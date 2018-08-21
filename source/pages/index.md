@@ -46,11 +46,11 @@ The list of US Core Profiles is shown below.  Each profile defines the minimum m
 - Allergies, Immunizations, Medications, Problems and Health Concerns, UDI, Smoking Status do not require a date range search since a system should return all relevant resources.
 - Vital Signs, Laboratory Results, Goals, Encounters, Procedures, and Assessment and Plan of Treatment (CarePlan) include date range search requirements in the Quick Start section on the profile page.
 
-See the Genera Guidance page for a [mapping] to the CCDS.
+See the *General Guidance* page for a [mapping] to the CCDS.
 
 ## US Core Conformance Requirements
 
-The [Capability Statements Section](capstmnts.html) outlines conformance requirements for the US Core Servers and Client applications, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual US Core profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the US Core actors.
+The [Capability Statements Section](capstatements.html) outlines conformance requirements for the US Core Servers and Client applications, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual US Core profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the US Core actors.
 
 ----
 
@@ -59,4 +59,4 @@ Primary Authors: Brett Marquard, Nagesh Bashyam, Eric Haas
 
 Secondary Authors: Grahame Grieve, Lloyd McKenzie
 
-{* include link-list.md *}
+{% include link-list.md %}
