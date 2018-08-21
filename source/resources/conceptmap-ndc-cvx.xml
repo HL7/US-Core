@@ -1,0 +1,1655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
+	<id value="ndc-cvx"/>
+	<!--	<text>
+		<status value="generated"/>
+		<xhtml:div>
+			<xhtml:p>Unit of Use NDC codes (https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) mapping  to the CVX Vaccine codes (https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx).  Note: source = NDC and target = CVX</xhtml:p>
+			<xhtml:p>Based upon the 2015 Edition Certification Requirements, the NDC vaccine codes SHOULD be supported as translations to the CVX vaccine codes.</xhtml:p>
+		</xhtml:div>
+	</text>
+-->
+	<url value="http://hl7.org/fhir/us/core-r4/ConceptMap/ndc-cvx"/>
+	<version value="1.0.1"/>
+	<name value="US Core NDC to CVX Code Mapping"/>
+	<status value="active"/>
+	<date value="2016-06-06"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+	<description value="Unit of Use [NDC code] (https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) mapping  to the [CVX Vaccine codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx).  Note: source = NDC and target = CVX"/>
+	<purpose value="Based upon the 2015 Edition Certification Requirements, the NDC vaccine codes SHOULD be supported as translations to the CVX vaccine codes."/>
+	<sourceCanonical value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-ndc-vaccine-codes"/>
+	<targetCanonical value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-cvx"/>
+	<group>
+		<element>
+			<code value="49281-0589-58"/>
+			<target>
+				<code value="114"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0623-78"/>
+			<target>
+				<code value="158"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0515-00"/>
+			<target>
+				<code value="161"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0415-88"/>
+			<target>
+				<code value="150"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0415-58"/>
+			<target>
+				<code value="150"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="33332-0115-11"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="33332-0015-02"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66019-0302-01"/>
+			<target>
+				<code value="149"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="42874-0015-01"/>
+			<target>
+				<code value="155"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0118-12"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0118-11"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0883-41"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0000-11"/>
+			<target>
+				<code value="168"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="69401-0000-01"/>
+			<target>
+				<code value="25"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66019-0301-01"/>
+			<target>
+				<code value="149"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="33332-0014-02"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="33332-0114-11"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="63851-0613-11"/>
+			<target>
+				<code value="153"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0117-11"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0117-12"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4093-01"/>
+			<target>
+				<code value="8"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4094-01"/>
+			<target>
+				<code value="43"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4095-01"/>
+			<target>
+				<code value="83"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4096-01"/>
+			<target>
+				<code value="52"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4963-01"/>
+			<target>
+				<code value="121"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4963-01"/>
+			<target>
+				<code value="121"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="42874-0014-01"/>
+			<target>
+				<code value="155"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0414-88"/>
+			<target>
+				<code value="150"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0395-88"/>
+			<target>
+				<code value="135"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0709-48"/>
+			<target>
+				<code value="144"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0881-41"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0809-01"/>
+			<target>
+				<code value="148"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="62577-0613-11"/>
+			<target>
+				<code value="153"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="19515-0893-02"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0621-78"/>
+			<target>
+				<code value="158"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00005-0100-01"/>
+			<target>
+				<code value="162"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00005-0100-01"/>
+			<target>
+				<code value="162"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00005-0100-01"/>
+			<target>
+				<code value="162"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4047-01"/>
+			<target>
+				<code value="116"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4109-01"/>
+			<target>
+				<code value="62"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="62577-0613-11"/>
+			<target>
+				<code value="153"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4121-01"/>
+			<target>
+				<code value="165"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4119-01"/>
+			<target>
+				<code value="165"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4119-01"/>
+			<target>
+				<code value="165"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="63851-0511-11"/>
+			<target>
+				<code value="18"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0562-58"/>
+			<target>
+				<code value="130"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="46028-0114-11"/>
+			<target>
+				<code value="163"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="46028-0114-11"/>
+			<target>
+				<code value="163"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4171-01"/>
+			<target>
+				<code value="94"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="13533-0131-00"/>
+			<target>
+				<code value="9"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0396-78"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0397-88"/>
+			<target>
+				<code value="135"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="62577-0614-11"/>
+			<target>
+				<code value="153"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0903-41"/>
+			<target>
+				<code value="150"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="19515-0898-01"/>
+			<target>
+				<code value="158"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="19515-0901-41"/>
+			<target>
+				<code value="150"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0393-88"/>
+			<target>
+				<code value="135"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0810-43"/>
+			<target>
+				<code value="20"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0810-01"/>
+			<target>
+				<code value="20"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0790-38"/>
+			<target>
+				<code value="101"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0790-88"/>
+			<target>
+				<code value="101"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0640-15"/>
+			<target>
+				<code value="127"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0650-10"/>
+			<target>
+				<code value="126"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0650-90"/>
+			<target>
+				<code value="126"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0650-25"/>
+			<target>
+				<code value="126"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0650-70"/>
+			<target>
+				<code value="126"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0650-50"/>
+			<target>
+				<code value="126"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0707-48"/>
+			<target>
+				<code value="144"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66019-0110-01"/>
+			<target>
+				<code value="111"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4681-01"/>
+			<target>
+				<code value="3"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0215-58"/>
+			<target>
+				<code value="113"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0215-88"/>
+			<target>
+				<code value="113"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="46028-0218-11"/>
+			<target>
+				<code value="136"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0387-65"/>
+			<target>
+				<code value="135"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0386-15"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0010-10"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0010-25"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0010-50"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="54868-0980-00"/>
+			<target>
+				<code value="3"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0830-43"/>
+			<target>
+				<code value="118"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0830-05"/>
+			<target>
+				<code value="118"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00005-1971-01"/>
+			<target>
+				<code value="133"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00005-1971-01"/>
+			<target>
+				<code value="133"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00005-1971-01"/>
+			<target>
+				<code value="133"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="17478-0131-00"/>
+			<target>
+				<code value="9"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0812-43"/>
+			<target>
+				<code value="130"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0812-01"/>
+			<target>
+				<code value="130"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66019-0108-01"/>
+			<target>
+				<code value="111"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4898-01"/>
+			<target>
+				<code value="51"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0809-01"/>
+			<target>
+				<code value="148"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="63851-0612-11"/>
+			<target>
+				<code value="153"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4992-01"/>
+			<target>
+				<code value="44"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4981-01"/>
+			<target>
+				<code value="8"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4980-00"/>
+			<target>
+				<code value="8"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4093-01"/>
+			<target>
+				<code value="8"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4094-01"/>
+			<target>
+				<code value="43"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4109-01"/>
+			<target>
+				<code value="62"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0112-02"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0112-10"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66019-0107-01"/>
+			<target>
+				<code value="111"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0225-58"/>
+			<target>
+				<code value="28"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0705-55"/>
+			<target>
+				<code value="144"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="42515-0001-00"/>
+			<target>
+				<code value="134"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0879-41"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0880-41"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0820-01"/>
+			<target>
+				<code value="8"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0820-43"/>
+			<target>
+				<code value="8"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0821-01"/>
+			<target>
+				<code value="43"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0821-43"/>
+			<target>
+				<code value="43"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0821-05"/>
+			<target>
+				<code value="43"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="42874-0012-01"/>
+			<target>
+				<code value="155"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0278-10"/>
+			<target>
+				<code value="28"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66019-0109-01"/>
+			<target>
+				<code value="111"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="19515-0890-02"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="19515-0889-02"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0900-41"/>
+			<target>
+				<code value="150"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0860-78"/>
+			<target>
+				<code value="10"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0860-88"/>
+			<target>
+				<code value="10"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0389-65"/>
+			<target>
+				<code value="135"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0388-15"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0011-10"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0011-50"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0703-55"/>
+			<target>
+				<code value="144"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0111-25"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0200-10"/>
+			<target>
+				<code value="126"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0200-02"/>
+			<target>
+				<code value="127"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0298-10"/>
+			<target>
+				<code value="20"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0806-01"/>
+			<target>
+				<code value="48"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="33332-0013-02"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="33332-0113-11"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0391-65"/>
+			<target>
+				<code value="135"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0012-50"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0012-10"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0112-25"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0390-15"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4897-01"/>
+			<target>
+				<code value="49"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0291-83"/>
+			<target>
+				<code value="113"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0291-10"/>
+			<target>
+				<code value="113"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0413-88"/>
+			<target>
+				<code value="150"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0413-58"/>
+			<target>
+				<code value="150"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0513-00"/>
+			<target>
+				<code value="161"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0113-02"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0113-10"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00005-1970-49"/>
+			<target>
+				<code value="100"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4047-01"/>
+			<target>
+				<code value="116"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0811-43"/>
+			<target>
+				<code value="110"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0811-41"/>
+			<target>
+				<code value="110"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4827-01"/>
+			<target>
+				<code value="21"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4826-01"/>
+			<target>
+				<code value="21"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0842-41"/>
+			<target>
+				<code value="115"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0842-01"/>
+			<target>
+				<code value="115"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0842-43"/>
+			<target>
+				<code value="115"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0842-05"/>
+			<target>
+				<code value="115"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66019-0300-01"/>
+			<target>
+				<code value="149"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0589-58"/>
+			<target>
+				<code value="114"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4095-01"/>
+			<target>
+				<code value="83"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4096-01"/>
+			<target>
+				<code value="52"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4831-01"/>
+			<target>
+				<code value="83"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="63851-0511-11"/>
+			<target>
+				<code value="18"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66019-0200-01"/>
+			<target>
+				<code value="125"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="14362-0111-03"/>
+			<target>
+				<code value="9"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="33332-0519-01"/>
+			<target>
+				<code value="126"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="33332-0519-25"/>
+			<target>
+				<code value="126"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="33332-0629-10"/>
+			<target>
+				<code value="127"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0825-43"/>
+			<target>
+				<code value="83"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0825-01"/>
+			<target>
+				<code value="83"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0826-43"/>
+			<target>
+				<code value="52"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0826-05"/>
+			<target>
+				<code value="52"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0826-01"/>
+			<target>
+				<code value="52"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="33332-0010-01"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="33332-0110-10"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0115-10"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0115-02"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4133-01"/>
+			<target>
+				<code value="9"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="54868-4320-09"/>
+			<target>
+				<code value="33"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="54868-3339-09"/>
+			<target>
+				<code value="33"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00052-0603-01"/>
+			<target>
+				<code value="19"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="64678-0211-05"/>
+			<target>
+				<code value="24"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4739-01"/>
+			<target>
+				<code value="33"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4943-01"/>
+			<target>
+				<code value="33"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0013-58"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0013-88"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0392-78"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0113-00"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0820-10"/>
+			<target>
+				<code value="35"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0800-83"/>
+			<target>
+				<code value="35"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0400-88"/>
+			<target>
+				<code value="115"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0286-58"/>
+			<target>
+				<code value="106"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0286-58"/>
+			<target>
+				<code value="106"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0286-58"/>
+			<target>
+				<code value="106"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0815-41"/>
+			<target>
+				<code value="104"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0815-43"/>
+			<target>
+				<code value="104"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0815-05"/>
+			<target>
+				<code value="104"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0815-43"/>
+			<target>
+				<code value="104"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0815-01"/>
+			<target>
+				<code value="104"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0114-10"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="76420-0482-01"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="19515-0895-01"/>
+			<target>
+				<code value="158"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4999-01"/>
+			<target>
+				<code value="94"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0545-15"/>
+			<target>
+				<code value="120"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="51285-0174-02"/>
+			<target>
+				<code value="143"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0248-58"/>
+			<target>
+				<code value="18"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0487-58"/>
+			<target>
+				<code value="32"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0915-58"/>
+			<target>
+				<code value="37"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0547-58"/>
+			<target>
+				<code value="48"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0851-01"/>
+			<target>
+				<code value="119"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0915-68"/>
+			<target>
+				<code value="37"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0488-78"/>
+			<target>
+				<code value="32"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="46028-0219-11"/>
+			<target>
+				<code value="136"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="51285-0175-02"/>
+			<target>
+				<code value="143"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0560-05"/>
+			<target>
+				<code value="120"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0400-58"/>
+			<target>
+				<code value="115"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0400-58"/>
+			<target>
+				<code value="115"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="42874-0013-01"/>
+			<target>
+				<code value="155"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0116-11"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="66521-0116-12"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4045-01"/>
+			<target>
+				<code value="62"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4045-01"/>
+			<target>
+				<code value="62"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4995-01"/>
+			<target>
+				<code value="43"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4995-01"/>
+			<target>
+				<code value="43"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4841-01"/>
+			<target>
+				<code value="52"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4841-01"/>
+			<target>
+				<code value="52"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0804-01"/>
+			<target>
+				<code value="160"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0802-02"/>
+			<target>
+				<code value="160"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="58160-0901-41"/>
+			<target>
+				<code value="150"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="00006-4837-01"/>
+			<target>
+				<code value="33"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="19515-0891-01"/>
+			<target>
+				<code value="158"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="19515-0893-02"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="19515-0894-41"/>
+			<target>
+				<code value="150"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0514-00"/>
+			<target>
+				<code value="161"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0394-78"/>
+			<target>
+				<code value="141"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0014-88"/>
+			<target>
+				<code value="140"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+		<element>
+			<code value="49281-0414-58"/>
+			<target>
+				<code value="150"/>
+				<equivalence value="wider"/>
+			</target>
+		</element>
+	</group>
+</ConceptMap>

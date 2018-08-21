@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="66c8856b-ba11-4876-8aa8-467aad8c11a2"/>
+    <type value="searchset"/>
+    <total value="1"/>
+    <link>
+        <relation value="self"/>
+        <url
+            value="http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole?_id=PractitionerRole-1&amp;_include=PractitionerRole%3Apractitioner&amp;_include=PractitionerRole%3Aendpoint"
+        />
+    </link>
+    <entry>
+        <fullUrl
+            value="http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole/PractitionerRole-1"/>
+        <resource>
+            <PractitionerRole xmlns="http://hl7.org/fhir">
+                <id value="PractitionerRole-1"/>
+                <meta>
+                    <profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitionerrole"/>
+                </meta>
+                <practitioner>
+                    <reference value="Practitioner/Practitioner-1011"/>
+                    <display value="Brenda Jennings Richard MD"/>
+                </practitioner>
+                <organization>
+                    <reference value="Organization/acme-lab"/>
+                    <display value="Acme Lab"/>
+                </organization>
+                <code>
+                    <coding>
+                        <system value="http://nucc.org/provider-taxonomy"/>
+                        <code value="261QP2300X"/>
+                        <display value="Doctor"/>
+                    </coding>
+                </code>
+                <specialty>
+                    <coding>
+                        <system value="http://nucc.org/provider-taxonomy"/>
+                        <code value="208D00000X"/>
+                        <display value="General Practice"/>
+                    </coding>
+                </specialty>
+                <location>
+                    <reference value="Location/hl7east"/>
+                    <display value="Health Level Seven International"/>
+                </location>
+                <endpoint>
+                    <reference value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+                    <display value="Westwood Physicians Organization ADT"/>
+                </endpoint>
+                <endpoint>
+                    <reference value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+                    <display value="Brenda.Jennings.Richard.MD@direct.example.org"/>
+                </endpoint>
+            </PractitionerRole>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="http://52.90.126.238:8080/fhir/baseDstu3/Practitioner/Practitioner-1011"/>
+        <resource>
+            <Practitioner xmlns="http://hl7.org/fhir">
+                <id value="Practitioner-1011"/>
+                <meta>
+                    <profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitioner"/>
+                </meta>
+                <identifier>
+                    <use value="official"/>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/identifier-type"/>
+                            <code value="SB"/>
+                            <display value="Social Beneficiary Identifier"/>
+                        </coding>
+                        <text value="US Social Security Number"/>
+                    </type>
+                    <system value="http://hl7.org/fhir/sid/us-ssn"/>
+                    <value value="000001011"/>
+                </identifier>
+                <identifier>
+                    <use value="official"/>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v2/0203"/>
+                            <code value="PRN"/>
+                            <display value="Provider number"/>
+                        </coding>
+                        <text value="US National Provider Identifier"/>
+                    </type>
+                    <system value="http://hl7.org/fhir/sid/us-npi"/>
+                    <value value="9999991011"/>
+                </identifier>
+                <identifier>
+                    <use value="official"/>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/identifier-type"/>
+                            <code value="SB"/>
+                            <display value="Social Beneficiary Identifier"/>
+                        </coding>
+                        <text value="Michigan Common Key Service Identifier"/>
+                    </type>
+                    <system value="http://mihin.org/fhir/cks"/>
+                    <value value="d46f70565a1042f6a6ece48dd81b408f"/>
+                </identifier>
+                <name>
+                    <family value="Richard"/>
+                    <given value="Brenda"/>
+                    <given value="Jennings"/>
+                    <suffix value="MD"/>
+                </name>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="313-555-6868"/>
+                    <use value="home"/>
+                </telecom>
+                <telecom>
+                    <system value="phone"/>
+                    <value value="313-555-6443"/>
+                    <use value="work"/>
+                </telecom>
+                <address>
+                    <text value="346 W Plum Avenu Dearborn MI 48123"/>
+                    <line value="346 W Plum Avenue"/>
+                    <city value="Dearborn"/>
+                    <state value="MI"/>
+                    <postalCode value="48126"/>
+                </address>
+                <gender value="female"/>
+                <birthDate value="1976-11-15"/>
+                <qualification>
+                    <identifier>
+                        <use value="official"/>
+                        <type>
+                            <coding>
+                                <system value="http://hl7.org/fhir/v2/0203"/>
+                                <code value="MD"/>
+                                <display value="Medical License number"/>
+                            </coding>
+                            <text value="Michigan Medical License"/>
+                        </type>
+                        <system value="http://michigan.gov/fhir/medical-license"/>
+                        <value value="LARA-1011"/>
+                        <assigner>
+                            <display value="State of Michigan"/>
+                        </assigner>
+                    </identifier>
+                    <code>
+                        <coding>
+                            <system value="http://michigan.gov/lara/license-type"/>
+                            <code value="4305"/>
+                            <display value="Medical Doctor"/>
+                        </coding>
+                    </code>
+                    <issuer>
+                        <display value="Michigan Department of Licensing and Regulatory Affairs"/>
+                    </issuer>
+                </qualification>
+            </Practitioner>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+        <resource>
+            <Endpoint xmlns="http://hl7.org/fhir">
+                <id value="71"/>
+                <status value="active"/>
+                <connectionType>
+                    <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+                    <code value="direct-project"/>
+                </connectionType>
+                <name value="Brenda.Jennings.Richard.MD@direct.example.org"/>
+                <managingOrganization>
+                    <reference value="Organization/acme-lab"/>
+                </managingOrganization>
+                <payloadType>
+                    <coding>
+                        <system value="urn:oid:1.3.6.1.4.1.19376.1.2.3"/>
+                        <code value="urn:hl7-org:sdwg:ccda-structuredBody:1.1"/>
+                    </coding>
+                </payloadType>
+                <payloadMimeType value="text/xml">
+                </payloadMimeType>
+                <address value="Brenda.Jennings.Richard.MD@direct.example.org"/>
+            </Endpoint>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+</Bundle>

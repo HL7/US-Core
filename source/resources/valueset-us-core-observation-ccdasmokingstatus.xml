@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="us-core-observation-ccdasmokingstatus"/>
+	<meta>
+		<lastUpdated value="2016-05-25T16:59:08.250+10:00"/>
+		<profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+	</meta>
+	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-observation-ccdasmokingstatus"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113883.4.642.2.602"/>
+	</identifier>
+	<version value="1.0.1"/>
+	<name value="Smoking Status"/>
+	<status value="active"/>
+
+	<date value="2016-08-10"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+	<contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+	<description value="This value set indicates the current smoking status of a patient."/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+	<compose>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<concept>
+				<code value="449868002"/>
+				<display value="Current every day smoker"/>
+			</concept>
+			<concept>
+				<code value="428041000124106"/>
+				<display value="Current some day smoker"/>
+			</concept>
+			<concept>
+				<code value="8517006"/>
+				<display value="Former smoker"/>
+			</concept>
+			<concept>
+				<code value="266919005"/>
+				<display value="Never smoker"/>
+			</concept>
+			<concept>
+				<code value="77176002"/>
+				<display value="Smoker, current status unknown"/>
+			</concept>
+			<concept>
+				<code value="266927001"/>
+				<display value="Unknown if ever smoked"/>
+			</concept>
+			<concept>
+				<code value="428071000124103"/>
+				<display value="Current Heavy tobacco smoker"/>
+			</concept>
+			<concept>
+				<code value="428061000124105"/>
+				<display value="Current Light tobacco smoker"/>
+			</concept>
+		</include>
+		<!--
+    <include>
+      <system value="http://hl7.org/fhir/data-absent-reason"/>
+      <concept>
+        <code value="unknown"/>
+      </concept>
+      <concept>
+        <code value="not-asked"/>
+      </concept>
+    </include>
+-->
+	</compose></ValueSet>

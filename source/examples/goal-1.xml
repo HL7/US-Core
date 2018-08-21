@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Goal xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir"  >
+	<id value="goal-1"/>
+		<meta>
+		<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-goal"/>
+	</meta>
+	<status value="in-progress"/>
+	<description>
+		<text value="Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs"/>
+	</description>
+	<subject>
+		<reference value="Patient/example"/>
+		<display value="Amy Shaw"/>
+	</subject>
+</Goal>

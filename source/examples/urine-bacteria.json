@@ -1,0 +1,49 @@
+{
+  "resourceType": "Observation",
+  "id": "urine-bacteria",
+  "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+    "versionId": "206540",
+    "lastUpdated": "2016-04-18T03:56:41.250+00:00"
+  },
+
+  "status": "final",
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+      }
+    ],
+    "text": "Laboratory"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "25145-4",
+        "display": "Bacteria [Presence] in Urine sediment by Light microscopy"
+      }
+    ],
+    "text": "BACTERIA"
+  },
+  "subject": {
+    "reference": "Patient/example","display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-05",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "260350009",
+        "display": "++++"
+      }
+    ],
+    "text": "4+"
+  },
+  "referenceRange": [
+    {
+      "text": "0-1+"
+    }
+  ]
+}

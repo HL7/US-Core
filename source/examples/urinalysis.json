@@ -1,0 +1,113 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "urinalysis",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-diagnosticreport"
+    ],
+    "versionId": "209563",
+    "lastUpdated": "2016-04-19T17:28:11.308+00:00"
+  },
+  "status": "final",
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/v2/0074",
+        "code": "LAB",
+        "display": "Laboratory"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "24356-8",
+        "display": "Urinalysis complete panel - Urine"
+      }
+    ],
+    "text": "Complete Urinalysis"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-05",
+  "issued": "2005-07-06T11:45:33+11:00",
+  "performer": [
+    {
+      "reference": "Organization/acme-lab",
+      "display": "Acme Laboratory, Inc"
+    }
+  ],
+  "result": [
+    {
+      "reference": "Observation/urine-color",
+      "display": "COLOR=Yellow"
+    },
+    {
+      "reference": "Observation/urine-clarity",
+      "display": "APPEARANCE=Hazy"
+    },
+    {
+      "reference": "Observation/urine-glucose",
+      "display": "GLUCOSE=Negative"
+    },
+    {
+      "reference": "Observation/urine-bilirubin",
+      "display": "BILIRUBIN=Negative"
+    },
+    {
+      "reference": "Observation/urine-ketone",
+      "display": "KETONE=Negative"
+    },
+    {
+      "reference": "Observation/usg",
+      "display": "SPEC GRAV=1.017"
+    },
+    {
+      "reference": "Observation/urine-ph",
+      "display": "PH=6 (pH)"
+    },
+    {
+      "reference": "Observation/urine-protein",
+      "display": "PROTEIN=Negative"
+    },
+    {
+      "reference": "Observation/urobilinogen",
+      "display": "UROBILINOGEN=0.3 mg/dL"
+    },
+    {
+      "reference": "Observation/urine-nitrite",
+      "display": "NITRITE=Positive"
+    },
+    {
+      "reference": "Observation/urine-hemoglobin",
+      "display": "BLOOD=Trace"
+    },
+    {
+      "reference": "Observation/urine-leukocyte-esterase",
+      "display": "LEUK ESTERASE=2+e"
+    },
+    {
+      "reference": "Observation/urine-sediment",
+      "display": "COMMENT=Recommend Urine Culture"
+    },
+    {
+      "reference": "Observation/urine-bacteria",
+      "display": "BACTERIA=4+"
+    },
+    {
+      "reference": "Observation/urine-epi-cells",
+      "display": "EPITHELIAL CELLS=1-5 cells/HPF"
+    },
+    {
+      "reference": "Observation/urine-wbcs",
+      "display": "WBC=20-30 cells/HPF"
+    },
+    {
+      "reference": "Observation/urine-rbcs",
+      "display": "RBC=Occasional cells/HPF"
+    }
+  ]
+}

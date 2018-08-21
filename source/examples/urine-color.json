@@ -1,0 +1,49 @@
+ {
+   "resourceType": "Observation",
+   "id": "urine-color",
+   "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+     "versionId": "206419",
+     "lastUpdated": "2016-04-18T03:27:43.203+00:00"
+   },
+
+   "status": "final",
+   "category": {
+     "coding": [
+       {
+         "system": "http://hl7.org/fhir/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+       }
+     ],
+     "text": "Laboratory"
+   },
+   "code": {
+     "coding": [
+       {
+         "system": "http://loinc.org",
+         "code": "5778-6",
+         "display": "Color of Urine"
+       }
+     ],
+     "text": "COLOR"
+   },
+   "subject": {
+     "reference": "Patient/example","display": "Amy Shaw"
+   },
+   "effectiveDateTime": "2005-07-05",
+   "valueCodeableConcept": {
+     "coding": [
+       {
+         "system": "http://snomed.inbnm,fo/sct",
+         "code": "371244009",
+         "display": "Yellow"
+       }
+     ],
+     "text": "Yellow"
+   },
+   "referenceRange": [
+     {
+       "text": "Yellow"
+     }
+   ]
+}

@@ -1,0 +1,49 @@
+{
+  "resourceType": "Observation",
+  "id": "urine-ketone",
+  "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+    "versionId": "206468",
+    "lastUpdated": "2016-04-18T03:39:00.812+00:00"
+  },
+
+  "status": "final",
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+      }
+    ],
+    "text": "Laboratory"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "2514-8",
+        "display": "Ketones [Presence] in Urine by Test strip"
+      }
+    ],
+    "text": "KETONE"
+  },
+  "subject": {
+    "reference": "Patient/example","display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-05",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "260385009",
+        "display": "Negative"
+      }
+    ],
+    "text": "Negative"
+  },
+  "referenceRange": [
+    {
+      "text": "Negative"
+    }
+  ]
+}

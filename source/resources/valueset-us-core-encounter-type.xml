@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<id value="us-core-encounter-type"/>
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h2>US Core Encounter Type</h2>
+			<p>The type of encounter: a specific code indicating type of service provided, from CPT</p>
+			<p>
+				<b>Copyright Statement:</b> CPT copyright 2014 American Medical Association. All rights reserved.
+			</p>
+			<p>This value set includes only the codes of the Current Procedure and Terminology designated for Evaluation and Management (99200 – 99607) (subscription to AMA Required) from code systems:</p>
+			<ul>
+				<li>http://www.ama-assn.org/go/cpt</li>
+			</ul>
+		</div>
+	</text>
+	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-encounter-type"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113883.3.88.12.80.32"/>
+	</identifier>
+	<version value="1.0.1"/>
+	<name value="US Core Encounter Type"/>
+	<status value="draft"/>
+	<date value="2017-12-10"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+	<contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+	<description value="The type of encounter: a specific code indicating type of service provided, from CPT"/>
+	<copyright value="CPT copyright 2014 American Medical Association. All rights reserved."/>
+	<compose>
+		<include>
+			<system value="http://www.ama-assn.org/go/cpt"/>
+		</include>
+	</compose>
+</ValueSet>

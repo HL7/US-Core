@@ -1,0 +1,39 @@
+<!--  - choose what you want  comment out or Change what you don't-->
+<ul class="nav nav-tabs">
+{% if {{include.active}} == "content" %}
+	<li class="active"><a href="#">Narrative Content</a></li>
+{% else %}
+	<li><a href="{{include.type}}-{{include.id}}.html">Narrative Content</a></li>
+{% endif %}
+<!--
+{ % if {{include.type}} == "StructureDefinition"  % }
+	{ % if {{include.active}} == "definitions"  % }
+		<li class="active"><a href="#">Detailed Descriptions</a></li>
+	{ % else % }
+		<li><a href="{{include.type}}-{{include.id}}-definitions.html">Detailed Descriptions</a></li>
+	{ % endif % }
+	{ % if {{include.active}} == "mappings" % }
+		<li class="active"><a href="#">Mappings</a></li>
+	{ % else % }
+		<li><a href="{{include.type}}-{{include.id}}-mappings.html">Mappings</a></li>
+	{ % endif % }
+{ % endif % }
+-->
+{% if {{include.active}} == "xml" %}
+	<li class="active"><a href="#">XML</a></li>
+{% else %}
+<li><a href="{{include.type}}-{{include.id}}.xml.html">XML</a></li>
+{% endif %}
+{% if {{include.active}} == "json" %}
+	<li class="active"><a href="#">JSON</a></li>
+{% else %}
+	<li><a href="{{include.type}}-{{include.id}}.json.html">JSON</a></li>
+{% endif %}
+<!--
+{ % if {{include.active}} == "turtle" % }
+	<li class="active"><a href="#">Turtle</a></li>
+{ % else % }
+	<li><a href="{{include.type}}-{{include.id}}.ttl.html">Turtle</a></li>
+{ % endif % }
+-->
+</ul>

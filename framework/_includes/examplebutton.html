@@ -1,0 +1,13 @@
+
+<p>
+  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#{{include.example}}" aria-expanded="false" aria-controls="collapseExample">
+    {{include.b_title | default: "Example" }}
+  </button>
+</p>
+
+<div class="collapse" id="{{include.example}}">
+  <div class="card card-body">
+      {% capture my-include %}{% include {{include.example}}.md %}{% endcapture %}{{ my-include | markdownify }}
+  </div>
+</div>
+<br />

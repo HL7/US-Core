@@ -1,0 +1,58 @@
+<MedicationRequest  xmlns="http://hl7.org/fhir" >
+	<!--example using medication codes-->
+	<id value="uscore-mo1"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-medicationrequest"/>
+	</meta>
+	<status value="active"/>
+	<intent value="order"/>
+
+	<medicationCodeableConcept>
+		<coding>
+			<system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+			<code value="582620"/>
+			<display value="Nizatidine 15 MG/ML Oral Solution [Axid]"/>
+		</coding>
+		<text value="Nizatidine 15 MG/ML Oral Solution [Axid]"/>
+	</medicationCodeableConcept>
+	<subject>
+		<reference value="Patient/example"/>
+		<display value="Amy Shaw"/>
+	</subject>
+	<authoredOn value="2008-04-05"/>
+	<requester>
+		<agent>
+			<!-- MedicationRequest Practitioner reference causes a build error
+						<reference value="Practitioner/practitioner-1"/>
+			-->			<display value="Ronald Bone, MD"/>
+		</agent>
+	</requester>
+	<!--  either a code or a reference to the medication being prescribed. As described earlier, this could be contained, separately
+        within a bundle or simply a reference to a remote server. -->
+	<!--	The following elements are not mandatory for the uscorenaut Profile -->
+	<dosageInstruction>
+		<text value="10 mL bid"/>
+		<timing>
+			<repeat>
+				<boundsPeriod>
+					<start value="2008-04-05"/>
+				</boundsPeriod>
+			</repeat>
+		</timing>
+	</dosageInstruction>
+	<dispenseRequest>
+		<numberOfRepeatsAllowed value="1"/>
+		<quantity>
+			<value value="480"/>
+			<unit value="mL"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="mL"/>
+		</quantity>
+		<expectedSupplyDuration>
+			<value value="30"/>
+			<unit value="days"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="d"/>
+		</expectedSupplyDuration>
+	</dispenseRequest>
+</MedicationRequest>

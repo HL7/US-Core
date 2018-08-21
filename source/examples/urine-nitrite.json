@@ -1,0 +1,49 @@
+{
+  "resourceType": "Observation",
+  "id": "urine-nitrite",
+  "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+    "versionId": "206492",
+    "lastUpdated": "2016-04-18T03:42:34.440+00:00"
+  },
+
+  "status": "final",
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+      }
+    ],
+    "text": "Laboratory"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "5802-4",
+        "display": "Nitrite [Presence] in Urine by Test strip"
+      }
+    ],
+    "text": "NITRITE"
+  },
+  "subject": {
+    "reference": "Patient/example","display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-05",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "10828004",
+        "display": "Positive"
+      }
+    ],
+    "text": "Positive"
+  },
+  "referenceRange": [
+    {
+      "text": "Negative"
+    }
+  ]
+}

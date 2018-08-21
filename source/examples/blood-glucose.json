@@ -1,0 +1,65 @@
+{
+  "resourceType": "Observation",
+  "id": "blood-glucose",
+  "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+    "versionId": "1165",
+    "lastUpdated": "2016-03-09T15:29:58.328+00:00"
+  },
+
+  "status": "final",
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+      }
+    ],
+    "text": "Laboratory"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "2339-0",
+        "display": "Glucose Bld-mCnc"
+      }
+    ],
+    "text": "Glucose Bld-mCnc"
+  },
+  "subject": {
+    "reference": "Patient/example","display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-05",
+  "valueQuantity": {
+    "value": 76.0,
+    "unit": "mg/dL",
+    "system": "http://unitsofmeasure.org"
+  },
+  "referenceRange": [
+    {
+      "low": {
+        "value": 40.0,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "high": {
+        "value": 109.0,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      },
+      "appliesTo": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/referencerange-meaning",
+            "code": "normal",
+            "display": "Normal Range"
+          }
+        ],
+        "text": "Normal Range"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+---
+# jekyll header
+level: 2
+active: profiles
+template: definitions
+layout: fhir-artifact
+type: {{[type]}}
+id: {{[id]}}
+topofpage: True
+---
+
+  <!-- ============CONTENT CONTENT=============== -->
+
+<h3>Definitions for the {{[type]}}-{{[id]}} Profile.</h3>
+
+{%include {{[type]}}-{{[id]}}-dict.xhtml%}
+
+<!-- ============CONTENT CONTENT=============== -->

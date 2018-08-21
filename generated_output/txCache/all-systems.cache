@@ -1,0 +1,300 @@
+-------------------------------------------------------------------------------------
+
+{"code" : {
+  "code" : "xml"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}}####
+v: {
+  "display" : "xml",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+
+{"code" : {
+  "code" : "json"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}}####
+v: {
+  "display" : "json",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+
+{"code" : {
+  "code" : "F"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/v3/AdministrativeGender",
+      "concept" : [{
+        "code" : "F",
+        "display" : "Female"
+      },
+      {
+        "code" : "M",
+        "display" : "Male"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/v3/NullFlavor",
+      "concept" : [{
+        "code" : "UNK",
+        "display" : "Unknown"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to provide support for code system http://hl7.org/fhir/v3/AdministrativeGender"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "text/xml"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}}####
+v: {
+  "display" : "text/xml",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "35637008",
+    "display" : "Alcohol rehabilitation"
+  },
+  {
+    "system" : "http://www.icd10data.com/icd10pcs",
+    "code" : "HZ30ZZZ",
+    "display" : "Individual Counseling for Substance Abuse Treatment, Cognitive"
+  }],
+  "text" : "Alcohol rehabilitation"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to provide support for code system http://www.ama-assn.org/go/cpt"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://hl7.org/fhir/sid/cvx",
+    "code" : "158",
+    "display" : "influenza, injectable, quadrivalent"
+  },
+  {
+    "system" : "http://hl7.org/fhir/sid/ndc",
+    "code" : "49281-0623-78",
+    "display" : "FLUZONE QUADRIVALENT"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/cvx"
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to provide support for code system http://hl7.org/fhir/sid/cvx"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "text/plain"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}}####
+v: {
+  "display" : "text/plain",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}}
+####
+e: {
+  "error" : "Error unmarshalling resource: Unable to provide support for code system http://www.ama-assn.org/go/cpt"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/condition-category"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/core-r4/CodeSystem/condition-category",
+      "concept" : [{
+        "code" : "health-concern",
+        "display" : "Health Concern"
+      }]
+    }]
+  }
+}}
+####
+e: {
+  "error" : "Error unmarshalling resource: Unable to provide support for code system http://hl7.org/fhir/condition-category"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://nucc.org/provider-taxonomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "125676002"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "394730007"
+      }]
+    }]
+  }
+}}
+####
+e: {
+  "error" : "Error unmarshalling resource: Unable to provide support for code system http://nucc.org/provider-taxonomy"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/v3/AdministrativeGender",
+      "concept" : [{
+        "code" : "F",
+        "display" : "Female"
+      },
+      {
+        "code" : "M",
+        "display" : "Male"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/v3/NullFlavor",
+      "concept" : [{
+        "code" : "UNK",
+        "display" : "Unknown"
+      }]
+    }]
+  }
+}}
+####
+e: {
+  "error" : "Error unmarshalling resource: Unable to provide support for code system http://hl7.org/fhir/v3/AdministrativeGender"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "concept" : [{
+        "code" : "1002-5",
+        "display" : "American Indian or Alaska Native"
+      },
+      {
+        "code" : "2028-9",
+        "display" : "Asian"
+      },
+      {
+        "code" : "2054-5",
+        "display" : "Black or African American"
+      },
+      {
+        "code" : "2076-8",
+        "display" : "Native Hawaiian or Other Pacific Islander"
+      },
+      {
+        "code" : "2106-3",
+        "display" : "White"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/v3/NullFlavor",
+      "concept" : [{
+        "code" : "UNK",
+        "display" : "Unknown"
+      },
+      {
+        "code" : "ASKU",
+        "display" : "Asked but no answer"
+      }]
+    }]
+  }
+}}
+####
+e: {
+  "error" : "Error unmarshalling resource: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.238"
+}
+-------------------------------------------------------------------------------------

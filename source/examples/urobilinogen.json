@@ -1,0 +1,56 @@
+{
+	"resourceType": "Observation",
+	"id": "urobilinogen",
+	"meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+		"versionId": "206612",
+		"lastUpdated": "2016-04-18T04:20:46.618+00:00"
+	},
+	"status": "final",
+	"category": {
+		"coding": [
+			{
+				"system": "http://hl7.org/fhir/observation-category",
+				"code": "laboratory",
+				"display": "Laboratory"
+			}
+		],
+		"text": "Laboratory"
+	},
+	"code": {
+		"coding": [
+			{
+				"system": "http://loinc.org",
+				"code": "20405-7",
+				"display": "Urobilinogen [Mass/volume] in Urine by Test strip"
+			}
+		],
+		"text": "UROBILINOGEN"
+	},
+	"subject": {
+		"reference": "Patient/example",
+		"display": "Amy Shaw"
+	},
+	"effectiveDateTime": "2005-07-05",
+	"valueQuantity": {
+		"value": 0.3,
+		"unit": "mg/dL",
+		"system": "http://unitsofmeasure.org",
+		"code": "mg/dL"
+	},
+	"referenceRange": [
+		{
+			"low": {
+				"value": 0.1,
+				"unit": "mg/dL",
+				"system": "http://unitsofmeasure.org",
+				"code": "mg/dL"
+			},
+			"high": {
+				"value": 1.0,
+				"unit": "mg/dL",
+				"system": "http://unitsofmeasure.org",
+				"code": "mg/dL"
+			}
+		}
+	]
+}

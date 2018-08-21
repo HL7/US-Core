@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure  xmlns="http://hl7.org/fhir" >
+	<id value="rehab"/>
+	<meta>
+		<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-procedure"/>
+	</meta>
+	<status value="completed"/>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="35637008"/>
+			<display value="Alcohol rehabilitation"/>
+		</coding>
+		<coding>
+			<system value="http://www.icd10data.com/icd10pcs"/>
+			<code value="HZ30ZZZ"/>
+			<display value="Individual Counseling for Substance Abuse Treatment, Cognitive"/>
+		</coding>
+		<text value="Alcohol rehabilitation"/>
+	</code>
+		<subject>
+		<reference value="Patient/example"/>
+		<display value="Amy Shaw"/>
+	</subject>
+	<performedDateTime value="2002-05-23"/>
+</Procedure>

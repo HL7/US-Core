@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt"]
+    },
+    {
+      "valueSet" : ["http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-rxnorm"]
+    },
+    {
+      "valueSet" : ["http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-sct"]
+    }]
+  }
+}}
+####
+e: {
+  "error" : "Error unmarshalling resource: Unable to find value set \"http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt\""
+}
+-------------------------------------------------------------------------------------

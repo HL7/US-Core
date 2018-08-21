@@ -1,0 +1,49 @@
+{
+  "resourceType": "Observation",
+  "id": "urine-glucose",
+  "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+    "versionId": "206444",
+    "lastUpdated": "2016-04-18T03:35:42.751+00:00"
+  },
+
+  "status": "final",
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+      }
+    ],
+    "text": "Laboratory"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "25428-4",
+        "display": "Glucose [Presence] in Urine by Test strip"
+      }
+    ],
+    "text": "GLUCOSE"
+  },
+  "subject": {
+    "reference": "Patient/example","display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-05",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "260385009",
+        "display": "Negative"
+      }
+    ],
+    "text": "Negative"
+  },
+  "referenceRange": [
+    {
+      "text": "Negative"
+    }
+  ]
+}

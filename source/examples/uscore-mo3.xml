@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir"  >
+	<id value="uscore-mo3"/>
+	<type value="searchset"/>
+	<total value="1"/>
+	<link>
+		<relation value="self"/>
+		<url value="http://fhir3.healthintersections.com.au/open/MedicationRequest?search-id=4085956e-63b8-402d-b181-325040fdb9&amp;&amp;_id=uscore%2Dmo3&amp;_include=MedicationRequest%3Amedication&amp;_sort=_id"/>
+	</link>
+	<entry>
+		<fullUrl value="http://fhir3.healthintersections.com.au/open/MedicationRequest/uscore-mo3"/>
+		<resource>
+			<MedicationRequest xmlns="http://hl7.org/fhir">
+				<id value="uscore-mo3"/>
+				<meta>
+					<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-medicationrequest"/>
+				</meta>
+				<!-- this is an example using an external reference to a medication resource
+ -->
+				<status value="active"/>
+				<intent value="order"/>
+				<!--  either a code or a reference to the medication being prescribed. As described earlier, this could be contained, separately    within a bundle or simply a reference to a remote server. -->
+				<medicationReference>
+					<reference value="Medication/uscore-med2"/>
+					<display value="Nizatidine 15 MG/ML Oral Solution [Axid]"/>
+				</medicationReference>
+				<subject>
+					<reference value="Patient/example"/>
+					<display value="Amy Shaw"/>
+				</subject>
+				<authoredOn value="2008-04-05"/>
+				<requester>
+					<agent>
+						<!-- MedicationRequest Practitioner reference causes a build error
+									<reference value="Practitioner/practitioner-1"/>
+						-->
+						<display value="Ronald Bone, MD"/>
+					</agent>
+				</requester>
+			</MedicationRequest>
+		</resource>
+		<search>
+			<mode value="match"/>
+		</search>
+	</entry>
+	<entry>
+		<fullUrl value="/Medication/uscore-med2"/>
+		<resource>
+			<Medication xmlns="http://hl7.org/fhir">
+				<id value="uscore-med2"/>
+				<meta>
+					<versionId value="1"/>
+					<lastUpdated value="2016-11-29T19:45:46Z"/>
+					<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-medication"/>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+						<code value="582620"/>
+						<display value="Nizatidine 15 MG/ML Oral Solution [Axid]"/>
+					</coding>
+					<text value="Nizatidine 15 MG/ML Oral Solution [Axid]"/>
+				</code>
+			</Medication>
+		</resource>
+		<search>
+			<mode value="include"/>
+		</search>
+	</entry>
+</Bundle>

@@ -1,0 +1,36 @@
+<Organization  xmlns="http://hl7.org/fhir" >
+	<id value="acme-lab"/>
+	<meta><profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization"></profile></meta>
+	<identifier>
+		<system value="http://hl7.org.fhir/sid/us-npi"/>
+		<value value="1144221847"/>
+	</identifier>
+	<identifier>
+		<system value="http://www.acme.org/organization"/>
+		<value value="2523423456"/>
+	</identifier>
+	<active value="true"/>
+	<type>
+		<coding>
+			<system value="http://hl7.org/fhir/organization-type"/>
+			<code value="prov"/>
+			<display value="Healthcare Provider"/>
+		</coding>
+	</type>
+	<name value="Acme Labs"/>
+	<telecom>
+		<system value="phone"/>
+		<value value="(+1) 734-677-7777"/>
+	</telecom>
+	<telecom>
+		<system value="email"/>
+		<value value="hq@acme.org"/>
+	</telecom>
+	<address>
+		<line value="3300 Washtenaw Avenue, Suite 227"/>
+		<city value="Amherst"/>
+		<state value="MA"/>
+		<postalCode value="01002"/>
+		<country value="USA"/>
+	</address>
+</Organization>

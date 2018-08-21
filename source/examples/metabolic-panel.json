@@ -1,0 +1,80 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "metabolic-panel",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-diagnosticreport"
+    ],
+    "versionId": "205790",
+    "lastUpdated": "2016-03-09T15:35:58.018+00:00"
+  },
+  "status": "final",
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/v2/0074",
+        "code": "LAB",
+        "display": "Laboratory"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "24323-8",
+        "display": "Comprehensive metabolic 2000 panel - Serum or Plasma"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-04",
+  "issued": "2005-07-06T11:45:33+11:00",
+  "performer": [
+    {
+      "reference": "Organization/acme-lab",
+      "display": "Acme Laboratory, Inc"
+    }
+  ],
+  "result": [
+    {
+      "reference": "Observation/serum-total-bilirubin",
+      "display": "TOTAL BILIRUBIN"
+    },
+    {
+      "reference": "Observation/serum-sodium",
+      "display": "SODIUM"
+    },
+    {
+      "reference": "Observation/serum-potassium",
+      "display": "Potassium"
+    },
+    {
+      "reference": "Observation/serum-creatinine",
+      "display": "CREATININE"
+    },
+    {
+      "reference": "Observation/serum-co2",
+      "display": "TOTAL CO2"
+    },
+    {
+      "reference": "Observation/serum-chloride",
+      "display": "CHLORIDE"
+    },
+    {
+      "reference": "Observation/serum-calcium",
+      "display": "CALCIUM"
+    },
+    {
+      "reference": "Observation/bun",
+      "display": "BUN"
+    },
+    {
+      "reference": "Observation/blood-glucose",
+      "display": "GLUCOSE"
+    }
+  ]
+}

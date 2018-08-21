@@ -1,0 +1,52 @@
+{
+  "resourceType": "Observation",
+  "id": "urine-wbcs",
+  "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+    "versionId": "206635",
+    "lastUpdated": "2016-04-18T04:25:02.064+00:00"
+  },
+  "status": "final",
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+      }
+    ],
+    "text": "Laboratory"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "5821-4",
+        "display": "Leukocytes [#/area] in Urine sediment by Microscopy high power field"
+      }
+    ],
+    "text": "WBC"
+  },
+  "subject": {
+    "reference": "Patient/example","display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-05",
+  "valueRange": {
+    "low": {
+      "value": 20,
+      "unit": "cells/HPF",
+      "system": "http://unitsofmeasure.org",
+      "code": "/[HPF]"
+    },
+    "high": {
+      "value": 30,
+      "unit": "cells/HPF",
+      "system": "http://unitsofmeasure.org",
+      "code": "/[HPF]"
+    }
+  },
+  "referenceRange": [
+    {
+      "text": "None Seen/HPF"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "resourceType": "Observation",
+  "id": "urine-ph",
+  "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+    "versionId": "206600",
+    "lastUpdated": "2016-04-18T04:12:25.425+00:00"
+  },
+
+  "status": "final",
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+      }
+    ],
+    "text": "Laboratory"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "5803-2",
+        "display": "pH of Urine by Test strip"
+      }
+    ],
+    "text": "PH"
+  },
+  "subject": {
+    "reference": "Patient/example","display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-05",
+  "valueQuantity": {
+    "value": 6.0,
+    "unit": "(pH)",
+    "system": "http://unitsofmeasure.org",
+    "code": "[pH]"
+  },
+  "referenceRange": [
+    {
+      "low": {
+        "value": 5.0,
+        "unit": "(pH)",
+        "system": "http://unitsofmeasure.org",
+        "code": "[pH]"
+      },
+      "high": {
+        "value": 8.0,
+        "unit": "(pH)",
+        "system": "http://unitsofmeasure.org",
+        "code": "[pH]"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd/fhir-all.xsd">
+	<id value="condition-category"/>
+	<url value="http://hl7.org/fhir/us/core-r4/CodeSystem/condition-category"/> <version value="1.0.1"/>
+	<name value="US Core Condition Category Extension Codes"/>
+	<status value="draft"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+	<description value="Set of codes that are needed for implementation of the US-Core profiles. These codes are used as extensions to the FHIR and US Core value sets.&#xa;"/>
+	<caseSensitive value="true"/>
+		<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/condition-category"/>
+	<content value="complete"/>
+	<concept>
+		<code value="problem"/>
+		<display value="Problem"/>
+		<definition value="The patients problems as identified by the provider(s). Items on the provider’s problem list"/>
+	</concept>
+	<concept>
+		<code value="health-concern"/>
+		<display value="Health Concern"/>
+		<definition value="Additional health concerns from other stakeholders which are outside the provider’s problem list."/>
+	</concept>
+</CodeSystem>

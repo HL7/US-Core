@@ -1,0 +1,53 @@
+{
+  "resourceType": "Observation",
+  "id": "urine-epi-cells",
+  "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+    "versionId": "206624",
+    "lastUpdated": "2016-04-18T04:23:12.123+00:00"
+  },
+
+  "status": "final",
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+      }
+    ],
+    "text": "Laboratory"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "5787-7",
+        "display": "Epithelial cells [#/area] in Urine sediment by Microscopy high power field"
+      }
+    ],
+    "text": "EPITHELIAL CELLS"
+  },
+  "subject": {
+    "reference": "Patient/example","display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-05",
+  "valueRange": {
+    "low": {
+      "value": 1,
+      "unit": "cells/HPF",
+      "system": "http://unitsofmeasure.org",
+      "code": "/[HPF]"
+    },
+    "high": {
+      "value": 5,
+      "unit": "cells/HPF",
+      "system": "http://unitsofmeasure.org",
+      "code": "/[HPF]"
+    }
+  },
+  "referenceRange": [
+    {
+      "text": "None Seen/HPF"
+    }
+  ]
+}

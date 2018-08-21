@@ -1,0 +1,66 @@
+{
+   "resourceType": "Observation",
+   "id": "serum-calcium",
+   "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+     "versionId": "902",
+     "lastUpdated": "2016-03-09T15:29:57.227+00:00"
+   },
+
+   "status": "final",
+   "category": {
+     "coding": [
+       {
+         "system": "http://hl7.org/fhir/observation-category",
+         "code": "laboratory",
+         "display": "Laboratory"
+       }
+     ],
+     "text": "Laboratory"
+   },
+   "code": {
+     "coding": [
+       {
+         "system": "http://loinc.org",
+         "code": "17861-6",
+         "display": "Calcium SerPl-mCnc"
+       }
+     ],
+     "text": "Calcium SerPl-mCnc"
+   },
+   "subject": {
+     "reference": "Patient/example","display": "Amy Shaw"
+   },
+   "effectiveDateTime": "2005-07-05",
+   "valueQuantity": {
+     "value": 7.7,
+     "unit": "mg/dL",
+     "system": "http://unitsofmeasure.org"
+   },
+   "referenceRange": [
+     {
+       "low": {
+         "value": 8.5,
+         "unit": "mg/dL",
+         "system": "http://unitsofmeasure.org",
+         "code": "mg/dL"
+       },
+       "high": {
+         "value": 10.5,
+         "unit": "mg/dL",
+         "system": "http://unitsofmeasure.org",
+         "code": "mg/dL"
+       },
+       "appliesTo": {
+         "coding": [
+           {
+             "system": "http://hl7.org/fhir/referencerange-meaning",
+             "code": "normal",
+             "display": "Normal Range"
+           }
+         ],
+         "text": "Normal Range"
+       }
+     }
+   ]
+}
+ 

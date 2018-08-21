@@ -1,0 +1,50 @@
+{
+  "resourceType": "Observation",
+  "id": "urine-protein",
+  "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
+    "versionId": "206480",
+    "lastUpdated": "2016-04-18T03:40:36.404+00:00"
+  },
+
+  "status": "final",
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory"
+      }
+    ],
+    "text": "Laboratory"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "20454-5",
+        "display": "Protein [Presence] in Urine by Test strip"
+      }
+    ],
+    "text": "PROTEIN"
+  },
+  "subject": {
+    "reference": "Patient/example","display": "Amy Shaw"
+  },
+  "effectiveDateTime": "2005-07-05",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "260385009",
+        "display": "Negative"
+      }
+    ],
+    "text": "Negative"
+  },
+  "referenceRange": [
+    {
+      "text": "Negative"
+    }
+  ]
+}
+ 
