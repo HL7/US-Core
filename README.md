@@ -9,7 +9,7 @@ FHIR R4 Implementation Guide
 
 GitHub will automatically trigger a new build whenever you commit changes.
 
-*Note: a build takes 2-3 minutes to complete. *Note: a build takes 2-3 minutes to complete. You should see a notification at https://chat.fhir.org/#narrow/stream/committers/topic/ig-build.
+*Note: a build takes 2-3 minutes to complete. You should see a notification at https://chat.fhir.org/#narrow/stream/committers/topic/ig-build.
 *
 
 ### Find your rendered IG automatically available at
