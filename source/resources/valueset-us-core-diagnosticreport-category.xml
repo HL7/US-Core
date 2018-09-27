@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<id value="us-core-diagnosticreport-category"/>
+	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-diagnosticreport-category"/>
+	<version value="0.0.0"/>
+	<name value="US Core DiagnosticReport Category Codes"/>
+	<title value="US Core DiagnosticReport Category Codes Value Set"/>
+	<status value="draft"/>
+	<date value="2018-05-02T08:16:34-07:00"/>
+	<description value="The US Core DiagnosticReport Type Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and notes."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<copyright value=" This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"/>
+	<compose>
+		<include>
+			<system value="http://loinc.org"/>
+			<concept>
+				<code value="LP29684-5"/>
+				<display value="Radiology"/>
+			</concept>
+			<concept>
+				<code value="LP29708-2"/>
+				<display value="Cardiology"/>
+			</concept>
+			<concept>
+				<code value="LP7839-6"/>
+				<display value="Pathology"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

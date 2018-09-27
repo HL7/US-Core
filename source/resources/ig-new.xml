@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ig"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"/>
+    <valueString value="C:\US-Core-R4\source\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"/>
+    <valueString value="C:\US-Core-R4\source\examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/framework"/>
+    <valueString value="C:\US-Core-R4\framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"/>
+    <valueString value="C:\US-Core-R4\source\pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/core-r4/ImplementationGuide/ig"/>
   <version value="2.0.0"/>
@@ -485,6 +485,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/us-core-diagnosticreport-category"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-substance-sct"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -762,6 +768,12 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/us-core-diagnosticreport"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/new-us-core-diagnosticreport"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
