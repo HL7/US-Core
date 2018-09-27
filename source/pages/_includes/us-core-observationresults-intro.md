@@ -30,7 +30,7 @@ Each Observation *should* have:
 **Profile specific implementation guidance:**
 
 * Additional codes that translate or map to the Observation code or category codes are allowed.  For example:
-   -  providing both a local code and LOINC code 
+   -  providing both a local code and LOINC code
    -  providing a more specific category codes such as 'chemistry', [SNOMED CT] concept, or system specific codes in addition to the 'laboratory' category code.
 * An Observation without a value must include an absent reason or group other results. When it groups results, the composite values or references to other Observations will be populated.
 * See the [General Guidance Section] for further guidance on using UCUM
@@ -42,9 +42,9 @@ Each Observation *should* have:
  - [observation-erythrocytes](Observation-erythrocytes.html)
 
  [SNOMED CT]: http://snomed.info/sct
-  [Observation Value Absent Reason]: {{site.data.fhir.path}}/valueset-observation-valueabsentreason.html
+  [Observation Value Absent Reason]: {http://hl7.org/fhir/valueset-data-absent-reason.html
   [UCUM]: http://unitsofmeasure.org
   [LOINC]: http://loinc.org
-[Observation]:  {{site.data.fhir.path}}/observation.html
-[DiagnosticReport]:  {{site.data.fhir.path}}/diagnosticreport.html
+[Observation]:  {{site.data.fhir.path}}observation.html
+[DiagnosticReport]:  {{site.data.fhir.path}}diagnosticreport.html
 [General Guidance Section]: guidance.html#using-ucum-codes-in-the-quantity-datatype

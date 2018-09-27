@@ -35,5 +35,5 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 
  - [observation-some-day-smoker](Observation-some-day-smoker.html)
 
-[Observation]: {{site.data.fhir.path}}/observation.html
+[Observation]: {{site.data.fhir.path}}observation.html
 [Conformance requirements for the US Core Server]: CapabilityStatement-server.html

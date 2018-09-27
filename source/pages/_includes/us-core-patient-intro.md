@@ -44,5 +44,5 @@ In addition, based upon the 2015 Edition Certification Requirements, the followi
 - [Patient-example](Patient-example.html)
 
 
-[Patient]: {{site.data.fhir.path}}/patient.html
+[Patient]: {{site.data.fhir.path}}patient.html
 [Must Support]: guidance.html#must-support

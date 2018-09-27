@@ -30,4 +30,4 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 
 - [AllergyIntolerance-example](AllergyIntolerance-example.html)
 
-[AllergyIntolerance]: {{site.data.fhir.path}}/allergyintolerance.html
+[AllergyIntolerance]: {{site.data.fhir.path}}allergyintolerance.html

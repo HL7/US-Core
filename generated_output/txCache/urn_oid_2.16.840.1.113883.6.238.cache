@@ -1,0 +1,147 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "1586-7",
+  "display" : "Shoshone"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "1000-9"
+      }]
+    }],
+    "exclude" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "concept" : [{
+        "code" : "1002-5"
+      },
+      {
+        "code" : "2028-9"
+      },
+      {
+        "code" : "2054-5"
+      },
+      {
+        "code" : "2076-8"
+      },
+      {
+        "code" : "2106-3"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"urn:oid:2.16.840.1.113883.6.238\" is not known; The code provided (urn:oid:2.16.840.1.113883.6.238#1586-7) is not  valid in the value set US-Core Detailed Race"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "2036-2",
+  "display" : "Filipino"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "1000-9"
+      }]
+    }],
+    "exclude" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "concept" : [{
+        "code" : "1002-5"
+      },
+      {
+        "code" : "2028-9"
+      },
+      {
+        "code" : "2054-5"
+      },
+      {
+        "code" : "2076-8"
+      },
+      {
+        "code" : "2106-3"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"urn:oid:2.16.840.1.113883.6.238\" is not known; The code provided (urn:oid:2.16.840.1.113883.6.238#2036-2) is not  valid in the value set US-Core Detailed Race"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "2184-0",
+  "display" : "Dominican"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "2133-7"
+      }]
+    }],
+    "exclude" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "concept" : [{
+        "code" : "2135-2"
+      },
+      {
+        "code" : "2186-5"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"urn:oid:2.16.840.1.113883.6.238\" is not known; The code provided (urn:oid:2.16.840.1.113883.6.238#2184-0) is not  valid in the value set US-Core Detailed ethnicity"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:2.16.840.1.113883.6.238",
+  "code" : "2148-5",
+  "display" : "Mexican"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "2133-7"
+      }]
+    }],
+    "exclude" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "concept" : [{
+        "code" : "2135-2"
+      },
+      {
+        "code" : "2186-5"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"urn:oid:2.16.840.1.113883.6.238\" is not known; The code provided (urn:oid:2.16.840.1.113883.6.238#2148-5) is not  valid in the value set US-Core Detailed ethnicity"
+}
+-------------------------------------------------------------------------------------

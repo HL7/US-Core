@@ -39,5 +39,5 @@ Additionally your system [Must Support]:
 - [Outpatient Example](Encounter-example-1.html)
 
 
-[Encounter]: {{site.data.fhir.path}}/encounter.html
+[Encounter]: {{site.data.fhir.path}}encounter.html
 [Must Support]: guidance.html#must-support

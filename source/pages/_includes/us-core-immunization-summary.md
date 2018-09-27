@@ -1,6 +1,6 @@
 #### Complete Summary of the Mandatory Requirements
 
-1.  One status in `Immunization.status` which has a [required]({{site.data.fhir.path}}/terminologies.html#required) binding to:
+1.  One status in `Immunization.status` which has a [required]({{site.data.fhir.path}}terminologies.html#required) binding to:
 -  [Immunization Status] value set.
 1.  One dateTime in `Immunization.date`
 1.  One vaccine code in `Immunization.vaccineCode` which has:
@@ -10,6 +10,6 @@
 1.  One boolean value in `Immunization.notGiven`
 1.  One boolean value in `Immunization.primarySource`
 
-  [Immunization Status]: {{site.data.fhir.path}}/valueset-immunization-status.html
+  [Immunization Status]: {{site.data.fhir.path}}valueset-immunization-status.html
   [CVX]: ValueSet-us-core-cvx.html
   [NDC]: ValueSet-us-core-ndc-vaccine-codes.html

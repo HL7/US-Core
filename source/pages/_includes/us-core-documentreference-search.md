@@ -47,8 +47,8 @@ Example: see [$docref operation]
 *Implementation Notes:* Search for CCD document from the last encounter and MAY search for other document types from the last encounter as well. Fetches a bundle of DocumentReference resources for the specified patient [(how to search by reference)].
 
 
-[(how to search by reference)]: {{site.data.fhir.path}}/search.html#reference
-[(how to search by token)]: {{site.data.fhir.path}}/search.html#token
-[(how to search by date)]: {{site.data.fhir.path}}/search.html#date
+[(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
+[(how to search by token)]: {{site.data.fhir.path}}search.html#token
+[(how to search by date)]: {{site.data.fhir.path}}search.html#date
 [IHE XDS]: https://wiki.ihe.net/index.php/Cross-Enterprise_Document_Sharing
 [$docref operation]: OperationDefinition-docref.html

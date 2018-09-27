@@ -30,4 +30,4 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 - [CarePlan-colonoscopy](CarePlan-colonoscopy.html)
 
 
-[CarePlan]: {{site.data.fhir.path}}/careplan.html
+[CarePlan]: {{site.data.fhir.path}}careplan.html

@@ -1,0 +1,120 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/ndfrt",
+  "code" : "N0000175503"
+}, "valueSet" :null}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/ndfrt\" is not known; The code provided (http://hl7.org/fhir/ndfrt#N0000175503) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/ndfrt",
+  "code" : "N0000000223"
+}, "valueSet" :null}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/ndfrt\" is not known; The code provided (http://hl7.org/fhir/ndfrt#N0000000223) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/ndfrt",
+  "code" : "N0000009802"
+}, "valueSet" :null}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/ndfrt\" is not known; The code provided (http://hl7.org/fhir/ndfrt#N0000009802) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/ndfrt",
+  "code" : "N0000000002"
+}, "valueSet" :null}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/ndfrt\" is not known; The code provided (http://hl7.org/fhir/ndfrt#N0000000002) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://hl7.org/fhir/ndfrt",
+    "code" : "N0000175503",
+    "display" : "sulfonamide antibacterial"
+  }],
+  "text" : "sulfonamide antibacterial"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt"]
+    },
+    {
+      "valueSet" : ["http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-rxnorm"]
+    },
+    {
+      "valueSet" : ["http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-sct"]
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "Unable to find value set http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/ndfrt",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "N0000000223"
+      }]
+    }]
+  }
+}}
+####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/ndfrt"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/ndfrt",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "N0000000223"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/ndfrt",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "N0000009802"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/ndfrt",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "N0000000002"
+      }]
+    }]
+  }
+}}
+####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/ndfrt"
+}
+-------------------------------------------------------------------------------------

@@ -37,17 +37,17 @@ Additionally your system [Must Support]:
 #### Examples
 
 - [MedicationStatement-uscore-ms1](MedicationStatement-uscore-ms1.html) Inline medication code to represent the medication.
-- [MedicationStatement-uscore-ms2](MedicationStatement-uscore-ms2.html) Reference to a [contained]({{site.data.fhir.path}}/references.html#contained) Medication resource.
-- [MedicationStatement-uscore-ms3](Bundle-uscore-ms3.html) A search [Bundle]({{site.data.fhir.path}}/bundle.html) with a MedicationStatement and an included Medication resource in the Bundle.
+- [MedicationStatement-uscore-ms2](MedicationStatement-uscore-ms2.html) Reference to a [contained]({{site.data.fhir.path}}references.html#contained) Medication resource.
+- [MedicationStatement-uscore-ms3](Bundle-uscore-ms3.html) A search [Bundle]({{site.data.fhir.path}}bundle.html) with a MedicationStatement and an included Medication resource in the Bundle.
 
   [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
-  [MedicationRequestStatus]: {{site.data.fhir.path}}/us/daf/ValueSet-medication-request-status.html
-[MedicationStatementStatus]: {{site.data.fhir.path}}/us/daf/ValueSet-medication-statement-status.html
-[MedicationStatement]:{{site.data.fhir.path}}/medicationstatement.html
- [MedicationRequest]: {{site.data.fhir.path}}/medicationrequest.html
- [Medication]:{{site.data.fhir.path}}/medication.html
+  [MedicationRequestStatus]: {{site.data.fhir.path}}us/daf/ValueSet-medication-request-status.html
+[MedicationStatementStatus]: {{site.data.fhir.path}}us/daf/ValueSet-medication-statement-status.html
+[MedicationStatement]:{{site.data.fhir.path}}medicationstatement.html
+ [MedicationRequest]: {{site.data.fhir.path}}medicationrequest.html
+ [Medication]:{{site.data.fhir.path}}medication.html
  [CapabilityStatement]: capstmnts.html
- [boundaries section]: {{site.data.fhir.path}}/medicationrequest.html#bnr
-[include]: {{site.data.fhir.path}}/search.html#include
-[contained]: {{site.data.fhir.path}}/references.html#contained
+ [boundaries section]: {{site.data.fhir.path}}medicationrequest.html#bnr
+[include]: {{site.data.fhir.path}}search.html#include
+[contained]: {{site.data.fhir.path}}references.html#contained
 [Must Support]: guidance.html#must-support

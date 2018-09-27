@@ -4,7 +4,7 @@ layout: default
 active: searchparameters
 ---
 
-The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations ]({{site.data.fhir.path}}/operations.html), [FHIR RESTful search api]({{site.data.fhir.path}}/search.html) and the standard [Search Param Registry]({{site.data.fhir.path}}/searchparameter-registry.html) see the FHIR specification.
+The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations ]({{site.data.fhir.path}}operations.html), [FHIR RESTful search api]({{site.data.fhir.path}}search.html) and the standard [Search Param Registry]({{site.data.fhir.path}}searchparameter-registry.html) see the FHIR specification.
 
 ## Operations
 

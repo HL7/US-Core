@@ -1,13 +1,13 @@
 ### Complete Summary of the Mandatory Requirements
 
-1.  One status in `Observation.status`which has an [extensible]({{site.data.fhir.path}}/terminologies.html#extensible) binding to:
+1.  One status in `Observation.status`which has an [extensible]({{site.data.fhir.path}}terminologies.html#extensible) binding to:
     -    [ObservationStatus] value set.
 1.  A category in `Observation.category` which must have:
     -   a fixed `Observation.category.coding.system`="http://hl7.org/fhir/observation-category"
     -   a fixed `Observation.category.coding.code`=“vital-signs”
 1.  A code in `Observation.code`
     -   a fixed `Observation.code.coding.system`=“<http://loinc.org>”
-    -   a LOINC code in `Observation.code.coding.code` which has an [extensible]({{site.data.fhir.path}}/terminologies.html#extensible) binding to:
+    -   a LOINC code in `Observation.code.coding.code` which has an [extensible]({{site.data.fhir.path}}terminologies.html#extensible) binding to:
          -   [Vital Signs] value set.                
 1.  One patient in `Observation.subject`
 1.  A date and time in `effectiveDateTime` or `effectivePeriod`
@@ -15,7 +15,7 @@
     -   Each Observation.valueQuantity must have:
         -   One numeric value in `Observation.valueQuantity.value`
         -   a fixed `Observation.valueQuantity.system`="<http://unitsofmeasure>"
-        -   a UCUM unit code in `Observation.valueQuantity.code` which has an [extensible]({{site.data.fhir.path}}/terminologies.html#extensible) binding to:
+        -   a UCUM unit code in `Observation.valueQuantity.code` which has an [extensible]({{site.data.fhir.path}}terminologies.html#extensible) binding to:
              -   [Vital Signs Units] value set.
     -   Observation.DataAbsentReason is bound to [Observation Value
         Absent ReaÂson] value set.
@@ -24,7 +24,7 @@
     1. one or more `Observation.component.code` each of which must have:
       -   a fixed
           `Observation.component.code.coding.system`=“<http://loinc.org>”
-           -   a LOINC code in `Observation.code.coding.code` which has an [extensible]({{site.data.fhir.path}}/terminologies.html#extensible) binding to:
+           -   a LOINC code in `Observation.code.coding.code` which has an [extensible]({{site.data.fhir.path}}terminologies.html#extensible) binding to:
                -   [Vital Signs] value set.
     1.  Either one `Observation.component.valueQuantity` or, if there is
           no value, one code in `Observation.component.DataAbsentReason`
@@ -33,7 +33,7 @@
                   `Observation.component.valueQuantity.value`
               -   a fixed `Observation.component.valueQuantity.system`=“<http://unitsofmeasure.org>”
               -   a UCUM unit code in
-                  `Observation.component.valueQuantity.code` which has an [extensible]({{site.data.fhir.path}}/terminologies.html#extensible) binding to:
+                  `Observation.component.valueQuantity.code` which has an [extensible]({{site.data.fhir.path}}terminologies.html#extensible) binding to:
                    -   [Vital Signs Units] value set.
           -   Observation.component.DataAbsentReason is bound to [Observation
               Value Absent Reason] value set.
@@ -42,8 +42,8 @@
     -   a fixed `Observation.related.type`=“has-member”
 
  [Vital Signs]: ValueSet-us-core-observation-ccdavitalsignresult.html
-  [Vital Signs Units]: {{site.data.fhir.path}}/valueset-ucum-vitals-common.html
+  [Vital Signs Units]: {{site.data.fhir.path}}valueset-ucum-vitals-common.html
   [extensible bindings]: Implementation_Guide#Extensible_binding_for_CodeableConcept_Datatype "wikilink"
   [using multiple codes]: Implementation_Guide#Using_multiple_codes_with_CodeableConcept_Datatype "wikilink"
-  [ObservationStatus]: {{site.data.fhir.path}}/valueset-observation-status.html
- [Observation Value Absent Reason]: {{site.data.fhir.path}}/valueset-observation-valueabsentreason.html
+  [ObservationStatus]: {{site.data.fhir.path}}valueset-observation-status.html
+ [Observation Value Absent Reason]: {http://hl7.org/fhir/valueset-data-absent-reason.html

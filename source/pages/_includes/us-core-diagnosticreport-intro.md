@@ -39,5 +39,5 @@ Each DiagnosticReport *should* have:
 - [Diagnosticreport-metabolic-panel](DiagnosticReport-metabolic-panel.html)
 - [Diagnosticreport-cbc](DiagnosticReport-cbc.html)
 
-[Observation]:  {{site.data.fhir.path}}/observation.html
-[DiagnosticReport]:  {{site.data.fhir.path}}/diagnosticreport.html
+[Observation]:  {{site.data.fhir.path}}observation.html
+[DiagnosticReport]:  {{site.data.fhir.path}}diagnosticreport.html

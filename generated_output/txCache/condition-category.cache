@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/condition-category"
+    }]
+  }
+}}
+####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/condition-category"
+}
+-------------------------------------------------------------------------------------

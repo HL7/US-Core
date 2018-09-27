@@ -42,7 +42,7 @@ SHOULD support:
 -   (Status 401/4xx): unauthorized request
 -   (Status 403): insufficient scope
 
-  [(how to search by reference)]: {{site.data.fhir.path}}/search.html#reference
-  [(how to search by token)]: {{site.data.fhir.path}}/search.html#token
- [(how to search by date)]: {{site.data.fhir.path}}/search.html#date
- [(how to search by string)]: {{site.data.fhir.path}}/search.html#string
+  [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
+  [(how to search by token)]: {{site.data.fhir.path}}search.html#token
+ [(how to search by date)]: {{site.data.fhir.path}}search.html#date
+ [(how to search by string)]: {{site.data.fhir.path}}search.html#string

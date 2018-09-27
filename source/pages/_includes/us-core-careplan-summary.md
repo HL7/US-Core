@@ -12,7 +12,8 @@
 1.  One reference to a patient in `CarePlan.subject`
 
 
-  [CarePlan.text.status]: {{site.data.fhir.path}}/valueset-narrative-status.html
-  [CarePlanStatus]: {{site.data.fhir.path}}/valueset-care-plan-status.html
-  [CarePlanIntent]: {{site.data.fhir.path}}/valueset-care-plan-intent.html
+  [CarePlan.text.status]: {{site.data.fhir.path}}valueset-narrative-status.html
+  [CarePlanStatus]: http://hl7.org/fhir/request-status
+
+  [CarePlanIntent]: {{site.data.fhir.path}}valueset-care-plan-intent.html
  [http://hl7.org/fhir/us/daf/CodeSystemCarePlan-category]: CodeSystem-careplan-category.html

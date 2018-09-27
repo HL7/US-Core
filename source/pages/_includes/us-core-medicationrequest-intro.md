@@ -35,16 +35,16 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 #### Examples
 
 - [MedicationRequest-uscore-mo1](MedicationRequest-uscore-mo1.html) Inline medication code to represent the medication.
-- [MedicationRequest-uscore-mo2](MedicationRequest-uscore-mo2.html) Reference to a [contained]({{site.data.fhir.path}}/references.html#contained) Medication resource.
-- [MedicationRequest-uscore-mo3](Bundle-uscore-mo3.html) A search [Bundle]({{site.data.fhir.path}}/bundle.html) with a MedicationRequest and an included Medication resource in the Bundle.
+- [MedicationRequest-uscore-mo2](MedicationRequest-uscore-mo2.html) Reference to a [contained]({{site.data.fhir.path}}references.html#contained) Medication resource.
+- [MedicationRequest-uscore-mo3](Bundle-uscore-mo3.html) A search [Bundle]({{site.data.fhir.path}}bundle.html) with a MedicationRequest and an included Medication resource in the Bundle.
 
   [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
-  [MedicationRequestStatus]: {{site.data.fhir.path}}/us/daf/ValueSet-medication-request-status.html
-[MedicationStatementStatus]: {{site.data.fhir.path}}/us/daf/ValueSet-medication-statement-status.html
-[MedicationStatement]:{{site.data.fhir.path}}/medicationstatement.html
- [MedicationRequest]: {{site.data.fhir.path}}/medicationrequest.html
- [Medication]:{{site.data.fhir.path}}/medication.html
+  [MedicationRequestStatus]: {{site.data.fhir.path}}us/daf/ValueSet-medication-request-status.html
+[MedicationStatementStatus]: {{site.data.fhir.path}}us/daf/ValueSet-medication-statement-status.html
+[MedicationStatement]:{{site.data.fhir.path}}medicationstatement.html
+ [MedicationRequest]: {{site.data.fhir.path}}medicationrequest.html
+ [Medication]:{{site.data.fhir.path}}medication.html
  [CapabilityStatement]: capstmnts.html
- [boundaries section]: {{site.data.fhir.path}}/medicationrequest.html#bnr
- [include]: {{site.data.fhir.path}}/search.html#include
- [contained]: {{site.data.fhir.path}}/references.html#contained
+ [boundaries section]: {{site.data.fhir.path}}medicationrequest.html#bnr
+ [include]: {{site.data.fhir.path}}search.html#include
+ [contained]: {{site.data.fhir.path}}references.html#contained

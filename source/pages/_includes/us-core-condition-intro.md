@@ -30,6 +30,6 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
  - [Condition-hc1](Condition-hc1.html) is an example of a condition categorized as a "problem"
  - [Condition-example](Condition-example.html) is an example of a condition categorized as a "health-concern"
 
-[Condition]: {{site.data.fhir.path}}/condition.html
-[extensible]: {{site.data.fhir.path}}/terminologies.html#extensible
+[Condition]: {{site.data.fhir.path}}condition.html
+[extensible]: {{site.data.fhir.path}}terminologies.html#extensible
 [US Core Condition Category Codes]: ValueSet-us-core-condition-category.html

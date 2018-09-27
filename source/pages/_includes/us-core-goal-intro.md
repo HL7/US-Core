@@ -28,4 +28,4 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 - [Goal-1](Goal-goal-1.html)
 
 
-[Goal]: {{site.data.fhir.path}}/goal.html
+[Goal]: {{site.data.fhir.path}}goal.html

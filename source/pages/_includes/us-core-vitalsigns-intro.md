@@ -51,22 +51,22 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
  - [observation-bp-data-absent](Observation-bp-data-absent.html)
 
 
-[Vital Signs Profile]: {{site.data.fhir.path}}/observation-profiles.html
-[Observation]: {{site.data.fhir.path}}/observation.html
-[extensible]: {{site.data.fhir.path}}/terminologies.html#extensible
+[Vital Signs Profile]: {{site.data.fhir.path}}observation-profiles.html
+[Observation]: {{site.data.fhir.path}}observation.html
+[extensible]: {{site.data.fhir.path}}terminologies.html#extensible
 [Conformance requirements for the US Core Server]: CapabilityStatement-server.html
 [General Guidance Section]: guidance.html
-[Vital Signs]: {{site.data.fhir.path}}/vitalsigns.html
-[Vital Signs Panel]: {{site.data.fhir.path}}/vitalspanel.html
-[Respiratory Rate]: {{site.data.fhir.path}}/resprate.html
-[Heart rate]: {{site.data.fhir.path}}/heartrate.html
-[Oxygen saturation]: {{site.data.fhir.path}}/oxygensat.html
-[Body temperature]: {{site.data.fhir.path}}/bodytemp.html
-[Body height]: {{site.data.fhir.path}}/bodyheight.html
-[Body length]: {{site.data.fhir.path}}/bodylength.html
-[Head circumference]: {{site.data.fhir.path}}/headcircum.html
-[Body weight]: {{site.data.fhir.path}}/bodyweight.html
-[Body mass index]: {{site.data.fhir.path}}/bmi.html
-[Blood pressure systolic and diastolic]: {{site.data.fhir.path}}/bp.html
-[Systolic blood pressure]: {{site.data.fhir.path}}/bp.html
-[Diastolic blood pressure]: {{site.data.fhir.path}}/bp.html
+[Vital Signs]: {{site.data.fhir.path}}vitalsigns.html
+[Vital Signs Panel]: {{site.data.fhir.path}}vitalspanel.html
+[Respiratory Rate]: {{site.data.fhir.path}}resprate.html
+[Heart rate]: {{site.data.fhir.path}}heartrate.html
+[Oxygen saturation]: {{site.data.fhir.path}}oxygensat.html
+[Body temperature]: {{site.data.fhir.path}}bodytemp.html
+[Body height]: {{site.data.fhir.path}}bodyheight.html
+[Body length]: {{site.data.fhir.path}}bodylength.html
+[Head circumference]: {{site.data.fhir.path}}headcircum.html
+[Body weight]: {{site.data.fhir.path}}bodyweight.html
+[Body mass index]: {{site.data.fhir.path}}bmi.html
+[Blood pressure systolic and diastolic]: {{site.data.fhir.path}}bp.html
+[Systolic blood pressure]: {{site.data.fhir.path}}bp.html
+[Diastolic blood pressure]: {{site.data.fhir.path}}bp.html

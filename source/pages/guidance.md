@@ -69,7 +69,7 @@ In the context of US Core, *Must Support* on any data element SHALL be interpret
 
 ## Referencing US Core profiles
 
-Many of the profiles in this guide [reference]({{site.data.fhir.path}}/references.html) other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core Careteam](StructureDefinition-us-core-careteam.html#profile) references US Core Patient.  For any other references not formally defined in a US Core profiles, the referenced resource SHOULD be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner should be a valid US Core Patient or US Core Practitioner.
+Many of the profiles in this guide [reference]({{site.data.fhir.path}}references.html) other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core Careteam](StructureDefinition-us-core-careteam.html#profile) references US Core Patient.  For any other references not formally defined in a US Core profiles, the referenced resource SHOULD be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner should be a valid US Core Patient or US Core Practitioner.
 
 ## Using Codes in US Core profiles
 
@@ -112,7 +112,7 @@ Example: AllergyIntolerance resource with a status that is text only or cannot b
        "resourceType”:“AllergyIntolerance”,
        ...
        “\_status”:{
-        “url” : “{{site.data.fhir.path}}/StructureDefinition/data-absent-reason”,
+        “url” : “{{site.data.fhir.path}}StructureDefinition/data-absent-reason”,
        “valueCode” : “unsupported”
         ...
       },
@@ -167,12 +167,12 @@ Example of translation of CVX vaccine code to NDC code.
     "vaccineCode" : {
         "coding" : [
           {
-            "system" : "{{site.data.fhir.path}}/sid/cvx",
+            "system" : "{{site.data.fhir.path}}sid/cvx",
             "code" : "158",
             "display" : "influenza, injectable, quadrivalent"
           },
           {
-            "system" : "{{site.data.fhir.path}}/sid/ndc",
+            "system" : "{{site.data.fhir.path}}sid/ndc",
             "code" : "49281-0623-78",
             "display" : "FLUZONE QUADRIVALENT"
           }
