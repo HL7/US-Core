@@ -3,10 +3,10 @@
 	<id value="simple-language"/>
 	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/simple-language"/>
 	<version value="1.0.1"/>
-	<name value="Language codes with language and optionally a region modifier"/>
+	<name value="Language_codes_with_language_and_optionally_a_region_modifier"/>
+	<title value="Language codes with language and optionally a region modifier"/>
 	<status value="draft"/>
 	<date value="2017-02-28"/>
-
 	<publisher value="HL7 US Realm Steering Committee"/>
 	<contact>
 		<telecom>
@@ -14,8 +14,7 @@
 			<value value="http://hl7.org/fhir"/>
 		</telecom>
 	</contact>
-	<description value="This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47). This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,
-		and a 3 character code if a 2 character code does not exist. It points back to [RFC 5646](https://tools.ietf.org/html/rfc5646), however only the language codes are required, all other elements are optional."/>
+	<description value="This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47). This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,   and a 3 character code if a 2 character code does not exist. It points back to [RFC 5646](https://tools.ietf.org/html/rfc5646), however only the language codes are required, all other elements are optional."/>
 	<compose>
 		<include>
 			<system value="urn:ietf:bcp:47"/>

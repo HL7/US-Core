@@ -44,7 +44,7 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 [MedicationStatement]:{{site.data.fhir.path}}medicationstatement.html
  [MedicationRequest]: {{site.data.fhir.path}}medicationrequest.html
  [Medication]:{{site.data.fhir.path}}medication.html
- [CapabilityStatement]: capstmnts.html
+ [CapabilityStatement]: capstatements.html
  [boundaries section]: {{site.data.fhir.path}}medicationrequest.html#bnr
  [include]: {{site.data.fhir.path}}search.html#include
  [contained]: {{site.data.fhir.path}}references.html#contained

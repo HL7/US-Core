@@ -3,19 +3,19 @@
   "id" : "ig",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\US-Core-R4\\source\\resources"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\US-Core-R4\\source\\examples"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\US-Core-R4\\framework"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\US-Core-R4\\source\\pages"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"
   }],
   "url" : "http://hl7.org/fhir/us/core-r4/ImplementationGuide/ig",
   "version" : "2.0.0",
@@ -488,12 +488,6 @@
     },
     {
       "reference" : {
-        "reference" : "ValueSet/us-core-diagnosticreport-category"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "ValueSet/us-core-substance-sct"
       },
       "exampleBoolean" : false
@@ -578,6 +572,12 @@
     },
     {
       "reference" : {
+        "reference" : "ValueSet/us-core-diagnosticreport-category"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/us-core-cvx"
       },
       "exampleBoolean" : false
@@ -657,6 +657,18 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/us-core-birthsex"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/new-us-core-documentreference"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/new-us-core-diagnosticreport"
       },
       "exampleBoolean" : false
     },
@@ -771,18 +783,6 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/us-core-diagnosticreport"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/new-us-core-diagnosticreport"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/new-us-core-documentreference"
       },
       "exampleBoolean" : false
     },

@@ -3,9 +3,9 @@
 	<id value="us-core-observation-value-codes"/>
 	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-observation-value-codes"/>
 	<version value="1.0.1"/>
-	<name value="Observation Value Codes (SNOMED-CT)"/>
+	<name value="Observation_Value_Codes_SNOMED_CT"/>
+  <title value="Observation Value Codes (SNOMED-CT)"/>
 	<status value="draft"/>
-	
 	<date value="2016-08-10"/>
 	<publisher value="HL7 US Realm Steering Committee"/>
 	<contact>
@@ -20,7 +20,6 @@
 	</contact>
 	<description value="[Snomed-CT](http://www.ihtsdo.org/) concept codes for coded results"/>
 	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
-	<extensible value="true"/>
 	<compose>
 		<include>
 			<system value="http://snomed.info/sct"/>

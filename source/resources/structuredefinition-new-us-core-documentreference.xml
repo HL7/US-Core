@@ -1,81 +1,82 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="new-us-core-documentreference" />
-  <url value="http://hl7.org/fhir/us/core-r4/StructureDefinition/new-us-core-documentreference" />
-  <name value="New US Core DocumentReference Profile for Clinical Notes" />
-  <status value="active"/>
-  <date value="2018-04-10T09:48:14.298-04:00" />
-  <fhirVersion value="3.0.1" />
-  <kind value="resource" />
-  <abstract value="false" />
-  <type value="DocumentReference" />
-  <baseDefinition value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-documentreference"/>
-  <derivation value="constraint" />
-  <differential>
-    <element id="DocumentReference">
-      <path value="DocumentReference" />
-      <mustSupport value="false" />
-      <isModifier value="false" />
-    </element>
-    <element id="DocumentReference.type">
-      <path value="DocumentReference.type"/>
-      <min value="1"/>
-      <max value="1"/>
-      <mustSupport value="true"/>
-      <isModifier value="false"/>
-      <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet">
-          <valueUri value="http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/argonaut-clinical-note-type"/>
-        </extension>
-        <strength value="required"/>
-        <description value="This is the code specifying the precise type of document"/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/c80-doc-typecodes"/>
-        </valueSetReference>
-      </binding>
-    </element>
-    <element id="DocumentReference.class">
-      <path value="DocumentReference.class"/>
-      <min value="1"/>
-      <mustSupport value="true"/>
-      <binding>
-        <strength value="extensible"/>
-        <valueSet value="http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/documentreference-category"/>
-      </binding>
-    </element>
-    <element id="DocumentReference.author">
-      <path value="DocumentReference.author" />
-      <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitioner" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="DocumentReference.custodian">
-      <path value="DocumentReference.custodian" />
-      <min value="0" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    </differential>
+	<id value="new-us-core-documentreference"/>
+	<url value="http://hl7.org/fhir/us/core-r4/StructureDefinition/new-us-core-documentreference"/>
+	<name value="New_US_Core_DocumentReference_Profile_for_Clinical_Notes"/>
+	<title value="New US Core DocumentReference Profile for Clinical Notes"/>
+	<status value="active"/>
+	<date value="2018-04-10T09:48:14.298-04:00"/>
+	<fhirVersion value="3.0.1"/>
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="DocumentReference"/>
+	<baseDefinition value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-documentreference"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="DocumentReference">
+			<path value="DocumentReference"/>
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="DocumentReference.type">
+			<path value="DocumentReference.type"/>
+			<min value="1"/>
+			<max value="1"/>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+			<binding>
+				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet">
+					<valueUri value="http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/argonaut-clinical-note-type"/>
+				</extension>
+				<strength value="required"/>
+				<description value="This is the code specifying the precise type of document"/>
+				<valueSetReference>
+					<reference value="http://hl7.org/fhir/ValueSet/c80-doc-typecodes"/>
+				</valueSetReference>
+			</binding>
+		</element>
+		<element id="DocumentReference.class">
+			<path value="DocumentReference.class"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+			<binding>
+				<strength value="extensible"/>
+				<valueSet value="http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/documentreference-category"/>
+			</binding>
+		</element>
+		<element id="DocumentReference.author">
+			<path value="DocumentReference.author"/>
+			<min value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitioner"/>
+			</type>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization"/>
+			</type>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+			</type>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient"/>
+			</type>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="DocumentReference.custodian">
+			<path value="DocumentReference.custodian"/>
+			<min value="0"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+	</differential>
 </StructureDefinition>

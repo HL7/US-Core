@@ -2,40 +2,41 @@
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="us-core-substance-rxnorm"/>
 	<meta>
-    <lastUpdated value="2016-05-25T16:59:08.250+10:00"/>
-  </meta>
+		<lastUpdated value="2016-05-25T16:59:08.250+10:00"/>
+	</meta>
 	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-rxnorm"/>
 	<identifier>
-    <system value="urn:ietf:rfc:3986"/>
-    <value value="urn:oid:2.16.840.1.113762.1.4.1010.7"/>
-  </identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113762.1.4.1010.7"/>
+	</identifier>
 	<version value="1.0.1"/>
-	<name value="US Core Substance RxNorm Codes"/>
+	<name value="US_Core_Substance_RxNorm_Codes"/>
+	<title value="US Core Substance RxNorm Codes"/>
 	<status value="draft"/>
 	<publisher value="HL7 US Realm Steering Committee"/>
 	<contact>
-    <telecom>
-      <system value="other"/>
-      <value value="http://hl7.org/fhir"/>
-    </telecom>
-  </contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
 	<description value="All RxNorm codes that have TTY = IN,PIN,MIN,BN, but TTY != OCD."/>
 	<compose>
-    <include>
-      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
-      <filter>
-        <property value="TTY"/>
-        <op value="in"/>
-        <value value="IN,PIN,MIN,BN"/>
-      </filter>
-    </include>
-    <exclude>
-      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
-      <filter>
-        <property value="TTY"/>
-        <op value="="/>
-        <value value="OCD"/>
-      </filter>
-    </exclude>
-  </compose>
+		<include>
+			<system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+			<filter>
+				<property value="TTY"/>
+				<op value="in"/>
+				<value value="IN,PIN,MIN,BN"/>
+			</filter>
+		</include>
+		<exclude>
+			<system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+			<filter>
+				<property value="TTY"/>
+				<op value="="/>
+				<value value="OCD"/>
+			</filter>
+		</exclude>
+	</compose>
 </ValueSet>

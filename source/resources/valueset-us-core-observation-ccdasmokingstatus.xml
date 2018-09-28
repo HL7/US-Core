@@ -11,9 +11,9 @@
 		<value value="urn:oid:2.16.840.1.113883.4.642.2.602"/>
 	</identifier>
 	<version value="1.0.1"/>
-	<name value="Smoking Status"/>
+	<name value="Smoking_Status"/>
+	<title value="Smoking Status"/>
 	<status value="active"/>
-
 	<date value="2016-08-10"/>
 	<publisher value="HL7 US Realm Steering Committee"/>
 	<contact>
@@ -59,8 +59,7 @@
 				<code value="428061000124105"/>
 				<display value="Current Light tobacco smoker"/>
 			</concept>
-		</include>
-		<!--
+		</include><!--
     <include>
       <system value="http://hl7.org/fhir/data-absent-reason"/>
       <concept>
@@ -70,5 +69,4 @@
         <code value="not-asked"/>
       </concept>
     </include>
--->
-	</compose></ValueSet>
+--></compose></ValueSet>

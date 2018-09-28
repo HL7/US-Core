@@ -2,26 +2,25 @@
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="us-core-procedure-icd10pcs"/>
 	<meta>
-    <lastUpdated value="2016-05-25T16:59:08.250+10:00"/>
-    <profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
-  </meta>
+		<lastUpdated value="2016-05-25T16:59:08.250+10:00"/>
+		<profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
+	</meta>
 	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-procedure-icd10pcs"/>
 	<version value="1.0.1"/>
-	<name value="US Core ICD-10-PCS Procedure Codes"/>
+	<name value="US_Core_ICD_10_PCS_Procedure_Codes"/>
+	<title value="US Core ICD-10-PCS Procedure Codes"/>
 	<status value="draft"/>
-
 	<date value="2016-08-10"/>
 	<publisher value="HL7 US Realm Steering Committee"/>
 	<contact>
-    <telecom>
-      <system value="other"/>
-      <value value="http://hl7.org/fhir"/>
-    </telecom>
-  </contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
 	<description value="This value set defines a set of codes from ICD10-PCS that can be used to indicate a type of procedure performed"/>
 	<copyright value="The International Classification of Diseases, Tenth Revision, Procedure Coding System (ICD-10-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS).  CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-10-PCS."/>
-	<compose>
-  <!--
+	<compose><!--
     <include>
       <system value="http://www.ama-assn.org/go/cpt"/>
     </include>
@@ -33,9 +32,8 @@
         <value value="71388002"/>
       </filter>
     </include>
-    -->
-    <include>
-      <system value="http://www.icd10data.com/icd10pcs"/>
-    </include>
-  </compose>
+    --><include>
+			<system value="http://www.icd10data.com/icd10pcs"/>
+		</include>
+	</compose>
 </ValueSet>

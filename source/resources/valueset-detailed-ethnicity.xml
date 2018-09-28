@@ -3,13 +3,14 @@
 	<id value="detailed-ethnicity"/>
 	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/detailed-ethnicity"/>
 	<version value="1.0.1"/>
-	<name value="US-Core Detailed ethnicity"/>
+	<name value="UsCoreDetailedEthnicity"/>
+	<title value="US-Core Detailed ethnicity"/>
 	<status value="draft"/>
 	<date value="2016-08-30"/>
 	<publisher value="HL7 US Realm Steering Committee"/>
 	<description value="The 41 [CDC ethnicity codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 2 OMB ethnicity category codes."/>
 	<compose>
-	<include>
+		<include>
 			<system value="urn:oid:2.16.840.1.113883.6.238"/>
 			<filter>
 				<property value="concept"/>
