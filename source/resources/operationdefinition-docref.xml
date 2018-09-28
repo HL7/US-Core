@@ -33,7 +33,8 @@
 		</div>
 	</text>
 	<url value="http://hl7.org/fhir/us/core-r4/OperationDefinition/docref"/>
-	<name value="US Core Fetch DocumentReferences"/>
+  <name value="UsCoreFetchDocumentReferences"/>
+	<title value="US Core Fetch DocumentReferences"/>
 	<status value="draft"/>
 	<kind value="operation"/>
 	<date value="2016-10-18"/>
@@ -93,7 +94,7 @@ It is assumed that the server has identified and secured the context appropriate
 		<type value="CodeableConcept"/>
 		<binding>
 			<strength value="required"></strength>
-			<valueSetUri value="http://hl7.org/fhir/ValueSet/c80-doc-typecodes"></valueSetUri>
+			<valueSet value="http://hl7.org/fhir/ValueSet/c80-doc-typecodes"/>
 		</binding>
 	</parameter>
 	<parameter>

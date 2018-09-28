@@ -56,11 +56,11 @@
 				<code value="CodeableConcept"/>
 			</type>
 			<mustSupport value="true"/>
+      <isModifier value="false"/>
 			<binding>
 				<strength value="extensible"/>
 				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-diagnosticreport-category"/>
 			</binding>
-			<isModifier value="false"/>
 			<mapping>
 				<identity value="argonaut-dq-dstu2"/>
 				<map value="DiagnosticReport.category"/>
@@ -184,9 +184,6 @@
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitioner"/>
-			</type>
-			<type>
-				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization"/>
 			</type>
 			<mustSupport value="true"/>

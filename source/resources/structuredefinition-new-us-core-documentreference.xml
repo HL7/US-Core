@@ -30,9 +30,7 @@
 				</extension>
 				<strength value="required"/>
 				<description value="This is the code specifying the precise type of document"/>
-				<valueSetReference>
-					<reference value="http://hl7.org/fhir/ValueSet/c80-doc-typecodes"/>
-				</valueSetReference>
+				<valueSet value="http://hl7.org/fhir/ValueSet/c80-doc-typecodes"/>
 			</binding>
 		</element>
 		<element id="DocumentReference.class">
@@ -50,21 +48,9 @@
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitioner"/>
-			</type>
-			<type>
-				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization"/>
-			</type>
-			<type>
-				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-			</type>
-			<type>
-				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient"/>
-			</type>
-			<type>
-				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
 			</type>
 			<mustSupport value="true"/>
