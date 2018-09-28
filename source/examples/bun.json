@@ -1,65 +1,72 @@
- {
-   "resourceType": "Observation",
-   "id": "bun",
-   "meta": { "profile": ["http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"],
-     "versionId": "1237",
-     "lastUpdated": "2016-03-09T15:29:58.597+00:00"
-   },
+{
    "status": "final",
-   "category": {
-     "coding": [
-       {
-         "system": "http://hl7.org/fhir/observation-category",
-         "code": "laboratory",
-         "display": "Laboratory"
-       }
-     ],
-     "text": "Laboratory"
-   },
+   "category": [
+      {
+         "text": "Laboratory",
+         "coding": [
+            {
+               "code": "laboratory",
+               "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+               "display": "Laboratory"
+            }
+         ]
+      }
+   ],
    "code": {
-     "coding": [
-       {
-         "system": "http://loinc.org",
-         "code": "3094-0",
-         "display": "BUN SerPl-mCnc"
-       }
-     ],
-     "text": "BUN SerPl-mCnc"
+      "text": "BUN SerPl-mCnc",
+      "coding": [
+         {
+            "code": "3094-0",
+            "system": "http://loinc.org",
+            "display": "BUN SerPl-mCnc"
+         }
+      ]
    },
-   "subject": {
-     "reference": "Patient/example","display": "Amy Shaw"
+   "resourceType": "Observation",
+   "referenceRange": [
+      {
+         "high": {
+            "code": "mg/dL",
+            "unit": "mg/dL",
+            "value": 20.0,
+            "system": "http://unitsofmeasure.org"
+         },
+         "appliesTo": [
+            {
+               "text": "Normal Range",
+               "coding": [
+                  {
+                     "code": "normal",
+                     "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+                     "display": "Normal Range"
+                  }
+               ]
+            }
+         ],
+         "low": {
+            "code": "mg/dL",
+            "unit": "mg/dL",
+            "value": 5.0,
+            "system": "http://unitsofmeasure.org"
+         }
+      }
+   ],
+   "valueQuantity": {
+      "unit": "mg/dL",
+      "value": 10.0,
+      "system": "http://unitsofmeasure.org"
+   },
+   "meta": {
+      "profile": [
+         "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"
+      ],
+      "versionId": "1237",
+      "lastUpdated": "2016-03-09T15:29:58.597+00:00"
    },
    "effectiveDateTime": "2005-07-05",
-   "valueQuantity": {
-     "value": 10.0,
-     "unit": "mg/dL",
-     "system": "http://unitsofmeasure.org"
-   },
-   "referenceRange": [
-     {
-       "low": {
-         "value": 5.0,
-         "unit": "mg/dL",
-         "system": "http://unitsofmeasure.org",
-         "code": "mg/dL"
-       },
-       "high": {
-         "value": 20.0,
-         "unit": "mg/dL",
-         "system": "http://unitsofmeasure.org",
-         "code": "mg/dL"
-       },
-       "appliesTo": {
-         "coding": [
-           {
-             "system": "http://hl7.org/fhir/referencerange-meaning",
-             "code": "normal",
-             "display": "Normal Range"
-           }
-         ],
-         "text": "Normal Range"
-       }
-     }
-   ]
+   "id": "bun",
+   "subject": {
+      "display": "Amy Shaw",
+      "reference": "Patient/example"
+   }
 }
- 

@@ -1,4 +1,5 @@
 -------------------------------------------------------------------------------------
+
 {"code" : {
   "code" : "xml"
 }, "valueSet" :{
@@ -15,6 +16,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 {"code" : {
   "code" : "json"
 }, "valueSet" :{
@@ -31,6 +33,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 {"code" : {
   "code" : "text/xml"
 }, "valueSet" :{
@@ -47,6 +50,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 {"code" : {
   "coding" : [{
     "system" : "http://snomed.info/sct",
@@ -81,6 +85,7 @@ v: {
   "error" : "The code system \"http://www.icd10data.com/icd10pcs\" is not known"
 }
 -------------------------------------------------------------------------------------
+
 {"code" : {
   "code" : "F"
 }, "valueSet" :{
@@ -112,6 +117,7 @@ v: {
   "error" : "The code system \"\" is not known; The code provided (#F) is not  valid in the value set US Core Birth Sex Value Set"
 }
 -------------------------------------------------------------------------------------
+
 {"code" : {
   "coding" : [{
     "system" : "http://hl7.org/fhir/sid/cvx",
@@ -137,6 +143,7 @@ v: {
   "error" : "The code system \"http://hl7.org/fhir/sid/ndc\" is not known"
 }
 -------------------------------------------------------------------------------------
+
 {"code" : {
   "code" : "text/plain"
 }, "valueSet" :{
@@ -153,6 +160,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -174,6 +182,7 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt"
 }
 -------------------------------------------------------------------------------------
+
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -194,6 +203,7 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/condition-category"
 }
 -------------------------------------------------------------------------------------
+
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -222,6 +232,7 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/v3/AdministrativeGender"
 }
 -------------------------------------------------------------------------------------
+
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -264,5 +275,30 @@ e: {
 ####
 e: {
   "error" : "Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.238"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://terminology.hl7.org/CodeSystem/sid/cvx",
+    "code" : "158",
+    "display" : "influenza, injectable, quadrivalent"
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/sid/ndc",
+    "code" : "49281-0623-78",
+    "display" : "FLUZONE QUADRIVALENT"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/cvx"
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/sid/cvx\" is not known; The code system \"http://terminology.hl7.org/CodeSystem/sid/ndc\" is not known; None of the codes provided (http://terminology.hl7.org/CodeSystem/sid/cvx#158, http://terminology.hl7.org/CodeSystem/sid/ndc#49281-0623-78) are  valid in the value set Vaccine_Administered_Value_Set_CVX"
 }
 -------------------------------------------------------------------------------------
