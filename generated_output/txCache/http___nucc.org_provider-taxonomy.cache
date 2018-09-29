@@ -1,5 +1,6 @@
 -------------------------------------------------------------------------------------
 
+
 {"code" : {
   "system" : "http://nucc.org/provider-taxonomy",
   "code" : "261QP2300X"
@@ -10,6 +11,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 
 {"code" : {
   "system" : "http://nucc.org/provider-taxonomy",
@@ -22,6 +24,7 @@ v: {
 }
 -------------------------------------------------------------------------------------
 
+
 {"code" : {
   "system" : "http://nucc.org/provider-taxonomy",
   "code" : "207RC0000X"
@@ -32,6 +35,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 
 {"code" : {
   "system" : "http://nucc.org/provider-taxonomy",
@@ -45,6 +49,7 @@ v: {
 }
 -------------------------------------------------------------------------------------
 
+
 {"code" : {
   "system" : "http://nucc.org/provider-taxonomy",
   "code" : "208D00000X",
@@ -56,6 +61,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 
 {"code" : {
   "coding" : [{
@@ -94,6 +100,7 @@ v: {
 }
 -------------------------------------------------------------------------------------
 
+
 {"code" : {
   "system" : "http://nucc.org/provider-taxonomy",
   "code" : "207RC0000X",
@@ -105,6 +112,7 @@ v: {
   "error" : "The display \"Allopathic &amp; Osteopathic Physicians:Internal Medicine:Cardiovascular Disease\" is not a valid display for the code {http://nucc.org/provider-taxonomy}207RC0000X - should be one of [\"Cardiovascular Disease\"]"
 }
 -------------------------------------------------------------------------------------
+
 
 {"code" : {
   "coding" : [{
@@ -143,6 +151,7 @@ v: {
 }
 -------------------------------------------------------------------------------------
 
+
 {"code" : {
   "system" : "http://nucc.org/provider-taxonomy",
   "code" : "208D00000X",
@@ -154,6 +163,7 @@ v: {
   "error" : "The display \"Allopathic &amp; Osteopathic Physicians:General Practice\" is not a valid display for the code {http://nucc.org/provider-taxonomy}208D00000X - should be one of [\"General Practice\"]"
 }
 -------------------------------------------------------------------------------------
+
 
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -7929,6 +7939,7 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 {"code" : {
   "coding" : [{
     "system" : "http://nucc.org/provider-taxonomy",
@@ -7947,5 +7958,25 @@ v: {
   "display" : "General Practice",
   "severity" : null,
   "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://nucc.org/provider-taxonomy",
+    "code" : "261QP2300X",
+    "display" : "Doctor"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://nucc.org/provider-taxonomy"
+    }]
+  }
+}}####
+v: {
+  "display" : "Primary Care",
+  "severity" : "warning",
+  "error" : "The display \"Doctor\" is not a valid display for the code {http://nucc.org/provider-taxonomy}261QP2300X - should be one of [\"Primary Care\"]"
 }
 -------------------------------------------------------------------------------------
