@@ -26,15 +26,15 @@
 			<isModifier value="false"/>
 			<binding>
 				<extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet">
-					<valueUri value="http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/argonaut-clinical-note-type"/>
+					<valueUri value="http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/argonaut-clinical-note-type"/>
 				</extension>
 				<strength value="required"/>
 				<description value="This is the code specifying the precise type of document"/>
 				<valueSet value="http://hl7.org/fhir/ValueSet/c80-doc-typecodes"/>
 			</binding>
 		</element>
-		<element id="DocumentReference.class">
-			<path value="DocumentReference.class"/>
+		<element id="DocumentReference.category">
+			<path value="DocumentReference.category"/>
 			<min value="1"/>
 			<mustSupport value="true"/>
 			<binding>
