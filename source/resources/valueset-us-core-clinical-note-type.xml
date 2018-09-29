@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="us-core-clinical-note-type"/>
+  <url value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-clinical-note-type"/>
+  <version value="0.0.0"/>
+  <name value="UsCoreDocumentReferencesTypeValueSet"/>
+  <title value="US Core DocumentReferences Type Value Set"/>
+  <status value="active"/>
+  <date value="2018-09-29T07:44:43+10:00"/>
+  <publisher value="HL7 US Realm Steering Committee"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <description value="The US Core DocumentReferences Type Value Set is a &#39;starter set&#39; of types supported for fetching and storing clinical notes. This value set is a subset of LOINC values listed in [HITSP C80 Table 2-144 Document Class Value Set Definition](http://build.fhir.org/valueset-c80-doc-typecodes.html)"/>
+  <date value="2018-09-29T07:44:43+10:00"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <copyright value=" This content LOINC&#xAE; is copyright &#xA9; 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="18842-5"/>
+      </concept>
+      <concept>
+        <code value="11488-4"/>
+      </concept>
+      <concept>
+        <code value="34117-2"/>
+      </concept>
+      <concept>
+        <code value="11506-3"/>
+      </concept>
+      <concept>
+        <code value="28570-0"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

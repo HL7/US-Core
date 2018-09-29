@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="us-core-documentreference-category"/>
+  <url value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-documentreference-category"/>
+  <version value="1.0.1"/>
+  <name value="USCoreDocumentReferenceCategoryCodesValueSet"/>
+  <title value="US Core DocumentReferences Category Value Set"/>
+  <status value="active"/>
+  <date value="2018-09-29T07:44:43+10:00"/>
+  <publisher value="HL7 US Realm Steering Committee"/>
+	<contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+  <description value="The US Core DocumentReferences Type Value Set is a &#39;starter set&#39; of categories supported for fetching and storing clinical notes."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/core-r4/CodeSystem/us-core-documentreference-category"/>
+    </include>
+  </compose>
+</ValueSet>
