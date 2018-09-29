@@ -32,14 +32,14 @@ In addition it should have (if available):
 
 **Profile specific implementation guidance:**
 
-The `DiagnosticReport.category` binding must support at a minimum the [3 concepts](ValueSet-diagnosticreport-category.html) of Cardiology, Radiology, and Pathology. Other categories may be supported.
+The `DiagnosticReport.category` binding must support at a minimum the [3 concepts](http://hl7.org/fhir/us/core-r4/ValueSet/us-core-diagnosticreport-category) of Cardiology, Radiology, and Pathology. Other categories may be supported.
 
 
 ##### Examples
 
 - TBD
 
-[US Core DiagnosticReport]: http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport.html
+[US Core DiagnosticReport]: http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-diagnosticreport
 [DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
  [Conformance]: daf-core-DocumentReference-conformance.html
  [boundaries section]: {{ site.data.fhir.path }}documentreference.html#bnr
