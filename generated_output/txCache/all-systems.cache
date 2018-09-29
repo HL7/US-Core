@@ -1,5 +1,6 @@
 -------------------------------------------------------------------------------------
 
+
 {"code" : {
   "code" : "xml"
 }, "valueSet" :{
@@ -16,6 +17,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 
 {"code" : {
   "code" : "json"
@@ -34,6 +36,7 @@ v: {
 }
 -------------------------------------------------------------------------------------
 
+
 {"code" : {
   "code" : "text/xml"
 }, "valueSet" :{
@@ -50,6 +53,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 
 {"code" : {
   "coding" : [{
@@ -86,6 +90,7 @@ v: {
 }
 -------------------------------------------------------------------------------------
 
+
 {"code" : {
   "code" : "F"
 }, "valueSet" :{
@@ -118,6 +123,7 @@ v: {
 }
 -------------------------------------------------------------------------------------
 
+
 {"code" : {
   "coding" : [{
     "system" : "http://hl7.org/fhir/sid/cvx",
@@ -144,6 +150,7 @@ v: {
 }
 -------------------------------------------------------------------------------------
 
+
 {"code" : {
   "code" : "text/plain"
 }, "valueSet" :{
@@ -160,6 +167,7 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+
 
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -183,6 +191,7 @@ e: {
 }
 -------------------------------------------------------------------------------------
 
+
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -203,6 +212,7 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/condition-category"
 }
 -------------------------------------------------------------------------------------
+
 
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -232,6 +242,7 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/v3/AdministrativeGender"
 }
 -------------------------------------------------------------------------------------
+
 
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -277,6 +288,7 @@ e: {
   "error" : "Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.238"
 }
 -------------------------------------------------------------------------------------
+
 {"code" : {
   "coding" : [{
     "system" : "http://terminology.hl7.org/CodeSystem/sid/cvx",
@@ -300,5 +312,261 @@ v: {
   "display" : "",
   "severity" : "error",
   "error" : "The code system \"http://terminology.hl7.org/CodeSystem/sid/cvx\" is not known; The code system \"http://terminology.hl7.org/CodeSystem/sid/ndc\" is not known; None of the codes provided (http://terminology.hl7.org/CodeSystem/sid/cvx#158, http://terminology.hl7.org/CodeSystem/sid/ndc#49281-0623-78) are  valid in the value set Vaccine_Administered_Value_Set_CVX"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "MA"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "https://www.usps.com/",
+      "concept" : [{
+        "code" : "AK",
+        "display" : "Alaska"
+      },
+      {
+        "code" : "AL",
+        "display" : "Alabama"
+      },
+      {
+        "code" : "AR",
+        "display" : "Arkansas"
+      },
+      {
+        "code" : "AS",
+        "display" : "American Samoa"
+      },
+      {
+        "code" : "AZ",
+        "display" : "Arizona"
+      },
+      {
+        "code" : "CA",
+        "display" : "California"
+      },
+      {
+        "code" : "CO",
+        "display" : "Colorado"
+      },
+      {
+        "code" : "CT",
+        "display" : "Connecticut"
+      },
+      {
+        "code" : "DC",
+        "display" : "District of Columbia"
+      },
+      {
+        "code" : "DE",
+        "display" : "Delaware"
+      },
+      {
+        "code" : "FL",
+        "display" : "Florida"
+      },
+      {
+        "code" : "FM",
+        "display" : "Federated States of Micronesia"
+      },
+      {
+        "code" : "GA",
+        "display" : "Georgia"
+      },
+      {
+        "code" : "GU",
+        "display" : "Guam"
+      },
+      {
+        "code" : "HI",
+        "display" : "Hawaii"
+      },
+      {
+        "code" : "IA",
+        "display" : "Iowa"
+      },
+      {
+        "code" : "ID",
+        "display" : "Idaho"
+      },
+      {
+        "code" : "IL",
+        "display" : "Illinois"
+      },
+      {
+        "code" : "IN",
+        "display" : "Indiana"
+      },
+      {
+        "code" : "KS",
+        "display" : "Kansas"
+      },
+      {
+        "code" : "KY",
+        "display" : "Kentucky"
+      },
+      {
+        "code" : "LA",
+        "display" : "Louisiana"
+      },
+      {
+        "code" : "MA",
+        "display" : "Massachusetts"
+      },
+      {
+        "code" : "MD",
+        "display" : "Maryland"
+      },
+      {
+        "code" : "ME",
+        "display" : "Maine"
+      },
+      {
+        "code" : "MH",
+        "display" : "Marshall Islands"
+      },
+      {
+        "code" : "MI",
+        "display" : "Michigan"
+      },
+      {
+        "code" : "MN",
+        "display" : "Minnesota"
+      },
+      {
+        "code" : "MO",
+        "display" : "Missouri"
+      },
+      {
+        "code" : "MP",
+        "display" : "Northern Mariana Islands"
+      },
+      {
+        "code" : "MS",
+        "display" : "Mississippi"
+      },
+      {
+        "code" : "MT",
+        "display" : "Montana"
+      },
+      {
+        "code" : "NC",
+        "display" : "North Carolina"
+      },
+      {
+        "code" : "ND",
+        "display" : "North Dakota"
+      },
+      {
+        "code" : "NE",
+        "display" : "Nebraska"
+      },
+      {
+        "code" : "NH",
+        "display" : "New Hampshire"
+      },
+      {
+        "code" : "NJ",
+        "display" : "New Jersey"
+      },
+      {
+        "code" : "NM",
+        "display" : "New Mexico"
+      },
+      {
+        "code" : "NV",
+        "display" : "Nevada"
+      },
+      {
+        "code" : "NY",
+        "display" : "New York"
+      },
+      {
+        "code" : "OH",
+        "display" : "Ohio"
+      },
+      {
+        "code" : "OK",
+        "display" : "Oklahoma"
+      },
+      {
+        "code" : "OR",
+        "display" : "Oregon"
+      },
+      {
+        "code" : "PA",
+        "display" : "Pennsylvania"
+      },
+      {
+        "code" : "PR",
+        "display" : "Puerto Rico"
+      },
+      {
+        "code" : "PW",
+        "display" : "Palau"
+      },
+      {
+        "code" : "RI",
+        "display" : "Rhode Island"
+      },
+      {
+        "code" : "SC",
+        "display" : "South Carolina"
+      },
+      {
+        "code" : "SD",
+        "display" : "South Dakota"
+      },
+      {
+        "code" : "TN",
+        "display" : "Tennessee"
+      },
+      {
+        "code" : "TX",
+        "display" : "Texas"
+      },
+      {
+        "code" : "UM",
+        "display" : "U.S. Minor Outlying Islands"
+      },
+      {
+        "code" : "UT",
+        "display" : "Utah"
+      },
+      {
+        "code" : "VA",
+        "display" : "Virginia"
+      },
+      {
+        "code" : "VI",
+        "display" : "Virgin Islands of the U.S."
+      },
+      {
+        "code" : "VT",
+        "display" : "Vermont"
+      },
+      {
+        "code" : "WA",
+        "display" : "Washington"
+      },
+      {
+        "code" : "WI",
+        "display" : "Wisconsin"
+      },
+      {
+        "code" : "WV",
+        "display" : "West Virginia"
+      },
+      {
+        "code" : "WY",
+        "display" : "Wyoming"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "Massachusetts",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

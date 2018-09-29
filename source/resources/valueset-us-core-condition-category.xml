@@ -12,7 +12,7 @@
 	<purpose value="So API consumers can separate health concerns and problems."/>
 	<compose>
 		<include>
-			<system value="http://hl7.org/fhir/condition-category"/>
+			<system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
 		</include>
 		<include>
 			<system value="http://hl7.org/fhir/us/core-r4/CodeSystem/condition-category"/>

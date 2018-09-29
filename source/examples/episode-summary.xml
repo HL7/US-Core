@@ -2,7 +2,7 @@
 <DocumentReference xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd/account.xsd">
 	<id value="episode-summary"/>
 	<meta>
-		<profile value="http://fhir.org/guides/argonaut/StructureDefinition/argo-documentreference"/>
+		<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/new-us-core-documentreference"/>
 	</meta>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
@@ -21,8 +21,7 @@
 		<reference value="Patient/example"/>
 		<display value="Amy Shaw"/>
 	</subject>
-	<created value="2006-09-01"/>
-	<indexed value="2016-03-09T15:29:46Z"/>
+	<date value="2016-03-09T15:29:46Z"/>
 	<author>
 		<reference value="Practitioner/practitioner-1"/>
 		<display value="Ronald Bone, MD"/>

@@ -19,7 +19,7 @@
             <id value="75"/>
             <status value="active"/>
             <connectionType>
-                <system value="http://hl7.org/fhir/endpoint-connection-type"/>
+                <system value="http://terminology.hl7.org/CodeSystem/endpoint-connection-type"/>
                 <code value="direct-project"/>
             </connectionType>
             <name value="Dr. Ronald Bone Direct Address"/>
@@ -65,6 +65,6 @@
 <postalCode value="64111"/>
 </address>
     <endpoint>
-        <reference value="#71"/>
+        <reference value="#75"/>
     </endpoint>
 </Organization>
