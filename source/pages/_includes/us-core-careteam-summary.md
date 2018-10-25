@@ -1,4 +1,4 @@
-#### Complete Summary of the Mandatory Requirements
+##### Complete Summary of the Mandatory Requirements
 
 1.  One status in `CareTeam.status`
 -   CareTeam.status is bound to [CareTeamStatus] value set

@@ -1,4 +1,4 @@
-### Complete Summary of the Mandatory Requirements
+#### Complete Summary of the Mandatory Requirements
 
 1.  One status in `Observation.status`which has an [extensible]({{site.data.fhir.path}}terminologies.html#extensible) binding to:
     -    [ObservationStatus] value set.

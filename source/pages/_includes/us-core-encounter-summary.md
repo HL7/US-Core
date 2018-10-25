@@ -1,11 +1,11 @@
-#### Complete Summary of the Mandatory Requirements
+##### Complete Summary of the Mandatory Requirements
 
 1.  One status in `Encounter.status`  
 2.  A class in `Encounter.class` from [EncounterCode]({{site.data.fhir.path}}v3/ActEncounterCode/vs.html) value set.
 3.  At least one type in `Encounter.type` from [US Core Encounter Type](ValueSet-us-core-encounter-type.html) value set.
 4.  One patient reference in `Encounter.subject`
 
-#### Summary of the Must Support Requirements
+##### Summary of the Must Support Requirements
 
 Additionally your system must Support:
 

@@ -11,7 +11,7 @@ The following are example usage scenarios for the US Core Patient profile:
 -   Query for a Patient demographic information using first name, last
     name, birthdate, and gender.
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
@@ -39,7 +39,7 @@ In addition, based upon the 2015 Edition Certification Requirements, the followi
 
 * none
 
-#### Examples
+##### Examples
 
 - [Patient-example](Patient-example.html)
 

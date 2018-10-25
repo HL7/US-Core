@@ -10,7 +10,7 @@ profile:
 -   Record medications that have been prescribed to a particular
     patient
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
@@ -32,7 +32,7 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
     *  The client application SHALL support all methods.  
     *  Additional guidance is provided below in the Search section and in the [CapabilityStatement] section.
 
-#### Examples
+##### Examples
 
 - [MedicationRequest-uscore-mo1](MedicationRequest-uscore-mo1.html) Inline medication code to represent the medication.
 - [MedicationRequest-uscore-mo2](MedicationRequest-uscore-mo2.html) Reference to a [contained]({{site.data.fhir.path}}references.html#contained) Medication resource.

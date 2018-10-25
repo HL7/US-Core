@@ -8,7 +8,7 @@ Profile:
 -   Query for vital signs of a particular patient
 -   Record vital signs of a particular patient
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) are provided as links in the table below to view the formal summary, definitions, and  terminology requirements.  
@@ -35,7 +35,7 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 * Other profiles may make rules about which vital sign must be present or must be present as part of a panel.
 
 
-#### Examples
+##### Examples
 
  - [observation-vitals-panel](Observation-vitals-panel.html)
  - [observation-weight](Observation-weight.html)

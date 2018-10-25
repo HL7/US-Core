@@ -1,4 +1,4 @@
-#### Complete Summary of the Mandatory Requirements
+##### Complete Summary of the Mandatory Requirements
 
 1.  Conditionally One clinical status in `Condition.clinicalStatus`
     -   [Invariants]

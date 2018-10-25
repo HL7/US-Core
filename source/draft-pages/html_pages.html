@@ -1,0 +1,140 @@
+---
+## jekyll header
+---
+{% include header.html %}
+
+
+{% include container-start.html %}
+
+
+  <!-- ============CONTENT CONTENT=============== -->
+{% assign pagepath = page.path %}
+pagepath = {{pagepath}}
+<br />
+
+
+
+<pre>
+### Table of Contents
+{: nocount="true"}
+{% for p in site.data.pages %}{% assign pagepath = p[0] %}{% assign pagelabel = site.data.pages[pagepath].label | remove: ".0" %}{% assign pagetitle = site.data.pages[pagepath].title %}{% assign depth = pagelabel | split: '.' %}{% unless {{pagepath}} contains 'ttl' or {{pagepath}} contains 'json' or  {{pagepath}} contains 'xml' or  {{pagepath}} contains 'definitions' or {{pagepath}} contains 'mappings'%}
+{% for i in depth %}&nbsp;&nbsp;{% endfor %}- {{pagelabel | plus: 1 }} - [{{pagetitle | remove: ".html"}}]({{pagepath}}){% endunless %}{% endfor %}
+</pre>
+
+{% for p in site.data.pages %}
+p = {{p}}
+<br />
+{% assign pagepath = {{p[0]}} %}
+pagepath = {{pagepath}}
+<br />
+p.title = {{site.data.pages[pagepath].title}}
+<br />
+p.label = {{site.data.pages[pagepath].label | remove: ".0" | plus: 1 }}
+<br />
+p.breadcrumb = <pre>{{site.data.pages[pagepath].breadcrumb}}</pre>
+
+
+{% endfor %}
+
+
+site.historypath = {{ site.historypath }}
+<br />
+
+{% for p in site.html_pages %}
+
+{% unless p.name contains 'ttl' or p.name contains 'json' or  p.name contains 'xml' or  p.name contains 'definitions' or p.name contains 'mappings'%}
+
+{% increment n %},
+{% assign title = p.name | remove: ".html" | remove: ".md" | split: '-' %}
+
+<em>title</em> = {% for word in title %}{{ word | capitalize }} {% endfor %}
+<em>path</em> = {{ p.path }},
+<em>url</em> = {{ p.url }},
+<em>link</em> = <a href = "{{ path }}">{% for word in title %}{{ word | capitalize }} {% endfor %}</a>
+<br />
+
+
+
+
+{% endunless %}
+
+{% endfor %}
+
+<br /><br />
+<hr />
+
+<h3>R3 IG pages</h3>
+{% for p in site.html_pages %}
+
+{% unless p.name contains 'ttl' or p.name contains 'json' or  p.name contains 'xml' or  p.name contains 'definitions' or p.name contains 'mappings'%}
+
+
+{% assign title = p.name | remove: ".html" | remove: ".md" | split: '-' %}
+
+&lt;page&gt;
+  &nbsp;&nbsp;&nbsp;&lt;source value=&quot;{{ p.path }}&quot;/&gt;
+  &nbsp;&nbsp;&nbsp;&lt;title value=&quot;{% for word in title %}{{ word | capitalize }} {% endfor %}&quot;/&gt;
+&nbsp;&nbsp;&nbsp;&lt;kind
+
+{% assign kind = "page" %}
+{% for e in site.example_types %}
+{% if title contains e %}
+{% assign kind = "example" %}
+{% else %}
+{% endif %}
+{% endfor %}
+
+{% for c in site.conformance_types %}
+{% if p.name contains c %}
+{% assign kind = "resource" %}
+{% endif %}
+{% endfor %}
+
+
+value=&quot;{{ kind }}&quot;/&gt;
+&lt;/page&gt;<br /><br />
+
+
+{% endunless %}
+
+{% endfor %}
+<br /><br />
+<hr />
+
+<h3>R4 IG pages</h3>
+{% for p in site.html_pages %}
+
+{% unless p.name contains 'ttl' or p.name contains 'json' or  p.name contains 'xml' or  p.name contains 'definitions' or p.name contains 'mappings'%}
+
+
+{% assign title = p.name | remove: ".html" | remove: ".md" | split: '-' %}
+
+
+&lt;page&gt;
+  &nbsp;&nbsp;&nbsp;&lt;nameUrl value=&quot;{{ p.path }}&quot;/&gt;
+  &nbsp;&nbsp;&nbsp;&lt;title value=&quot;{% for word in title %}{{ word | capitalize }} {% endfor %}&quot;/&gt;
+  &nbsp;&nbsp;&nbsp;&lt;generation
+
+{% assign generation = "markdown" %}
+{% for e in site.resource_types %}
+{% if title contains e %}
+{% assign generation = "generated" %}
+
+{% endif %}
+{% endfor %}
+
+
+value=&quot;{{ generation }}&quot;/&gt;
+&lt;/page&gt;<br /><br />
+
+
+{% endunless %}
+
+{% endfor %}
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+
+    {% include footer.html %}

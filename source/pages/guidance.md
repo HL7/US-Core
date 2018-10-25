@@ -19,7 +19,7 @@ The conformance verbs used are defined in [FHIR Conformance Rules].
 
 <!-- end TOC -->
 
-## The 2015 Edition Common Clinical Data Set
+### The 2015 Edition Common Clinical Data Set
 
 The US Core Profiles are intended to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access – Data Category Request 170.315(g)(8). They were created for each of the [2015 Edition Common Clinical Data Set (CCDS)].  The Location, Organization, and Practitioner Profiles are not called out specifically in the certification criteria but are included because they are directly referenced by other profiles.  Where applicable the US Core Profiles are based on the HL7 U.S. [Data Access Framework (DAF)] FHIR DSTU2 Implementation Guide. However, the requirements per resource are a subset of those of the DAF implementation guide.
 
@@ -50,7 +50,7 @@ No| CCDS Data Element | US Core Profile | FHIR Resource
 (20) |  Goals | [US Core Goal Profile] | Goal
 (21) |  Health concerns | [US Core Condition Profile] | Condition
 
-## Must Support
+### Must Support
 In the context of US Core, *Must Support* on any data element SHALL be interpreted as follows:
 
 
@@ -67,18 +67,18 @@ In the context of US Core, *Must Support* on any data element SHALL be interpret
 * NOTE: The above definition of Supported is derived from HL7v2 concept "Required but may be empty - RE" described in HL7v2 V28_CH02B_Conformance.doc.
 * NOTE: Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
 
-## Referencing US Core profiles
+### Referencing US Core profiles
 
 Many of the profiles in this guide [reference]({{site.data.fhir.path}}references.html) other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core Careteam](StructureDefinition-us-core-careteam.html#profile) references US Core Patient.  For any other references not formally defined in a US Core profiles, the referenced resource SHOULD be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner should be a valid US Core Patient or US Core Practitioner.
 
-## Using Codes in US Core profiles
+### Using Codes in US Core profiles
 
-### Extensible binding for CodeableConcept Datatype
+#### Extensible binding for CodeableConcept Datatype
 {:.no_toc}
 
 Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values SHALL be from the specified value set if a code applies, but if no suitable code exists in the value set and no further restrictions have been applied (such as the max valueset binding described in the next section), alternate code(s) may be provided in its place. If only text available, then just text may be used.
 
-### Extensible + Max-ValueSet binding for CodeableConcept Datatype
+#### Extensible + Max-ValueSet binding for CodeableConcept Datatype
 {:.no_toc}
 
 For this IG, we have defined the Extensible + Max-ValueSet binding to allow for either a code from the defined value set or text if the code is not available.  (for example, legacy data). This means, unlike a FHIR extensible binding, alternate code(s) are not permitted and a text value SHALL be supplied if the code is not available.  However, multiple codings (translations) are allowed as is discussed below.
@@ -95,7 +95,7 @@ Example: Immunization resource vaccineCode's CVX coding - the source only has th
     }
 
 
-### Required binding for Code Datatype
+#### Required binding for Code Datatype
 {:.no_toc}
 
 Required binding to a value set definition for this IG means that one of the codes from the specified value set SHALL be used. If only text is available or the local (proprietary, system) code cannot be mapped to one of the required codes the [core specification] provides guidance which we have summarized:
@@ -118,13 +118,13 @@ Example: AllergyIntolerance resource with a status that is text only or cannot b
       },
      }
 
-### Required binding for CodeableConcept Datatype
+#### Required binding for CodeableConcept Datatype
 {:.no_toc}
 
 Required binding to a value set definition means that one of the codes from the specified value set SHALL be used and using only text is not valid. In this IG, we have defined the Extensible + Max-ValueSet binding to allow for either a code from the specified value set or text. Multiple codings (translations) are permitted as is discussed below.
 
 
-### Using multiple codes with CodeableConcept Datatype
+#### Using multiple codes with CodeableConcept Datatype
 {:.no_toc}
 
 Alternate codes may be provided in addition to the standard codes defined in required or extensible value sets. The alternate codes are called “translations”. These translations may be equivalent to or narrower in meaning to the standard concept code.
@@ -179,7 +179,7 @@ Example of translation of CVX vaccine code to NDC code.
         ]
       },
 
-###  Using UCUM codes in the [Quantity] datatype
+####  Using UCUM codes in the [Quantity] datatype
 {:.no_toc}
 
 Both the [Vital Signs Profile] and [US Core Result Observation Profile] bind the `valueQuantity` datatypes to the [UCUM] code system.  A FHIR [UCUM Codes value set] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or the units are missing altogether which will likely occur in the real world.  
@@ -214,7 +214,7 @@ Both the [Vital Signs Profile] and [US Core Result Observation Profile] bind the
 ```
 
 
-## Read(Fetch) resource notation:
+### Read(Fetch) resource notation:
 
 Interactions on profile pages are defined with the syntax:
 
@@ -230,7 +230,7 @@ Interactions on profile pages are defined with the syntax:
 
 For more information see the [FHIR RESTful API]
 
-## Search Syntax
+### Search Syntax
 
 In the simplest case, a search is executed by performing a GET operation in the RESTful framework:
 
@@ -238,7 +238,7 @@ In the simplest case, a search is executed by performing a GET operation in the 
 
 For this RESTful search ([FHIR Search]), the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource the name “code” for search on the LOINC code. See [FHIR Search] for more information about searching in REST, messaging, and services.
 
-## Syntax for searches limited by patient
+### Syntax for searches limited by patient
 
 There are several potential ways to search for resources associated with a specific patient depending on the context and implementation. These searches result in the same outcome.:
 
@@ -260,11 +260,11 @@ There are several potential ways to search for resources associated with a speci
 
 1. Patient [compartment] based search with a specified resource type in that compartment. **NOTE this IG does not support compartment based searches**.
 
-## Across Platform Searches
+### Across Platform Searches
 
 US Core servers are not required to resolve full URLs that are external to their environment.
 
-## Guidance on limiting the number of search results
+### Guidance on limiting the number of search results
 
 In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
 

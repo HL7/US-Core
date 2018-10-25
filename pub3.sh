@@ -1,7 +1,7 @@
 #!/bin/bash
-name="US-Core-R4"
+name="US Core R4"
 path1=/Users/ehaas/Downloads/org.hl7.fhir.igpublisher.jar
-path2=/Users/ehaas/Downloads/org.hl7.fhir.igpublisher-test.jar
+path2=/Users/ehaas/Downloads/org.hl7.fhir.igpublisher-old.jar
 path3=/Users/ehaas/Documents/FHIR/IG-tools/
 while getopts ds:to option
 do
@@ -20,7 +20,7 @@ echo "Optional Parameters"
 echo '-d parameter = create definitions files  = ' $DEFN
 echo '-s parameter = source directory = ' $SOURCE
 echo '-t parameter for no terminology server (run faster and offline)= ' $NA
-echo '-o parameter for running latest version of the igpublisher= ' $PUB
+echo '-o parameter for running previous version of the igpublisher= ' $PUB
 echo === create ig.json and ig.xml in $PWD and ../$SOURCE ===
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
@@ -38,12 +38,12 @@ if [[ $DEFN ]]; then
 fi
 if [[ $PUB ]]; then
   echo "================================================================="
-  echo === run most recent version of the igpublisher ===
+  echo === run last known good version of the igpublisherrun most recent version of the igpublisher ===
   echo "================================================================="
   java -jar ${path2} -ig ig.json -watch -tx $NA
 else
   echo "================================================================="
-  echo === run last known good version of the igpublisher ===
+  echo ===run most recent version of the igpublisher ===
   echo "================================================================="
   java -jar ${path1} -ig ig.json -watch -tx $NA
 fi

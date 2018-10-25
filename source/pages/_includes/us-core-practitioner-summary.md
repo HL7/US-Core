@@ -1,4 +1,4 @@
-#### Complete Summary of the Mandatory Requirements
+##### Complete Summary of the Mandatory Requirements
 
 1.  At least one (non-local) identifier in `Practitioner.identifier`
     -   NPI preferred

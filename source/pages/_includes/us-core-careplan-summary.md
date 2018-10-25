@@ -1,4 +1,4 @@
-#### Complete Summary of the Mandatory Requirements
+##### Complete Summary of the Mandatory Requirements
 
 1.  A narrative summary in `CarePlan.text`
     -   [CarePlan.text.status] is either “generated” or “additional”

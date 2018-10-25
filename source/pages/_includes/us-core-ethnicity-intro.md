@@ -1,7 +1,7 @@
-#### US Core Ethnicity Extension
+##### US Core Ethnicity Extension
 
 
-##### Scope and Usage
+###### Scope and Usage
 
 This Complex Extension for ethnicity allows one or more ethnicity codes of which:
 

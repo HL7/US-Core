@@ -1,4 +1,4 @@
-#### Complete Summary of the Mandatory Requirements
+##### Complete Summary of the Mandatory Requirements
 
 
 1.  One or more medical record numbers in `Patient.identifier`
@@ -17,7 +17,7 @@
   [AdministrativeGender]: {{site.data.fhir.path}}valueset-administrative-gender.html
 
 
-#### Summary of the Must Support Requirements
+##### Summary of the Must Support Requirements
 
 Additionally your system must Support:
 

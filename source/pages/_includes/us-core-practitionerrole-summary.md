@@ -1,4 +1,4 @@
-#### Summary of the Mandatory Requirements
+##### Summary of the Mandatory Requirements
 
 1.  One practitioner in `PractitionerRole.practitioner`
 1.  One organization in `PractitionerRole.organization`

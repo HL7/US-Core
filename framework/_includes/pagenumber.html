@@ -1,0 +1,9 @@
+{% assign pagepath = {{page.path | replace: ".md", ".html" }} %}
+
+{% assign pagenumber = {{site.data.pages[pagepath].label | remove: ".0" }} %}
+
+{% unless pagenumber == '' %}
+  <style type="text/css">
+  h2,h3,h4,h5,h6{--pagenumber: "{{pagenumber | plus: 1}}"}
+  </style>
+{% endunless %}

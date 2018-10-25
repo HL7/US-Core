@@ -1,4 +1,4 @@
-#### Complete Summary of the Mandatory Requirements
+##### Complete Summary of the Mandatory Requirements
 
 1.  One status in `Observation.status` which has a [required]({{site.data.fhir.path}}terminologies.html#required) binding to [ObservationStatus]
 1.  A category in `Observation.category` which must have:

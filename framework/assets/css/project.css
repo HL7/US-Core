@@ -275,13 +275,18 @@ body {
 }
 .breadcrumb {
   margin-bottom: 0;
+  padding: 0px 0px;
 }
 .breadcrumb a {
   color: #555555;
 }
 .breadcrumb .btn-link {
   font-weight: bold;
+  border-color: white;
+  border-right-width: 5px;
 }
+
+
 
 .nav-listing {
   overflow: hidden;
@@ -405,27 +410,31 @@ h3{counter-reset: composite}
 h4{counter-reset: detail}
 h5{counter-reset: more-detail}
 
-h2:before{
+h2:not([nocount^="true"]):before{
   counter-increment: section;
-  content: counter(section) " ";
+  content:  var(--pagenumber) "." counter(section) " ";
+  color: silver;
 }
-h3:before{
+h3:not([nocount^="true"]):before{
   counter-increment: sub-section;
-  content: counter(section) "." counter(sub-section) " ";
+  content: var(--pagenumber) "." counter(section) "." counter(sub-section) " ";
+  color: silver;
 }
-h4:before{
+h4:not([nocount^="true"]):before{
   counter-increment: composite;
-  content: counter(section) "." counter(sub-section) "." counter(composite) " ";
+  content: var(--pagenumber) "." counter(section) "." counter(sub-section) "." counter(composite) " ";
+  color: silver;
 }
-h5:before{
+h5:not([nocount^="true"]):before{
   counter-increment: detail;
-  content: counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";
+  content: var(--pagenumber) "." counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";
+  color: silver;
 }
-h6:before{
+h6:not([nocount^="true"]):before{
   counter-increment: more-detail;
-  content: counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";
+  content: var(--pagenumber) "." counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";
+  color: silver;
 }
-
 /* ----------Publish box styling------*/
 
 

@@ -1,4 +1,4 @@
-#### Version 1.1.0
+##### Version 1.1.0
 
 |GForge reference|Description of Change|
 |---|---|
@@ -6,7 +6,7 @@
 |Jan 2018 Ballot|Add US-Core-PractitionerRole Profile based on Argonaut Provider Directory PractitionerRole profile|
 |Jan 2018 Ballot|Add US-Core-DocumentReference Profile based on Argonaut Data Access DocumentReference profile|
 
-#### Version 1.0.1
+##### Version 1.0.1
 
 |GForge reference|Description of Change|
 |---|---|

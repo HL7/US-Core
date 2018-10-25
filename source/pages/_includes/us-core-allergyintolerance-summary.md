@@ -1,4 +1,4 @@
-#### Summary of the Mandatory Requirements
+##### Summary of the Mandatory Requirements
 
 1.  Conditionally One clinical status in `AllergyIntolerance.clinicalStatus`
     - [Invariants]({{site.data.fhir.path}}allergyintolerance.html#invs)

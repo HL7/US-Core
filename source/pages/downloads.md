@@ -12,8 +12,6 @@ The following package file includes an NPM package file used by many of the FHIR
 
 **Schematrons** are also available and listed below:
 
-**Schematrons** are also available and listed below:
-
 - [us-core-allergyintolerance](us-core-allergyintolerance.sch)
 - [us-core-birthsex](us-core-birthsex.sch)
 - [us-core-careplan](us-core-careplan.sch)

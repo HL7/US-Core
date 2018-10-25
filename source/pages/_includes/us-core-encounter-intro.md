@@ -9,7 +9,7 @@ The following are example usage scenarios for the US Core Encounter profile:
 -   Query for recent patient encounters
 -   Record or update an encounter
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
@@ -34,7 +34,7 @@ Additionally your system [Must Support]:
 
 * none
 
-#### Examples
+##### Examples
 
 - [Outpatient Example](Encounter-example-1.html)
 

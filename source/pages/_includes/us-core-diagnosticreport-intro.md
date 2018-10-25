@@ -7,7 +7,7 @@ The following are example usage scenarios for the US Core-DiagnosticReport profi
 -   Query for lab reports belonging to a Patient
 -   Record a lab report for a specific Patient
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
@@ -33,7 +33,7 @@ Each DiagnosticReport *should* have:
    -  providing a more specific category codes to the “LAB” category code, such as “CH” (chemistry), in an additional coding element.
 * Results that are free text or report form may be represented using the valueAttachment element in Observation or alternatively using the presentedForm element in DiagnosticReport.
 
-#### Examples
+##### Examples
 
 - [Diagnosticreport-urinalysis](DiagnosticReport-urinalysis.html)
 - [Diagnosticreport-metabolic-panel](DiagnosticReport-metabolic-panel.html)

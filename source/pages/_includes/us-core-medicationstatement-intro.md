@@ -8,7 +8,7 @@ US Core-MedicationStatement profile:
 -   Query active medications being taken by a patient
 -   Record or update active medications being taken by a patient
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
@@ -34,7 +34,7 @@ Additionally your system [Must Support]:
     *  The client application SHALL support all methods.  
     *  Additional guidance is provided below in the Search section and in the [CapabilityStatement] section.
 
-#### Examples
+##### Examples
 
 - [MedicationStatement-uscore-ms1](MedicationStatement-uscore-ms1.html) Inline medication code to represent the medication.
 - [MedicationStatement-uscore-ms2](MedicationStatement-uscore-ms2.html) Reference to a [contained]({{site.data.fhir.path}}references.html#contained) Medication resource.

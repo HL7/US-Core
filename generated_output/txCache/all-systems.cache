@@ -1,6 +1,4 @@
 -------------------------------------------------------------------------------------
-
-
 {"code" : {
   "code" : "xml"
 }, "valueSet" :{
@@ -17,8 +15,6 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
-
-
 {"code" : {
   "code" : "json"
 }, "valueSet" :{
@@ -35,8 +31,6 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
-
-
 {"code" : {
   "code" : "text/xml"
 }, "valueSet" :{
@@ -51,267 +45,6 @@ v: {
   "display" : "text/xml",
   "severity" : null,
   "error" : ""
-}
--------------------------------------------------------------------------------------
-
-
-{"code" : {
-  "coding" : [{
-    "system" : "http://snomed.info/sct",
-    "code" : "35637008",
-    "display" : "Alcohol rehabilitation"
-  },
-  {
-    "system" : "http://www.icd10data.com/icd10pcs",
-    "code" : "HZ30ZZZ",
-    "display" : "Individual Counseling for Substance Abuse Treatment, Cognitive"
-  }],
-  "text" : "Alcohol rehabilitation"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.ama-assn.org/go/cpt"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "71388002"
-      }]
-    }]
-  }
-}}####
-v: {
-  "display" : "Alcohol rehabilitation (regime/therapy)",
-  "severity" : "warning",
-  "error" : "The code system \"http://www.icd10data.com/icd10pcs\" is not known"
-}
--------------------------------------------------------------------------------------
-
-
-{"code" : {
-  "code" : "F"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/v3/AdministrativeGender",
-      "concept" : [{
-        "code" : "F",
-        "display" : "Female"
-      },
-      {
-        "code" : "M",
-        "display" : "Male"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/v3/NullFlavor",
-      "concept" : [{
-        "code" : "UNK",
-        "display" : "Unknown"
-      }]
-    }]
-  }
-}}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"\" is not known; The code provided (#F) is not  valid in the value set US Core Birth Sex Value Set"
-}
--------------------------------------------------------------------------------------
-
-
-{"code" : {
-  "coding" : [{
-    "system" : "http://hl7.org/fhir/sid/cvx",
-    "code" : "158",
-    "display" : "influenza, injectable, quadrivalent"
-  },
-  {
-    "system" : "http://hl7.org/fhir/sid/ndc",
-    "code" : "49281-0623-78",
-    "display" : "FLUZONE QUADRIVALENT"
-  }]
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/sid/cvx"
-    }]
-  }
-}}####
-v: {
-  "display" : "influenza, injectable, quadrivalent",
-  "severity" : "warning",
-  "error" : "The code system \"http://hl7.org/fhir/sid/ndc\" is not known"
-}
--------------------------------------------------------------------------------------
-
-
-{"code" : {
-  "code" : "text/plain"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:ietf:bcp:13"
-    }]
-  }
-}}####
-v: {
-  "display" : "text/plain",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-
-
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.ama-assn.org/go/cpt"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "71388002"
-      }]
-    }]
-  }
-}}
-####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt"
-}
--------------------------------------------------------------------------------------
-
-
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/condition-category"
-    },
-    {
-      "system" : "http://hl7.org/fhir/us/core-r4/CodeSystem/condition-category",
-      "concept" : [{
-        "code" : "health-concern",
-        "display" : "Health Concern"
-      }]
-    }]
-  }
-}}
-####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/condition-category"
-}
--------------------------------------------------------------------------------------
-
-
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/v3/AdministrativeGender",
-      "concept" : [{
-        "code" : "F",
-        "display" : "Female"
-      },
-      {
-        "code" : "M",
-        "display" : "Male"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/v3/NullFlavor",
-      "concept" : [{
-        "code" : "UNK",
-        "display" : "Unknown"
-      }]
-    }]
-  }
-}}
-####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/v3/AdministrativeGender"
-}
--------------------------------------------------------------------------------------
-
-
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:oid:2.16.840.1.113883.6.238",
-      "concept" : [{
-        "code" : "1002-5",
-        "display" : "American Indian or Alaska Native"
-      },
-      {
-        "code" : "2028-9",
-        "display" : "Asian"
-      },
-      {
-        "code" : "2054-5",
-        "display" : "Black or African American"
-      },
-      {
-        "code" : "2076-8",
-        "display" : "Native Hawaiian or Other Pacific Islander"
-      },
-      {
-        "code" : "2106-3",
-        "display" : "White"
-      }]
-    },
-    {
-      "system" : "http://hl7.org/fhir/v3/NullFlavor",
-      "concept" : [{
-        "code" : "UNK",
-        "display" : "Unknown"
-      },
-      {
-        "code" : "ASKU",
-        "display" : "Asked but no answer"
-      }]
-    }]
-  }
-}}
-####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.238"
-}
--------------------------------------------------------------------------------------
-
-{"code" : {
-  "coding" : [{
-    "system" : "http://terminology.hl7.org/CodeSystem/sid/cvx",
-    "code" : "158",
-    "display" : "influenza, injectable, quadrivalent"
-  },
-  {
-    "system" : "http://terminology.hl7.org/CodeSystem/sid/ndc",
-    "code" : "49281-0623-78",
-    "display" : "FLUZONE QUADRIVALENT"
-  }]
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://hl7.org/fhir/sid/cvx"
-    }]
-  }
-}}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/sid/cvx\" is not known; The code system \"http://terminology.hl7.org/CodeSystem/sid/ndc\" is not known; None of the codes provided (http://terminology.hl7.org/CodeSystem/sid/cvx#158, http://terminology.hl7.org/CodeSystem/sid/ndc#49281-0623-78) are  valid in the value set Vaccine_Administered_Value_Set_CVX"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -568,5 +301,101 @@ v: {
   "display" : "Massachusetts",
   "severity" : null,
   "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "35637008",
+    "display" : "Alcohol rehabilitation"
+  },
+  {
+    "system" : "http://www.icd10data.com/icd10pcs",
+    "code" : "HZ30ZZZ",
+    "display" : "Individual Counseling for Substance Abuse Treatment, Cognitive"
+  }],
+  "text" : "Alcohol rehabilitation"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "Alcohol rehabilitation (regime/therapy)",
+  "severity" : "warning",
+  "error" : "The code system \"http://www.icd10data.com/icd10pcs\" is not known"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://terminology.hl7.org/CodeSystem/sid/cvx",
+    "code" : "158",
+    "display" : "influenza, injectable, quadrivalent"
+  },
+  {
+    "system" : "http://terminology.hl7.org/CodeSystem/sid/ndc",
+    "code" : "49281-0623-78",
+    "display" : "FLUZONE QUADRIVALENT"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/cvx"
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://terminology.hl7.org/CodeSystem/sid/cvx\" is not known; The code system \"http://terminology.hl7.org/CodeSystem/sid/ndc\" is not known; None of the codes provided (http://terminology.hl7.org/CodeSystem/sid/cvx#158, http://terminology.hl7.org/CodeSystem/sid/ndc#49281-0623-78) are  valid in the value set Vaccine_Administered_Value_Set_CVX"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "text/plain"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}}####
+v: {
+  "display" : "text/plain",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}}
+####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt"
 }
 -------------------------------------------------------------------------------------

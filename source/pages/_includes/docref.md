@@ -10,10 +10,10 @@ Otherwise the POST transaction is used as follows:
 
 ---
 
-##### Example
+###### Example
 
 ~~~
-##### 1. Request the latest CCD for a patient #####
+###### 1. Request the latest CCD for a patient #####
 
 GET [base]/DocumentReference/$docref?patient=123
 
@@ -35,7 +35,7 @@ POST [base]/DocumentReference/$docref}
     }
 
 
-##### 1. Response #####
+###### 1. Response #####
 
     {
       "resourceType": "Bundle",

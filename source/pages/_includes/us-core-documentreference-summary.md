@@ -1,4 +1,4 @@
-#### Summary of the Mandatory Requirements
+##### Summary of the Mandatory Requirements
 
 1.  One status in `DocumentReference.status`
     -   DocumentReference.status is bound to [DocumentReferenceStatus] value set 

@@ -9,7 +9,7 @@ The following are example usage scenarios for the Diagnostic Report profile:
 -   Query for category of reports (e.g. all Cardiology reports)
 
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
 
@@ -35,7 +35,7 @@ In addition it should have (if available):
 The `DiagnosticReport.category` binding must support at a minimum the [3 concepts](http://hl7.org/fhir/us/core-r4/ValueSet/us-core-diagnosticreport-category) of Cardiology, Radiology, and Pathology. Other categories may be supported.
 
 
-##### Examples
+###### Examples
 
 - TBD
 

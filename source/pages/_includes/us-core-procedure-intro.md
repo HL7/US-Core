@@ -8,7 +8,7 @@ The following are example usage scenarios for the US Core-Procedure profile:
 -   Record a procedure performed on a Patient
 
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
@@ -27,7 +27,7 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 
  - This profile may be referenced by different capability statements, such as the [Conformance requirements for the US Core Server].
 
-#### Examples
+##### Examples
 
 - [procedure-rehab](Procedure-rehab.html)
 

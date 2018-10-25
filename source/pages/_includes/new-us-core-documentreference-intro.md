@@ -10,7 +10,7 @@ The following are example usage scenarios for the Argonaut Clinical Notes profil
 -   Query for all Clinical Notes belonging to a Patient
 -   Write a new Note to a Patient's Chart
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
 
@@ -46,7 +46,7 @@ The `DocumentReference.type` binding must support at a minimum these [5 concepts
 The views provided on this page are of just the Clinical Notes Profile, and the Clinical Notes Profile combined with US Core DocumentReference and FHIR core. <!--See [merged profile view](StructureDefinition-example-dr.html) for the combination of Clinical Notes Profile and US Core DocumentReference without FHIR core.-->
 
 
-##### Examples
+###### Examples
 
 - TBD
 

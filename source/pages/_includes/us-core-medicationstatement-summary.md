@@ -1,4 +1,4 @@
-#### Complete Summary of the Mandatory Requirements
+##### Complete Summary of the Mandatory Requirements
 
 
 1.  One status in `MedicationStatement.status` which has a [required]({{site.data.fhir.path}}terminologies.html#required) binding to:
@@ -10,7 +10,7 @@
 1.  One medication taken code in `MedicationStatement.taken` which has a [required]({{site.data.fhir.path}}terminologies.html#required) binding to:
 -   [MedicationStatementTaken] value set.
 
-#### Summary of the Must Support Requirements
+##### Summary of the Must Support Requirements
 
 1.  One date or period in `MedicationStatement.effectiveDateTime` or `MedicationStatement.effectivePeriod`
 1.  One or more references in `MedicationStatement.derivedFrom` (likely references would be to the [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html))

@@ -32,9 +32,10 @@
   "copyright" : "Used by permission of HL7 US Realm Steering Committee, all rights reserved Creative Commons License",
   "packageId" : "hl7.fhir.us.core.r4",
   "license" : "CC0-1.0",
-  "fhirVersion" : "3.6.0",
+  "fhirVersion" : ["3.6.0",
+  "3.6.0"],
   "definition" : {
-    "package" : [{
+    "grouping" : [{
       "name" : "base"
     }],
     "resource" : [{
@@ -207,12 +208,6 @@
     },
     {
       "reference" : {
-        "reference" : "DiagnosticReport/urinalysis"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "Device/udi-1"
       },
       "exampleBoolean" : true
@@ -327,12 +322,6 @@
     },
     {
       "reference" : {
-        "reference" : "DiagnosticReport/metabolic-panel"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "Observation/mchc"
       },
       "exampleBoolean" : true
@@ -430,12 +419,6 @@
     {
       "reference" : {
         "reference" : "CarePlan/colonoscopy"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "DiagnosticReport/cbc"
       },
       "exampleBoolean" : true
     },
@@ -884,21 +867,358 @@
       "exampleBoolean" : false
     }],
     "page" : {
-      "nameUrl" : "index.md",
-      "title" : "US Core R4 Homepage",
-      "generation" : "markdown"
+      "nameUrl" : "index.html",
+      "title" : "US Core Homepage",
+      "generation" : "markdown",
+      "page" : [{
+        "nameUrl" : "guidance.html",
+        "title" : "Guidance",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "profiles.html",
+        "title" : "Profiles",
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "StructureDefinition-us-core-allergyintolerance.html",
+          "title" : "Structure Definition US Core Allergyintolerance",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-careplan.html",
+          "title" : "Structure Definition US Core Careplan",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-careteam.html",
+          "title" : "Structure Definition US Core Careteam",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-condition.html",
+          "title" : "Structure Definition US Core Condition",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-device.html",
+          "title" : "Structure Definition US Core Device",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-diagnosticreport.html",
+          "title" : "Structure Definition US Core Diagnosticreport",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-documentreference.html",
+          "title" : "Structure Definition US Core Documentreference",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-encounter.html",
+          "title" : "Structure Definition US Core Encounter",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-goal.html",
+          "title" : "Structure Definition US Core Goal",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-immunization.html",
+          "title" : "Structure Definition US Core Immunization",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-location.html",
+          "title" : "Structure Definition US Core Location",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-medication.html",
+          "title" : "Structure Definition US Core Medication",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-medicationrequest.html",
+          "title" : "Structure Definition US Core Medicationrequest",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-medicationstatement.html",
+          "title" : "Structure Definition US Core Medicationstatement",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-observationresults.html",
+          "title" : "Structure Definition US Core Observationresults",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-organization.html",
+          "title" : "Structure Definition US Core Organization",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-patient.html",
+          "title" : "Structure Definition US Core Patient",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-practitioner.html",
+          "title" : "Structure Definition US Core Practitioner",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-practitionerrole.html",
+          "title" : "Structure Definition US Core Practitionerrole",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-procedure.html",
+          "title" : "Structure Definition US Core Procedure",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-smokingstatus.html",
+          "title" : "Structure Definition US Core Smokingstatus",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-birthsex.html",
+          "title" : "Structure Definition US Core Birthsex",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-direct.html",
+          "title" : "Structure Definition US Core Direct",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-race.html",
+          "title" : "Structure Definition US Core Race",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-ethnicity.html",
+          "title" : "Structure Definition US Core Ethnicity",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-profile-link.html",
+          "title" : "Structure Definition US Core Profile Link",
+          "generation" : "generated"
+        }]
+      },
+      {
+        "nameUrl" : "terminology.html",
+        "title" : "Terminology",
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "CodeSystem-careplan-category.html",
+          "title" : "Code System Careplan Category",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CodeSystem-cdcrec.html",
+          "title" : "Code System CDC Race and Ethnicity",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CodeSystem-condition-category.html",
+          "title" : "Code System Condition Category",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-detailed-ethnicity.html",
+          "title" : "Value Set Detailed Ethnicity",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-detailed-race.html",
+          "title" : "Value Set Detailed Race",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-omb-ethnicity-category.html",
+          "title" : "Value Set OMB Ethnicity Category",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-omb-race-category.html",
+          "title" : "Value Set OMB Race Category",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-simple-language.html",
+          "title" : "Value Set Simple Language",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-birthsex.html",
+          "title" : "Value Set US Core Birthsex",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-careteam-provider-roles.html",
+          "title" : "Value Set US Core Careteam Provider Roles",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-condition-category.html",
+          "title" : "Value Set US Core Condition Category",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-cvx.html",
+          "title" : "Value Set US Core CVX",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-encounter-type.html",
+          "title" : "Value Set US Core Encounter Type",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-medication-codes.html",
+          "title" : "Value Set US Core Medication Codes",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-narrative-status.html",
+          "title" : "Value Set US Core Narrative Status",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-ndc-vaccine-codes.html",
+          "title" : "Value Set US Core Ndc Vaccine Codes",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-observation-ccdasmokingstatus.html",
+          "title" : "Value Set US Core Observation CCCDA smokingstatus",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-observation-value-codes.html",
+          "title" : "Value Set US Core Observation Value Codes",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-problem.html",
+          "title" : "Value Set US Core Problem",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-procedure-code.html",
+          "title" : "Value Set US Core Procedure Code",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-procedure-icd10pcs.html",
+          "title" : "Value Set US Core Procedure ICD-10pcs",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-provider-role.html",
+          "title" : "Value Set US Core Provider Role",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-provider-specialty.html",
+          "title" : "Value Set US Core Provider Specialty",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-substance-ndfrt.html",
+          "title" : "Value Set US Core Substance Ndfrt",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-substance-rxnorm.html",
+          "title" : "Value Set US Core Substance Rxnorm",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-substance-sct.html",
+          "title" : "Value Set US Core Substance Sct",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-substance.html",
+          "title" : "Value Set US Core Substance",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ConceptMap-ndc-cvx.html",
+          "title" : "Concept Map Ndc cvx",
+          "generation" : "generated"
+        }]
+      },
+      {
+        "nameUrl" : "searchparameters.html",
+        "title" : "Search Parameters and Operations",
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "SearchParameter-us-core-ethnicity.html",
+          "title" : "Search Parameter US Core Ethnicity",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-race.html",
+          "title" : "Search Parameter US Core Race",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "OperationDefinition-docref.html",
+          "title" : "US Core Fetch DocumentReference",
+          "generation" : "generated"
+        }]
+      },
+      {
+        "nameUrl" : "capstatements.html",
+        "title" : "Capability Statements",
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "CapabilityStatement-client.html",
+          "title" : "Capability Statement Client",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-server.html",
+          "title" : "Capability Statement Server",
+          "generation" : "generated"
+        }]
+      },
+      {
+        "nameUrl" : "security.html",
+        "title" : "Security",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "downloads.html",
+        "title" : "Downloads",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "all-examples.html",
+        "title" : "All Examples",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "change-notes.html",
+        "title" : "US Core Change Notes",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "toc.html",
+        "title" : "US Core Table of Contents",
+        "generation" : "html"
+      }]
     },
     "parameter" : [{
-      "code" : "apply-business-version",
-      "value" : "2.0.0"
-    },
-    {
-      "code" : "html-template",
-      "value" : "html-template.html"
-    },
-    {
-      "code" : "apply-jurisdiction",
-      "value" : "true"
+      "code" : "apply",
+      "value" : "jurisdiction"
     },
     {
       "code" : "generate-json",

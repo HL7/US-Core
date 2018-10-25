@@ -7,7 +7,7 @@ The following are example usage scenarios for the US Core-Results profile:
 -   Query for lab results belonging to a Patient
 -   Record lab results belonging to a Patient
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
@@ -35,7 +35,7 @@ Each Observation *should* have:
 * An Observation without a value must include an absent reason or group other results. When it groups results, the composite values or references to other Observations will be populated.
 * See the [General Guidance Section] for further guidance on using UCUM
 
-#### Examples
+##### Examples
 
  - [observation-usg](Observation-usg.html)
  - [observation-serum-total-bilirubin](Observation-serum-total-bilirubin.html)

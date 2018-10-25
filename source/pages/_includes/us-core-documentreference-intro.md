@@ -7,7 +7,7 @@ The following are example usage scenarios for the US Core DocumentReference prof
 -   Query for all documents belonging to a Patient
 -   Query for clinical summary information about a patient (access a patient's Continuity of Care Document (CCD))
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
@@ -35,7 +35,7 @@ For a C-CDA Clinical Summary of Care (CCD):
 -   The format code is `urn:hl7-org:sdwg:ccda-structuredBody:2.1`
 -   The https address may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]) address or a FHIR Document Bundle (i.e [base]/Bundle/[id] address on the server.
 
-#### Examples
+##### Examples
 
    -  [DocumentReference-episode-summary](DocumentReference-episode-summary.html) Retrieve a URL for an episode summary note (CCD).
 

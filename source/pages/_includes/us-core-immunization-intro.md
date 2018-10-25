@@ -8,7 +8,7 @@ profile:
 -   Query for immunizations belonging to a Patient
 -   Record immunizations belonging to a Patient
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
@@ -28,7 +28,7 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 * **NDC codes as a translational data element**:
 Based upon the 2015 Edition Certification Requirements, [CVX vaccine codes] are required and the [NDC vaccine codes] SHOULD be supported as translations to them.  A [NDC to CVX ConceptMap] is provided and is based upon the CDC's [CVX crosswalk table]. A translation is illustrated in the example below.
 
-#### Examples
+##### Examples
 
 - [Immunization-imm-1](Immunization-imm-1.html)
 

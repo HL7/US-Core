@@ -80,7 +80,7 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
 
 <!--  ********remove the tabs editing purposes if status draft ********* -->
 
-{% if {{site.data.structuredefinitions.{{[id]}}.status}} == "active" %}
+{% if site.data.structuredefinitions.{{[id]}}.status == "active" %}
 
 <div id="tabs">
 
@@ -99,13 +99,11 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
   <div id="tbl-summ">
    <div id="tbl-diff-inner">
      <a name="summary"> </a>
-
-{% include {{[type]}}-{{[id]}}-summary.xhtml %}
-
-
-<!--{% raw %}
-{% capture my-include %}{% include {{[id]}}-summary.md id="{{[id]}}" %}{% endcapture %}{{ my-include | markdownify }}
-{% endraw %}-->
+{% if site.summaries %}
+  {% capture my-include %}{% include {{[id]}}-summary.md id="{{[id]}}" %}{% endcapture %}{{ my-include | markdownify }}
+{% else %}
+  {% include {{[type]}}-{{[id]}}-summary.xhtml %}
+{% endif%}
    </div>
   </div>
  </div>
@@ -171,12 +169,14 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
      {% include {{[type]}}-{{[id]}}-diff.xhtml %}
    </div>
    <!-- =======Differential level 2 ( if want to show an intermediate diff if profiling a profile) ========= -->
+{% if site.diff2 %}
       <div id="all-tbl-diff2-inner">
         {% include {{[id]}}-diff2.md type="{{[type]}}" id="{{[id]}}" %}
       </div>
+{% endif %}
 </div>
 <!-- =======Snapshot======== -->
-{% unless {{site.data.structuredefinitions.{{[id]}}.kind}} == "logical" %}
+{% unless site.data.structuredefinitions.{{[id]}}.kind == "logical" %}
   <div id="all-tbl-snap">
    <p><b>Snapshot View</b></p>
    <div id="all-tbl-snap-inner">
@@ -212,13 +212,15 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
 
 <br />
 
+{% if site.data.structuredefinitions.{{[id]}}.kind == "resource" %}
+
 <a name="downloads"> </a>
 <p>Downloads: StructureDefinition: (<a href="{{[type]}}-{{[id]}}.xml" download>XML</a>, <a href="{{[type]}}-{{[id]}}.json" download>JSON</a>), Schema:  <a href="{{[id]}}.sch" download>XML Schematron</a></p>
 
 <br />
 
 
-{% if {{site.data.structuredefinitions.{{[id]}}.kind}} == "resource" %}
+
 
   <!-- search text here-->
   <a name="search"> </a>
@@ -229,7 +231,9 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
   {% capture my-include %}{% include {{[id]}}-search.md id="{{[id]}}" %}{% endcapture %}{{ my-include | markdownify }}
 
 
-{% elsif {{site.data.structuredefinitions.{{[id]}}.kind}} == "logical" %}
+{% elsif site.data.structuredefinitions.{{[id]}}.kind == "logical" %}
+
+<br />
 
 
   <a name="mapping-tables"> </a>

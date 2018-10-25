@@ -9,7 +9,7 @@ The following are example usage scenarios for the US Core-Practitioner profile:
 -   Reference from other Resources
 
 
-##### Mandatory Data Elements and Terminology
+###### Mandatory Data Elements and Terminology
 
 
 The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
@@ -24,7 +24,7 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 - This profile may be referenced by different capability statements, such as the [Conformance requirements for the US Core Server], or a provider directory capability statement.
 
 
-#### Examples
+##### Examples
 
 [Practitioner-1](Practitioner-practitioner-1.html)
 

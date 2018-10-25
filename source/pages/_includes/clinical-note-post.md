@@ -1,6 +1,6 @@
 An example to demonstrate writing a note to the server.
 
-#### Clinical Note
+##### Clinical Note
 
 ~~~
 
@@ -34,7 +34,7 @@ Request Body:
 
 ~~~~
 
-# Note Content
+## Note Content
 
 The content is Base64 encoded and states:
  "No activity restriction, regular diet, follow up in two to three weeks with primary care provider."

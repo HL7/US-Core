@@ -5,7 +5,7 @@
 	<version value="1.0.1"/>
 	<name value="ProfileResourceAssociationExtension"/>
 	<title value="Profile-resource association extension"/>
-	<status value="draft"/>
+	<status value="active"/>
 	<publisher value="HL7 US Realm Steering Committee"/>
 	<contact>
 		<telecom>
@@ -15,7 +15,7 @@
 	</contact>
 	<description value="Used in the CapabilityStatment resource to link profiles to the resources they are based upon for the purpose of describing profile specific capababilties such as specific search criteria or operations which are supported on a profile by profile bases. It is a code that references a resource listed in Capability.rest.resource. For more information on how the Capability resource describes profiles on resources, see [Two uses of Profiles](http://hl7.org/fhir/STU3/profiling.html#profile-uses)."/>
 	<purpose value="To allow profiles to be associated with resources in CapabilityStatements."/>
-	<fhirVersion value="1.9.0"/>
+	<fhirVersion value="3.6.0"/>
 	<mapping>
 		<identity value="rim"/>
 		<uri value="http://hl7.org/v3"/>
