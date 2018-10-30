@@ -572,3 +572,12 @@ fieldset[disabled] .btn-example.active {
   color: #EFF3F6;
   background-color: #000000;
 }
+
+/* ============ downloads css ============= */
+
+a[href$=".sch"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".sch"]:after, a[href$=".xml"]:after, a[href$=".json"]:after, a[href$=".csv"]:after, a[href$=".ttl"]:after {
+  content: url(../images/download.png);
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 3px;
+}
