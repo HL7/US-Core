@@ -46,4 +46,4 @@
   [extensible bindings]: Implementation_Guide#Extensible_binding_for_CodeableConcept_Datatype "wikilink"
   [using multiple codes]: Implementation_Guide#Using_multiple_codes_with_CodeableConcept_Datatype "wikilink"
   [ObservationStatus]: {{site.data.fhir.path}}valueset-observation-status.html
- [Observation Value Absent Reason]: {http://hl7.org/fhir/valueset-data-absent-reason.html
+ [Observation Value Absent Reason]: {http://hl7.org/fhir/ValueSet/data-absent-reason

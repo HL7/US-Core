@@ -10,5 +10,5 @@
 
 
   [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
-  [MedicationRequestStatus]: {{site.data.fhir.path}}valueset-medication-request-status.html
+  [MedicationRequestStatus]: {{site.data.fhir.path}}valueset-medicationrequest-status.html
 [MedicationStatementStatus]: {{site.data.fhir.path}}valueset-medication-statement-status.html

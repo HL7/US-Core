@@ -39,7 +39,7 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 - [MedicationRequest-uscore-mo3](Bundle-uscore-mo3.html) A search [Bundle]({{site.data.fhir.path}}bundle.html) with a MedicationRequest and an included Medication resource in the Bundle.
 
   [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
-  [MedicationRequestStatus]: {{site.data.fhir.path}}us/daf/ValueSet-medication-request-status.html
+  [MedicationRequestStatus]: {{site.data.fhir.path}}us/daf/ValueSet-medicationrequest-status.html
 [MedicationStatementStatus]: {{site.data.fhir.path}}us/daf/ValueSet-medication-statement-status.html
 [MedicationStatement]:{{site.data.fhir.path}}medicationstatement.html
  [MedicationRequest]: {{site.data.fhir.path}}medicationrequest.html

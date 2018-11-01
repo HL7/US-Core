@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-current/fhir-all.xsd">
 	<id value="new-us-core-diagnosticreport"/>
 	<url value="http://hl7.org/fhir/us/core-r4/StructureDefinition/new-us-core-diagnosticreport"/>
 	<name value="New_US_Core_Diagnostic_Report_Profile_for_Report_and_Note_exchange"/>
@@ -51,12 +51,11 @@
 			<alias value="service"/>
 			<alias value="discipline"/>
 			<min value="1"/>
-			<max value="1"/>
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
 			<mustSupport value="true"/>
-      <isModifier value="false"/>
+			<isModifier value="false"/>
 			<binding>
 				<strength value="extensible"/>
 				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-diagnosticreport-category"/>
@@ -133,10 +132,8 @@
 				<map value="DiagnosticReport.subject"/>
 			</mapping>
 		</element>
-		<element id="DiagnosticReport.context">
-			<path value="DiagnosticReport.context"/>
-			<min value="0"/>
-			<max value="1"/>
+		<element id="DiagnosticReport.encounter">
+			<path value="DiagnosticReport.encounter"/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-encounter"/>
@@ -193,8 +190,8 @@
 				<map value="NA (new element in STU3)"/>
 			</mapping>
 		</element>
-		<element id="DiagnosticReport.image">
-			<path value="DiagnosticReport.image"/>
+		<element id="DiagnosticReport.media">
+			<path value="DiagnosticReport.media"/>
 			<min value="0"/>
 			<max value="*"/>
 			<mustSupport value="true"/>
