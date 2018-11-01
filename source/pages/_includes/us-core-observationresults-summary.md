@@ -18,7 +18,7 @@ Each Observation *SHOULD* have:
 1.  A reference range if applicable in `Observation.referenceRange`
 
   [Observation Value Codes (SNOMED-CT)]: ValueSet-us-core-observation-value-codes.html
-  [Observation Value Absent Reason]: {http://hl7.org/fhir/ValueSet/data-absent-reason
+  [Observation Value Absent Reason]: http://hl7.org/fhir/ValueSet/data-absent-reason
   [UCUM units]: {{site.data.fhir.path}}valueset-ucum-units.html
   [LOINC]: http://loinc.org
   [LOINC Observation Codes]: {{site.data.fhir.path}}valueset-observation-codes.html
