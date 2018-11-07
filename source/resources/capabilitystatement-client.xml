@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd/account.xsd">
-  <id value="client"/>
+  <id value="us-core-r4-client"/>
   <text>
     <status value="additional"/>
     <div xmlns="http://www.w3.org/1999/xhtml">
@@ -10,7 +10,7 @@
         <li>Published: 2017-12-22</li>
         <li>Published by: Health Level Seven International US Realm Steering Committee</li>
       </ul>
-      <p>The Section describes the expected capabilities of the  US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the [Conformance Requirements for Server]. US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.</p>
+      <p>The Section describes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the <a href ="CapabilityStatement-us-core-r4-server.html">Conformance Requirements for Server</a>. US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.</p>
       <h4 id="behavior-1">Behavior</h4>
       <p>Description:</p>
       <p>The US Core Client <strong>SHOULD</strong>:</p>
@@ -564,7 +564,7 @@
 <p/>
 </div>
 </text>
-<url value="http://hl7.org/fhir/us/core-r4/CapabilityStatement/client"/>
+<url value="http://hl7.org/fhir/us/core-r4/CapabilityStatement/us-core-r4-client"/>
 <version value="1.0.1"/>
 <name value="UsCoreClient"/>
 <title value="US Core Client"/>

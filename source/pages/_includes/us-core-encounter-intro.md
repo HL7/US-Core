@@ -25,9 +25,11 @@ Additionally your system [Must Support]:
 1. An encounter identifier
 1. Providers involved in the encounter
 1. Where the encounter occurred
-1. When the encounter ocurred
+1. When the encounter occurred
 1. The discharge disposition
 1. Reason for the visit
+1. Diagnosis
+1. Indication of the principle diagnosis
 
 
 **Profile specific implementation guidance:**
@@ -39,5 +41,4 @@ Additionally your system [Must Support]:
 - [Outpatient Example](Encounter-example-1.html)
 
 
-[Encounter]: {{site.data.fhir.path}}encounter.html
-[Must Support]: guidance.html#must-support
+{% include link-list.md %}

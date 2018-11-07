@@ -3,7 +3,7 @@
 1.  At least one (non-local) identifier in `Practitioner.identifier`
     -   NPI preferred
     -   Tax id is allowed
-    -   Local id is allowed in addition to 'authoritative' identifier
+    -   Local id is allowed in addition to another identifier supplied by a jurisdictional authority such as a practitioner's *Drug Enforcement Administration (DEA)* number.
 1.  One name in `Practitioner.name`
 
 

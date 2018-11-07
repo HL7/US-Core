@@ -31,12 +31,4 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 
 - [procedure-rehab](Procedure-rehab.html)
 
-
-
-  [SNOMED CT]: {{site.data.fhir.path}}valueset-procedure-code.html
-  [CPT-4/HCPC for procedures]: {{site.data.fhir.path}}valueset-procedure-code.html
-  [ICD-10-PCS codes]: http://www.icd10data.com/icd10pcs
-  [Code on Dental Procedures and Nomenclature (CDT Code)]: http://www.ada.org/en/publications/cdt/
-  [ProcedureStatus]: {{site.data.fhir.path}}valueset-procedure-status.html
-  [Procedure]: {{site.data.fhir.path}}procedure.html
-  [Conformance requirements for the US Core Server]: CapabilityStatement-server.html
+{% include link-list.md %}

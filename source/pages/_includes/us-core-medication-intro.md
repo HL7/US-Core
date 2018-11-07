@@ -20,7 +20,6 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 **Profile specific implementation guidance:**
 
 *  Since the binding is [extensible](guidance.html#extensible-binding-for-codeableconcept-datatype), when a code is unavailable just text is allowed.
+* When the medication is compounded and is a list of ingredients, the code is still present and may contain only the text. 
 
-[MedicationStatement]: {{site.data.fhir.path}}medicationstatement.html
- [MedicationRequest]: {{site.data.fhir.path}}medicationrequest.html
- [Medication]: {{site.data.fhir.path}}medication.html
+{% include link-list.md %}

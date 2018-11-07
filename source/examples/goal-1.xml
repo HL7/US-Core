@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Goal xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir"  >
+<Goal xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-current/fhir-all.xsd">
 	<id value="goal-1"/>
-		<meta>
+	<meta>
 		<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-goal"/>
 	</meta>
-	<status value="in-progress"/>
+	<lifecycleStatus value="active"/>
 	<description>
 		<text value="Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs"/>
 	</description>

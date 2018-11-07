@@ -475,30 +475,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/us-core-substance"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/us-core-substance-sct"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/us-core-substance-rxnorm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/us-core-substance-ndfrt"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/us-core-provider-specialty"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -847,13 +823,13 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/server"/>
+        <reference value="CapabilityStatement/us-core-r4-server"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/client"/>
+        <reference value="CapabilityStatement/us-core-r4-client"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -869,12 +845,12 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="Guidance"/>
+        <title value="General Guidance"/>
         <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
-        <title value="Profiles"/>
+        <title value="Profiles and Extensions"/>
         <generation value="markdown"/>
         <page>
           <nameUrl value="StructureDefinition-us-core-allergyintolerance.html"/>
@@ -1127,26 +1103,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="ValueSet-us-core-substance-ndfrt.html"/>
-          <title value="Value Set US Core Substance Ndfrt"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="ValueSet-us-core-substance-rxnorm.html"/>
-          <title value="Value Set US Core Substance Rxnorm"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="ValueSet-us-core-substance-sct.html"/>
-          <title value="Value Set US Core Substance Sct"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="ValueSet-us-core-substance.html"/>
-          <title value="Value Set US Core Substance"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="ConceptMap-ndc-cvx.html"/>
           <title value="Concept Map Ndc cvx"/>
           <generation value="generated"/>
@@ -1177,13 +1133,13 @@
         <title value="Capability Statements"/>
         <generation value="markdown"/>
         <page>
-          <nameUrl value="CapabilityStatement-client.html"/>
-          <title value="Capability Statement Client"/>
+          <nameUrl value="CapabilityStatement-us-core-r4-client.html"/>
+          <title value="Capability Statement US Core Client"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CapabilityStatement-server.html"/>
-          <title value="Capability Statement Server"/>
+          <nameUrl value="CapabilityStatement-us-core-r4-server.html"/>
+          <title value="Capability Statement US Core Server"/>
           <generation value="generated"/>
         </page>
       </page>

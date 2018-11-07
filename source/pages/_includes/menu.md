@@ -21,10 +21,10 @@
   </a>
       <ul class="dropdown-menu">
         <li>
-          <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+          <a href="CapabilityStatement-us-core-r4-server.html">Conformance requirements for Server</a>
         </li>
         <li>
-          <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+          <a href="CapabilityStatement-us-core-r4-client.html">Conformance requirements for Client</a>
         </li>
       </ul>
   </li>

@@ -36,6 +36,29 @@
     <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/>
   </resource>   -->
   <!-- insert resources -->
+  <!-- DR examples not building
+  <resource>
+    <reference>
+      <reference value="DiagnosticReport/cbc"/>
+    </reference>
+    <exampleBoolean value="true"/>
+  </resource>
+
+  <resource>
+    <reference>
+      <reference value="DiagnosticReport/metabolic-panel"/>
+    </reference>
+    <exampleBoolean value="true"/>
+  </resource>
+
+  <resource>
+    <reference>
+      <reference value="Observation/urinalysis"/>
+    </reference>
+    <exampleBoolean value="true"/>
+  </resource>
+-->
+  
   <resource>
     <reference>
       <reference value="Observation/weight"/>
@@ -474,6 +497,8 @@
     </reference>
     <exampleBoolean value="false"/>
   </resource>
+  
+  <!--
   <resource>
     <reference>
       <reference value="ValueSet/us-core-substance"/>
@@ -498,6 +523,8 @@
     </reference>
     <exampleBoolean value="false"/>
   </resource>
+-->
+
   <resource>
     <reference>
       <reference value="ValueSet/us-core-provider-specialty"/>
@@ -848,13 +875,13 @@
   </resource>
   <resource>
     <reference>
-      <reference value="CapabilityStatement/server"/>
+      <reference value="CapabilityStatement/us-core-r4-server"/>
     </reference>
     <exampleBoolean value="false"/>
   </resource>
   <resource>
     <reference>
-      <reference value="CapabilityStatement/client"/>
+      <reference value="CapabilityStatement/us-core-r4-client"/>
     </reference>
     <exampleBoolean value="false"/>
   </resource>
@@ -870,13 +897,15 @@
     <generation value="markdown"/>
     <page>
       <nameUrl value="guidance.html"/>
-      <title value="Guidance"/>
+      <title value="General Guidance"/>
       <generation value="markdown"/>
     </page>
     <page>
       <nameUrl value="profiles.html"/>
-      <title value="Profiles"/>
+      <title value="Profiles and Extensions"/>
       <generation value="markdown"/>
+      
+      
       <page>
         <nameUrl value="StructureDefinition-us-core-allergyintolerance.html"/>
         <title value="Structure Definition US Core Allergyintolerance"/>
@@ -977,6 +1006,9 @@
         <title value="Structure Definition US Core Procedure"/>
         <generation value="generated"/>
       </page>
+      
+      
+      
       <page>
         <nameUrl value="StructureDefinition-us-core-smokingstatus.html"/>
         <title value="Structure Definition US Core Smokingstatus"/>
@@ -1127,6 +1159,9 @@
         <title value="Value Set US Core Provider Specialty"/>
         <generation value="generated"/>
       </page>
+      
+      <!--
+      
       <page>
         <nameUrl value="ValueSet-us-core-substance-ndfrt.html"/>
         <title value="Value Set US Core Substance Ndfrt"/>
@@ -1147,6 +1182,9 @@
         <title value="Value Set US Core Substance"/>
         <generation value="generated"/>
       </page>
+      
+    --> 
+    
       <page>
         <nameUrl value="ConceptMap-ndc-cvx.html"/>
         <title value="Concept Map Ndc cvx"/>
@@ -1178,13 +1216,13 @@
       <title value="Capability Statements"/>
       <generation value="markdown"/>
       <page>
-        <nameUrl value="CapabilityStatement-client.html"/>
-        <title value="Capability Statement Client"/>
+        <nameUrl value="CapabilityStatement-us-core-r4-client.html"/>
+        <title value="Capability Statement US Core Client"/>
         <generation value="generated"/>
       </page>
       <page>
-        <nameUrl value="CapabilityStatement-server.html"/>
-        <title value="Capability Statement Server"/>
+        <nameUrl value="CapabilityStatement-us-core-r4-server.html"/>
+        <title value="Capability Statement US Core Server"/>
         <generation value="generated"/>
       </page>
     </page>

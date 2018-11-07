@@ -1,20 +1,37 @@
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
+{"code" : {
+  "coding" : [{
+    "code" : "active"
+  }]
+}, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "valueSet" : ["http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt"]
-    },
-    {
-      "valueSet" : ["http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-rxnorm"]
-    },
-    {
-      "valueSet" : ["http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-sct"]
+      "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
     }]
   }
-}}
-####
-e: {
-  "error" : "Error from server: Unable to find value set \"http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt\""
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known; The code provided (#active) is not  valid in the value set AllergyIntoleranceClinicalStatusCodes"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "code" : "confirmed"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"\" is not known; The code provided (#confirmed) is not  valid in the value set AllergyIntoleranceVerificationStatusCodes"
 }
 -------------------------------------------------------------------------------------

@@ -39,8 +39,4 @@ The `DiagnosticReport.category` binding must support at a minimum the [3 concept
 
 - TBD
 
-[US Core DiagnosticReport]: http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-diagnosticreport
-[DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
- [Conformance]: daf-core-DocumentReference-conformance.html
- [boundaries section]: {{ site.data.fhir.path }}documentreference.html#bnr
- [IHE MHD]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_MHD.pdf
+{% include link-list.md %}

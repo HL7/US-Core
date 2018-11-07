@@ -1,0 +1,67 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : " http://terminology.hl7.org/CodeSystem/condition-category",
+  "code" : "problem-list-item"
+}, "valueSet" :null}####
+v: {
+  "display" : "Problem List Item",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : " http://terminology.hl7.org/CodeSystem/condition-category",
+    "code" : "problem-list-item",
+    "display" : "Problem Lst Item"
+  }],
+  "text" : "Problem"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/core-r4/CodeSystem/condition-category",
+      "concept" : [{
+        "code" : "health-concern",
+        "display" : "Health Concern"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "Problem List Item",
+  "severity" : "warning",
+  "error" : "The display \"Problem Lst Item\" is not a valid display for the code {http://terminology.hl7.org/CodeSystem/condition-category}problem-list-item - should be one of [\"Problem List Item\"]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : " http://terminology.hl7.org/CodeSystem/condition-category",
+    "code" : "problem-list-item",
+    "display" : "Problem List Item"
+  }],
+  "text" : "Problem"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/core-r4/CodeSystem/condition-category",
+      "concept" : [{
+        "code" : "health-concern",
+        "display" : "Health Concern"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "Problem List Item",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

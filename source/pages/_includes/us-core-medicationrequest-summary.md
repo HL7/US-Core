@@ -8,7 +8,8 @@
 1.  One date in `MedicationRequest.authoredOn`
 1.  One practitioner in `MedicationRequest.requester`
 
+##### Summary of the Must Support Requirements
 
-  [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
-  [MedicationRequestStatus]: {{site.data.fhir.path}}valueset-medicationrequest-status.html
-[MedicationStatementStatus]: {{site.data.fhir.path}}valueset-medication-statement-status.html
+1.  One or more *Sigs* in `MedicationRequest.dosageInstruction.text`
+
+{% include link-list.md %}

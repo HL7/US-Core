@@ -9,6 +9,7 @@
       "defns": "StructureDefinition-us-core-observationresults-definitions.html",
       "base": "StructureDefinition-us-core-observationresults.html"
     },
+
     "Observation/blood-glucose": {
       "base": "Observation-blood-glucose.html",
       "source": "blood-glucose.json"
@@ -118,10 +119,6 @@
       "base": "DocumentReference-episode-summary.html",
       "source": "episode-summary.xml"
     },
-    "ValueSet/us-core-substance-ndfrt": {
-      "base": "ValueSet-us-core-substance-ndfrt.html",
-      "source": "valueset-us-core-substance-ndfrt.xml"
-    },
     "ValueSet/us-core-birthsex": {
       "base": "ValueSet-us-core-birthsex.html",
       "source": "valueset-us-core-birthsex.xml"
@@ -166,10 +163,6 @@
       "defns": "StructureDefinition-us-core-procedure-definitions.html",
       "base": "StructureDefinition-us-core-procedure.html"
     },
-    "ValueSet/us-core-substance-rxnorm": {
-      "base": "ValueSet-us-core-substance-rxnorm.html",
-      "source": "valueset-us-core-substance-rxnorm.xml"
-    },
     "ValueSet/us-core-careteam-provider-roles": {
       "base": "ValueSet-us-core-careteam-provider-roles.html",
       "source": "valueset-us-core-careteam-provider-roles.xml"
@@ -185,10 +178,6 @@
     "StructureDefinition/us-core-encounter": {
       "defns": "StructureDefinition-us-core-encounter-definitions.html",
       "base": "StructureDefinition-us-core-encounter.html"
-    },
-    "ValueSet/us-core-substance": {
-      "base": "ValueSet-us-core-substance.html",
-      "source": "valueset-us-core-substance.xml"
     },
     "CodeSystem/careplan-category": {
       "base": "CodeSystem-careplan-category.html",
@@ -374,10 +363,6 @@
       "defns": "StructureDefinition-us-core-allergyintolerance-definitions.html",
       "base": "StructureDefinition-us-core-allergyintolerance.html"
     },
-    "ValueSet/us-core-substance-sct": {
-      "base": "ValueSet-us-core-substance-sct.html",
-      "source": "valueset-us-core-substance-sct.xml"
-    },
     "Medication/uscore-med2": {
       "base": "Medication-uscore-med2.html",
       "source": "uscore-med2.xml"
@@ -434,8 +419,8 @@
       "defns": "StructureDefinition-us-core-medicationrequest-definitions.html",
       "base": "StructureDefinition-us-core-medicationrequest.html"
     },
-    "CapabilityStatement/client": {
-      "base": "CapabilityStatement-client.html",
+    "CapabilityStatement/us-core-r4-client": {
+      "base": "CapabilityStatement-us-core-r4-client.html",
       "source": "capabilitystatement-client.xml"
     },
     "Organization/saint-luke-w-endpoint": {
@@ -510,8 +495,8 @@
       "base": "ValueSet-us-core-provider-role.html",
       "source": "valueset-us-core-provider-role.xml"
     },
-    "CapabilityStatement/server": {
-      "base": "CapabilityStatement-server.html",
+    "CapabilityStatement/us-core-r4-server": {
+      "base": "CapabilityStatement-us-core-r4-server.html",
       "source": "capabilitystatement-server.xml"
     },
     "Organization/example-organization-2": {

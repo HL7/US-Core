@@ -478,30 +478,6 @@
     },
     {
       "reference" : {
-        "reference" : "ValueSet/us-core-substance"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/us-core-substance-sct"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/us-core-substance-rxnorm"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/us-core-substance-ndfrt"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "ValueSet/us-core-provider-specialty"
       },
       "exampleBoolean" : false
@@ -850,13 +826,13 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/server"
+        "reference" : "CapabilityStatement/us-core-r4-server"
       },
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/client"
+        "reference" : "CapabilityStatement/us-core-r4-client"
       },
       "exampleBoolean" : false
     },
@@ -872,12 +848,12 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "Guidance",
+        "title" : "General Guidance",
         "generation" : "markdown"
       },
       {
         "nameUrl" : "profiles.html",
-        "title" : "Profiles",
+        "title" : "Profiles and Extensions",
         "generation" : "markdown",
         "page" : [{
           "nameUrl" : "StructureDefinition-us-core-allergyintolerance.html",
@@ -1130,26 +1106,6 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "ValueSet-us-core-substance-ndfrt.html",
-          "title" : "Value Set US Core Substance Ndfrt",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "ValueSet-us-core-substance-rxnorm.html",
-          "title" : "Value Set US Core Substance Rxnorm",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "ValueSet-us-core-substance-sct.html",
-          "title" : "Value Set US Core Substance Sct",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "ValueSet-us-core-substance.html",
-          "title" : "Value Set US Core Substance",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "ConceptMap-ndc-cvx.html",
           "title" : "Concept Map Ndc cvx",
           "generation" : "generated"
@@ -1180,13 +1136,13 @@
         "title" : "Capability Statements",
         "generation" : "markdown",
         "page" : [{
-          "nameUrl" : "CapabilityStatement-client.html",
-          "title" : "Capability Statement Client",
+          "nameUrl" : "CapabilityStatement-us-core-r4-client.html",
+          "title" : "Capability Statement US Core Client",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "CapabilityStatement-server.html",
-          "title" : "Capability Statement Server",
+          "nameUrl" : "CapabilityStatement-us-core-r4-server.html",
+          "title" : "Capability Statement US Core Server",
           "generation" : "generated"
         }]
       },

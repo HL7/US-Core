@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<AllergyIntolerance xmlns="http://hl7.org/fhir" >
+<AllergyIntolerance xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-current/fhir-all.xsd">
 	<id value="example"/>
 	<meta>
 		<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-allergyintolerance">
@@ -11,15 +11,15 @@
 		<div xmlns="http://www.w3.org/1999/xhtml">Sensitivity to sulfonamide antibacterial</div>
 	</text>
 -->
-	<clinicalStatus value="active"/>
-	<verificationStatus value="confirmed"/>
+	<clinicalStatus><coding><code value="active"></code></coding></clinicalStatus>
+	<verificationStatus><coding><code value="confirmed"></code></coding></verificationStatus>
 	<category value="medication"/>
 	<criticality value="high"/>
 	<code>
 		<coding>
-			<system value="http://hl7.org/fhir/ndfrt"/>
-			<code value="N0000175503"/>
-			<display value="sulfonamide antibacterial"/>
+			<system value="http://snomed.info/sct"/>
+			<code value="387406002"/>
+			<display value="Sulfonamide (substance)"/>
 		</coding>
 		<text value="sulfonamide antibacterial"/>
 	</code>

@@ -213,6 +213,19 @@ Both the [Vital Signs Profile] and [US Core Result Observation Profile] bind the
  }
 ```
 
+### Representing Deleted Information
+
+Clinical information that has been removed from the patient's record needs to be represented in a way so that client systems know they can delete them.
+
+- A FHIR server SHOULD not delete resources.
+
+- The resource status SHOULD be updated to the appropriate status such as  `entered-in-error` or `inactive`, and these resources SHOULD *still* be searchable by client applications.
+
+- If the status is `entered-in-error`:
+    
+  - for patient viewing systems the content of resource SHOULD be removed. In other words a blank resource.
+
+  - A provider facing system MAY be supplied with additional details that the patient viewing system would typically not have access to.
 
 ### Read(Fetch) resource notation:
 
