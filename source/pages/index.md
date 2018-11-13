@@ -1,7 +1,6 @@
 ---
 title: Implementation Guide HomePage
 layout: default
-active: terminology
 ---
 
 {:.no_toc}

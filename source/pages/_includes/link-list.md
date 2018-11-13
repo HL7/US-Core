@@ -1,6 +1,6 @@
 
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
-[$expand]: {{ site.data.fhir.path }}valueset-operation-expand.html)  An operation used to create a simple collection of codes suitable for use for data entry or validation"
+[$expand]: {{ site.data.fhir.path }}valueset-operation-expand.html)  "An operation used to create a simple collection of codes suitable for use for data entry or validation"
 [2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
 [AllergyIntolerance]: {{site.data.fhir.path}}allergyintolerance.html
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page

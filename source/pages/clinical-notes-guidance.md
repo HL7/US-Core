@@ -69,7 +69,7 @@ This guide requires systems implement the US Core Clinical Notes DiagnosticRepor
  
 Other categories may be supported as well.  
 
-A method for discovery of the types of notes and reports that a server supports is described in the [section below](#determining-server-note-and-report-type-support-expand).
+A method for discovery of the types of notes and reports that a server supports is described in the [section below](#using-expand).
 
 Note that this guide focuses on exposing existing information, and not how systems allow their users to capture information. The contents of the notes or reports, even using standard LOINC concepts, may vary widely by health system or even location. For example, CT Spleen WO contrast (LOINC 30621-7) may include individual sections for history, impressions, conclusions, or just an impressions section. Discharge Summaries may have different facility or regulatory content requirements.
 
@@ -94,6 +94,7 @@ Common client search scenarios include:
 <br/>
 
 ### Determining Server Note Type Support Using The Value Set Expansion Operation ($expand)
+{#using-expand}
 
 In addition to inspecting a server CapabilityStatement, a client can determine the note and report types support by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**. Because servers may support different read and write formats, it also is used to determine the formats (for example, text, pdf) the server supports read and write transactions. A FHIR server claiming support to this guide **SHOULD** support the $expand operation.
 
@@ -131,13 +132,13 @@ where:
 
 ### Resource Selection
 
-When reviewing the minimal number of elements required for each Resource, the [FHIR Version {{site.data.fhir.version}}]({{site.data.fhir.path}}) specification includes several appropriate places to include clinical notes such as Composition, ClinicalImpression, DocumentReference, DiagnosticReport, etc.  The developers of this guide also considered creating a new ClinicalNotes resource. To differentiate which resource was most appropriate these characteristics were considered:
+When reviewing the minimal number of elements required for each Resource, the FHIR specification includes several appropriate places to include clinical notes such as Composition, ClinicalImpression, DocumentReference, DiagnosticReport, etc.  The developers of this guide also considered creating a new ClinicalNotes resource. To differentiate which resource was most appropriate these characteristics were considered:
 
 - Discrete result information
 - Note types
 - Consistent Client access to scanned, or narrative-only, reports
 
-While several resources work well for a specific use case, they don't solve the question "find all Clinical Notes for a patient?" expecially when considering the variability of Note formats. For example systems use text, XHTML, PDF, CDA to capture clinical notes. This variability led the designers to select the [DocumentReference and DiagnosticReport](guidance.html#documentreference-vs-diagnosticreport) as an index mechanisms to the underlying content. In other words, a client can query one of these resources and it will return a pointer to specific resource or the underlying binary content. 
+While several resources work well for a specific use case, they don't solve the question "find all Clinical Notes for a patient?" expecially when considering the variability of Note formats. For example systems use text, XHTML, PDF, CDA to capture clinical notes. This variability led the designers to select the [DocumentReference and DiagnosticReport](guidance.html#fhir-resources-to-exchange-clinical-notes) as an index mechanisms to the underlying content. In other words, a client can query one of these resources and it will return a pointer to specific resource or the underlying binary content. 
 
 For example, consider the following situation for a Discharge Summary Note:
 
