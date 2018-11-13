@@ -3,8 +3,18 @@
   <li>
     <a href="index.html">Home</a>
   </li>
-  <li>
-    <a href="guidance.html">General Guidance</a>
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Guidance<b class="caret">
+    </b>
+  </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a href="general-guidance.html">General Guidance</a>
+        </li>
+        <li>
+          <a href="clinical-notes-guidance.html">Clinical Notes Guidance</a>
+        </li>
+      </ul>
   </li>
   <li>
     <a href="profiles.html">Profiles and Extensions</a>

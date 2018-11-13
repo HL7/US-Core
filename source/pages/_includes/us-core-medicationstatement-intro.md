@@ -50,4 +50,4 @@ Additionally your system [Must Support]:
  [boundaries section]: {{site.data.fhir.path}}medicationrequest.html#bnr
 [include]: {{site.data.fhir.path}}search.html#include
 [contained]: {{site.data.fhir.path}}references.html#contained
-[Must Support]: guidance.html#must-support
+[Must Support]: general-guidance.html#must-support

@@ -22,7 +22,7 @@
 Additionally your system must Support:
 
 1.  A date of birth in `Patient.birthDate`
-2.  One or more languages spoken in `Patient.communication.language` which has a [extensible + max valueset](guidance.html#extensible--max-valueset-binding-for-codeableconcept-datatype)  binding to the [All Language codes with language and optionally a region modifier] valueset
+2.  One or more languages spoken in `Patient.communication.language` which has a [extensible + max valueset](general-guidance.html#extensible--max-valueset-binding-for-codeableconcept-datatype)  binding to the [All Language codes with language and optionally a region modifier] valueset
 3.  One or more race codes in  `Patient.extension`= [US Core Race Extension] which:
     - Must include at least one code from [OMB Race Categories]
     - May include additional race codes from [CDC Race Codes]

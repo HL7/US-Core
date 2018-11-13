@@ -848,8 +848,18 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "General Guidance",
-        "generation" : "markdown"
+        "title" : "Guidance",
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "general-guidance.html",
+          "title" : "General Guidance",
+          "generation" : "markdown"
+        },
+        {
+          "nameUrl" : "clinical-notes-guidance.html",
+          "title" : "Clinical Notes Guidance",
+          "generation" : "markdown"
+        }]
       },
       {
         "nameUrl" : "profiles.html",

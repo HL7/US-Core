@@ -47,4 +47,4 @@ Each Observation *should* have:
   [LOINC]: http://loinc.org
 [Observation]:  {{site.data.fhir.path}}observation.html
 [DiagnosticReport]:  {{site.data.fhir.path}}diagnosticreport.html
-[General Guidance Section]: guidance.html#using-ucum-codes-in-the-quantity-datatype
+[General Guidance Section]: general-guidance.html#using-ucum-codes-in-the-quantity-datatype
