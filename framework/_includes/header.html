@@ -59,7 +59,7 @@
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
 
-      {% if {{site.data.fhir.ig.status}} == 'draft' %}
+      {% if {{site.build}} == 'ci' %}
       <strong>{{site.data.fhir.igName}} Implementation Guide CI Build</strong>
       {% else %}
       <strong>{{site.data.fhir.igName}} Implementation Guide Release {{site.data.fhir.ig.version}}</strong>

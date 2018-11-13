@@ -1,3 +1,9 @@
 <p id="publish-box">
-This is the  {% if {{site.data.fhir.ig.status}} == 'draft' %} Continuous Integration Build {% else %} Version {{site.data.fhir.ig.version}} Release {% endif %} of the {{site.data.fhir.igName}} Implementation Guide,  based on <a href="{{ site.data.fhir.path }}index.html">FHIR Version {{ site.data.fhir.version }}</a>.  See the <a href="{{ site.historypath }}">Directory of published versions</a>
+This is the {% if {{site.build}} == "ci" %}
+    Continuous Integration Build
+   {% elsif {{site.build}} == "ballot" %}
+     Release {{site.data.fhir.ig.version}} Ballot
+   {% else %}
+     Release {{site.data.fhir.ig.version }}
+  {% endif %} of the {{site.data.fhir.igName}} Implementation Guide,  based on <a href="{{ site.data.fhir.path }}index.html">FHIR Version {{ site.data.fhir.version }}</a>.  See the <a href="{{ site.historypath }}">Directory of published versions</a>
 </p>

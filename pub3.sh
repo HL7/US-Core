@@ -1,5 +1,5 @@
 #!/bin/bash
-name="US Core R4"
+name="SMART Launch"
 path1=/Users/ehaas/Downloads/org.hl7.fhir.igpublisher.jar
 path2=/Users/ehaas/Downloads/org.hl7.fhir.igpublisher-old.jar
 path3=/Users/ehaas/Documents/FHIR/IG-tools/
