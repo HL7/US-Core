@@ -41,13 +41,14 @@ Additional Inherited from [US Core DocumentReference]
 
 **Profile specific implementation guidance:**
 
-The `DocumentReference.type` binding must support at a minimum these [5 concepts](#.html) and may extend to the full  [HITSP C80 Table 2-144 Document Class Value Set Definition](http://build.fhir.org/valueset-c80-doc-typecodes.html)
-
-The views provided on this page are of just the Clinical Notes Profile, and the Clinical Notes Profile combined with US Core DocumentReference and FHIR core. <!--See [merged profile view](StructureDefinition-example-dr.html) for the combination of Clinical Notes Profile and US Core DocumentReference without FHIR core.-->
+The `DocumentReference.type` binding must support at a minimum the [5 Common Clinical Notes](clinical-notes-guidance.html#common-clinical-notes) and may extend to the full  [HITSP C80 Table 2-144 Document Class Value Set Definition](http://build.fhir.org/valueset-c80-doc-typecodes.html)
 
 
 ###### Examples
 
 - TBD
+
+**Note that the *Differential Table View* displayed below is the Clinical Notes Profile, and the *SnapShot Table View* combines the the Clinical Notes Profile with US Core DocumentReference and FHIR core.** <!--See [merged profile view](StructureDefinition-example-dr.html) for the combination of Clinical Notes Profile and US Core DocumentReference without FHIR core.-->
+
 
 {% include link-list.md %}

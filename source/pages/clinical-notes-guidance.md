@@ -17,6 +17,7 @@ topofpage: true
 Clinical notes are a key component to communicate the current status of a patient. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing and even handwritten notes by a providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems. 
 
 Specifically, this implementation guide defines the exchange of the following five "Common Clinical Notes".
+{: #common-clinical-notes}
 
 - [Consultation Note (11488-4)]
 - [Discharge Summary (18842-5)]

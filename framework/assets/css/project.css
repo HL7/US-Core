@@ -494,6 +494,7 @@ pre.spec {
 }
 
 /* this part adds an icon after external links, using external.png file  for p and li elements */
+
 p a[href^="http://"]:not([no-external^="true"]):after, a[href^="https://"]:not([no-external^="true"]):after {
     content: url(../images/external.png);
     display: inline-block;
@@ -575,7 +576,7 @@ fieldset[disabled] .btn-example.active {
 
 /* ============ downloads css ============= */
 
-a[href$=".sch"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".sch"]:after, a[href$=".xml"]:after, a[href$=".json"]:after, a[href$=".csv"]:after, a[href$=".ttl"]:after {
+a[href$=".sch"]:after, a[href$=".zip"]:after, a[href$=".tgz"]:after, a[href$=".xml"]:after, a[href$=".json"]:after, a[href$=".csv"]:after, a[href$=".ttl"]:after {
   content: url(../images/download.png);
   display: inline-block;
   text-decoration: none;
@@ -591,4 +592,3 @@ p.note-to-balloters {
     background-color: #fff2ff;
     border-left-color: #ffa0ff;
 }
-
