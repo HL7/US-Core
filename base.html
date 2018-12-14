@@ -26,29 +26,14 @@ topofpage: True
   {% include {{[type]}}-{{[id]}}-expansion.xhtml %}
 <!-- ============VAlUESET CONTENT CONTENT=============== -->
 
-<!-- ( % when 'StructureMap' % }
-============StructureMap CONTENT CONTENT===============
-  ( % include nav-tabs.html type="{{[type]}}" id="{{[id]}}" active="content" % }
+{% when 'CodeSystem' %}
+<!-- ============CODESYSTEM CONTENT CONTENT=============== -->
 
-  <p>
-  Thise is the mapping between FHIR resources and the Logical Model:
-  </p>
+  {% include {{[type]}}-{{[id]}}-summary.xhtml %}
 
-  <a name="summary"> </a>
-  <h2>Summary</h2>
-  ( % include {{[type]}}-{{[id]}}-summary.xhtml % }
-  <br/>
+  {% include {{[type]}}-{{[name]}}.xhtml %}
 
-  <h2>Content</h2>
-  ( %  include {{[type]}}-{{[id]}}-content.xhtml % }
-  <br/>
-
-  <a name="script"> </a>
-  <h2>Script</h2>
-  <pre>
-  ( % include {{[type]}}-{{[id]}}-script.xhtml % }
-  </pre>
-============StructureMap CONTENT CONTENT=============== -->
+  <!-- ============CODESYSTEM CONTENT CONTENT=============== -->
 
 {% when 'OperationDefinition' %}
 <!-- ============OperationDefinition CONTENT CONTENT=============== -->
@@ -59,11 +44,10 @@ topofpage: True
 <!-- ============OperationDefinition CONTENT CONTENT=============== -->
 
 {% else %}
-<!-- ============CodeSystem ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
-
-  <h2>{{[type]}}: {{[id]}}</h2>
+<!-- ============ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
 
   {% include {{[type]}}-{{[name]}}.xhtml %}
+  
   <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
 
 {% endcase %}
