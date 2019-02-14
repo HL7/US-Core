@@ -154,7 +154,7 @@
 			<binding>
 				<strength value="required"/>
 				<description value="Code for sex assigned at birth"/>
-				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-birthsex"/>
+				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/birthsex"/>
 			</binding>
 			<mapping>
 				<identity value="rim"/>
@@ -196,7 +196,7 @@
 			<binding>
 				<strength value="required"/>
 				<description value="Code for sex assigned at birth"/>
-				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-birthsex"/>
+				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/birthsex"/>
 			</binding>
 		</element>
 	</differential>

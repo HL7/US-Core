@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
-	<id value="us-core-birthsex"/>
-	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-birthsex"/>
+	<id value="birthsex"/>
+	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/birthsex"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+	  <value value="urn:oid:2.16.840.1.113762.1.4.1021.24"/>
+	</identifier>
 	<version value="1.0.1"/>
-	<name value="US_Core_Birth_Sex_Value_Set"/>
-	<title value="US Core Birth Sex Value Set"/>
+	<name value="birthsex"/>
+	<title value="Birth Sex"/>
 	<status value="active"/>
 	<date value="2016-08-10"/>
 	<publisher value="HL7 US Realm Steering Committee"/>
