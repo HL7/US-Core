@@ -2,7 +2,7 @@
 <CarePlan xmlns="http://hl7.org/fhir"  >
 	<id value="colonoscopy"/>
 	<meta>
-		<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-careplan"/>
+		<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"/>
 	</meta>
 	<text>
 		<status value="additional"/>
@@ -35,7 +35,7 @@
 	<intent value="order"/>
 	<category>
 		<coding>
-			<system value="http://hl7.org/fhir/us/core-r4/CodeSystem/careplan-category"/>
+			<system value="http://hl7.org/fhir/us/core/CodeSystem/careplan-category"/>
 			<code value="assess-plan"/>
 		</coding>
 	</category>

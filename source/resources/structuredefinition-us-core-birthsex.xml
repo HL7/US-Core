@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
 	<id value="us-core-birthsex"/>
-	<url value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-birthsex"/>
+	<url value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"/>
 	<version value="1.0.1"/>
 	<name value="UsCoreBirthSexExtension"/>
 	<title value="US Core Birth Sex Extension"/>
@@ -131,7 +131,7 @@
 			<type>
 				<code value="uri"/>
 			</type>
-			<fixedUri value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-birthsex"/>
+			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"/>
 			<mapping>
 				<identity value="rim"/>
 				<map value="N/A"/>
@@ -154,7 +154,7 @@
 			<binding>
 				<strength value="required"/>
 				<description value="Code for sex assigned at birth"/>
-				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/birthsex"/>
+				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/birthsex"/>
 			</binding>
 			<mapping>
 				<identity value="rim"/>
@@ -184,7 +184,7 @@
 		</element>
 		<element id="Extension:birthsex.url">
 			<path value="Extension.url"/>
-			<fixedUri value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-birthsex"/>
+			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"/>
 		</element>
 		<element id="Extension:birthsex.valueCode">
 			<path value="Extension.valueCode"/>
@@ -196,7 +196,7 @@
 			<binding>
 				<strength value="required"/>
 				<description value="Code for sex assigned at birth"/>
-				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/birthsex"/>
+				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/birthsex"/>
 			</binding>
 		</element>
 	</differential>

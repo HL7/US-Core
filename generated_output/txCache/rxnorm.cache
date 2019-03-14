@@ -57,17 +57,6 @@ v: {
 }
 -------------------------------------------------------------------------------------
 {"code" : {
-  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
-  "code" : "206765",
-  "display" : "Lisinopril 10 MG Oral Tablet [Prinivil]"
-}, "valueSet" :null}####
-v: {
-  "display" : "Prinivil 10 MG Oral Tablet",
-  "severity" : "warning",
-  "error" : "The display \"Lisinopril 10 MG Oral Tablet [Prinivil]\" is not a valid display for the code {http://www.nlm.nih.gov/research/umls/rxnorm}206765 - should be one of [\"Prinivil 10 MG Oral Tablet\",\"Prinivil 10 MG Oral Tablet\"]"
-}
--------------------------------------------------------------------------------------
-{"code" : {
   "coding" : [{
     "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
     "code" : "206765",
@@ -93,6 +82,17 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "code" : "206765",
+  "display" : "Lisinopril 10 MG Oral Tablet [Prinivil]"
+}, "valueSet" :null}####
+v: {
+  "display" : "Prinivil 10 MG Oral Tablet",
+  "severity" : "warning",
+  "error" : "The display \"Lisinopril 10 MG Oral Tablet [Prinivil]\" is not a valid display for the code {http://www.nlm.nih.gov/research/umls/rxnorm}206765 - should be one of [\"Prinivil 10 MG Oral Tablet\",\"Prinivil 10 MG Oral Tablet\"]"
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -114,8 +114,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:1c328960-4f91-4144-b49c-e792f6b00f11",
-    "timestamp" : "2019-02-14T20:57:46.419Z",
+    "identifier" : "urn:uuid:27fdf2eb-ad5e-4577-a53d-ae4d150751f0",
+    "timestamp" : "2019-03-14T03:31:12.783Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"

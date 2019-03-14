@@ -16,7 +16,7 @@
             <PractitionerRole xmlns="http://hl7.org/fhir">
                 <id value="PractitionerRole-1"/>
                 <meta>
-                    <profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitionerrole"/>
+                    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
                 </meta>
                 <practitioner>
                     <reference value="Practitioner/Practitioner-1011"/>
@@ -64,7 +64,7 @@
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="Practitioner-1011"/>
                 <meta>
-                    <profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitioner"/>
+                    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
                 </meta>
                 <identifier>
                     <use value="official"/>

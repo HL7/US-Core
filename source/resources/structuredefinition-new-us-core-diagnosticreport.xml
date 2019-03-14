@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-current/fhir-all.xsd">
 	<id value="new-us-core-diagnosticreport"/>
-	<url value="http://hl7.org/fhir/us/core-r4/StructureDefinition/new-us-core-diagnosticreport"/>
+	<url value="http://hl7.org/fhir/us/core/StructureDefinition/new-us-core-diagnosticreport"/>
 	<name value="New_US_Core_Diagnostic_Report_Profile_for_Report_and_Note_exchange"/>
 	<title value="New US Core Diagnostic Report Profile for Report and Note exchange"/>
 	<status value="active"/>
@@ -58,7 +58,7 @@
 			<isModifier value="false"/>
 			<binding>
 				<strength value="extensible"/>
-				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-diagnosticreport-category"/>
+				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"/>
 			</binding>
 			<mapping>
 				<identity value="argonaut-dq-dstu2"/>
@@ -102,7 +102,7 @@
 			</base>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
@@ -136,7 +136,7 @@
 			<path value="DiagnosticReport.encounter"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-encounter"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
@@ -180,8 +180,8 @@
 			<max value="*"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitioner"/>
-				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>

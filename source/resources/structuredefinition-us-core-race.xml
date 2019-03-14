@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
 	<id value="us-core-race"/>
-	<url value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-race"/>
+	<url value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"/>
 	<version value="1.0.1"/>
 	<name value="UsCoreRaceExtension"/>
 	<title value="US Core Race Extension"/>
@@ -221,7 +221,7 @@
 			<binding>
 				<strength value="required"/>
 				<description value="The 5 race category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.whitehouse.gov/omb/fedreg_1997standards)."/>
-				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/omb-race-category"/>
+				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/omb-race-category"/>
 			</binding>
 			<mapping>
 				<identity value="rim"/>
@@ -330,7 +330,7 @@
 			<binding>
 				<strength value="required"/>
 				<description value="The [900+ CDC Race codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 5 OMB race category codes."/>
-				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/detailed-race"/>
+				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/detailed-race"/>
 			</binding>
 			<mapping>
 				<identity value="rim"/>
@@ -454,7 +454,7 @@
 			<type>
 				<code value="uri"/>
 			</type>
-			<fixedUri value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-race"/>
+			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"/>
 			<mapping>
 				<identity value="rim"/>
 				<map value="N/A"/>
@@ -644,7 +644,7 @@
 			<binding>
 				<strength value="required"/>
 				<description value="The 5 race category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.whitehouse.gov/omb/fedreg_1997standards)."/>
-				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/omb-race-category"/>
+				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/omb-race-category"/>
 			</binding>
 		</element>
 		<element id="Extension:race.extension:detailed">
@@ -682,7 +682,7 @@
 			<binding>
 				<strength value="required"/>
 				<description value="The [900+ CDC Race codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 5 OMB race category codes."/>
-				<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/detailed-race"/>
+				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/detailed-race"/>
 			</binding>
 		</element>
 		<element id="Extension:race.extension:text">
@@ -719,7 +719,7 @@
 			<path value="Extension.url"/>
 			<min value="1"/>
 			<max value="1"/>
-			<fixedUri value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-race"/>
+			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"/>
 		</element>
 	</differential>
 </StructureDefinition>

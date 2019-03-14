@@ -2,7 +2,7 @@
 <DocumentReference xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-current/fhir-all.xsd">
 	<id value="episode-summary"/>
 	<meta>
-		<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/new-us-core-documentreference"/>
+		<profile value="http://hl7.org/fhir/us/core/StructureDefinition/new-us-core-documentreference"/>
 	</meta>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
@@ -19,7 +19,7 @@
 	</type>
 	<category>
 		<coding>
-			<system value="http://hl7.org/fhir/us/core-r4/CodeSystem/us-core-documentreference-category"/>
+			<system value="http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category"/>
 			<code value="clinical-note"/>
 			<display value="Clinical Note"/>
 		</coding>

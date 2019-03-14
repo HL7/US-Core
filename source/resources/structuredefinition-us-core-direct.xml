@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
 	<id value="us-core-direct"/>
-	<url value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-direct"/>
+	<url value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct"/>
 	<version value="1.0.1"/>
 	<name value="UsCoreDirectEmailExtension"/>
 	<title value="US Core Direct email Extension"/>
@@ -131,7 +131,7 @@
 			<type>
 				<code value="uri"/>
 			</type>
-			<fixedUri value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-direct"/>
+			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct"/>
 			<mapping>
 				<identity value="rim"/>
 				<map value="N/A"/>
@@ -180,7 +180,7 @@
 		</element>
 		<element id="Extension:direct.url">
 			<path value="Extension.url"/>
-			<fixedUri value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-direct"/>
+			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct"/>
 		</element>
 		<element id="Extension:direct.valueBoolean">
 			<path value="Extension.valueBoolean"/>

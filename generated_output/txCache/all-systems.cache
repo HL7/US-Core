@@ -50,6 +50,40 @@ v: {
 }
 -------------------------------------------------------------------------------------
 {"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "35637008",
+    "display" : "Alcohol rehabilitation"
+  },
+  {
+    "system" : "http://www.icd10data.com/icd10pcs",
+    "code" : "HZ30ZZZ",
+    "display" : "Individual Counseling for Substance Abuse Treatment, Cognitive"
+  }],
+  "text" : "Alcohol rehabilitation"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "Alcohol rehabilitation (regime/therapy)",
+  "severity" : "warning",
+  "error" : "The code system \"http://www.icd10data.com/icd10pcs\" is not known"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
   "code" : "text/xml"
 }, "valueSet" :{
   "resourceType" : "ValueSet",
@@ -319,40 +353,6 @@ v: {
   "display" : "Massachusetts",
   "severity" : null,
   "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "coding" : [{
-    "system" : "http://snomed.info/sct",
-    "code" : "35637008",
-    "display" : "Alcohol rehabilitation"
-  },
-  {
-    "system" : "http://www.icd10data.com/icd10pcs",
-    "code" : "HZ30ZZZ",
-    "display" : "Individual Counseling for Substance Abuse Treatment, Cognitive"
-  }],
-  "text" : "Alcohol rehabilitation"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.ama-assn.org/go/cpt"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "71388002"
-      }]
-    }]
-  }
-}}####
-v: {
-  "display" : "Alcohol rehabilitation (regime/therapy)",
-  "severity" : "warning",
-  "error" : "The code system \"http://www.icd10data.com/icd10pcs\" is not known"
 }
 -------------------------------------------------------------------------------------
 {"code" : {

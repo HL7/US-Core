@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SearchParameter xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-current/fhir-all.xsd">
 	<id value="us-core-ethnicity"/>
-	<url value="http://hl7.org/fhir/us/core-r4/SearchParameter/us-core-ethnicity"/>
+	<url value="http://hl7.org/fhir/us/core/SearchParameter/us-core-ethnicity"/>
 	<name value="USCoreEthnicity"/>
 	<status value="active"/>
 	<date value="2016-12-22"/>
@@ -16,7 +16,7 @@
 	<code value="ethnicity"/>
 	<base value="Patient"/>
 	<type value="token"/>
-	<expression value="Patient.extension.where(url = 'http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-ethnicity').extension.value.code"/>
-	<xpath value="f:Patient/f:extension[@url='http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-ethnicity']/f:extension/f:valueCoding/f:code/@value"/>
+	<expression value="Patient.extension.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity').extension.value.code"/>
+	<xpath value="f:Patient/f:extension[@url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity']/f:extension/f:valueCoding/f:code/@value"/>
 	<xpathUsage value="normal"/>
 </SearchParameter>

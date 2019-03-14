@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<id value="us-core-condition-category"/>
-	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-condition-category"/>
+	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category"/>
 	<version value="1.0.1"/>
 	<name value="US_Core_Condition_Category_Codes"/>
 	<title value="US Core Condition Category Codes"/>
@@ -15,7 +15,7 @@
 			<system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
 		</include>
 		<include>
-			<system value="http://hl7.org/fhir/us/core-r4/CodeSystem/condition-category"/>
+			<system value="http://hl7.org/fhir/us/core/CodeSystem/condition-category"/>
 			<concept>
 				<code value="health-concern"/>
 				<display value="Health Concern"/>

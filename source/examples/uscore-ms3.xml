@@ -18,7 +18,7 @@
  -->
 				<id value="uscore-ms3"/>
 				<meta>
-					<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-medicationstatement"/>
+					<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationstatement"/>
 				</meta>
 				<status value="active"/>
 				<!--   either a code or a reference to the medication being prescribed. As described earlier, this could be contained, separately
@@ -49,7 +49,7 @@
 			<Medication xmlns="http://hl7.org/fhir">
 				<id value="uscore-med2"/>
 				<meta>
-					<profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-medication"/>
+					<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"/>
 				</meta>
 				<code>
 					<coding>

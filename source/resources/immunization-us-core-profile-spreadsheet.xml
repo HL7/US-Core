@@ -1011,8 +1011,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s81" ss:HRef="http://hl7.org/fhir/us/core-r4/StructureDefinition/immunization"><Data
-      ss:Type="String">http://hl7.org/fhir/us/core-r4/StructureDefinition/immunization</Data></Cell>
+    <Cell ss:StyleID="s81" ss:HRef="http://hl7.org/fhir/us/core/StructureDefinition/immunization"><Data
+      ss:Type="String">http://hl7.org/fhir/us/core/StructureDefinition/immunization</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s82"><Data ss:Type="String">introduction</Data></Cell>
@@ -1376,7 +1376,7 @@
     <Cell ss:StyleID="s109"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s109"><Data ss:Type="String">Reference(Patient){http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient}</Data><NamedCell
+    <Cell ss:StyleID="s109"><Data ss:Type="String">Reference(Patient){http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -7319,8 +7319,8 @@
     <Cell ss:StyleID="s98"><Data ss:Type="String">The CVX (vaccine administered) code system</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">extensible</Data></Cell>
-    <Cell ss:StyleID="s135"><Data ss:Type="String">http://hl7.org/fhir/us/core-r4/ValueSet/us-core-cvx</Data></Cell>
-    <Cell ss:StyleID="s135"><Data ss:Type="String">http://hl7.org/fhir/us/core-r4/ValueSet/us-core-cvx</Data></Cell>
+    <Cell ss:StyleID="s135"><Data ss:Type="String">http://hl7.org/fhir/us/core/ValueSet/us-core-cvx</Data></Cell>
+    <Cell ss:StyleID="s135"><Data ss:Type="String">http://hl7.org/fhir/us/core/ValueSet/us-core-cvx</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">This value set binds to the CDC  Vaccines administered (CVX) 2.16.840.1.113883.12.292 code system.</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">2.16.840.1.113883.3.88.12.80.22</Data></Cell>
     <Cell ss:StyleID="s135"/>
