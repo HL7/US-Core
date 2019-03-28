@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 name="SMART Launch"
 path1=/Users/ehaas/Downloads/org.hl7.fhir.igpublisher.jar
 path2=/Users/ehaas/Downloads/org.hl7.fhir.igpublisher-old.jar

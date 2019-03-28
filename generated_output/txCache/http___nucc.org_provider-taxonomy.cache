@@ -1,10 +1,10 @@
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://nucc.org/provider-taxonomy",
-  "code" : "261QP2300X"
+  "code" : "207RC0000X"
 }, "valueSet" :null}####
 v: {
-  "display" : "Primary Care",
+  "display" : "Cardiovascular Disease",
   "severity" : null,
   "error" : ""
 }
@@ -21,72 +21,10 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://nucc.org/provider-taxonomy",
-  "code" : "207RC0000X"
-}, "valueSet" :null}####
-v: {
-  "display" : "Cardiovascular Disease",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "coding" : [{
-    "system" : "http://nucc.org/provider-taxonomy",
-    "code" : "261QP2300X",
-    "display" : "Doctor"
-  }]
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://nucc.org/provider-taxonomy"
-    }]
-  }
-}}####
-v: {
-  "display" : "Primary Care",
-  "severity" : "warning",
-  "error" : "The display \"Doctor\" is not a valid display for the code {http://nucc.org/provider-taxonomy}261QP2300X - should be one of [\"Primary Care\"]"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://nucc.org/provider-taxonomy",
-  "code" : "261QP2300X",
-  "display" : "Doctor"
+  "code" : "261QP2300X"
 }, "valueSet" :null}####
 v: {
   "display" : "Primary Care",
-  "severity" : "warning",
-  "error" : "The display \"Doctor\" is not a valid display for the code {http://nucc.org/provider-taxonomy}261QP2300X - should be one of [\"Primary Care\"]"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "coding" : [{
-    "system" : "http://nucc.org/provider-taxonomy",
-    "code" : "208D00000X",
-    "display" : "General Practice"
-  }]
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://nucc.org/provider-taxonomy"
-    }]
-  }
-}}####
-v: {
-  "display" : "General Practice",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://nucc.org/provider-taxonomy",
-  "code" : "208D00000X",
-  "display" : "General Practice"
-}, "valueSet" :null}####
-v: {
-  "display" : "General Practice",
   "severity" : null,
   "error" : ""
 }
@@ -185,6 +123,68 @@ v: {
   "error" : "The display \"Allopathic &amp; Osteopathic Physicians:General Practice\" is not a valid display for the code {http://nucc.org/provider-taxonomy}208D00000X - should be one of [\"General Practice\"]"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://nucc.org/provider-taxonomy",
+    "code" : "261QP2300X",
+    "display" : "Doctor"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://nucc.org/provider-taxonomy"
+    }]
+  }
+}}####
+v: {
+  "display" : "Primary Care",
+  "severity" : "warning",
+  "error" : "The display \"Doctor\" is not a valid display for the code {http://nucc.org/provider-taxonomy}261QP2300X - should be one of [\"Primary Care\"]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://nucc.org/provider-taxonomy",
+  "code" : "261QP2300X",
+  "display" : "Doctor"
+}, "valueSet" :null}####
+v: {
+  "display" : "Primary Care",
+  "severity" : "warning",
+  "error" : "The display \"Doctor\" is not a valid display for the code {http://nucc.org/provider-taxonomy}261QP2300X - should be one of [\"Primary Care\"]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://nucc.org/provider-taxonomy",
+    "code" : "208D00000X",
+    "display" : "General Practice"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://nucc.org/provider-taxonomy"
+    }]
+  }
+}}####
+v: {
+  "display" : "General Practice",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://nucc.org/provider-taxonomy",
+  "code" : "208D00000X",
+  "display" : "General Practice"
+}, "valueSet" :null}####
+v: {
+  "display" : "General Practice",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -197,8 +197,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:6586dbdb-cbfa-45b0-834a-3928de2b4f49",
-    "timestamp" : "2019-02-14T20:55:49.012Z",
+    "identifier" : "urn:uuid:2fa73328-cff7-46ce-8565-5e7f3b102f9a",
+    "timestamp" : "2019-03-28T20:55:35.098Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"

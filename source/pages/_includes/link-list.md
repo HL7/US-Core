@@ -2,6 +2,9 @@
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
 [$expand]: {{ site.data.fhir.path }}valueset-operation-expand.html)  "An operation used to create a simple collection of codes suitable for use for data entry or validation"
 [2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
+[AdministrativeGender]: {{site.data.fhir.path}}valueset-administrative-gender.html
+[All Language codes with language and optionally a region modifier]: ValueSet-simple-language.html
+[All Languages]: {{site.data.fhir.path}}valueset-all-languages.html
 [AllergyIntolerance]: {{site.data.fhir.path}}allergyintolerance.html
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page
 [boundaries section]: {{ site.data.fhir.path }}documentreference.html#bnr
@@ -11,6 +14,8 @@
 [CapabilityStatement]: capstatements.html
 [Cardiology]: todo.html
 [CarePlan]: {{site.data.fhir.path}}careplan.html
+[CDC Ethnicity Codes]: ValueSet-detailed-ethnicity.html
+[CDC Race Codes]:ValueSet-detailed-race.html
 [CIMI]:http://www.opencimi.org
 [ClinicalImpression]: {{site.data.fhir.path}}clinicalimpression.html
 [Code on Dental Procedures and Nomenclature (CDT Code)]: http://www.ada.org/en/publications/cdt/
@@ -38,6 +43,7 @@
 [DocumentReference]:{{ site.data.fhir.path }}documentreference.html
 [Downloads]: downloads.html "Downloads Page"
 [Encounter]: {{site.data.fhir.path}}encounter.html
+[extensible + max valueset]: (general-guidance.html#extensible--max-valueset-binding-for-codeableconcept-datatype)
 [FHIR Conformance Rules]: {{site.data.fhir.path}}conformance-rules.html
 [FHIR Data Types]: {{site.data.fhir.path}}datatypes.html
 [FHIR Documents]: {{site.data.fhir.path}}documents.html
@@ -72,9 +78,13 @@
 [NamingSystem]: {{site.data.fhir.path}}namingsystem.html
 [Observation]: {{site.data.fhir.path}}observation.html
 [Office of the National Coordinator for Health Information Technology (ONC)]: http://www.healthit.gov/newsroom/about-onc
+[OMB Ethnicity Categories]: ValueSet-omb-ethnicity-category.html
+[OMB Race Categories]: ValueSet-omb-race-category.html
 [ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
 [Organization]: {{site.data.fhir.path}}organization.html
 [Pathology]: todo.html
+[Patient.birthDate]: {{site.data.fhir.path}}us/daf/daf-patient-guidance.html#daf-patient.Patient.birthDate
+[Patient.communication.language]: {{site.data.fhir.path}}us/daf/daf-patient-guidance.html#daf-patient.Patient.communication.language
 [Patient]: {{site.data.fhir.path}}patient.html
 [Practitioner]: {{site.data.fhir.path}}practitioner.html
 [Procedure]: {{site.data.fhir.path}}procedure.html
@@ -86,6 +96,7 @@
 [QI-Core]:https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/CQF+Home
 [Quantity]: {{site.data.fhir.path}}datatypes.html#quantity
 [Radiology]: todo.html
+[required]: ({{site.data.fhir.path}}terminologies.html#required)
 [search]: http://hl7.org/fhir/search.html
 [SNOMED CT]: {{site.data.fhir.path}}valueset-procedure-code.html
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
@@ -93,20 +104,25 @@
 [UCUM Codes value set]: {{site.data.fhir.path}}valueset-ucum-units.html
 [UCUM]: http://unitsofmeasure.org
 [US Core Allergies Profile]: StructureDefinition-us-core-allergyintolerance.html
+[US Core Birth Sex]: ValueSet-us-core-birthsex.html
 [US Core CarePlan Profile]: StructureDefinition-us-core-careplan.html
 [US Core CareTeam Profile]: StructureDefinition-us-core-careteam.html
 [US Core Condition Profile]: StructureDefinition-us-core-condition.html
 [US Core Diagnostic Report Profile]: StructureDefinition-us-core-diagnosticreport.html
 [US Core DiagnosticReport]: http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-diagnosticreport
 [US Core DocumentReference]: http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-documentreference
+[US Core ethnicity Extension]:StructureDefinition-us-core-ethnicity.html
 [US Core Goal Profile]: StructureDefinition-us-core-goal.html
 [US Core Immunization Profile]: StructureDefinition-us-core-immunization.html
 [US Core Implanted Device Profile]: StructureDefinition-us-core-device.html
 [US Core Medication Profile]: StructureDefinition-us-core-medication.html
 [US Core Medication Request Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
+[US Core Patient Birth Sex]:StructureDefinition-us-core-birthsex.html
 [US Core Patient Profile]: StructureDefinition-us-core-patient.html
+[US Core Patient Race]: StructureDefinition-us-core-race.html
 [US Core Procedure Profile]: StructureDefinition-us-core-procedure.html
+[US Core Race Extension]:StructureDefinition-us-core-race.html
 [US Core Result Observation Profile]: StructureDefinition-us-core-observationresults.html
 [US Core Security]: security.html
 [US Core Server Capability Statement]: CapabilityStatement-us-core-r4-server.html
