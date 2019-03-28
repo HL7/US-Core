@@ -23,7 +23,9 @@
   <link href="assets/css/project.css" rel="stylesheet"/>
   <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
 	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-
+{% if page.sectionnumbering %}
+<link href="assets/css/section-numbering.css" rel="stylesheet"/>
+{% endif %}
 {% if page.mycss %}
 <link href="assets/css/{{page.mycss}}" rel="stylesheet"/>
 {% endif %}
@@ -56,14 +58,13 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-        <b>{{ site.data.fhir.igName }} Implementation Guide</b>
-        {% if {{site.build}} == "ci" %}
-        CI Build
-        {% elsif {{site.build}} == "ballot" %}
-        (Release {{ site.data.fhir.ig.version }} {{site.ballot}} Ballot)
-        {% else %}
-        (Release {{ site.data.fhir.ig.version }} )
-        {% endif %}
+
+      {% if {{site.build}} == 'ci' %}
+      <strong>{{site.data.fhir.igName}} Implementation Guide CI Build</strong>
+      {% else %}
+      <strong>{{site.data.fhir.igName}} Implementation Guide Release {{site.data.fhir.ig.version}}</strong>
+      {% endif %}
+
     </div><!-- end ig title text -->
 
   </div><!-- end container -->

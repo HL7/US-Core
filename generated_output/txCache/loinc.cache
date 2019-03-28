@@ -1,207 +1,60 @@
 -------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "LP29684-5",
-        "display" : "Radiology"
-      },
-      {
-        "code" : "LP29708-2",
-        "display" : "Cardiology"
-      },
-      {
-        "code" : "LP7839-6",
-        "display" : "Pathology"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "expansion" : {
-    "identifier" : "urn:uuid:b7a97fa0-f05c-44b6-9848-d7e8d5452562",
-    "timestamp" : "2019-03-28T20:53:13.488Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueString" : "-1"
-    },
-    {
-      "name" : "excludeNested",
-      "valueString" : "-1"
-    },
-    {
-      "name" : "version",
-      "valueString" : "http://loinc.org?version=2.65"
-    }],
-    "contains" : [{
-      "system" : "http://loinc.org",
-      "code" : "LP29684-5",
-      "display" : "Radiology"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "LP29708-2",
-      "display" : "Cardiology"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "LP7839-6",
-      "display" : "Pathology"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-<<<<<<< HEAD
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
-        "code" : "18842-5"
-      },
-      {
-        "code" : "11488-4"
-      },
-      {
-        "code" : "34117-2"
-      },
-      {
-        "code" : "11506-3"
-      },
-      {
-        "code" : "28570-0"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "expansion" : {
-    "identifier" : "urn:uuid:587df531-5db5-4f62-b774-6a1fe610917f",
-    "timestamp" : "2019-03-28T20:53:13.785Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueString" : "-1"
-    },
-    {
-      "name" : "excludeNested",
-      "valueString" : "-1"
-    },
-    {
-      "name" : "version",
-      "valueString" : "http://loinc.org?version=2.65"
-    }],
-    "contains" : [{
-      "system" : "http://loinc.org",
-      "code" : "18842-5",
-      "display" : "Discharge summary"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "11488-4",
-      "display" : "Consult note"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "34117-2",
-      "display" : "History and physical note"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "11506-3",
-      "display" : "Progress note"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "28570-0",
-      "display" : "Procedure note"
-    }]
-  }
-},
-=======
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "25428-4"
-}, "valueSet" :null}####
-v: {
-  "display" : "Glucose [Presence] in Urine by Test strip",
-  "severity" : null,
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "72166-2"
 }, "valueSet" :null}####
 v: {
   "display" : "Tobacco smoking status NHIS",
-=======
-  "code" : "5799-2"
-}, "valueSet" :null}####
-v: {
-  "display" : "Leukocyte esterase [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "25428-4"
 }, "valueSet" :null}####
 v: {
   "display" : "Glucose [Presence] in Urine by Test strip",
-=======
-  "code" : "5770-3"
-}, "valueSet" :null}####
-v: {
-  "display" : "Bilirubin.total [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "5799-2"
 }, "valueSet" :null}####
 v: {
   "display" : "Leukocyte esterase [Presence] in Urine by Test strip",
-=======
-  "code" : "11279-7"
-}, "valueSet" :null}####
-v: {
-  "display" : "Urine sediment comments by Light microscopy Narrative",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "5770-3"
 }, "valueSet" :null}####
 v: {
   "display" : "Bilirubin.total [Presence] in Urine by Test strip",
-=======
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "11279-7"
+}, "valueSet" :null}####
+v: {
+  "display" : "Urine sediment comments by Light microscopy Narrative",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "5803-2"
 }, "valueSet" :null}####
 v: {
   "display" : "pH of Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -218,153 +71,90 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "5803-2"
-}, "valueSet" :null}####
-v: {
-  "display" : "pH of Urine by Test strip",
-=======
   "code" : "58410-2"
 }, "valueSet" :null}####
 v: {
   "display" : "Complete blood count (hemogram) panel - Blood by Automated count",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "2951-2"
-}, "valueSet" :null}####
-v: {
-  "display" : "Sodium [Moles/volume] in Serum or Plasma",
-=======
   "code" : "2823-3"
 }, "valueSet" :null}####
 v: {
   "display" : "Potassium [Moles/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "58410-2"
-}, "valueSet" :null}####
-v: {
-  "display" : "Complete blood count (hemogram) panel - Blood by Automated count",
-=======
   "code" : "2028-9"
 }, "valueSet" :null}####
 v: {
   "display" : "Carbon dioxide, total [Moles/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "2823-3"
-}, "valueSet" :null}####
-v: {
-  "display" : "Potassium [Moles/volume] in Serum or Plasma",
-=======
   "code" : "20454-5"
 }, "valueSet" :null}####
 v: {
   "display" : "Protein [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "2028-9"
-}, "valueSet" :null}####
-v: {
-  "display" : "Carbon dioxide, total [Moles/volume] in Serum or Plasma",
-=======
   "code" : "5811-5"
 }, "valueSet" :null}####
 v: {
   "display" : "Specific gravity of Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "20454-5"
-}, "valueSet" :null}####
-v: {
-  "display" : "Protein [Presence] in Urine by Test strip",
-=======
   "code" : "2075-0"
 }, "valueSet" :null}####
 v: {
   "display" : "Chloride [Moles/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "5811-5"
-}, "valueSet" :null}####
-v: {
-  "display" : "Specific gravity of Urine by Test strip",
-=======
   "code" : "17861-6"
 }, "valueSet" :null}####
 v: {
   "display" : "Calcium [Mass/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "2075-0"
-}, "valueSet" :null}####
-v: {
-  "display" : "Chloride [Moles/volume] in Serum or Plasma",
-=======
   "code" : "5778-6"
 }, "valueSet" :null}####
 v: {
   "display" : "Color of Urine",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "17861-6"
-}, "valueSet" :null}####
-v: {
-  "display" : "Calcium [Mass/volume] in Serum or Plasma",
-=======
   "code" : "85354-9"
 }, "valueSet" :null}####
 v: {
   "display" : "Blood pressure panel with all children optional",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -381,51 +171,30 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "85354-9"
-}, "valueSet" :null}####
-v: {
-  "display" : "Blood pressure panel with all children optional",
-=======
   "code" : "8462-4"
 }, "valueSet" :null}####
 v: {
   "display" : "Diastolic blood pressure",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "8480-6"
-}, "valueSet" :null}####
-v: {
-  "display" : "Systolic blood pressure",
-=======
   "code" : "8310-5"
 }, "valueSet" :null}####
 v: {
   "display" : "Body temperature",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "8462-4"
-}, "valueSet" :null}####
-v: {
-  "display" : "Diastolic blood pressure",
-=======
   "code" : "39156-5"
 }, "valueSet" :null}####
 v: {
   "display" : "Body mass index (BMI) [Ratio]",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -442,131 +211,76 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "39156-5"
-}, "valueSet" :null}####
-v: {
-  "display" : "Body mass index (BMI) [Ratio]",
-=======
   "code" : "8306-3"
 }, "valueSet" :null}####
 v: {
   "display" : "Body height --lying",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "5787-7"
-}, "valueSet" :null}####
-v: {
-  "display" : "Epithelial cells [#/area] in Urine sediment by Microscopy high power field",
-=======
   "code" : "13945-1"
 }, "valueSet" :null}####
 v: {
   "display" : "Erythrocytes [#/area] in Urine sediment by Microscopy high power field",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "8306-3"
-}, "valueSet" :null}####
-v: {
-  "display" : "Body height --lying",
-=======
   "code" : "20405-7"
 }, "valueSet" :null}####
 v: {
   "display" : "Urobilinogen [Mass/volume] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "13945-1"
-}, "valueSet" :null}####
-v: {
-  "display" : "Erythrocytes [#/area] in Urine sediment by Microscopy high power field",
-=======
   "code" : "25145-4"
 }, "valueSet" :null}####
 v: {
   "display" : "Bacteria [Presence] in Urine sediment by Light microscopy",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "20405-7"
-}, "valueSet" :null}####
-v: {
-  "display" : "Urobilinogen [Mass/volume] in Urine by Test strip",
-=======
   "code" : "8287-5"
 }, "valueSet" :null}####
 v: {
   "display" : "Head Occipital-frontal circumference by Tape measure",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "25145-4"
-}, "valueSet" :null}####
-v: {
-  "display" : "Bacteria [Presence] in Urine sediment by Light microscopy",
-=======
   "code" : "24323-8"
 }, "valueSet" :null}####
 v: {
   "display" : "Comprehensive metabolic 2000 panel - Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "8287-5"
-}, "valueSet" :null}####
-v: {
-  "display" : "Head Occipital-frontal circumference by Tape measure",
-=======
   "code" : "3094-0"
 }, "valueSet" :null}####
 v: {
   "display" : "Urea nitrogen [Mass/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "24323-8"
-}, "valueSet" :null}####
-v: {
-  "display" : "Comprehensive metabolic 2000 panel - Serum or Plasma",
-=======
   "code" : "770-8"
 }, "valueSet" :null}####
 v: {
@@ -581,61 +295,16 @@ v: {
 }, "valueSet" :null}####
 v: {
   "display" : "Nitrite [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "3094-0"
-}, "valueSet" :null}####
-v: {
-  "display" : "Urea nitrogen [Mass/volume] in Serum or Plasma",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "85353-1"
-}, "valueSet" :null}####
-v: {
-  "display" : "Vital signs, weight, height, head circumference, oxygen saturation and BMI panel",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "5802-4"
-}, "valueSet" :null}####
-v: {
-  "display" : "Nitrite [Presence] in Urine by Test strip",
-=======
-  "code" : "5821-4"
-}, "valueSet" :null}####
-v: {
-  "display" : "Leukocytes [#/area] in Urine sediment by Microscopy high power field",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "59408-5"
 }, "valueSet" :null}####
 v: {
   "display" : "Oxygen saturation in Arterial blood by Pulse oximetry",
-=======
-  "code" : "8302-2"
-}, "valueSet" :null}####
-v: {
-  "display" : "Body height",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -652,27 +321,10 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "5821-4"
 }, "valueSet" :null}####
 v: {
   "display" : "Leukocytes [#/area] in Urine sediment by Microscopy high power field",
-=======
-  "code" : "34133-9"
-}, "valueSet" :null}####
-v: {
-  "display" : "Summary of episode note",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "5794-3"
-}, "valueSet" :null}####
-v: {
-  "display" : "Hemoglobin [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -689,148 +341,126 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "718-7"
 }, "valueSet" :null}####
 v: {
   "display" : "Hemoglobin [Mass/volume] in Blood",
-=======
-  "code" : "2339-0"
-}, "valueSet" :null}####
-v: {
-  "display" : "Glucose [Mass/volume] in Blood",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "34133-9"
 }, "valueSet" :null}####
 v: {
   "display" : "Summary of episode note",
-=======
-  "code" : "24356-8"
-}, "valueSet" :null}####
-v: {
-  "display" : "Urinalysis complete panel - Urine",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "5794-3"
 }, "valueSet" :null}####
 v: {
   "display" : "Hemoglobin [Presence] in Urine by Test strip",
-=======
-  "code" : "2160-0"
-}, "valueSet" :null}####
-v: {
-  "display" : "Creatinine [Mass/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "8867-4"
 }, "valueSet" :null}####
 v: {
   "display" : "Heart rate",
-=======
-  "code" : "1975-2"
-}, "valueSet" :null}####
-v: {
-  "display" : "Bilirubin.total [Mass/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "2339-0"
 }, "valueSet" :null}####
 v: {
   "display" : "Glucose [Mass/volume] in Blood",
-=======
-  "code" : "29463-7"
-}, "valueSet" :null}####
-v: {
-  "display" : "Body weight",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "24356-8"
 }, "valueSet" :null}####
 v: {
   "display" : "Urinalysis complete panel - Urine",
-=======
-  "code" : "786-4"
-}, "valueSet" :null}####
-v: {
-  "display" : "MCHC [Mass/volume] by Automated count",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "2160-0"
 }, "valueSet" :null}####
 v: {
   "display" : "Creatinine [Mass/volume] in Serum or Plasma",
-=======
-  "code" : "32167-9"
-}, "valueSet" :null}####
-v: {
-  "display" : "Clarity of Urine",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "1975-2"
 }, "valueSet" :null}####
 v: {
   "display" : "Bilirubin.total [Mass/volume] in Serum or Plasma",
-=======
-  "code" : "789-8"
-}, "valueSet" :null}####
-v: {
-  "display" : "Erythrocytes [#/volume] in Blood by Automated count",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
   "code" : "29463-7"
 }, "valueSet" :null}####
 v: {
   "display" : "Body weight",
-=======
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "786-4"
+}, "valueSet" :null}####
+v: {
+  "display" : "MCHC [Mass/volume] by Automated count",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "32167-9"
+}, "valueSet" :null}####
+v: {
+  "display" : "Clarity of Urine",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "789-8"
+}, "valueSet" :null}####
+v: {
+  "display" : "Erythrocytes [#/volume] in Blood by Automated count",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
   "code" : "2514-8"
 }, "valueSet" :null}####
 v: {
@@ -845,20 +475,10 @@ v: {
 }, "valueSet" :null}####
 v: {
   "display" : "Respiratory rate",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
-<<<<<<< HEAD
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "786-4"
-}, "valueSet" :null}####
-v: {
-  "display" : "MCHC [Mass/volume] by Automated count",
-  "severity" : null,
-=======
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -985,18 +605,10 @@ e: {
     }]
   }
 },
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
-<<<<<<< HEAD
-  "system" : "http://loinc.org",
-  "code" : "32167-9"
-}, "valueSet" :null}####
-v: {
-  "display" : "Clarity of Urine",
-=======
   "coding" : [{
     "system" : "http://loinc.org",
     "code" : "25428-4",
@@ -1013,37 +625,22 @@ v: {
 }}####
 v: {
   "display" : "Glucose [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "789-8"
-}, "valueSet" :null}####
-v: {
-  "display" : "Erythrocytes [#/volume] in Blood by Automated count",
-=======
   "code" : "25428-4",
   "display" : "Glucose [Presence] in Urine by Test strip"
 }, "valueSet" :null}####
 v: {
   "display" : "Glucose [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
-<<<<<<< HEAD
-  "system" : "http://loinc.org",
-  "code" : "2514-8"
-}, "valueSet" :null}####
-v: {
-  "display" : "Ketones [Presence] in Urine by Test strip",
-=======
   "coding" : [{
     "system" : "http://loinc.org",
     "code" : "5799-2",
@@ -1060,25 +657,17 @@ v: {
 }}####
 v: {
   "display" : "Leukocyte esterase [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "9279-1"
-}, "valueSet" :null}####
-v: {
-  "display" : "Respiratory rate",
-=======
   "code" : "5799-2",
   "display" : "Leukocyte esterase [Presence] in Urine by Test strip"
 }, "valueSet" :null}####
 v: {
   "display" : "Leukocyte esterase [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -1086,17 +675,10 @@ v: {
 {"code" : {
   "coding" : [{
     "system" : "http://loinc.org",
-<<<<<<< HEAD
-    "code" : "25428-4",
-    "display" : "Glucose [Presence] in Urine by Test strip"
-  }],
-  "text" : "GLUCOSE"
-=======
     "code" : "5770-3",
     "display" : "Bilirubin.total [Presence] in Urine by Test strip"
   }],
   "text" : "BILIRUBIN"
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -1106,30 +688,18 @@ v: {
   }
 }}####
 v: {
-<<<<<<< HEAD
-  "display" : "Glucose [Presence] in Urine by Test strip",
-=======
   "display" : "Bilirubin.total [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "25428-4",
-  "display" : "Glucose [Presence] in Urine by Test strip"
-}, "valueSet" :null}####
-v: {
-  "display" : "Glucose [Presence] in Urine by Test strip",
-=======
   "code" : "5770-3",
   "display" : "Bilirubin.total [Presence] in Urine by Test strip"
 }, "valueSet" :null}####
 v: {
   "display" : "Bilirubin.total [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -1137,17 +707,10 @@ v: {
 {"code" : {
   "coding" : [{
     "system" : "http://loinc.org",
-<<<<<<< HEAD
-    "code" : "5799-2",
-    "display" : "Leukocyte esterase [Presence] in Urine by Test strip"
-  }],
-  "text" : "LEUK ESTERASE"
-=======
     "code" : "11279-7",
     "display" : "Urine sediment comments by Light microscopy Narrative"
   }],
   "text" : "COMMENT"
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -1157,30 +720,18 @@ v: {
   }
 }}####
 v: {
-<<<<<<< HEAD
-  "display" : "Leukocyte esterase [Presence] in Urine by Test strip",
-=======
   "display" : "Urine sediment comments by Light microscopy Narrative",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "5799-2",
-  "display" : "Leukocyte esterase [Presence] in Urine by Test strip"
-}, "valueSet" :null}####
-v: {
-  "display" : "Leukocyte esterase [Presence] in Urine by Test strip",
-=======
   "code" : "11279-7",
   "display" : "Urine sediment comments by Light microscopy Narrative"
 }, "valueSet" :null}####
 v: {
   "display" : "Urine sediment comments by Light microscopy Narrative",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -1188,17 +739,10 @@ v: {
 {"code" : {
   "coding" : [{
     "system" : "http://loinc.org",
-<<<<<<< HEAD
-    "code" : "5770-3",
-    "display" : "Bilirubin.total [Presence] in Urine by Test strip"
-  }],
-  "text" : "BILIRUBIN"
-=======
     "code" : "5803-2",
     "display" : "pH of Urine by Test strip"
   }],
   "text" : "PH"
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -1208,30 +752,18 @@ v: {
   }
 }}####
 v: {
-<<<<<<< HEAD
-  "display" : "Bilirubin.total [Presence] in Urine by Test strip",
-=======
   "display" : "pH of Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "5770-3",
-  "display" : "Bilirubin.total [Presence] in Urine by Test strip"
-}, "valueSet" :null}####
-v: {
-  "display" : "Bilirubin.total [Presence] in Urine by Test strip",
-=======
   "code" : "5803-2",
   "display" : "pH of Urine by Test strip"
 }, "valueSet" :null}####
 v: {
   "display" : "pH of Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -1271,16 +803,9 @@ v: {
 {"code" : {
   "coding" : [{
     "system" : "http://loinc.org",
-<<<<<<< HEAD
-    "code" : "5803-2",
-    "display" : "pH of Urine by Test strip"
-  }],
-  "text" : "PH"
-=======
     "code" : "58410-2",
     "display" : "Complete blood count (hemogram) panel - Blood by Automated count"
   }]
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -1290,30 +815,18 @@ v: {
   }
 }}####
 v: {
-<<<<<<< HEAD
-  "display" : "pH of Urine by Test strip",
-=======
   "display" : "Complete blood count (hemogram) panel - Blood by Automated count",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "5803-2",
-  "display" : "pH of Urine by Test strip"
-}, "valueSet" :null}####
-v: {
-  "display" : "pH of Urine by Test strip",
-=======
   "code" : "58410-2",
   "display" : "Complete blood count (hemogram) panel - Blood by Automated count"
 }, "valueSet" :null}####
 v: {
   "display" : "Complete blood count (hemogram) panel - Blood by Automated count",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -1321,17 +834,10 @@ v: {
 {"code" : {
   "coding" : [{
     "system" : "http://loinc.org",
-<<<<<<< HEAD
-    "code" : "2951-2",
-    "display" : "Sodium SerPl-sCnc"
-  }],
-  "text" : "Sodium SerPl-sCnc"
-=======
     "code" : "2823-3",
     "display" : "Potassium SerPl-sCnc"
   }],
   "text" : "Potassium SerPl-sCnc"
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -1341,69 +847,29 @@ v: {
   }
 }}####
 v: {
-<<<<<<< HEAD
-  "display" : "Sodium [Moles/volume] in Serum or Plasma",
-=======
   "display" : "Potassium [Moles/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "2951-2",
-  "display" : "Sodium SerPl-sCnc"
-}, "valueSet" :null}####
-v: {
-  "display" : "Sodium [Moles/volume] in Serum or Plasma",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "coding" : [{
-    "system" : "http://loinc.org",
-    "code" : "58410-2",
-    "display" : "Complete blood count (hemogram) panel - Blood by Automated count"
-  }]
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}}####
-v: {
-  "display" : "Complete blood count (hemogram) panel - Blood by Automated count",
-=======
   "code" : "2823-3",
   "display" : "Potassium SerPl-sCnc"
 }, "valueSet" :null}####
 v: {
   "display" : "Potassium [Moles/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "58410-2",
-  "display" : "Complete blood count (hemogram) panel - Blood by Automated count"
-}, "valueSet" :null}####
-v: {
-  "display" : "Complete blood count (hemogram) panel - Blood by Automated count",
-=======
   "code" : "72166-2",
   "display" : "Tobacco smoking status NHIS"
 }, "valueSet" :null}####
 v: {
   "display" : "Tobacco smoking status NHIS",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -1411,17 +877,10 @@ v: {
 {"code" : {
   "coding" : [{
     "system" : "http://loinc.org",
-<<<<<<< HEAD
-    "code" : "2823-3",
-    "display" : "Potassium SerPl-sCnc"
-  }],
-  "text" : "Potassium SerPl-sCnc"
-=======
     "code" : "2028-9",
     "display" : "CO2 SerPl-sCnc"
   }],
   "text" : "CO2 SerPl-sCnc"
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -1431,41 +890,18 @@ v: {
   }
 }}####
 v: {
-<<<<<<< HEAD
-  "display" : "Potassium [Moles/volume] in Serum or Plasma",
-=======
   "display" : "Carbon dioxide, total [Moles/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "2823-3",
-  "display" : "Potassium SerPl-sCnc"
-}, "valueSet" :null}####
-v: {
-  "display" : "Potassium [Moles/volume] in Serum or Plasma",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "72166-2",
-  "display" : "Tobacco smoking status NHIS"
-}, "valueSet" :null}####
-v: {
-  "display" : "Tobacco smoking status NHIS",
-=======
   "code" : "2028-9",
   "display" : "CO2 SerPl-sCnc"
 }, "valueSet" :null}####
 v: {
   "display" : "Carbon dioxide, total [Moles/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -1473,17 +909,10 @@ v: {
 {"code" : {
   "coding" : [{
     "system" : "http://loinc.org",
-<<<<<<< HEAD
-    "code" : "2028-9",
-    "display" : "CO2 SerPl-sCnc"
-  }],
-  "text" : "CO2 SerPl-sCnc"
-=======
     "code" : "20454-5",
     "display" : "Protein [Presence] in Urine by Test strip"
   }],
   "text" : "PROTEIN"
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -1493,30 +922,18 @@ v: {
   }
 }}####
 v: {
-<<<<<<< HEAD
-  "display" : "Carbon dioxide, total [Moles/volume] in Serum or Plasma",
-=======
   "display" : "Protein [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "2028-9",
-  "display" : "CO2 SerPl-sCnc"
-}, "valueSet" :null}####
-v: {
-  "display" : "Carbon dioxide, total [Moles/volume] in Serum or Plasma",
-=======
   "code" : "20454-5",
   "display" : "Protein [Presence] in Urine by Test strip"
 }, "valueSet" :null}####
 v: {
   "display" : "Protein [Presence] in Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -1524,17 +941,10 @@ v: {
 {"code" : {
   "coding" : [{
     "system" : "http://loinc.org",
-<<<<<<< HEAD
-    "code" : "20454-5",
-    "display" : "Protein [Presence] in Urine by Test strip"
-  }],
-  "text" : "PROTEIN"
-=======
     "code" : "5811-5",
     "display" : "Specific gravity of Urine by Test strip"
   }],
   "text" : "SPEC GRAV"
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -1544,30 +954,18 @@ v: {
   }
 }}####
 v: {
-<<<<<<< HEAD
-  "display" : "Protein [Presence] in Urine by Test strip",
-=======
   "display" : "Specific gravity of Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "20454-5",
-  "display" : "Protein [Presence] in Urine by Test strip"
-}, "valueSet" :null}####
-v: {
-  "display" : "Protein [Presence] in Urine by Test strip",
-=======
   "code" : "5811-5",
   "display" : "Specific gravity of Urine by Test strip"
 }, "valueSet" :null}####
 v: {
   "display" : "Specific gravity of Urine by Test strip",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -1575,17 +973,10 @@ v: {
 {"code" : {
   "coding" : [{
     "system" : "http://loinc.org",
-<<<<<<< HEAD
-    "code" : "5811-5",
-    "display" : "Specific gravity of Urine by Test strip"
-  }],
-  "text" : "SPEC GRAV"
-=======
     "code" : "2075-0",
     "display" : "Chloride SerPl-sCnc"
   }],
   "text" : "Chloride SerPl-sCnc"
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -1595,30 +986,18 @@ v: {
   }
 }}####
 v: {
-<<<<<<< HEAD
-  "display" : "Specific gravity of Urine by Test strip",
-=======
   "display" : "Chloride [Moles/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "5811-5",
-  "display" : "Specific gravity of Urine by Test strip"
-}, "valueSet" :null}####
-v: {
-  "display" : "Specific gravity of Urine by Test strip",
-=======
   "code" : "2075-0",
   "display" : "Chloride SerPl-sCnc"
 }, "valueSet" :null}####
 v: {
   "display" : "Chloride [Moles/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -1626,17 +1005,10 @@ v: {
 {"code" : {
   "coding" : [{
     "system" : "http://loinc.org",
-<<<<<<< HEAD
-    "code" : "2075-0",
-    "display" : "Chloride SerPl-sCnc"
-  }],
-  "text" : "Chloride SerPl-sCnc"
-=======
     "code" : "17861-6",
     "display" : "Calcium SerPl-mCnc"
   }],
   "text" : "Calcium SerPl-mCnc"
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -1646,30 +1018,18 @@ v: {
   }
 }}####
 v: {
-<<<<<<< HEAD
-  "display" : "Chloride [Moles/volume] in Serum or Plasma",
-=======
   "display" : "Calcium [Mass/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "2075-0",
-  "display" : "Chloride SerPl-sCnc"
-}, "valueSet" :null}####
-v: {
-  "display" : "Chloride [Moles/volume] in Serum or Plasma",
-=======
   "code" : "17861-6",
   "display" : "Calcium SerPl-mCnc"
 }, "valueSet" :null}####
 v: {
   "display" : "Calcium [Mass/volume] in Serum or Plasma",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   "severity" : null,
   "error" : ""
 }
@@ -1677,66 +1037,14 @@ v: {
 {"code" : {
   "coding" : [{
     "system" : "http://loinc.org",
-<<<<<<< HEAD
-    "code" : "17861-6",
-    "display" : "Calcium SerPl-mCnc"
-  }],
-  "text" : "Calcium SerPl-mCnc"
-=======
     "code" : "5778-6",
     "display" : "Color of Urine"
   }],
   "text" : "COLOR"
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
 }, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-      "system" : "http://loinc.org"
-    }]
-  }
-}}####
-v: {
-<<<<<<< HEAD
-  "display" : "Calcium [Mass/volume] in Serum or Plasma",
-=======
-  "display" : "Color of Urine",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-<<<<<<< HEAD
-  "code" : "17861-6",
-  "display" : "Calcium SerPl-mCnc"
-}, "valueSet" :null}####
-v: {
-  "display" : "Calcium [Mass/volume] in Serum or Plasma",
-=======
-  "code" : "5778-6",
-  "display" : "Color of Urine"
-}, "valueSet" :null}####
-v: {
-  "display" : "Color of Urine",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "coding" : [{
-    "system" : "http://loinc.org",
-    "code" : "85354-9",
-    "display" : "Blood pressure panel with all children optional"
-  }],
-  "text" : "Blood pressure systolic and diastolic"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-<<<<<<< HEAD
       "system" : "http://loinc.org"
     }]
   }
@@ -1769,8 +1077,6 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
-=======
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
       "system" : "http://loinc.org",
       "concept" : [{
         "code" : "85353-1"
@@ -28950,20 +28256,15 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-<<<<<<< HEAD
-    "identifier" : "urn:uuid:697eb96a-9b31-450a-bb58-849ee65c2c2d",
-    "timestamp" : "2019-03-28T20:57:51.707Z",
-=======
     "identifier" : "urn:uuid:143d96fc-7c9b-4dff-8e72-8a883c1d2e70",
     "timestamp" : "2019-03-14T03:33:40.954Z",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org?version=2.65"
+      "valueString" : "http://loinc.org?version=2.64"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -29012,20 +28313,15 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-<<<<<<< HEAD
-    "identifier" : "urn:uuid:dc950ade-5823-48e0-aa2f-8bc514197880",
-    "timestamp" : "2019-03-28T20:57:52.051Z",
-=======
     "identifier" : "urn:uuid:a9f03cbc-42e5-4e88-8893-82ef907a60d2",
     "timestamp" : "2019-03-14T03:33:41.735Z",
->>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org?version=2.65"
+      "valueString" : "http://loinc.org?version=2.64"
     }],
     "contains" : [{
       "system" : "http://loinc.org",

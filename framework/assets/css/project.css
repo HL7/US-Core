@@ -392,7 +392,7 @@ ul#markdown-toc {
     padding: 4px;
     /*float: right;*/
     z-index: 10;
-    width: 40%;
+    width: 250px;
     background-color: #f5f5f5;
     border: 1px solid #f5f5f5;
     border-radius: 5px;
@@ -522,18 +522,10 @@ li a[href^="http://"]:not([no-external^="true"]):after, a[href^="https://"]:not(
 }
 
 .figure-img-portrait{
-  width: 100%;
+  width: 100%%;
 }
 
-.figure-img-portrait-med{
-  height: 1040px;
-  width: 740%;
-}
 
-.figure-img-small{
-  height: 100px;
-  width: 350px;
-}
 /*--------- change example button color------*/
 
 .btn-example {

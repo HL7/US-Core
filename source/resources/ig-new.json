@@ -1,6 +1,6 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "hl7.fhir.us.core.r4-4.0.0",
+  "id" : "ig",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
     "valueString" : "C:\\work\\org.hl7.fhir.igs\\US-Core-R4\\source\\resources"
@@ -17,14 +17,12 @@
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
     "valueString" : "C:\\work\\org.hl7.fhir.igs\\US-Core-R4\\source\\pages"
   }],
-
-  "url" : "http://hl7.org/fhir/us/core-r4/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0",
-
+  "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/ig",
   "version" : "4.0.0",
   "name" : "USCoreR4",
   "title" : "US Core R4",
   "status" : "active",
-  "publisher" : "HL7 Structured Documents Work Group",
+  "publisher" : "HL7 Structured Documents  Work Group",
   "contact" : [{
     "telecom" : [{
       "system" : "url",
@@ -37,10 +35,8 @@
       "code" : "US"
     }]
   }],
-
-  "copyright" : "Used by permission of HL7 Structured Documents Work Group, all rights reserved Creative Commons License",
-  "packageId" : "hl7.fhir.us.core.r4",
-
+  "copyright" : "Used by permission of HL7 Structured Documents  Work Group, all rights reserved Creative Commons License",
+  "packageId" : "hl7.fhir.us.core",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
   "4.0.0"],
@@ -638,7 +634,7 @@
     },
     {
       "reference" : {
-        "reference" : "ValueSet/usps-state"
+        "reference" : "ValueSet/us-core-usps-state"
       },
       "exampleBoolean" : false
     },
@@ -1094,8 +1090,8 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "ValueSet-usps-state.html",
-          "title" : "ValueSet Usps State",
+          "nameUrl" : "ValueSet-us-core-usps-state.html",
+          "title" : "ValueSet Us Core Usps State",
           "generation" : "generated"
         },
         {
