@@ -9,7 +9,7 @@
 		</xhtml:div>
 	</text>
 -->
-	<url value="http://hl7.org/fhir/us/core-r4/ConceptMap/ndc-cvx"/>
+	<url value="http://hl7.org/fhir/us/core/ConceptMap/ndc-cvx"/>
 	<version value="1.0.1"/>
 	<name value="USCoreNDCtoCVXCodeMapping"/>
 	<title value="US Core NDC to CVX Code Mapping"/>
@@ -18,8 +18,8 @@
 	<publisher value="HL7 US Realm Steering Committee"/>
 	<description value="Unit of Use [NDC code] (https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) mapping  to the [CVX Vaccine codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx).  Note: source = NDC and target = CVX"/>
 	<purpose value="Based upon the 2015 Edition Certification Requirements, the NDC vaccine codes SHOULD be supported as translations to the CVX vaccine codes."/>
-	<sourceCanonical value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-ndc-vaccine-codes"/>
-	<targetCanonical value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-cvx"/>
+	<sourceCanonical value="http://hl7.org/fhir/us/core/ValueSet/us-core-ndc-vaccine-codes"/>
+	<targetCanonical value="http://hl7.org/fhir/us/core/ValueSet/us-core-cvx"/>
 	<group>
 		<element>
 			<code value="49281-0589-58"/>

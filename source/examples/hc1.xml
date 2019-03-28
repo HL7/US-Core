@@ -2,7 +2,7 @@
 <Condition xmlns="http://hl7.org/fhir"  >
   <id value="hc1"/>
   <meta>
-    <profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-condition"/>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
   </meta>
   <clinicalStatus>
     <coding>
@@ -22,7 +22,7 @@
   </verificationStatus>
   <category>
     <coding>
-      <system value="http://hl7.org/fhir/us/core-r4/CodeSystem/condition-category"/>
+      <system value="http://hl7.org/fhir/us/core/CodeSystem/condition-category"/>
       <code value="health-concern"/>
       <display value="Health Concern"/>
     </coding>

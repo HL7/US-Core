@@ -32,7 +32,7 @@
 
 		</div>
 	</text>
-	<url value="http://hl7.org/fhir/us/core-r4/OperationDefinition/docref"/>
+	<url value="http://hl7.org/fhir/us/core/OperationDefinition/docref"/>
   <name value="UsCoreFetchDocumentReferences"/>
 	<title value="US Core Fetch DocumentReferences"/>
 	<status value="active"/>
@@ -48,7 +48,7 @@ The operation takes the input parameters:
 - end date
 - document type
 
-and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type &quot;searchset&quot; containing [US Core DocumentReference Profiles](http://hl7.org/fhir/us/core-r4/StructureDefinition-us-core-documentreference.html) for the patient. If the server has or can create documents that are related to the patient, and that are available for the given user, the server returns the DocumentReference profiles needed to support the records.  The principle intended use for this operation is to provide a provider or patient with access to their available document information.
+and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type &quot;searchset&quot; containing [US Core DocumentReference Profiles](http://hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html) for the patient. If the server has or can create documents that are related to the patient, and that are available for the given user, the server returns the DocumentReference profiles needed to support the records.  The principle intended use for this operation is to provide a provider or patient with access to their available document information.
 
 The server SHOULD return at least all references for documents that it has made available in a document indexing system. This is the same as a simple query (`GET [base]/DocumentReference?patient=[id]`). This operaton differs from a simple query in that  DocumentReferences may be created 'on-the-fly' in response to this operation.  For example, in some cases the documents themselves may not exist but can be generated when needed so a reference to them can be generated using this operation. If no documents exist and an 'on-demand' document cannot be created then the operation will return an empty search bundle."/>
 	<code value="docref"/>

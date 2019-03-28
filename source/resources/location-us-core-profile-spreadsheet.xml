@@ -1044,8 +1044,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/core-r4/StructureDefinition/"><Data
-      ss:Type="String">http://hl7.org/fhir/us/core-r4/StructureDefinition/</Data></Cell>
+    <Cell ss:StyleID="s79" ss:HRef="http://hl7.org/fhir/us/core/StructureDefinition/"><Data
+      ss:Type="String">http://hl7.org/fhir/us/core/StructureDefinition/</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -1744,7 +1744,7 @@
     <Cell ss:Index="6" ss:StyleID="s105"><Data ss:Type="String">0..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">Reference(Organization){http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization}</Data><NamedCell
+    <Cell ss:StyleID="s105"><Data ss:Type="String">Reference(Organization){http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -6443,7 +6443,11 @@
     <Cell ss:StyleID="s105"><Data ss:Type="String">Two letter USPS alphabetic codes. </Data></Cell>
     <Cell ss:StyleID="s146"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s146"><Data ss:Type="String">extensible</Data></Cell>
+<<<<<<< HEAD
     <Cell ss:StyleID="s146"><Data ss:Type="String">http://hl7.org/fhir/us/core-r4/ValueSet/usps-state</Data></Cell>
+=======
+    <Cell ss:StyleID="s146"><Data ss:Type="String">http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state</Data></Cell>
+>>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
     <Cell ss:StyleID="s146"/>
     <Cell ss:StyleID="s146"/>
     <Cell ss:StyleID="s146"/>

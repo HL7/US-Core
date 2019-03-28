@@ -13,7 +13,7 @@
       <MedicationRequest xmlns="http://hl7.org/fhir">
         <id value="uscore-mo3"/>
         <meta>
-          <profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-medicationrequest"/>
+          <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
         </meta>
         <!-- this is an example using an external reference to a medication resource -->
         <status value="active"/>
@@ -46,7 +46,7 @@
         <meta>
           <versionId value="1"/>
           <lastUpdated value="2016-11-29T19:45:46Z"/>
-          <profile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-medication"/>
+          <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"/>
         </meta>
         <code>
           <coding>

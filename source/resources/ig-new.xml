@@ -3,18 +3,22 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.core.r4-4.0.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"/>
+    <valueString value="C:\work\org.hl7.fhir.igs\US-Core-R4\source\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"/>
+    <valueString value="C:\work\org.hl7.fhir.igs\US-Core-R4\source\examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/framework"/>
+    <valueString value="C:\work\org.hl7.fhir.igs\US-Core-R4\framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"/>
+    <valueString value="C:\work\org.hl7.fhir.igs\US-Core-R4\source\pages"/>
   </extension>
+<<<<<<< HEAD
   <url value="http://hl7.org/fhir/us/core-r4/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0"/>
+=======
+  <url value="http://hl7.org/fhir/us/core/ImplementationGuide/ig"/>
+>>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   <version value="4.0.0"/>
   <name value="USCoreR4"/>
   <title value="US Core R4"/>
@@ -32,8 +36,13 @@
       <code value="US"/>
     </coding>
   </jurisdiction>
+<<<<<<< HEAD
   <copyright value="Used by permission of HL7 Structured Documents Work Group, all rights reserved Creative Commons License"/>
   <packageId value="hl7.fhir.us.core.r4"/>
+=======
+  <copyright value="Used by permission of HL7 Structured Documents  Work Group, all rights reserved Creative Commons License"/>
+  <packageId value="hl7.fhir.us.core"/>
+>>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.0"/>
   <fhirVersion value="4.0.0"/>

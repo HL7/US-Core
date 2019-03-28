@@ -1044,8 +1044,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s62" ss:HRef="http://hl7.org/fhir/us/core-r4/StructureDefinition/careplan"><Data
-      ss:Type="String">http://hl7.org/fhir/us/core-r4/StructureDefinition/careplan</Data></Cell>
+    <Cell ss:StyleID="s62" ss:HRef="http://hl7.org/fhir/us/core/StructureDefinition/careplan"><Data
+      ss:Type="String">http://hl7.org/fhir/us/core/StructureDefinition/careplan</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s79"><Data ss:Type="String">introduction</Data></Cell>
@@ -1468,7 +1468,7 @@
     <Cell ss:StyleID="s106"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Patient){http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient}</Data><NamedCell
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Patient){http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -2468,7 +2468,7 @@
     <Cell ss:StyleID="s126"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s126"><Data ss:Type="String">example</Data></Cell>
     <Cell ss:StyleID="s126"/>
-    <Cell ss:StyleID="s126"><Data ss:Type="String">http://hl7.org/fhir/us/core-r4/ValueSet/care-plan-category</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">http://hl7.org/fhir/us/core/ValueSet/care-plan-category</Data></Cell>
     <Cell ss:StyleID="s126"/>
     <Cell ss:StyleID="s126"/>
     <Cell ss:StyleID="s126"/>
@@ -2484,7 +2484,7 @@
     <Cell ss:StyleID="s126"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s126"><Data ss:Type="String">required</Data></Cell>
     <Cell ss:StyleID="s126"/>
-    <Cell ss:StyleID="s126"><Data ss:Type="String">http://hl7.org/fhir/us/core-r4/ValueSet/us-core-narrative-status</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status</Data></Cell>
     <Cell ss:StyleID="s126"/>
     <Cell ss:StyleID="s126"/>
     <Cell ss:StyleID="s126"/>
@@ -5638,11 +5638,11 @@
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s111"><Data ss:Type="String">CarePlan.category</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">Must have a category of 'assess-plan' and a code system 'http://hl7.org/fhir/us/core-r4/CodeSystem/careplan-category'</Data><NamedCell
+    <Cell ss:StyleID="s99"><Data ss:Type="String">Must have a category of 'assess-plan' and a code system 'http://hl7.org/fhir/us/core/CodeSystem/careplan-category'</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s99"><Data ss:Type="String">where(coding.system='http://hl7.org/fhir/us/core-r4/CodeSystem/careplan-category' and coding.code='assess-plan').exists()</Data><NamedCell
+    <Cell ss:StyleID="s99"><Data ss:Type="String">where(coding.system='http://hl7.org/fhir/us/core/CodeSystem/careplan-category' and coding.code='assess-plan').exists()</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s133"><Data ss:Type="String">exists(f:coding/code[@value='assess-plan']) and exists(f:coding/system[@value='http://hl7.org/fhir/us/core-r4/CodeSystem/careplan-category'])</Data><NamedCell
+    <Cell ss:StyleID="s133"><Data ss:Type="String">exists(f:coding/code[@value='assess-plan']) and exists(f:coding/system[@value='http://hl7.org/fhir/us/core/CodeSystem/careplan-category'])</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">

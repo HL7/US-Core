@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
 	<id value="us-core-profile-link"/>
-	<url value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-profile-link"/>
+	<url value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-profile-link"/>
 	<version value="1.0.1"/>
 	<name value="ProfileResourceAssociationExtension"/>
 	<title value="Profile-resource association extension"/>
@@ -131,7 +131,7 @@
 			<type>
 				<code value="uri"/>
 			</type>
-			<fixedUri value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-profile-link"/>
+			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-profile-link"/>
 			<mapping>
 				<identity value="rim"/>
 				<map value="N/A"/>
@@ -185,7 +185,7 @@
 		</element>
 		<element id="Extension:profile-link.url">
 			<path value="Extension.url"/>
-			<fixedUri value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-profile-link"/>
+			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-profile-link"/>
 		</element>
 		<element id="Extension:profile-link.valueCode">
 			<path value="Extension.valueCode"/>

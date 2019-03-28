@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<id value="new-us-core-documentreference"/>
-	<url value="http://hl7.org/fhir/us/core-r4/StructureDefinition/new-us-core-documentreference"/>
+	<url value="http://hl7.org/fhir/us/core/StructureDefinition/new-us-core-documentreference"/>
 	<name value="New_US_Core_DocumentReference_Profile_for_Clinical_Notes"/>
 	<title value="New US Core DocumentReference Profile for Clinical Notes"/>
 	<status value="active"/>
@@ -10,7 +10,7 @@
 	<kind value="resource"/>
 	<abstract value="false"/>
 	<type value="DocumentReference"/>
-	<baseDefinition value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-documentreference"/>
+	<baseDefinition value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"/>
 	<derivation value="constraint"/>
 	<differential>
 		<element id="DocumentReference">
@@ -47,10 +47,10 @@
 			<min value="1"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitioner"/>
-				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
 				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
 				<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
 			</type>
 			<mustSupport value="true"/>
@@ -60,7 +60,7 @@
 			<min value="0"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
 			</type>
 			<mustSupport value="true"/>
 		</element>

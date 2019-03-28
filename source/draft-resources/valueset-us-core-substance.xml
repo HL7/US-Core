@@ -8,7 +8,7 @@
 		<lastUpdated value="2016-05-25T16:59:08.250+10:00"/>
 		<profile value="http://hl7.org/fhir/StructureDefinition/valueset-shareable-definition"/>
 	</meta>
-	<url value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance"/>
+	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-substance"/>
 	<version value="1.0.1"/>
 	<name value="US_Core_Substance_Reactant_for_Intolerance_and_Negation_Codes"/>
 	<title value="US Core Substance-Reactant for Intolerance and Negation Codes"/>
@@ -25,13 +25,13 @@
 	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
 	<compose>
 		<include>
-			<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-ndfrt"/>
+			<valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-substance-ndfrt"/>
 		</include>
 		<include>
-			<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-rxnorm"/>
+			<valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-substance-rxnorm"/>
 		</include>
 		<include>
-			<valueSet value="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-substance-sct"/>
+			<valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-substance-sct"/>
 		</include>
 	</compose>
 </ValueSet>

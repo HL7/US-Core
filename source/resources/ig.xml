@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Hidden IG for de facto IG publishing-->
 <ImplementationGuide xmlns="http://hl7.org/fhir">
+<<<<<<< HEAD
   <id value="hl7.fhir.us.core.r4-4.0.0"/>
   <url value="http://hl7.org/fhir/us/core-r4/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0"/>
   <version value="4.0.0"/>
+=======
+  <id value="ig"/>
+  <url value="http://hl7.org/fhir/us/core/ImplementationGuide/ig"/>
+  <version value="2.0.0"/>
+>>>>>>> e9f9ba6aa214c423722acd0aac3dd05c621a5c05
   <name value="USCoreR4"/>
   <title value="US Core R4"/>
   <status value="active"/>
@@ -18,7 +24,7 @@
   </contact>
   <copyright value="Used by permission of HL7 Structured Documents Work Group, all rights reserved Creative Commons License"/>
   <!-- 0..1 Use and/or publishing restrictions -->
- <packageId value="hl7.fhir.us.core.r4"/> <!-- 0..1 NPM Package name for IG -->
+ <packageId value="hl7.fhir.us.core"/> <!-- 0..1 NPM Package name for IG -->
 <license value="CC0-1.0"/> <!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
 <fhirVersion value="4.0.0"/> <!-- 0..1 FHIR Version this Implementation Guide targets -->
  <definition>

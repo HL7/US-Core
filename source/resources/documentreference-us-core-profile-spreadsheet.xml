@@ -992,8 +992,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s62" ss:HRef="http://hl7.org/fhir/us/core-r4/StructureDefinition/documentreference"><Data
-      ss:Type="String">http://hl7.org/fhir/us/core-r4/StructureDefinition/documentreference</Data></Cell>
+    <Cell ss:StyleID="s62" ss:HRef="http://hl7.org/fhir/us/core/StructureDefinition/documentreference"><Data
+      ss:Type="String">http://hl7.org/fhir/us/core/StructureDefinition/documentreference</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s79"><Data ss:Type="String">introduction</Data></Cell>
@@ -1300,7 +1300,7 @@
     <Cell ss:StyleID="s103"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s103"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s103"><Data ss:Type="String">Reference(Patient){http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient}</Data><NamedCell
+    <Cell ss:StyleID="s103"><Data ss:Type="String">Reference(Patient){http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s103"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1518,7 +1518,7 @@
     <Cell ss:StyleID="s103"><Data ss:Type="String">0..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s103"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s103"><Data ss:Type="String">Reference(Encounter){http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-encounter}</Data><NamedCell
+    <Cell ss:StyleID="s103"><Data ss:Type="String">Reference(Encounter){http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s103"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -6278,7 +6278,7 @@
     <Cell ss:StyleID="s135"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">required</Data></Cell>
     <Cell ss:StyleID="s132"/>
-    <Cell ss:StyleID="s154" ss:HRef="http://hl7.org/fhir/us/core-r4/ValueSet/us-core-provider-role"><Data
+    <Cell ss:StyleID="s154" ss:HRef="http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role"><Data
       ss:Type="String">http://hl7.org/fhir/ValueSet/c80-doc-typecodes</Data></Cell>
     <Cell ss:StyleID="s132"/>
     <Cell ss:StyleID="s132"/>

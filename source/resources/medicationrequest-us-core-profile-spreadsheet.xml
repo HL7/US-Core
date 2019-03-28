@@ -1036,8 +1036,8 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s80" ss:HRef="http://hl7.org/fhir/us/core-r4/StructureDefinition/medicationrequest"><Data
-      ss:Type="String">http://hl7.org/fhir/us/core-r4/StructureDefinition/medicationrequest</Data></Cell>
+    <Cell ss:StyleID="s80" ss:HRef="http://hl7.org/fhir/us/core/StructureDefinition/medicationrequest"><Data
+      ss:Type="String">http://hl7.org/fhir/us/core/StructureDefinition/medicationrequest</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s81"><Data ss:Type="String">introduction</Data></Cell>
@@ -1299,7 +1299,7 @@
     <Cell ss:StyleID="s109"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell><Data ss:Type="String">CodeableConcept | Reference(Medication){http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-medication}</Data><NamedCell
+    <Cell><Data ss:Type="String">CodeableConcept | Reference(Medication){http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1331,7 +1331,7 @@
     <Cell ss:StyleID="s109"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s109"><Data ss:Type="String">Reference(Patient){http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient}</Data><NamedCell
+    <Cell ss:StyleID="s109"><Data ss:Type="String">Reference(Patient){http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1391,7 +1391,7 @@
     <Cell ss:StyleID="s109"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s109"><Data ss:Type="String">Reference(Practitioner){http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitioner}</Data><NamedCell
+    <Cell ss:StyleID="s109"><Data ss:Type="String">Reference(Practitioner){http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -8538,7 +8538,7 @@
     <Cell ss:StyleID="s97"><Data ss:Type="String">Prescribable medications</Data></Cell>
     <Cell ss:StyleID="s136"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s139"><Data ss:Type="String">extensible</Data></Cell>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">http://hl7.org/fhir/us/core-r4/ValueSet/us-core-medication-codes</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes</Data></Cell>
     <Cell ss:Index="7" ss:StyleID="s136"><Data ss:Type="String">2.16.840.1.113762.1.4.1010.4</Data></Cell>
     <Cell ss:StyleID="s136"/>
     <Cell ss:StyleID="s136"/>
