@@ -1,7 +1,7 @@
 Configuration Parameter,Configuration Value ( use '|' for lists)
 allviews,TRUE
 broken-links,warning
-canonicalBase,http://hl7.org/fhir/us/core-r4
+canonicalBase,http://hl7.org/fhir/us/core
 codesystems,
 dependencyList.location,
 dependencyList.name,
@@ -25,8 +25,8 @@ paths.specification,http://build.fhir.org
 paths.temp,generated_output/temp
 paths.txCache,generated_output/txCache
 publisher,HL7 Structured Documents  Work Group
-contact_system,url
-contact_value,http://www.hl7.org/Special/committees/structure/index.cfm
+contact.system,url
+contact.value,http://www.hl7.org/Special/committees/structure/index.cfm
 sct-edition,http://snomed.info/sct/731000124108
 searches,
 source,ig.xml

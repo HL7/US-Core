@@ -1,23 +1,23 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "ig",
+  "id" : "hl7.fhir.us.core.r4-4.0.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\work\\org.hl7.fhir.igs\\US-Core-R4\\source\\resources"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\work\\org.hl7.fhir.igs\\US-Core-R4\\source\\examples"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\work\\org.hl7.fhir.igs\\US-Core-R4\\framework"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\work\\org.hl7.fhir.igs\\US-Core-R4\\source\\pages"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"
   }],
-  "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/ig",
+  "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0",
   "version" : "4.0.0",
   "name" : "USCoreR4",
   "title" : "US Core R4",
@@ -36,7 +36,7 @@
     }]
   }],
   "copyright" : "Used by permission of HL7 Structured Documents  Work Group, all rights reserved Creative Commons License",
-  "packageId" : "hl7.fhir.us.core",
+  "packageId" : "hl7.fhir.us.core.r4",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
   "4.0.0"],
@@ -634,6 +634,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/us-core-pediatric-bmi"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/us-core-usps-state"
       },
       "exampleBoolean" : false
@@ -665,6 +671,12 @@
     {
       "reference" : {
         "reference" : "CodeSystem/condition-category"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/us-core-pediatric-weight"
       },
       "exampleBoolean" : false
     },
@@ -779,6 +791,12 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/us-core-race"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/us-core-inspired-oxygen"
       },
       "exampleBoolean" : false
     },
@@ -930,8 +948,18 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "StructureDefinition-us-core-pediatric-bmi.html",
+          "title" : "StructureDefinition Us Core Pediatric Bmi",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-us-core-procedure.html",
           "title" : "StructureDefinition Us Core Procedure",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-pediatric-weight.html",
+          "title" : "StructureDefinition Us Core Pediatric Weight",
           "generation" : "generated"
         },
         {
@@ -982,6 +1010,11 @@
         {
           "nameUrl" : "StructureDefinition-us-core-race.html",
           "title" : "StructureDefinition Us Core Race",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-inspired-oxygen.html",
+          "title" : "StructureDefinition Us Core Inspired Oxygen",
           "generation" : "generated"
         },
         {

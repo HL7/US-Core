@@ -28,7 +28,9 @@ In addition, based upon the 2015 Edition Certification Requirements, the followi
 
 **If the data is available Patient shall include:**
 
+1. contact detail (e.g. a telephone number or an email address)
 1. a birth date
+1. an address
 1. a communication language
 1. a race
 1. an ethnicity

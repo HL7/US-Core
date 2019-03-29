@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ig"/>
+  <id value="hl7.fhir.us.core.r4-4.0.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\work\org.hl7.fhir.igs\US-Core-R4\source\resources"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\work\org.hl7.fhir.igs\US-Core-R4\source\examples"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\work\org.hl7.fhir.igs\US-Core-R4\framework"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\work\org.hl7.fhir.igs\US-Core-R4\source\pages"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"/>
   </extension>
-  <url value="http://hl7.org/fhir/us/core/ImplementationGuide/ig"/>
+  <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0"/>
   <version value="4.0.0"/>
   <name value="USCoreR4"/>
   <title value="US Core R4"/>
@@ -33,7 +33,7 @@
     </coding>
   </jurisdiction>
   <copyright value="Used by permission of HL7 Structured Documents  Work Group, all rights reserved Creative Commons License"/>
-  <packageId value="hl7.fhir.us.core"/>
+  <packageId value="hl7.fhir.us.core.r4"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.0"/>
   <fhirVersion value="4.0.0"/>
@@ -631,6 +631,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/us-core-pediatric-bmi"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-usps-state"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -662,6 +668,12 @@
     <resource>
       <reference>
         <reference value="CodeSystem/condition-category"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/us-core-pediatric-weight"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -776,6 +788,12 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/us-core-race"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/us-core-inspired-oxygen"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -927,8 +945,18 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-us-core-pediatric-bmi.html"/>
+          <title value="StructureDefinition Us Core Pediatric Bmi"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-us-core-procedure.html"/>
           <title value="StructureDefinition Us Core Procedure"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-us-core-pediatric-weight.html"/>
+          <title value="StructureDefinition Us Core Pediatric Weight"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -979,6 +1007,11 @@
         <page>
           <nameUrl value="StructureDefinition-us-core-race.html"/>
           <title value="StructureDefinition Us Core Race"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-us-core-inspired-oxygen.html"/>
+          <title value="StructureDefinition Us Core Inspired Oxygen"/>
           <generation value="generated"/>
         </page>
         <page>

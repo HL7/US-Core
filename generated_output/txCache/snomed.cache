@@ -1,4 +1,137 @@
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "449868002",
+        "display" : "Current every day smoker"
+      },
+      {
+        "code" : "428041000124106",
+        "display" : "Current some day smoker"
+      },
+      {
+        "code" : "8517006",
+        "display" : "Former smoker"
+      },
+      {
+        "code" : "266919005",
+        "display" : "Never smoker"
+      },
+      {
+        "code" : "77176002",
+        "display" : "Smoker, current status unknown"
+      },
+      {
+        "code" : "266927001",
+        "display" : "Unknown if ever smoked"
+      },
+      {
+        "code" : "428071000124103",
+        "display" : "Current Heavy tobacco smoker"
+      },
+      {
+        "code" : "428061000124105",
+        "display" : "Current Light tobacco smoker"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:303c6c37-d2ac-42e9-9ab3-aaed31105e48",
+    "timestamp" : "2019-03-28T23:56:11.003Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct?version=http://snomed.info/sct/20611000087101/version/20161031"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "449868002",
+      "display" : "Current every day smoker"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "428041000124106",
+      "display" : "Current some day smoker"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "8517006",
+      "display" : "Former smoker"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "266919005",
+      "display" : "Never smoker"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "77176002",
+      "display" : "Smoker, current status unknown"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "266927001",
+      "display" : "Unknown if ever smoked"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "428071000124103",
+      "display" : "Current Heavy tobacco smoker"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "428061000124105",
+      "display" : "Current Light tobacco smoker"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "125676002"
+}, "valueSet" :null}####
+v: {
+  "display" : "Person",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "394730007"
+}, "valueSet" :null}####
+v: {
+  "display" : "Healthcare related organization",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "71388002"
+}, "valueSet" :null}####
+v: {
+  "display" : "Procedure",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://snomed.info/sct",
   "code" : "260385009"
@@ -139,139 +272,6 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct",
-      "concept" : [{
-        "code" : "449868002",
-        "display" : "Current every day smoker"
-      },
-      {
-        "code" : "428041000124106",
-        "display" : "Current some day smoker"
-      },
-      {
-        "code" : "8517006",
-        "display" : "Former smoker"
-      },
-      {
-        "code" : "266919005",
-        "display" : "Never smoker"
-      },
-      {
-        "code" : "77176002",
-        "display" : "Smoker, current status unknown"
-      },
-      {
-        "code" : "266927001",
-        "display" : "Unknown if ever smoked"
-      },
-      {
-        "code" : "428071000124103",
-        "display" : "Current Heavy tobacco smoker"
-      },
-      {
-        "code" : "428061000124105",
-        "display" : "Current Light tobacco smoker"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "expansion" : {
-    "identifier" : "urn:uuid:74f8564b-5fe4-4830-a286-640bbb47c0df",
-    "timestamp" : "2019-03-14T03:29:00.501Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueString" : "-1"
-    },
-    {
-      "name" : "excludeNested",
-      "valueString" : "-1"
-    },
-    {
-      "name" : "version",
-      "valueString" : "http://snomed.info/sct?version=http://snomed.info/sct/20611000087101/version/20161031"
-    }],
-    "contains" : [{
-      "system" : "http://snomed.info/sct",
-      "code" : "449868002",
-      "display" : "Current every day smoker"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "428041000124106",
-      "display" : "Current some day smoker"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "8517006",
-      "display" : "Former smoker"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "266919005",
-      "display" : "Never smoker"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "77176002",
-      "display" : "Smoker, current status unknown"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "266927001",
-      "display" : "Unknown if ever smoked"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "428071000124103",
-      "display" : "Current Heavy tobacco smoker"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "428061000124105",
-      "display" : "Current Light tobacco smoker"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "125676002"
-}, "valueSet" :null}####
-v: {
-  "display" : "Person",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "394730007"
-}, "valueSet" :null}####
-v: {
-  "display" : "Healthcare related organization",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://snomed.info/sct",
-  "code" : "71388002"
-}, "valueSet" :null}####
-v: {
-  "display" : "Procedure",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://snomed.info/sct",
   "code" : "260385009",
@@ -348,58 +348,6 @@ v: {
 }, "valueSet" :null}####
 v: {
   "display" : "Present ++ out of ++++ (qualifier value)",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "coding" : [{
-    "system" : "http://snomed.info/sct",
-    "code" : "428041000124106"
-  }],
-  "text" : "Current some day smoker"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://snomed.info/sct",
-      "concept" : [{
-        "code" : "449868002",
-        "display" : "Current every day smoker"
-      },
-      {
-        "code" : "428041000124106",
-        "display" : "Current some day smoker"
-      },
-      {
-        "code" : "8517006",
-        "display" : "Former smoker"
-      },
-      {
-        "code" : "266919005",
-        "display" : "Never smoker"
-      },
-      {
-        "code" : "77176002",
-        "display" : "Smoker, current status unknown"
-      },
-      {
-        "code" : "266927001",
-        "display" : "Unknown if ever smoked"
-      },
-      {
-        "code" : "428071000124103",
-        "display" : "Current Heavy tobacco smoker"
-      },
-      {
-        "code" : "428061000124105",
-        "display" : "Current Light tobacco smoker"
-      }]
-    }]
-  }
-}}####
-v: {
-  "display" : "Occasional tobacco smoker",
   "severity" : null,
   "error" : ""
 }
@@ -612,8 +560,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:d439b56c-9111-46ef-ae46-33f78eeec101",
-    "timestamp" : "2019-03-14T03:31:15.173Z",
+    "identifier" : "urn:uuid:188497de-0d49-404c-a6df-ad55ccaca86e",
+    "timestamp" : "2019-03-28T23:58:51.362Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -682,8 +630,8 @@ e: {
   "valueSet" : {
   "resourceType" : "ValueSet",
   "expansion" : {
-    "identifier" : "urn:uuid:d3dd11a1-4d26-4846-94d2-2cfaf9762a10",
-    "timestamp" : "2019-03-14T03:31:30.626Z",
+    "identifier" : "urn:uuid:6e471d8b-8ce7-4e3e-b84e-527cf9fd509b",
+    "timestamp" : "2019-03-28T23:59:11.159Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -727,8 +675,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:91777eb9-7c9f-42fb-b1ff-dbd4579123d2",
-    "timestamp" : "2019-03-14T03:31:31.282Z",
+    "identifier" : "urn:uuid:af9b30f2-fb09-46f0-8949-0f2f7f42fef6",
+    "timestamp" : "2019-03-28T23:59:11.487Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -5771,8 +5719,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:3286cd86-c7de-4d79-a72f-efdd091be422",
-    "timestamp" : "2019-03-14T03:32:21.610Z",
+    "identifier" : "urn:uuid:5f26211a-0a3e-4389-b58b-ad491800c379",
+    "timestamp" : "2019-03-29T00:00:03.331Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -10811,8 +10759,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:732fbf88-6257-44fc-9082-d4f38f6a8828",
-    "timestamp" : "2019-03-14T03:33:13.063Z",
+    "identifier" : "urn:uuid:c08642ec-92b2-43f4-ae66-8d9c3ed7b6e9",
+    "timestamp" : "2019-03-29T00:00:55.487Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -13106,8 +13054,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:2752c250-faca-443c-9d25-564fc93440a7",
-    "timestamp" : "2019-03-14T03:33:36.688Z",
+    "identifier" : "urn:uuid:4afbebfe-e536-4c32-ae8e-7fbd392192a3",
+    "timestamp" : "2019-03-29T00:01:19.440Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"
@@ -13446,8 +13394,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:b8e66b87-3b5b-440a-a69e-5e4979a7342a",
-    "timestamp" : "2019-03-14T03:33:47.517Z",
+    "identifier" : "urn:uuid:29586058-b632-4b7d-833d-9691cf97fb51",
+    "timestamp" : "2019-03-29T00:01:26.472Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueString" : "-1"

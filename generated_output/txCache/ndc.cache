@@ -1597,7 +1597,1062 @@
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/sid/ndc"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:3efbd58a-50a6-47f4-b838-0e521db1cf9f",
+    "timestamp" : "2019-03-28T23:56:11.893Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "excludeNested",
+      "valueString" : "-1"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0589-58",
+      "display" : "NEISSERIA MENINGITIDIS GROUP A CAPSULAR POLYSACCHARIDE DIPHTHERIA TOXOID CONJUGATE ANTIGEN, NEISSERI"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0623-78",
+      "display" : "FLUZONE QUADRIVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0515-00",
+      "display" : "Fluzone Quadrivalent, peds"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0415-88",
+      "display" : "Fluzone Quadrivalent PF"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0415-58",
+      "display" : "FLUZONE QUADRIVALENT PF"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0115-11",
+      "display" : "INFLUENZA A VIRUS"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0015-02",
+      "display" : "INFLUENZA A VIRUS"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0302-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "42874-0015-01",
+      "display" : "influenza virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0118-12",
+      "display" : "INFLUENZA  VIRUS"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0118-11",
+      "display" : "Influenza Virus Vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0883-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0000-11",
+      "display" : "TRIVALENT INFLUENZA WITH ADJUVANT 2015/2016"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "69401-0000-01",
+      "display" : "SALMONELLA TYPHI TY21A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0301-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0014-02",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0114-11",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "63851-0613-11",
+      "display" : "Flucelvax"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0117-11",
+      "display" : "FLUVIRIN"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0117-12",
+      "display" : "Fluvirin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4093-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4094-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4095-01",
+      "display" : "HEPATITIS A VACCINE, INACTIVATED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4096-01",
+      "display" : "HEPATITIS A VACCINE, INACTIVATED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4963-01",
+      "display" : "ZOSTER VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "42874-0014-01",
+      "display" : "influenza virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0414-88",
+      "display" : "Fluzone Quadrivalent PF"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0395-88",
+      "display" : "Fluzone HD"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0709-48",
+      "display" : "FLUZONE Intradermal"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0881-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0809-01",
+      "display" : "MENINGOCOCCAL GROUPS C AND Y AND HAEMOPHILUS B TETANUS TOXOID CONJUGATE VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "62577-0613-11",
+      "display" : "INFLUENZA A VIRUS A/BRISBANE/10/2010 (H1N1) ANTIGEN (MDCK CELL DERIVED, PROPIOLACTONE INACTIVATED),"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0893-02",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0621-78",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00005-0100-01",
+      "display" : "Meningococcal B, recombinant"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4047-01",
+      "display" : "ROTAVIRUS VACCINE, LIVE, ORAL, PENTAVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4109-01",
+      "display" : "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4121-01",
+      "display" : "HUMAN PAPILLOMAVIRUS 9-VALENT VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4119-01",
+      "display" : "HUMAN PAPILLOMAVIRUS 9-VALENT VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "63851-0511-11",
+      "display" : "RABIES VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0562-58",
+      "display" : "DTAP, IPV"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "46028-0114-11",
+      "display" : "NEISSERIA MENINGITIDIS SEROGROUP B NHBA FUSION PROTEIN ANTIGEN, NEISSERIA MENINGITIDIS SEROGROUP B F"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4171-01",
+      "display" : "MEASLES, MUMPS, RUBELLA AND VARICELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "13533-0131-00",
+      "display" : "TETANUS AND DIPHTHERIA TOXOIDS ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0396-78",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0397-88",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "62577-0614-11",
+      "display" : "INFLUENZA A VIRUS A/BRISBANE/10/2010 (H1N1) ANTIGEN (MDCK CELL DERIVED, PROPIOLACTONE INACTIVATED),"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0903-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0898-01",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0901-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0393-88",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0810-43",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0810-01",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0790-38",
+      "display" : "SALMONELLA TYPHI TY2 VI POLYSACCHARIDE ANTIGEN"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0790-88",
+      "display" : "SALMONELLA TYPHI TY2 VI POLYSACCHARIDE ANTIGEN"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0640-15",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0650-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0650-90",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0650-25",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0650-70",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0650-50",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0707-48",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0110-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4681-01",
+      "display" : "MEASLES, MUMPS, AND RUBELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0215-58",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CORYNEBACTERIUM DIPHTHERIAE TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0215-88",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CORYNEBACTERIUM DIPHTHERIAE TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "46028-0218-11",
+      "display" : "MENA VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0387-65",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0386-15",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0010-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0010-25",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED),"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0010-50",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "54868-0980-00",
+      "display" : "MEASLES, MUMPS, AND RUBELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0830-43",
+      "display" : "HUMAN PAPILLOMAVIRUS BIVALENT (TYPES 16 AND 18) VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0830-05",
+      "display" : "HUMAN PAPILLOMAVIRUS BIVALENT (TYPES 16 AND 18) VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00005-1971-01",
+      "display" : "PNEUMOCOCCAL 13-VALENT CONJUGATE VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "17478-0131-00",
+      "display" : "TETANUS AND DIPHTHERIA TOXOIDS ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0812-43",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0812-01",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0108-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4898-01",
+      "display" : "HAEMOPHILUS B CONJUGATE (MENINGOCOCCAL PROTEIN CONJUGATE) AND HEPATITIS B (RECOMBINANT) VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "63851-0612-11",
+      "display" : "INFLUENZA A VIRUS A/BRISBANE/10/2010 (H1N1) ANTIGEN (MDCK CELL DERIVED, PROPIOLACTONE INACTIVATED),"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4992-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4981-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4980-00",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0112-02",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0112-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0107-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0225-58",
+      "display" : "CORYNEBACTERIUM DIPHTHERIAE TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CLOSTRIDIUM TETANI TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0705-55",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "42515-0001-00",
+      "display" : "JAPANESE ENCEPHALITIS VACCINE, INACTIVATED, ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0879-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0880-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0820-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0820-43",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0821-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0821-43",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0821-05",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "42874-0012-01",
+      "display" : "INFLUENZA VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0278-10",
+      "display" : "CORYNEBACTERIUM DIPHTHERIAE TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CLOSTRIDIUM TETANI TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0109-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0890-02",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0889-02",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0900-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0860-78",
+      "display" : "POLIOVIRUS TYPE 1 ANTIGEN (FORMALDEHYDE INACTIVATED), POLIOVIRUS TYPE 2 ANTIGEN (FORMALDEHYDE INACTI"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0860-88",
+      "display" : "POLIOVIRUS TYPE 1 ANTIGEN (FORMALDEHYDE INACTIVATED), POLIOVIRUS TYPE 2 ANTIGEN (FORMALDEHYDE INACTI"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0389-65",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0388-15",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0011-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0011-50",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0703-55",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0111-25",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0200-10",
+      "display" : "Influenza A (H1N1) 2009 Monovalent Vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0200-02",
+      "display" : "Influenza A (H1N1) 2009 Monovalent Vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0298-10",
+      "display" : "CORYNEBACTERIUM DIPHTHERIAE TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED), CLOSTRIDIUM TETANI TOXOID ANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0806-01",
+      "display" : "HAEMOPHILUS B CONJUGATE VACCINE (TETANUS TOXOID CONJUGATE)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0013-02",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0113-11",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0391-65",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0012-50",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0012-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0112-25",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0390-15",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4897-01",
+      "display" : "HAEMOPHILUS B CONJUGATE VACCINE (MENINGOCOCCAL PROTEIN CONJUGATE)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0291-83",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CORYNEBACTERIUM DIPHTHERIAE TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0291-10",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CORYNEBACTERIUM DIPHTHERIAE TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0413-88",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0413-58",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0513-00",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0113-02",
+      "display" : "Influenza Virus Vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0113-10",
+      "display" : "INFLUENZA A VIRUS A/CHRISTCHURCH/16/2010 NIB-74 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZ"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00005-1970-49",
+      "display" : "PNEUMOCOCCAL 7-VALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0811-43",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0811-41",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4827-01",
+      "display" : "VARICELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4826-01",
+      "display" : "VARICELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0842-41",
+      "display" : "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE, ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0842-01",
+      "display" : "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE, ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0842-43",
+      "display" : "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE, ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0842-05",
+      "display" : "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE, ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0300-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4831-01",
+      "display" : "HEPATITIS A VACCINE, INACTIVATED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0200-01",
+      "display" : "INFLUENZA A H1N1 2009 MONOVALENT VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "14362-0111-03",
+      "display" : "TETANUS AND DIPHTHERIA TOXOIDS ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0519-01",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0519-25",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0629-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0825-43",
+      "display" : "HEPATITIS A VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0825-01",
+      "display" : "HEPATITIS A VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0826-43",
+      "display" : "HEPATITIS A VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0826-05",
+      "display" : "HEPATITIS A VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0826-01",
+      "display" : "HEPATITIS A VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0010-01",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0110-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0115-10",
+      "display" : "Influenza Virus Vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0115-02",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4133-01",
+      "display" : "TETANUS AND DIPHTHERIA TOXOIDS ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "54868-4320-09",
+      "display" : "PNEUMOCOCCAL VACCINE POLYVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "54868-3339-09",
+      "display" : "PNEUMOCOCCAL VACCINE POLYVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00052-0603-01",
+      "display" : "BACILLUS CALMETTE-GUERIN SUBSTRAIN TICE LIVE ANTIGEN"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "64678-0211-05",
+      "display" : "BACILLUS ANTHRACIS"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4739-01",
+      "display" : "PNEUMOCOCCAL VACCINE POLYVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4943-01",
+      "display" : "PNEUMOCOCCAL VACCINE POLYVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0013-58",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0013-88",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0392-78",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0113-00",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0820-10",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0800-83",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0400-88",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED), CORYNEBACTERIUM DIPHTHERIAE TOXOID ANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0286-58",
+      "display" : "CORYNEBACTERIUM DIPHTHERIAE TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED), CLOSTRIDIUM TETANI TOXOID ANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0815-41",
+      "display" : "HEPATITIS A AND HEPATITIS B (RECOMBINANT) VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0815-43",
+      "display" : "HEPATITIS A AND HEPATITIS B (RECOMBINANT) VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0815-05",
+      "display" : "HEPATITIS A AND HEPATITIS B (RECOMBINANT) VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0815-01",
+      "display" : "HEPATITIS A AND HEPATITIS B (RECOMBINANT) VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0114-10",
+      "display" : "INFLUENZA A VIRUS A/CHRISTCHURCH/16/2010 NIB-74 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZ"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "76420-0482-01",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED),"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0895-01",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4999-01",
+      "display" : "MEASLES, MUMPS, RUBELLA AND VARICELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0545-15",
+      "display" : "HAEMOPHILUS B CONJUGATE VACCINE (TETANUS TOXOID CONJUGATE)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "51285-0174-02",
+      "display" : "ADENOVIRUS TYPE 4 VACCINE, LIVE, ORAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0248-58",
+      "display" : "RABIES VIRUS STRAIN PM-1503-3M ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0487-58",
+      "display" : "NEISSERIA MENINGITIDIS GROUP A CAPSULAR POLYSACCHARIDE ANTIGEN, NEISSERIA MENINGITIDIS GROUP C CAPSU"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0915-58",
+      "display" : "YELLOW FEVER VIRUS LIVE ANTIGEN, A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0547-58",
+      "display" : "HAEMOPHILUS INFLUENZAE TYPE B STRAIN 1482 CAPSULAR POLYSACCHARIDE TETANUS TOXOID CONJUGATE ANTIGEN"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0851-01",
+      "display" : "ROTAVIRUS VACCINE, LIVE, ORAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0915-68",
+      "display" : "YELLOW FEVER VIRUS LIVE ANTIGEN, A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0488-78",
+      "display" : "NEISSERIA MENINGITIDIS GROUP A POLYSACCHARIDE ANTIGEN, A, NEISSERIA MENINGITIDIS GROUP C POLYSACCHAR"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "46028-0219-11",
+      "display" : "MENC, Y, W-135 VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "51285-0175-02",
+      "display" : "ADENOVIRUS TYPE 7 VACCINE, LIVE, ORAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0560-05",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0400-58",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED), CORYNEBACTERIUM DIPHTHERIAE TOXOID ANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "42874-0013-01",
+      "display" : "INFLUENZA VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0116-11",
+      "display" : "influenza a virus a/christchurch , influenza a virus a/texas   , influenza b virus b/massachusetts"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0116-12",
+      "display" : "influenza a virus a/christchurch , influenza a virus a/texas   , influenza b virus b/massachusetts"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4045-01",
+      "display" : "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4995-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4841-01",
+      "display" : "HEPATITIS A VACCINE, INACTIVATED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0804-01",
+      "display" : "INFLUENZA (H5N1) MONOVALENT, ADJUVANTED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0802-02",
+      "display" : "Adjuvant"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0901-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4837-01",
+      "display" : "PNEUMOCOCCAL VACCINE POLYVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0891-01",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0894-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0514-00",
+      "display" : "Fluzone Quadrivalent, Peds"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0394-78",
+      "display" : "FLUZONE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0014-88",
+      "display" : "FLUZONE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0414-58",
+      "display" : "FLUZONE QUADRIVALENT PF"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -3198,6 +4253,1057 @@ e: {
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/sid/ndc"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "identifier" : "urn:uuid:490bca90-8f84-4c1b-9e4a-ae500a9fe340",
+    "timestamp" : "2019-03-28T23:58:53.099Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0589-58",
+      "display" : "NEISSERIA MENINGITIDIS GROUP A CAPSULAR POLYSACCHARIDE DIPHTHERIA TOXOID CONJUGATE ANTIGEN, NEISSERI"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0623-78",
+      "display" : "FLUZONE QUADRIVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0515-00",
+      "display" : "Fluzone Quadrivalent, peds"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0415-88",
+      "display" : "Fluzone Quadrivalent PF"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0415-58",
+      "display" : "FLUZONE QUADRIVALENT PF"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0115-11",
+      "display" : "INFLUENZA A VIRUS"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0015-02",
+      "display" : "INFLUENZA A VIRUS"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0302-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "42874-0015-01",
+      "display" : "influenza virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0118-12",
+      "display" : "INFLUENZA  VIRUS"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0118-11",
+      "display" : "Influenza Virus Vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0883-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0000-11",
+      "display" : "TRIVALENT INFLUENZA WITH ADJUVANT 2015/2016"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "69401-0000-01",
+      "display" : "SALMONELLA TYPHI TY21A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0301-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0014-02",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0114-11",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "63851-0613-11",
+      "display" : "Flucelvax"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0117-11",
+      "display" : "FLUVIRIN"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0117-12",
+      "display" : "Fluvirin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4093-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4094-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4095-01",
+      "display" : "HEPATITIS A VACCINE, INACTIVATED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4096-01",
+      "display" : "HEPATITIS A VACCINE, INACTIVATED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4963-01",
+      "display" : "ZOSTER VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "42874-0014-01",
+      "display" : "influenza virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0414-88",
+      "display" : "Fluzone Quadrivalent PF"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0395-88",
+      "display" : "Fluzone HD"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0709-48",
+      "display" : "FLUZONE Intradermal"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0881-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0809-01",
+      "display" : "MENINGOCOCCAL GROUPS C AND Y AND HAEMOPHILUS B TETANUS TOXOID CONJUGATE VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "62577-0613-11",
+      "display" : "INFLUENZA A VIRUS A/BRISBANE/10/2010 (H1N1) ANTIGEN (MDCK CELL DERIVED, PROPIOLACTONE INACTIVATED),"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0893-02",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0621-78",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00005-0100-01",
+      "display" : "Meningococcal B, recombinant"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4047-01",
+      "display" : "ROTAVIRUS VACCINE, LIVE, ORAL, PENTAVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4109-01",
+      "display" : "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4121-01",
+      "display" : "HUMAN PAPILLOMAVIRUS 9-VALENT VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4119-01",
+      "display" : "HUMAN PAPILLOMAVIRUS 9-VALENT VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "63851-0511-11",
+      "display" : "RABIES VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0562-58",
+      "display" : "DTAP, IPV"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "46028-0114-11",
+      "display" : "NEISSERIA MENINGITIDIS SEROGROUP B NHBA FUSION PROTEIN ANTIGEN, NEISSERIA MENINGITIDIS SEROGROUP B F"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4171-01",
+      "display" : "MEASLES, MUMPS, RUBELLA AND VARICELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "13533-0131-00",
+      "display" : "TETANUS AND DIPHTHERIA TOXOIDS ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0396-78",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0397-88",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "62577-0614-11",
+      "display" : "INFLUENZA A VIRUS A/BRISBANE/10/2010 (H1N1) ANTIGEN (MDCK CELL DERIVED, PROPIOLACTONE INACTIVATED),"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0903-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0898-01",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0901-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0393-88",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0810-43",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0810-01",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS VACCINE ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0790-38",
+      "display" : "SALMONELLA TYPHI TY2 VI POLYSACCHARIDE ANTIGEN"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0790-88",
+      "display" : "SALMONELLA TYPHI TY2 VI POLYSACCHARIDE ANTIGEN"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0640-15",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0650-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0650-90",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0650-25",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0650-70",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0650-50",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0707-48",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0110-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4681-01",
+      "display" : "MEASLES, MUMPS, AND RUBELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0215-58",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CORYNEBACTERIUM DIPHTHERIAE TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0215-88",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CORYNEBACTERIUM DIPHTHERIAE TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "46028-0218-11",
+      "display" : "MENA VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0387-65",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0386-15",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0010-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0010-25",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED),"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0010-50",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "54868-0980-00",
+      "display" : "MEASLES, MUMPS, AND RUBELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0830-43",
+      "display" : "HUMAN PAPILLOMAVIRUS BIVALENT (TYPES 16 AND 18) VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0830-05",
+      "display" : "HUMAN PAPILLOMAVIRUS BIVALENT (TYPES 16 AND 18) VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00005-1971-01",
+      "display" : "PNEUMOCOCCAL 13-VALENT CONJUGATE VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "17478-0131-00",
+      "display" : "TETANUS AND DIPHTHERIA TOXOIDS ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0812-43",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0812-01",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED AND INACTIVATED POLIOVIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0108-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4898-01",
+      "display" : "HAEMOPHILUS B CONJUGATE (MENINGOCOCCAL PROTEIN CONJUGATE) AND HEPATITIS B (RECOMBINANT) VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "63851-0612-11",
+      "display" : "INFLUENZA A VIRUS A/BRISBANE/10/2010 (H1N1) ANTIGEN (MDCK CELL DERIVED, PROPIOLACTONE INACTIVATED),"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4992-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4981-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4980-00",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0112-02",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0112-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0107-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0225-58",
+      "display" : "CORYNEBACTERIUM DIPHTHERIAE TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CLOSTRIDIUM TETANI TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0705-55",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "42515-0001-00",
+      "display" : "JAPANESE ENCEPHALITIS VACCINE, INACTIVATED, ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0879-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0880-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0820-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0820-43",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0821-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0821-43",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0821-05",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "42874-0012-01",
+      "display" : "INFLUENZA VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0278-10",
+      "display" : "CORYNEBACTERIUM DIPHTHERIAE TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CLOSTRIDIUM TETANI TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0109-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0890-02",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0889-02",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0900-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0860-78",
+      "display" : "POLIOVIRUS TYPE 1 ANTIGEN (FORMALDEHYDE INACTIVATED), POLIOVIRUS TYPE 2 ANTIGEN (FORMALDEHYDE INACTI"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0860-88",
+      "display" : "POLIOVIRUS TYPE 1 ANTIGEN (FORMALDEHYDE INACTIVATED), POLIOVIRUS TYPE 2 ANTIGEN (FORMALDEHYDE INACTI"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0389-65",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0388-15",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0011-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0011-50",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0703-55",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0111-25",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0200-10",
+      "display" : "Influenza A (H1N1) 2009 Monovalent Vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0200-02",
+      "display" : "Influenza A (H1N1) 2009 Monovalent Vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0298-10",
+      "display" : "CORYNEBACTERIUM DIPHTHERIAE TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED), CLOSTRIDIUM TETANI TOXOID ANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0806-01",
+      "display" : "HAEMOPHILUS B CONJUGATE VACCINE (TETANUS TOXOID CONJUGATE)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0013-02",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0113-11",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0391-65",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0012-50",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0012-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0112-25",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0390-15",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4897-01",
+      "display" : "HAEMOPHILUS B CONJUGATE VACCINE (MENINGOCOCCAL PROTEIN CONJUGATE)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0291-83",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CORYNEBACTERIUM DIPHTHERIAE TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0291-10",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED) AND CORYNEBACTERIUM DIPHTHERIAE TOXOID"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0413-88",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0413-58",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0513-00",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0113-02",
+      "display" : "Influenza Virus Vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0113-10",
+      "display" : "INFLUENZA A VIRUS A/CHRISTCHURCH/16/2010 NIB-74 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZ"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00005-1970-49",
+      "display" : "PNEUMOCOCCAL 7-VALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0811-43",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0811-41",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, HEPATITIS B (RECOMBINANT) AND INACT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4827-01",
+      "display" : "VARICELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4826-01",
+      "display" : "VARICELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0842-41",
+      "display" : "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE, ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0842-01",
+      "display" : "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE, ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0842-43",
+      "display" : "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE, ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0842-05",
+      "display" : "TETANUS TOXOID, REDUCED DIPHTHERIA TOXOID AND ACELLULAR PERTUSSIS VACCINE, ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0300-01",
+      "display" : "INFLUENZA VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4831-01",
+      "display" : "HEPATITIS A VACCINE, INACTIVATED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66019-0200-01",
+      "display" : "INFLUENZA A H1N1 2009 MONOVALENT VACCINE LIVE INTRANASAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "14362-0111-03",
+      "display" : "TETANUS AND DIPHTHERIA TOXOIDS ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0519-01",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0519-25",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0629-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0825-43",
+      "display" : "HEPATITIS A VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0825-01",
+      "display" : "HEPATITIS A VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0826-43",
+      "display" : "HEPATITIS A VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0826-05",
+      "display" : "HEPATITIS A VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0826-01",
+      "display" : "HEPATITIS A VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0010-01",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "33332-0110-10",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-181 (H1N1) HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0115-10",
+      "display" : "Influenza Virus Vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0115-02",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4133-01",
+      "display" : "TETANUS AND DIPHTHERIA TOXOIDS ADSORBED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "54868-4320-09",
+      "display" : "PNEUMOCOCCAL VACCINE POLYVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "54868-3339-09",
+      "display" : "PNEUMOCOCCAL VACCINE POLYVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00052-0603-01",
+      "display" : "BACILLUS CALMETTE-GUERIN SUBSTRAIN TICE LIVE ANTIGEN"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "64678-0211-05",
+      "display" : "BACILLUS ANTHRACIS"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4739-01",
+      "display" : "PNEUMOCOCCAL VACCINE POLYVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4943-01",
+      "display" : "PNEUMOCOCCAL VACCINE POLYVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0013-58",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0013-88",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0392-78",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0113-00",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009 X-179A (H1N1) ANTIGEN (FORMALDEHYDE INACTIVATED), INFLUENZA A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0820-10",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0800-83",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0400-88",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED), CORYNEBACTERIUM DIPHTHERIAE TOXOID ANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0286-58",
+      "display" : "CORYNEBACTERIUM DIPHTHERIAE TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED), CLOSTRIDIUM TETANI TOXOID ANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0815-41",
+      "display" : "HEPATITIS A AND HEPATITIS B (RECOMBINANT) VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0815-43",
+      "display" : "HEPATITIS A AND HEPATITIS B (RECOMBINANT) VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0815-05",
+      "display" : "HEPATITIS A AND HEPATITIS B (RECOMBINANT) VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0815-01",
+      "display" : "HEPATITIS A AND HEPATITIS B (RECOMBINANT) VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0114-10",
+      "display" : "INFLUENZA A VIRUS A/CHRISTCHURCH/16/2010 NIB-74 (H1N1) ANTIGEN (PROPIOLACTONE INACTIVATED), INFLUENZ"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "76420-0482-01",
+      "display" : "INFLUENZA A VIRUS A/CALIFORNIA/7/2009(H1N1)-LIKE HEMAGGLUTININ ANTIGEN (PROPIOLACTONE INACTIVATED),"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0895-01",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4999-01",
+      "display" : "MEASLES, MUMPS, RUBELLA AND VARICELLA VIRUS VACCINE LIVE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0545-15",
+      "display" : "HAEMOPHILUS B CONJUGATE VACCINE (TETANUS TOXOID CONJUGATE)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "51285-0174-02",
+      "display" : "ADENOVIRUS TYPE 4 VACCINE, LIVE, ORAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0248-58",
+      "display" : "RABIES VIRUS STRAIN PM-1503-3M ANTIGEN (PROPIOLACTONE INACTIVATED)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0487-58",
+      "display" : "NEISSERIA MENINGITIDIS GROUP A CAPSULAR POLYSACCHARIDE ANTIGEN, NEISSERIA MENINGITIDIS GROUP C CAPSU"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0915-58",
+      "display" : "YELLOW FEVER VIRUS LIVE ANTIGEN, A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0547-58",
+      "display" : "HAEMOPHILUS INFLUENZAE TYPE B STRAIN 1482 CAPSULAR POLYSACCHARIDE TETANUS TOXOID CONJUGATE ANTIGEN"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0851-01",
+      "display" : "ROTAVIRUS VACCINE, LIVE, ORAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0915-68",
+      "display" : "YELLOW FEVER VIRUS LIVE ANTIGEN, A"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0488-78",
+      "display" : "NEISSERIA MENINGITIDIS GROUP A POLYSACCHARIDE ANTIGEN, A, NEISSERIA MENINGITIDIS GROUP C POLYSACCHAR"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "46028-0219-11",
+      "display" : "MENC, Y, W-135 VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "51285-0175-02",
+      "display" : "ADENOVIRUS TYPE 7 VACCINE, LIVE, ORAL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0560-05",
+      "display" : "DIPHTHERIA AND TETANUS TOXOIDS AND ACELLULAR PERTUSSIS ADSORBED, INACTIVATED POLIOVIRUS"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0400-58",
+      "display" : "CLOSTRIDIUM TETANI TOXOID ANTIGEN (FORMALDEHYDE INACTIVATED), CORYNEBACTERIUM DIPHTHERIAE TOXOID ANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "42874-0013-01",
+      "display" : "INFLUENZA VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0116-11",
+      "display" : "influenza a virus a/christchurch , influenza a virus a/texas   , influenza b virus b/massachusetts"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "66521-0116-12",
+      "display" : "influenza a virus a/christchurch , influenza a virus a/texas   , influenza b virus b/massachusetts"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4045-01",
+      "display" : "HUMAN PAPILLOMAVIRUS QUADRIVALENT (TYPES 6, 11, 16, AND 18) VACCINE, RECOMBINANT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4995-01",
+      "display" : "HEPATITIS B VACCINE (RECOMBINANT)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4841-01",
+      "display" : "HEPATITIS A VACCINE, INACTIVATED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0804-01",
+      "display" : "INFLUENZA (H5N1) MONOVALENT, ADJUVANTED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0802-02",
+      "display" : "Adjuvant"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "58160-0901-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "00006-4837-01",
+      "display" : "PNEUMOCOCCAL VACCINE POLYVALENT"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0891-01",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "19515-0894-41",
+      "display" : "INFLUENZA VIRUS VACCINE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0514-00",
+      "display" : "Fluzone Quadrivalent, Peds"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0394-78",
+      "display" : "FLUZONE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0014-88",
+      "display" : "FLUZONE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/ndc",
+      "code" : "49281-0414-58",
+      "display" : "FLUZONE QUADRIVALENT PF"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
