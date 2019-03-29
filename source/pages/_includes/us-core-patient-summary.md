@@ -39,7 +39,7 @@ Additionally your system must Support:
   [All Language codes with language and optionally a region modifier]: ValueSet-simple-language.html
   [All Languages]: {{site.data.fhir.path}}valueset-all-languages.html
   [US Core Patient Birth Sex]:StructureDefinition-us-core-birthsex.html
-  [US Core Birth Sex]: ValueSet-us-core-birthsex.html
+  [US Core Birth Sex]: ValueSet-birthsex.html
   [US Core Patient Race]: StructureDefinition-us-core-race.html
   [OMB Race Categories]: ValueSet-omb-race-category.html
   [US Core Race Extension]:StructureDefinition-us-core-race.html

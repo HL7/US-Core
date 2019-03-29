@@ -1,7 +1,13 @@
 
+[(how to search by date)]: {{site.data.fhir.path}}search.html#date
+[(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
+[(how to search by token)]: {{site.data.fhir.path}}search.html#token
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
-[$expand]: {{ site.data.fhir.path }}valueset-operation-expand.html)  "An operation used to create a simple collection of codes suitable for use for data entry or validation"
+[$docref operation]: OperationDefinition-docref.html
+[$expand]: {{ site.data.fhir.path }}valueset-operation-expand.html  "An operation used to create a simple collection of codes suitable for use for data entry or validation"
 [2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
+[34133-9]: http://s.details.loinc.org/LOINC/34133-9.html?sections=Comprehensive
+[5 Common Clinical Notes]: clinical-notes-guidance.html#common-clinical-notes
 [AllergyIntolerance]: {{site.data.fhir.path}}allergyintolerance.html
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page
 [boundaries section]: {{ site.data.fhir.path }}documentreference.html#bnr
@@ -32,12 +38,16 @@
 [DiagnosticReport]: {{site.data.fhir.path}}diagnosticreport.html
 [DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
 [Discharge Summary (18842-5)]: https://s.details.loinc.org/LOINC/18842-5.html?sections=Comprehensive
+[Document Type]: http://hl7.org/fhir/ValueSet-c80-doc-typecodes.html
 [Document types]: {{site.data.fhir.path}}valueset-c80-doc-typecodes.html
+[DocumentReference Format]: http://hl7.org/fhir/ValueSet-formatcodes.html
 [DocumentReference vs DiagnosticReport]: clinical-notes-guidance.html#documentreference-vs-diagnosticreport
+[DocumentReference-episode-summary]: DocumentReference-episode-summary.html
 [DocumentReference]: {{site.data.fhir.path}}documentreference.html
-[DocumentReference]:{{ site.data.fhir.path }}documentreference.html
+[DocumentReferenceStatus]: http://hl7.org/fhir/ValueSet-document-reference-status.html
 [Downloads]: downloads.html "Downloads Page"
 [Encounter]: {{site.data.fhir.path}}encounter.html
+[FHIR Binary Resource]: http://hl7.org/fhir/binary.html
 [FHIR Conformance Rules]: {{site.data.fhir.path}}conformance-rules.html
 [FHIR Data Types]: {{site.data.fhir.path}}datatypes.html
 [FHIR Documents]: {{site.data.fhir.path}}documents.html
@@ -52,11 +62,13 @@
 [FHIR Version STU3]: http://hl7.org/fhir/STU3/index.html "FHIR Version STU3 Specification Home Page"
 [Guidance]: general-guidance.html  "General Guidance Page"
 [History & Physical Note (34117-2)]: https://s.details.loinc.org/LOINC/34117-2.html?sections=Comprehensive
+[HITSP C80 Table 2-144 Document Class Value Set Definition]: http://build.fhir.org/valueset-c80-doc-typecodes.html
 [HL7 U.S. Data Access Framework (DAF)]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [Home]: index.html "Home Page"
 [HTTP]: {{site.data.fhir.path}}http.html
 [ICD-10-PCS codes]: http://www.icd10data.com/icd10pcs
 [IHE MHD]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_MHD.pdf
+[IHE XDS]: https://wiki.ihe.net/index.php/Cross-Enterprise_Document_Sharing
 [include]: {{site.data.fhir.path}}search.html#include
 [logical view]: {{site.data.fhir.path}}formats.html#table
 [logical views]: {{site.data.fhir.path}}formats.html#table
@@ -68,6 +80,7 @@
 [MedicationRequestStatus]: {{site.data.fhir.path}}valueset-medicationrequest-status.html
 [MedicationStatement]: {{site.data.fhir.path}}medicationstatement.html
 [MedicationStatementStatus]: {{site.data.fhir.path}}valueset-medication-statement-status.html
+[MimeType]: http://www.rfc-editor.org/bcp/bcp13.txt#
 [Must Support]: general-guidance.html#must-support
 [NamingSystem]: {{site.data.fhir.path}}namingsystem.html
 [Observation]: {{site.data.fhir.path}}observation.html
@@ -99,6 +112,7 @@
 [US Core Diagnostic Report Profile]: StructureDefinition-us-core-diagnosticreport.html
 [US Core DiagnosticReport]: http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-diagnosticreport
 [US Core DocumentReference]: http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-documentreference
+[US Core DocumentReferences Category Value Set]: ValueSet-us-core-documentreference-category.html
 [US Core Goal Profile]: StructureDefinition-us-core-goal.html
 [US Core Immunization Profile]: StructureDefinition-us-core-immunization.html
 [US Core Implanted Device Profile]: StructureDefinition-us-core-device.html
