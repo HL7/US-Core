@@ -101,19 +101,7 @@ Example: GET [base]/DocumentReference?patient=2169591&type=34133-9&period=ge2016
 
 ### Searching documents using the [$docref operation]
 
-This operation differs from the above query in that:
-
-1. If not otherwise specified, the returned DocumentReference provides the url for the most current CCD by default
-1. The returned DocumentReference may reference virtual documents that are generated on demand when the location provided by the `DocumentReference.content.attachment.url` is accessed.  The $docref operation should return DocumentReferences for *existing documents* as well.
-
-<!--
-
-Functional behavior of Server when responding to the $docref operation:
-
-1. SHALL return at least a reference to CCD document, if available, but MAY provide references to other document types as well.
-2. If a context date range is supplied the server SHOULD provide references to any document that falls within the date range
-3. If no date range is supplied, then the server SHALL provide references to last or current encounter
--->
+This operation is used to request a server *generate* a document based on the specified parameters.  If no parameters are specified, the server SHALL return a DocumentReference to the patient's most current CCD.  See the [$docref operation] definition for details on how this operation differs from a FHIR RESTful search.
 
 -----
 
@@ -121,8 +109,9 @@ Functional behavior of Server when responding to the $docref operation:
 
 Example: see [$docref operation]
 
-*Support:* Mandatory to support response to operation.
+*Support:* Mandatory to support search by $docref operation.
 
-*Implementation Notes:* Search for CCD document from the last encounter and MAY search for other document types from the last encounter as well. Fetches a bundle of DocumentReference resources for the specified patient. The document itself is retrieved using the link provided from the DocumentQuery search results.
+
+*Implementation Notes:* This operation returns DocumentReference resources. The document itself is retrieved using the link provided in the `DocumentReference.content.attachment.url` element.
 
 {% include link-list.md %}

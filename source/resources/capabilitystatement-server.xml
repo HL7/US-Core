@@ -594,7 +594,7 @@
     </p>
   </li>
   <li>
-    <p>A server <strong>SHALL</strong>e capable of responding to a <a href="OperationDefinition-docref.html">$docref</a>peration. At minimum, it must return a reference to a CCD document.</p>
+    <p>A server <strong>SHALL</strong> be capable of responding to a <a href="OperationDefinition-docref.html">$docref</a> operation.  <strong>SHALL</strong> be capable of returning at least a reference to a <em>generated</em> CCD document, if available.  <strong>MAY</strong> provide references to other <em>generated and existing</em> document types as well. If a context date range is supplied the server <strong>SHOULD</strong> provide references to any document that falls within the date range If no date range is supplied, then the server SHALL provide references to last or current encounter.  <strong>SHOULD</strong> document what resources, if any, are returned as included resources</p>
     <p>
       <code class="highlighter-rouge">GET [base]/DocumentReference/$docref?patient=[id]</code>
     </p>
@@ -1751,6 +1751,7 @@
       <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-Type"/>
       <type value="token"/>
     </searchParam>
+
   </resource>
   <resource>
     <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">

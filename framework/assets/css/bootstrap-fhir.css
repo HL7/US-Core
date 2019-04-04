@@ -4061,6 +4061,9 @@ td.visible-print {
   display: none !important;
 }
 @media print {
+  .collapse {
+        display: block !important;
+  }
   .visible-print {
     display: block !important;
   }

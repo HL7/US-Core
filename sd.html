@@ -58,7 +58,8 @@ Formats: <a href="{{[type]}}-{{[id]}}.html">Narrative</a>, <a href="{{[type]}}-{
 </p>
 
 <p>
-The official URL for this profile is: <code>{{site.data.structuredefinitions.{{[id]}}.url}}</code>
+The official URL for this profile is:
+<code>{{site.data.structuredefinitions.{{[id]}}.url}}</code><button id="copy-button" class="btn-default btn-sm" data-clipboard-text="{{site.data.structuredefinitions.{{[id]}}.url}}">Copy</button>
 </p>
 
 <p>
@@ -68,8 +69,6 @@ Published on {{site.data.structuredefinitions.{{[id]}}.date}} as a {{site.data.s
 <p><strong>
 This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basepath}}">{{site.data.structuredefinitions.{{[id]}}.basename}}</a>
 </strong></p>
-
-
 
 <!--{% raw %}
 {% include {{[type]}}-{{[id]}}-header.xhtml %}
@@ -87,11 +86,13 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
 <!--  this could be a customizable include -->
  <ul>
   {% unless "{{[id]}}" contains "extension" %}<li><a href="#tabs-summ">Text Summary</a></li>{% endunless %}
-  <li><a href="#tabs-diff">Differential Table</a></li>
-  <li><a href="#tabs-snap">Snapshot Table</a></li>
+<!--  <li><a href="#tabs-diff">Differential Table</a></li> -->
+  <li><a href="#tabs-diff">Differential View</a></li>
+  <!-- <li><a href="#tabs-snap">Snapshot Table</a></li> -->
+  <li><a href="#tabs-snap">Full View</a></li>
   <!-- <li><a href="#tabs-xml">XML Template</a></li> -->
   <!-- <li><a href="#tabs-json">JSON Template</a></li> -->
-  <li><a href="#tabs-all">All</a></li>
+  <li><a href="#tabs-all">All Views</a></li>
 
  </ul>
 {% unless "{{[id]}}" contains "extension" %}

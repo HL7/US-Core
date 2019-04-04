@@ -1,5 +1,3 @@
-source file: pages/_includes/docref/md
-
 The operation can be invoked using the GET Syntax if the complex type parameter is omitted:
 
 `GET [base]/DocumentReference/$docref?{parameters}`
@@ -10,19 +8,19 @@ Otherwise the POST transaction is used as follows:
 
 ---
 
-###### Example
+### Example
+
+**Request the latest CCD for a patient using `GET` syntax**
+
+`GET [base]/DocumentReference/$docref?patient=123`
+
+**Request the latest CCD for a patient using `POST` syntax**
+
+`POST [base]/DocumentReference/$docref}`
+
+**POST request body:**
 
 ~~~
-###### 1. Request the latest CCD for a patient #####
-
-GET [base]/DocumentReference/$docref?patient=123
-
-or
-
-POST [base]/DocumentReference/$docref}
-
-    **payload:**
-
     {
       "resourceType": "Parameters",
       "id": "get-ccd123",
@@ -33,10 +31,18 @@ POST [base]/DocumentReference/$docref}
         }
       ]
     }
+~~~
 
+**Response**
 
-###### 1. Response #####
+~~~
+HTTP/1.1 200 OK
+[other headers]
+~~~
 
+**Response body**
+
+~~~
     {
       "resourceType": "Bundle",
       "id": "get-ccd123-response",
