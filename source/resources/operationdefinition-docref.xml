@@ -33,7 +33,7 @@ This operation is the *same* as a FHIR RESTful search by patient,type and date r
 "/>
 	<code value="docref"/>
 	<comment value="
-- The server is responsible for determining what resources, if any, to return as [included](http://hl7.org/fhir/R4/search.html#revinclude) resources rather than the client specifying which ones. This frees the client from needing to determine what it could or should ask for. For example, the server may return the referenced document as an included FHIR Binary resource within the return bundle. The server's CapabilityStatement should documents this behaviour.
+- The server is responsible for determining what resources, if any, to return as [included](http://hl7.org/fhir/R4/search.html#revinclude) resources rather than the client specifying which ones. This frees the client from needing to determine what it could or should ask for. For example, the server may return the referenced document as an included FHIR Binary resource within the return bundle. The server's CapabilityStatement should document this behavior.
 &#xA;&#xA;
 - The document itself can be subsequently retrieved using the link provided  in the `DocumentReference.content.attachment.url element`. The link could be a FHIR endpoint to a [Binary](http://hl7.org/fhir/R4/binary.html) Resource or some other document repository.
 &#xA;&#xA;
