@@ -110,8 +110,8 @@
 [US Core CareTeam Profile]: StructureDefinition-us-core-careteam.html
 [US Core Condition Profile]: StructureDefinition-us-core-condition.html
 [US Core Diagnostic Report Profile]: StructureDefinition-us-core-diagnosticreport.html
-[US Core DiagnosticReport]: http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-diagnosticreport
-[US Core DocumentReference]: http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-documentreference
+[US Core DiagnosticReport]: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport
+[US Core DocumentReference]: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
 [US Core DocumentReferences Category Value Set]: ValueSet-us-core-documentreference-category.html
 [US Core Goal Profile]: StructureDefinition-us-core-goal.html
 [US Core Immunization Profile]: StructureDefinition-us-core-immunization.html

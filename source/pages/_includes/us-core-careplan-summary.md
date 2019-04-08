@@ -7,7 +7,7 @@
 1.  One intent in `CarePlan.intent`
     -   CarePlan.intent is bound to [CarePlanIntent] Value set
 1.  A category in `Careplan.category` which must have:
-    -   a fixed `Careplan.category.coding.system`= "http://hl7.org/fhir/us/core-r4/CodeSystem/careplan-category"
+    -   a fixed `Careplan.category.coding.system`= "http://hl7.org/fhir/us/core/CodeSystem/careplan-category"
     -   a fixed `Careplan.category.coding.code`=“assess-plan”
 1.  One reference to a patient in `CarePlan.subject`
 
