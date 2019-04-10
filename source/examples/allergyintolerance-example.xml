@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AllergyIntolerance xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-current/fhir-all.xsd">
-	<id value="example"/>
-	<meta>
-		<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance">
-		</profile>
-	</meta>
-	<!--
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">Sensitivity to sulfonamide antibacterial</div>
-	</text>
--->
-	<clinicalStatus><coding><code value="active"></code></coding></clinicalStatus>
-	<verificationStatus><coding><code value="confirmed"></code></coding></verificationStatus>
-	<category value="medication"/>
-	<criticality value="high"/>
-	<code>
-		<coding>
-			<system value="http://snomed.info/sct"/>
-			<code value="387406002"/>
-			<display value="Sulfonamide (substance)"/>
-		</coding>
-		<text value="sulfonamide antibacterial"/>
-	</code>
-	<patient>
-		<reference value="Patient/example"/>
-		<display value="Amy V. Shaw"/>
-	</patient>
-	<reaction>
-		<manifestation>
-			<coding>
-				<system value="http://snomed.info/sct"/>
-				<code value="271807003"/>
-				<display value="skin rash"/>
-			</coding>
-			<text value="skin rash"/>
-		</manifestation>
-		<severity value="mild"/>
-	</reaction>
+  <id value="example"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance">
+    </profile>
+  </meta>
+  <!--	<text>
+  <status value="generated"/>
+  <div xmlns="http://www.w3.org/1999/xhtml">Sensitivity to sulfonamide antibacterial</div>
+</text>-->
+<clinicalStatus>
+  <coding>
+    <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+    <code value="active"/>
+  </coding>
+</clinicalStatus>
+<verificationStatus>
+  <coding>
+    <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+    <code value="confirmed"/>
+  </coding>
+</verificationStatus>
+<category value="medication"/>
+<criticality value="high"/>
+<code>
+  <coding>
+    <system value="http://snomed.info/sct"/>
+    <code value="387406002"/>
+    <display value="Sulfonamide (substance)"/>
+  </coding>
+  <text value="sulfonamide antibacterial"/>
+</code>
+<patient>
+  <reference value="Patient/example"/>
+  <display value="Amy V. Shaw"/>
+</patient>
+<reaction>
+  <manifestation>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="271807003"/>
+      <display value="skin rash"/>
+    </coding>
+    <text value="skin rash"/>
+  </manifestation>
+  <severity value="mild"/>
+</reaction>
 </AllergyIntolerance>

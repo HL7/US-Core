@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Condition xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-current/fhir-all.xsd">
-	<id value="example"/>
-	<meta>
-		<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
-	</meta>
-	<clinicalStatus>
-		<coding>
-			<system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
-			<code value="active"/>
-			<display value="Active"/>
-		</coding>
-		<text value="Active"/>
-	</clinicalStatus>
-	<verificationStatus>
-		<coding>
-			<system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
-			<code value="confirmed"/>
-			<display value="Confirmed"/>
-		</coding>
-		<text value="Confirmed"/>
-	</verificationStatus>
-	<category>
-		<coding>
-			<system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
-			<code value="problem-list-item"/>
-			<display value="Problem List Item"/>
-		</coding>
-		<text value="Problem"/>
-	</category>
-	<code>
-		<coding>
-			<system value="http://snomed.info/sct"/>
-			<code value="442311008"/>
-			<display value="Liveborn born in hospital"/>
-		</coding>
-		<text value="Single liveborn, born in hospital"/>
-	</code>
-	<subject>
-		<reference value="Patient/example"/>
-		<display value="Amy V. Shaw"/>
-	</subject>
-	<onsetDateTime value="2016-08-10"/>
+  <id value="example"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+    <text value="Active"/>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+    <text value="Confirmed"/>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="problem-list-item"/>
+      <display value="Problem List Item"/>
+    </coding>
+    <text value="Problem"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="442311008"/>
+      <display value="Liveborn born in hospital"/>
+    </coding>
+    <text value="Single liveborn, born in hospital"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Amy V. Shaw"/>
+  </subject>
+  <onsetDateTime value="2016-08-10"/>
 </Condition>
