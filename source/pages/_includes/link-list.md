@@ -38,8 +38,7 @@
 [DiagnosticReport]: {{site.data.fhir.path}}diagnosticreport.html
 [DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
 [Discharge Summary (18842-5)]: https://s.details.loinc.org/LOINC/18842-5.html?sections=Comprehensive
-[Document Type]: http://hl7.org/fhir/ValueSet-c80-doc-typecodes.html
-[Document types]: {{site.data.fhir.path}}valueset-c80-doc-typecodes.html
+[US Core DocumentReference Type Value Set]: ValueSet-us-core-documentreference-type.html
 [DocumentReference Format]: http://hl7.org/fhir/ValueSet-formatcodes.html
 [DocumentReference vs DiagnosticReport]: clinical-notes-guidance.html#documentreference-vs-diagnosticreport
 [DocumentReference-episode-summary]: DocumentReference-episode-summary.html
@@ -62,7 +61,6 @@
 [FHIR Version STU3]: http://hl7.org/fhir/STU3/index.html "FHIR Version STU3 Specification Home Page"
 [Guidance]: general-guidance.html  "General Guidance Page"
 [History & Physical Note (34117-2)]: https://s.details.loinc.org/LOINC/34117-2.html?sections=Comprehensive
-[HITSP C80 Table 2-144 Document Class Value Set Definition]: http://build.fhir.org/valueset-c80-doc-typecodes.html
 [HL7 U.S. Data Access Framework (DAF)]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [Home]: index.html "Home Page"
 [HTTP]: {{site.data.fhir.path}}http.html

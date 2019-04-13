@@ -541,6 +541,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/us-core-documentreference-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/us-core-practitioner"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -793,12 +799,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/us-core-inspired-oxygen"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/us-core-documentreference-category"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1010,11 +1010,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-us-core-inspired-oxygen.html"/>
-          <title value="StructureDefinition Us Core Inspired Oxygen"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="StructureDefinition-us-core-organization.html"/>
           <title value="StructureDefinition Us Core Organization"/>
           <generation value="generated"/>
@@ -1082,6 +1077,11 @@
         <page>
           <nameUrl value="ValueSet-us-core-narrative-status.html"/>
           <title value="ValueSet Us Core Narrative Status"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="ValueSet-us-core-documentreference-type.html"/>
+          <title value="ValueSet Us Core DocumentReference Type"/>
           <generation value="generated"/>
         </page>
         <page>

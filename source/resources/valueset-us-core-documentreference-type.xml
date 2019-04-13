@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="us-core-documentreference-type"/>
+	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type"/>
+	<version value="1.0.1"/>
+	<name value="USCoreDocumentReferenceTypeValueSet"/>
+	<title value="US Core DocumentReference Type Value Set"/>
+	<status value="active"/>
+	<date value="2019-04-10T02:17:38+00:00"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+	<contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+	<description value="The Document Type value set includes all LOINC  values whose SCALE is DOC in the LOINC database and the SNOMED-CT concept 'unknown'"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="This content from LOINC&#xAE; is copyright &#xA9; 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use."/>
+	<compose>
+		<include>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+			<concept>
+				<code value="UNK"/>
+				<display value="unknown"/>
+			</concept>
+		</include>
+		<include>
+			<system value="http://loinc.org"/>
+			<filter>
+				<property value="SCALE_TYP"/>
+				<op value="="/>
+				<value value="DOC"/>
+			</filter>
+		</include>
+	</compose>
+</ValueSet>

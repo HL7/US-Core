@@ -6,6 +6,10 @@ build: ci  # choice of ci|ballot|version
 ballot:    #STU version of IG ( if needed for publishing HL7 guides)
 hl7_version:  # not sure what this is for
 hl7_ig: true # 'true'  if HL7 ig
+showXML: true  #'true' if want xml tab'
+showTTL: #'true' if want ttl tab'
+showMappings:  # 'true' if want to display mappings tab'
+showDefs:  # 'true' if want to display Definitions tab'
 example_types:  # for matching type to Type
 - Account
 - ActivityDefinition
