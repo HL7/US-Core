@@ -1289,7 +1289,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="family"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Patient-family"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/individual-family"/>
       <type value="string"/>
     </searchParam>
     <searchParam>
@@ -1297,7 +1297,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="given"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Patient-given"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/individual-given"/>
       <type value="string"/>
     </searchParam>
     <searchParam>
@@ -1313,7 +1313,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="gender"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Patient-gender"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/individual-gender"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -1321,7 +1321,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="birthdate"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Patient-birthdate"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/individual-birthdate"/>
       <type value="date"/>
     </searchParam>
   </resource>
@@ -1368,7 +1368,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
   </resource>
@@ -1459,7 +1459,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/CarePlan-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
     <searchParam>
@@ -1467,7 +1467,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="category"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/CarePlan-Category"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/CarePlan-category"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -1475,7 +1475,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="status"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/CarePlan-Status"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/CarePlan-status"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -1483,7 +1483,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="date"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/CarePlan-Date"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
       <type value="date"/>
       <documentation value="The server SHALL support the date search modifiers 'ge','le','gt', and 'lt'"/>
     </searchParam>
@@ -1539,7 +1539,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/CareTeam-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
     <searchParam>
@@ -1547,7 +1547,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="status"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/CareTeam-Status"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/CareTeam-status"/>
       <type value="token"/>
     </searchParam>
   </resource>
@@ -1610,7 +1610,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Condition-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
     <searchParam>
@@ -1618,7 +1618,7 @@
         <valueCode value="SHOULD"/>
       </extension>
       <name value="category"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Condition-Category"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Condition-category"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -1626,7 +1626,7 @@
         <valueCode value="SHOULD"/>
       </extension>
       <name value="clinicalstatus"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Condition-ClinicalStatus"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Condition-clinical-status"/>
       <type value="token"/>
     </searchParam>
   </resource>
@@ -1673,7 +1673,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Device-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
   </resource>
@@ -1731,7 +1731,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
     <searchParam>
@@ -1739,7 +1739,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="date"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-Date"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
       <type value="date"/>
       <documentation value="The server SHALL support the date search modifiers 'ge','le','gt', and 'lt'"/>
     </searchParam>
@@ -1748,7 +1748,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="type"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/DocumentReference-Type"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-type"/>
       <type value="token"/>
     </searchParam>
 
@@ -1804,7 +1804,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Encounter-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
     <searchParam>
@@ -1812,7 +1812,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="date"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Encounter-Date"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
       <type value="date"/>
       <documentation value="The server SHALL support the date search modifiers 'ge','le','gt', and 'lt'"/>
     </searchParam>
@@ -1868,7 +1868,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Goal-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
     <searchParam>
@@ -1876,7 +1876,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="date"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Goal-Date"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
       <type value="date"/>
       <documentation value="The server SHALL support the date search modifiers 'ge','le','gt', and 'lt'"/>
     </searchParam>
@@ -1924,7 +1924,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Immunization-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
   </resource>
@@ -2015,7 +2015,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
     <searchParam>
@@ -2023,7 +2023,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="category"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-Category"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-category"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -2031,7 +2031,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="code"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-Code"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -2039,7 +2039,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="date"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-Date"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
       <type value="date"/>
       <documentation value="The server SHALL support the date search modifiers 'ge','le','gt', and 'lt'"/>
     </searchParam>
@@ -2087,7 +2087,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="name"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Location-Name"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Location-name"/>
       <type value="string"/>
     </searchParam>
     <searchParam>
@@ -2095,7 +2095,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="address"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Location-Address"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Location-address"/>
       <type value="string"/>
     </searchParam>
   </resource>
@@ -2186,7 +2186,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/MedicationStatement-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
   </resource>
@@ -2238,7 +2238,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/MedicationRequest-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
   </resource>
@@ -2345,7 +2345,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Observation-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
     <searchParam>
@@ -2353,7 +2353,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="category"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Organization-Category"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Observation-category"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -2361,7 +2361,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="code"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Organization-Code"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -2369,7 +2369,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="date"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Organization-Date"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
       <type value="date"/>
       <documentation value="The server SHALL support the date search modifiers 'ge','le','gt', and 'lt'"/>
     </searchParam>
@@ -2417,7 +2417,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="identifier"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Organization-Identifier"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Organization-identifier"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -2425,7 +2425,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="name"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Organization-Name"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Organization-name"/>
       <type value="string"/>
     </searchParam>
     <searchParam>
@@ -2433,7 +2433,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="address"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Organization-Address"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Organization-address"/>
       <type value="string"/>
     </searchParam>
   </resource>
@@ -2480,7 +2480,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="identifier"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Practitioner-Identifier"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Practitioner-identifier"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -2488,7 +2488,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="name"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Practitioner-Name"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Practitioner-name"/>
       <type value="string"/>
     </searchParam>
   </resource>
@@ -2536,7 +2536,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="identifier"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-Identifier"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -2544,16 +2544,17 @@
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHALL"/>
       </extension>
-      <name value="name"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-Name"/>
-      <type value="string"/>
+      <name value="practitioner"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner"/>
+      <type value="reference"/>
+      <documentation value="Shall support the chained parameters `name` and `identifier`"/>
     </searchParam>
     <searchParam>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHALL"/>
       </extension>
       <name value="speciality"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-Specialty"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-specialty"/>
       <type value="token"/>
     </searchParam>
   </resource>
@@ -2608,7 +2609,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="patient"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Procedure-Patient"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
       <type value="reference"/>
     </searchParam>
     <searchParam>
@@ -2616,7 +2617,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="date"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Procedure-Date"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-date"/>
       <type value="date"/>
       <documentation value="The server SHALL support the date search modifiers 'ge','le','gt', and 'lt'"/>
     </searchParam>
