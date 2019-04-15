@@ -1281,7 +1281,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="name"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/individual-name"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Patient-name"/>
       <type value="string"/>
     </searchParam>
     <searchParam>
@@ -1305,7 +1305,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="identifier"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/individual-identifier"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Patient-identifier"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -2031,7 +2031,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="code"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/DiagnosticReport-Code"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -2353,7 +2353,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="category"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Organization-category"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Observation-category"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -2361,7 +2361,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="code"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Organization-Code"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/clinical-code"/>
       <type value="token"/>
     </searchParam>
     <searchParam>
@@ -2433,7 +2433,7 @@
         <valueCode value="SHALL"/>
       </extension>
       <name value="address"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/Organization-Address"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/Organization-address"/>
       <type value="string"/>
     </searchParam>
   </resource>
@@ -2544,9 +2544,10 @@
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHALL"/>
       </extension>
-      <name value="name"/>
-      <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-name"/>
-      <type value="string"/>
+      <name value="practitioner"/>
+      <definition value="http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner"/>
+      <type value="reference"/>
+      <documentation value="Shall support the chained parameters `name` and `identifier`"
     </searchParam>
     <searchParam>
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
