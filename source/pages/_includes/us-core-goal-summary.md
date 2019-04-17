@@ -1,8 +1,10 @@
-##### Complete Summary of the Mandatory Requirements
+**Goal**
 
-1.  A status in `Goal.status` which has a [required]({{site.data.fhir.path}}terminologies.html#required) binding to:
-    -   [GoalStatus] value set.
-1.  A  text description in `Goal.description.text`
-1.  A patient reference in `Goal.subject`
-
-  [GoalStatus]: {{site.data.fhir.path}}valueset-goal-status.html
+#### Summary of the Mandatory Requirements
+1.  A  code  in `Goal.lifecycleStatus`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [GoalLifecycleStatus](http://hl7.org/fhir/ValueSet/goal-status)
+1.  A  CodeableConcept  in `Goal.description`
+with an [example](http://hl7.org/fhir/R4/terminologies.html#example)
+ binding to [SNOMED CT Clinical Findings](http://hl7.org/fhir/ValueSet/clinical-findings)
+1.  A Patient Reference  in `Goal.subject`

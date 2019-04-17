@@ -24,12 +24,11 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 
 * The [US Core Condition Category Codes] support the separate concepts of problems and health concerns so API consumers can separate health concerns and problems. However this is not mandatory for 2015 certification
 * The 2015 Certification rule requires the use of SNOMED CT for problem list entries. Following the rules for [extensible] binding to coded data types, ICD or other local codes can be used as translations to or in addition to SNOMED CT.
+* To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.  An example search is shown in the [Quick Start](#quick-start) section below.
 
 ##### Examples
 
  - [Condition-hc1](Condition-hc1.html) is an example of a condition categorized as a "problem"
  - [Condition-example](Condition-example.html) is an example of a condition categorized as a "health-concern"
 
-[Condition]: {{site.data.fhir.path}}condition.html
-[extensible]: {{site.data.fhir.path}}terminologies.html#extensible
-[US Core Condition Category Codes]: ValueSet-us-core-condition-category.html
+{% include link-list.md %}

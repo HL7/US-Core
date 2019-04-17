@@ -8,7 +8,11 @@ catch(exception){
 }
 
 if (!currentTabIndex)
+  {% if site.default_profile_view %}
+  currentTabIndex = '{{site.default_profile_view}}';
+  {% else %}
   currentTabIndex = '1';
+  {% endif %}
 
 $( '#tabs' ).tabs({
          active: currentTabIndex,

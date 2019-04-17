@@ -1,3 +1,7 @@
-##### Summary of the Mandatory Requirements
+**Extension**
 
-1. MAY use this extension to indicate if contactpoint datatype is a direct email address
+#### Summary of the Mandatory Requirements
+1.  An  uri  in `Extension.url`
+
+#### Summary of the Must Support Requirements
+1.  A  boolean  in `Extension.valueBoolean`

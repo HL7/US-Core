@@ -10,16 +10,16 @@
   <LastAuthor>Brett A Marquard</LastAuthor>
   <Created>2012-03-19T11:12:07Z</Created>
   <LastSaved>2017-12-13T14:01:37Z</LastSaved>
-  <Version>12.00</Version>
+  <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>13245</WindowHeight>
-  <WindowWidth>25365</WindowWidth>
-  <WindowTopX>0</WindowTopX>
-  <WindowTopY>465</WindowTopY>
+  <WindowHeight>10125</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
   <TabRatio>663</TabRatio>
   <ActiveSheet>2</ActiveSheet>
   <FirstVisibleSheet>1</FirstVisibleSheet>
@@ -1086,7 +1086,9 @@
   <Table ss:ExpandedColumnCount="24" ss:ExpandedRowCount="69" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s84" ss:DefaultColumnWidth="59.25"
    ss:DefaultRowHeight="20.25">
-   <Column ss:Index="3" ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="117"/>
+   <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="123"/>
+   <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="168.75"/>
+   <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="117"/>
    <Column ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="96"/>
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="170.25"/>
    <Column ss:Index="9" ss:StyleID="s84" ss:AutoFitWidth="0" ss:Width="348"/>
@@ -1188,8 +1190,8 @@
    <Row ss:AutoFitHeight="0" ss:Height="20.0625">
     <Cell ss:Formula="=&quot;USCore&quot;&amp;RC[4]&amp;&quot;Profile&quot;"><Data
       ss:Type="String">USCoreEncounterProfile</Data></Cell>
-    <Cell ss:Formula="=&quot;US Core &quot;&amp;RC[3]&amp;&quot; Profile&quot;"><Data
-      ss:Type="String">US Core Encounter Profile</Data></Cell>
+    <Cell ss:Formula="=&quot;**UPDATED ** US Core &quot;&amp;RC[3]&amp;&quot; Profile **UDPATED**&quot;"><Data
+      ss:Type="String">**UPDATED ** US Core Encounter Profile **UDPATED**</Data></Cell>
     <Cell ss:StyleID="s91"/>
     <Cell ss:StyleID="s92"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s93"><Data ss:Type="String">Encounter</Data><NamedCell
@@ -1208,8 +1210,7 @@
     <Cell ss:StyleID="s96"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s97"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s97"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s94"><Data ss:Type="String">US Core Encounter Profile</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s94"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s98"><Data ss:Type="String">This is basic constraint on Encounter for use in US Core resources.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s98"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1587,7 +1588,7 @@
    <Row ss:AutoFitHeight="0" ss:Height="20.0625">
     <Cell ss:Index="3" ss:StyleID="s102"/>
     <Cell ss:StyleID="s103"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s104"><Data ss:Type="String">Encounter.diagnosis</Data><NamedCell
+    <Cell ss:StyleID="s104"><Data ss:Type="String">!Encounter.diagnosis</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><Data ss:Type="String">0..*</Data><NamedCell
@@ -1615,7 +1616,7 @@
    <Row ss:AutoFitHeight="0" ss:Height="20.0625">
     <Cell ss:Index="3" ss:StyleID="s102"/>
     <Cell ss:StyleID="s103"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s104"><Data ss:Type="String">Encounter.diagnosis.condition</Data><NamedCell
+    <Cell ss:StyleID="s104"><Data ss:Type="String">!Encounter.diagnosis.condition</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><Data ss:Type="String">Admission diagnosis, discharge diagnosis, indication</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1644,7 +1645,7 @@
    <Row ss:AutoFitHeight="0" ss:Height="20.0625">
     <Cell ss:Index="3" ss:StyleID="s102"/>
     <Cell ss:StyleID="s103"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s104"><Data ss:Type="String">Encounter.diagnosis.rank</Data><NamedCell
+    <Cell ss:StyleID="s104"><Data ss:Type="String">!Encounter.diagnosis.rank</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -2896,8 +2897,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>17</ActiveRow>
-     <ActiveCol>15</ActiveCol>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

@@ -1,23 +1,34 @@
-##### Summary of the Mandatory Requirements
+**DocumentReference**
 
-1.  One status in `DocumentReference.status`
-    -   DocumentReference.status is bound to [DocumentReferenceStatus] value set
-1.  One document type code in `DocumentReference.type` which is bound to [Document Type] value set
-1.  One or more categories in `DocumentReference.category`  with an [extensible] binding to [US Core DocumentReferences Category Value Set] value set
-1.  One reference to a patient in `DocumentReference.subject`
-1.  A date and time in `DocumentReference.indexed`
-1.  One url of the document in `DocumentReference.content.attachment`
-    -   a mime type in `DocumentReference.content.attachment.contentType` which is bound to [MimeType] value set
-    -   a url of the document in `DocumentReference.content.attachment.url`
+#### Summary of the Mandatory Requirements
+1.  A  code  in `DocumentReference.status`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [DocumentReferenceStatus](http://hl7.org/fhir/ValueSet/document-reference-status)
+1.  A  CodeableConcept  in `DocumentReference.type`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [US Core DocumentReference Type Value Set](http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type)
+1. One or more  CodeableConcepts  in `DocumentReference.category`
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
+ binding to [US Core DocumentReference Category Value Set](http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category)
+1.  A Patient Reference  in `DocumentReference.subject`
+1.  A  Content  in `DocumentReference.content`
+   - which must have a  Attachment value  in `DocumentReference.content.attachment`
+   - which must have a  code value  in `DocumentReference.content.attachment.contentType`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [MimeType](http://hl7.org/fhir/ValueSet/mimetypes|4.0.0)
+   - which should have a  base64Binary value  in `DocumentReference.content.attachment.data`
+   - which should have an  url value  in `DocumentReference.content.attachment.url`
+   - which should have a  Coding value  in `DocumentReference.content.format`
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
+ binding to [DocumentReference Format Code Set](http://hl7.org/fhir/ValueSet/formatcodes)
 
+#### Summary of the Must Support Requirements
+1.  A  Identifier  in `DocumentReference.identifier`
+1.  An  instant  in `DocumentReference.date`
+1. One or more Author References  in `DocumentReference.author`
+1.  A Custodian Reference  in `DocumentReference.custodian`
+1.  A  Context  in `DocumentReference.context`
+   - which should have a Encounter Reference value  in `DocumentReference.context.encounter`
 
-SHOULD have:
-
-1.  One identifier in `DocumentReference.identifier`
-1.  One dateTime value in `DocumentReference.created`
-1.  One on more references to the authors in `DocumentReference.author`
-1.  One reference to the custodian in `DocumentReference.custodian`
-1.  One format code in `DocumentReference.content.format` with an [extensible] binding to [DocumentReference format] value set
-1.  One reference to an encounter in `DocumentReference.context.encounter`
-
-{% include link-list.md %}
+#### Summary of Constraints
+1. DocumentReference.content.attachment.url or  DocumentReference.content.attachment.data or both SHALL be present.

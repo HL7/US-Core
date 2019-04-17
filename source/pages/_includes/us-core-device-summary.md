@@ -1,9 +1,10 @@
-##### Complete Summary of the Mandatory Requirements
+**Device**
 
-1.  One udicarrier string in `Device.udicarrier`
-    -   The Human Readable Form (HRF) representation of the barcode string as printed on the packaging of the device *SHALL* be used. The AIDC representation cannot be conveyed in FHIR, Because of limitations on character sets in XML and the need to round-trip JSON data through XML.
-1.  A code in `Device.type` which has an [extensible]({{site.data.fhir.path}}terminologies.html#extensible) binding to:
-    -   [Device Types] (SNOMED-CT) value set.
-1.  One patient reference in `Device.patient`
-
-  [Device Types]: {{site.data.fhir.path}}valueset-device-kind.html
+#### Summary of the Mandatory Requirements
+1.  A  Udicarrier  in `Device.udiCarrier`
+   - which should have a  base64Binary value  in `Device.udiCarrier.carrierAIDC`
+   - which should have a  string value  in `Device.udiCarrier.carrierHRF`
+1.  A  CodeableConcept  in `Device.type`
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
+ binding to [FHIR Device Types](http://hl7.org/fhir/ValueSet/device-kind)
+1.  A Patient Reference  in `Device.patient`

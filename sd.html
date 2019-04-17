@@ -63,7 +63,7 @@ The official URL for this profile is:
 </p>
 
 <p>
-Published on {{site.data.structuredefinitions.{{[id]}}.date}} as a {{site.data.structuredefinitions.{{[id]}}.status}} by {{site.data.structuredefinitions.{{[id]}}.publisher}}.
+Published on {{site.data.structuredefinitions.{{[id]}}.date}} as  {{site.data.structuredefinitions.{{[id]}}.status}} by {{site.data.structuredefinitions.{{[id]}}.publisher}}.
 </p>
 
 <p><strong>
@@ -156,7 +156,11 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
   <div id="all-tbl-summ">
     <div id="all-tbl-summ-inner">
      <a name="summary"> </a>
-{% include {{[type]}}-{{[id]}}-summary.xhtml %}
+   {% if site.summaries %}
+     {% capture my-include %}{% include {{[id]}}-summary.md id="{{[id]}}" %}{% endcapture %}{{ my-include | markdownify }}
+   {% else %}
+     {% include {{[type]}}-{{[id]}}-summary.xhtml %}
+   {% endif%}
 <!--{% raw %}
 {% include {{[id]}}-summary.md id="{{[id]}}" %}
 {% endraw %}-->

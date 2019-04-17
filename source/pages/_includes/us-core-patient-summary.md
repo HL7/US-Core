@@ -1,49 +1,43 @@
-##### Complete Summary of the Mandatory Requirements
+**Patient**
 
+#### Summary of the Mandatory Requirements
+1. One or more  Identifiers  in `Patient.identifier`
+   - which must have an  uri value  in `Patient.identifier.system`
+   - which must have a  string value  in `Patient.identifier.value`
+1. One or more  HumanNames  in `Patient.name`
+ with the following constraints: *Patient.name.given  or Patient.name.family or both SHALL be present*
+   - which should have a  string value  in `Patient.name.family`
+   - which should have one or more  string values  in `Patient.name.given`
+1.  A  code  in `Patient.gender`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [AdministrativeGender](http://hl7.org/fhir/ValueSet/administrative-gender)
 
-1.  One or more medical record numbers in `Patient.identifier`
-    -   each Patient.identifier must have:
-        -   an `identifier.system`
-        -   an `identifier.value` that is unique within the system.
+#### Summary of the Must Support Requirements
+1.  A
+[Race](http://hl7.org/fhir/us/core/StructureDefinition/us-core-race) Extension  in `Patient.extension`
+1.  An
+[Ethnicity](http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity) Extension  in `Patient.extension`
+1.  A
+[Birthsex](http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex) Extension  in `Patient.extension`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [Birth Sex](http://hl7.org/fhir/us/core/ValueSet/birthsex)
+1. One or more  ContactPoints  in `Patient.telecom`
+   - which must have a  code value  in `Patient.telecom.system`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [ContactPointSystem](http://hl7.org/fhir/ValueSet/contact-point-system)
+   - which must have a  string value  in `Patient.telecom.value`
+1.  A  date  in `Patient.birthDate`
+1. One or more  Addresses  in `Patient.address`
+   - which should have one or more  string values  in `Patient.address.line`
+   - which should have a  string value  in `Patient.address.city`
+   - which should have a  string value  in `Patient.address.state`
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
+ binding to [USPS Two Letter Alphabetic Codes](http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state)
+   - which should have a  string value  in `Patient.address.postalCode`
+1. One or more  Communications  in `Patient.communication`
+   - which must have a  CodeableConcept value  in `Patient.communication.language`
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)\+ [MaxValueSet](general-guidance.html#max-binding)
+ binding to [Language codes with language and optionally a region modifier](http://hl7.org/fhir/us/core/ValueSet/simple-language)
 
-2.  One or more names in `Patient.name`
-    -   each Patient.name must have:
-        -   a `name.family`
-        -   a `name.given`
-
-3.  One administrative gender in `Patient.gender`
-    -   Patient.gender is bound to [AdministrativeGender] Value set
-
-  [AdministrativeGender]: {{site.data.fhir.path}}valueset-administrative-gender.html
-
-
-##### Summary of the Must Support Requirements
-
-Additionally your system must Support:
-
-1.  A date of birth in `Patient.birthDate`
-2.  One or more languages spoken in `Patient.communication.language` which has a [extensible + max valueset](general-guidance.html#extensible--max-valueset-binding-for-codeableconcept-datatype)  binding to the [All Language codes with language and optionally a region modifier] valueset
-3.  One or more race codes in  `Patient.extension`= [US Core Race Extension] which:
-    - Must include at least one code from [OMB Race Categories]
-    - May include additional race codes from [CDC Race Codes]
-
-4.  One or more ethnicity codes in  `Patient.extension`=[US Core ethnicity Extension] which:
-    - Must include one code from [OMB Ethnicity Categories]
-    - May include additional race codes from [CDC Ethnicity Codes]
-
-5.  One Birth Sex in `Patient.extension`= [US Core Patient Birth Sex] which has a [required]({{site.data.fhir.path}}terminologies.html#required) binding to [US Core Birth Sex] valueset
-
-
-  [Patient.birthDate]: {{site.data.fhir.path}}us/daf/daf-patient-guidance.html#daf-patient.Patient.birthDate
-  [Patient.communication.language]: {{site.data.fhir.path}}us/daf/daf-patient-guidance.html#daf-patient.Patient.communication.language
-  [All Language codes with language and optionally a region modifier]: ValueSet-simple-language.html
-  [All Languages]: {{site.data.fhir.path}}valueset-all-languages.html
-  [US Core Patient Birth Sex]:StructureDefinition-us-core-birthsex.html
-  [US Core Birth Sex]: ValueSet-birthsex.html
-  [US Core Patient Race]: StructureDefinition-us-core-race.html
-  [OMB Race Categories]: ValueSet-omb-race-category.html
-  [US Core Race Extension]:StructureDefinition-us-core-race.html
-  [CDC Race Codes]:ValueSet-detailed-race.html
- [CDC Ethnicity Codes]: ValueSet-detailed-ethnicity.html
- [US Core ethnicity Extension]:StructureDefinition-us-core-ethnicity.html
- [OMB Ethnicity Categories]: ValueSet-omb-ethnicity-category.html
+#### Summary of Constraints
+1. Patient.name.given  or Patient.name.family or both SHALL be present

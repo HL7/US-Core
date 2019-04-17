@@ -1,10 +1,19 @@
-##### Summary of the Mandatory Requirements
+**AllergyIntolerance**
 
-1.  Conditionally One clinical status in `AllergyIntolerance.clinicalStatus`
-    - [Invariants]({{site.data.fhir.path}}allergyintolerance.html#invs)
-    - `AllergyIntolerance.clinicalStatus` has a [required]({{site.data.fhir.path}}terminologies.html#required) binding to [AllergyIntoleranceStatus]({{site.data.fhir.path}}valueset-allergyintolerance-clinical.html) value set
-1.  One code in `AllergyIntolerance.verificationStatus` which has a [required]({{site.data.fhir.path}}terminologies.html#required) binding to:
-    -   [AllergyIntoleranceVerificationStatus]({{site.data.fhir.path}}valueset-allergyintolerance-verification.html) value set
-1.  One Identification of a substance, or a class of substances, that is considered to be responsible for the adverse reaction risk in `AllergyIntolerance.code` which has an [extensible]({{site.data.fhir.path}}terminologies.html#extensible) binding to:
-    -    [Common Substances For Allergy And Intolerance Documentation Including Refutations](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion) value set
-1.  One patient reference in `AllergyIntolerance.patient`
+#### Summary of the Mandatory Requirements
+1.  A  CodeableConcept  in `AllergyIntolerance.code`
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
+ binding to [Common substances for allergy and intolerance documentation including refutations](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion)
+1.  A Patient Reference  in `AllergyIntolerance.patient`
+
+#### Summary of the Must Support Requirements
+1.  A  CodeableConcept  in `AllergyIntolerance.clinicalStatus`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [AllergyIntolerance Clinical Status Codes](http://hl7.org/fhir/ValueSet/allergyintolerance-clinical)
+1.  A  CodeableConcept  in `AllergyIntolerance.verificationStatus`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [AllergyIntolerance Verification Status Codes](http://hl7.org/fhir/ValueSet/allergyintolerance-verification)
+
+#### Summary of Constraints
+1. AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error.
+1. AllergyIntolerance.clinicalStatus SHALL NOT be present if verification Status is entered-in-error

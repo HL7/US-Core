@@ -1,8 +1,6 @@
-##### Complete Summary of the Mandatory Requirements
+**Medication**
 
-1.  Either:
-    -  One drug code in `Medication.code` which has an [extensible]({{site.data.fhir.path}}terminologies.html#extensible) binding to:
-        -  [Medication Clinical Drug (RxNorm)] value set
-   
-
-  [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
+#### Summary of the Mandatory Requirements
+1.  A  CodeableConcept  in `Medication.code`
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
+ binding to [Medication Clinical Drug (RxNorm)](http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes)

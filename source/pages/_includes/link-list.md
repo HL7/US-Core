@@ -24,6 +24,7 @@
 [compartment]: {{site.data.fhir.path}}compartmentdefinition.html
 [Composition]: {{site.data.fhir.path}}composition.html
 [ConceptMap]: {{site.data.fhir.path}}conceptmap.html
+[Condition]: {{site.data.fhir.path}}condition.html
 [Conformance Requirements for Client]: CapabilityStatement-us-core-r4-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-us-core-r4-server.html "Conformance Requirements for Server Page"
 [Conformance requirements for the US Core Server]: CapabilityStatement-us-core-r4-server.html
@@ -38,7 +39,6 @@
 [DiagnosticReport]: {{site.data.fhir.path}}diagnosticreport.html
 [DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
 [Discharge Summary (18842-5)]: https://s.details.loinc.org/LOINC/18842-5.html?sections=Comprehensive
-[US Core DocumentReference Type Value Set]: ValueSet-us-core-documentreference-type.html
 [DocumentReference Format]: http://hl7.org/fhir/ValueSet-formatcodes.html
 [DocumentReference vs DiagnosticReport]: clinical-notes-guidance.html#documentreference-vs-diagnosticreport
 [DocumentReference-episode-summary]: DocumentReference-episode-summary.html
@@ -46,6 +46,7 @@
 [DocumentReferenceStatus]: http://hl7.org/fhir/ValueSet-document-reference-status.html
 [Downloads]: downloads.html "Downloads Page"
 [Encounter]: {{site.data.fhir.path}}encounter.html
+[extensible]: {{site.data.fhir.path}}terminologies.html#extensible
 [FHIR Binary Resource]: http://hl7.org/fhir/binary.html
 [FHIR Conformance Rules]: {{site.data.fhir.path}}conformance-rules.html
 [FHIR Data Types]: {{site.data.fhir.path}}datatypes.html
@@ -106,9 +107,11 @@
 [US Core Allergies Profile]: StructureDefinition-us-core-allergyintolerance.html
 [US Core CarePlan Profile]: StructureDefinition-us-core-careplan.html
 [US Core CareTeam Profile]: StructureDefinition-us-core-careteam.html
+[US Core Condition Category Codes]: ValueSet-us-core-condition-category.html
 [US Core Condition Profile]: StructureDefinition-us-core-condition.html
 [US Core Diagnostic Report Profile]: StructureDefinition-us-core-diagnosticreport.html
 [US Core DiagnosticReport]: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport
+[US Core DocumentReference Type Value Set]: ValueSet-us-core-documentreference-type.html
 [US Core DocumentReference]: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
 [US Core DocumentReferences Category Value Set]: ValueSet-us-core-documentreference-category.html
 [US Core Goal Profile]: StructureDefinition-us-core-goal.html
@@ -125,3 +128,4 @@
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
 [Value sets]: terminology.html
 [Vital Signs Profile]: {{site.data.fhir.path}}observation-vitalsigns.html
+[Condition Quick Start]: StructureDefinition-us-core-condition.html#quick-start

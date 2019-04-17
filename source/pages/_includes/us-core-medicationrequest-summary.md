@@ -1,15 +1,16 @@
-##### Complete Summary of the Mandatory Requirements
+**MedicationRequest**
 
-1.  One status in `MedicationRequest.status` which has a [required]({{site.data.fhir.path}}terminologies.html#required) binding to:
--   [MedicationRequestStatus] value set
-1.  One medication via `MedicationRequest.medicationCodeableConcept` or `MedicationRequest.medicationReference`   
-     -  `MedicationRequest.medicationCodeableConcept` has an [extensible]({{site.data.fhir.path}}terminologies.html#extensible) binding to [Medication Clinical Drug (RxNorm)]
-1.  One patient reference in `MedicationRequest.patient`
-1.  One date in `MedicationRequest.authoredOn`
-1.  One practitioner in `MedicationRequest.requester`
+#### Summary of the Mandatory Requirements
+1.  A  code  in `MedicationRequest.status`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [Medicationrequest  status](http://hl7.org/fhir/ValueSet/medicationrequest-status)
+1.  A  CodeableConcept  in `MedicationRequest.medication[x]`
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
+ binding to [Medication Clinical Drug (RxNorm)](http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes)
+1.  A Patient Reference  in `MedicationRequest.subject`
+1.  A  dateTime  in `MedicationRequest.authoredOn`
+1.  A Requester Reference  in `MedicationRequest.requester`
 
-##### Summary of the Must Support Requirements
-
-1.  One or more *Sigs* in `MedicationRequest.dosageInstruction.text`
-
-{% include link-list.md %}
+#### Summary of the Must Support Requirements
+1. One or more  Dosages  in `MedicationRequest.dosageInstruction`
+   - which should have a  string value  in `MedicationRequest.dosageInstruction.text`

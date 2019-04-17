@@ -79,7 +79,7 @@ Many of the profiles in this guide [reference]({{site.data.fhir.path}}references
 Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values SHALL be from the specified value set if a code applies, but if no suitable code exists in the value set and no further restrictions have been applied (such as the max valueset binding described in the next section), alternate code(s) may be provided in its place. If only text available, then just text may be used.
 
 #### Extensible + Max-ValueSet binding for CodeableConcept Datatype
-{:.no_toc}
+{:.no_toc #max-binding}
 
 For this IG, we have defined the Extensible + Max-ValueSet binding to allow for either a code from the defined value set or text if the code is not available.  (for example, legacy data). This means, unlike a FHIR extensible binding, alternate code(s) are not permitted and a text value SHALL be supplied if the code is not available.  However, multiple codings (translations) are allowed as is discussed below.
 
@@ -222,7 +222,7 @@ Clinical information that has been removed from the patient's record needs to be
 - The resource status SHOULD be updated to the appropriate status such as  `entered-in-error` or `inactive`, and these resources SHOULD *still* be searchable by client applications.
 
 - If the status is `entered-in-error`:
-    
+
   - for patient viewing systems the content of resource SHOULD be removed. In other words a blank resource.
 
   - A provider facing system MAY be supplied with additional details that the patient viewing system would typically not have access to.

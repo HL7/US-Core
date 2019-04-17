@@ -1,15 +1,20 @@
-##### Complete Summary of the Mandatory Requirements
+**Immunization**
 
-1.  One status in `Immunization.status` which has a [required]({{site.data.fhir.path}}terminologies.html#required) binding to:
--  [Immunization Status] value set.
-1.  One dateTime in `Immunization.date`
-1.  One vaccine code in `Immunization.vaccineCode` which has:
--   a [extensible + max valueset](general-guidance.html#extensible--max-valueset-binding-for-codeableconcept-datatype)  binding to the [CVX] value set
--   SHOULD have a translation to the [NDC] value set
-1.  One patient in `Immunization.patient`
-1.  One boolean value in `Immunization.notGiven`
-1.  One boolean value in `Immunization.primarySource`
+#### Summary of the Mandatory Requirements
+1.  A  code  in `Immunization.status`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [Immunization Status Codes](http://hl7.org/fhir/ValueSet/immunization-status)
+1.  A  CodeableConcept  in `Immunization.vaccineCode`
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)\+ [MaxValueSet](general-guidance.html#max-binding)
+ binding to [Vaccine Administered Value Set (CVX)](http://hl7.org/fhir/us/core/ValueSet/us-core-cvx) with the following constraints: *SHOULD have a translation to the NDC value set*
+1.  A Patient Reference  in `Immunization.patient`
+1.  A  dateTime  in `Immunization.occurrence[x]`
+1.  A  boolean  in `Immunization.primarySource`
 
-  [Immunization Status]: {{site.data.fhir.path}}valueset-immunization-status.html
-  [CVX]: ValueSet-us-core-cvx.html
-  [NDC]: ValueSet-us-core-ndc-vaccine-codes.html
+#### Summary of the Must Support Requirements
+1.  A  CodeableConcept  in `Immunization.statusReason`
+with an [example](http://hl7.org/fhir/R4/terminologies.html#example)
+ binding to [Immunization Status Reason Codes](http://hl7.org/fhir/ValueSet/immunization-status-reason)
+
+#### Summary of Constraints
+1. SHOULD have a translation to the NDC value set

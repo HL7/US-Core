@@ -1,13 +1,18 @@
-##### Complete Summary of the Mandatory Requirements
+**CareTeam**
 
-1.  One status in `CareTeam.status`
--   CareTeam.status is bound to [CareTeamStatus] value set
-1.  One reference to a patient in `CareTeam.subject`
-1.  One participant role for each careteam member in
-    `CareTeam.participant.role`which which has:
-    -   a [extensible + max valueset](general-guidance.html#extensible--max-valueset-binding-for-codeableconcept-datatype)  binding to the [CareTeam Provider Role
-Value Set] value set.
-1.  Careteam members in `CareTeam.participant.member`
+#### Summary of the Mandatory Requirements
+1.  A Patient Reference  in `CareTeam.subject`
+1. One or more  Participants  in `CareTeam.participant`
+ with the following constraints: *CareTeam.participant.onBehalfOf can only be populated when CareTeam.participant.member is a Practitioner*
+   - which must have a  CodeableConcept value  in `CareTeam.participant.role`
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)\+ [MaxValueSet](general-guidance.html#max-binding)
+ binding to [CareTeam Provider Roles](http://hl7.org/fhir/us/core/ValueSet/us-core-careteam-provider-roles)
+   - which must have a Member Reference value  in `CareTeam.participant.member`
 
- [CareTeamStatus]: {{site.data.fhir.path}}valueset-care-team-status.html
- [CareTeam Provider Role Value Set]: ValueSet-us-core-careteam-provider-roles.html
+#### Summary of the Must Support Requirements
+1.  A  code  in `CareTeam.status`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [CareTeamStatus](http://hl7.org/fhir/ValueSet/care-team-status)
+
+#### Summary of Constraints
+1. CareTeam.participant.onBehalfOf can only be populated when CareTeam.participant.member is a Practitioner

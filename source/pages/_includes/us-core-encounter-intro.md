@@ -34,7 +34,7 @@ Additionally your system [Must Support]:
 
 **Profile specific implementation guidance:**
 
-* none
+* To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.   An example search is shown in the [Condition Quick Start] section.
 
 ##### Examples
 

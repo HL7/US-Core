@@ -1,4 +1,9 @@
-##### Summary of the Mandatory Requirements
+**Extension**
 
-1. One Birth Sex in Patient.extension= US Core Patient Birth Sex which has an required binding to:
-[US Core Birth Sex](ValueSet-us-core-birthsex.html)
+#### Summary of the Mandatory Requirements
+1.  An  uri  in `Extension.url`
+
+#### Summary of the Must Support Requirements
+1.  A  code  in `Extension.valueCode`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [Birth Sex](http://hl7.org/fhir/us/core/ValueSet/birthsex)
