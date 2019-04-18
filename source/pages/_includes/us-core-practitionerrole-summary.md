@@ -5,10 +5,10 @@
 1.  A Organization Reference  in `PractitionerRole.organization`
 1.  A  CodeableConcept  in `PractitionerRole.code`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [US Core Provider Role (NUCC)](http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role)
+ binding to [US Core Provider Role (NUCC)](ValueSet-us-core-provider-role.html)
 1.  A  CodeableConcept  in `PractitionerRole.specialty`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [US Core Provider Speciality (NUCC)](http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty)
+ binding to [US Core Provider Speciality (NUCC)](ValueSet-us-core-provider-specialty.html)
 
 #### Summary of the Must Support Requirements
 1. One or more Location References  in `PractitionerRole.location`

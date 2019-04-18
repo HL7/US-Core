@@ -4,7 +4,7 @@
 1.  A  Narrative  in `CarePlan.text`
    - which must have a  code value  in `CarePlan.text.status`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
- binding to [Narrative Status](http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status)
+ binding to [Narrative Status](ValueSet-us-core-narrative-status.html)
 1.  A  code  in `CarePlan.status`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [RequestStatus](http://hl7.org/fhir/ValueSet/request-status)

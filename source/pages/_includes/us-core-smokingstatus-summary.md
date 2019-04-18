@@ -11,7 +11,7 @@ with an [example](http://hl7.org/fhir/R4/terminologies.html#example)
 1.  An  instant  in `Observation.issued`
 1.  A  CodeableConcept  in `Observation.valueCodeableConcept`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)\+ [MaxValueSet](general-guidance.html#max-binding)
- binding to [Smoking Status](http://hl7.org/fhir/us/core/ValueSet/us-core-observation-ccdasmokingstatus)
+ binding to [Smoking Status](ValueSet-us-core-observation-ccdasmokingstatus.html)
 
 #### Summary of Constraints
 1. If Observation.code is the same as an Observation.component.code then the value element associated with the code SHALL NOT be present

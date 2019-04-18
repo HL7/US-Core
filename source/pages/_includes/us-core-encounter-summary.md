@@ -9,7 +9,7 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [V3 Value SetActEncounterCode](http://terminology.hl7.org/ValueSet/v3-ActEncounterCode)
 1. One or more  CodeableConcepts  in `Encounter.type`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [US Core Encounter Type](http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type)
+ binding to [US Core Encounter Type](ValueSet-us-core-encounter-type.html)
 1.  A Patient Reference  in `Encounter.subject`
 
 #### Summary of the Must Support Requirements

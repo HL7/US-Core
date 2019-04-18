@@ -6,7 +6,7 @@
  with the following constraints: *CareTeam.participant.onBehalfOf can only be populated when CareTeam.participant.member is a Practitioner*
    - which must have a  CodeableConcept value  in `CareTeam.participant.role`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)\+ [MaxValueSet](general-guidance.html#max-binding)
- binding to [CareTeam Provider Roles](http://hl7.org/fhir/us/core/ValueSet/us-core-careteam-provider-roles)
+ binding to [CareTeam Provider Roles](ValueSet-us-core-careteam-provider-roles.html)
    - which must have a Member Reference value  in `CareTeam.participant.member`
 
 #### Summary of the Must Support Requirements

@@ -3,10 +3,10 @@
 #### Summary of the Mandatory Requirements
 1. One or more  CodeableConcepts  in `Condition.category`
 with a [preferred](http://hl7.org/fhir/R4/terminologies.html#preferred)
- binding to [US Core Condition Category Codes](http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category)
+ binding to [US Core Condition Category Codes](ValueSet-us-core-condition-category.html)
 1.  A  CodeableConcept  in `Condition.code`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [Problem Value Set](http://hl7.org/fhir/us/core/ValueSet/us-core-problem)
+ binding to [Problem Value Set](ValueSet-us-core-problem.html)
 1.  A Patient Reference  in `Condition.subject`
 
 #### Summary of the Must Support Requirements

@@ -6,7 +6,7 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [DiagnosticReportStatus](http://hl7.org/fhir/ValueSet/diagnostic-report-status)
 1. One or more  CodeableConcepts  in `DiagnosticReport.category`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [US Core DiagnosticReport Category Codes Value Set](http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category)
+ binding to [US Core DiagnosticReport Category Codes Value Set](ValueSet-us-core-diagnosticreport-category.html)
 1.  A  CodeableConcept  in `DiagnosticReport.code`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [LOINC Diagnostic Report Codes](http://hl7.org/fhir/ValueSet/report-codes)
