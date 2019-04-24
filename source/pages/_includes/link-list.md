@@ -7,7 +7,7 @@
 [$expand]: {{ site.data.fhir.path }}valueset-operation-expand.html  "An operation used to create a simple collection of codes suitable for use for data entry or validation"
 [2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
 [34133-9]: http://s.details.loinc.org/LOINC/34133-9.html?sections=Comprehensive
-[5 Common Clinical Notes]: clinical-notes-guidance.html#common-clinical-notes
+[5 Common Clinical Notes]: ValueSet-us-core-clinical-note-type.html
 [AllergyIntolerance]: {{site.data.fhir.path}}allergyintolerance.html
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page
 [boundaries section]: {{ site.data.fhir.path }}documentreference.html#bnr
