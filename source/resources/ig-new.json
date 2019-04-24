@@ -538,6 +538,12 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-questionnaire-context-type-value"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/us-core-allergyintolerance"
       },
       "exampleBoolean" : false
@@ -545,6 +551,12 @@
     {
       "reference" : {
         "reference" : "ValueSet/us-core-documentreference-type"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-patient-gender"
       },
       "exampleBoolean" : false
     },
@@ -569,6 +581,12 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/us-core-birthsex"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-encounter-class"
       },
       "exampleBoolean" : false
     },
@@ -622,6 +640,12 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-questionnaire-title"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/us-core-cvx"
       },
       "exampleBoolean" : false
@@ -658,13 +682,31 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-patient-given"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/us-core-procedure"
       },
       "exampleBoolean" : false
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-encounter-type"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/us-core-problem"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-questionnaire-version"
       },
       "exampleBoolean" : false
     },
@@ -682,7 +724,19 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-encounter-patient"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/us-core-pediatric-weight"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-patient-address"
       },
       "exampleBoolean" : false
     },
@@ -695,6 +749,12 @@
     {
       "reference" : {
         "reference" : "ValueSet/birthsex"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-patient-telecom"
       },
       "exampleBoolean" : false
     },
@@ -742,6 +802,18 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-questionnaire-url"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-encounter-date"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/us-core-diagnosticreport-category"
       },
       "exampleBoolean" : false
@@ -754,6 +826,12 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-patient-birthdate"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/us-core-careteam"
       },
       "exampleBoolean" : false
@@ -761,6 +839,12 @@
     {
       "reference" : {
         "reference" : "ValueSet/us-core-clinical-note-type"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-encounter-status"
       },
       "exampleBoolean" : false
     },
@@ -790,6 +874,12 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-patient-family"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/us-core-smokingstatus"
       },
       "exampleBoolean" : false
@@ -802,6 +892,12 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-questionnaire-status"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/us-core-documentreference-category"
       },
       "exampleBoolean" : false
@@ -809,6 +905,18 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/us-core-organization"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-encounter-identifier"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-patient-name"
       },
       "exampleBoolean" : false
     },
@@ -863,6 +971,18 @@
     {
       "reference" : {
         "reference" : "CodeSystem/careplan-category"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-patient-identifier"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-questionnaire-publisher"
       },
       "exampleBoolean" : false
     },
@@ -1218,13 +1338,113 @@
         "title" : "Search Parameters",
         "generation" : "markdown",
         "page" : [{
+          "nameUrl" : "SearchParameter-us-core-questionnaire-context-type-value.html",
+          "title" : "SearchParameter Us Core Questionnaire Context Type Value",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-patient-gender.html",
+          "title" : "SearchParameter Us Core Patient Gender",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-encounter-class.html",
+          "title" : "SearchParameter Us Core Encounter Class",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-questionnaire-title.html",
+          "title" : "SearchParameter Us Core Questionnaire Title",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-patient-given.html",
+          "title" : "SearchParameter Us Core Patient Given",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-encounter-type.html",
+          "title" : "SearchParameter Us Core Encounter Type",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-questionnaire-version.html",
+          "title" : "SearchParameter Us Core Questionnaire Version",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-encounter-patient.html",
+          "title" : "SearchParameter Us Core Encounter Patient",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-patient-address.html",
+          "title" : "SearchParameter Us Core Patient Address",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-patient-telecom.html",
+          "title" : "SearchParameter Us Core Patient Telecom",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "SearchParameter-us-core-ethnicity.html",
           "title" : "SearchParameter Us Core Ethnicity",
           "generation" : "generated"
         },
         {
+          "nameUrl" : "SearchParameter-us-core-questionnaire-url.html",
+          "title" : "SearchParameter Us Core Questionnaire Url",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-encounter-date.html",
+          "title" : "SearchParameter Us Core Encounter Date",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-patient-birthdate.html",
+          "title" : "SearchParameter Us Core Patient Birthdate",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-encounter-status.html",
+          "title" : "SearchParameter Us Core Encounter Status",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "SearchParameter-us-core-race.html",
           "title" : "SearchParameter Us Core Race",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-patient-family.html",
+          "title" : "SearchParameter Us Core Patient Family",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-questionnaire-status.html",
+          "title" : "SearchParameter Us Core Questionnaire Status",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-encounter-identifier.html",
+          "title" : "SearchParameter Us Core Encounter Identifier",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-patient-name.html",
+          "title" : "SearchParameter Us Core Patient Name",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-patient-identifier.html",
+          "title" : "SearchParameter Us Core Patient Identifier",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-questionnaire-publisher.html",
+          "title" : "SearchParameter Us Core Questionnaire Publisher",
           "generation" : "generated"
         }]
       },

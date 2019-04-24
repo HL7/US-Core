@@ -535,6 +535,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-questionnaire-context-type-value"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/us-core-allergyintolerance"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -542,6 +548,12 @@
     <resource>
       <reference>
         <reference value="ValueSet/us-core-documentreference-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-patient-gender"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -566,6 +578,12 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/us-core-birthsex"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-encounter-class"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -619,6 +637,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-questionnaire-title"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-cvx"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -655,13 +679,31 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-patient-given"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/us-core-procedure"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-encounter-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-problem"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-questionnaire-version"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -679,7 +721,19 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-encounter-patient"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/us-core-pediatric-weight"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-patient-address"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -692,6 +746,12 @@
     <resource>
       <reference>
         <reference value="ValueSet/birthsex"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-patient-telecom"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -739,6 +799,18 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-questionnaire-url"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-encounter-date"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-diagnosticreport-category"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -751,6 +823,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-patient-birthdate"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/us-core-careteam"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -758,6 +836,12 @@
     <resource>
       <reference>
         <reference value="ValueSet/us-core-clinical-note-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-encounter-status"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -787,6 +871,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-patient-family"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/us-core-smokingstatus"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -799,6 +889,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-questionnaire-status"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-documentreference-category"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -806,6 +902,18 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/us-core-organization"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-encounter-identifier"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-patient-name"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -860,6 +968,18 @@
     <resource>
       <reference>
         <reference value="CodeSystem/careplan-category"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-patient-identifier"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-questionnaire-publisher"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1215,13 +1335,113 @@
         <title value="Search Parameters"/>
         <generation value="markdown"/>
         <page>
+          <nameUrl value="SearchParameter-us-core-questionnaire-context-type-value.html"/>
+          <title value="SearchParameter Us Core Questionnaire Context Type Value"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-patient-gender.html"/>
+          <title value="SearchParameter Us Core Patient Gender"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-encounter-class.html"/>
+          <title value="SearchParameter Us Core Encounter Class"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-questionnaire-title.html"/>
+          <title value="SearchParameter Us Core Questionnaire Title"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-patient-given.html"/>
+          <title value="SearchParameter Us Core Patient Given"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-encounter-type.html"/>
+          <title value="SearchParameter Us Core Encounter Type"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-questionnaire-version.html"/>
+          <title value="SearchParameter Us Core Questionnaire Version"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-encounter-patient.html"/>
+          <title value="SearchParameter Us Core Encounter Patient"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-patient-address.html"/>
+          <title value="SearchParameter Us Core Patient Address"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-patient-telecom.html"/>
+          <title value="SearchParameter Us Core Patient Telecom"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="SearchParameter-us-core-ethnicity.html"/>
           <title value="SearchParameter Us Core Ethnicity"/>
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="SearchParameter-us-core-questionnaire-url.html"/>
+          <title value="SearchParameter Us Core Questionnaire Url"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-encounter-date.html"/>
+          <title value="SearchParameter Us Core Encounter Date"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-patient-birthdate.html"/>
+          <title value="SearchParameter Us Core Patient Birthdate"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-encounter-status.html"/>
+          <title value="SearchParameter Us Core Encounter Status"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="SearchParameter-us-core-race.html"/>
           <title value="SearchParameter Us Core Race"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-patient-family.html"/>
+          <title value="SearchParameter Us Core Patient Family"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-questionnaire-status.html"/>
+          <title value="SearchParameter Us Core Questionnaire Status"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-encounter-identifier.html"/>
+          <title value="SearchParameter Us Core Encounter Identifier"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-patient-name.html"/>
+          <title value="SearchParameter Us Core Patient Name"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-patient-identifier.html"/>
+          <title value="SearchParameter Us Core Patient Identifier"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-questionnaire-publisher.html"/>
+          <title value="SearchParameter Us Core Questionnaire Publisher"/>
           <generation value="generated"/>
         </page>
       </page>

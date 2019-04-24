@@ -1,18 +1,19 @@
 
-`GET /AllergyIntolerance?patient=[id]`
+#### Mandatory Search Parameters:
 
-**Example:** GET [base]/AllergyIntolerance?patient=1137192
-
-
-*Support:* Mandatory to support search by patient.
-
-*Implementation Notes:* Search for all allergies for a patient. Fetches a bundle of all AllergyIntolerance resources for the specified patient [(how to search by reference)].
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
 
+1. **SHALL** support searching for all allergies for a patient using the **`_id`** search parameter:
+
+  `GET [base]/AllergyIntolerance[id]`
+
+  Example: GET [base]/AllergyIntolerance?patient=1137192
+
+  *Implementation Notes:* Fetches a bundle of all AllergyIntolerance resources for the specified patient (how to search by the [logical id] of the resource)
 
 
-  [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
-  [`https://fhir-open-api-dstu2.smarthealthit.org/AllergyIntolerance?patient=1137192`]: https://fhir-open-api-dstu2.smarthealthit.org/AllergyIntolerance?patient=1137192
-  [(how to search by token)]: {{site.data.fhir.path}}search.html#token
-  [Composite Search Parameters]: {{site.data.fhir.path}}search.html#combining
-  [`https://fhir-open-api-dstu2.smarthealthit.org/AllergyIntolerance?patient=1137192&status=active,unconfirmed,confirmed`]: https://fhir-open-api-dstu2.smarthealthit.org/AllergyIntolerance?patient=1137192&status=active,unconfirmed,confirmed
+
+
+
+{% include link-list.md %}
