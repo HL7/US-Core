@@ -11,10 +11,10 @@ The following are example usage scenarios for the US Core Patient profile:
 -   Query for a Patient demographic information using first name, last
     name, birthdate, and gender.
 
-###### Mandatory Data Elements and Terminology
+### Mandatory and Must Support Data Elements
 
 
-The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
+The following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.  
 
 **Each Patient must have:**
 
@@ -40,7 +40,7 @@ In addition, based upon the 2015 Edition Certification Requirements, the followi
 
 - The [FHIR Specification]({{site.data.fhir.path}}patient.html#gender) provides guidance and background for representing patient gender. The American Clinical Laboratory Association (ACLA) has published [best practice guidelines](http://www.acla.com/acla-best-practice-recommendation-for-administrative-and-clinical-patient-gender-used-for-laboratory-testing-and-reporting/) for administrative and clinical gender related to laboratory testing and reporting which implementers may find helpful as well.
 
-##### Examples
+### Examples
 
 - [Patient-example](Patient-example.html)
 

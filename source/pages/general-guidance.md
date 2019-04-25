@@ -38,14 +38,14 @@ No| CCDS Data Element | US Core Profile | FHIR Resource
 (8) |  Problems | [US Core Condition Profile] | Condition
 (9) |  Medications | [US Core Medication Profile], [US Core Medication Statement Profile], [US Core Medication Request Profile] | Medication, MedicationStatement, MedicationRequest
 (10) |  Medication allergies | [US Core Allergies Profile] | AllergyIntolerance
-(11) |  Laboratory test(s) | [US Core Result Observation Profile], [US Core Diagnostic Report Profile]| Observation, DiagnosticReport
-(12) |  Laboratory value(s)/result(s) |  [US Core Result Observation Profile], [US Core Diagnostic Report Profile] | Observation, DiagnosticReport
+(11) |  Laboratory test(s) | [US Core Result Observation Profile], [US Core DiagnosticReport Profile for Laboratory Results Reporting]| Observation, DiagnosticReport
+(12) |  Laboratory value(s)/result(s) |  [US Core Result Observation Profile], [US Core DiagnosticReport Profile for Laboratory Results Reporting] | Observation, DiagnosticReport
 (13) |  Vital signs | [Vital Signs Profile] (From FHIR Core Profiles for Observation) | Observation
 (14) |  (no longer required) | -
 (15) |  Procedures | [US Core Procedure Profile] | Procedure
 (16) |  Care team member(s) | [US Core CareTeam Profile] | CareTeam
 (17) |  Immunizations | [US Core Immunization Profile] | Immunization
-(18) |  Unique device identifier(s) for a patient’s implantable device(s) | [US Core Implanted Device Profile] | Device
+(18) |  Unique device identifier(s) for a patient’s implantable device(s) | [US Core Device Profile] | Device
 (19) |  Assessment and plan of treatment | [US Core CarePlan Profile] | CarePlan
 (20) |  Goals | [US Core Goal Profile] | Goal
 (21) |  Health concerns | [US Core Condition Profile] | Condition

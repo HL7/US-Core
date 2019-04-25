@@ -9,10 +9,10 @@ The following are example usage scenarios for the US Core Encounter profile:
 -   Query for recent patient encounters
 -   Record or update an encounter
 
-###### Mandatory Data Elements and Terminology
+### Mandatory and Must Support Data Elements
 
 
-The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
+The following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.  
 
 **Each Encounter must have:**
 
@@ -20,7 +20,7 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 1. an encounter type
 1. a patient
 
-Additionally your system [Must Support]:
+**Each AllergyIntolerance must support:**
 
 1. An encounter identifier
 1. Providers involved in the encounter
@@ -36,7 +36,7 @@ Additionally your system [Must Support]:
 
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.   An example search is shown in the [Condition Quick Start] section.
 
-##### Examples
+### Examples
 
 - [Outpatient Example](Encounter-example-1.html)
 

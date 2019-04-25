@@ -9,9 +9,9 @@ The following are example usage scenarios for the US Core DocumentReference prof
 -   Query for all Clinical Notes belonging to a Patient
 -   Write a new Note to a Patient's Chart
 
-###### Mandatory Data Elements and Terminology
+### Mandatory and Must Support Data Elements
 
-The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
+The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.  
 
 **Each DocumentReference must have:**
 
@@ -41,7 +41,7 @@ In addition it should have (if available):
    -  The format code is `urn:hl7-org:sdwg:ccda-structuredBody:2.1`
 -   The `content.url` may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]), FHIR Document Bundle (i.e [base]/Bundle/[id] or other endpoint.
 
-###### Examples
+#### Examples
 
 -  [DocumentReference-episode-summary] Retrieve a URL for an episode summary note (CCD).
 

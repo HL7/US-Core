@@ -12,10 +12,10 @@ profile:
 - Query for the Smoking Status of a patient
 - Record or update the Smoking Status of a patient
 
-###### Mandatory Data Elements and Terminology
+### Mandatory and Must Support Data Elements
 
 
-The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) below provides the  formal summary, definitions, and  terminology requirements.  
+The following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.  
 
 **Each Observation must have:**
 
@@ -31,7 +31,7 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
  - Smoking observation LOINC = 72166-2 *Tobacco smoking status NHIS*
  - This profile may be referenced by different capability statements, such as the [Conformance requirements for the US Core Server].
 
-##### Examples
+### Examples
 
  - [observation-some-day-smoker](Observation-some-day-smoker.html)
 

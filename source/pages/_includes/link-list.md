@@ -109,14 +109,13 @@
 [US Core CareTeam Profile]: StructureDefinition-us-core-careteam.html
 [US Core Condition Category Codes]: ValueSet-us-core-condition-category.html
 [US Core Condition Profile]: StructureDefinition-us-core-condition.html
-[US Core Diagnostic Report Profile]: StructureDefinition-us-core-diagnosticreport.html
-[US Core DiagnosticReport]: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport
+[US Core DiagnosticReport Profile for Laboratory Results Reporting]: StructureDefinition-us-core-diagnosticreport-lab.html
 [US Core DocumentReference Type Value Set]: ValueSet-us-core-documentreference-type.html
 [US Core DocumentReference]: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
 [US Core DocumentReferences Category Value Set]: ValueSet-us-core-documentreference-category.html
 [US Core Goal Profile]: StructureDefinition-us-core-goal.html
 [US Core Immunization Profile]: StructureDefinition-us-core-immunization.html
-[US Core Implanted Device Profile]: StructureDefinition-us-core-device.html
+[US Core Device Profile]: StructureDefinition-us-core-device.html
 [US Core Medication Profile]: StructureDefinition-us-core-medication.html
 [US Core Medication Request Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
@@ -128,5 +127,6 @@
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
 [Value sets]: terminology.html
 [Vital Signs Profile]: {{site.data.fhir.path}}observation-vitalsigns.html
-[Condition Quick Start]: StructureDefinition-us-core-condition.html#quick-start
+[Condition Quick Start]: StructureDefinition-us-core-condition.html#search
 [Device]: {{site.data.fhir.path}}device.html
+[Formal Profile Definition]: #profile

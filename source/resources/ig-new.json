@@ -568,6 +568,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/us-core-diagnosticreport-note"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/omb-ethnicity-category"
       },
       "exampleBoolean" : false
@@ -766,12 +772,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/new-us-core-documentreference"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/us-core-direct"
       },
       "exampleBoolean" : false
@@ -946,12 +946,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/new-us-core-diagnosticreport"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/us-core-goal"
       },
       "exampleBoolean" : false
@@ -988,7 +982,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/us-core-diagnosticreport"
+        "reference" : "StructureDefinition/us-core-diagnosticreport-lab"
       },
       "exampleBoolean" : false
     }],
@@ -1023,6 +1017,11 @@
         {
           "nameUrl" : "StructureDefinition-us-core-practitioner.html",
           "title" : "StructureDefinition Us Core Practitioner",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-diagnosticreport-note.html",
+          "title" : "StructureDefinition Us Core DiagnosticReport Note",
           "generation" : "generated"
         },
         {
@@ -1081,11 +1080,6 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-new-us-core-documentreference.html",
-          "title" : "StructureDefinition New Us Core DocumentReference",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "StructureDefinition-us-core-direct.html",
           "title" : "StructureDefinition Us Core Direct",
           "generation" : "generated"
@@ -1136,11 +1130,6 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-new-us-core-diagnosticreport.html",
-          "title" : "StructureDefinition New Us Core DiagnosticReport",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "StructureDefinition-us-core-goal.html",
           "title" : "StructureDefinition Us Core Goal",
           "generation" : "generated"
@@ -1151,8 +1140,8 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-us-core-diagnosticreport.html",
-          "title" : "StructureDefinition Us Core DiagnosticReport",
+          "nameUrl" : "StructureDefinition-us-core-diagnosticreport-lab.html",
+          "title" : "StructureDefinition Us Core DiagnosticReport Lab",
           "generation" : "generated"
         }]
       },

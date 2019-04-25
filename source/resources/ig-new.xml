@@ -565,6 +565,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/us-core-diagnosticreport-note"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/omb-ethnicity-category"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -763,12 +769,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/new-us-core-documentreference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/us-core-direct"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -943,12 +943,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/new-us-core-diagnosticreport"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/us-core-goal"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -985,7 +979,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/us-core-diagnosticreport"/>
+        <reference value="StructureDefinition/us-core-diagnosticreport-lab"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1020,6 +1014,11 @@
         <page>
           <nameUrl value="StructureDefinition-us-core-practitioner.html"/>
           <title value="StructureDefinition Us Core Practitioner"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-us-core-diagnosticreport-note.html"/>
+          <title value="StructureDefinition Us Core DiagnosticReport Note"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -1078,11 +1077,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-new-us-core-documentreference.html"/>
-          <title value="StructureDefinition New Us Core DocumentReference"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="StructureDefinition-us-core-direct.html"/>
           <title value="StructureDefinition Us Core Direct"/>
           <generation value="generated"/>
@@ -1133,11 +1127,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-new-us-core-diagnosticreport.html"/>
-          <title value="StructureDefinition New Us Core DiagnosticReport"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="StructureDefinition-us-core-goal.html"/>
           <title value="StructureDefinition Us Core Goal"/>
           <generation value="generated"/>
@@ -1148,8 +1137,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-us-core-diagnosticreport.html"/>
-          <title value="StructureDefinition Us Core DiagnosticReport"/>
+          <nameUrl value="StructureDefinition-us-core-diagnosticreport-lab.html"/>
+          <title value="StructureDefinition Us Core DiagnosticReport Lab"/>
           <generation value="generated"/>
         </page>
       </page>
