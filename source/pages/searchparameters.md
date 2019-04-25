@@ -5,18 +5,21 @@ topofpage: true
 sectionnumbering: true
 ---
 
-The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations ]({{site.data.fhir.path}}operations.html), [FHIR RESTful search api]({{site.data.fhir.path}}search.html) and the standard [Search Param Registry]({{site.data.fhir.path}}searchparameter-registry.html) see the FHIR specification.
+The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations], [FHIR RESTful search api] and the standard [Search Param Registry] see the FHIR specification.
 
 ### Operations
 
 
-{% include list-simple-operationdefinitions.xhtml %}
+  {% include list-simple-operationdefinitions.xhtml %}
 
 
-
+<br />
 
 ### Search Parameters
 
+
+**AllergyIntolerance**
+  - [_id](SearchParameter-None.html)
 
 **Patient**
   - [_id](SearchParameter-None.html)
@@ -26,10 +29,8 @@ The following operations and search parameters have been defined for the US Core
   - [gender](SearchParameter-us-core-patient-gender.html)
   - [family](SearchParameter-us-core-patient-family.html)
   - [given](SearchParameter-us-core-patient-given.html)
-  - [address](SearchParameter-us-core-patient-address.html)
-  - [telecom](SearchParameter-us-core-patient-telecom.html)
 
-**Questionnaire**  ========== *NOT PART of US CORE - For Testing Purposes only* ========
+**Questionnaire**
   - [_id](SearchParameter-None.html)
   - [url](SearchParameter-us-core-questionnaire-url.html)
   - [status](SearchParameter-us-core-questionnaire-status.html)
@@ -47,7 +48,5 @@ The following operations and search parameters have been defined for the US Core
   - [class](SearchParameter-us-core-encounter-class.html)
   - [type](SearchParameter-us-core-encounter-type.html)
 
-**AllergyIntolerance**
-  - [_id](SearchParameter-None.html)
 
 {% include link-list.md %}

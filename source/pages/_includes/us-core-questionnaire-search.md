@@ -71,7 +71,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [string] and [composite])
+  *Implementation Notes:* . (how to search by [composite] and [string])
 
 1. **SHOULD** support searching using the combination of the  **`context-type-value and publisher and status`** search parameters:
 
@@ -79,7 +79,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [token] and [string] and [composite])
+  *Implementation Notes:* . (how to search by [token] and [composite] and [string])
 
 1. **SHOULD** support searching using the combination of the  **`context-type-value and status`** search parameters:
 

@@ -14,7 +14,7 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHALL** support searching for all encounters for a patient using the **`patient`** search parameter:
 
-  `GET [base]/Encounter?patient=[url]`
+  `GET [base]/Encounter?patient=[reference]`
 
   Example: GET [base]/Encounter?patient=1137192
 
@@ -81,7 +81,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [date] and [token])
+  *Implementation Notes:* . (how to search by [token] and [date])
 
 1. **SHOULD** support searching using the combination of the  **`class and date and patient`** search parameters:
 
@@ -89,7 +89,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [reference] and [token] and [date])
+  *Implementation Notes:* . (how to search by [token] and [reference] and [date])
 
 1. **SHOULD** support searching using the combination of the  **`class and date and patient and type`** search parameters:
 
@@ -97,7 +97,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [reference] and [token] and [date])
+  *Implementation Notes:* . (how to search by [token] and [reference] and [date])
 
 1. **SHOULD** support searching using the combination of the  **`class and date and type`** search parameters:
 
@@ -105,7 +105,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [date] and [token])
+  *Implementation Notes:* . (how to search by [token] and [date])
 
 1. **SHOULD** support searching using the combination of the  **`class and patient`** search parameters:
 
@@ -113,7 +113,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [reference] and [token])
+  *Implementation Notes:* . (how to search by [token] and [reference])
 
 1. **SHOULD** support searching using the combination of the  **`class and patient and status`** search parameters:
 
@@ -121,7 +121,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [reference] and [token])
+  *Implementation Notes:* . (how to search by [token] and [reference])
 
 1. **SHOULD** support searching using the combination of the  **`class and patient and status and type`** search parameters:
 
@@ -129,7 +129,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [reference] and [token])
+  *Implementation Notes:* . (how to search by [token] and [reference])
 
 1. **SHOULD** support searching using the combination of the  **`class and patient and type`** search parameters:
 
@@ -137,7 +137,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [reference] and [token])
+  *Implementation Notes:* . (how to search by [token] and [reference])
 
 1. **SHOULD** support searching using the combination of the  **`class and status`** search parameters:
 
@@ -169,7 +169,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [reference] and [token] and [date])
+  *Implementation Notes:* . (how to search by [token] and [reference] and [date])
 
 1. **SHOULD** support searching using the combination of the  **`date and type`** search parameters:
 
@@ -177,7 +177,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [date] and [token])
+  *Implementation Notes:* . (how to search by [token] and [date])
 
 1. **SHOULD** support searching using the combination of the  **`patient and status`** search parameters:
 
@@ -185,7 +185,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [reference] and [token])
+  *Implementation Notes:* . (how to search by [token] and [reference])
 
 1. **SHOULD** support searching using the combination of the  **`patient and status and type`** search parameters:
 
@@ -193,7 +193,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [reference] and [token])
+  *Implementation Notes:* . (how to search by [token] and [reference])
 
 1. **SHOULD** support searching using the combination of the  **`patient and type`** search parameters:
 
@@ -201,7 +201,7 @@ The following search parameters, search parameter combinations and search parame
 
   Example: 
 
-  *Implementation Notes:* . (how to search by [reference] and [token])
+  *Implementation Notes:* . (how to search by [token] and [reference])
 
 1. **SHOULD** support searching using the combination of the  **`status and type`** search parameters:
 

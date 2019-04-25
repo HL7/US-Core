@@ -733,12 +733,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/us-core-patient-address"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/us-core-medication"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -746,12 +740,6 @@
     <resource>
       <reference>
         <reference value="ValueSet/birthsex"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="SearchParameter/us-core-patient-telecom"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1372,16 +1360,6 @@
         <page>
           <nameUrl value="SearchParameter-us-core-encounter-patient.html"/>
           <title value="SearchParameter Us Core Encounter Patient"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="SearchParameter-us-core-patient-address.html"/>
-          <title value="SearchParameter Us Core Patient Address"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="SearchParameter-us-core-patient-telecom.html"/>
-          <title value="SearchParameter Us Core Patient Telecom"/>
           <generation value="generated"/>
         </page>
         <page>
