@@ -8,11 +8,11 @@ The following are example usage scenarios for the US Core AllergyIntolerance
 -   Query for Allergies belonging to a Patient
 -   Record or update a Patient Allergy
 
-### Mandatory Data Elements
+### Mandatory and Must Support Data Elements
+
+The following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition](#formal-views-of-profile-content) below provides the  formal summary, definitions, and  terminology requirements.
 
 **Each AllergyIntolerance must have:**
-
-The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition](#summary) below provides the  formal summary, definitions, and  terminology requirements.
 
 1.  a status of the allergy*
 1.  a code which tells you what the patient is allergic to
@@ -21,8 +21,6 @@ The following data-elements are mandatory (i.e data MUST be present). These are 
 *The status element has the following constraints: SHALL be present if verification status is not entered-in-error and SHALL NOT be present if verification Status is entered-in-error.
 
 **Each AllergyIntolerance must support:**
-
-In addition, the following data-elements must be supported if the data is present in the sending system ([Must Support] definition):
 
 1.  a verification status
 

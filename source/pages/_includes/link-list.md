@@ -129,3 +129,4 @@
 [Value sets]: terminology.html
 [Vital Signs Profile]: {{site.data.fhir.path}}observation-vitalsigns.html
 [Condition Quick Start]: StructureDefinition-us-core-condition.html#quick-start
+[Device]: {{site.data.fhir.path}}device.html
