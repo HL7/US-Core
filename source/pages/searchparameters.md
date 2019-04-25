@@ -5,7 +5,12 @@ topofpage: true
 sectionnumbering: true
 ---
 
-The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations], [FHIR RESTful search api] and the standard [Search Param Registry] see the FHIR specification.
+The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations ]({{site.data.fhir.path}}operations.html), [FHIR RESTful search api]({{site.data.fhir.path}}search.html) and the standard [Search Param Registry]({{site.data.fhir.path}}searchparameter-registry.html) see the FHIR specification.
+
+This page is not a list of search requirements for the client or server. These search parameters definitions are used within the Capability Statement to define the search capabilities of the server. 
+
+The search parameters **SHALL NOT** be interpreted on their own as requirements for servers.
+
 
 ### Operations
 
