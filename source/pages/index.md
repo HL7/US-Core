@@ -31,9 +31,6 @@ The following actors are part of the US Core IG:
 
 The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  In addition each profile has a "Quick Start" section which is intended as an implementer friendly overview of the required search and read operations.
 
-New DocumentReference and DiagnosticReport Profiles are being introduced for exchanging Clinical Notes. These are *in addition to* the existing US Core DocumentReference and US Core DiagnosticReport Profiles.  Comments are requested on the question of whether these profiles and their use cases should be merged into a single DocumentReference and DiagnosticReport Profile.
-{: .note-to-balloters}
-
 {% include list-simple-profiles.xhtml %}
 
 - In addition US Core uses the [Vital Signs Profile] from the FHIR Specification.
