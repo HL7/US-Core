@@ -32,7 +32,7 @@ In addition it should have (if available):
 
 **Profile specific implementation guidance:**
 
-The `DiagnosticReport.category` binding must support at a minimum the [3 concepts](http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category) of Cardiology, Radiology, and Pathology. Other categories may be supported.
+The `DiagnosticReport.category` binding must support at a minimum the [US Core DiagnosticReport Category Codes] of Cardiology, Radiology, and Pathology. Other categories may be supported.
 
 
 #### Examples
