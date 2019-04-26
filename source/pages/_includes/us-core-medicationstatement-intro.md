@@ -33,6 +33,7 @@ Additionally your system [Must Support]:
     *  The server application MAY choose any combination of these methods, but if an external reference to Medication is used, the server SHALL support the [include] parameter for searching this element.
     *  The client application SHALL support all methods.  
     *  Additional guidance is provided below in the Search section and in the [CapabilityStatement] section.
+*  Source EHR identifiers **SHOULD** be included to support deduplication across MedicationStatement and MedicationRequest resources. A patient medication may appear when a prescription is present as a MedicationRequest or MedicationStatement even though the EHR stores as a single instance. Exposing the EHR identifiers helps client applications identify duplicates.
 
 ### Examples
 
