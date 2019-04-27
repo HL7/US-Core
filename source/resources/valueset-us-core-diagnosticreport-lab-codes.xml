@@ -29,9 +29,9 @@
 		<include>
 			<system value="http://loinc.org"/>
 			<filter>
-				<property value="LASSTYPE"/>
+				<property value="CLASSTYPE"/>
 				<op value="="/>
-				<value value="LABORATORY"/>
+				<value value="1"/>
 			</filter>
 		</include>
 	</compose>

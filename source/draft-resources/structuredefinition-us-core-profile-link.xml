@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
+	<id value="us-core-profile-link"/>
+	<url value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-profile-link"/>
+	<version value="1.0.1"/>
+	<name value="ProfileResourceAssociationExtension"/>
+	<title value="Profile-resource association extension"/>
+	<status value="active"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.healthit.gov"/>
+		</telecom>
+	</contact>
+	<description value="Used in the CapabilityStatment resource to link profiles to the resources they are based upon for the purpose of describing profile specific capababilties such as specific search criteria or operations which are supported on a profile by profile bases. It is a code that references a resource listed in Capability.rest.resource. For more information on how the Capability resource describes profiles on resources, see [Two uses of Profiles](http://hl7.org/fhir/STU3/profiling.html#profile-uses)."/>
+	<purpose value="To allow profiles to be associated with resources in CapabilityStatements."/>
+	<fhirVersion value="4.0.0"/>
+	<mapping>
+		<identity value="rim"/>
+		<uri value="http://hl7.org/v3"/>
+		<name value="RIM Mapping"/>
+	</mapping>
+	<kind value="complex-type"/>
+	<abstract value="false"/>
+	<context>
+		<type value="element"/>
+		<expression value="CapapbilityStatement.profile"/>
+	</context>
+	<type value="Extension"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+	<derivation value="constraint"/>
+	<snapshot>
+		<element id="Extension:profile-link">
+			<path value="Extension"/>
+			<!--
+			<sliceName value="profile-link"/>
+			-->
+			<short value="Resource that this profile is based on"/>
+			<definition value="This is a code that references a  resource listed in CapabilityStatement.rest.resource.  This is used to link the profile to the resources for the purpose of describing profile specific capababilties such as specific search criteria or operations which are supported on a profile by profile bases."/>
+			<comment value="This is helpful for publishing the CapabilityResource narrative."/>
+			<min value="0"/>
+			<max value="*"/>
+			<base>
+				<path value="Extension"/>
+				<min value="0"/>
+				<max value="*"/>
+			</base>
+			<condition value="ele-1"/>
+			<constraint>
+				<key value="ele-1"/>
+				<severity value="error"/>
+				<human value="All FHIR elements must have a @value or children"/>
+				<expression value="children().count() &gt; id.count()"/>
+				<xpath value="@value|f:*|h:div"/>
+				<source value="Element"/>
+			</constraint>
+			<constraint>
+				<key value="ext-1"/>
+				<severity value="error"/>
+				<human value="Must have either extensions or value[x], not both"/>
+				<expression value="extension.exists() != value.exists()"/>
+				<xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
+				<source value="Extension"/>
+			</constraint>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="v2"/>
+				<map value="No v2 equivalent"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value="No RIM equivalent"/>
+			</mapping>
+		</element>
+		<element id="Extension:profile-link.id">
+			<path value="Extension.id"/>
+			<representation value="xmlAttr"/>
+			<short value="xml:id (or equivalent in JSON)"/>
+			<definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+			<min value="0"/>
+			<max value="1"/>
+			<base>
+				<path value="Element.id"/>
+				<min value="0"/>
+				<max value="1"/>
+			</base>
+			<type>
+				<code value="string"/>
+			</type>
+			<mapping>
+				<identity value="rim"/>
+				<map value="n/a"/>
+			</mapping>
+		</element>
+		<element id="Extension:profile-link.extension">
+			<path value="Extension.extension"/>
+			<short value="Additional Content defined by implementations"/>
+			<definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+			<comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+			<alias value="extensions"/>
+			<alias value="user content"/>
+			<min value="0"/>
+			<max value="*"/>
+			<base>
+				<path value="Element.extension"/>
+				<min value="0"/>
+				<max value="*"/>
+			</base>
+			<type>
+				<code value="Extension"/>
+			</type>
+			<mapping>
+				<identity value="rim"/>
+				<map value="n/a"/>
+			</mapping>
+		</element>
+		<element id="Extension:profile-link.url">
+			<path value="Extension.url"/>
+			<representation value="xmlAttr"/>
+			<short value="identifies the meaning of the extension"/>
+			<definition value="Source of the definition for the extension code - a logical name or a URL."/>
+			<comment value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension."/>
+			<min value="1"/>
+			<max value="1"/>
+			<base>
+				<path value="Extension.url"/>
+				<min value="1"/>
+				<max value="1"/>
+			</base>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-profile-link"/>
+			<mapping>
+				<identity value="rim"/>
+				<map value="N/A"/>
+			</mapping>
+		</element>
+		<element id="Extension:profile-link.valueCode">
+			<path value="Extension.valueCode"/>
+			<short value="Value of extension"/>
+			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+			<min value="0"/>
+			<max value="1"/>
+			<base>
+				<path value="Extension.value[x]"/>
+				<min value="0"/>
+				<max value="1"/>
+			</base>
+			<type>
+				<code value="code"/>
+			</type>
+			<binding>
+				<strength value="required"/>
+				<description value="One of the resource types defined as part of FHIR."/>
+				<valueSet value="http://hl7.org/fhir/ValueSet/resource-types"/>
+			</binding>
+			<mapping>
+				<identity value="rim"/>
+				<map value="N/A"/>
+			</mapping>
+		</element>
+	</snapshot>
+	<differential>
+		<element id="Extension:profile-link">
+			<path value="Extension"/>
+			<!--
+			<sliceName value="profile-link"/>
+			-->
+			<short value="Resource that this profile is based on"/>
+			<definition value="This is a code that references a  resource listed in CapabilityStatement.rest.resource.  This is used to link the profile to the resources for the purpose of describing profile specific capababilties such as specific search criteria or operations which are supported on a profile by profile bases."/>
+			<comment value="This is helpful for publishing the CapabilityResource narrative."/>
+			<min value="0"/>
+			<max value="*"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="v2"/>
+				<map value="No v2 equivalent"/>
+			</mapping>
+			<mapping>
+				<identity value="rim"/>
+				<map value="No RIM equivalent"/>
+			</mapping>
+		</element>
+		<element id="Extension:profile-link.url">
+			<path value="Extension.url"/>
+			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-profile-link"/>
+		</element>
+		<element id="Extension:profile-link.valueCode">
+			<path value="Extension.valueCode"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
+			<binding>
+				<strength value="required"/>
+				<description value="One of the resource types defined as part of FHIR."/>
+				<valueSet value="http://hl7.org/fhir/ValueSet/resource-types"/>
+			</binding>
+		</element>
+	</differential>
+</StructureDefinition>
