@@ -17,7 +17,7 @@
 [CapabilityStatement]: capstatements.html
 [Cardiology]: todo.html
 [CarePlan]: {{site.data.fhir.path}}careplan.html
-[CIMI]:http://www.opencimi.org
+[CIMI]:http://www.hl7.org/Special/Committees/cimi/index.cfm
 [ClinicalImpression]: {{site.data.fhir.path}}clinicalimpression.html
 [Code on Dental Procedures and Nomenclature (CDT Code)]: http://www.ada.org/en/publications/cdt/
 [CodeSystem]: {{site.data.fhir.path}}codesystem.html
@@ -95,7 +95,7 @@
 [profiles]: {{site.data.fhir.path}}profiling.html
 [Profiles]: profiles.html "Profiles and Extensions Page"
 [Progress Note (11506-3)]: https://s.details.loinc.org/LOINC/11506-3.html?sections=Comprehensive"
-[QI-Core]:https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/CQF+Home
+[QI-Core]:http://hl7.org/fhir/us/qicore/
 [Quantity]: {{site.data.fhir.path}}datatypes.html#quantity
 [Radiology]: todo.html
 [search]: http://hl7.org/fhir/search.html
