@@ -5,11 +5,12 @@
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
 [$docref operation]: OperationDefinition-docref.html
 [$expand]: {{ site.data.fhir.path }}valueset-operation-expand.html  "An operation used to create a simple collection of codes suitable for use for data entry or validation"
-[2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
+[2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf
 [34133-9]: http://s.details.loinc.org/LOINC/34133-9.html?sections=Comprehensive
 [5 Common Clinical Notes]: ValueSet-us-core-clinical-note-type.html
 [AllergyIntolerance]: {{site.data.fhir.path}}allergyintolerance.html
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page
+[Argonaut DSTU2]:http://www.fhir.org/guides/argonaut/r2/
 [boundaries section]: {{ site.data.fhir.path }}documentreference.html#bnr
 [boundaries section]: {{ site.data.fhir.path }}DocumentReference.html#bnr
 [boundaries section]: {{site.data.fhir.path}}medicationrequest.html#bnr
@@ -34,7 +35,7 @@
 [core specification]: {{site.data.fhir.path}}extensibility.html#2.20.0.2.2
 [CPT-4/HCPC for procedures]: {{site.data.fhir.path}}valueset-procedure-code.html
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
-[Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
+[Data Access Framework]: http://hl7.org/fhir/DSTU2/daf/daf.html
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
 [DiagnosticReport]: {{site.data.fhir.path}}diagnosticreport.html
 [DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
@@ -127,6 +128,7 @@
 [US Core Security]: security.html
 [US Core Server Capability Statement]: CapabilityStatement-us-core-r4-server.html
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
+[U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/isa/us-core-data-interoperability-uscdi
 [Value sets]: terminology.html
 [Vital Signs Profile]: {{site.data.fhir.path}}observation-vitalsigns.html
 [Condition Quick Start]: StructureDefinition-us-core-condition.html#search
