@@ -20,9 +20,9 @@ Retrieve all Clinical Notes for a given Patient:
 
 ----
 
-**`GET [base]/DocumentReference?patient=[id]&class=clinical-note`**
+**`GET [base]/DocumentReference?patient=[id]&category=clinical-note`**
 
-Example: GET [base]/DocumentReference?patient=1235541&class=clinical-note
+Example: GET [base]/DocumentReference?patient=1235541&category=clinical-note
 
 
 *Support:* Mandatory to support search by patient to locate all Clinical Notes.
@@ -34,9 +34,9 @@ Retrieve a Patient's Clinical Notes by Searching with a date range:
 
 ----
 
-**`GET [base]/DocumentReference?patient=[id]&class=clinical-note&created=[date]`**
+**`GET [base]/DocumentReference?patient=[id]&category=clinical-note&created=[date]`**
 
-Example: GET [base]/DocumentReference?patient=1316024&class=clinical-note&created=ge2018-04-11
+Example: GET [base]/DocumentReference?patient=1316024&category=clinical-note&created=ge2018-04-11
 
 
 *Support:* Mandatory to support search by date range.
