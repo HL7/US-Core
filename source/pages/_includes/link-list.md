@@ -99,6 +99,7 @@
 [Quantity]: {{site.data.fhir.path}}datatypes.html#quantity
 [Radiology]: todo.html
 [search]: http://hl7.org/fhir/search.html
+[ServiceRequest]: {{site.data.fhir.path}}servicerequest.html
 [SNOMED CT]: {{site.data.fhir.path}}valueset-procedure-code.html
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
 [Terminology]: terminology.html "Terminology Page"
