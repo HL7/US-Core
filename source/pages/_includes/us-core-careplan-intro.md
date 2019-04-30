@@ -23,7 +23,11 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Profile specific implementation guidance:**
 
-* none
+* Additional considerations for systems aligning with [HL7 Consolidated (C-CDA)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) Care Plan requirements: 
+    - US Core Goal **SHOULD** be present in CarePlan.goal
+    - US Core Condition **SHOULD** be present in CarePlan.addresses
+    - Assement and Plan **MAY** be included as narrative text
+
 
 ### Examples
 
