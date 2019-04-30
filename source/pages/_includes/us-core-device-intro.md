@@ -26,7 +26,8 @@ In addition, the following data-elements must be supported if the data is presen
 
 **Profile specific implementation guidance:**
 
-* none
+* This profile supports the requirement to retrieve an 170.315(a)(14) [Implantable device list.](https://www.healthit.gov/test-method/implantable-device-list). 
+* Servers **SHOULD** support query by Device.type to allow clients to request only implantable devices.
 
 ### Examples
 
