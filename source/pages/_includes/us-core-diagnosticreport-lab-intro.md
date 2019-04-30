@@ -20,7 +20,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.   a patient
 1.   a time indicating when the measurement was taken
 1.   a time indicating when the measurement was reported
-1.   at least one result (an Observation reference)
+1.   at least one result (an Observation reference or text)
 
 **Each AllergyIntolerance must support:**
 
