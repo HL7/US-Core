@@ -16,12 +16,14 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each Immunization must have:**
 
 1.  a status
-1.  a date the vaccine was administered
 1.  a vaccine code that identifies the kind of vaccine administered
+1.  a date the vaccine was administered
 1.  a patient
-1.  a flag to indicate whether vaccine was given
 1.  a flag to indicate whether the vaccine was reported by patient rather than directly administered.
 
+In addition it should have (if available):
+
+1.  a statusReason if the vaccine wasn't given
 
 **Profile specific implementation guidance:**
 
