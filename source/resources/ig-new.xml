@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.core.r4-4.0.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\US-Core-R4\source\resources"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\US-Core-R4\source\examples"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\US-Core-R4\framework"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\US-Core-R4\source\pages"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0"/>
   <version value="4.0.0"/>
@@ -919,6 +919,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/us-core-diagnosticreport-report-and-note-codes"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-provider-role"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1603,6 +1609,11 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="ValueSet-us-core-diagnosticreport-report-and-note-codes.html"/>
+          <title value="ValueSet Us Core DiagnosticReport Report And Note Codes"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="ValueSet-us-core-provider-role.html"/>
           <title value="ValueSet Us Core Provider Role"/>
           <generation value="generated"/>
@@ -2124,16 +2135,12 @@
       <value value="jurisdiction"/>
     </parameter>
     <parameter>
-      <code value="generate-json"/>
-      <value value="true"/>
+      <code value="generate"/>
+      <value value="xml"/>
     </parameter>
     <parameter>
-      <code value="generate-xml"/>
-      <value value="true"/>
-    </parameter>
-    <parameter>
-      <code value="generate-turtle"/>
-      <value value="true"/>
+      <code value="generate"/>
+      <value value="JSON"/>
     </parameter>
   </definition>
 </ImplementationGuide>

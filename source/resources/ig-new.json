@@ -3,19 +3,19 @@
   "id" : "hl7.fhir.us.core.r4-4.0.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\US-Core-R4\\source\\resources"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\US-Core-R4\\source\\examples"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\US-Core-R4\\framework"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\US-Core-R4\\source\\pages"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"
   }],
   "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0",
   "version" : "4.0.0",
@@ -922,6 +922,12 @@
     },
     {
       "reference" : {
+        "reference" : "ValueSet/us-core-diagnosticreport-report-and-note-codes"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/us-core-provider-role"
       },
       "exampleBoolean" : false
@@ -1606,6 +1612,11 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "ValueSet-us-core-diagnosticreport-report-and-note-codes.html",
+          "title" : "ValueSet Us Core DiagnosticReport Report And Note Codes",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "ValueSet-us-core-provider-role.html",
           "title" : "ValueSet Us Core Provider Role",
           "generation" : "generated"
@@ -2127,16 +2138,12 @@
       "value" : "jurisdiction"
     },
     {
-      "code" : "generate-json",
-      "value" : "true"
+      "code" : "generate",
+      "value" : "xml"
     },
     {
-      "code" : "generate-xml",
-      "value" : "true"
-    },
-    {
-      "code" : "generate-turtle",
-      "value" : "true"
+      "code" : "generate",
+      "value" : "JSON"
     }]
   }
 }

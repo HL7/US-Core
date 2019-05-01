@@ -159,3 +159,4 @@
 [capabilitystatement-expectation]: http://hl7.org/fhir/extension-capabilitystatement-expectation.html
 [mulipleAnd]: {{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleAnd
 [mulipleOr]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleOr
+[Implantable device list]: https://www.healthit.gov/test-method/implantable-device-list

@@ -8,7 +8,7 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHALL** support searching practitioner role by specialty using the **[`specialty`](SearchParameter-us-core-practitionerrole-specialty.html)** search parameter:
 
-  - including optional support of the `_include` parameter to indicate that these resources be included in the results: `PractitionerRole:endpoint, PractitionerRole:practitioner`
+    - including optional support of the `_include` parameter to indicate that these resources be included in the results: `PractitionerRole:endpoint, PractitionerRole:practitioner`
 
     `GET [base]/PractitionerRole?specialty={[system]}|[code]`
 
@@ -20,8 +20,8 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHALL** support searching practitioner role by practitioner name and identifier using chained parameters using the **[`practitioner`](SearchParameter-us-core-practitionerrole-practitioner.html)** search parameter:
 
-  - including support for these chained parameters: `identifier, name`
-  - including optional support of the `_include` parameter to indicate that these resources be included in the results: `PractitionerRole:endpoint, PractitionerRole:practitioner`
+    - including support for these chained parameters: `identifier, name`
+    - including optional support of the `_include` parameter to indicate that these resources be included in the results: `PractitionerRole:endpoint, PractitionerRole:practitioner`
 
     `GET [base]/PractitionerRole?practitioner=[reference]`
 
