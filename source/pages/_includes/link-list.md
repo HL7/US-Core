@@ -15,7 +15,7 @@
 [boundaries section]: {{site.data.fhir.path}}medicationrequest.html#bnr
 [CapabilityStatement]: {{site.data.fhir.path}}capabilitystatement.html
 [CapabilityStatement]: capstatements.html
-[Cardiology]: todo.html
+[Cardiology (LP29708-2)]: https://loinc.org/LP29708-2
 [CarePlan]: {{site.data.fhir.path}}careplan.html
 [CIMI]:http://www.hl7.org/Special/Committees/cimi/index.cfm
 [ClinicalImpression]: {{site.data.fhir.path}}clinicalimpression.html
@@ -29,7 +29,7 @@
 [Conformance Requirements for Server]: CapabilityStatement-us-core-r4-server.html "Conformance Requirements for Server Page"
 [Conformance requirements for the US Core Server]: CapabilityStatement-us-core-r4-server.html
 [Conformance]: daf-core-DocumentReference-conformance.html
-[Consultation Note (11488-4)]: https://s.details.loinc.org/LOINC/11488-4.html?sections=Comprehensive
+[Consultation Note (11488-4)]: https://loinc.org/11488-4.html
 [contained]: {{site.data.fhir.path}}references.html#contained
 [core specification]: {{site.data.fhir.path}}extensibility.html#2.20.0.2.2
 [CPT-4/HCPC for procedures]: {{site.data.fhir.path}}valueset-procedure-code.html
@@ -38,7 +38,7 @@
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
 [DiagnosticReport]: {{site.data.fhir.path}}diagnosticreport.html
 [DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
-[Discharge Summary (18842-5)]: https://s.details.loinc.org/LOINC/18842-5.html?sections=Comprehensive
+[Discharge Summary (18842-5)]: https://loinc.org/18842-5.html
 [DocumentReference Format]: http://hl7.org/fhir/ValueSet-formatcodes.html
 [DocumentReference vs DiagnosticReport]: clinical-notes-guidance.html#documentreference-vs-diagnosticreport
 [DocumentReference-episode-summary]: DocumentReference-episode-summary.html
@@ -61,7 +61,7 @@
 [FHIR Version R4]: {{site.data.fhir.path}}index.html "FHIR Version R4 Specification Home Page"
 [FHIR Version STU3]: http://hl7.org/fhir/STU3/index.html "FHIR Version STU3 Specification Home Page"
 [Guidance]: general-guidance.html  "General Guidance Page"
-[History & Physical Note (34117-2)]: https://s.details.loinc.org/LOINC/34117-2.html?sections=Comprehensive
+[History & Physical Note (34117-2)]: https://loinc.org/34117-2.html
 [HL7 U.S. Data Access Framework (DAF)]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [Home]: index.html "Home Page"
 [HTTP]: {{site.data.fhir.path}}http.html
@@ -86,19 +86,19 @@
 [Office of the National Coordinator for Health Information Technology (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
 [Organization]: {{site.data.fhir.path}}organization.html
-[Pathology]: todo.html
+[Pathology (LP7839-6)]: https://loinc.org/LP7839-6
 [Patient]: {{site.data.fhir.path}}patient.html
 [Practitioner]: {{site.data.fhir.path}}practitioner.html
 [PractitionerRole]: {{site.data.fhir.path}}practitionerrole.html
 [Procedure]: {{site.data.fhir.path}}procedure.html
-[Procedures Note (28570-0)]: https://s.details.loinc.org/LOINC/28570-0.html?sections=Comprehensive
+[Procedures Note (28570-0)]: https://loinc.org/28570-0.html
 [ProcedureStatus]: {{site.data.fhir.path}}valueset-procedure-status.html
 [profiles]: {{site.data.fhir.path}}profiling.html
 [Profiles]: profiles.html "Profiles and Extensions Page"
-[Progress Note (11506-3)]: https://s.details.loinc.org/LOINC/11506-3.html?sections=Comprehensive"
+[Progress Note (11506-3)]: https://loinc.org/11506-3.html
 [QI-Core]:http://hl7.org/fhir/us/qicore/
 [Quantity]: {{site.data.fhir.path}}datatypes.html#quantity
-[Radiology]: todo.html
+[Radiology (LP29684-5)]: https://loinc.org/LP29684-5
 [search]: http://hl7.org/fhir/search.html
 [ServiceRequest]: {{site.data.fhir.path}}servicerequest.html
 [SNOMED CT]: {{site.data.fhir.path}}valueset-procedure-code.html

@@ -26,9 +26,9 @@ Specifically, this implementation guide defines the exchange of the following fi
 
 and SHOULD support the DiagnosticReport categories:
 
-* Cardiology (LP29684-5)
-* Radiology (LP29708-2)
-* Pathology (LP7839-6)
+* [Cardiology (LP29708-2)]
+* [Pathology (LP7839-6)]
+* [Radiology (LP29684-5)]
 
 The Argonaut project team provided this initial list to HL7 after surveying the participants in Argonaut and the US Veterans Administration (VA). They represent the *minimum* set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types such as:
 
@@ -99,9 +99,9 @@ This guide requires systems implement the US Core Clinical Notes DocumentReferen
 
 This guide requires systems implement the US Core Clinical Notes DiagnosticReport profile and to support a *minimum* of the three report categories:
 
-- Cardiology (LP29684-5)
-- Radiology (LP29708-2)
-- Pathology (LP7839-6)
+* [Cardiology (LP29708-2)]
+* [Pathology (LP7839-6)]
+* [Radiology (LP29684-5)]
 
 Other categories may be supported as well.  
 
@@ -219,7 +219,7 @@ The following **SHOULD** be exposed via DiagnosticReport
 * Pathology Report Narrative
 * Procedure Note
 
-The servers that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of Radiology (LP29708-2) will receive Radiology and other imaging reports.     
+The servers that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.     
 
 ---
 footnotes:
