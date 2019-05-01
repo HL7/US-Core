@@ -9,7 +9,7 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [US Core DiagnosticReport Category Codes Value Set](ValueSet-us-core-diagnosticreport-category.html)
 1.  A  CodeableConcept  in `DiagnosticReport.code`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [LOINC Diagnostic Report Codes](http://hl7.org/fhir/ValueSet/report-codes)
+binding to [](ValueSet-us-core-diagnosticreport-report-and-note-codes.html)
 1.  A Patient Reference  in `DiagnosticReport.subject`
 1.  A  dateTime  in `DiagnosticReport.effective[x]`
 

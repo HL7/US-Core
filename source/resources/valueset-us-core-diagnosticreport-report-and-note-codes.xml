@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="us-core-diagnosticreport-report-and-note-codes"/>
+  <url value="http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes"/>
+  <version value="4.0.0"/>
+  <name value="UsCoreDiagnosticreportReportAndNoteCodes"/>
+  <title value="US Core Diagnosticreport Report And Note Codes"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2019-05-01"/>
+  <publisher value="HL7 US Realm Steering Committee"/>
+	<contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+  <description value="This value set currently contains all of LOINC. The codes selected should represent discrete and narrative diagnostic observations and reports"/>
+  <copyright value="This content from LOINC&#xAE; is copyright &#xA9; 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use."/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+    </include>
+  </compose>
+</ValueSet>
