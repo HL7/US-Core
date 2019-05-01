@@ -1,46 +1,68 @@
 
 
-`GET [base]/DiagnosticReport?patient=[id]&category=LAB`
 
-**Example:** GET [base]/DiagnosticReport?patient=f201&category=LAB
+#### Mandatory Search Parameters:
 
-*Support:* Mandatory to support search by patient and category code = 'LAB'.
-
-*Implementation Notes:* Search based on diagnostic report category code = 'LAB'. This fetches a bundle of all lab related DiagnosticReport resources for the specified patient  [(how to search by reference)] and [(how to search by token)].
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
 
------------
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`category`](SearchParameter-us-core-diagnosticreport-category.html)** search parameters:
 
-`GET [base]/DiagnosticReport?patient=[id]&code=[LOINC{,LOINC2,LOINC3,...}]`
+    `GET [base]/DiagnosticReport?patient=[reference]&category=http://terminology.hl7.org/CodeSystem/v2-0074|LAB`
 
-**Example:**
--  Search for all metabolic panel reports (LOINC = 24323-8 *Comprehensive metabolic 2000 panel - Serum or Plasma*) for a patient
-  - GET [base]/DiagnosticReport?patient=1032702&code=24323-8
+    Example:
+    
+    1. GET [base]/DiagnosticReport?patient=f201&amp;category=http://terminology.hl7.org/CodeSystem/v2-0074\|LAB
+
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and  a category code = `LAB` ([how to search by reference] and [how to search by token])
+
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`code`](SearchParameter-us-core-diagnosticreport-code.html)** search parameters:
+
+    `GET [base]/DiagnosticReport?patient=[reference]&code={[system]}|[code]`
+
+    Example:
+    
+    1. GET [base]/DiagnosticReport?patient=1032702&amp;code=http://loinc.org\|24323-8
+
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and  report code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token])
+
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`category`](SearchParameter-us-core-diagnosticreport-category.html)** and **[`date`](SearchParameter-us-core-diagnosticreport-date.html)** search parameters:
+  - including support for these comparators: `gt, lt, ge, le`
+
+    `GET [base]/DiagnosticReport?patient=[reference]&category=http://terminology.hl7.org/CodeSystem/v2-0074|LAB&date={gt|lt|ge|le}[date]`
+
+    Example:
+    
+    1. GET [base]/DiagnosticReport?patient=f201&amp;category=http://terminology.hl7.org/CodeSystem/v2-0074\|LAB&amp;date=ge2010-01-14
+
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and a category code = `LAB` ([how to search by reference] and [how to search by token] and [how to search by date])
 
 
-- Search for all cbc (LOINC = 58410-2 *Complete blood count (hemogram) panel - Blood by Automated count*), metabolic panel, and urinalysis panels (LOINC = 24356-8 *Urinalysis complete panel - Urine*) for a patient
-  - GET [base]/DiagnosticReport?patient=1032702&code=24323-8,58410-2,24356-8
 
-*Support:* Mandatory support search by a laboratory order code. SHOULD support search by multiple order codes.
+#### Optional Search Parameters:
 
-*Implementation Notes:* Search based on DiagnosticReport code(s). This fetches a bundle of all DiagnosticReport resources for a specific diagnostic order code(s) for the specified patient  [(how to search by reference)] and [(how to search by token)].
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
+
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`status`](SearchParameter-us-core-diagnosticreport-status.html)** search parameters:
+
+    `GET [base]/DiagnosticReport?patient=[reference]&status={[system]}|[code]`
+
+    Example:
+    
+    1. GET [base]/DiagnosticReport?patient=1137192&amp;status=completed
+
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and status ([how to search by reference] and [how to search by token])
+
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`code`](SearchParameter-us-core-diagnosticreport-code.html)** and **[`date`](SearchParameter-us-core-diagnosticreport-date.html)** search parameters:
+  - including support for these comparators: `gt, lt, ge, le`
+
+    `GET [base]/DiagnosticReport?patient=[reference]&code={[system]}|[code]&date={gt|lt|ge|le}[date]`
+
+    Example:
+    
+    1. GET [base]/DiagnosticReport?patient=f201&amp;code=http://loinc.org\|24323-8&amp;date=ge2019-01-14
+
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and report code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
 
 
------------
-
-`GET [base]/DiagnosticReport?patient=[id]&category=LAB&date=[date]{&date=[date]}`
-
-**Example:** Find all the lab reports issued after 2010-01-14
-
-- GET [base]/DiagnosticReport?patient=f201&category=LAB&date=ge2010-01-14
-
-*Support:*  Mandatory support search by category code = 'LAB' and date or period.
-
-*Implementation Notes:*  Search based on laboratory category code and date. This fetches a bundle of all DiagnosticReport resources with category 'LAB' for the specified patient for a specified time period   [(how to search by reference)], [(how to search by token)] amd [(how to search by date)].
-
-
-
-  [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
-  [(how to search by token)]: {{site.data.fhir.path}}search.html#token
-  [Composite Search Parameters]: {{site.data.fhir.path}}search.html#combining
-  [(how to search by date)]: {{site.data.fhir.path}}search.html#date
+{% include link-list.md %}

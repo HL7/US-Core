@@ -1,48 +1,79 @@
 
-`GET [base]/Observation?patient=[id]&category=laboratory`
-
-**Example:** GET [base]/Observation?patient=1134281&category=laboratory
-
-*Support:* Mandatory to support search by patient and category code = 'laboratory'.
-
-*Implementation Notes:* Search based on laboratory category code = "laboratory". This fetches a bundle of all Observation resources with laboratory categories for the specified patient [(how to search by reference)] and [(how to search by token)].
 
 
------------
+#### Mandatory Search Parameters:
 
-`GET [base]/Observation?patient=[id]&code=[LOINC{,LOINC2,LOINC3,...}]`
-
-
-**Example:**
-
-- Search for all blood glucose lab results (LOINC = 2339-0 *Glucose [Mass/volume] in Blood*) for a patient:
-  - GET [base]/Observation?patient=1134281&code=2339-0
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
 
-- Search for all blood glucose, urine glucose (LOINC = 25428-4 *Glucose [Presence] in Urine by Test strip*) and urine ketones (LOINC = 2339-0 *Ketones [Presence] in Urine by Test strip*) for a patient
-  - GET [base]/Observation?patient=1134281&code=2339-0,25428-4,2514-8
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** search parameters:
 
-*Support:* Mandatory support search by a laboratory LOINC code. SHOULD support search by multiple LOINC codes.
+    `GET [base]/Observation?patient=[reference]&category=http://hl7.org/fhir/observation-category|laboratory`
 
-*Implementation Notes:* 1) Search based on laboratory LOINC code(s). This fetches a bundle of all Observation resources for a specific observation LOINC code(s) for the specified patient  [(how to search by reference)] and [(how to search by token)].   2) The Observation "code" parameter searches both in both Observation.code and Observation.component.code.
+    Example:
+    
+    1. GET [base]/Observation?patient=1134281&amp;category=http://hl7.org/fhir/observation-category\|laboratory
 
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and a category code = `laboratory` ([how to search by reference] and [how to search by token])
 
------------
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`code`](SearchParameter-us-core-observation-code.html)** search parameters:
 
-`GET [base]/Observation?patient=[id]&category=laboratory&date=[date]{&date=[date]}`
+    `GET [base]/Observation?patient=[reference]&code={[system]}|[code]`
 
-**Example:**
+    Example:
+    
+    1. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|2339-0
+    1. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|2339-0,http://loinc.org\|25428-4,2514-8
 
-- Find all the laboratory results after 2013-03-14
-  - GET [base]Observation?patient=555580&category=laboratory&date=ge2015-01-14
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code(s).  SHOULD support search by multiple report codes. The Observation `code` parameter searches `Observation.code only. ([how to search by reference] and [how to search by token])
 
-*Support:*  Mandatory support search by category code ="laboratory" and date or period
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`date`](SearchParameter-us-core-observation-date.html)** search parameters:
+  - including support for these comparators: `gt, lt, ge, le`
 
-*Implementation Notes:*  Search based on laboratory category code and date. This fetches a bundle of all Observation resources with category 'laboratory' for the specified patient for a specified time period  [(how to search by reference)], [(how to search by token)] amd [(how to search by date)].
+    `GET [base]/Observation?patient=[reference]&category=http://hl7.org/fhir/observation-category|laboratory&date={gt|lt|ge|le}[date]`
+
+    Example:
+    
+    1. GET [base]Observation?patient=555580&amp;category=http://hl7.org/fhir/observation-category\|laboratory&amp;date=ge2018-03-14
+
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and date and a category code = `laboratory` ([how to search by reference] and [how to search by token] and [how to search by date])
 
 
 
-  [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
-  [(how to search by token)]: {{site.data.fhir.path}}search.html#token
-  [Composite Search Parameters]: {{site.data.fhir.path}}search.html#combining
-  [(how to search by date)]: {{site.data.fhir.path}}search.html#date
+#### Optional Search Parameters:
+
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
+
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`status`](SearchParameter-us-core-observation-status.html)** search parameters:
+
+    `GET [base]/Observation?patient=[reference]&category=http://hl7.org/fhir/observation-category|laboratory&status={[system]}|[code]`
+
+    Example:
+    
+    1. GET [base]/Observation?patient=1134281&amp;category=http://hl7.org/fhir/observation-category\|laboratory&amp;status=final
+
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and category = `laboratory` and status ([how to search by reference] and [how to search by token])
+
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`code`](SearchParameter-us-core-observation-code.html)** and **[`date`](SearchParameter-us-core-observation-date.html)** search parameters:
+  - including support for these comparators: `gt, lt, ge, le`
+
+    `GET [base]/Observation?patient=[reference]&code={[system]}|[code]&date={gt|lt|ge|le}[date]`
+
+    Example:
+    
+    1. GET [base]Observation?patient=555580&amp;code=http://loinc.org\|2339-0&amp;date=ge2019
+
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and date and report code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
+
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`status`](SearchParameter-us-core-observation-status.html)** search parameters:
+
+    `GET [base]/Observation?patient=[reference]&status={[system]}|[code]`
+
+    Example:
+    
+    1. GET [base]/Observation?patient=1137192&amp;status=final
+
+    *Implementation Notes:* Fetches a bundle of all !Observation resources for the specified patient and status ([how to search by reference] and [how to search by token])
+
+
+{% include link-list.md %}

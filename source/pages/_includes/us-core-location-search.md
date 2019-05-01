@@ -1,48 +1,56 @@
 
-`GET [base]/Location?name=[string]`
-
-**Example:** GET [base]/Location?name=Health
 
 
-*Support:* Mandatory
+#### Mandatory Search Parameters:
 
-*Implementation Notes:*  Search based on text name [(how to search by string)]. 
-
-*Response Class:*
-
--   (Status 200): successful operation
--   (Status 400): invalid parameter
--   (Status 401/4xx): unauthorized request
--   (Status 403): insufficient scope
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
 
------------
+1. **SHALL** support searching by location name using the **[`name`](SearchParameter-us-core-location-name.html)** search parameter:
+
+    `GET [base]/Location?name=[string]`
+
+  Example: GET [base]/Location?name=Health
+
+  *Implementation Notes:* Fetches a bundle of all Location resources that match the name ([how to search by string])
+
+1. **SHALL** support searching location based on text address using the **[`address`](SearchParameter-us-core-location-address.html)** search parameter:
+
+    `GET [base]/Location?address=[string]`
+
+  Example: GET [base]/Location?address=Arbor
+
+  *Implementation Notes:* Fetches a bundle of all Location resources that match the address string ([how to search by string])
 
 
-`GET [base]/Location?address=[string]`
 
-**Example:** GET [base]/Location?address=Arbor
+#### Optional Search Parameters:
 
-**Example:** GET [base]/Location?address-postalcode=48104
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
 
-*Support:* Mandatory
+1. **SHOULD** support searching using the **[`address-city`](i.rel_url)** search parameter:
 
-*Implementation Notes:* Search based on text address [(how to search by string)].
+   `GET [base]/Location?address-city=[string]`
 
-SHOULD support:
+   Example: GET [base]/Location?address-city=Ann Arbor
 
-   - address-city
-   - address-state
-   - address-postalcode
+   *Implementation Notes:* Fetches a bundle of all Location resources for the city ([how to search by string])
 
-*Response Class:*
+1. **SHOULD** support searching using the **[`address-state`](i.rel_url)** search parameter:
 
--   (Status 200): successful operation
--   (Status 400): invalid parameter
--   (Status 401/4xx): unauthorized request
--   (Status 403): insufficient scope
+   `GET [base]/Location?address-state=[string]`
 
-  [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
-  [(how to search by token)]: {{site.data.fhir.path}}search.html#token
- [(how to search by date)]: {{site.data.fhir.path}}search.html#date
- [(how to search by string)]: {{site.data.fhir.path}}search.html#string
+   Example: GET [base]/Location?address-state=MI
+
+   *Implementation Notes:* Fetches a bundle of all Location resources for the state ([how to search by string])
+
+1. **SHOULD** support searching using the **[`address-postalcode`](i.rel_url)** search parameter:
+
+   `GET [base]/Location?address-postalcode=[string]`
+
+   Example: GET [base]/Location?address-postalcode=48104
+
+   *Implementation Notes:* Fetches a bundle of all Location resources for the ZIP code ([how to search by string])
+
+
+{% include link-list.md %}

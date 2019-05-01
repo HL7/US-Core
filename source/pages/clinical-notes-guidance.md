@@ -14,7 +14,7 @@ topofpage: true
 
 ### Clinical Notes
 
-Clinical notes are a key component to communicate the current status of a patient. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing and even handwritten notes by a providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems. 
+Clinical notes are a key component to communicate the current status of a patient. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing and even handwritten notes by a providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems.
 
 Specifically, this implementation guide defines the exchange of the following five "Common Clinical Notes".
 {: #common-clinical-notes}
@@ -30,7 +30,7 @@ This initial list was defined after surveying the participants in Argonaut and t
 *TODO - link these to LOINC too*
 - Imaging
 - Pathology narrative
-- Cardiology Reports 
+- Cardiology Reports
 - Referral Note
 - Surgical Operation Note
 - Nurse Note
@@ -67,7 +67,7 @@ This guide requires systems implement the US Core Clinical Notes DiagnosticRepor
 - Cardiology (LP29684-5)
 - Radiology (LP29708-2)
 - Pathology (LP7839-6)
- 
+
 Other categories may be supported as well.  
 
 A method for discovery of the types of notes and reports that a server supports is described in the [section below](#using-expand).
@@ -81,17 +81,17 @@ To retrieve clinical notes and reports, the standard FHIR [search] API is used. 
 Common client search scenarios include:
 
 1. A client interested in all Radiology reports can use the following query:
-   
+
 	 `GET [base]/DiagnosticReport?patient=[id]&category=http://loinc.org|LP29684-5`
 
 1. A client interested in all Clinical Notes can use the following query:
-   
-	 `GET [base]/DocumentReference?patient=[id]&class=clinical-note`
+
+	 `GET [base]/DocumentReference?patient=[id]&category=clinical-note`
 
 1. A client interested in all Discharge Summary Notes can use the following query:
-  
+
 	`GET [base]/DocumentReference?patient=[id]&type=http://loinc.org|18842-5`
-	
+
 <br/>
 
 ### Determining Server Note Type Support Using The Value Set Expansion Operation ($expand)
@@ -100,8 +100,8 @@ Common client search scenarios include:
 In addition to inspecting a server CapabilityStatement, a client can determine the note and report types support by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**. Because servers may support different read and write formats, it also is used to determine the formats (for example, text, pdf) the server supports read and write transactions. A FHIR server claiming support to this guide **SHOULD** support the $expand operation.
 
 #### Discovering Note and Report Types
-	
-The note and report types for a particular server are discovered by invoking the #expand operation as follows: 
+
+The note and report types for a particular server are discovered by invoking the #expand operation as follows:
 
 `GET [base]/ValueSet/$expand?context=[context]&contextDirection=[contextDirection]`
 
@@ -111,10 +111,10 @@ where:
 
 **Examples**
 
-{% include examplebutton.html example="note-and-report-types-scenario1" b_title = "Scenario 1" %} 
-{% include examplebutton.html example="note-and-report-types-scenario2" b_title = "Scenario 2" %} 
-{% include examplebutton.html example="note-and-report-types-scenario3" b_title = "Scenario 3" %} 
-{% include examplebutton.html example="note-and-report-types-scenario4" b_title = "Scenario 4" %} 
+{% include examplebutton.html example="note-and-report-types-scenario1" b_title = "Scenario 1" %}
+{% include examplebutton.html example="note-and-report-types-scenario2" b_title = "Scenario 2" %}
+{% include examplebutton.html example="note-and-report-types-scenario3" b_title = "Scenario 3" %}
+{% include examplebutton.html example="note-and-report-types-scenario4" b_title = "Scenario 4" %}
 
 #### Discovering Server Read and Write Formats
 
@@ -128,8 +128,8 @@ where:
 
  **Examples**
 
- {% include examplebutton.html example="read-and-write-format-scenario1" b_title = "Scenario 1" %} 
- {% include examplebutton.html example="read-and-write-format-scenario2" b_title = "Scenario 2" %} 
+ {% include examplebutton.html example="read-and-write-format-scenario1" b_title = "Scenario 1" %}
+ {% include examplebutton.html example="read-and-write-format-scenario2" b_title = "Scenario 2" %}
 
 ### Resource Selection
 
@@ -139,7 +139,7 @@ When reviewing the minimal number of elements required for each Resource, the FH
 - Note types
 - Consistent Client access to scanned, or narrative-only, reports
 
-While several resources work well for a specific use case, they don't solve the question "find all Clinical Notes for a patient?" especially when considering the variability of Note formats. For example systems use text, XHTML, PDF, CDA to capture clinical notes. This variability led the designers to select the [DocumentReference and DiagnosticReport](#fhir-resources-to-exchange-clinical-notes) as an index mechanisms to the underlying content. In other words, a client can query one of these resources and it will return a pointer to specific resource or the underlying binary content. 
+While several resources work well for a specific use case, they don't solve the question "find all Clinical Notes for a patient?" especially when considering the variability of Note formats. For example systems use text, XHTML, PDF, CDA to capture clinical notes. This variability led the designers to select the [DocumentReference and DiagnosticReport](#fhir-resources-to-exchange-clinical-notes) as an index mechanisms to the underlying content. In other words, a client can query one of these resources and it will return a pointer to specific resource or the underlying binary content.
 
 For example, consider the following situation for a Discharge Summary Note:
 
@@ -150,12 +150,12 @@ For example, consider the following situation for a Discharge Summary Note:
 The following single query into DocumentReference supports all 3 scenarios:
 
 	GET [base]/DocumentReference?patient=[id]&type=http://loinc.org|18842-5
-	
+
 The server returns either a pointer to the Composition or the Binary resource. If other more specific resources are developed for Clinical Notes systems can update their pointers to the new resource.  
 
-#### Clinical Notes vs ClinicalImpression 
+#### Clinical Notes vs ClinicalImpression
 
-[ClinicalImpression] resource supports the record of a clinical assessment. 
+[ClinicalImpression] resource supports the record of a clinical assessment.
 
 >
 A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter, but this varies greatly depending on the clinical workflow. This resource is called "ClinicalImpression" rather than "ClinicalAssessment" to avoid confusion with the recording of assessment tools such as Apgar score

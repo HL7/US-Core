@@ -1,0 +1,142 @@
+{
+    "id": "us-core-condition-onset-date",
+    "base": [
+        "Condition"
+    ],
+    "code": "onset-date",
+    "comparator": [
+        "eq",
+        "ne",
+        "gt",
+        "lt",
+        "le",
+        "sa",
+        "eb",
+        "ap"
+    ],
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.hl7.org/Special/committees/structure/index.cfm"
+                }
+            ]
+        }
+    ],
+    "date": "2019-04-30T23:52:39.149347Z",
+    "derivedFrom": "http://hl7.org/fhir/SearchParameter/Condition-onset-date",
+    "description": "Date related onsets (dateTime and Period)",
+    "experimental": false,
+    "expression": "Condition.onset.as(dateTime)",
+    "modifier": [
+        "missing"
+    ],
+    "multipleAnd": true,
+    "multipleOr": true,
+    "name": "USCoreConditionOnsetDate",
+    "publisher": "HL7 International - Structured Documents Work Group",
+    "status": "active",
+    "type": "date",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-onset-date",
+    "version": "4.1.0",
+    "xpath": "f:Condition/f:onsetDateTime",
+    "xpathUsage": "normal",
+    "resourceType": "SearchParameter",
+    "_multipleOr": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueCode": "MAY"
+            }
+        ]
+    },
+    "_multipleAnd": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueCode": "SHOULD"
+            }
+        ]
+    },
+    "_modifier": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        }
+    ],
+    "_comparator": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "SHALL"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "SHALL"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "SHALL"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        }
+    ],
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Generated Narrative with Details</b></p><p><b> id</b> us-core-condition-onset-date</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-onset-date</b></p><p><b> version</b> : 4.1.0</p><p><b> name</b> : USCoreConditionOnsetDate</p><p><b> derivedFrom</b> : <a> http://hl7.org/fhir/SearchParameter/Condition-onset-date</a></p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-04-30</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> description</b> : Date related onsets (dateTime and Period)</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span></p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>onset-date</code></p><p><b> base</b> :Condition</p><p><b> type</b> : date</p><p><b> expression</b> : <code>Condition.onset.as(dateTime)</code></p><p><b> xpath</b> : <code>f:Condition/f:onsetDateTime</code></p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = SHOULD)</p>\n    \n    \n    <p><b> comparator</b> : <code>eq</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>ne</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>gt</code> ( Conformance Expectation = SHALL)</p>\n    \n    <p><b> comparator</b> : <code>lt</code> ( Conformance Expectation = SHALL)</p>\n    \n    <p><b> comparator</b> : <code>le</code> ( Conformance Expectation = SHALL)</p>\n    \n    <p><b> comparator</b> : <code>sa</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>eb</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>ap</code> ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    \n    <p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p>\n    \n    \n    \n\t\t</div>"
+    }
+}

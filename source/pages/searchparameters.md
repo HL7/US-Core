@@ -5,12 +5,7 @@ topofpage: true
 sectionnumbering: true
 ---
 
-The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations ]({{site.data.fhir.path}}operations.html), [FHIR RESTful search api]({{site.data.fhir.path}}search.html) and the standard [Search Param Registry]({{site.data.fhir.path}}searchparameter-registry.html) see the FHIR specification.
-
-This page is not a list of search requirements for the client or server. These search parameters definitions are used within the Capability Statement to define the search capabilities of the server. 
-
-The search parameters **SHALL NOT** be interpreted on their own as requirements for servers.
-
+The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations], [FHIR RESTful search api] and the standard [Search Param Registry] see the FHIR specification.
 
 ### Operations
 
@@ -22,36 +17,126 @@ The search parameters **SHALL NOT** be interpreted on their own as requirements 
 
 ### Search Parameters
 
+NOTE: These search parameters **SHALL NOT** be interpreted on their own as requirements for server:
+This section lists the search parameters definitions that are used within the capability statement to define the search capabilities expectations for the US Core Server.  This is not a list of search requirements for the client or server.
 
-**AllergyIntolerance**
-  - [_id](SearchParameter-None.html)
+
+**MedicationStatement**
+  - [status](SearchParameter-us-core-medicationstatement-status.html)
+  - [patient](SearchParameter-us-core-medicationstatement-patient.html)
+  - [effective](SearchParameter-us-core-medicationstatement-effective.html)
 
 **Patient**
-  - [_id](SearchParameter-None.html)
+  - [_id](SearchParameter-us-core-patient-id.html)
+  - [birthdate](SearchParameter-us-core-patient-birthdate.html)
+  - [family](SearchParameter-us-core-patient-family.html)
+  - [gender](SearchParameter-us-core-patient-gender.html)
+  - [given](SearchParameter-us-core-patient-given.html)
   - [identifier](SearchParameter-us-core-patient-identifier.html)
   - [name](SearchParameter-us-core-patient-name.html)
-  - [birthdate](SearchParameter-us-core-patient-birthdate.html)
-  - [gender](SearchParameter-us-core-patient-gender.html)
-  - [family](SearchParameter-us-core-patient-family.html)
-  - [given](SearchParameter-us-core-patient-given.html)
 
-**Questionnaire**
-  - [_id](SearchParameter-None.html)
-  - [url](SearchParameter-us-core-questionnaire-url.html)
-  - [status](SearchParameter-us-core-questionnaire-status.html)
-  - [title](SearchParameter-us-core-questionnaire-title.html)
-  - [publisher](SearchParameter-us-core-questionnaire-publisher.html)
-  - [version](SearchParameter-us-core-questionnaire-version.html)
-  - [context-type-value](SearchParameter-us-core-questionnaire-context-type-value.html)
+**MedicationRequest**
+  - [status](SearchParameter-us-core-medicationrequest-status.html)
+  - [patient](SearchParameter-us-core-medicationrequest-patient.html)
+  - [authoredon](SearchParameter-us-core-medicationrequest-authoredon.html)
+
+**DiagnosticReport**
+  - [status](SearchParameter-us-core-diagnosticreport-status.html)
+  - [patient](SearchParameter-us-core-diagnosticreport-patient.html)
+  - [category](SearchParameter-us-core-diagnosticreport-category.html)
+  - [code](SearchParameter-us-core-diagnosticreport-code.html)
+  - [date](SearchParameter-us-core-diagnosticreport-date.html)
+
+**Device**
+  - [patient](SearchParameter-us-core-device-patient.html)
+
+**Condition**
+  - [category](SearchParameter-us-core-condition-category.html)
+  - [clinical-status](SearchParameter-us-core-condition-clinical-status.html)
+  - [patient](SearchParameter-us-core-condition-patient.html)
+  - [onset-date](SearchParameter-us-core-condition-onset-date.html)
+  - [code](SearchParameter-us-core-condition-code.html)
+
+**Practitioner**
+  - [name](SearchParameter-us-core-practitioner-name.html)
+  - [identifier](SearchParameter-us-core-practitioner-identifier.html)
+  - [specialty](SearchParameter-us-core-practitionerrole-specialty.html)
+  - [practitioner](SearchParameter-us-core-practitionerrole-practitioner.html)
+
+**Location**
+  - [name](SearchParameter-us-core-location-name.html)
+  - [address](SearchParameter-us-core-location-address.html)
+  - [address-city](SearchParameter-us-core-location-address-city.html)
+  - [address-state](SearchParameter-us-core-location-address-state.html)
+  - [address-postalcode](SearchParameter-us-core-location-address-postalcode.html)
+
+**CarePlan**
+  - [category](SearchParameter-us-core-careplan-category.html)
+  - [date](SearchParameter-us-core-careplan-date.html)
+  - [patient](SearchParameter-us-core-careplan-patient.html)
+  - [status](SearchParameter-us-core-careplan-status.html)
+
+**Observation**
+  - [status](SearchParameter-us-core-observation-status.html)
+  - [category](SearchParameter-us-core-observation-category.html)
+  - [code](SearchParameter-us-core-observation-code.html)
+  - [date](SearchParameter-us-core-observation-date.html)
+  - [patient](SearchParameter-us-core-observation-patient.html)
+
+**AllergyIntolerance**
+  - [clinical-status](SearchParameter-us-core-allergyintolerance-clinical-status.html)
+  - [patient](SearchParameter-us-core-allergyintolerance-patient.html)
+
+**PractitionerRole**
+  - [specialty](SearchParameter-us-core-practitionerrole-specialty.html)
+  - [practitioner](SearchParameter-us-core-practitionerrole-practitioner.html)
+
+**DocumentReference**
+  - [_id](SearchParameter-us-core-documentreference-id.html)
+  - [status](SearchParameter-us-core-documentreference-status.html)
+  - [patient](SearchParameter-us-core-documentreference-patient.html)
+  - [category](SearchParameter-us-core-documentreference-category.html)
+  - [type](SearchParameter-us-core-documentreference-type.html)
+  - [date](SearchParameter-us-core-documentreference-date.html)
+  - [period](SearchParameter-us-core-documentreference-period.html)
+
+**Organization**
+  - [name](SearchParameter-us-core-organization-name.html)
+  - [address](SearchParameter-us-core-organization-address.html)
 
 **Encounter**
-  - [_id](SearchParameter-None.html)
-  - [patient](SearchParameter-us-core-encounter-patient.html)
+  - [_id](SearchParameter-us-core-encounter-id.html)
+  - [class](SearchParameter-us-core-encounter-class.html)
   - [date](SearchParameter-us-core-encounter-date.html)
   - [identifier](SearchParameter-us-core-encounter-identifier.html)
+  - [patient](SearchParameter-us-core-encounter-patient.html)
   - [status](SearchParameter-us-core-encounter-status.html)
-  - [class](SearchParameter-us-core-encounter-class.html)
   - [type](SearchParameter-us-core-encounter-type.html)
 
+**Goal**
+  - [lifecycle-status](SearchParameter-us-core-goal-lifecycle-status.html)
+  - [patient](SearchParameter-us-core-goal-patient.html)
+  - [start-date](SearchParameter-us-core-goal-start-date.html)
+
+**Immunization**
+  - [patient](SearchParameter-us-core-immunization-patient.html)
+  - [status](SearchParameter-us-core-immunization-status.html)
+  - [date](SearchParameter-us-core-immunization-date.html)
+
+**Procedure**
+  - [status](SearchParameter-us-core-procedure-status.html)
+  - [patient](SearchParameter-us-core-procedure-patient.html)
+  - [date](SearchParameter-us-core-procedure-date.html)
+  - [code](SearchParameter-us-core-procedure-code.html)
+
+**CareTeam**
+  - [patient](SearchParameter-us-core-careteam-patient.html)
+  - [status](SearchParameter-us-core-careteam-status.html)
+
+
+
+Editors note : append these to Patient
+  - [us-core-race]
+  - [us-core-ethnicity]
 
 {% include link-list.md %}

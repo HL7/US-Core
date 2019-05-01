@@ -5,12 +5,11 @@
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
 [$docref operation]: OperationDefinition-docref.html
 [$expand]: {{ site.data.fhir.path }}valueset-operation-expand.html  "An operation used to create a simple collection of codes suitable for use for data entry or validation"
-[2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf
+[2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
 [34133-9]: http://s.details.loinc.org/LOINC/34133-9.html?sections=Comprehensive
 [5 Common Clinical Notes]: ValueSet-us-core-clinical-note-type.html
 [AllergyIntolerance]: {{site.data.fhir.path}}allergyintolerance.html
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page
-[Argonaut DSTU2]:http://www.fhir.org/guides/argonaut/r2/
 [boundaries section]: {{ site.data.fhir.path }}documentreference.html#bnr
 [boundaries section]: {{ site.data.fhir.path }}DocumentReference.html#bnr
 [boundaries section]: {{site.data.fhir.path}}medicationrequest.html#bnr
@@ -35,7 +34,7 @@
 [core specification]: {{site.data.fhir.path}}extensibility.html#2.20.0.2.2
 [CPT-4/HCPC for procedures]: {{site.data.fhir.path}}valueset-procedure-code.html
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
-[Data Access Framework]: http://hl7.org/fhir/DSTU2/daf/daf.html
+[Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
 [DiagnosticReport]: {{site.data.fhir.path}}diagnosticreport.html
 [DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
@@ -90,6 +89,7 @@
 [Pathology]: todo.html
 [Patient]: {{site.data.fhir.path}}patient.html
 [Practitioner]: {{site.data.fhir.path}}practitioner.html
+[PractitionerRole]: {{site.data.fhir.path}}practitionerrole.html
 [Procedure]: {{site.data.fhir.path}}procedure.html
 [Procedures Note (28570-0)]: https://s.details.loinc.org/LOINC/28570-0.html?sections=Comprehensive
 [ProcedureStatus]: {{site.data.fhir.path}}valueset-procedure-status.html
@@ -128,9 +128,29 @@
 [US Core Security]: security.html
 [US Core Server Capability Statement]: CapabilityStatement-us-core-r4-server.html
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
-[U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/isa/us-core-data-interoperability-uscdi
 [Value sets]: terminology.html
 [Vital Signs Profile]: {{site.data.fhir.path}}observation-vitalsigns.html
 [Condition Quick Start]: StructureDefinition-us-core-condition.html#search
+[Vital Signs Quick Start]: StructureDefinition-us-core-vitalsigns.html#search
 [Device]: {{site.data.fhir.path}}device.html
 [Formal Profile Definition]: #profile
+[modifiers]: {{site.data.fhir.path}}search.html#modifiers
+[comparators]: {{site.data.fhir.path}}search.html#prefix
+[chained parameters]: {{site.data.fhir.path}}search.html#chaining
+[how to search by logical id]: {{site.data.fhir.path}}references.html#logical
+[how to search by token]: {{site.data.fhir.path}}search.html#token
+[how to search by string]: {{site.data.fhir.path}}search.html#string
+[how to search by date]: {{site.data.fhir.path}}search.html#date
+[how to search by reference]: {{site.data.fhir.path}}search.html#reference
+[quantity]: {{site.data.fhir.path}}search.html#quantity
+[FHIR RESTful operations]: {{site.data.fhir.path}}Operations.html
+[FHIR RESTful search api]: {{site.data.fhir.path}}search.html
+[Search Parameter Registry]: {{site.data.fhir.path}}searchparameter-registry.html
+[us-core-race]: SearchParameter-us-core-race.html
+[us-core-ethnicity]: SearchParameter-us-core-ethnicity.html
+[Device search parameters]: {{site.data.fhir.path}}device.html#search
+[Quick Start]: #search
+[ONC Provider Directory Workshop]: https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents
+[Argonaut Provider Directory]: http://www.fhir.org/guides/argonaut/pd//release1/index.html
+[IHE Healthcare Provider Directory]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf
+[Direct address]: https://www.healthit.gov/sites/default/files/directbasicsforprovidersqa_05092014.pdf

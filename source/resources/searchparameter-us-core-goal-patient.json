@@ -1,0 +1,88 @@
+{
+    "id": "us-core-goal-patient",
+    "base": [
+        "Goal"
+    ],
+    "code": "patient",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.hl7.org/Special/committees/structure/index.cfm"
+                }
+            ]
+        }
+    ],
+    "date": "2019-04-30T23:52:39.442989Z",
+    "derivedFrom": "http://hl7.org/fhir/SearchParameter/clinical-patient",
+    "description": "Who this goal is intended for",
+    "experimental": false,
+    "expression": "Goal.subject.where(resolve() is Patient)",
+    "modifier": [
+        "missing",
+        "type",
+        "identifier"
+    ],
+    "multipleAnd": true,
+    "multipleOr": true,
+    "name": "USCoreGoalPatient",
+    "publisher": "HL7 International - Structured Documents Work Group",
+    "status": "active",
+    "target": [
+        "Patient",
+        "Group"
+    ],
+    "type": "reference",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-goal-patient",
+    "version": "4.1.0",
+    "xpath": "f:Goal/f:subject",
+    "xpathUsage": "normal",
+    "resourceType": "SearchParameter",
+    "_multipleOr": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueCode": "MAY"
+            }
+        ]
+    },
+    "_multipleAnd": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueCode": "MAY"
+            }
+        ]
+    },
+    "_modifier": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        }
+    ],
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Generated Narrative with Details</b></p><p><b> id</b> us-core-goal-patient</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-goal-patient</b></p><p><b> version</b> : 4.1.0</p><p><b> name</b> : USCoreGoalPatient</p><p><b> derivedFrom</b> : <a> http://hl7.org/fhir/SearchParameter/clinical-patient</a></p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-04-30</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> description</b> : Who this goal is intended for</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span></p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>patient</code></p><p><b> base</b> :Goal</p><p><b> type</b> : reference</p><p><b> expression</b> : <code>Goal.subject.where(resolve() is Patient)</code></p><p><b> xpath</b> : <code>f:Goal/f:subject</code></p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    <p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>type</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>identifier</code>  (Conformance Expectation =  MAY)</p>\n    \n    \n    \n\t\t</div>"
+    }
+}

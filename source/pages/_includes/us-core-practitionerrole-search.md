@@ -1,49 +1,31 @@
 
 
-`GET [base]/PractitionerRole?practitioner.identifier=[system]|[code]`
 
-**Example:** GET [base]/PractitionerRole?practitioner.identifier=http://hl7.org/fhir/sid/us-npi%7C14\|97860456
+#### Mandatory Search Parameters:
 
-*Support:* Mandatory to support search by Practitioner identifier.
-
-*Implementation Notes:* Search based on Practitioner identifier (NPI) [(how to search by token)].
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
 
------------
+1. **SHALL** support searching practiitioner role by specialty using the **[`specialty`](SearchParameter-us-core-practitionerrole-specialty.html)** search parameter:
 
-`GET [base]/PractitionerRole?practitioner.family=[string]&given=[string]`
+    `GET [base]/PractitionerRole?specialty={[system]}|[code]`
 
-**Example:** GET [base]/PractitionerRole?practitioner.name=Henry
+    Example: GET [base]/PractitionerRole?specialty=http://hl7.org/fhir/practitioner-specialty\|cardio
 
-*Support:* Mandatory to support search by Practitioner name.
+    *Implementation Notes:* Fetches a bundle containing  PractitionerRole resources matching the specialty ([how to search by token])
 
-*Implementation Notes:* Search based on text name [(how to search by string)].
+1. **SHALL** support searching practitioner role by practitioner name and identifier using chained parameters using the **[`practitioner`](SearchParameter-us-core-practitionerrole-practitioner.html)** search parameter:
 
------------
+   - including support for these chained parameters: `identifier, name`
+   - including optional support of the `_include` parameter to indicate that these resources be included in the results: `PractitionerRole:endpoint, PractitionerRole:practitioner`
 
-`GET [base]/PractitionerRole?specialty=[system]|[code]`
+    `GET [base]/PractitionerRole?practitioner=[reference]`
 
-**Example:** GET [base]/PractitionerRole?specialty=http://hl7.org/fhir/practitioner-specialty%7Ccardio
+    Example:
 
-*Support:* Mandatory to support search by Specialty.
+    1. GET [base]/PractitionerRole?practitioner.identifier=http://hl7.org/fhir/sid/us-npi%7C14\|97860456&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole?endpoint
+    1. GET [base]/PractitionerRole?practitioner.name=Henry&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole?endpoint
 
-*Implementation Notes:*  Search based on specialty [(how to search by token)].
+    *Implementation Notes:* Fetches a bundle containing  PractitionerRole resources matching the chained parameter practitioner.name or practitioner.identifier. SHOULD support the _include for PractionerRole.practitioner and PractitionerRole.endpoint. ([how to search by reference])
 
------------
-**Searches to consider for future**
-
-  `GET [base]/PractitionerRole?location.address-city=[city]`
-  
-  `GET [base]/PractitionerRole?location.address-city=[city]&specialty=[string]`
-  
-  `GET [base]/PractitionerRole?location.near=-72.519854,42.373222&near-distance=2m`
-
-
-*Implementation Notes:*  Search based on location [(how to search by reference)].
-
-
-
-  [(how to search by reference)]: http://hl7.org/fhir/search.html#reference
-  [(how to search by token)]: http://hl7.org/fhir/search.html#token
- [(how to search by date)]: http://hl7.org/fhir/search.html#date
- [(how to search by string)]: http://hl7.org/fhir/search.html#string
+{% include link-list.md %}

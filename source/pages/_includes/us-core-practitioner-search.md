@@ -1,40 +1,29 @@
 
 
 
------------
+#### Mandatory Search Parameters:
 
-**`GET [base]/Practitioner?identifier=[system]|[code]`**
-
-**Example:** GET [base]/Practitioner?identifier=http://hl7.org/fhir/sid/us-npi%7C1497860456
-
-*Support:* Mandatory
-
-*Implementation Notes:*  Search based on practitioner identifier  [(how to search by token)].
-
-*Response Class:*
-
--   (Status 200): successful operation
--   (Status 400): invalid parameter
--   (Status 401/4xx): unauthorized request
-
------------
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
 
-**`GET [base]/Practitioner?family=[string]&given=[string]`**
+1. **SHALL** support searching for a practitioner by a string match of any part of name using the **[`name`](SearchParameter-us-core-practitioner-name.html)** search parameter:
 
-**Example:** GET [base]/Practitioner?family=Smith&given=John
+    `GET [base]/Practitioner?name=[string]`
 
-*Support:* Mandatory
+  Example: GET [base]/Practitioner?name=Smith
 
-*Implementation Notes:* Search based on text name [(how to search by string)].
+  *Implementation Notes:* Fetches a bundle of all Practitioner resources matching the name ([how to search by string])
 
-*Response Class:*
+1. **SHALL** support searching a practiitioner by an identifier such as an NPI using the **[`identifier`](SearchParameter-us-core-practitioner-identifier.html)** search parameter:
 
--   (Status 200): successful operation
--   (Status 400): invalid parameter
--   (Status 401/4xx): unauthorized request
+    `GET [base]/Practitioner?identifier={[system]}|[code]`
 
-  [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
-  [(how to search by token)]: {{site.data.fhir.path}}search.html#token
- [(how to search by date)]: {{site.data.fhir.path}}search.html#date
- [(how to search by string)]: {{site.data.fhir.path}}search.html#string
+  Example: GET [base]/Practitioner?identifier=http://hl7.org/fhir/sid/us-npi%7C1497860456
+
+  *Implementation Notes:* Fetches a bundle containing any Practitioner resources matching the identifier ([how to search by token])
+
+
+
+
+
+{% include link-list.md %}

@@ -14,17 +14,17 @@
             ]
         }
     ],
-    "date": "2019-04-25T00:14:45.813721Z",
+    "date": "2019-04-30T23:52:39.067876Z",
     "derivedFrom": "http://hl7.org/fhir/SearchParameter/individual-family",
     "description": "A portion of the family name of the patient",
     "experimental": false,
-    "expression": "Patient.name.family ",
+    "expression": "Patient.name.family",
     "modifier": [
         "missing",
         "exact",
         "contains"
     ],
-    "multipleAnd": false,
+    "multipleAnd": true,
     "multipleOr": true,
     "name": "USCorePatientFamily",
     "publisher": "HL7 International - Structured Documents Work Group",
@@ -32,7 +32,7 @@
     "type": "string",
     "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-family",
     "version": "4.1.0",
-    "xpath": "f:Patient/f:name/f:family ",
+    "xpath": "f:Patient/f:name/f:family",
     "xpathUsage": "normal",
     "resourceType": "SearchParameter",
     "_multipleOr": {
@@ -79,6 +79,6 @@
     ],
     "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Generated Narrative with Details</b></p><p><b> id</b> us-core-patient-family</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-family</b></p><p><b> version</b> : 4.1.0</p><p><b> name</b> : USCorePatientFamily</p><p><b> derivedFrom</b> : <a> <code>http://hl7.org/fhir/SearchParameter/individual-family</code></a></p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-04-25</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> description</b> : A portion of the family name of the patient</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span></p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>family</code></p><p><b> base</b> :Patient</p><p><b> type</b> : string</p><p><b> expression</b> : <code>Patient.name.family </code></p><p><b> xpath</b> : <code>f:Patient/f:name/f:family </code></p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : False  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    <p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>exact</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>contains</code>  (Conformance Expectation =  MAY)</p>\n    \n    \n    \n\t\t</div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Generated Narrative with Details</b></p><p><b> id</b> us-core-patient-family</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-family</b></p><p><b> version</b> : 4.1.0</p><p><b> name</b> : USCorePatientFamily</p><p><b> derivedFrom</b> : <a> http://hl7.org/fhir/SearchParameter/individual-family</a></p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-04-30</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> description</b> : A portion of the family name of the patient</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span></p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>family</code></p><p><b> base</b> :Patient</p><p><b> type</b> : string</p><p><b> expression</b> : <code>Patient.name.family</code></p><p><b> xpath</b> : <code>f:Patient/f:name/f:family</code></p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    <p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>exact</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>contains</code>  (Conformance Expectation =  MAY)</p>\n    \n    \n    \n\t\t</div>"
     }
 }

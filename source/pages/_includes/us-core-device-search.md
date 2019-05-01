@@ -1,26 +1,21 @@
 
-`GET /Device?patient=[id]`
-
-**Example:** GET [base]/Device?patient=1032702
 
 
-*Support:* Mandatory to support search by patient.
+#### Mandatory Search Parameters:
 
-*Implementation Notes:* Fetches a bundle of all Device resources for the specified patient [(how to search by reference)]. This search will return both implantable and non-implantable devices.  
-
-`GET /Device?patient=[id]&type=[device type (SNOMED)]`
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
 
-**Example:** GET /Device?patient=1032702&type=14106009
+1. **SHALL** support searching for all devices for a patient, including implantable devices using the **[`patient`](SearchParameter-us-core-device-patient.html)** search parameter:
 
-*Support:* Recommended to support search by patient and device type.
+    `GET [base]/Device?patient=[reference]`
 
-*Implementation Notes:* Fetches a bundle of Device resources for the specified patient of a specific Device type.  
+  Example: GET [base]/Device?patient=1137192
+
+  *Implementation Notes:* Fetches a bundle of all Device resources for the specified patient ([how to search by reference])
 
 
 
 
-  [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
-  [(how to search by token)]: {{site.data.fhir.path}}search.html#token
-  [Composite Search Parameters]: {{site.data.fhir.path}}search.html#combining
-  [(how to search by date)]: {{site.data.fhir.path}}search.html#date
+
+{% include link-list.md %}

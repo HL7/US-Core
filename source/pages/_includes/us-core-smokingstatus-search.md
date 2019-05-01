@@ -1,15 +1,23 @@
 
-`GET [base]/Observation?patient=[id]&code=72166-2`
 
-*Support:* Mandatory to support search by patient and code = '72166-2'.
 
-**Example:** GET [base]/Observation?patient=1032702&code=72166-2
+#### Mandatory Search Parameters:
 
-*Implementation Notes:*  Search based on smoking status LOINC code. Fetches a bundle of all Observation resources with Observation.code of Tobacco Smoking Status for the specified patient [(how to search by reference)] and [(how to search by token)].
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
-  [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
-  [(how to search by token)]: {{site.data.fhir.path}}search.html#token
-  [Composite Search Parameters]: {{site.data.fhir.path}}search.html#combining
-  [(how to search by date)]: {{site.data.fhir.path}}search.html#date
-  [(how to search by string)]: {{site.data.fhir.path}}search.html#string
 
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`code`](SearchParameter-us-core-observation-code.html)** search parameters:
+
+    `GET [base]/Observation?patient=[reference]&code=http://loinc.org|72166-2`
+
+    Example:
+    
+    1. GET [base]/Observation?patient=1032702&amp;code=http://loinc.org\|72166-2
+
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code. ([how to search by reference] and [how to search by token])
+
+
+
+
+
+{% include link-list.md %}

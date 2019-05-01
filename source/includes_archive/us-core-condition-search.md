@@ -10,7 +10,7 @@
 
 -----------
 
-`GET /Condition?patient=[id]&clinicalstatus=active,recurrance,remission`
+`GET /Condition?patient=[id]&clinicalstatus=active,recurrence,remission`
 
 **Example:** GET [base]/Condition?patient=1032702&clinicalstatus=active,relapse,remission
 

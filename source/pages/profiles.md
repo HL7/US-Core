@@ -9,7 +9,7 @@ The following Profiles and have been defined for this implementation guide.
 
 {% include list-simple-profiles.xhtml %}
 
-- In addition US Core uses the [Vital Signs Profile] from the FHIR Specification.
+- In addition US Core uses the [Vital Signs Profile] from the FHIR Specification.  The expanded US Core [Vital Signs Quick Start] section provides guidance on vital signs search.
 
 
 <br />

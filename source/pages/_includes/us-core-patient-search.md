@@ -1,48 +1,61 @@
 
+
+
 #### Mandatory Search Parameters:
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
 
-1. **SHALL** support fetching a Patient using the **`_id`** search parameter:
+1. **SHALL** support fetching a Patient using the **[`_id`](SearchParameter-us-core-patient-id.html)** search parameter:
 
-  `GET [base]/Patient[id]`
+    `GET [base]/Patient[id]`
 
-  Example: GET [base]/Patient/1032702
+    Example:
+    
+    1. GET [base]/Patient/1032702
+    1. GET [base]/Patient?_id=1032702
 
-  *Implementation Notes:*  (how to search by the [logical id] of the resource)
+    *Implementation Notes:*  ([how to search by the logical id] of the resource)
 
-1. **SHALL** support searching a Patient by an identifier such as a MPI using the **`identifier`** search parameter:
+1. **SHALL** support searching a patient by an identifier such as a MPI using the **[`identifier`](SearchParameter-us-core-patient-identifier.html)** search parameter:
 
-  `GET [base]/Patient?identifier={[system]}|[code]`
+    `GET [base]/Patient?identifier={[system]}|[code]`
 
-  Example: GET [base]/Patient?identifier=http://hospital.smarthealthit.org|1032702
+    Example:
+    
+    1. GET [base]/Patient?identifier=http://hospital.smarthealthit.org\|1032702
 
-  *Implementation Notes:*  (how to search by [token])
+    *Implementation Notes:* Fetches a bundle containing any Patient resources matching the identifier ([how to search by token])
 
-1. **SHALL** support searching using the **`name`** search parameter:
+1. **SHALL** support searching for a patient by a string match of any part of name using the **[`name`](SearchParameter-us-core-patient-name.html)** search parameter:
 
-  `GET [base]/Patient?name=[string]`
+    `GET [base]/Patient?name=[string]`
 
-  Example: See combination searches below
+    Example:
+    
+    1. GET [base]/Patient?name=Shaw
 
-  *Implementation Notes:* Search based on at least name and another patient element  (how to search by [string])
+    *Implementation Notes:* Fetches a bundle of all Patient resources matching the name ([how to search by string])
 
-1. **SHALL**  using the combination of the  **`birthdate and name`** search parameters:
+1. **SHALL** support searching using the combination of the **[`birthdate`](SearchParameter-us-core-patient-birthdate.html)** and **[`name`](SearchParameter-us-core-patient-name.html)** search parameters:
 
-  `GET [base]/Patient?birthdate=[date]&name=[string]`
+    `GET [base]/Patient?birthdate=[date]&name=[string]`
 
-  Example: 
+    Example:
+    
+    1. GET [base]/Patient?name=Shaw&amp;birthdate=2007-03-20
 
-  *Implementation Notes:*  (how to search by [string] and [date])
+    *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified birthdate and name ([how to search by date] and [how to search by string])
 
-1. **SHALL**  using the combination of the  **`gender and name`** search parameters:
+1. **SHALL** support searching using the combination of the **[`gender`](SearchParameter-us-core-patient-gender.html)** and **[`name`](SearchParameter-us-core-patient-name.html)** search parameters:
 
-  `GET [base]/Patient?gender=[token]&name=[string]`
+    `GET [base]/Patient?gender={[system]}|[code]&name=[string]`
 
-  Example: 
+    Example:
+    
+    1. GET [base]/Patient?name=Shaw&amp;gender=female
 
-  *Implementation Notes:*  (how to search by [token] and [string])
+    *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified gender and name ([how to search by string] and [how to search by token])
 
 
 
@@ -50,21 +63,25 @@ The following search parameters, search parameter combinations and search parame
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
 
-1. **SHOULD** support searching using the combination of the  **`birthdate and family`** search parameters:
+1. **SHOULD** support searching using the combination of the **[`birthdate`](SearchParameter-us-core-patient-birthdate.html)** and **[`family`](SearchParameter-us-core-patient-family.html)** search parameters:
 
-  `GET [base]/Patient?birthdate=[date]&family=[string]`
+    `GET [base]/Patient?birthdate=[date]&family=[string]`
 
-  Example: 
+    Example:
+    
+    1. GET [base]/Patient?family=Shaw&amp;birthdate=2007-03-20
 
-  *Implementation Notes:* . (how to search by [string] and [date])
+    *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified birthdate and family ([how to search by date] and [how to search by string])
 
-1. **SHOULD** support searching using the combination of the  **`family and gender`** search parameters:
+1. **SHOULD** support searching using the combination of the **[`family`](SearchParameter-us-core-patient-family.html)** and **[`gender`](SearchParameter-us-core-patient-gender.html)** search parameters:
 
-  `GET [base]/Patient?family=[string]&gender=[token]`
+    `GET [base]/Patient?family=[string]&gender={[system]}|[code]`
 
-  Example: 
+    Example:
+    
+    1. GET [base]/Patient?family=Shaw&amp;gender=female
 
-  *Implementation Notes:* . (how to search by [token] and [string])
+    *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified family and gender ([how to search by string] and [how to search by token])
 
 
 {% include link-list.md %}

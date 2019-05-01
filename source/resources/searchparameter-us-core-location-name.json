@@ -1,0 +1,84 @@
+{
+    "id": "us-core-location-name",
+    "base": [
+        "Location"
+    ],
+    "code": "name",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.hl7.org/Special/committees/structure/index.cfm"
+                }
+            ]
+        }
+    ],
+    "date": "2019-04-30T23:52:39.774315Z",
+    "derivedFrom": "http://hl7.org/fhir/SearchParameter/Location-name",
+    "description": "A portion of the location's name or alias",
+    "experimental": false,
+    "expression": "Location.name",
+    "modifier": [
+        "missing",
+        "exact",
+        "contains"
+    ],
+    "multipleAnd": true,
+    "multipleOr": true,
+    "name": "USCoreLocationName",
+    "publisher": "HL7 International - Structured Documents Work Group",
+    "status": "active",
+    "type": "string",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-location-name",
+    "version": "4.1.0",
+    "xpath": "f:Location/f:name",
+    "xpathUsage": "normal",
+    "resourceType": "SearchParameter",
+    "_multipleOr": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueCode": "MAY"
+            }
+        ]
+    },
+    "_multipleAnd": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueCode": "MAY"
+            }
+        ]
+    },
+    "_modifier": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        }
+    ],
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Generated Narrative with Details</b></p><p><b> id</b> us-core-location-name</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-location-name</b></p><p><b> version</b> : 4.1.0</p><p><b> name</b> : USCoreLocationName</p><p><b> derivedFrom</b> : <a> http://hl7.org/fhir/SearchParameter/Location-name</a></p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-04-30</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> description</b> : A portion of the location&#39;s name or alias</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span></p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>name</code></p><p><b> base</b> :Location</p><p><b> type</b> : string</p><p><b> expression</b> : <code>Location.name</code></p><p><b> xpath</b> : <code>f:Location/f:name</code></p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    <p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>exact</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>contains</code>  (Conformance Expectation =  MAY)</p>\n    \n    \n    \n\t\t</div>"
+    }
+}

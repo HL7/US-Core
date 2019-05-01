@@ -1,55 +1,58 @@
 
 
-`GET /CarePlan?patient=[id]&category=assess-plan`
 
-**Example:** GET [base]/CarePlan?patient=1137192&category=assess-plan
+#### Mandatory Search Parameters:
 
-*Support:* Mandatory to support search by patient.
-
-*Implementation Notes:* Search for all patient assessments and plans of treatment for a patient. Fetches a bundle of all CarePlan resources for the specified patient [(how to search by reference)] and [(how to search by token)].
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
 
------------
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-careplan-patient.html)** and **[`category`](SearchParameter-us-core-careplan-category.html)** search parameters:
 
-`GET /CarePlan?patient=[id]&category=assess-plan&date=[date]`
+    `GET [base]/CarePlan?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan`
 
-**Example:**
+    Example:
+    
+    1. GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category\|assess-plan
 
-- GET [base]/CarePlan?patient=1137192&category=assess-plan&date=ge2015-01-14
-- GET [base]/CarePlan?patient=1137192&category=assess-plan&date=ge2015-01-14&date=le2016-01-14
-
-*Support:* Mandatory to support search by date
-
-*Implementation Notes:* Search for all assessment and plan of treatment for a patient within a time period. Fetches a bundle of all CarePlan resources for the specified patient for a specified time period.  [(how to search by reference)], [(how to search by token)] and [(how to search by date)].
-
-
------------
-
-`GET /CarePlan?patient=[id]&category=assess-plan&status=active`
-
-**Example:** GET [base]/CarePlan?patient=1137192&status=active
-
-*Support:* SHOULD support search by patient and status = 'active'.
-
-*Implementation Notes:* SHOULD support search by reference and status. [(how to search by reference)], [(how to search by token)].
-
-
------------
-
-`GET /CarePlan?patient=[id]&category=assess-plan&status=active&date=[date]`
-
-**Example:** GET [base]/CarePlan?patient=1137192&category=assess-plan&datatus=active&date=ge2015-01-14
-
-*Support:* SHOULD support search by patient and status = 'active' and date.
-
-*Implementation Notes:* Search for all active assessment and plan of treatment for a patient within a time period. Fetches a bundle of all active (careplan = "active") CarePlan resources for the specified patient for a specified time period.  [(how to search by reference)], [(how to search by token)] and [(how to search by date)].
+    *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient and category=`assess-plan` ([how to search by reference] and [how to search by token])
 
 
 
+#### Optional Search Parameters:
 
-  [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
-  [`https://fhir-open-api-dstu2.smarthealthit.org/AllergyIntolerance?patient=1137192`]: https://fhir-open-api-dstu2.smarthealthit.org/AllergyIntolerance?patient=1137192
-  [(how to search by token)]: {{site.data.fhir.path}}search.html#token
-  [Composite Search Parameters]: {{site.data.fhir.path}}search.html#combining
-  [`https://fhir-open-api-dstu2.smarthealthit.org/AllergyIntolerance?patient=1137192&status=active,unconfirmed,confirmed`]: https://fhir-open-api-dstu2.smarthealthit.org/AllergyIntolerance?patient=1137192&status=active,unconfirmed,confirmed
-   [(how to search by date)]: {{site.data.fhir.path}}search.html#date
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
+
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-careplan-patient.html)** and **[`category`](SearchParameter-us-core-careplan-category.html)** and **[`date`](SearchParameter-us-core-careplan-date.html)** search parameters:
+  - including support for these comparators: `gt, lt, ge, le`
+
+    `GET [base]/CarePlan?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&date={gt|lt|ge|le}[date]`
+
+    Example:
+    
+    1. GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category\|assess-plan&amp;date=ge2019
+
+    *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient and category=`assess-plan` and date ([how to search by reference] and [how to search by token] and [how to search by date])
+
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-careplan-patient.html)** and **[`category`](SearchParameter-us-core-careplan-category.html)** and **[`status`](SearchParameter-us-core-careplan-status.html)** search parameters:
+
+    `GET [base]/CarePlan?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&status={[system]}|[code]`
+
+    Example:
+    
+    1. GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category\|assess-plan&amp;status=active
+
+    *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient and category=`assess-plan` and status=`active` ([how to search by reference] and [how to search by token])
+
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-careplan-patient.html)** and **[`category`](SearchParameter-us-core-careplan-category.html)** and **[`status`](SearchParameter-us-core-careplan-status.html)** and **[`date`](SearchParameter-us-core-careplan-date.html)** search parameters:
+  - including support for these comparators: `gt, lt, ge, le`
+
+    `GET [base]/CarePlan?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&status={[system]}|[code]&date={gt|lt|ge|le}[date]`
+
+    Example:
+    
+    1. GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category\|assess-plan&amp;status=active&amp;date=ge2019
+
+    *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient and category=`assess-plan` and status=`active` and date ([how to search by reference] and [how to search by token] and [how to search by date])
+
+
+{% include link-list.md %}

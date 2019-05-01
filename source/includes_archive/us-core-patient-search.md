@@ -1,72 +1,70 @@
 
-`GET [base]/Patient/[id]`
+#### Mandatory Search Parameters:
 
-**Example:** GET [base]/Patient/1032702
-
-
-*Support:* Mandatory
-
-*Implementation Notes:*  Fetches a single Patient
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
 
------------
+1. **SHALL** support fetching a Patient using the **`_id`** search parameter:
 
-**`GET [base]/Patient/identifier=[system]|[code]`**
+  `GET [base]/Patient[id]`
 
-**Example:** GET [base]/Patient?identifier=http://hospital.smarthealthit.org|1032702
+  Example: GET [base]/Patient/1032702
 
-*Support:* Mandatory
+  *Implementation Notes:*  (how to search by the [logical id] of the resource)
 
-*Implementation Notes:*  Fetches a single Patient by an Identifier such as a MPI
+1. **SHALL** support searching a Patient by an identifier such as a MPI using the **`identifier`** search parameter:
 
+  `GET [base]/Patient?identifier={[system]}|[code]`
 
------------
+  Example: GET [base]/Patient?identifier=http://hospital.smarthealthit.org|1032702
 
-`GET [base]/Patient?name=[string]&birthdate=[date]`
+  *Implementation Notes:*  (how to search by [token])
 
-**Example:** GET [base]/Patient?name=Shaw&birthdate=2007-03-20
+1. **SHALL** support searching using the **`name`** search parameter:
 
+  `GET [base]/Patient?name=[string]`
 
-*Support:* Mandatory
+  Example: See combination searches below
 
-*Implementation Notes:*  Search based on at least 2 patient elements -text name [(how to search by string)] and birthdate [(how to search by date)]
+  *Implementation Notes:* Search based on at least name and another patient element  (how to search by [string])
 
+1. **SHALL**  using the combination of the  **`birthdate and name`** search parameters:
 
------------
-`GET [base]/Patient?name=[string]&gender=[code]`
+  `GET [base]/Patient?birthdate=[date]&name=[string]`
 
-**Example:** GET [base]/Patient?name=Shaw&gender=female
+  Example: 
 
-*Support:* Mandatory
+  *Implementation Notes:*  (how to search by [string] and [date])
 
-*Implementation Notes:*  Search based on at least 2 patient elements -text name [(how to search by string)] and gender [(how to search by token)].
+1. **SHALL**  using the combination of the  **`gender and name`** search parameters:
 
------------
+  `GET [base]/Patient?gender=[token]&name=[string]`
 
-`GET [base]/Patient?family=[string]&gender=[code]`
+  Example: 
 
-**Example:** GET [base]/Patient?family=shaw&gender=female
-
-*Support:* SHOULD support Patient search by family name and gender
-
-*Implementation Notes:*  Search based on at least 2 patient elements -text family name [(how to search by string)] and gender [(how to search by token)].
+  *Implementation Notes:*  (how to search by [token] and [string])
 
 
------------
 
-`GET [base]/Patient?given=[string]&gender=[code]`
+#### Optional Search Parameters:
 
-**Example:** GET [base]/Patient?given=amy&gender=female
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
 
-*Support:* SHOULD support Patient search by given name and gender
+1. **SHOULD** support searching using the combination of the  **`birthdate and family`** search parameters:
 
-*Implementation Notes:*  Search based on at least 2 patient elements -text given name [(how to search by string)] and gender [(how to search by token)]
+  `GET [base]/Patient?birthdate=[date]&family=[string]`
+
+  Example: 
+
+  *Implementation Notes:* . (how to search by [string] and [date])
+
+1. **SHOULD** support searching using the combination of the  **`family and gender`** search parameters:
+
+  `GET [base]/Patient?family=[string]&gender=[token]`
+
+  Example: 
+
+  *Implementation Notes:* . (how to search by [token] and [string])
 
 
------------
-
-  [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
-  [(how to search by token)]: {{site.data.fhir.path}}search.html#token
-  [Composite Search Parameters]: {{site.data.fhir.path}}search.html#combining
-  [(how to search by date)]: {{site.data.fhir.path}}search.html#date
-  [(how to search by string)]: {{site.data.fhir.path}}search.html#string
+{% include link-list.md %}

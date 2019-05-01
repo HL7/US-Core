@@ -1,41 +1,42 @@
 
+
+
 #### Mandatory Search Parameters:
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
 
 
-1. **SHALL** support fetching an Encounter using the **`_id`** search parameter:
+1. **SHALL** support fetching an encounter using the **[`_id`](SearchParameter-us-core-encounter-id.html)** search parameter:
 
-  `GET [base]/Encounter[id]`
+    `GET [base]/Encounter[id]`
 
-  Example: GET [base]/Encounter/12354
+    Example:
+    
+    1. GET [base]/Encounter/12354
+    1. GET [base]/Encounter?_id=12354
 
-  *Implementation Notes:*  (how to search by the [logical id] of the resource)
+    *Implementation Notes:* Fetches a single Encounter ([how to search by the logical id] of the resource)
 
-1. **SHALL** support searching for all encounters for a patient using the **`patient`** search parameter:
+1. **SHALL** support searching for all encounters for a patient using the **[`patient`](SearchParameter-us-core-encounter-patient.html)** search parameter:
 
-  `GET [base]/Encounter?patient=[reference]`
+    `GET [base]/Encounter?patient=[reference]`
 
-  Example: GET [base]/Encounter?patient=1137192
+    Example:
+    
+    1. GET [base]/Encounter?patient=1137192
 
-  *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient (how to search by [reference])
+    *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient ([how to search by reference])
 
-1. **SHALL** support searching for all encounters by date using the **`date`** search parameter:
+1. **SHALL** support searching using the combination of the **[`date`](SearchParameter-us-core-encounter-date.html)** and **[`patient`](SearchParameter-us-core-encounter-patient.html)** search parameters:
   - including support for these comparators: `gt, lt, ge, le`
 
-  `GET [base]/Encounter?date={gt|lt|ge|le}[date]`
+    `GET [base]/Encounter?date={gt|lt|ge|le}[date]&patient=[reference]`
 
-  Example: See combination searches below
+    Example:
+    
+    1. GET [base]/Encounter?patient=example1&amp;date=ge2019
 
-  *Implementation Notes:* Search based on date and patient parameter (how to search by [date])
-
-1. **SHALL**  using the combination of the  **`date and patient`** search parameters:
-
-  `GET [base]/Encounter?date={gt|lt|ge|le}[date]&patient=[reference]`
-
-  Example: 
-
-  *Implementation Notes:*  (how to search by [reference] and [date])
+    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified date and patient ([how to search by date] and [how to search by reference])
 
 
 
@@ -43,173 +44,45 @@ The following search parameters, search parameter combinations and search parame
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
 
-1. **SHOULD** support searching using the **`identifier`** search parameter:
+1. **SHOULD** support searching using the **[`identifier`](i.rel_url)** search parameter:
 
-  `GET [base]/Encounter?identifier={[system]}|[code]`
+     `GET [base]/Encounter?identifier={[system]}|[code]`
 
-  Example: GET [base]/Encounter?identifier=http://hospital.smarthealthit.org|1032702
+    Example:
+    
+    1. GET [base]/Encounter?identifier=http://hospital.smarthealthit.org\|1032702
 
-  *Implementation Notes:*  (how to search by [token])
+     *Implementation Notes:* Fetches a bundle containing any Encounter resources matching the identifier ([how to search by token])
 
-1. **SHOULD** support searching using the **`status`** search parameter:
+1. **SHOULD** support searching using the combination of the **[`class`](SearchParameter-us-core-encounter-class.html)** and **[`patient`](SearchParameter-us-core-encounter-patient.html)** search parameters:
 
-  `GET [base]/Encounter?status={[system]}|[code]`
+    `GET [base]/Encounter?class={[system]}|[code]&patient=[reference]`
 
-  Example: GET [base]/Encounter?status=completed
+    Example:
+    
+    1. GET [base]/Encounter?patient=example1&amp;class= http://terminology.hl7.org/CodeSystem/v3-ActCode code\|AMB
 
-  *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient (how to search by [token])
+    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified class and patient ([how to search by reference] and [how to search by token])
 
-1. **SHOULD** support searching using the **`class`** search parameter:
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-encounter-patient.html)** and **[`type`](SearchParameter-us-core-encounter-type.html)** search parameters:
 
-  `GET [base]/Encounter?class={[system]}|[code]`
+    `GET [base]/Encounter?patient=[reference]&type={[system]}|[code]`
 
-  Example: GET [base]/Encounter?status=http://terminology.hl7.org/CodeSystem/v3-ActCode|AMB
+    Example:
+    
+    1. GET [base]/Encounter?patient=1137192&amp;type=http://www.ama-assn.org/go/cpt code\|99201
 
-  *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient (how to search by [token])
+    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and type ([how to search by reference] and [how to search by token])
 
-1. **SHOULD** support searching using the **`type`** search parameter:
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-encounter-patient.html)** and **[`status`](SearchParameter-us-core-encounter-status.html)** search parameters:
 
-  `GET [base]/Encounter?type={[system]}|[code]`
+    `GET [base]/Encounter?patient=[reference]&status={[system]}|[code]`
 
-  Example: GET [base]/Encounter?http://www.ama-assn.org/go/cpt|99201
+    Example:
+    
+    1. GET [base]/Encounter?patient=example1&amp;status=finished
 
-  *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient (how to search by [token])
-
-1. **SHOULD** support searching using the combination of the  **`class and date`** search parameters:
-
-  `GET [base]/Encounter?class=[token]&date={gt|lt|ge|le}[date]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [date])
-
-1. **SHOULD** support searching using the combination of the  **`class and date and patient`** search parameters:
-
-  `GET [base]/Encounter?class=[token]&date={gt|lt|ge|le}[date]&patient=[reference]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [reference] and [date])
-
-1. **SHOULD** support searching using the combination of the  **`class and date and patient and type`** search parameters:
-
-  `GET [base]/Encounter?class=[token]&date={gt|lt|ge|le}[date]&patient=[reference]&type=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [reference] and [date])
-
-1. **SHOULD** support searching using the combination of the  **`class and date and type`** search parameters:
-
-  `GET [base]/Encounter?class=[token]&date={gt|lt|ge|le}[date]&type=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [date])
-
-1. **SHOULD** support searching using the combination of the  **`class and patient`** search parameters:
-
-  `GET [base]/Encounter?class=[token]&patient=[reference]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [reference])
-
-1. **SHOULD** support searching using the combination of the  **`class and patient and status`** search parameters:
-
-  `GET [base]/Encounter?class=[token]&patient=[reference]&status=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [reference])
-
-1. **SHOULD** support searching using the combination of the  **`class and patient and status and type`** search parameters:
-
-  `GET [base]/Encounter?class=[token]&patient=[reference]&status=[token]&type=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [reference])
-
-1. **SHOULD** support searching using the combination of the  **`class and patient and type`** search parameters:
-
-  `GET [base]/Encounter?class=[token]&patient=[reference]&type=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [reference])
-
-1. **SHOULD** support searching using the combination of the  **`class and status`** search parameters:
-
-  `GET [base]/Encounter?class=[token]&status=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token])
-
-1. **SHOULD** support searching using the combination of the  **`class and status and type`** search parameters:
-
-  `GET [base]/Encounter?class=[token]&status=[token]&type=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token])
-
-1. **SHOULD** support searching using the combination of the  **`class and type`** search parameters:
-
-  `GET [base]/Encounter?class=[token]&type=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token])
-
-1. **SHOULD** support searching using the combination of the  **`date and patient and type`** search parameters:
-
-  `GET [base]/Encounter?date={gt|lt|ge|le}[date]&patient=[reference]&type=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [reference] and [date])
-
-1. **SHOULD** support searching using the combination of the  **`date and type`** search parameters:
-
-  `GET [base]/Encounter?date={gt|lt|ge|le}[date]&type=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [date])
-
-1. **SHOULD** support searching using the combination of the  **`patient and status`** search parameters:
-
-  `GET [base]/Encounter?patient=[reference]&status=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [reference])
-
-1. **SHOULD** support searching using the combination of the  **`patient and status and type`** search parameters:
-
-  `GET [base]/Encounter?patient=[reference]&status=[token]&type=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [reference])
-
-1. **SHOULD** support searching using the combination of the  **`patient and type`** search parameters:
-
-  `GET [base]/Encounter?patient=[reference]&type=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token] and [reference])
-
-1. **SHOULD** support searching using the combination of the  **`status and type`** search parameters:
-
-  `GET [base]/Encounter?status=[token]&type=[token]`
-
-  Example: 
-
-  *Implementation Notes:* . (how to search by [token])
+    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and status ([how to search by reference] and [how to search by token])
 
 
 {% include link-list.md %}

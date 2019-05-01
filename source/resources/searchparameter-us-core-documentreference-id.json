@@ -1,0 +1,129 @@
+{
+    "id": "us-core-documentreference-id",
+    "base": [
+        "DocumentReference"
+    ],
+    "code": "_id",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.hl7.org/Special/committees/structure/index.cfm"
+                }
+            ]
+        }
+    ],
+    "date": "2019-04-30T23:52:39.200227Z",
+    "derivedFrom": "http://hl7.org/fhir/SearchParameter/Resource-id",
+    "description": "Logical id of this artifact",
+    "experimental": false,
+    "expression": "DocumentReference.id",
+    "modifier": [
+        "missing",
+        "text",
+        "not",
+        "in",
+        "not-in",
+        "below",
+        "above",
+        "ofType"
+    ],
+    "multipleAnd": true,
+    "multipleOr": true,
+    "name": "USCoreDocumentreferenceId",
+    "publisher": "HL7 International - Structured Documents Work Group",
+    "status": "active",
+    "type": "token",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-documentreference-id",
+    "version": "4.1.0",
+    "xpath": "DocumentReference.id",
+    "xpathUsage": "normal",
+    "resourceType": "SearchParameter",
+    "_multipleOr": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueCode": "MAY"
+            }
+        ]
+    },
+    "_multipleAnd": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueCode": "MAY"
+            }
+        ]
+    },
+    "_modifier": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        }
+    ],
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Generated Narrative with Details</b></p><p><b> id</b> us-core-documentreference-id</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-documentreference-id</b></p><p><b> version</b> : 4.1.0</p><p><b> name</b> : USCoreDocumentreferenceId</p><p><b> derivedFrom</b> : <a> http://hl7.org/fhir/SearchParameter/Resource-id</a></p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-04-30</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> description</b> : Logical id of this artifact</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span></p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>_id</code></p><p><b> base</b> :DocumentReference</p><p><b> type</b> : token</p><p><b> expression</b> : <code>DocumentReference.id</code></p><p><b> xpath</b> : <code>DocumentReference.id</code></p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    <p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>text</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>not</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>in</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>not-in</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>below</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>above</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>ofType</code>  (Conformance Expectation =  MAY)</p>\n    \n    \n    \n\t\t</div>"
+    }
+}
