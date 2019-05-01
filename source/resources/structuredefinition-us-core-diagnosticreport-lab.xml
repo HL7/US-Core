@@ -61,6 +61,13 @@
       <definition value="The US Core Diagnostic Report Profile is based upon the core FHIR DiagnosticReport Resource and created to meet the 2015 Edition Common Clinical Data Set &#39;Laboratory test(s) and Laboratory value(s)/result(s)&#39; requirements."/>
       <alias value="Lab Result"/>
       <alias value="Lab Report"/>
+      <constraint>
+        <key value="us-core-7"/>
+        <severity value="error"/>
+        <human value="DiagnosticReport.result or  DiagnosticReport.presentedForm or both SHALL be present."/>
+        <expression value="result.exists() or presentedForm.exists()"/>
+        <xpath value="f:result or f:presentedForm"/>
+      </constraint>
       <mustSupport value="false"/>
       <isModifier value="false"/>
       <mapping>
