@@ -13,7 +13,7 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/PractitionerRole?specialty={[system]}|[code]`
 
     Example:
-
+    
     1. GET [base]/PractitionerRole?specialty=http://nucc.org/provider-taxonomy\|208D0000X
 
     *Implementation Notes:* Fetches a bundle containing  PractitionerRole resources matching the specialty ([how to search by token])
@@ -26,7 +26,7 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/PractitionerRole?practitioner=[reference]`
 
     Example:
-
+    
     1. GET [base]/PractitionerRole?practitioner.identifier=http://hl7.org/fhir/sid/us-npi\|97860456&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole?endpoint
     1. GET [base]/PractitionerRole?practitioner.name=Henry&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole?endpoint
 
