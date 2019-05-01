@@ -18,7 +18,7 @@ The following operations and search parameters have been defined for the US Core
 ### Search Parameters
 
 NOTE: These search parameters **SHALL NOT** be interpreted on their own as requirements for server:
-This section lists the search parameters definitions that are used within the capability statement to define the search capabilities expectations for the US Core Server.  This is not a list of search requirements for the client or server.
+This section lists the search parameters definitions that are used within the capability statement to define the search capabilities expectations for the US Core Server.  Note that these Search Parameters are derived from the base FHIR specification and customized to fully define the *conformance expectations* for each search parameter by extending the context of [capabilitystatement-expectation] extension. This extension describes level of expectation for each SearchParameter's [modifier], [comparator], [chain], [mulipleAnd] and [MultipleOr] elements. The CapabilityStatement references these SearchParameters to completely define the search capability expectations for a US Core Server. By itself, this list does not enumerate search requirements for the client or server.
 
 
 **MedicationStatement**
@@ -34,6 +34,8 @@ This section lists the search parameters definitions that are used within the ca
   - [given](SearchParameter-us-core-patient-given.html)
   - [identifier](SearchParameter-us-core-patient-identifier.html)
   - [name](SearchParameter-us-core-patient-name.html)
+  - [us-core-race]
+  - [us-core-ethnicity]
 
 **MedicationRequest**
   - [status](SearchParameter-us-core-medicationrequest-status.html)
@@ -132,11 +134,5 @@ This section lists the search parameters definitions that are used within the ca
 **CareTeam**
   - [patient](SearchParameter-us-core-careteam-patient.html)
   - [status](SearchParameter-us-core-careteam-status.html)
-
-
-
-Editors note : append these to Patient
-  - [us-core-race]
-  - [us-core-ethnicity]
 
 {% include link-list.md %}

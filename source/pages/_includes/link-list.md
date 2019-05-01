@@ -154,3 +154,6 @@
 [Argonaut Provider Directory]: http://www.fhir.org/guides/argonaut/pd//release1/index.html
 [IHE Healthcare Provider Directory]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf
 [Direct address]: https://www.healthit.gov/sites/default/files/directbasicsforprovidersqa_05092014.pdf
+[capabilitystatement-expectation]: http://hl7.org/fhir/extension-capabilitystatement-expectation.html
+[mulipleAnd]: {{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleAnd
+[mulipleOr]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleOr
