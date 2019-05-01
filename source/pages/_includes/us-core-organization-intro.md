@@ -23,7 +23,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Profile specific implementation guidance:**
 
-- Preferred identifier for Organizations is National Provider Identifier (NPI), or Clinical Laboratory Improvement Amendments (CLIA) for labs. 
+- The preferred identifier for an Organization is the National Provider Identifier (NPI), or Clinical Laboratory Improvement Amendments (CLIA) for labs. 
 
 ### Examples
 
