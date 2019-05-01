@@ -3,19 +3,19 @@
   "id" : "hl7.fhir.us.core.r4-4.0.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"
+    "valueString" : "C:\\US-Core-R4\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"
+    "valueString" : "C:\\US-Core-R4\\source\\examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/framework"
+    "valueString" : "C:\\US-Core-R4\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"
+    "valueString" : "C:\\US-Core-R4\\source\\pages"
   }],
   "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0",
   "version" : "4.0.0",
@@ -2127,12 +2127,16 @@
       "value" : "jurisdiction"
     },
     {
-      "code" : "generate",
-      "value" : "xml"
+      "code" : "generate-json",
+      "value" : "true"
     },
     {
-      "code" : "generate",
-      "value" : "JSON"
+      "code" : "generate-xml",
+      "value" : "true"
+    },
+    {
+      "code" : "generate-turtle",
+      "value" : "true"
     }]
   }
 }

@@ -112,9 +112,11 @@
 [US Core Condition Category Codes]: ValueSet-us-core-condition-category.html
 [US Core Condition Profile]: StructureDefinition-us-core-condition.html
 [US Core DiagnosticReport Profile for Laboratory Results Reporting]: StructureDefinition-us-core-diagnosticreport-lab.html
+[US Core DiagnosticReport Profile for Report and Note exchange]: StructureDefinition-us-core-diagnosticreport-note.html
 [US Core DiagnosticReport Category Codes]: ValueSet-us-core-diagnosticreport-category.html
 [US Core DocumentReference Type Value Set]: ValueSet-us-core-documentreference-type.html
-[US Core DocumentReference]: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
+[US Core DocumentReference]: StructureDefinition-us-core-documentreference.html
+[US Core DocumentReference Profile]: StructureDefinition-us-core-documentreference.html
 [US Core DocumentReferences Category Value Set]: ValueSet-us-core-documentreference-category.html
 [US Core Goal Profile]: StructureDefinition-us-core-goal.html
 [US Core Immunization Profile]: StructureDefinition-us-core-immunization.html

@@ -17,27 +17,30 @@ topofpage: true
 Clinical notes are a key component to communicate the current status of a patient. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing and even handwritten notes by a providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems.
 
 Specifically, this implementation guide defines the exchange of the following five "Common Clinical Notes".
-{: #common-clinical-notes}
 
-- [Consultation Note (11488-4)]
-- [Discharge Summary (18842-5)]
-- [History & Physical Note (34117-2)]
-- [Procedures Note (28570-0)]
-- [Progress Note (11506-3)]
+* [Consultation Note (11488-4)]
+* [Discharge Summary (18842-5)]
+* [History & Physical Note (34117-2)]
+* [Procedures Note (28570-0)]
+* [Progress Note (11506-3)]
 
-This initial list was defined after surveying the participants in Argonaut and the US Veterans Administration (VA). They represent the *minimum* set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types such as:
+and SHOULD support the DiagnosticReport categories:
 
-*TODO - link these to LOINC too*
-- Imaging
-- Pathology narrative
-- Cardiology Reports
-- Referral Note
-- Surgical Operation Note
-- Nurse Note
+* Cardiology (LP29684-5)
+* Radiology (LP29708-2)
+* Pathology (LP7839-6)
+
+The Argonaut project team provided this initial list to HL7 after surveying the participants in Argonaut and the US Veterans Administration (VA). They represent the *minimum* set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types such as:
+
+* Referral Note
+* Surgical Operation Note
+* Nurse Note
+
+The full list of note (document) types is available in the [US Core DocumentReference Type Value Set].
 
 ### FHIR Resources to Exchange Clinical Notes
 
-Both [DocumentReference] and [DiagnosticReport] resources have been [profiled] to support the exchange of clinical notes. (See  [Resource Selection](#resource-selection) for a full discussion on the decision to use these resources.)
+The [US Core DocumentReference Profile] and [US Core DiagnosticReport Profile for Report and Note exchange] support the exchange of clinical notes. (See  [Resource Selection](#resource-selection) for a full discussion on the decision to use these resources.)
 
 DocumentReference is the best choice when the narrative is broader then a specific order or report, such as a Progress Note or Discharge Summary Note. The DocumentReference Resource can point to a short 2-3 sentence status of the patient, or reference a complex CDA or Composition document which can include *both* a narrative and a discrete information.
 
@@ -47,14 +50,46 @@ There is no single best practice for representing a scanned, or narrative-only r
 
 {% include img-portrait.html img="DiagnosticReport_DocumentReference_Resource_Overlap.png" caption="Figure 1: DiagnosticReport and DocumentReference Report Overlap" %}
 
-In order to enable consistent access to scanned narrative-only clinical reports the US Core Clinical Note Server **SHALL** expose these reports through *both* DiagnosticReport and DocumentReference by representing the same attachment url using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify the duplicate data.
+In order to enable consistent access to scanned narrative-only clinical reports the Argonaut Clinical Note Server **SHALL** expose these reports through *both* DiagnosticReport and DocumentReference by representing the same attachment url using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify the duplicate data.
 
-- DocumentReference.content.attachment.url
-- DiagnosticReport.presentedForm.url
+* DocumentReference.content.attachment.url
+* DiagnosticReport.presentedForm.url
 
-For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment shall also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2)
+For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2) This guide requires servers implement the duplicate reference to allow a client to find a Pathology report, or other Diagnostic Reports, in either Resource. If servers properly categorized scanned reports and used the correct resource per report type (e.g. Pathology scan in DiagnosticReport) this wouldn't be required.
 
 {% include img.html img="both-url.jpg" caption="Figure 2: Expose a PDF Report Through Both DiagnosticReport and DocumentReference" %}
+
+**Example JSON Snippets Referencing Common Binary in DocumentReference and DiagnosticReport**
+
+DocumentReference:
+```
+{
+  ...snip...
+    "content": [
+        {
+            "attachment": {
+                "contentType": "application/xhtml",
+                "url": "http://example.org/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32",
+                "creation": "2005-12-24"
+            }
+        }
+    ]
+}
+```
+DiagnosticReport:
+```
+{
+  ...snip...
+   "presentedForm": [
+        {
+            "contentType": "application/xhtml",
+            "url": "http://example.org/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32",
+            "creation": "2005-12-24"
+        }
+    ]
+}
+```
+
 
 Note that not all scanned information stored through DocumentReference will be exposed through DiagnosticReport since DocumentReference stores other non-clinical information. For example, DocumentReference can point to an insurance card.
 
@@ -111,10 +146,10 @@ where:
 
 **Examples**
 
-{% include examplebutton.html example="note-and-report-types-scenario1" b_title = "Scenario 1" %}
-{% include examplebutton.html example="note-and-report-types-scenario2" b_title = "Scenario 2" %}
-{% include examplebutton.html example="note-and-report-types-scenario3" b_title = "Scenario 3" %}
-{% include examplebutton.html example="note-and-report-types-scenario4" b_title = "Scenario 4" %}
+{% include examplebutton.html example="note-and-report-types-scenario1" b_title = "Click on Here To See Scenario 1 Example" %}
+{% include examplebutton.html example="note-and-report-types-scenario2" b_title = "Click on Here To See Scenario 2 Example" %}
+{% include examplebutton.html example="note-and-report-types-scenario3" b_title = "Click on Here To See Scenario 3 Example" %}
+{% include examplebutton.html example="note-and-report-types-scenario4" b_title = "Click on Here To See Scenario 4 Example" %}
 
 #### Discovering Server Read and Write Formats
 
@@ -128,24 +163,24 @@ where:
 
  **Examples**
 
- {% include examplebutton.html example="read-and-write-format-scenario1" b_title = "Scenario 1" %}
- {% include examplebutton.html example="read-and-write-format-scenario2" b_title = "Scenario 2" %}
+ {% include examplebutton.html example="read-and-write-format-scenario1" b_title = "Click on Here To See Scenario 1 Example" %}
+ {% include examplebutton.html example="read-and-write-format-scenario2" b_title = "Click on Here To See Scenario 2 Example" %}
 
 ### Resource Selection
 
-When reviewing the minimal number of elements required for each Resource, the FHIR specification includes several appropriate places to include clinical notes such as Composition, ClinicalImpression, DocumentReference, DiagnosticReport, etc.  The developers of this guide also considered creating a new ClinicalNotes resource. To differentiate which resource was most appropriate these characteristics were considered:
+When reviewing the minimal number of elements required for each Resource, the [FHIR Version {{site.data.fhir.version}}]({{site.data.fhir.path}}) specification includes several appropriate places to include clinical notes such as Composition, ClinicalImpression, DocumentReference, DiagnosticReport, etc.  The developers of this guide also considered creating a new ClinicalNotes resource. To differentiate which resource was most appropriate these characteristics were considered:
 
-- Discrete result information
-- Note types
-- Consistent Client access to scanned, or narrative-only, reports
+* Discrete result information
+* Note types
+* Consistent Client access to scanned, or narrative-only, reports
 
-While several resources work well for a specific use case, they don't solve the question "find all Clinical Notes for a patient?" especially when considering the variability of Note formats. For example systems use text, XHTML, PDF, CDA to capture clinical notes. This variability led the designers to select the [DocumentReference and DiagnosticReport](#fhir-resources-to-exchange-clinical-notes) as an index mechanisms to the underlying content. In other words, a client can query one of these resources and it will return a pointer to specific resource or the underlying binary content.
+While several resources work well for a specific use case, they don't solve the question "find all Clinical Notes for a patient?" especially when considering the variability of Note formats. For example systems use text, XHTML, PDF, CDA to capture clinical notes. This variability led the designers to select the DocumentReference and DiagnosticReport resources as an index mechanisms to the underlying content. In other words, a client can query one of these resources and it will return a pointer to specific resource or the underlying binary content.
 
 For example, consider the following situation for a Discharge Summary Note:
 
-- System A supports the Discharge Summary as a Composition resource
-- System B supports the Discharge Summary as a CDA Document
-- System C supports the Discharge Summary as a PDF Document
+* System A supports the Discharge Summary as a Composition resource
+* System B supports the Discharge Summary as a CDA Document
+* System C supports the Discharge Summary as a PDF Document
 
 The following single query into DocumentReference supports all 3 scenarios:
 
@@ -165,7 +200,26 @@ However, in existing EHRs, the clinical impression is often contained with in a 
 
 ### Future Work
 
-Expand the number of notes systems must support.
+#### ONC 2019 NPRM
+ The Office of the National Coordinator (ONC) published a new [Notice of Proposed Rulemaking](https://www.healthit.gov/topic/laws-regulation-and-policy/notice-proposed-rulemaking-improve-interoperability-health) on March 4, 2019 which required these Clinical Notes:
+* Consultation Note
+* Discharge Summary Note
+* History & Physical
+* Imaging Narrative
+* Laboratory Report Narrative
+* Pathology Report Narrative
+* Procedure Note
+* Progress Note
+
+All of these clinical notes **SHALL** be exposed via DocumentReference. This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
+
+The following **SHOULD** be exposed via DiagnosticReport
+* Imaging Narrative
+* Laboratory Report Narrative
+* Pathology Report Narrative
+* Procedure Note
+
+The servers that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of Radiology (LP29708-2) will receive Radiology and other imaging reports.     
 
 ---
 footnotes:
