@@ -1219,7 +1219,19 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-device-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-procedure-code"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/us-core-diagnosticreport-lab"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1346,12 +1358,6 @@
     <resource>
       <reference>
         <reference value="ValueSet/detailed-race"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/us-core-diagnosticreport-lab"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1494,6 +1500,11 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-us-core-diagnosticreport-lab.html"/>
+          <title value="StructureDefinition Us Core DiagnosticReport Lab"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-us-core-condition.html"/>
           <title value="StructureDefinition Us Core Condition"/>
           <generation value="generated"/>
@@ -1506,11 +1517,6 @@
         <page>
           <nameUrl value="StructureDefinition-us-core-medicationrequest.html"/>
           <title value="StructureDefinition Us Core MedicationRequest"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-us-core-diagnosticreport-lab.html"/>
-          <title value="StructureDefinition Us Core DiagnosticReport Lab"/>
           <generation value="generated"/>
         </page>
       </page>
@@ -2031,6 +2037,11 @@
         <page>
           <nameUrl value="SearchParameter-us-core-patient-name.html"/>
           <title value="SearchParameter Us Core Patient Name"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-device-type.html"/>
+          <title value="SearchParameter Us Core Device Type"/>
           <generation value="generated"/>
         </page>
         <page>

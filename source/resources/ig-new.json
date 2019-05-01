@@ -1222,7 +1222,19 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-device-type"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/us-core-procedure-code"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/us-core-diagnosticreport-lab"
       },
       "exampleBoolean" : false
     },
@@ -1349,12 +1361,6 @@
     {
       "reference" : {
         "reference" : "ValueSet/detailed-race"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/us-core-diagnosticreport-lab"
       },
       "exampleBoolean" : false
     }],
@@ -1497,6 +1503,11 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "StructureDefinition-us-core-diagnosticreport-lab.html",
+          "title" : "StructureDefinition Us Core DiagnosticReport Lab",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-us-core-condition.html",
           "title" : "StructureDefinition Us Core Condition",
           "generation" : "generated"
@@ -1509,11 +1520,6 @@
         {
           "nameUrl" : "StructureDefinition-us-core-medicationrequest.html",
           "title" : "StructureDefinition Us Core MedicationRequest",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-us-core-diagnosticreport-lab.html",
-          "title" : "StructureDefinition Us Core DiagnosticReport Lab",
           "generation" : "generated"
         }]
       },
@@ -2034,6 +2040,11 @@
         {
           "nameUrl" : "SearchParameter-us-core-patient-name.html",
           "title" : "SearchParameter Us Core Patient Name",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-device-type.html",
+          "title" : "SearchParameter Us Core Device Type",
           "generation" : "generated"
         },
         {
