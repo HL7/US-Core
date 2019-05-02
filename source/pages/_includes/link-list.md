@@ -82,6 +82,7 @@
 [MimeType]: http://www.rfc-editor.org/bcp/bcp13.txt#
 [Must Support]: general-guidance.html#must-support
 [NamingSystem]: {{site.data.fhir.path}}namingsystem.html
+[Nurse Note (34746-8)]: https://loinc.org/34746-8.html
 [Observation]: {{site.data.fhir.path}}observation.html
 [Office of the National Coordinator for Health Information Technology (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
@@ -99,10 +100,12 @@
 [QI-Core]:http://hl7.org/fhir/us/qicore/
 [Quantity]: {{site.data.fhir.path}}datatypes.html#quantity
 [Radiology (LP29684-5)]: https://loinc.org/LP29684-5
+[Referral Note (57133-1)]: https://loinc.org/57133-1.html
 [search]: http://hl7.org/fhir/search.html
 [ServiceRequest]: {{site.data.fhir.path}}servicerequest.html
 [SNOMED CT]: {{site.data.fhir.path}}valueset-procedure-code.html
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
+[Surgical Operation Note (11504-8)]: https://loinc.org/11504-8.html
 [Terminology]: terminology.html "Terminology Page"
 [UCUM Codes value set]: {{site.data.fhir.path}}valueset-ucum-units.html
 [UCUM]: http://unitsofmeasure.org

@@ -32,9 +32,9 @@ and SHOULD support the DiagnosticReport categories:
 
 The Argonaut project team provided this initial list to HL7 after surveying the participants in Argonaut and the US Veterans Administration (VA). They represent the *minimum* set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types such as:
 
-* Referral Note
-* Surgical Operation Note
-* Nurse Note
+* [Referral Note (57133-1)]
+* [Surgical Operation Note (11504-8)]
+* [Nurse Note (34746-8)]
 
 The full list of note (document) types is available in the [US Core DocumentReference Type Value Set].
 
