@@ -27,7 +27,7 @@ In addition it should have (if available):
 
 **Profile specific implementation guidance:**
 
-- *Use the status code: `not-done` to represent that an immunization was *not* given.
+- \*Use the status code: `not-done` to represent that an immunization was *not* given.
 - NDC codes as a translational data element:
 Based upon the 2015 Edition Certification Requirements, [CVX vaccine codes] are required and the [NDC vaccine codes] SHOULD be supported as translations to them.  A [NDC to CVX ConceptMap] is provided and is based upon the CDC's [CVX crosswalk table]. A translation is illustrated in the example below.
 

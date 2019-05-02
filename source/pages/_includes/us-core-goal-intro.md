@@ -19,6 +19,10 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  text description of the goal
 1.  a patient
 
+**Each Goal must support:**
+
+1. target date(s):
+
 **Profile specific implementation guidance:**
 
 * none
