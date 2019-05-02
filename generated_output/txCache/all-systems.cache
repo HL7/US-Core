@@ -647,3 +647,19 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/json-patch+json"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}}####
+v: {
+  "display" : "application/json-patch+json",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

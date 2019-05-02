@@ -34,7 +34,7 @@
   </a>
       <ul class="dropdown-menu">
         <li>
-          <a href="CapabilityStatement-us-core-r4-server.html">Conformance requirements for Server</a>
+          <a href="CapabilityStatement-hl7.fhir.us.core.r4-4.0.0-server.html">Conformance requirements for Server</a>
         </li>
         <li>
           <a href="CapabilityStatement-us-core-r4-client.html">Conformance requirements for Client</a>

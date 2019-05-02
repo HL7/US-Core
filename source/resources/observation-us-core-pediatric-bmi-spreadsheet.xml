@@ -21,7 +21,7 @@
   <WindowTopX>380</WindowTopX>
   <WindowTopY>460</WindowTopY>
   <TabRatio>808</TabRatio>
-  <ActiveSheet>2</ActiveSheet>
+  <ActiveSheet>1</ActiveSheet>
   <FirstVisibleSheet>1</FirstVisibleSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
@@ -617,7 +617,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">display</Data></Cell>
-    <Cell ss:StyleID="s74"><Data ss:Type="String">**ADDED** US Core Pediatric BMI Observation Profile **ADDED** </Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">US Core Pediatric BMI Observation Profile </Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">author.name</Data></Cell>
@@ -641,7 +641,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">date</Data></Cell>
-    <Cell ss:StyleID="s77" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-04-16T18:50:01.620</Data></Cell>
+    <Cell ss:StyleID="s77" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-05-01T23:26:05.460</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">published.structure</Data></Cell>
@@ -681,6 +681,7 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -700,7 +701,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>5</ActiveRow>
+     <ActiveRow>6</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -838,7 +839,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:Formula="=Metadata!R[1]C[1]"><Data ss:Type="String">USCorePediatricBMIObservationProfile</Data></Cell>
-    <Cell ss:Formula="=Metadata!R[2]C"><Data ss:Type="String">**ADDED** US Core Pediatric BMI Observation Profile **ADDED** </Data></Cell>
+    <Cell ss:Formula="=Metadata!R[2]C"><Data ss:Type="String">US Core Pediatric BMI Observation Profile </Data></Cell>
     <Cell ss:StyleID="s91"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s92"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s92"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -3319,7 +3320,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -3341,8 +3341,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>4</ActiveRow>
-     <ActiveCol>2</ActiveCol>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
