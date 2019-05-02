@@ -13,7 +13,7 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/MedicationRequest?patient=[reference]`
 
     Example:
-    
+
     1. GET [base]/MedicationRequest?patient=14676
     1. GET [base]/MedicationRequest?patient=14676&amp;_include=MedicationRequest:medication
 
@@ -26,8 +26,9 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/MedicationRequest?patient=[reference]&status={[system]}|[code]`
 
     Example:
-    
+
     1. GET [base]/MedicationRequest?patient=1137192&amp;status=active
+    1. GET [base]/MedicationRequest?patient=1137192&amp;status=active&amp;_include=MedicationRequest:medication
 
     *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient and status ([how to search by reference] and [how to search by token])
 
@@ -45,8 +46,9 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/MedicationRequest?patient=[reference]&authoredon={gt|lt|ge|le}[date]`
 
     Example:
-    
-    1. GET [base]/MedicationStatement?patient=1137192&amp;effective=ge2019
+
+    1. GET [base]/MedicationRequest?patient=1137192&amp;effective=ge2019
+    1. GET [base]/MedicationStatement?patient=1137192&amp;effective=ge2019&amp;_include=MedicationRequest:medication
 
     *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient and date ([how to search by reference] and [how to search by date])
 

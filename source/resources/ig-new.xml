@@ -949,6 +949,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/us-core-observation-smoking-status-codes"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-careteam-provider-roles"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1622,6 +1628,11 @@
         <page>
           <nameUrl value="ValueSet-us-core-provider-role.html"/>
           <title value="ValueSet Us Core Provider Role"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="ValueSet-us-core-observation-smoking-status-codes.html"/>
+          <title value="ValueSet Us Core Observation Smoking Status Codes"/>
           <generation value="generated"/>
         </page>
         <page>
