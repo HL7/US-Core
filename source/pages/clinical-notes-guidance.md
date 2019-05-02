@@ -142,7 +142,7 @@ The note and report types for a particular server are discovered by invoking the
 
 where:
 - [contextDirection] = `incoming` for write operations and `outgoing` for read operations.
- - [context] = `DiagnosticReport.category` for DiagnosticReport report type discovery, `DocumentReference.type` for DocumentReference note type discovery and `DocumentReference.class` for DocumentReference note category discovery.
+ - [context] = `DiagnosticReport.category` for DiagnosticReport report category discovery, `DiagnosticReport.code` for DiagnosticReport report type discovery, `DocumentReference.category` for DocumentReference note category discovery, `DocumentReference.type` for DocumentReference note type discovery.
 
 **Examples**
 
