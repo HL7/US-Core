@@ -8,3 +8,11 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
 with an [example](http://hl7.org/fhir/R4/terminologies.html#example)
  binding to [SNOMED CT Clinical Findings](http://hl7.org/fhir/ValueSet/clinical-findings)
 1.  A Patient Reference  in `Goal.subject`
+
+#### Summary of the Must Support Requirements
+1. One or more  Targets  in `Goal.target`
+ with the following constraints: *Goal.target.measure is required if Goal.target.detail is populated*
+   - which should have a  date value  in `Goal.target.dueDate`
+
+#### Summary of Constraints
+1. Goal.target.measure is required if Goal.target.detail is populated

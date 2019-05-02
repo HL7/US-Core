@@ -71,7 +71,43 @@ In the context of US Core, *Must Support* on any data element SHALL be interpret
 
 Many of the profiles in this guide [reference]({{site.data.fhir.path}}references.html) other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core Careteam](StructureDefinition-us-core-careteam.html#profile) references US Core Patient.  For any other references not formally defined in a US Core profiles, the referenced resource SHOULD be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner should be a valid US Core Patient or US Core Practitioner.
 
+### When there is no source data for required data elements
+{:.no_toc}
+
+If the source system does not have data for a required data element, the core specification provides guidance which we have summarized:
+
+1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
+  - Use the code ‘unsupported’ - The source system wasn't capable of supporting this element.
+
+    Example: Patient resource where the patient name is not available.
+
+    ~~~
+    {
+      "resourceType" : "Patient",
+           ...
+           "name":
+             "extension" : [
+             "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+             "valueCode" : "unsupported"
+              }
+            "telecom" :
+            ...
+         }
+    ~~~
+
+1. For *coded* data elements:
+   - for *example*, *preferred*, or *extensible* binding strengths:
+      - use the appropriate "unknown" concept code from the value set if available
+      - use `unknown` from the [DataAbsentReason Code System] id the value set does not have the appropriate concept.
+    - for required concept code:
+       - use the appropriate "unknown" concept code from the value set if availabl
+
 ### Using Codes in US Core profiles
+
+#### Required binding for CodeableConcept Datatype
+{:.no_toc}
+
+Required binding to a value set definition means that one of the codes from the specified value set SHALL be used and using only text is not valid. In this IG, we have defined the Extensible + Max-ValueSet binding to allow for either a code from the specified value set or text. Multiple codings (translations) are permitted as is discussed below.
 
 #### Extensible binding for CodeableConcept Datatype
 {:.no_toc}
@@ -85,7 +121,8 @@ For this IG, we have defined the Extensible + Max-ValueSet binding to allow for 
 
 Example: Immunization resource vaccineCode's CVX coding - the source only has the text "4-way Influenza" and no CVX code.
 
-    \{
+~~~
+    {
       "resourceType": "Immunization",
       ...
       "vaccineCode": {
@@ -93,36 +130,7 @@ Example: Immunization resource vaccineCode's CVX coding - the source only has th
       },
       ...
     }
-
-
-#### Required binding for Code Datatype
-{:.no_toc}
-
-Required binding to a value set definition for this IG means that one of the codes from the specified value set SHALL be used. If only text is available or the local (proprietary, system) code cannot be mapped to one of the required codes the [core specification] provides guidance which we have summarized:
-
-1.  Send the resource with the code element empty
-2.  Use the [DataAbsentReason Extension] in the data type
-3.  Use the code ‘unsupported’ - The source system wasn't capable of supporting this element.
-
-Note that when a query uses a status parameter, a status will be ambiguous.
-
-Example: AllergyIntolerance resource with a status that is text only or cannot be mapped to the status value set.
-
-     \{
-       "resourceType”:“AllergyIntolerance”,
-       ...
-       “\_status”:{
-        “url” : “{{site.data.fhir.path}}StructureDefinition/data-absent-reason”,
-       “valueCode” : “unsupported”
-        ...
-      },
-     }
-
-#### Required binding for CodeableConcept Datatype
-{:.no_toc}
-
-Required binding to a value set definition means that one of the codes from the specified value set SHALL be used and using only text is not valid. In this IG, we have defined the Extensible + Max-ValueSet binding to allow for either a code from the specified value set or text. Multiple codings (translations) are permitted as is discussed below.
-
+~~~
 
 #### Using multiple codes with CodeableConcept Datatype
 {:.no_toc}
@@ -131,7 +139,7 @@ Alternate codes may be provided in addition to the standard codes defined in req
 
 Example of multiple translation for Body Weight concept code.
 
-
+~~~
     "code": {
         "coding": [
          {
@@ -160,10 +168,11 @@ Example of multiple translation for Body Weight concept code.
         ],
         "text": "weight"
       },
+~~~
 
 Example of translation of CVX vaccine code to NDC code.
 
-
+~~~
     "vaccineCode" : {
         "coding" : [
           {
@@ -178,6 +187,7 @@ Example of translation of CVX vaccine code to NDC code.
           }
         ]
       },
+~~~
 
 ####  Using UCUM codes in the [Quantity] datatype
 {:.no_toc}
@@ -291,8 +301,8 @@ The US Core implementation Guide will grow following these steps:
 
 {% include img.html img="US_Core_Growth_Path.jpg" caption="Figure 1: Growth Path of US Core" %}
 
-1. Declare candidacy - this step can be completed by presenting to the US Realm Steering Committee through a Project Scope Statement. 
-1. Get published - development a formal profile, implementation guide, or get requirements directly published in  FHIR Core. The initial publication could be an outside consortium, or vendor publication. 
+1. Declare candidacy - this step can be completed by presenting to the US Realm Steering Committee through a Project Scope Statement.
+1. Get published - development a formal profile, implementation guide, or get requirements directly published in  FHIR Core. The initial publication could be an outside consortium, or vendor publication.
 1. Pilot - coordinate with 3 or more implementers an in-person or virtual connectathon. This is the time to identify issues with the new proposal.
 1. Propose candidate for US Core to US Realm Steering Committee - receive formal approval from the US Realm SC to add.
 1. Submit formal STU comment, or propose through a ballot
@@ -309,7 +319,7 @@ The FDA formally submitted the UDI elements for testing in the Summer of 2019. T
 
 (create new UDI component profile?)
 
-**Candidates under consideration** 
+**Candidates under consideration**
 
 The following items were submitted during a US Core ballot or STU comment. Additional requirements gathering is required before testing may occur on these items:
 * [ServiceRequest] - The CDS hooks community, and other implementers are gathering requirements for the ServiceRequest Resource.

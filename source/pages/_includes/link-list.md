@@ -36,6 +36,7 @@
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
 [Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
+[DataAbsentReason Code System]: {{site.data.fhir.path}}codesystem-data-absent-reason.html
 [DiagnosticReport]: {{site.data.fhir.path}}diagnosticreport.html
 [DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
 [Discharge Summary (18842-5)]: https://loinc.org/18842-5.html
