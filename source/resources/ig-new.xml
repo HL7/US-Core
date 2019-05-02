@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.core.r4-4.0.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\US-Core-R4\source\resources"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\US-Core-R4\source\examples"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\US-Core-R4\framework"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\US-Core-R4\source\pages"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0"/>
   <version value="4.0.0"/>
@@ -661,6 +661,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CapabilityStatement/us-core-server"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-condition-category"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -949,12 +955,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/us-core-r4-client"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="SearchParameter/us-core-documentreference-type"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1183,12 +1183,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/hl7.fhir.us.core.r4-4.0.0-server"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="SearchParameter/us-core-immunization-date"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1316,6 +1310,12 @@
     <resource>
       <reference>
         <reference value="SearchParameter/us-core-documentreference-category"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/us-core-client"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -2110,13 +2110,13 @@
         <title value="Capability Statements"/>
         <generation value="markdown"/>
         <page>
-          <nameUrl value="CapabilityStatement-us-core-r4-client.html"/>
-          <title value="CapabilityStatement Us Core R4 Client"/>
+          <nameUrl value="CapabilityStatement-us-core-server.html"/>
+          <title value="CapabilityStatement Us Core Server"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CapabilityStatement-hl7.fhir.us.core.r4-4.0.0-server.html"/>
-          <title value="CapabilityStatement Hl7.fhir.us.core.r4 4.0.0 Server"/>
+          <nameUrl value="CapabilityStatement-us-core-client.html"/>
+          <title value="CapabilityStatement Us Core Client"/>
           <generation value="generated"/>
         </page>
       </page>
@@ -2146,16 +2146,12 @@
       <value value="jurisdiction"/>
     </parameter>
     <parameter>
-      <code value="generate-json"/>
-      <value value="true"/>
+      <code value="generate"/>
+      <value value="xml"/>
     </parameter>
     <parameter>
-      <code value="generate-xml"/>
-      <value value="true"/>
-    </parameter>
-    <parameter>
-      <code value="generate-turtle"/>
-      <value value="true"/>
+      <code value="generate"/>
+      <value value="JSON"/>
     </parameter>
   </definition>
 </ImplementationGuide>

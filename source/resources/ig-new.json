@@ -3,19 +3,19 @@
   "id" : "hl7.fhir.us.core.r4-4.0.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\US-Core-R4\\source\\resources"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\US-Core-R4\\source\\examples"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\US-Core-R4\\framework"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\US-Core-R4\\source\\pages"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"
   }],
   "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.r4-4.0.0",
   "version" : "4.0.0",
@@ -664,6 +664,12 @@
     },
     {
       "reference" : {
+        "reference" : "CapabilityStatement/us-core-server"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/us-core-condition-category"
       },
       "exampleBoolean" : false
@@ -952,12 +958,6 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/us-core-r4-client"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "SearchParameter/us-core-documentreference-type"
       },
       "exampleBoolean" : false
@@ -1186,12 +1186,6 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/hl7.fhir.us.core.r4-4.0.0-server"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "SearchParameter/us-core-immunization-date"
       },
       "exampleBoolean" : false
@@ -1319,6 +1313,12 @@
     {
       "reference" : {
         "reference" : "SearchParameter/us-core-documentreference-category"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/us-core-client"
       },
       "exampleBoolean" : false
     },
@@ -2113,13 +2113,13 @@
         "title" : "Capability Statements",
         "generation" : "markdown",
         "page" : [{
-          "nameUrl" : "CapabilityStatement-us-core-r4-client.html",
-          "title" : "CapabilityStatement Us Core R4 Client",
+          "nameUrl" : "CapabilityStatement-us-core-server.html",
+          "title" : "CapabilityStatement Us Core Server",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "CapabilityStatement-hl7.fhir.us.core.r4-4.0.0-server.html",
-          "title" : "CapabilityStatement Hl7.fhir.us.core.r4 4.0.0 Server",
+          "nameUrl" : "CapabilityStatement-us-core-client.html",
+          "title" : "CapabilityStatement Us Core Client",
           "generation" : "generated"
         }]
       },
@@ -2149,16 +2149,12 @@
       "value" : "jurisdiction"
     },
     {
-      "code" : "generate-json",
-      "value" : "true"
+      "code" : "generate",
+      "value" : "xml"
     },
     {
-      "code" : "generate-xml",
-      "value" : "true"
-    },
-    {
-      "code" : "generate-turtle",
-      "value" : "true"
+      "code" : "generate",
+      "value" : "JSON"
     }]
   }
 }
