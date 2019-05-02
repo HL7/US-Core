@@ -11,7 +11,7 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/CarePlan?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan`
 
     Example:
-    
+
     1. GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category\|assess-plan
 
     *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient and category=`assess-plan` ([how to search by reference] and [how to search by token])
@@ -28,8 +28,9 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/CarePlan?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&date={gt|lt|ge|le}[date]`
 
     Example:
-    
+
     1. GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category\|assess-plan&amp;date=ge2019
+    1. GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category\|assess-plan&amp;date=ge2018&amp;date=le2018
 
     *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient and category=`assess-plan` and date ([how to search by reference] and [how to search by token] and [how to search by date])
 
@@ -38,7 +39,7 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/CarePlan?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&status={[system]}|[code]`
 
     Example:
-    
+
     1. GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category\|assess-plan&amp;status=active
 
     *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient and category=`assess-plan` and status=`active` ([how to search by reference] and [how to search by token])
@@ -49,8 +50,9 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/CarePlan?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&status={[system]}|[code]&date={gt|lt|ge|le}[date]`
 
     Example:
-    
+
     1. GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category\|assess-plan&amp;status=active&amp;date=ge2019
+    1. GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category\|assess-plan&amp;status=active&amp;date=ge2018&amp;date=le2019
 
     *Implementation Notes:* Fetches a bundle of all CarePlan resources for the specified patient and category=`assess-plan` and status=`active` and date ([how to search by reference] and [how to search by token] and [how to search by date])
 
