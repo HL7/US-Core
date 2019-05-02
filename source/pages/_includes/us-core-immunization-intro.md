@@ -15,11 +15,11 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each Immunization must have:**
 
-1.  a status
+1.  a status*
 1.  a vaccine code that identifies the kind of vaccine administered
 1.  a date the vaccine was administered
 1.  a patient
-1.  a flag to indicate whether the vaccine was reported by patient rather than directly administered.
+
 
 In addition it should have (if available):
 
@@ -27,7 +27,8 @@ In addition it should have (if available):
 
 **Profile specific implementation guidance:**
 
-* **NDC codes as a translational data element**:
+- *Use the status code: `not-done` to represent that an immunization was *not* given.
+- NDC codes as a translational data element:
 Based upon the 2015 Edition Certification Requirements, [CVX vaccine codes] are required and the [NDC vaccine codes] SHOULD be supported as translations to them.  A [NDC to CVX ConceptMap] is provided and is based upon the CDC's [CVX crosswalk table]. A translation is illustrated in the example below.
 
 ### Examples
