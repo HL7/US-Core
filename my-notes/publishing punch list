@@ -2,7 +2,9 @@
 1. develop in json only mode,  turn in definitions.csv and add xml etc tabs back in before committing.
 1. add in missing pages - menu items in guidance
 1. package-list.json
-1. whether to add to vitals quickstart vitals?  since is in base FHIR specification.
-1. hand edit observation & dr, careplan, careteam, to add in fixed values to general example.  todo make a dict with values for jinja, describe in CapabilityStatements
-1. update for multipleOr to add {code,code,code} for obs and dr
-1.  change back to how to search by...
+1. cap statements
+1. capstatements fields for discussion  #1 = referecePolicy == needs a conformance extension
+1. SearchIncludes  = needs a conformance extension need to move resources tab and search when making up sps
+1. should the CapabilityStatement narrative use canonical urls or absolute or relative references
+1.fix links in capstatements  - get from brett
+1. make sure only lf
