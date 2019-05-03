@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="us-core-observation-status-smoking-status"/>
+	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-observation-status-smoking-status"/>
+	<version value="1.0.1"/>
+	<name value="USCoreObservationStatusSmokingStatus"/>
+	<title value="US Core Observation Status for Smoking Status Value Set"/>
+	<status value="active"/>
+	<date value="2019-05-02"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+	<contact>
+		<telecom>
+			<system value="other"/>
+			<value value="http://hl7.org/fhir"/>
+		</telecom>
+	</contact>
+	<description value="Codes providing the status of an observation for smoking status. Constrained to `final`and `entered-in-error`."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<compose>
+		<include>
+			<system value="http://hl7.org/fhir/observation-status"/>
+			<concept>
+				<code value="final"/>
+			</concept>
+			<concept>
+				<code value="entered-in-error"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

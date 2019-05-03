@@ -781,6 +781,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/us-core-observation-status-smoking-status"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-usps-state"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1598,6 +1604,11 @@
         <page>
           <nameUrl value="ValueSet-us-core-cvx.html"/>
           <title value="ValueSet Us Core Cvx"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="ValueSet-us-core-observation-status-smoking-status.html"/>
+          <title value="ValueSet Us Core Observation Status Smoking Status"/>
           <generation value="generated"/>
         </page>
         <page>

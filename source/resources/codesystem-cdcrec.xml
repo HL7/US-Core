@@ -18,16 +18,25 @@
 			<value value="http://hl7.org"/>
 		</telecom>
 	</contact>
-	<description value=" The U.S. Centers for Disease Control and Prevention (CDC) has prepared a code set for use in codingrace and ethnicity data. This code set is based on current federal standards for classifying data onrace and ethnicity, specifically the minimum race and ethnicity categories defined by the U.S. Office ofManagement and Budget (OMB) and a more detailed set of race and ethnicity categories maintainedby the U.S. Bureau of the Census (BC). The main purpose of the code set is to facilitate use of federalstandards for classifying data on race and ethnicity when these data are exchanged, stored, retrieved,or analyzed in electronic form. At the same time, the code set can be applied to paper-based recordsystems to the extent that these systems are used to collect, maintain, and report data on race andethnicity in accordance with current federal standards. Source: [Race and Ethnicity Code Set Version 1.0](https://www.cdc.gov/phin/resources/vocabulary/documents/cdc-race--ethnicity-background-and-purpose.pdf)"/>
+	<description value=" The U.S. Centers for Disease Control and Prevention (CDC) has prepared a code set for use in codingrace and ethnicity data. This code set is based on current federal standards for classifying data onrace and ethnicity, specifically the minimum race and ethnicity categories defined by the U.S. Office ofManagement and Budget (OMB) and a more detailed set of race and ethnicity categories maintainedby the U.S. Bureau of the Census (BC). The main purpose of the code set is to facilitate use of federalstandards for classifying data on race and ethnicity when these data are exchanged, stored, retrieved,or analyzed in electronic form. At the same time, the code set can be applied to paper-based recordsystems to the extent that these systems are used to collect, maintain, and report data on race andethnicity in accordance with current federal standards. Source: [Race and Ethnicity Code Set Version 1.0](https://www.cdc.gov/phin/resources/vocabulary/documents/cdc-race--ethnicity-background-and-purpose.pdf)."/>
 	<caseSensitive value="true"/>
 	<valueSet value="http://hl7.org/fhir/us/core/ValueSet/cdcrec"/>
 	<hierarchyMeaning value="is-a"/>
 	<content value="complete"/>
 	<count value="966"/>
+	<property>
+		<code value="abstract"/>
+		<description value="True if an element is considered 'abstract' - in other words, the code is not for use as a real concept"/>
+		<type value="boolean"/>
+	</property>
 	<concept>
 		<code value="1000-9"/>
 		<display value="Race"/>
-		<definition value="Race"/>
+		<definition value="Race, Note that this is an abstract 'grouping' concept and not for use as a real concept"/>
+		<property>
+			<code value="abstract"/>
+			<valueBoolean value="true"/>
+		</property>
 		<concept>
 			<code value="1002-5"/>
 			<display value="American Indian or Alaska Native"/>
@@ -4637,7 +4646,11 @@
 	<concept>
 		<code value="2133-7"/>
 		<display value="Ethnicity"/>
-		<definition value="Ethnicity"/>
+		<definition value="Ethnicity Note that this is an abstract 'grouping' concept and not for use as a real concept"/>
+		<property>
+			<code value="abstract"/>
+			<valueBoolean value="true"/>
+		</property>
 		<concept>
 			<code value="2135-2"/>
 			<display value="Hispanic or Latino"/>
