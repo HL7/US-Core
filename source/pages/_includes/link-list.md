@@ -9,36 +9,53 @@
 [34133-9]: http://s.details.loinc.org/LOINC/34133-9.html?sections=Comprehensive
 [5 Common Clinical Notes]: ValueSet-us-core-clinical-note-type.html
 [AllergyIntolerance]: {{site.data.fhir.path}}allergyintolerance.html
+[Argonaut Provider Directory]: http://www.fhir.org/guides/argonaut/pd//release1/index.html
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page
+[Audit Logging]: {{site.data.fhir.path}}security.html#audit
+[Audit Logging]: {{site.data.fhir.path}}security.html#audit%20logging
+[AuditEvent]: {{site.data.fhir.path}}auditevent.html
+[Authentication]: {{site.data.fhir.path}}security.html#authentication
+[Authorization/Access Control]: {{site.data.fhir.path}}security.html#authorization/access%20control
 [boundaries section]: {{ site.data.fhir.path }}documentreference.html#bnr
 [boundaries section]: {{ site.data.fhir.path }}DocumentReference.html#bnr
 [boundaries section]: {{site.data.fhir.path}}medicationrequest.html#bnr
+[capabilitystatement-expectation]: http://hl7.org/fhir/extension-capabilitystatement-expectation.html
 [CapabilityStatement]: {{site.data.fhir.path}}capabilitystatement.html
 [CapabilityStatement]: capstatements.html
 [Cardiology (LP29708-2)]: https://loinc.org/LP29708-2
 [CarePlan]: {{site.data.fhir.path}}careplan.html
+[chains]: {{site.data.fhir.path}}search.html#chaining
 [CIMI]:http://www.hl7.org/Special/Committees/cimi/index.cfm
 [ClinicalImpression]: {{site.data.fhir.path}}clinicalimpression.html
 [Code on Dental Procedures and Nomenclature (CDT Code)]: http://www.ada.org/en/publications/cdt/
 [CodeSystem]: {{site.data.fhir.path}}codesystem.html
+[Communications]: {{site.data.fhir.path}}security.html#http
+[comparators]: {{site.data.fhir.path}}search.html#prefix
 [compartment]: {{site.data.fhir.path}}compartmentdefinition.html
+[composites]: {{site.data.fhir.path}}search.html#combining
 [Composition]: {{site.data.fhir.path}}composition.html
 [ConceptMap]: {{site.data.fhir.path}}conceptmap.html
+[Condition Quick Start]: StructureDefinition-us-core-condition.html#search
 [Condition]: {{site.data.fhir.path}}condition.html
 [Conformance Requirements for Client]: CapabilityStatement-us-core-r4-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-us-core-r4-server.html "Conformance Requirements for Server Page"
 [Conformance requirements for the US Core Server]: CapabilityStatement-us-core-r4-server.html
 [Conformance]: daf-core-DocumentReference-conformance.html
+[Consent]: {{site.data.fhir.path}}consent.html
 [Consultation Note (11488-4)]: https://loinc.org/11488-4.html
 [contained]: {{site.data.fhir.path}}references.html#contained
 [core specification]: {{site.data.fhir.path}}extensibility.html#2.20.0.2.2
 [CPT-4/HCPC for procedures]: {{site.data.fhir.path}}valueset-procedure-code.html
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
 [Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
-[DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
 [DataAbsentReason Code System]: {{site.data.fhir.path}}codesystem-data-absent-reason.html
+[DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
+[Device search parameters]: {{site.data.fhir.path}}device.html#search
+[Device]: {{site.data.fhir.path}}device.html
 [DiagnosticReport]: {{site.data.fhir.path}}diagnosticreport.html
 [DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
+[Digital Signatures]: {{site.data.fhir.path}}security.html#digital%20signatures
+[Direct address]: https://www.healthit.gov/sites/default/files/directbasicsforprovidersqa_05092014.pdf
 [Discharge Summary (18842-5)]: https://loinc.org/18842-5.html
 [DocumentReference Format]: http://hl7.org/fhir/ValueSet-formatcodes.html
 [DocumentReference vs DiagnosticReport]: clinical-notes-guidance.html#documentreference-vs-diagnosticreport
@@ -49,29 +66,42 @@
 [Encounter]: {{site.data.fhir.path}}encounter.html
 [extensible]: {{site.data.fhir.path}}terminologies.html#extensible
 [FHIR Binary Resource]: http://hl7.org/fhir/binary.html
+[FHIR Communications]: {{site.data.fhir.path}}security.html#http
 [FHIR Conformance Rules]: {{site.data.fhir.path}}conformance-rules.html
 [FHIR Data Types]: {{site.data.fhir.path}}datatypes.html
+[FHIR Digital Signatures]: {{site.data.fhir.path}}security.html#digital%20signatures
 [FHIR Documents]: {{site.data.fhir.path}}documents.html
 [FHIR Paging]: {{site.data.fhir.path}}http.html#paging
+[FHIR Provenance]: {{site.data.fhir.path}}provenance.html
 [FHIR Resource]: {{site.data.fhir.path}}resource.html
 [FHIR RESTful API]: {{site.data.fhir.path}}http.html
+[FHIR RESTful operations]: {{site.data.fhir.path}}Operations.html
+[FHIR RESTful search api]: {{site.data.fhir.path}}search.html
 [FHIR Search]: {{site.data.fhir.path}}search.html
+[FHIR Security Labels]: {{site.data.fhir.path}}security-labels.html
 [FHIR Terminology]: {{site.data.fhir.path}}terminologies.html
 [FHIR Version 3.0.1]: {{site.data.fhir.path}} "FHIR Specification Home Page"
 [FHIR Version DSTU2]: http://hl7.org/fhir/DSTU2/index.html "FHIR Version DSTU2 Specification Home Page"
 [FHIR Version R4]: {{site.data.fhir.path}}index.html "FHIR Version R4 Specification Home Page"
 [FHIR Version STU3]: http://hl7.org/fhir/STU3/index.html "FHIR Version STU3 Specification Home Page"
+[Formal Profile Definition]: #profile
 [Guidance]: general-guidance.html  "General Guidance Page"
 [History & Physical Note (34117-2)]: https://loinc.org/34117-2.html
 [HL7 U.S. Data Access Framework (DAF)]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [Home]: index.html "Home Page"
+[how to search by date]: {{site.data.fhir.path}}search.html#date
+[how to search by the logical id]: {{site.data.fhir.path}}references.html#logical
+[how to search by reference]: {{site.data.fhir.path}}search.html#reference
+[how to search by string]: {{site.data.fhir.path}}search.html#string
+[how to search by token]: {{site.data.fhir.path}}search.html#token
 [HTTP]: {{site.data.fhir.path}}http.html
 [ICD-10-PCS codes]: http://www.icd10data.com/icd10pcs
+[IHE Healthcare Provider Directory]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf
 [IHE MHD]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_MHD.pdf
 [IHE XDS]: https://wiki.ihe.net/index.php/Cross-Enterprise_Document_Sharing
+[Implantable device list]: https://www.healthit.gov/test-method/implantable-device-list
 [include]: {{site.data.fhir.path}}search.html#include
 [logical view]: {{site.data.fhir.path}}formats.html#table
-[logical views]: {{site.data.fhir.path}}formats.html#table
 [managing returned resources]: {{site.data.fhir.path}}search.html#return
 [mapping]: general-guidance.html#the-2015-edition-common-clinical-data-set
 [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
@@ -81,12 +111,17 @@
 [MedicationStatement]: {{site.data.fhir.path}}medicationstatement.html
 [MedicationStatementStatus]: {{site.data.fhir.path}}valueset-medication-statement-status.html
 [MimeType]: http://www.rfc-editor.org/bcp/bcp13.txt#
+[modifiers]: {{site.data.fhir.path}}search.html#modifiers
+[mulipleAnd]: {{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleAnd
+[mulipleOr]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleOr
 [Must Support]: general-guidance.html#must-support
 [NamingSystem]: {{site.data.fhir.path}}namingsystem.html
+[Narrative]: {{site.data.fhir.path}}security.html#narrative
 [Nurse Note (34746-8)]: https://loinc.org/34746-8.html
 [Observation]: {{site.data.fhir.path}}observation.html
 [Office of the National Coordinator for Health Information Technology (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
+[ONC Provider Directory Workshop]: https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents
 [Organization]: {{site.data.fhir.path}}organization.html
 [Pathology (LP7839-6)]: https://loinc.org/LP7839-6
 [Patient]: {{site.data.fhir.path}}patient.html
@@ -100,9 +135,14 @@
 [Progress Note (11506-3)]: https://loinc.org/11506-3.html
 [QI-Core]:http://hl7.org/fhir/us/qicore/
 [Quantity]: {{site.data.fhir.path}}datatypes.html#quantity
+[quantity]: {{site.data.fhir.path}}search.html#quantity
+[Quick Start]: #search
 [Radiology (LP29684-5)]: https://loinc.org/LP29684-5
 [Referral Note (57133-1)]: https://loinc.org/57133-1.html
+[Search Parameter Registry]: {{site.data.fhir.path}}searchparameter-registry.html
 [search]: http://hl7.org/fhir/search.html
+[security considerations]: {{site.data.fhir.path}}security.html
+[Security Labels]: {{site.data.fhir.path}}security-labels.html
 [ServiceRequest]: {{site.data.fhir.path}}servicerequest.html
 [SNOMED CT]: {{site.data.fhir.path}}valueset-procedure-code.html
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
@@ -115,16 +155,16 @@
 [US Core CareTeam Profile]: StructureDefinition-us-core-careteam.html
 [US Core Condition Category Codes]: ValueSet-us-core-condition-category.html
 [US Core Condition Profile]: StructureDefinition-us-core-condition.html
+[US Core Device Profile]: StructureDefinition-us-core-device.html
+[US Core DiagnosticReport Category Codes]: ValueSet-us-core-diagnosticreport-category.html
 [US Core DiagnosticReport Profile for Laboratory Results Reporting]: StructureDefinition-us-core-diagnosticreport-lab.html
 [US Core DiagnosticReport Profile for Report and Note exchange]: StructureDefinition-us-core-diagnosticreport-note.html
-[US Core DiagnosticReport Category Codes]: ValueSet-us-core-diagnosticreport-category.html
+[US Core DocumentReference Profile]: StructureDefinition-us-core-documentreference.html
 [US Core DocumentReference Type Value Set]: ValueSet-us-core-documentreference-type.html
 [US Core DocumentReference]: StructureDefinition-us-core-documentreference.html
-[US Core DocumentReference Profile]: StructureDefinition-us-core-documentreference.html
 [US Core DocumentReferences Category Value Set]: ValueSet-us-core-documentreference-category.html
 [US Core Goal Profile]: StructureDefinition-us-core-goal.html
 [US Core Immunization Profile]: StructureDefinition-us-core-immunization.html
-[US Core Device Profile]: StructureDefinition-us-core-device.html
 [US Core Medication Profile]: StructureDefinition-us-core-medication.html
 [US Core Medication Request Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
@@ -132,36 +172,12 @@
 [US Core Procedure Profile]: StructureDefinition-us-core-procedure.html
 [US Core Result Observation Profile]: StructureDefinition-us-core-observationresults.html
 [US Core Security]: security.html
+[General Security Considerations]: security.html
 [US Core Server Capability Statement]: CapabilityStatement-us-core-r4-server.html
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
+[us-core-ethnicity]: SearchParameter-us-core-ethnicity.html
+[us-core-race]: SearchParameter-us-core-race.html
 [Value sets]: terminology.html
 [Vital Signs Profile]: {{site.data.fhir.path}}observation-vitalsigns.html
-[Condition Quick Start]: StructureDefinition-us-core-condition.html#search
-[Vital Signs Quick Start]: StructureDefinition-us-core-vitalsigns.html#search
-[Device]: {{site.data.fhir.path}}device.html
-[Formal Profile Definition]: #profile
-[modifiers]: {{site.data.fhir.path}}search.html#modifiers
-[comparators]: {{site.data.fhir.path}}search.html#prefix
-[chains]: {{site.data.fhir.path}}search.html#chaining
-[how to search by logical id]: {{site.data.fhir.path}}references.html#logical
-[how to search by token]: {{site.data.fhir.path}}search.html#token
-[how to search by string]: {{site.data.fhir.path}}search.html#string
-[how to search by date]: {{site.data.fhir.path}}search.html#date
-[how to search by reference]: {{site.data.fhir.path}}search.html#reference
-[quantity]: {{site.data.fhir.path}}search.html#quantity
-[FHIR RESTful operations]: {{site.data.fhir.path}}Operations.html
-[FHIR RESTful search api]: {{site.data.fhir.path}}search.html
-[Search Parameter Registry]: {{site.data.fhir.path}}searchparameter-registry.html
-[us-core-race]: SearchParameter-us-core-race.html
-[us-core-ethnicity]: SearchParameter-us-core-ethnicity.html
-[Device search parameters]: {{site.data.fhir.path}}device.html#search
-[Quick Start]: #search
-[ONC Provider Directory Workshop]: https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents
-[Argonaut Provider Directory]: http://www.fhir.org/guides/argonaut/pd//release1/index.html
-[IHE Healthcare Provider Directory]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf
-[Direct address]: https://www.healthit.gov/sites/default/files/directbasicsforprovidersqa_05092014.pdf
-[capabilitystatement-expectation]: http://hl7.org/fhir/extension-capabilitystatement-expectation.html
-[mulipleAnd]: {{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleAnd
-[mulipleOr]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleOr
-[Implantable device list]: https://www.healthit.gov/test-method/implantable-device-list
-[composites]: {{site.data.fhir.path}}search.html#combining
+[Vital Signs Quick Start]: vitals-search.html
+[SMART App Launch Framework]: http://www.hl7.org/fhir/smart-app-launch/history.cfml

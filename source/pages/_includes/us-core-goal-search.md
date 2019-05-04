@@ -1,20 +1,18 @@
 
 
-
 #### Mandatory Search Parameters:
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
 
-
 1. **SHALL** support searching for all goals for a patient using the **[`patient`](SearchParameter-us-core-goal-patient.html)** search parameter:
+
     `GET [base]/Goal?patient=[reference]`
 
     Example:
     
-    1. GET [base]/Goal?patient=1137192
+      1. GET [base]/Goal?patient=1137192
 
     *Implementation Notes:* Fetches a bundle of all Goal resources for the specified patient ([how to search by reference])
-
 
 
 #### Optional Search Parameters:
@@ -27,21 +25,20 @@ The following search parameters, search parameter combinations and search parame
 
     Example:
     
-    1. GET [base]/Goal?patient=1137192&amp;lifecycle-status=active
+      1. GET [base]/Goal?patient=1137192&amp;lifecycle-status=active
 
     *Implementation Notes:* Fetches a bundle of all Goal resources for the specified patient and lifecycle-status ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-goal-patient.html)** and **[`target-date`](SearchParameter-us-core-goal-target-date.html)** search parameters:
     - including support for these `target-date` comparators: `gt,lt,ge,le`
-    - optional support for composite *AND* search on `target-date` (e.g.`target-date=&target-date=&...`)
+    - including optional support for composite *AND* search on `target-date` (e.g.`target-date=&target-date=&...`)
 
     `GET [base]/Goal?patient=[reference]&target-date={gt|lt|ge|le}[date]{&target-date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
-    1. GET [base]/Goal?patient=1137192&amp;target-date=ge2015-01-14&amp;target-date=le2019-01-14
+      1. GET [base]/Goal?patient=1137192&amp;target-date=ge2015-01-14&amp;target-date=le2019-01-14
 
     *Implementation Notes:* Fetches a bundle of all Goal resources for the specified patient and target-date ([how to search by reference] and [how to search by date])
-
 
 {% include link-list.md %}

@@ -1,10 +1,8 @@
 
 
-
 #### Mandatory Search Parameters:
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
-
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-careteam-patient.html)** and **[`status`](SearchParameter-us-core-careteam-status.html)** search parameters:
 
@@ -12,11 +10,9 @@ The following search parameters, search parameter combinations and search parame
 
     Example:
     
-    1. GET [base]/CareTeam?patient=1137192&amp;status=active
+      1. GET [base]/CareTeam?patient=1137192&amp;status=active
 
     *Implementation Notes:* Fetches a bundle of all CareTeam resources for the specified patient and status =`active` ([how to search by reference] and [how to search by token])
-
-
 
 
 
