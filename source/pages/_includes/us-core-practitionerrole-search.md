@@ -3,14 +3,12 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
 
 
 1. **SHALL** support searching practitioner role by specialty using the **[`specialty`](SearchParameter-us-core-practitionerrole-specialty.html)** search parameter:
 
-    - including optional support of the `_include` parameter to indicate that these resources be included in the results: `PractitionerRole:endpoint, PractitionerRole:practitioner`
-
-    `GET [base]/PractitionerRole?specialty={[system]}|[code]`
+    - including optional support of these `_include` parameters: `PractitionerRole:endpoint,PractitionerRole:practitioner`    `GET [base]/PractitionerRole?specialty={[system]}|[code]`
 
     Example:
     
@@ -20,10 +18,8 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHALL** support searching practitioner role by practitioner name and identifier using chained parameters using the **[`practitioner`](SearchParameter-us-core-practitionerrole-practitioner.html)** search parameter:
 
-    - including support for these chained parameters: `identifier, name`
-    - including optional support of the `_include` parameter to indicate that these resources be included in the results: `PractitionerRole:endpoint, PractitionerRole:practitioner`
-
-    `GET [base]/PractitionerRole?practitioner=[reference]`
+    - including support for these chained parameters: `practitioner:identifier,name`
+    - including optional support of these `_include` parameters: `PractitionerRole:endpoint,PractitionerRole:practitioner`    `GET [base]/PractitionerRole?practitioner=[reference]`
 
     Example:
     

@@ -3,11 +3,10 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
 
 
 1. **SHALL** support searching for all conditions including problems, health concerns, and encounter diagnosis for a patient using the **[`patient`](SearchParameter-us-core-condition-patient.html)** search parameter:
-
     `GET [base]/Condition?patient=[reference]`
 
     Example:
@@ -20,7 +19,7 @@ The following search parameters, search parameter combinations and search parame
 
 #### Optional Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`clinical-status`](SearchParameter-us-core-condition-clinical-status.html)** search parameters:
 
@@ -55,9 +54,10 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and code. ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`onset-date`](SearchParameter-us-core-condition-onset-date.html)** search parameters:
-    - including support for these comparators: `gt, lt, ge, le`
+    - including support for these `onset-date` comparators: `gt,lt,ge,le`
+    - optional support for composite *AND* search on `onset-date` (e.g.`onset-date=&onset-date=&...`)
 
-    `GET [base]/Condition?patient=[reference]&onset-date={gt|lt|ge|le}[date]`
+    `GET [base]/Condition?patient=[reference]&onset-date={gt|lt|ge|le}[date]{&onset-date={gt|lt|ge|le}[date]&...}`
 
     Example:
     

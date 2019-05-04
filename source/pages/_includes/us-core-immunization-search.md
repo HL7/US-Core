@@ -3,11 +3,10 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
 
 
 1. **SHALL** support searching for all immunizations for a patient using the **[`patient`](SearchParameter-us-core-immunization-patient.html)** search parameter:
-
     `GET [base]/Immunization?patient=[reference]`
 
     Example:
@@ -20,12 +19,13 @@ The following search parameters, search parameter combinations and search parame
 
 #### Optional Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-immunization-patient.html)** and **[`date`](SearchParameter-us-core-immunization-date.html)** search parameters:
-    - including support for these comparators: `gt, lt, ge, le`
+    - including support for these `date` comparators: `gt,lt,ge,le`
+    - optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]&...`)
 
-    `GET [base]/Immunization?patient=[reference]&date={gt|lt|ge|le}[date]`
+    `GET [base]/Immunization?patient=[reference]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     

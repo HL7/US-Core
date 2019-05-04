@@ -3,11 +3,10 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
 
 
 1. **SHALL** support fetching an encounter using the **[`_id`](SearchParameter-us-core-encounter-id.html)** search parameter:
-
     `GET [base]/Encounter[id]`
 
     Example:
@@ -18,7 +17,6 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a single Encounter ([how to search by the logical id] of the resource)
 
 1. **SHALL** support searching for all encounters for a patient using the **[`patient`](SearchParameter-us-core-encounter-patient.html)** search parameter:
-
     `GET [base]/Encounter?patient=[reference]`
 
     Example:
@@ -28,9 +26,10 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient ([how to search by reference])
 
 1. **SHALL** support searching using the combination of the **[`date`](SearchParameter-us-core-encounter-date.html)** and **[`patient`](SearchParameter-us-core-encounter-patient.html)** search parameters:
-    - including support for these comparators: `gt, lt, ge, le`
+    - including support for these `date` comparators: `gt,lt,ge,le`
+    - optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]&...`)
 
-    `GET [base]/Encounter?date={gt|lt|ge|le}[date]&patient=[reference]`
+    `GET [base]/Encounter?date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}&patient=[reference]`
 
     Example:
     
@@ -42,9 +41,10 @@ The following search parameters, search parameter combinations and search parame
 
 #### Optional Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the **[`identifier`](i.rel_url)** search parameter:
+
 
      `GET [base]/Encounter?identifier={[system]}|[code]`
 

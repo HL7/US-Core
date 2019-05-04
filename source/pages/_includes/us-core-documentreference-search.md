@@ -3,11 +3,10 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
 
 
 1. **SHALL** support fetching a DocumentReference using the **[`_id`](SearchParameter-us-core-documentreference-_id.html)** search parameter:
-
     `GET [base]/DocumentReference[id]`
 
     Example:
@@ -18,7 +17,6 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a single DocumentReference. The document itself is represented as a base64 encoded binary data element or retrieved using the link provided by the resource. If the document is a  relative link to a [Binary] resource like a resource reference, it can be subsequently retrieved using: `GET [base]/Binary/[id]`. ([how to search by the logical id] of the resource)
 
 1. **SHALL** support searching for all documentreferences for a patient using the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** search parameter:
-
     `GET [base]/DocumentReference?patient=[reference]`
 
     Example:
@@ -38,9 +36,10 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and category = `clinical-note`.  See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`category`](SearchParameter-us-core-documentreference-category.html)** and **[`date`](SearchParameter-us-core-documentreference-date.html)** search parameters:
-    - including support for these comparators: `gt, lt, ge, le`
+    - including support for these `date` comparators: `gt,lt,ge,le`
+    - optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]&...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note&date={gt|lt|ge|le}[date]`
+    `GET [base]/DocumentReference?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
@@ -62,7 +61,7 @@ The following search parameters, search parameter combinations and search parame
 
 #### Optional Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`status`](SearchParameter-us-core-documentreference-status.html)** search parameters:
 
@@ -75,9 +74,10 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and status. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`type`](SearchParameter-us-core-documentreference-type.html)** and **[`period`](SearchParameter-us-core-documentreference-period.html)** search parameters:
-    - including support for these comparators: `gt, lt, ge, le`
+    - including support for these `period` comparators: `gt,lt,ge,le`
+    - optional support for composite *AND* search on `period` (e.g.`period=&period=&...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&type={[system]}|[code]&period={gt|lt|ge|le}[date]`
+    `GET [base]/DocumentReference?patient=[reference]&type={[system]}|[code]&period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]&...}`
 
     Example:
     

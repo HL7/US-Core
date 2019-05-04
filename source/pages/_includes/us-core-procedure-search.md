@@ -3,11 +3,10 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHALL be supported.  the  modifiers, comparators and chained parameters that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
 
 
 1. **SHALL** support searching for all procedures for a patient using the **[`patient`](SearchParameter-us-core-procedure-patient.html)** search parameter:
-
     `GET [base]/Procedure?patient=[reference]`
 
     Example:
@@ -17,9 +16,10 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient ([how to search by reference])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-procedure-patient.html)** and **[`date`](SearchParameter-us-core-procedure-date.html)** search parameters:
-    - including support for these comparators: `gt, lt, ge, le`
+    - including support for these `date` comparators: `gt,lt,ge,le`
+    - optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]&...`)
 
-    `GET [base]/Procedure?patient=[reference]&date={gt|lt|ge|le}[date]`
+    `GET [base]/Procedure?patient=[reference]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
@@ -31,7 +31,7 @@ The following search parameters, search parameter combinations and search parame
 
 #### Optional Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators] and [chained parameters] SHOULD be supported.
+The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-procedure-patient.html)** and **[`status`](SearchParameter-us-core-procedure-status.html)** search parameters:
 
@@ -44,9 +44,11 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient and status ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-procedure-patient.html)** and **[`code`](SearchParameter-us-core-procedure-code.html)** and **[`date`](SearchParameter-us-core-procedure-date.html)** search parameters:
-    - including support for these comparators: `gt, lt, ge, le`
+    - optional support for composite *OR* search on `code` (e.g.`code=,,...`)
+    - including support for these `date` comparators: `gt,lt,ge,le`
+    - optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]&...`)
 
-    `GET [base]/Procedure?patient=[reference]&code={[system]}|[code]&date={gt|lt|ge|le}[date]`
+    `GET [base]/Procedure?patient=[reference]&code={[system]}|[code]{,,...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     

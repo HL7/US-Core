@@ -142,7 +142,7 @@
 [Formal Profile Definition]: #profile
 [modifiers]: {{site.data.fhir.path}}search.html#modifiers
 [comparators]: {{site.data.fhir.path}}search.html#prefix
-[chained parameters]: {{site.data.fhir.path}}search.html#chaining
+[chains]: {{site.data.fhir.path}}search.html#chaining
 [how to search by logical id]: {{site.data.fhir.path}}references.html#logical
 [how to search by token]: {{site.data.fhir.path}}search.html#token
 [how to search by string]: {{site.data.fhir.path}}search.html#string
@@ -164,3 +164,4 @@
 [mulipleAnd]: {{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleAnd
 [mulipleOr]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleOr
 [Implantable device list]: https://www.healthit.gov/test-method/implantable-device-list
+[composites]: {{site.data.fhir.path}}search.html#combining
