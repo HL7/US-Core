@@ -16,7 +16,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each Practitioner must have:**
 
-1.  An identifier (NPI preferred)
+1.  An identifier which must support an NPI if available.
 1.  A name
 
 **Profile specific implementation guidance:**

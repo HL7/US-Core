@@ -1,4 +1,4 @@
-This profile sets minimum expectations for searching and fetching fetching patient documents including Clinical Notes using the [DocumentReference] resource. It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the DocumentReference resource when using this profile. 
+This profile sets minimum expectations for searching and fetching fetching patient documents including Clinical Notes using the [DocumentReference] resource. It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the DocumentReference resource when using this profile.
 
 **Example Usage Scenarios:**
 
@@ -30,6 +30,7 @@ In addition it should have (if available):
 1.  the organization responsible for the document, referred to as custodian.
 1.  a code identifying the specific details about the format of the document — over and above the content's MIME type
 1.  the patient encounter that is being referenced
+1. clinically relevant date
 
 
 **Profile specific implementation guidance:**
