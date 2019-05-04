@@ -1,25 +1,27 @@
+This profile sets minimum expectations for the [Observation] resource to record, search and fetch pediatric weight for height and age observations associated with a patient. It is based on the FHIR [Vital Signs Profile] and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile.
 
-{% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-intro.md
+**Example Usage Scenarios:**
 
-{{site.data.structuredefinitions.[id].description}}
+The following are example usage scenarios for the US Core Pediatric Weight Observation Profile:
 
-#### Scope and Usage
+- Query for pediatric weight observations belonging to a pediatric patient
+- Record pediatric weight observations belonging to a pediatric patient
 
-scope and usage text here
+### Mandatory and Must Support Data Elements
 
-#### Mandatory Data Elements and Terminology
+In addition to the mandatory and must support data elements in the FHIR Vital Signs Profile, the following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.
 
-The following data-elements are mandatory (i.e data MUST be present). blah blah blah
+**Each Observation must have:**
 
-**must have:**
+1.  a fixed code for pediatric weight for height and age measurement
+1.  a result value
 
-1. blah
-1. blah
-1. blah
+**Profile specific implementation guidance:**
 
-**Additional Profile specific implementation guidance:**
+- none
 
-#### Examples
+### Examples
 
-- list examples here
+- [Pediatric Weight Example](Observation-pediatric-wt-example.html)
+
+{% include link-list.md %}
