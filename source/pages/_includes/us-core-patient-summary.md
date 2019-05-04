@@ -2,12 +2,12 @@
 
 #### Summary of the Mandatory Requirements
 1. One or more  Identifiers  in `Patient.identifier`
-   - which must have an  uri value  in `Patient.identifier.system`
-   - which must have a  string value  in `Patient.identifier.value`
+      - which must have an  uri value  in `Patient.identifier.system`
+      - which must have a  string value  in `Patient.identifier.value`
 1. One or more  HumanNames  in `Patient.name`
  with the following constraints: *Patient.name.given  or Patient.name.family or both SHALL be present*
-   - which should have a  string value  in `Patient.name.family`
-   - which should have one or more  string values  in `Patient.name.given`
+      - which should have a  string value  in `Patient.name.family`
+      - which should have one or more  string values  in `Patient.name.given`
 1.  A  code  in `Patient.gender`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [AdministrativeGender](http://hl7.org/fhir/ValueSet/administrative-gender)

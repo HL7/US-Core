@@ -1,10 +1,10 @@
 **Extension**
 
 #### Summary of the Mandatory Requirements
-1.  A *Text* Extension  in `Extension.extension`
-   - which must have a fixed `Extension.extension.url` = `text`
-   - which must have a  string value  in `Extension.extension.valueString`
-1.  An  uri  in `Extension.url`
+   - which must have at least  a *Text* Extension value  in `Extension.extension`
+      - which must have a fixed `Extension.extension.url` = `text`
+      - which must have a  string value  in `Extension.extension.valueString`
+   - which must have a fixed `Extension.url` = `http://hl7.org/fhir/us/core/StructureDefinition/us-core-race`
 
 #### Summary of the Must Support Requirements
 1. One or more *Ombcategory* Extensions  in `Extension.extension`
