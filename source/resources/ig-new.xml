@@ -559,6 +559,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/us-core-observation-lab"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="SearchParameter/us-core-questionnaire-context-type-value"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -746,12 +752,6 @@
     <resource>
       <reference>
         <reference value="SearchParameter/us-core-allergyintolerance-clinical-status"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/us-core-observationresults"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1397,6 +1397,11 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-us-core-observation-lab.html"/>
+          <title value="StructureDefinition Us Core Observation Lab"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-us-core-allergyintolerance.html"/>
           <title value="StructureDefinition Us Core AllergyIntolerance"/>
           <generation value="generated"/>
@@ -1429,11 +1434,6 @@
         <page>
           <nameUrl value="StructureDefinition-us-core-medicationstatement.html"/>
           <title value="StructureDefinition Us Core MedicationStatement"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-us-core-observationresults.html"/>
-          <title value="StructureDefinition Us Core Observationresults"/>
           <generation value="generated"/>
         </page>
         <page>

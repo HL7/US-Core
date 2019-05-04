@@ -562,6 +562,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/us-core-observation-lab"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "SearchParameter/us-core-questionnaire-context-type-value"
       },
       "exampleBoolean" : false
@@ -749,12 +755,6 @@
     {
       "reference" : {
         "reference" : "SearchParameter/us-core-allergyintolerance-clinical-status"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/us-core-observationresults"
       },
       "exampleBoolean" : false
     },
@@ -1400,6 +1400,11 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "StructureDefinition-us-core-observation-lab.html",
+          "title" : "StructureDefinition Us Core Observation Lab",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-us-core-allergyintolerance.html",
           "title" : "StructureDefinition Us Core AllergyIntolerance",
           "generation" : "generated"
@@ -1432,11 +1437,6 @@
         {
           "nameUrl" : "StructureDefinition-us-core-medicationstatement.html",
           "title" : "StructureDefinition Us Core MedicationStatement",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-us-core-observationresults.html",
-          "title" : "StructureDefinition Us Core Observationresults",
           "generation" : "generated"
         },
         {

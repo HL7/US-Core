@@ -38,8 +38,8 @@ No| CCDS Data Element | US Core Profile | FHIR Resource
 (8) |  Problems | [US Core Condition Profile] | Condition
 (9) |  Medications | [US Core Medication Profile], [US Core Medication Statement Profile], [US Core Medication Request Profile] | Medication, MedicationStatement, MedicationRequest
 (10) |  Medication allergies | [US Core Allergies Profile] | AllergyIntolerance
-(11) |  Laboratory test(s) | [US Core Result Observation Profile], [US Core DiagnosticReport Profile for Laboratory Results Reporting]| Observation, DiagnosticReport
-(12) |  Laboratory value(s)/result(s) |  [US Core Result Observation Profile], [US Core DiagnosticReport Profile for Laboratory Results Reporting] | Observation, DiagnosticReport
+(11) |  Laboratory test(s) | [US Core Laboratory Result Observation Profile], [US Core DiagnosticReport Profile for Laboratory Results Reporting]| Observation, DiagnosticReport
+(12) |  Laboratory value(s)/result(s) |  [US Core Laboratory Result Observation Profile], [US Core DiagnosticReport Profile for Laboratory Results Reporting] | Observation, DiagnosticReport
 (13) |  Vital signs | [Vital Signs Profile] (From FHIR Core Profiles for Observation) | Observation
 (14) |  (no longer required) | -
 (15) |  Procedures | [US Core Procedure Profile] | Procedure
@@ -192,7 +192,7 @@ Example of translation of CVX vaccine code to NDC code.
 ####  Using UCUM codes in the [Quantity] datatype
 {:.no_toc}
 
-Both the [Vital Signs Profile] and [US Core Result Observation Profile] bind the `valueQuantity` datatypes to the [UCUM] code system.  A FHIR [UCUM Codes value set] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or the units are missing altogether which will likely occur in the real world.  
+Both the [Vital Signs Profile] and [US Core Laboratory Result Observation Profile] bind the `valueQuantity` datatypes to the [UCUM] code system.  A FHIR [UCUM Codes value set] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or the units are missing altogether which will likely occur in the real world.  
 
 **UCUM code provided**
 

@@ -170,7 +170,7 @@
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
 [US Core Patient Profile]: StructureDefinition-us-core-patient.html
 [US Core Procedure Profile]: StructureDefinition-us-core-procedure.html
-[US Core Result Observation Profile]: StructureDefinition-us-core-observationresults.html
+[US Core Laboratory Result Observation Profile]: StructureDefinition-us-core-observation-lab.html
 [US Core Security]: security.html
 [General Security Considerations]: security.html
 [US Core Server Capability Statement]: CapabilityStatement-us-core-r4-server.html
