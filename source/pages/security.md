@@ -26,7 +26,7 @@ For the purposes of US Core, security conformance requirements are as follows:
 -   Systems SHALL use TLS version 1.2 or higher for all transmissions not taking place over a secure network connection.
     (Using TLS even within a secured network environment is still encouraged to provide defense in depth.) US Federal systems SHOULD conform with FIPS PUB 140-2.
 -   Systems SHALL conform to [FHIR Communications] requirements.
--   For Authentication and Authorization, Systems SHOULD use the [SMART App Launch Framework]. NOTE: The Smart On FHIR specifications include the required OAuth2 scopes for enabling security decisions.
+-   For Authentication and Authorization, Systems SHALL use the [SMART App Launch Framework]. NOTE: The Smart On FHIR specifications include the required OAuth2 scopes for enabling security decisions.
 -   Systems SHOULD implement requirements from [FHIR Security Labels] to provide information on the type and sensitivity of data.
 -   Systems SHALL implement consent requirements per their state, local, and institutional policies. The Business Associate Agreements SHOULD document systems mutual consent requirements. US Core actors SHALL ensure that any necessary consent records such DAF actors SHALL ensure that any necessary FHIR Consent records exist DAF actors SHALL ensure that FHIR [Consent] or other consent records exist and are reviewed prior to each exchange of patient-identifiable healthcare information. This verification should be logged in the same manner as other transactions, as discussed above under [General Security Considerations].
 -   Systems SHOULD makes the right Provenance statements using the [FHIR Provenance] resource and associated requirements.
