@@ -75,7 +75,7 @@
 [FHIR Provenance]: {{site.data.fhir.path}}provenance.html
 [FHIR Resource]: {{site.data.fhir.path}}resource.html
 [FHIR RESTful API]: {{site.data.fhir.path}}http.html
-[FHIR RESTful operations]: {{site.data.fhir.path}}Operations.html
+[FHIR RESTful operations]: {{site.data.fhir.path}}operations.html
 [FHIR RESTful search api]: {{site.data.fhir.path}}search.html
 [FHIR Search]: {{site.data.fhir.path}}search.html
 [FHIR Security Labels]: {{site.data.fhir.path}}security-labels.html
