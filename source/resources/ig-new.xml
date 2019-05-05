@@ -1153,6 +1153,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-goal-target-date"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="SearchParameter/us-core-diagnosticreport-patient"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1964,6 +1970,11 @@
         <page>
           <nameUrl value="SearchParameter-us-core-procedure-patient.html"/>
           <title value="SearchParameter Us Core Procedure Patient"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-goal-target-date.html"/>
+          <title value="SearchParameter Us Core Goal Target Date"/>
           <generation value="generated"/>
         </page>
         <page>
