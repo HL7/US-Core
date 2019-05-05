@@ -21,7 +21,7 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-careplan-patient.html)** and **[`category`](SearchParameter-us-core-careplan-category.html)** and **[`date`](SearchParameter-us-core-careplan-date.html)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]&...`)
+    - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
     `GET [base]/CarePlan?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
@@ -44,7 +44,7 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-careplan-patient.html)** and **[`category`](SearchParameter-us-core-careplan-category.html)** and **[`status`](SearchParameter-us-core-careplan-status.html)** and **[`date`](SearchParameter-us-core-careplan-date.html)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]&...`)
+    - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
     `GET [base]/CarePlan?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&status={[system]}|[code]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 

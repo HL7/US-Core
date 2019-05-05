@@ -31,7 +31,7 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-goal-patient.html)** and **[`target-date`](SearchParameter-us-core-goal-target-date.html)** search parameters:
     - including support for these `target-date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `target-date` (e.g.`target-date=&target-date=&...`)
+    - including optional support for composite *AND* search on `target-date` (e.g.`target-date=[date]&target-date=[date]]&...`)
 
     `GET [base]/Goal?patient=[reference]&target-date={gt|lt|ge|le}[date]{&target-date={gt|lt|ge|le}[date]&...}`
 

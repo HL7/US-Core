@@ -3,7 +3,7 @@
 #### Summary of the Mandatory Requirements
 1.  A  CodeableConcept  in `AllergyIntolerance.code`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [Common substances for allergy and intolerance documentation including refutations](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion)
+ binding to [](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion)
 1.  A Patient Reference  in `AllergyIntolerance.patient`
 
 #### Summary of the Must Support Requirements

@@ -53,7 +53,7 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`onset-date`](SearchParameter-us-core-condition-onset-date.html)** search parameters:
     - including support for these `onset-date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `onset-date` (e.g.`onset-date=&onset-date=&...`)
+    - including optional support for composite *AND* search on `onset-date` (e.g.`onset-date=[date]&onset-date=[date]]&...`)
 
     `GET [base]/Condition?patient=[reference]&onset-date={gt|lt|ge|le}[date]{&onset-date={gt|lt|ge|le}[date]&...}`
 

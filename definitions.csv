@@ -1,5 +1,5 @@
 Configuration Parameter,Configuration Value ( use '|' for lists)
-onlyJson,TRUE
+onlyJson,FALSE
 allviews,TRUE
 broken-links,warning
 canonicalBase,http://hl7.org/fhir/us/core
@@ -25,7 +25,7 @@ paths.resources,source/resources|source/examples
 paths.specification,http://build.fhir.org
 paths.temp,generated_output/temp
 paths.txCache,generated_output/txCache
-paths.history,http://www.hl7.org/fhir/us/core/history.cfml
+paths.history,http://hl7.org/fhir/us/core/history.html
 publisher,HL7 International - Structured Documents Work Group
 contact.system,url
 contact.value,http://www.hl7.org/Special/committees/structure/index.cfm

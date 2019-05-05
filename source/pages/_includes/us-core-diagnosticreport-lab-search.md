@@ -15,9 +15,9 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and  a category code = `LAB` ([how to search by reference] and [how to search by token])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`code`](SearchParameter-us-core-diagnosticreport-code.html)** search parameters:
-    - including optional support for composite *OR* search on `code` (e.g.`code=,,...`)
+    - including optional support for composite *OR* search on `code` (e.g.`code={[system]}|[code],{[system]}|[code],...`)
 
-    `GET [base]/DiagnosticReport?patient=[reference]&code={[system]}|[code]{,,...}`
+    `GET [base]/DiagnosticReport?patient=[reference]&code={[system]}|[code]{,{[system]}|[code],...}`
 
     Example:
     
@@ -27,7 +27,7 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`category`](SearchParameter-us-core-diagnosticreport-category.html)** and **[`date`](SearchParameter-us-core-diagnosticreport-date.html)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]&...`)
+    - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
     `GET [base]/DiagnosticReport?patient=[reference]&category=http://terminology.hl7.org/CodeSystem/v2-0074|LAB&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
@@ -53,11 +53,11 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and status ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`code`](SearchParameter-us-core-diagnosticreport-code.html)** and **[`date`](SearchParameter-us-core-diagnosticreport-date.html)** search parameters:
-    - including optional support for composite *OR* search on `code` (e.g.`code=,,...`)
+    - including optional support for composite *OR* search on `code` (e.g.`code={[system]}|[code],{[system]}|[code],...`)
     - including support for these `date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]&...`)
+    - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
-    `GET [base]/DiagnosticReport?patient=[reference]&code={[system]}|[code]{,,...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/DiagnosticReport?patient=[reference]&code={[system]}|[code]{,{[system]}|[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     

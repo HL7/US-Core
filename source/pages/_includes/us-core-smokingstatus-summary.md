@@ -3,10 +3,10 @@
 #### Summary of the Mandatory Requirements
 1.  A  code  in `Observation.status`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
- binding to [](ValueSet-us-core-observation-status-smoking-status.html)
+ binding to [US Core Observation Status for Smoking Status Value Set](ValueSet-us-core-observation-status-smoking-status.html)
 1.  A  CodeableConcept  in `Observation.code`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [](ValueSet-us-core-observation-smoking-status-codes.html)
+ binding to [US Core Observation Smoking Status Codes Value Set](ValueSet-us-core-observation-smoking-status-codes.html)
 1.  A Patient Reference  in `Observation.subject`
 1.  An  instant  in `Observation.issued`
 1.  A  CodeableConcept  in `Observation.valueCodeableConcept`

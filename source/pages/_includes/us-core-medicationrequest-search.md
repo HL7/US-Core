@@ -37,7 +37,7 @@ The following search parameters, search parameter combinations and search parame
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-medicationrequest-patient.html)** and **[`authoredon`](SearchParameter-us-core-medicationrequest-authoredon.html)** search parameters:
     - including optional support for these `_include` parameters: `MedicationRequest:medication`
     - including support for these `authoredon` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `authoredon` (e.g.`authoredon=&authoredon=&...`)
+    - including optional support for composite *AND* search on `authoredon` (e.g.`authoredon=[date]&authoredon=[date]]&...`)
 
     `GET [base]/MedicationRequest?patient=[reference]&authoredon={gt|lt|ge|le}[date]{&authoredon={gt|lt|ge|le}[date]&...}`
 
