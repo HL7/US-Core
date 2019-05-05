@@ -21,37 +21,41 @@ NOTE: These search parameters **SHALL NOT** be interpreted on their own as requi
 This section lists the search parameters definitions that are used within the capability statement to define the search capabilities expectations for the US Core Server.  This is not a list of search requirements for the client or server.
 
 
+**PractitionerRole**
+  - [specialty](SearchParameter-us-core-practitionerrole-specialty.html)
+  - [practitioner](SearchParameter-us-core-practitionerrole-practitioner.html)
+
+**Condition**
+  - [category](SearchParameter-us-core-condition-category.html)
+  - [clinical-status](SearchParameter-us-core-condition-clinical-status.html)
+  - [patient](SearchParameter-us-core-condition-patient.html)
+  - [onset-date](SearchParameter-us-core-condition-onset-date.html)
+  - [code](SearchParameter-us-core-condition-code.html)
+
 **MedicationRequest**
   - [status](SearchParameter-us-core-medicationrequest-status.html)
   - [patient](SearchParameter-us-core-medicationrequest-patient.html)
   - [authoredon](SearchParameter-us-core-medicationrequest-authoredon.html)
 
-**MedicationStatement**
-  - [status](SearchParameter-us-core-medicationstatement-status.html)
-  - [patient](SearchParameter-us-core-medicationstatement-patient.html)
-  - [effective](SearchParameter-us-core-medicationstatement-effective.html)
-
-**Immunization**
-  - [patient](SearchParameter-us-core-immunization-patient.html)
-  - [status](SearchParameter-us-core-immunization-status.html)
-  - [date](SearchParameter-us-core-immunization-date.html)
+**Location**
+  - [name](SearchParameter-us-core-location-name.html)
+  - [address](SearchParameter-us-core-location-address.html)
+  - [address-city](SearchParameter-us-core-location-address-city.html)
+  - [address-state](SearchParameter-us-core-location-address-state.html)
+  - [address-postalcode](SearchParameter-us-core-location-address-postalcode.html)
 
 **AllergyIntolerance**
   - [clinical-status](SearchParameter-us-core-allergyintolerance-clinical-status.html)
   - [patient](SearchParameter-us-core-allergyintolerance-patient.html)
 
-**Patient**
-  - [_id](SearchParameter-us-core-patient-id.html)
-  - [birthdate](SearchParameter-us-core-patient-birthdate.html)
-  - [family](SearchParameter-us-core-patient-family.html)
-  - [gender](SearchParameter-us-core-patient-gender.html)
-  - [given](SearchParameter-us-core-patient-given.html)
-  - [identifier](SearchParameter-us-core-patient-identifier.html)
-  - [name](SearchParameter-us-core-patient-name.html)
+**Device**
+  - [patient](SearchParameter-us-core-device-patient.html)
+  - [type](SearchParameter-us-core-device-type.html)
 
-**Organization**
-  - [name](SearchParameter-us-core-organization-name.html)
-  - [address](SearchParameter-us-core-organization-address.html)
+**Immunization**
+  - [patient](SearchParameter-us-core-immunization-patient.html)
+  - [status](SearchParameter-us-core-immunization-status.html)
+  - [date](SearchParameter-us-core-immunization-date.html)
 
 **Practitioner**
   - [name](SearchParameter-us-core-practitioner-name.html)
@@ -65,23 +69,9 @@ This section lists the search parameters definitions that are used within the ca
   - [date](SearchParameter-us-core-procedure-date.html)
   - [code](SearchParameter-us-core-procedure-code.html)
 
-**Goal**
-  - [lifecycle-status](SearchParameter-us-core-goal-lifecycle-status.html)
-  - [patient](SearchParameter-us-core-goal-patient.html)
-  - [target-date](SearchParameter-us-core-goal-target-date.html)
-
-**CarePlan**
-  - [category](SearchParameter-us-core-careplan-category.html)
-  - [date](SearchParameter-us-core-careplan-date.html)
-  - [patient](SearchParameter-us-core-careplan-patient.html)
-  - [status](SearchParameter-us-core-careplan-status.html)
-
-**Condition**
-  - [category](SearchParameter-us-core-condition-category.html)
-  - [clinical-status](SearchParameter-us-core-condition-clinical-status.html)
-  - [patient](SearchParameter-us-core-condition-patient.html)
-  - [onset-date](SearchParameter-us-core-condition-onset-date.html)
-  - [code](SearchParameter-us-core-condition-code.html)
+**Organization**
+  - [name](SearchParameter-us-core-organization-name.html)
+  - [address](SearchParameter-us-core-organization-address.html)
 
 **DiagnosticReport**
   - [status](SearchParameter-us-core-diagnosticreport-status.html)
@@ -90,18 +80,10 @@ This section lists the search parameters definitions that are used within the ca
   - [code](SearchParameter-us-core-diagnosticreport-code.html)
   - [date](SearchParameter-us-core-diagnosticreport-date.html)
 
-**PractitionerRole**
-  - [specialty](SearchParameter-us-core-practitionerrole-specialty.html)
-  - [practitioner](SearchParameter-us-core-practitionerrole-practitioner.html)
-
-**Encounter**
-  - [_id](SearchParameter-us-core-encounter-id.html)
-  - [class](SearchParameter-us-core-encounter-class.html)
-  - [date](SearchParameter-us-core-encounter-date.html)
-  - [identifier](SearchParameter-us-core-encounter-identifier.html)
-  - [patient](SearchParameter-us-core-encounter-patient.html)
-  - [status](SearchParameter-us-core-encounter-status.html)
-  - [type](SearchParameter-us-core-encounter-type.html)
+**Goal**
+  - [lifecycle-status](SearchParameter-us-core-goal-lifecycle-status.html)
+  - [patient](SearchParameter-us-core-goal-patient.html)
+  - [target-date](SearchParameter-us-core-goal-target-date.html)
 
 **DocumentReference**
   - [_id](SearchParameter-us-core-documentreference-id.html)
@@ -112,16 +94,38 @@ This section lists the search parameters definitions that are used within the ca
   - [date](SearchParameter-us-core-documentreference-date.html)
   - [period](SearchParameter-us-core-documentreference-period.html)
 
-**Device**
-  - [patient](SearchParameter-us-core-device-patient.html)
-  - [type](SearchParameter-us-core-device-type.html)
+**MedicationStatement**
+  - [status](SearchParameter-us-core-medicationstatement-status.html)
+  - [patient](SearchParameter-us-core-medicationstatement-patient.html)
+  - [effective](SearchParameter-us-core-medicationstatement-effective.html)
 
-**Location**
-  - [name](SearchParameter-us-core-location-name.html)
-  - [address](SearchParameter-us-core-location-address.html)
-  - [address-city](SearchParameter-us-core-location-address-city.html)
-  - [address-state](SearchParameter-us-core-location-address-state.html)
-  - [address-postalcode](SearchParameter-us-core-location-address-postalcode.html)
+**CarePlan**
+  - [category](SearchParameter-us-core-careplan-category.html)
+  - [date](SearchParameter-us-core-careplan-date.html)
+  - [patient](SearchParameter-us-core-careplan-patient.html)
+  - [status](SearchParameter-us-core-careplan-status.html)
+
+**Patient**
+  - [_id](SearchParameter-us-core-patient-id.html)
+  - [birthdate](SearchParameter-us-core-patient-birthdate.html)
+  - [family](SearchParameter-us-core-patient-family.html)
+  - [gender](SearchParameter-us-core-patient-gender.html)
+  - [given](SearchParameter-us-core-patient-given.html)
+  - [identifier](SearchParameter-us-core-patient-identifier.html)
+  - [name](SearchParameter-us-core-patient-name.html)
+
+**Encounter**
+  - [_id](SearchParameter-us-core-encounter-id.html)
+  - [class](SearchParameter-us-core-encounter-class.html)
+  - [date](SearchParameter-us-core-encounter-date.html)
+  - [identifier](SearchParameter-us-core-encounter-identifier.html)
+  - [patient](SearchParameter-us-core-encounter-patient.html)
+  - [status](SearchParameter-us-core-encounter-status.html)
+  - [type](SearchParameter-us-core-encounter-type.html)
+
+**CareTeam**
+  - [patient](SearchParameter-us-core-careteam-patient.html)
+  - [status](SearchParameter-us-core-careteam-status.html)
 
 **Observation**
   - [status](SearchParameter-us-core-observation-status.html)
@@ -129,10 +133,6 @@ This section lists the search parameters definitions that are used within the ca
   - [code](SearchParameter-us-core-observation-code.html)
   - [date](SearchParameter-us-core-observation-date.html)
   - [patient](SearchParameter-us-core-observation-patient.html)
-
-**CareTeam**
-  - [patient](SearchParameter-us-core-careteam-patient.html)
-  - [status](SearchParameter-us-core-careteam-status.html)
 
 
 
