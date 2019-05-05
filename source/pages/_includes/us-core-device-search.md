@@ -19,7 +19,7 @@ The following search parameters, search parameter combinations and search parame
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
-1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-device-patient.html)** and **[`type`]()** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-device-patient.html)** and **[`type`](SearchParameter-us-core-device-type.html)** search parameters:
 
     `GET [base]/Device?patient=[reference]&type={[system]}|[code]`
 
