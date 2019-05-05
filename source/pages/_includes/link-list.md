@@ -80,7 +80,7 @@
 [FHIR Search]: {{site.data.fhir.path}}search.html
 [FHIR Security Labels]: {{site.data.fhir.path}}security-labels.html
 [FHIR Terminology]: {{site.data.fhir.path}}terminologies.html
-[FHIR Version 4.0.0]: {{site.data.fhir.path}} "FHIR Specification Home Page"
+[FHIR Version 4.0.0]: {{site.data.fhir.path}}index.html "FHIR Specification Home Page"
 [FHIR Version DSTU2]: http://hl7.org/fhir/DSTU2/index.html "FHIR Version DSTU2 Specification Home Page"
 [FHIR Version R4]: {{site.data.fhir.path}}index.html "FHIR Version R4 Specification Home Page"
 [FHIR Version STU3]: http://hl7.org/fhir/STU3/index.html "FHIR Version STU3 Specification Home Page"
