@@ -42,7 +42,7 @@ The following search parameters, search parameter combinations and search parame
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
-1. **SHOULD** support searching using the **[`identifier`](i.rel_url)** search parameter:
+1. **SHOULD** support searching using the **[`identifier`](SearchParameter-us-core-encounter-identifier.html)** search parameter:
 
      `GET [base]/Encounter?identifier={[system]}|[code]`
 

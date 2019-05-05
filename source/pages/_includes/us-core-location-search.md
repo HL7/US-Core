@@ -29,7 +29,7 @@ The following search parameters, search parameter combinations and search parame
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
-1. **SHOULD** support searching using the **[`address-city`](i.rel_url)** search parameter:
+1. **SHOULD** support searching using the **[`address-city`](SearchParameter-us-core-location-address-city.html)** search parameter:
 
      `GET [base]/Location?address-city=[string]`
 
@@ -39,7 +39,7 @@ The following search parameters, search parameter combinations and search parame
 
      *Implementation Notes:* Fetches a bundle of all Location resources for the city ([how to search by string])
 
-1. **SHOULD** support searching using the **[`address-state`](i.rel_url)** search parameter:
+1. **SHOULD** support searching using the **[`address-state`](SearchParameter-us-core-location-address-state.html)** search parameter:
 
      `GET [base]/Location?address-state=[string]`
 
@@ -49,7 +49,7 @@ The following search parameters, search parameter combinations and search parame
 
      *Implementation Notes:* Fetches a bundle of all Location resources for the state ([how to search by string])
 
-1. **SHOULD** support searching using the **[`address-postalcode`](i.rel_url)** search parameter:
+1. **SHOULD** support searching using the **[`address-postalcode`](SearchParameter-us-core-location-address-postalcode.html)** search parameter:
 
      `GET [base]/Location?address-postalcode=[string]`
 

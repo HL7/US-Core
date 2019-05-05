@@ -4,7 +4,7 @@
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
 
-1. **SHALL** support fetching a DocumentReference using the **[`_id`](SearchParameter-us-core-documentreference-_id.html)** search parameter:
+1. **SHALL** support fetching a DocumentReference using the **[`_id`](SearchParameter-us-core-documentreference-id.html)** search parameter:
 
     `GET [base]/DocumentReference[id]`
 
