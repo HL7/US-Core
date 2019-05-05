@@ -6,7 +6,22 @@
 	<title value="US Core DiagnosticReport Profile for Report and Note exchange"/>
 	<status value="active"/>
 	<date value="2018-04-10T09:48:14.298-04:00"/>
-	<fhirVersion value="3.0.1"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.healthit.gov"/>
+    </telecom>
+  </contact>
+  <description value="Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with clinical notes for a patient"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+	<fhirVersion value="4.0.0"/>
 	<kind value="resource"/>
 	<abstract value="false"/>
 	<type value="DiagnosticReport"/>
@@ -21,10 +36,6 @@
 			<alias value="Radiology Report"/>
 			<mustSupport value="false"/>
 			<isModifier value="false"/>
-			<mapping>
-				<identity value="argonaut-dq-R3"/>
-				<map value="DiagnosticReport"/>
-			</mapping>
 		</element>
 		<element id="DiagnosticReport.status">
 			<path value="DiagnosticReport.status"/>
@@ -39,10 +50,6 @@
 				<strength value="required"/>
 				<valueSet value="http://hl7.org/fhir/ValueSet/diagnostic-report-status"/>
 			</binding>
-			<mapping>
-				<identity value="argonaut-dq-dstu2"/>
-				<map value="DiagnosticReport.status"/>
-			</mapping>
 		</element>
 		<element id="DiagnosticReport.category">
 			<path value="DiagnosticReport.category"/>
@@ -60,10 +67,6 @@
 				<strength value="extensible"/>
 				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"/>
 			</binding>
-			<mapping>
-				<identity value="argonaut-dq-dstu2"/>
-				<map value="DiagnosticReport.category"/>
-			</mapping>
 		</element>
 		<element id="DiagnosticReport.code">
 			<path value="DiagnosticReport.code"/>
@@ -82,10 +85,6 @@
 				<description value="LOINC codes"/>
 				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes"/>
 			</binding>
-			<mapping>
-				<identity value="argonaut-dq-dstu2"/>
-				<map value="DiagnosticReport.code"/>
-			</mapping>
 		</element>
 		<element id="DiagnosticReport.subject">
 			<path value="DiagnosticReport.subject"/>
@@ -107,30 +106,6 @@
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 			<isSummary value="true"/>
-			<mapping>
-				<identity value="workflow"/>
-				<map value="Event.subject"/>
-			</mapping>
-			<mapping>
-				<identity value="w5"/>
-				<map value="FiveWs.subject[x]"/>
-			</mapping>
-			<mapping>
-				<identity value="v2"/>
-				<map value="PID-3 (no HL7 v2 mapping for Group or Device)"/>
-			</mapping>
-			<mapping>
-				<identity value="rim"/>
-				<map value="participation[typeCode=SBJ]"/>
-			</mapping>
-			<mapping>
-				<identity value="w5"/>
-				<map value="FiveWs.subject"/>
-			</mapping>
-			<mapping>
-				<identity value="argonaut-dq-dstu2"/>
-				<map value="DiagnosticReport.subject"/>
-			</mapping>
 		</element>
 		<element id="DiagnosticReport.encounter">
 			<path value="DiagnosticReport.encounter"/>
@@ -155,10 +130,6 @@
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
-			<mapping>
-				<identity value="argonaut-dq-dstu2"/>
-				<map value="DiagnosticReport.effective[x]"/>
-			</mapping>
 		</element>
 		<element id="DiagnosticReport.issued">
 			<path value="DiagnosticReport.issued"/>
@@ -169,10 +140,6 @@
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
-			<mapping>
-				<identity value="argonaut-dq-dstu2"/>
-				<map value="DiagnosticReport.issued"/>
-			</mapping>
 		</element>
 		<element id="DiagnosticReport.performer">
 			<path value="DiagnosticReport.performer"/>
@@ -185,10 +152,6 @@
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
-			<mapping>
-				<identity value="argonaut-dq-dstu2"/>
-				<map value="NA (new element in STU3)"/>
-			</mapping>
 		</element>
 		<element id="DiagnosticReport.media">
 			<path value="DiagnosticReport.media"/>
@@ -196,10 +159,6 @@
 			<max value="*"/>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
-			<mapping>
-				<identity value="argonaut-dq-dstu2"/>
-				<map value="DiagnosticReport.image"/>
-			</mapping>
 		</element>
 		<element id="DiagnosticReport.presentedForm">
 			<path value="DiagnosticReport.presentedForm"/>
@@ -210,10 +169,6 @@
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
-			<mapping>
-				<identity value="argonaut-dq-dstu2"/>
-				<map value="DiagnosticReport.presentedForm"/>
-			</mapping>
 		</element>
 	</differential>
 </StructureDefinition>
