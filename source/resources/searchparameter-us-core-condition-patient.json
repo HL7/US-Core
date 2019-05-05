@@ -14,7 +14,7 @@
             ]
         }
     ],
-    "date": "2019-05-02T18:41:17.858922Z",
+    "date": "2019-05-05T15:26:39.082801Z",
     "derivedFrom": "http://hl7.org/fhir/SearchParameter/clinical-patient",
     "description": "Who has the condition?",
     "experimental": false,
@@ -35,7 +35,7 @@
     ],
     "type": "reference",
     "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-patient",
-    "version": "4.1.0",
+    "version": "4.0.0",
     "xpath": "f:Condition/f:subject",
     "xpathUsage": "normal",
     "resourceType": "SearchParameter",
@@ -83,6 +83,6 @@
     ],
     "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Generated Narrative with Details</b></p><p><b> id</b> us-core-condition-patient</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-patient</b></p><p><b> version</b> : 4.1.0</p><p><b> name</b> : USCoreConditionPatient</p><p><b> derivedFrom</b> : <a> http://hl7.org/fhir/SearchParameter/clinical-patient</a></p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-05-02</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> description</b> : Who has the condition?</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span></p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>patient</code></p><p><b> base</b> :Condition</p><p><b> type</b> : reference</p><p><b> expression</b> : <code>Condition.subject.where(resolve() is Patient)</code></p><p><b> xpath</b> : <code>f:Condition/f:subject</code></p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    <p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>type</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>identifier</code>  (Conformance Expectation =  MAY)</p>\n    \n    \n    \n\t\t</div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Generated Narrative with Details</b></p><p><b> id</b> us-core-condition-patient</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-patient</b></p><p><b> version</b> : 4.0.0</p><p><b> name</b> : USCoreConditionPatient</p><p><b> derivedFrom</b> : <a> http://hl7.org/fhir/SearchParameter/clinical-patient</a></p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-05-05</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> description</b> : Who has the condition?</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span></p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>patient</code></p><p><b> base</b> :Condition</p><p><b> type</b> : reference</p><p><b> expression</b> : <code>Condition.subject.where(resolve() is Patient)</code></p><p><b> xpath</b> : <code>f:Condition/f:subject</code></p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    <p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>type</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>identifier</code>  (Conformance Expectation =  MAY)</p>\n    \n    \n    \n\t\t</div>"
     }
 }

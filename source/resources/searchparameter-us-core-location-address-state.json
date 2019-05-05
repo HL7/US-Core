@@ -14,7 +14,7 @@
             ]
         }
     ],
-    "date": "2019-05-02T18:41:22.225351Z",
+    "date": "2019-05-05T15:26:40.061862Z",
     "derivedFrom": "http://hl7.org/fhir/SearchParameter/Location-address-state",
     "description": "A state specified in an address",
     "experimental": false,
@@ -31,7 +31,7 @@
     "status": "active",
     "type": "string",
     "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-location-address-state",
-    "version": "4.1.0",
+    "version": "4.0.0",
     "xpath": "f:Location/f:address/f:state",
     "xpathUsage": "normal",
     "resourceType": "SearchParameter",
@@ -79,6 +79,6 @@
     ],
     "text": {
         "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Generated Narrative with Details</b></p><p><b> id</b> us-core-location-address-state</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-location-address-state</b></p><p><b> version</b> : 4.1.0</p><p><b> name</b> : USCoreLocationAddressState</p><p><b> derivedFrom</b> : <a> http://hl7.org/fhir/SearchParameter/Location-address-state</a></p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-05-02</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> description</b> : A state specified in an address</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span></p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>address-state</code></p><p><b> base</b> :Location</p><p><b> type</b> : string</p><p><b> expression</b> : <code>Location.address.state</code></p><p><b> xpath</b> : <code>f:Location/f:address/f:state</code></p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    <p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>exact</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>contains</code>  (Conformance Expectation =  MAY)</p>\n    \n    \n    \n\t\t</div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b> Generated Narrative with Details</b></p><p><b> id</b> us-core-location-address-state</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-location-address-state</b></p><p><b> version</b> : 4.0.0</p><p><b> name</b> : USCoreLocationAddressState</p><p><b> derivedFrom</b> : <a> http://hl7.org/fhir/SearchParameter/Location-address-state</a></p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-05-05</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> description</b> : A state specified in an address</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span></p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>address-state</code></p><p><b> base</b> :Location</p><p><b> type</b> : string</p><p><b> expression</b> : <code>Location.address.state</code></p><p><b> xpath</b> : <code>f:Location/f:address/f:state</code></p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    <p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>exact</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>contains</code>  (Conformance Expectation =  MAY)</p>\n    \n    \n    \n\t\t</div>"
     }
 }
