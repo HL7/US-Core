@@ -6,10 +6,10 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [DocumentReferenceStatus](http://hl7.org/fhir/ValueSet/document-reference-status)
 1.  A  CodeableConcept  in `DocumentReference.type`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
- binding to [US Core DocumentReference Type Value Set](ValueSet-us-core-documentreference-type.html)
+ binding to [US Core DocumentReference Type](ValueSet-us-core-documentreference-type.html)
 1. One or more  CodeableConcepts  in `DocumentReference.category`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [US Core DocumentReference Category Value Set](ValueSet-us-core-documentreference-category.html)
+ binding to [US Core DocumentReference Category](ValueSet-us-core-documentreference-category.html)
 1.  A Patient Reference  in `DocumentReference.subject`
 1.  A  Content  in `DocumentReference.content`
       - which must have a  Attachment value  in `DocumentReference.content.attachment`

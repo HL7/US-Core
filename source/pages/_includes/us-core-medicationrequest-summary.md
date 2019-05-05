@@ -6,7 +6,7 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [Medicationrequest  status](http://hl7.org/fhir/ValueSet/medicationrequest-status)
 1.  A  CodeableConcept  in `MedicationRequest.medication[x]`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [Medication Clinical Drug (RxNorm)](ValueSet-us-core-medication-codes.html)
+ binding to [US Core Medication Codes (RxNorm)](ValueSet-us-core-medication-codes.html)
 1.  A Patient Reference  in `MedicationRequest.subject`
 1.  A  dateTime  in `MedicationRequest.authoredOn`
 1.  A Requester Reference  in `MedicationRequest.requester`

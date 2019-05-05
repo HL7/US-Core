@@ -16,4 +16,4 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
    - which must have a fixed `Extension.extension.url` = `detailed`
    - which must have a  Coding value  in `Extension.extension.valueCoding`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
- binding to [US-Core Detailed Race](ValueSet-detailed-race.html)
+ binding to [Detailed Race](ValueSet-detailed-race.html)
