@@ -38,8 +38,8 @@
 [Condition Quick Start]: StructureDefinition-us-core-condition.html#search
 [Condition]: {{site.data.fhir.path}}condition.html
 [Conformance Requirements for Client]: CapabilityStatement-us-core-r4-client.html "Conformance Requirements for Client Page"
-[Conformance Requirements for Server]: CapabilityStatement-us-core-r4-server.html "Conformance Requirements for Server Page"
-[Conformance requirements for the US Core Server]: CapabilityStatement-us-core-r4-server.html
+[Conformance Requirements for Server]: CapabilityStatement-us-core-server.html "Conformance Requirements for Server Page"
+[Conformance requirements for the US Core Server]: CapabilityStatement-us-core-server.html
 [Conformance]: daf-core-DocumentReference-conformance.html
 [Consent]: {{site.data.fhir.path}}consent.html
 [Consultation Note (11488-4)]: https://loinc.org/11488-4.html
@@ -80,7 +80,7 @@
 [FHIR Search]: {{site.data.fhir.path}}search.html
 [FHIR Security Labels]: {{site.data.fhir.path}}security-labels.html
 [FHIR Terminology]: {{site.data.fhir.path}}terminologies.html
-[FHIR Version 3.0.1]: {{site.data.fhir.path}} "FHIR Specification Home Page"
+[FHIR Version 4.0.0]: {{site.data.fhir.path}} "FHIR Specification Home Page"
 [FHIR Version DSTU2]: http://hl7.org/fhir/DSTU2/index.html "FHIR Version DSTU2 Specification Home Page"
 [FHIR Version R4]: {{site.data.fhir.path}}index.html "FHIR Version R4 Specification Home Page"
 [FHIR Version STU3]: http://hl7.org/fhir/STU3/index.html "FHIR Version STU3 Specification Home Page"
@@ -173,7 +173,7 @@
 [US Core Laboratory Result Observation Profile]: StructureDefinition-us-core-observation-lab.html
 [US Core Security]: security.html
 [General Security Considerations]: security.html
-[US Core Server Capability Statement]: CapabilityStatement-us-core-r4-server.html
+[US Core Server Capability Statement]: CapabilityStatement-us-core-server.html
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
 [us-core-ethnicity]: SearchParameter-us-core-ethnicity.html
 [us-core-race]: SearchParameter-us-core-race.html
@@ -181,3 +181,4 @@
 [Vital Signs Profile]: {{site.data.fhir.path}}observation-vitalsigns.html
 [Vital Signs Quick Start]: vitals-search.html
 [SMART App Launch Framework]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
+[base resource differential]: {{site.data.fhir.path}}diff.html
