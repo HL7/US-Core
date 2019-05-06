@@ -18,13 +18,11 @@ The conformance verbs used are defined in [FHIR Conformance Rules].
 
 <!-- end TOC -->
 
-### The 2015 Edition Common Clinical Data Set
+### U.S. Core Data for Interoperability and 2015 Edition Common Clinical Data Set
 
 The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access – Data Category Request 170.315(g)(8). They were created for each item in the [2015 Edition Common Clinical Data Set (CCDS)].  The Location, Organization, and Practitioner Profiles are not called out specifically in the certification criteria but are included because they are directly referenced by other profiles.  The US Core Profiles are informed by the prior [Data Access Framework] and the [Argonaut DSTU2] Implementation Guides. However, the profiles here are stand alone and include new requirements from the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)] and includes all the [API Resource Collection in Health (ARCH)] resources.
 
-{% include uscdi_table.md %}
-
-The table below lists the US Core Profile and FHIR Resources used for the corresponding 2015 Edition Common Clinical Data Set (CCDS) Data elements:
+The table below lists the US Core Profile and FHIR Resources used for the corresponding USCDI Data elements:
 
 {% include uscdi_table.md %}
 
