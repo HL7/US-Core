@@ -5,7 +5,7 @@
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
 [$docref operation]: OperationDefinition-docref.html
 [$expand]: {{ site.data.fhir.path }}valueset-operation-expand.html  "An operation used to create a simple collection of codes suitable for use for data entry or validation"
-[2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
+[2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf
 [34133-9]: http://s.details.loinc.org/LOINC/34133-9.html?sections=Comprehensive
 [5 Common Clinical Notes]: ValueSet-us-core-clinical-note-type.html
 [AllergyIntolerance]: {{site.data.fhir.path}}allergyintolerance.html
@@ -103,7 +103,7 @@
 [include]: {{site.data.fhir.path}}search.html#include
 [logical view]: {{site.data.fhir.path}}formats.html#table
 [managing returned resources]: {{site.data.fhir.path}}search.html#return
-[mapping]: general-guidance.html#the-2015-edition-common-clinical-data-set
+[mapping]: general-guidance.html
 [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
 [Medication]: {{site.data.fhir.path}}medication.html
 [MedicationRequest]: {{site.data.fhir.path}}medicationrequest.html
@@ -120,7 +120,7 @@
 [Nurse Note (34746-8)]: https://loinc.org/34746-8.html
 [Observation]: {{site.data.fhir.path}}observation.html
 [Office of the National Coordinator for Health Information Technology (ONC)]: http://www.healthit.gov/newsroom/about-onc
-[ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/2015Ed_CCG_CCDS.pdf
+[ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf
 [ONC Provider Directory Workshop]: https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents
 [Organization]: {{site.data.fhir.path}}organization.html
 [Pathology (LP7839-6)]: https://loinc.org/LP7839-6
