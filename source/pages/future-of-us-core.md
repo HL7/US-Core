@@ -1,7 +1,6 @@
 ---
-title: General Guidance
+title: Future of US Core
 layout: default
-active: terminology
 ---
 
 This section outlines the approach to adding new content to US Core.
@@ -28,8 +27,8 @@ The US Core implementation Guide will grow following these steps:
 
 {% include img.html img="US_Core_Growth_Path.jpg" caption="Figure 1: Growth Path of US Core" %}
 
-1. Declare candidacy - this step can be completed by presenting to the US Realm Steering Committee through a Project Scope Statement. 
-1. Get published - development a formal profile, implementation guide, or get requirements directly published in  FHIR Core. The initial publication could be an outside consortium, or vendor publication. 
+1. Declare candidacy - this step can be completed by presenting to the US Realm Steering Committee through a Project Scope Statement.
+1. Get published - development a formal profile, implementation guide, or get requirements directly published in  FHIR Core. The initial publication could be an outside consortium, or vendor publication.
 1. Pilot - coordinate with 3 or more implementers an in-person or virtual connectathon. This is the time to identify issues with the new proposal.
 1. Propose candidate for US Core to US Realm Steering Committee - receive formal approval from the US Realm SC to add.
 1. Submit formal STU comment, or propose through a ballot
@@ -46,7 +45,7 @@ The FDA formally submitted the UDI elements for testing in the Summer of 2019. T
 
 (create new UDI component profile?)
 
-**Candidates under consideration** 
+**Candidates under consideration**
 
 The following items were submitted during a US Core ballot or STU comment. Additional requirements gathering is required before testing may occur on these items:
 * [ServiceRequest] - The CDS hooks community, and other implementers are gathering requirements for the ServiceRequest Resource.

@@ -2,7 +2,7 @@ This profile sets minimum expectations for the [Observation] resource to record,
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core Pediatric BMI Observation Profile:
+The following are example usage scenarios for the US Core Pediatric BMI for Age Observation Profile:
 
 - Query for BMI observations belonging to a pediatric patient
 - Record BMI observations belonging to a pediatric patient
@@ -22,6 +22,6 @@ In addition to the mandatory and must support data elements in the FHIR Vital Si
 
 ### Examples
 
-- [Pediatric BMI Example](Observation-pediatric-bmi-example.html)
+- [Pediatric BMI for Age Example](Observation-pediatric-bmi-example.html)
 
 {% include link-list.md %}

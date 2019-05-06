@@ -2,7 +2,7 @@ This profile sets minimum expectations for the [Observation] resource to record,
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core Pediatric Weight Observation Profile:
+The following are example usage scenarios for the US Core Pediatric Weight for Height Observation Profile:
 
 - Query for pediatric weight observations belonging to a pediatric patient
 - Record pediatric weight observations belonging to a pediatric patient
@@ -22,6 +22,6 @@ In addition to the mandatory and must support data elements in the FHIR Vital Si
 
 ### Examples
 
-- [Pediatric Weight Example](Observation-pediatric-wt-example.html)
+- [Pediatric Weight for Height Example](Observation-pediatric-wt-example.html)
 
 {% include link-list.md %}

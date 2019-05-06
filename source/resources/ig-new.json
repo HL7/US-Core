@@ -586,6 +586,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/pediatric-bmi-for-age"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/us-core-allergyintolerance"
       },
       "exampleBoolean" : false
@@ -778,12 +784,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/us-core-pediatric-bmi"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "ValueSet/us-core-observation-smoking-status-status"
       },
       "exampleBoolean" : false
@@ -863,12 +863,6 @@
     {
       "reference" : {
         "reference" : "SearchParameter/us-core-encounter-patient"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/us-core-pediatric-weight"
       },
       "exampleBoolean" : false
     },
@@ -1258,6 +1252,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/pediatric-weight-for-height"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/us-core-observation-value-codes"
       },
       "exampleBoolean" : false
@@ -1358,8 +1358,23 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "General Guidance",
-        "generation" : "markdown"
+        "title" : "Guidance",
+        "generation" : "markdown",
+        "page" : [{
+          "nameUrl" : "general-guidance.html",
+          "title" : "General Guidance",
+          "generation" : "markdown"
+        },
+        {
+          "nameUrl" : "clinical-notes-guidance.html",
+          "title" : "Clinical Notes Guidance",
+          "generation" : "markdown"
+        },
+        {
+          "nameUrl" : "future-of-us-core.html",
+          "title" : "Future of US Core",
+          "generation" : "markdown"
+        }]
       },
       {
         "nameUrl" : "profiles.html",
@@ -1378,6 +1393,11 @@
         {
           "nameUrl" : "StructureDefinition-us-core-observation-lab.html",
           "title" : "StructureDefinition Us Core Observation Lab",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-pediatric-bmi-for-age.html",
+          "title" : "StructureDefinition Pediatric Bmi For Age",
           "generation" : "generated"
         },
         {
@@ -1421,18 +1441,8 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-us-core-pediatric-bmi.html",
-          "title" : "StructureDefinition Us Core Pediatric Bmi",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "StructureDefinition-us-core-procedure.html",
           "title" : "StructureDefinition Us Core Procedure",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-us-core-pediatric-weight.html",
-          "title" : "StructureDefinition Us Core Pediatric Weight",
           "generation" : "generated"
         },
         {
@@ -1493,6 +1503,11 @@
         {
           "nameUrl" : "StructureDefinition-us-core-condition.html",
           "title" : "StructureDefinition Us Core Condition",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-pediatric-weight-for-height.html",
+          "title" : "StructureDefinition Pediatric Weight For Height",
           "generation" : "generated"
         },
         {

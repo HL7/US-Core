@@ -583,6 +583,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/pediatric-bmi-for-age"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/us-core-allergyintolerance"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -775,12 +781,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/us-core-pediatric-bmi"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/us-core-observation-smoking-status-status"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -860,12 +860,6 @@
     <resource>
       <reference>
         <reference value="SearchParameter/us-core-encounter-patient"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/us-core-pediatric-weight"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1255,6 +1249,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/pediatric-weight-for-height"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-observation-value-codes"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1355,8 +1355,23 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="General Guidance"/>
+        <title value="Guidance"/>
         <generation value="markdown"/>
+        <page>
+          <nameUrl value="general-guidance.html"/>
+          <title value="General Guidance"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="clinical-notes-guidance.html"/>
+          <title value="Clinical Notes Guidance"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="future-of-us-core.html"/>
+          <title value="Future of US Core"/>
+          <generation value="markdown"/>
+        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
@@ -1375,6 +1390,11 @@
         <page>
           <nameUrl value="StructureDefinition-us-core-observation-lab.html"/>
           <title value="StructureDefinition Us Core Observation Lab"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-pediatric-bmi-for-age.html"/>
+          <title value="StructureDefinition Pediatric Bmi For Age"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -1418,18 +1438,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-us-core-pediatric-bmi.html"/>
-          <title value="StructureDefinition Us Core Pediatric Bmi"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="StructureDefinition-us-core-procedure.html"/>
           <title value="StructureDefinition Us Core Procedure"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-us-core-pediatric-weight.html"/>
-          <title value="StructureDefinition Us Core Pediatric Weight"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -1490,6 +1500,11 @@
         <page>
           <nameUrl value="StructureDefinition-us-core-condition.html"/>
           <title value="StructureDefinition Us Core Condition"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-pediatric-weight-for-height.html"/>
+          <title value="StructureDefinition Pediatric Weight For Height"/>
           <generation value="generated"/>
         </page>
         <page>

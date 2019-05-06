@@ -1,7 +1,6 @@
 ---
 title: General Guidance
 layout: default
-active: terminology
 ---
 
 This section outlines important definitions and interpretations and requirements common to all US Core actors used in this guide.
@@ -21,34 +20,17 @@ The conformance verbs used are defined in [FHIR Conformance Rules].
 
 ### The 2015 Edition Common Clinical Data Set
 
-The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access – Data Category Request 170.315(g)(8). They were created for each item in the [2015 Edition Common Clinical Data Set (CCDS)].  The Location, Organization, and Practitioner Profiles are not called out specifically in the certification criteria but are included because they are directly referenced by other profiles.  The US Core Profiles are informed by the prior [Data Access Framework] and the [Argonaut DSTU2] Implementation Guides. However, the profiles here are stand alone and include new requirements from the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)]. The FHIR core specification provides a [base resource differential] to help implementers navigate version changes.  
+The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access – Data Category Request 170.315(g)(8). They were created for each item in the [2015 Edition Common Clinical Data Set (CCDS)].  The Location, Organization, and Practitioner Profiles are not called out specifically in the certification criteria but are included because they are directly referenced by other profiles.  The US Core Profiles are informed by the prior [Data Access Framework] and the [Argonaut DSTU2] Implementation Guides. However, the profiles here are stand alone and include new requirements from the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)] and includes all the [API Resource Collection in Health (ARCH)] resources.
 
+{% include uscdi_table.md %}
 
 The table below lists the US Core Profile and FHIR Resources used for the corresponding 2015 Edition Common Clinical Data Set (CCDS) Data elements:
 
-No| CCDS Data Element | US Core Profile | FHIR Resource
----|---|---|
-(1) |  Patient Name | [US Core Patient Profile] | Patient
-(2) |  Sex | [US Core Patient Profile] | Patient
-(3) |  Date of birth | [US Core Patient Profile] | Patient
-(4) |  Race | [US Core Patient Profile] | Patient
-(5) |  Ethnicity | [US Core Patient Profile] | Patient
-(6) |  Preferred language | [US Core Patient Profile] | Patient
-(7) |  Smoking status | [US Core Smoking Status Observation Profile] | Observation
-(8) |  Problems | [US Core Condition Profile] | Condition
-(9) |  Medications | [US Core Medication Profile], [US Core Medication Statement Profile], [US Core Medication Request Profile] | Medication, MedicationStatement, MedicationRequest
-(10) |  Medication allergies | [US Core Allergies Profile] | AllergyIntolerance
-(11) |  Laboratory test(s) | [US Core Laboratory Result Observation Profile], [US Core DiagnosticReport Profile for Laboratory Results Reporting]| Observation, DiagnosticReport
-(12) |  Laboratory value(s)/result(s) |  [US Core Laboratory Result Observation Profile], [US Core DiagnosticReport Profile for Laboratory Results Reporting] | Observation, DiagnosticReport
-(13) |  Vital signs | [Vital Signs Profile] (From FHIR Core Profiles for Observation) | Observation
-(14) |  (no longer required) | -
-(15) |  Procedures | [US Core Procedure Profile] | Procedure
-(16) |  Care team member(s) | [US Core CareTeam Profile] | CareTeam
-(17) |  Immunizations | [US Core Immunization Profile] | Immunization
-(18) |  Unique device identifier(s) for a patient’s implantable device(s) | [US Core Device Profile] | Device
-(19) |  Assessment and plan of treatment | [US Core CarePlan Profile] | CarePlan
-(20) |  Goals | [US Core Goal Profile] | Goal
-(21) |  Health concerns | [US Core Condition Profile] | Condition
+{% include uscdi_table.md %}
+
+### Changes Between Major Version of FHIR
+
+With each major version in FHIR, the core data models have undergone changes.  The FHIR core specification provides a [base resource differential] to help implementers navigate version changes.
 
 ### Must Support
 In the context of US Core, *Must Support* on any data element SHALL be interpreted as follows:

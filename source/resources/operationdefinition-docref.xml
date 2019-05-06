@@ -29,8 +29,7 @@ This operation is *different* from a search by patient and type and date range b
 &#xA;&#xA;
 This operation is the *same* as a FHIR RESTful search by patient,type and date range because:
 &#xA;&#xA;
-1. References for *existing* documents that meet the requirements of the request SHOULD also be returned.
-"/>
+1. References for *existing* documents that meet the requirements of the request SHOULD also be returned unless the client indicates they are only interested in 'on-demand' documents using the *on-demand* parameter."/>
 	<code value="docref"/>
 	<comment value="
 - The server is responsible for determining what resources, if any, to return as [included](http://hl7.org/fhir/R4/search.html#revinclude) resources rather than the client specifying which ones. This frees the client from needing to determine what it could or should ask for. For example, the server may return the referenced document as an included FHIR Binary resource within the return bundle. The server's CapabilityStatement should document this behavior.
@@ -76,6 +75,14 @@ This operation is the *same* as a FHIR RESTful search by patient,type and date r
 			<strength value="required"></strength>
 			<valueSet value="http://hl7.org/fhir/ValueSet/c80-doc-typecodes"/>
 		</binding>
+	</parameter>
+	<parameter>
+		<name value="on-demand"/>
+		<use value="in"/>
+		<min value="0"/>
+		<max value="1"/>
+		<documentation value="This on-demand parameter allows client to dictate whether they are requesting only ‘on-demand’ or both ‘on-demand’ and 'stable' documents (or delayed/deferred assembly) that meet the query parameters"/>
+		<type value="boolean"/>
 	</parameter>
 	<parameter>
 		<name value="return"/>
