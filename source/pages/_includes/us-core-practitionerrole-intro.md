@@ -17,8 +17,8 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each PractitionerRole must support:**
 
-1. A list of roles
-1. A list of specialties
+1. A role
+1. A specialty
 
 **Profile specific implementation guidance:**
 
