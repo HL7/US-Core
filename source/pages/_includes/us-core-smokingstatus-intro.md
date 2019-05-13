@@ -20,7 +20,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each Observation must have:**
 
 1.  a status
-1.  a fixed code for smoking observation
+1.  a code for smoking observation
 1.  a patient
 1.  a date representing when the smoking status was recorded
 1.  a result value code for smoking status
@@ -29,7 +29,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Profile specific implementation guidance:**
 
  - Smoking observation LOINC = 72166-2 *Tobacco smoking status NHIS*
- - This profile may be referenced by different capability statements, such as the [Conformance requirements for the US Core Server].
+ 
 
 ### Examples
 
