@@ -14,11 +14,16 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each Condition must have:**
 
-1.  a status of the problem
-1.  a verification status
+1.  a status of the problem*
 1.  a category
 1.  a code that identifies the problem
 1.  a patient
+
+*The status element has the following constraints: SHALL be present if verification status is not entered-in-error and SHALL NOT be present if verification Status is entered-in-error.
+
+**Each Condition must support:**
+
+1.  a verification status
 
 **Profile specific implementation guidance:**
 

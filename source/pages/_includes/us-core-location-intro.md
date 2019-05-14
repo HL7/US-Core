@@ -10,9 +10,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 1. A name
 
-**Additional Profile specific implementation guidance:**
-
-When available the following must be sent:
+**Each Location must support:**
 
 1.  Location.status
 2.  Location.name
@@ -20,8 +18,11 @@ When available the following must be sent:
 4.  Location.address
 5.  managingOrganization
 
+**Additional Profile specific implementation guidance:**
+- none
+
 ### Examples
 
 - [Location-hl7east](Location-hl7east.html)
 
-[Location]:  {{site.data.fhir.path}}location.html
+{% include link-list.md %}

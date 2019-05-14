@@ -43,8 +43,21 @@ topofpage: True
   {% capture my-include %}{% include {{[id]}}-example.md %}{% endcapture %}{{ my-include | markdownify }}  <!--add inline examples here -->
 <!-- ============OperationDefinition CONTENT CONTENT=============== -->
 
+
+{% when 'CapabilityStatement' %}
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
+<p>
+Downloads:  CapabilityStatement: (<a href="{{[type]}}-{{[id]}}.xml" download>XML</a>, <a href="{{[type]}}-{{[id]}}.json" download>JSON</a>),<a href="{{[id]}}.openapi.json">OpenAPI-Swagger Definition file</a>
+</p>
+
+  {% include {{[type]}}-{{[name]}}.xhtml %}
+
+<!-- ============CapabilityStatement CONTENT CONTENT=============== -->
+
 {% else %}
 <!-- ============ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
+
 
   {% include {{[type]}}-{{[name]}}.xhtml %}
 

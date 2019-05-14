@@ -1,25 +1,31 @@
+This profile sets minimum expectations for the [Resource] resource to record, search and fetch [resource content] associated with a patient.  It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the [Resource] resource when using this profile.
 
-{% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-intro.md
+**Example Usage Scenarios:**
 
-{{site.data.structuredefinitions.[id].description}}
+The following are example usage scenarios for the [Profile]
+ profile:
 
-#### Scope and Usage
+-   foo
+-   vocabularies
 
-scope and usage text here
+### Mandatory and Must Support Data Elements
 
-#### Mandatory Data Elements and Terminology
+The following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.
 
-The following data-elements are mandatory (i.e data MUST be present). blah blah blah
+**Each [resource] must have:**
 
-**must have:**
+1.  item
+1.  item
+1.  item
 
-1. blah
-1. blah
-1. blah
+**Each [resource] must support:**
 
-**Additional Profile specific implementation guidance:**
+1.  item
+
+**Profile specific implementation guidance:**
 
 #### Examples
 
 - list examples here
+
+{% include link-list.md %}

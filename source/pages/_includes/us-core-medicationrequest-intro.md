@@ -23,10 +23,9 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  a date for when written
 1.  a prescriber
 
-Additionally your system [Must Support]:
+**Each MedicationRequest must support:**
 
 1. the prescription *Sig*
-
 
 **Profile specific implementation guidance:**
 

@@ -16,12 +16,13 @@
 [AuditEvent]: {{site.data.fhir.path}}auditevent.html
 [Authentication]: {{site.data.fhir.path}}security.html#authentication
 [Authorization/Access Control]: {{site.data.fhir.path}}security.html#authorization/access%20control
+[base resource differential]: {{site.data.fhir.path}}diff.html
 [boundaries section]: {{ site.data.fhir.path }}documentreference.html#bnr
 [boundaries section]: {{ site.data.fhir.path }}DocumentReference.html#bnr
 [boundaries section]: {{site.data.fhir.path}}medicationrequest.html#bnr
 [capabilitystatement-expectation]: http://hl7.org/fhir/extension-capabilitystatement-expectation.html
 [CapabilityStatement]: {{site.data.fhir.path}}capabilitystatement.html
-[CapabilityStatement]: capstatements.html
+[Capability Statements]: capstatements.html
 [Cardiology (LP29708-2)]: https://loinc.org/LP29708-2
 [CarePlan]: {{site.data.fhir.path}}careplan.html
 [chains]: {{site.data.fhir.path}}search.html#chaining
@@ -46,12 +47,15 @@
 [contained]: {{site.data.fhir.path}}references.html#contained
 [core specification]: {{site.data.fhir.path}}extensibility.html#2.20.0.2.2
 [CPT-4/HCPC for procedures]: {{site.data.fhir.path}}valueset-procedure-code.html
+[CVX crosswalk table]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
+[CVX vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
 [Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [DataAbsentReason Code System]: {{site.data.fhir.path}}codesystem-data-absent-reason.html
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
 [Device search parameters]: {{site.data.fhir.path}}device.html#search
 [Device]: {{site.data.fhir.path}}device.html
+[DiagnosticReport]:  {{site.data.fhir.path}}diagnosticreport.html
 [DiagnosticReport]: {{site.data.fhir.path}}diagnosticreport.html
 [DiagnosticReport]:{{ site.data.fhir.path }}diagnosticreport.html
 [Digital Signatures]: {{site.data.fhir.path}}security.html#digital%20signatures
@@ -85,30 +89,42 @@
 [FHIR Version R4]: {{site.data.fhir.path}}index.html "FHIR Version R4 Specification Home Page"
 [FHIR Version STU3]: http://hl7.org/fhir/STU3/index.html "FHIR Version STU3 Specification Home Page"
 [Formal Profile Definition]: #profile
-[Guidance]: general-guidance.html  "General Guidance Page"
+[General Guidance Section]: general-guidance.html#using-ucum-codes-in-the-quantity-datatype
+[General Security Considerations]: security.html
+[Security]: security.html
+[Guidance]: guidance.html
+[Future of US Core]: future-of-us-core.html
+[General Guidance]: general-guidance.html  "General Guidance Page"
 [History & Physical Note (34117-2)]: https://loinc.org/34117-2.html
 [HL7 U.S. Data Access Framework (DAF)]: http://wiki.siframework.org/Data+Access+Framework+Homepage
 [Home]: index.html "Home Page"
 [how to search by date]: {{site.data.fhir.path}}search.html#date
-[how to search by the logical id]: {{site.data.fhir.path}}references.html#logical
 [how to search by reference]: {{site.data.fhir.path}}search.html#reference
 [how to search by string]: {{site.data.fhir.path}}search.html#string
+[how to search by the logical id]: {{site.data.fhir.path}}references.html#logical
 [how to search by token]: {{site.data.fhir.path}}search.html#token
 [HTTP]: {{site.data.fhir.path}}http.html
 [ICD-10-PCS codes]: http://www.icd10data.com/icd10pcs
 [IHE Healthcare Provider Directory]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf
 [IHE MHD]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_MHD.pdf
 [IHE XDS]: https://wiki.ihe.net/index.php/Cross-Enterprise_Document_Sharing
+[Immunization]:  {{site.data.fhir.path}}immunization.html
 [Implantable device list]: https://www.healthit.gov/test-method/implantable-device-list
 [include]: {{site.data.fhir.path}}search.html#include
+[Location]:  {{site.data.fhir.path}}location.html
 [logical view]: {{site.data.fhir.path}}formats.html#table
+[LOINC]: http://loinc.org
 [managing returned resources]: {{site.data.fhir.path}}search.html#return
 [mapping]: general-guidance.html
 [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
 [Medication]: {{site.data.fhir.path}}medication.html
+[Medication]:{{site.data.fhir.path}}medication.html
 [MedicationRequest]: {{site.data.fhir.path}}medicationrequest.html
+[MedicationRequestStatus]: {{site.data.fhir.path}}us/daf/ValueSet-medicationrequest-status.html
 [MedicationRequestStatus]: {{site.data.fhir.path}}valueset-medicationrequest-status.html
 [MedicationStatement]: {{site.data.fhir.path}}medicationstatement.html
+[MedicationStatement]:{{site.data.fhir.path}}medicationstatement.html
+[MedicationStatementStatus]: {{site.data.fhir.path}}us/daf/ValueSet-medication-statement-status.html
 [MedicationStatementStatus]: {{site.data.fhir.path}}valueset-medication-statement-status.html
 [MimeType]: http://www.rfc-editor.org/bcp/bcp13.txt#
 [modifiers]: {{site.data.fhir.path}}search.html#modifiers
@@ -117,7 +133,11 @@
 [Must Support]: general-guidance.html#must-support
 [NamingSystem]: {{site.data.fhir.path}}namingsystem.html
 [Narrative]: {{site.data.fhir.path}}security.html#narrative
+[NDC to CVX ConceptMap]: ConceptMap-ndc-cvx.html
+[NDC vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
 [Nurse Note (34746-8)]: https://loinc.org/34746-8.html
+[Observation Value Absent Reason]: http://hl7.org/fhir/ValueSet/data-absent-reason
+[Observation]:  {{site.data.fhir.path}}observation.html
 [Observation]: {{site.data.fhir.path}}observation.html
 [Office of the National Coordinator for Health Information Technology (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf
@@ -132,6 +152,7 @@
 [ProcedureStatus]: {{site.data.fhir.path}}valueset-procedure-status.html
 [profiles]: {{site.data.fhir.path}}profiling.html
 [Profiles]: profiles.html "Profiles and Extensions Page"
+[Profiles and Extensions]: profiles.html
 [Progress Note (11506-3)]: https://loinc.org/11506-3.html
 [QI-Core]:http://hl7.org/fhir/us/qicore/
 [Quantity]: {{site.data.fhir.path}}datatypes.html#quantity
@@ -144,9 +165,12 @@
 [security considerations]: {{site.data.fhir.path}}security.html
 [Security Labels]: {{site.data.fhir.path}}security-labels.html
 [ServiceRequest]: {{site.data.fhir.path}}servicerequest.html
+[SMART App Launch Framework]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
 [SNOMED CT]: {{site.data.fhir.path}}valueset-procedure-code.html
+[SNOMED CT]: http://snomed.info/sct
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
 [Surgical Operation Note (11504-8)]: https://loinc.org/11504-8.html
+[Synthea]: https://github.com/synthetichealth/synthea/wiki
 [Terminology]: terminology.html "Terminology Page"
 [UCUM Codes value set]: {{site.data.fhir.path}}valueset-ucum-units.html
 [UCUM]: http://unitsofmeasure.org
@@ -165,14 +189,13 @@
 [US Core DocumentReferences Category Value Set]: ValueSet-us-core-documentreference-category.html
 [US Core Goal Profile]: StructureDefinition-us-core-goal.html
 [US Core Immunization Profile]: StructureDefinition-us-core-immunization.html
+[US Core Laboratory Result Observation Profile]: StructureDefinition-us-core-observation-lab.html
 [US Core Medication Profile]: StructureDefinition-us-core-medication.html
 [US Core Medication Request Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
 [US Core Patient Profile]: StructureDefinition-us-core-patient.html
 [US Core Procedure Profile]: StructureDefinition-us-core-procedure.html
-[US Core Laboratory Result Observation Profile]: StructureDefinition-us-core-observation-lab.html
 [US Core Security]: security.html
-[General Security Considerations]: security.html
 [US Core Server Capability Statement]: CapabilityStatement-us-core-server.html
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
 [us-core-ethnicity]: SearchParameter-us-core-ethnicity.html
@@ -180,5 +203,7 @@
 [Value sets]: terminology.html
 [Vital Signs Profile]: {{site.data.fhir.path}}observation-vitalsigns.html
 [Vital Signs Quick Start]: vitals-search.html
-[SMART App Launch Framework]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
-[base resource differential]: {{site.data.fhir.path}}diff.html
+[Search Parameters and Operations]: searchparameters.html
+[Terminology]: terminology.html
+[Examples]: examples.html
+[Clinical Notes Guidance]: clinical-notes-guidance.html

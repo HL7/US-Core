@@ -1,6 +1,7 @@
 #!/bin/bash
 # exit when any command fails
 set -e
+homepath=$PWD
 path1=/Users/ehaas/Downloads/org.hl7.fhir.igpublisher.jar
 path2=/Users/ehaas/Downloads/org.hl7.fhir.igpublisher-old.jar
 path3=/Users/ehaas/Documents/FHIR/IG-tools/
@@ -14,12 +15,14 @@ do
  o) PUB=1;;
  n) USEDEF=1;;
  p) UPDATE=1;;
+ a) RUNALL=1;;
  esac
 done
 echo "================================================================="
 echo === Publish $SOURCE IG!!! $(date -u) ===
 echo see 'local workflow.md' file for how to use
 echo "Optional Parameters"
+echo '-a parameter = run build then run summary, search parameter and capstatement scripts then rerun build  = ' $RUNALL
 echo '-d parameter = create definitions files  = ' $DEFN
 echo '-n parameter = use definitions source directory definition files  = ' $USEDEF
 echo '-s parameter = source directory = ' $SOURCE
@@ -76,4 +79,17 @@ else
   echo ===run most recent version of the igpublisher ===
   echo "================================================================="
   java -jar ${path1} -ig ig.json -watch -tx $NA
+fi
+
+if [[ $RUNALL ]]; then
+
+  echo "================================================================="
+  echo === run summary maker /Users/ehaas/Documents/Python/MyNotebooks/Summary-maker/summary_maker.py===
+  echo "================================================================="
+  cd /Users/ehaas/Documents/Python/MyNotebooks/Summary-maker
+  venv37
+  python3.7 summary_maker.py
+  deactivate
+  cd $homepath
+  echo "done......"
 fi

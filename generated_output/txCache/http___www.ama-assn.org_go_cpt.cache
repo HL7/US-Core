@@ -41,3 +41,13 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "33249"
+}, "valueSet" :null}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ama-assn.org/go/cpt\" is not known; The code provided (http://www.ama-assn.org/go/cpt#33249) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

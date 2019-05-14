@@ -124,6 +124,12 @@
     },
     {
       "reference" : {
+        "reference" : "DiagnosticReport/chest-xray-report"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Observation/serum-sodium"
       },
       "exampleBoolean" : true
@@ -167,6 +173,12 @@
     {
       "reference" : {
         "reference" : "Observation/urine-protein"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Procedure/defib-implant"
       },
       "exampleBoolean" : true
     },
@@ -233,6 +245,12 @@
     {
       "reference" : {
         "reference" : "Observation/length"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Device/udi-2"
       },
       "exampleBoolean" : true
     },
@@ -329,6 +347,12 @@
     {
       "reference" : {
         "reference" : "Observation/oxygen-saturation"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "DiagnosticReport/cardiology-report"
       },
       "exampleBoolean" : true
     },
@@ -1382,17 +1406,17 @@
         "generation" : "markdown",
         "page" : [{
           "nameUrl" : "StructureDefinition-us-core-immunization.html",
-          "title" : "StructureDefinition Us Core Immunization",
+          "title" : "StructureDefinition US Core Immunization",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-practitionerrole.html",
-          "title" : "StructureDefinition Us Core PractitionerRole",
+          "title" : "StructureDefinition US Core PractitionerRole",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-observation-lab.html",
-          "title" : "StructureDefinition Us Core Observation Lab",
+          "title" : "StructureDefinition US Core Observation Lab",
           "generation" : "generated"
         },
         {
@@ -1402,107 +1426,107 @@
         },
         {
           "nameUrl" : "StructureDefinition-us-core-allergyintolerance.html",
-          "title" : "StructureDefinition Us Core AllergyIntolerance",
+          "title" : "StructureDefinition US Core AllergyIntolerance",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-practitioner.html",
-          "title" : "StructureDefinition Us Core Practitioner",
+          "title" : "StructureDefinition US Core Practitioner",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-diagnosticreport-note.html",
-          "title" : "StructureDefinition Us Core DiagnosticReport Note",
+          "title" : "StructureDefinition US Core DiagnosticReport Note",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-birthsex.html",
-          "title" : "StructureDefinition Us Core Birthsex",
+          "title" : "StructureDefinition US Core Birthsex",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-encounter.html",
-          "title" : "StructureDefinition Us Core Encounter",
+          "title" : "StructureDefinition US Core Encounter",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-patient.html",
-          "title" : "StructureDefinition Us Core Patient",
+          "title" : "StructureDefinition US Core Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-medicationstatement.html",
-          "title" : "StructureDefinition Us Core MedicationStatement",
+          "title" : "StructureDefinition US Core MedicationStatement",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-location.html",
-          "title" : "StructureDefinition Us Core Location",
+          "title" : "StructureDefinition US Core Location",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-procedure.html",
-          "title" : "StructureDefinition Us Core Procedure",
+          "title" : "StructureDefinition US Core Procedure",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-medication.html",
-          "title" : "StructureDefinition Us Core Medication",
+          "title" : "StructureDefinition US Core Medication",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-documentreference.html",
-          "title" : "StructureDefinition Us Core DocumentReference",
+          "title" : "StructureDefinition US Core DocumentReference",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-direct.html",
-          "title" : "StructureDefinition Us Core Direct",
+          "title" : "StructureDefinition US Core Direct",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-device.html",
-          "title" : "StructureDefinition Us Core Device",
+          "title" : "StructureDefinition US Core Device",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-careteam.html",
-          "title" : "StructureDefinition Us Core CareTeam",
+          "title" : "StructureDefinition US Core CareTeam",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-ethnicity.html",
-          "title" : "StructureDefinition Us Core Ethnicity",
+          "title" : "StructureDefinition US Core Ethnicity",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-careplan.html",
-          "title" : "StructureDefinition Us Core CarePlan",
+          "title" : "StructureDefinition US Core CarePlan",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-smokingstatus.html",
-          "title" : "StructureDefinition Us Core Smokingstatus",
+          "title" : "StructureDefinition US Core Smokingstatus",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-race.html",
-          "title" : "StructureDefinition Us Core Race",
+          "title" : "StructureDefinition US Core Race",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-organization.html",
-          "title" : "StructureDefinition Us Core Organization",
+          "title" : "StructureDefinition US Core Organization",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-diagnosticreport-lab.html",
-          "title" : "StructureDefinition Us Core DiagnosticReport Lab",
+          "title" : "StructureDefinition US Core DiagnosticReport Lab",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-condition.html",
-          "title" : "StructureDefinition Us Core Condition",
+          "title" : "StructureDefinition US Core Condition",
           "generation" : "generated"
         },
         {
@@ -1512,12 +1536,12 @@
         },
         {
           "nameUrl" : "StructureDefinition-us-core-goal.html",
-          "title" : "StructureDefinition Us Core Goal",
+          "title" : "StructureDefinition US Core Goal",
           "generation" : "generated"
         },
         {
           "nameUrl" : "StructureDefinition-us-core-medicationrequest.html",
-          "title" : "StructureDefinition Us Core MedicationRequest",
+          "title" : "StructureDefinition US Core MedicationRequest",
           "generation" : "generated"
         }]
       },
@@ -1537,12 +1561,12 @@
         "generation" : "markdown",
         "page" : [{
           "nameUrl" : "ValueSet-us-core-medication-codes.html",
-          "title" : "ValueSet Us Core Medication Codes",
+          "title" : "ValueSet US Core Medication Codes",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-observation-smokingstatus.html",
-          "title" : "ValueSet Us Core Observation Smokingstatus",
+          "title" : "ValueSet US Core Observation Smokingstatus",
           "generation" : "generated"
         },
         {
@@ -1552,12 +1576,12 @@
         },
         {
           "nameUrl" : "ValueSet-us-core-narrative-status.html",
-          "title" : "ValueSet Us Core Narrative Status",
+          "title" : "ValueSet US Core Narrative Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-documentreference-type.html",
-          "title" : "ValueSet Us Core DocumentReference Type",
+          "title" : "ValueSet US Core DocumentReference Type",
           "generation" : "generated"
         },
         {
@@ -1567,7 +1591,7 @@
         },
         {
           "nameUrl" : "ValueSet-us-core-condition-category.html",
-          "title" : "ValueSet Us Core Condition Category",
+          "title" : "ValueSet US Core Condition Category",
           "generation" : "generated"
         },
         {
@@ -1577,42 +1601,42 @@
         },
         {
           "nameUrl" : "ValueSet-us-core-ndc-vaccine-codes.html",
-          "title" : "ValueSet Us Core Ndc Vaccine Codes",
+          "title" : "ValueSet US Core Ndc Vaccine Codes",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-procedure-icd10pcs.html",
-          "title" : "ValueSet Us Core Procedure Icd10pcs",
+          "title" : "ValueSet US Core Procedure Icd10pcs",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-provider-specialty.html",
-          "title" : "ValueSet Us Core Provider Specialty",
+          "title" : "ValueSet US Core Provider Specialty",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-cvx.html",
-          "title" : "ValueSet Us Core Cvx",
+          "title" : "ValueSet US Core Cvx",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-observation-smoking-status-status.html",
-          "title" : "ValueSet Us Core Observation Smoking Status Status",
+          "title" : "ValueSet US Core Observation Smoking Status Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-usps-state.html",
-          "title" : "ValueSet Us Core Usps State",
+          "title" : "ValueSet US Core Usps State",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-encounter-type.html",
-          "title" : "ValueSet Us Core Encounter Type",
+          "title" : "ValueSet US Core Encounter Type",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-problem.html",
-          "title" : "ValueSet Us Core Problem",
+          "title" : "ValueSet US Core Problem",
           "generation" : "generated"
         },
         {
@@ -1622,42 +1646,42 @@
         },
         {
           "nameUrl" : "ValueSet-us-core-diagnosticreport-report-and-note-codes.html",
-          "title" : "ValueSet Us Core DiagnosticReport Report And Note Codes",
+          "title" : "ValueSet US Core DiagnosticReport Report And Note Codes",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-provider-role.html",
-          "title" : "ValueSet Us Core Provider Role",
+          "title" : "ValueSet US Core Provider Role",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-smoking-status-observation-codes.html",
-          "title" : "ValueSet Us Core Smoking Status Observation Codes",
+          "title" : "ValueSet US Core Smoking Status Observation Codes",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-careteam-provider-roles.html",
-          "title" : "ValueSet Us Core CareTeam Provider Roles",
+          "title" : "ValueSet US Core CareTeam Provider Roles",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-diagnosticreport-category.html",
-          "title" : "ValueSet Us Core DiagnosticReport Category",
+          "title" : "ValueSet US Core DiagnosticReport Category",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-clinical-note-type.html",
-          "title" : "ValueSet Us Core Clinical Note Type",
+          "title" : "ValueSet US Core Clinical Note Type",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-documentreference-category.html",
-          "title" : "ValueSet Us Core DocumentReference Category",
+          "title" : "ValueSet US Core DocumentReference Category",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-procedure-code.html",
-          "title" : "ValueSet Us Core Procedure Code",
+          "title" : "ValueSet US Core Procedure Code",
           "generation" : "generated"
         },
         {
@@ -1667,12 +1691,12 @@
         },
         {
           "nameUrl" : "ValueSet-us-core-observation-value-codes.html",
-          "title" : "ValueSet Us Core Observation Value Codes",
+          "title" : "ValueSet US Core Observation Value Codes",
           "generation" : "generated"
         },
         {
           "nameUrl" : "ValueSet-us-core-diagnosticreport-lab-codes.html",
-          "title" : "ValueSet Us Core DiagnosticReport Lab Codes",
+          "title" : "ValueSet US Core DiagnosticReport Lab Codes",
           "generation" : "generated"
         },
         {
@@ -1692,7 +1716,7 @@
         },
         {
           "nameUrl" : "CodeSystem-us-core-documentreference-category.html",
-          "title" : "CodeSystem Us Core DocumentReference Category",
+          "title" : "CodeSystem US Core DocumentReference Category",
           "generation" : "generated"
         },
         {
@@ -1712,382 +1736,382 @@
         "generation" : "markdown",
         "page" : [{
           "nameUrl" : "SearchParameter-us-core-location-address-state.html",
-          "title" : "SearchParameter Us Core Location Address State",
+          "title" : "SearchParameter US Core Location Address State",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-practitionerrole-practitioner.html",
-          "title" : "SearchParameter Us Core PractitionerRole Practitioner",
+          "title" : "SearchParameter US Core PractitionerRole Practitioner",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-medicationstatement-status.html",
-          "title" : "SearchParameter Us Core MedicationStatement Status",
+          "title" : "SearchParameter US Core MedicationStatement Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-organization-name.html",
-          "title" : "SearchParameter Us Core Organization Name",
+          "title" : "SearchParameter US Core Organization Name",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-diagnosticreport-code.html",
-          "title" : "SearchParameter Us Core DiagnosticReport Code",
+          "title" : "SearchParameter US Core DiagnosticReport Code",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-goal-lifecycle-status.html",
-          "title" : "SearchParameter Us Core Goal Lifecycle Status",
+          "title" : "SearchParameter US Core Goal Lifecycle Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-procedure-code.html",
-          "title" : "SearchParameter Us Core Procedure Code",
+          "title" : "SearchParameter US Core Procedure Code",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-patient-gender.html",
-          "title" : "SearchParameter Us Core Patient Gender",
+          "title" : "SearchParameter US Core Patient Gender",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-condition-clinical-status.html",
-          "title" : "SearchParameter Us Core Condition Clinical Status",
+          "title" : "SearchParameter US Core Condition Clinical Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-documentreference-id.html",
-          "title" : "SearchParameter Us Core DocumentReference Id",
+          "title" : "SearchParameter US Core DocumentReference Id",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-careplan-category.html",
-          "title" : "SearchParameter Us Core CarePlan Category",
+          "title" : "SearchParameter US Core CarePlan Category",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-encounter-class.html",
-          "title" : "SearchParameter Us Core Encounter Class",
+          "title" : "SearchParameter US Core Encounter Class",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-medicationrequest-patient.html",
-          "title" : "SearchParameter Us Core MedicationRequest Patient",
+          "title" : "SearchParameter US Core MedicationRequest Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-documentreference-patient.html",
-          "title" : "SearchParameter Us Core DocumentReference Patient",
+          "title" : "SearchParameter US Core DocumentReference Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-diagnosticreport-date.html",
-          "title" : "SearchParameter Us Core DiagnosticReport Date",
+          "title" : "SearchParameter US Core DiagnosticReport Date",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-procedure-date.html",
-          "title" : "SearchParameter Us Core Procedure Date",
+          "title" : "SearchParameter US Core Procedure Date",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-allergyintolerance-clinical-status.html",
-          "title" : "SearchParameter Us Core AllergyIntolerance Clinical Status",
+          "title" : "SearchParameter US Core AllergyIntolerance Clinical Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-documentreference-date.html",
-          "title" : "SearchParameter Us Core DocumentReference Date",
+          "title" : "SearchParameter US Core DocumentReference Date",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-location-address.html",
-          "title" : "SearchParameter Us Core Location Address",
+          "title" : "SearchParameter US Core Location Address",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-practitioner-name.html",
-          "title" : "SearchParameter Us Core Practitioner Name",
+          "title" : "SearchParameter US Core Practitioner Name",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-documentreference-period.html",
-          "title" : "SearchParameter Us Core DocumentReference Period",
+          "title" : "SearchParameter US Core DocumentReference Period",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-observation-code.html",
-          "title" : "SearchParameter Us Core Observation Code",
+          "title" : "SearchParameter US Core Observation Code",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-location-name.html",
-          "title" : "SearchParameter Us Core Location Name",
+          "title" : "SearchParameter US Core Location Name",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-condition-onset-date.html",
-          "title" : "SearchParameter Us Core Condition Onset Date",
+          "title" : "SearchParameter US Core Condition Onset Date",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-patient-given.html",
-          "title" : "SearchParameter Us Core Patient Given",
+          "title" : "SearchParameter US Core Patient Given",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-encounter-type.html",
-          "title" : "SearchParameter Us Core Encounter Type",
+          "title" : "SearchParameter US Core Encounter Type",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-encounter-patient.html",
-          "title" : "SearchParameter Us Core Encounter Patient",
+          "title" : "SearchParameter US Core Encounter Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-organization-address.html",
-          "title" : "SearchParameter Us Core Organization Address",
+          "title" : "SearchParameter US Core Organization Address",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-observation-category.html",
-          "title" : "SearchParameter Us Core Observation Category",
+          "title" : "SearchParameter US Core Observation Category",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-diagnosticreport-status.html",
-          "title" : "SearchParameter Us Core DiagnosticReport Status",
+          "title" : "SearchParameter US Core DiagnosticReport Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-observation-date.html",
-          "title" : "SearchParameter Us Core Observation Date",
+          "title" : "SearchParameter US Core Observation Date",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-diagnosticreport-category.html",
-          "title" : "SearchParameter Us Core DiagnosticReport Category",
+          "title" : "SearchParameter US Core DiagnosticReport Category",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-observation-status.html",
-          "title" : "SearchParameter Us Core Observation Status",
+          "title" : "SearchParameter US Core Observation Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-ethnicity.html",
-          "title" : "SearchParameter Us Core Ethnicity",
+          "title" : "SearchParameter US Core Ethnicity",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-documentreference-type.html",
-          "title" : "SearchParameter Us Core DocumentReference Type",
+          "title" : "SearchParameter US Core DocumentReference Type",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-encounter-date.html",
-          "title" : "SearchParameter Us Core Encounter Date",
+          "title" : "SearchParameter US Core Encounter Date",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-patient-birthdate.html",
-          "title" : "SearchParameter Us Core Patient Birthdate",
+          "title" : "SearchParameter US Core Patient Birthdate",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-procedure-status.html",
-          "title" : "SearchParameter Us Core Procedure Status",
+          "title" : "SearchParameter US Core Procedure Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-encounter-status.html",
-          "title" : "SearchParameter Us Core Encounter Status",
+          "title" : "SearchParameter US Core Encounter Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-careplan-status.html",
-          "title" : "SearchParameter Us Core CarePlan Status",
+          "title" : "SearchParameter US Core CarePlan Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-condition-patient.html",
-          "title" : "SearchParameter Us Core Condition Patient",
+          "title" : "SearchParameter US Core Condition Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-allergyintolerance-patient.html",
-          "title" : "SearchParameter Us Core AllergyIntolerance Patient",
+          "title" : "SearchParameter US Core AllergyIntolerance Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-device-patient.html",
-          "title" : "SearchParameter Us Core Device Patient",
+          "title" : "SearchParameter US Core Device Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-condition-code.html",
-          "title" : "SearchParameter Us Core Condition Code",
+          "title" : "SearchParameter US Core Condition Code",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-observation-patient.html",
-          "title" : "SearchParameter Us Core Observation Patient",
+          "title" : "SearchParameter US Core Observation Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-race.html",
-          "title" : "SearchParameter Us Core Race",
+          "title" : "SearchParameter US Core Race",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-careplan-patient.html",
-          "title" : "SearchParameter Us Core CarePlan Patient",
+          "title" : "SearchParameter US Core CarePlan Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-patient-family.html",
-          "title" : "SearchParameter Us Core Patient Family",
+          "title" : "SearchParameter US Core Patient Family",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-medicationrequest-status.html",
-          "title" : "SearchParameter Us Core MedicationRequest Status",
+          "title" : "SearchParameter US Core MedicationRequest Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-medicationstatement-effective.html",
-          "title" : "SearchParameter Us Core MedicationStatement Effective",
+          "title" : "SearchParameter US Core MedicationStatement Effective",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-medicationstatement-patient.html",
-          "title" : "SearchParameter Us Core MedicationStatement Patient",
+          "title" : "SearchParameter US Core MedicationStatement Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-location-address-postalcode.html",
-          "title" : "SearchParameter Us Core Location Address Postalcode",
+          "title" : "SearchParameter US Core Location Address Postalcode",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-encounter-id.html",
-          "title" : "SearchParameter Us Core Encounter Id",
+          "title" : "SearchParameter US Core Encounter Id",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-medicationrequest-authoredon.html",
-          "title" : "SearchParameter Us Core MedicationRequest Authoredon",
+          "title" : "SearchParameter US Core MedicationRequest Authoredon",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-documentreference-status.html",
-          "title" : "SearchParameter Us Core DocumentReference Status",
+          "title" : "SearchParameter US Core DocumentReference Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-procedure-patient.html",
-          "title" : "SearchParameter Us Core Procedure Patient",
+          "title" : "SearchParameter US Core Procedure Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-goal-target-date.html",
-          "title" : "SearchParameter Us Core Goal Target Date",
+          "title" : "SearchParameter US Core Goal Target Date",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-diagnosticreport-patient.html",
-          "title" : "SearchParameter Us Core DiagnosticReport Patient",
+          "title" : "SearchParameter US Core DiagnosticReport Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-careplan-date.html",
-          "title" : "SearchParameter Us Core CarePlan Date",
+          "title" : "SearchParameter US Core CarePlan Date",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-careteam-patient.html",
-          "title" : "SearchParameter Us Core CareTeam Patient",
+          "title" : "SearchParameter US Core CareTeam Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-immunization-date.html",
-          "title" : "SearchParameter Us Core Immunization Date",
+          "title" : "SearchParameter US Core Immunization Date",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-encounter-identifier.html",
-          "title" : "SearchParameter Us Core Encounter Identifier",
+          "title" : "SearchParameter US Core Encounter Identifier",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-practitionerrole-specialty.html",
-          "title" : "SearchParameter Us Core PractitionerRole Specialty",
+          "title" : "SearchParameter US Core PractitionerRole Specialty",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-patient-name.html",
-          "title" : "SearchParameter Us Core Patient Name",
+          "title" : "SearchParameter US Core Patient Name",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-device-type.html",
-          "title" : "SearchParameter Us Core Device Type",
+          "title" : "SearchParameter US Core Device Type",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-goal-patient.html",
-          "title" : "SearchParameter Us Core Goal Patient",
+          "title" : "SearchParameter US Core Goal Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-immunization-patient.html",
-          "title" : "SearchParameter Us Core Immunization Patient",
+          "title" : "SearchParameter US Core Immunization Patient",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-goal-start-date.html",
-          "title" : "SearchParameter Us Core Goal Start Date",
+          "title" : "SearchParameter US Core Goal Start Date",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-patient-id.html",
-          "title" : "SearchParameter Us Core Patient Id",
+          "title" : "SearchParameter US Core Patient Id",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-location-address-city.html",
-          "title" : "SearchParameter Us Core Location Address City",
+          "title" : "SearchParameter US Core Location Address City",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-careteam-status.html",
-          "title" : "SearchParameter Us Core CareTeam Status",
+          "title" : "SearchParameter US Core CareTeam Status",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-documentreference-category.html",
-          "title" : "SearchParameter Us Core DocumentReference Category",
+          "title" : "SearchParameter US Core DocumentReference Category",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-practitioner-identifier.html",
-          "title" : "SearchParameter Us Core Practitioner Identifier",
+          "title" : "SearchParameter US Core Practitioner Identifier",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-patient-identifier.html",
-          "title" : "SearchParameter Us Core Patient Identifier",
+          "title" : "SearchParameter US Core Patient Identifier",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-condition-category.html",
-          "title" : "SearchParameter Us Core Condition Category",
+          "title" : "SearchParameter US Core Condition Category",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-us-core-immunization-status.html",
-          "title" : "SearchParameter Us Core Immunization Status",
+          "title" : "SearchParameter US Core Immunization Status",
           "generation" : "generated"
         }]
       },
@@ -2097,12 +2121,12 @@
         "generation" : "markdown",
         "page" : [{
           "nameUrl" : "CapabilityStatement-us-core-server.html",
-          "title" : "CapabilityStatement Us Core Server",
+          "title" : "CapabilityStatement US Core Server",
           "generation" : "generated"
         },
         {
           "nameUrl" : "CapabilityStatement-us-core-client.html",
-          "title" : "CapabilityStatement Us Core Client",
+          "title" : "CapabilityStatement US Core Client",
           "generation" : "generated"
         }]
       },

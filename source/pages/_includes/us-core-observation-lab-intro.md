@@ -21,11 +21,10 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.   a result value and, if the result value is a numeric quantity, a standard [UCUM] unit
 
 
-Each Observation *should* have:
+**Each Observation must support:**
 
 1.   a time indicating when the measurement was taken
 1.   a reference range if available
-
 
 **Profile specific implementation guidance:**
 
@@ -41,10 +40,4 @@ Each Observation *should* have:
  - [observation-serum-total-bilirubin](Observation-serum-total-bilirubin.html)
  - [observation-erythrocytes](Observation-erythrocytes.html)
 
- [SNOMED CT]: http://snomed.info/sct
-  [Observation Value Absent Reason]: http://hl7.org/fhir/ValueSet/data-absent-reason
-  [UCUM]: http://unitsofmeasure.org
-  [LOINC]: http://loinc.org
-[Observation]:  {{site.data.fhir.path}}observation.html
-[DiagnosticReport]:  {{site.data.fhir.path}}diagnosticreport.html
-[General Guidance Section]: general-guidance.html#using-ucum-codes-in-the-quantity-datatype
+{% include link-list.md %}

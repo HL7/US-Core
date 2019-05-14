@@ -10,7 +10,6 @@ profile:
 
 ### Mandatory and Must Support Data Elements
 
-
 The following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.  
 
 **Each Immunization must have:**
@@ -20,8 +19,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  a date the vaccine was administered
 1.  a patient
 
-
-In addition it should have (if available):
+**Each Immunization must support:**
 
 1.  a statusReason if the vaccine wasn't given
 
@@ -35,8 +33,4 @@ Based upon the 2015 Edition Certification Requirements, [CVX vaccine codes] are 
 
 - [Immunization-imm-1](Immunization-imm-1.html)
 
-  [CVX vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx
-  [NDC vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
-  [CVX crosswalk table]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
-[Immunization]:  {{site.data.fhir.path}}immunization.html
-[NDC to CVX ConceptMap]: ConceptMap-ndc-cvx.html
+{% include link-list.md %}

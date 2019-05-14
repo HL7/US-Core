@@ -18,8 +18,10 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  A status of the organization
 1.  A name
 1.  A list of contact information
-1.  Endpoint information
 
+**Each Organization must support:**
+
+1.  Endpoint information
 
 **Profile specific implementation guidance:**
 

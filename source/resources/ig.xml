@@ -121,6 +121,12 @@
   </resource>
   <resource>
     <reference>
+      <reference value="DiagnosticReport/chest-xray-report"/>
+    </reference>
+    <exampleBoolean value="true"/>
+  </resource>
+  <resource>
+    <reference>
       <reference value="Observation/serum-sodium"/>
     </reference>
     <exampleBoolean value="true"/>
@@ -164,6 +170,12 @@
   <resource>
     <reference>
       <reference value="Observation/urine-protein"/>
+    </reference>
+    <exampleBoolean value="true"/>
+  </resource>
+  <resource>
+    <reference>
+      <reference value="Procedure/defib-implant"/>
     </reference>
     <exampleBoolean value="true"/>
   </resource>
@@ -230,6 +242,12 @@
   <resource>
     <reference>
       <reference value="Observation/length"/>
+    </reference>
+    <exampleBoolean value="true"/>
+  </resource>
+  <resource>
+    <reference>
+      <reference value="Device/udi-2"/>
     </reference>
     <exampleBoolean value="true"/>
   </resource>
@@ -326,6 +344,12 @@
   <resource>
     <reference>
       <reference value="Observation/oxygen-saturation"/>
+    </reference>
+    <exampleBoolean value="true"/>
+  </resource>
+  <resource>
+    <reference>
+      <reference value="DiagnosticReport/cardiology-report"/>
     </reference>
     <exampleBoolean value="true"/>
   </resource>
@@ -1380,6 +1404,7 @@
 
     </page>
     <!-- ============ Guidance Page =============== -->
+
     <!-- ============ Profiles Page =============== -->
     <page>
       <nameUrl value="profiles.html"/>
@@ -1389,17 +1414,17 @@
       <!-- insert profiles -->
       <page>
         <nameUrl value="StructureDefinition-us-core-immunization.html"/>
-        <title value="StructureDefinition Us Core Immunization"/>
+        <title value="StructureDefinition US Core Immunization"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-practitionerrole.html"/>
-        <title value="StructureDefinition Us Core PractitionerRole"/>
+        <title value="StructureDefinition US Core PractitionerRole"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-observation-lab.html"/>
-        <title value="StructureDefinition Us Core Observation Lab"/>
+        <title value="StructureDefinition US Core Observation Lab"/>
         <generation value="generated"/>
       </page>
       <page>
@@ -1409,107 +1434,107 @@
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-allergyintolerance.html"/>
-        <title value="StructureDefinition Us Core AllergyIntolerance"/>
+        <title value="StructureDefinition US Core AllergyIntolerance"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-practitioner.html"/>
-        <title value="StructureDefinition Us Core Practitioner"/>
+        <title value="StructureDefinition US Core Practitioner"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-diagnosticreport-note.html"/>
-        <title value="StructureDefinition Us Core DiagnosticReport Note"/>
+        <title value="StructureDefinition US Core DiagnosticReport Note"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-birthsex.html"/>
-        <title value="StructureDefinition Us Core Birthsex"/>
+        <title value="StructureDefinition US Core Birthsex"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-encounter.html"/>
-        <title value="StructureDefinition Us Core Encounter"/>
+        <title value="StructureDefinition US Core Encounter"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-patient.html"/>
-        <title value="StructureDefinition Us Core Patient"/>
+        <title value="StructureDefinition US Core Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-medicationstatement.html"/>
-        <title value="StructureDefinition Us Core MedicationStatement"/>
+        <title value="StructureDefinition US Core MedicationStatement"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-location.html"/>
-        <title value="StructureDefinition Us Core Location"/>
+        <title value="StructureDefinition US Core Location"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-procedure.html"/>
-        <title value="StructureDefinition Us Core Procedure"/>
+        <title value="StructureDefinition US Core Procedure"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-medication.html"/>
-        <title value="StructureDefinition Us Core Medication"/>
+        <title value="StructureDefinition US Core Medication"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-documentreference.html"/>
-        <title value="StructureDefinition Us Core DocumentReference"/>
+        <title value="StructureDefinition US Core DocumentReference"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-direct.html"/>
-        <title value="StructureDefinition Us Core Direct"/>
+        <title value="StructureDefinition US Core Direct"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-device.html"/>
-        <title value="StructureDefinition Us Core Device"/>
+        <title value="StructureDefinition US Core Device"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-careteam.html"/>
-        <title value="StructureDefinition Us Core CareTeam"/>
+        <title value="StructureDefinition US Core CareTeam"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-ethnicity.html"/>
-        <title value="StructureDefinition Us Core Ethnicity"/>
+        <title value="StructureDefinition US Core Ethnicity"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-careplan.html"/>
-        <title value="StructureDefinition Us Core CarePlan"/>
+        <title value="StructureDefinition US Core CarePlan"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-smokingstatus.html"/>
-        <title value="StructureDefinition Us Core Smokingstatus"/>
+        <title value="StructureDefinition US Core Smokingstatus"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-race.html"/>
-        <title value="StructureDefinition Us Core Race"/>
+        <title value="StructureDefinition US Core Race"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-organization.html"/>
-        <title value="StructureDefinition Us Core Organization"/>
+        <title value="StructureDefinition US Core Organization"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-diagnosticreport-lab.html"/>
-        <title value="StructureDefinition Us Core DiagnosticReport Lab"/>
+        <title value="StructureDefinition US Core DiagnosticReport Lab"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-condition.html"/>
-        <title value="StructureDefinition Us Core Condition"/>
+        <title value="StructureDefinition US Core Condition"/>
         <generation value="generated"/>
       </page>
       <page>
@@ -1519,12 +1544,12 @@
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-goal.html"/>
-        <title value="StructureDefinition Us Core Goal"/>
+        <title value="StructureDefinition US Core Goal"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="StructureDefinition-us-core-medicationrequest.html"/>
-        <title value="StructureDefinition Us Core MedicationRequest"/>
+        <title value="StructureDefinition US Core MedicationRequest"/>
         <generation value="generated"/>
       </page>
       <!-- ============ End Profiles and examples=============== -->
@@ -1555,12 +1580,12 @@
       <!-- insert valuesets -->
       <page>
         <nameUrl value="ValueSet-us-core-medication-codes.html"/>
-        <title value="ValueSet Us Core Medication Codes"/>
+        <title value="ValueSet US Core Medication Codes"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-observation-smokingstatus.html"/>
-        <title value="ValueSet Us Core Observation Smokingstatus"/>
+        <title value="ValueSet US Core Observation Smokingstatus"/>
         <generation value="generated"/>
       </page>
       <page>
@@ -1570,12 +1595,12 @@
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-narrative-status.html"/>
-        <title value="ValueSet Us Core Narrative Status"/>
+        <title value="ValueSet US Core Narrative Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-documentreference-type.html"/>
-        <title value="ValueSet Us Core DocumentReference Type"/>
+        <title value="ValueSet US Core DocumentReference Type"/>
         <generation value="generated"/>
       </page>
       <page>
@@ -1585,7 +1610,7 @@
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-condition-category.html"/>
-        <title value="ValueSet Us Core Condition Category"/>
+        <title value="ValueSet US Core Condition Category"/>
         <generation value="generated"/>
       </page>
       <page>
@@ -1595,42 +1620,42 @@
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-ndc-vaccine-codes.html"/>
-        <title value="ValueSet Us Core Ndc Vaccine Codes"/>
+        <title value="ValueSet US Core Ndc Vaccine Codes"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-procedure-icd10pcs.html"/>
-        <title value="ValueSet Us Core Procedure Icd10pcs"/>
+        <title value="ValueSet US Core Procedure Icd10pcs"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-provider-specialty.html"/>
-        <title value="ValueSet Us Core Provider Specialty"/>
+        <title value="ValueSet US Core Provider Specialty"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-cvx.html"/>
-        <title value="ValueSet Us Core Cvx"/>
+        <title value="ValueSet US Core Cvx"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-observation-smoking-status-status.html"/>
-        <title value="ValueSet Us Core Observation Smoking Status Status"/>
+        <title value="ValueSet US Core Observation Smoking Status Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-usps-state.html"/>
-        <title value="ValueSet Us Core Usps State"/>
+        <title value="ValueSet US Core Usps State"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-encounter-type.html"/>
-        <title value="ValueSet Us Core Encounter Type"/>
+        <title value="ValueSet US Core Encounter Type"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-problem.html"/>
-        <title value="ValueSet Us Core Problem"/>
+        <title value="ValueSet US Core Problem"/>
         <generation value="generated"/>
       </page>
       <page>
@@ -1640,42 +1665,42 @@
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-diagnosticreport-report-and-note-codes.html"/>
-        <title value="ValueSet Us Core DiagnosticReport Report And Note Codes"/>
+        <title value="ValueSet US Core DiagnosticReport Report And Note Codes"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-provider-role.html"/>
-        <title value="ValueSet Us Core Provider Role"/>
+        <title value="ValueSet US Core Provider Role"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-smoking-status-observation-codes.html"/>
-        <title value="ValueSet Us Core Smoking Status Observation Codes"/>
+        <title value="ValueSet US Core Smoking Status Observation Codes"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-careteam-provider-roles.html"/>
-        <title value="ValueSet Us Core CareTeam Provider Roles"/>
+        <title value="ValueSet US Core CareTeam Provider Roles"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-diagnosticreport-category.html"/>
-        <title value="ValueSet Us Core DiagnosticReport Category"/>
+        <title value="ValueSet US Core DiagnosticReport Category"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-clinical-note-type.html"/>
-        <title value="ValueSet Us Core Clinical Note Type"/>
+        <title value="ValueSet US Core Clinical Note Type"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-documentreference-category.html"/>
-        <title value="ValueSet Us Core DocumentReference Category"/>
+        <title value="ValueSet US Core DocumentReference Category"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-procedure-code.html"/>
-        <title value="ValueSet Us Core Procedure Code"/>
+        <title value="ValueSet US Core Procedure Code"/>
         <generation value="generated"/>
       </page>
       <page>
@@ -1685,12 +1710,12 @@
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-observation-value-codes.html"/>
-        <title value="ValueSet Us Core Observation Value Codes"/>
+        <title value="ValueSet US Core Observation Value Codes"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="ValueSet-us-core-diagnosticreport-lab-codes.html"/>
-        <title value="ValueSet Us Core DiagnosticReport Lab Codes"/>
+        <title value="ValueSet US Core DiagnosticReport Lab Codes"/>
         <generation value="generated"/>
       </page>
       <page>
@@ -1713,7 +1738,7 @@
       </page>
       <page>
         <nameUrl value="CodeSystem-us-core-documentreference-category.html"/>
-        <title value="CodeSystem Us Core DocumentReference Category"/>
+        <title value="CodeSystem US Core DocumentReference Category"/>
         <generation value="generated"/>
       </page>
       <page>
@@ -1740,382 +1765,382 @@
       <!-- insert searchparameters -->
       <page>
         <nameUrl value="SearchParameter-us-core-location-address-state.html"/>
-        <title value="SearchParameter Us Core Location Address State"/>
+        <title value="SearchParameter US Core Location Address State"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-practitionerrole-practitioner.html"/>
-        <title value="SearchParameter Us Core PractitionerRole Practitioner"/>
+        <title value="SearchParameter US Core PractitionerRole Practitioner"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-medicationstatement-status.html"/>
-        <title value="SearchParameter Us Core MedicationStatement Status"/>
+        <title value="SearchParameter US Core MedicationStatement Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-organization-name.html"/>
-        <title value="SearchParameter Us Core Organization Name"/>
+        <title value="SearchParameter US Core Organization Name"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-diagnosticreport-code.html"/>
-        <title value="SearchParameter Us Core DiagnosticReport Code"/>
+        <title value="SearchParameter US Core DiagnosticReport Code"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-goal-lifecycle-status.html"/>
-        <title value="SearchParameter Us Core Goal Lifecycle Status"/>
+        <title value="SearchParameter US Core Goal Lifecycle Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-procedure-code.html"/>
-        <title value="SearchParameter Us Core Procedure Code"/>
+        <title value="SearchParameter US Core Procedure Code"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-patient-gender.html"/>
-        <title value="SearchParameter Us Core Patient Gender"/>
+        <title value="SearchParameter US Core Patient Gender"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-condition-clinical-status.html"/>
-        <title value="SearchParameter Us Core Condition Clinical Status"/>
+        <title value="SearchParameter US Core Condition Clinical Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-documentreference-id.html"/>
-        <title value="SearchParameter Us Core DocumentReference Id"/>
+        <title value="SearchParameter US Core DocumentReference Id"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-careplan-category.html"/>
-        <title value="SearchParameter Us Core CarePlan Category"/>
+        <title value="SearchParameter US Core CarePlan Category"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-encounter-class.html"/>
-        <title value="SearchParameter Us Core Encounter Class"/>
+        <title value="SearchParameter US Core Encounter Class"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-medicationrequest-patient.html"/>
-        <title value="SearchParameter Us Core MedicationRequest Patient"/>
+        <title value="SearchParameter US Core MedicationRequest Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-documentreference-patient.html"/>
-        <title value="SearchParameter Us Core DocumentReference Patient"/>
+        <title value="SearchParameter US Core DocumentReference Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-diagnosticreport-date.html"/>
-        <title value="SearchParameter Us Core DiagnosticReport Date"/>
+        <title value="SearchParameter US Core DiagnosticReport Date"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-procedure-date.html"/>
-        <title value="SearchParameter Us Core Procedure Date"/>
+        <title value="SearchParameter US Core Procedure Date"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-allergyintolerance-clinical-status.html"/>
-        <title value="SearchParameter Us Core AllergyIntolerance Clinical Status"/>
+        <title value="SearchParameter US Core AllergyIntolerance Clinical Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-documentreference-date.html"/>
-        <title value="SearchParameter Us Core DocumentReference Date"/>
+        <title value="SearchParameter US Core DocumentReference Date"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-location-address.html"/>
-        <title value="SearchParameter Us Core Location Address"/>
+        <title value="SearchParameter US Core Location Address"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-practitioner-name.html"/>
-        <title value="SearchParameter Us Core Practitioner Name"/>
+        <title value="SearchParameter US Core Practitioner Name"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-documentreference-period.html"/>
-        <title value="SearchParameter Us Core DocumentReference Period"/>
+        <title value="SearchParameter US Core DocumentReference Period"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-observation-code.html"/>
-        <title value="SearchParameter Us Core Observation Code"/>
+        <title value="SearchParameter US Core Observation Code"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-location-name.html"/>
-        <title value="SearchParameter Us Core Location Name"/>
+        <title value="SearchParameter US Core Location Name"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-condition-onset-date.html"/>
-        <title value="SearchParameter Us Core Condition Onset Date"/>
+        <title value="SearchParameter US Core Condition Onset Date"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-patient-given.html"/>
-        <title value="SearchParameter Us Core Patient Given"/>
+        <title value="SearchParameter US Core Patient Given"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-encounter-type.html"/>
-        <title value="SearchParameter Us Core Encounter Type"/>
+        <title value="SearchParameter US Core Encounter Type"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-encounter-patient.html"/>
-        <title value="SearchParameter Us Core Encounter Patient"/>
+        <title value="SearchParameter US Core Encounter Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-organization-address.html"/>
-        <title value="SearchParameter Us Core Organization Address"/>
+        <title value="SearchParameter US Core Organization Address"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-observation-category.html"/>
-        <title value="SearchParameter Us Core Observation Category"/>
+        <title value="SearchParameter US Core Observation Category"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-diagnosticreport-status.html"/>
-        <title value="SearchParameter Us Core DiagnosticReport Status"/>
+        <title value="SearchParameter US Core DiagnosticReport Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-observation-date.html"/>
-        <title value="SearchParameter Us Core Observation Date"/>
+        <title value="SearchParameter US Core Observation Date"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-diagnosticreport-category.html"/>
-        <title value="SearchParameter Us Core DiagnosticReport Category"/>
+        <title value="SearchParameter US Core DiagnosticReport Category"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-observation-status.html"/>
-        <title value="SearchParameter Us Core Observation Status"/>
+        <title value="SearchParameter US Core Observation Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-ethnicity.html"/>
-        <title value="SearchParameter Us Core Ethnicity"/>
+        <title value="SearchParameter US Core Ethnicity"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-documentreference-type.html"/>
-        <title value="SearchParameter Us Core DocumentReference Type"/>
+        <title value="SearchParameter US Core DocumentReference Type"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-encounter-date.html"/>
-        <title value="SearchParameter Us Core Encounter Date"/>
+        <title value="SearchParameter US Core Encounter Date"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-patient-birthdate.html"/>
-        <title value="SearchParameter Us Core Patient Birthdate"/>
+        <title value="SearchParameter US Core Patient Birthdate"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-procedure-status.html"/>
-        <title value="SearchParameter Us Core Procedure Status"/>
+        <title value="SearchParameter US Core Procedure Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-encounter-status.html"/>
-        <title value="SearchParameter Us Core Encounter Status"/>
+        <title value="SearchParameter US Core Encounter Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-careplan-status.html"/>
-        <title value="SearchParameter Us Core CarePlan Status"/>
+        <title value="SearchParameter US Core CarePlan Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-condition-patient.html"/>
-        <title value="SearchParameter Us Core Condition Patient"/>
+        <title value="SearchParameter US Core Condition Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-allergyintolerance-patient.html"/>
-        <title value="SearchParameter Us Core AllergyIntolerance Patient"/>
+        <title value="SearchParameter US Core AllergyIntolerance Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-device-patient.html"/>
-        <title value="SearchParameter Us Core Device Patient"/>
+        <title value="SearchParameter US Core Device Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-condition-code.html"/>
-        <title value="SearchParameter Us Core Condition Code"/>
+        <title value="SearchParameter US Core Condition Code"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-observation-patient.html"/>
-        <title value="SearchParameter Us Core Observation Patient"/>
+        <title value="SearchParameter US Core Observation Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-race.html"/>
-        <title value="SearchParameter Us Core Race"/>
+        <title value="SearchParameter US Core Race"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-careplan-patient.html"/>
-        <title value="SearchParameter Us Core CarePlan Patient"/>
+        <title value="SearchParameter US Core CarePlan Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-patient-family.html"/>
-        <title value="SearchParameter Us Core Patient Family"/>
+        <title value="SearchParameter US Core Patient Family"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-medicationrequest-status.html"/>
-        <title value="SearchParameter Us Core MedicationRequest Status"/>
+        <title value="SearchParameter US Core MedicationRequest Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-medicationstatement-effective.html"/>
-        <title value="SearchParameter Us Core MedicationStatement Effective"/>
+        <title value="SearchParameter US Core MedicationStatement Effective"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-medicationstatement-patient.html"/>
-        <title value="SearchParameter Us Core MedicationStatement Patient"/>
+        <title value="SearchParameter US Core MedicationStatement Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-location-address-postalcode.html"/>
-        <title value="SearchParameter Us Core Location Address Postalcode"/>
+        <title value="SearchParameter US Core Location Address Postalcode"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-encounter-id.html"/>
-        <title value="SearchParameter Us Core Encounter Id"/>
+        <title value="SearchParameter US Core Encounter Id"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-medicationrequest-authoredon.html"/>
-        <title value="SearchParameter Us Core MedicationRequest Authoredon"/>
+        <title value="SearchParameter US Core MedicationRequest Authoredon"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-documentreference-status.html"/>
-        <title value="SearchParameter Us Core DocumentReference Status"/>
+        <title value="SearchParameter US Core DocumentReference Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-procedure-patient.html"/>
-        <title value="SearchParameter Us Core Procedure Patient"/>
+        <title value="SearchParameter US Core Procedure Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-goal-target-date.html"/>
-        <title value="SearchParameter Us Core Goal Target Date"/>
+        <title value="SearchParameter US Core Goal Target Date"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-diagnosticreport-patient.html"/>
-        <title value="SearchParameter Us Core DiagnosticReport Patient"/>
+        <title value="SearchParameter US Core DiagnosticReport Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-careplan-date.html"/>
-        <title value="SearchParameter Us Core CarePlan Date"/>
+        <title value="SearchParameter US Core CarePlan Date"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-careteam-patient.html"/>
-        <title value="SearchParameter Us Core CareTeam Patient"/>
+        <title value="SearchParameter US Core CareTeam Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-immunization-date.html"/>
-        <title value="SearchParameter Us Core Immunization Date"/>
+        <title value="SearchParameter US Core Immunization Date"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-encounter-identifier.html"/>
-        <title value="SearchParameter Us Core Encounter Identifier"/>
+        <title value="SearchParameter US Core Encounter Identifier"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-practitionerrole-specialty.html"/>
-        <title value="SearchParameter Us Core PractitionerRole Specialty"/>
+        <title value="SearchParameter US Core PractitionerRole Specialty"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-patient-name.html"/>
-        <title value="SearchParameter Us Core Patient Name"/>
+        <title value="SearchParameter US Core Patient Name"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-device-type.html"/>
-        <title value="SearchParameter Us Core Device Type"/>
+        <title value="SearchParameter US Core Device Type"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-goal-patient.html"/>
-        <title value="SearchParameter Us Core Goal Patient"/>
+        <title value="SearchParameter US Core Goal Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-immunization-patient.html"/>
-        <title value="SearchParameter Us Core Immunization Patient"/>
+        <title value="SearchParameter US Core Immunization Patient"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-goal-start-date.html"/>
-        <title value="SearchParameter Us Core Goal Start Date"/>
+        <title value="SearchParameter US Core Goal Start Date"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-patient-id.html"/>
-        <title value="SearchParameter Us Core Patient Id"/>
+        <title value="SearchParameter US Core Patient Id"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-location-address-city.html"/>
-        <title value="SearchParameter Us Core Location Address City"/>
+        <title value="SearchParameter US Core Location Address City"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-careteam-status.html"/>
-        <title value="SearchParameter Us Core CareTeam Status"/>
+        <title value="SearchParameter US Core CareTeam Status"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-documentreference-category.html"/>
-        <title value="SearchParameter Us Core DocumentReference Category"/>
+        <title value="SearchParameter US Core DocumentReference Category"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-practitioner-identifier.html"/>
-        <title value="SearchParameter Us Core Practitioner Identifier"/>
+        <title value="SearchParameter US Core Practitioner Identifier"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-patient-identifier.html"/>
-        <title value="SearchParameter Us Core Patient Identifier"/>
+        <title value="SearchParameter US Core Patient Identifier"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-condition-category.html"/>
-        <title value="SearchParameter Us Core Condition Category"/>
+        <title value="SearchParameter US Core Condition Category"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="SearchParameter-us-core-immunization-status.html"/>
-        <title value="SearchParameter Us Core Immunization Status"/>
+        <title value="SearchParameter US Core Immunization Status"/>
         <generation value="generated"/>
       </page>
       <!-- ============ End SearchParameters  =============== -->
@@ -2129,12 +2154,12 @@
       <!-- insert capabilitystatements -->
       <page>
         <nameUrl value="CapabilityStatement-us-core-server.html"/>
-        <title value="CapabilityStatement Us Core Server"/>
+        <title value="CapabilityStatement US Core Server"/>
         <generation value="generated"/>
       </page>
       <page>
         <nameUrl value="CapabilityStatement-us-core-client.html"/>
-        <title value="CapabilityStatement Us Core Client"/>
+        <title value="CapabilityStatement US Core Client"/>
         <generation value="generated"/>
       </page>
       <!-- ============ End CapabilityStatements    =============== -->

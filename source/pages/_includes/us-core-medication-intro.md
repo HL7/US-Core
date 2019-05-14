@@ -16,10 +16,9 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 1.  A medication code
 
-
 **Profile specific implementation guidance:**
 
 *  Since the binding is [extensible](general-guidance.html#extensible-binding-for-codeableconcept-datatype), when a code is unavailable just text is allowed.
-* When the medication is compounded and is a list of ingredients, the code is still present and may contain only the text. 
+* When the medication is compounded and is a list of ingredients, the code is still present and may contain only the text.
 
 {% include link-list.md %}

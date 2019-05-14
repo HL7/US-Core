@@ -20,13 +20,9 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 1. a patient identifier (e.g. MRN)
 1. a patient name
-1. a gender
+1. a gender*
 
-**2015 Edition Certification Requirements ([Must Support]).**
-
-In addition, based upon the 2015 Edition Certification Requirements, the following data-elements must be supported.
-
-**If the data is available Patient shall include:**
+**Each Patient must support:**
 
 1. contact detail (e.g. a telephone number or an email address)
 1. a birth date
@@ -34,11 +30,11 @@ In addition, based upon the 2015 Edition Certification Requirements, the followi
 1. a communication language
 1. a race
 1. an ethnicity
-1. a birth sex
+1. a birth sex*
 
 **Profile specific implementation guidance:**
 
-- The [FHIR Specification]({{site.data.fhir.path}}patient.html#gender) provides guidance and background for representing patient gender. The American Clinical Laboratory Association (ACLA) has published [best practice guidelines](http://www.acla.com/acla-best-practice-recommendation-for-administrative-and-clinical-patient-gender-used-for-laboratory-testing-and-reporting/) for administrative and clinical gender related to laboratory testing and reporting which implementers may find helpful as well.
+- \*The [FHIR Specification]({{site.data.fhir.path}}patient.html#gender) provides guidance and background for representing patient gender. The American Clinical Laboratory Association (ACLA) has published [best practice guidelines](http://www.acla.com/acla-best-practice-recommendation-for-administrative-and-clinical-patient-gender-used-for-laboratory-testing-and-reporting/) for administrative and clinical gender related to laboratory testing and reporting which implementers may find helpful as well.
 
 ### Examples
 

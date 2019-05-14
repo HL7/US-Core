@@ -22,9 +22,8 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Profile specific implementation guidance:**
 
-* The PractitionerRole.endpoint is where the [Direct address] is included.
+* The PractitionerRole.endpoint is where a [Direct address] may be represented.
 * Clients can request servers return the Practitioner resource and Endpoint resources by using `_include`. See [Quick Start].
-
 
 #### Examples
 

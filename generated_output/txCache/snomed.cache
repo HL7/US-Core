@@ -13457,3 +13457,50 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "19257004"
+}, "valueSet" :null}####
+v: {
+  "display" : "Defibrillator, device",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "19257004",
+    "display" : "Defibrillator, device"
+  }],
+  "text" : "Implant"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "49062001"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "Defibrillator, device",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "19257004",
+  "display" : "Defibrillator, device"
+}, "valueSet" :null}####
+v: {
+  "display" : "Defibrillator, device",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

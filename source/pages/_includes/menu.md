@@ -45,6 +45,9 @@
   <a href="security.html">Security</a>
 </li>
 <li>
+  <a href="all-examples.html">Examples</a>
+</li>
+<li>
   <a href="downloads.html">Downloads</a>
 </li>
 </ul>

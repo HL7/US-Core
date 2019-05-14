@@ -21,10 +21,10 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  a patient
 1.  a code indicating whether the medication was taken
 
-Additionally your system [Must Support]:
+**Each MedicationStatement must support:**
 
 1. the time medication was taken
-2. whether the MedicatoinStatement was derived from another resource
+2. whether the MedicationStatement was derived from another resource
 
 **Profile specific implementation guidance:**
 
@@ -41,14 +41,4 @@ Additionally your system [Must Support]:
 - [MedicationStatement-uscore-ms2](MedicationStatement-uscore-ms2.html) Reference to a [contained]({{site.data.fhir.path}}references.html#contained) Medication resource.
 - [MedicationStatement-uscore-ms3](Bundle-uscore-ms3.html) A search [Bundle]({{site.data.fhir.path}}bundle.html) with a MedicationStatement and an included Medication resource in the Bundle.
 
-  [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
-  [MedicationRequestStatus]: {{site.data.fhir.path}}us/daf/ValueSet-medicationrequest-status.html
-[MedicationStatementStatus]: {{site.data.fhir.path}}us/daf/ValueSet-medication-statement-status.html
-[MedicationStatement]:{{site.data.fhir.path}}medicationstatement.html
- [MedicationRequest]: {{site.data.fhir.path}}medicationrequest.html
- [Medication]:{{site.data.fhir.path}}medication.html
- [CapabilityStatement]: capstatements.html
- [boundaries section]: {{site.data.fhir.path}}medicationrequest.html#bnr
-[include]: {{site.data.fhir.path}}search.html#include
-[contained]: {{site.data.fhir.path}}references.html#contained
-[Must Support]: general-guidance.html#must-support
+{% include link-list.md %}

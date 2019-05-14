@@ -1,0 +1,39 @@
+<Procedure xmlns="http://hl7.org/fhir">
+   <id value="defib-implant"/>
+   <meta>
+     <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+   </meta>
+   <identifier>
+      <system value="usual"/>
+      <value value="b2a737f2-2fdb-49c1-b097-dac173d07aff"/>
+   </identifier>
+   <basedOn>
+   <!--
+		Optional: reference to order
+      <reference value="ServiceRequest/28707"/>
+	  -->
+   </basedOn>
+   <status value="completed"/>
+   <code>
+      <coding>
+         <system value="http://www.ama-assn.org/go/cpt"/>
+         <code value="33249"/>
+      </coding>
+      <text value="Insertion or replacement of permanent implantable defibrillator system with transvenous lead(s), single or dual chamber"/>
+   </code>
+   <subject>
+      <reference value="Patient/example"/>
+   </subject>
+      <performedPeriod>
+      <start value="2019-03-26T12:55:26-07:00"/>
+      <end value="2019-03-26T13:25:26-07:00"/>
+   </performedPeriod>
+      <performer>
+      <actor>
+         <reference value="Practitioner/practitioner-1"/>
+      </actor>
+   </performer>
+   <focalDevice>
+		<reference value="Device/udi-2"/>
+   </focalDevice>
+ </Procedure>

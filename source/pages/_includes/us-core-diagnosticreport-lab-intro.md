@@ -9,7 +9,6 @@ The following are example usage scenarios for the US Core DiagnosticReport Profi
 
 ### Mandatory and Must Support Data Elements
 
-
 The following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.  
 
 **Each DiagnosticReport must have:**
@@ -22,7 +21,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.   a time indicating when the measurement was reported
 1.   at least one result (an Observation reference or text)
 
-**Each AllergyIntolerance must support:**
+**Each DiagnosticReport must support:**
 
 1.   who issues the report
 
@@ -31,7 +30,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 * Additional codes that translate or map to the DiagnosticReport codes or category codes are allowed.  For example:
    -  providing both a local system codes and a LOINC code that it map to
    -  providing a more specific category codes to the “LAB” category code, such as “CH” (chemistry), in an additional coding element.
-* Results that are free text or report form may be represented using the valueAttachment element in Observation or alternatively using the presentedForm element in DiagnosticReport.
+* Results that are free text or report form are represented using the 'presentedForm' element in DiagnosticReport.
 
 ### Examples
 

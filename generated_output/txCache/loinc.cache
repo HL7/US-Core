@@ -43965,3 +43965,141 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LP29684-5"
+}, "valueSet" :null}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"LP29684-5\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LP29684-5) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "36134-5"
+}, "valueSet" :null}####
+v: {
+  "display" : "MR Abdomen W contrast IV",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "LP29684-5",
+    "display" : "Radiology"
+  }],
+  "text" : "Radiology"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LP29684-5",
+        "display" : "Radiology"
+      },
+      {
+        "code" : "LP29708-2",
+        "display" : "Cardiology"
+      },
+      {
+        "code" : "LP7839-6",
+        "display" : "Pathology"
+      }]
+    }]
+  }
+}}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"LP29684-5\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LP29684-5, (Radiology)) is not  valid in the value set USCoreDiagnosticReportCategory"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LP29684-5",
+  "display" : "Radiology"
+}, "valueSet" :null}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code \"LP29684-5\" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LP29684-5) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "30746-2",
+    "display" : "Portable XR Chest Views"
+  }],
+  "text" : "Portable XR Chest Views"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}}####
+v: {
+  "display" : "Portable XR Chest Views",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "30746-2"
+}, "valueSet" :null}####
+v: {
+  "display" : "Portable XR Chest Views",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "30746-2",
+  "display" : "Portable XR Chest Views"
+}, "valueSet" :null}####
+v: {
+  "display" : "Portable XR Chest Views",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "36134-5",
+    "display" : "MR Abdomen W contrast IV"
+  }],
+  "text" : "MR Abdomen W contrast IV"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}}####
+v: {
+  "display" : "MR Abdomen W contrast IV",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "36134-5",
+  "display" : "MR Abdomen W contrast IV"
+}, "valueSet" :null}####
+v: {
+  "display" : "MR Abdomen W contrast IV",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

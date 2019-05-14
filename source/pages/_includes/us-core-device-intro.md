@@ -28,20 +28,22 @@ In addition, the following data-elements must be supported if the data is presen
 
 - This profile supports the requirement to retrieve an 170.315(a)(14) [Implantable device list](https://www.healthit.gov/test-method/implantable-device-list).
 -  Servers **SHOULD** support query by Device.type to allow clients to request only implantable devices.
-- In the [Quick Start] section below, searching for all devices is described. Records of implanted devices MAY be queried against UDI data including:
+- In the [Quick Start] section below, searching for all devices is described. Records of implanted devices **MAY** be queried against UDI data including:
 
     - UDI Carrier string (`udi-carrier`)
     - UDI Device Identifier (`udi-di`)
     - Manufacturer (`manufacturer`)
     - Model number (`model`)
 
-  Implementers MAY also adopt custom SearchParameters for searching by:
+  Implementers **MAY** also adopt custom SearchParameters for searching by:
 
     - specific lot numbers
     - serial numbers
 
 ### Examples
 
-- [Device-udi-1](Device-udi-1.html)
+- [Device-UDI-1](Device-udi-1.html)
+- [Device-UDI-2](Device-udi-2.html)
+
 
 {% include link-list.md %}
