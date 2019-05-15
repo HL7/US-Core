@@ -43,7 +43,7 @@ In the January ballot of 2019 we tested this process with the FDA requesting US 
 
 The FDA formally submitted the UDI elements for testing in the Summer of 2019. The following profile will be followed:
 
-(create new UDI component profile?)
+<!--(create new UDI component profile?) -->
 
 **Candidates under consideration**
 

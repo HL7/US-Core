@@ -4,7 +4,7 @@ layout: default
 ---
 
 This section outlines important definitions and interpretations and requirements common to all US Core actors used in this guide.
-The conformance verbs used are defined in [FHIR Conformance Rules].
+The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used below and in this guide are defined in [FHIR Conformance Rules].
 
 ---
 
@@ -20,7 +20,7 @@ The conformance verbs used are defined in [FHIR Conformance Rules].
 
 ### U.S. Core Data for Interoperability and 2015 Edition Common Clinical Data Set
 
-The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access – Data Category Request 170.315(g)(8). They were created for each item in the [2015 Edition Common Clinical Data Set (CCDS)].  The Location, Organization, and Practitioner Profiles are not called out specifically in the certification criteria but are included because they are directly referenced by other profiles.  The US Core Profiles are informed by the prior [Data Access Framework] and the [Argonaut DSTU2] Implementation Guides. However, the profiles here are stand alone and include new requirements from the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)] and includes all the [API Resource Collection in Health (ARCH)] resources.
+The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access – Data Category Request 170.315(g)(8). They were created for each item in the [2015 Edition Common Clinical Data Set (CCDS)].  The Location, Organization, and Practitioner Profiles are not called out specifically in the certification criteria but are included because they are directly referenced by other profiles.  The US Core Profiles are informed by the prior [Data Access Framework] and the [Argonaut Data Query] Implementation Guides. However, the profiles here are stand alone and include new requirements from the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)] and includes all the [API Resource Collection in Health (ARCH)] resources.
 
 The table below lists the US Core Profile and FHIR Resources used for the corresponding USCDI Data elements:
 
@@ -49,15 +49,14 @@ In the context of US Core, *Must Support* on any data element SHALL be interpret
 
 ### Referencing US Core profiles
 
-Many of the profiles in this guide [reference]({{site.data.fhir.path}}references.html) other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core Careteam](StructureDefinition-us-core-careteam.html#profile) references US Core Patient.  For any other references not formally defined in a US Core profiles, the referenced resource SHOULD be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner should be a valid US Core Patient or US Core Practitioner.
+Many of the profiles in this guide [reference]({{site.data.fhir.path}}references.html) other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core Careteam](StructureDefinition-us-core-careteam.html#profile) references US Core Patient.  For any other references not formally defined in a US Core profiles, the referenced resource SHOULD be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.
 
 ### When there is no source data for required data elements
-{:.no_toc}
 
-If the source system does not have data for a required data element, the core specification provides guidance which we have summarized:
+If the source system does not have data for a *Must Support* data element, the data element is not present as described above.  If the source system does not have data for a *required* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
 
 1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
-  - Use the code ‘unsupported’ - The source system wasn't capable of supporting this element.
+  - Use the code `unsupported` - The source system wasn't capable of supporting this element.
 
     Example: Patient resource where the patient name is not available.
 
@@ -76,11 +75,19 @@ If the source system does not have data for a required data element, the core sp
     ~~~
 
 1. For *coded* data elements:
-   - for *example*, *preferred*, or *extensible* binding strengths:
-      - use the appropriate "unknown" concept code from the value set if available
-      - use `unknown` from the [DataAbsentReason Code System] id the value set does not have the appropriate concept.
-    - for required concept code:
-       - use the appropriate "unknown" concept code from the value set if availabl
+   - for *example*, *preferred*, or *extensible* binding strengths (CodeableConcept datatypes):
+      - if the source systems has text but no coded data, only the text element is used.
+      - if there is neither text or coded data:
+        - use the appropriate "unknown" concept code from the value set if available
+        - use `unknown` from the [DataAbsentReason Code System] id the value set does not have the appropriate concept.
+  - for *required* binding strength (CodeableConcept or code datatypes):
+     - use the appropriate "unknown" concept code from the value set if available
+     - For the following data elements no appropriate "unknown" concept code is available and the resource instance will be nonconformant:
+          - `Immunization.status`
+          - `DocumentReference.status`
+          - `CarePlan.text.status`
+          - `Goal.lifecycleStatus`
+
 
 ### Using Codes in US Core profiles
 
@@ -219,7 +226,7 @@ Clinical information that has been removed from the patient's record needs to be
 
 ### Read(Fetch) resource notation:
 
-Interactions on profile pages are defined with the syntax:
+For fetching a resource interactions on profile pages are defined with the following syntax:
 
  **`GET [base]/[Resource-type]/[id] {parameters}`**
 
@@ -233,13 +240,33 @@ Interactions on profile pages are defined with the syntax:
 
 For more information see the [FHIR RESTful API]
 
+### Search resource notation:
+
+For searching a resource, interactions on profile pages are defined with the following syntax:
+
+ **`GET [base]/[Resource-type]?[parameter1]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]{&parameter2={:m1|m2|...}={c1|c2|...}[value1{,value2,...}&...}`**
+
+-   GET is the HTTP verb used for fetching a resource
+-   Content surrounded by \[\] is mandatory, and will be replaced by the string literal identified.
+    -   base: The Service Root URL (e.g. “<https://fhir-open-api-dstu2.smarthealthit.org>”)
+    -  Resource-type: The name of a resource type (e.g. “Patient”)
+    -  parameter: the search parameters as defined for the particular interaction (e.g."?patient=Patient/123")
+    -  value: the search parameter value for a particular search
+    - {:m1|m2|...}: The list of supported search parameter modifiers
+    - {c1|c2|...}: The list of supported search parameter comparators
+    - {,value2,...}: Optional multiple 'OR' Values
+    - ]{&parameter2={:m1|m2|...}={c1|c2|...}[value1{,value2,...}&...}: Optional multiple 'AND' search parameters
+
+For more information see the [FHIR RESTful Search API]
+
+
 ### Search Syntax
 
 In the simplest case, a search is executed by performing a GET operation in the RESTful framework:
 
 **GET [base]/[Resource-type]?name=value&...**
 
-For this RESTful search ([FHIR Search]), the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource the name “code” for search on the LOINC code. See [FHIR Search] for more information about searching in REST, messaging, and services.
+For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource the name “code” for search on the LOINC code. See [FHIR Search] for more information about searching in REST, messaging, and services.
 
 ### Syntax for searches limited by patient
 
@@ -270,40 +297,6 @@ US Core servers are not required to resolve full URLs that are external to their
 ### Guidance on limiting the number of search results
 
 In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
-
-### Future of US Core
-
-The US Core FHIR profiles are the base set of requirements for FHIR implementation in the US. All US Realm implementation guides **SHALL** use the US Core profiles or **SHALL** explicitly state why they are unable to use. Throughout the development of US Core, implementers, government, and clinical community have brought forward additional requirements for US Core. This section outlines the approach to growth, and is holding place for items that with additional profiling and testing will be added to US Core.
-
-#### Growth Path of US Core
-
-The US Core implementation Guide will grow following these steps:
-
-{% include img.html img="US_Core_Growth_Path.jpg" caption="Figure 1: Growth Path of US Core" %}
-
-1. Declare candidacy - this step can be completed by presenting to the US Realm Steering Committee through a Project Scope Statement.
-1. Get published - development a formal profile, implementation guide, or get requirements directly published in  FHIR Core. The initial publication could be an outside consortium, or vendor publication.
-1. Pilot - coordinate with 3 or more implementers an in-person or virtual connectathon. This is the time to identify issues with the new proposal.
-1. Propose candidate for US Core to US Realm Steering Committee - receive formal approval from the US Realm SC to add.
-1. Submit formal STU comment, or propose through a ballot
-
-A new US Regulatory requirement may jump over some of these steps, however, regulators should be discouraged from skipping pilot testing. Without pilot testing it's difficult to understand how a change will affect real-world implementation.
-
-In the January ballot of 2019 we tested this process with the FDA requesting US Core include all the component parts of UDI. In prior efforts, the FDA had successfully enhanced the base FHIR specification to include the UDI components, reaching step 3. In the summer of 2019 FDA plans to pilot test the new requirements with the Argonaut community which will the be incorporated in a fall 2019 STU update.
-
-#### Future Requirements Under Considerations
-
-**Pilot Testing**
-
-The FDA formally submitted the UDI elements for testing in the Summer of 2019. The following profile will be followed:
-
-(create new UDI component profile?)
-
-**Candidates under consideration**
-
-The following items were submitted during a US Core ballot or STU comment. Additional requirements gathering is required before testing may occur on these items:
-* [ServiceRequest] - The CDS hooks community, and other implementers are gathering requirements for the ServiceRequest Resource.
-
 
 ------------------------------------------------------------------------
 

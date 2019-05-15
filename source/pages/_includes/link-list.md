@@ -80,7 +80,7 @@
 [FHIR Resource]: {{site.data.fhir.path}}resource.html
 [FHIR RESTful API]: {{site.data.fhir.path}}http.html
 [FHIR RESTful operations]: {{site.data.fhir.path}}operations.html
-[FHIR RESTful search api]: {{site.data.fhir.path}}search.html
+[FHIR RESTful Search API]: {{site.data.fhir.path}}search.html
 [FHIR Search]: {{site.data.fhir.path}}search.html
 [FHIR Security Labels]: {{site.data.fhir.path}}security-labels.html
 [FHIR Terminology]: {{site.data.fhir.path}}terminologies.html
@@ -207,3 +207,16 @@
 [Terminology]: terminology.html
 [Examples]: examples.html
 [Clinical Notes Guidance]: clinical-notes-guidance.html
+[U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/topic/laws-regulation-and-policy/notice-proposed-rulemaking-improve-interoperability-health
+[Argonaut Data Query]: http://www.fhir.org/guides/argonaut/r2/
+[API Resource Collection in Health (ARCH)]: https://www.healthit.gov/isa/api-resource-collection-health-arch
+[US Core Pediatric BMI for Age Observation Profile]: StructureDefinition-pediatric-bmi-for-age.html
+[US Core Pediatric Weight for Height Observation Profile]: StructureDefinition-pediatric-weight-for-height.html
+[Blood pressure systolic and diastolic]: {{site.data.fhir.path}}bp.html
+[Body height]: {{site.data.fhir.path}}bodyheight.html
+[Body weight]: {{site.data.fhir.path}}bodyweight.html
+[Heart rate]: {{site.data.fhir.path}}heartrate.html
+[Respiratory rate]: {{site.data.fhir.path}}resprate.html
+[Body temperature]: {{site.data.fhir.path}}bodytemp.html
+[Oxygen saturation]: {{site.data.fhir.path}}oxygensat.html
+[Head circumference]: {{site.data.fhir.path}}headcircum.html

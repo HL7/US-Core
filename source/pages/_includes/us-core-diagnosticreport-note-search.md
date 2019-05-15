@@ -71,6 +71,6 @@ The following search parameters, search parameter combinations and search parame
 
     `POST [base]/DiagnosticReport`
 
-    {% include examplebutton_default.html example="diagnosticreport-clinical-note-post" b_title = "Click Here To See Example" %} %}
+    {% include examplebutton_default.html example="diagnosticreport-clinical-note-post" b_title = "Click Here To See Example" %}
 
 {% include link-list.md %}

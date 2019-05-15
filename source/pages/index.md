@@ -48,29 +48,23 @@ The following actors are part of the US Core IG:
 
 ### US Core Profiles
 
-The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  In addition each profile has a "Quick Start" section which is intended as an implementer friendly overview of the required search and read operations.
+The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the *Quick Start* Section of the profile page.
 
 {% include list-simple-profiles.xhtml %}
 
 - In addition US Core uses the [Vital Signs Profile] from the FHIR Specification.
 
-
-*Note on Searches based on a date or date range:*
-
-- Allergies, Immunizations, Medications, Problems and Health Concerns, UDI, Smoking Status do not require a date range search since a system should return all relevant resources.
-- Vital Signs, Laboratory Results, Goals, Encounters, Procedures, and Assessment and Plan of Treatment (CarePlan) include date range search requirements in the Quick Start section on the profile page.
-
-See the *General Guidance* page for a [mapping] to the CCDS.
+See the General Guidance page for a [mapping] to the USCDI.
 
 ### US Core Conformance Requirements
 
-The [Capability Statements Section](capstatements.html) outlines conformance requirements for the US Core Servers and Client applications, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual US Core profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the US Core actors.
+The [Capability Statements Section](capstatements.html) outlines conformance requirements and expectations for the US Core Servers and Client applications, identifying the specific profiles and RESTful transactions that need to be supported. Note that the individual US Core profiles identify the structural constraints, terminology bindings and invariants.  Similarly, the individual US Core SearchParameter and Operation resources specify how they are understood by the server. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles and the search parameters applicable to each of the US Core actors.
 
 ----
 
 
-Primary Authors: Brett Marquard, Nagesh Bashyam, Eric Haas
+Primary Authors: Brett Marquard, Eric Haas
 
-Secondary Authors: Grahame Grieve, Lloyd McKenzie
+Secondary Authors: Grahame Grieve, Nagesh Bashyam
 
 {% include link-list.md %}
