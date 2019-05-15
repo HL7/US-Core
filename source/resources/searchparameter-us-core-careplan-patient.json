@@ -14,9 +14,9 @@
             ]
         }
     ],
-    "date": "2019-05-05T16:59:34.805058Z",
+    "date": "2019-05-15T04:01:08.584472Z",
     "derivedFrom": "http://hl7.org/fhir/SearchParameter/clinical-patient",
-    "description": "Who the care plan is for",
+    "description": "Who the care plan is for<br />\n<em>NOTE</em>: This US Core SearchParameter definition extends the usage context of\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">capabilitystatement-expectation</a>\n extension to formally express implementer expectations for these elements:<br />\n - multipleAnd<br />\n - multipleOr<br />\n - modifier<br />\n - comparator<br />\n - chain<br />\n ",
     "experimental": false,
     "expression": "CarePlan.subject.where(resolve() is Patient)",
     "modifier": [
@@ -35,7 +35,7 @@
     ],
     "type": "reference",
     "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-careplan-patient",
-    "version": "4.0.0",
+    "version": "4.1.0",
     "xpath": "f:CarePlan/f:subject",
     "xpathUsage": "normal",
     "resourceType": "SearchParameter",
@@ -82,7 +82,7 @@
         }
     ],
     "text": {
-        "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SearchParameter: USCoreCareplanPatient</h2><br /><p><b> id</b> us-core-careplan-patient</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-careplan-patient</b></p><p><b> version</b> : 4.0.0</p><p><b> name</b> : USCoreCareplanPatient</p><p><b> derivedFrom</b> : <a> http://hl7.org/fhir/SearchParameter/clinical-patient</a></p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-05-05</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> description</b> : Who the care plan is for</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span></p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>patient</code></p><p><b> base</b> :CarePlan</p><p><b> type</b> : reference</p><p><b> expression</b> : <code>CarePlan.subject.where(resolve() is Patient)</code></p><p><b> xpath</b> : <code>f:CarePlan/f:subject</code></p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    <p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>type</code>  (Conformance Expectation =  MAY)</p>\n    \n    <p><b> modifier</b> : <code>identifier</code>  (Conformance Expectation =  MAY)</p>\n    \n    \n    \n\t\t</div>"
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SearchParameter: USCoreCareplanPatient</h2><p><b> description</b> : Who the care plan is for<br></br>\n<em>NOTE</em>: This US Core SearchParameter definition extends the usage context of\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">capabilitystatement-expectation</a>\n extension to formally express implementer expectations for these elements:<br></br>\n - multipleAnd<br></br>\n - multipleOr<br></br>\n - modifier<br></br>\n - comparator<br></br>\n - chain<br></br>\n </p><br></br><p><b> id</b> us-core-careplan-patient</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-careplan-patient</b>\n\t\t\t</p><p><b> version</b> : 4.1.0</p><p><b> name</b> : USCoreCareplanPatient</p><p><b> derivedFrom</b> : <a> http://hl7.org/fhir/SearchParameter/clinical-patient</a>\n\t\t\t</p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-05-15</p><p><b> publisher</b> : HL7 International - Structured Documents Work Group</p><p><b> contact</b> : http://www.hl7.org/Special/committees/structure/index.cfm</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span>\n\t\t\t</p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>patient</code>\n\t\t\t</p><p><b> base</b> :CarePlan</p><p><b> type</b> : reference</p><p><b> expression</b> : <code>CarePlan.subject.where(resolve() is Patient)</code>\n\t\t\t</p><p><b> xpath</b> : <code>f:CarePlan/f:subject</code>\n\t\t\t</p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p><p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p><p><b> modifier</b> : <code>type</code>  (Conformance Expectation =  MAY)</p><p><b> modifier</b> : <code>identifier</code>  (Conformance Expectation =  MAY)</p></div>",
+        "status": "generated"
     }
 }
