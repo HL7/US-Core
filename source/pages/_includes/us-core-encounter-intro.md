@@ -20,7 +20,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1. an encounter type
 1. a patient
 
-**Each AllergyIntolerance must support:**
+**Each Encounter must support:**
 
 1. An encounter identifier
 1. Providers involved in the encounter
