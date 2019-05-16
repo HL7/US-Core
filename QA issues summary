@@ -1,0 +1,54 @@
+QA errors:
+1)
+Path	Severity	Message
+DiagnosticReport/cardiology-report: DiagnosticReport.category.coding	error	The code "LP29684-5" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LP29684-5) is not valid in the value set All codes known to the system (see Tx log)
+
+and
+
+ Path	Severity	Message
+DiagnosticReport/chest-xray-report: DiagnosticReport.category.coding	error	The code "LP29684-5" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LP29684-5) is not valid in the value set All codes known to the system (see Tx log)
+
+The codes are valid for example see https://s.details.loinc.org/Part/LP29684-5.html
+
+Add to   Terminology Server
+
+2)
+Procedure/defib-implant: Procedure.code	error	None of the codes provided are in the maximum value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code (http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code, and a code from this value set is required) (codes = http://www.ama-assn.org/go/cpt#33249) (see Tx log)
+
+Cause: Due to no expansion of ValueSet since uses CPT codes ( IP issues )
+
+Resolution: Unknown since IP issues is intractable
+
+3) CarePlan/colonoscopy: CarePlan.category	error	Unable to resolve discriminator
+CarePlan/colonoscopy: CarePlan	information	Profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan, Element 'CarePlan.category[assessplan]'': Unable to check minimum required (1) due to lack of slicing validation
+
+Is the slice definition wrong (StructureDefinition-us-core-careplan.html)  or is it a tool issue with the pattern as discriminator?
+
+4)
+Immunization/imm-1: Immunization.vaccineCode	warning	The display "influenza, injectable, quadrivalent, contains preservative" is not a valid display for the code {http://hl7.org/fhir/sid/cvx}158 - should be one of ["influenza, injectable, quadrivalent"]; The code "49281-0623-78" is not valid in the system http://hl7.org/fhir/sid/ndc (see Tx log)
+Immunization/imm-1: Immunization.vaccineCode	warning	Code 49281-0623-78 is not a valid code in code system http://hl7.org/fhir/sid/ndc (see Tx log)
+Immunization/imm-1: Immunization.vaccineCode.coding[1]	warning	The display "influenza, injectable, quadrivalent, contains preservative" is not a valid display for the code {http://hl7.org/fhir/sid/cvx}158 - should be one of ["influenza, injectable, quadrivalent"] (see Tx log)
+Immunization/imm-1: Immunization.vaccineCode.coding[1].system	error	URL value 'http://hl7.org/fhir/sid/cvx' does not resolve
+Immunization/imm-1: Immunization.vaccineCode.coding[2]	error	The code "49281-0623-78" is not valid in the system http://hl7.org/fhir/sid/ndc; The code provided (http://hl7.org/fhir/sid/ndc#49281-0623-78) is not valid in the value set All codes known to the system (see Tx log)
+Immunization/imm-1: Immunization.vaccineCode.coding[2].system	error	URL value 'http://hl7.org/fhir/sid/ndc' does not resolve
+
+The URL/code system 'http://hl7.org/fhir/sid/cvx' and 'http://hl7.org/fhir/sid/ndc' are published in the FHIR core spec and used in the Immunization resources examples.
+
+The code "49281-0623-78"  is published in the valueset exopansion
+check with GG
+
+5) Patient/example: Patient.extension[1].extension[4].valueCoding	warning	Could not confirm that the codes provided are in the value set http://hl7.org/fhir/us/core/ValueSet/detailed-race (http://hl7.org/fhir/us/core/ValueSet/detailed-race, and a code from this value set is required) (see Tx log)
+Patient/example: Patient.extension[1].extension[5].valueCoding	warning	Could not confirm that the codes provided are in the value set http://hl7.org/fhir/us/core/ValueSet/detailed-race (http://hl7.org/fhir/us/core/ValueSet/detailed-race, and a code from this value set is required) (see Tx log)
+Patient/example: Patient.extension[2].extension[2].valueCoding	warning	Could not confirm that the codes provided are in the value set http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity, and a code from this value set is required) (see Tx log)
+Patient/example: Patient.extension[2].extension[3].valueCoding	warning	Could not confirm that the codes provided are in the value set http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity (http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity, and a code from this value set is required) (see Tx log)
+
+The codes are published in the specification.
+Not sure how to fix this error
+check with GG
+
+The rest are:
+A) unresolved URL errors:
+ - check with GG
+
+B) value set expansion issues
+ - check with GG
