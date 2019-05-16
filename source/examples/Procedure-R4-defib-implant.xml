@@ -1,18 +1,12 @@
 <Procedure xmlns="http://hl7.org/fhir">
    <id value="defib-implant"/>
    <meta>
-     <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+     <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
    </meta>
    <identifier>
-      <system value="usual"/>
-      <value value="b2a737f2-2fdb-49c1-b097-dac173d07aff"/>
+      <system value="urn:ietf:rfc:3986"/>
+      <value value="urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff"/>
    </identifier>
-   <basedOn>
-   <!--
-		Optional: reference to order
-      <reference value="ServiceRequest/28707"/>
-	  -->
-   </basedOn>
    <status value="completed"/>
    <code>
       <coding>
@@ -34,6 +28,8 @@
       </actor>
    </performer>
    <focalDevice>
+     <manipulated>
 		<reference value="Device/udi-2"/>
+  </manipulated>
    </focalDevice>
  </Procedure>

@@ -113,6 +113,8 @@ This section lists the search parameters definitions that are used within the ca
   - [given](SearchParameter-us-core-patient-given.html)
   - [identifier](SearchParameter-us-core-patient-identifier.html)
   - [name](SearchParameter-us-core-patient-name.html)
+  - [us-core-race]
+  - [us-core-ethnicity]
 
 **Encounter**
   - [_id](SearchParameter-us-core-encounter-id.html)
@@ -135,9 +137,10 @@ This section lists the search parameters definitions that are used within the ca
   - [patient](SearchParameter-us-core-observation-patient.html)
 
 
-
+<!--
 Editors note : append these to Patient
   - [us-core-race]
   - [us-core-ethnicity]
+-->
 
 {% include link-list.md %}

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ValueSet xmlns="http://hl7.org/fhir">
-	<id value="us-core-cvx"/>
-	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-cvx"/>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-CURRENT/valueset.xsd">
+	<id value="us-core-vaccines-cvx"/>
+	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-vaccines-cvx"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113762.1.4.1010.6"/>
+	</identifier>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
 		<value value="urn:oid:2.16.840.1.113883.3.88.12.80.22"/>
@@ -18,10 +22,708 @@
 			<value value="http://hl7.org/fhir"/>
 		</telecom>
 	</contact>
-	<description value="This identifies the vaccine substance administered - CVX codes"/>
+	<description value="This identifies the vaccine substance administered - CVX
+codes. **Inclusion Criteria:**
+
+Any CVX code with CVX  'status' (VSAC Property) = `Active`,` Inactive`, `Non-US` except
+ those noted in exclusions.
+
+**Exclusion Criteria:**
+
+CVX codes that have a CVX  'status' of either `Pending` or `Never Active` AND CVX
+ codes with CVX 'Nonvaccine' property = True.
+ Available at http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx"/>
 	<compose>
 		<include>
 			<system value="http://hl7.org/fhir/sid/cvx"/>
+<concept>
+				<code value="01"/>
+				<display value="diphtheria, tetanus toxoids and pertussis vaccine"/>
+			</concept>
+			<concept>
+				<code value="02"/>
+				<display value="trivalent poliovirus vaccine, live, oral"/>
+			</concept>
+			<concept>
+				<code value="03"/>
+				<display value="measles, mumps and rubella virus vaccine"/>
+			</concept>
+			<concept>
+				<code value="04"/>
+				<display value="measles and rubella virus vaccine"/>
+			</concept>
+			<concept>
+				<code value="05"/>
+				<display value="measles virus vaccine"/>
+			</concept>
+			<concept>
+				<code value="06"/>
+				<display value="rubella virus vaccine"/>
+			</concept>
+			<concept>
+				<code value="07"/>
+				<display value="mumps virus vaccine"/>
+			</concept>
+			<concept>
+				<code value="08"/>
+				<display value="hepatitis B vaccine, pediatric or pediatric/adolescent dosage"/>
+			</concept>
+			<concept>
+				<code value="09"/>
+				<display value="tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use (2 Lf of tetanus toxoid and 2 Lf of diphtheria toxoid)"/>
+			</concept>
+			<concept>
+				<code value="10"/>
+				<display value="poliovirus vaccine, inactivated"/>
+			</concept>
+			<concept>
+				<code value="100"/>
+				<display value="pneumococcal conjugate vaccine, 7 valent"/>
+			</concept>
+			<concept>
+				<code value="101"/>
+				<display value="typhoid Vi capsular polysaccharide vaccine"/>
+			</concept>
+			<concept>
+				<code value="102"/>
+				<display value="DTP- Haemophilus influenzae type b conjugate and hepatitis b vaccine"/>
+			</concept>
+			<concept>
+				<code value="103"/>
+				<display value="meningococcal C conjugate vaccine"/>
+			</concept>
+			<concept>
+				<code value="104"/>
+				<display value="hepatitis A and hepatitis B vaccine"/>
+			</concept>
+			<concept>
+				<code value="105"/>
+				<display value="vaccinia (smallpox) vaccine, diluted"/>
+			</concept>
+			<concept>
+				<code value="106"/>
+				<display value="diphtheria, tetanus toxoids and acellular pertussis vaccine, 5 pertussis antigens"/>
+			</concept>
+			<concept>
+				<code value="107"/>
+				<display value="diphtheria, tetanus toxoids and acellular pertussis vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="108"/>
+				<display value="meningococcal ACWY vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="109"/>
+				<display value="pneumococcal vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="11"/>
+				<display value="pertussis vaccine"/>
+			</concept>
+			<concept>
+				<code value="110"/>
+				<display value="DTaP-hepatitis B and poliovirus vaccine"/>
+			</concept>
+			<concept>
+				<code value="111"/>
+				<display value="influenza virus vaccine, live, attenuated, for intranasal use"/>
+			</concept>
+			<concept>
+				<code value="112"/>
+				<display value="tetanus toxoid, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="113"/>
+				<display value="tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use (5 Lf of tetanus toxoid and 2 Lf of diphtheria toxoid)"/>
+			</concept>
+			<concept>
+				<code value="114"/>
+				<display value="meningococcal polysaccharide (groups A, C, Y and W-135) diphtheria toxoid conjugate vaccine (MCV4P)"/>
+			</concept>
+			<concept>
+				<code value="115"/>
+				<display value="tetanus toxoid, reduced diphtheria toxoid, and acellular pertussis vaccine, adsorbed"/>
+			</concept>
+			<concept>
+				<code value="116"/>
+				<display value="rotavirus, live, pentavalent vaccine"/>
+			</concept>
+			<concept>
+				<code value="117"/>
+				<display value="varicella zoster immune globulin (Investigational New Drug)"/>
+			</concept>
+			<concept>
+				<code value="118"/>
+				<display value="human papilloma virus vaccine, bivalent"/>
+			</concept>
+			<concept>
+				<code value="119"/>
+				<display value="rotavirus, live, monovalent vaccine"/>
+			</concept>
+			<concept>
+				<code value="12"/>
+				<display value="diphtheria antitoxin"/>
+			</concept>
+			<concept>
+				<code value="120"/>
+				<display value="diphtheria, tetanus toxoids and acellular pertussis vaccine, Haemophilus influenzae type b conjugate, and poliovirus vaccine, inactivated (DTaP-Hib-IPV)"/>
+			</concept>
+			<concept>
+				<code value="121"/>
+				<display value="zoster vaccine, live"/>
+			</concept>
+			<concept>
+				<code value="122"/>
+				<display value="rotavirus vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="123"/>
+				<display value="influenza virus vaccine, H5N1, A/Vietnam/1203/2004 (national stockpile)"/>
+			</concept>
+			<concept>
+				<code value="125"/>
+				<display value="Novel Influenza-H1N1-09, live virus for nasal administration"/>
+			</concept>
+			<concept>
+				<code value="126"/>
+				<display value="Novel influenza-H1N1-09, preservative-free, injectable"/>
+			</concept>
+			<concept>
+				<code value="127"/>
+				<display value="Novel influenza-H1N1-09, injectable"/>
+			</concept>
+			<concept>
+				<code value="128"/>
+				<display value="Novel influenza-H1N1-09, all formulations"/>
+			</concept>
+			<concept>
+				<code value="129"/>
+				<display value="Japanese Encephalitis vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="13"/>
+				<display value="tetanus immune globulin"/>
+			</concept>
+			<concept>
+				<code value="130"/>
+				<display value="Diphtheria, tetanus toxoids and acellular pertussis vaccine, and poliovirus vaccine, inactivated"/>
+			</concept>
+			<concept>
+				<code value="131"/>
+				<display value="Historical record of a typhus vaccination"/>
+			</concept>
+			<concept>
+				<code value="132"/>
+				<display value="Historical diphtheria and tetanus toxoids and acellular pertussis, poliovirus, Haemophilus b conjugate and hepatitis B (recombinant) vaccine."/>
+			</concept>
+			<concept>
+				<code value="133"/>
+				<display value="pneumococcal conjugate vaccine, 13 valent"/>
+			</concept>
+			<concept>
+				<code value="134"/>
+				<display value="Japanese Encephalitis vaccine for intramuscular administration"/>
+			</concept>
+			<concept>
+				<code value="135"/>
+				<display value="influenza, high dose seasonal, preservative-free"/>
+			</concept>
+			<concept>
+				<code value="136"/>
+				<display value="meningococcal oligosaccharide (groups A, C, Y and W-135) diphtheria toxoid conjugate vaccine (MCV4O)"/>
+			</concept>
+			<concept>
+				<code value="137"/>
+				<display value="HPV, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="138"/>
+				<display value="tetanus and diphtheria toxoids, not adsorbed, for adult use"/>
+			</concept>
+			<concept>
+				<code value="139"/>
+				<display value="Td(adult) unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="14"/>
+				<display value="immune globulin, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="140"/>
+				<display value="Influenza, seasonal, injectable, preservative free"/>
+			</concept>
+			<concept>
+				<code value="141"/>
+				<display value="Influenza, seasonal, injectable"/>
+			</concept>
+			<concept>
+				<code value="142"/>
+				<display value="tetanus toxoid, not adsorbed"/>
+			</concept>
+			<concept>
+				<code value="143"/>
+				<display value="Adenovirus, type 4 and type 7, live, oral"/>
+			</concept>
+			<concept>
+				<code value="144"/>
+				<display value="seasonal influenza, intradermal, preservative free"/>
+			</concept>
+			<concept>
+				<code value="147"/>
+				<display value="Meningococcal, MCV4, unspecified conjugate formulation(groups A, C, Y and W-135)"/>
+			</concept>
+			<concept>
+				<code value="148"/>
+				<display value="Meningococcal Groups C and Y and Haemophilus b Tetanus Toxoid Conjugate Vaccine"/>
+			</concept>
+			<concept>
+				<code value="149"/>
+				<display value="influenza, live, intranasal, quadrivalent"/>
+			</concept>
+			<concept>
+				<code value="15"/>
+				<display value="influenza virus vaccine, split virus (incl. purified surface antigen)-retired CODE"/>
+			</concept>
+			<concept>
+				<code value="150"/>
+				<display value="Influenza, injectable, quadrivalent, preservative free"/>
+			</concept>
+			<concept>
+				<code value="151"/>
+				<display value="influenza nasal, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="152"/>
+				<display value="Pneumococcal Conjugate, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="153"/>
+				<display value="Influenza, injectable, Madin Darby Canine Kidney, preservative free"/>
+			</concept>
+			<concept>
+				<code value="155"/>
+				<display value="Seasonal, trivalent, recombinant, injectable influenza vaccine, preservative free"/>
+			</concept>
+			<concept>
+				<code value="156"/>
+				<display value="Rho(D) Immune globulin- IV or IM"/>
+			</concept>
+			<concept>
+				<code value="157"/>
+				<display value="Rho(D) Immune globulin - IM"/>
+			</concept>
+			<concept>
+				<code value="158"/>
+				<display value="influenza, injectable, quadrivalent, contains preservative"/>
+			</concept>
+			<concept>
+				<code value="159"/>
+				<display value="Rho(D) Unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="16"/>
+				<display value="influenza virus vaccine, whole virus"/>
+			</concept>
+			<concept>
+				<code value="160"/>
+				<display value="Influenza A monovalent (H5N1), adjuvanted, National stockpile 2013"/>
+			</concept>
+			<concept>
+				<code value="161"/>
+				<display value="Influenza, injectable,quadrivalent, preservative free, pediatric"/>
+			</concept>
+			<concept>
+				<code value="162"/>
+				<display value="meningococcal B vaccine, fully recombinant"/>
+			</concept>
+			<concept>
+				<code value="163"/>
+				<display value="meningococcal B vaccine, recombinant, OMV, adjuvanted"/>
+			</concept>
+			<concept>
+				<code value="164"/>
+				<display value="meningococcal B, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="165"/>
+				<display value="Human Papillomavirus 9-valent vaccine"/>
+			</concept>
+			<concept>
+				<code value="166"/>
+				<display value="influenza, intradermal, quadrivalent, preservative free, injectable"/>
+			</concept>
+			<concept>
+				<code value="167"/>
+				<display value="meningococcal vaccine of unknown formulation and unknown serogroups"/>
+			</concept>
+			<concept>
+				<code value="168"/>
+				<display value="Seasonal trivalent influenza vaccine, adjuvanted, preservative free"/>
+			</concept>
+			<concept>
+				<code value="169"/>
+				<display value="Hep A, live attenuated-IM"/>
+			</concept>
+			<concept>
+				<code value="17"/>
+				<display value="Haemophilus influenzae type b vaccine, conjugate unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="170"/>
+				<display value="non-US diphtheria, tetanus toxoids and acellular pertussis vaccine, Haemophilus influenzae type b conjugate, and poliovirus vaccine, inactivated (DTaP-Hib-IPV)"/>
+			</concept>
+			<concept>
+				<code value="171"/>
+				<display value="Influenza, injectable, Madin Darby Canine Kidney, preservative free, quadrivalent"/>
+			</concept>
+			<concept>
+				<code value="172"/>
+				<display value="cholera, WC-rBS"/>
+			</concept>
+			<concept>
+				<code value="173"/>
+				<display value="cholera, BivWC"/>
+			</concept>
+			<concept>
+				<code value="174"/>
+				<display value="cholera, live attenuated"/>
+			</concept>
+			<concept>
+				<code value="175"/>
+				<display value="Human Rabies vaccine from human diploid cell culture"/>
+			</concept>
+			<concept>
+				<code value="176"/>
+				<display value="Human rabies vaccine from Chicken fibroblast culture"/>
+			</concept>
+			<concept>
+				<code value="177"/>
+				<display value="pneumococcal conjugate vaccine, 10 valent"/>
+			</concept>
+			<concept>
+				<code value="178"/>
+				<display value="Non-US bivalent oral polio vaccine (types 1 and 3)"/>
+			</concept>
+			<concept>
+				<code value="179"/>
+				<display value="Non-US monovalent oral polio vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="18"/>
+				<display value="rabies vaccine, for intramuscular injection RETIRED CODE"/>
+			</concept>
+			<concept>
+				<code value="180"/>
+				<display value="tetanus immune globulin"/>
+			</concept>
+			<concept>
+				<code value="181"/>
+				<display value="anthrax immune globulin"/>
+			</concept>
+			<concept>
+				<code value="182"/>
+				<display value="Oral Polio Vaccine, Unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="183"/>
+				<display value="Yellow fever vaccine alternative formulation"/>
+			</concept>
+			<concept>
+				<code value="184"/>
+				<display value="Yellow fever vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="185"/>
+				<display value="Seasonal, quadrivalent, recombinant, injectable influenza vaccine, preservative free"/>
+			</concept>
+			<concept>
+				<code value="186"/>
+				<display value="Influenza, injectable, Madin Darby Canine Kidney,  quadrivalent with preservative"/>
+			</concept>
+			<concept>
+				<code value="187"/>
+				<display value="zoster vaccine recombinant"/>
+			</concept>
+			<concept>
+				<code value="188"/>
+				<display value="zoster vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="189"/>
+				<display value="Hepatitis B vaccine (recombinant), CpG adjuvanted"/>
+			</concept>
+			<concept>
+				<code value="19"/>
+				<display value="Bacillus Calmette-Guerin vaccine"/>
+			</concept>
+			<concept>
+				<code value="20"/>
+				<display value="diphtheria, tetanus toxoids and acellular pertussis vaccine"/>
+			</concept>
+			<concept>
+				<code value="21"/>
+				<display value="varicella virus vaccine"/>
+			</concept>
+			<concept>
+				<code value="22"/>
+				<display value="DTP-Haemophilus influenzae type b conjugate vaccine"/>
+			</concept>
+			<concept>
+				<code value="23"/>
+				<display value="plague vaccine"/>
+			</concept>
+			<concept>
+				<code value="24"/>
+				<display value="anthrax vaccine"/>
+			</concept>
+			<concept>
+				<code value="25"/>
+				<display value="typhoid vaccine, live, oral"/>
+			</concept>
+			<concept>
+				<code value="26"/>
+				<display value="cholera vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="27"/>
+				<display value="botulinum antitoxin"/>
+			</concept>
+			<concept>
+				<code value="28"/>
+				<display value="diphtheria and tetanus toxoids, adsorbed for pediatric use"/>
+			</concept>
+			<concept>
+				<code value="29"/>
+				<display value="cytomegalovirus immune globulin, intravenous"/>
+			</concept>
+			<concept>
+				<code value="30"/>
+				<display value="hepatitis B immune globulin"/>
+			</concept>
+			<concept>
+				<code value="31"/>
+				<display value="hepatitis A vaccine, pediatric dosage, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="32"/>
+				<display value="meningococcal polysaccharide vaccine (MPSV4)"/>
+			</concept>
+			<concept>
+				<code value="33"/>
+				<display value="pneumococcal polysaccharide vaccine, 23 valent"/>
+			</concept>
+			<concept>
+				<code value="34"/>
+				<display value="rabies immune globulin"/>
+			</concept>
+			<concept>
+				<code value="35"/>
+				<display value="tetanus toxoid, adsorbed"/>
+			</concept>
+			<concept>
+				<code value="36"/>
+				<display value="varicella zoster immune globulin"/>
+			</concept>
+			<concept>
+				<code value="37"/>
+				<display value="yellow fever vaccine"/>
+			</concept>
+			<concept>
+				<code value="38"/>
+				<display value="rubella and mumps virus vaccine"/>
+			</concept>
+			<concept>
+				<code value="39"/>
+				<display value="Japanese Encephalitis Vaccine SC"/>
+			</concept>
+			<concept>
+				<code value="40"/>
+				<display value="rabies vaccine, for intradermal injection"/>
+			</concept>
+			<concept>
+				<code value="41"/>
+				<display value="typhoid vaccine, parenteral, other than acetone-killed, dried"/>
+			</concept>
+			<concept>
+				<code value="42"/>
+				<display value="hepatitis B vaccine, adolescent/high risk infant dosage"/>
+			</concept>
+			<concept>
+				<code value="43"/>
+				<display value="hepatitis B vaccine, adult dosage"/>
+			</concept>
+			<concept>
+				<code value="44"/>
+				<display value="hepatitis B vaccine, dialysis patient dosage"/>
+			</concept>
+			<concept>
+				<code value="45"/>
+				<display value="hepatitis B vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="46"/>
+				<display value="Haemophilus influenzae type b vaccine, PRP-D conjugate"/>
+			</concept>
+			<concept>
+				<code value="47"/>
+				<display value="Haemophilus influenzae type b vaccine, HbOC conjugate"/>
+			</concept>
+			<concept>
+				<code value="48"/>
+				<display value="Haemophilus influenzae type b vaccine, PRP-T conjugate"/>
+			</concept>
+			<concept>
+				<code value="49"/>
+				<display value="Haemophilus influenzae type b vaccine, PRP-OMP conjugate"/>
+			</concept>
+			<concept>
+				<code value="50"/>
+				<display value="DTaP-Haemophilus influenzae type b conjugate vaccine"/>
+			</concept>
+			<concept>
+				<code value="51"/>
+				<display value="Haemophilus influenzae type b conjugate and Hepatitis B vaccine"/>
+			</concept>
+			<concept>
+				<code value="52"/>
+				<display value="hepatitis A vaccine, adult dosage"/>
+			</concept>
+			<concept>
+				<code value="53"/>
+				<display value="typhoid vaccine, parenteral, acetone-killed, dried (U.S. military)"/>
+			</concept>
+			<concept>
+				<code value="54"/>
+				<display value="adenovirus vaccine, type 4, live, oral"/>
+			</concept>
+			<concept>
+				<code value="55"/>
+				<display value="adenovirus vaccine, type 7, live, oral"/>
+			</concept>
+			<concept>
+				<code value="62"/>
+				<display value="human papilloma virus vaccine, quadrivalent"/>
+			</concept>
+			<concept>
+				<code value="66"/>
+				<display value="Lyme disease vaccine"/>
+			</concept>
+			<concept>
+				<code value="69"/>
+				<display value="parainfluenza-3 virus vaccine"/>
+			</concept>
+			<concept>
+				<code value="71"/>
+				<display value="respiratory syncytial virus immune globulin, intravenous"/>
+			</concept>
+			<concept>
+				<code value="74"/>
+				<display value="rotavirus, live, tetravalent vaccine"/>
+			</concept>
+			<concept>
+				<code value="75"/>
+				<display value="vaccinia (smallpox) vaccine"/>
+			</concept>
+			<concept>
+				<code value="76"/>
+				<display value="Staphylococcus bacteriophage lysate"/>
+			</concept>
+			<concept>
+				<code value="77"/>
+				<display value="tick-borne encephalitis vaccine"/>
+			</concept>
+			<concept>
+				<code value="78"/>
+				<display value="tularemia vaccine"/>
+			</concept>
+			<concept>
+				<code value="79"/>
+				<display value="vaccinia immune globulin"/>
+			</concept>
+			<concept>
+				<code value="80"/>
+				<display value="Venezuelan equine encephalitis, live, attenuated"/>
+			</concept>
+			<concept>
+				<code value="801"/>
+				<display value="AS03 Adjuvant"/>
+			</concept>
+			<concept>
+				<code value="81"/>
+				<display value="Venezuelan equine encephalitis, inactivated"/>
+			</concept>
+			<concept>
+				<code value="82"/>
+				<display value="adenovirus vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="83"/>
+				<display value="hepatitis A vaccine, pediatric/adolescent dosage, 2 dose schedule"/>
+			</concept>
+			<concept>
+				<code value="84"/>
+				<display value="hepatitis A vaccine, pediatric/adolescent dosage, 3 dose schedule"/>
+			</concept>
+			<concept>
+				<code value="85"/>
+				<display value="hepatitis A vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="86"/>
+				<display value="immune globulin, intramuscular"/>
+			</concept>
+			<concept>
+				<code value="87"/>
+				<display value="immune globulin, intravenous"/>
+			</concept>
+			<concept>
+				<code value="88"/>
+				<display value="influenza virus vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="89"/>
+				<display value="poliovirus vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="90"/>
+				<display value="rabies vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="91"/>
+				<display value="typhoid vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="92"/>
+				<display value="Venezuelan equine encephalitis vaccine, unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="93"/>
+				<display value="respiratory syncytial virus monoclonal antibody (palivizumab), intramuscular"/>
+			</concept>
+			<concept>
+				<code value="94"/>
+				<display value="measles, mumps, rubella, and varicella virus vaccine"/>
+			</concept>
+			<concept>
+				<code value="95"/>
+				<display value="tuberculin skin test; old tuberculin, multipuncture device"/>
+			</concept>
+			<concept>
+				<code value="96"/>
+				<display value="tuberculin skin test; purified protein derivative solution, intradermal"/>
+			</concept>
+			<concept>
+				<code value="97"/>
+				<display value="tuberculin skin test; purified protein derivative, multipuncture device"/>
+			</concept>
+			<concept>
+				<code value="98"/>
+				<display value="tuberculin skin test; unspecified formulation"/>
+			</concept>
+			<concept>
+				<code value="998"/>
+				<display value="no vaccine administered"/>
+			</concept>
 		</include>
 	</compose>
 </ValueSet>

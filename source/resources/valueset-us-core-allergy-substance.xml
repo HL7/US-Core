@@ -1,0 +1,3099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="us-core-allergy-substance"/>
+	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-allergy-substance"/>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:oid:2.16.840.1.113762.1.4.1186.8"/>
+	</identifier>
+	<version value="4.0.0"/>
+	<name value="USCoreAllergySubstance"/>
+	<title value="US Core Common substances for allergy and intolerance documentation including refutations"/>
+	<status value="active"/>
+	<date value="2019-05-15"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.hl7.org/Special/committees/structure/index.cfm"/>
+		</telecom>
+	</contact>
+	<description value="Documentation of substances suspected of (or not suspected of) causing an allergy or intolerance reaction in an individual. **Inclusion Criteria:** specific or general substances to which a patient may be exposed and which may be suspected of causing an adverse reaction; assertions refuting these suspicions. This includes:
+
+1. Common dietary substances for allergy and intolerance documentation (SNOMEDCT)
+2. Common drug classes for allergy and intolerance documentation (SNOMEDCT)
+3. Common drug substances for allergy and intolerance documentation (SNOMEDCT)
+4. Common environmental substances for allergy and intolerance documentation (RXNORM)
+5. Common refutations and null values for substance causes for allergy and intolerance documentation (SNOMEDCT)
+
+**Exclusion Criteria:** actual conditions caused by exposure (reactions, allergies)"/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+	<compose>
+		<include>
+			<system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+			<concept>
+				<code value="1002293"/>
+				<display value="formoterol / Mometasone"/>
+			</concept>
+			<concept>
+				<code value="1007388"/>
+				<display value="Lactase / rennet"/>
+			</concept>
+			<concept>
+				<code value="1008298"/>
+				<display value="Acetaminophen / Caffeine / Chlorpheniramine / Hydrocodone / Phenylephrine"/>
+			</concept>
+			<concept>
+				<code value="1008519"/>
+				<display value="guaiacolsulfonate / Hydrocodone"/>
+			</concept>
+			<concept>
+				<code value="1009148"/>
+				<display value="Ampicillin / Sulbactam"/>
+			</concept>
+			<concept>
+				<code value="10109"/>
+				<display value="Streptomycin"/>
+			</concept>
+			<concept>
+				<code value="10154"/>
+				<display value="Succinylcholine"/>
+			</concept>
+			<concept>
+				<code value="10156"/>
+				<display value="Sucralfate"/>
+			</concept>
+			<concept>
+				<code value="10169"/>
+				<display value="Sulfacetamide"/>
+			</concept>
+			<concept>
+				<code value="10171"/>
+				<display value="Sulfadiazine"/>
+			</concept>
+			<concept>
+				<code value="10180"/>
+				<display value="Sulfamethoxazole"/>
+			</concept>
+			<concept>
+				<code value="10207"/>
+				<display value="Sulfisoxazole"/>
+			</concept>
+			<concept>
+				<code value="10223"/>
+				<display value="Sulfur"/>
+			</concept>
+			<concept>
+				<code value="10237"/>
+				<display value="Sulindac"/>
+			</concept>
+			<concept>
+				<code value="10324"/>
+				<display value="Tamoxifen"/>
+			</concept>
+			<concept>
+				<code value="10355"/>
+				<display value="Temazepam"/>
+			</concept>
+			<concept>
+				<code value="10368"/>
+				<display value="Terbutaline"/>
+			</concept>
+			<concept>
+				<code value="1037042"/>
+				<display value="dabigatran etexilate"/>
+			</concept>
+			<concept>
+				<code value="10379"/>
+				<display value="Testosterone"/>
+			</concept>
+			<concept>
+				<code value="10395"/>
+				<display value="Tetracycline"/>
+			</concept>
+			<concept>
+				<code value="103990"/>
+				<display value="Carbidopa / Levodopa"/>
+			</concept>
+			<concept>
+				<code value="1040028"/>
+				<display value="lurasidone"/>
+			</concept>
+			<concept>
+				<code value="10438"/>
+				<display value="Theophylline"/>
+			</concept>
+			<concept>
+				<code value="10472"/>
+				<display value="Thimerosal"/>
+			</concept>
+			<concept>
+				<code value="10493"/>
+				<display value="Thiopental"/>
+			</concept>
+			<concept>
+				<code value="10502"/>
+				<display value="Thioridazine"/>
+			</concept>
+			<concept>
+				<code value="10510"/>
+				<display value="Thiothixene"/>
+			</concept>
+			<concept>
+				<code value="10582"/>
+				<display value="levothyroxine"/>
+			</concept>
+			<concept>
+				<code value="10594"/>
+				<display value="Ticlopidine"/>
+			</concept>
+			<concept>
+				<code value="10600"/>
+				<display value="Timolol"/>
+			</concept>
+			<concept>
+				<code value="10627"/>
+				<display value="Tobramycin"/>
+			</concept>
+			<concept>
+				<code value="10636"/>
+				<display value="Tolmetin"/>
+			</concept>
+			<concept>
+				<code value="10689"/>
+				<display value="Tramadol"/>
+			</concept>
+			<concept>
+				<code value="10737"/>
+				<display value="Trazodone"/>
+			</concept>
+			<concept>
+				<code value="10759"/>
+				<display value="Triamcinolone"/>
+			</concept>
+			<concept>
+				<code value="107602"/>
+				<display value="Epinephrine / Lidocaine"/>
+			</concept>
+			<concept>
+				<code value="10763"/>
+				<display value="Triamterene"/>
+			</concept>
+			<concept>
+				<code value="10767"/>
+				<display value="Triazolam"/>
+			</concept>
+			<concept>
+				<code value="10800"/>
+				<display value="Trifluoperazine"/>
+			</concept>
+			<concept>
+				<code value="108118"/>
+				<display value="Mometasone"/>
+			</concept>
+			<concept>
+				<code value="10829"/>
+				<display value="Trimethoprim"/>
+			</concept>
+			<concept>
+				<code value="10831"/>
+				<display value="Sulfamethoxazole / Trimethoprim"/>
+			</concept>
+			<concept>
+				<code value="11124"/>
+				<display value="Vancomycin"/>
+			</concept>
+			<concept>
+				<code value="1114195"/>
+				<display value="rivaroxaban"/>
+			</concept>
+			<concept>
+				<code value="1116632"/>
+				<display value="Ticagrelor"/>
+			</concept>
+			<concept>
+				<code value="11170"/>
+				<display value="Verapamil"/>
+			</concept>
+			<concept>
+				<code value="11248"/>
+				<display value="Vitamin B 12"/>
+			</concept>
+			<concept>
+				<code value="11253"/>
+				<display value="Vitamin D"/>
+			</concept>
+			<concept>
+				<code value="11256"/>
+				<display value="Vitamin E"/>
+			</concept>
+			<concept>
+				<code value="11289"/>
+				<display value="Warfarin"/>
+			</concept>
+			<concept>
+				<code value="113588"/>
+				<display value="Erythromycin / Sulfisoxazole"/>
+			</concept>
+			<concept>
+				<code value="11416"/>
+				<display value="Zinc"/>
+			</concept>
+			<concept>
+				<code value="11423"/>
+				<display value="Zinc Oxide"/>
+			</concept>
+			<concept>
+				<code value="114477"/>
+				<display value="Levetiracetam"/>
+			</concept>
+			<concept>
+				<code value="114970"/>
+				<display value="zafirlukast"/>
+			</concept>
+			<concept>
+				<code value="114979"/>
+				<display value="rabeprazole"/>
+			</concept>
+			<concept>
+				<code value="1151"/>
+				<display value="Ascorbic Acid"/>
+			</concept>
+			<concept>
+				<code value="115264"/>
+				<display value="Ibandronate"/>
+			</concept>
+			<concept>
+				<code value="115552"/>
+				<display value="trovafloxacin"/>
+			</concept>
+			<concept>
+				<code value="115698"/>
+				<display value="ziprasidone"/>
+			</concept>
+			<concept>
+				<code value="1191"/>
+				<display value="Aspirin"/>
+			</concept>
+			<concept>
+				<code value="119565"/>
+				<display value="tolterodine"/>
+			</concept>
+			<concept>
+				<code value="1202"/>
+				<display value="Atenolol"/>
+			</concept>
+			<concept>
+				<code value="121191"/>
+				<display value="rituximab"/>
+			</concept>
+			<concept>
+				<code value="1223"/>
+				<display value="Atropine"/>
+			</concept>
+			<concept>
+				<code value="1256"/>
+				<display value="Azathioprine"/>
+			</concept>
+			<concept>
+				<code value="1272"/>
+				<display value="Aztreonam"/>
+			</concept>
+			<concept>
+				<code value="1291"/>
+				<display value="Bacitracin"/>
+			</concept>
+			<concept>
+				<code value="1292"/>
+				<display value="Baclofen"/>
+			</concept>
+			<concept>
+				<code value="1310171"/>
+				<display value="Gadolinium"/>
+			</concept>
+			<concept>
+				<code value="1311085"/>
+				<display value="xanthine"/>
+			</concept>
+			<concept>
+				<code value="1311524"/>
+				<display value="Aspartame"/>
+			</concept>
+			<concept>
+				<code value="1311629"/>
+				<display value="nickel"/>
+			</concept>
+			<concept>
+				<code value="1314891"/>
+				<display value="Latex"/>
+			</concept>
+			<concept>
+				<code value="1331"/>
+				<display value="Barium Sulfate"/>
+			</concept>
+			<concept>
+				<code value="134615"/>
+				<display value="brimonidine"/>
+			</concept>
+			<concept>
+				<code value="1347"/>
+				<display value="Beclomethasone"/>
+			</concept>
+			<concept>
+				<code value="135447"/>
+				<display value="donepezil"/>
+			</concept>
+			<concept>
+				<code value="135775"/>
+				<display value="zolmitriptan"/>
+			</concept>
+			<concept>
+				<code value="1359"/>
+				<display value="Belladonna Alkaloids"/>
+			</concept>
+			<concept>
+				<code value="1362879"/>
+				<display value="Sulfur Dioxide"/>
+			</concept>
+			<concept>
+				<code value="1363043"/>
+				<display value="ethyl ether"/>
+			</concept>
+			<concept>
+				<code value="136411"/>
+				<display value="sildenafil"/>
+			</concept>
+			<concept>
+				<code value="1364430"/>
+				<display value="apixaban"/>
+			</concept>
+			<concept>
+				<code value="138099"/>
+				<display value="gemifloxacin"/>
+			</concept>
+			<concept>
+				<code value="139462"/>
+				<display value="moxifloxacin"/>
+			</concept>
+			<concept>
+				<code value="1399"/>
+				<display value="Benzocaine"/>
+			</concept>
+			<concept>
+				<code value="140587"/>
+				<display value="celecoxib"/>
+			</concept>
+			<concept>
+				<code value="1406"/>
+				<display value="benzoin resin"/>
+			</concept>
+			<concept>
+				<code value="141626"/>
+				<display value="colesevelam"/>
+			</concept>
+			<concept>
+				<code value="1418"/>
+				<display value="Benzoyl Peroxide"/>
+			</concept>
+			<concept>
+				<code value="1424"/>
+				<display value="Benztropine"/>
+			</concept>
+			<concept>
+				<code value="1514"/>
+				<display value="Betamethasone"/>
+			</concept>
+			<concept>
+				<code value="153970"/>
+				<display value="Hyoscyamine"/>
+			</concept>
+			<concept>
+				<code value="1596450"/>
+				<display value="Gentamicin"/>
+			</concept>
+			<concept>
+				<code value="15996"/>
+				<display value="Mirtazapine"/>
+			</concept>
+			<concept>
+				<code value="161"/>
+				<display value="Acetaminophen"/>
+			</concept>
+			<concept>
+				<code value="16681"/>
+				<display value="Acarbose"/>
+			</concept>
+			<concept>
+				<code value="167"/>
+				<display value="Acetazolamide"/>
+			</concept>
+			<concept>
+				<code value="17128"/>
+				<display value="lansoprazole"/>
+			</concept>
+			<concept>
+				<code value="1727875"/>
+				<display value="Tetanus immune globulin"/>
+			</concept>
+			<concept>
+				<code value="17300"/>
+				<display value="alfuzosin"/>
+			</concept>
+			<concept>
+				<code value="17767"/>
+				<display value="Amlodipine"/>
+			</concept>
+			<concept>
+				<code value="1827"/>
+				<display value="Buspirone"/>
+			</concept>
+			<concept>
+				<code value="183379"/>
+				<display value="rivastigmine"/>
+			</concept>
+			<concept>
+				<code value="1841"/>
+				<display value="Butorphanol"/>
+			</concept>
+			<concept>
+				<code value="18631"/>
+				<display value="Azithromycin"/>
+			</concept>
+			<concept>
+				<code value="187832"/>
+				<display value="pregabalin"/>
+			</concept>
+			<concept>
+				<code value="1886"/>
+				<display value="Caffeine"/>
+			</concept>
+			<concept>
+				<code value="18867"/>
+				<display value="benazepril"/>
+			</concept>
+			<concept>
+				<code value="1895"/>
+				<display value="Calcium"/>
+			</concept>
+			<concept>
+				<code value="1897"/>
+				<display value="Calcium Carbonate"/>
+			</concept>
+			<concept>
+				<code value="18993"/>
+				<display value="benzonatate"/>
+			</concept>
+			<concept>
+				<code value="190376"/>
+				<display value="linezolid"/>
+			</concept>
+			<concept>
+				<code value="191831"/>
+				<display value="infliximab"/>
+			</concept>
+			<concept>
+				<code value="19478"/>
+				<display value="bismuth subsalicylate"/>
+			</concept>
+			<concept>
+				<code value="19552"/>
+				<display value="cefprozil"/>
+			</concept>
+			<concept>
+				<code value="19711"/>
+				<display value="Amoxicillin / Clavulanate"/>
+			</concept>
+			<concept>
+				<code value="19831"/>
+				<display value="Budesonide"/>
+			</concept>
+			<concept>
+				<code value="1998"/>
+				<display value="Captopril"/>
+			</concept>
+			<concept>
+				<code value="2002"/>
+				<display value="Carbamazepine"/>
+			</concept>
+			<concept>
+				<code value="20352"/>
+				<display value="carvedilol"/>
+			</concept>
+			<concept>
+				<code value="20481"/>
+				<display value="cefepime"/>
+			</concept>
+			<concept>
+				<code value="20489"/>
+				<display value="cefpodoxime"/>
+			</concept>
+			<concept>
+				<code value="20610"/>
+				<display value="Cetirizine"/>
+			</concept>
+			<concept>
+				<code value="2101"/>
+				<display value="Carisoprodol"/>
+			</concept>
+			<concept>
+				<code value="21107"/>
+				<display value="cilostazol"/>
+			</concept>
+			<concept>
+				<code value="21183"/>
+				<display value="Citric Acid"/>
+			</concept>
+			<concept>
+				<code value="21212"/>
+				<display value="Clarithromycin"/>
+			</concept>
+			<concept>
+				<code value="214130"/>
+				<display value="Acetaminophen / butalbital / Caffeine"/>
+			</concept>
+			<concept>
+				<code value="214153"/>
+				<display value="Acetaminophen / dichloralphenazone / isometheptene"/>
+			</concept>
+			<concept>
+				<code value="214159"/>
+				<display value="Aspirin / butalbital / Caffeine"/>
+			</concept>
+			<concept>
+				<code value="214160"/>
+				<display value="Aspirin / butalbital / Caffeine / Codeine"/>
+			</concept>
+			<concept>
+				<code value="214181"/>
+				<display value="Acetaminophen / Diphenhydramine"/>
+			</concept>
+			<concept>
+				<code value="214182"/>
+				<display value="Acetaminophen / Hydrocodone"/>
+			</concept>
+			<concept>
+				<code value="214183"/>
+				<display value="Acetaminophen / Oxycodone"/>
+			</concept>
+			<concept>
+				<code value="214199"/>
+				<display value="Albuterol / Ipratropium"/>
+			</concept>
+			<concept>
+				<code value="214223"/>
+				<display value="Amlodipine / benazepril"/>
+			</concept>
+			<concept>
+				<code value="214250"/>
+				<display value="Aspirin / Caffeine"/>
+			</concept>
+			<concept>
+				<code value="214256"/>
+				<display value="Aspirin / Oxycodone"/>
+			</concept>
+			<concept>
+				<code value="214257"/>
+				<display value="Aspirin / Pentazocine"/>
+			</concept>
+			<concept>
+				<code value="214317"/>
+				<display value="Bisoprolol / Hydrochlorothiazide"/>
+			</concept>
+			<concept>
+				<code value="214336"/>
+				<display value="Caffeine / Ergotamine"/>
+			</concept>
+			<concept>
+				<code value="214354"/>
+				<display value="candesartan"/>
+			</concept>
+			<concept>
+				<code value="214364"/>
+				<display value="carbinoxamine / Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="214392"/>
+				<display value="Chlorpheniramine / Hydrocodone"/>
+			</concept>
+			<concept>
+				<code value="214442"/>
+				<display value="Codeine / Guaifenesin"/>
+			</concept>
+			<concept>
+				<code value="214445"/>
+				<display value="Codeine / Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="214488"/>
+				<display value="Dextromethorphan / Guaifenesin"/>
+			</concept>
+			<concept>
+				<code value="214502"/>
+				<display value="Diclofenac / Misoprostol"/>
+			</concept>
+			<concept>
+				<code value="214555"/>
+				<display value="Etanercept"/>
+			</concept>
+			<concept>
+				<code value="214558"/>
+				<display value="Ethinyl Estradiol / Levonorgestrel"/>
+			</concept>
+			<concept>
+				<code value="214565"/>
+				<display value="fexofenadine / Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="214599"/>
+				<display value="Guaifenesin / Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="214614"/>
+				<display value="homatropine / Hydrocodone"/>
+			</concept>
+			<concept>
+				<code value="214617"/>
+				<display value="Hydrochlorothiazide / irbesartan"/>
+			</concept>
+			<concept>
+				<code value="214618"/>
+				<display value="Hydrochlorothiazide / Lisinopril"/>
+			</concept>
+			<concept>
+				<code value="214619"/>
+				<display value="Hydrochlorothiazide / Losartan"/>
+			</concept>
+			<concept>
+				<code value="214626"/>
+				<display value="Hydrochlorothiazide / valsartan"/>
+			</concept>
+			<concept>
+				<code value="214627"/>
+				<display value="Hydrocodone / Ibuprofen"/>
+			</concept>
+			<concept>
+				<code value="214631"/>
+				<display value="Hydrocodone / Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="214682"/>
+				<display value="Loratadine / Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="214721"/>
+				<display value="Naloxone / Pentazocine"/>
+			</concept>
+			<concept>
+				<code value="214807"/>
+				<display value="Pseudoephedrine / Triprolidine"/>
+			</concept>
+			<concept>
+				<code value="2176"/>
+				<display value="Cefaclor"/>
+			</concept>
+			<concept>
+				<code value="217627"/>
+				<display value="Hydrocortisone / Neomycin / Polymyxin B"/>
+			</concept>
+			<concept>
+				<code value="2177"/>
+				<display value="Cefadroxil"/>
+			</concept>
+			<concept>
+				<code value="2180"/>
+				<display value="Cefazolin"/>
+			</concept>
+			<concept>
+				<code value="2189"/>
+				<display value="Cefoxitin"/>
+			</concept>
+			<concept>
+				<code value="2191"/>
+				<display value="Ceftazidime"/>
+			</concept>
+			<concept>
+				<code value="2193"/>
+				<display value="Ceftriaxone"/>
+			</concept>
+			<concept>
+				<code value="219314"/>
+				<display value="Polymyxin B / Trimethoprim"/>
+			</concept>
+			<concept>
+				<code value="219315"/>
+				<display value="Iron polysaccharide"/>
+			</concept>
+			<concept>
+				<code value="2194"/>
+				<display value="Cefuroxime"/>
+			</concept>
+			<concept>
+				<code value="21949"/>
+				<display value="cyclobenzaprine"/>
+			</concept>
+			<concept>
+				<code value="221147"/>
+				<display value="POLYETHYLENE GLYCOL 3350"/>
+			</concept>
+			<concept>
+				<code value="22299"/>
+				<display value="Daptomycin"/>
+			</concept>
+			<concept>
+				<code value="2231"/>
+				<display value="Cephalexin"/>
+			</concept>
+			<concept>
+				<code value="226716"/>
+				<display value="Aspirin / Dipyridamole"/>
+			</concept>
+			<concept>
+				<code value="228476"/>
+				<display value="gatifloxacin"/>
+			</concept>
+			<concept>
+				<code value="228790"/>
+				<display value="Dutasteride"/>
+			</concept>
+			<concept>
+				<code value="232158"/>
+				<display value="rofecoxib"/>
+			</concept>
+			<concept>
+				<code value="233698"/>
+				<display value="dronedarone"/>
+			</concept>
+			<concept>
+				<code value="2348"/>
+				<display value="Chloramphenicol"/>
+			</concept>
+			<concept>
+				<code value="2356"/>
+				<display value="Chlordiazepoxide"/>
+			</concept>
+			<concept>
+				<code value="2358"/>
+				<display value="Chlorhexidine"/>
+			</concept>
+			<concept>
+				<code value="236778"/>
+				<display value="Trospium"/>
+			</concept>
+			<concept>
+				<code value="237159"/>
+				<display value="Levalbuterol"/>
+			</concept>
+			<concept>
+				<code value="2393"/>
+				<display value="Chloroquine"/>
+			</concept>
+			<concept>
+				<code value="2400"/>
+				<display value="Chlorpheniramine"/>
+			</concept>
+			<concept>
+				<code value="2403"/>
+				<display value="Chlorpromazine"/>
+			</concept>
+			<concept>
+				<code value="2409"/>
+				<display value="Chlorthalidone"/>
+			</concept>
+			<concept>
+				<code value="2410"/>
+				<display value="Chlorzoxazone"/>
+			</concept>
+			<concept>
+				<code value="2418"/>
+				<display value="Cholecalciferol"/>
+			</concept>
+			<concept>
+				<code value="2447"/>
+				<display value="Cholestyramine Resin"/>
+			</concept>
+			<concept>
+				<code value="24605"/>
+				<display value="Etodolac"/>
+			</concept>
+			<concept>
+				<code value="24947"/>
+				<display value="ferrous sulfate"/>
+			</concept>
+			<concept>
+				<code value="25025"/>
+				<display value="Finasteride"/>
+			</concept>
+			<concept>
+				<code value="25033"/>
+				<display value="Cefixime"/>
+			</concept>
+			<concept>
+				<code value="25037"/>
+				<display value="cefdinir"/>
+			</concept>
+			<concept>
+				<code value="25120"/>
+				<display value="flunisolide"/>
+			</concept>
+			<concept>
+				<code value="25255"/>
+				<display value="formoterol"/>
+			</concept>
+			<concept>
+				<code value="253157"/>
+				<display value="Bee pollen"/>
+			</concept>
+			<concept>
+				<code value="2541"/>
+				<display value="Cimetidine"/>
+			</concept>
+			<concept>
+				<code value="25480"/>
+				<display value="gabapentin"/>
+			</concept>
+			<concept>
+				<code value="2551"/>
+				<display value="Ciprofloxacin"/>
+			</concept>
+			<concept>
+				<code value="2556"/>
+				<display value="Citalopram"/>
+			</concept>
+			<concept>
+				<code value="25789"/>
+				<display value="glimepiride"/>
+			</concept>
+			<concept>
+				<code value="2582"/>
+				<display value="Clindamycin"/>
+			</concept>
+			<concept>
+				<code value="258337"/>
+				<display value="Hydrochlorothiazide / Triamterene"/>
+			</concept>
+			<concept>
+				<code value="2598"/>
+				<display value="Clonazepam"/>
+			</concept>
+			<concept>
+				<code value="2599"/>
+				<display value="Clonidine"/>
+			</concept>
+			<concept>
+				<code value="260101"/>
+				<display value="Oseltamivir"/>
+			</concept>
+			<concept>
+				<code value="26225"/>
+				<display value="Ondansetron"/>
+			</concept>
+			<concept>
+				<code value="2623"/>
+				<display value="Clotrimazole"/>
+			</concept>
+			<concept>
+				<code value="2670"/>
+				<display value="Codeine"/>
+			</concept>
+			<concept>
+				<code value="2683"/>
+				<display value="Colchicine"/>
+			</concept>
+			<concept>
+				<code value="2685"/>
+				<display value="Colestipol"/>
+			</concept>
+			<concept>
+				<code value="27169"/>
+				<display value="leflunomide"/>
+			</concept>
+			<concept>
+				<code value="274783"/>
+				<display value="Insulin Glargine"/>
+			</concept>
+			<concept>
+				<code value="274786"/>
+				<display value="telithromycin"/>
+			</concept>
+			<concept>
+				<code value="27723"/>
+				<display value="iodinated glycerol"/>
+			</concept>
+			<concept>
+				<code value="278567"/>
+				<display value="valdecoxib"/>
+			</concept>
+			<concept>
+				<code value="28031"/>
+				<display value="Itraconazole"/>
+			</concept>
+			<concept>
+				<code value="281"/>
+				<display value="Acyclovir"/>
+			</concept>
+			<concept>
+				<code value="283742"/>
+				<display value="Esomeprazole"/>
+			</concept>
+			<concept>
+				<code value="283809"/>
+				<display value="travoprost"/>
+			</concept>
+			<concept>
+				<code value="28439"/>
+				<display value="lamotrigine"/>
+			</concept>
+			<concept>
+				<code value="284635"/>
+				<display value="fluticasone / salmeterol"/>
+			</concept>
+			<concept>
+				<code value="2878"/>
+				<display value="Cortisone"/>
+			</concept>
+			<concept>
+				<code value="28889"/>
+				<display value="Loratadine"/>
+			</concept>
+			<concept>
+				<code value="28981"/>
+				<display value="loracarbef"/>
+			</concept>
+			<concept>
+				<code value="29046"/>
+				<display value="Lisinopril"/>
+			</concept>
+			<concept>
+				<code value="29542"/>
+				<display value="Mercury, Ammoniated"/>
+			</concept>
+			<concept>
+				<code value="29561"/>
+				<display value="meropenem"/>
+			</concept>
+			<concept>
+				<code value="296"/>
+				<display value="Adenosine"/>
+			</concept>
+			<concept>
+				<code value="3008"/>
+				<display value="Cyclosporine"/>
+			</concept>
+			<concept>
+				<code value="301542"/>
+				<display value="rosuvastatin"/>
+			</concept>
+			<concept>
+				<code value="306674"/>
+				<display value="vardenafil"/>
+			</concept>
+			<concept>
+				<code value="3108"/>
+				<display value="Dapsone"/>
+			</concept>
+			<concept>
+				<code value="3143"/>
+				<display value="prasterone"/>
+			</concept>
+			<concept>
+				<code value="31448"/>
+				<display value="nabumetone"/>
+			</concept>
+			<concept>
+				<code value="31555"/>
+				<display value="nebivolol"/>
+			</concept>
+			<concept>
+				<code value="31565"/>
+				<display value="nefazodone"/>
+			</concept>
+			<concept>
+				<code value="31738"/>
+				<display value="nickel sulfate"/>
+			</concept>
+			<concept>
+				<code value="318340"/>
+				<display value="Aloe vera preparation"/>
+			</concept>
+			<concept>
+				<code value="321064"/>
+				<display value="olmesartan"/>
+			</concept>
+			<concept>
+				<code value="321988"/>
+				<display value="Escitalopram"/>
+			</concept>
+			<concept>
+				<code value="322167"/>
+				<display value="Solifenacin"/>
+			</concept>
+			<concept>
+				<code value="3247"/>
+				<display value="Desipramine"/>
+			</concept>
+			<concept>
+				<code value="325642"/>
+				<display value="ertapenem"/>
+			</concept>
+			<concept>
+				<code value="32592"/>
+				<display value="oxaliplatin"/>
+			</concept>
+			<concept>
+				<code value="32613"/>
+				<display value="oxaprozin"/>
+			</concept>
+			<concept>
+				<code value="32624"/>
+				<display value="oxcarbazepine"/>
+			</concept>
+			<concept>
+				<code value="3264"/>
+				<display value="Dexamethasone"/>
+			</concept>
+			<concept>
+				<code value="32675"/>
+				<display value="oxybutynin"/>
+			</concept>
+			<concept>
+				<code value="327361"/>
+				<display value="adalimumab"/>
+			</concept>
+			<concept>
+				<code value="3289"/>
+				<display value="Dextromethorphan"/>
+			</concept>
+			<concept>
+				<code value="32937"/>
+				<display value="Paroxetine"/>
+			</concept>
+			<concept>
+				<code value="32968"/>
+				<display value="clopidogrel"/>
+			</concept>
+			<concept>
+				<code value="3322"/>
+				<display value="Diazepam"/>
+			</concept>
+			<concept>
+				<code value="33408"/>
+				<display value="phenyltoloxamine"/>
+			</concept>
+			<concept>
+				<code value="3355"/>
+				<display value="Diclofenac"/>
+			</concept>
+			<concept>
+				<code value="3356"/>
+				<display value="Dicloxacillin"/>
+			</concept>
+			<concept>
+				<code value="3361"/>
+				<display value="Dicyclomine"/>
+			</concept>
+			<concept>
+				<code value="33738"/>
+				<display value="pioglitazone"/>
+			</concept>
+			<concept>
+				<code value="3393"/>
+				<display value="Diflunisal"/>
+			</concept>
+			<concept>
+				<code value="3407"/>
+				<display value="Digoxin"/>
+			</concept>
+			<concept>
+				<code value="341248"/>
+				<display value="ezetimibe"/>
+			</concept>
+			<concept>
+				<code value="3418"/>
+				<display value="Dihydroergotamine"/>
+			</concept>
+			<concept>
+				<code value="3423"/>
+				<display value="Hydromorphone"/>
+			</concept>
+			<concept>
+				<code value="3443"/>
+				<display value="Diltiazem"/>
+			</concept>
+			<concept>
+				<code value="3444"/>
+				<display value="Dimenhydrinate"/>
+			</concept>
+			<concept>
+				<code value="3498"/>
+				<display value="Diphenhydramine"/>
+			</concept>
+			<concept>
+				<code value="35208"/>
+				<display value="quinapril"/>
+			</concept>
+			<concept>
+				<code value="3521"/>
+				<display value="Dipyridamole"/>
+			</concept>
+			<concept>
+				<code value="352362"/>
+				<display value="Acetaminophen / Tramadol"/>
+			</concept>
+			<concept>
+				<code value="35296"/>
+				<display value="Ramipril"/>
+			</concept>
+			<concept>
+				<code value="35382"/>
+				<display value="resorcinol"/>
+			</concept>
+			<concept>
+				<code value="35636"/>
+				<display value="Risperidone"/>
+			</concept>
+			<concept>
+				<code value="358263"/>
+				<display value="tadalafil"/>
+			</concept>
+			<concept>
+				<code value="35827"/>
+				<display value="Ketorolac"/>
+			</concept>
+			<concept>
+				<code value="35829"/>
+				<display value="ranolazine"/>
+			</concept>
+			<concept>
+				<code value="36108"/>
+				<display value="Salsalate"/>
+			</concept>
+			<concept>
+				<code value="36117"/>
+				<display value="salmeterol"/>
+			</concept>
+			<concept>
+				<code value="3616"/>
+				<display value="Dobutamine"/>
+			</concept>
+			<concept>
+				<code value="3638"/>
+				<display value="Doxepin"/>
+			</concept>
+			<concept>
+				<code value="3640"/>
+				<display value="Doxycycline"/>
+			</concept>
+			<concept>
+				<code value="36437"/>
+				<display value="Sertraline"/>
+			</concept>
+			<concept>
+				<code value="3648"/>
+				<display value="Droperidol"/>
+			</concept>
+			<concept>
+				<code value="36567"/>
+				<display value="Simvastatin"/>
+			</concept>
+			<concept>
+				<code value="37418"/>
+				<display value="Sumatriptan"/>
+			</concept>
+			<concept>
+				<code value="37617"/>
+				<display value="tazobactam"/>
+			</concept>
+			<concept>
+				<code value="37798"/>
+				<display value="Terazosin"/>
+			</concept>
+			<concept>
+				<code value="37801"/>
+				<display value="terbinafine"/>
+			</concept>
+			<concept>
+				<code value="3827"/>
+				<display value="Enalapril"/>
+			</concept>
+			<concept>
+				<code value="3829"/>
+				<display value="Enalaprilat"/>
+			</concept>
+			<concept>
+				<code value="38400"/>
+				<display value="atomoxetine"/>
+			</concept>
+			<concept>
+				<code value="38404"/>
+				<display value="topiramate"/>
+			</concept>
+			<concept>
+				<code value="38413"/>
+				<display value="torsemide"/>
+			</concept>
+			<concept>
+				<code value="38574"/>
+				<display value="trichloroacetaldehyde"/>
+			</concept>
+			<concept>
+				<code value="38685"/>
+				<display value="trimethobenzamide"/>
+			</concept>
+			<concept>
+				<code value="389132"/>
+				<display value="Budesonide / formoterol"/>
+			</concept>
+			<concept>
+				<code value="3966"/>
+				<display value="Ephedrine"/>
+			</concept>
+			<concept>
+				<code value="39786"/>
+				<display value="venlafaxine"/>
+			</concept>
+			<concept>
+				<code value="3992"/>
+				<display value="Epinephrine"/>
+			</concept>
+			<concept>
+				<code value="39993"/>
+				<display value="zolpidem"/>
+			</concept>
+			<concept>
+				<code value="39998"/>
+				<display value="zonisamide"/>
+			</concept>
+			<concept>
+				<code value="40048"/>
+				<display value="Carboplatin"/>
+			</concept>
+			<concept>
+				<code value="400674"/>
+				<display value="dexbrompheniramine / Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="4025"/>
+				<display value="Ergotamine"/>
+			</concept>
+			<concept>
+				<code value="40254"/>
+				<display value="Valproate"/>
+			</concept>
+			<concept>
+				<code value="4053"/>
+				<display value="Erythromycin"/>
+			</concept>
+			<concept>
+				<code value="40575"/>
+				<display value="zileuton"/>
+			</concept>
+			<concept>
+				<code value="40790"/>
+				<display value="pantoprazole"/>
+			</concept>
+			<concept>
+				<code value="4083"/>
+				<display value="Estradiol"/>
+			</concept>
+			<concept>
+				<code value="4099"/>
+				<display value="Estrogens, Conjugated (USP)"/>
+			</concept>
+			<concept>
+				<code value="41126"/>
+				<display value="fluticasone"/>
+			</concept>
+			<concept>
+				<code value="41127"/>
+				<display value="fluvastatin"/>
+			</concept>
+			<concept>
+				<code value="4124"/>
+				<display value="Ethinyl Estradiol"/>
+			</concept>
+			<concept>
+				<code value="41397"/>
+				<display value="Lactase"/>
+			</concept>
+			<concept>
+				<code value="41493"/>
+				<display value="meloxicam"/>
+			</concept>
+			<concept>
+				<code value="42330"/>
+				<display value="Terfenadine"/>
+			</concept>
+			<concept>
+				<code value="42331"/>
+				<display value="Misoprostol"/>
+			</concept>
+			<concept>
+				<code value="42347"/>
+				<display value="Bupropion"/>
+			</concept>
+			<concept>
+				<code value="42351"/>
+				<display value="Lithium Carbonate"/>
+			</concept>
+			<concept>
+				<code value="42372"/>
+				<display value="Mupirocin"/>
+			</concept>
+			<concept>
+				<code value="42463"/>
+				<display value="Pravastatin"/>
+			</concept>
+			<concept>
+				<code value="4278"/>
+				<display value="Famotidine"/>
+			</concept>
+			<concept>
+				<code value="4316"/>
+				<display value="Felodipine"/>
+			</concept>
+			<concept>
+				<code value="4337"/>
+				<display value="Fentanyl"/>
+			</concept>
+			<concept>
+				<code value="435"/>
+				<display value="Albuterol"/>
+			</concept>
+			<concept>
+				<code value="43611"/>
+				<display value="latanoprost"/>
+			</concept>
+			<concept>
+				<code value="4419"/>
+				<display value="Fish Oils"/>
+			</concept>
+			<concept>
+				<code value="4441"/>
+				<display value="Flecainide"/>
+			</concept>
+			<concept>
+				<code value="4450"/>
+				<display value="Fluconazole"/>
+			</concept>
+			<concept>
+				<code value="448"/>
+				<display value="Ethanol"/>
+			</concept>
+			<concept>
+				<code value="4492"/>
+				<display value="Fluorouracil"/>
+			</concept>
+			<concept>
+				<code value="4493"/>
+				<display value="Fluoxetine"/>
+			</concept>
+			<concept>
+				<code value="4496"/>
+				<display value="Fluphenazine"/>
+			</concept>
+			<concept>
+				<code value="4500"/>
+				<display value="Flurandrenolide"/>
+			</concept>
+			<concept>
+				<code value="4530"/>
+				<display value="Formaldehyde"/>
+			</concept>
+			<concept>
+				<code value="4603"/>
+				<display value="Furosemide"/>
+			</concept>
+			<concept>
+				<code value="46041"/>
+				<display value="Alendronate"/>
+			</concept>
+			<concept>
+				<code value="461016"/>
+				<display value="Eszopiclone"/>
+			</concept>
+			<concept>
+				<code value="4637"/>
+				<display value="Galantamine"/>
+			</concept>
+			<concept>
+				<code value="465397"/>
+				<display value="Ciprofloxacin / Dexamethasone"/>
+			</concept>
+			<concept>
+				<code value="466522"/>
+				<display value="Diphenhydramine / Zinc Acetate"/>
+			</concept>
+			<concept>
+				<code value="466541"/>
+				<display value="Neomycin / Polymyxin B"/>
+			</concept>
+			<concept>
+				<code value="466549"/>
+				<display value="Aspirin / Caffeine / Orphenadrine"/>
+			</concept>
+			<concept>
+				<code value="466553"/>
+				<display value="penicillin G benzathine / penicillin G procaine"/>
+			</concept>
+			<concept>
+				<code value="466566"/>
+				<display value="Acetaminophen / Dextromethorphan / Diphenhydramine / Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="466584"/>
+				<display value="Acetaminophen / Aspirin / Caffeine"/>
+			</concept>
+			<concept>
+				<code value="4719"/>
+				<display value="Gemfibrozil"/>
+			</concept>
+			<concept>
+				<code value="475968"/>
+				<display value="liraglutide"/>
+			</concept>
+			<concept>
+				<code value="4815"/>
+				<display value="Glyburide"/>
+			</concept>
+			<concept>
+				<code value="48203"/>
+				<display value="Clavulanate"/>
+			</concept>
+			<concept>
+				<code value="4821"/>
+				<display value="Glipizide"/>
+			</concept>
+			<concept>
+				<code value="48274"/>
+				<display value="Acetaminophen / Propoxyphene"/>
+			</concept>
+			<concept>
+				<code value="484139"/>
+				<display value="Chlorhexidine / Isopropyl Alcohol"/>
+			</concept>
+			<concept>
+				<code value="484211"/>
+				<display value="ezetimibe / Simvastatin"/>
+			</concept>
+			<concept>
+				<code value="4850"/>
+				<display value="Glucose"/>
+			</concept>
+			<concept>
+				<code value="4917"/>
+				<display value="Nitroglycerin"/>
+			</concept>
+			<concept>
+				<code value="49276"/>
+				<display value="Doxazosin"/>
+			</concept>
+			<concept>
+				<code value="50166"/>
+				<display value="Fosinopril"/>
+			</concept>
+			<concept>
+				<code value="5021"/>
+				<display value="Griseofulvin"/>
+			</concept>
+			<concept>
+				<code value="5032"/>
+				<display value="Guaifenesin"/>
+			</concept>
+			<concept>
+				<code value="5093"/>
+				<display value="Haloperidol"/>
+			</concept>
+			<concept>
+				<code value="51272"/>
+				<display value="quetiapine"/>
+			</concept>
+			<concept>
+				<code value="519"/>
+				<display value="Allopurinol"/>
+			</concept>
+			<concept>
+				<code value="52175"/>
+				<display value="Losartan"/>
+			</concept>
+			<concept>
+				<code value="5224"/>
+				<display value="heparin"/>
+			</concept>
+			<concept>
+				<code value="52582"/>
+				<display value="mesalamine"/>
+			</concept>
+			<concept>
+				<code value="5470"/>
+				<display value="Hydralazine"/>
+			</concept>
+			<concept>
+				<code value="5487"/>
+				<display value="Hydrochlorothiazide"/>
+			</concept>
+			<concept>
+				<code value="5489"/>
+				<display value="Hydrocodone"/>
+			</concept>
+			<concept>
+				<code value="5492"/>
+				<display value="Hydrocortisone"/>
+			</concept>
+			<concept>
+				<code value="5499"/>
+				<display value="Hydrogen Peroxide"/>
+			</concept>
+			<concept>
+				<code value="5521"/>
+				<display value="Hydroxychloroquine"/>
+			</concept>
+			<concept>
+				<code value="5553"/>
+				<display value="Hydroxyzine"/>
+			</concept>
+			<concept>
+				<code value="5640"/>
+				<display value="Ibuprofen"/>
+			</concept>
+			<concept>
+				<code value="5691"/>
+				<display value="Imipramine"/>
+			</concept>
+			<concept>
+				<code value="56946"/>
+				<display value="Paclitaxel"/>
+			</concept>
+			<concept>
+				<code value="57258"/>
+				<display value="tizanidine"/>
+			</concept>
+			<concept>
+				<code value="5764"/>
+				<display value="Indapamide"/>
+			</concept>
+			<concept>
+				<code value="5781"/>
+				<display value="Indomethacin"/>
+			</concept>
+			<concept>
+				<code value="588250"/>
+				<display value="milnacipran"/>
+			</concept>
+			<concept>
+				<code value="59078"/>
+				<display value="metaxalone"/>
+			</concept>
+			<concept>
+				<code value="591622"/>
+				<display value="varenicline"/>
+			</concept>
+			<concept>
+				<code value="5933"/>
+				<display value="Iodine"/>
+			</concept>
+			<concept>
+				<code value="593411"/>
+				<display value="sitagliptin"/>
+			</concept>
+			<concept>
+				<code value="594040"/>
+				<display value="Atropine / Diphenoxylate"/>
+			</concept>
+			<concept>
+				<code value="5956"/>
+				<display value="Iohexol"/>
+			</concept>
+			<concept>
+				<code value="596"/>
+				<display value="Alprazolam"/>
+			</concept>
+			<concept>
+				<code value="596723"/>
+				<display value="cerivastatin"/>
+			</concept>
+			<concept>
+				<code value="597142"/>
+				<display value="brimonidine / Timolol"/>
+			</concept>
+			<concept>
+				<code value="5992"/>
+				<display value="Iron-Dextran Complex"/>
+			</concept>
+			<concept>
+				<code value="60207"/>
+				<display value="dorzolamide"/>
+			</concept>
+			<concept>
+				<code value="6038"/>
+				<display value="isoniazid"/>
+			</concept>
+			<concept>
+				<code value="60548"/>
+				<display value="exenatide"/>
+			</concept>
+			<concept>
+				<code value="6057"/>
+				<display value="Isosorbide"/>
+			</concept>
+			<concept>
+				<code value="6058"/>
+				<display value="Isosorbide Dinitrate"/>
+			</concept>
+			<concept>
+				<code value="611854"/>
+				<display value="Chlordiazepoxide / clidinium"/>
+			</concept>
+			<concept>
+				<code value="6130"/>
+				<display value="Ketamine"/>
+			</concept>
+			<concept>
+				<code value="6135"/>
+				<display value="Ketoconazole"/>
+			</concept>
+			<concept>
+				<code value="61381"/>
+				<display value="olanzapine"/>
+			</concept>
+			<concept>
+				<code value="6142"/>
+				<display value="Ketoprofen"/>
+			</concept>
+			<concept>
+				<code value="6185"/>
+				<display value="Labetalol"/>
+			</concept>
+			<concept>
+				<code value="620"/>
+				<display value="Amantadine"/>
+			</concept>
+			<concept>
+				<code value="6218"/>
+				<display value="Lactulose"/>
+			</concept>
+			<concept>
+				<code value="6227"/>
+				<display value="Lanolin"/>
+			</concept>
+			<concept>
+				<code value="6387"/>
+				<display value="Lidocaine"/>
+			</concept>
+			<concept>
+				<code value="6398"/>
+				<display value="Lincomycin"/>
+			</concept>
+			<concept>
+				<code value="6448"/>
+				<display value="Lithium"/>
+			</concept>
+			<concept>
+				<code value="645555"/>
+				<display value="Bacitracin / Polymyxin B"/>
+			</concept>
+			<concept>
+				<code value="6468"/>
+				<display value="Loperamide"/>
+			</concept>
+			<concept>
+				<code value="6470"/>
+				<display value="Lorazepam"/>
+			</concept>
+			<concept>
+				<code value="6472"/>
+				<display value="Lovastatin"/>
+			</concept>
+			<concept>
+				<code value="6574"/>
+				<display value="Magnesium"/>
+			</concept>
+			<concept>
+				<code value="6585"/>
+				<display value="Magnesium Sulfate"/>
+			</concept>
+			<concept>
+				<code value="662263"/>
+				<display value="dorzolamide / Timolol"/>
+			</concept>
+			<concept>
+				<code value="6676"/>
+				<display value="Meclizine"/>
+			</concept>
+			<concept>
+				<code value="6691"/>
+				<display value="Medroxyprogesterone"/>
+			</concept>
+			<concept>
+				<code value="67108"/>
+				<display value="Enoxaparin"/>
+			</concept>
+			<concept>
+				<code value="6711"/>
+				<display value="Melatonin"/>
+			</concept>
+			<concept>
+				<code value="6719"/>
+				<display value="Memantine"/>
+			</concept>
+			<concept>
+				<code value="6750"/>
+				<display value="Menthol"/>
+			</concept>
+			<concept>
+				<code value="6754"/>
+				<display value="Meperidine"/>
+			</concept>
+			<concept>
+				<code value="6809"/>
+				<display value="Metformin"/>
+			</concept>
+			<concept>
+				<code value="6813"/>
+				<display value="Methadone"/>
+			</concept>
+			<concept>
+				<code value="6835"/>
+				<display value="Methimazole"/>
+			</concept>
+			<concept>
+				<code value="6845"/>
+				<display value="Methocarbamol"/>
+			</concept>
+			<concept>
+				<code value="6851"/>
+				<display value="Methotrexate"/>
+			</concept>
+			<concept>
+				<code value="6876"/>
+				<display value="Methyldopa"/>
+			</concept>
+			<concept>
+				<code value="689"/>
+				<display value="Aminophylline"/>
+			</concept>
+			<concept>
+				<code value="689467"/>
+				<display value="Oxytetracycline / Polymyxin B"/>
+			</concept>
+			<concept>
+				<code value="689518"/>
+				<display value="Aspirin / Caffeine / Propoxyphene"/>
+			</concept>
+			<concept>
+				<code value="689556"/>
+				<display value="Acetaminophen / Aspirin / Phenylpropanolamine"/>
+			</concept>
+			<concept>
+				<code value="689558"/>
+				<display value="Acetaminophen / Brompheniramine / Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="689561"/>
+				<display value="Acetaminophen / butalbital / Caffeine / Codeine"/>
+			</concept>
+			<concept>
+				<code value="689582"/>
+				<display value="Acetaminophen / Chlorpheniramine / Dextromethorphan / Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="689606"/>
+				<display value="Atropine / Hyoscyamine / Phenobarbital / Scopolamine"/>
+			</concept>
+			<concept>
+				<code value="689623"/>
+				<display value="Bacitracin / Hydrocortisone / Neomycin / Polymyxin B"/>
+			</concept>
+			<concept>
+				<code value="690077"/>
+				<display value="Benzalkonium / Lidocaine"/>
+			</concept>
+			<concept>
+				<code value="6901"/>
+				<display value="Methylphenidate"/>
+			</concept>
+			<concept>
+				<code value="6902"/>
+				<display value="Methylprednisolone"/>
+			</concept>
+			<concept>
+				<code value="690693"/>
+				<display value="Diphenhydramine / Phenylephrine"/>
+			</concept>
+			<concept>
+				<code value="690808"/>
+				<display value="Brompheniramine / Dextromethorphan / Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="69120"/>
+				<display value="tiotropium"/>
+			</concept>
+			<concept>
+				<code value="6915"/>
+				<display value="Metoclopramide"/>
+			</concept>
+			<concept>
+				<code value="6916"/>
+				<display value="Metolazone"/>
+			</concept>
+			<concept>
+				<code value="6918"/>
+				<display value="Metoprolol"/>
+			</concept>
+			<concept>
+				<code value="6922"/>
+				<display value="Metronidazole"/>
+			</concept>
+			<concept>
+				<code value="692572"/>
+				<display value="Bacitracin / Neomycin / Polymyxin B"/>
+			</concept>
+			<concept>
+				<code value="692794"/>
+				<display value="Gramicidin / Neomycin / Polymyxin B"/>
+			</concept>
+			<concept>
+				<code value="6932"/>
+				<display value="Miconazole"/>
+			</concept>
+			<concept>
+				<code value="6960"/>
+				<display value="Midazolam"/>
+			</concept>
+			<concept>
+				<code value="69749"/>
+				<display value="valsartan"/>
+			</concept>
+			<concept>
+				<code value="6980"/>
+				<display value="Minocycline"/>
+			</concept>
+			<concept>
+				<code value="6984"/>
+				<display value="Minoxidil"/>
+			</concept>
+			<concept>
+				<code value="703"/>
+				<display value="Amiodarone"/>
+			</concept>
+			<concept>
+				<code value="704"/>
+				<display value="Amitriptyline"/>
+			</concept>
+			<concept>
+				<code value="7052"/>
+				<display value="Morphine"/>
+			</concept>
+			<concept>
+				<code value="705258"/>
+				<display value="Acetaminophen / Dextromethorphan / Doxylamine"/>
+			</concept>
+			<concept>
+				<code value="7213"/>
+				<display value="Ipratropium"/>
+			</concept>
+			<concept>
+				<code value="72143"/>
+				<display value="Raloxifene"/>
+			</concept>
+			<concept>
+				<code value="72236"/>
+				<display value="fosphenytoin"/>
+			</concept>
+			<concept>
+				<code value="723"/>
+				<display value="Amoxicillin"/>
+			</concept>
+			<concept>
+				<code value="72302"/>
+				<display value="ropinirole"/>
+			</concept>
+			<concept>
+				<code value="7233"/>
+				<display value="Nafcillin"/>
+			</concept>
+			<concept>
+				<code value="7238"/>
+				<display value="Nalbuphine"/>
+			</concept>
+			<concept>
+				<code value="7243"/>
+				<display value="Naltrexone"/>
+			</concept>
+			<concept>
+				<code value="725"/>
+				<display value="Amphetamine"/>
+			</concept>
+			<concept>
+				<code value="7258"/>
+				<display value="Naproxen"/>
+			</concept>
+			<concept>
+				<code value="72625"/>
+				<display value="duloxetine"/>
+			</concept>
+			<concept>
+				<code value="7299"/>
+				<display value="Neomycin"/>
+			</concept>
+			<concept>
+				<code value="73056"/>
+				<display value="Risedronate"/>
+			</concept>
+			<concept>
+				<code value="733"/>
+				<display value="Ampicillin"/>
+			</concept>
+			<concept>
+				<code value="73494"/>
+				<display value="telmisartan"/>
+			</concept>
+			<concept>
+				<code value="73645"/>
+				<display value="valacyclovir"/>
+			</concept>
+			<concept>
+				<code value="7393"/>
+				<display value="Niacin"/>
+			</concept>
+			<concept>
+				<code value="7407"/>
+				<display value="Nicotine"/>
+			</concept>
+			<concept>
+				<code value="74169"/>
+				<display value="Piperacillin / tazobactam"/>
+			</concept>
+			<concept>
+				<code value="7417"/>
+				<display value="Nifedipine"/>
+			</concept>
+			<concept>
+				<code value="7454"/>
+				<display value="Nitrofurantoin"/>
+			</concept>
+			<concept>
+				<code value="746741"/>
+				<display value="Pramipexole"/>
+			</concept>
+			<concept>
+				<code value="7486"/>
+				<display value="Nitrous Oxide"/>
+			</concept>
+			<concept>
+				<code value="7517"/>
+				<display value="Norfloxacin"/>
+			</concept>
+			<concept>
+				<code value="7531"/>
+				<display value="Nortriptyline"/>
+			</concept>
+			<concept>
+				<code value="7597"/>
+				<display value="Nystatin"/>
+			</concept>
+			<concept>
+				<code value="7623"/>
+				<display value="Ofloxacin"/>
+			</concept>
+			<concept>
+				<code value="7646"/>
+				<display value="Omeprazole"/>
+			</concept>
+			<concept>
+				<code value="7676"/>
+				<display value="Opium"/>
+			</concept>
+			<concept>
+				<code value="7715"/>
+				<display value="Orphenadrine"/>
+			</concept>
+			<concept>
+				<code value="77492"/>
+				<display value="tamsulosin"/>
+			</concept>
+			<concept>
+				<code value="7804"/>
+				<display value="Oxycodone"/>
+			</concept>
+			<concept>
+				<code value="7821"/>
+				<display value="Oxytetracycline"/>
+			</concept>
+			<concept>
+				<code value="787390"/>
+				<display value="tapentadol"/>
+			</concept>
+			<concept>
+				<code value="7975"/>
+				<display value="Penicillamine"/>
+			</concept>
+			<concept>
+				<code value="797541"/>
+				<display value="Isopropyl Alcohol"/>
+			</concept>
+			<concept>
+				<code value="7980"/>
+				<display value="Penicillin G"/>
+			</concept>
+			<concept>
+				<code value="7984"/>
+				<display value="Penicillin V"/>
+			</concept>
+			<concept>
+				<code value="7994"/>
+				<display value="Pentamidine"/>
+			</concept>
+			<concept>
+				<code value="8001"/>
+				<display value="Pentazocine"/>
+			</concept>
+			<concept>
+				<code value="8120"/>
+				<display value="Phenazopyridine"/>
+			</concept>
+			<concept>
+				<code value="8134"/>
+				<display value="Phenobarbital"/>
+			</concept>
+			<concept>
+				<code value="815166"/>
+				<display value="Dextromethorphan / Doxylamine"/>
+			</concept>
+			<concept>
+				<code value="8163"/>
+				<display value="Phenylephrine"/>
+			</concept>
+			<concept>
+				<code value="816346"/>
+				<display value="dexlansoprazole"/>
+			</concept>
+			<concept>
+				<code value="8175"/>
+				<display value="Phenylpropanolamine"/>
+			</concept>
+			<concept>
+				<code value="817579"/>
+				<display value="Acetaminophen / Codeine"/>
+			</concept>
+			<concept>
+				<code value="817958"/>
+				<display value="Aspirin / Calcium Carbonate"/>
+			</concept>
+			<concept>
+				<code value="8183"/>
+				<display value="Phenytoin"/>
+			</concept>
+			<concept>
+				<code value="82122"/>
+				<display value="Levofloxacin"/>
+			</concept>
+			<concept>
+				<code value="822929"/>
+				<display value="Amphetamine aspartate / Amphetamine Sulfate / Dextroamphetamine saccharate / Dextroamphetamine Sulfate"/>
+			</concept>
+			<concept>
+				<code value="83367"/>
+				<display value="atorvastatin"/>
+			</concept>
+			<concept>
+				<code value="8356"/>
+				<display value="Piroxicam"/>
+			</concept>
+			<concept>
+				<code value="83818"/>
+				<display value="irbesartan"/>
+			</concept>
+			<concept>
+				<code value="84108"/>
+				<display value="rosiglitazone"/>
+			</concept>
+			<concept>
+				<code value="8536"/>
+				<display value="Polymyxin B"/>
+			</concept>
+			<concept>
+				<code value="857974"/>
+				<display value="saxagliptin"/>
+			</concept>
+			<concept>
+				<code value="8588"/>
+				<display value="Potassium"/>
+			</concept>
+			<concept>
+				<code value="8591"/>
+				<display value="Potassium Chloride"/>
+			</concept>
+			<concept>
+				<code value="8610"/>
+				<display value="Povidone"/>
+			</concept>
+			<concept>
+				<code value="8611"/>
+				<display value="Povidone-Iodine"/>
+			</concept>
+			<concept>
+				<code value="861634"/>
+				<display value="pitavastatin"/>
+			</concept>
+			<concept>
+				<code value="8629"/>
+				<display value="Prazosin"/>
+			</concept>
+			<concept>
+				<code value="8638"/>
+				<display value="prednisolone"/>
+			</concept>
+			<concept>
+				<code value="8640"/>
+				<display value="Prednisone"/>
+			</concept>
+			<concept>
+				<code value="8687"/>
+				<display value="Primaquine"/>
+			</concept>
+			<concept>
+				<code value="8691"/>
+				<display value="Primidone"/>
+			</concept>
+			<concept>
+				<code value="8698"/>
+				<display value="Probenecid"/>
+			</concept>
+			<concept>
+				<code value="8700"/>
+				<display value="Procainamide"/>
+			</concept>
+			<concept>
+				<code value="8701"/>
+				<display value="Procaine"/>
+			</concept>
+			<concept>
+				<code value="8703"/>
+				<display value="Fenofibrate"/>
+			</concept>
+			<concept>
+				<code value="8704"/>
+				<display value="Prochlorperazine"/>
+			</concept>
+			<concept>
+				<code value="8727"/>
+				<display value="Progesterone"/>
+			</concept>
+			<concept>
+				<code value="8745"/>
+				<display value="Promethazine"/>
+			</concept>
+			<concept>
+				<code value="8754"/>
+				<display value="Propafenone"/>
+			</concept>
+			<concept>
+				<code value="87636"/>
+				<display value="fexofenadine"/>
+			</concept>
+			<concept>
+				<code value="8782"/>
+				<display value="Propofol"/>
+			</concept>
+			<concept>
+				<code value="8785"/>
+				<display value="Propoxyphene"/>
+			</concept>
+			<concept>
+				<code value="8787"/>
+				<display value="Propranolol"/>
+			</concept>
+			<concept>
+				<code value="8794"/>
+				<display value="Propylthiouracil"/>
+			</concept>
+			<concept>
+				<code value="88014"/>
+				<display value="rizatriptan"/>
+			</concept>
+			<concept>
+				<code value="88249"/>
+				<display value="montelukast"/>
+			</concept>
+			<concept>
+				<code value="883815"/>
+				<display value="Dexamethasone / Tobramycin"/>
+			</concept>
+			<concept>
+				<code value="8896"/>
+				<display value="Pseudoephedrine"/>
+			</concept>
+			<concept>
+				<code value="89013"/>
+				<display value="aripiprazole"/>
+			</concept>
+			<concept>
+				<code value="8928"/>
+				<display value="Psyllium"/>
+			</concept>
+			<concept>
+				<code value="8948"/>
+				<display value="Purified Protein Derivative of Tuberculin"/>
+			</concept>
+			<concept>
+				<code value="90176"/>
+				<display value="Iron"/>
+			</concept>
+			<concept>
+				<code value="9068"/>
+				<display value="Quinidine"/>
+			</concept>
+			<concept>
+				<code value="9071"/>
+				<display value="Quinine"/>
+			</concept>
+			<concept>
+				<code value="91263"/>
+				<display value="Aloe Extract"/>
+			</concept>
+			<concept>
+				<code value="9143"/>
+				<display value="Ranitidine"/>
+			</concept>
+			<concept>
+				<code value="9384"/>
+				<display value="Rifampin"/>
+			</concept>
+			<concept>
+				<code value="9524"/>
+				<display value="Sulfasalazine"/>
+			</concept>
+			<concept>
+				<code value="9601"/>
+				<display value="Scopolamine"/>
+			</concept>
+			<concept>
+				<code value="9778"/>
+				<display value="Silicones"/>
+			</concept>
+			<concept>
+				<code value="9793"/>
+				<display value="silver sulfadiazine"/>
+			</concept>
+			<concept>
+				<code value="9947"/>
+				<display value="Sotalol"/>
+			</concept>
+			<concept>
+				<code value="9997"/>
+				<display value="Spironolactone"/>
+			</concept>
+		</include>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<concept>
+				<code value="102259006"/>
+				<display value="Citrus fruit (substance)"/>
+			</concept>
+			<concept>
+				<code value="102261002"/>
+				<display value="Strawberry (substance)"/>
+			</concept>
+			<concept>
+				<code value="102262009"/>
+				<display value="Chocolate (substance)"/>
+			</concept>
+			<concept>
+				<code value="102263004"/>
+				<display value="Eggs (edible) (substance)"/>
+			</concept>
+			<concept>
+				<code value="102264005"/>
+				<display value="Cheese (substance)"/>
+			</concept>
+			<concept>
+				<code value="111088007"/>
+				<display value="Latex (substance)"/>
+			</concept>
+			<concept>
+				<code value="111151007"/>
+				<display value="Anabolic steroid (substance)"/>
+			</concept>
+			<concept>
+				<code value="11526002"/>
+				<display value="Aspartame (substance)"/>
+			</concept>
+			<concept>
+				<code value="116274004"/>
+				<display value="Artificial sweetener (substance)"/>
+			</concept>
+			<concept>
+				<code value="116566001"/>
+				<display value="Steroid (substance)"/>
+			</concept>
+			<concept>
+				<code value="13577000"/>
+				<display value="Nut (substance)"/>
+			</concept>
+			<concept>
+				<code value="14443002"/>
+				<display value="Substance with aminoglycoside structure and antibacterial mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="226723006"/>
+				<display value="Buckwheat - cereal (substance)"/>
+			</concept>
+			<concept>
+				<code value="226734009"/>
+				<display value="Wheatgerm (substance)"/>
+			</concept>
+			<concept>
+				<code value="226760005"/>
+				<display value="Dairy foods (substance)"/>
+			</concept>
+			<concept>
+				<code value="226915003"/>
+				<display value="Red meat (substance)"/>
+			</concept>
+			<concept>
+				<code value="226916002"/>
+				<display value="Beef (substance)"/>
+			</concept>
+			<concept>
+				<code value="226934003"/>
+				<display value="Pork (substance)"/>
+			</concept>
+			<concept>
+				<code value="226955001"/>
+				<display value="Chicken - meat (substance)"/>
+			</concept>
+			<concept>
+				<code value="226967004"/>
+				<display value="Turkey - meat (substance)"/>
+			</concept>
+			<concept>
+				<code value="227144008"/>
+				<display value="Tuna fish (substance)"/>
+			</concept>
+			<concept>
+				<code value="227151004"/>
+				<display value="Prawns (substance)"/>
+			</concept>
+			<concept>
+				<code value="227208008"/>
+				<display value="Abalone canned in brine (substance)"/>
+			</concept>
+			<concept>
+				<code value="227219006"/>
+				<display value="Aubergine (substance)"/>
+			</concept>
+			<concept>
+				<code value="227313005"/>
+				<display value="Pulse vegetables (substance)"/>
+			</concept>
+			<concept>
+				<code value="227388008"/>
+				<display value="Cinnamon (substance)"/>
+			</concept>
+			<concept>
+				<code value="227400003"/>
+				<display value="Ginger (substance)"/>
+			</concept>
+			<concept>
+				<code value="227421003"/>
+				<display value="Cranberries (substance)"/>
+			</concept>
+			<concept>
+				<code value="227444000"/>
+				<display value="Raspberries (substance)"/>
+			</concept>
+			<concept>
+				<code value="227493005"/>
+				<display value="Cashew nut (substance)"/>
+			</concept>
+			<concept>
+				<code value="227512001"/>
+				<display value="Pistachio nut (substance)"/>
+			</concept>
+			<concept>
+				<code value="227598003"/>
+				<display value="Honey (substance)"/>
+			</concept>
+			<concept>
+				<code value="228102000"/>
+				<display value="Sodium nitrate (substance)"/>
+			</concept>
+			<concept>
+				<code value="255632006"/>
+				<display value="Anticonvulsant (substance)"/>
+			</concept>
+			<concept>
+				<code value="255637000"/>
+				<display value="Salicylate (substance)"/>
+			</concept>
+			<concept>
+				<code value="255641001"/>
+				<display value="Caffeine (substance)"/>
+			</concept>
+			<concept>
+				<code value="256259004"/>
+				<display value="Pollen (substance)"/>
+			</concept>
+			<concept>
+				<code value="256277009"/>
+				<display value="Grass pollen (substance)"/>
+			</concept>
+			<concept>
+				<code value="256306003"/>
+				<display value="Orange - fruit (substance)"/>
+			</concept>
+			<concept>
+				<code value="256307007"/>
+				<display value="Banana (substance)"/>
+			</concept>
+			<concept>
+				<code value="256313003"/>
+				<display value="Pineapple (substance)"/>
+			</concept>
+			<concept>
+				<code value="256315005"/>
+				<display value="Grapefruit (substance)"/>
+			</concept>
+			<concept>
+				<code value="256317002"/>
+				<display value="Grapes (substance)"/>
+			</concept>
+			<concept>
+				<code value="256319004"/>
+				<display value="Carrot (substance)"/>
+			</concept>
+			<concept>
+				<code value="256326004"/>
+				<display value="Celery (substance)"/>
+			</concept>
+			<concept>
+				<code value="256329006"/>
+				<display value="Spinach (substance)"/>
+			</concept>
+			<concept>
+				<code value="256350002"/>
+				<display value="Almond (substance)"/>
+			</concept>
+			<concept>
+				<code value="256351003"/>
+				<display value="Brazil nut (substance)"/>
+			</concept>
+			<concept>
+				<code value="256352005"/>
+				<display value="Walnut - nut (substance)"/>
+			</concept>
+			<concept>
+				<code value="256353000"/>
+				<display value="Hazelnut (substance)"/>
+			</concept>
+			<concept>
+				<code value="256354006"/>
+				<display value="Bean (substance)"/>
+			</concept>
+			<concept>
+				<code value="256417003"/>
+				<display value="Horse dander (substance)"/>
+			</concept>
+			<concept>
+				<code value="256440004"/>
+				<display value="Wasp venom (substance)"/>
+			</concept>
+			<concept>
+				<code value="259858000"/>
+				<display value="Varicella-zoster virus antibody (substance)"/>
+			</concept>
+			<concept>
+				<code value="260152009"/>
+				<display value="Cat dander (substance)"/>
+			</concept>
+			<concept>
+				<code value="260154005"/>
+				<display value="Dog dander (substance)"/>
+			</concept>
+			<concept>
+				<code value="260167008"/>
+				<display value="Sesame seed (substance)"/>
+			</concept>
+			<concept>
+				<code value="260176001"/>
+				<display value="Kiwi fruit (substance)"/>
+			</concept>
+			<concept>
+				<code value="260177005"/>
+				<display value="Melon (substance)"/>
+			</concept>
+			<concept>
+				<code value="260179008"/>
+				<display value="Mango fruit (substance)"/>
+			</concept>
+			<concept>
+				<code value="260184002"/>
+				<display value="Peas (substance)"/>
+			</concept>
+			<concept>
+				<code value="260189007"/>
+				<display value="Pecan nut (substance)"/>
+			</concept>
+			<concept>
+				<code value="260205009"/>
+				<display value="Sunflower seed (substance)"/>
+			</concept>
+			<concept>
+				<code value="264287008"/>
+				<display value="Animal dander (substance)"/>
+			</concept>
+			<concept>
+				<code value="264337003"/>
+				<display value="Seed (substance)"/>
+			</concept>
+			<concept>
+				<code value="28230009"/>
+				<display value="Poultry (substance)"/>
+			</concept>
+			<concept>
+				<code value="288328004"/>
+				<display value="Bee venom (substance)"/>
+			</concept>
+			<concept>
+				<code value="28942008"/>
+				<display value="Coconut oil (substance)"/>
+			</concept>
+			<concept>
+				<code value="29263009"/>
+				<display value="Coffee (substance)"/>
+			</concept>
+			<concept>
+				<code value="304275008"/>
+				<display value="Corticosteroid and corticosteroid derivative (substance)"/>
+			</concept>
+			<concept>
+				<code value="33008008"/>
+				<display value="Dust (substance)"/>
+			</concept>
+			<concept>
+				<code value="350327004"/>
+				<display value="Diphtheria + tetanus vaccine (product)"/>
+			</concept>
+			<concept>
+				<code value="35748005"/>
+				<display value="Wine (substance)"/>
+			</concept>
+			<concept>
+				<code value="360201004"/>
+				<display value="Nitrofuran derivative (substance)"/>
+			</concept>
+			<concept>
+				<code value="3692009"/>
+				<display value="Sodium sulfite (substance)"/>
+			</concept>
+			<concept>
+				<code value="372480009"/>
+				<display value="Substance with macrolide structure and antibacterial mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="372664007"/>
+				<display value="Benzodiazepine (substance)"/>
+			</concept>
+			<concept>
+				<code value="372665008"/>
+				<display value="Non-steroidal anti-inflammatory agent (substance)"/>
+			</concept>
+			<concept>
+				<code value="372711004"/>
+				<display value="Sulfonylurea (substance)"/>
+			</concept>
+			<concept>
+				<code value="372722000"/>
+				<display value="Substance with quinolone structure and antibacterial mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="372733002"/>
+				<display value="Substance with angiotensin-converting enzyme inhibitor mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="372747003"/>
+				<display value="Thiazide diuretic (substance)"/>
+			</concept>
+			<concept>
+				<code value="372783007"/>
+				<display value="Antiparkinsonian agent (substance)"/>
+			</concept>
+			<concept>
+				<code value="372798009"/>
+				<display value="Barbiturate (substance)"/>
+			</concept>
+			<concept>
+				<code value="372806008"/>
+				<display value="Substance with histamine receptor antagonist mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="372889003"/>
+				<display value="First generation cephalosporin (substance)"/>
+			</concept>
+			<concept>
+				<code value="372912004"/>
+				<display value="Substance with 3-hydroxy-3-methylglutaryl-coenzyme A reductase inhibitor mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="372913009"/>
+				<display value="Substance with angiotensin II receptor antagonist mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="373206009"/>
+				<display value="Substance with tetracycline structure and antibacterial mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="373253007"/>
+				<display value="Tricyclic antidepressant (substance)"/>
+			</concept>
+			<concept>
+				<code value="373254001"/>
+				<display value="Substance with beta adrenergic receptor antagonist mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="373262009"/>
+				<display value="Substance with cephalosporin structure and antibacterial mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="373270004"/>
+				<display value="Substance with penicillin structure and antibacterial mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="373297006"/>
+				<display value="Substance with beta-lactam structure and antibacterial mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="373304005"/>
+				<display value="Substance with calcium channel blocker mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="373531009"/>
+				<display value="Gelatin (substance)"/>
+			</concept>
+			<concept>
+				<code value="385420005"/>
+				<display value="Contrast media (substance)"/>
+			</concept>
+			<concept>
+				<code value="386127005"/>
+				<display value="Formula milk (substance)"/>
+			</concept>
+			<concept>
+				<code value="386962001"/>
+				<display value="Plasma protein fraction (substance)"/>
+			</concept>
+			<concept>
+				<code value="387050005"/>
+				<display value="Substance with prostaglandin-endoperoxide synthase isoform 2 inhibitor mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="387406002"/>
+				<display value="Sulfonamide (substance)"/>
+			</concept>
+			<concept>
+				<code value="391737006"/>
+				<display value="Almond oil (substance)"/>
+			</concept>
+			<concept>
+				<code value="391739009"/>
+				<display value="Aloe (substance)"/>
+			</concept>
+			<concept>
+				<code value="396345004"/>
+				<display value="Carbapenem (substance)"/>
+			</concept>
+			<concept>
+				<code value="396420001"/>
+				<display value="Anthrax vaccine (substance)"/>
+			</concept>
+			<concept>
+				<code value="396425006"/>
+				<display value="Influenza virus vaccine (substance)"/>
+			</concept>
+			<concept>
+				<code value="396433007"/>
+				<display value="Pertussis vaccine (substance)"/>
+			</concept>
+			<concept>
+				<code value="396439006"/>
+				<display value="Smallpox vaccine (substance)"/>
+			</concept>
+			<concept>
+				<code value="396441007"/>
+				<display value="Typhoid vaccine (substance)"/>
+			</concept>
+			<concept>
+				<code value="396442000"/>
+				<display value="Varicella virus vaccine (substance)"/>
+			</concept>
+			<concept>
+				<code value="398730001"/>
+				<display value="Pneumococcal vaccine (substance)"/>
+			</concept>
+			<concept>
+				<code value="400872007"/>
+				<display value="Hydrocolloid (substance)"/>
+			</concept>
+			<concept>
+				<code value="404642006"/>
+				<display value="Substance with opioid receptor agonist mechanism of action (substance)"/>
+			</concept>
+			<concept>
+				<code value="406748003"/>
+				<display value="Carbamate (substance)"/>
+			</concept>
+			<concept>
+				<code value="409137002"/>
+				<display value="No known drug allergy (situation)"/>
+			</concept>
+			<concept>
+				<code value="412061001"/>
+				<display value="Blueberries (substance)"/>
+			</concept>
+			<concept>
+				<code value="412062008"/>
+				<display value="Cantaloupe (substance)"/>
+			</concept>
+			<concept>
+				<code value="412066006"/>
+				<display value="Pepper (substance)"/>
+			</concept>
+			<concept>
+				<code value="412068007"/>
+				<display value="Rye (substance)"/>
+			</concept>
+			<concept>
+				<code value="412071004"/>
+				<display value="Wheat (substance)"/>
+			</concept>
+			<concept>
+				<code value="412138001"/>
+				<display value="Horse serum protein (substance)"/>
+			</concept>
+			<concept>
+				<code value="412357001"/>
+				<display value="Corn (substance)"/>
+			</concept>
+			<concept>
+				<code value="412373007"/>
+				<display value="Diphtheria + pertussis + tetanus + Haemophilus influenzae type b vaccine (product)"/>
+			</concept>
+			<concept>
+				<code value="412375000"/>
+				<display value="Tetanus vaccine (substance)"/>
+			</concept>
+			<concept>
+				<code value="412533000"/>
+				<display value="Wheat bran (substance)"/>
+			</concept>
+			<concept>
+				<code value="412534006"/>
+				<display value="Yeast (substance)"/>
+			</concept>
+			<concept>
+				<code value="412583005"/>
+				<display value="Bee pollen (substance)"/>
+			</concept>
+			<concept>
+				<code value="41598000"/>
+				<display value="Estrogen (substance)"/>
+			</concept>
+			<concept>
+				<code value="417889008"/>
+				<display value="Arachis oil (substance)"/>
+			</concept>
+			<concept>
+				<code value="418000008"/>
+				<display value="Methadone analog (substance)"/>
+			</concept>
+			<concept>
+				<code value="418504009"/>
+				<display value="Oats (substance)"/>
+			</concept>
+			<concept>
+				<code value="418920007"/>
+				<display value="Adhesive agent (substance)"/>
+			</concept>
+			<concept>
+				<code value="419420009"/>
+				<display value="Watermelon (substance)"/>
+			</concept>
+			<concept>
+				<code value="419933005"/>
+				<display value="Glucocorticoid (substance)"/>
+			</concept>
+			<concept>
+				<code value="421245007"/>
+				<display value="Diphtheria + pertussis + tetanus vaccine (product)"/>
+			</concept>
+			<concept>
+				<code value="424369009"/>
+				<display value="Product containing beta-galactosidase (medicinal product)"/>
+			</concept>
+			<concept>
+				<code value="426722004"/>
+				<display value="Iodinated contrast media (substance)"/>
+			</concept>
+			<concept>
+				<code value="428607008"/>
+				<display value="No known environmental allergy (situation)"/>
+			</concept>
+			<concept>
+				<code value="429625007"/>
+				<display value="No known food allergy (situation)"/>
+			</concept>
+			<concept>
+				<code value="43735007"/>
+				<display value="Sulfur (substance)"/>
+			</concept>
+			<concept>
+				<code value="43921001"/>
+				<display value="Nickel compound (substance)"/>
+			</concept>
+			<concept>
+				<code value="44027008"/>
+				<display value="Seafood (substance)"/>
+			</concept>
+			<concept>
+				<code value="442381000124103"/>
+				<display value="Blue food coloring (substance)"/>
+			</concept>
+			<concept>
+				<code value="442571000124108"/>
+				<display value="Tree nut (substance)"/>
+			</concept>
+			<concept>
+				<code value="442771000124102"/>
+				<display value="Pepperoni (substance)"/>
+			</concept>
+			<concept>
+				<code value="44588005"/>
+				<display value="Iodine (substance)"/>
+			</concept>
+			<concept>
+				<code value="446273004"/>
+				<display value="Red food coloring (substance)"/>
+			</concept>
+			<concept>
+				<code value="446274005"/>
+				<display value="Yellow food coloring (substance)"/>
+			</concept>
+			<concept>
+				<code value="47703008"/>
+				<display value="Lactose (substance)"/>
+			</concept>
+			<concept>
+				<code value="51386004"/>
+				<display value="Food preservative (substance)"/>
+			</concept>
+			<concept>
+				<code value="51905005"/>
+				<display value="Mustard (substance)"/>
+			</concept>
+			<concept>
+				<code value="53041004"/>
+				<display value="Alcohol (substance)"/>
+			</concept>
+			<concept>
+				<code value="61789006"/>
+				<display value="Dye (substance)"/>
+			</concept>
+			<concept>
+				<code value="63045006"/>
+				<display value="Berry (substance)"/>
+			</concept>
+			<concept>
+				<code value="67324005"/>
+				<display value="Rice (substance)"/>
+			</concept>
+			<concept>
+				<code value="67866001"/>
+				<display value="Insulin (substance)"/>
+			</concept>
+			<concept>
+				<code value="70813002"/>
+				<display value="Milk (substance)"/>
+			</concept>
+			<concept>
+				<code value="710179004"/>
+				<display value="Lupine seed (substance)"/>
+			</concept>
+			<concept>
+				<code value="716184000"/>
+				<display value="No known latex allergy (situation)"/>
+			</concept>
+			<concept>
+				<code value="716186003"/>
+				<display value="No known allergy (situation)"/>
+			</concept>
+			<concept>
+				<code value="720687003"/>
+				<display value="Dust mite protein (substance)"/>
+			</concept>
+			<concept>
+				<code value="72511004"/>
+				<display value="Fruit (substance)"/>
+			</concept>
+			<concept>
+				<code value="726730005"/>
+				<display value="Yam (substance)"/>
+			</concept>
+			<concept>
+				<code value="734881000"/>
+				<display value="Tomato (substance)"/>
+			</concept>
+			<concept>
+				<code value="735006003"/>
+				<display value="Squid (substance)"/>
+			</concept>
+			<concept>
+				<code value="735009005"/>
+				<display value="Salmon (substance)"/>
+			</concept>
+			<concept>
+				<code value="735029006"/>
+				<display value="Shellfish (substance)"/>
+			</concept>
+			<concept>
+				<code value="735030001"/>
+				<display value="Garlic (substance)"/>
+			</concept>
+			<concept>
+				<code value="735043001"/>
+				<display value="Mackerel (substance)"/>
+			</concept>
+			<concept>
+				<code value="735045008"/>
+				<display value="Mushroom (substance)"/>
+			</concept>
+			<concept>
+				<code value="735047000"/>
+				<display value="Onion (substance)"/>
+			</concept>
+			<concept>
+				<code value="735049002"/>
+				<display value="Peach (substance)"/>
+			</concept>
+			<concept>
+				<code value="735050002"/>
+				<display value="Pear (substance)"/>
+			</concept>
+			<concept>
+				<code value="735051003"/>
+				<display value="Plum (substance)"/>
+			</concept>
+			<concept>
+				<code value="735053000"/>
+				<display value="Potato (substance)"/>
+			</concept>
+			<concept>
+				<code value="735123009"/>
+				<display value="Broccoli (substance)"/>
+			</concept>
+			<concept>
+				<code value="735124003"/>
+				<display value="Barley (substance)"/>
+			</concept>
+			<concept>
+				<code value="735211005"/>
+				<display value="Coconut (substance)"/>
+			</concept>
+			<concept>
+				<code value="735212003"/>
+				<display value="Papaya (substance)"/>
+			</concept>
+			<concept>
+				<code value="735213008"/>
+				<display value="Cucumber (substance)"/>
+			</concept>
+			<concept>
+				<code value="735214002"/>
+				<display value="Apricot (substance)"/>
+			</concept>
+			<concept>
+				<code value="735215001"/>
+				<display value="Apple (substance)"/>
+			</concept>
+			<concept>
+				<code value="735248001"/>
+				<display value="Cherry (substance)"/>
+			</concept>
+			<concept>
+				<code value="735249009"/>
+				<display value="Avocado (substance)"/>
+			</concept>
+			<concept>
+				<code value="735340006"/>
+				<display value="Lemon (substance)"/>
+			</concept>
+			<concept>
+				<code value="735959004"/>
+				<display value="Marine mollusk (substance)"/>
+			</concept>
+			<concept>
+				<code value="735971005"/>
+				<display value="Fish (substance)"/>
+			</concept>
+			<concept>
+				<code value="735977009"/>
+				<display value="Marine crustacean (substance)"/>
+			</concept>
+			<concept>
+				<code value="736027000"/>
+				<display value="Scallop (substance)"/>
+			</concept>
+			<concept>
+				<code value="736030007"/>
+				<display value="Clam (substance)"/>
+			</concept>
+			<concept>
+				<code value="736031006"/>
+				<display value="Oyster (substance)"/>
+			</concept>
+			<concept>
+				<code value="736159005"/>
+				<display value="Crab (substance)"/>
+			</concept>
+			<concept>
+				<code value="736162008"/>
+				<display value="Lobster (substance)"/>
+			</concept>
+			<concept>
+				<code value="74801000"/>
+				<display value="Sugar (substance)"/>
+			</concept>
+			<concept>
+				<code value="75665004"/>
+				<display value="Monosodium glutamate (substance)"/>
+			</concept>
+			<concept>
+				<code value="762952008"/>
+				<display value="Peanut (substance)"/>
+			</concept>
+			<concept>
+				<code value="7791007"/>
+				<display value="Soy protein (substance)"/>
+			</concept>
+			<concept>
+				<code value="80259003"/>
+				<display value="Food flavoring agent (substance)"/>
+			</concept>
+			<concept>
+				<code value="84489001"/>
+				<display value="Mold (organism)"/>
+			</concept>
+			<concept>
+				<code value="89119000"/>
+				<display value="Nitrate salt (substance)"/>
+			</concept>
+			<concept>
+				<code value="89707004"/>
+				<display value="Sesame oil (substance)"/>
+			</concept>
+			<concept>
+				<code value="89811004"/>
+				<display value="Gluten (substance)"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

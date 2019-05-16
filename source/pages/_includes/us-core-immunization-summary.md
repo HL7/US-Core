@@ -6,7 +6,7 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [Immunization Status Codes](http://hl7.org/fhir/ValueSet/immunization-status)
 1.  A  CodeableConcept  in `Immunization.vaccineCode`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)\+ [MaxValueSet](general-guidance.html#max-binding)
- binding to [](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.6/expansion) with the following constraints: *SHOULD have a translation to the NDC value set*
+ binding to [US Core Vaccine Administered Value Set (CVX)](ValueSet-us-core-vaccines-cvx.html) with the following constraints: *SHOULD have a translation to the NDC value set*
 1.  A Patient Reference  in `Immunization.patient`
 1.  A  dateTime  in `Immunization.occurrence[x]`
 1.  A  boolean  in `Immunization.primarySource`

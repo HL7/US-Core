@@ -205,7 +205,7 @@
 [Vital Signs Quick Start]: vitals-search.html
 [Search Parameters and Operations]: searchparameters.html
 [Terminology]: terminology.html
-[Examples]: examples.html
+[Examples]: all-examples.html
 [Clinical Notes Guidance]: clinical-notes-guidance.html
 [U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/topic/laws-regulation-and-policy/notice-proposed-rulemaking-improve-interoperability-health
 [Argonaut Data Query]: http://www.fhir.org/guides/argonaut/r2/

@@ -10,7 +10,44 @@
 1. make sure only lf
 1. add MultipleOrs and MultipleAnds to QS
 
+
 google seets: https://docs.google.com/spreadsheets/d/1Q7wDOuMeFmXx1I-NEV9UksccBhgsvv66Pyjct5ATcmk/edit#gid=1750674319
 fhir: http://build.fhir.org/
 trackers: https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemEdit&tracker_item_id=19852
 uscore:http://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-allergyintolerance.html
+
+
+old
+US Core Result Observation Profile
+
+new
+US Core Laboratory Result Observation Profile
+
+
+old id
+us-core-observationresults
+
+new id
+us-core-observation-lab
+
+
+
+old canonical
+http://hl7.org/fhir/us/core/StructureDefinition/us-core-observationresults
+
+new canonical
+http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+
+old html link:
+StructureDefinition-us-core-observationresults.html
+
+new:
+StructureDefinition-us-core-observation-lab.html
+
+{"coding":[{"system":"http://loinc.org","code":"51968-6"}]}
+
+Must support an NPI for a Practitioner, they must send it.
+
+http://hl7.org/fhir/sid/cvx
+
+https://build.fhir.org/ig/HL7/US-Core-R4/SearchParameter-us-core-device-type.html

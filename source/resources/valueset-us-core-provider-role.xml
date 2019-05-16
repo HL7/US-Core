@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ValueSet xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-CURRENT/valueset.xsd">
 	<id value="us-core-provider-role"/>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<h2>US Core Provider Role (NUCC)</h2>
-			<div>
-				<p>Provider roles codes which are composed of the NUCC Health Care Provider Taxonomy
-					Code Set for providers. Only concepts with a classification and no specialization are included.</p>
-			</div>
-			<p>
-				<b>Copyright Statement:</b> TODO: Permission to Use and Distribute the Health Care
-				Provider Taxonomy Code Set</p>
-			<p>This value set includes codes from the following code systems:</p>
-			<ul>
-				<li>Include only concepts with a classification and no specialization from: http://nucc.org/provider-taxonomy</li>
-			</ul>
-		</div>
-	</text>
 	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role"/>
 	<version value="1.0.1"/>
 	<name value="USCoreProviderRoleNucc"/>
@@ -36,6 +19,954 @@
 	<compose>
 		<include>
 			<system value="http://nucc.org/provider-taxonomy"/>
+			<concept>
+				<code value="101Y00000X"/>
+				<display value="Counselor"/>
+			</concept>
+			<concept>
+				<code value="102L00000X"/>
+				<display value="Psychoanalyst"/>
+			</concept>
+			<concept>
+				<code value="102X00000X"/>
+				<display value="Poetry Therapist"/>
+			</concept>
+			<concept>
+				<code value="103G00000X"/>
+				<display value="Clinical Neuropsychologist"/>
+			</concept>
+			<concept>
+				<code value="103K00000X"/>
+				<display value="Behavior Analyst"/>
+			</concept>
+			<concept>
+				<code value="103T00000X"/>
+				<display value="Psychologist"/>
+			</concept>
+			<concept>
+				<code value="104100000X"/>
+				<display value="Social Worker"/>
+			</concept>
+			<concept>
+				<code value="106E00000X"/>
+				<display value="Assistant Behavior Analyst"/>
+			</concept>
+			<concept>
+				<code value="106H00000X"/>
+				<display value="Marriage &amp; Family Therapist"/>
+			</concept>
+			<concept>
+				<code value="106S00000X"/>
+				<display value="Behavior Technician"/>
+			</concept>
+			<concept>
+				<code value="111N00000X"/>
+				<display value="Chiropractor"/>
+			</concept>
+			<concept>
+				<code value="122300000X"/>
+				<display value="Dentist"/>
+			</concept>
+			<concept>
+				<code value="122400000X"/>
+				<display value="Denturist"/>
+			</concept>
+			<concept>
+				<code value="124Q00000X"/>
+				<display value="Dental Hygienist"/>
+			</concept>
+			<concept>
+				<code value="125J00000X"/>
+				<display value="Dental Therapist"/>
+			</concept>
+			<concept>
+				<code value="125K00000X"/>
+				<display value="Advanced Practice Dental Therapist"/>
+			</concept>
+			<concept>
+				<code value="125Q00000X"/>
+				<display value="Oral Medicinist"/>
+			</concept>
+			<concept>
+				<code value="126800000X"/>
+				<display value="Dental Assistant"/>
+			</concept>
+			<concept>
+				<code value="126900000X"/>
+				<display value="Dental Laboratory Technician"/>
+			</concept>
+			<concept>
+				<code value="132700000X"/>
+				<display value="Dietary Manager"/>
+			</concept>
+			<concept>
+				<code value="133N00000X"/>
+				<display value="Nutritionist"/>
+			</concept>
+			<concept>
+				<code value="133V00000X"/>
+				<display value="Dietitian, Registered"/>
+			</concept>
+			<concept>
+				<code value="136A00000X"/>
+				<display value="Dietetic Technician, Registered"/>
+			</concept>
+			<concept>
+				<code value="146D00000X"/>
+				<display value="Personal Emergency Response Attendant"/>
+			</concept>
+			<concept>
+				<code value="146L00000X"/>
+				<display value="Emergency Medical Technician, Paramedic"/>
+			</concept>
+			<concept>
+				<code value="146M00000X"/>
+				<display value="Emergency Medical Technician, Intermediate"/>
+			</concept>
+			<concept>
+				<code value="146N00000X"/>
+				<display value="Emergency Medical Technician, Basic"/>
+			</concept>
+			<concept>
+				<code value="152W00000X"/>
+				<display value="Optometrist"/>
+			</concept>
+			<concept>
+				<code value="156F00000X"/>
+				<display value="Technician/Technologist"/>
+			</concept>
+			<concept>
+				<code value="163W00000X"/>
+				<display value="Registered Nurse"/>
+			</concept>
+			<concept>
+				<code value="164W00000X"/>
+				<display value="Licensed Practical Nurse"/>
+			</concept>
+			<concept>
+				<code value="164X00000X"/>
+				<display value="Licensed Vocational Nurse"/>
+			</concept>
+			<concept>
+				<code value="167G00000X"/>
+				<display value="Licensed Psychiatric Technician"/>
+			</concept>
+			<concept>
+				<code value="170100000X"/>
+				<display value="Medical Genetics, Ph.D. Medical Genetics"/>
+			</concept>
+			<concept>
+				<code value="170300000X"/>
+				<display value="Genetic Counselor, MS"/>
+			</concept>
+			<concept>
+				<code value="171000000X"/>
+				<display value="Military Health Care Provider"/>
+			</concept>
+			<concept>
+				<code value="171100000X"/>
+				<display value="Acupuncturist"/>
+			</concept>
+			<concept>
+				<code value="171M00000X"/>
+				<display value="Case Manager/Care Coordinator"/>
+			</concept>
+			<concept>
+				<code value="171R00000X"/>
+				<display value="Interpreter"/>
+			</concept>
+			<concept>
+				<code value="171W00000X"/>
+				<display value="Contractor"/>
+			</concept>
+			<concept>
+				<code value="172A00000X"/>
+				<display value="Driver"/>
+			</concept>
+			<concept>
+				<code value="172M00000X"/>
+				<display value="Mechanotherapist"/>
+			</concept>
+			<concept>
+				<code value="172P00000X"/>
+				<display value="Naprapath"/>
+			</concept>
+			<concept>
+				<code value="172V00000X"/>
+				<display value="Community Health Worker"/>
+			</concept>
+			<concept>
+				<code value="173000000X"/>
+				<display value="Legal Medicine"/>
+			</concept>
+			<concept>
+				<code value="173C00000X"/>
+				<display value="Reflexologist"/>
+			</concept>
+			<concept>
+				<code value="173F00000X"/>
+				<display value="Sleep Specialist, PhD"/>
+			</concept>
+			<concept>
+				<code value="174200000X"/>
+				<display value="Meals"/>
+			</concept>
+			<concept>
+				<code value="174400000X"/>
+				<display value="Specialist"/>
+			</concept>
+			<concept>
+				<code value="174H00000X"/>
+				<display value="Health Educator"/>
+			</concept>
+			<concept>
+				<code value="174M00000X"/>
+				<display value="Veterinarian"/>
+			</concept>
+			<concept>
+				<code value="174N00000X"/>
+				<display value="Lactation Consultant, Non-RN"/>
+			</concept>
+			<concept>
+				<code value="174V00000X"/>
+				<display value="Clinical Ethicist"/>
+			</concept>
+			<concept>
+				<code value="175F00000X"/>
+				<display value="Naturopath"/>
+			</concept>
+			<concept>
+				<code value="175L00000X"/>
+				<display value="Homeopath"/>
+			</concept>
+			<concept>
+				<code value="175M00000X"/>
+				<display value="Midwife, Lay"/>
+			</concept>
+			<concept>
+				<code value="175T00000X"/>
+				<display value="Peer Specialist"/>
+			</concept>
+			<concept>
+				<code value="176B00000X"/>
+				<display value="Midwife"/>
+			</concept>
+			<concept>
+				<code value="176P00000X"/>
+				<display value="Funeral Director"/>
+			</concept>
+			<concept>
+				<code value="177F00000X"/>
+				<display value="Lodging"/>
+			</concept>
+			<concept>
+				<code value="183500000X"/>
+				<display value="Pharmacist"/>
+			</concept>
+			<concept>
+				<code value="183700000X"/>
+				<display value="Pharmacy Technician"/>
+			</concept>
+			<concept>
+				<code value="193200000X"/>
+				<display value="Multi-Specialty"/>
+			</concept>
+			<concept>
+				<code value="193400000X"/>
+				<display value="Single Specialty"/>
+			</concept>
+			<concept>
+				<code value="202C00000X"/>
+				<display value="Independent Medical Examiner"/>
+			</concept>
+			<concept>
+				<code value="202K00000X"/>
+				<display value="Phlebology"/>
+			</concept>
+			<concept>
+				<code value="204C00000X"/>
+				<display value="Neuromusculoskeletal Medicine, Sports Medicine"/>
+			</concept>
+			<concept>
+				<code value="204D00000X"/>
+				<display value="Neuromusculoskeletal Medicine &amp; OMM"/>
+			</concept>
+			<concept>
+				<code value="204E00000X"/>
+				<display value="Oral &amp; Maxillofacial Surgery"/>
+			</concept>
+			<concept>
+				<code value="204F00000X"/>
+				<display value="Transplant Surgery"/>
+			</concept>
+			<concept>
+				<code value="204R00000X"/>
+				<display value="Electrodiagnostic Medicine"/>
+			</concept>
+			<concept>
+				<code value="207K00000X"/>
+				<display value="Allergy &amp; Immunology"/>
+			</concept>
+			<concept>
+				<code value="207L00000X"/>
+				<display value="Anesthesiology"/>
+			</concept>
+			<concept>
+				<code value="207N00000X"/>
+				<display value="Dermatology"/>
+			</concept>
+			<concept>
+				<code value="207P00000X"/>
+				<display value="Emergency Medicine"/>
+			</concept>
+			<concept>
+				<code value="207Q00000X"/>
+				<display value="Family Medicine"/>
+			</concept>
+			<concept>
+				<code value="207R00000X"/>
+				<display value="Internal Medicine"/>
+			</concept>
+			<concept>
+				<code value="207T00000X"/>
+				<display value="Neurological Surgery"/>
+			</concept>
+			<concept>
+				<code value="207U00000X"/>
+				<display value="Nuclear Medicine"/>
+			</concept>
+			<concept>
+				<code value="207V00000X"/>
+				<display value="Obstetrics &amp; Gynecology"/>
+			</concept>
+			<concept>
+				<code value="207W00000X"/>
+				<display value="Ophthalmology"/>
+			</concept>
+			<concept>
+				<code value="207X00000X"/>
+				<display value="Orthopaedic Surgery"/>
+			</concept>
+			<concept>
+				<code value="207Y00000X"/>
+				<display value="Otolaryngology"/>
+			</concept>
+			<concept>
+				<code value="208000000X"/>
+				<display value="Pediatrics"/>
+			</concept>
+			<concept>
+				<code value="208100000X"/>
+				<display value="Physical Medicine &amp; Rehabilitation"/>
+			</concept>
+			<concept>
+				<code value="208200000X"/>
+				<display value="Plastic Surgery"/>
+			</concept>
+			<concept>
+				<code value="208600000X"/>
+				<display value="Surgery"/>
+			</concept>
+			<concept>
+				<code value="208800000X"/>
+				<display value="Urology"/>
+			</concept>
+			<concept>
+				<code value="208C00000X"/>
+				<display value="Colon &amp; Rectal Surgery"/>
+			</concept>
+			<concept>
+				<code value="208D00000X"/>
+				<display value="General Practice"/>
+			</concept>
+			<concept>
+				<code value="208G00000X"/>
+				<display value="Thoracic Surgery (Cardiothoracic Vascular Surgery)"/>
+			</concept>
+			<concept>
+				<code value="208M00000X"/>
+				<display value="Hospitalist"/>
+			</concept>
+			<concept>
+				<code value="208U00000X"/>
+				<display value="Clinical Pharmacology"/>
+			</concept>
+			<concept>
+				<code value="209800000X"/>
+				<display value="Legal Medicine"/>
+			</concept>
+			<concept>
+				<code value="211D00000X"/>
+				<display value="Assistant, Podiatric"/>
+			</concept>
+			<concept>
+				<code value="213E00000X"/>
+				<display value="Podiatrist"/>
+			</concept>
+			<concept>
+				<code value="221700000X"/>
+				<display value="Art Therapist"/>
+			</concept>
+			<concept>
+				<code value="222Q00000X"/>
+				<display value="Developmental Therapist"/>
+			</concept>
+			<concept>
+				<code value="222Z00000X"/>
+				<display value="Orthotist"/>
+			</concept>
+			<concept>
+				<code value="224900000X"/>
+				<display value="Mastectomy Fitter"/>
+			</concept>
+			<concept>
+				<code value="224L00000X"/>
+				<display value="Pedorthist"/>
+			</concept>
+			<concept>
+				<code value="224P00000X"/>
+				<display value="Prosthetist"/>
+			</concept>
+			<concept>
+				<code value="224Y00000X"/>
+				<display value="Clinical Exercise Physiologist"/>
+			</concept>
+			<concept>
+				<code value="224Z00000X"/>
+				<display value="Occupational Therapy Assistant"/>
+			</concept>
+			<concept>
+				<code value="225000000X"/>
+				<display value="Orthotic Fitter"/>
+			</concept>
+			<concept>
+				<code value="225100000X"/>
+				<display value="Physical Therapist"/>
+			</concept>
+			<concept>
+				<code value="225200000X"/>
+				<display value="Physical Therapy Assistant"/>
+			</concept>
+			<concept>
+				<code value="225400000X"/>
+				<display value="Rehabilitation Practitioner"/>
+			</concept>
+			<concept>
+				<code value="225500000X"/>
+				<display value="Specialist/Technologist"/>
+			</concept>
+			<concept>
+				<code value="225600000X"/>
+				<display value="Dance Therapist"/>
+			</concept>
+			<concept>
+				<code value="225700000X"/>
+				<display value="Massage Therapist"/>
+			</concept>
+			<concept>
+				<code value="225800000X"/>
+				<display value="Recreation Therapist"/>
+			</concept>
+			<concept>
+				<code value="225A00000X"/>
+				<display value="Music Therapist"/>
+			</concept>
+			<concept>
+				<code value="225B00000X"/>
+				<display value="Pulmonary Function Technologist"/>
+			</concept>
+			<concept>
+				<code value="225C00000X"/>
+				<display value="Rehabilitation Counselor"/>
+			</concept>
+			<concept>
+				<code value="225X00000X"/>
+				<display value="Occupational Therapist"/>
+			</concept>
+			<concept>
+				<code value="226000000X"/>
+				<display value="Recreational Therapist Assistant"/>
+			</concept>
+			<concept>
+				<code value="226300000X"/>
+				<display value="Kinesiotherapist"/>
+			</concept>
+			<concept>
+				<code value="227800000X"/>
+				<display value="Respiratory Therapist, Certified"/>
+			</concept>
+			<concept>
+				<code value="227900000X"/>
+				<display value="Respiratory Therapist, Registered"/>
+			</concept>
+			<concept>
+				<code value="229N00000X"/>
+				<display value="Anaplastologist"/>
+			</concept>
+			<concept>
+				<code value="231H00000X"/>
+				<display value="Audiologist"/>
+			</concept>
+			<concept>
+				<code value="235500000X"/>
+				<display value="Specialist/Technologist"/>
+			</concept>
+			<concept>
+				<code value="235Z00000X"/>
+				<display value="Speech-Language Pathologist"/>
+			</concept>
+			<concept>
+				<code value="237600000X"/>
+				<display value="Audiologist-Hearing Aid Fitter"/>
+			</concept>
+			<concept>
+				<code value="237700000X"/>
+				<display value="Hearing Instrument Specialist"/>
+			</concept>
+			<concept>
+				<code value="242T00000X"/>
+				<display value="Perfusionist"/>
+			</concept>
+			<concept>
+				<code value="243U00000X"/>
+				<display value="Radiology Practitioner Assistant"/>
+			</concept>
+			<concept>
+				<code value="246Q00000X"/>
+				<display value="Specialist/Technologist, Pathology"/>
+			</concept>
+			<concept>
+				<code value="246R00000X"/>
+				<display value="Technician, Pathology"/>
+			</concept>
+			<concept>
+				<code value="246W00000X"/>
+				<display value="Technician, Cardiology"/>
+			</concept>
+			<concept>
+				<code value="246X00000X"/>
+				<display value="Specialist/Technologist Cardiovascular"/>
+			</concept>
+			<concept>
+				<code value="246Y00000X"/>
+				<display value="Specialist/Technologist, Health Information"/>
+			</concept>
+			<concept>
+				<code value="246Z00000X"/>
+				<display value="Specialist/Technologist, Other"/>
+			</concept>
+			<concept>
+				<code value="247000000X"/>
+				<display value="Technician, Health Information"/>
+			</concept>
+			<concept>
+				<code value="247100000X"/>
+				<display value="Radiologic Technologist"/>
+			</concept>
+			<concept>
+				<code value="247200000X"/>
+				<display value="Technician, Other"/>
+			</concept>
+			<concept>
+				<code value="251300000X"/>
+				<display value="Local Education Agency (LEA)"/>
+			</concept>
+			<concept>
+				<code value="251B00000X"/>
+				<display value="Case Management"/>
+			</concept>
+			<concept>
+				<code value="251C00000X"/>
+				<display value="Day Training, Developmentally Disabled Services"/>
+			</concept>
+			<concept>
+				<code value="251E00000X"/>
+				<display value="Home Health"/>
+			</concept>
+			<concept>
+				<code value="251F00000X"/>
+				<display value="Home Infusion"/>
+			</concept>
+			<concept>
+				<code value="251G00000X"/>
+				<display value="Hospice Care, Community Based"/>
+			</concept>
+			<concept>
+				<code value="251J00000X"/>
+				<display value="Nursing Care"/>
+			</concept>
+			<concept>
+				<code value="251K00000X"/>
+				<display value="Public Health or Welfare"/>
+			</concept>
+			<concept>
+				<code value="251S00000X"/>
+				<display value="Community/Behavioral Health"/>
+			</concept>
+			<concept>
+				<code value="251T00000X"/>
+				<display value="Program of All-Inclusive Care for the Elderly (PACE) Provider Organization"/>
+			</concept>
+			<concept>
+				<code value="251V00000X"/>
+				<display value="Voluntary or Charitable"/>
+			</concept>
+			<concept>
+				<code value="251X00000X"/>
+				<display value="Supports Brokerage"/>
+			</concept>
+			<concept>
+				<code value="252Y00000X"/>
+				<display value="Early Intervention Provider Agency"/>
+			</concept>
+			<concept>
+				<code value="253J00000X"/>
+				<display value="Foster Care Agency"/>
+			</concept>
+			<concept>
+				<code value="253Z00000X"/>
+				<display value="In Home Supportive Care"/>
+			</concept>
+			<concept>
+				<code value="261Q00000X"/>
+				<display value="Clinic/Center"/>
+			</concept>
+			<concept>
+				<code value="273100000X"/>
+				<display value="Epilepsy Unit"/>
+			</concept>
+			<concept>
+				<code value="273R00000X"/>
+				<display value="Psychiatric Unit"/>
+			</concept>
+			<concept>
+				<code value="273Y00000X"/>
+				<display value="Rehabilitation Unit"/>
+			</concept>
+			<concept>
+				<code value="275N00000X"/>
+				<display value="Medicare Defined Swing Bed Unit"/>
+			</concept>
+			<concept>
+				<code value="276400000X"/>
+				<display value="Rehabilitation, Substance Use Disorder Unit"/>
+			</concept>
+			<concept>
+				<code value="281P00000X"/>
+				<display value="Chronic Disease Hospital"/>
+			</concept>
+			<concept>
+				<code value="282E00000X"/>
+				<display value="Long Term Care Hospital"/>
+			</concept>
+			<concept>
+				<code value="282J00000X"/>
+				<display value="Religious Nonmedical Health Care Institution"/>
+			</concept>
+			<concept>
+				<code value="282N00000X"/>
+				<display value="General Acute Care Hospital"/>
+			</concept>
+			<concept>
+				<code value="283Q00000X"/>
+				<display value="Psychiatric Hospital"/>
+			</concept>
+			<concept>
+				<code value="283X00000X"/>
+				<display value="Rehabilitation Hospital"/>
+			</concept>
+			<concept>
+				<code value="284300000X"/>
+				<display value="Special Hospital"/>
+			</concept>
+			<concept>
+				<code value="286500000X"/>
+				<display value="Military Hospital"/>
+			</concept>
+			<concept>
+				<code value="287300000X"/>
+				<display value="Christian Science Sanitorium"/>
+			</concept>
+			<concept>
+				<code value="291900000X"/>
+				<display value="Military Clinical Medical Laboratory"/>
+			</concept>
+			<concept>
+				<code value="291U00000X"/>
+				<display value="Clinical Medical Laboratory"/>
+			</concept>
+			<concept>
+				<code value="292200000X"/>
+				<display value="Dental Laboratory"/>
+			</concept>
+			<concept>
+				<code value="293D00000X"/>
+				<display value="Physiological Laboratory"/>
+			</concept>
+			<concept>
+				<code value="302F00000X"/>
+				<display value="Exclusive Provider Organization"/>
+			</concept>
+			<concept>
+				<code value="302R00000X"/>
+				<display value="Health Maintenance Organization"/>
+			</concept>
+			<concept>
+				<code value="305R00000X"/>
+				<display value="Preferred Provider Organization"/>
+			</concept>
+			<concept>
+				<code value="305S00000X"/>
+				<display value="Point of Service"/>
+			</concept>
+			<concept>
+				<code value="310400000X"/>
+				<display value="Assisted Living Facility"/>
+			</concept>
+			<concept>
+				<code value="310500000X"/>
+				<display value="Intermediate Care Facility, Mental Illness"/>
+			</concept>
+			<concept>
+				<code value="311500000X"/>
+				<display value="Alzheimer Center (Dementia Center)"/>
+			</concept>
+			<concept>
+				<code value="311Z00000X"/>
+				<display value="Custodial Care Facility"/>
+			</concept>
+			<concept>
+				<code value="313M00000X"/>
+				<display value="Nursing Facility/Intermediate Care Facility"/>
+			</concept>
+			<concept>
+				<code value="314000000X"/>
+				<display value="Skilled Nursing Facility"/>
+			</concept>
+			<concept>
+				<code value="315D00000X"/>
+				<display value="Hospice, Inpatient"/>
+			</concept>
+			<concept>
+				<code value="315P00000X"/>
+				<display value="Intermediate Care Facility, Mentally Retarded"/>
+			</concept>
+			<concept>
+				<code value="317400000X"/>
+				<display value="Christian Science Facility"/>
+			</concept>
+			<concept>
+				<code value="320600000X"/>
+				<display value="Residential Treatment Facility, Mental Retardation and/or Developmental Disabilities"/>
+			</concept>
+			<concept>
+				<code value="320700000X"/>
+				<display value="Residential Treatment Facility, Physical Disabilities"/>
+			</concept>
+			<concept>
+				<code value="320800000X"/>
+				<display value="Community Based Residential Treatment Facility, Mental Illness"/>
+			</concept>
+			<concept>
+				<code value="320900000X"/>
+				<display value="Community Based Residential Treatment Facility, Mental Retardation and/or Developmental Disabilities"/>
+			</concept>
+			<concept>
+				<code value="322D00000X"/>
+				<display value="Residential Treatment Facility, Emotionally Disturbed Children"/>
+			</concept>
+			<concept>
+				<code value="323P00000X"/>
+				<display value="Psychiatric Residential Treatment Facility"/>
+			</concept>
+			<concept>
+				<code value="324500000X"/>
+				<display value="Substance Abuse Rehabilitation Facility"/>
+			</concept>
+			<concept>
+				<code value="331L00000X"/>
+				<display value="Blood Bank"/>
+			</concept>
+			<concept>
+				<code value="332000000X"/>
+				<display value="Military/U.S. Coast Guard Pharmacy"/>
+			</concept>
+			<concept>
+				<code value="332100000X"/>
+				<display value="Department of Veterans Affairs (VA) Pharmacy"/>
+			</concept>
+			<concept>
+				<code value="332800000X"/>
+				<display value="Indian Health Service/Tribal/Urban Indian Health (I/T/U) Pharmacy"/>
+			</concept>
+			<concept>
+				<code value="332900000X"/>
+				<display value="Non-Pharmacy Dispensing Site"/>
+			</concept>
+			<concept>
+				<code value="332B00000X"/>
+				<display value="Durable Medical Equipment &amp; Medical Supplies"/>
+			</concept>
+			<concept>
+				<code value="332G00000X"/>
+				<display value="Eye Bank"/>
+			</concept>
+			<concept>
+				<code value="332H00000X"/>
+				<display value="Eyewear Supplier"/>
+			</concept>
+			<concept>
+				<code value="332S00000X"/>
+				<display value="Hearing Aid Equipment"/>
+			</concept>
+			<concept>
+				<code value="332U00000X"/>
+				<display value="Home Delivered Meals"/>
+			</concept>
+			<concept>
+				<code value="333300000X"/>
+				<display value="Emergency Response System Companies"/>
+			</concept>
+			<concept>
+				<code value="333600000X"/>
+				<display value="Pharmacy"/>
+			</concept>
+			<concept>
+				<code value="335E00000X"/>
+				<display value="Prosthetic/Orthotic Supplier"/>
+			</concept>
+			<concept>
+				<code value="335G00000X"/>
+				<display value="Medical Foods Supplier"/>
+			</concept>
+			<concept>
+				<code value="335U00000X"/>
+				<display value="Organ Procurement Organization"/>
+			</concept>
+			<concept>
+				<code value="335V00000X"/>
+				<display value="Portable X-ray and/or Other Portable Diagnostic Imaging Supplier"/>
+			</concept>
+			<concept>
+				<code value="341600000X"/>
+				<display value="Ambulance"/>
+			</concept>
+			<concept>
+				<code value="341800000X"/>
+				<display value="Military/U.S. Coast Guard Transport"/>
+			</concept>
+			<concept>
+				<code value="343800000X"/>
+				<display value="Secured Medical Transport (VAN)"/>
+			</concept>
+			<concept>
+				<code value="343900000X"/>
+				<display value="Non-emergency Medical Transport (VAN)"/>
+			</concept>
+			<concept>
+				<code value="344600000X"/>
+				<display value="Taxi"/>
+			</concept>
+			<concept>
+				<code value="344800000X"/>
+				<display value="Air Carrier"/>
+			</concept>
+			<concept>
+				<code value="347B00000X"/>
+				<display value="Bus"/>
+			</concept>
+			<concept>
+				<code value="347C00000X"/>
+				<display value="Private Vehicle"/>
+			</concept>
+			<concept>
+				<code value="347D00000X"/>
+				<display value="Train"/>
+			</concept>
+			<concept>
+				<code value="347E00000X"/>
+				<display value="Transportation Broker"/>
+			</concept>
+			<concept>
+				<code value="363A00000X"/>
+				<display value="Physician Assistant"/>
+			</concept>
+			<concept>
+				<code value="363L00000X"/>
+				<display value="Nurse Practitioner"/>
+			</concept>
+			<concept>
+				<code value="364S00000X"/>
+				<display value="Clinical Nurse Specialist"/>
+			</concept>
+			<concept>
+				<code value="367500000X"/>
+				<display value="Nurse Anesthetist, Certified Registered"/>
+			</concept>
+			<concept>
+				<code value="367A00000X"/>
+				<display value="Advanced Practice Midwife"/>
+			</concept>
+			<concept>
+				<code value="367H00000X"/>
+				<display value="Anesthesiologist Assistant"/>
+			</concept>
+			<concept>
+				<code value="372500000X"/>
+				<display value="Chore Provider"/>
+			</concept>
+			<concept>
+				<code value="372600000X"/>
+				<display value="Adult Companion"/>
+			</concept>
+			<concept>
+				<code value="373H00000X"/>
+				<display value="Day Training/Habilitation Specialist"/>
+			</concept>
+			<concept>
+				<code value="374700000X"/>
+				<display value="Technician"/>
+			</concept>
+			<concept>
+				<code value="374J00000X"/>
+				<display value="Doula"/>
+			</concept>
+			<concept>
+				<code value="374K00000X"/>
+				<display value="Religious Nonmedical Practitioner"/>
+			</concept>
+			<concept>
+				<code value="374T00000X"/>
+				<display value="Religious Nonmedical Nursing Personnel"/>
+			</concept>
+			<concept>
+				<code value="374U00000X"/>
+				<display value="Home Health Aide"/>
+			</concept>
+			<concept>
+				<code value="376G00000X"/>
+				<display value="Nursing Home Administrator"/>
+			</concept>
+			<concept>
+				<code value="376J00000X"/>
+				<display value="Homemaker"/>
+			</concept>
+			<concept>
+				<code value="376K00000X"/>
+				<display value="Nurse's Aide"/>
+			</concept>
+			<concept>
+				<code value="385H00000X"/>
+				<display value="Respite Care"/>
+			</concept>
+			<concept>
+				<code value="390200000X"/>
+				<display value="Student in an Organized Health Care Education/Training Program"/>
+			</concept>
+			<concept>
+				<code value="405300000X"/>
+				<display value="Prevention Professional"/>
+			</concept>
 		</include>
 	</compose>
 </ValueSet>
