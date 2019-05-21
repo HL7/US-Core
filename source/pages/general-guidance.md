@@ -51,7 +51,7 @@ In the context of US Core, *Must Support* on any data element SHALL be interpret
 
 Many of the profiles in this guide [reference]({{site.data.fhir.path}}references.html) other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core Careteam](StructureDefinition-us-core-careteam.html#profile) references US Core Patient.  For any other references not formally defined in a US Core profiles, the referenced resource SHOULD be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.
 
-### When there is no source data for required data elements
+### Missing Data
 
 If the source system does not have data for a *Must Support* data element, the data element is not present as described above.  If the source system does not have data for a *required* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
 
@@ -80,13 +80,13 @@ If the source system does not have data for a *Must Support* data element, the d
       - if there is neither text or coded data:
         - use the appropriate "unknown" concept code from the value set if available
         - use `unknown` from the [DataAbsentReason Code System] id the value set does not have the appropriate concept.
-  - for *required* binding strength (CodeableConcept or code datatypes):
-     - use the appropriate "unknown" concept code from the value set if available
-     - For the following data elements no appropriate "unknown" concept code is available and the resource instance will be nonconformant:
-          - `Immunization.status`
-          - `DocumentReference.status`
-          - `CarePlan.text.status`
-          - `Goal.lifecycleStatus`
+1. For *required* binding strength (CodeableConcept or code datatypes):
+  - use the appropriate "unknown" concept code from the value set if available
+  - For the following data elements no appropriate "unknown" concept code is available, therefore the element must be populated:
+      - `Immunization.status`
+      - `DocumentReference.status`
+      - `CarePlan.text.status`
+      - `Goal.lifecycleStatus`
 
 
 ### Using Codes in US Core profiles
