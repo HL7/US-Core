@@ -10,7 +10,7 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
 1.  A Patient Reference  in `Observation.subject`
 1.  An  instant  in `Observation.issued`
 1.  A  CodeableConcept  in `Observation.valueCodeableConcept`
-with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)\+ [MaxValueSet](general-guidance.html#max-binding)
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [US Core Smoking Status](ValueSet-us-core-observation-smokingstatus.html)
 
 #### Summary of Constraints
