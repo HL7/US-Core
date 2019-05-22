@@ -12,3 +12,10 @@
    - which must have a  Coding value  in `Extension.extension.valueCoding`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [OMB Race Categories](ValueSet-omb-race-category.html)
+
+#### Summary of Other Supported Elements
+ 1. One or more *Detailed* Extensions
+    - which must have a fixed `Extension.extension.url` = `detailed`
+    - which must have a  Coding value  in `Extension.extension.valueCoding`
+ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+  binding to [Detailed Race](ValueSet-detailed-race.html)

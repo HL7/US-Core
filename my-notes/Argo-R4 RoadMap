@@ -1,0 +1,43 @@
+US Core agenda
+
+Medication list
+ - MedicationRequest get all
+
+Must Support
+Courtesy of NPRM text:
+Use Case specific
+
+"More specifically, we
+clarify that all data elements indicated as "mandatory" and "must support" by the proposed
+standards and implementation specifications must be supported and would be in scope for
+testing. Through this approach, certification will provide for a consistent and predictable starting
+scope of data from which apps and other services can be developed."
+
+Must Support and "must be supported"  are not the same
+
+recommend that ONC change this word to "Have the capability to represent all the mandatory data elements.  Have the capability to represent all the must support data elements when the source data is available."
+
+R2 to R4 conversion
+
+US Core Use Cases:  Patient Access bulk data and Security and CapStatements for different use cases
+
+Search filters and hidden default Values
+ - required status for search
+ - default to active
+
+Remove section: https://build.fhir.org/ig/HL7/US-Core-R4/general-guidance.html#syntax-for-searches-limited-by-patient
+ - get ARGO input
+ - do it one way
+
+Technical Issues
+Search for fixed values
+  search parameter support this/Document in CapStatement
+  implied in Profile?
+
+Data MIssing  - add link
+
+Med list slide
+
+Review Sprint one:  Postman Collection
+
+Finish QA and for if able.
