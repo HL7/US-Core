@@ -64,11 +64,12 @@ If the source system does not have data for a *Must Support* data element, the d
     {
       "resourceType" : "Patient",
            ...
-           "name":
+           "name":[
              "extension" : [
              "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
              "valueCode" : "unsupported"
-              }
+              }]
+              ]
             "telecom" :
             ...
          }
