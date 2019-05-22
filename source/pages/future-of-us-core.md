@@ -19,7 +19,7 @@ This section outlines the approach to adding new content to US Core.
 
 ### Future of US Core
 
-The US Core FHIR profiles are designed to be the base set of requirements for FHIR implementation in the US. All US Realm implementation guides **SHOULD** use the US Core profiles or **SHOULD** explicitly state why they are unable to use. Throughout the development of US Core, implementers, government, and clinical community have brought forward additional requirements for US Core. This section outlines the approach to growth, and is holding place for items that with additional profiling and testing will be added to US Core.
+The US Core FHIR profiles are designed to be the base set of requirements for FHIR implementation in the US. All US Realm implementation guides **SHALL** use the US Core profiles or **SHALL** explicitly state why they are unable to use. Throughout the development of US Core, implementers, government, and clinical community have brought forward additional requirements for US Core. This section outlines the approach to growth, and is holding place for items that with additional profiling and testing will be added to US Core.
 
 #### Growth Path of US Core
 
@@ -35,7 +35,7 @@ The US Core implementation Guide will grow following these steps:
 
 A new US Regulatory requirement may jump over some of these steps, however, regulators should be discouraged from skipping pilot testing. Without pilot testing it's difficult to understand how a change will affect real-world implementation.
 
-In the January ballot of 2019 we tested this process with the FDA requesting US Core include all the component parts of UDI. In prior efforts, the FDA had successfully enhanced the base FHIR specification to include the UDI components, reaching step 3. In the summer of 2019 FDA plans to pilot these proposed new requirements within the Argonaut community the results of which will help inform whether they be incorporated in a planned fall 2019 STU update.
+In the January ballot of 2019 we tested this process with the FDA requesting US Core include all the component parts of UDI. In prior efforts, the FDA had successfully enhanced the base FHIR specification to include the UDI components, reaching step 3. In the summer of 2019 FDA plans to pilot these proposed new requirements within the Argonaut community the results of which will inform updates to the planned fall 2019 STU release.
 
 #### Future Requirements Under Considerations
 
