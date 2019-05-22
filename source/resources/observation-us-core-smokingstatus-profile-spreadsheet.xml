@@ -20,12 +20,11 @@
    <Path>/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources/\\ERICS-AIR-2\ehaas\Users\ehaas\Documents\FHIR\US-Core\resources\observation-spreadsheet.xml</Path>
    <SheetName>Invariants</SheetName>
   </SupBook>
-  <WindowHeight>9885</WindowHeight>
-  <WindowWidth>19200</WindowWidth>
+  <WindowHeight>11775</WindowHeight>
+  <WindowWidth>25200</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
-  <ActiveSheet>8</ActiveSheet>
-  <FirstVisibleSheet>3</FirstVisibleSheet>
+  <ActiveSheet>1</ActiveSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -826,6 +825,9 @@
   <Style ss:ID="s155">
    <Font ss:FontName="Verdana" x:Family="Swiss" ss:Size="9" ss:Color="#333333"/>
   </Style>
+  <Style ss:ID="s156">
+   <Interior/>
+  </Style>
   <Style ss:ID="s157">
    <Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
   </Style>
@@ -901,9 +903,6 @@
     <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="3"/>
     <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="3"/>
    </Borders>
-   <Interior/>
-  </Style>
-  <Style ss:ID="s169">
    <Interior/>
   </Style>
  </Styles>
@@ -995,7 +994,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">date</Data></Cell>
-    <Cell ss:StyleID="s78"><Data ss:Type="DateTime">2016-08-01T00:00:00.000</Data></Cell>
+    <Cell ss:StyleID="s78" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-05-21T18:41:37.500</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">published.structure</Data></Cell>
@@ -1044,6 +1043,7 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -1063,7 +1063,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>2</ActiveRow>
+     <ActiveRow>9</ActiveRow>
+     <ActiveCol>2</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -9074,7 +9075,7 @@
     <Cell ss:StyleID="s107"/>
     <Cell ss:StyleID="s136"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s136"><Data ss:Type="String">extensible</Data></Cell>
-    <Cell ss:Index="6" ss:StyleID="s169"><Data ss:Type="String">http://hl7.org/fhir/us/core/ValueSet/us-core-smoking-status-observation-codes</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s156"><Data ss:Type="String">http://hl7.org/fhir/us/core/ValueSet/us-core-smoking-status-observation-codes</Data></Cell>
     <Cell ss:StyleID="s136"/>
     <Cell ss:StyleID="s136"/>
     <Cell ss:StyleID="s136"/>
@@ -9481,7 +9482,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
