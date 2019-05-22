@@ -170,7 +170,6 @@
 [SNOMED CT]: http://snomed.info/sct
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
 [Surgical Operation Note (11504-8)]: https://loinc.org/11504-8.html
-[Synthea]: https://github.com/synthetichealth/synthea/wiki
 [Terminology]: terminology.html "Terminology Page"
 [UCUM Codes value set]: {{site.data.fhir.path}}valueset-ucum-units.html
 [UCUM]: http://unitsofmeasure.org

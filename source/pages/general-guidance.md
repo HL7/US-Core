@@ -224,7 +224,7 @@ Clinical information that has been removed from the patient's record needs to be
 
   - A provider facing system MAY be supplied with additional details that the patient viewing system would typically not have access to.
 
-### Read(Fetch) resource notation:
+### Read(Fetch) syntax:
 
 For fetching a resource interactions on profile pages are defined with the following syntax:
 
@@ -240,7 +240,7 @@ For fetching a resource interactions on profile pages are defined with the follo
 
 For more information see the [FHIR RESTful API]
 
-### Search resource notation:
+### Search Syntax
 
 For searching a resource, interactions on profile pages are defined with the following syntax:
 
@@ -252,21 +252,17 @@ For searching a resource, interactions on profile pages are defined with the fol
     -  Resource-type: The name of a resource type (e.g. “Patient”)
     -  parameter: the search parameters as defined for the particular interaction (e.g."?patient=Patient/123")
     -  value: the search parameter value for a particular search
-    - {:m1|m2|...}: The list of supported search parameter modifiers
+    - \{:m1|m2|...}: The list of supported search parameter modifiers
     - {c1|c2|...}: The list of supported search parameter comparators
     - {,value2,...}: Optional multiple 'OR' Values
-    - ]{&parameter2={:m1|m2|...}={c1|c2|...}[value1{,value2,...}&...}: Optional multiple 'AND' search parameters
+    - {&parameter2={:m1|m2|...}={c1|c2|...}[value1{,value2,...}&...}: Optional multiple 'AND' search parameters
 
-For more information see the [FHIR RESTful Search API]
-
-
-### Search Syntax
 
 In the simplest case, a search is executed by performing a GET operation in the RESTful framework:
 
-**GET [base]/[Resource-type]?name=value&...**
+`GET [base]/[Resource-type]?name=value&...`
 
-For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource the name “code” for search on the LOINC code. See [FHIR Search] for more information about searching in REST, messaging, and services.
+For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource the name “code” for search on the LOINC code.  For more information see the [FHIR RESTful Search API]
 
 ### Syntax for searches limited by patient
 
