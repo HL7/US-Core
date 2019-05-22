@@ -1,7 +1,4 @@
-##### US Core Race Extension
-
-
-###### Scope and Usage
+### US Core Race Extension
 
 This Complex Extension for race allows one or more race codes of which:
 
