@@ -12,13 +12,14 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 1. An associated practitioner
 1. An associated organization
-1. An associated location
-1. Contact information
 
 **Each PractitionerRole must support:**
 
 1. A role
 1. A specialty
+1. An associated location
+1. Contact information
+1. A communication endpoint
 
 **Profile specific implementation guidance:**
 

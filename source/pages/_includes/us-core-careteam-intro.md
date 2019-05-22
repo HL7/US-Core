@@ -15,7 +15,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each CareTeam must have:**
 
-1.  a status code
 1.  a patient
 1.  a participant role for each careteam members
 1.  names of careteam members which can be:
@@ -23,7 +22,10 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
     -   the patient
     -   a relative or friend or guardian
     -   an organization
+    
+**Each Condition must support:**
 
+1.  a status code
 
 **Profile specific implementation guidance:**
 

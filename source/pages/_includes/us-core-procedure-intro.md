@@ -24,7 +24,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
  - Based upon the 2015 Edition Certification Requirements, either SNOMED-CT or CPT-4/HCPC procedure codes are required and [ICD-10-PCS codes] MAY be supported as translations to them. If choosing to primarily to dental procedures, the [Code on Dental Procedures and Nomenclature (CDT Code)] may be used.
 
- - A procedure including an implantable device **SHOULD** use the Procedure.focalDevice with a reference to the [US Core Device Profile].
+ - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` with a reference to the [US Core Device Profile].
 
 ### Examples
 

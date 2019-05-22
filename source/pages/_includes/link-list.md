@@ -138,8 +138,8 @@
 [NDC vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
 [Nurse Note (34746-8)]: https://loinc.org/34746-8.html
 [Observation Value Absent Reason]: http://hl7.org/fhir/ValueSet/data-absent-reason
-[Observation]:  {{site.data.fhir.path}}observation.html
 [Observation]: {{site.data.fhir.path}}observation.html
+[Observation Grouping]: {{site.data.fhir.path}}observation.html#obsgrouping
 [Office of the National Coordinator for Health Information Technology (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf
 [ONC Provider Directory Workshop]: https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents

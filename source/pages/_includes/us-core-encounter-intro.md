@@ -16,25 +16,23 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each Encounter must have:**
 
-1. a status
-1. an encounter type
-1. a patient
+1. A status
+1. An classification such as inpatient, outpatient or emergency
+1. An encounter type
+1. abs patient
 
 **Each Encounter must support:**
 
 1. An encounter identifier
 1. Providers involved in the encounter
-1. Where the encounter occurred
 1. When the encounter occurred
-1. The discharge disposition
 1. Reason for the visit
-1. Diagnosis
-1. Indication of the principle diagnosis
-
+1. The discharge disposition
+1. Where the encounter occurred
 
 **Profile specific implementation guidance:**
 
-* To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.   An example search is shown in the [Condition Quick Start] section.
+* To search for an encounter diagnosis, query for Condition resources that reference the Encounter of interest and have a category of `encounter-diagnosis`.   An example search is shown in the [Condition Quick Start] section.
 
 ### Examples
 

@@ -6299,3 +6299,24 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/sid/cvx",
+  "code" : "158"
+}, "valueSet" :null}####
+v: {
+  "display" : "influenza, injectable, quadrivalent",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/sid/cvx",
+  "code" : "158",
+  "display" : "influenza, injectable, quadrivalent, contains preservative"
+}, "valueSet" :null}####
+v: {
+  "display" : "influenza, injectable, quadrivalent",
+  "severity" : "warning",
+  "error" : "The display \"influenza, injectable, quadrivalent, contains preservative\" is not a valid display for the code {http://hl7.org/fhir/sid/cvx}158 - should be one of [\"influenza, injectable, quadrivalent\"]"
+}
+-------------------------------------------------------------------------------------

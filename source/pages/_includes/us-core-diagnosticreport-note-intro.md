@@ -20,19 +20,19 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  a code describing the type of report
 1.  a patient
 1.  date and time the report was created
-1.  an author (actor) producing the report
 
 **Each Diagnostic Report must support:**
 
 1.  the encounter the report occurred within
 1.  instant the report was released
+1.  an author (actor) producing the report
 1.  an image
 1.  a reference to the full report (presentedForm)
 
 **Profile specific implementation guidance:**
 
 - The `DiagnosticReport.category` binding must support at a minimum the [US Core DiagnosticReport Category Codes] of Cardiology, Radiology, and Pathology. Other categories may be supported.
-- A server will return how a customer has categorized their reports at a particular site. Categorization of reports is not consistent across sites. (e.g. a system may categorize an orthopedic note as a cardiology.)
+- A server will return how a customer has categorized their reports at a particular site. Categorization of reports is not consistent across sites. (e.g. a system may categorize an orthopedic note as cardiology.)
 
 #### Examples
 

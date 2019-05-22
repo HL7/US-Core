@@ -21,7 +21,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each Organization must support:**
 
-1.  Endpoint information
+1.  A communication endpoint
 
 **Profile specific implementation guidance:**
 

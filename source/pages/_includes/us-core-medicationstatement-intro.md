@@ -19,7 +19,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  a medication
 1.  an assertion date
 1.  a patient
-1.  a code indicating whether the medication was taken
 
 **Each MedicationStatement must support:**
 

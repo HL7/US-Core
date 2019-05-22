@@ -16,8 +16,8 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each DocumentReference must have:**
 
 1.  a status
-1.  a code describing the type of document
 1.  a document category
+1.  a code describing the type of document
 1.  a patient
 1.  the MIME type (i.e. contentType) of the document
 1.  an address (e.g. url) where the document can be retrieved or the content as inline base64 encoded data
@@ -35,7 +35,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Profile specific implementation guidance:**
 
-- See [Clinical Notes Guidance](clinical-notes-guidance.html) for additional detail on using this profile for Clincal Notes.
+- See the [Clinical Notes Guidance](clinical-notes-guidance.html) section for additional detail on using this profile for Clinical Notes.
 - The `DocumentReference.type` binding must support at a minimum the [5 Common Clinical Notes] and may extend to the full  [US Core DocumentReference Type Value Set]
 - For a C-CDA Clinical Summary of Care (CCD):
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.
