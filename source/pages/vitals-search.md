@@ -8,7 +8,6 @@ Below is an overview of the required set of RESTful FHIR interactions - for exam
 
 {% include us-core-vitalsigns-search.md %}
 
+<br />
 
 {% include link-list.md %}
-
-<br />

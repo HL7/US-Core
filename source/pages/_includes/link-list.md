@@ -38,6 +38,7 @@
 [ConceptMap]: {{site.data.fhir.path}}conceptmap.html
 [Condition Quick Start]: StructureDefinition-us-core-condition.html#search
 [Condition]: {{site.data.fhir.path}}condition.html
+[Conformance Requirements]: capstatements.html "CapabilityStatements defined for this Guide"
 [Conformance Requirements for Client]: CapabilityStatement-us-core-r4-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-us-core-server.html "Conformance Requirements for Server Page"
 [Conformance requirements for the US Core Server]: CapabilityStatement-us-core-server.html
