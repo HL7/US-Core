@@ -22,7 +22,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
     -   the patient
     -   a relative or friend or guardian
     -   an organization
-    
+
 **Each Condition must support:**
 
 1.  a status code
