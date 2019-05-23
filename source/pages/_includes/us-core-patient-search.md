@@ -36,9 +36,8 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the name ([how to search by string])
 
 1. **SHALL** support searching using the combination of the **[`birthdate`](SearchParameter-us-core-patient-birthdate.html)** and **[`name`](SearchParameter-us-core-patient-name.html)** search parameters:
-    - including optional support for composite *AND* search on `birthdate` (e.g.`birthdate=[date]&birthdate=[date]]&...`)
 
-    `GET [base]/Patient?birthdate=[date]{&birthdate=[date]&...}&name=[string]`
+    `GET [base]/Patient?birthdate=[date]&name=[string]`
 
     Example:
     
@@ -62,9 +61,8 @@ The following search parameters, search parameter combinations and search parame
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`birthdate`](SearchParameter-us-core-patient-birthdate.html)** and **[`family`](SearchParameter-us-core-patient-family.html)** search parameters:
-    - including optional support for composite *AND* search on `birthdate` (e.g.`birthdate=[date]&birthdate=[date]]&...`)
 
-    `GET [base]/Patient?birthdate=[date]{&birthdate=[date]&...}&family=[string]`
+    `GET [base]/Patient?birthdate=[date]&family=[string]`
 
     Example:
     
