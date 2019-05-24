@@ -76,18 +76,18 @@ If the source system does not have data for a *Must Support* data element, the d
     ~~~
 
 1. For *coded* data elements:
-   - for *example*, *preferred*, or *extensible* binding strengths (CodeableConcept datatypes):
+   - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept datatypes):
       - if the source systems has text but no coded data, only the text element is used.
       - if there is neither text or coded data:
         - use the appropriate "unknown" concept code from the value set if available
-        - use `unknown` from the [DataAbsentReason Code System] id the value set does not have the appropriate concept.
-1. For *required* binding strength (CodeableConcept or code datatypes):
-  - use the appropriate "unknown" concept code from the value set if available
-  - For the following data elements no appropriate "unknown" concept code is available, therefore the element must be populated:
-      - `Immunization.status`
-      - `DocumentReference.status`
-      - `CarePlan.text.status`
-      - `Goal.lifecycleStatus`
+        - use `unknown` from the [DataAbsentReason Code System] if the value set does not have the appropriate concept.
+   - *required* binding strength (CodeableConcept or code datatypes):
+      - use the appropriate "unknown" concept code from the value set if available
+      - For the following data elements no appropriate "unknown" concept code is available, therefore the element must be populated:
+          - `Immunization.status`
+          - `DocumentReference.status`
+          - `CarePlan.text.status`
+          - `Goal.lifecycleStatus`
 
 
 ### Using Codes in US Core profiles
