@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ConceptMap xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-current/fhir-all.xsd" xmlns="http://hl7.org/fhir">
+<ConceptMap xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-current/fhir-all.xsd"
+	xmlns="http://hl7.org/fhir">
 	<id value="ndc-cvx"/>
 	<!--	<text>
 		<status value="generated"/>
@@ -16,8 +19,10 @@
 	<status value="active"/>
 	<date value="2019-05-21"/>
 	<publisher value="HL7 US Realm Steering Committee"/>
-	<description value="Unit of Use [NDC code] (https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) mapping  to the [CVX Vaccine codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx).  Note: source = NDC and target = CVX"/>
-	<purpose value="Based upon the 2015 Edition Certification Requirements, the NDC vaccine codes SHOULD be supported as translations to the CVX vaccine codes."/>
+	<description
+		value="Unit of Use [NDC code] (https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) mapping  to the [CVX Vaccine codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx).  Note: source = NDC and target = CVX"/>
+	<purpose
+		value="Based upon the 2015 Edition Certification Requirements, the NDC vaccine codes SHOULD be supported as translations to the CVX vaccine codes."/>
 	<sourceCanonical value="http://hl7.org/fhir/us/core/ValueSet/us-core-ndc-vaccine-codes"/>
 	<targetCanonical value="http://hl7.org/fhir/us/core/ValueSet/us-core-vaccines-cvx"/>
 	<group>
@@ -29,7 +34,7 @@
 			</target>
 		</element>
 		<element>
-			<code value="49281-0623-78"/>
+			<code value="49281-0621-15"/>
 			<target>
 				<code value="158"/>
 				<equivalence value="wider"/>
