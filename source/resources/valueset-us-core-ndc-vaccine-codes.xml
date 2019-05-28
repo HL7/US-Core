@@ -1,343 +1,1318 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-	<id value="us-core-ndc-vaccine-codes"/>
-	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-ndc-vaccine-codes"/>
-	<version value="1.0.1"/>
-	<name value="USCoreVaccineNationalDrugCode"/>
-	<title value="US Core Vaccine National Drug Codes (NDC)"/>
-	<status value="active"/>
-	<date value="2019-05-21"/>
-	<publisher value="HL7 US Realm Steering Committee"/>
-	<description value="This value set includes all the Vaccine National Drug Codes (NDC).  This source of this data is provided by the [CDC](https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp)"/>
-	<purpose value="Codes that are used as translations for CVS code for implementation of the Argonaut Immunization IG and MU2015 certification."/>
-	<compose>
-<include>
-	<system value="http://hl7.org/fhir/sid/ndc"/>
-	<concept><code value="00005-0100-02"/></concept>
-	<concept><code value="00005-0100-05"/></concept>
-	<concept><code value="00005-0100-10"/></concept>
-	<concept><code value="00005-1970-50"/></concept>
-	<concept><code value="00005-1971-02"/></concept>
-	<concept><code value="00005-1971-04"/></concept>
-	<concept><code value="00005-1971-05"/></concept>
-	<concept><code value="00006-4045-00"/></concept>
-	<concept><code value="00006-4045-41"/></concept>
-	<concept><code value="00006-4047-20"/></concept>
-	<concept><code value="00006-4047-41"/></concept>
-	<concept><code value="00006-4093-02"/></concept>
-	<concept><code value="00006-4093-09"/></concept>
-	<concept><code value="00006-4094-02"/></concept>
-	<concept><code value="00006-4094-09"/></concept>
-	<concept><code value="00006-4095-02"/></concept>
-	<concept><code value="00006-4095-09"/></concept>
-	<concept><code value="00006-4096-02"/></concept>
-	<concept><code value="00006-4096-09"/></concept>
-	<concept><code value="00006-4109-02"/></concept>
-	<concept><code value="00006-4109-09"/></concept>
-	<concept><code value="00006-4119-02"/></concept>
-	<concept><code value="00006-4119-03"/></concept>
-	<concept><code value="00006-4121-02"/></concept>
-	<concept><code value="00006-4133-41"/></concept>
-	<concept><code value="00006-4171-00"/></concept>
-	<concept><code value="00006-4681-00"/></concept>
-	<concept><code value="00006-4739-00"/></concept>
-	<concept><code value="00006-4826-00"/></concept>
-	<concept><code value="00006-4827-00"/></concept>
-	<concept><code value="00006-4831-41"/></concept>
-	<concept><code value="00006-4837-02"/></concept>
-	<concept><code value="00006-4837-03"/></concept>
-	<concept><code value="00006-4841-00"/></concept>
-	<concept><code value="00006-4841-41"/></concept>
-	<concept><code value="00006-4897-00"/></concept>
-	<concept><code value="00006-4898-00"/></concept>
-	<concept><code value="00006-4943-00"/></concept>
-	<concept><code value="00006-4963-00"/></concept>
-	<concept><code value="00006-4963-41"/></concept>
-	<concept><code value="00006-4980-00"/></concept>
-	<concept><code value="00006-4981-00"/></concept>
-	<concept><code value="00006-4992-00"/></concept>
-	<concept><code value="00006-4995-00"/></concept>
-	<concept><code value="00006-4995-41"/></concept>
-	<concept><code value="00006-4999-00"/></concept>
-	<concept><code value="00052-0603-02"/></concept>
-	<concept><code value="13533-0131-01"/></concept>
-	<concept><code value="14362-0111-04"/></concept>
-	<concept><code value="17478-0131-01"/></concept>
-	<concept><code value="19515-0845-11"/></concept>
-	<concept><code value="19515-0850-52"/></concept>
-	<concept><code value="19515-0889-07"/></concept>
-	<concept><code value="19515-0890-07"/></concept>
-	<concept><code value="19515-0891-11"/></concept>
-	<concept><code value="19515-0893-07"/></concept>
-	<concept><code value="19515-0894-52"/></concept>
-	<concept><code value="19515-0895-11"/></concept>
-	<concept><code value="19515-0896-11"/></concept>
-	<concept><code value="19515-0898-11"/></concept>
-	<concept><code value="19515-0900-11"/></concept>
-	<concept><code value="19515-0901-52"/></concept>
-	<concept><code value="19515-0903-11"/></concept>
-	<concept><code value="19515-0908-52"/></concept>
-	<concept><code value="19515-0909-52"/></concept>
-	<concept><code value="19515-0912-52"/></concept>
-	<concept><code value="21695-0413-01"/></concept>
-	<concept><code value="33332-0010-01"/></concept>
-	<concept><code value="33332-0013-01"/></concept>
-	<concept><code value="33332-0014-01"/></concept>
-	<concept><code value="33332-0015-01"/></concept>
-	<concept><code value="33332-0016-01"/></concept>
-	<concept><code value="33332-0017-01"/></concept>
-	<concept><code value="33332-0018-01"/></concept>
-	<concept><code value="33332-0110-10"/></concept>
-	<concept><code value="33332-0113-10"/></concept>
-	<concept><code value="33332-0114-10"/></concept>
-	<concept><code value="33332-0115-10"/></concept>
-	<concept><code value="33332-0116-10"/></concept>
-	<concept><code value="33332-0117-10"/></concept>
-	<concept><code value="33332-0118-10"/></concept>
-	<concept><code value="33332-0316-01"/></concept>
-	<concept><code value="33332-0317-01"/></concept>
-	<concept><code value="33332-0318-01"/></concept>
-	<concept><code value="33332-0416-10"/></concept>
-	<concept><code value="33332-0417-10"/></concept>
-	<concept><code value="33332-0418-10"/></concept>
-	<concept><code value="33332-0519-01"/></concept>
-	<concept><code value="33332-0519-25"/></concept>
-	<concept><code value="33332-0629-10"/></concept>
-	<concept><code value="42515-0001-01"/></concept>
-	<concept><code value="42515-0001-01"/></concept>
-	<concept><code value="42515-0001-01"/></concept>
-	<concept><code value="42515-0001-01"/></concept>
-	<concept><code value="42515-0002-01"/></concept>
-	<concept><code value="42874-0012-10"/></concept>
-	<concept><code value="42874-0013-10"/></concept>
-	<concept><code value="42874-0014-10"/></concept>
-	<concept><code value="42874-0015-10"/></concept>
-	<concept><code value="42874-0016-10"/></concept>
-	<concept><code value="42874-0017-10"/></concept>
-	<concept><code value="42874-0117-10"/></concept>
-	<concept><code value="43528-0002-05"/></concept>
-	<concept><code value="43528-0003-05"/></concept>
-	<concept><code value="46028-0114-01"/></concept>
-	<concept><code value="46028-0114-02"/></concept>
-	<concept><code value="46028-0208-01"/></concept>
-	<concept><code value="46028-0208-01"/></concept>
-	<concept><code value="49281-0010-10"/></concept>
-	<concept><code value="49281-0010-25"/></concept>
-	<concept><code value="49281-0010-50"/></concept>
-	<concept><code value="49281-0011-10"/></concept>
-	<concept><code value="49281-0011-50"/></concept>
-	<concept><code value="49281-0012-10"/></concept>
-	<concept><code value="49281-0012-50"/></concept>
-	<concept><code value="49281-0013-10"/></concept>
-	<concept><code value="49281-0013-50"/></concept>
-	<concept><code value="49281-0014-50"/></concept>
-	<concept><code value="49281-0111-25"/></concept>
-	<concept><code value="49281-0112-25"/></concept>
-	<concept><code value="49281-0113-25"/></concept>
-	<concept><code value="49281-0215-10"/></concept>
-	<concept><code value="49281-0215-15"/></concept>
-	<concept><code value="49281-0225-10"/></concept>
-	<concept><code value="49281-0250-51"/></concept>
-	<concept><code value="49281-0278-10"/></concept>
-	<concept><code value="49281-0286-01"/></concept>
-	<concept><code value="49281-0286-05"/></concept>
-	<concept><code value="49281-0286-10"/></concept>
-	<concept><code value="49281-0291-10"/></concept>
-	<concept><code value="49281-0291-83"/></concept>
-	<concept><code value="49281-0298-10"/></concept>
-	<concept><code value="49281-0386-15"/></concept>
-	<concept><code value="49281-0387-65"/></concept>
-	<concept><code value="49281-0388-15"/></concept>
-	<concept><code value="49281-0389-65"/></concept>
-	<concept><code value="49281-0390-15"/></concept>
-	<concept><code value="49281-0391-65"/></concept>
-	<concept><code value="49281-0392-15"/></concept>
-	<concept><code value="49281-0393-65"/></concept>
-	<concept><code value="49281-0394-15"/></concept>
-	<concept><code value="49281-0395-65"/></concept>
-	<concept><code value="49281-0396-15"/></concept>
-	<concept><code value="49281-0397-65"/></concept>
-	<concept><code value="49281-0399-65"/></concept>
-	<concept><code value="49281-0400-05"/></concept>
-	<concept><code value="49281-0400-10"/></concept>
-	<concept><code value="49281-0400-15"/></concept>
-	<concept><code value="49281-0400-20"/></concept>
-	<concept><code value="49281-0401-65"/></concept>
-	<concept><code value="49281-0403-65"/></concept>
-	<concept><code value="49281-0413-10"/></concept>
-	<concept><code value="49281-0413-50"/></concept>
-	<concept><code value="49281-0414-10"/></concept>
-	<concept><code value="49281-0414-50"/></concept>
-	<concept><code value="49281-0415-10"/></concept>
-	<concept><code value="49281-0416-10"/></concept>
-	<concept><code value="49281-0416-50"/></concept>
-	<concept><code value="49281-0417-10"/></concept>
-	<concept><code value="49281-0417-50"/></concept>
-	<concept><code value="49281-0418-10"/></concept>
-	<concept><code value="49281-0418-50"/></concept>
-	<concept><code value="49281-0489-01"/></concept>
-	<concept><code value="49281-0489-91"/></concept>
-	<concept><code value="49281-0510-05"/></concept>
-	<concept><code value="49281-0510-05"/></concept>
-	<concept><code value="49281-0513-25"/></concept>
-	<concept><code value="49281-0514-25"/></concept>
-	<concept><code value="49281-0516-25"/></concept>
-	<concept><code value="49281-0517-25"/></concept>
-	<concept><code value="49281-0518-25"/></concept>
-	<concept><code value="49281-0545-03"/></concept>
-	<concept><code value="49281-0545-05"/></concept>
-	<concept><code value="49281-0562-10"/></concept>
-	<concept><code value="49281-0589-05"/></concept>
-	<concept><code value="49281-0621-15"/></concept>
-	<concept><code value="49281-0625-15"/></concept>
-	<concept><code value="49281-0627-15"/></concept>
-	<concept><code value="49281-0629-15"/></concept>
-	<concept><code value="49281-0640-15"/></concept>
-	<concept><code value="49281-0650-10"/></concept>
-	<concept><code value="49281-0650-25"/></concept>
-	<concept><code value="49281-0650-50"/></concept>
-	<concept><code value="49281-0650-70"/></concept>
-	<concept><code value="49281-0650-90"/></concept>
-	<concept><code value="49281-0703-55"/></concept>
-	<concept><code value="49281-0705-55"/></concept>
-	<concept><code value="49281-0707-55"/></concept>
-	<concept><code value="49281-0708-40"/></concept>
-	<concept><code value="49281-0709-55"/></concept>
-	<concept><code value="49281-0710-40"/></concept>
-	<concept><code value="49281-0712-40"/></concept>
-	<concept><code value="49281-0718-10"/></concept>
-	<concept><code value="49281-0790-20"/></concept>
-	<concept><code value="49281-0790-51"/></concept>
-	<concept><code value="49281-0800-83"/></concept>
-	<concept><code value="49281-0820-10"/></concept>
-	<concept><code value="49281-0860-10"/></concept>
-	<concept><code value="49281-0860-10"/></concept>
-	<concept><code value="49281-0860-55"/></concept>
-	<concept><code value="49281-0913-01"/></concept>
-	<concept><code value="49281-0915-01"/></concept>
-	<concept><code value="49281-0915-05"/></concept>
-	<concept><code value="50090-1693-09"/></concept>
-	<concept><code value="50090-2883-00"/></concept>
-	<concept><code value="50090-3096-00"/></concept>
-	<concept><code value="50090-3469-00"/></concept>
-	<concept><code value="51285-0138-50"/></concept>
-	<concept><code value="51285-0138-50"/></concept>
-	<concept><code value="54868-0734-00"/></concept>
-	<concept><code value="54868-0980-00"/></concept>
-	<concept><code value="54868-2219-00"/></concept>
-	<concept><code value="54868-2219-01"/></concept>
-	<concept><code value="54868-3339-01"/></concept>
-	<concept><code value="54868-4320-00"/></concept>
-	<concept><code value="54868-6177-00"/></concept>
-	<concept><code value="54868-6180-00"/></concept>
-	<concept><code value="55045-3841-01"/></concept>
-	<concept><code value="58160-0801-11"/></concept>
-	<concept><code value="58160-0806-05"/></concept>
-	<concept><code value="58160-0808-15"/></concept>
-	<concept><code value="58160-0808-15"/></concept>
-	<concept><code value="58160-0809-05"/></concept>
-	<concept><code value="58160-0810-11"/></concept>
-	<concept><code value="58160-0810-52"/></concept>
-	<concept><code value="58160-0811-51"/></concept>
-	<concept><code value="58160-0811-52"/></concept>
-	<concept><code value="58160-0812-11"/></concept>
-	<concept><code value="58160-0812-52"/></concept>
-	<concept><code value="58160-0815-11"/></concept>
-	<concept><code value="58160-0815-34"/></concept>
-	<concept><code value="58160-0815-46"/></concept>
-	<concept><code value="58160-0815-48"/></concept>
-	<concept><code value="58160-0815-52"/></concept>
-	<concept><code value="58160-0816-05"/></concept>
-	<concept><code value="58160-0818-11"/></concept>
-	<concept><code value="58160-0819-12"/></concept>
-	<concept><code value="58160-0820-11"/></concept>
-	<concept><code value="58160-0820-52"/></concept>
-	<concept><code value="58160-0821-11"/></concept>
-	<concept><code value="58160-0821-34"/></concept>
-	<concept><code value="58160-0821-52"/></concept>
-	<concept><code value="58160-0823-11"/></concept>
-	<concept><code value="58160-0825-11"/></concept>
-	<concept><code value="58160-0825-52"/></concept>
-	<concept><code value="58160-0826-11"/></concept>
-	<concept><code value="58160-0826-34"/></concept>
-	<concept><code value="58160-0826-52"/></concept>
-	<concept><code value="58160-0830-34"/></concept>
-	<concept><code value="58160-0830-52"/></concept>
-	<concept><code value="58160-0842-11"/></concept>
-	<concept><code value="58160-0842-34"/></concept>
-	<concept><code value="58160-0842-51"/></concept>
-	<concept><code value="58160-0842-52"/></concept>
-	<concept><code value="58160-0854-52"/></concept>
-	<concept><code value="58160-0879-52"/></concept>
-	<concept><code value="58160-0880-52"/></concept>
-	<concept><code value="58160-0881-52"/></concept>
-	<concept><code value="58160-0883-52"/></concept>
-	<concept><code value="58160-0898-52"/></concept>
-	<concept><code value="58160-0900-52"/></concept>
-	<concept><code value="58160-0901-52"/></concept>
-	<concept><code value="58160-0903-52"/></concept>
-	<concept><code value="58160-0905-52"/></concept>
-	<concept><code value="58160-0907-52"/></concept>
-	<concept><code value="58160-0955-09"/></concept>
-	<concept><code value="58160-0955-09"/></concept>
-	<concept><code value="58160-0964-12"/></concept>
-	<concept><code value="58160-0964-12"/></concept>
-	<concept><code value="58160-0976-06"/></concept>
-	<concept><code value="58160-0976-20"/></concept>
-	<concept><code value="62195-0051-10"/></concept>
-	<concept><code value="62577-0613-01"/></concept>
-	<concept><code value="62577-0614-01"/></concept>
-	<concept><code value="63851-0501-01"/></concept>
-	<concept><code value="63851-0501-02"/></concept>
-	<concept><code value="63851-0612-01"/></concept>
-	<concept><code value="63851-0613-01"/></concept>
-	<concept><code value="64678-0211-01"/></concept>
-	<concept><code value="66019-0107-01"/></concept>
-	<concept><code value="66019-0108-10"/></concept>
-	<concept><code value="66019-0109-10"/></concept>
-	<concept><code value="66019-0110-10"/></concept>
-	<concept><code value="66019-0200-10"/></concept>
-	<concept><code value="66019-0300-10"/></concept>
-	<concept><code value="66019-0301-10"/></concept>
-	<concept><code value="66019-0302-10"/></concept>
-	<concept><code value="66019-0303-10"/></concept>
-	<concept><code value="66019-0304-10"/></concept>
-	<concept><code value="66019-0305-10"/></concept>
-	<concept><code value="66521-0000-01"/></concept>
-	<concept><code value="66521-0112-02"/></concept>
-	<concept><code value="66521-0112-10"/></concept>
-	<concept><code value="66521-0113-02"/></concept>
-	<concept><code value="66521-0113-10"/></concept>
-	<concept><code value="66521-0114-02"/></concept>
-	<concept><code value="66521-0114-10"/></concept>
-	<concept><code value="66521-0115-02"/></concept>
-	<concept><code value="66521-0115-10"/></concept>
-	<concept><code value="66521-0116-02"/></concept>
-	<concept><code value="66521-0116-10"/></concept>
-	<concept><code value="66521-0117-02"/></concept>
-	<concept><code value="66521-0117-10"/></concept>
-	<concept><code value="66521-0118-02"/></concept>
-	<concept><code value="66521-0118-10"/></concept>
-	<concept><code value="66521-0200-02"/></concept>
-	<concept><code value="66521-0200-10"/></concept>
-	<concept><code value="69401-0000-01"/></concept>
-	<concept><code value="69401-0000-02"/></concept>
-	<concept><code value="70460-0001-01"/></concept>
-	<concept><code value="70461-0001-01"/></concept>
-	<concept><code value="70461-0002-01"/></concept>
-	<concept><code value="70461-0018-03"/></concept>
-	<concept><code value="70461-0119-02"/></concept>
-	<concept><code value="70461-0119-10"/></concept>
-	<concept><code value="70461-0120-02"/></concept>
-	<concept><code value="70461-0120-10"/></concept>
-	<concept><code value="70461-0200-01"/></concept>
-	<concept><code value="70461-0201-01"/></concept>
-	<concept><code value="70461-0301-10"/></concept>
-	<concept><code value="70461-0318-03"/></concept>
-	<concept><code value="70461-0418-10"/></concept>
-	<concept><code value="76420-0482-01"/></concept>
-	<concept><code value="76420-0483-01"/></concept>
-	<concept><code value="63361-0245-10"/></concept>
-</include>
-	</compose>
-</ValueSet>
+  <id value="us-core-ndc-vaccine-codes"/>
+  <url value="http://hl7.org/fhir/us/core/ValueSet/us-core-ndc-vaccine-codes"/>
+  <version value="1.0.1"/>
+  <name value="USCoreVaccineNationalDrugCode"/>
+  <title value="US Core Vaccine National Drug Codes (NDC)"/>
+  <status value="active"/>
+  <date value="2019-05-21"/>
+  <publisher value="HL7 US Realm Steering Committee"/>
+  <description value="This value set includes all the Vaccine National Drug Codes (NDC).  This source of this data is provided by the [CDC](https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp)"/>
+  <purpose value="Codes that are used as translations for CVS code for implementation of the Argonaut Immunization IG and MU2015 certification."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/sid/ndc"/>
+      <concept>
+        <code value="00005-0100-02"/>
+        <display value="Trumenba"/>
+      </concept>
+      <concept>
+        <code value="00005-0100-05"/>
+        <display value="Trumenba"/>
+      </concept>
+      <concept>
+        <code value="00005-0100-10"/>
+        <display value="Trumenba"/>
+      </concept>
+      <concept>
+        <code value="00005-1970-50"/>
+        <display value="Prevnar"/>
+      </concept>
+      <concept>
+        <code value="00005-1971-02"/>
+        <display value="PREVNAR 13"/>
+      </concept>
+      <concept>
+        <code value="00005-1971-04"/>
+        <display value="PREVNAR 13"/>
+      </concept>
+      <concept>
+        <code value="00005-1971-05"/>
+        <display value="PREVNAR 13"/>
+      </concept>
+      <concept>
+        <code value="00006-4045-00"/>
+        <display value="GARDASIL"/>
+      </concept>
+      <concept>
+        <code value="00006-4045-41"/>
+        <display value="GARDASIL"/>
+      </concept>
+      <concept>
+        <code value="00006-4047-20"/>
+        <display value="RotaTeq"/>
+      </concept>
+      <concept>
+        <code value="00006-4047-41"/>
+        <display value="RotaTeq"/>
+      </concept>
+      <concept>
+        <code value="00006-4093-02"/>
+        <display value="RECOMBIVAX HB"/>
+      </concept>
+      <concept>
+        <code value="00006-4093-09"/>
+        <display value="RECOMBIVAX HB"/>
+      </concept>
+      <concept>
+        <code value="00006-4094-02"/>
+        <display value="RECOMBIVAX HB"/>
+      </concept>
+      <concept>
+        <code value="00006-4094-09"/>
+        <display value="RECOMBIVAX HB"/>
+      </concept>
+      <concept>
+        <code value="00006-4095-02"/>
+        <display value="VAQTA"/>
+      </concept>
+      <concept>
+        <code value="00006-4095-09"/>
+        <display value="VAQTA"/>
+      </concept>
+      <concept>
+        <code value="00006-4096-02"/>
+        <display value="VAQTA"/>
+      </concept>
+      <concept>
+        <code value="00006-4096-09"/>
+        <display value="VAQTA"/>
+      </concept>
+      <concept>
+        <code value="00006-4109-02"/>
+        <display value="GARDASIL"/>
+      </concept>
+      <concept>
+        <code value="00006-4109-09"/>
+        <display value="GARDASIL"/>
+      </concept>
+      <concept>
+        <code value="00006-4119-02"/>
+        <display value="GARDASIL 9"/>
+      </concept>
+      <concept>
+        <code value="00006-4119-03"/>
+        <display value="GARDASIL 9"/>
+      </concept>
+      <concept>
+        <code value="00006-4121-02"/>
+        <display value="GARDASIL 9"/>
+      </concept>
+      <concept>
+        <code value="00006-4133-41"/>
+        <display value="Tetanus and Diphtheria Toxoids Adsorbed"/>
+      </concept>
+      <concept>
+        <code value="00006-4171-00"/>
+        <display value="ProQuad"/>
+      </concept>
+      <concept>
+        <code value="00006-4681-00"/>
+        <display value="M-M-R II"/>
+      </concept>
+      <concept>
+        <code value="00006-4739-00"/>
+        <display value="PNEUMOVAX 23"/>
+      </concept>
+      <concept>
+        <code value="00006-4826-00"/>
+        <display value="VARIVAX"/>
+      </concept>
+      <concept>
+        <code value="00006-4827-00"/>
+        <display value="VARIVAX"/>
+      </concept>
+      <concept>
+        <code value="00006-4831-41"/>
+        <display value="VAQTA"/>
+      </concept>
+      <concept>
+        <code value="00006-4837-02"/>
+        <display value="PNEUMOVAX 23"/>
+      </concept>
+      <concept>
+        <code value="00006-4837-03"/>
+        <display value="PNEUMOVAX 23"/>
+      </concept>
+      <concept>
+        <code value="00006-4841-00"/>
+        <display value="VAQTA"/>
+      </concept>
+      <concept>
+        <code value="00006-4841-41"/>
+        <display value="VAQTA"/>
+      </concept>
+      <concept>
+        <code value="00006-4897-00"/>
+        <display value="PedvaxHIB"/>
+      </concept>
+      <concept>
+        <code value="00006-4898-00"/>
+        <display value="COMVAX"/>
+      </concept>
+      <concept>
+        <code value="00006-4943-00"/>
+        <display value="PNEUMOVAX 23"/>
+      </concept>
+      <concept>
+        <code value="00006-4963-00"/>
+        <display value="ZOSTAVAX"/>
+      </concept>
+      <concept>
+        <code value="00006-4963-41"/>
+        <display value="ZOSTAVAX"/>
+      </concept>
+      <concept>
+        <code value="00006-4980-00"/>
+        <display value="RECOMBIVAX HB"/>
+      </concept>
+      <concept>
+        <code value="00006-4981-00"/>
+        <display value="RECOMBIVAX HB"/>
+      </concept>
+      <concept>
+        <code value="00006-4992-00"/>
+        <display value="RECOMBIVAX HB"/>
+      </concept>
+      <concept>
+        <code value="00006-4995-00"/>
+        <display value="RECOMBIVAX HB"/>
+      </concept>
+      <concept>
+        <code value="00006-4995-41"/>
+        <display value="RECOMBIVAX HB"/>
+      </concept>
+      <concept>
+        <code value="00006-4999-00"/>
+        <display value="ProQuad"/>
+      </concept>
+      <concept>
+        <code value="00052-0603-02"/>
+        <display value="BCG VACCINE"/>
+      </concept>
+      <concept>
+        <code value="13533-0131-01"/>
+        <display value="Tetanus and Diphtheria Toxoids Adsorbed"/>
+      </concept>
+      <concept>
+        <code value="14362-0111-04"/>
+        <display value="Tetanus and Diphtheria Toxoids Adsorbed"/>
+      </concept>
+      <concept>
+        <code value="17478-0131-01"/>
+        <display value="Tetanus and Diphtheria Toxoids Adsorbed"/>
+      </concept>
+      <concept>
+        <code value="19515-0845-11"/>
+        <display value="FLULAVAL"/>
+      </concept>
+      <concept>
+        <code value="19515-0850-52"/>
+        <display value="FLULAVAL"/>
+      </concept>
+      <concept>
+        <code value="19515-0889-07"/>
+        <display value="FLULAVAL"/>
+      </concept>
+      <concept>
+        <code value="19515-0890-07"/>
+        <display value="FLULAVAL"/>
+      </concept>
+      <concept>
+        <code value="19515-0891-11"/>
+        <display value="Flulaval Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="19515-0893-07"/>
+        <display value="FLULAVAL"/>
+      </concept>
+      <concept>
+        <code value="19515-0894-52"/>
+        <display value="Flulaval Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="19515-0895-11"/>
+        <display value="Flulaval Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="19515-0896-11"/>
+        <display value="Flulaval Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="19515-0898-11"/>
+        <display value="Flulaval Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="19515-0900-11"/>
+        <display value="Flulaval Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="19515-0901-52"/>
+        <display value="Flulaval Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="19515-0903-11"/>
+        <display value="Flulaval Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="19515-0908-52"/>
+        <display value="Flulaval Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="19515-0909-52"/>
+        <display value="Flulaval Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="19515-0912-52"/>
+        <display value="Flulaval Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="21695-0413-01"/>
+        <display value="Tetanus and Diphtheria Toxoids Adsorbed"/>
+      </concept>
+      <concept>
+        <code value="33332-0010-01"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0013-01"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0014-01"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0015-01"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0016-01"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0017-01"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0018-01"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0110-10"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0113-10"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0114-10"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0115-10"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0116-10"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0117-10"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0118-10"/>
+        <display value="AFLURIA"/>
+      </concept>
+      <concept>
+        <code value="33332-0316-01"/>
+        <display value="AFLURIA QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="33332-0317-01"/>
+        <display value="AFLURIA QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="33332-0318-01"/>
+        <display value="AFLURIA QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="33332-0416-10"/>
+        <display value="AFLURIA QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="33332-0417-10"/>
+        <display value="AFLURIA QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="33332-0418-10"/>
+        <display value="AFLURIA QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="33332-0519-01"/>
+        <display value="Influenza A"/>
+      </concept>
+      <concept>
+        <code value="33332-0519-25"/>
+        <display value="Influenza A"/>
+      </concept>
+      <concept>
+        <code value="33332-0629-10"/>
+        <display value="Influenza A"/>
+      </concept>
+      <concept>
+        <code value="42515-0001-01"/>
+        <display value="IXIARO"/>
+      </concept>
+      <concept>
+        <code value="42515-0001-01"/>
+        <display value="IXIARO"/>
+      </concept>
+      <concept>
+        <code value="42515-0001-01"/>
+        <display value="IXIARO"/>
+      </concept>
+      <concept>
+        <code value="42515-0001-01"/>
+        <display value="IXIARO"/>
+      </concept>
+      <concept>
+        <code value="42515-0002-01"/>
+        <display value="IXIARO"/>
+      </concept>
+      <concept>
+        <code value="42874-0012-10"/>
+        <display value="Flublok"/>
+      </concept>
+      <concept>
+        <code value="42874-0013-10"/>
+        <display value="Flublok"/>
+      </concept>
+      <concept>
+        <code value="42874-0014-10"/>
+        <display value="Flublok"/>
+      </concept>
+      <concept>
+        <code value="42874-0015-10"/>
+        <display value="Flublok"/>
+      </concept>
+      <concept>
+        <code value="42874-0016-10"/>
+        <display value="Flublok"/>
+      </concept>
+      <concept>
+        <code value="42874-0017-10"/>
+        <display value="Flublok"/>
+      </concept>
+      <concept>
+        <code value="42874-0117-10"/>
+        <display value="Flublok Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="43528-0002-05"/>
+        <display value="HEPLISAV-B"/>
+      </concept>
+      <concept>
+        <code value="43528-0003-05"/>
+        <display value="HEPLISAV-B"/>
+      </concept>
+      <concept>
+        <code value="46028-0114-01"/>
+        <display value="Bexsero"/>
+      </concept>
+      <concept>
+        <code value="46028-0114-02"/>
+        <display value="Bexsero"/>
+      </concept>
+      <concept>
+        <code value="46028-0208-01"/>
+        <display value="Menveo"/>
+      </concept>
+      <concept>
+        <code value="46028-0208-01"/>
+        <display value="Menveo"/>
+      </concept>
+      <concept>
+        <code value="49281-0010-10"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0010-25"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0010-50"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0011-10"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0011-50"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0012-10"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0012-50"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0013-10"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0013-50"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0014-50"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0111-25"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0112-25"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0113-25"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0215-10"/>
+        <display value="TENIVAC"/>
+      </concept>
+      <concept>
+        <code value="49281-0215-15"/>
+        <display value="TENIVAC"/>
+      </concept>
+      <concept>
+        <code value="49281-0225-10"/>
+        <display value="DIPHTHERIA AND TETANUS TOXOIDS ADSORBED"/>
+      </concept>
+      <concept>
+        <code value="49281-0250-51"/>
+        <display value="IMOVAX RABIES"/>
+      </concept>
+      <concept>
+        <code value="49281-0278-10"/>
+        <display value="DIPHTHERIA AND TETANUS TOXOIDS ADSORBED"/>
+      </concept>
+      <concept>
+        <code value="49281-0286-01"/>
+        <display value="DAPTACEL"/>
+      </concept>
+      <concept>
+        <code value="49281-0286-05"/>
+        <display value="DAPTACEL"/>
+      </concept>
+      <concept>
+        <code value="49281-0286-10"/>
+        <display value="DAPTACEL"/>
+      </concept>
+      <concept>
+        <code value="49281-0291-10"/>
+        <display value="DECAVAC"/>
+      </concept>
+      <concept>
+        <code value="49281-0291-83"/>
+        <display value="DECAVAC"/>
+      </concept>
+      <concept>
+        <code value="49281-0298-10"/>
+        <display value="TRIPEDIA"/>
+      </concept>
+      <concept>
+        <code value="49281-0386-15"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0387-65"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0388-15"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0389-65"/>
+        <display value="FLUZONE HIGH DOSE"/>
+      </concept>
+      <concept>
+        <code value="49281-0390-15"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0391-65"/>
+        <display value="FLUZONE High-Dose"/>
+      </concept>
+      <concept>
+        <code value="49281-0392-15"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0393-65"/>
+        <display value="FLUZONE High-Dose"/>
+      </concept>
+      <concept>
+        <code value="49281-0394-15"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0395-65"/>
+        <display value="FLUZONE High-Dose"/>
+      </concept>
+      <concept>
+        <code value="49281-0396-15"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0397-65"/>
+        <display value="FLUZONE High-Dose"/>
+      </concept>
+      <concept>
+        <code value="49281-0399-65"/>
+        <display value="FLUZONE High-Dose"/>
+      </concept>
+      <concept>
+        <code value="49281-0400-05"/>
+        <display value="Adacel"/>
+      </concept>
+      <concept>
+        <code value="49281-0400-10"/>
+        <display value="Adacel"/>
+      </concept>
+      <concept>
+        <code value="49281-0400-15"/>
+        <display value="Adacel"/>
+      </concept>
+      <concept>
+        <code value="49281-0400-20"/>
+        <display value="Adacel"/>
+      </concept>
+      <concept>
+        <code value="49281-0401-65"/>
+        <display value="FLUZONE High-Dose"/>
+      </concept>
+      <concept>
+        <code value="49281-0403-65"/>
+        <display value="FLUZONE High-Dose"/>
+      </concept>
+      <concept>
+        <code value="49281-0413-10"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0413-50"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0414-10"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0414-50"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0415-10"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0416-10"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0416-50"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0417-10"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0417-50"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0418-10"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0418-50"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0489-01"/>
+        <display value="MENOMUNE - A/C/Y/W-135 COMBINED"/>
+      </concept>
+      <concept>
+        <code value="49281-0489-91"/>
+        <display value="MENOMUNE - A/C/Y/W-135 COMBINED"/>
+      </concept>
+      <concept>
+        <code value="49281-0510-05"/>
+        <display value="PENTACEL"/>
+      </concept>
+      <concept>
+        <code value="49281-0510-05"/>
+        <display value="PENTACEL"/>
+      </concept>
+      <concept>
+        <code value="49281-0513-25"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0514-25"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0516-25"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0517-25"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0518-25"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0545-03"/>
+        <display value="ActHIB"/>
+      </concept>
+      <concept>
+        <code value="49281-0545-05"/>
+        <display value="ActHIB"/>
+      </concept>
+      <concept>
+        <code value="49281-0562-10"/>
+        <display value="QUADRACEL"/>
+      </concept>
+      <concept>
+        <code value="49281-0589-05"/>
+        <display value="Menactra"/>
+      </concept>
+      <concept>
+        <code value="49281-0621-15"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0625-15"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0627-15"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0629-15"/>
+        <display value="FLUZONE QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0640-15"/>
+        <display value="INFLUENZA A (H1N1) 2009 MONOVALENT VACCINE"/>
+      </concept>
+      <concept>
+        <code value="49281-0650-10"/>
+        <display value="INFLUENZA A (H1N1) 2009 MONOVALENT VACCINE"/>
+      </concept>
+      <concept>
+        <code value="49281-0650-25"/>
+        <display value="INFLUENZA A (H1N1) 2009 MONOVALENT VACCINE"/>
+      </concept>
+      <concept>
+        <code value="49281-0650-50"/>
+        <display value="INFLUENZA A (H1N1) 2009 MONOVALENT VACCINE"/>
+      </concept>
+      <concept>
+        <code value="49281-0650-70"/>
+        <display value="INFLUENZA A (H1N1) 2009 MONOVALENT VACCINE"/>
+      </concept>
+      <concept>
+        <code value="49281-0650-90"/>
+        <display value="INFLUENZA A (H1N1) 2009 MONOVALENT VACCINE"/>
+      </concept>
+      <concept>
+        <code value="49281-0703-55"/>
+        <display value="FLUZONE INTRADERMAL"/>
+      </concept>
+      <concept>
+        <code value="49281-0705-55"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0707-55"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="49281-0708-40"/>
+        <display value="FLUZONE INTRADERMAL QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0709-55"/>
+        <display value="FLUZONE Intradermal"/>
+      </concept>
+      <concept>
+        <code value="49281-0710-40"/>
+        <display value="FLUZONE INTRADERMAL QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0712-40"/>
+        <display value="FLUZONE INTRADERMAL QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="49281-0718-10"/>
+        <display value="Flublok Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="49281-0790-20"/>
+        <display value="Typhim Vi"/>
+      </concept>
+      <concept>
+        <code value="49281-0790-51"/>
+        <display value="Typhim Vi"/>
+      </concept>
+      <concept>
+        <code value="49281-0800-83"/>
+        <display value="TETANUS TOXOID ADSORBED"/>
+      </concept>
+      <concept>
+        <code value="49281-0820-10"/>
+        <display value="TETANUS TOXOID ADSORBED"/>
+      </concept>
+      <concept>
+        <code value="49281-0860-10"/>
+        <display value="IPOL"/>
+      </concept>
+      <concept>
+        <code value="49281-0860-10"/>
+        <display value="IPOL"/>
+      </concept>
+      <concept>
+        <code value="49281-0860-55"/>
+        <display value="IPOL"/>
+      </concept>
+      <concept>
+        <code value="49281-0913-01"/>
+        <display value="STAMARIL"/>
+      </concept>
+      <concept>
+        <code value="49281-0915-01"/>
+        <display value="YF-VAX"/>
+      </concept>
+      <concept>
+        <code value="49281-0915-05"/>
+        <display value="YF-VAX"/>
+      </concept>
+      <concept>
+        <code value="50090-1693-09"/>
+        <display value="IPOL"/>
+      </concept>
+      <concept>
+        <code value="50090-2883-00"/>
+        <display value="INFANRIX"/>
+      </concept>
+      <concept>
+        <code value="50090-3096-00"/>
+        <display value="RabAvert"/>
+      </concept>
+      <concept>
+        <code value="50090-3469-00"/>
+        <display value="HEPLISAV-B"/>
+      </concept>
+      <concept>
+        <code value="51285-0138-50"/>
+        <display value="Adenovirus Type 4 and Type 7 Vaccine, Live"/>
+      </concept>
+      <concept>
+        <code value="51285-0138-50"/>
+        <display value="Adenovirus Type 4 and Type 7 Vaccine, Live"/>
+      </concept>
+      <concept>
+        <code value="54868-0734-00"/>
+        <display value="ENGERIX-B"/>
+      </concept>
+      <concept>
+        <code value="54868-0980-00"/>
+        <display value="M-M-R II"/>
+      </concept>
+      <concept>
+        <code value="54868-2219-00"/>
+        <display value="RECOMBIVAX HB"/>
+      </concept>
+      <concept>
+        <code value="54868-2219-01"/>
+        <display value="RECOMBIVAX HB"/>
+      </concept>
+      <concept>
+        <code value="54868-3339-01"/>
+        <display value="PNEUMOVAX 23"/>
+      </concept>
+      <concept>
+        <code value="54868-4320-00"/>
+        <display value="PNEUMOVAX 23"/>
+      </concept>
+      <concept>
+        <code value="54868-6177-00"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="54868-6180-00"/>
+        <display value="FLUZONE"/>
+      </concept>
+      <concept>
+        <code value="55045-3841-01"/>
+        <display value="HAVRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0801-11"/>
+        <display value="Menhibrix"/>
+      </concept>
+      <concept>
+        <code value="58160-0806-05"/>
+        <display value="HIBERIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0808-15"/>
+        <display value="Influenza A (H5N1) Monovalent Vaccine, Adjuvanted"/>
+      </concept>
+      <concept>
+        <code value="58160-0808-15"/>
+        <display value="Influenza A (H5N1) Monovalent Vaccine, Adjuvanted"/>
+      </concept>
+      <concept>
+        <code value="58160-0809-05"/>
+        <display value="MENHIBRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0810-11"/>
+        <display value="INFANRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0810-52"/>
+        <display value="INFANRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0811-51"/>
+        <display value="PEDIARIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0811-52"/>
+        <display value="PEDIARIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0812-11"/>
+        <display value="KINRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0812-52"/>
+        <display value="KINRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0815-11"/>
+        <display value="TWINRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0815-34"/>
+        <display value="TWINRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0815-46"/>
+        <display value="TWINRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0815-48"/>
+        <display value="TWINRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0815-52"/>
+        <display value="TWINRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0816-05"/>
+        <display value="Hiberix"/>
+      </concept>
+      <concept>
+        <code value="58160-0818-11"/>
+        <display value="Hiberix"/>
+      </concept>
+      <concept>
+        <code value="58160-0819-12"/>
+        <display value="Shingrix"/>
+      </concept>
+      <concept>
+        <code value="58160-0820-11"/>
+        <display value="ENGERIX-B"/>
+      </concept>
+      <concept>
+        <code value="58160-0820-52"/>
+        <display value="ENGERIX-B"/>
+      </concept>
+      <concept>
+        <code value="58160-0821-11"/>
+        <display value="ENGERIX-B"/>
+      </concept>
+      <concept>
+        <code value="58160-0821-34"/>
+        <display value="ENGERIX-B"/>
+      </concept>
+      <concept>
+        <code value="58160-0821-52"/>
+        <display value="ENGERIX-B"/>
+      </concept>
+      <concept>
+        <code value="58160-0823-11"/>
+        <display value="Shingrix"/>
+      </concept>
+      <concept>
+        <code value="58160-0825-11"/>
+        <display value="HAVRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0825-52"/>
+        <display value="HAVRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0826-11"/>
+        <display value="HAVRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0826-34"/>
+        <display value="HAVRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0826-52"/>
+        <display value="HAVRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0830-34"/>
+        <display value="CERVARIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0830-52"/>
+        <display value="CERVARIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0842-11"/>
+        <display value="BOOSTRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0842-34"/>
+        <display value="BOOSTRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0842-51"/>
+        <display value="BOOSTRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0842-52"/>
+        <display value="BOOSTRIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0854-52"/>
+        <display value="ROTARIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0879-52"/>
+        <display value="FLUARIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0880-52"/>
+        <display value="FLUARIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0881-52"/>
+        <display value="FLUARIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0883-52"/>
+        <display value="FLUARIX"/>
+      </concept>
+      <concept>
+        <code value="58160-0898-52"/>
+        <display value="FLUARIX QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="58160-0900-52"/>
+        <display value="FLUARIX QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="58160-0901-52"/>
+        <display value="FLUARIX QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="58160-0903-52"/>
+        <display value="FLUARIX QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="58160-0905-52"/>
+        <display value="FLUARIX QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="58160-0907-52"/>
+        <display value="FLUARIX QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="58160-0955-09"/>
+        <display value="Menveo"/>
+      </concept>
+      <concept>
+        <code value="58160-0955-09"/>
+        <display value="Menveo"/>
+      </concept>
+      <concept>
+        <code value="58160-0964-12"/>
+        <display value="RabAvert"/>
+      </concept>
+      <concept>
+        <code value="58160-0964-12"/>
+        <display value="RabAvert"/>
+      </concept>
+      <concept>
+        <code value="58160-0976-06"/>
+        <display value="Bexsero"/>
+      </concept>
+      <concept>
+        <code value="58160-0976-20"/>
+        <display value="Bexsero"/>
+      </concept>
+      <concept>
+        <code value="62195-0051-10"/>
+        <display value="Ixiaro"/>
+      </concept>
+      <concept>
+        <code value="62577-0613-01"/>
+        <display value="Flucelvax"/>
+      </concept>
+      <concept>
+        <code value="62577-0614-01"/>
+        <display value="Flucelvax"/>
+      </concept>
+      <concept>
+        <code value="63851-0501-01"/>
+        <display value="RabAvert"/>
+      </concept>
+      <concept>
+        <code value="63851-0501-02"/>
+        <display value="RabAvert"/>
+      </concept>
+      <concept>
+        <code value="63851-0612-01"/>
+        <display value="Flucelvax"/>
+      </concept>
+      <concept>
+        <code value="63851-0613-01"/>
+        <display value="FLUCELVAX"/>
+      </concept>
+      <concept>
+        <code value="64678-0211-01"/>
+        <display value="BioThrax"/>
+      </concept>
+      <concept>
+        <code value="66019-0107-01"/>
+        <display value="FLUMIST"/>
+      </concept>
+      <concept>
+        <code value="66019-0108-10"/>
+        <display value="FLUMIST"/>
+      </concept>
+      <concept>
+        <code value="66019-0109-10"/>
+        <display value="FLUMIST"/>
+      </concept>
+      <concept>
+        <code value="66019-0110-10"/>
+        <display value="FluMist"/>
+      </concept>
+      <concept>
+        <code value="66019-0200-10"/>
+        <display value="Influenza A H1N1 Intranasal"/>
+      </concept>
+      <concept>
+        <code value="66019-0300-10"/>
+        <display value="FluMist Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="66019-0301-10"/>
+        <display value="FluMist Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="66019-0302-10"/>
+        <display value="FluMist Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="66019-0303-10"/>
+        <display value="FluMist Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="66019-0304-10"/>
+        <display value="FluMist Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="66019-0305-10"/>
+        <display value="FluMist Quadrivalent"/>
+      </concept>
+      <concept>
+        <code value="66521-0000-01"/>
+        <display value="FLUAD"/>
+      </concept>
+      <concept>
+        <code value="66521-0112-02"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="66521-0112-10"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="66521-0113-02"/>
+        <display value="FLUVIRIN"/>
+      </concept>
+      <concept>
+        <code value="66521-0113-10"/>
+        <display value="FLUVIRIN"/>
+      </concept>
+      <concept>
+        <code value="66521-0114-02"/>
+        <display value="FLUVIRIN"/>
+      </concept>
+      <concept>
+        <code value="66521-0114-10"/>
+        <display value="FLUVIRIN"/>
+      </concept>
+      <concept>
+        <code value="66521-0115-02"/>
+        <display value="FLUVIRIN"/>
+      </concept>
+      <concept>
+        <code value="66521-0115-10"/>
+        <display value="FLUVIRIN"/>
+      </concept>
+      <concept>
+        <code value="66521-0116-02"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="66521-0116-10"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="66521-0117-02"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="66521-0117-10"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="66521-0118-02"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="66521-0118-10"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="66521-0200-02"/>
+        <display value="Influenza A (H1N1) 2009 Monovalent Vaccine"/>
+      </concept>
+      <concept>
+        <code value="66521-0200-10"/>
+        <display value="Influenza A (H1N1) 2009 Monovalent Vaccine"/>
+      </concept>
+      <concept>
+        <code value="69401-0000-01"/>
+        <display value="Vivotif"/>
+      </concept>
+      <concept>
+        <code value="69401-0000-02"/>
+        <display value="Vivotif"/>
+      </concept>
+      <concept>
+        <code value="70460-0001-01"/>
+        <display value="Vaxchora"/>
+      </concept>
+      <concept>
+        <code value="70461-0001-01"/>
+        <display value="FLUAD"/>
+      </concept>
+      <concept>
+        <code value="70461-0002-01"/>
+        <display value="FLUAD"/>
+      </concept>
+      <concept>
+        <code value="70461-0018-03"/>
+        <display value="FLUAD"/>
+      </concept>
+      <concept>
+        <code value="70461-0119-02"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="70461-0119-10"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="70461-0120-02"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="70461-0120-10"/>
+        <display value="Fluvirin"/>
+      </concept>
+      <concept>
+        <code value="70461-0200-01"/>
+        <display value="FLUCELVAX QUADRIVALENT"/>
+      </concept>
+      <concept>
+        <code value="70461-0201-01"/>
+        <display value="FLUCELVAX QUADRIVALENT (PREFILLED SYRINGE)"/>
+      </concept>
+      <concept>
+        <code value="70461-0301-10"/>
+        <display value="FLUCELVAX QUADRIVALENT (MULTI-DOSE VIAL)"/>
+      </concept>
+      <concept>
+        <code value="70461-0318-03"/>
+        <display value="FLUCELVAX QUADRIVALENT (PREFILLED SYRINGE)"/>
+      </concept>
+      <concept>
+        <code value="70461-0418-10"/>
+        <display value="FLUCELVAX QUADRIVALENT (MULTI-DOSE VIAL)"/>
+      </concept>
+      <concept>
+        <code value="76420-0482-01"/>
+        <display value="Medical Provider Single Use EZ Flu Shot 2013-2014"/>
+      </concept>
+      <concept>
+        <code value="76420-0483-01"/>
+        <display value="Medical Provider Single Use EZ Flu Shot 2013-2014"/>
+      </concept>
+      <concept>
+        <code value="63361-0245-10"/>
+        <display value="VAXELIS"/>
+      </concept>
+		</include>
+    </compose>
+  </ValueSet>
