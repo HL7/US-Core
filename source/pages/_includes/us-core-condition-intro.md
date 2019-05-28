@@ -33,7 +33,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 ### Examples
 
- - [Condition-hc1](Condition-hc1.html) is an example of a condition categorized as a "problem"
- - [Condition-example](Condition-example.html) is an example of a condition categorized as a "health-concern"
+ - [Condition-hc1](Condition-hc1.html) is an example of a condition categorized as a "health-concern"
+ - [Condition-example](Condition-example.html) is an example of a condition categorized as a "problem"
 
 {% include link-list.md %}
