@@ -15,6 +15,17 @@ layout: default
 
 ### Introduction
 
+The Argonaut R4 Implementation Guide is a copy of the the *US Core Implementation Guide STU3* which is based on FHIR R4.  This guide is the basis for further testing and guidance by the Argonaut Project Team.  The guide will retain the US Core artifacts and names and provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. It is anticipated this updated content will contributed to HL7 US Core R4 IG through an HL7 STU update (quick ballot) in autumn 2019
+
+Argonaut R4 Implementation Guide Ground Rules:
+
+1. Reuse HL7 US Core Implementation Guide profiles
+1. Issues identified with US Core Profiles will be reported to HL7 to be fixed in fall STU update
+1. New profiles, such as Provenance, may be included in the Argonaut IG before being ported to US Core
+1. Profiles not planned for port to US Core are out of scope
+
+---
+
 The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for accessing patient data. The [Argonaut] pilot implementations, ONC [2015 Edition Common Clinical Data Set (CCDS)], and the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)] provided the requirements for this guide.  The prior Argonaut search and vocabulary requirements, based on [FHIR DSTU2](http://hl7.org/fhir/DSTU2/index.html), are updated in this guide to support [FHIR Version R4]. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by [DAF-Research], [QI-Core], and [CIMI].  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
 
 These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the [Office of the National Coordinator for Health Information Technology (ONC)] sponsored [Data Access Framework] (DAF) project. For more information on how DAF became US Core see the [US Core change notes](change-notes.html).
