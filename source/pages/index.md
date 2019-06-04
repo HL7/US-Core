@@ -15,14 +15,14 @@ layout: default
 
 ### Introduction
 
-The Argonaut R4 Implementation Guide is a copy of the the *US Core Implementation Guide STU3* which is based on FHIR R4.  This guide is the basis for further testing and guidance by the Argonaut Project Team.  The guide will retain the US Core artifacts and names and provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. It is anticipated this updated content will contributed to HL7 US Core R4 IG through an HL7 STU update (quick ballot) in autumn 2019
+**The Argonaut R4 Implementation Guide is a copy of the the *US Core Implementation Guide STU3* which is based on FHIR R4.  This guide is the basis for further testing and guidance by the Argonaut Project Team.  The guide will retain the US Core artifacts and names and provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. It is anticipated this updated content will contributed to HL7 US Core R4 IG through an HL7 STU update (quick ballot) in autumn 2019**
 
-Argonaut R4 Implementation Guide Ground Rules:
+**Argonaut R4 Implementation Guide Ground Rules:**
 
-1. Reuse HL7 US Core Implementation Guide profiles
-1. Issues identified with US Core Profiles will be reported to HL7 to be fixed in fall STU update
-1. New profiles, such as Provenance, may be included in the Argonaut IG before being ported to US Core
-1. Profiles not planned for port to US Core are out of scope
+1. **Reuse HL7 US Core Implementation Guide profiles**
+1. **Issues identified with US Core Profiles will be reported to HL7 to be fixed in fall STU update**
+1. **New profiles, such as Provenance, may be included in the Argonaut IG before being ported to US Core**
+1. **Profiles not planned for port to US Core are out of scope**
 
 ---
 
