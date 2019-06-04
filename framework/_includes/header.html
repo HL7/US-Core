@@ -56,19 +56,18 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
+
         {% if site.data.fhir.version == 3.0.1 %}
         <b>{{ site.data.fhir.ig.name }} Implementation Guide</b>
         {% else %}
-        <!--<b>{{ site.data.fhir.ig.title }} Implementation Guide</b> no title!!-->
-        <b>{{ site.title }} Implementation Guide</b> 
+        <b>{{ site.title }}</b>
         {% endif %}
         {% if {{site.build}} == "ci" %}
         CI Build
         {% elsif {{site.build}} == "ballot" %}
         (Release {{ site.data.fhir.ig.version }} {{site.ballot}} Ballot)
-        {% else %}
-        (Release {{ site.data.fhir.ig.version }} )
         {% endif %}
+
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
