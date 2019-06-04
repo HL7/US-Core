@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>{{site.data.fhir.igName}}</title>
+  <title>{{site.title}}</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="{{site.data.fhir.igName}} Implemenation Guide" />
@@ -60,7 +60,7 @@
         <b>{{ site.data.fhir.ig.name }} Implementation Guide</b>
         {% else %}
         <!--<b>{{ site.data.fhir.ig.title }} Implementation Guide</b> no title!!-->
-        <b>{{ site.title }} Implementation Guide</b> 
+        <b>{{ site.title }} Implementation Guide</b>
         {% endif %}
         {% if {{site.build}} == "ci" %}
         CI Build
