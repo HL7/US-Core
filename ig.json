@@ -2,23 +2,23 @@
   "do-transforms": "false",
   "topofpage": "true",
   "license": "CC0-1.0",
-  "igtemplate-dir": "/Users/ehaas/Documents/FHIR/US-Core-R4/",
+  "igtemplate-dir": "/Users/ehaas/Documents/FHIR/Argo-R4/",
   "gen-examples": "false",
   "special-urls": [
     "urn:oid:2.16.840.1.113883.6.238",
     "urn:oid:2.16.840.1.113762.1.4.1021.24"
   ],
-  "npm-name": "hl7.fhir.us.core.r4",
-  "publisher": "HL7 International - US Realm Steering Committee",
-  "pub_url": "http://www.hl7.org/Special/Committees/usrealm/index.cfm",
-  "fixed-business-version": "3.0.0",
+  "npm-name": "hl7.fhir.us.core.argo",
+  "publisher": "The Argonaut Project",
+  "pub_url": "http://argonautwiki.hl7.org",
+  "fixed-business-version": "3.1.0",
   "extraTemplates": [
     "mappings"
   ],
   "status": "active",
   "tool": "jekyll",
   "jurisdiction": "US",
-  "title": "US Core R4",
+  "title": "Argo R4",
   "resources": {
     "SearchParameter/us-core-observation-code": {
       "base": "SearchParameter-us-core-observation-code.html",
@@ -947,7 +947,7 @@
     "progress"
   ],
   "allviews": "true",
-  "working-dir": "/Users/ehaas/Documents/FHIR/US-Core-R4/",
+  "working-dir": "/Users/ehaas/Documents/FHIR/Argo-R4/",
   "defaults": {
     "SearchParameter": {
       "template-base": "base.html"
@@ -1053,7 +1053,7 @@
   ],
   "no-inactive-codes": "false",
   "sct-edition": "http://snomed.info/sct/731000124108",
-  "name": "USCoreR4",
+  "name": "ArgoR4",
   "swagger": [
     {
       "mode": "single",
