@@ -46,10 +46,10 @@ GitHub will automatically trigger a new build whenever you commit changes.
 
 ### Find your rendered IG automatically available at
 
-http://build.fhir.org/ig/HL7/Argo-R4
+http://build.fhir.org/ig/argonautproject/R4/branches/master/index.html
 
 ### For a build log see
 
-http://build.fhir.org/ig/HL7/Argo-R4/build.log
+http://build.fhir.org/ig/HL7/US-Core-R4/branches/master/qa.html
 
 ---
