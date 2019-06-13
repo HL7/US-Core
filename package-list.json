@@ -1,5 +1,5 @@
 {
-  "package-id": "hl7.fhir.us.core.r4",
+  "package-id": "hl7.fhir.us.core",
   "title": "US Core",
   "canonical": "http://hl7.org/fhir/us/core",
   "introduction": "The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access – Data Category Request 170.315(g)(8). They were created for each item in the 2015 Edition Common Clinical Data Set (CCDS). The Location, Organization, and Practitioner Profiles are not called out specifically in the certification criteria but are included because they are directly referenced by other profiles. The US Core Profiles are informed by the prior Data Access Framework and the [Argonaut DSTU2](http://www.fhir.org/guides/argonaut/r2/) Implementation Guides. However, the profiles here are stand alone and include new requirements from the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isa/us-core-data-interoperability-uscdi) and includes all the [API Resource Collection in Health (ARCH)](https://www.healthit.gov/isa/api-resource-collection-health-arch) resources.  This implementation guide forms the foundation to build future US Realm FHIR implementation guides and its content will continue to grow to meet the needs of US implementers.",
@@ -13,7 +13,7 @@
     },
     {
       "version": "3.0.0",
-      "date": "2019-05-15",
+      "date": "2019-06-15",
       "desc": "FHIR R4 version of US Core which added profiles for exchanging Clinical Notes, expanded search expectations, and updated guidance as a results of comments from balloters.",
       "path": "http://hl7.org/fhir/us/core/STU3",
       "status": "trial-use",
