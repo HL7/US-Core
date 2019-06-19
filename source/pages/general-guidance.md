@@ -225,6 +225,33 @@ Clinical information that has been removed from the patient's record needs to be
 
   - A provider facing system MAY be supplied with additional details that the patient viewing system would typically not have access to.
 
+### Language Support
+
+There is a basic need be able to access records in your language, and the data provider should do their best to translate (safely) to the language being requested. Understanding that this will be variably complete depending on the nature of the record. For example translating the following elements is relatively straightforward:
+
+- `Coding.display`
+- Generated narrative
+- `Attachment.title`
+
+The following guidelines outline how to request and return a resource in the requested language.
+
+* Clients MAY request language/locale using the http `Accept-Language` header.  < link >
+* Servers SHOULD make reasonable efforts to translate what can be safely translated.
+* Servers SHOULD populate the Resource's `language` element which is reasonably based on the underlying language of record, *not* the requested language.
+    * Servers SHALL use the http://hl7.org/fhir/StructureDefinition/language extension when the language of a display, etc is known to be different to the stated (or inferred) language.
+
+          <todo  example snippet>
+
+* Servers SHALL use the http://hl7.org/fhir/StructureDefinition/translation where they wish to provide language translations.
+        <todo  example snippet>
+* Servers SHALL make discoverable what languages it can support.
+  - via its CapabilityStatement
+  - other means
+
+For further guidance on language and locale for generation of the resource narrative, see http://hl7.org/fhir/narrative.html#lang
+
+*TODO...Follow FHIR R5 guidance for how to report the user's timezone.*
+
 ### Read(Fetch) syntax:
 
 For fetching a resource interactions on profile pages are defined with the following syntax:

@@ -1,0 +1,768 @@
+{
+	"id": "3a1eff04-7c0b-425b-ae91-580e1956cd02",
+	"name": "Encounter",
+	"allTests": [],
+	"timestamp": "2019-06-19T15:32:22.324Z",
+	"collection_id": "af1b350c-31e2-4f59-baf6-abf872f5b807",
+	"folder_id": "08e1872f-93d2-4115-ba96-8dbfffdf01ed",
+	"target_type": "folder",
+	"environment_id": "225804e0-0e2f-47eb-b7eb-82f18cb885ac",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "af1b350c-31e2-4f59-baf6-abf872f5b807",
+		"name": "US_Core_R4",
+		"description": "US Core R4 Examples",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [],
+		"folders_order": [
+			"00b908ce-58b3-4d98-ab60-bfa55c05af9a",
+			"864e1f20-d97c-432f-99f7-08df0fba9677",
+			"08e1872f-93d2-4115-ba96-8dbfffdf01ed",
+			"65480b3c-13c0-427a-9c41-4eba3e238e1e",
+			"13c53e28-3c6c-4537-a6f1-295ea7e197a7"
+		],
+		"owner": "1447203",
+		"favorite": true,
+		"isFavorite": true
+	},
+	"folder": {
+		"id": "08e1872f-93d2-4115-ba96-8dbfffdf01ed",
+		"name": "Encounter",
+		"description": "",
+		"auth": null,
+		"events": null,
+		"collection": "af1b350c-31e2-4f59-baf6-abf872f5b807",
+		"folder": null,
+		"order": [
+			"1ed3e865-16a7-4643-b08a-29acfae90b5f",
+			"e4da06bd-6df3-4a8c-9c08-207e3f037c35",
+			"9f9a90e6-2b4e-4beb-ade8-3364e8aca919",
+			"69ad0cf3-67a7-43f9-9f6b-8d8a992af5d7",
+			"85c577bc-e0b3-45ae-bf5b-7a9c6155446d",
+			"fe16af37-734d-4e2d-b70c-2c90851ec82f",
+			"04f8f12b-ef69-44a4-9074-7cb4593041d2"
+		],
+		"folders_order": [],
+		"type": "folder",
+		"depth": 1
+	},
+	"environment": null,
+	"globals": [
+		{
+			"key": "epic_argo_r4",
+			"value": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4/",
+			"enabled": false
+		},
+		{
+			"key": "bin_url",
+			"value": "http://test.fhir.org/r3/Binary/omh-stepcount-example",
+			"enabled": true
+		},
+		{
+			"key": "commonTests",
+			"value": "() => {\n// check if get a 200 back for successful search\npm.test(\"Description:\" + request.description, function () {\n    pm.response;\n});\n//console.log(pm.request.url.query.all())\nvar query = {};\nvar good_to_go = true;\npm.request.url.query.all().forEach((param) => { \n    //console.log(param.key + ', param.value = ' + param.value);\n    if (param.value == null || param.value.startsWith('{')) {\n              pm.test(\"no \" +  param.key + \" value = \" + param.value, function () {\n              pm.expect.fail();\n              });\n             good_to_go = false; \n        }\n    });\n\n\nif (good_to_go){\nvar resource_type = pm.environment.get(\"resource_type\");\npm.test(\"response is ok\" + resource_type, function () {\n    pm.response.to.have.status(200);\n});\nif (pm.response.code === 200){\n    try{\n        var b = pm.response.json();\n        var has_r =false ;\n        for (var i in b.entry) {\n            r = b.entry[i].resource;\n            if  (r.resourceType == resource_type )\n            {\n                pm.test('Resource Type= ' + r.resourceType + \" id = \" + r.id, function () {});\n                has_r = true ;\n            }\n            }\n            if  (has_r === false){\n            pm.test(\"no \" + resource_type + \" in bundle\", function () {\n              pm.expect.fail();\n              });\n            }\n        }\n        \n        catch(e){\n            console.log(e);\n        }\n    }\n}\n}",
+			"enabled": true
+		},
+		{
+			"key": "reset_env",
+			"value": "() => {\n// reset all environmental variable for Encounter\nuri = pm.environment.get(\"uri\");\npatient = pm.environment.get(\"patient\");\npm.environment.clear();\npm.environment.set(\"uri\", uri);\npm.environment.set(\"patient\", patient);\n}",
+			"enabled": true
+		},
+		{
+			"key": "base_url",
+			"value": "http://hapi.fhir.org/baseR4",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "{{uri}}/Encounter?patient={{patient}}",
+			"id": "1ed3e865-16a7-4643-b08a-29acfae90b5f",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Description:SHALL support searching for all encounters for a patient using the patient search parameter:\n\nGET [base]/Encounter?patient=[reference]": true,
+				"response is ok": true,
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": true,
+				"period element is missingTypeError: Cannot read property 'start' of undefined": false,
+				"identifier element is missing or incompleteReferenceError: identifer is not defined": false,
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": true,
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": true,
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": true,
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
+			},
+			"testPassFailCounts": {
+				"Description:SHALL support searching for all encounters for a patient using the patient search parameter:\n\nGET [base]/Encounter?patient=[reference]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"period element is missingTypeError: Cannot read property 'start' of undefined": {
+					"pass": 0,
+					"fail": 1
+				},
+				"identifier element is missing or incompleteReferenceError: identifer is not defined": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"3902"
+			],
+			"allTests": [
+				{
+					"Description:SHALL support searching for all encounters for a patient using the patient search parameter:\n\nGET [base]/Encounter?patient=[reference]": true,
+					"response is ok": true,
+					"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": true,
+					"period element is missingTypeError: Cannot read property 'start' of undefined": false,
+					"identifier element is missing or incompleteReferenceError: identifer is not defined": false,
+					"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": true,
+					"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": true,
+					"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": true,
+					"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
+				}
+			],
+			"time": "3902",
+			"totalRequestTime": "3902",
+			"iterationResults": {}
+		},
+		{
+			"name": "{{uri}}/Encounter?_Id={{id}}",
+			"id": "e4da06bd-6df3-4a8c-9c08-207e3f037c35",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?_Id=ejPvGuBUqYJkCweOPRabvYg3",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Description:SHALL support fetching an encounter using the _id search parameter:\n\nGET [base]/Encounter[id]": true,
+				"response is okEncounter": true,
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
+			},
+			"testPassFailCounts": {
+				"Description:SHALL support fetching an encounter using the _id search parameter:\n\nGET [base]/Encounter[id]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is okEncounter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"186"
+			],
+			"allTests": [
+				{
+					"Description:SHALL support fetching an encounter using the _id search parameter:\n\nGET [base]/Encounter[id]": true,
+					"response is okEncounter": true,
+					"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
+				}
+			],
+			"time": "186",
+			"totalRequestTime": "186",
+			"iterationResults": {}
+		},
+		{
+			"name": "{{uri}}/Encounter?patient={{patient}}&date={{date}}",
+			"id": "9f9a90e6-2b4e-4beb-ade8-3364e8aca919",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&date={{date}}",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Description:SHALL support searching using the combination of the date and patient search parameters:\n\nGET [base]/Encounter?date={gt|lt|ge|le}[date]{&amp;date={gt|lt|ge|le}[date]&amp;...}&amp;patient=[reference]": true,
+				"no date value = {{date}}": false
+			},
+			"testPassFailCounts": {
+				"Description:SHALL support searching using the combination of the date and patient search parameters:\n\nGET [base]/Encounter?date={gt|lt|ge|le}[date]{&amp;date={gt|lt|ge|le}[date]&amp;...}&amp;patient=[reference]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"no date value = {{date}}": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"211"
+			],
+			"allTests": [
+				{
+					"Description:SHALL support searching using the combination of the date and patient search parameters:\n\nGET [base]/Encounter?date={gt|lt|ge|le}[date]{&amp;date={gt|lt|ge|le}[date]&amp;...}&amp;patient=[reference]": true,
+					"no date value = {{date}}": false
+				}
+			],
+			"time": "211",
+			"totalRequestTime": "211",
+			"iterationResults": {}
+		},
+		{
+			"name": "{{uri}}/Encounter?identifier={{identifier}}",
+			"id": "69ad0cf3-67a7-43f9-9f6b-8d8a992af5d7",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?identifier={{identifier}}",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"Description:SHOULD support searching using the identifier search parameter:\n\nGET [base]/Encounter?identifier={[system]}|[code]": true,
+				"no identifier value = {{identifier}}": false
+			},
+			"testPassFailCounts": {
+				"Description:SHOULD support searching using the identifier search parameter:\n\nGET [base]/Encounter?identifier={[system]}|[code]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"no identifier value = {{identifier}}": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"98"
+			],
+			"allTests": [
+				{
+					"Description:SHOULD support searching using the identifier search parameter:\n\nGET [base]/Encounter?identifier={[system]}|[code]": true,
+					"no identifier value = {{identifier}}": false
+				}
+			],
+			"time": "98",
+			"totalRequestTime": "98",
+			"iterationResults": {}
+		},
+		{
+			"name": "{{uri}}/Encounter?patient={{patient}}&class={{class}}",
+			"id": "85c577bc-e0b3-45ae-bf5b-7a9c6155446d",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&class=urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.13260|13",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Description:SHOULD support searching using the combination of the class and patient search parameters:\n\nGET [base]/Encounter?class={[system]}|[code]&amp;patient=[reference]\n\n": true,
+				"response is okEncounter": true,
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": true,
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": true,
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": true,
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": true,
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
+			},
+			"testPassFailCounts": {
+				"Description:SHOULD support searching using the combination of the class and patient search parameters:\n\nGET [base]/Encounter?class={[system]}|[code]&amp;patient=[reference]\n\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is okEncounter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"180"
+			],
+			"allTests": [
+				{
+					"Description:SHOULD support searching using the combination of the class and patient search parameters:\n\nGET [base]/Encounter?class={[system]}|[code]&amp;patient=[reference]\n\n": true,
+					"response is okEncounter": true,
+					"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": true,
+					"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": true,
+					"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": true,
+					"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": true,
+					"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
+				}
+			],
+			"time": "180",
+			"totalRequestTime": "180",
+			"iterationResults": {}
+		},
+		{
+			"name": "{{uri}}/Encounter?patient={{patient}}&type={{type}}",
+			"id": "fe16af37-734d-4e2d-b70c-2c90851ec82f",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&type=urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.30|210",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Description:SHOULD support searching using the combination of the patient and type search parameters:\n\nGET [base]/Encounter?patient=[reference]&amp;type={[system]}|[code]\n\n": true,
+				"response is okEncounter": true,
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": true,
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": true,
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": true,
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": true,
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
+			},
+			"testPassFailCounts": {
+				"Description:SHOULD support searching using the combination of the patient and type search parameters:\n\nGET [base]/Encounter?patient=[reference]&amp;type={[system]}|[code]\n\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is okEncounter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"185"
+			],
+			"allTests": [
+				{
+					"Description:SHOULD support searching using the combination of the patient and type search parameters:\n\nGET [base]/Encounter?patient=[reference]&amp;type={[system]}|[code]\n\n": true,
+					"response is okEncounter": true,
+					"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": true,
+					"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": true,
+					"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": true,
+					"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": true,
+					"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
+				}
+			],
+			"time": "185",
+			"totalRequestTime": "185",
+			"iterationResults": {}
+		},
+		{
+			"name": "{{uri}}/Encounter?patient={{patient}}&status={{status}}",
+			"id": "04f8f12b-ef69-44a4-9074-7cb4593041d2",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&status=finished",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Description:SHOULD support searching using the combination of the patient and status search parameters:\n\nGET [base]/Encounter?patient=[reference]&amp;status={[system]}|[code]": true,
+				"response is okEncounter": true,
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": true,
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": true,
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": true,
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": true,
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
+			},
+			"testPassFailCounts": {
+				"Description:SHOULD support searching using the combination of the patient and status search parameters:\n\nGET [base]/Encounter?patient=[reference]&amp;status={[system]}|[code]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is okEncounter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"180"
+			],
+			"allTests": [
+				{
+					"Description:SHOULD support searching using the combination of the patient and status search parameters:\n\nGET [base]/Encounter?patient=[reference]&amp;status={[system]}|[code]": true,
+					"response is okEncounter": true,
+					"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": true,
+					"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": true,
+					"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": true,
+					"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": true,
+					"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
+				}
+			],
+			"time": "180",
+			"totalRequestTime": "180",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 33,
+	"totalFail": 12,
+	"totalTime": 4942,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "{{uri}}/Encounter?patient={{patient}}",
+			"id": "1ed3e865-16a7-4643-b08a-29acfae90b5f",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3",
+			"time": "2019-06-19T15:32:22.324Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Description:SHALL support searching for all encounters for a patient using the patient search parameter:\n\nGET [base]/Encounter?patient=[reference]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"period element is missingTypeError: Cannot read property 'start' of undefined": {
+					"pass": 0,
+					"fail": 1
+				},
+				"identifier element is missing or incompleteReferenceError: identifer is not defined": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "{{uri}}/Encounter?_Id={{id}}",
+			"id": "e4da06bd-6df3-4a8c-9c08-207e3f037c35",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?_Id=ejPvGuBUqYJkCweOPRabvYg3",
+			"time": "2019-06-19T15:32:22.324Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Description:SHALL support fetching an encounter using the _id search parameter:\n\nGET [base]/Encounter[id]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is okEncounter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "{{uri}}/Encounter?patient={{patient}}&date={{date}}",
+			"id": "9f9a90e6-2b4e-4beb-ade8-3364e8aca919",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&date={{date}}",
+			"time": "2019-06-19T15:32:22.324Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Description:SHALL support searching using the combination of the date and patient search parameters:\n\nGET [base]/Encounter?date={gt|lt|ge|le}[date]{&amp;date={gt|lt|ge|le}[date]&amp;...}&amp;patient=[reference]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"no date value = {{date}}": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "{{uri}}/Encounter?identifier={{identifier}}",
+			"id": "69ad0cf3-67a7-43f9-9f6b-8d8a992af5d7",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?identifier={{identifier}}",
+			"time": "2019-06-19T15:32:22.324Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"Description:SHOULD support searching using the identifier search parameter:\n\nGET [base]/Encounter?identifier={[system]}|[code]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"no identifier value = {{identifier}}": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "{{uri}}/Encounter?patient={{patient}}&class={{class}}",
+			"id": "85c577bc-e0b3-45ae-bf5b-7a9c6155446d",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&class=urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.13260|13",
+			"time": "2019-06-19T15:32:22.324Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Description:SHOULD support searching using the combination of the class and patient search parameters:\n\nGET [base]/Encounter?class={[system]}|[code]&amp;patient=[reference]\n\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is okEncounter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "{{uri}}/Encounter?patient={{patient}}&type={{type}}",
+			"id": "fe16af37-734d-4e2d-b70c-2c90851ec82f",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&type=urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.30|210",
+			"time": "2019-06-19T15:32:22.324Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Description:SHOULD support searching using the combination of the patient and type search parameters:\n\nGET [base]/Encounter?patient=[reference]&amp;type={[system]}|[code]\n\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is okEncounter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "{{uri}}/Encounter?patient={{patient}}&status={{status}}",
+			"id": "04f8f12b-ef69-44a4-9074-7cb4593041d2",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&status=finished",
+			"time": "2019-06-19T15:32:22.324Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Description:SHOULD support searching using the combination of the patient and status search parameters:\n\nGET [base]/Encounter?patient=[reference]&amp;status={[system]}|[code]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is okEncounter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
