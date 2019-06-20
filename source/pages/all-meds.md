@@ -11,7 +11,7 @@ topofpage: true
 <!-- end TOC -->
 The guidance below addresses how a patient or a provider can access a patients' active, historical and future (planned) medications list.  This use case adopts the use cases defined as part of the Argonaut Project and US Core, specifically within the scope of accessing medication information as prescribed in the proposed ONC U.S. Core Data for Interoperability (USCDI).
 
-This section provide specific guidance on how to to access “all medications” and “all active medications” for a patient using  a query on **MedicationRequest**.  Note that in prior versions of this guide, a query on MedicationRequest was required. This change is due to underlying changes in the FHIR Release 4 pharmacy resources.
+This section provide specific guidance on how to to access “all medications” and “all active medications” for a patient using  a query on **MedicationRequest**.  Note that in prior versions of this guide, a query on MedicationStatement was required. This change is due to underlying changes in the FHIR Release 4 pharmacy resources.
 
 ### Background on the FHIR Medications resources
 
@@ -24,7 +24,7 @@ The 5 FHIR pharmacy resources concerned with the ordering, dispensing, administr
 - [MedicationRequest]({{ site.data.fhir.path }}medicationrequest.html): Represents an authorization to dispense and administer a medication (aka prescription or order).  
 - [MedicationDispense]({{ site.data.fhir.path }}medicationdispense.html): Represents a response to a prescription - provision of a supply of a medication.
 - [MedicationAdministration]({{ site.data.fhir.path }}medicationadministration.html): Represents the consumption or administration of a medication.
-- [MedicationRequest]({{ site.data.fhir.path }}MedicationRequest.html): Represents the record for past present and future medications use.
+- [MedicationStatement]({{ site.data.fhir.path }}MedicationStatement.html): Represents the record for past present and future medications use.
 
 Details about each resource can be found in the FHIR specification.  A general discussion regarding the interaction between these resources is described in the FHIR [Medications Module]({{ site.data.fhir.path }}medications-module.html) and the [Guide to Resources]({{ site.data.fhir.path }}resourceguide.html) Sections.
 
