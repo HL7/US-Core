@@ -1,0 +1,22 @@
+Should provide some guidance - break out base url / Resource / id  ( issues with this)
+Best to keep same id  but not always possible
+DSTU2 - R4 identifiers not always same.
+
+Whether a version independent identifier ( business identifier ) would be better
+e.g. a MRN
+
+See FHIR for guidance  - will review.
+
+See scopes - typically need to reauthorized if go from DSTU2 - R4.
+
+one application: refresh tokens fail if go from 2 to 4.
+
+effectively developer need to start fresh with new reg to go from 2 to 4
+
+upshot is keep both registration for 2 to 4  (or context version)
+
+brings up more questions:
+
+separate call:
+
+? how to convey that changes are coming.
