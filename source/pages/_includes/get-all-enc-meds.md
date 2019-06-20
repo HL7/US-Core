@@ -42,13 +42,13 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
      ...snip...
      "entry": [
        {
-         "fullUrl": "http://wildfhir.aegis.net/fhir3-0-0/MedicationRequest/derivedfrom-mr-enca-1",
+         "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-1",
          "resource": {
            "resourceType": "MedicationRequest",
-           "id": "derivedfrom-mr-enca-1",
+           "id": "mr-example-6",
       ...snip...
       },
-      "context": {
+      "encounter": {
         "reference": "Encounter/A",
         "display": "Inpatient Encounter A"
       },
@@ -64,13 +64,13 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
         "text": "Cefotaxime 1000Mg Powder For Solution For Injection"
       },
       ...snip...
-      "fullUrl": "http://wildfhir.aegis.net/fhir3-0-0/MedicationRequest/derivedfrom-mr-enca-2",
+      "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-2",
       "resource": {
         "resourceType": "MedicationRequest",
-        "id": "derivedfrom-mr-enca-2",
+        "id": "mr-example-7",
         ...snip...
         },
-        "context": {
+        "encounter": {
           "reference": "Encounter/A",
           "display": "Inpatient Encounter A"
         },
@@ -86,10 +86,10 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
           "text": "Ketorolac Tromethamine 15 MG/ML For Injection"
         },
         ...snip...
-        "fullUrl": "http://wildfhir.aegis.net/fhir3-0-0/MedicationRequest/derivedfrom-mr-enca-3",
+        "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-3",
         "resource": {
           "resourceType": "MedicationRequest",
-          "id": "derivedfrom-mr-enca-3",
+          "id": "mr-example-8",
           ...snip...
           "contained": [
             {
@@ -105,7 +105,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
               },
               ...snip...
               },
-            "context": {
+            "encounter": {
               "reference": "Encounter/A",
               "display": "Inpatient Encounter A"
             },
@@ -114,12 +114,12 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
                 "reference": "#med-1"
               },
               ...snip...
-          "fullUrl": "http://wildfhir.aegis.net/fhir3-0-0/MedicationRequest/derivedfrom-mr-enca-4",
+          "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-4",
           "resource": {
             "resourceType": "MedicationRequest",
-            "id": "derivedfrom-mr-enca-4",
+            "id": "mr-example-9",
           ...snip...
-          "context": {
+          "encounter": {
             "reference": "Encounter/A",
             "display": "Inpatient Encounter A"
           },
@@ -134,12 +134,12 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
             ],
             "text": "LRS"
             ...snip...
-          "fullUrl": "http://wildfhir.aegis.net/fhir3-0-0/MedicationRequest/derivedfrom-mr-enca-5",
+          "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-5",
           "resource": {
             "resourceType": "MedicationRequest",
-            "id": "derivedfrom-mr-enca-5",
+            "id": "mr-example-10",
           ...snip...
-          "context": {
+          "encounter": {
             "reference": "Encounter/A",
             "display": "Inpatient Encounter A"
           },
@@ -154,13 +154,13 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
             ],
             "text": "Zithromax 500 MG Oral Tablet"
             ...snip...
-          "fullUrl": "http://wildfhir.aegis.net/fhir3-0-0/MedicationRequest/derivedfrom-mr-enca-6",
+          "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-6",
           "resource": {
             "resourceType": "MedicationRequest",
-            "id": "derivedfrom-mr-enca-6",
+            "id": "mr-example-11",
           ...snip...
           },
-          "context": {
+          "encounter": {
             "reference": "Encounter/A",
             "display": "Inpatient Encounter A"
           },

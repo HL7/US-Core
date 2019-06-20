@@ -37,13 +37,13 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
       "lastUpdated" : "2017-03-28T14:29:23Z"
     },
     "type" : "searchset",
-    "total" : 4,
+    "total" : 3,
     "entry" : [
       {
-        "fullUrl" : "http://fhir3.healthintersections.com.au/open/MedicationRequest/derivedfrom-mr-test2-1",
+        "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-test2-1",
         "resource" : {
           "resourceType" : "MedicationRequest",
-          "id" : "derivedfrom-mr-test2-1",
+          "id" : "mr-example-1",
     ...snip...
           "status" : "active",
           "medicationCodeableConcept" : {
@@ -60,10 +60,10 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
     ...snip...
       },
       {
-        "fullUrl" : "http://fhir3.healthintersections.com.au/open/MedicationRequest/derivedfrom-mr-test2-2",
+        "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-test2-2",
         "resource" : {
           "resourceType" : "MedicationRequest",
-          "id" : "derivedfrom-mr-test2-2",
+          "id" : "mr-example-2",
     ...snip...
           "status" : "active",
           "medicationCodeableConcept" : {
@@ -80,10 +80,10 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
     ...snip...
       },
       {
-        "fullUrl" : "http://fhir3.healthintersections.com.au/open/MedicationRequest/test2-2",
+        "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/test2-2",
         "resource" : {
           "resourceType" : "MedicationRequest",
-          "id" : "test2-2",
+          "id" : "mr-example-5",
     ...snip...
           "status" : "active",
           "medicationCodeableConcept" : {
