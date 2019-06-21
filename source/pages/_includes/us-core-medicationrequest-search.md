@@ -1,8 +1,8 @@
 
+- See the [Medication List Guidance] section for guidance on accessing a patient medications.
+- See the [General Guidance] section for a discussion of how Servers expose "Hidden Server Default Values".
 
 #### Mandatory Search Parameters:
-
-See the [Medication List Guidance] section for guidance on accessing a patient medications.
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
 
