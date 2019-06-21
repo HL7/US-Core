@@ -1,4 +1,3 @@
-
 [(how to search by date)]: {{site.data.fhir.path}}search.html#date
 [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
 [(how to search by token)]: {{site.data.fhir.path}}search.html#token
@@ -220,3 +219,5 @@
 [Body temperature]: {{site.data.fhir.path}}bodytemp.html
 [Oxygen saturation]: {{site.data.fhir.path}}oxygensat.html
 [Head circumference]: {{site.data.fhir.path}}headcircum.html
+[Medication List Guidance]: all-meds.html
+[MedicationRequest Quick Start]: StructureDefinition-us-core-medicationrequest.html#quick-start

@@ -11,7 +11,7 @@ topofpage: true
 <!-- end TOC -->
 The guidance below addresses how a patient or a provider can access a patients' active, historical and future (planned) medications list.  This use case adopts the use cases defined as part of the Argonaut Project and US Core, specifically within the scope of accessing medication information as prescribed in the proposed ONC U.S. Core Data for Interoperability (USCDI).
 
-This section provide specific guidance on how to to access “all medications” and “all active medications” for a patient using  a query on **MedicationRequest**.  Note that in prior versions of this guide, a query on MedicationStatement was required. This change is due to underlying changes in the FHIR Release 4 pharmacy resources.
+This section provide specific guidance on how to to access “all medications” and “all active medications” for a patient using  a query on **MedicationRequest**.  Note that in prior versions of this guide, a query on MedicationStatement was required. This change is due to underlying changes in the FHIR Release 4 pharmacy resources.[^1]
 
 ### Background on the FHIR Medications resources
 
@@ -69,27 +69,27 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 #### Get All Medications
 
-1. Get all medications for a patient by querying MedicationRequest using the `patient` search parameter and `intent` search parameter == 'order'.  See [MedicationRequest QuickStart Section] for further details.
+1. Get all medications for a patient by querying MedicationRequest using the `patient` search parameter and `intent` search parameter == 'order'.  See [MedicationRequest Quick Start] for further details.
 
    `GET /MedicationRequest?patient=[id]&intent=order{&_include=MedicationRequest:medication}`
 
-      {% include examplebutton_default.html example="get-all-meds" b_title = "Click on Here To See Get All Medications Example" %}
+      {% include examplebutton_default.html example="get-all-meds" b_title = "Click Here to See 'Get All Medications' Example" %}
 
 #### Get All *Active* Medications
 
-1. Get all *active* medications for a patient by querying MedicationRequest using the `patient`,  and `intent` ="order" `status`="active" search parameters.  See [MedicationRequest QuickStart Section] for further details.
+1. Get all *active* medications for a patient by querying MedicationRequest using the `patient`,  and `intent` ="order" `status`="active" search parameters.  See [MedicationRequest Quick Start] for further details.
 
    `GET /MedicationRequest?patient=[id]&intent=order&status=active{&_include=MedicationRequest:medication}`
 
-        {% include examplebutton_default.html example="get-all-active-meds" b_title = "Click on Here To See Get All *Active* Medications Example" %}
+        {% include examplebutton_default.html example="get-all-active-meds" b_title = "Click Here to See 'Get All *Active* Medications' Example" %}
 
 #### Get All Medications for an Encounter
 
-1. Get “all medications” for an encounter by querying MedicationRequest using the `patient` and `encounter` and `intent` ="order" search parameters.  See [MedicationRequest QuickStart Section] for further details.
+1. Get “all medications” for an encounter by querying MedicationRequest using the `patient` and `encounter` and `intent` ="order" search parameters.  See [MedicationRequest Quick Start] for further details.
 
    `GET /MedicationRequest?patient=[id]&intent=order&encounter=[id]{&_include=MedicationRequest:medication}`
 
-      {% include examplebutton_default.html example="get-all-enc-meds" b_title = "Click on Here To SeeGet All Medications for an Encounter Example" %}
+      {% include examplebutton_default.html example="get-all-enc-meds" b_title = "Click Here to See 'Get All Medications for an Encounter' Example" %}
 
 See the [US Core Server Capability Statement] for a complete list of supported RESTful operations and search parameters for this IG.
 
@@ -105,4 +105,6 @@ This specification does not specify deduplication best practices, however system
 
 {% include link-list.md %}
 
+---
+[^1]: It is anticipated that there will be further changes to the medication resources in future versions of FHIR which may lead to changes in our guidance for fetching patient medications in future versions of this guide.
 <br />

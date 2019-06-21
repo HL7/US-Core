@@ -1,13 +1,14 @@
-Both the [MedicationRequest] and [MedicationStatement] resources can be used to record a patient's medication.   For more information about the context for their usages, refer to the medication domain [boundaries section]. This profile sets minimum expectations for the MedicationRequest resource to record, search and fetch medications associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
+The [MedicationRequest] resource can be used to record a patient's medication prescription or order.  This profile sets minimum expectations for the MedicationRequest resource to record, search and fetch medications associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
 
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core-MedicationRequest
-profile:
+profile. See the [Medication List Guidance] section for guidance on accessing a patient medications:
 
--   Query for medications that have been prescribed to a particular
-    patient
--   Record medications that have been prescribed to a particular
+-   Fetching all medications that have been prescribed to a particular patient
+-   Fetching all *active* medications that have been prescribed to  particular patient
+-   Fetching all medications that have been prescribed to particular patient during a particular encounter
+-   Record medications that have been prescribed for a particular
     patient
 
 ### Mandatory and Must Support Data Elements
@@ -18,6 +19,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each MedicationRequest must have:**
 
 1.  a status
+1.  an intent code to indicate whether an order or proposal
 1.  a medication
 1.  a patient
 1.  a date for when written
@@ -25,6 +27,8 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each MedicationRequest must support:**
 
+1. the `reported` flag signaling that information is from a secondary source such as a patient.
+1. the encounter
 1. the prescription *Sig*
 
 **Profile specific implementation guidance:**

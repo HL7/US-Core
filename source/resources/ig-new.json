@@ -20,7 +20,7 @@
   "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.argo-3.1.0",
   "version" : "3.1.0",
   "name" : "ArgoR4",
-  "title" : "Argo R4",
+  "title" : " Argo R4",
   "status" : "active",
   "publisher" : "The Argonaut Project",
   "contact" : [{
@@ -35,7 +35,7 @@
       "code" : "US"
     }]
   }],
-  "copyright" : "Used by permission of HL7 International and The Argonaut Project, all rights reserved Creative Commons License",
+  "copyright" : "Used by permission of The Argonaut Project, all rights reserved Creative Commons License",
   "packageId" : "hl7.fhir.us.core.argo",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
@@ -802,6 +802,12 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-medicationrequest-intent"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/us-core-location"
       },
       "exampleBoolean" : false
@@ -887,6 +893,12 @@
     {
       "reference" : {
         "reference" : "CodeSystem/condition-category"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-medicationrequest-encounter"
       },
       "exampleBoolean" : false
     },
@@ -1835,6 +1847,11 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "SearchParameter-us-core-medicationrequest-intent.html",
+          "title" : "SearchParameter US Core MedicationRequest Intent",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "SearchParameter-us-core-location-address.html",
           "title" : "SearchParameter US Core Location Address",
           "generation" : "generated"
@@ -1872,6 +1889,11 @@
         {
           "nameUrl" : "SearchParameter-us-core-encounter-type.html",
           "title" : "SearchParameter US Core Encounter Type",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-medicationrequest-encounter.html",
+          "title" : "SearchParameter US Core MedicationRequest Encounter",
           "generation" : "generated"
         },
         {

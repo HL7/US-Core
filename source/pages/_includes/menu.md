@@ -1,5 +1,8 @@
 
 <ul class="nav navbar-nav">
+<li>
+  <a href="toc.html">Table of Contents</a>
+</li>
   <li>
     <a href="index.html">Home</a>
   </li>
@@ -23,6 +26,13 @@
         </li>
       </ul>
   </li>
+
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">FHIR Artifacts<b class="caret">
+    </b>
+  </a>
+      <ul class="dropdown-menu">
+
   <li>
     <a href="profiles.html">Profiles and Extensions</a>
   </li>
@@ -32,19 +42,13 @@
   <li>
     <a href="terminology.html">Terminology</a>
   </li>
-  <li class="dropdown">
-    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Capability Statements<b class="caret">
-    </b>
-  </a>
-      <ul class="dropdown-menu">
-        <li>
-          <a href="CapabilityStatement-us-core-server.html">Conformance requirements for Server</a>
-        </li>
-        <li>
-          <a href="CapabilityStatement-us-core-client.html">Conformance requirements for Client</a>
-        </li>
-      </ul>
+  <li>
+    <a href="capstatements.html">Capability Statements</a>
   </li>
+
+  </ul>
+</li>  
+
 <li>
   <a href="security.html">Security</a>
 </li>

@@ -17,7 +17,7 @@
   <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.argo-3.1.0"/>
   <version value="3.1.0"/>
   <name value="ArgoR4"/>
-  <title value="Argo R4"/>
+  <title value=" Argo R4"/>
   <status value="active"/>
   <publisher value="The Argonaut Project"/>
   <contact>
@@ -32,7 +32,7 @@
       <code value="US"/>
     </coding>
   </jurisdiction>
-  <copyright value="Used by permission of HL7 International and The Argonaut Project, all rights reserved Creative Commons License"/>
+  <copyright value="Used by permission of The Argonaut Project, all rights reserved Creative Commons License"/>
   <packageId value="hl7.fhir.us.core.argo"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.0"/>
@@ -799,6 +799,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/us-core-medicationrequest-intent"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/us-core-location"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -884,6 +890,12 @@
     <resource>
       <reference>
         <reference value="CodeSystem/condition-category"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-medicationrequest-encounter"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1832,6 +1844,11 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="SearchParameter-us-core-medicationrequest-intent.html"/>
+          <title value="SearchParameter US Core MedicationRequest Intent"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="SearchParameter-us-core-location-address.html"/>
           <title value="SearchParameter US Core Location Address"/>
           <generation value="generated"/>
@@ -1869,6 +1886,11 @@
         <page>
           <nameUrl value="SearchParameter-us-core-encounter-type.html"/>
           <title value="SearchParameter US Core Encounter Type"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-medicationrequest-encounter.html"/>
+          <title value="SearchParameter US Core MedicationRequest Encounter"/>
           <generation value="generated"/>
         </page>
         <page>
