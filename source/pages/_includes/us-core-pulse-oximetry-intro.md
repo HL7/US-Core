@@ -9,21 +9,21 @@ The following are example usage scenarios for the US Core Pulse Oximetry Profile
 
 ### Mandatory and Must Support Data Elements
 
-In addition to the mandatory and must support data elements in the FHIR Vital Signs Profile, the following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.
+In addition to the mandatory and must support data elements in the FHIR Oxygen Saturation Profile, the following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.
 
 **Each Observation must have:**
 
-1. a fixed code for oxygen saturation in arterial blood as defined in the FHIR vital sign profile
+1. a fixed code for oxygen saturation in arterial blood as defined in the FHIR oxygen saturation profile
 1. a additional coding for oxygen saturation in arterial blood by pulse oximetry
 
-**Each AllergyIntolerance must support:**
+**Each Observation must support:**
 
 1. a code for inspired oxygen concentration
 1. a value for inspired oxygen concentration
 
 **Profile specific implementation guidance:**
 
-- inspired oxygen concentration may be expressed as inhaled oxygen flow rate (e.g. 6 liters/min) or as inhaled oxygen concentration ( e.g. 40% oxygen)
+- inspired oxygen concentration may be expressed as [component observations] when measured at the same time as the pulse oximetry measurements. They are expressed as either inhaled oxygen flow rate (e.g. 6 liters/min) or as inhaled oxygen concentration ( e.g. 40% oxygen)
 
 ### Examples
 

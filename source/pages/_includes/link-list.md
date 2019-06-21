@@ -221,3 +221,4 @@
 [Head circumference]: {{site.data.fhir.path}}headcircum.html
 [Medication List Guidance]: all-meds.html
 [MedicationRequest Quick Start]: StructureDefinition-us-core-medicationrequest.html#quick-start
+[component observation]:  {{site.data.fhir.path}}observation.html#gr-comp
