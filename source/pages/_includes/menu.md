@@ -23,7 +23,9 @@
           <li>
           <a href="basic-provenance.html">Basic Provenance</a>
         </li>
-
+        <li>
+          <a href="r2-r4-guidance.html">DSTU2 to R4 Conversion</a>
+        </li>
         <li>
           <a href="future-of-us-core.html">Future of US Core</a>
         </li>
