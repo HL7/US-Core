@@ -154,6 +154,7 @@
 [Profiles]: profiles.html "Profiles and Extensions Page"
 [Profiles and Extensions]: profiles.html
 [Progress Note (11506-3)]: https://loinc.org/11506-3.html
+[Provenance]: {{site.data.fhir.path}}provenance.html
 [QI-Core]:http://hl7.org/fhir/us/qicore/
 [Quantity]: {{site.data.fhir.path}}datatypes.html#quantity
 [quantity]: {{site.data.fhir.path}}search.html#quantity

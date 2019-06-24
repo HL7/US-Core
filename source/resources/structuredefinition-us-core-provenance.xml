@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
+	<id value="us-core-provenance"/>
+	<url value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"/>
+	<version value="1.0.1"/>
+	<name value="USCoreProvenance"/>
+	<title value="**DRAFT** US Core Provenance"/>
+	<status value="active"/>
+	<date value="2019-08-05"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.healthit.gov"/>
+		</telecom>
+	</contact>
+	<description value="Draft set of requirements to satisfy Basic Provenance Requirements."/>
+	<fhirVersion value="4.0.0"/>
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="Provenance"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Provenance"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="Provenance">
+			<path value="Provenance"/>
+			<short value="US Core Provenance - DRAFT"/>
+			<definition value="The US Core Provenance Profile is based upon the Argonaut Data Query requirements."/>
+			<alias value="Basic Provenance"/>
+			<mustSupport value="false"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Provenance.target">
+			<path value="Provenance.target"/>			
+			<short value="The Resource this Provenance record supports"/> 
+			<min value="1"/>
+			<max value="*"/>
+			<type> 
+				<code value="Reference"/> 
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/> 
+			</type> 
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Provenance.recorded">
+			<path value="Provenance.recorded"/>
+			<short value="Timestamp when the activity was recorded / updated"/> 
+			<definition value="The instant of time at which the activity was recorded."/> 
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="instant"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Provenance.agent">
+			<path value="Provenance.agent"/>
+			<min value="1"/>
+			<max value="*"/>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Provenance.agent.type">
+			<path value="Provenance.agent.type"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<patternCodeableConcept>
+				<coding>
+					<system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+					<code value="author"/>
+				</coding>
+			</patternCodeableConcept>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Provenance.agent.who">
+			<path value="Provenance.agent.who"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/> 
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/> 
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/> 
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/> 
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/> 
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/> 
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Provenance.agent.onBehalfOf">
+			<path value="Provenance.agent.onBehalfOf"/>
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/> 
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+	</differential>
+</StructureDefinition>
