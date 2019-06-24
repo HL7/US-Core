@@ -252,7 +252,7 @@ For further guidance on language and locale for generation of the resource narra
 
 *TODO...Follow FHIR R5 guidance for how to report the user's timezone.*
 
-### Read(Fetch) syntax:
+### Read(Fetch) syntax
 
 For fetching a resource interactions on profile pages are defined with the following syntax:
 
