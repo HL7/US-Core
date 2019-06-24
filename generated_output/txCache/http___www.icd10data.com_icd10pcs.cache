@@ -21,3 +21,13 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://www.icd10data.com/icd10pcs"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.icd10data.com/icd10pcs",
+  "code" : "HZ30ZZZ"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.icd10data.com/icd10pcs\" is not known for the code \"HZ30ZZZ\"; The code provided (http://www.icd10data.com/icd10pcs#HZ30ZZZ) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------

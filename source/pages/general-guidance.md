@@ -292,33 +292,35 @@ In the simplest case, a search is executed by performing a GET operation in the 
 
 For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource the name “code” for search on the LOINC code.  For more information see the [FHIR RESTful Search API]
 
-### Syntax for searches limited by patient
+Note that the patient may be *implicit* in the context in some implementations (e.g. using SMART). Then the patient parameter can be omitted:
 
-There are several potential ways to search for resources associated with a specific patient depending on the context and implementation. These searches result in the same outcome.:
+`GET [base]/[Resource-type]{?other-parameters}`
 
-1. An explicitly defined patient using the 'patient' parameter that controls which set of resources are being searched by resource type.  Note that all the search interactions in this IG are published using this syntax:
-  - **GET [base]/[Resource-type]?patient=24342{&otherparameters}**
-   - There are several variations to this syntax which are listed below:
+### Search for Servers Requiring Status
 
-        -   GET \[base\]/\[Resource-type\]?Subject=\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?Subject=Patient/\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?Subject.\_id=\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?subject:Patient=\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?subject:Patient=Patient/\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?subject:Patient=\[https://%5Burl%5D/Patient/id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?subject:Patient.\_id=\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?patient:Patient=\[https://%5Burl%5D/Patient/id\]{&other parameter
+For searches where the client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.  These systems are allowed to reject such requests3 as follows:
 
-1. The patient may be *implicit* in the context (e.g. using SMART). Then the patient parameter can be omitted:
-  - **GET [base]/[Resource-type]{?other-parameters}**
+- **SHALL** return an http `404` status
+- **SHALL** return an [OperationOutcome] specifying that status(es) must be present.
+- **SHALL NOT** restrict search results ( i.e. apply 'hidden' filters) when a client includes status parameters in the query.
+- **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.
+- Follow the [deleted data](#representing-deleted-information) guidance above.
+- If a system doesn't support a specific status? (i.e. refuted), the search results **SHOULD**:
+  - return an http `200` status with search bundle containing resources matching the search criteria
+  - return an OperationOutcome warning the client that the status value is not supported.
 
-1. Patient [compartment] based search with a specified resource type in that compartment. **NOTE this IG does not support compartment based searches**.
+        {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
+
+
+### Compartment Based Search
+
+This IG does not support patient [compartment] based searches.
 
 ### Across Platform Searches
 
 US Core servers are not required to resolve full URLs that are external to their environment.
 
-### Guidance on limiting the number of search results
+### Guidance On Limiting The Number Of Search Results
 
 In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
 
