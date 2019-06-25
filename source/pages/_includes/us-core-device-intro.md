@@ -23,6 +23,12 @@ In addition, the following data-elements must be supported if the data is presen
 1. A Unique Device Identifier (UDI) numeric or alphanumeric code
    - either as the Human Readable Form (HRF) string representation of the barcode
    - or the Automatic Identification and Data Capture (AIDC) representation.
+1. The following parsed content from the UDI
+   - the Device Identifier (DI)
+   - the manufacture date
+   - the expiration date
+   - the lot number
+   - the serial number
 
 **Profile specific implementation guidance:**
 

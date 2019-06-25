@@ -8,5 +8,10 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
 
 #### Summary of the Must Support Requirements
 1.  A  Udicarrier  in `Device.udiCarrier`
+   - which must have a  string value  in `Device.udiCarrier.deviceIdentifier`
    - which should have a  base64Binary value  in `Device.udiCarrier.carrierAIDC`
    - which should have a  string value  in `Device.udiCarrier.carrierHRF`
+1.  A  dateTime  in `Device.manufactureDate`
+1.  A  dateTime  in `Device.expirationDate`
+1.  A  string  in `Device.lotNumber`
+1.  A  string  in `Device.serialNumber`

@@ -7,7 +7,6 @@ layout: fhir-artifact
 type: {{[type]}}
 id: {{[id]}}
 topofpage: true
-allviews: true
 mappings: false
 ---
 <!-- ============CONTENT CONTENT=============== -->
@@ -86,12 +85,10 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
 <!--  this could be a customizable include -->
  <ul>
   {% unless "{{[id]}}" contains "extension" %}<li><a href="#tabs-summ">Text Summary</a></li>{% endunless %}
-<!--  <li><a href="#tabs-diff">Differential Table</a></li> -->
   <li><a href="#tabs-diff">Differential View</a></li>
-  <!-- <li><a href="#tabs-snap">Snapshot Table</a></li> -->
   <li><a href="#tabs-snap">Full View</a></li>
-  <!-- <li><a href="#tabs-xml">XML Template</a></li> -->
-  <!-- <li><a href="#tabs-json">JSON Template</a></li> -->
+  {% if site.showPsuedoXML %}<li><a href="#tabs-xml">XML Template</a></li>{% endif %}
+  {% if site.showPsuedoJson %}<li><a href="#tabs-json">JSON Template</a></li>{% endif %}
   <li><a href="#tabs-all">All Views</a></li>
 
  </ul>
@@ -125,9 +122,9 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
    </div>
   </div>
  </div>
-<!-- =======XML and JSON ======== -->
 
- <!--{% raw %}
+<!-- =======XML and JSON ======== -->
+{% if site.showPsuedoXML%}
  <div id="tabs-xml">
   <div id="xml">
    <div id="xml-inner">
@@ -135,8 +132,10 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
    </div>
   </div>
  </div>
-{% endraw %}-->
-<!--{% raw %}
+{% endif %}
+
+
+{% if site.showPsuedoJson%}
  <div id="tabs-json">
   <div id="json">
    <div id="json-inner">
@@ -146,7 +145,8 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
    </div>
   </div>
  </div>
-{% endraw %}-->
+{% endif %}
+
 {% endif %}
 
 
@@ -190,27 +190,28 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
   </div>
 {% endunless %}
 <!-- =======XML and JSON ======== -->
-{% if page.allviews %}
-    <!--{% raw %}
+
+
+    {% if showPsuedoJson %}
         <div id="all-xml">
          <p><b>XML Template</b></p>
          <div id="all-xml-inner">
       {% include {{[type]}}-{{[id]}}-pseudo-xml.xhtml %}
          </div>
         </div>
-    {% endraw %}-->
+    {% endif %}
 
-        <!--{% raw %}
-    <div id="all-json">
-     <p><b>JSON Template</b></p>
-     <div id="all-json-inner">
-        <pre class="spec">
-         {% include {{[type]}}-{{[id]}}-pseudo-json.xhtml %}
-        </pre>
-    </div>
-  </div>
-    {% endraw %}-->
-{% endif %}
+    {% if showPsuedoXML %}
+        <div id="all-json">
+         <p><b>JSON Template</b></p>
+         <div id="all-json-inner">
+            <pre class="spec">
+             {% include {{[type]}}-{{[id]}}-pseudo-json.xhtml %}
+            </pre>
+        </div>
+      </div>
+    {% endif %}
+
 
  </div>
 </div>

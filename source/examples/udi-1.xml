@@ -1,12 +1,17 @@
-<Device xmlns="http://hl7.org/fhir"  >
+<Device xmlns="http://hl7.org/fhir">
 	<id value="udi-1"/>
 	<meta>
 		<profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"/>
 	</meta>
 	<udiCarrier>
-	<carrierHRF value="(01)09504000059118(17)141120(10)7654321D(21)10987654d321"/>
-</udiCarrier>
+		<deviceIdentifier value="09504000059118"/>
+		<carrierHRF value="(01)09504000059118(17)141120(10)7654321D(21)10987654d321"/>
+	</udiCarrier>
 	<status value="active"/>
+	<!-- manufactureDate value = ""/ -->
+	<expirationDate value="2014-11-20"/>
+	<lotNumber value="7654321D"/>
+	<serialNumber value="10987654d321"/>
 	<type>
 		<coding>
 			<system value="http://snomed.info/sct"/>

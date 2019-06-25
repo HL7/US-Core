@@ -307,6 +307,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="MedicationRequest/self-tylenol"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="DiagnosticReport/metabolic-panel"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -668,6 +674,12 @@
     <resource>
       <reference>
         <reference value="ValueSet/omb-ethnicity-category"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/us-core-provenance"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1327,12 +1339,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/us-core-provenance"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="SearchParameter/us-core-careteam-status"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1409,38 +1415,8 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="Guidance"/>
+        <title value="General Guidance"/>
         <generation value="markdown"/>
-        <page>
-          <nameUrl value="general-guidance.html"/>
-          <title value="General Guidance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="clinical-notes-guidance.html"/>
-          <title value="Clinical Notes Guidance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="all-meds.html"/>
-          <title value="Medication List Guidance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="basic-provenance.html"/>
-          <title value="Basic Provenance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="r2-r4-guidance.html"/>
-          <title value="DSTU2 to R4 Conversion"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="future-of-us-core.html"/>
-          <title value="Future of US Core"/>
-          <generation value="markdown"/>
-        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
@@ -1479,6 +1455,11 @@
         <page>
           <nameUrl value="StructureDefinition-us-core-diagnosticreport-note.html"/>
           <title value="StructureDefinition US Core DiagnosticReport Note"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-us-core-provenance.html"/>
+          <title value="StructureDefinition US Core Provenance"/>
           <generation value="generated"/>
         </page>
         <page>
