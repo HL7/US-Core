@@ -56,24 +56,63 @@
 		</element>
 		<element id="Provenance.agent">
 			<path value="Provenance.agent"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="type.coding.code"/>
+				</discriminator>
+				<discriminator>
+					<type value="value"/>
+					<path value="type.coding.system"/>
+				</discriminator>
+				<rules value="open"/>
+			</slicing>
 			<min value="1"/>
 			<max value="*"/>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
-		<element id="Provenance.agent.type">
+		<element id="Provenance.agent:author">
+			<path value="Provenance.agent"/>
+			<sliceName value="provenance-author"/>
+			<min value="1"/>
+			<max value="1"/>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Provenance.agent:author.type">
 			<path value="Provenance.agent.type"/>
 			<min value="1"/>
 			<max value="1"/>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Provenance.agent:author.type.coding">
+			<path value="Provenance.agent.type.coding"/>
+			<min value="1"/>
+			<max value="1"/>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Provenance.agent:author.type.coding.system">
+			<path value="Provenance.agent.type.coding.system"/>
+			<min value="1"/>
+			<max value="1"/>
 			<type>
-				<code value="CodeableConcept"/>
+				<code value="uri"/>
 			</type>
-			<patternCodeableConcept>
-				<coding>
-					<system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
-					<code value="author"/>
-				</coding>
-			</patternCodeableConcept>
+			<fixedUri value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Provenance.agent:author.type.coding.code">
+			<path value="Provenance.agent.type.coding.code"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="code"/>
+			</type>
+			<fixedCode value="author"/>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>

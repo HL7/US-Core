@@ -4,8 +4,8 @@ This profile sets minimum expectations for the [Provenance] resource to record, 
 
 The following are example usage scenarios for the US Core Provenance profile:
 
--   Query or the Provenance records belonging to an Allergy
--   Query or the Provenance records belonging to Document
+-   Query for the Provenance records associated with an Allergy
+-   Query for the Provenance records associated with a Problem
 
 
 ### Mandatory and Must Support Data Elements

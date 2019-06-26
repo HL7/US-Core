@@ -28,7 +28,7 @@ Clinical Information Reconciliation and Incorporation (CIRI) is a process where 
 
 This is some text to describe the image in step 1:
 
-{% include img.html img="Provenance_Recon_Workflow_Step1.jpg" caption="Figure 1: Clinical Information Reconciliation and Incorporation (CIRI) from two Organizations " %}
+{% include img.html img="Provenance_Recon_Workflow_Step1.svg" caption="Figure 1: Clinical Information Reconciliation and Incorporation (CIRI) from two Organizations " %}
 
 Good Health Organization Provenance
 **insert example**
@@ -38,7 +38,7 @@ Sunshine Health Organization Provenance
 
 This is some text to describe the image in step 2:
 
-{% include img.html img="Provenance_Recon_Workflow_Step2.jpg" caption="Figure 1: CIRI After Addition Information during Reconciliation" %}
+{% include img.html img="Provenance_Recon_Workflow_Step2.svg" caption="Figure 1: CIRI After Addition Information during Reconciliation" %}
 
 Future Health Organization Provenance
 **insert example**
