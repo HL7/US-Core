@@ -1,3 +1,3 @@
-- See the [General Guidance] section for a discussion of how Servers expose "Hidden Server Default Values".
+- See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 
 **No Search criteria for us-core-birthsex extension.**

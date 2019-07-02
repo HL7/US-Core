@@ -298,7 +298,7 @@ Note that the patient may be *implicit* in the context in some implementations (
 
 ### Search for Servers Requiring Status
 
-For searches where the client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.  These systems are allowed to reject such requests3 as follows:
+For searches where the client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.  These systems are allowed to reject such requests as follows:
 
 - **SHALL** return an http `404` status
 - **SHALL** return an [OperationOutcome] specifying that status(es) must be present.

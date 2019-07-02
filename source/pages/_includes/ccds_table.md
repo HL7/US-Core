@@ -23,3 +23,4 @@ USCDI Data Element | US Core Profile | FHIR Resource
 (21) |  Health concerns | [US Core Condition Profile] | Condition
 (21) |  Health concerns | [US Core Condition Profile] | Condition
 (21) |  Health concerns | [US Core Condition Profile] | Condition
+{: .grid #grid}
