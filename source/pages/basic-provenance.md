@@ -28,7 +28,7 @@ Author | Name<br>Identifier | NPI recommended, additional identifiers allowed| P
 Author Organization | Name<br>Identifier  | NPI recommended, additional identifiers allowed |Provenance.agent.onBehalfOf 
 Timestamp | Date and time with timezone offset | | Provenance.recorded
 Target | Resource Provenance record supports | | Provenance.target
-
+{: .grid}
 
 #### 'Last Hop'
 
@@ -47,7 +47,10 @@ This is some text to describe the image in step 1:
 {% include img.html img="Provenance_Recon_Workflow_Step1.svg" caption="Figure 1: Clinical Information Reconciliation and Incorporation (CIRI) from two Organizations " %}
 
 Good Health Organization Provenance
-**insert example**
+ 
+ `GET /AllergyIntolerance?patient=[ID]&_revinclude=Provenance:target`
+
+      {% include examplebutton_default.html example="get-all-allergy-provenance-good-health" b_title = "Click Here to See 'Get Allergy Information for a Patient at Good Health' Example" %}
 
 Sunshine Health Organization Provenance
 **insert example**
