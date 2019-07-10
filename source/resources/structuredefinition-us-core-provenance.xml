@@ -134,13 +134,19 @@
 		</element>
 		<element id="Provenance.agent.onBehalfOf">
 			<path value="Provenance.agent.onBehalfOf"/>
-			<short value="SHALL be present when Provenance.agent.who is a Practitioner."/>
+			<!-- short value="SHALL be present when Provenance.agent.who is a Practitioner."/ -->
 			<min value="0"/>
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
 			</type>
+			<constraint>
+			 <key value="provenance-1"/>
+			 <severity value="error"/>
+			 <human value="SHALL be present when Provenance.agent.who is a Practitioner"/>
+			 <expression value="exists() and not(Provenance.agent.who.resolve().ofType(Practitioner))"/>
+		 </constraint>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
