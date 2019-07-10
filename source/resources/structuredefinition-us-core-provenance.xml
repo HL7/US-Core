@@ -4,7 +4,7 @@
 	<url value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"/>
 	<version value="1.0.1"/>
 	<name value="USCoreProvenance"/>
-	<title value="**DRAFT** US Core Provenance"/>
+	<title value="US Core Provenance Profile"/>
 	<status value="active"/>
 	<date value="2019-08-05"/>
 	<publisher value="HL7 US Realm Steering Committee"/>
@@ -31,21 +31,21 @@
 			<isModifier value="false"/>
 		</element>
 		<element id="Provenance.target">
-			<path value="Provenance.target"/>			
-			<short value="The Resource this Provenance record supports"/> 
+			<path value="Provenance.target"/>
+			<short value="The Resource this Provenance record supports"/>
 			<min value="1"/>
 			<max value="*"/>
-			<type> 
-				<code value="Reference"/> 
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/> 
-			</type> 
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
+			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
 		<element id="Provenance.recorded">
 			<path value="Provenance.recorded"/>
-			<short value="Timestamp when the activity was recorded / updated"/> 
-			<definition value="The instant of time at which the activity was recorded."/> 
+			<short value="Timestamp when the activity was recorded / updated"/>
+			<definition value="The instant of time at which the activity was recorded."/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
@@ -122,24 +122,24 @@
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/> 
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/> 
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/> 
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/> 
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/> 
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/> 
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
 		<element id="Provenance.agent.onBehalfOf">
 			<path value="Provenance.agent.onBehalfOf"/>
-			<short value="SHALL be present when Provenance.agent.who is a Practitioner."/> 
+			<short value="SHALL be present when Provenance.agent.who is a Practitioner."/>
 			<min value="0"/>
 			<max value="1"/>
 			<type>
 				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/> 
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>

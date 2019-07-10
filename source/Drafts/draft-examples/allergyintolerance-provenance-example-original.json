@@ -9,7 +9,7 @@
     "link": [
         {
             "relation": "self",
-            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples"
+            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=48097"
         }
     ],
     "entry": [
@@ -20,10 +20,7 @@
                 "id": "79613",
                 "meta": {
                     "versionId": "1",
-                    "lastUpdated": "2019-07-09T15:26:23.217+00:00",
-                    "profile": [
-                       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
-                    ]
+                    "lastUpdated": "2019-07-09T15:26:23.217+00:00"
                 },
                 "clinicalStatus": {
                     "coding": [
@@ -43,22 +40,12 @@
                         }
                     ]
                 },
-                "code": {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "code": "130002",
-                            "display": "Hemoglobin Hopkins-II (substance)"
-                        }
-                    ],
-                    "text": "Hemoglobin Hopkins-II (substance)"
-                },
                 "category": [
                     "medication"
                 ],
                 "criticality": "high",
                 "patient": {
-                    "reference": "Patient/example"
+                    "reference": "Patient/48097"
                 },
                 "onsetDateTime": "2017-06-09",
                 "reaction": [
@@ -99,17 +86,14 @@
                 "id": "79614",
                 "meta": {
                     "versionId": "1",
-                    "lastUpdated": "2019-07-09T15:26:23.217+00:00",
-                    "profile": [
-                       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
-                    ]
+                    "lastUpdated": "2019-07-09T15:26:23.217+00:00"
                 },
                 "target": [
                      {
                         "reference": "AllergyIntolerance/79613"
                     }
                 ],
-             "recorded": "2019-07-09T15:26:23.217+00:00",
+              "recorded": "2019-07-09T15:26:23.217+00:00",
              "agent": [
                     {
                         "type":
@@ -124,10 +108,10 @@
                             }
                         ,
                         "who": {
-                                "reference": "Practitioner/practitioner-1"
+                                "reference": "Practitioner/Dr-Jones-12345"
                         },
                         "onBehalfOf": {
-                                "reference": "Organization/saint-luke-w-endpoint"
+                                "reference": "Organization/Dr-Jones-12345"
                         }
                     }
                 ]},
