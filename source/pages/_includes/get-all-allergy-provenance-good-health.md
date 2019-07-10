@@ -6,7 +6,7 @@ The following example is based upon the following scenario:
 
 **Request:**
 
-Get “all allergies” for a patient and all corresponding Provenance records..
+Get “all allergies” for a patient and all corresponding Provenance records.
 
 
     GET [base]/AllergyIntolerance?patient=12345&_revinclude=Provenance:target
@@ -18,7 +18,7 @@ A Server returns a search Bundle resource containing all the Allergies for the p
 
     HTTP/1.1 200 OK
     [other headers]
-    
+     
     {
     "resourceType": "Bundle",
     "id": "c887e62f-6166-419f-8268-b5ecd6c7b901",
@@ -30,7 +30,7 @@ A Server returns a search Bundle resource containing all the Allergies for the p
     "link": [
         {
             "relation": "self",
-            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=48097"
+            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples"
         }
     ],
     "entry": [
@@ -41,7 +41,10 @@ A Server returns a search Bundle resource containing all the Allergies for the p
                 "id": "79613",
                 "meta": {
                     "versionId": "1",
-                    "lastUpdated": "2019-07-09T15:26:23.217+00:00"
+                    "lastUpdated": "2019-07-09T15:26:23.217+00:00",
+                    "profile": [
+                       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+                    ]
                 },
                 "clinicalStatus": {
                     "coding": [
@@ -61,38 +64,38 @@ A Server returns a search Bundle resource containing all the Allergies for the p
                         }
                     ]
                 },
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "762952008",
+                            "display": "Peanuts"
+                        }
+                    ],
+                    "text": "Peanuts"
+                },
                 "category": [
                     "medication"
                 ],
                 "criticality": "high",
                 "patient": {
-                    "reference": "Patient/48097"
+                    "reference": "Patient/example"
                 },
                 "onsetDateTime": "2017-06-09",
                 "reaction": [
                     {
-                        "substance": {
-                            "coding": [
-                                {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "130002",
-                                    "display": "Hemoglobin Hopkins-II (substance)"
-                                }
-                            ],
-                            "text": "Hemoglobin Hopkins-II (substance)"
-                        },
                         "manifestation": [
                             {
                                 "coding": [
                                     {
                                         "system": "http://snomed.info/sct",
-                                        "code": "122003",
-                                        "display": "Choroidal hemorrhage (disorder)"
+                                        "code": "247472004",
+                                        "display": "Hives"
                                     }
                                 ]
                             }
                         ],
-                        "onset": "2017-06-09"
+                        "onset": "2018-01"
                     }
                 ]
             },
@@ -107,13 +110,17 @@ A Server returns a search Bundle resource containing all the Allergies for the p
                 "id": "79614",
                 "meta": {
                     "versionId": "1",
-                    "lastUpdated": "2019-07-09T15:26:23.217+00:00"
+                    "lastUpdated": "2019-07-09T15:26:23.217+00:00",
+                    "profile": [
+                       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                    ]
                 },
                 "target": [
                      {
                         "reference": "AllergyIntolerance/79613"
                     }
                 ],
+             "recorded": "2019-07-09T15:26:23.217+00:00",
              "agent": [
                     {
                         "type": [

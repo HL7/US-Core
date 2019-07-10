@@ -1,4 +1,25 @@
-{
+
+**Storyboard for this example**
+
+The following example is based upon the following scenario:
+
+
+**Request:**
+
+Get “all allergies” for a patient and all corresponding Provenance records.
+
+
+    GET [base]/AllergyIntolerance?patient=1234599&_revinclude=Provenance:target
+
+**Response:**
+
+A Server returns a search Bundle resource containing all the Allergies for the patient and corresponding Provenance records. 
+
+
+    HTTP/1.1 200 OK
+    [other headers]
+    
+    {
     "resourceType": "Bundle",
     "id": "c887e62f-6166-419f-8268-b5ecd6c7b901",
     "meta": {
@@ -9,15 +30,15 @@
     "link": [
         {
             "relation": "self",
-            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples"
+            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples99"
         }
     ],
     "entry": [
         {
-            "fullUrl": "http://hapi.fhir.org/baseR4/AllergyIntolerance/79613",
+            "fullUrl": "http://hapi.fhir.org/baseR4/AllergyIntolerance/7961399",
             "resource": {
                 "resourceType": "AllergyIntolerance",
-                "id": "79613",
+                "id": "7961399",
                 "meta": {
                     "versionId": "1",
                     "lastUpdated": "2019-07-09T15:26:23.217+00:00",
@@ -67,14 +88,14 @@
                             {
                                 "coding": [
                                     {
-                                        "system": "http://snomed.info/sct",
-                                        "code": "247472004",
-                                        "display": "Hives"
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                                        "code": "UNK",
+                                        "display": "Unknown"
                                     }
                                 ]
                             }
                         ],
-                        "onset": "2017-06-09"
+                        "onset": "2017-09"
                     }
                 ]
             },
@@ -83,10 +104,10 @@
             }
         },
         {
-            "fullUrl": "http://hapi.fhir.org/baseR4/Provenance/79614",
+            "fullUrl": "http://hapi.fhir.org/baseR4/Provenance/7961499",
             "resource": {
                 "resourceType": "Provenance",
-                "id": "79614",
+                "id": "7961499",
                 "meta": {
                     "versionId": "1",
                     "lastUpdated": "2019-07-09T15:26:23.217+00:00",
@@ -96,13 +117,13 @@
                 },
                 "target": [
                      {
-                        "reference": "AllergyIntolerance/79613"
+                        "reference": "AllergyIntolerance/7961399"
                     }
                 ],
              "recorded": "2019-07-09T15:26:23.217+00:00",
              "agent": [
                     {
-                        "type":
+                        "type": [
                             {
                                 "coding": [
                                     {
@@ -112,12 +133,12 @@
                                     }
                                 ]
                             }
-                        ,
+                        ],
                         "who": {
-                                "reference": "Practitioner/practitioner-1"
+                                "reference": "Practitioner/Dr-Smith-1234599"
                         },
                         "onBehalfOf": {
-                                "reference": "Organization/saint-luke-w-endpoint"
+                                "reference": "Organization/sunshine-health-5432199"
                         }
                     }
                 ]},
@@ -127,3 +148,4 @@
         }
     ]
 }
+    

@@ -53,7 +53,8 @@ Good Health Organization Provenance
       {% include examplebutton_default.html example="get-all-allergy-provenance-good-health" b_title = "Click Here to See 'Get Allergy Information for a Patient at Good Health' Example" %}
 
 Sunshine Health Organization Provenance
-**insert example**
+
+{% include examplebutton_default.html example="get-all-allergy-provenance-sunshine-health" b_title = "Click Here to See 'Get Allergy Information for a Patient at Sunshine Health' Example" %}
 
 This is some text to describe the image in step 2:
 
