@@ -1,0 +1,550 @@
+{
+	"id": "29b89dc6-36ec-443f-bb96-48fb5da76092",
+	"name": "Allergy",
+	"allTests": [],
+	"timestamp": "2019-07-16T04:22:11.819Z",
+	"collection_id": "af1b350c-31e2-4f59-baf6-abf872f5b807",
+	"folder_id": "864e1f20-d97c-432f-99f7-08df0fba9677",
+	"target_type": "folder",
+	"environment_id": "f4bff0db-4fea-427f-975f-eda76b9c7139",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "af1b350c-31e2-4f59-baf6-abf872f5b807",
+		"name": "US_Core_R4",
+		"description": "US Core R4 Examples",
+		"auth": {
+			"type": "oauth2",
+			"oauth2": [
+				{
+					"key": "accessToken",
+					"value": "eyJraWQiOiIyMDE5LTA3LTE1VDIzOjA1OjQ4LjM3NS5lYyIsInR5cCI6IkpXVCIsImFsZyI6IkVTMjU2In0.eyJzdWIiOiJwb3J0YWwiLCJ1cm46Y29tOmNlcm5lcjphdXRob3JpemF0aW9uOmNsYWltcyI6eyJ2ZXIiOiIxLjAiLCJ0bnQiOiIwYjhhMDExMS1lOGU2LTRjMjYtYTkxYy01MDY5Y2JjNmIxY2EiLCJhenMiOiJ1c2VyXC9DYXBhYmlsaXR5U3RhdGVtZW50LnJlYWQgdXNlclwvQWxsZXJneUludG9sZXJhbmNlLnJlYWQgdXNlclwvQXBwb2ludG1lbnQucmVhZCB1c2VyXC9FbmNvdW50ZXIucmVhZCB1c2VyXC9QYXRpZW50LnJlYWQgdXNlclwvUHJhY3RpdGlvbmVyLnJlYWQgdXNlclwvUmVsYXRlZFBlcnNvbi5yZWFkIn0sImF6cCI6IjgwMjg5YjQ4LTYzMjYtNDcxNi04NDQ1LThmYjIxNTkxNTkwZiIsImlzcyI6Imh0dHBzOlwvXC9hdXRob3JpemF0aW9uLnNhbmRib3hjZXJuZXIuY29tXC8iLCJleHAiOjE1NjMyNTA5ODQsImlhdCI6MTU2MzI1MDM4NCwianRpIjoiNjFlNjc1MjUtZTQ3MS00MjIxLWIyYmQtOGIxNDhkNzQxZGMyIiwidXJuOmNlcm5lcjphdXRob3JpemF0aW9uOmNsYWltczp2ZXJzaW9uOjEiOnsidmVyIjoiMS4wIiwicHJvZmlsZXMiOnsic21hcnQtdjEiOnsiYXpzIjoidXNlclwvQ2FwYWJpbGl0eVN0YXRlbWVudC5yZWFkIHVzZXJcL0FsbGVyZ3lJbnRvbGVyYW5jZS5yZWFkIHVzZXJcL0FwcG9pbnRtZW50LnJlYWQgdXNlclwvRW5jb3VudGVyLnJlYWQgdXNlclwvUGF0aWVudC5yZWFkIHVzZXJcL1ByYWN0aXRpb25lci5yZWFkIHVzZXJcL1JlbGF0ZWRQZXJzb24ucmVhZCJ9fSwiY2xpZW50Ijp7Im5hbWUiOiJ0ZXN0LXI0IiwiaWQiOiI4MDI4OWI0OC02MzI2LTQ3MTYtODQ0NS04ZmIyMTU5MTU5MGYifSwidXNlciI6eyJwcmluY2lwYWwiOiJwb3J0YWwiLCJwZXJzb25hIjoicHJvdmlkZXIiLCJpZHNwIjoiMGI4YTAxMTEtZThlNi00YzI2LWE5MWMtNTA2OWNiYzZiMWNhIiwicHJpbmNpcGFsVXJpIjoiaHR0cHM6XC9cL21pbGxlbm5pYS5zYW5kYm94Y2VybmVyLmNvbVwvaW5zdGFuY2VcLzBiOGEwMTExLWU4ZTYtNGMyNi1hOTFjLTUwNjljYmM2YjFjYVwvcHJpbmNpcGFsXC8wMDAwLjAwMDAuMDA0NC4xRDg3IiwiaWRzcFVyaSI6Imh0dHBzOlwvXC9taWxsZW5uaWEuc2FuZGJveGNlcm5lci5jb21cL2FjY291bnRzXC9maGlycGxheS50ZW1wX3Joby5jZXJuZXJhc3AuY29tXC8wYjhhMDExMS1lOGU2LTRjMjYtYTkxYy01MDY5Y2JjNmIxY2FcL2xvZ2luIn0sInRlbmFudCI6IjBiOGEwMTExLWU4ZTYtNGMyNi1hOTFjLTUwNjljYmM2YjFjYSJ9fQ.Bot97V4hLHJ6Zd8N_qW_feHS_SLTZMHY2_W2cwAtufkTgqFfG9L40101ceY9c7s9uukFmxT-QLsPDW2B54sNDA"
+				},
+				{
+					"key": "tokenType",
+					"value": "Bearer"
+				},
+				{
+					"key": "addTokenTo",
+					"value": "header"
+				}
+			]
+		},
+		"events": [
+			{
+				"listen": "prerequest",
+				"script": {
+					"id": "81a15c2d-e6f3-45ad-b7ff-fccff31adc9f",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			},
+			{
+				"listen": "test",
+				"script": {
+					"id": "52701d41-d47f-4215-9c15-1f1c7d7e3c9d",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			}
+		],
+		"variables": [],
+		"order": [],
+		"folders_order": [
+			"00b908ce-58b3-4d98-ab60-bfa55c05af9a",
+			"864e1f20-d97c-432f-99f7-08df0fba9677",
+			"08e1872f-93d2-4115-ba96-8dbfffdf01ed",
+			"65480b3c-13c0-427a-9c41-4eba3e238e1e",
+			"13c53e28-3c6c-4537-a6f1-295ea7e197a7"
+		],
+		"owner": "1447203",
+		"favorite": true,
+		"isFavorite": true
+	},
+	"folder": {
+		"id": "864e1f20-d97c-432f-99f7-08df0fba9677",
+		"name": "Allergy",
+		"description": "",
+		"auth": null,
+		"events": null,
+		"collection": "af1b350c-31e2-4f59-baf6-abf872f5b807",
+		"folder": null,
+		"order": [
+			"8d8cc065-248a-41ba-8b82-7bfab6aa5ae7",
+			"c926fee7-9839-4fd0-a99e-fe0098dc6675"
+		],
+		"folders_order": [],
+		"type": "folder",
+		"depth": 1
+	},
+	"environment": null,
+	"globals": [
+		{
+			"key": "epic_argo_r4",
+			"value": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4/",
+			"enabled": false
+		},
+		{
+			"key": "bin_url",
+			"value": "http://test.fhir.org/r3/Binary/omh-stepcount-example",
+			"enabled": true
+		},
+		{
+			"key": "commonTests",
+			"value": "() => {\n// check if get a 200 back for successful search\npm.test(\"Description:\" + request.description, function () {\n    pm.response;\n});\n//console.log(pm.request.url.query.all())\nvar query = {};\nvar good_to_go = true;\npm.request.url.query.all().forEach((param) => { \n    //console.log(param.key + ', param.value = ' + param.value);\n    if (param.value == null || param.value.startsWith('{')) {\n              pm.test(\"no \" +  param.key + \" value = \" + param.value, function () {\n              pm.expect.fail();\n              });\n             good_to_go = false; \n        }\n    });\n\n\nif (good_to_go){\nvar resource_type = pm.environment.get(\"resource_type\");\npm.test(\"response is ok\" + resource_type, function () {\n    pm.response.to.have.status(200);\n});\nif (pm.response.code === 200){\n    try{\n        var b = pm.response.json();\n        var has_r =false ;\n        for (var i in b.entry) {\n            r = b.entry[i].resource;\n            if  (r.resourceType == resource_type )\n            {\n                pm.test('Resource Type= ' + r.resourceType + \" id = \" + r.id, function () {});\n                has_r = true ;\n            }\n            }\n            if  (has_r === false){\n            pm.test(\"no \" + resource_type + \" in bundle\", function () {\n              pm.expect.fail();\n              });\n            }\n        }\n        \n        catch(e){\n            console.log(e);\n        }\n    }\n}\n}",
+			"enabled": true
+		},
+		{
+			"key": "reset_env",
+			"value": "() => {\n// reset all environmental variable for Encounter\nuri = pm.environment.get(\"uri\");\npatient = pm.environment.get(\"patient\");\npm.environment.clear();\npm.environment.set(\"uri\", uri);\npm.environment.set(\"patient\", patient);\n}",
+			"enabled": true
+		},
+		{
+			"key": "base_url",
+			"value": "http://hapi.fhir.org/baseR4",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "{{uri}}/AllergyIntolerance?patient={{pid}}",
+			"id": "8d8cc065-248a-41ba-8b82-7bfab6aa5ae7",
+			"url": "https://fhir-ehr.sandboxcerner.com/r4/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca//AllergyIntolerance?patient=4342009",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Description:SHALL support searching for all allergies for a patient using the patient search parameter:\n\nGET [base]/AllergyIntolerance?patient=[reference]": true,
+				"response is ok": true,
+				"Resource Type= AllergyIntolerance id = 7991735": true,
+				"clinicalStatus = active": true,
+				"Resource Type= AllergyIntolerance id = 6171733": true,
+				"Resource Type= AllergyIntolerance id = 6851733": true,
+				"Resource Type= AllergyIntolerance id = 7583733": true,
+				"Resource Type= AllergyIntolerance id = 6279917": true,
+				"Resource Type= AllergyIntolerance id = 6267831": true,
+				"clinicalStatus element is missing and verification status is \"entered-in-error\"": true,
+				"Resource Type= AllergyIntolerance id = 6267775": true,
+				"Resource Type= AllergyIntolerance id = 6499769": true,
+				"Resource Type= AllergyIntolerance id = 6283733": true,
+				"Resource Type= AllergyIntolerance id = 6859739": true,
+				"Resource Type= AllergyIntolerance id = 6267833": true,
+				"Resource Type= AllergyIntolerance id = 7167733": true,
+				"Resource Type= AllergyIntolerance id = 7639733": true,
+				"Resource Type= AllergyIntolerance id = 6267785": true
+			},
+			"testPassFailCounts": {
+				"Description:SHALL support searching for all allergies for a patient using the patient search parameter:\n\nGET [base]/AllergyIntolerance?patient=[reference]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7991735": {
+					"pass": 1,
+					"fail": 0
+				},
+				"clinicalStatus = active": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6171733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6851733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7583733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6279917": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267831": {
+					"pass": 1,
+					"fail": 0
+				},
+				"clinicalStatus element is missing and verification status is \"entered-in-error\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267775": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6499769": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6283733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6859739": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267833": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7167733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7639733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267785": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"596"
+			],
+			"allTests": [
+				{
+					"Description:SHALL support searching for all allergies for a patient using the patient search parameter:\n\nGET [base]/AllergyIntolerance?patient=[reference]": true,
+					"response is ok": true,
+					"Resource Type= AllergyIntolerance id = 7991735": true,
+					"clinicalStatus = active": true,
+					"Resource Type= AllergyIntolerance id = 6171733": true,
+					"Resource Type= AllergyIntolerance id = 6851733": true,
+					"Resource Type= AllergyIntolerance id = 7583733": true,
+					"Resource Type= AllergyIntolerance id = 6279917": true,
+					"Resource Type= AllergyIntolerance id = 6267831": true,
+					"clinicalStatus element is missing and verification status is \"entered-in-error\"": true,
+					"Resource Type= AllergyIntolerance id = 6267775": true,
+					"Resource Type= AllergyIntolerance id = 6499769": true,
+					"Resource Type= AllergyIntolerance id = 6283733": true,
+					"Resource Type= AllergyIntolerance id = 6859739": true,
+					"Resource Type= AllergyIntolerance id = 6267833": true,
+					"Resource Type= AllergyIntolerance id = 7167733": true,
+					"Resource Type= AllergyIntolerance id = 7639733": true,
+					"Resource Type= AllergyIntolerance id = 6267785": true
+				}
+			],
+			"time": "596",
+			"totalRequestTime": "596",
+			"iterationResults": {}
+		},
+		{
+			"name": "{{uri}}/AllergyIntolerance?patient={{pid}}&clinical-status={{clinical-status}}",
+			"id": "c926fee7-9839-4fd0-a99e-fe0098dc6675",
+			"url": "https://fhir-ehr.sandboxcerner.com/r4/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca//AllergyIntolerance?patient=4342009&clinical-status=http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|active",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Description:SHOULD support searching using the combination of the patient and clinical-status search parameters:\n\nGET [base]/AllergyIntolerance?patient=[reference]&amp;clinical-status={[system]}|[code]": true,
+				"response is okAllergyIntolerance": true,
+				"Resource Type= AllergyIntolerance id = 7991735": true,
+				"Resource Type= AllergyIntolerance id = 6851733": true,
+				"Resource Type= AllergyIntolerance id = 6171733": true,
+				"Resource Type= AllergyIntolerance id = 7583733": true,
+				"Resource Type= AllergyIntolerance id = 6279917": true,
+				"Resource Type= AllergyIntolerance id = 6267831": true,
+				"Resource Type= AllergyIntolerance id = 6267775": true,
+				"Resource Type= AllergyIntolerance id = 6499769": true,
+				"Resource Type= AllergyIntolerance id = 6283733": true,
+				"Resource Type= AllergyIntolerance id = 6859739": true,
+				"Resource Type= AllergyIntolerance id = 6267833": true,
+				"Resource Type= AllergyIntolerance id = 7167733": true,
+				"Resource Type= AllergyIntolerance id = 7639733": true,
+				"Resource Type= AllergyIntolerance id = 6267785": true
+			},
+			"testPassFailCounts": {
+				"Description:SHOULD support searching using the combination of the patient and clinical-status search parameters:\n\nGET [base]/AllergyIntolerance?patient=[reference]&amp;clinical-status={[system]}|[code]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is okAllergyIntolerance": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7991735": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6851733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6171733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7583733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6279917": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267831": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267775": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6499769": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6283733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6859739": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267833": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7167733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7639733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267785": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"874"
+			],
+			"allTests": [
+				{
+					"Description:SHOULD support searching using the combination of the patient and clinical-status search parameters:\n\nGET [base]/AllergyIntolerance?patient=[reference]&amp;clinical-status={[system]}|[code]": true,
+					"response is okAllergyIntolerance": true,
+					"Resource Type= AllergyIntolerance id = 7991735": true,
+					"Resource Type= AllergyIntolerance id = 6851733": true,
+					"Resource Type= AllergyIntolerance id = 6171733": true,
+					"Resource Type= AllergyIntolerance id = 7583733": true,
+					"Resource Type= AllergyIntolerance id = 6279917": true,
+					"Resource Type= AllergyIntolerance id = 6267831": true,
+					"Resource Type= AllergyIntolerance id = 6267775": true,
+					"Resource Type= AllergyIntolerance id = 6499769": true,
+					"Resource Type= AllergyIntolerance id = 6283733": true,
+					"Resource Type= AllergyIntolerance id = 6859739": true,
+					"Resource Type= AllergyIntolerance id = 6267833": true,
+					"Resource Type= AllergyIntolerance id = 7167733": true,
+					"Resource Type= AllergyIntolerance id = 7639733": true,
+					"Resource Type= AllergyIntolerance id = 6267785": true
+				}
+			],
+			"time": "874",
+			"totalRequestTime": "874",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 46,
+	"totalFail": 0,
+	"totalTime": 1470,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "{{uri}}/AllergyIntolerance?patient={{pid}}",
+			"id": "8d8cc065-248a-41ba-8b82-7bfab6aa5ae7",
+			"url": "https://fhir-ehr.sandboxcerner.com/r4/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca//AllergyIntolerance?patient=4342009",
+			"time": "2019-07-16T04:22:11.819Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Description:SHALL support searching for all allergies for a patient using the patient search parameter:\n\nGET [base]/AllergyIntolerance?patient=[reference]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7991735": {
+					"pass": 1,
+					"fail": 0
+				},
+				"clinicalStatus = active": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6171733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6851733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7583733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6279917": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267831": {
+					"pass": 1,
+					"fail": 0
+				},
+				"clinicalStatus element is missing and verification status is \"entered-in-error\"": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267775": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6499769": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6283733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6859739": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267833": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7167733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7639733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267785": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "{{uri}}/AllergyIntolerance?patient={{pid}}&clinical-status={{clinical-status}}",
+			"id": "c926fee7-9839-4fd0-a99e-fe0098dc6675",
+			"url": "https://fhir-ehr.sandboxcerner.com/r4/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca//AllergyIntolerance?patient=4342009&clinical-status=http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|active",
+			"time": "2019-07-16T04:22:11.819Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Description:SHOULD support searching using the combination of the patient and clinical-status search parameters:\n\nGET [base]/AllergyIntolerance?patient=[reference]&amp;clinical-status={[system]}|[code]": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is okAllergyIntolerance": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7991735": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6851733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6171733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7583733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6279917": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267831": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267775": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6499769": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6283733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6859739": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267833": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7167733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 7639733": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resource Type= AllergyIntolerance id = 6267785": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

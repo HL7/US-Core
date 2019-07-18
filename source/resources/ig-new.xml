@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.core.argo-3.1.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\R4\source\resources"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\R4\source\examples"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\R4\framework"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\R4\source\pages"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.argo-3.1.0"/>
   <version value="3.1.0"/>
@@ -253,12 +253,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Device/udi-3"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="MedicationRequest/uscore-mo1"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -320,6 +314,12 @@
     <resource>
       <reference>
         <reference value="DiagnosticReport/metabolic-panel"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/udi-3"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -1051,12 +1051,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/us-core-device"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="SearchParameter/us-core-patient-birthdate"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1123,7 +1117,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/us-core-device-patient"/>
+        <reference value="SearchParameter/us-core-implantable-device-patient"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1279,7 +1273,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/us-core-device-type"/>
+        <reference value="SearchParameter/us-core-implantable-device-type"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1417,6 +1411,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/us-core-implantable-device"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/detailed-race"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1427,38 +1427,8 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="Guidance"/>
+        <title value="General Guidance"/>
         <generation value="markdown"/>
-        <page>
-          <nameUrl value="general-guidance.html"/>
-          <title value="General Guidance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="clinical-notes-guidance.html"/>
-          <title value="Clinical Notes Guidance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="all-meds.html"/>
-          <title value="Medication List Guidance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="basic-provenance.html"/>
-          <title value="Basic Provenance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="r2-r4-guidance.html"/>
-          <title value="DSTU2 to R4 Conversion"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="future-of-us-core.html"/>
-          <title value="Future of US Core"/>
-          <generation value="markdown"/>
-        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
@@ -1555,11 +1525,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-us-core-device.html"/>
-          <title value="StructureDefinition Us Core Device"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="StructureDefinition-us-core-careteam.html"/>
           <title value="StructureDefinition Us Core CareTeam"/>
           <generation value="generated"/>
@@ -1612,6 +1577,11 @@
         <page>
           <nameUrl value="StructureDefinition-us-core-medicationrequest.html"/>
           <title value="StructureDefinition Us Core MedicationRequest"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-us-core-implantable-device.html"/>
+          <title value="StructureDefinition Us Core Implantable Device"/>
           <generation value="generated"/>
         </page>
       </page>
@@ -2030,8 +2000,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="SearchParameter-us-core-device-patient.html"/>
-          <title value="SearchParameter Us Core Device Patient"/>
+          <nameUrl value="SearchParameter-us-core-implantable-device-patient.html"/>
+          <title value="SearchParameter Us Core Implantable Device Patient"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -2140,8 +2110,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="SearchParameter-us-core-device-type.html"/>
-          <title value="SearchParameter Us Core Device Type"/>
+          <nameUrl value="SearchParameter-us-core-implantable-device-type.html"/>
+          <title value="SearchParameter Us Core Implantable Device Type"/>
           <generation value="generated"/>
         </page>
         <page>

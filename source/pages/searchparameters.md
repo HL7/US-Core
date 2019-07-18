@@ -43,8 +43,8 @@ This section lists the search parameters definitions that are used within the ca
   - [code](SearchParameter-us-core-condition-code.html)
 
 **Device**
-  - [patient](SearchParameter-us-core-device-patient.html)
-  - [type](SearchParameter-us-core-device-type.html)
+  - [patient](SearchParameter-us-core-implantable-device-patient.html)
+  - [type](SearchParameter-us-core-implantable-device-type.html)
 
 **DiagnosticReport**
   - [status](SearchParameter-us-core-diagnosticreport-status.html)

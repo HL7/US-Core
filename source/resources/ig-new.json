@@ -3,19 +3,19 @@
   "id" : "hl7.fhir.us.core.argo-3.1.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\R4\\source\\resources"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\R4\\source\\examples"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\R4\\framework"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\R4\\source\\pages"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/pages"
   }],
   "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.argo-3.1.0",
   "version" : "3.1.0",
@@ -256,12 +256,6 @@
     },
     {
       "reference" : {
-        "reference" : "Device/udi-3"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "MedicationRequest/uscore-mo1"
       },
       "exampleBoolean" : true
@@ -323,6 +317,12 @@
     {
       "reference" : {
         "reference" : "DiagnosticReport/metabolic-panel"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Device/udi-3"
       },
       "exampleBoolean" : true
     },
@@ -1054,12 +1054,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/us-core-device"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "SearchParameter/us-core-patient-birthdate"
       },
       "exampleBoolean" : false
@@ -1126,7 +1120,7 @@
     },
     {
       "reference" : {
-        "reference" : "SearchParameter/us-core-device-patient"
+        "reference" : "SearchParameter/us-core-implantable-device-patient"
       },
       "exampleBoolean" : false
     },
@@ -1282,7 +1276,7 @@
     },
     {
       "reference" : {
-        "reference" : "SearchParameter/us-core-device-type"
+        "reference" : "SearchParameter/us-core-implantable-device-type"
       },
       "exampleBoolean" : false
     },
@@ -1420,6 +1414,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/us-core-implantable-device"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/detailed-race"
       },
       "exampleBoolean" : false
@@ -1430,38 +1430,8 @@
       "generation" : "markdown",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "Guidance",
-        "generation" : "markdown",
-        "page" : [{
-          "nameUrl" : "general-guidance.html",
-          "title" : "General Guidance",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "clinical-notes-guidance.html",
-          "title" : "Clinical Notes Guidance",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "all-meds.html",
-          "title" : "Medication List Guidance",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "basic-provenance.html",
-          "title" : "Basic Provenance",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "r2-r4-guidance.html",
-          "title" : "DSTU2 to R4 Conversion",
-          "generation" : "markdown"
-        },
-        {
-          "nameUrl" : "future-of-us-core.html",
-          "title" : "Future of US Core",
-          "generation" : "markdown"
-        }]
+        "title" : "General Guidance",
+        "generation" : "markdown"
       },
       {
         "nameUrl" : "profiles.html",
@@ -1558,11 +1528,6 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-us-core-device.html",
-          "title" : "StructureDefinition Us Core Device",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "StructureDefinition-us-core-careteam.html",
           "title" : "StructureDefinition Us Core CareTeam",
           "generation" : "generated"
@@ -1615,6 +1580,11 @@
         {
           "nameUrl" : "StructureDefinition-us-core-medicationrequest.html",
           "title" : "StructureDefinition Us Core MedicationRequest",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-implantable-device.html",
+          "title" : "StructureDefinition Us Core Implantable Device",
           "generation" : "generated"
         }]
       },
@@ -2033,8 +2003,8 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "SearchParameter-us-core-device-patient.html",
-          "title" : "SearchParameter Us Core Device Patient",
+          "nameUrl" : "SearchParameter-us-core-implantable-device-patient.html",
+          "title" : "SearchParameter Us Core Implantable Device Patient",
           "generation" : "generated"
         },
         {
@@ -2143,8 +2113,8 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "SearchParameter-us-core-device-type.html",
-          "title" : "SearchParameter Us Core Device Type",
+          "nameUrl" : "SearchParameter-us-core-implantable-device-type.html",
+          "title" : "SearchParameter Us Core Implantable Device Type",
           "generation" : "generated"
         },
         {

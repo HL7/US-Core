@@ -41,7 +41,7 @@ In the January ballot of 2019 we tested this process with the FDA requesting US 
 
 **Pilot Testing**
 
-Additional UDI elements in a US Core Device Profile
+Additional UDI elements in a US Core Implantable Device Profile
 
 **Candidates under consideration**
 

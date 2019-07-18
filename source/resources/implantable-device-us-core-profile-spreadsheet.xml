@@ -16,8 +16,8 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>17565</WindowHeight>
-  <WindowWidth>32767</WindowWidth>
+  <WindowHeight>12225</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <ActiveSheet>2</ActiveSheet>
@@ -1019,15 +1019,15 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s72"><Data ss:Type="String">id</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="String">device-us-core</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">us-core-implantable-device</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">name</Data></Cell>
-    <Cell ss:StyleID="s75"><Data ss:Type="String">USCoreDeviceProfile</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">USCoreImplantableDeviceProfile</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">display</Data></Cell>
-    <Cell ss:StyleID="s75"><Data ss:Type="String">US-Core-Device</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">US Core Implantable Device Profile</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">author.name</Data></Cell>
@@ -1043,7 +1043,7 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="69">
     <Cell ss:StyleID="s74"><Data ss:Type="String">description</Data></Cell>
-    <Cell ss:StyleID="s75"><Data ss:Type="String">Defines constraints and extensions on the Device resource for the minimal set of data to query and retrieve a patient's Device(s).</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Defines constraints and extensions on the Device resource for the minimal set of data to query and retrieve a patient's implantable device(s).</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">status</Data></Cell>
@@ -1051,11 +1051,11 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">date</Data></Cell>
-    <Cell ss:StyleID="s78" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-07-18T09:47:01.070</Data></Cell>
+    <Cell ss:StyleID="s78" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-07-18T11:22:12.450</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">published.structure</Data></Cell>
-    <Cell ss:StyleID="s77"><Data ss:Type="String">US-Core-Device</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">US-Core-Implantable-Device</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">version</Data></Cell>
@@ -1076,7 +1076,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
-    <Cell ss:StyleID="s81"><Data ss:Type="String">device-us-core-profile-introduction.xml</Data></Cell>
+    <Cell ss:StyleID="s81"/>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s82"><Data ss:Type="String">publication.status</Data></Cell>
@@ -1084,7 +1084,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s83"><Data ss:Type="String">notes</Data></Cell>
-    <Cell ss:StyleID="s84"><Data ss:Type="String">device-us-core-profile-notes.xml</Data></Cell>
+    <Cell ss:StyleID="s84"/>
    </Row>
    <Row ss:AutoFitHeight="0"/>
   </Table>
@@ -1119,8 +1119,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>8</ActiveRow>
-     <ActiveCol>4</ActiveCol>
+     <ActiveRow>3</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -1128,16 +1127,16 @@
    <x:PageLayoutZoom>0</x:PageLayoutZoom>
   </WorksheetOptions>
  </Worksheet>
- <Worksheet ss:Name="US-Core-Device">
+ <Worksheet ss:Name="US-Core-Implantable-Device">
   <Names>
    <NamedRange ss:Name="_FilterDatabase"
-    ss:RefersTo="='US-Core-Device'!R1C3:R18C26" ss:Hidden="1"/>
+    ss:RefersTo="='US-Core-Implantable-Device'!R1C3:R18C26" ss:Hidden="1"/>
   </Names>
   <Table ss:ExpandedColumnCount="28" ss:ExpandedRowCount="19" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s85" ss:DefaultColumnWidth="65.25"
    ss:DefaultRowHeight="19.5">
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="99.75"/>
-   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="105.75"/>
+   <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="226.5"/>
    <Column ss:StyleID="s85" ss:AutoFitWidth="0" ss:Width="71.25"/>
    <Column ss:StyleID="s86" ss:Width="68.25"/>
    <Column ss:StyleID="s86" ss:AutoFitWidth="0" ss:Width="32.25"/>
@@ -1262,9 +1261,8 @@
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="18.9375">
-    <Cell ss:Formula="=&quot;USCore&quot;&amp;RC[5]&amp;&quot;Profile&quot;"><Data
-      ss:Type="String">USCoreDeviceProfile</Data></Cell>
-    <Cell><Data ss:Type="String">US Core Device Profile </Data></Cell>
+    <Cell ss:Formula="=Metadata!R[1]C[1]"><Data ss:Type="String">USCoreImplantableDeviceProfile</Data></Cell>
+    <Cell ss:Formula="=Metadata!R[2]C"><Data ss:Type="String">US Core Implantable Device Profile</Data></Cell>
     <Cell ss:StyleID="s93"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s94"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s94"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1282,7 +1280,7 @@
     <Cell ss:StyleID="s97"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s97"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s96"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s96"><Data ss:Type="String">The US Core Device Profile is based upon the core FHIR Device Resource and created to meet the 2015 Edition Common Clinical Data Set 'Unique device identifier(s) for a patient’s implantable device(s)' requirements.</Data><NamedCell
+    <Cell ss:StyleID="s96"><Data ss:Type="String">The US Core Implantable Device Profile is based upon the core FHIR Device Resource and created to meet the 2015 Edition Common Clinical Data Set 'Unique device identifier(s) for a patient’s implantable device(s)' requirements.</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s96"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s98"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1804,8 +1802,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>6</ActiveRow>
-     <ActiveCol>31</ActiveCol>
+     <ActiveRow>2</ActiveRow>
+     <ActiveCol>0</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

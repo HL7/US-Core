@@ -6,7 +6,7 @@
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
 
-1. **SHALL** support searching for all devices for a patient, including implantable devices using the **[`patient`](SearchParameter-us-core-device-patient.html)** search parameter:
+1. **SHALL** support searching for all devices for a patient, including implantable devices using the **[`patient`](SearchParameter-us-core-implantable-device-patient.html)** search parameter:
 
     `GET [base]/Device?patient=[reference]`
 
@@ -21,7 +21,7 @@ The following search parameters, search parameter combinations and search parame
 
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
-1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-device-patient.html)** and **[`type`](SearchParameter-us-core-device-type.html)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-implantable-device-patient.html)** and **[`type`](SearchParameter-us-core-implantable-device-type.html)** search parameters:
 
     `GET [base]/Device?patient=[reference]&type={[system]}|[code]`
 

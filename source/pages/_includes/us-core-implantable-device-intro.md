@@ -1,11 +1,11 @@
-﻿This profile sets minimum expectations for the [Device] resource to record, search and fetch UDI information associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
+﻿This profile sets minimum expectations for the [Device] resource to record, search and fetch UDI information associated with a patient's implantable device(s). It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core-Device profile:
+The following are example usage scenarios for the US Core Implantable Device profile:
 
--   Query for a Patient's Devices
--   Record a Patient Device
+-   Query for a Patient's Implantable Devices
+-   Record a Patient Implantable Device
 
 ### Mandatory and Must Support Data Elements
 
