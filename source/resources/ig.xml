@@ -9,8 +9,8 @@
   <status value="active"/>
   <publisher value="The Argonaut Project"/>
 
-
-<contact><!-- 0..* ContactDetail Contact details for the publisher -->
+  <contact>
+    <!-- 0..* ContactDetail Contact details for the publisher -->
     <telecom>
       <system value="url"/>
       <value value="http://argonautwiki.hl7.org"/>
@@ -18,99 +18,743 @@
   </contact>
   <copyright value="Used by permission of The Argonaut Project, all rights reserved Creative Commons License"/>
   <!-- 0..1 Use and/or publishing restrictions -->
- <packageId value="hl7.fhir.us.core.argo"/> <!-- 0..1 NPM Package name for IG -->
-<license value="CC0-1.0"/> <!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
-<fhirVersion value="4.0.0"/> <!-- 0..1 FHIR Version this Implementation Guide targets -->
- <definition>
-  <!--  <grouping>  0..* Grouping used to present related resources in the IG -->
-  <!-- <name value="[string]"/> 1..1 Descriptive name for the package -->
-  <!--   <description value="[string]"/> 0..1 Human readable text describing the package -->
-  <!--  </grouping>  -->
+  <packageId value="hl7.fhir.us.core.argo"/>
+  <!-- 0..1 NPM Package name for IG -->
+  <license value="CC0-1.0"/>
+  <!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
+  <fhirVersion value="4.0.0"/>
+  <!-- 0..1 FHIR Version this Implementation Guide targets -->
+  <definition>
+    <!-- <grouping> 0..* Grouping used to present related resources in the IG -->
+    <!-- <name value="[string]"/> 1..1 Descriptive name for the package -->
+    <!-- <description value="[string]"/> 0..1 Human readable text describing the package -->
+    <!-- </grouping> -->
     <grouping>
       <name value="base"/>
     </grouping>
-    <!-- <resource>
-    <reference>
-      <reference value="[type]/[id]"/>
-    </reference>
-    <name value="Test Example"/>
-    <description value="A test example to show how a implementation guide works"/>
-    <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/>
-  </resource>   -->
-  <!--  <groupingId value="[id]"/>  0..1 Grouping this is part of -->
-  <!-- insert resources --><resource><reference><reference value="Observation/urine-glucose"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Procedure/rehab"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="CareTeam/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-leukocyte-esterase"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-bilirubin"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Condition/hc1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-sediment"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Immunization/imm-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/pediatric-wt-example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/saint-luke-w-endpoint"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-ph"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Encounter/example-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="DiagnosticReport/chest-xray-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/serum-sodium"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="DiagnosticReport/cbc"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/serum-potassium"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Encounter/1036"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/some-day-smoker"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Location/hl7east"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/serum-co2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-protein"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Procedure/defib-implant"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/usg"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/serum-chloride"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/serum-calcium"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-color"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/bp-data-absent"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Patient/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/temperature"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/bmi"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Medication/uscore-med2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-cells"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/length"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Device/udi-2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MedicationRequest/uscore-mo1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/practitioner-2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Goal/goal-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-rbcs"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urobilinogen"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Medication/uscore-med1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-bacteria"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/uscore-mo3"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/head-circumference"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MedicationRequest/self-tylenol"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="DiagnosticReport/metabolic-panel"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Device/udi-3"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MedicationRequest/uscore-mo2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/bun"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Practitioner/practitioner-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/neutrophils"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-nitrite"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/oxygen-saturation"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="DiagnosticReport/cardiology-report"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/vitals-panel"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/blood-pressure"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-wbcs"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/height"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/acme-lab"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Device/udi-1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/hemoglobin"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="DocumentReference/episode-summary"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-hemoglobin"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/heart-rate"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-epi-cells"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="AllergyIntolerance/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/blood-glucose"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="DiagnosticReport/urinalysis"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Condition/example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MedicationStatement/uscore-ms2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/serum-creatinine"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Bundle/uscore-ms3"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/satO2-fiO2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/serum-total-bilirubin"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="MedicationStatement/uscore-ms1"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/pediatric-bmi-example"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Organization/example-organization-2"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/weight"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/mchc"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-clarity"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="CarePlan/colonoscopy"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/erythrocytes"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/urine-ketone"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="Observation/respiratory-rate"/></reference><exampleBoolean value="true"/></resource><resource><reference><reference value="ValueSet/us-core-medication-codes"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-immunization"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-location-address-state"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-practitionerrole-practitioner"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-observation-smokingstatus"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-medicationstatement-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/omb-race-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-practitionerrole"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-allergy-substance"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-narrative-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CodeSystem/cdcrec"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-organization-name"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-observation-lab"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-diagnosticreport-code"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/pediatric-bmi-for-age"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-allergyintolerance"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-goal-lifecycle-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-procedure-code"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-documentreference-type"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-patient-gender"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-practitioner"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-diagnosticreport-note"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/omb-ethnicity-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-provenance"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="OperationDefinition/docref"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-condition-clinical-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-birthsex"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-documentreference-id"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-careplan-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-encounter-class"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-medicationrequest-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/us-core-server"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-condition-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/detailed-ethnicity"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-documentreference-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-encounter"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-ndc-vaccine-codes"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-diagnosticreport-date"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-medicationstatement"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-procedure-icd10pcs"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-provider-specialty"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-procedure-date"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-vaccines-cvx"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-pulse-oximetry"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-allergyintolerance-clinical-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-documentreference-date"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-medicationrequest-intent"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-location"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-location-address"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-observation-smoking-status-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-usps-state"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-practitioner-name"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-encounter-type"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-documentreference-period"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-observation-code"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-location-name"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-condition-onset-date"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-patient-given"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-procedure"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-encounter-type"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-problem"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CodeSystem/condition-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-medicationrequest-encounter"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-encounter-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-organization-address"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-observation-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-medication"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-diagnosticreport-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-observation-date"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/birthsex"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-diagnosticreport-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-observation-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-diagnosticreport-report-and-note-codes"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-provider-role"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-ethnicity"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-documentreference"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-direct"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-smoking-status-observation-codes"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-careteam-provider-roles"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-documentreference-type"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-encounter-date"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-diagnosticreport-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-patient-birthdate"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-careteam"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-procedure-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-clinical-note-type"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-encounter-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ConceptMap/ndc-cvx"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-ethnicity"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-careplan-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-careplan"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-condition-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-allergyintolerance-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-implantable-device-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-condition-code"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-observation-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-race"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-careplan-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-patient-family"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-smokingstatus"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-medicationrequest-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-medicationstatement-effective"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-race"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-medicationstatement-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-location-address-postalcode"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-encounter-id"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-medicationrequest-authoredon"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-documentreference-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-documentreference-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-procedure-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-goal-target-date"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-diagnosticreport-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-careplan-date"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-careteam-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-organization"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-immunization-date"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-encounter-identifier"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-practitionerrole-specialty"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-patient-name"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-implantable-device-type"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-procedure-code"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-diagnosticreport-lab"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-goal-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/simple-language"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-immunization-patient"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-condition"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/pediatric-weight-for-height"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-observation-value-codes"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-patient-id"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-location-address-city"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-goal"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-careteam-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CodeSystem/us-core-documentreference-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/us-core-diagnosticreport-lab-codes"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CodeSystem/careplan-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-documentreference-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="CapabilityStatement/us-core-client"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-practitioner-identifier"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-patient-identifier"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-condition-category"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="SearchParameter/us-core-immunization-status"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-medicationrequest"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="StructureDefinition/us-core-implantable-device"/></reference><exampleBoolean value="false"/></resource><resource><reference><reference value="ValueSet/detailed-race"/></reference><exampleBoolean value="false"/></resource>
+    <!-- <resource> <reference> <reference value="[type]/[id]"/> </reference> <name value="Test Example"/> <description value="A test example to show how a implementation guide works"/> <exampleCanonical
+    value="http://hl7.org/fhir/us/core/StructureDefinition/patient"/>|<exampleBoolean value="true|false"/> </resource> -->
+    <!-- <groupingId value="[id]"/> 0..1 Grouping this is part of -->
+    <!-- insert resources -->
+    <resource>
+      <reference><reference value="Observation/urine-glucose"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Procedure/rehab"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="CareTeam/example"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-leukocyte-esterase"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-bilirubin"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Condition/hc1"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-sediment"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Immunization/imm-1"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/pediatric-wt-example"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Organization/saint-luke-w-endpoint"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-ph"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Encounter/example-1"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="DiagnosticReport/chest-xray-report"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/serum-sodium"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="DiagnosticReport/cbc"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/serum-potassium"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Encounter/1036"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/some-day-smoker"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Location/hl7east"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/serum-co2"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-protein"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Procedure/defib-implant"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/usg"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/serum-chloride"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/serum-calcium"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-color"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/bp-data-absent"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Patient/example"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/temperature"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/bmi"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Medication/uscore-med2"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-cells"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/length"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Device/udi-2"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="MedicationRequest/uscore-mo1"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Practitioner/practitioner-2"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Goal/goal-1"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-rbcs"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urobilinogen"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Medication/uscore-med1"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-bacteria"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Bundle/uscore-mo3"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/head-circumference"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="MedicationRequest/self-tylenol"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="DiagnosticReport/metabolic-panel"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Device/udi-3"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="MedicationRequest/uscore-mo2"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/bun"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Practitioner/practitioner-1"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/neutrophils"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-nitrite"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/oxygen-saturation"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="DiagnosticReport/cardiology-report"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/vitals-panel"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/blood-pressure"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-wbcs"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/height"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Organization/acme-lab"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Device/udi-1"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/hemoglobin"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="DocumentReference/episode-summary"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-hemoglobin"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/heart-rate"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-epi-cells"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="AllergyIntolerance/example"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/blood-glucose"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="DiagnosticReport/urinalysis"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Condition/example"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="MedicationStatement/uscore-ms2"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/serum-creatinine"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Bundle/uscore-ms3"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/satO2-fiO2"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/serum-total-bilirubin"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="MedicationStatement/uscore-ms1"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/pediatric-bmi-example"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Organization/example-organization-2"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/weight"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/mchc"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-clarity"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="CarePlan/colonoscopy"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/erythrocytes"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/urine-ketone"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="Observation/respiratory-rate"/></reference><exampleBoolean value="true"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-medication-codes"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-immunization"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-location-address-state"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-practitionerrole-practitioner"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-observation-smokingstatus"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-medicationstatement-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/omb-race-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-practitionerrole"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-allergy-substance"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-narrative-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="CodeSystem/cdcrec"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-organization-name"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-observation-lab"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-diagnosticreport-code"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/pediatric-bmi-for-age"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-allergyintolerance"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-goal-lifecycle-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-procedure-code"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-documentreference-type"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-patient-gender"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-practitioner"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-diagnosticreport-note"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/omb-ethnicity-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-provenance"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="OperationDefinition/docref"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-condition-clinical-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-birthsex"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-documentreference-id"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-careplan-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-encounter-class"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-medicationrequest-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="CapabilityStatement/us-core-server"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-condition-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/detailed-ethnicity"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-documentreference-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-encounter"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-ndc-vaccine-codes"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-diagnosticreport-date"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-medicationstatement"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-procedure-icd10pcs"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-provider-specialty"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-procedure-date"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-vaccines-cvx"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-pulse-oximetry"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-allergyintolerance-clinical-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-documentreference-date"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-medicationrequest-intent"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-location"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-location-address"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-observation-smoking-status-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-usps-state"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-practitioner-name"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-encounter-type"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-documentreference-period"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-observation-code"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-location-name"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-condition-onset-date"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-patient-given"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-procedure"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-encounter-type"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-problem"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="CodeSystem/condition-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-medicationrequest-encounter"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-encounter-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-organization-address"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-observation-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-medication"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-diagnosticreport-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-observation-date"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/birthsex"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-diagnosticreport-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-observation-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-diagnosticreport-report-and-note-codes"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-provider-role"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-ethnicity"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-documentreference"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-direct"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-smoking-status-observation-codes"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-careteam-provider-roles"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-documentreference-type"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-encounter-date"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-diagnosticreport-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-patient-birthdate"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-careteam"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-procedure-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-clinical-note-type"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-encounter-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ConceptMap/ndc-cvx"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-ethnicity"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-careplan-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-careplan"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-condition-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-allergyintolerance-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-implantable-device-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-condition-code"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-observation-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-race"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-careplan-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-patient-family"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-smokingstatus"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-medicationrequest-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-medicationstatement-effective"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-race"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-medicationstatement-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-location-address-postalcode"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-encounter-id"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-medicationrequest-authoredon"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-documentreference-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-documentreference-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-procedure-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-goal-target-date"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-diagnosticreport-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-careplan-date"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-careteam-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-organization"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-immunization-date"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-encounter-identifier"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-practitionerrole-specialty"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-patient-name"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-implantable-device-type"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-procedure-code"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-diagnosticreport-lab"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-goal-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/simple-language"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-immunization-patient"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-condition"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/pediatric-weight-for-height"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-observation-value-codes"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-patient-id"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-location-address-city"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-goal"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-careteam-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="CodeSystem/us-core-documentreference-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/us-core-diagnosticreport-lab-codes"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="CodeSystem/careplan-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-documentreference-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="CapabilityStatement/us-core-client"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-practitioner-identifier"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-patient-identifier"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-condition-category"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="SearchParameter/us-core-immunization-status"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-medicationrequest"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="StructureDefinition/us-core-implantable-device"/></reference><exampleBoolean value="false"/></resource>
+    <resource>
+      <reference><reference value="ValueSet/detailed-race"/></reference><exampleBoolean value="false"/></resource>
 
     <!-- ============ Home Page =============== -->
-  <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
+    <page><nameUrl value="index.html"/><title value="Home"/><generation value="markdown"/>
 
     <!-- ============ Guidance Page =============== -->
-    <page><nameUrl value="guidance.html"/><title value="General Guidance"/><generation value="markdown"/></page>
+    <page>
+      <nameUrl value="guidance.html"/>
+      <title value="Guidance"/>
+      <generation value="markdown"/>
 
-    <!-- ============ Profiles Page =============== -->
-    <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>
+      <page>
+        <nameUrl value="general-guidance.html"/>
+        <title value="General Guidance"/>
+        <generation value="markdown"/>
+      </page>
 
-     <!-- ============ Profiles and examples=============== -->
-     <!-- insert profiles --><page><nameUrl value="StructureDefinition-us-core-immunization.html"/><title value="StructureDefinition Us Core Immunization"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-practitionerrole.html"/><title value="StructureDefinition Us Core PractitionerRole"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-observation-lab.html"/><title value="StructureDefinition Us Core Observation Lab"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-pediatric-bmi-for-age.html"/><title value="StructureDefinition Pediatric Bmi For Age"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-allergyintolerance.html"/><title value="StructureDefinition Us Core AllergyIntolerance"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-practitioner.html"/><title value="StructureDefinition Us Core Practitioner"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-diagnosticreport-note.html"/><title value="StructureDefinition Us Core DiagnosticReport Note"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-provenance.html"/><title value="StructureDefinition Us Core Provenance"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-birthsex.html"/><title value="StructureDefinition Us Core Birthsex"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-encounter.html"/><title value="StructureDefinition Us Core Encounter"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-patient.html"/><title value="StructureDefinition Us Core Patient"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-medicationstatement.html"/><title value="StructureDefinition Us Core MedicationStatement"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-pulse-oximetry.html"/><title value="StructureDefinition Us Core Pulse Oximetry"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-location.html"/><title value="StructureDefinition Us Core Location"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-procedure.html"/><title value="StructureDefinition Us Core Procedure"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-medication.html"/><title value="StructureDefinition Us Core Medication"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-documentreference.html"/><title value="StructureDefinition Us Core DocumentReference"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-direct.html"/><title value="StructureDefinition Us Core Direct"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-careteam.html"/><title value="StructureDefinition Us Core CareTeam"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-ethnicity.html"/><title value="StructureDefinition Us Core Ethnicity"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-careplan.html"/><title value="StructureDefinition Us Core CarePlan"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-smokingstatus.html"/><title value="StructureDefinition Us Core Smokingstatus"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-race.html"/><title value="StructureDefinition Us Core Race"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-organization.html"/><title value="StructureDefinition Us Core Organization"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-diagnosticreport-lab.html"/><title value="StructureDefinition Us Core DiagnosticReport Lab"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-condition.html"/><title value="StructureDefinition Us Core Condition"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-pediatric-weight-for-height.html"/><title value="StructureDefinition Pediatric Weight For Height"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-goal.html"/><title value="StructureDefinition Us Core Goal"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-medicationrequest.html"/><title value="StructureDefinition Us Core MedicationRequest"/><generation value="generated"/></page><page><nameUrl value="StructureDefinition-us-core-implantable-device.html"/><title value="StructureDefinition Us Core Implantable Device"/><generation value="generated"/></page>
-    <!-- ============ End Profiles and examples=============== -->
+      <page>
+        <nameUrl value="clinical-notes-guidance.html"/>
+        <title value="Clinical Notes Guidance"/>
+        <generation value="markdown"/>
+      </page>
 
-    <!-- ============ Extensions and examples =============== -->
-    <!-- insert extensions -->
-    <!-- ============ End Extensions and examples =============== -->
+      <page>
+        <nameUrl value="all-meds.html"/>
+        <title value="Medication List Guidance"/>
+        <generation value="markdown"/>
+      </page>
+
+      <page>
+        <nameUrl value="basic-provenance.html"/>
+        <title value="Basic Provenance"/>
+        <generation value="markdown"/>
+      </page>
+
+      <page>
+        <nameUrl value="r2-r4-guidance.html"/>
+        <title value="DSTU2 to R4 Conversion"/>
+        <generation value="markdown"/>
+      </page>
+
+      <page>
+        <nameUrl value="future-of-us-core.html"/>
+        <title value="Future of US Core"/>
+        <generation value="markdown"/>
+      </page>
+
+    </page>
+    <!-- ============ Guidance Page =============== -->
+
+      <!-- ============ Profiles Page =============== -->
+      <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>
+
+        <!-- ============ Profiles and examples=============== -->
+        <!-- insert profiles -->
+        <page><nameUrl value="StructureDefinition-us-core-immunization.html"/><title value="StructureDefinition US Core Immunization"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-practitionerrole.html"/><title value="StructureDefinition US Core PractitionerRole"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-observation-lab.html"/><title value="StructureDefinition US Core Observation Lab"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-pediatric-bmi-for-age.html"/><title value="StructureDefinition Pediatric Bmi For Age"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-allergyintolerance.html"/><title value="StructureDefinition US Core AllergyIntolerance"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-practitioner.html"/><title value="StructureDefinition US Core Practitioner"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-diagnosticreport-note.html"/><title value="StructureDefinition US Core DiagnosticReport Note"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-provenance.html"/><title value="StructureDefinition US Core Provenance"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-birthsex.html"/><title value="StructureDefinition US Core Birthsex"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-encounter.html"/><title value="StructureDefinition US Core Encounter"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-patient.html"/><title value="StructureDefinition US Core Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-medicationstatement.html"/><title value="StructureDefinition US Core MedicationStatement"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-pulse-oximetry.html"/><title value="StructureDefinition US Core Pulse Oximetry"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-location.html"/><title value="StructureDefinition US Core Location"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-procedure.html"/><title value="StructureDefinition US Core Procedure"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-medication.html"/><title value="StructureDefinition US Core Medication"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-documentreference.html"/><title value="StructureDefinition US Core DocumentReference"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-direct.html"/><title value="StructureDefinition US Core Direct"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-careteam.html"/><title value="StructureDefinition US Core CareTeam"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-ethnicity.html"/><title value="StructureDefinition US Core Ethnicity"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-careplan.html"/><title value="StructureDefinition US Core CarePlan"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-smokingstatus.html"/><title value="StructureDefinition US Core Smokingstatus"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-race.html"/><title value="StructureDefinition US Core Race"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-organization.html"/><title value="StructureDefinition US Core Organization"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-diagnosticreport-lab.html"/><title value="StructureDefinition US Core DiagnosticReport Lab"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-condition.html"/><title value="StructureDefinition US Core Condition"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-pediatric-weight-for-height.html"/><title value="StructureDefinition Pediatric Weight For Height"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-goal.html"/><title value="StructureDefinition US Core Goal"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-medicationrequest.html"/><title value="StructureDefinition US Core MedicationRequest"/><generation value="generated"/></page>
+        <page><nameUrl value="StructureDefinition-us-core-implantable-device.html"/><title value="StructureDefinition US Core Implantable Device"/><generation value="generated"/></page>
+        <!-- ============ End Profiles and examples=============== -->
+
+        <!-- ============ Extensions and examples =============== -->
+        <!-- insert extensions -->
+        <!-- ============ End Extensions and examples =============== -->
 
       </page>
-    <!-- ============ Operations Page =============== -->
-    <page><nameUrl value="operations.html"/><title value="Operations"/><generation value="markdown"/>
+      <!-- ============ Operations Page =============== -->
+      <page><nameUrl value="operations.html"/><title value="Operations"/><generation value="markdown"/>
 
-    <!-- ============ Operations and examples  =============== -->
-    <!-- insert operationdefinitions --><page><nameUrl value="OperationDefinition-docref.html"/><title value="OperationDefinition Docref"/><generation value="generated"/></page>
-    <!-- ============ End Operations and examples  =============== -->
+        <!-- ============ Operations and examples =============== -->
+        <!-- insert operationdefinitions -->
+        <page><nameUrl value="OperationDefinition-docref.html"/><title value="OperationDefinition Docref"/><generation value="generated"/></page>
+        <!-- ============ End Operations and examples =============== -->
+
+      </page>
+      <!-- ============ Terminology Page =============== -->
+
+      <page><nameUrl value="terminology.html"/><title value="Terminology"/><generation value="markdown"/>
+        <!-- ============ ValueSet =============== -->
+        <!-- insert valuesets -->
+        <page><nameUrl value="ValueSet-us-core-medication-codes.html"/><title value="ValueSet US Core Medication Codes"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-observation-smokingstatus.html"/><title value="ValueSet US Core Observation Smokingstatus"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-omb-race-category.html"/><title value="ValueSet Omb Race Category"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-allergy-substance.html"/><title value="ValueSet US Core Allergy Substance"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-narrative-status.html"/><title value="ValueSet US Core Narrative Status"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-documentreference-type.html"/><title value="ValueSet US Core DocumentReference Type"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-omb-ethnicity-category.html"/><title value="ValueSet Omb Ethnicity Category"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-condition-category.html"/><title value="ValueSet US Core Condition Category"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-detailed-ethnicity.html"/><title value="ValueSet Detailed Ethnicity"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-ndc-vaccine-codes.html"/><title value="ValueSet US Core Ndc Vaccine Codes"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-procedure-icd10pcs.html"/><title value="ValueSet US Core Procedure Icd10pcs"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-provider-specialty.html"/><title value="ValueSet US Core Provider Specialty"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-vaccines-cvx.html"/><title value="ValueSet US Core Vaccines Cvx"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-observation-smoking-status-status.html"/><title value="ValueSet US Core Observation Smoking Status Status"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-usps-state.html"/><title value="ValueSet US Core Usps State"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-encounter-type.html"/><title value="ValueSet US Core Encounter Type"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-problem.html"/><title value="ValueSet US Core Problem"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-birthsex.html"/><title value="ValueSet Birthsex"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-diagnosticreport-report-and-note-codes.html"/><title value="ValueSet US Core DiagnosticReport Report And Note Codes"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-provider-role.html"/><title value="ValueSet US Core Provider Role"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-smoking-status-observation-codes.html"/><title value="ValueSet US Core Smoking Status Observation Codes"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-careteam-provider-roles.html"/><title value="ValueSet US Core CareTeam Provider Roles"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-diagnosticreport-category.html"/><title value="ValueSet US Core DiagnosticReport Category"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-clinical-note-type.html"/><title value="ValueSet US Core Clinical Note Type"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-documentreference-category.html"/><title value="ValueSet US Core DocumentReference Category"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-procedure-code.html"/><title value="ValueSet US Core Procedure Code"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-simple-language.html"/><title value="ValueSet Simple Language"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-observation-value-codes.html"/><title value="ValueSet US Core Observation Value Codes"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-us-core-diagnosticreport-lab-codes.html"/><title value="ValueSet US Core DiagnosticReport Lab Codes"/><generation value="generated"/></page>
+        <page><nameUrl value="ValueSet-detailed-race.html"/><title value="ValueSet Detailed Race"/><generation value="generated"/></page>
+        <!-- ============ End ValueSet =============== -->
+
+        <!-- ============ CodeSystems =============== -->
+        <!-- insert codesystems -->
+        <page><nameUrl value="CodeSystem-cdcrec.html"/><title value="CodeSystem Cdcrec"/><generation value="generated"/></page>
+        <page><nameUrl value="CodeSystem-condition-category.html"/><title value="CodeSystem Condition Category"/><generation value="generated"/></page>
+        <page><nameUrl value="CodeSystem-us-core-documentreference-category.html"/><title value="CodeSystem US Core DocumentReference Category"/><generation value="generated"/></page>
+        <page><nameUrl value="CodeSystem-careplan-category.html"/><title value="CodeSystem CarePlan Category"/><generation value="generated"/></page>
+        <!-- ============ End CodeSystems =============== -->
+
+        <!-- ============ ConceptMaps =============== -->
+        <!-- insert conceptmaps -->
+        <page><nameUrl value="ConceptMap-ndc-cvx.html"/><title value="ConceptMap Ndc Cvx"/><generation value="generated"/></page>
+        <!-- ============ End ConceptMaps =============== -->
+
+      </page>
+
+      <!-- ============ SearchParameter Page =============== -->
+      <page><nameUrl value="searchparameters.html"/><title value="Search Parameters"/><generation value="markdown"/>
+
+        <!-- ============ SearchParameters =============== -->
+        <!-- insert searchparameters -->
+        <page><nameUrl value="SearchParameter-us-core-location-address-state.html"/><title value="SearchParameter US Core Location Address State"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-practitionerrole-practitioner.html"/><title value="SearchParameter US Core PractitionerRole Practitioner"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-medicationstatement-status.html"/><title value="SearchParameter US Core MedicationStatement Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-organization-name.html"/><title value="SearchParameter US Core Organization Name"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-diagnosticreport-code.html"/><title value="SearchParameter US Core DiagnosticReport Code"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-goal-lifecycle-status.html"/><title value="SearchParameter US Core Goal Lifecycle Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-procedure-code.html"/><title value="SearchParameter US Core Procedure Code"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-patient-gender.html"/><title value="SearchParameter US Core Patient Gender"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-condition-clinical-status.html"/><title value="SearchParameter US Core Condition Clinical Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-documentreference-id.html"/><title value="SearchParameter US Core DocumentReference Id"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-careplan-category.html"/><title value="SearchParameter US Core CarePlan Category"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-encounter-class.html"/><title value="SearchParameter US Core Encounter Class"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-medicationrequest-patient.html"/><title value="SearchParameter US Core MedicationRequest Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-documentreference-patient.html"/><title value="SearchParameter US Core DocumentReference Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-diagnosticreport-date.html"/><title value="SearchParameter US Core DiagnosticReport Date"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-procedure-date.html"/><title value="SearchParameter US Core Procedure Date"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-allergyintolerance-clinical-status.html"/><title value="SearchParameter US Core AllergyIntolerance Clinical Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-documentreference-date.html"/><title value="SearchParameter US Core DocumentReference Date"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-medicationrequest-intent.html"/><title value="SearchParameter US Core MedicationRequest Intent"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-location-address.html"/><title value="SearchParameter US Core Location Address"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-practitioner-name.html"/><title value="SearchParameter US Core Practitioner Name"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-documentreference-period.html"/><title value="SearchParameter US Core DocumentReference Period"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-observation-code.html"/><title value="SearchParameter US Core Observation Code"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-location-name.html"/><title value="SearchParameter US Core Location Name"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-condition-onset-date.html"/><title value="SearchParameter US Core Condition Onset Date"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-patient-given.html"/><title value="SearchParameter US Core Patient Given"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-encounter-type.html"/><title value="SearchParameter US Core Encounter Type"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-medicationrequest-encounter.html"/><title value="SearchParameter US Core MedicationRequest Encounter"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-encounter-patient.html"/><title value="SearchParameter US Core Encounter Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-organization-address.html"/><title value="SearchParameter US Core Organization Address"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-observation-category.html"/><title value="SearchParameter US Core Observation Category"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-diagnosticreport-status.html"/><title value="SearchParameter US Core DiagnosticReport Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-observation-date.html"/><title value="SearchParameter US Core Observation Date"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-diagnosticreport-category.html"/><title value="SearchParameter US Core DiagnosticReport Category"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-observation-status.html"/><title value="SearchParameter US Core Observation Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-ethnicity.html"/><title value="SearchParameter US Core Ethnicity"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-documentreference-type.html"/><title value="SearchParameter US Core DocumentReference Type"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-encounter-date.html"/><title value="SearchParameter US Core Encounter Date"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-patient-birthdate.html"/><title value="SearchParameter US Core Patient Birthdate"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-procedure-status.html"/><title value="SearchParameter US Core Procedure Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-encounter-status.html"/><title value="SearchParameter US Core Encounter Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-careplan-status.html"/><title value="SearchParameter US Core CarePlan Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-condition-patient.html"/><title value="SearchParameter US Core Condition Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-allergyintolerance-patient.html"/><title value="SearchParameter US Core AllergyIntolerance Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-implantable-device-patient.html"/><title value="SearchParameter US Core Implantable Device Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-condition-code.html"/><title value="SearchParameter US Core Condition Code"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-observation-patient.html"/><title value="SearchParameter US Core Observation Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-race.html"/><title value="SearchParameter US Core Race"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-careplan-patient.html"/><title value="SearchParameter US Core CarePlan Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-patient-family.html"/><title value="SearchParameter US Core Patient Family"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-medicationrequest-status.html"/><title value="SearchParameter US Core MedicationRequest Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-medicationstatement-effective.html"/><title value="SearchParameter US Core MedicationStatement Effective"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-medicationstatement-patient.html"/><title value="SearchParameter US Core MedicationStatement Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-location-address-postalcode.html"/><title value="SearchParameter US Core Location Address Postalcode"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-encounter-id.html"/><title value="SearchParameter US Core Encounter Id"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-medicationrequest-authoredon.html"/><title value="SearchParameter US Core MedicationRequest Authoredon"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-documentreference-status.html"/><title value="SearchParameter US Core DocumentReference Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-procedure-patient.html"/><title value="SearchParameter US Core Procedure Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-goal-target-date.html"/><title value="SearchParameter US Core Goal Target Date"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-diagnosticreport-patient.html"/><title value="SearchParameter US Core DiagnosticReport Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-careplan-date.html"/><title value="SearchParameter US Core CarePlan Date"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-careteam-patient.html"/><title value="SearchParameter US Core CareTeam Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-immunization-date.html"/><title value="SearchParameter US Core Immunization Date"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-encounter-identifier.html"/><title value="SearchParameter US Core Encounter Identifier"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-practitionerrole-specialty.html"/><title value="SearchParameter US Core PractitionerRole Specialty"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-patient-name.html"/><title value="SearchParameter US Core Patient Name"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-implantable-device-type.html"/><title value="SearchParameter US Core Implantable Device Type"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-goal-patient.html"/><title value="SearchParameter US Core Goal Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-immunization-patient.html"/><title value="SearchParameter US Core Immunization Patient"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-patient-id.html"/><title value="SearchParameter US Core Patient Id"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-location-address-city.html"/><title value="SearchParameter US Core Location Address City"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-careteam-status.html"/><title value="SearchParameter US Core CareTeam Status"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-documentreference-category.html"/><title value="SearchParameter US Core DocumentReference Category"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-practitioner-identifier.html"/><title value="SearchParameter US Core Practitioner Identifier"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-patient-identifier.html"/><title value="SearchParameter US Core Patient Identifier"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-condition-category.html"/><title value="SearchParameter US Core Condition Category"/><generation value="generated"/></page>
+        <page><nameUrl value="SearchParameter-us-core-immunization-status.html"/><title value="SearchParameter US Core Immunization Status"/><generation value="generated"/></page>
+        <!-- ============ End SearchParameters =============== -->
+      </page>
+
+      <!-- ============ CapabilityStatement Page =============== -->
+      <page><nameUrl value="capstatements.html"/><title value="Capability Statements"/><generation value="markdown"/>
+
+        <!-- ============ CapabilityStatements =============== -->
+        <!-- insert capabilitystatements -->
+        <page><nameUrl value="CapabilityStatement-us-core-server.html"/><title value="CapabilityStatement US Core Server"/><generation value="generated"/></page>
+        <page><nameUrl value="CapabilityStatement-us-core-client.html"/><title value="CapabilityStatement US Core Client"/><generation value="generated"/></page>
+        <!-- ============ End CapabilityStatements =============== -->
+      </page>
+
+      <!-- ============ Security Page =============== -->
+      <page><nameUrl value="security.html"/><title value="Security"/><generation value="markdown"/></page>
+
+      <!-- ============ Downloads Page =============== -->
+      <page><nameUrl value="downloads.html"/><title value="Downloads"/><generation value="markdown"/></page>
+
+      <!-- ============ Examples Page=============== -->
+      <page><nameUrl value="all-examples.html"/><title value="All Examples"/><generation value="markdown"/></page>
+
+      <!-- ============ Table of Contents =============== -->
+      <page><nameUrl value="toc.html"/><title value="Table of Contents"/><generation value="html"/></page>
 
     </page>
-    <!-- ============ Terminology Page =============== -->
-
-    <page><nameUrl value="terminology.html"/><title value="Terminology"/><generation value="markdown"/>
-     <!-- ============ ValueSet   =============== -->
-    <!-- insert valuesets --><page><nameUrl value="ValueSet-us-core-medication-codes.html"/><title value="ValueSet Us Core Medication Codes"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-observation-smokingstatus.html"/><title value="ValueSet Us Core Observation Smokingstatus"/><generation value="generated"/></page><page><nameUrl value="ValueSet-omb-race-category.html"/><title value="ValueSet Omb Race Category"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-allergy-substance.html"/><title value="ValueSet Us Core Allergy Substance"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-narrative-status.html"/><title value="ValueSet Us Core Narrative Status"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-documentreference-type.html"/><title value="ValueSet Us Core DocumentReference Type"/><generation value="generated"/></page><page><nameUrl value="ValueSet-omb-ethnicity-category.html"/><title value="ValueSet Omb Ethnicity Category"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-condition-category.html"/><title value="ValueSet Us Core Condition Category"/><generation value="generated"/></page><page><nameUrl value="ValueSet-detailed-ethnicity.html"/><title value="ValueSet Detailed Ethnicity"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-ndc-vaccine-codes.html"/><title value="ValueSet Us Core Ndc Vaccine Codes"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-procedure-icd10pcs.html"/><title value="ValueSet Us Core Procedure Icd10pcs"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-provider-specialty.html"/><title value="ValueSet Us Core Provider Specialty"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-vaccines-cvx.html"/><title value="ValueSet Us Core Vaccines Cvx"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-observation-smoking-status-status.html"/><title value="ValueSet Us Core Observation Smoking Status Status"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-usps-state.html"/><title value="ValueSet Us Core Usps State"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-encounter-type.html"/><title value="ValueSet Us Core Encounter Type"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-problem.html"/><title value="ValueSet Us Core Problem"/><generation value="generated"/></page><page><nameUrl value="ValueSet-birthsex.html"/><title value="ValueSet Birthsex"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-diagnosticreport-report-and-note-codes.html"/><title value="ValueSet Us Core DiagnosticReport Report And Note Codes"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-provider-role.html"/><title value="ValueSet Us Core Provider Role"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-smoking-status-observation-codes.html"/><title value="ValueSet Us Core Smoking Status Observation Codes"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-careteam-provider-roles.html"/><title value="ValueSet Us Core CareTeam Provider Roles"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-diagnosticreport-category.html"/><title value="ValueSet Us Core DiagnosticReport Category"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-clinical-note-type.html"/><title value="ValueSet Us Core Clinical Note Type"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-documentreference-category.html"/><title value="ValueSet Us Core DocumentReference Category"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-procedure-code.html"/><title value="ValueSet Us Core Procedure Code"/><generation value="generated"/></page><page><nameUrl value="ValueSet-simple-language.html"/><title value="ValueSet Simple Language"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-observation-value-codes.html"/><title value="ValueSet Us Core Observation Value Codes"/><generation value="generated"/></page><page><nameUrl value="ValueSet-us-core-diagnosticreport-lab-codes.html"/><title value="ValueSet Us Core DiagnosticReport Lab Codes"/><generation value="generated"/></page><page><nameUrl value="ValueSet-detailed-race.html"/><title value="ValueSet Detailed Race"/><generation value="generated"/></page>
-    <!-- ============ End ValueSet   =============== -->
-
-    <!-- ============ CodeSystems  =============== -->
-    <!-- insert codesystems --><page><nameUrl value="CodeSystem-cdcrec.html"/><title value="CodeSystem Cdcrec"/><generation value="generated"/></page><page><nameUrl value="CodeSystem-condition-category.html"/><title value="CodeSystem Condition Category"/><generation value="generated"/></page><page><nameUrl value="CodeSystem-us-core-documentreference-category.html"/><title value="CodeSystem Us Core DocumentReference Category"/><generation value="generated"/></page><page><nameUrl value="CodeSystem-careplan-category.html"/><title value="CodeSystem CarePlan Category"/><generation value="generated"/></page>
-    <!-- ============ End CodeSystems  =============== -->
-
-    <!-- ============ ConceptMaps   =============== -->
-    <!-- insert conceptmaps --><page><nameUrl value="ConceptMap-ndc-cvx.html"/><title value="ConceptMap Ndc Cvx"/><generation value="generated"/></page>
-    <!-- ============ End ConceptMaps   =============== -->
-
-    </page>
-
-    <!-- ============ SearchParameter Page =============== -->
-    <page><nameUrl value="searchparameters.html"/><title value="Search Parameters"/><generation value="markdown"/>
-
-  <!-- ============ SearchParameters =============== -->
-  <!-- insert searchparameters --><page><nameUrl value="SearchParameter-us-core-location-address-state.html"/><title value="SearchParameter Us Core Location Address State"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-practitionerrole-practitioner.html"/><title value="SearchParameter Us Core PractitionerRole Practitioner"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-medicationstatement-status.html"/><title value="SearchParameter Us Core MedicationStatement Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-organization-name.html"/><title value="SearchParameter Us Core Organization Name"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-diagnosticreport-code.html"/><title value="SearchParameter Us Core DiagnosticReport Code"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-goal-lifecycle-status.html"/><title value="SearchParameter Us Core Goal Lifecycle Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-procedure-code.html"/><title value="SearchParameter Us Core Procedure Code"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-patient-gender.html"/><title value="SearchParameter Us Core Patient Gender"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-condition-clinical-status.html"/><title value="SearchParameter Us Core Condition Clinical Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-documentreference-id.html"/><title value="SearchParameter Us Core DocumentReference Id"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-careplan-category.html"/><title value="SearchParameter Us Core CarePlan Category"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-encounter-class.html"/><title value="SearchParameter Us Core Encounter Class"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-medicationrequest-patient.html"/><title value="SearchParameter Us Core MedicationRequest Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-documentreference-patient.html"/><title value="SearchParameter Us Core DocumentReference Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-diagnosticreport-date.html"/><title value="SearchParameter Us Core DiagnosticReport Date"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-procedure-date.html"/><title value="SearchParameter Us Core Procedure Date"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-allergyintolerance-clinical-status.html"/><title value="SearchParameter Us Core AllergyIntolerance Clinical Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-documentreference-date.html"/><title value="SearchParameter Us Core DocumentReference Date"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-medicationrequest-intent.html"/><title value="SearchParameter Us Core MedicationRequest Intent"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-location-address.html"/><title value="SearchParameter Us Core Location Address"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-practitioner-name.html"/><title value="SearchParameter Us Core Practitioner Name"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-documentreference-period.html"/><title value="SearchParameter Us Core DocumentReference Period"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-observation-code.html"/><title value="SearchParameter Us Core Observation Code"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-location-name.html"/><title value="SearchParameter Us Core Location Name"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-condition-onset-date.html"/><title value="SearchParameter Us Core Condition Onset Date"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-patient-given.html"/><title value="SearchParameter Us Core Patient Given"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-encounter-type.html"/><title value="SearchParameter Us Core Encounter Type"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-medicationrequest-encounter.html"/><title value="SearchParameter Us Core MedicationRequest Encounter"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-encounter-patient.html"/><title value="SearchParameter Us Core Encounter Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-organization-address.html"/><title value="SearchParameter Us Core Organization Address"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-observation-category.html"/><title value="SearchParameter Us Core Observation Category"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-diagnosticreport-status.html"/><title value="SearchParameter Us Core DiagnosticReport Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-observation-date.html"/><title value="SearchParameter Us Core Observation Date"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-diagnosticreport-category.html"/><title value="SearchParameter Us Core DiagnosticReport Category"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-observation-status.html"/><title value="SearchParameter Us Core Observation Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-ethnicity.html"/><title value="SearchParameter Us Core Ethnicity"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-documentreference-type.html"/><title value="SearchParameter Us Core DocumentReference Type"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-encounter-date.html"/><title value="SearchParameter Us Core Encounter Date"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-patient-birthdate.html"/><title value="SearchParameter Us Core Patient Birthdate"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-procedure-status.html"/><title value="SearchParameter Us Core Procedure Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-encounter-status.html"/><title value="SearchParameter Us Core Encounter Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-careplan-status.html"/><title value="SearchParameter Us Core CarePlan Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-condition-patient.html"/><title value="SearchParameter Us Core Condition Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-allergyintolerance-patient.html"/><title value="SearchParameter Us Core AllergyIntolerance Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-implantable-device-patient.html"/><title value="SearchParameter Us Core Implantable Device Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-condition-code.html"/><title value="SearchParameter Us Core Condition Code"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-observation-patient.html"/><title value="SearchParameter Us Core Observation Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-race.html"/><title value="SearchParameter Us Core Race"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-careplan-patient.html"/><title value="SearchParameter Us Core CarePlan Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-patient-family.html"/><title value="SearchParameter Us Core Patient Family"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-medicationrequest-status.html"/><title value="SearchParameter Us Core MedicationRequest Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-medicationstatement-effective.html"/><title value="SearchParameter Us Core MedicationStatement Effective"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-medicationstatement-patient.html"/><title value="SearchParameter Us Core MedicationStatement Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-location-address-postalcode.html"/><title value="SearchParameter Us Core Location Address Postalcode"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-encounter-id.html"/><title value="SearchParameter Us Core Encounter Id"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-medicationrequest-authoredon.html"/><title value="SearchParameter Us Core MedicationRequest Authoredon"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-documentreference-status.html"/><title value="SearchParameter Us Core DocumentReference Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-procedure-patient.html"/><title value="SearchParameter Us Core Procedure Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-goal-target-date.html"/><title value="SearchParameter Us Core Goal Target Date"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-diagnosticreport-patient.html"/><title value="SearchParameter Us Core DiagnosticReport Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-careplan-date.html"/><title value="SearchParameter Us Core CarePlan Date"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-careteam-patient.html"/><title value="SearchParameter Us Core CareTeam Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-immunization-date.html"/><title value="SearchParameter Us Core Immunization Date"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-encounter-identifier.html"/><title value="SearchParameter Us Core Encounter Identifier"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-practitionerrole-specialty.html"/><title value="SearchParameter Us Core PractitionerRole Specialty"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-patient-name.html"/><title value="SearchParameter Us Core Patient Name"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-implantable-device-type.html"/><title value="SearchParameter Us Core Implantable Device Type"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-goal-patient.html"/><title value="SearchParameter Us Core Goal Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-immunization-patient.html"/><title value="SearchParameter Us Core Immunization Patient"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-patient-id.html"/><title value="SearchParameter Us Core Patient Id"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-location-address-city.html"/><title value="SearchParameter Us Core Location Address City"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-careteam-status.html"/><title value="SearchParameter Us Core CareTeam Status"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-documentreference-category.html"/><title value="SearchParameter Us Core DocumentReference Category"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-practitioner-identifier.html"/><title value="SearchParameter Us Core Practitioner Identifier"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-patient-identifier.html"/><title value="SearchParameter Us Core Patient Identifier"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-condition-category.html"/><title value="SearchParameter Us Core Condition Category"/><generation value="generated"/></page><page><nameUrl value="SearchParameter-us-core-immunization-status.html"/><title value="SearchParameter Us Core Immunization Status"/><generation value="generated"/></page>
-  <!-- ============ End SearchParameters  =============== -->
-    </page>
-
-    <!-- ============ CapabilityStatement Page =============== -->
-    <page><nameUrl value="capstatements.html"/><title value="Capability Statements"/><generation value="markdown"/>
-
-  <!-- ============ CapabilityStatements    =============== -->
-    <!-- insert capabilitystatements --><page><nameUrl value="CapabilityStatement-us-core-server.html"/><title value="CapabilityStatement Us Core Server"/><generation value="generated"/></page><page><nameUrl value="CapabilityStatement-us-core-client.html"/><title value="CapabilityStatement Us Core Client"/><generation value="generated"/></page>
-  <!-- ============ End CapabilityStatements    =============== -->
-    </page>
-
-    <!-- ============ Security Page =============== -->
-    <page><nameUrl value="security.html"/><title value="Security"/><generation value="markdown"/></page>
-
-    <!-- ============ Downloads Page =============== -->
-    <page><nameUrl value="downloads.html"/><title value="Downloads"/><generation value="markdown"/></page>
-
-    <!-- ============ Examples Page=============== -->
-    <page><nameUrl value="all-examples.html"/><title value="All Examples"/><generation value="markdown"/></page>
-
-    <!-- ============ Table of Contents =============== -->
-    <page><nameUrl value="toc.html"/><title value="Table of Contents"/><generation value="html"/></page>
-
-  </page>
   </definition>
 </ImplementationGuide>
