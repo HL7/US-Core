@@ -13,7 +13,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each Device must have:**
 
-1.  a code identifying the type of resource
+1.  a code identifying the type of device
 1.  a patient
 
 In addition, the following data-elements must be supported if the data is present in the sending system ([Must Support] definition):
@@ -24,33 +24,41 @@ In addition, the following data-elements must be supported if the data is presen
    - either as the Human Readable Form (HRF) string representation of the barcode
    - or the Automatic Identification and Data Capture (AIDC) representation.
 1. The following parsed content from the UDI
-   - the Device Identifier (DI)
-   - the manufacture date
-   - the expiration date
-   - the lot number
-   - the serial number
+   - the Device Identifier (DI) and at least one the following Production Identifiers (UDI-PI):
+     - the manufacture date
+     - the expiration date
+     - the lot number
+     - the serial number
+     - the distinct identifier (i.e., the distinct identification code)
 
 **Profile specific implementation guidance:**
 
-- This profile supports the requirement to retrieve an 170.315(a)(14) [Implantable device list](https://www.healthit.gov/test-method/implantable-device-list).
+- This profile supports the requirement to retrieve an 170.315(a)(14) [Implantable device list](https://www.healthit.gov/test-method/implantable-device-list). Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:
+  - The [AccessGUDID API](https://www.fda.gov/medical-devices/global-unique-device-identification-database-gudid/accessgudid-public) provides access to device records in GUDID including safety information and UDI. It includes APIs to query and download a complete list of implantable devices registered in GUDID.
+  - The Parse UDI API allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
+
 - Implantable medical devices that have UDI information **SHALL** represent this information in either `carrierAIDC` or `carrierHRF`.
--  Servers **SHOULD** support query by Device.type to allow clients to request only implantable devices.
+-  Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type.
 - In the [Quick Start] section below, searching for all devices is described. Records of implanted devices **MAY** be queried against UDI data including:
 
-    - UDI Carrier string (`udi-carrier`)
+    - UDI HRF string (`udi-carrier`)
     - UDI Device Identifier (`udi-di`)
     - Manufacturer (`manufacturer`)
     - Model number (`model`)
 
   Implementers **MAY** also adopt custom SearchParameters for searching by:
 
-    - specific lot numbers
-    - serial numbers
+    - lot numbers
+    - serial number
+    - expiration date
+    - manufacture date
+    - distinct identifier
 
 ### Examples
 
 - [Device-UDI-1](Device-udi-1.html)
 - [Device-UDI-2](Device-udi-2.html)
+- [Device-UDI-3](Device-udi-3.html)
 
 
 {% include link-list.md %}
