@@ -1,9 +1,3 @@
-
-**Storyboard for this example**
-
-The following example is based upon the following scenario:
-
-
 **Request:**
 
 Get “all allergies” for a patient and all corresponding Provenance records.
@@ -81,7 +75,7 @@ A Server returns a search Bundle resource containing all the Allergies for the p
                 "patient": {
                     "reference": "Patient/example"
                 },
-                "onsetDateTime": "2017-06-09",
+                "onsetDateTime": "2017-09",
                 "reaction": [
                     {
                         "manifestation": [
@@ -120,7 +114,7 @@ A Server returns a search Bundle resource containing all the Allergies for the p
                         "reference": "AllergyIntolerance/7961399"
                     }
                 ],
-             "recorded": "2019-07-09T15:26:23.217+00:00",
+             "recorded": "2017-10T15:26:23.217+00:00",
              "agent": [
                     {
                         "type": [

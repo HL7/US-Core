@@ -14,7 +14,7 @@ topofpage: true
 
 ### Basic Provenance
 
-The FHIR [Provenance] Resource provides a foundation for assessing authenticity, enabling trust, and allowing reproducibility. It isn't scoped to a specific use case, nor limits the number of Provenance records associated with a Resource. The basic guidance here focuses on a key subset of elements, the 'last hop', and specific use cases. The guidance here doesn't preclude more advanced use cases or additional elements.
+The FHIR [Provenance] Resource provides a foundation for assessing authenticity, enabling trust, and allowing reproducibility. It isn't scoped to a specific use case, nor limits the number of Provenance records associated with a Resource. The basic guidance here, and in the [US Core Provenance Profile] focuses on a key subset of elements, the 'last hop', and specific use cases. The guidance here doesn't preclude more advanced use cases or additional elements.
 
 #### Key Provenance Elements
 
@@ -41,30 +41,28 @@ Full Provenance of a Resource requires details from the original creator of a Re
 
 Clinical Information Reconciliation and Incorporation (CIRI) is a process where a user reviews and updates, or accepts, information into their system. The information could come from a Health Information Exchange (HIE), a 3rd-party FHIR server, or a patient providing information. Figure 1 represents information being provided from two different sources, Good Health organization and Sunshine Health Organization. Dr. Reconciled reviews the information in Figure 2, updates the reaction to hives, and stores into the Future Health Organization system. When a mobile app requests the information they receive Dr. Reconciled as the Author and Future Health as the organization.  
 
+The Figure below represents information from two different organizations to a clinician for reconciliation:
 
-This is some text to describe the image in step 1:
+{% include img.html img="Provenance_Recon_Workflow_Step2.svg" caption="Figure 1: Clinical Information Reconciliation and Incorporation (CIRI) from two Organizations" %}
 
-{% include img.html img="Provenance_Recon_Workflow_Step1.svg" caption="Figure 1: Clinical Information Reconciliation and Incorporation (CIRI) from two Organizations " %}
-
-Good Health Organization Provenance
- 
  `GET /AllergyIntolerance?patient=[ID]&_revinclude=Provenance:target`
 
-      {% include examplebutton_default.html example="get-all-allergy-provenance-good-health" b_title = "Click Here to See 'Get Allergy Information for a Patient at Good Health' Example" %}
+Good Health Organization Provenance
+{% include examplebutton_default.html example="get-all-allergy-provenance-good-health" b_title = "Click Here to See 'Get Allergy Information for a Patient at Good Health' Example" %}
 
 Sunshine Health Organization Provenance
-
 {% include examplebutton_default.html example="get-all-allergy-provenance-sunshine-health" b_title = "Click Here to See 'Get Allergy Information for a Patient at Sunshine Health' Example" %}
 
-This is some text to describe the image in step 2:
+After reconciliation, the Future Health Organization Provenance contains the latest information. 
+{% include examplebutton_default.html example="get-all-allergy-provenance-future-health" b_title = "Click Here to See 'Get Allergy Information for a Patient at Future Health' Example" %}
 
-{% include img.html img="Provenance_Recon_Workflow_Step2.svg" caption="Figure 2: CIRI After Addition Information during Reconciliation" %}
+#### Accepting information from a single site
 
-Future Health Organization Provenance
-**insert example**
+The Figure below represents information after a provider accepted information from a single site:
 
-#### Clinical Information Reconciliation and Incorporation 
+{% include img.html img="Provenance_Recon_Single_Organization.svg" caption="Figure 2: CIRI After Accepting Reconciliation, No Changes" %}
 
+Dr. Accepted is the latest author after verifying and accepting the content into their local data store, since it went through an interactive reconciliation process.
 
 
 {% include link-list.md %}

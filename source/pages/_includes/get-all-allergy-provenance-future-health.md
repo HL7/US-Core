@@ -3,7 +3,7 @@
 Get “all allergies” for a patient and all corresponding Provenance records.
 
 
-    GET [base]/AllergyIntolerance?patient=12345&_revinclude=Provenance:target
+    GET [base]/AllergyIntolerance?patient=123459988&_revinclude=Provenance:target
 
 **Response:**
 
@@ -12,27 +12,27 @@ A Server returns a search Bundle resource containing all the Allergies for the p
 
     HTTP/1.1 200 OK
     [other headers]
-     
+    
     {
     "resourceType": "Bundle",
-    "id": "c887e62f-6166-419f-8268-b5ecd6c7b901",
+    "id": "94d5d5ac-6645-41dc-8282-1870b71e840a",
     "meta": {
-        "lastUpdated": "2019-07-09T18:49:01.235+00:00"
+        "lastUpdated": "2019-07-20T18:49:01.235+00:00"
     },
     "type": "searchset",
     "total": 1,
     "link": [
         {
             "relation": "self",
-            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples"
+            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples9988"
         }
     ],
     "entry": [
         {
-            "fullUrl": "http://hapi.fhir.org/baseR4/AllergyIntolerance/79613",
+            "fullUrl": "http://hapi.fhir.org/baseR4/AllergyIntolerance/796139988",
             "resource": {
                 "resourceType": "AllergyIntolerance",
-                "id": "79613",
+                "id": "796139988",
                 "meta": {
                     "versionId": "1",
                     "lastUpdated": "2019-07-09T15:26:23.217+00:00",
@@ -75,7 +75,7 @@ A Server returns a search Bundle resource containing all the Allergies for the p
                 "patient": {
                     "reference": "Patient/example"
                 },
-                "onsetDateTime": "2018-01",
+                "onsetDateTime": "2005-02",
                 "reaction": [
                     {
                         "manifestation": [
@@ -98,10 +98,10 @@ A Server returns a search Bundle resource containing all the Allergies for the p
             }
         },
         {
-            "fullUrl": "http://hapi.fhir.org/baseR4/Provenance/79614",
+            "fullUrl": "http://hapi.fhir.org/baseR4/Provenance/796149988",
             "resource": {
                 "resourceType": "Provenance",
-                "id": "79614",
+                "id": "796149988",
                 "meta": {
                     "versionId": "1",
                     "lastUpdated": "2019-07-09T15:26:23.217+00:00",
@@ -111,10 +111,10 @@ A Server returns a search Bundle resource containing all the Allergies for the p
                 },
                 "target": [
                      {
-                        "reference": "AllergyIntolerance/79613"
+                        "reference": "AllergyIntolerance/796139988"
                     }
                 ],
-             "recorded": "2019-03-09T15:26:23.217+00:00",
+             "recorded": "2019-05-15T15:26:23.217+00:00",
              "agent": [
                     {
                         "type": [
@@ -129,10 +129,10 @@ A Server returns a search Bundle resource containing all the Allergies for the p
                             }
                         ],
                         "who": {
-                                "reference": "Practitioner/Dr-Jones-12345"
+                                "reference": "Practitioner/dr-reconciled-123459988"
                         },
                         "onBehalfOf": {
-                                "reference": "Organization/good-health-54321"
+                                "reference": "Organization/future-health-543219988"
                         }
                     }
                 ]},

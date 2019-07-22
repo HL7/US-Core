@@ -195,6 +195,7 @@
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
 [US Core Patient Profile]: StructureDefinition-us-core-patient.html
 [US Core Procedure Profile]: StructureDefinition-us-core-procedure.html
+[US Core Provenance Profile]: StructureDefinition-us-core-provenance.html
 [US Core Security]: security.html
 [US Core Server Capability Statement]: CapabilityStatement-us-core-server.html
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
