@@ -311,6 +311,21 @@ For searches where the client does not supply a status parameter, an implementat
 
         {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
 
+### Searching multiple patients
+
+For clients with user level authorization scopes, searching for more that one patient's data is done by one of two ways:
+- Providing a comma separated list of valid patient ids as the patients search parameter value.
+- Omitting the patient as a search parameter and relying one the authorization scopes to fetch results for only those patients authorized to see.
+    - patient level scopes:  fetch all patients - only see 1 patient
+    - users level scopes:  fetch all patients - only those authorized to see  (e.g., all patients for provider y)
+
+~~~
+example scenarios:
+    provider discover all my patients with allergy to x
+    patient/consumer- see if have access to my children
+
+    ... todo ...
+~~~
 
 ### Compartment Based Search
 
