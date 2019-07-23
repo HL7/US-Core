@@ -16,6 +16,8 @@ topofpage: true
 
 The FHIR [Provenance] Resource provides a foundation for assessing authenticity, enabling trust, and allowing reproducibility. It isn't scoped to a specific use case, nor limits the number of Provenance records associated with a Resource. The basic guidance here, and in the [US Core Provenance Profile] focuses on a key subset of elements, the 'last hop', and specific use cases. The guidance here doesn't preclude more advanced use cases or additional elements.
 
+Full Provenance of a Resource requires details from the original creator of a Resource and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches, and display to end user, and agreed the most important information is the prior system providing the data, the 'last hop'.  Participants didn't dispute the potential need to recreate the full chain, but didn't see this as relevant to the immediate end-user.
+
 #### Key Provenance Elements
 
 The guidance for Provenance in US Core focuses on 4 key elements: Author, Author Organization, Timestamp, and the Target Resource. The Author represents the person(s) responsible for the information. The Author Organization represents the organization the author is associated when they created, updated, or deleted the data. The timestamp is the date and time the author created, updated, or deleted the data. The target is the Resource the Provenance record supports.
@@ -30,12 +32,9 @@ Timestamp | Date and time with timezone offset | | Provenance.recorded
 Target | Resource Provenance record supports | | Provenance.target
 {: .grid}
 
-#### 'Last Hop'
-
-Full Provenance of a Resource requires details from the original creator of a Resource and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches, and display to end user, and agreed the most important information is the prior system providing the data, the 'last hop'.  Participants didn't dispute the potential need to recreate the full chain, but didn't see this as relevant to the immediate end-user. 
-
-
 ### Use Cases
+
+The HL7 Basic Provenance Informative implementation guide outlines four use cases: Fax, Health Information Exchange (HIE) redistribution, HIE transformation, and Clinical Information Reconciliation and Incorporation (CIRI). While these use cases may have FHIR implications in the future, CIRI is the key use case and is covered in detail here.
 
 #### Clinical Information Reconciliation and Incorporation 
 
