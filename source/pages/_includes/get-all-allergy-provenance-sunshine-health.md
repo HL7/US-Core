@@ -114,7 +114,7 @@ A Server returns a search Bundle resource containing all the Allergies for the p
                         "reference": "AllergyIntolerance/7961399"
                     }
                 ],
-             "recorded": "2017-10T15:26:23.217+00:00",
+             "recorded": "2017-09T15:26:23.217+00:00",
              "agent": [
                     {
                         "type": [

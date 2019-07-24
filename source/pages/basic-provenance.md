@@ -28,7 +28,7 @@ Element | Required |Optional| FHIR Element|
 ---|---|---|---|---
 Author | Name<br>Identifier | NPI recommended, additional identifiers allowed| Provenance.agent.who
 Author Organization | Name<br>Identifier  | NPI recommended, additional identifiers allowed |Provenance.agent.onBehalfOf 
-Timestamp | Date and time with timezone offset | | Provenance.recorded
+Timestamp | Date | Time with timezone offset | Provenance.recorded
 Target | Resource Provenance record supports | | Provenance.target
 {: .grid}
 
@@ -44,6 +44,8 @@ The Figure below represents information from two different organizations to a cl
 
 {% include img.html img="Provenance_Recon_Workflow_Step2.svg" caption="Figure 1: Clinical Information Reconciliation and Incorporation (CIRI) from two Organizations" %}
 
+ Dr. Reconciled is the latest author after updating the reaction on 5/15/2019 and accepting to the local data store. The acceptance of the information is them taking over the responsibility.
+ 
  `GET /AllergyIntolerance?patient=[ID]&_revinclude=Provenance:target`
 
 Good Health Organization Provenance
@@ -61,7 +63,7 @@ The Figure below represents information after a provider accepted information fr
 
 {% include img.html img="Provenance_Recon_Single_Organization.svg" caption="Figure 2: CIRI After Accepting Reconciliation, No Changes" %}
 
-Dr. Accepted is the latest author after verifying and accepting the content into their local data store, since it went through an interactive reconciliation process.
+Dr. Accepted is the latest author after verifying the problem on 5/2018 and accepting the content into their local data store, since it went through an interactive reconciliation process.
 
 
 {% include link-list.md %}
