@@ -1,8 +1,8 @@
 {
-	"id": "3a1eff04-7c0b-425b-ae91-580e1956cd02",
+	"id": "d7747f2b-4729-4119-bcb2-f4ab240601a8",
 	"name": "Encounter",
 	"allTests": [],
-	"timestamp": "2019-06-19T15:32:22.324Z",
+	"timestamp": "2019-07-24T00:12:57.885Z",
 	"collection_id": "af1b350c-31e2-4f59-baf6-abf872f5b807",
 	"folder_id": "08e1872f-93d2-4115-ba96-8dbfffdf01ed",
 	"target_type": "folder",
@@ -14,8 +14,41 @@
 		"id": "af1b350c-31e2-4f59-baf6-abf872f5b807",
 		"name": "US_Core_R4",
 		"description": "US Core R4 Examples",
-		"auth": null,
-		"events": null,
+		"auth": {
+			"type": "apikey",
+			"apikey": [
+				{
+					"key": "key",
+					"value": "Epic-Client-ID"
+				},
+				{
+					"key": "value",
+					"value": "ArgoAAAA-A0be-4d9c-bb49-000000000000"
+				}
+			]
+		},
+		"events": [
+			{
+				"listen": "prerequest",
+				"script": {
+					"id": "81a15c2d-e6f3-45ad-b7ff-fccff31adc9f",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			},
+			{
+				"listen": "test",
+				"script": {
+					"id": "52701d41-d47f-4215-9c15-1f1c7d7e3c9d",
+					"type": "text/javascript",
+					"exec": [
+						""
+					]
+				}
+			}
+		],
 		"variables": [],
 		"order": [],
 		"folders_order": [
@@ -23,10 +56,13 @@
 			"864e1f20-d97c-432f-99f7-08df0fba9677",
 			"08e1872f-93d2-4115-ba96-8dbfffdf01ed",
 			"65480b3c-13c0-427a-9c41-4eba3e238e1e",
-			"13c53e28-3c6c-4537-a6f1-295ea7e197a7"
+			"13c53e28-3c6c-4537-a6f1-295ea7e197a7",
+			"e891e5d4-56b4-4277-bead-9e9ccd141105",
+			"e5d2f15d-9ae9-4257-92e0-570dc35ab648",
+			"c21d0971-6dd3-49fb-a935-6798f16ba168"
 		],
 		"owner": "1447203",
-		"favorite": true,
+		"favorite": false,
 		"isFavorite": true
 	},
 	"folder": {
@@ -97,7 +133,6 @@
 				"response is ok": true,
 				"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": true,
 				"period element is missingTypeError: Cannot read property 'start' of undefined": false,
-				"identifier element is missing or incompleteReferenceError: identifer is not defined": false,
 				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": true,
 				"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": true,
 				"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": true,
@@ -120,10 +155,6 @@
 					"pass": 0,
 					"fail": 1
 				},
-				"identifier element is missing or incompleteReferenceError: identifer is not defined": {
-					"pass": 0,
-					"fail": 1
-				},
 				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": {
 					"pass": 1,
 					"fail": 0
@@ -142,7 +173,7 @@
 				}
 			},
 			"times": [
-				"3902"
+				"999"
 			],
 			"allTests": [
 				{
@@ -150,21 +181,20 @@
 					"response is ok": true,
 					"Resource Type= Encounter id = ehoN2kZnYuW5z0Di4Kkno5w3": true,
 					"period element is missingTypeError: Cannot read property 'start' of undefined": false,
-					"identifier element is missing or incompleteReferenceError: identifer is not defined": false,
 					"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": true,
 					"Resource Type= Encounter id = e1Jw-ETrL1kZAPiXl3uSMWw3": true,
 					"Resource Type= Encounter id = eZAjx5sRd6AgpTlKjDh4b5w3": true,
 					"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
 				}
 			],
-			"time": "3902",
-			"totalRequestTime": "3902",
+			"time": "999",
+			"totalRequestTime": "999",
 			"iterationResults": {}
 		},
 		{
 			"name": "{{uri}}/Encounter?_Id={{id}}",
 			"id": "e4da06bd-6df3-4a8c-9c08-207e3f037c35",
-			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?_Id=ejPvGuBUqYJkCweOPRabvYg3",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?_id=ejPvGuBUqYJkCweOPRabvYg3",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -194,7 +224,7 @@
 				}
 			},
 			"times": [
-				"186"
+				"131"
 			],
 			"allTests": [
 				{
@@ -203,14 +233,14 @@
 					"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
 				}
 			],
-			"time": "186",
-			"totalRequestTime": "186",
+			"time": "131",
+			"totalRequestTime": "131",
 			"iterationResults": {}
 		},
 		{
 			"name": "{{uri}}/Encounter?patient={{patient}}&date={{date}}",
 			"id": "9f9a90e6-2b4e-4beb-ade8-3364e8aca919",
-			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&date={{date}}",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&date={{start}}",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -222,35 +252,35 @@
 			},
 			"tests": {
 				"Description:SHALL support searching using the combination of the date and patient search parameters:\n\nGET [base]/Encounter?date={gt|lt|ge|le}[date]{&amp;date={gt|lt|ge|le}[date]&amp;...}&amp;patient=[reference]": true,
-				"no date value = {{date}}": false
+				"no date value = {{start}}": false
 			},
 			"testPassFailCounts": {
 				"Description:SHALL support searching using the combination of the date and patient search parameters:\n\nGET [base]/Encounter?date={gt|lt|ge|le}[date]{&amp;date={gt|lt|ge|le}[date]&amp;...}&amp;patient=[reference]": {
 					"pass": 1,
 					"fail": 0
 				},
-				"no date value = {{date}}": {
+				"no date value = {{start}}": {
 					"pass": 0,
 					"fail": 1
 				}
 			},
 			"times": [
-				"211"
+				"214"
 			],
 			"allTests": [
 				{
 					"Description:SHALL support searching using the combination of the date and patient search parameters:\n\nGET [base]/Encounter?date={gt|lt|ge|le}[date]{&amp;date={gt|lt|ge|le}[date]&amp;...}&amp;patient=[reference]": true,
-					"no date value = {{date}}": false
+					"no date value = {{start}}": false
 				}
 			],
-			"time": "211",
-			"totalRequestTime": "211",
+			"time": "214",
+			"totalRequestTime": "214",
 			"iterationResults": {}
 		},
 		{
 			"name": "{{uri}}/Encounter?identifier={{identifier}}",
 			"id": "69ad0cf3-67a7-43f9-9f6b-8d8a992af5d7",
-			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?identifier={{identifier}}",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?identifier=urn:oid:1.2.840.114350.1.13.0.1.7.3.698084.8|27379",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 400,
@@ -262,29 +292,29 @@
 			},
 			"tests": {
 				"Description:SHOULD support searching using the identifier search parameter:\n\nGET [base]/Encounter?identifier={[system]}|[code]": true,
-				"no identifier value = {{identifier}}": false
+				"response is okEncounter": false
 			},
 			"testPassFailCounts": {
 				"Description:SHOULD support searching using the identifier search parameter:\n\nGET [base]/Encounter?identifier={[system]}|[code]": {
 					"pass": 1,
 					"fail": 0
 				},
-				"no identifier value = {{identifier}}": {
+				"response is okEncounter": {
 					"pass": 0,
 					"fail": 1
 				}
 			},
 			"times": [
-				"98"
+				"109"
 			],
 			"allTests": [
 				{
 					"Description:SHOULD support searching using the identifier search parameter:\n\nGET [base]/Encounter?identifier={[system]}|[code]": true,
-					"no identifier value = {{identifier}}": false
+					"response is okEncounter": false
 				}
 			],
-			"time": "98",
-			"totalRequestTime": "98",
+			"time": "109",
+			"totalRequestTime": "109",
 			"iterationResults": {}
 		},
 		{
@@ -340,7 +370,7 @@
 				}
 			},
 			"times": [
-				"180"
+				"188"
 			],
 			"allTests": [
 				{
@@ -353,8 +383,8 @@
 					"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
 				}
 			],
-			"time": "180",
-			"totalRequestTime": "180",
+			"time": "188",
+			"totalRequestTime": "188",
 			"iterationResults": {}
 		},
 		{
@@ -410,7 +440,7 @@
 				}
 			},
 			"times": [
-				"185"
+				"191"
 			],
 			"allTests": [
 				{
@@ -423,8 +453,8 @@
 					"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
 				}
 			],
-			"time": "185",
-			"totalRequestTime": "185",
+			"time": "191",
+			"totalRequestTime": "191",
 			"iterationResults": {}
 		},
 		{
@@ -480,7 +510,7 @@
 				}
 			},
 			"times": [
-				"180"
+				"193"
 			],
 			"allTests": [
 				{
@@ -493,21 +523,21 @@
 					"Resource Type= Encounter id = ejPvGuBUqYJkCweOPRabvYg3": true
 				}
 			],
-			"time": "180",
-			"totalRequestTime": "180",
+			"time": "193",
+			"totalRequestTime": "193",
 			"iterationResults": {}
 		}
 	],
 	"totalPass": 33,
-	"totalFail": 12,
-	"totalTime": 4942,
+	"totalFail": 7,
+	"totalTime": 2025,
 	"lifecycle": "done",
 	"requests": [
 		{
 			"name": "{{uri}}/Encounter?patient={{patient}}",
 			"id": "1ed3e865-16a7-4643-b08a-29acfae90b5f",
 			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3",
-			"time": "2019-06-19T15:32:22.324Z",
+			"time": "2019-07-24T00:12:57.885Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -533,10 +563,6 @@
 					"pass": 0,
 					"fail": 1
 				},
-				"identifier element is missing or incompleteReferenceError: identifer is not defined": {
-					"pass": 0,
-					"fail": 1
-				},
 				"Resource Type= Encounter id = eiSX3g2gt4tJIs7-6h7nJjA3": {
 					"pass": 1,
 					"fail": 0
@@ -558,8 +584,8 @@
 		{
 			"name": "{{uri}}/Encounter?_Id={{id}}",
 			"id": "e4da06bd-6df3-4a8c-9c08-207e3f037c35",
-			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?_Id=ejPvGuBUqYJkCweOPRabvYg3",
-			"time": "2019-06-19T15:32:22.324Z",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?_id=ejPvGuBUqYJkCweOPRabvYg3",
+			"time": "2019-07-24T00:12:57.885Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -586,8 +612,8 @@
 		{
 			"name": "{{uri}}/Encounter?patient={{patient}}&date={{date}}",
 			"id": "9f9a90e6-2b4e-4beb-ade8-3364e8aca919",
-			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&date={{date}}",
-			"time": "2019-06-19T15:32:22.324Z",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&date={{start}}",
+			"time": "2019-07-24T00:12:57.885Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -601,7 +627,7 @@
 					"pass": 1,
 					"fail": 0
 				},
-				"no date value = {{date}}": {
+				"no date value = {{start}}": {
 					"pass": 0,
 					"fail": 1
 				}
@@ -610,8 +636,8 @@
 		{
 			"name": "{{uri}}/Encounter?identifier={{identifier}}",
 			"id": "69ad0cf3-67a7-43f9-9f6b-8d8a992af5d7",
-			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?identifier={{identifier}}",
-			"time": "2019-06-19T15:32:22.324Z",
+			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?identifier=urn:oid:1.2.840.114350.1.13.0.1.7.3.698084.8|27379",
+			"time": "2019-07-24T00:12:57.885Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -625,7 +651,7 @@
 					"pass": 1,
 					"fail": 0
 				},
-				"no identifier value = {{identifier}}": {
+				"response is okEncounter": {
 					"pass": 0,
 					"fail": 1
 				}
@@ -635,7 +661,7 @@
 			"name": "{{uri}}/Encounter?patient={{patient}}&class={{class}}",
 			"id": "85c577bc-e0b3-45ae-bf5b-7a9c6155446d",
 			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&class=urn:oid:1.2.840.114350.1.72.1.7.7.10.696784.13260|13",
-			"time": "2019-06-19T15:32:22.324Z",
+			"time": "2019-07-24T00:12:57.885Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -679,7 +705,7 @@
 			"name": "{{uri}}/Encounter?patient={{patient}}&type={{type}}",
 			"id": "fe16af37-734d-4e2d-b70c-2c90851ec82f",
 			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&type=urn:oid:1.2.840.114350.1.13.0.1.7.10.698084.30|210",
-			"time": "2019-06-19T15:32:22.324Z",
+			"time": "2019-07-24T00:12:57.885Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -723,7 +749,7 @@
 			"name": "{{uri}}/Encounter?patient={{patient}}&status={{status}}",
 			"id": "04f8f12b-ef69-44a4-9074-7cb4593041d2",
 			"url": "https://connectathon.epic.com/Interconnect-Fhir-Unsecure/api/FHIR/R4//Encounter?patient=eroCd17NbCffM3E3WXi7eOQ3&status=finished",
-			"time": "2019-06-19T15:32:22.324Z",
+			"time": "2019-07-24T00:12:57.885Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",

@@ -217,8 +217,6 @@
     <resource>
       <reference><reference value="ValueSet/us-core-observation-smokingstatus"/></reference><exampleBoolean value="false"/></resource>
     <resource>
-      <reference><reference value="SearchParameter/us-core-medicationstatement-status"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
       <reference><reference value="ValueSet/omb-race-category"/></reference><exampleBoolean value="false"/></resource>
     <resource>
       <reference><reference value="StructureDefinition/us-core-practitionerrole"/></reference><exampleBoolean value="false"/></resource>
@@ -284,8 +282,6 @@
       <reference><reference value="StructureDefinition/us-core-patient"/></reference><exampleBoolean value="false"/></resource>
     <resource>
       <reference><reference value="SearchParameter/us-core-diagnosticreport-date"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="StructureDefinition/us-core-medicationstatement"/></reference><exampleBoolean value="false"/></resource>
     <resource>
       <reference><reference value="ValueSet/us-core-procedure-icd10pcs"/></reference><exampleBoolean value="false"/></resource>
     <resource>
@@ -411,11 +407,7 @@
     <resource>
       <reference><reference value="SearchParameter/us-core-medicationrequest-status"/></reference><exampleBoolean value="false"/></resource>
     <resource>
-      <reference><reference value="SearchParameter/us-core-medicationstatement-effective"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
       <reference><reference value="StructureDefinition/us-core-race"/></reference><exampleBoolean value="false"/></resource>
-    <resource>
-      <reference><reference value="SearchParameter/us-core-medicationstatement-patient"/></reference><exampleBoolean value="false"/></resource>
     <resource>
       <reference><reference value="SearchParameter/us-core-location-address-postalcode"/></reference><exampleBoolean value="false"/></resource>
     <resource>
@@ -544,7 +536,6 @@
 
     </page>
     <!-- ============ Guidance Page =============== -->
-
       <!-- ============ Profiles Page =============== -->
       <page><nameUrl value="profiles.html"/><title value="Profiles and Extensions"/><generation value="markdown"/>
 
@@ -561,7 +552,6 @@
         <page><nameUrl value="StructureDefinition-us-core-birthsex.html"/><title value="StructureDefinition US Core Birthsex"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-us-core-encounter.html"/><title value="StructureDefinition US Core Encounter"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-us-core-patient.html"/><title value="StructureDefinition US Core Patient"/><generation value="generated"/></page>
-        <page><nameUrl value="StructureDefinition-us-core-medicationstatement.html"/><title value="StructureDefinition US Core MedicationStatement"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-us-core-pulse-oximetry.html"/><title value="StructureDefinition US Core Pulse Oximetry"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-us-core-location.html"/><title value="StructureDefinition US Core Location"/><generation value="generated"/></page>
         <page><nameUrl value="StructureDefinition-us-core-procedure.html"/><title value="StructureDefinition US Core Procedure"/><generation value="generated"/></page>
@@ -655,7 +645,6 @@
         <!-- insert searchparameters -->
         <page><nameUrl value="SearchParameter-us-core-location-address-state.html"/><title value="SearchParameter US Core Location Address State"/><generation value="generated"/></page>
         <page><nameUrl value="SearchParameter-us-core-practitionerrole-practitioner.html"/><title value="SearchParameter US Core PractitionerRole Practitioner"/><generation value="generated"/></page>
-        <page><nameUrl value="SearchParameter-us-core-medicationstatement-status.html"/><title value="SearchParameter US Core MedicationStatement Status"/><generation value="generated"/></page>
         <page><nameUrl value="SearchParameter-us-core-organization-name.html"/><title value="SearchParameter US Core Organization Name"/><generation value="generated"/></page>
         <page><nameUrl value="SearchParameter-us-core-diagnosticreport-code.html"/><title value="SearchParameter US Core DiagnosticReport Code"/><generation value="generated"/></page>
         <page><nameUrl value="SearchParameter-us-core-goal-lifecycle-status.html"/><title value="SearchParameter US Core Goal Lifecycle Status"/><generation value="generated"/></page>
@@ -704,8 +693,6 @@
         <page><nameUrl value="SearchParameter-us-core-careplan-patient.html"/><title value="SearchParameter US Core CarePlan Patient"/><generation value="generated"/></page>
         <page><nameUrl value="SearchParameter-us-core-patient-family.html"/><title value="SearchParameter US Core Patient Family"/><generation value="generated"/></page>
         <page><nameUrl value="SearchParameter-us-core-medicationrequest-status.html"/><title value="SearchParameter US Core MedicationRequest Status"/><generation value="generated"/></page>
-        <page><nameUrl value="SearchParameter-us-core-medicationstatement-effective.html"/><title value="SearchParameter US Core MedicationStatement Effective"/><generation value="generated"/></page>
-        <page><nameUrl value="SearchParameter-us-core-medicationstatement-patient.html"/><title value="SearchParameter US Core MedicationStatement Patient"/><generation value="generated"/></page>
         <page><nameUrl value="SearchParameter-us-core-location-address-postalcode.html"/><title value="SearchParameter US Core Location Address Postalcode"/><generation value="generated"/></page>
         <page><nameUrl value="SearchParameter-us-core-encounter-id.html"/><title value="SearchParameter US Core Encounter Id"/><generation value="generated"/></page>
         <page><nameUrl value="SearchParameter-us-core-medicationrequest-authoredon.html"/><title value="SearchParameter US Core MedicationRequest Authoredon"/><generation value="generated"/></page>

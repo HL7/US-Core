@@ -7,6 +7,6 @@
   {%- for i in depth -%}
   &nbsp;&nbsp;
   {%- endfor -%}
-{{ pagelabel | plus: 1 }}&nbsp;-&nbsp;[{{ pagetitle | remove: ".html" }}]({{ pagepath }}) pagelabel = {{pagelabel}},  site.data.pages[pagepath].label = {{site.data.pages[pagepath].label}}
+{{ pagelabel | plus: 1 }}&nbsp;-&nbsp;[{{ pagetitle | remove: ".html" }}]({{ pagepath }})
 {% endunless %}
 {% endfor %}

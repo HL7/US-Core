@@ -95,10 +95,12 @@ This section lists the search parameters definitions that are used within the ca
   - [encounter](SearchParameter-us-core-medicationrequest-encounter.html)
   - [authoredon](SearchParameter-us-core-medicationrequest-authoredon.html)
 
+<!--
 **MedicationStatement**
   - [status](SearchParameter-us-core-medicationstatement-status.html)
   - [patient](SearchParameter-us-core-medicationstatement-patient.html)
   - [effective](SearchParameter-us-core-medicationstatement-effective.html)
+-->
 
 **Observation**
   - [status](SearchParameter-us-core-observation-status.html)

@@ -583,12 +583,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/us-core-medicationstatement-status"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/omb-race-category"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -782,12 +776,6 @@
     <resource>
       <reference>
         <reference value="SearchParameter/us-core-diagnosticreport-date"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/us-core-medicationstatement"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1165,19 +1153,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/us-core-medicationstatement-effective"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/us-core-race"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="SearchParameter/us-core-medicationstatement-patient"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1520,11 +1496,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-us-core-medicationstatement.html"/>
-          <title value="StructureDefinition US Core MedicationStatement"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="StructureDefinition-us-core-pulse-oximetry.html"/>
           <title value="StructureDefinition US Core Pulse Oximetry"/>
           <generation value="generated"/>
@@ -1820,11 +1791,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="SearchParameter-us-core-medicationstatement-status.html"/>
-          <title value="SearchParameter US Core MedicationStatement Status"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="SearchParameter-us-core-organization-name.html"/>
           <title value="SearchParameter US Core Organization Name"/>
           <generation value="generated"/>
@@ -2062,16 +2028,6 @@
         <page>
           <nameUrl value="SearchParameter-us-core-medicationrequest-status.html"/>
           <title value="SearchParameter US Core MedicationRequest Status"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="SearchParameter-us-core-medicationstatement-effective.html"/>
-          <title value="SearchParameter US Core MedicationStatement Effective"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="SearchParameter-us-core-medicationstatement-patient.html"/>
-          <title value="SearchParameter US Core MedicationStatement Patient"/>
           <generation value="generated"/>
         </page>
         <page>
