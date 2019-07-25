@@ -75,7 +75,7 @@ A Server returns a search Bundle resource containing all the Allergies for the p
                 "patient": {
                     "reference": "Patient/example"
                 },
-                "onsetDateTime": "2005-02",
+                "onsetDateTime": "2017-09",
                 "reaction": [
                     {
                         "manifestation": [
@@ -89,7 +89,7 @@ A Server returns a search Bundle resource containing all the Allergies for the p
                                 ]
                             }
                         ],
-                        "onset": "2018-01"
+                        "onset": "2017-09"
                     }
                 ]
             },
