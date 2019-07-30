@@ -1,6 +1,6 @@
+
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
-
-
+- See the [General Guidance] section for additional guidance on searching for multiple patients.
 
 #### Mandatory Search Parameters:
 
@@ -11,7 +11,7 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/DocumentReference[id]`
 
     Example:
-
+    
       1. GET [base]/DocumentReference/2169591
       1. GET [base]/DocumentReference?_id=2169591
 
@@ -19,42 +19,47 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHALL** support searching for all documentreferences for a patient using the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** search parameter:
 
-    `GET [base]/DocumentReference?patient=[reference]`
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
+
+    `GET [base]/DocumentReference?patient=[reference]{,[reference],...}`
 
     Example:
-
+    
       1. GET [base]/DocumentReference?patient=1137192
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient. See the implementation notes above for how to access the actual document. ([how to search by reference])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`category`](SearchParameter-us-core-documentreference-category.html)** search parameters:
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note`
+    `GET [base]/DocumentReference?patient=[reference]{,[reference],...}&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note`
 
     Example:
-
+    
       1. GET [base]/DocumentReference?patient=1235541&amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category\|clinical-note
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and category = `clinical-note`.  See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`category`](SearchParameter-us-core-documentreference-category.html)** and **[`date`](SearchParameter-us-core-documentreference-date.html)** search parameters:
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/DocumentReference?patient=[reference]{,[reference],...}&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
-
+    
       1. GET [base]/DocumentReference?patient=1235541&amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category\|clinical-note&amp;date=ge2019
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and category = `clinical=note` and date. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token] and [how to search by date])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`type`](SearchParameter-us-core-documentreference-type.html)** search parameters:
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&type={[system]}|[code]`
+    `GET [base]/DocumentReference?patient=[reference]{,[reference],...}&type={[system]}|[code]`
 
     Example:
-
+    
       1. GET [base]/DocumentReference?patient=1316024&amp;type=http://loinc.org\|18842-5
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token])
@@ -65,46 +70,28 @@ The following search parameters, search parameter combinations and search parame
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`status`](SearchParameter-us-core-documentreference-status.html)** search parameters:
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
+    - including support for composite *OR* search on `status` (e.g.`status={[system]}|[code],{[system]}|[code],...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&status={[system]}|[code]`
+    `GET [base]/DocumentReference?patient=[reference]{,[reference],...}&status={[system]}|[code]{,{[system]}|[code],...}`
 
     Example:
-
+    
       1. GET [base]/DocumentReference?patient=1235541
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and status. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`type`](SearchParameter-us-core-documentreference-type.html)** and **[`period`](SearchParameter-us-core-documentreference-period.html)** search parameters:
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
     - including support for these `period` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `period` (e.g.`period=[date]&period=[date]]&...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&type={[system]}|[code]&period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]&...}`
+    `GET [base]/DocumentReference?patient=[reference]{,[reference],...}&type={[system]}|[code]&period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]&...}`
 
     Example:
-
+    
       1. GET [base]/DocumentReference?patient=2169591&amp;type=http://loinc.org \|34133-9&amp;period=ge2019
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type and period. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token] and [how to search by date])
-
-
-#### Mandatory Write Capability:
-
-1. **SHALL** support writing a new note to a Patient's Chart:
-
-    `POST [base]/DocumentReference`
-
-    {% include examplebutton_default.html example="documentreference-clinical-note-post" b_title = "Click Here To See Example" %} %}
-
-
-#### Mandatory Operations
-
-**SHALL** support fetching documents using the $docref operation.
-
-**`GET [base]/DocumentReference/$docref?patient=[id]`**
-
-Example: see [$docref operation]
-
-*Implementation Notes:* This operation is used to request a server *generate* a document based on the specified parameters.  If no parameters are specified, the server SHALL return a DocumentReference to the patient's most current CCD.  See the [$docref operation] definition for details on how this operation differs from a FHIR RESTful search.  This operation returns a DocumentReference resources. The document itself is retrieved using the link provided in the `DocumentReference.content.attachment.url` element.
-
 
 {% include link-list.md %}
