@@ -28220,3 +28220,1109 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "308335008"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "Patient encounter procedure",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "308335008"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "expansion" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+      "valueBoolean" : true
+    }],
+    "identifier" : "urn:uuid:517f036d-b8fe-477d-bb5d-c53ca2bdecef",
+    "timestamp" : "2019-07-30T18:27:48.157Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueString" : "-1"
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://snomed.info/sct?version=http://snomed.info/sct/20611000087101/version/20190430"
+    }],
+    "contains" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "680007",
+      "display" : "Radiation physics consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "726007",
+      "display" : "Pathology consultation, comprehensive, records and specimen with report"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "2530001",
+      "display" : "Chiropractic visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4525004",
+      "display" : "Seen by casualty - service"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5947002",
+      "display" : "Consultation for hearing and/or speech problem"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "8502007",
+      "display" : "Radiation physics consultation with therapeutic radiologist"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11429006",
+      "display" : "Consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "11797002",
+      "display" : "Telephone call by physician to patient or for consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12566000",
+      "display" : "Consultation in computer dosimetry and isodose chart, teletherapy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12586001",
+      "display" : "Physician direction of emergency medical systems"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "12843005",
+      "display" : "Subsequent hospital visit by physician"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "14736009",
+      "display" : "Patient evaluation and management"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "15301000",
+      "display" : "Consultation in chemotherapy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "17436001",
+      "display" : "Medical consultation with outpatient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "18170008",
+      "display" : "Subsequent nursing facility visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "19681004",
+      "display" : "Nursing evaluation of patient and report"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "24882007",
+      "display" : "Medical consultation on hospital inpatient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "25028003",
+      "display" : "Dermatology consultation and report, comprehensive"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "28191001",
+      "display" : "Consultation and report by radiologist"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30078008",
+      "display" : "Dermatology consultation and report, brief"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "30274002",
+      "display" : "Chiropractic consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "31108002",
+      "display" : "Consultation for laboratory medicine"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "34043003",
+      "display" : "Dental examination"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35437002",
+      "display" : "Consultation in computer dosimetry and isodose chart for brachytherapy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "35755007",
+      "display" : "Chiropractic interpretation of x-rays"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "42423000",
+      "display" : "Chiropractic consultation, history and examination"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "44340006",
+      "display" : "Prosthodontic dental consultation and report"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "48550003",
+      "display" : "Medical consultation on nursing facility inpatient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49463003",
+      "display" : "Consultation for paternity case"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "49569001",
+      "display" : "Consultation in teletherapy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50357006",
+      "display" : "HV - Home visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "50687007",
+      "display" : "Digestive tract consultation and report"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "53923005",
+      "display" : "Medical consultation on inpatient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "58400001",
+      "display" : "Chiropractic examination"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "59000001",
+      "display" : "Surgical pathology consultation and report on referred slides prepared elsewhere"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "65981005",
+      "display" : "Consultation in laboratory medicine for test interpretation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "68341005",
+      "display" : "Hemodialysis, supervision at home"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "69399002",
+      "display" : "Initial hospital visit by physician"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "70495004",
+      "display" : "Limited consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71318009",
+      "display" : "Physical medicine consultation and report"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "71387007",
+      "display" : "Endodontic dental consultation and report"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "73007006",
+      "display" : "Dermatology consultation and report"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "73575006",
+      "display" : "Chiropractic consultation with history"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "77406008",
+      "display" : "Confirmatory medical consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "77965002",
+      "display" : "Consultation in brachytherapy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "83362003",
+      "display" : "Final inpatient visit with instructions at discharge"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "84251009",
+      "display" : "Comprehensive consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86013001",
+      "display" : "Periodic reevaluation and management of healthy individual"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "86181006",
+      "display" : "Evaluation and management of inpatient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "87790002",
+      "display" : "Follow-up inpatient consultation visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "89291005",
+      "display" : "Orthodontic dental consultation and report"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "90526000",
+      "display" : "Initial evaluation and management of healthy individual"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "108219001",
+      "display" : "Physician visit with evaluation AND/OR management service"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "108220007",
+      "display" : "Evaluation AND/OR management - new patient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "108221006",
+      "display" : "Evaluation AND/OR management - established patient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185316007",
+      "display" : "Indirect encounter"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185317003",
+      "display" : "Telephone encounter"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185318008",
+      "display" : "Third party encounter"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185320006",
+      "display" : "Encounter by computer link"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185321005",
+      "display" : "Letter encounter to patient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185345009",
+      "display" : "Encounter for symptom"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185346005",
+      "display" : "Encounter for sign"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185347001",
+      "display" : "Encounter for problem"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185348006",
+      "display" : "Encounter for fear"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185349003",
+      "display" : "Encounter for check up"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185387006",
+      "display" : "New patient consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185389009",
+      "display" : "Follow-up visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185462000",
+      "display" : "Home visit request by relative"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185463005",
+      "display" : "Visit out of hours"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185464004",
+      "display" : "Out of hours visit - not night visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185465003",
+      "display" : "Weekend visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185466002",
+      "display" : "Home visit for urgent condition"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185467006",
+      "display" : "Home visit for acute condition"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185468001",
+      "display" : "Home visit for chronic condition"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185469009",
+      "display" : "District nurse visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "185470005",
+      "display" : "Home visit elderly assessment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "207195004",
+      "display" : "Nursing facility patient evaluation and management"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "209099002",
+      "display" : "History and physical examination with management of domiciliary or rest home patient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "210098006",
+      "display" : "Domiciliary or rest home patient evaluation and management"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "225929007",
+      "display" : "Joint home visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270424005",
+      "display" : "Letter encounter from patient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270425006",
+      "display" : "Letter from specialist"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270427003",
+      "display" : "Patient-initiated encounter"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "270430005",
+      "display" : "Provider-initiated encounter"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "275693003",
+      "display" : "Letter from consultant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "281036007",
+      "display" : "Follow-up consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "288836004",
+      "display" : "Agreeing on elements of the care plan"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "308720009",
+      "display" : "Letter encounter"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "310587004",
+      "display" : "First annual visit by district nurse"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "310588009",
+      "display" : "Visit by health visitor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "313183009",
+      "display" : "Inappropriate use of out of hours service"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "314849005",
+      "display" : "Telephone contact by consultant"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "315205008",
+      "display" : "Bank holiday home visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "370838009",
+      "display" : "Obtains consultation from the appropriate health care providers"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "386472008",
+      "display" : "Telephone consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "386473003",
+      "display" : "Telephone follow-up"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "386479004",
+      "display" : "Triage: telephone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "388970003",
+      "display" : "Weight maintenance consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "388975008",
+      "display" : "Weight reduction consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "388977000",
+      "display" : "Weight increase consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "390906007",
+      "display" : "Follow-up encounter"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "398228004",
+      "display" : "Anesthesia consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400979004",
+      "display" : "Homeopathic consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "401267002",
+      "display" : "Telephone triage encounter"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "401271004",
+      "display" : "E-mail sent to patient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "406547006",
+      "display" : "Urgent follow-up"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408482001",
+      "display" : "District nurse follow up"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408483006",
+      "display" : "District nurse initial visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "408487007",
+      "display" : "Health visitor follow up"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "416520008",
+      "display" : "Consultation for unaccompanied minor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "420454001",
+      "display" : "Consultation for chronic pain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "420650002",
+      "display" : "Consultation for pain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "421946003",
+      "display" : "Consultation for acute pain"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "423215004",
+      "display" : "Provision of continuity of care"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "423861007",
+      "display" : "Consultation for restraint debriefing"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "425604002",
+      "display" : "Case management follow up"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "438515009",
+      "display" : "E-mail encounter from carer"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "438516005",
+      "display" : "E-mail encounter to carer"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "439058005",
+      "display" : "Home visit for care and maintenance of urinary catheter"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "439708006",
+      "display" : "Home visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "439740005",
+      "display" : "Postoperative follow-up visit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "439887005",
+      "display" : "Home visit for mechanical ventilation care"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "440068009",
+      "display" : "Home visit for newborn care and assessment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "440085006",
+      "display" : "Home visit for postpartum care and assessment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "440146002",
+      "display" : "Home visit for care and maintenance of colostomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "440168007",
+      "display" : "Provision of copy of letter from specialist to patient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "440568002",
+      "display" : "Visit with nurse at next appointment requested"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "440611006",
+      "display" : "Home visit for marriage counseling"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "440696002",
+      "display" : "Home visit for intramuscular injection"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "441244001",
+      "display" : "Home visit for cystostomy care and maintenance"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "445450000",
+      "display" : "Encounter by short message service text messaging"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "448337001",
+      "display" : "Telemedicine consultation with patient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "698307003",
+      "display" : "Consultation for benign neoplasm disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "698308008",
+      "display" : "Consultation for malignant neoplasm disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "698309000",
+      "display" : "Consultation for endoscopic procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "698310005",
+      "display" : "Consultation for colposcopy related procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "698311009",
+      "display" : "Consultation for assisted reproductive procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "698312002",
+      "display" : "Consultation for minor abdominal procedure"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "698313007",
+      "display" : "Consultation for minor operation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "698314001",
+      "display" : "Consultation for treatment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "698704008",
+      "display" : "Home visit for rheumatology service"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "704126008",
+      "display" : "Home visit for anticoagulation monitoring"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "711420002",
+      "display" : "X-ray consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "711458003",
+      "display" : "Encounter for fitness for duty exam"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "711532000",
+      "display" : "Surgical pathology consultation on slides with comprehensive review and interpretation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713281006",
+      "display" : "Consultation for palliative care"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713776001",
+      "display" : "Email encounter from third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "719407002",
+      "display" : "Remote non-verbal consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "719410009",
+      "display" : "Consultation via video conference"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "763184009",
+      "display" : "Telepractice consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "773298008",
+      "display" : "Trauma dental consultation and report"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "3391000175108",
+      "display" : "Office visit for pediatric care and assessment"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5611000087100",
+      "display" : "CT consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5621000087108",
+      "display" : "Mammography consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5631000087105",
+      "display" : "Nuclear medicine consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5641000087104",
+      "display" : "Positron emission tomography consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5651000087101",
+      "display" : "Fluoroscopy consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5661000087103",
+      "display" : "Angiography consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5671000087107",
+      "display" : "MRI consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5681000087109",
+      "display" : "Ultrasonography consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "5691000087106",
+      "display" : "Bone density scan consultation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "140182721000087101",
+      "display" : "Direct encounter with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "149224951000087107",
+      "display" : "Other computer link with third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "152147791000087107",
+      "display" : "Other computer link with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "203336121000087104",
+      "display" : "Telemedicine with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "218527971000087103",
+      "display" : "Telemedicine with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "228039861000087107",
+      "display" : "Mobile messaging with third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "256294291000087100",
+      "display" : "Telemedicine with third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "273027811000087105",
+      "display" : "Online call third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "285238501000087105",
+      "display" : "Online call with video with third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "334935761000087109",
+      "display" : "Provider portal with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "367418221000087108",
+      "display" : "Client portal with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "400407971000087106",
+      "display" : "Telephone with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "422840101000087109",
+      "display" : "Email with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "467536481000087102",
+      "display" : "Other computer link with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "481206121000087108",
+      "display" : "Mobile messaging with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "538390091000087109",
+      "display" : "Online call with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "547731771000087101",
+      "display" : "Online chat with third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "565952521000087100",
+      "display" : "Client portal with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "568331491000087106",
+      "display" : "Help line with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "572494971000087107",
+      "display" : "Client portal with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "607437961000087101",
+      "display" : "Online chat with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "612885861000087100",
+      "display" : "Online chat with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "630298231000087104",
+      "display" : "Email with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "649924391000087105",
+      "display" : "Direct encounter with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "668347831000087105",
+      "display" : "Direct encounter with third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "687005881000087103",
+      "display" : "Online call with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "690545391000087106",
+      "display" : "Mobile messaging with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "705882981000087105",
+      "display" : "Telephone with third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "713687281000087104",
+      "display" : "Client portal with third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "740207951000087102",
+      "display" : "Telephone with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "762945721000087105",
+      "display" : "Other computer link with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "771950191000087103",
+      "display" : "Mobile messaging with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "783447471000087101",
+      "display" : "Help line with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "801503861000087105",
+      "display" : "Provider portal with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "803155061000087106",
+      "display" : "Direct encounter with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "804607021000087102",
+      "display" : "Online call with video with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "852888611000087109",
+      "display" : "Help line with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "856451561000087102",
+      "display" : "Online call with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "896704581000087108",
+      "display" : "Telemedicine with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "897030771000087101",
+      "display" : "Help line with third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "903035951000087107",
+      "display" : "Online call with video with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "945199901000087104",
+      "display" : "Online chat with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "948404801000087104",
+      "display" : "Telephone with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "950307351000087100",
+      "display" : "Provider portal with client and third party"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "952106091000087108",
+      "display" : "Online call with video with client in group"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "979296831000087107",
+      "display" : "Email with client alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "981971691000087104",
+      "display" : "Provider portal with third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "994795761000087106",
+      "display" : "Email with third party alone"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "999486161000087105",
+      "display" : "Letter for government service"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "999486171000087101",
+      "display" : "Letter for school"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "999486181000087104",
+      "display" : "Letter for workplace"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
