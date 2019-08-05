@@ -63,7 +63,6 @@ The Figure below represents information after a provider accepted information fr
 
 {% include img.html img="Provenance_Recon_Single_Organization.svg" caption="Figure 2: CIRI After Accepting Reconciliation, No Changes" %}
 
-Dr. Accepted is the latest author after verifying the problem on 5/2018 and accepting the content into their local data store, since it went through an interactive reconciliation process.
-
+Dr. Accepted is the latest author after verifying the problem on 5/2018 and accepting the problem data into their local data store, since it went through an interactive reconciliation process. This type of authorship change is only relevant for data fit for reconciliation, such as medications, allergies, problems. If Dr. Accepted had saved other clinical content into his EHR that aren't reconciled but simply stored, such as clinical notes, that content must retain its original author.
 
 {% include link-list.md %}
