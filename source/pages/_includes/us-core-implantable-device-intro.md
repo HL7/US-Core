@@ -24,7 +24,7 @@ In addition, the following data-elements must be supported if the data is presen
    - either as the Human Readable Form (HRF) string representation of the barcode
    - or the Automatic Identification and Data Capture (AIDC) representation.
 1. The following parsed content from the UDI
-   - the Device Identifier (DI) and at least one the following Production Identifiers (UDI-PI):
+   - the Device Identifier (UDI-DI) and at least one the following Production Identifiers (UDI-PI):
      - the manufacture date
      - the expiration date
      - the lot number
@@ -38,7 +38,7 @@ In addition, the following data-elements must be supported if the data is presen
   - The Parse UDI API allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
 
 - Implantable medical devices that have UDI information **SHALL** represent this information in either `carrierAIDC` or `carrierHRF`.
--  Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type.
+-  Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type. Note: The Device.type is too granular to differentiate implantable vs. non-implantable devices.  
 - In the [Quick Start] section below, searching for all devices is described. Records of implanted devices **MAY** be queried against UDI data including:
 
     - UDI HRF string (`udi-carrier`)
