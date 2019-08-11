@@ -67,7 +67,7 @@ If the source system does not have data for a *Must Support* data element, the d
            "name":[
              "extension" : [
              "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-             "valueCode" : "unsupported"
+             "valueCode" : "unknown"
               }]
               ]
             "telecom" :
