@@ -56,7 +56,7 @@ Many of the profiles in this guide [reference]({{site.data.fhir.path}}references
 If the source system does not have data for a *Must Support* data element, the data element is not present as described above.  If the source system does not have data for a *required* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
 
 1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
-  - Use the code `unsupported` - The source system wasn't capable of supporting this element.
+  - Use the code `unknown` - The value is expected to exist but is not known.
 
     Example: Patient resource where the patient name is not available.
 
@@ -80,7 +80,7 @@ If the source system does not have data for a *Must Support* data element, the d
       - if the source systems has text but no coded data, only the text element is used.
       - if there is neither text or coded data:
         - use the appropriate "unknown" concept code from the value set if available
-        - use `unknown` from the [DataAbsentReason Code System] if the value set does not have the appropriate concept.
+        - if the value set does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
    - *required* binding strength (CodeableConcept or code datatypes):
       - use the appropriate "unknown" concept code from the value set if available
       - For the following data elements no appropriate "unknown" concept code is available, therefore the element must be populated:
