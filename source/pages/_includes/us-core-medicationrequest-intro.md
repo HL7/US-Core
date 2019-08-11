@@ -33,17 +33,18 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Profile specific implementation guidance:**
 
-*  The MedicationStatement and MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
+* See the [Medication List Guidance] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
+*  The MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
     *  When referencing a Medication resource,  the resource may be [contained] or an external resource.
     *  The server application MAY choose any combination of these methods, but if an external reference to Medication is used, the server SHALL support the [include] parameter for searching this element.
     *  The client application SHALL support all methods.  
-    *  Additional guidance is provided below in the Search section and in the [CapabilityStatement] section.
-*  Source EHR identifiers **SHOULD** be included to support deduplication across MedicationStatement and MedicationRequest resources. A patient medication may appear when a prescription is present as a MedicationRequest or MedicationStatement even though the EHR stores as a single instance. Exposing the EHR identifiers helps client applications identify duplicates.
+*  Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
 
 ### Examples
 
 - [MedicationRequest-uscore-mo1](MedicationRequest-uscore-mo1.html) Inline medication code to represent the medication.
 - [MedicationRequest-uscore-mo2](MedicationRequest-uscore-mo2.html) Reference to a [contained]({{site.data.fhir.path}}references.html#contained) Medication resource.
 - [MedicationRequest-uscore-mo3](Bundle-uscore-mo3.html) A search [Bundle]({{site.data.fhir.path}}bundle.html) with a MedicationRequest and an included Medication resource in the Bundle.
+- [Self-prescribed Tylenol](MedicationRequest-self-tylenol.html) Representation of a reported self-prescribed OTC medication.
 
 {% include link-list.md %}

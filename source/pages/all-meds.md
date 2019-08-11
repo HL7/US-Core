@@ -18,13 +18,13 @@ This section provide specific guidance on how to to access “all medications”
 #### Pharmacy FHIR Resources
 {:.no_toc}
 
-The 5 FHIR pharmacy resources concerned with the ordering, dispensing, administration and recording of medications are:
+The FHIR specification defines 5 FHIR pharmacy resources concerned with the ordering, dispensing, administration and recording of medications.  Note that as stated above, this IG uses *only* Medication and MedicationRequest to access a patient's medications:
 
 - [Medication]({{ site.data.fhir.path }}medication.html):  Represents the medication itself
 - [MedicationRequest]({{ site.data.fhir.path }}medicationrequest.html): Represents an authorization to dispense and administer a medication (aka prescription or order).  
-- [MedicationDispense]({{ site.data.fhir.path }}medicationdispense.html): Represents a response to a prescription - provision of a supply of a medication.
-- [MedicationAdministration]({{ site.data.fhir.path }}medicationadministration.html): Represents the consumption or administration of a medication.
-- [MedicationStatement]({{ site.data.fhir.path }}MedicationStatement.html): Represents the record for past present and future medications use.
+- [MedicationDispense]({{ site.data.fhir.path }}medicationdispense.html): Represents a response to a prescription - provision of a supply of a medication. **Not used for accessing a patient's medications**
+- [MedicationAdministration]({{ site.data.fhir.path }}medicationadministration.html): Represents the consumption or administration of a medication. **Not used for accessing a patient's medications**
+- [MedicationStatement]({{ site.data.fhir.path }}MedicationStatement.html): Represents the record for past present and future medications use. **Not used for accessing a patient's medications**
 
 Details about each resource can be found in the FHIR specification.  A general discussion regarding the interaction between these resources is described in the FHIR [Medications Module]({{ site.data.fhir.path }}medications-module.html) and the [Guide to Resources]({{ site.data.fhir.path }}resourceguide.html) Sections.
 
@@ -51,6 +51,7 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 **Definitions**
 
+- "medication" is defined in this IG to include all prescribed and "self-prescribed" medications directly ordered by a provider or reported by the provider, patient or related person including ethical drugs, over the counter (OTC) medication, and other substances taken for medical and/or recreational use.
 - "All medications" is defined in this IG to include all historical, active, future prescribed medications and medications that are entered in error and whose status is unknown.
 - "Active medications" is defined in this IG to include all medications with an active status. Active medications do not include past, future, unknown status, and entered in error medications.
 
@@ -69,7 +70,7 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 #### Get All Medications
 
-1. Get all medications for a patient by querying MedicationRequest using the `patient` search parameter and `intent` search parameter == 'order'.  See [MedicationRequest Quick Start] for further details.
+1. Get all medications for a patient by querying MedicationRequest using the `patient` search parameter and `intent` search parameter = 'order'.  See [MedicationRequest Quick Start] for further details.
 
    `GET /MedicationRequest?patient=[id]&intent=order{&_include=MedicationRequest:medication}`
 

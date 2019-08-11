@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.core.argo-3.1.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\R4\source\resources"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\R4\source\examples"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\R4\framework"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\R4\source\pages"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.argo-3.1.0"/>
   <version value="3.1.0"/>
@@ -463,19 +463,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/uscore-ms2"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Observation/serum-creatinine"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Bundle/uscore-ms3"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -488,12 +476,6 @@
     <resource>
       <reference>
         <reference value="Observation/serum-total-bilirubin"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="MedicationStatement/uscore-ms1"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -1403,38 +1385,8 @@
       <generation value="markdown"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="Guidance"/>
+        <title value="General Guidance"/>
         <generation value="markdown"/>
-        <page>
-          <nameUrl value="general-guidance.html"/>
-          <title value="General Guidance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="clinical-notes-guidance.html"/>
-          <title value="Clinical Notes Guidance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="all-meds.html"/>
-          <title value="Medication List Guidance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="basic-provenance.html"/>
-          <title value="Basic Provenance"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="r2-r4-guidance.html"/>
-          <title value="DSTU2 to R4 Conversion"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="future-of-us-core.html"/>
-          <title value="Future of US Core"/>
-          <generation value="markdown"/>
-        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
@@ -1997,7 +1949,7 @@
         </page>
         <page>
           <nameUrl value="SearchParameter-us-core-device-patient.html"/>
-          <title value="SearchParameter US Core Implantable Device Patient"/>
+          <title value="SearchParameter US Core Device Patient"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -2097,7 +2049,7 @@
         </page>
         <page>
           <nameUrl value="SearchParameter-us-core-device-type.html"/>
-          <title value="SearchParameter US Core Implantable Device Type"/>
+          <title value="SearchParameter US Core Device Type"/>
           <generation value="generated"/>
         </page>
         <page>
