@@ -307,7 +307,7 @@ For searches where the client does not supply a status parameter, an implementat
 - Follow the [deleted data](#representing-deleted-information) guidance above.
 - If a system doesn't support a specific status that is queried, the search results **SHOULD** return an http `200` status with search bundle containing resources matching the search criteria *and* an OperationOutcome warning the client which status value is not supported.
 
-   - For example, a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, `entered-in-error` but not `refuted`
+   - For example, in a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, `entered-in-error` but not `refuted`, the search parameter is referring to an unknown code since `refuted` is not known to the server.
 
 {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
 
