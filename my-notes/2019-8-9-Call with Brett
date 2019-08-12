@@ -33,7 +33,19 @@ MedStatement poll commenters feedback
 
   - planned block vote
 
-Missing code Feedback from poll - follow up and next call
+Missing code Feedback from poll - follow up offline and on next call
+
+(1) The current approach is clear, and these are conveying two different kinds of reasons. What would be the rationale for trying to combine them?
+
+(2) Unsupported and Unknown are distinct concepts. If there is confusion on when to use one over the other, then add narrative describing the difference.
+
+(3) "Expected to exist but not known" and "Not capable of supporting this element" are two different concepts and both should be available to indicate precisely what's happening on the server. Include both in the code system.
+
+Background: The code "unsupported" was inherited from DSTU2 specifically for using when a code was not available and we recommended using the DAR.  This guidance was incorrect for codes and thus updated.   http://www.fhir.org/guides/argonaut/r2/definitions.html
+
+For uncoded elements "unsupported - The source system wasn’t capable of supporting this element" is thus a legacy artifact and is not appropriate for must support elements since we say you must support them!
+
+For codes, the concept 'unknown' is consistent with most FHIR value sets that have such a concept  - e.g.  http://build.fhir.org/valueset-observation-status.html and argument could be made to support both however.
 
 codes for encounter type adds.  Does CPT cover these concepts?  onus on commenter to provide codes or recommended system.  time crunch maked infeasible
 

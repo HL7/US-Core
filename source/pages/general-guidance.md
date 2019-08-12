@@ -305,7 +305,7 @@ For searches where the client does not supply a status parameter, an implementat
 - **SHALL NOT** restrict search results ( i.e. apply 'hidden' filters) when a client includes status parameters in the query.
 - **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.
 - Follow the [deleted data](#representing-deleted-information) guidance above.
-- If a system doesn't support a specific status (for example, a system supports the `AllergyIntolerance.verificationStatus` concepts `unconfirmed`, `confirmed`, `entered-in-error` but not `refuted`), the search results **SHOULD** return an http `200` status with search bundle containing resources matching the search criteria *and* an OperationOutcome warning the client that the status value is not supported.
+- If a system doesn't support a specific status (for example, a system supports the `AllergyIntolerance.verificationStatus` concepts `unconfirmed`, `confirmed`, `entered-in-error` but not `refuted`), the search results **SHOULD** return an http `200` status with search bundle containing resources matching the search criteria *and* an OperationOutcome warning the client which status value is not supported.
 
         {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
 
