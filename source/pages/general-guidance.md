@@ -250,7 +250,7 @@ The following guidelines outline how to request and return a resource in the req
 
 For further guidance on language and locale for generation of the resource narrative, see http://hl7.org/fhir/narrative.html#lang
 
-*TODO...Follow FHIR R5 guidance for how to report the user's timezone.*
+<!-- *TODO...Follow FHIR R5 guidance for how to report the user's timezone.* -->
 
 ### Read(Fetch) syntax
 
