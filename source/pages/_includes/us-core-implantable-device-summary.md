@@ -11,6 +11,7 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
 1.  A Patient Reference  in `Device.patient`
 
 #### Summary of the Must Support Requirements
+
 1.  A  string  in `Device.distinctIdentifier`
 1.  A  dateTime  in `Device.manufactureDate`
 1.  A  dateTime  in `Device.expirationDate`
