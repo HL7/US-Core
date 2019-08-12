@@ -35,7 +35,7 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 {% include img.html img="ArgoR4Meds_1.svg" caption="Figure 1: FHIR Medication Order and Fulfillment" %}
 
-#### MedicationRequest Provenance
+#### Sources of a MedicationRequest
 
  Several sources may be used to create a MedicationRequest as is shown in Figure 2 below. The information may captured directly a system's medication orders or reported by a provider.  A patient or related person may also report the information (or provide some type of record) including "self-prescribed" orders.  For example, oftentimes the patient is the *only* source of information when the patient reports Cannabis or OTC medication use.
 
