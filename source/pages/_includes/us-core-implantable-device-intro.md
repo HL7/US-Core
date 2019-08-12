@@ -15,6 +15,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 1.  a code identifying the type of device
 1.  a patient
+1.  the Device Identifier (UDI-DI)
 
 In addition, the following data-elements must be supported if the data is present in the sending system ([Must Support] definition):
 
@@ -23,8 +24,7 @@ In addition, the following data-elements must be supported if the data is presen
 1. A Unique Device Identifier (UDI) numeric or alphanumeric code
    - either as the Human Readable Form (HRF) string representation of the barcode
    - or the Automatic Identification and Data Capture (AIDC) representation.
-1. The following parsed content from the UDI
-   - the Device Identifier (UDI-DI) and at least one the following Production Identifiers (UDI-PI):
+1. The following parsed Production Identifiers (UDI-PI) from the UDI
      - the manufacture date
      - the expiration date
      - the lot number
@@ -36,9 +36,9 @@ In addition, the following data-elements must be supported if the data is presen
 - This profile supports the requirement to retrieve an 170.315(a)(14) [Implantable device list](https://www.healthit.gov/test-method/implantable-device-list). Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:
   - The [AccessGUDID API](https://www.fda.gov/medical-devices/global-unique-device-identification-database-gudid/accessgudid-public) provides access to device records in GUDID including safety information and UDI. It includes APIs to query and download a complete list of implantable devices registered in GUDID.
   - The Parse UDI API allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
-
 - Implantable medical devices that have UDI information **SHALL** represent this information in either `carrierAIDC` or `carrierHRF`.
--  Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type. Note: The Device.type is too granular to differentiate implantable vs. non-implantable devices.  
+- At least one of the Production Identifiers (UDI-PI) **SHALL** be present.
+- Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type. Note: The Device.type is too granular to differentiate implantable vs. non-implantable devices.  
 - In the [Quick Start] section below, searching for all devices is described. Records of implanted devices **MAY** be queried against UDI data including:
 
     - UDI HRF string (`udi-carrier`)
