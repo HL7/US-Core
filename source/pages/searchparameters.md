@@ -24,16 +24,22 @@ This section lists the search parameters definitions that are used within the ca
 **AllergyIntolerance**
   - [clinical-status](SearchParameter-us-core-allergyintolerance-clinical-status.html)
   - [patient](SearchParameter-us-core-allergyintolerance-patient.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **CarePlan**
   - [category](SearchParameter-us-core-careplan-category.html)
   - [date](SearchParameter-us-core-careplan-date.html)
   - [patient](SearchParameter-us-core-careplan-patient.html)
   - [status](SearchParameter-us-core-careplan-status.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **CareTeam**
   - [patient](SearchParameter-us-core-careteam-patient.html)
   - [status](SearchParameter-us-core-careteam-status.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **Condition**
   - [category](SearchParameter-us-core-condition-category.html)
@@ -41,10 +47,14 @@ This section lists the search parameters definitions that are used within the ca
   - [patient](SearchParameter-us-core-condition-patient.html)
   - [onset-date](SearchParameter-us-core-condition-onset-date.html)
   - [code](SearchParameter-us-core-condition-code.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **Device**
   - [patient](SearchParameter-us-core-device-patient.html)
   - [type](SearchParameter-us-core-device-type.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **DiagnosticReport**
   - [status](SearchParameter-us-core-diagnosticreport-status.html)
@@ -52,6 +62,8 @@ This section lists the search parameters definitions that are used within the ca
   - [category](SearchParameter-us-core-diagnosticreport-category.html)
   - [code](SearchParameter-us-core-diagnosticreport-code.html)
   - [date](SearchParameter-us-core-diagnosticreport-date.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **DocumentReference**
   - [_id](SearchParameter-us-core-documentreference-id.html)
@@ -61,6 +73,8 @@ This section lists the search parameters definitions that are used within the ca
   - [type](SearchParameter-us-core-documentreference-type.html)
   - [date](SearchParameter-us-core-documentreference-date.html)
   - [period](SearchParameter-us-core-documentreference-period.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **Encounter**
   - [_id](SearchParameter-us-core-encounter-id.html)
@@ -70,16 +84,22 @@ This section lists the search parameters definitions that are used within the ca
   - [patient](SearchParameter-us-core-encounter-patient.html)
   - [status](SearchParameter-us-core-encounter-status.html)
   - [type](SearchParameter-us-core-encounter-type.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **Goal**
   - [lifecycle-status](SearchParameter-us-core-goal-lifecycle-status.html)
   - [patient](SearchParameter-us-core-goal-patient.html)
   - [target-date](SearchParameter-us-core-goal-target-date.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **Immunization**
   - [patient](SearchParameter-us-core-immunization-patient.html)
   - [status](SearchParameter-us-core-immunization-status.html)
   - [date](SearchParameter-us-core-immunization-date.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **Location**
   - [name](SearchParameter-us-core-location-name.html)
@@ -87,6 +107,8 @@ This section lists the search parameters definitions that are used within the ca
   - [address-city](SearchParameter-us-core-location-address-city.html)
   - [address-state](SearchParameter-us-core-location-address-state.html)
   - [address-postalcode](SearchParameter-us-core-location-address-postalcode.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **MedicationRequest**
   - [status](SearchParameter-us-core-medicationrequest-status.html)
@@ -94,6 +116,8 @@ This section lists the search parameters definitions that are used within the ca
   - [patient](SearchParameter-us-core-medicationrequest-patient.html)
   - [encounter](SearchParameter-us-core-medicationrequest-encounter.html)
   - [authoredon](SearchParameter-us-core-medicationrequest-authoredon.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 <!--
 **MedicationStatement**
@@ -108,10 +132,14 @@ This section lists the search parameters definitions that are used within the ca
   - [code](SearchParameter-us-core-observation-code.html)
   - [date](SearchParameter-us-core-observation-date.html)
   - [patient](SearchParameter-us-core-observation-patient.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **Organization**
   - [name](SearchParameter-us-core-organization-name.html)
   - [address](SearchParameter-us-core-organization-address.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **Patient**
   - [_id](SearchParameter-us-core-patient-id.html)
@@ -123,21 +151,28 @@ This section lists the search parameters definitions that are used within the ca
   - [name](SearchParameter-us-core-patient-name.html)
   - [us-core-race]
   - [us-core-ethnicity]
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **Practitioner**
   - [name](SearchParameter-us-core-practitioner-name.html)
   - [identifier](SearchParameter-us-core-practitioner-identifier.html)
   - [specialty](SearchParameter-us-core-practitionerrole-specialty.html)
   - [practitioner](SearchParameter-us-core-practitionerrole-practitioner.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **PractitionerRole**
   - [specialty](SearchParameter-us-core-practitionerrole-specialty.html)
   - [practitioner](SearchParameter-us-core-practitionerrole-practitioner.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
+
 
 **Procedure**
   - [status](SearchParameter-us-core-procedure-status.html)
   - [patient](SearchParameter-us-core-procedure-patient.html)
   - [date](SearchParameter-us-core-procedure-date.html)
   - [code](SearchParameter-us-core-procedure-code.html)
+  - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
 
 {% include link-list.md %}
