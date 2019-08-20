@@ -224,3 +224,4 @@
 [Medication List Guidance]: all-meds.html
 [MedicationRequest Quick Start]: StructureDefinition-us-core-medicationrequest.html#search
 [component observation]:  {{site.data.fhir.path}}observation.html#gr-comp
+[Coverage]: {{site.data.fhir.path}}coverage.html

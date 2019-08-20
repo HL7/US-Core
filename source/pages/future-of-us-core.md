@@ -47,6 +47,7 @@ Additional UDI elements in a US Core Implantable Device Profile
 
 The following items were submitted during a US Core ballot or STU comment. Additional requirements gathering is required before testing may occur on these items:
 * [ServiceRequest] - The CDS hooks community, and other implementers are gathering requirements for the ServiceRequest Resource.
+* [Coverage] - Several US implementations Guides including Da Vinci and Argonaut and QI Core have defined requirements for the Coverage Resource.
 
 
 ------------------------------------------------------------------------
