@@ -58,12 +58,16 @@
 			<path value="Provenance.agent"/>
 			<slicing>
 				<discriminator>
+<!--
 					<type value="value"/>
 					<path value="type.coding.code"/>
 				</discriminator>
 				<discriminator>
 					<type value="value"/>
 					<path value="type.coding.system"/>
+-->
+				<type value="pattern"/>
+				<path value="type"/>
 				</discriminator>
 				<rules value="open"/>
 			</slicing>
@@ -72,9 +76,9 @@
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
-		<element id="Provenance.agent:author">
+		<element id="Provenance.agent:ProvenanceAuthorSlice">
 			<path value="Provenance.agent"/>
-			<sliceName value="provenance-author"/>
+			<sliceName value="ProvenanceAuthorSlice"/>
 			<min value="1"/>
 			<max value="1"/>
 			<mustSupport value="true"/>
@@ -84,9 +88,22 @@
 			<path value="Provenance.agent.type"/>
 			<min value="1"/>
 			<max value="1"/>
+
+			<type>
+				<code value="CodeableConcept"/>
+			</type>
+			<patternCodeableConcept>
+				<coding>
+					<system
+									value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+					<code value="author"/>
+				</coding>
+			</patternCodeableConcept>
+
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
+<!--
 		<element id="Provenance.agent:author.type.coding">
 			<path value="Provenance.agent.type.coding"/>
 			<min value="1"/>
@@ -116,6 +133,7 @@
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
+-->
 		<element id="Provenance.agent.who">
 			<path value="Provenance.agent.who"/>
 			<min value="1"/>
