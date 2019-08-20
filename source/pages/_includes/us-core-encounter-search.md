@@ -1,4 +1,6 @@
 
+- See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
+- See the [General Guidance] section for additional guidance on searching for multiple patients.
 
 #### Mandatory Search Parameters:
 
@@ -17,7 +19,9 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHALL** support searching for all encounters for a patient using the **[`patient`](SearchParameter-us-core-encounter-patient.html)** search parameter:
 
-    `GET [base]/Encounter?patient=[reference]`
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
+
+    `GET [base]/Encounter?patient=[reference]{,[reference],...}`
 
     Example:
     
@@ -28,8 +32,9 @@ The following search parameters, search parameter combinations and search parame
 1. **SHALL** support searching using the combination of the **[`date`](SearchParameter-us-core-encounter-date.html)** and **[`patient`](SearchParameter-us-core-encounter-patient.html)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/Encounter?date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}&patient=[reference]`
+    `GET [base]/Encounter?date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}&patient=[reference]{,[reference],...}`
 
     Example:
     
@@ -53,8 +58,9 @@ The following search parameters, search parameter combinations and search parame
      *Implementation Notes:* Fetches a bundle containing any Encounter resources matching the identifier ([how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`class`](SearchParameter-us-core-encounter-class.html)** and **[`patient`](SearchParameter-us-core-encounter-patient.html)** search parameters:
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/Encounter?class={[system]}|[code]&patient=[reference]`
+    `GET [base]/Encounter?class={[system]}|[code]&patient=[reference]{,[reference],...}`
 
     Example:
     
@@ -63,8 +69,9 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified class and patient ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-encounter-patient.html)** and **[`type`](SearchParameter-us-core-encounter-type.html)** search parameters:
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/Encounter?patient=[reference]&type={[system]}|[code]`
+    `GET [base]/Encounter?patient=[reference]{,[reference],...}&type={[system]}|[code]`
 
     Example:
     
@@ -73,8 +80,9 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and type ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-encounter-patient.html)** and **[`status`](SearchParameter-us-core-encounter-status.html)** search parameters:
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/Encounter?patient=[reference]&status={[system]}|[code]`
+    `GET [base]/Encounter?patient=[reference]{,[reference],...}&status={[system]}|[code]`
 
     Example:
     

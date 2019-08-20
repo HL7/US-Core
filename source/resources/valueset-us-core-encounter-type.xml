@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<id value="us-core-encounter-type"/>
+	<!--
 	<text>
 		<status value="generated"/>
 		<div xmlns="http://www.w3.org/1999/xhtml">
@@ -15,6 +16,7 @@
 			</ul>
 		</div>
 	</text>
+-->
 	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type"/>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
@@ -32,9 +34,18 @@
 			<value value="http://hl7.org/fhir"/>
 		</telecom>
 	</contact>
-	<description value="The type of encounter: a specific code indicating type of service provided, from CPT"/>
-	<copyright value="CPT copyright 2014 American Medical Association. All rights reserved."/>
+	<description value="The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure)) and from the Current Procedure and Terminology(CPT) designated for Evaluation and Management (99200 – 99607) (subscription to AMA Required)"/>
+	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type"/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.  This value set includes content from CPT copyright 2014 American Medical Association. All rights reserved."/>
 	<compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="308335008"/>
+      </filter>
+    </include>
 		<include>
 			<system value="http://www.ama-assn.org/go/cpt"/>
 		</include>

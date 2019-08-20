@@ -1,32 +1,32 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "hl7.fhir.us.core-3.0.0",
+  "id" : "hl7.fhir.us.core.argo-3.1.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/framework"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"
+    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/pages"
   }],
-  "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.0.0",
-  "version" : "3.0.0",
-  "name" : "USCoreR4",
-  "title" : "US Core R4",
+  "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.argo-3.1.0",
+  "version" : "3.1.0",
+  "name" : "ArgoR4",
+  "title" : " Argo R4",
   "status" : "active",
-  "publisher" : "HL7 International - US Realm Steering Committee",
+  "publisher" : "The Argonaut Project",
   "contact" : [{
     "telecom" : [{
       "system" : "url",
-      "value" : "http://www.hl7.org/Special/committees/usrealm/index.cfm"
+      "value" : "http://argonautwiki.hl7.org"
     }]
   }],
   "jurisdiction" : [{
@@ -35,8 +35,8 @@
       "code" : "US"
     }]
   }],
-  "copyright" : "Used by permission of HL7 International - US Realm Steering Committee, all rights reserved Creative Commons License",
-  "packageId" : "hl7.fhir.us.core",
+  "copyright" : "Used by permission of The Argonaut Project, all rights reserved Creative Commons License",
+  "packageId" : "hl7.fhir.us.core.argo",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
   "4.0.0"],
@@ -310,13 +310,31 @@
     },
     {
       "reference" : {
+        "reference" : "MedicationRequest/self-tylenol"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "DiagnosticReport/metabolic-panel"
       },
       "exampleBoolean" : true
     },
     {
       "reference" : {
+        "reference" : "Device/udi-3"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "MedicationRequest/uscore-mo2"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901"
       },
       "exampleBoolean" : true
     },
@@ -448,31 +466,19 @@
     },
     {
       "reference" : {
-        "reference" : "MedicationStatement/uscore-ms2"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "Observation/serum-creatinine"
       },
       "exampleBoolean" : true
     },
     {
       "reference" : {
-        "reference" : "Bundle/uscore-ms3"
+        "reference" : "Observation/satO2-fiO2"
       },
       "exampleBoolean" : true
     },
     {
       "reference" : {
         "reference" : "Observation/serum-total-bilirubin"
-      },
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "MedicationStatement/uscore-ms1"
       },
       "exampleBoolean" : true
     },
@@ -557,12 +563,6 @@
     {
       "reference" : {
         "reference" : "ValueSet/us-core-observation-smokingstatus"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "SearchParameter/us-core-medicationstatement-status"
       },
       "exampleBoolean" : false
     },
@@ -670,6 +670,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/us-core-provenance"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "OperationDefinition/docref"
       },
       "exampleBoolean" : false
@@ -760,12 +766,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/us-core-medicationstatement"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "ValueSet/us-core-procedure-icd10pcs"
       },
       "exampleBoolean" : false
@@ -790,6 +790,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/us-core-pulse-oximetry"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "SearchParameter/us-core-allergyintolerance-clinical-status"
       },
       "exampleBoolean" : false
@@ -797,6 +803,12 @@
     {
       "reference" : {
         "reference" : "SearchParameter/us-core-documentreference-date"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-medicationrequest-intent"
       },
       "exampleBoolean" : false
     },
@@ -887,6 +899,12 @@
     {
       "reference" : {
         "reference" : "CodeSystem/condition-category"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/us-core-medicationrequest-encounter"
       },
       "exampleBoolean" : false
     },
@@ -1006,12 +1024,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/us-core-device"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "SearchParameter/us-core-patient-birthdate"
       },
       "exampleBoolean" : false
@@ -1126,19 +1138,7 @@
     },
     {
       "reference" : {
-        "reference" : "SearchParameter/us-core-medicationstatement-effective"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/us-core-race"
-      },
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "SearchParameter/us-core-medicationstatement-patient"
       },
       "exampleBoolean" : false
     },
@@ -1342,6 +1342,12 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/us-core-includeprovenance"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "SearchParameter/us-core-practitioner-identifier"
       },
       "exampleBoolean" : false
@@ -1372,6 +1378,12 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/us-core-implantable-device"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/detailed-race"
       },
       "exampleBoolean" : false
@@ -1392,6 +1404,21 @@
         {
           "nameUrl" : "clinical-notes-guidance.html",
           "title" : "Clinical Notes Guidance",
+          "generation" : "markdown"
+        },
+        {
+          "nameUrl" : "all-meds.html",
+          "title" : "Medication List Guidance",
+          "generation" : "markdown"
+        },
+        {
+          "nameUrl" : "basic-provenance.html",
+          "title" : "Basic Provenance",
+          "generation" : "markdown"
+        },
+        {
+          "nameUrl" : "r2-r4-guidance.html",
+          "title" : "DSTU2 to R4 Conversion",
           "generation" : "markdown"
         },
         {
@@ -1440,6 +1467,11 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "StructureDefinition-us-core-provenance.html",
+          "title" : "StructureDefinition US Core Provenance",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-us-core-birthsex.html",
           "title" : "StructureDefinition US Core Birthsex",
           "generation" : "generated"
@@ -1455,8 +1487,8 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-us-core-medicationstatement.html",
-          "title" : "StructureDefinition US Core MedicationStatement",
+          "nameUrl" : "StructureDefinition-us-core-pulse-oximetry.html",
+          "title" : "StructureDefinition US Core Pulse Oximetry",
           "generation" : "generated"
         },
         {
@@ -1482,11 +1514,6 @@
         {
           "nameUrl" : "StructureDefinition-us-core-direct.html",
           "title" : "StructureDefinition US Core Direct",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-us-core-device.html",
-          "title" : "StructureDefinition US Core Device",
           "generation" : "generated"
         },
         {
@@ -1542,6 +1569,11 @@
         {
           "nameUrl" : "StructureDefinition-us-core-medicationrequest.html",
           "title" : "StructureDefinition US Core MedicationRequest",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-us-core-implantable-device.html",
+          "title" : "StructureDefinition US Core Implantable Device",
           "generation" : "generated"
         }]
       },
@@ -1750,11 +1782,6 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "SearchParameter-us-core-medicationstatement-status.html",
-          "title" : "SearchParameter US Core MedicationStatement Status",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "SearchParameter-us-core-organization-name.html",
           "title" : "SearchParameter US Core Organization Name",
           "generation" : "generated"
@@ -1830,6 +1857,11 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "SearchParameter-us-core-medicationrequest-intent.html",
+          "title" : "SearchParameter US Core MedicationRequest Intent",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "SearchParameter-us-core-location-address.html",
           "title" : "SearchParameter US Core Location Address",
           "generation" : "generated"
@@ -1867,6 +1899,11 @@
         {
           "nameUrl" : "SearchParameter-us-core-encounter-type.html",
           "title" : "SearchParameter US Core Encounter Type",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-medicationrequest-encounter.html",
+          "title" : "SearchParameter US Core MedicationRequest Encounter",
           "generation" : "generated"
         },
         {
@@ -1985,16 +2022,6 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "SearchParameter-us-core-medicationstatement-effective.html",
-          "title" : "SearchParameter US Core MedicationStatement Effective",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "SearchParameter-us-core-medicationstatement-patient.html",
-          "title" : "SearchParameter US Core MedicationStatement Patient",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "SearchParameter-us-core-location-address-postalcode.html",
           "title" : "SearchParameter US Core Location Address Postalcode",
           "generation" : "generated"
@@ -2092,6 +2119,11 @@
         {
           "nameUrl" : "SearchParameter-us-core-documentreference-category.html",
           "title" : "SearchParameter US Core DocumentReference Category",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-us-core-includeprovenance.html",
+          "title" : "SearchParameter US Core Includeprovenance",
           "generation" : "generated"
         },
         {

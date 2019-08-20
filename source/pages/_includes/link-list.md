@@ -1,4 +1,3 @@
-
 [(how to search by date)]: {{site.data.fhir.path}}search.html#date
 [(how to search by reference)]: {{site.data.fhir.path}}search.html#reference
 [(how to search by token)]: {{site.data.fhir.path}}search.html#token
@@ -155,6 +154,7 @@
 [Profiles]: profiles.html "Profiles and Extensions Page"
 [Profiles and Extensions]: profiles.html
 [Progress Note (11506-3)]: https://loinc.org/11506-3.html
+[Provenance]: {{site.data.fhir.path}}provenance.html
 [QI-Core]:http://hl7.org/fhir/us/qicore/
 [Quantity]: {{site.data.fhir.path}}datatypes.html#quantity
 [quantity]: {{site.data.fhir.path}}search.html#quantity
@@ -179,7 +179,7 @@
 [US Core CareTeam Profile]: StructureDefinition-us-core-careteam.html
 [US Core Condition Category Codes]: ValueSet-us-core-condition-category.html
 [US Core Condition Profile]: StructureDefinition-us-core-condition.html
-[US Core Device Profile]: StructureDefinition-us-core-device.html
+[US Core Implantable Device Profile]: StructureDefinition-us-core-implantable-device.html
 [US Core DiagnosticReport Category Codes]: ValueSet-us-core-diagnosticreport-category.html
 [US Core DiagnosticReport Profile for Laboratory Results Reporting]: StructureDefinition-us-core-diagnosticreport-lab.html
 [US Core DiagnosticReport Profile for Report and Note exchange]: StructureDefinition-us-core-diagnosticreport-note.html
@@ -195,6 +195,7 @@
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
 [US Core Patient Profile]: StructureDefinition-us-core-patient.html
 [US Core Procedure Profile]: StructureDefinition-us-core-procedure.html
+[US Core Provenance Profile]: StructureDefinition-us-core-provenance.html
 [US Core Security]: security.html
 [US Core Server Capability Statement]: CapabilityStatement-us-core-server.html
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
@@ -220,3 +221,6 @@
 [Body temperature]: {{site.data.fhir.path}}bodytemp.html
 [Oxygen saturation]: {{site.data.fhir.path}}oxygensat.html
 [Head circumference]: {{site.data.fhir.path}}headcircum.html
+[Medication List Guidance]: all-meds.html
+[MedicationRequest Quick Start]: StructureDefinition-us-core-medicationrequest.html#search
+[component observation]:  {{site.data.fhir.path}}observation.html#gr-comp

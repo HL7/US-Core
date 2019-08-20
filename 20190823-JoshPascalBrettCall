@@ -1,0 +1,44 @@
+
+### Endpoint Discoverability
+
+- client should know what version they are dealing with without having inspect metadata on each endpoint.
+- existing mechanisms confusing
+- Server SHOULD make explicit which version of Argo/US Core on their FHIR endpoint
+   - e.g., "DSTU2" or “R4" path component or separate files based on version
+- In future coalesce on single method
+
+### No Guarantee that Resource IDs are Preserved between DSTU-2 and R4
+
+- stable ids = best practice
+- Can not make assume ids will be the same
+  - Clients need to deduplicate and map across versions
+
+### Expectation that DSTU2 Data is Preserved in R4
+
+- Resource Types SHALL be the same in R4 as DSTU2.
+    - r3-r4 resources migration - change name, careteam, medicationrequests
+- SHALL represent the *same** data in R4 as DSTU2.  ( e.g patient Rhonda Jones is available on both)
+- Data SHALL not be degraded between versions.
+
+### Authorization Across Versions
+
+- Separate authorization is required
+   - No expectation that DSTU2 authorizations will work on R4 endpoints and hence the need to reauthorize when migrating between versions.
+      - Maintaining the same auth server for both endpoints so that the refresh token is valid for the R4 endpoint as well may be possible but not in scope.
+- The new endpoint will bring additional data types and added scopes
+
+### multiple patients
+
+- for both provider and patient apps
+  - example scenarios:
+    provider discover all my patients with allergy to x
+    patient/consumer - see if have access to my children
+
+- propose search *without* patients:
+   - only fetch those authorized to see.
+
+      - patient level scopes:  fetch all patients - only see 1 patient
+
+      - users level scopes:  fetch all patients - only those authorized to see  (e.g., all patients for provider y)
+
+clarification on multiple patients  - Josh to ask Steve.

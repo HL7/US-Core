@@ -14,5 +14,10 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
 1. One or more  CodeableConcepts  in `CarePlan.category`
 with an [example](http://hl7.org/fhir/R4/terminologies.html#example)
  binding to [Care Plan Category](http://hl7.org/fhir/ValueSet/care-plan-category)
-   - which must have at least  a `CarePlan.category` = `{"coding": [{"code": "assess-plan", "system": "http://hl7.org/fhir/us/core/CodeSystem/careplan-category"}]}`
+   - which must have at least  a  CodeableConcept value  in `CarePlan.category`
+with an [example](http://hl7.org/fhir/R4/terminologies.html#example)
+ binding to [Care Plan Category](http://hl7.org/fhir/ValueSet/care-plan-category)
+      - which must have a  Coding value  in `CarePlan.category.coding`
+         - which must have a fixed `CarePlan.category.coding.system` = `http://hl7.org/fhir/us/core/CodeSystem/careplan-category`
+         - which must have a fixed `CarePlan.category.coding.code` = `assess-plan`
 1.  A Patient Reference  in `CarePlan.subject`

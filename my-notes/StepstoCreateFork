@@ -1,0 +1,24 @@
+Steps for Fork from/to Argo-R4:
+
+1. Change title, history url in _config.yaml
+1. update/replace the package-list.json file  - TODO
+1. Replace in definition.csv/ig.json:
+   - canonical
+   - title
+   - working and source directory
+1. update canonicals in source folder
+   - Replace canonical in definition.csv/ig.json:
+   - Find and Replace  'http://hl7.org/fhir/us/core/' with  'http://fhir.org/guides/argonaut/'
+1. Find Replace ( match case !):
+    'US Core'  to 'Argo-R4'
+    'us core'  to  'argo-r4'
+    'uscore' to 'argor4'
+    'us-core' to argo-r4'
+    'US-Core' to 'Argo'-R4'
+    'USCore' to 'ArgoR4'
+1.  File name find and Replace in source folder
+    - 'us-core' to argo-r4
+    - 'uscore' to argor4
+1. run ig-publisher bash file with -d option
+   - update pages
+1. add argo logo

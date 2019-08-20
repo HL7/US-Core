@@ -1,0 +1,63 @@
+language in Argonaut.
+
+Argonaut to patient core  -  strip vocabulary
+vs
+Argo to US Core base vs US Core for ONC Certification
+
+Code Systems can use translations
+
+no local, type script
+
+narrative local shifts to local, also in display, text, markdown.
+
+Argo says nothing about language
+can mis language within resource
+
+can request a display a language in request
+
+leave it headers.
+
+interested in application
+
+Options for US Core:
+
+General Guidance - words to this effect
+
+how to request in a language
+how to return in the requested language
+( timezone diversion )
+
+
+Add Guidance on Language:
+
+1.To request language: Accept language header
+2. Resource:  pop resource language:  SHALL/SHOULD to discuss on call...
+3. CapabilityStatement: supported language, local, service default timezone
+4. (May provide both translations) SHOULD provide Narrative in requested language  (using div attribute)
+5. MAY translate where translateable to request language and SHOULD and language extension (s)?
+
+Get Example
+Ask Synthea to do this
+
+Proposed outcomes from pop-up session yesterday:
+
+* clients request language/locale using the http Accept-Language header
+* servers SHOULD endeavour to perform reasonable efforts to translate what can be safely translated
+* servers SHOULD populate the Resource.langauge element. This is reasonably based on the underlying record language, not the requested language (but MAY be based on requested language if translation is (reasonably) complete
+* servers SHALL use the http://hl7.org/fhir/StructureDefinition/language extension when the language of a display etc is known to be different to the stated (or inferred) language
+* servers SHALL use the http://hl7.org/fhir/StructureDefinition/translation where they wish to provide language translations
+* servers SHALL follow the advice at http://hl7.org/fhir/narrative.html#lang where it comes to langauge and locale for the narrative portion of the resource
+* we will define a way in FHIR R5 for a client to report to the server  what the user's timezone is, and Argonaut should consider pre-adopting it (this is relevant when the server performs decision support such as medication dosing planning for the client)
+* we will define a way for the server to detail what languages it can support, and argonaut should consider pre-adopting it 
+
+
+
+
+
+
+
+vs Profile elements and CapabilityStatement stuff
+
+
+
+look at the IPS

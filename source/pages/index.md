@@ -15,7 +15,18 @@ layout: default
 
 ### Introduction
 
-The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for accessing patient data. The [Argonaut] pilot implementations, ONC [2015 Edition Common Clinical Data Set (CCDS)], and the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)] provided the requirements for this guide.  The prior Argonaut search and vocabulary requirements, based on [FHIR DSTU2](http://hl7.org/fhir/DSTU2/index.html), are updated in this guide to support [FHIR Version R4]. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by [DAF-Research], [QI-Core], and [CIMI].  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
+**The Argonaut R4 Implementation Guide is a copy of the the *US Core Implementation Guide STU3* which is based on FHIR R4.  This guide is the basis for further testing and guidance by the Argonaut Project Team.  The guide will retain the US Core artifacts and names and provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. It is anticipated this updated content will contributed to HL7 US Core R4 IG through an HL7 STU update (quick ballot) in autumn 2019**
+
+**Argonaut R4 Implementation Guide Ground Rules:**
+
+1. **Reuse HL7 US Core Implementation Guide profiles**
+1. **Issues identified with US Core Profiles will be reported to HL7 to be fixed in fall STU update**
+1. **New profiles, such as Provenance, may be included in the Argonaut IG before being ported to US Core**
+1. **Profiles not planned for port to US Core are out of scope**
+
+---
+
+The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for accessing patient data. The [Argonaut] pilot implementations, ONC [2015 Edition Common Clinical Data Set (CCDS)], and the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)] provided the requirements for this guide.  The prior Argonaut search and vocabulary requirements, based on FHIR DSTU2, are updated in this guide to support FHIR Version R4. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by [DAF-Research], [QI-Core], and [CIMI].  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
 
 These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the [Office of the National Coordinator for Health Information Technology (ONC)] sponsored [Data Access Framework] (DAF) project. For more information on how DAF became US Core see the [US Core change notes](change-notes.html).
 
@@ -27,7 +38,8 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Guidance]\: These pages provides overall guidance in using the profiles and transactions defined in this guide.
   - [General Guidance] provides guidance, definitions and requirements common to all {{site.title}} actors used in this guide..
   -  [Clinical Notes Guidance] gives guidance on the interactions between Consumers and Producers of clinical notes.
-  -  [Future of {{site.title}}] outlines the approach to adding new content to {{site.title}}.
+  -  [Medication List Guidance] gives guidance on how a patient or provider can access a patients medications.
+  -  [Future of US Core] outlines the approach to adding new content to {{site.title}}.
 - [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative introduction, formal definition and a "Quick Start" guide to the supported search transaction for each {{site.title}} Profile.
 - [Search Parameters and Operations]\: This page lists the{{site.title}} defined Operations and Search Parameters that are used in US Core transactions.
 - [Terminology]\: This page lists the value sets and code system defined for {{site.title}} profiles.
@@ -48,7 +60,7 @@ The following actors are part of the US Core IG:
 
 ### US Core Profiles
 
-The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the *Quick Start* Section of the profile page.
+The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the *Quick Start* Section of the profile page.
 
 {% include list-simple-profiles.xhtml %}
 

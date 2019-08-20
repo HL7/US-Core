@@ -1,4 +1,6 @@
 
+- See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
+- See the [General Guidance] section for additional guidance on searching for multiple patients.
 
 #### Mandatory Search Parameters:
 
@@ -6,7 +8,9 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHALL** support searching for all goals for a patient using the **[`patient`](SearchParameter-us-core-goal-patient.html)** search parameter:
 
-    `GET [base]/Goal?patient=[reference]`
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
+
+    `GET [base]/Goal?patient=[reference]{,[reference],...}`
 
     Example:
     
@@ -20,8 +24,9 @@ The following search parameters, search parameter combinations and search parame
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-goal-patient.html)** and **[`lifecycle-status`](SearchParameter-us-core-goal-lifecycle-status.html)** search parameters:
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/Goal?patient=[reference]&lifecycle-status={[system]}|[code]`
+    `GET [base]/Goal?patient=[reference]{,[reference],...}&lifecycle-status={[system]}|[code]`
 
     Example:
     
@@ -30,10 +35,11 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Goal resources for the specified patient and lifecycle-status ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-goal-patient.html)** and **[`target-date`](SearchParameter-us-core-goal-target-date.html)** search parameters:
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
     - including support for these `target-date` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `target-date` (e.g.`target-date=[date]&target-date=[date]]&...`)
 
-    `GET [base]/Goal?patient=[reference]&target-date={gt|lt|ge|le}[date]{&target-date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/Goal?patient=[reference]{,[reference],...}&target-date={gt|lt|ge|le}[date]{&target-date={gt|lt|ge|le}[date]&...}`
 
     Example:
     

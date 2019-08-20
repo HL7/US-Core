@@ -1,13 +1,14 @@
-Both the [MedicationRequest] and [MedicationStatement] resources can be used to record a patient's medication.   For more information about the context for their usages, refer to the medication domain [boundaries section]. This profile sets minimum expectations for the MedicationRequest resource to record, search and fetch medications associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
+The [MedicationRequest] resource can be used to record a patient's medication prescription or order.  This profile sets minimum expectations for the MedicationRequest resource to record, search and fetch medications associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
 
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core-MedicationRequest
-profile:
+profile. See the [Medication List Guidance] section for guidance on accessing a patient medications:
 
--   Query for medications that have been prescribed to a particular
-    patient
--   Record medications that have been prescribed to a particular
+-   Fetching all medications that have been prescribed to a particular patient
+-   Fetching all *active* medications that have been prescribed to  particular patient
+-   Fetching all medications that have been prescribed to particular patient during a particular encounter
+-   Record medications that have been prescribed for a particular
     patient
 
 ### Mandatory and Must Support Data Elements
@@ -18,6 +19,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each MedicationRequest must have:**
 
 1.  a status
+1.  an intent code to indicate whether an order or proposal
 1.  a medication
 1.  a patient
 1.  a date for when written
@@ -25,21 +27,24 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each MedicationRequest must support:**
 
+1. the `reported` flag signaling that information is from a secondary source such as a patient.
+1. the encounter
 1. the prescription *Sig*
 
 **Profile specific implementation guidance:**
 
-*  The MedicationStatement and MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
+* See the [Medication List Guidance] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
+*  The MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
     *  When referencing a Medication resource,  the resource may be [contained] or an external resource.
     *  The server application MAY choose any combination of these methods, but if an external reference to Medication is used, the server SHALL support the [include] parameter for searching this element.
     *  The client application SHALL support all methods.  
-    *  Additional guidance is provided below in the Search section and in the [CapabilityStatement] section.
-*  Source EHR identifiers **SHOULD** be included to support deduplication across MedicationStatement and MedicationRequest resources. A patient medication may appear when a prescription is present as a MedicationRequest or MedicationStatement even though the EHR stores as a single instance. Exposing the EHR identifiers helps client applications identify duplicates.
+*  Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
 
 ### Examples
 
 - [MedicationRequest-uscore-mo1](MedicationRequest-uscore-mo1.html) Inline medication code to represent the medication.
 - [MedicationRequest-uscore-mo2](MedicationRequest-uscore-mo2.html) Reference to a [contained]({{site.data.fhir.path}}references.html#contained) Medication resource.
 - [MedicationRequest-uscore-mo3](Bundle-uscore-mo3.html) A search [Bundle]({{site.data.fhir.path}}bundle.html) with a MedicationRequest and an included Medication resource in the Bundle.
+- [Self-prescribed Tylenol](MedicationRequest-self-tylenol.html) Representation of a reported self-prescribed OTC medication.
 
 {% include link-list.md %}

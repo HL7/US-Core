@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchParameter xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="us-core-includeprovenance"/>
+  <url value="http://hl7.org/fhir/us/core/SearchParameter/us-core-includeprovenance"/>
+  <name value="USCoreincludeProvenance"/>
+  <status value="active"/>
+  <date value="2019-08-13"/>
+  <publisher value="US Realm Steering Committee"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://www.healthit.gov/"/>
+    </telecom>
+  </contact>
+  <description value="Allows a client to request relevant Provenance records for a successful search. This search request is similar to using _revInclude for Provenance."/>
+  <code value="us-core-includeProvenance"/>
+  <base value="AllergyIntolerance"/>
+  <base value="CarePlan"/>
+  <base value="CareTeam"/>
+  <base value="Condition"/>
+  <base value="DiagnosticReport"/>
+  <base value="DocumentReference"/>
+  <base value="Encounter"/>
+  <base value="Goal"/>
+  <base value="Immunization"/>
+  <base value="Device"/>
+  <base value="Observation"/>
+  <base value="Location"/>
+  <base value="Medication"/>
+  <base value="MedicationRequest"/>
+  <base value="Organization"/>
+  <base value="Patient"/>
+  <base value="Practitioner"/>
+  <base value="PractitionerRole"/>
+  <base value="Procedure"/>
+  <type value="special"/>
+</SearchParameter>

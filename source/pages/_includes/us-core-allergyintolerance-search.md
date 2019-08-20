@@ -1,4 +1,6 @@
 
+- See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
+- See the [General Guidance] section for additional guidance on searching for multiple patients.
 
 #### Mandatory Search Parameters:
 
@@ -6,7 +8,9 @@ The following search parameters, search parameter combinations and search parame
 
 1. **SHALL** support searching for all allergies for a patient using the **[`patient`](SearchParameter-us-core-allergyintolerance-patient.html)** search parameter:
 
-    `GET [base]/AllergyIntolerance?patient=[reference]`
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
+
+    `GET [base]/AllergyIntolerance?patient=[reference]{,[reference],...}`
 
     Example:
     
@@ -20,8 +24,9 @@ The following search parameters, search parameter combinations and search parame
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-allergyintolerance-patient.html)** and **[`clinical-status`](SearchParameter-us-core-allergyintolerance-clinical-status.html)** search parameters:
+    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/AllergyIntolerance?patient=[reference]&clinical-status={[system]}|[code]`
+    `GET [base]/AllergyIntolerance?patient=[reference]{,[reference],...}&clinical-status={[system]}|[code]`
 
     Example:
     

@@ -59,8 +59,8 @@
 				<valueSet value="http://hl7.org/fhir/ValueSet/diagnostic-report-status"/>
 			</binding>
 		</element>
-		
-		
+
+
 		<element id="DiagnosticReport.category">
 			<path value="DiagnosticReport.category"/>
 			<slicing>
@@ -72,18 +72,18 @@
 			</slicing>
 			<min value="1"/>
 			<max value="*"/>
-		
+
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
-		
-		
-		<element id="DiagnosticReport.category:lab">
+
+
+		<element id="DiagnosticReport.category:LaboratorySlice">
 			<path value="DiagnosticReport.category"/>
-			<sliceName value="lab"/>
+			<sliceName value="LaboratorySlice"/>
 			<min value="1"/>
 			<max value="1"/>
 			<type>
