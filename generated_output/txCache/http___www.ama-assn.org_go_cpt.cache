@@ -187,3 +187,71 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "99201"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ama-assn.org/go/cpt\" is not known; The code provided (http://www.ama-assn.org/go/cpt#99201) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "33249"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ama-assn.org/go/cpt\" is not known; The code provided (http://www.ama-assn.org/go/cpt#33249) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://www.ama-assn.org/go/cpt",
+    "code" : "99201"
+  }],
+  "text" : "Office Visit"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    }]
+  }
+}, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ama-assn.org/go/cpt\" is not known; The code provided (http://www.ama-assn.org/go/cpt#99201, (Office Visit)) is not  valid in the value set USCoreEncounterType"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://www.ama-assn.org/go/cpt",
+    "code" : "33249"
+  }],
+  "text" : "Insertion or replacement of permanent implantable defibrillator system with transvenous lead(s), single or dual chamber"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://www.ama-assn.org/go/cpt\" is not known; The code provided (http://www.ama-assn.org/go/cpt#33249, (Insertion or replacement of permanent implantable defibrillator system with transvenous lead(s), single or dual chamber)) is not  valid in the value set USCoreProcedureCodes"
+}
+-------------------------------------------------------------------------------------

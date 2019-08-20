@@ -1,20 +1,18 @@
-title: Argo R4
+title: HL7 FHIR® US Core Implementation Guide STU 3
 copyrightyear: "2019" # copyright date for footer
 historypath: "http://hl7.org/fhir/us/core/history.html" # complete path to IG history file use "history" for an example of what this page would look like
-changelink: https://github.com/argonautproject/R4/issues # where to log issues exposed in footer
+changelink: http://hl7.org/fhir-issues
 summaries: true #true if want custom profile summaries in summary tab
 diff2: false # true if want to show intermediate differentials - probably never use this.
-build: ci  # choice of ci|ballot|version
-ballot:    #STU version of IG ( if needed for publishing HL7 guides)
-hl7_version:  # not sure what this is for
+build: version  # choice of ci|ballot|version
+ballot: 3 #STU version of IG ( if needed for publishing HL7 guides)
+hl7_version: # not sure what this is for
 hl7_ig: true # 'true'  if HL7 ig
 showXML: true  #'true' if want xml tab'
 showTTL: #'true' if want ttl tab'
 showMappings:  # 'true' if want to display mappings tab'
 showDefs: true # 'true' if want to display Definitions tab'
 showExamples:  # 'true' if want to display Examples tab -currently no template for it'
-showPsuedoJson: # 'true' if want to display Psuedo JSON profile view' - note lots of broken links
-showPsuedoXML: # 'true' if want to display Psuedo JSON profile view'
 default_profile_view: 1  # choice of 0|1|2|3 for summary|differential|full|all views in profile
 example_types:  # for matching type to Type
 - Account
