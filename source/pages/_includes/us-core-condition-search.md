@@ -4,13 +4,11 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations SHALL be supported.  Any listed search parameter [modifiers], [comparators], [chains] and [composites] SHALL also be supported UNLESS they are listed as "optional" in which case they SHOULD be supported.:
 
 1. **SHALL** support searching for all conditions including problems, health concerns, and encounter diagnosis for a patient using the **[`patient`](SearchParameter-us-core-condition-patient.html)** search parameter:
 
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
-
-    `GET [base]/Condition?patient=[reference]{,[reference],...}`
+    `GET [base]/Condition?patient=[reference]`
 
     Example:
     
@@ -24,9 +22,8 @@ The following search parameters, search parameter combinations and search parame
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`clinical-status`](SearchParameter-us-core-condition-clinical-status.html)** search parameters:
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/Condition?patient=[reference]{,[reference],...}&clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical|active,http://terminology.hl7.org/CodeSystem/condition-clinical|recurrance,http://terminology.hl7.org/CodeSystem/condition-clinical|remission`
+    `GET [base]/Condition?patient=[reference]&clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical|active,http://terminology.hl7.org/CodeSystem/condition-clinical|recurrance,http://terminology.hl7.org/CodeSystem/condition-clinical|remission`
 
     Example:
     
@@ -35,9 +32,8 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and all &#34;active&#34; statuses (active,relapse,remission). This will not return any &#34;entered in error&#34; resources because of the conditional presence of the clinicalStatus element. ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`category`](SearchParameter-us-core-condition-category.html)** search parameters:
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/Condition?patient=[reference]{,[reference],...}&category={[system]}|[code]`
+    `GET [base]/Condition?patient=[reference]&category={[system]}|[code]`
 
     Example:
     
@@ -48,9 +44,8 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and category. ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`code`](SearchParameter-us-core-condition-code.html)** search parameters:
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/Condition?patient=[reference]{,[reference],...}&code={[system]}|[code]`
+    `GET [base]/Condition?patient=[reference]&code={[system]}|[code]`
 
     Example:
     
@@ -59,11 +54,10 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and code. ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`onset-date`](SearchParameter-us-core-condition-onset-date.html)** search parameters:
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
     - including support for these `onset-date` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `onset-date` (e.g.`onset-date=[date]&onset-date=[date]]&...`)
 
-    `GET [base]/Condition?patient=[reference]{,[reference],...}&onset-date={gt|lt|ge|le}[date]{&onset-date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/Condition?patient=[reference]&onset-date={gt|lt|ge|le}[date]{&onset-date={gt|lt|ge|le}[date]&...}`
 
     Example:
     

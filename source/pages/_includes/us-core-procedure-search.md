@@ -4,13 +4,11 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations SHALL be supported.  Any listed search parameter [modifiers], [comparators], [chains] and [composites] SHALL also be supported UNLESS they are listed as "optional" in which case they SHOULD be supported.:
 
 1. **SHALL** support searching for all procedures for a patient using the **[`patient`](SearchParameter-us-core-procedure-patient.html)** search parameter:
 
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
-
-    `GET [base]/Procedure?patient=[reference]{,[reference],...}`
+    `GET [base]/Procedure?patient=[reference]`
 
     Example:
     
@@ -19,11 +17,10 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient ([how to search by reference])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-procedure-patient.html)** and **[`date`](SearchParameter-us-core-procedure-date.html)** search parameters:
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
-    `GET [base]/Procedure?patient=[reference]{,[reference],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/Procedure?patient=[reference]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
@@ -37,10 +34,9 @@ The following search parameters, search parameter combinations and search parame
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-procedure-patient.html)** and **[`status`](SearchParameter-us-core-procedure-status.html)** search parameters:
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
     - including support for composite *OR* search on `status` (e.g.`status={[system]}|[code],{[system]}|[code],...`)
 
-    `GET [base]/Procedure?patient=[reference]{,[reference],...}&status={[system]}|[code]{,{[system]}|[code],...}`
+    `GET [base]/Procedure?patient=[reference]&status={[system]}|[code]{,{[system]}|[code],...}`
 
     Example:
     
@@ -49,12 +45,11 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient and status ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-procedure-patient.html)** and **[`code`](SearchParameter-us-core-procedure-code.html)** and **[`date`](SearchParameter-us-core-procedure-date.html)** search parameters:
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
     - including optional support for composite *OR* search on `code` (e.g.`code={[system]}|[code],{[system]}|[code],...`)
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
-    `GET [base]/Procedure?patient=[reference]{,[reference],...}&code={[system]}|[code]{,{[system]}|[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/Procedure?patient=[reference]&code={[system]}|[code]{,{[system]}|[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     

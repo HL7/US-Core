@@ -53,7 +53,7 @@ Many of the profiles in this guide [reference]({{site.data.fhir.path}}references
 
 ### Missing Data
 
-If the source system does not have data for a *Must Support* data element, the data element is not present as described above.  If the source system does not have data for a *required* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
+If the source system does not have data for a *Must Support* data element, the data element is omitted from the resource as described above.  If the source system does not have data for a *required* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
 
 1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
   - Use the code `unknown` - The value is expected to exist but is not known.
@@ -95,30 +95,13 @@ If the source system does not have data for a *Must Support* data element, the d
 #### Required binding for CodeableConcept Datatype
 {:.no_toc}
 
-Required binding to a value set definition means that one of the codes from the specified value set SHALL be used and using only text is not valid. In this IG, we have defined the Extensible + Max-ValueSet binding to allow for either a code from the specified value set or text. Multiple codings (translations) are permitted as is discussed below.
+Required binding to a value set definition means that one of the codes from the specified value set SHALL be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
 
 #### Extensible binding for CodeableConcept Datatype
 {:.no_toc}
 
-Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values SHALL be from the specified value set if a code applies, but if no suitable code exists in the value set and no further restrictions have been applied (such as the max valueset binding described in the next section), alternate code(s) may be provided in its place. If only text available, then just text may be used.
-
-#### Extensible + Max-ValueSet binding for CodeableConcept Datatype
-{:.no_toc #max-binding}
-
-For this IG, we have defined the Extensible + Max-ValueSet binding to allow for either a code from the defined value set or text if the code is not available.  (for example, legacy data). This means, unlike a FHIR extensible binding, alternate code(s) are not permitted and a text value SHALL be supplied if the code is not available.  However, multiple codings (translations) are allowed as is discussed below.
-
-Example: Immunization resource vaccineCode's CVX coding - the source only has the text "4-way Influenza" and no CVX code.
-
-~~~
-    {
-      "resourceType": "Immunization",
-      ...
-      "vaccineCode": {
-        "text":"4-way Influenza"
-      },
-      ...
-    }
-~~~
+Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values SHALL be from the specified value set if a code applies, but if no suitable
+ code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
 
 #### Using multiple codes with CodeableConcept Datatype
 {:.no_toc}
@@ -250,7 +233,29 @@ The following guidelines outline how to request and return a resource in the req
 
 For further guidance on language and locale for generation of the resource narrative, see http://hl7.org/fhir/narrative.html#lang
 
-<!-- *TODO...Follow FHIR R5 guidance for how to report the user's timezone.* -->
+### TimeZone and Time Offsets (*STRAWMAN PROPOSAL*)
+
+- Servers **SHALL** store the existing supplied time offset or convert to Z(-0) time.
+  - best practice is to preserve the original timezone offset so clients are able to display the correct time independent of the current user location
+- The data source timezone **SHOULD** be preserved
+  - Use 'meta.tag'  (plan to use new meta time-zone element in R5)
+    - name = time zone
+    - values bound to codes derived from the tz database: <https://en.wikipedia.org/wiki/Tz_database>
+
+    Example:
+
+    ~~~
+    {
+      "resource": {
+        "id" : "1",
+        "meta" : {
+          "tag" : [{
+            "system" : "https://www.iana.org/time-zones",
+            "code" : "PDT",
+            "display" : "Pacific Daylight Time"
+          }]
+... [snip] ...
+    ~~~
 
 ### Read(Fetch) syntax
 
@@ -313,19 +318,9 @@ For searches where the client does not supply a status parameter, an implementat
 
 ### Searching multiple patients
 
-For clients with user level authorization scopes, searching for more that one patient's data is done by one of two ways:
-- Providing a comma separated list of valid patient ids as the patients search parameter value.
-- Omitting the patient as a search parameter and relying one the authorization scopes to fetch results for only those patients authorized to see.
-    - patient level scopes:  fetch all patients - only see 1 patient
-    - users level scopes:  fetch all patients - only those authorized to see  (e.g., all patients for provider y)
+Currently most EHRs permit queries that provide a singles patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described the standard FHIR REST API. Instead, a user facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data.
 
-~~~
-example scenarios:
-    provider discover all my patients with allergy to x
-    patient/consumer- see if have access to my children
-
-    ... todo ...
-~~~
+However, neither specification defines how a user facing provider apps is able to seek realtime "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core]
 
 ### Compartment Based Search
 

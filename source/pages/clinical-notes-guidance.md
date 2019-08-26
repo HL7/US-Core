@@ -16,19 +16,19 @@ topofpage: true
 
 Clinical notes are a key component to communicate the current status of a patient. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing and even handwritten notes by a providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems.
 
-Specifically, this implementation guide defines the exchange of the following five "Common Clinical Notes".
+Specifically, this implementation guide defines the exchange of the following five "Common Clinical Notes" which systems are required to support...
 
-* [Consultation Note (11488-4)]
-* [Discharge Summary (18842-5)]
-* [History & Physical Note (34117-2)]
-* [Procedures Note (28570-0)]
-* [Progress Note (11506-3)]
+1. [Consultation Note (11488-4)]
+1. [Discharge Summary (18842-5)]
+1. [History & Physical Note (34117-2)]
+1. [Procedures Note (28570-0)]
+1. [Progress Note (11506-3)]
 
-and SHOULD support the DiagnosticReport categories:
+and three DiagnosticReport categories which systems should support.
 
-* [Cardiology (LP29708-2)]
-* [Pathology (LP7839-6)]
-* [Radiology (LP29684-5)]
+1. [Cardiology (LP29708-2)]
+1. [Pathology (LP7839-6)]
+1. [Radiology (LP29684-5)]
 
 The Argonaut project team provided this initial list to HL7 after surveying the participants in Argonaut and the US Veterans Administration (VA). They represent the *minimum* set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types such as:
 

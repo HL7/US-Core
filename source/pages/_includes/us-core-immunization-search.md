@@ -4,13 +4,11 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations SHALL be supported.  Any listed search parameter [modifiers], [comparators], [chains] and [composites] SHALL also be supported UNLESS they are listed as "optional" in which case they SHOULD be supported.:
 
 1. **SHALL** support searching for all immunizations for a patient using the **[`patient`](SearchParameter-us-core-immunization-patient.html)** search parameter:
 
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
-
-    `GET [base]/Immunization?patient=[reference]{,[reference],...}`
+    `GET [base]/Immunization?patient=[reference]`
 
     Example:
     
@@ -24,11 +22,10 @@ The following search parameters, search parameter combinations and search parame
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-immunization-patient.html)** and **[`date`](SearchParameter-us-core-immunization-date.html)** search parameters:
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
-    `GET [base]/Immunization?patient=[reference]{,[reference],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/Immunization?patient=[reference]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
     
@@ -37,9 +34,8 @@ The following search parameters, search parameter combinations and search parame
     *Implementation Notes:* Fetches a bundle of all Immunization resources for the specified patient and date ([how to search by date] and [how to search by reference])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-immunization-patient.html)** and **[`status`](SearchParameter-us-core-immunization-status.html)** search parameters:
-    - including optional support for composite *OR* search on `patient` (e.g.`patient=[reference],[reference],...`)
 
-    `GET [base]/Immunization?patient=[reference]{,[reference],...}&status={[system]}|[code]`
+    `GET [base]/Immunization?patient=[reference]&status={[system]}|[code]`
 
     Example:
     
