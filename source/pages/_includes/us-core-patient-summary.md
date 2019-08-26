@@ -5,7 +5,7 @@
       - which must have an  uri value  in `Patient.identifier.system`
       - which must have a  string value  in `Patient.identifier.value`
 1. One or more  HumanNames  in `Patient.name`
- with the following constraints: *Patient.name.given  or Patient.name.family or both SHALL be present*
+ with the following constraints: *Patient.name.given or Patient.name.family or both SHALL be present*
       - which should have a  string value  in `Patient.name.family`
       - which should have one or more  string values  in `Patient.name.given`
 1.  A  code  in `Patient.gender`
@@ -23,6 +23,9 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [ContactPointSystem](http://hl7.org/fhir/ValueSet/contact-point-system)
    - which must have a  string value  in `Patient.telecom.value`
+   - which should have a  code value  in `Patient.telecom.use`
+with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
+ binding to [ContactPointUse](http://hl7.org/fhir/ValueSet/contact-point-use)
 1.  A  date  in `Patient.birthDate`
 1. One or more  Addresses  in `Patient.address`
    - which should have one or more  string values  in `Patient.address.line`
@@ -31,10 +34,11 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [USPS Two Letter Alphabetic Codes](ValueSet-us-core-usps-state.html)
    - which should have a  string value  in `Patient.address.postalCode`
+   - which should have a  Period value  in `Patient.address.period`
 1. One or more  Communications  in `Patient.communication`
    - which must have a  CodeableConcept value  in `Patient.communication.language`
-with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)\+ [MaxValueSet](general-guidance.html#max-binding)
+with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [Language codes with language and optionally a region modifier](ValueSet-simple-language.html)
 
 #### Summary of Constraints
-1. Patient.name.given  or Patient.name.family or both SHALL be present
+1. Patient.name.given or Patient.name.family or both SHALL be present

@@ -224,4 +224,5 @@
 [Medication List Guidance]: all-meds.html
 [MedicationRequest Quick Start]: StructureDefinition-us-core-medicationrequest.html#search
 [component observation]:  {{site.data.fhir.path}}observation.html#gr-comp
+[FHIR Bulk Data Access (Flat FHIR)]: http://hl7.org/fhir/uv/bulkdata/STU1/
 [Coverage]: {{site.data.fhir.path}}coverage.html
