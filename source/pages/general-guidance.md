@@ -233,13 +233,13 @@ The following guidelines outline how to request and return a resource in the req
 
 For further guidance on language and locale for generation of the resource narrative, see http://hl7.org/fhir/narrative.html#lang
 
-### TimeZone and Time Offsets (*STRAWMAN PROPOSAL*)
+### Timezone and Time Offsets (*STRAWMAN PROPOSAL*)
 
 - Servers **SHALL** store the existing supplied time offset or convert to Z(-0) time.
-  - best practice is to preserve the original timezone offset so clients are able to display the correct time independent of the current user location
+  - best practice is to preserve the original time offset so clients are able to display the correct time independent of the current user location
 - The data source timezone **SHOULD** be preserved
   - Use 'meta.tag'  (plan to use new meta time-zone element in R5)
-    - name = time zone
+    - system = https://www.iana.org/time-zones
     - values bound to codes derived from the tz database: <https://en.wikipedia.org/wiki/Tz_database>
 
     Example:
@@ -256,6 +256,14 @@ For further guidance on language and locale for generation of the resource narra
           }]
 ... [snip] ...
     ~~~
+
+Client algorithm for resolving time offsets and timezones.
+
+  1. Look for a time offset on a specific datetime. If present, treat that as the data source time offset.
+  1. Look for a data source timezone in Resource.meta.tag. If present, treat that as the data source timezone.
+  1. If there is no time offset on a specific datetime Look for a data source timezone in Resource.meta.tag. If present, treat that as the data source timezone and use it to convert the time offset.
+  1. If there is no data source timezone in Resource.meta.tag. The timezone may be calculated from the source location and time offset.
+  1. If there is no time offset on a specific datetime nor a data source timezone in Resource.meta.tag. Assume the data source timezone is UTC (? or you are on your own ?)
 
 ### Read(Fetch) syntax
 
