@@ -237,7 +237,7 @@ For further guidance on language and locale for generation of the resource narra
 
 >A *timezone* is a geographical region in which residents observe the same standard time. A *time offset* is an amount of time subtracted from or added to Coordinated Universal Time (UTC) time to get the current civil time, whether it is standard time or daylight saving time (DST).[^1]
 
-- Servers **SHALL** store the existing supplied time offset or convert to Z(-0) time.
+- Servers **SHALL** store the existing supplied time offset or convert to "Z"(-0 offset) time.
   - best practice is to preserve the original time offset so clients are able to display the correct time independent of the current user location
 - The data source timezone **SHOULD** be preserved
   - Use `meta.tag`  (plan to use new meta timezone element in R5)
