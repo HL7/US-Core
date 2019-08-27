@@ -173,6 +173,8 @@ This section lists the search parameters definitions that are used within the ca
   - [patient](SearchParameter-us-core-procedure-patient.html)
   - [date](SearchParameter-us-core-procedure-date.html)
   - [code](SearchParameter-us-core-procedure-code.html)
+
+**Provenance**
   - [us-core-includeProvenance](SearchParameter-us-core-includeprovenance.html)
 
 {% include link-list.md %}
