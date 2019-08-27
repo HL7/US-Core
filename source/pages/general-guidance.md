@@ -240,7 +240,7 @@ For further guidance on language and locale for generation of the resource narra
 - Servers **SHALL** store the existing supplied time offset or convert to Z(-0) time.
   - best practice is to preserve the original time offset so clients are able to display the correct time independent of the current user location
 - The data source timezone **SHOULD** be preserved
-  - Use `meta.tag`  (plan to use new meta time-zone element in R5)
+  - Use `meta.tag`  (plan to use new meta timezone element in R5)
     - system = https://www.iana.org/time-zones
     - values bound to codes derived from the tz database: <https://en.wikipedia.org/wiki/Tz_database>
 
