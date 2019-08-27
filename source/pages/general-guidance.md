@@ -235,6 +235,8 @@ For further guidance on language and locale for generation of the resource narra
 
 ### Timezone and Time Offsets (*STRAWMAN PROPOSAL*)
 
+>A *timezone* is a geographical region in which residents observe the same standard time. A *time offset* is an amount of time subtracted from or added to Coordinated Universal Time (UTC) time to get the current civil time, whether it is standard time or daylight saving time (DST).[^1]
+
 - Servers **SHALL** store the existing supplied time offset or convert to Z(-0) time.
   - best practice is to preserve the original time offset so clients are able to display the correct time independent of the current user location
 - The data source timezone **SHOULD** be preserved
@@ -343,5 +345,6 @@ US Core servers are not required to resolve full URLs that are external to their
 In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
 
 ------------------------------------------------------------------------
+[^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset&action=edit&section=1
 
 {% include link-list.md %}
