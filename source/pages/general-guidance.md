@@ -240,11 +240,11 @@ For further guidance on language and locale for generation of the resource narra
 - Servers **SHALL** store the existing supplied time offset or convert to "Z"(-0 offset) time.
   - best practice is to preserve the original time offset so clients are able to display the correct time independent of the current user location
 - The data source timezone **SHOULD** be preserved
-  - Use `meta.tag` or extension on `meta`  (plan to use new meta timezone element in R5)
-    - system = https://www.iana.org/time-zones
-    - values bound to codes derived from the tz database: <https://en.wikipedia.org/wiki/Tz_database>
-
-*Discuss whether should address a way to override the global timezone information within particular datetime elements e.g., using an extension: see <https://chat.fhir.org/#narrow/stream/179175-argonaut/topic/Language/near/173420513>*
+  - Use a [TZ Extension] on `[Resource].meta`  (plan to use new meta timezone element in R5)
+    - ValueCode:
+      - system = https://www.iana.org/time-zones
+      - values bound to codes derived from the tz database: <https://en.wikipedia.org/wiki/Tz_database>
+  - The TZ Extension is also used to override the global timezone information within particular dateTime elements
 
     Example:
 
@@ -252,22 +252,34 @@ For further guidance on language and locale for generation of the resource narra
     {
       "resource": {
         "id" : "1",
-        "meta" : {
-          "tag" : [{
-            "system" : "https://www.iana.org/time-zones",
-            "code" : "PDT",
-            "display" : "Pacific Daylight Time"
-          }]
+        "meta": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/us/core/StructureDefinition/tz",
+              "valueCode": "PDT"
+            }
+            ]
+          },
+... [snip] ...
+      "authoredOn" : "2019-08-28T15:20:27+00:00",
+      "_authoredOn" : {
+           "extension": [
+             {
+              "url": "http://hl7.org/fhir/us/core/StructureDefinition/tz",
+              "valueCode": "MDT"
+              }
+            ]
+      },
 ... [snip] ...
     ~~~
 
 Client algorithm for resolving time offsets and timezones.
 
   1. Look for a time offset on a specific datetime. If present, treat that as the data source time offset.
-  1. Look for a data source timezone in Resource.meta.tag. If present, treat that as the data source timezone.
-  1. If there is no time offset on a specific datetime Look for a data source timezone in Resource.meta.tag. If present, treat that as the data source timezone and use it to convert the time offset.
-  1. If there is no data source timezone in Resource.meta.tag. The timezone may be calculated from the source location and time offset.
-  1. If there is no time offset on a specific datetime nor a data source timezone in Resource.meta.tag. Assume the data source timezone is UTC (? or you are on your own ?)
+  1. Look for a data source timezone in `[dateTime element].extension`. If present, treat that as the data source timezone.
+  1. Look for a data source timezone in `[Resource].meta.extension`. If present, treat that as the data source timezone.
+  1. If there is no data source timezone in `[dateTime element].extension` or `[Resource].meta.extension`. The timezone may be calculated from the source location and time offset.
+  * If hours and minutes are specified and there is no time offset on a specific datetime, the resource is invalid.
 
 ### Read(Fetch) syntax
 
