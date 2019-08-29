@@ -3,16 +3,16 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.core.argo-3.1.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/resources"/>
+    <valueString value="C:\R4\source\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/examples"/>
+    <valueString value="C:\R4\source\examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/framework"/>
+    <valueString value="C:\R4\framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/pages"/>
+    <valueString value="C:\R4\source\pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.argo-3.1.0"/>
   <version value="3.1.0"/>
@@ -638,6 +638,12 @@
     <resource>
       <reference>
         <reference value="ValueSet/us-core-documentreference-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/us-core-provenance-participant-type"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1310,6 +1316,12 @@
     <resource>
       <reference>
         <reference value="CodeSystem/us-core-documentreference-category"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/us-core-provenance-participant-type"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>

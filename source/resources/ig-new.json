@@ -3,19 +3,19 @@
   "id" : "hl7.fhir.us.core.argo-3.1.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/resources"
+    "valueString" : "C:\\R4\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/examples"
+    "valueString" : "C:\\R4\\source\\examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/framework"
+    "valueString" : "C:\\R4\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/pages"
+    "valueString" : "C:\\R4\\source\\pages"
   }],
   "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.argo-3.1.0",
   "version" : "3.1.0",
@@ -641,6 +641,12 @@
     {
       "reference" : {
         "reference" : "ValueSet/us-core-documentreference-type"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/us-core-provenance-participant-type"
       },
       "exampleBoolean" : false
     },
@@ -1313,6 +1319,12 @@
     {
       "reference" : {
         "reference" : "CodeSystem/us-core-documentreference-category"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/us-core-provenance-participant-type"
       },
       "exampleBoolean" : false
     },
