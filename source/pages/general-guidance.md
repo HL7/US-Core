@@ -238,9 +238,11 @@ For further guidance on language and locale for generation of the resource narra
 >A *timezone* is a geographical region in which residents observe the same standard time. A *time offset* is an amount of time subtracted from or added to Coordinated Universal Time (UTC) time to get the current civil time, whether it is standard time or daylight saving time (DST).[^1]
 
 - Servers **SHALL** store the existing supplied time offset or convert to "Z"(-0 offset) time.
+
+<!--
   - best practice is to preserve the original time offset so clients are able to display the correct time independent of the current user location
 - The data source timezone **SHOULD** be preserved
-  - Use a [TZ Extension] on `[Resource].meta`  (plan to use new meta timezone element in R5)
+  - Use a [TZ Extension] on `[Resource]`  (plan to use new meta timezone element in R5)
     - ValueCode:
       - system = https://www.iana.org/time-zones
       - values bound to codes derived from the tz database: <https://en.wikipedia.org/wiki/Tz_database>
@@ -252,21 +254,19 @@ For further guidance on language and locale for generation of the resource narra
     {
       "resource": {
         "id" : "1",
-        "meta": {
           "extension": [
             {
               "url": "http://hl7.org/fhir/us/core/StructureDefinition/tz",
-              "valueCode": "PDT"
+              "valueCode": "US/Pacific"
             }
-            ]
-          },
+            ],
 ... [snip] ...
       "authoredOn" : "2019-08-28T15:20:27+00:00",
       "_authoredOn" : {
            "extension": [
              {
               "url": "http://hl7.org/fhir/us/core/StructureDefinition/tz",
-              "valueCode": "MDT"
+              "valueCode": "US/Mountain"
               }
             ]
       },
@@ -280,6 +280,8 @@ Client algorithm for resolving time offsets and timezones.
   1. Look for a data source timezone in `[Resource].meta.extension`. If present, treat that as the data source timezone.
   1. If there is no data source timezone in `[dateTime element].extension` or `[Resource].meta.extension`. The timezone may be calculated from the source location and time offset.
   * If hours and minutes are specified and there is no time offset on a specific datetime, the resource is invalid.
+
+-->
 
 ### Read(Fetch) syntax
 
