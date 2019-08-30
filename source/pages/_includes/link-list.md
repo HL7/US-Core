@@ -205,7 +205,6 @@
 [Vital Signs Profile]: {{site.data.fhir.path}}observation-vitalsigns.html
 [Vital Signs Quick Start]: vitals-search.html
 [Search Parameters and Operations]: searchparameters.html
-[Terminology]: terminology.html
 [Examples]: all-examples.html
 [Clinical Notes Guidance]: clinical-notes-guidance.html
 [U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/topic/laws-regulation-and-policy/notice-proposed-rulemaking-improve-interoperability-health
@@ -226,3 +225,6 @@
 [component observation]:  {{site.data.fhir.path}}observation.html#gr-comp
 [FHIR Bulk Data Access (Flat FHIR)]: http://hl7.org/fhir/uv/bulkdata/STU1/
 [Coverage]: {{site.data.fhir.path}}coverage.html
+[FHIR Artifacts]: artifacts.html
+[Basic Provenance]: basic-provenance.html
+[DSTU2 to R4 Conversion]: r2-r4-guidance.html
