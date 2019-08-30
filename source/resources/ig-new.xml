@@ -643,6 +643,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/us-core-provenance-participant-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="SearchParameter/us-core-patient-gender"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1310,6 +1316,12 @@
     <resource>
       <reference>
         <reference value="CodeSystem/us-core-documentreference-category"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/us-core-provenance-participant-type"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
