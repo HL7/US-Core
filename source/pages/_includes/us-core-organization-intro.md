@@ -14,18 +14,21 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each Organization must have:**
 
-1.  An identifier (e.g. NPI)
 1.  A status of the organization
 1.  A name
-1.  A list of contact information
+
 
 **Each Organization must support:**
 
+1.  An identifier
+   - National Provider Identifier (NPI) for organizations
+   - Clinical Laboratory Improvement Amendments (CLIA) for laboratories.
+1.  A list of contact information
 1.  A communication endpoint
 
 **Profile specific implementation guidance:**
 
-- The preferred identifier for an Organization is the National Provider Identifier (NPI), or Clinical Laboratory Improvement Amendments (CLIA) for labs.
+- none
 
 ### Examples
 

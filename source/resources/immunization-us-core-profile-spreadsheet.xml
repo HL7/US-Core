@@ -7,21 +7,21 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Grahame</Author>
-  <LastAuthor>Eric Haas</LastAuthor>
+  <LastAuthor>User</LastAuthor>
   <Created>2012-03-19T11:12:07Z</Created>
-  <LastSaved>2016-12-22T06:04:25Z</LastSaved>
+  <LastSaved>2019-08-26T16:57:23Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>11775</WindowHeight>
+  <WindowHeight>11715</WindowHeight>
   <WindowWidth>25200</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
-  <ActiveSheet>1</ActiveSheet>
-  <FirstVisibleSheet>1</FirstVisibleSheet>
+  <ActiveSheet>8</ActiveSheet>
+  <FirstVisibleSheet>2</FirstVisibleSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -995,7 +995,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">date</Data></Cell>
-    <Cell ss:StyleID="s80" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-05-21T18:43:17.930</Data></Cell>
+    <Cell ss:StyleID="s80" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-08-26T09:57:37.390</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">published.structure</Data></Cell>
@@ -1044,7 +1044,6 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -7246,7 +7245,7 @@
     <Cell ss:StyleID="s98"><Data ss:Type="String">The CVX (vaccine administered) code system</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">value set</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">extensible</Data></Cell>
-    <Cell ss:StyleID="s135"><Data ss:Type="String">http://hl7.org/fhir/us/core/ValueSet/us-core-vaccines-cvx</Data></Cell>
+    <Cell ss:StyleID="s135"/>
     <Cell ss:StyleID="s135"><Data ss:Type="String">http://hl7.org/fhir/us/core/ValueSet/us-core-vaccines-cvx</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">This value set binds to 2.16.840.1.113762.1.4.1010.6 (CVX Vaccines Administered - Vaccine Set)</Data></Cell>
     <Cell ss:StyleID="s135"><Data ss:Type="String">2.16.840.1.113762.1.4.1010.6</Data></Cell>
@@ -7670,6 +7669,7 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -7689,9 +7689,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>8</ActiveRow>
-     <ActiveCol>4</ActiveCol>
-     <RangeSelection>R8C5:R9C5</RangeSelection>
+     <ActiveRow>12</ActiveRow>
+     <ActiveCol>2</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

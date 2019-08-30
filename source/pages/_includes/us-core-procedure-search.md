@@ -1,8 +1,10 @@
 
+- See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
+- See the [General Guidance] section for additional guidance on searching for multiple patients.
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations SHALL be supported.  Any listed search parameter [modifiers], [comparators], [chains] and [composites] SHALL also be supported UNLESS they are listed as "optional" in which case they SHOULD be supported.:
 
 1. **SHALL** support searching for all procedures for a patient using the **[`patient`](SearchParameter-us-core-procedure-patient.html)** search parameter:
 
@@ -32,8 +34,9 @@ The following search parameters, search parameter combinations and search parame
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-procedure-patient.html)** and **[`status`](SearchParameter-us-core-procedure-status.html)** search parameters:
+    - including support for composite *OR* search on `status` (e.g.`status={[system]}|[code],{[system]}|[code],...`)
 
-    `GET [base]/Procedure?patient=[reference]&status={[system]}|[code]`
+    `GET [base]/Procedure?patient=[reference]&status={[system]}|[code]{,{[system]}|[code],...}`
 
     Example:
     

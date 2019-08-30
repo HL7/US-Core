@@ -1,0 +1,36 @@
+add oauths to collection to run for Cerner. currently only working on desktop
+
+cerner dev app website
+
+iis parameter:
+
+only json
+
+cerner test app: https://code.cerner.com/developer/smart-on-fhir/apps/822431e1-cd25-4149-ac5f-ef40010ded65
+
+
+my_token
+Grant Type
+Authorization Code
+Callback URL
+https://www.getpostman.com/oauth2/callback
+Auth URL
+https://authorization.sandboxcerner.com/tenants/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/protocols/oauth2/profiles/smart-v1/personas/provider/authorize?aud=https://fhir-ehr.sandboxcerner.com/dstu2/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca
+Access Token URL
+https://authorization.sandboxcerner.com/tenants/0b8a0111-e8e6-4c26-a91c-5069cbc6b1ca/protocols/oauth2/profiles/smart-v1/token
+Client ID
+portal
+Client Secret
+Client Secret
+
+Scope
+user/CapabilityStatement.read,user/AllergyIntolerance.read,user/Appointment.read,user/Encounter.read,user/Patient.read,user/Practitioner.read,user/RelatedPerson.read,user/Appointment.write,user/Encounter.write,user/Patient.write
+
+State
+
+login with:
+username 'portal'  password: 'portal'
+
+Cerner Encounter type codes - not CPT
+
+What to do with intent?

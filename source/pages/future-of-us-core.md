@@ -41,13 +41,18 @@ In the January ballot of 2019 we tested this process with the FDA requesting US 
 
 **Pilot Testing**
 
-Additional UDI elements in a US Core Device Profile
+Additional UDI elements in a US Core Implantable Device Profile
 
 **Candidates under consideration**
 
 The following items were submitted during a US Core ballot or STU comment. Additional requirements gathering is required before testing may occur on these items:
 * [ServiceRequest] - The CDS hooks community, and other implementers are gathering requirements for the ServiceRequest Resource.
+* [Coverage] - Several US implementations Guides including Da Vinci and Argonaut and QI Core have defined requirements for the Coverage Resource.
+* Searching for multiple patients has been called out in the ONC Health IT Certification Program.  Defining capabilities for multiple patient access  would focus on querying real time data for a user facing provider app across patients. Examples of the type of queries that would be addressed include searching for all of a provider's patients:
 
+    - with recent lab results  
+    - currently in the Emergency Department
+    - with an Allergy to X
 
 ------------------------------------------------------------------------
 

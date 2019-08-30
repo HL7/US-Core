@@ -14,11 +14,27 @@
         <li>
           <a href="clinical-notes-guidance.html">Clinical Notes Guidance</a>
         </li>
+         <li>
+          <a href="all-meds.html">Medication List Guidance</a>
+        </li>
+          <li>
+          <a href="basic-provenance.html">Basic Provenance</a>
+        </li>
+        <li>
+          <a href="r2-r4-guidance.html">DSTU2 to R4 Conversion</a>
+        </li>
         <li>
           <a href="future-of-us-core.html">Future of US Core</a>
         </li>
       </ul>
   </li>
+
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">FHIR Artifacts<b class="caret">
+    </b>
+  </a>
+      <ul class="dropdown-menu">
+
   <li>
     <a href="profiles.html">Profiles and Extensions</a>
   </li>
@@ -28,19 +44,13 @@
   <li>
     <a href="terminology.html">Terminology</a>
   </li>
-  <li class="dropdown">
-    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Capability Statements<b class="caret">
-    </b>
-  </a>
-      <ul class="dropdown-menu">
-        <li>
-          <a href="CapabilityStatement-us-core-server.html">Conformance requirements for Server</a>
-        </li>
-        <li>
-          <a href="CapabilityStatement-us-core-client.html">Conformance requirements for Client</a>
-        </li>
-      </ul>
+  <li>
+    <a href="capstatements.html">Capability Statements</a>
   </li>
+
+  </ul>
+</li>  
+
 <li>
   <a href="security.html">Security</a>
 </li>
