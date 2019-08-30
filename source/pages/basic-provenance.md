@@ -67,4 +67,17 @@ The Figure below represents information after a provider accepted information fr
 
 Dr. Accepted is the latest author after verifying the problem on 5/2018 and accepting the problem data into their local data store, since it went through an interactive reconciliation process. This type of authorship change is only relevant for data fit for reconciliation, such as medications, allergies, problems. If Dr. Accepted had saved other clinical content into his EHR that aren't reconciled but simply stored, such as clinical notes, that content must retain its original author.
 
+
+### Development of `us-core-includeprovenance` parameter
+The original design in this guide required support for the `_revinclude` parameter (see [Including other resources in result]({{site.data.fhir.path}}search.html#revinclude)) to retrieve a Provenance Record. After discussing this approach at length with the Argonaut community, and client developers, the US Core guidance shifted to the custom parameter `us-core-includeprovenance`. 
+
+Functionally, the searches
+
+`GET /AllergyIntolerance?patient=[ID]&_revinclude=Provenance:target` and `GET /AllergyIntolerance?patient=[ID]&us-core-includeprovenance` are equivalent.
+
+Implementers found the name `_revinclude` non-intuitive, and were concerned clients would assume if FHIR servers supported this for Provenance, they would be adding support for other use cases. None of the servers that participated in the development of this guide have `_revinclude` in their current development roadmap.
+
+
+
+
 {% include link-list.md %}
