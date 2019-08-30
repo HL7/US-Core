@@ -1,8 +1,10 @@
 
+- See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
+- See the [General Guidance] section for additional guidance on searching for multiple patients.
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations SHALL be supported.  Any listed search parameter [modifiers], [comparators], [chains] and [composites] SHALL also be supported UNLESS they are listed as "optional" in which case they SHOULD be supported.:
 
 1. **SHALL** support searching for a practitioner by a string match of any part of name using the **[`name`](SearchParameter-us-core-practitioner-name.html)** search parameter:
 

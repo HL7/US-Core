@@ -53,10 +53,10 @@ Many of the profiles in this guide [reference]({{site.data.fhir.path}}references
 
 ### Missing Data
 
-If the source system does not have data for a *Must Support* data element, the data element is not present as described above.  If the source system does not have data for a *required* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
+If the source system does not have data for a *Must Support* data element, the data element is omitted from the resource as described above.  If the source system does not have data for a *required* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
 
 1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
-  - Use the code `unsupported` - The source system wasn't capable of supporting this element.
+  - Use the code `unknown` - The value is expected to exist but is not known.
 
     Example: Patient resource where the patient name is not available.
 
@@ -67,7 +67,7 @@ If the source system does not have data for a *Must Support* data element, the d
            "name":[
              "extension" : [
              "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-             "valueCode" : "unsupported"
+             "valueCode" : "unknown"
               }]
               ]
             "telecom" :
@@ -80,7 +80,7 @@ If the source system does not have data for a *Must Support* data element, the d
       - if the source systems has text but no coded data, only the text element is used.
       - if there is neither text or coded data:
         - use the appropriate "unknown" concept code from the value set if available
-        - use `unknown` from the [DataAbsentReason Code System] if the value set does not have the appropriate concept.
+        - if the value set does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
    - *required* binding strength (CodeableConcept or code datatypes):
       - use the appropriate "unknown" concept code from the value set if available
       - For the following data elements no appropriate "unknown" concept code is available, therefore the element must be populated:
@@ -95,30 +95,13 @@ If the source system does not have data for a *Must Support* data element, the d
 #### Required binding for CodeableConcept Datatype
 {:.no_toc}
 
-Required binding to a value set definition means that one of the codes from the specified value set SHALL be used and using only text is not valid. In this IG, we have defined the Extensible + Max-ValueSet binding to allow for either a code from the specified value set or text. Multiple codings (translations) are permitted as is discussed below.
+Required binding to a value set definition means that one of the codes from the specified value set SHALL be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
 
 #### Extensible binding for CodeableConcept Datatype
 {:.no_toc}
 
-Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values SHALL be from the specified value set if a code applies, but if no suitable code exists in the value set and no further restrictions have been applied (such as the max valueset binding described in the next section), alternate code(s) may be provided in its place. If only text available, then just text may be used.
-
-#### Extensible + Max-ValueSet binding for CodeableConcept Datatype
-{:.no_toc #max-binding}
-
-For this IG, we have defined the Extensible + Max-ValueSet binding to allow for either a code from the defined value set or text if the code is not available.  (for example, legacy data). This means, unlike a FHIR extensible binding, alternate code(s) are not permitted and a text value SHALL be supplied if the code is not available.  However, multiple codings (translations) are allowed as is discussed below.
-
-Example: Immunization resource vaccineCode's CVX coding - the source only has the text "4-way Influenza" and no CVX code.
-
-~~~
-    {
-      "resourceType": "Immunization",
-      ...
-      "vaccineCode": {
-        "text":"4-way Influenza"
-      },
-      ...
-    }
-~~~
+Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values SHALL be from the specified value set if a code applies, but if no suitable
+ code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
 
 #### Using multiple codes with CodeableConcept Datatype
 {:.no_toc}
@@ -225,7 +208,82 @@ Clinical information that has been removed from the patient's record needs to be
 
   - A provider facing system MAY be supplied with additional details that the patient viewing system would typically not have access to.
 
-### Read(Fetch) syntax:
+### Language Support
+
+There is a basic need be able to access records in your language, and the data provider should do their best to translate (safely) to the language being requested. Understanding that this will be variably complete depending on the nature of the record. For example translating the following elements is relatively straightforward:
+
+- `Coding.display`
+- Generated narrative
+- `Attachment.title`
+
+The following guidelines outline how to request and return a resource in the requested language.
+
+* Clients MAY request language/locale using the http `Accept-Language` header.  < link >
+* Servers SHOULD make reasonable efforts to translate what can be safely translated.
+* Servers SHOULD populate the Resource's `language` element which is reasonably based on the underlying language of record, *not* the requested language.
+    * Servers SHALL use the http://hl7.org/fhir/StructureDefinition/language extension when the language of a display, etc is known to be different to the stated (or inferred) language.
+
+          <todo  example snippet>
+
+* Servers SHALL use the http://hl7.org/fhir/StructureDefinition/translation where they wish to provide language translations.
+        <todo  example snippet>
+* Servers SHALL make discoverable what languages it can support.
+  - via its CapabilityStatement
+  - other means
+
+For further guidance on language and locale for generation of the resource narrative, see http://hl7.org/fhir/narrative.html#lang
+
+### Timezone and Time Offsets (*STRAWMAN PROPOSAL*)
+
+>A *timezone* is a geographical region in which residents observe the same standard time. A *time offset* is an amount of time subtracted from or added to Coordinated Universal Time (UTC) time to get the current civil time, whether it is standard time or daylight saving time (DST).[^1]
+
+- Servers **SHALL** store the existing supplied time offset or convert to "Z"(-0 offset) time.
+
+<!--
+  - best practice is to preserve the original time offset so clients are able to display the correct time independent of the current user location
+- The data source timezone **SHOULD** be preserved
+  - Use a [TZ Extension] on `[Resource]`  (plan to use new meta timezone element in R5)
+    - ValueCode:
+      - system = https://www.iana.org/time-zones
+      - values bound to codes derived from the tz database: <https://en.wikipedia.org/wiki/Tz_database>
+  - The TZ Extension is also used to override the global timezone information within particular dateTime elements
+
+    Example:
+
+    ~~~
+    {
+      "resource": {
+        "id" : "1",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/us/core/StructureDefinition/tz",
+              "valueCode": "US/Pacific"
+            }
+            ],
+... [snip] ...
+      "authoredOn" : "2019-08-28T15:20:27+00:00",
+      "_authoredOn" : {
+           "extension": [
+             {
+              "url": "http://hl7.org/fhir/us/core/StructureDefinition/tz",
+              "valueCode": "US/Mountain"
+              }
+            ]
+      },
+... [snip] ...
+    ~~~
+
+Client algorithm for resolving time offsets and timezones.
+
+  1. Look for a time offset on a specific datetime. If present, treat that as the data source time offset.
+  1. Look for a data source timezone in `[dateTime element].extension`. If present, treat that as the data source timezone.
+  1. Look for a data source timezone in `[Resource].meta.extension`. If present, treat that as the data source timezone.
+  1. If there is no data source timezone in `[dateTime element].extension` or `[Resource].meta.extension`. The timezone may be calculated from the source location and time offset.
+  * If hours and minutes are specified and there is no time offset on a specific datetime, the resource is invalid.
+
+-->
+
+### Read(Fetch) syntax
 
 For fetching a resource interactions on profile pages are defined with the following syntax:
 
@@ -265,36 +323,44 @@ In the simplest case, a search is executed by performing a GET operation in the 
 
 For this RESTful search, the parameters are a series of name=\[value\] pairs encoded in the URL. The search parameter names are defined for each resource. For example, the Observation resource the name “code” for search on the LOINC code.  For more information see the [FHIR RESTful Search API]
 
-### Syntax for searches limited by patient
+Note that the patient may be *implicit* in the context in some implementations (e.g. using SMART). Then the patient parameter can be omitted:
 
-There are several potential ways to search for resources associated with a specific patient depending on the context and implementation. These searches result in the same outcome.:
+`GET [base]/[Resource-type]{?other-parameters}`
 
-1. An explicitly defined patient using the 'patient' parameter that controls which set of resources are being searched by resource type.  Note that all the search interactions in this IG are published using this syntax:
-  - **GET [base]/[Resource-type]?patient=24342{&otherparameters}**
-   - There are several variations to this syntax which are listed below:
+### Search for Servers Requiring Status
 
-        -   GET \[base\]/\[Resource-type\]?Subject=\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?Subject=Patient/\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?Subject.\_id=\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?subject:Patient=\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?subject:Patient=Patient/\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?subject:Patient=\[https://%5Burl%5D/Patient/id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?subject:Patient.\_id=\[id\]{&other parameters}
-        -   GET \[base\]/\[Resource-type\]?patient:Patient=\[https://%5Burl%5D/Patient/id\]{&other parameter
+For searches where the client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.  These systems are allowed to reject such requests as follows:
 
-1. The patient may be *implicit* in the context (e.g. using SMART). Then the patient parameter can be omitted:
-  - **GET [base]/[Resource-type]{?other-parameters}**
+- **SHALL** return an http `404` status
+- **SHALL** return an [OperationOutcome] specifying that status(es) must be present.
+- **SHALL NOT** restrict search results ( i.e. apply 'hidden' filters) when a client includes status parameters in the query.
+- **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.
+- Follow the [deleted data](#representing-deleted-information) guidance above.
+- If a system doesn't support a specific status that is queried, search results **SHOULD** return an http `200` status with search bundle containing resources matching the search criteria *and* an OperationOutcome warning the client which status value is not supported.
 
-1. Patient [compartment] based search with a specified resource type in that compartment. **NOTE this IG does not support compartment based searches**.
+   - For example, in a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, `entered-in-error` but not `refuted`, the search parameter is referring to an unknown code since `refuted` is not known to the server.
+
+{% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
+
+### Searching multiple patients
+
+Currently most EHRs permit queries that provide a singles patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described the standard FHIR REST API. Instead, a user facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data.
+
+However, neither specification defines how a user facing provider apps is able to seek realtime "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core]
+
+### Compartment Based Search
+
+This IG does not support patient [compartment] based searches.
 
 ### Across Platform Searches
 
 US Core servers are not required to resolve full URLs that are external to their environment.
 
-### Guidance on limiting the number of search results
+### Guidance On Limiting The Number Of Search Results
 
 In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
 
 ------------------------------------------------------------------------
+[^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset&action=edit&section=1
 
 {% include link-list.md %}

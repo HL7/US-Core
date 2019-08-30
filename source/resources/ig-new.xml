@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.us.core-3.0.0"/>
+  <id value="hl7.fhir.us.core.argo-3.1.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/framework"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"/>
+    <valueString value="/Users/ehaas/Documents/FHIR/Argo-R4/source/pages"/>
   </extension>
-  <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.0.0"/>
-  <version value="3.0.0"/>
-  <name value="USCoreR4"/>
-  <title value="US Core R4"/>
+  <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.argo-3.1.0"/>
+  <version value="3.1.0"/>
+  <name value="ArgoR4"/>
+  <title value=" Argo R4"/>
   <status value="active"/>
-  <publisher value="HL7 International - US Realm Steering Committee"/>
+  <publisher value="The Argonaut Project"/>
   <contact>
     <telecom>
       <system value="url"/>
-      <value value="http://www.hl7.org/Special/committees/usrealm/index.cfm"/>
+      <value value="http://argonautwiki.hl7.org"/>
     </telecom>
   </contact>
   <jurisdiction>
@@ -32,8 +32,8 @@
       <code value="US"/>
     </coding>
   </jurisdiction>
-  <copyright value="Used by permission of HL7 International - US Realm Steering Committee, all rights reserved Creative Commons License"/>
-  <packageId value="hl7.fhir.us.core"/>
+  <copyright value="Used by permission of The Argonaut Project, all rights reserved Creative Commons License"/>
+  <packageId value="hl7.fhir.us.core.argo"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.0"/>
   <fhirVersion value="4.0.0"/>
@@ -307,13 +307,31 @@
     </resource>
     <resource>
       <reference>
+        <reference value="MedicationRequest/self-tylenol"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="DiagnosticReport/metabolic-panel"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
+        <reference value="Device/udi-3"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="MedicationRequest/uscore-mo2"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -445,31 +463,19 @@
     </resource>
     <resource>
       <reference>
-        <reference value="MedicationStatement/uscore-ms2"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Observation/serum-creatinine"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Bundle/uscore-ms3"/>
+        <reference value="Observation/satO2-fiO2"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <reference>
         <reference value="Observation/serum-total-bilirubin"/>
-      </reference>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="MedicationStatement/uscore-ms1"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -559,12 +565,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/us-core-medicationstatement-status"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/omb-race-category"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -643,6 +643,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/us-core-provenance-participant-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="SearchParameter/us-core-patient-gender"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -662,6 +668,12 @@
     <resource>
       <reference>
         <reference value="ValueSet/omb-ethnicity-category"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/us-core-provenance"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -757,12 +769,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/us-core-medicationstatement"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/us-core-procedure-icd10pcs"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -787,6 +793,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/us-core-pulse-oximetry"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="SearchParameter/us-core-allergyintolerance-clinical-status"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -794,6 +806,12 @@
     <resource>
       <reference>
         <reference value="SearchParameter/us-core-documentreference-date"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-medicationrequest-intent"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -884,6 +902,12 @@
     <resource>
       <reference>
         <reference value="CodeSystem/condition-category"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-medicationrequest-encounter"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1003,12 +1027,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/us-core-device"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="SearchParameter/us-core-patient-birthdate"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1123,19 +1141,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/us-core-medicationstatement-effective"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/us-core-race"/>
-      </reference>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="SearchParameter/us-core-medicationstatement-patient"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1315,6 +1321,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CodeSystem/us-core-provenance-participant-type"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/us-core-diagnosticreport-lab-codes"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1334,6 +1346,12 @@
     <resource>
       <reference>
         <reference value="CapabilityStatement/us-core-client"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/us-core-includeprovenance"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1369,6 +1387,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/us-core-implantable-device"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/detailed-race"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1389,6 +1413,21 @@
         <page>
           <nameUrl value="clinical-notes-guidance.html"/>
           <title value="Clinical Notes Guidance"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="all-meds.html"/>
+          <title value="Medication List Guidance"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="basic-provenance.html"/>
+          <title value="Basic Provenance"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="r2-r4-guidance.html"/>
+          <title value="DSTU2 to R4 Conversion"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -1437,6 +1476,11 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-us-core-provenance.html"/>
+          <title value="StructureDefinition US Core Provenance"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-us-core-birthsex.html"/>
           <title value="StructureDefinition US Core Birthsex"/>
           <generation value="generated"/>
@@ -1452,8 +1496,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-us-core-medicationstatement.html"/>
-          <title value="StructureDefinition US Core MedicationStatement"/>
+          <nameUrl value="StructureDefinition-us-core-pulse-oximetry.html"/>
+          <title value="StructureDefinition US Core Pulse Oximetry"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -1479,11 +1523,6 @@
         <page>
           <nameUrl value="StructureDefinition-us-core-direct.html"/>
           <title value="StructureDefinition US Core Direct"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-us-core-device.html"/>
-          <title value="StructureDefinition US Core Device"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -1539,6 +1578,11 @@
         <page>
           <nameUrl value="StructureDefinition-us-core-medicationrequest.html"/>
           <title value="StructureDefinition US Core MedicationRequest"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-us-core-implantable-device.html"/>
+          <title value="StructureDefinition US Core Implantable Device"/>
           <generation value="generated"/>
         </page>
       </page>
@@ -1747,11 +1791,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="SearchParameter-us-core-medicationstatement-status.html"/>
-          <title value="SearchParameter US Core MedicationStatement Status"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="SearchParameter-us-core-organization-name.html"/>
           <title value="SearchParameter US Core Organization Name"/>
           <generation value="generated"/>
@@ -1827,6 +1866,11 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="SearchParameter-us-core-medicationrequest-intent.html"/>
+          <title value="SearchParameter US Core MedicationRequest Intent"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="SearchParameter-us-core-location-address.html"/>
           <title value="SearchParameter US Core Location Address"/>
           <generation value="generated"/>
@@ -1864,6 +1908,11 @@
         <page>
           <nameUrl value="SearchParameter-us-core-encounter-type.html"/>
           <title value="SearchParameter US Core Encounter Type"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-medicationrequest-encounter.html"/>
+          <title value="SearchParameter US Core MedicationRequest Encounter"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -1982,16 +2031,6 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="SearchParameter-us-core-medicationstatement-effective.html"/>
-          <title value="SearchParameter US Core MedicationStatement Effective"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="SearchParameter-us-core-medicationstatement-patient.html"/>
-          <title value="SearchParameter US Core MedicationStatement Patient"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="SearchParameter-us-core-location-address-postalcode.html"/>
           <title value="SearchParameter US Core Location Address Postalcode"/>
           <generation value="generated"/>
@@ -2089,6 +2128,11 @@
         <page>
           <nameUrl value="SearchParameter-us-core-documentreference-category.html"/>
           <title value="SearchParameter US Core DocumentReference Category"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-us-core-includeprovenance.html"/>
+          <title value="SearchParameter US Core Includeprovenance"/>
           <generation value="generated"/>
         </page>
         <page>

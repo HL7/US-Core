@@ -6,7 +6,17 @@
 v: {
   "display" : "",
   "severity" : "error",
-  "error" : "The code system \"http://michigan.gov/lara/license-type\" is not known; The code provided (http://michigan.gov/lara/license-type#4305) is not  valid in the value set All codes known to the system"
+  "error" : "The code system \"http://michigan.gov/lara/license-type\" is not known for the code \"4305\"; The code provided (http://michigan.gov/lara/license-type#4305) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://michigan.gov/lara/license-type",
+  "code" : "4305"
+}, "valueSet" :null, "lang":"null"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://michigan.gov/lara/license-type\" is not known for the code \"4305\"; The code provided (http://michigan.gov/lara/license-type#4305) is not  valid in the value set All codes known to the system"
 }
 -------------------------------------------------------------------------------------
 {"code" : {

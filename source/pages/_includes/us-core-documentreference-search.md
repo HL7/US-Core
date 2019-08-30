@@ -1,8 +1,10 @@
 
+- See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
+- See the [General Guidance] section for additional guidance on searching for multiple patients.
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHALL be supported.  the  modifiers, comparators, chains and composites that are listed as optional SHOULD be supported.:
+The following search parameters, search parameter combinations SHALL be supported.  Any listed search parameter [modifiers], [comparators], [chains] and [composites] SHALL also be supported UNLESS they are listed as "optional" in which case they SHOULD be supported.:
 
 1. **SHALL** support fetching a DocumentReference using the **[`_id`](SearchParameter-us-core-documentreference-id.html)** search parameter:
 
@@ -15,7 +17,7 @@ The following search parameters, search parameter combinations and search parame
 
     *Implementation Notes:* Fetches a single DocumentReference. The document itself is represented as a base64 encoded binary data element or retrieved using the link provided by the resource. If the document is a  relative link to a [Binary] resource like a resource reference, it can be subsequently retrieved using: `GET [base]/Binary/[id]`. ([how to search by the logical id] of the resource)
 
-1. **SHALL** support searching for all documentreferences for a patient using the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** search parameter:
+1. **SHALL** support searching for all DocumentReference resources for a patient using the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** search parameter:
 
     `GET [base]/DocumentReference?patient=[reference]`
 
@@ -63,8 +65,9 @@ The following search parameters, search parameter combinations and search parame
 The following search parameters, search parameter combinations and search parameter [modifiers], [comparators], [chains] and [composites] SHOULD be supported.
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`status`](SearchParameter-us-core-documentreference-status.html)** search parameters:
+    - including support for composite *OR* search on `status` (e.g.`status={[system]}|[code],{[system]}|[code],...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&status={[system]}|[code]`
+    `GET [base]/DocumentReference?patient=[reference]&status={[system]}|[code]{,{[system]}|[code],...}`
 
     Example:
 
@@ -84,25 +87,6 @@ The following search parameters, search parameter combinations and search parame
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type and period. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token] and [how to search by date])
 
-
-#### Mandatory Write Capability:
-
-1. **SHALL** support writing a new note to a Patient's Chart:
-
-    `POST [base]/DocumentReference`
-
-    {% include examplebutton_default.html example="documentreference-clinical-note-post" b_title = "Click Here To See Example" %} %}
-
-
-#### Mandatory Operations
-
-**SHALL** support fetching documents using the $docref operation.
-
-**`GET [base]/DocumentReference/$docref?patient=[id]`**
-
-Example: see [$docref operation]
-
-*Implementation Notes:* This operation is used to request a server *generate* a document based on the specified parameters.  If no parameters are specified, the server SHALL return a DocumentReference to the patient's most current CCD.  See the [$docref operation] definition for details on how this operation differs from a FHIR RESTful search.  This operation returns a DocumentReference resources. The document itself is retrieved using the link provided in the `DocumentReference.content.attachment.url` element.
-
+{% include write-and-docref.md %}
 
 {% include link-list.md %}
