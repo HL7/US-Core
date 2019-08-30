@@ -17254,3 +17254,47 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://nucc.org/provider-taxonomy",
+  "code" : "207RC0000X",
+  "display" : "Allopathic &amp; Osteopathic Physicians:Internal Medicine:Cardiovascular Disease"
+}, "valueSet" :null}####
+v: {
+  "display" : "Cardiovascular Disease",
+  "severity" : "warning",
+  "error" : "The display \"Allopathic &amp; Osteopathic Physicians:Internal Medicine:Cardiovascular Disease\" is not a valid display for the code {http://nucc.org/provider-taxonomy}207RC0000X - should be one of [\"Cardiovascular Disease\"]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://nucc.org/provider-taxonomy",
+  "code" : "208D00000X",
+  "display" : "Allopathic &amp; Osteopathic Physicians:General Practice"
+}, "valueSet" :null}####
+v: {
+  "display" : "General Practice",
+  "severity" : "warning",
+  "error" : "The display \"Allopathic &amp; Osteopathic Physicians:General Practice\" is not a valid display for the code {http://nucc.org/provider-taxonomy}208D00000X - should be one of [\"General Practice\"]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://nucc.org/provider-taxonomy",
+  "code" : "261QP2300X",
+  "display" : "Primary Care"
+}, "valueSet" :null}####
+v: {
+  "display" : "Primary Care",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://nucc.org/provider-taxonomy",
+  "code" : "208D00000X",
+  "display" : "General Practice"
+}, "valueSet" :null}####
+v: {
+  "display" : "General Practice",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

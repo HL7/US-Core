@@ -22,7 +22,7 @@ The following data-elements are mandatory (i.e. data MUST be present) or must be
 
 1.  an author responsible for the update
 1.  the author organization responsible for the information
-1.  the transmitter device or organization that provided the information
+1.  the transmitter device that provided the information
 1.  if the transmitter device is provided, the transmitter organization responsible for the transmission is also required.
 
 **Profile specific implementation guidance:**

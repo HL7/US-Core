@@ -3,7 +3,7 @@
 Get “all allergies” for a patient and all corresponding Provenance records.
 
 
-    GET [base]/AllergyIntolerance?patient=12345&_revinclude=Provenance:target
+    GET [base]/AllergyIntolerance?patient=12345&us-core-includeprovenance
 
 **Response:**
 

@@ -24,12 +24,14 @@ The guidance for Provenance in US Core focuses on 4 key elements: Author, Author
 
 **Key Provenance elements:**
 
-Element | Required |Optional| FHIR Element|
+Element | Required | Must Support |Optional| FHIR Element|
 ---|---|---|---|---
-Author | Name<br>Identifier | NPI recommended, additional identifiers allowed| Provenance.agent.who
-Author Organization | Name<br>Identifier  | NPI recommended, additional identifiers allowed |Provenance.agent.onBehalfOf 
-Timestamp | Date | Time with timezone offset | Provenance.recorded
-Target | Resource Provenance record supports | | Provenance.target
+Target | Resource Provenance <br>record supports | | | Provenance.target
+Timestamp | Date | | Time with timezone offset | Provenance.recorded
+Author | | Name<br>Identifier | NPI recommended, additional identifiers allowed| Provenance.agent.who
+Author Organization | | Name<br>Identifier  | NPI recommended, additional identifiers allowed |Provenance.agent.onBehalfOf 
+Transmitter | | Name<br>Identifier | NPI recommended, additional identifiers allowed| Provenance.agent.who
+Transmitter Organization | | Name<br>Identifier  | NPI recommended, additional identifiers allowed |Provenance.agent.onBehalfOf 
 {: .grid}
 
 ### Use Cases
@@ -46,7 +48,7 @@ The Figure below represents information from two different organizations to a cl
 
  Dr. Reconciled is the latest author after updating the reaction on 5/15/2019 and accepting to the local data store. The acceptance of the information is them taking over the responsibility.
  
- `GET /AllergyIntolerance?patient=[ID]&_revinclude=Provenance:target`
+ `GET /AllergyIntolerance?patient=[ID]&us-core-includeprovenance`
 
 Good Health Organization Provenance
 {% include examplebutton_default.html example="get-all-allergy-provenance-good-health" b_title = "Click Here to See 'Get Allergy Information for a Patient at Good Health' Example" %}
