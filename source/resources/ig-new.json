@@ -1,32 +1,32 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "hl7.fhir.us.core.argo-3.1.0",
+  "id" : "hl7.fhir.us.core-3.1.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/resources"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/examples"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/framework"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-R4/source/pages"
+    "valueString" : "/Users/ehaas/Documents/FHIR/US-Core-R4/source/pages"
   }],
-  "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.argo-3.1.0",
+  "url" : "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.1.0",
   "version" : "3.1.0",
-  "name" : "ArgoR4",
-  "title" : " Argo R4",
+  "name" : "USCore",
+  "title" : "US Core",
   "status" : "active",
-  "publisher" : "The Argonaut Project",
+  "publisher" : "HL7 International - US Realm Steering Committee",
   "contact" : [{
     "telecom" : [{
       "system" : "url",
-      "value" : "http://argonautwiki.hl7.org"
+      "value" : "http://www.hl7.org/Special/committees/usrealm/index.cfm"
     }]
   }],
   "jurisdiction" : [{
@@ -35,8 +35,8 @@
       "code" : "US"
     }]
   }],
-  "copyright" : "Used by permission of The Argonaut Project, all rights reserved Creative Commons License",
-  "packageId" : "hl7.fhir.us.core.argo",
+  "copyright" : "Used by permission of HL7 International, all rights reserved Creative Commons License",
+  "packageId" : "hl7.fhir.us.core",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
   "4.0.0"],

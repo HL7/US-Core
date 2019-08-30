@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Hidden IG for de facto IG publishing-->
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.us.core.argo-3.1.0"/>
-  <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core.argo-3.1.0"/>
+  <id value="hl7.fhir.us.core-3.1.0"/>
+  <url value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core-3.1.0"/>
   <version value="3.1.0"/>
-  <name value="ArgoR4"/>
-  <title value=" Argo R4"/>
+  <name value="USCore"/>
+  <title value="US Core"/>
   <status value="active"/>
-  <publisher value="The Argonaut Project"/>
+  <publisher value="HL7 International - US Realm Steering Committee"/>
 
 
   <contact>
     <!-- 0..* ContactDetail Contact details for the publisher -->
     <telecom>
       <system value="url"/>
-      <value value="http://argonautwiki.hl7.org"/>
+      <value value="http://www.hl7.org/Special/committees/usrealm/index.cfm"/>
     </telecom>
   </contact>
   <copyright
-    value="Used by permission of The Argonaut Project, all rights reserved Creative Commons License"/>
+    value="Used by permission of HL7 International, all rights reserved Creative Commons License"/>
   <!-- 0..1 Use and/or publishing restrictions -->
-  <packageId value="hl7.fhir.us.core.argo"/>
+  <packageId value="hl7.fhir.us.core"/>
   <!-- 0..1 NPM Package name for IG -->
   <license value="CC0-1.0"/>
   <!--*****HARDCODED********* 0..1 SPDX license code for this IG (or not-open-source) -->
