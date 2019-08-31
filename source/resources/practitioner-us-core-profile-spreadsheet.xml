@@ -987,7 +987,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">date</Data></Cell>
-    <Cell ss:StyleID="s77" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-08-31T16:14:39.470</Data></Cell>
+    <Cell ss:StyleID="s77" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-08-31T16:25:21.190</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">published.structure</Data></Cell>
@@ -1208,7 +1208,7 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="47.0625">
     <Cell ss:Index="3" ss:StyleID="s101"/>
-    <Cell ss:StyleID="s102"><Data ss:Type="String" x:Ticked="1">system</Data></Cell>
+    <Cell ss:StyleID="s102"><Data ss:Type="String" x:Ticked="1">@pattern</Data></Cell>
     <Cell ss:StyleID="s102"/>
     <Cell ss:StyleID="s104"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><Data ss:Type="String">Practitioner.identifier</Data><NamedCell
@@ -1296,7 +1296,7 @@
     <Cell ss:StyleID="s102"/>
     <Cell ss:StyleID="s85"><Data ss:Type="String">NPI-Slice</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">!Practitioner.identifier</Data><NamedCell
+    <Cell ss:StyleID="s105"><Data ss:Type="String">Practitioner.identifier</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><Data ss:Type="String">0..1</Data><NamedCell
@@ -1325,7 +1325,7 @@
     <Cell ss:StyleID="s102"/>
     <Cell ss:StyleID="s102"/>
     <Cell ss:StyleID="s104"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">Practitioner.identifier.system</Data><NamedCell
+    <Cell ss:StyleID="s105"><Data ss:Type="String">!Practitioner.identifier.system</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><Data ss:Type="String">1..1</Data><NamedCell
@@ -3758,7 +3758,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>3</ActiveRow>
+     <ActiveCol>3</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
