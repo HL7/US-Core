@@ -229,3 +229,4 @@
 [Basic Provenance]: basic-provenance.html
 [DSTU2 to R4 Conversion]: r2-r4-guidance.html
 [Multi-language support for Narratives]: {{site.data.fhir.path}}narrative.html#lang
+[US Core Pulse Oximetry Profile]: StructureDefinition-us-core-pulse-oximetry.html
