@@ -228,3 +228,4 @@
 [FHIR Artifacts]: artifacts.html
 [Basic Provenance]: basic-provenance.html
 [DSTU2 to R4 Conversion]: r2-r4-guidance.html
+[Multi-language support for Narratives]: {{site.data.fhir.path}}narrative.html#lang

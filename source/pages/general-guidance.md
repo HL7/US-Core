@@ -208,6 +208,7 @@ Clinical information that has been removed from the patient's record needs to be
 
   - A provider facing system MAY be supplied with additional details that the patient viewing system would typically not have access to.
 
+<div class="note-to-balloters" markdown="1">
 ### Language Support
 
 There is a basic need be able to access records in your language, and the data provider should do their best to translate (safely) to the language being requested. Understanding that this will be variably complete depending on the nature of the record. For example translating the following elements is relatively straightforward:
@@ -231,15 +232,17 @@ The following guidelines outline how to request and return a resource in the req
   - via its CapabilityStatement
   - other means
 
-For further guidance on language and locale for generation of the resource narrative, see http://hl7.org/fhir/narrative.html#lang
+For further guidance on language and locale for generation of the resource narrative, see the [Multi-language support for Narratives] in the core specification.
+</div>
 
+<!--
 ### Timezone and Time Offsets (*STRAWMAN PROPOSAL*)
 
 >A *timezone* is a geographical region in which residents observe the same standard time. A *time offset* is an amount of time subtracted from or added to Coordinated Universal Time (UTC) time to get the current civil time, whether it is standard time or daylight saving time (DST).[^1]
 
 - Servers **SHALL** store the existing supplied time offset or convert to "Z"(-0 offset) time.
 
-<!--
+
   - best practice is to preserve the original time offset so clients are able to display the correct time independent of the current user location
 - The data source timezone **SHOULD** be preserved
   - Use a [TZ Extension] on `[Resource]`  (plan to use new meta timezone element in R5)
@@ -327,6 +330,7 @@ Note that the patient may be *implicit* in the context in some implementations (
 
 `GET [base]/[Resource-type]{?other-parameters}`
 
+<div class="note-to-balloters" markdown="1">
 ### Search for Servers Requiring Status
 
 For searches where the client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.  These systems are allowed to reject such requests as follows:
@@ -341,12 +345,15 @@ For searches where the client does not supply a status parameter, an implementat
    - For example, in a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, `entered-in-error` but not `refuted`, the search parameter is referring to an unknown code since `refuted` is not known to the server.
 
 {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
+</div>
 
+<div class="note-to-balloters" markdown="1">
 ### Searching multiple patients
 
 Currently most EHRs permit queries that provide a singles patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described the standard FHIR REST API. Instead, a user facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data.
 
 However, neither specification defines how a user facing provider apps is able to seek realtime "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core]
+</div>
 
 ### Compartment Based Search
 
