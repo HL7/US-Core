@@ -111,6 +111,7 @@
 [Location]:  {{site.data.fhir.path}}location.html
 [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
 [Medication List Guidance]: all-meds.html
+[MedicationRequest examples]: StructureDefinition-us-core-medicationrequest.html#examples
 [MedicationRequest Quick Start]: StructureDefinition-us-core-medicationrequest.html#search
 [MedicationRequestStatus]: {{site.data.fhir.path}}valueset-medicationrequest-status.html
 [MedicationRequest]: {{site.data.fhir.path}}medicationrequest.html
