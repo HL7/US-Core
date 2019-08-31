@@ -17,7 +17,7 @@ layout: default
 
 **STU Update Comment Review**
 
-Any and all comments for this STU Update comment review must be logged as new [GForge Tracker](http://hl7.org/fhir-issues) items under the *Specification* "US Core" and *Ballot* "STU3 Update" (?need to work these details out with Lloyd and Austin?).  All content that is open to review are highlighted in pink and marked with the text "Open for STU Comment" as demonstrated here. **Any comments outside of these boundaries will be dispositioned as "Not Related" for this STU Comment period.**
+Any and all comments for this STU Update comment review must be logged as new [GForge Tracker](http://hl7.org/fhir-issues) items under the *Specification* "US Core" and *Ballot* "STU3 Update" (?need to work these details out with Lloyd and Austin?).  **All content that is open to review are highlighted in pink and marked with the text "Open for STU Comment" as demonstrated here. Any comments outside of these boundaries will be dispositioned as "Not Related" for this STU Comment period.**
 
 In order meet the proposed ONC [U.S. Core Data for Interoperability (USCDI)] regulatory requirements for access to patient data, this STU Update of the US Core Implementation Guide has added new content. [The Argonaut Project Team](https://argonautwiki.hl7.org/Argonaut_2019_Projects#Argonaut_R4) has spent the last several months reviewing, testing and providing invaluable feedback on these and other topics including most notably:
 
