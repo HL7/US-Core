@@ -1908,7 +1908,7 @@
     <Cell ss:StyleID="s125"><Data ss:Type="String">error</Data></Cell>
     <Cell ss:StyleID="s125"><Data ss:Type="String">Device</Data></Cell>
     <Cell ss:StyleID="s125"><Data ss:Type="String">At least one of the Production Identifiers (UDI-PI) SHALL be present.</Data></Cell>
-    <Cell ss:StyleID="s125"><Data ss:Type="String">manufactureDate or expirationDate or lotNumber or serialNumber or distinctIdentifier</Data></Cell>
+    <Cell ss:StyleID="s125"><Data ss:Type="String">manufactureDate.exists() or expirationDate.exists() or lotNumber.exists() or serialNumber.exists() or distinctIdentifier.exists()</Data></Cell>
     <Cell ss:StyleID="s126"><Data ss:Type="String">f:manufactureDate or f:expirationDate or f:lotNumber or f:serialNumber or f:distinctIdentifier</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
