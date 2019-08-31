@@ -1019,7 +1019,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">date</Data></Cell>
-    <Cell ss:StyleID="s78" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-08-31T16:18:11.500</Data></Cell>
+    <Cell ss:StyleID="s78" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-08-31T16:24:47.670</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s73"><Data ss:Type="String">published.structure</Data></Cell>
@@ -1270,7 +1270,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:Index="3" ss:StyleID="s102"/>
-    <Cell ss:StyleID="s103"><Data ss:Type="String" x:Ticked="1">identifier</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String" x:Ticked="1">@pattern</Data></Cell>
     <Cell ss:StyleID="s103"/>
     <Cell ss:StyleID="s102"><Data ss:Type="String">Organization.identifier</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1377,9 +1377,9 @@
     <Cell ss:StyleID="s105"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">http://hl7.org/fhir/sid/us-npi</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">{&quot;system&quot; : &quot;http://hl7.org/fhir/sid/us-npi&quot;}</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:Index="16" ss:StyleID="s105"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><Data ss:Type="String">National Provider Identifier (NPI)</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1410,9 +1410,9 @@
     <Cell ss:StyleID="s105"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s105"><Data ss:Type="String">urn:oid:2.16.840.1.113883.4.7</Data><NamedCell
-      ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><NamedCell ss:Name="_FilterDatabase"/></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="String">{&quot;system&quot; : &quot;urn:oid:2.16.840.1.113883.4.7&quot;}</Data><NamedCell
+      ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:Index="16" ss:StyleID="s105"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s105"><Data ss:Type="String">Clinical Laboratory Improvement Amendments (CLIA) Number for laboratories</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -3687,8 +3687,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>6</ActiveRow>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>2</ActiveRow>
+     <ActiveCol>3</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
