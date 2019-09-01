@@ -45,6 +45,8 @@ The following pages, page sections are open to review and comment for this US Co
 - 2.6.1.1.3 [Candidates under consideration](future-of-us-core.html#candidates-under-consideration)
 - 3.8 - [StructureDefinition US Core Provenance](StructureDefinition-us-core-provenance.html)
 - 3.12 - [StructureDefinition US Core Pulse Oximetry](StructureDefinition-us-core-pulse-oximetry.html)
+- 3.28.1.1 - [StructureDefinition-us-core-medicationrequest](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
+- 3.28.1.4 - [MedicationRuequest Quick Start](StructureDefinition-us-core-medicationrequest.html#quick-start)
 - 3.29 - [StructureDefinition US Core Implantable Device](StructureDefinition-us-core-implantable-device.html)
 
 
