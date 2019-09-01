@@ -44,19 +44,19 @@ The following pages, page sections and artifacts are open to review and comment 
 -  2.5 - [DSTU2 to R4 Conversion](r2-r4-guidance.html) (GF#22755 Add R2 to R4 conversion and guidance)
 - 2.6.1.1.3 [Candidates under consideration](future-of-us-core.html#candidates-under-consideration) (GF#20571 Add a Coverage Profile to US Core to Support Interactions with Payers, GF#23734 add guidance on multiple patients,GF#23778 add timezone and time offset guidance)
 - 3.8 - [StructureDefinition US Core Provenance](StructureDefinition-us-core-provenance.html)
-- 3.11.1.3 - [StructureDefinition US Core Patient](StructureDefinition-us-core-patient.html#formal-views-of-profile-content)(GF#23735 add telecom.use and address.period to Patient) Note changes highlighted in 'Text Summary Tab'
-- 3.12 - [StructureDefinition US Core Pulse Oximetry](StructureDefinition-us-core-pulse-oximetry.html)(GF#20616 Add FIO2 to vitals as isted in USCDI)
+- 3.11.1.3 - [StructureDefinition US Core Patient](StructureDefinition-us-core-patient.html#formal-views-of-profile-content) (GF#23735 add telecom.use and address.period to Patient) Note changes highlighted in 'Text Summary Tab'
+- 3.12 - [StructureDefinition US Core Pulse Oximetry](StructureDefinition-us-core-pulse-oximetry.html) (GF#20616 Add FIO2 to vitals as isted in USCDI)
 - 3.23.1.1 - [StructureDefinition-us-core-organization](StructureDefinition-us-core-organization.html#mandatory-and-must-support-data-elements)  (GF#22771 Update Organization requirements to support more than just provider directory)
 - 3.28.1.1 - [StructureDefinition-us-core-medicationrequest](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements) (GF#22751 Add med list guidance and update MedRequest profile to support med list)
 - 3.28.1.4 - [MedicationRequest Quick Start](StructureDefinition-us-core-medicationrequest.html#quick-start) (GF#22751 Add med list guidance and update MedRequest profile to support med list)
-- 3.29 - [StructureDefinition US Core Implantable Device](StructureDefinition-us-core-implantable-device.html)(GF#22851 Rename US Core Device Profile, GF#19796 Clarify that this US Core Device profile is actually US Core Implanted Device Profile rather than a generic US Core Device, GF#20971 Add UDI Elements including Parsed UDI-DI and applicable UDI-PIs, GF#22901 Update Device Intro and Examples per FDA)
-- 5.1.1 - [US Core Encounter Type](terminology.html)(GF#22853 Add SNOMED back to Encounter Type Value Set)
-- 5.1.1 - [US Core Procedure Code](terminology.html)(GF#23053 US Core Procedure Code Value Set Description and Content Don't Match)
+- 3.29 - [StructureDefinition US Core Implantable Device](StructureDefinition-us-core-implantable-device.html) (GF#22851 Rename US Core Device Profile, GF#19796 Clarify that this US Core Device profile is actually US Core Implanted Device Profile rather than a generic US Core Device, GF#20971 Add UDI Elements including Parsed UDI-DI and applicable UDI-PIs, GF#22901 Update Device Intro and Examples per FDA)
+- 5.1.1 - [US Core Encounter Type](terminology.html) (GF#22853 Add SNOMED back to Encounter Type Value Set)
+- 5.1.1 - [US Core Procedure Code](terminology.html) (GF#23053 US Core Procedure Code Value Set Description and Content Don't Match)
 
 The following pages and sections have be removed (Links to US Core Implementation Guide (v3.0.0: STU3)):
 
-- [US Core MedicationStatement Profile and SearchParameters](http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-medicationstatement.html) (GF#22751 Add med list guidance and update MedRequest profile to support med list)
-- [Extensible + Max-ValueSet binding for CodeableConcept Datatype](http://hl7.org/fhir/us/core/STU3/general-guidance.html#max-binding)(GF#23773 remove MaxValue Extension from 4 extensible valuesets)
+- [US Core MedicationStatement Profile and SearchParameters](http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-medicationstatement.html)  (GF#22751 Add med list guidance and update MedRequest profile to support med list)
+- [Extensible + Max-ValueSet binding for CodeableConcept Datatype](http://hl7.org/fhir/us/core/STU3/general-guidance.html#max-binding) (GF#23773 remove MaxValue Extension from 4 extensible valuesets)
 - [Syntax for searches limited by patient](http://hl7.org/fhir/us/core/STU3/general-guidance.html#syntax-for-searches-limited-by-patient) (GF#22750 Remove extra patient search syntax from US Core)
 
 Other technical Corrections that cannot be highlighted since they are embeded in the JSON and XML Representations.
