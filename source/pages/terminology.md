@@ -10,37 +10,51 @@ This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part 
 
 These value sets have been defined for this implementation guide.
 
-<li><a href="ValueSet-us-core-medication-codes.html">US Core Medication Codes (RxNorm)</a></li>
-<li><a href="ValueSet-us-core-observation-smokingstatus.html">US Core Smoking Status</a></li>
-<li><a href="ValueSet-omb-race-category.html">OMB Race Categories</a></li>
-<li><a href="ValueSet-us-core-allergy-substance.html">US Core Common substances for allergy and intolerance documentation including refutations</a></li>
-<li><a href="ValueSet-us-core-narrative-status.html">US Core Narrative Status</a></li>
-<li><a href="ValueSet-us-core-documentreference-type.html">US Core DocumentReference Type</a></li>
-<li><a href="ValueSet-us-core-provenance-participant-type.html">US Core Provenance Participant Type Codes</a></li>
-<li><a href="ValueSet-omb-ethnicity-category.html">OMB Ethnicity Categories</a></li>
-<li><a href="ValueSet-us-core-condition-category.html">US Core Condition Category Codes</a></li>
-<li><a href="ValueSet-detailed-ethnicity.html">Detailed ethnicity</a></li>
-<li><a href="ValueSet-us-core-ndc-vaccine-codes.html">US Core Vaccine National Drug Codes (NDC)</a></li>
-<li><a href="ValueSet-us-core-procedure-icd10pcs.html">US Core ICD-10-PCS Procedure Codes</a></li>
-<li><a href="ValueSet-us-core-provider-specialty.html">US Core Provider Speciality (NUCC)</a></li>
-<li><a href="ValueSet-us-core-vaccines-cvx.html">US Core Vaccine Administered Value Set (CVX)</a></li>
-<li><a href="ValueSet-us-core-observation-smoking-status-status.html">US Core Status for Smoking Status Observation</a></li>
-<li><a href="ValueSet-us-core-usps-state.html">USPS Two Letter Alphabetic Codes</a></li>
-<li><a class="note-to-balloters" href="ValueSet-us-core-encounter-type.html">US Core Encounter Type</a></li>
-<li><a href="ValueSet-us-core-problem.html">US Core Problem</a></li>
-<li><a href="ValueSet-birthsex.html">Birth Sex</a></li>
-<li><a href="ValueSet-us-core-diagnosticreport-report-and-note-codes.html">US Core Diagnosticreport Report And Note Codes</a></li>
-<li><a href="ValueSet-us-core-provider-role.html">US Core Provider Role (NUCC)</a></li>
-<li><a href="ValueSet-us-core-smoking-status-observation-codes.html">US Core Smoking Status Observation Codes</a></li>
-<li><a href="ValueSet-us-core-careteam-provider-roles.html">US Core CareTeam Provider Roles</a></li>
-<li><a href="ValueSet-us-core-diagnosticreport-category.html">US Core DiagnosticReport Category</a></li>
-<li><a href="ValueSet-us-core-clinical-note-type.html">US Core Clinical Note Type</a></li>
-<li><a href="ValueSet-us-core-documentreference-category.html">US Core DocumentReference Category</a></li>
-<li><a class="note-to-balloters" href="ValueSet-us-core-procedure-code.html">US Core Procedure Codes</a></li>
-<li><a href="ValueSet-simple-language.html">Language codes with language and optionally a region modifier</a></li>
-<li><a href="ValueSet-us-core-observation-value-codes.html">US Core Observation Value Codes (SNOMED-CT)</a></li>
-<li><a href="ValueSet-us-core-diagnosticreport-lab-codes.html">US Core Diagnostic Report Laboratory Codes</a></li>
-<li><a href="ValueSet-detailed-race.html">Detailed Race</a></li>
+- [US Core Medication Codes(RxNorm)](ValueSet-us-core-medication-codes.html)
+- [US Core SmokingStatus](ValueSet-us-core-observation-smokingstatus.html)
+- [OMB Race Categories](ValueSet-omb-race-category.html)
+- [US Core Common substances for allergy and intolerance documentationincluding refutations](ValueSet-us-core-allergy-substance.html)
+- [US Core Narrative Status](ValueSet-us-core-narrative-status.html)
+- [US Core DocumentReferenceType](ValueSet-us-core-documentreference-type.html)
+- [US Core Provenance Participant TypeCodes](ValueSet-us-core-provenance-participant-type.html)
+- [OMB Ethnicity Categories](ValueSet-omb-ethnicity-category.html)
+- [US Core Condition CategoryCodes](ValueSet-us-core-condition-category.html)
+- [Detailed ethnicity](ValueSet-detailed-ethnicity.html)
+- [US Core Vaccine National Drug Codes(NDC)](ValueSet-us-core-ndc-vaccine-codes.html)
+- [US Core ICD-10-PCS ProcedureCodes](ValueSet-us-core-procedure-icd10pcs.html)
+- [US Core Provider Speciality(NUCC)](ValueSet-us-core-provider-specialty.html)
+- [US Core Vaccine Administered Value Set(CVX)](ValueSet-us-core-vaccines-cvx.html)
+- [US Core Status for Smoking StatusObservation](ValueSet-us-core-observation-smoking-status-status.html)
+- [USPS Two Letter Alphabetic Codes](ValueSet-us-core-usps-state.html)
+- {: .note-to-balloters}[US Core Encounter Type](ValueSet-us-core-encounter-type.html)
+- [US Core Problem](ValueSet-us-core-problem.html)
+- [Birth Sex](ValueSet-birthsex.html)
+- [US Core Diagnosticreport Report And NoteCodes](ValueSet-us-core-diagnosticreport-report-and-note-codes.html)
+- [US Core Provider Role (NUCC)](ValueSet-us-core-provider-role.html)
+- [US Core Smoking Status ObservationCodes](ValueSet-us-core-smoking-status-observation-codes.html)
+- [US Core CareTeam ProviderRoles](ValueSet-us-core-careteam-provider-roles.html)
+- [US Core DiagnosticReportCategory](ValueSet-us-core-diagnosticreport-category.html)
+- [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
+- [US Core DocumentReferenceCategory](ValueSet-us-core-documentreference-category.html)
+- [US Core Procedure Codes](ValueSet-us-core-procedure-code.html)
+- [Language codes with language and optionally a regionmodifier](ValueSet-simple-language.html)
+- [US Core Observation Value Codes(SNOMED-CT)](ValueSet-us-core-observation-value-codes.html)
+- [US Core Diagnostic Report LaboratoryCodes](ValueSet-us-core-diagnosticreport-lab-codes.html)
+- [US Core Problem](ValueSet-us-core-problem.html)
+- [Birth Sex](ValueSet-birthsex.html)
+- [US Core Diagnosticreport Report And NoteCodes](ValueSet-us-core-diagnosticreport-report-and-note-codes.html)
+- [US Core Provider Role (NUCC)](ValueSet-us-core-provider-role.html)
+- [US Core Smoking Status ObservationCodes](ValueSet-us-core-smoking-status-observation-codes.html)
+- [US Core CareTeam ProviderRoles](ValueSet-us-core-careteam-provider-roles.html)
+- [US Core DiagnosticReportCategory](ValueSet-us-core-diagnosticreport-category.html)
+- [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
+- [US Core DocumentReferenceCategory](ValueSet-us-core-documentreference-category.html)
+- {: .note-to-balloters}[US Core Procedure Codes](ValueSet-us-core-procedure-code.html)
+- [Language codes with language and optionally a regionmodifier](ValueSet-simple-language.html)
+- [US Core Observation Value Codes(SNOMED-CT)](ValueSet-us-core-observation-value-codes.html)
+- [US Core Diagnostic Report LaboratoryCodes](ValueSet-us-core-diagnosticreport-lab-codes.html)
+- [Detailed Race](ValueSet-detailed-race.html)
+
 
 <!-- {% raw %}
 {% include list-simple-valuesets.xhtml %}
