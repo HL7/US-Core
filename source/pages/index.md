@@ -52,8 +52,8 @@ The following pages, page sections and artifacts are open to review and comment 
 - 3.28.1.1 - [Structure Definition US Core MedicationRequest](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements) *Note changes also highlighted in 'Text Summary Tab'* (GF#22751 Add med list guidance and update MedRequest profile to support med list)
 - 3.28.1.4 - [MedicationRequest Quick Start](StructureDefinition-us-core-medicationrequest.html#quick-start) (GF#22751 Add med list guidance and update MedRequest profile to support med list)
 - 3.29 - [StructureDefinition US Core Implantable Device](StructureDefinition-us-core-implantable-device.html) (GF#22851 Rename US Core Device Profile, GF#19796 Clarify that this US Core Device profile is actually US Core Implanted Device Profile rather than a generic US Core Device, GF#20971 Add UDI Elements including Parsed UDI-DI and applicable UDI-PIs, GF#22901 Update Device Intro and Examples per FDA)
-- 5.1.1 - [US Core Encounter Type](terminology.html) (GF#22853 Add SNOMED back to Encounter Type Value Set)
-- 5.1.1 - [US Core Procedure Code](terminology.html) (GF#23053 US Core Procedure Code Value Set Description and Content Don't Match)
+- 5.1.1 - [US Core Encounter Type](ValueSet-us-core-encounter-type.html) (GF#22853 Add SNOMED back to Encounter Type Value Set)
+- 5.1.1 - [US Core Procedure Code](ValueSet-us-core-procedure-code.html) (GF#23053 US Core Procedure Code Value Set Description and Content Don't Match)
 
 
 

@@ -10,55 +10,7 @@ This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part 
 
 These value sets have been defined for this implementation guide.
 
-- [US Core Medication Codes(RxNorm)](ValueSet-us-core-medication-codes.html)
-- [US Core SmokingStatus](ValueSet-us-core-observation-smokingstatus.html)
-- [OMB Race Categories](ValueSet-omb-race-category.html)
-- [US Core Common substances for allergy and intolerance documentationincluding refutations](ValueSet-us-core-allergy-substance.html)
-- [US Core Narrative Status](ValueSet-us-core-narrative-status.html)
-- [US Core DocumentReferenceType](ValueSet-us-core-documentreference-type.html)
-- [US Core Provenance Participant TypeCodes](ValueSet-us-core-provenance-participant-type.html)
-- [OMB Ethnicity Categories](ValueSet-omb-ethnicity-category.html)
-- [US Core Condition CategoryCodes](ValueSet-us-core-condition-category.html)
-- [Detailed ethnicity](ValueSet-detailed-ethnicity.html)
-- [US Core Vaccine National Drug Codes(NDC)](ValueSet-us-core-ndc-vaccine-codes.html)
-- [US Core ICD-10-PCS ProcedureCodes](ValueSet-us-core-procedure-icd10pcs.html)
-- [US Core Provider Speciality(NUCC)](ValueSet-us-core-provider-specialty.html)
-- [US Core Vaccine Administered Value Set(CVX)](ValueSet-us-core-vaccines-cvx.html)
-- [US Core Status for Smoking StatusObservation](ValueSet-us-core-observation-smoking-status-status.html)
-- [USPS Two Letter Alphabetic Codes](ValueSet-us-core-usps-state.html)
-- {: .note-to-balloters}[US Core Encounter Type](ValueSet-us-core-encounter-type.html)
-- [US Core Problem](ValueSet-us-core-problem.html)
-- [Birth Sex](ValueSet-birthsex.html)
-- [US Core Diagnosticreport Report And NoteCodes](ValueSet-us-core-diagnosticreport-report-and-note-codes.html)
-- [US Core Provider Role (NUCC)](ValueSet-us-core-provider-role.html)
-- [US Core Smoking Status ObservationCodes](ValueSet-us-core-smoking-status-observation-codes.html)
-- [US Core CareTeam ProviderRoles](ValueSet-us-core-careteam-provider-roles.html)
-- [US Core DiagnosticReportCategory](ValueSet-us-core-diagnosticreport-category.html)
-- [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
-- [US Core DocumentReferenceCategory](ValueSet-us-core-documentreference-category.html)
-- [US Core Procedure Codes](ValueSet-us-core-procedure-code.html)
-- [Language codes with language and optionally a regionmodifier](ValueSet-simple-language.html)
-- [US Core Observation Value Codes(SNOMED-CT)](ValueSet-us-core-observation-value-codes.html)
-- [US Core Diagnostic Report LaboratoryCodes](ValueSet-us-core-diagnosticreport-lab-codes.html)
-- [US Core Problem](ValueSet-us-core-problem.html)
-- [Birth Sex](ValueSet-birthsex.html)
-- [US Core Diagnosticreport Report And NoteCodes](ValueSet-us-core-diagnosticreport-report-and-note-codes.html)
-- [US Core Provider Role (NUCC)](ValueSet-us-core-provider-role.html)
-- [US Core Smoking Status ObservationCodes](ValueSet-us-core-smoking-status-observation-codes.html)
-- [US Core CareTeam ProviderRoles](ValueSet-us-core-careteam-provider-roles.html)
-- [US Core DiagnosticReportCategory](ValueSet-us-core-diagnosticreport-category.html)
-- [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
-- [US Core DocumentReferenceCategory](ValueSet-us-core-documentreference-category.html)
-- {: .note-to-balloters}[US Core Procedure Codes](ValueSet-us-core-procedure-code.html)
-- [Language codes with language and optionally a regionmodifier](ValueSet-simple-language.html)
-- [US Core Observation Value Codes(SNOMED-CT)](ValueSet-us-core-observation-value-codes.html)
-- [US Core Diagnostic Report LaboratoryCodes](ValueSet-us-core-diagnosticreport-lab-codes.html)
-- [Detailed Race](ValueSet-detailed-race.html)
-
-
-<!-- {% raw %}
 {% include list-simple-valuesets.xhtml %}
-{% endraw %} -->
 
 ### Code Systems
 
