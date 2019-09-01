@@ -32,7 +32,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1. the prescription *Sig*
 **Profile specific implementation guidance:**
 
-* See the [Medication List Guidance] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
+* {: .note-to-balloters}See the [Medication List Guidance] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
 *  The MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
     *  When referencing a Medication resource,  the resource may be [contained] or an external resource.
     *  The server application MAY choose any combination of these methods, but if an external reference to Medication is used, the server SHALL support the [include] parameter for searching this element.
