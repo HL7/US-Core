@@ -23,7 +23,7 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [DocumentReference Format Code Set](http://hl7.org/fhir/ValueSet/formatcodes)
 
 #### Summary of the Must Support Requirements
-1. One or more  Identifiers  in `DocumentReference.identifier`
+1. {: note-to-balloters)One or more  Identifiers  in `DocumentReference.identifier`
 1.  An  instant  in `DocumentReference.date`
 1. One or more Author References  in `DocumentReference.author`
 1.  A Custodian Reference  in `DocumentReference.custodian`
