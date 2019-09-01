@@ -25,7 +25,7 @@ In order meet the proposed ONC [U.S. Core Data for Interoperability (USCDI)] reg
 - Guidance on fetching a patient's medications
 - A US Core spO2 by Pulse Oximetry profile
 - Recasting the US Core Device profile into a US Core Implantable Device profile
-- Making server search requirements less opaque
+- Making server search requirements less opaque and requiring search ny multiple statuses.
 - Guidance when the source has no data
 - General guidelines and considerations for DSTU2 to R4 Conversion
 - Guidance for language support
@@ -57,8 +57,8 @@ The following pages and section have be removed (Links to US Core Implementation
 - [Syntax for searches limited by patient](http://hl7.org/fhir/us/core/STU3/general-guidance.html#syntax-for-searches-limited-by-patient)
 
 Other technical Corrections that cannot be highlighted since they are embeded in the JSON and XML Representations.
-
- - Converted fixed values to patterns for US Core CarePlan Profile, US Core Pediatric Weight for Height Observation Profile, US Core Pediatric BMI for Age Observation Profile, US Core Practitioner Profile and US Core Organization Profile, and US Core Pulse Oximetry Profile
+- Added conformance expectation of SHALL for the`multipleOR` SearchParameter element for all status parameters.  An example of this can be seen [here](SearchParameter-us-core-careplan-status.html).
+- Converted fixed values to patterns for US Core CarePlan Profile, US Core Pediatric Weight for Height Observation Profile, US Core Pediatric BMI for Age Observation Profile, US Core Practitioner Profile and US Core Organization Profile, and US Core Pulse Oximetry Profile
 </div>
 
 ### Introduction
