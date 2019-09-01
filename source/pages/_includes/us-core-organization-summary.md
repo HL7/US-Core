@@ -5,8 +5,8 @@
 1.  A  string  in `Organization.name`
 
 #### Summary of the Must Support Requirements
-1.{: .note-to-balloters}One or more  Identifiers  in `Organization.identifier`
-1.{: .note-to-balloters}A  Identifier  in `Organization.identifier`
+1. {: .note-to-balloters}One or more  Identifiers  in `Organization.identifier`
+1. {: .note-to-balloters}A  Identifier  in `Organization.identifier`
    - which should have a fixed `Organization.identifier.system` = `http://example.org/fhir/sid/us-npi`
    - which should have a  string value  in `Organization.identifier.value`
 1.  A  Identifier  in `Organization.identifier`
