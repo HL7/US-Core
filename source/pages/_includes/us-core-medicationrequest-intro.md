@@ -19,7 +19,11 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each MedicationRequest must have:**
 
 1.  a status
+{: }
+
 1.  an intent code to indicate whether an order or proposal
+{: .note-to-balloters}
+
 1.  a medication
 1.  a patient
 1.  a date for when written
@@ -28,7 +32,11 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each MedicationRequest must support:**
 
 1. the `reported` flag signaling that information is from a secondary source such as a patient.
+{: .note-to-balloters}
+
 1. the encounter
+{: .note-to-balloters}
+
 1. the prescription *Sig*
 
 **Profile specific implementation guidance:**
