@@ -51,6 +51,7 @@ In the context of US Core, *Must Support* on any data element SHALL be interpret
 
 Many of the profiles in this guide [reference]({{site.data.fhir.path}}references.html) other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core Careteam](StructureDefinition-us-core-careteam.html#profile) references US Core Patient.  For any other references not formally defined in a US Core profiles, the referenced resource SHOULD be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.
 
+<div class="note-to-balloters" markdown="1">
 ### Missing Data
 
 If the source system does not have data for a *Must Support* data element, the data element is omitted from the resource as described above.  If the source system does not have data for a *required* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
@@ -88,7 +89,7 @@ If the source system does not have data for a *Must Support* data element, the d
           - `DocumentReference.status`
           - `CarePlan.text.status`
           - `Goal.lifecycleStatus`
-
+</div>
 
 ### Using Codes in US Core profiles
 

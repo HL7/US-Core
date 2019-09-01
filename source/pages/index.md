@@ -26,6 +26,7 @@ In order meet the proposed ONC [U.S. Core Data for Interoperability (USCDI)] reg
 - A US Core spO2 by Pulse Oximetry profile
 - Recasting the US Core Device profile into a US Core Implantable Device profile
 - Making server search requirements less opaque
+- Guidance when the source has no data
 - General guidelines and considerations for DSTU2 to R4 Conversion
 - Guidance for language support
 - Considerations for Fetching data for multiple patients
@@ -34,7 +35,7 @@ In order meet the proposed ONC [U.S. Core Data for Interoperability (USCDI)] reg
 These sections as well as several other clarifications, corrections and technical changes that are listed in the sections below have been reviewed and voted on by the members of the [HL7 International Structured Documents WorkGroup](http://www.hl7.org/Special/committees/structure/index.cfm) who is sponsoring this STU Update comment period and reconciliation of the comments.
 
 The following pages, page sections are open to review and comment for this US Core Implementation Guide (v3.0.1: STU3) STU Update:
-
+- 2.1.1.5 [Missing Data](general-guidance.html#missing-data)
 - 2.1.1.8 [Language Support](general-guidance.html#language-support)
 - 2.1.1.12 [Search for Servers Requiring Status](general-guidance.html#search-for-servers-requiring-status)
 - 2.1.1.13 [Searching multiple patients](general-guidance.html#searching-multiple-patients)
@@ -53,6 +54,9 @@ The following pages and section have be removed (Links to US Core Implementation
 - [Extensible + Max-ValueSet binding for CodeableConcept Datatype](http://hl7.org/fhir/us/core/STU3/general-guidance.html#max-binding)
 - [Syntax for searches limited by patient](http://hl7.org/fhir/us/core/STU3/general-guidance.html#syntax-for-searches-limited-by-patient)
 
+Other technical Corrections that cannot be highlighted since they are embeded in the JSON and XML Representations.
+
+ - Converted fixed values to patterns for US Core CarePlan Profile, US Core Pediatric Weight for Height Observation Profile, US Core Pediatric BMI for Age Observation Profile, US Core Practitioner Profile and US Core Organization Profile, and US Core Pulse Oximetry Profile
 </div>
 
 ### Introduction

@@ -1,4 +1,4 @@
-
+<div class="note-to-balloters" markdown="1">
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
 
@@ -11,7 +11,7 @@ The following search parameters, search parameter combinations SHALL be supporte
     `GET [base]/MedicationRequest?patient=[reference]&intent=http://hl7.org/fhir/CodeSystem/medicationrequest-intent|order`
 
     Example:
-    
+
       1. GET [base]/MedicationRequest?patient=14676&amp;intent=http://hl7.org/fhir/CodeSystem/medicationrequest-intent|order
       1. GET [base]/MedicationRequest?patient=14676&amp;intent=http://hl7.org/fhir/CodeSystem/medicationrequest-intent|order&amp;_include=MedicationRequest:medication
 
@@ -23,7 +23,7 @@ The following search parameters, search parameter combinations SHALL be supporte
     `GET [base]/MedicationRequest?patient=[reference]&intent=http://hl7.org/fhir/CodeSystem/medicationrequest-intent|order&status={[system]}|[code]{,{[system]}|[code],...}`
 
     Example:
-    
+
       1. GET [base]/MedicationRequest?patient=1137192&amp;status=active
       1. GET [base]/MedicationRequest?patient=1137192&amp;status=active&amp;_include=MedicationRequest:medication
 
@@ -39,7 +39,7 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/MedicationRequest?patient=[reference]&intent=http://hl7.org/fhir/CodeSystem/medicationrequest-intent|order&encounter=[reference]`
 
     Example:
-    
+
       1. GET [base]/MedicationRequest?patient=1137192&amp;status=active
       1. GET [base]/MedicationRequest?patient=1137192&amp;status=active&amp;_include=MedicationRequest:medication
 
@@ -52,10 +52,10 @@ The following search parameters, search parameter combinations and search parame
     `GET [base]/MedicationRequest?patient=[reference]&intent=http://hl7.org/fhir/CodeSystem/medicationrequest-intent|order&authoredon={gt|lt|ge|le}[date]{&authoredon={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]/MedicationRequest?patient=1137192&amp;effective=ge2019
       1. GET [base]/MedicationStatement?patient=1137192&amp;effective=ge2019&amp;_include=MedicationRequest:medication
 
     *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient and intent  code = `order` and authoredon date ([how to search by reference] and [how to search by token] and [how to search by date])
-
+</div>
 {% include link-list.md %}
