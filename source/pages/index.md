@@ -37,6 +37,7 @@ In order meet the proposed ONC [U.S. Core Data for Interoperability (USCDI)] reg
 These sections as well as several other clarifications, corrections and technical changes that are listed in the sections below have been reviewed and voted on by the members of the [HL7 International Structured Documents WorkGroup](http://www.hl7.org/Special/committees/structure/index.cfm) who is sponsoring this STU Update comment period and reconciliation of the comments.
 
 The following pages, page sections and artifacts are open to review and comment for this US Core Implementation Guide (v3.0.1: STU3) STU Update:
+- 2.1.1.1 [U.S. Core Data for Interoperability and 2015 Edition Common Clinical Data Set](general-guidance.html#us-core-data-for-interoperability-and-2015-edition-common-clinical-data-set)
 - 2.1.1.5 [Missing Data](general-guidance.html#missing-data) (GF#22276 update guidance on when source has no data)
 - 2.1.1.8 [Language Support](general-guidance.html#language-support) (GF#22753 Add language support guidance )
 - 2.1.1.12 [Search for Servers Requiring Status](general-guidance.html#search-for-servers-requiring-status) (GF#22754 Provide guidance on Search filters and hidden default values by EHRs)
