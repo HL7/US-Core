@@ -60,7 +60,7 @@ The following pages and section have be removed (Links to US Core Implementation
 Other technical Corrections that cannot be highlighted since they are embeded in the JSON and XML Representations.
 - Added conformance expectation of SHALL for the`multipleOR` SearchParameter element for all status parameters.  An example of this can be seen [here](SearchParameter-us-core-careplan-status.html). (GF#22756 Add SHALL support multipleOR on Statuses)
 - Converted fixed values to patterns for US Core CarePlan Profile, US Core Pediatric Weight for Height Observation Profile, US Core Pediatric BMI for Age Observation Profile, US Core Practitioner Profile and US Core Organization Profile, and US Core Pulse Oximetry Profile (GF#22772 change careplan slice disciminator from pattern to slice for easier reading in diff)
--Update US Core DocumentReference.identifier from 0..1 to 0..* ()*
+-Update US Core `DocumentReference.identifier` from 0..1 to 0..* (GF#22806 Update US Core DocumentReference.identifier to 0..*)
 </div>
 
 ### Introduction
