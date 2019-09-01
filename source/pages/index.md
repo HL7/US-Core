@@ -34,7 +34,7 @@ In order meet the proposed ONC [U.S. Core Data for Interoperability (USCDI)] reg
 
 These sections as well as several other clarifications, corrections and technical changes that are listed in the sections below have been reviewed and voted on by the members of the [HL7 International Structured Documents WorkGroup](http://www.hl7.org/Special/committees/structure/index.cfm) who is sponsoring this STU Update comment period and reconciliation of the comments.
 
-The following pages, page sections are open to review and comment for this US Core Implementation Guide (v3.0.1: STU3) STU Update:
+The following pages, page sections and artifacts are open to review and comment for this US Core Implementation Guide (v3.0.1: STU3) STU Update:
 - 2.1.1.5 [Missing Data](general-guidance.html#missing-data) (GF#22276 update guidance on when source has no data)
 - 2.1.1.8 [Language Support](general-guidance.html#language-support) (GF#22753 Add language support guidance )
 - 2.1.1.12 [Search for Servers Requiring Status](general-guidance.html#search-for-servers-requiring-status) (GF#22754 Provide guidance on Search filters and hidden default values by EHRs)
@@ -48,10 +48,10 @@ The following pages, page sections are open to review and comment for this US Co
 - 3.23.1.1 - [StructureDefinition-us-core-organization](StructureDefinition-us-core-organization.html#mandatory-and-must-support-data-elements)  (GF#22771 Update Organization requirements to support more than just provider directory)
 - 3.28.1.1 - [StructureDefinition-us-core-medicationrequest](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements) (GF#22751 Add med list guidance and update MedRequest profile to support med list)
 - 3.28.1.4 - [MedicationRequest Quick Start](StructureDefinition-us-core-medicationrequest.html#quick-start) (GF#22751 Add med list guidance and update MedRequest profile to support med list)
-- 3.29 - [StructureDefinition US Core Implantable Device](StructureDefinition-us-core-implantable-device.html)
+- 3.29 - [StructureDefinition US Core Implantable Device](StructureDefinition-us-core-implantable-device.html)(GF#22851 Rename US Core Device Profile)
 
 
-The following pages and section have be removed (Links to US Core Implementation Guide (v3.0.0: STU3)):
+The following pages and sections have be removed (Links to US Core Implementation Guide (v3.0.0: STU3)):
 
 - [US Core MedicationStatement Profile and SearchParameters](http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-medicationstatement.html) (GF#22751 Add med list guidance and update MedRequest profile to support med list)
 - [Extensible + Max-ValueSet binding for CodeableConcept Datatype](http://hl7.org/fhir/us/core/STU3/general-guidance.html#max-binding)
