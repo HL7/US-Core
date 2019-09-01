@@ -55,11 +55,7 @@ The following items were submitted during a US Core ballot or STU comment. Addit
     - with recent lab results  
     - currently in the Emergency Department
     - with an Allergy to X
-
-
 * {: .note-to-balloters}Future considerations for times offset and timezone guidelines (TODO provide current state and future guidance)
-
-
 
 ------------------------------------------------------------------------
 
