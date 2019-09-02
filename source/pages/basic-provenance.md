@@ -16,11 +16,11 @@ topofpage: true
 
 The FHIR [Provenance] Resource provides a foundation for assessing authenticity, enabling trust, and allowing reproducibility. It isn't scoped to a specific use case, nor limits the number of Provenance records associated with a Resource. The basic guidance here, and in the [US Core Provenance Profile] focuses on a key subset of elements, the 'last hop', and specific use cases. The guidance here doesn't preclude more advanced use cases or additional elements.
 
-Full Provenance of a Resource requires details from the original creator of a Resource and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches, and display to end user, and agreed the most important information is the prior system providing the data, the 'last hop'.  Participants didn't dispute the potential need to recreate the full chain, but didn't see this as relevant to the immediate end-user.
+Full Provenance of a Resource requires details from the original creator of a Resource and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches, and display to end user, and agreed the most important information is the last organization making a meaningful clinic update to the data, and the prior system providing the data, the 'last hop'.  Participants didn't dispute the potential need to recreate the full chain, but didn't see this as relevant to the immediate end-user.
 
 #### Key Provenance Elements
 
-The guidance for Provenance in US Core focuses on 4 key elements: Author, Author Organization, Timestamp, and the Target Resource. The Author represents the person(s) responsible for the information. The Author Organization represents the organization the author is associated when they created, updated, or deleted the data. The timestamp is the date and time the author created, updated, or deleted the data. The target is the Resource the Provenance record supports.
+The guidance for Provenance in US Core focuses on 6 key elements: Timestamp, the Target Resource, Author, Author Organization, Transmitter, and Transmitter Organization. The timestamp is the date and time the author created, updated, or deleted the data. The target is the Resource the Provenance record supports. The Author represents the person(s) responsible for the information. The Author Organization represents the organization the author is associated when they created, updated, or deleted the data. The Transmitter represents the system responsible for transmitting the information. The Transmitter Organization represents the organization responsible for the transmission. 
 
 **Key Provenance elements:**
 
@@ -80,7 +80,7 @@ Since no clinical content is changed in the HIE redistribution the best scenario
 - Provenance.agent.type = transmitter 
   - Provenance.agent.who set to the HIE organization 
  
- The timestamp and pointer (i.e. target) to the appropriate Resource is required in all cases and must be included. This IG would note these as **SHALL** constraints if systems always provided the Author, and Author Organizations. Participants in the development of this guide reported Author information provided to HIEs is inconsistent and unreliable.  
+ The timestamp and pointer (i.e. target) to the appropriate Resource is required in all cases and must be included. This IG would note these as **SHALL** constraints if systems always had the Author and Author Organizations available. Participants in the development of this guide reported Author information provided to HIEs is inconsistent and unreliable.  
 
 
 #### HIE Transformation
@@ -93,7 +93,7 @@ Alternatively, the HIE is the author/author organization if they created new inf
 
 {% include img.html img="Provenance_HIE_Multi_Org_Device.svg" caption="Figure 4: HIE Transformation - Clinical content is transformed" %}
 
-In figure 4, each different stripe in the folder represents a different Resource. For the 3 items where the information is carried from the original system  the best scenario is a single Provenance Record with:
+In figure 4, each different stripe in the folder represents a different Resource. For the 3 items where the information is carried from the original system the best scenario is a single Provenance Record for each Resource with:
 - Provenance.agent.type = author
   - Provenance.agent.who set to the practitioner who authored the content (i.e. not the HIE)
   - Provenance.agent.onBehalfOf set to the organization that author acted on behalf of before sharing with the HIE
