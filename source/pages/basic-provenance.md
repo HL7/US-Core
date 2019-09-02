@@ -36,7 +36,7 @@ Transmitter Organization | | Name<br>Identifier  | NPI recommended, additional i
 
 ### Use Cases
 
-The HL7 Basic Provenance Informative implementation guide outlines four use cases: Fax, Health Information Exchange (HIE) redistribution, HIE transformation, and Clinical Information Reconciliation and Incorporation (CIRI). While these use cases may have FHIR implications in the future, CIRI is the key use case and is covered in detail here.
+The HL7 Basic Provenance Informative implementation guide outlines four use cases: Fax, Health Information Exchange (HIE) redistribution, HIE transformation, and Clinical Information Reconciliation and Incorporation (CIRI). While these use cases may have FHIR implications in the future, CIRI and HIE are the key use cases and are covered in detail here.
 
 #### Clinical Information Reconciliation and Incorporation 
 
@@ -67,8 +67,50 @@ The Figure below represents information after a provider accepted information fr
 
 Dr. Accepted is the latest author after verifying the problem on 5/2018 and accepting the problem data into their local data store, since it went through an interactive reconciliation process. This type of authorship change is only relevant for data fit for reconciliation, such as medications, allergies, problems. If Dr. Accepted had saved other clinical content into his EHR that aren't reconciled but simply stored, such as clinical notes, that content must retain its original author.
 
+#### HIE Redistribution 
+
+A Health Information Exchange (HIE) is an organization and technology to facilitate exchange from one to many partners. In certain HIE scenarios they only redistribute information, while in others they store, transform, and redistribute information. The HIE must keep fidelity of the clinical content, (original author, author organization, and timestamp). The HIE must keep track of who sent them the information for auditing, however, they are not required to include the original transmitter when redistributing content. 
+
+{% include img.html img="Provenance_HIE_Single_Org_Device.svg" caption="Figure 3: HIE Redistribution - No clinical content transformation" %}
+
+Since no clinical content is changed in the HIE redistribution the best scenario is a single Provenance Record with:
+- Provenance.agent.type = author
+  - Provenance.agent.who set to the practitioner who authored the content (i.e. not the HIE)
+  - Provenance.agent.onBehalfOf set to the organization that author acted on behalf of before sharing with the HIE
+- Provenance.agent.type = transmitter 
+  - Provenance.agent.who set to the HIE organization 
+ 
+ The timestamp and pointer (i.e. target) to the appropriate Resource is required in all cases and must be included. This IG would note these as **SHALL** constraints if systems always provided the Author, and Author Organizations. Participants in the development of this guide reported Author information provided to HIEs is inconsistent and unreliable.  
+
+
+#### HIE Transformation
+
+Different from Use Case 3 - HIE Redistribution, Use Case 4 includes transformation of data. Information is received (e.g. v2 lab, other CDs) and transformed by a HIE, stored, and then passed in a new format (e.g. CCD). Source data is not manipulated beyond transforming into a new format. 
+Transformation of data from one format to another does not change the authorship of the information. The HIE is only the author/author organization if they produce and include new information.
+For example, if a v2 lab message is received and stored into the HIE, and then subsequently included in a CDA document, the author/author organization is the lab that sent the original message. The addition of terminology translations, or additional identifiers, should not influence the authorship of the information. 
+Alternatively, the HIE is the author/author organization if they created new information, such as calculation of a quality measure score. If specific clinical elements were included to support the quality calculation, they would reference their original author/author organization
+
+
+{% include img.html img="Provenance_HIE_Multi_Org_Device.svg" caption="Figure 4: HIE Transformation - Clinical content is transformed" %}
+
+In figure 4, each different stripe in the folder represents a different Resource. For the 3 items where the information is carried from the original system  the best scenario is a single Provenance Record with:
+- Provenance.agent.type = author
+  - Provenance.agent.who set to the practitioner who authored the content (i.e. not the HIE)
+  - Provenance.agent.onBehalfOf set to the organization that author acted on behalf of before sharing with the HIE
+- Provenance.agent.type = transmitter 
+  - Provenance.agent.who set to the HIE organization 
+ 
+This matches the requirements of HIE Redistribution.
+
+For the new content, the HIE is the Author so the following is recommenced:
+- Provenance.agent.type = author
+   - Provenance.agent.onBehalfOf set to the HIE organization
+- Provenance.agent.type = transmitter 
+  - Provenance.agent.who set to the HIE organization 
+ 
 
 ### Development of `us-core-includeprovenance` parameter
+
 The original design in this guide required support for the `_revinclude` parameter (see [Including other resources in result]({{site.data.fhir.path}}search.html#revinclude)) to retrieve a Provenance Record. After discussing this approach at length with the Argonaut community, and client developers, the US Core guidance shifted to the custom parameter `us-core-includeprovenance`. 
 
 Functionally, the searches
