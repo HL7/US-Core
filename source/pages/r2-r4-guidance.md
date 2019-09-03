@@ -26,9 +26,7 @@ FHIR Version - a client should know which version they are dealing with without 
 * A server **SHOULD** make explicit which version of Argo/US Core on their FHIR endpoint
    - e.g., "DSTU2" or “R4" path component or separate files based on version
 
-~~~
-  TODO Discuss with Argonauts/HL7 on single approach.
-~~~
+   A single best practice may be defined in a future version of this guide through continued engagement with the implementer community.
 
 ### No Guarantee that Resource IDs are Preserved
 
