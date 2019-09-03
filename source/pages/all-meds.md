@@ -10,8 +10,7 @@ topofpage: true
 
 <!-- end TOC -->
 The guidance below addresses how a patient or a provider can access a patients' active, historical and future (planned) medications list.  This use case adopts the use cases defined as part of the Argonaut Project and US Core, specifically within the scope of accessing medication information as prescribed in the proposed ONC U.S. Core Data for Interoperability (USCDI).
-
-This section provide specific guidance on how to to access “all medications” and “all active medications” for a patient using  a query on MedicationRequest*.  Note that in prior versions of this guide, a query on *MedicationStatement* was required. This change is due to underlying changes in the FHIR Release 4 pharmacy resources.[^1]
+\This section provide specific guidance on how to to access “all medications” and “all active medications” for a patient using  a query on MedicationRequest*.  Note that in prior versions of this guide, a query on *MedicationStatement* was required. This change is due to underlying changes in the FHIR Release 4 pharmacy resources.[^1]
 
 ### Background on the FHIR Medications resources
 
@@ -20,11 +19,11 @@ This section provide specific guidance on how to to access “all medications”
 
 The FHIR specification defines 5 FHIR pharmacy resources concerned with the ordering, dispensing, administration and recording of medications.  Note that as stated above, this IG uses *only* Medication and MedicationRequest to access a patient's medications:
 
-- [Medication]:  Represents the medication itself
-- [MedicationRequest]: Represents an authorization to dispense and administer a medication (aka prescription or order).  
-- [MedicationDispense]: Represents a response to a prescription - provision of a supply of a medication. **Not used for accessing a patient's medications**
-- [MedicationAdministration]: Represents the consumption or administration of a medication. **Not used for accessing a patient's medications**
-- [MedicationStatement]: Represents the record for past present and future medications use. **Not used for accessing a patient's medications**
+- [Medication]\:  Represents the medication itself
+- [MedicationRequest]\: Represents an authorization to dispense and administer a medication (aka prescription or order).  
+- [MedicationDispense]\: Represents a response to a prescription - provision of a supply of a medication. **Not used for accessing a patient's medications**
+- [MedicationAdministration]\: Represents the consumption or administration of a medication. **Not used for accessing a patient's medications**
+- [MedicationStatement]\: Represents the record for past present and future medications use. **Not used for accessing a patient's medications**
 
 Details about each resource can be found in the FHIR specification.  A general discussion regarding the interaction between these resources is described in the FHIR [Medications Module] and the [Guide to Resources] Sections.
 

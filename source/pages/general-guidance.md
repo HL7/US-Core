@@ -17,6 +17,7 @@ The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used below and in this 
 ---
 
 <!-- end TOC -->
+<div class="note-to-balloters" markdown="1">
 ### U.S. Core Data for Interoperability and 2015 Edition Common Clinical Data Set
 
 The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access – Data Category Request 170.315(g)(8). They were created for each item in the [2015 Edition Common Clinical Data Set (CCDS)].  The Location, Organization, and Practitioner Profiles are not called out specifically in the certification criteria but are included because they are directly referenced by other profiles.  The US Core Profiles are informed by the prior [Data Access Framework] and the [Argonaut Data Query] Implementation Guides. However, the profiles here are stand alone and include new requirements from the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)] and includes all the [API Resource Collection in Health (ARCH)] resources.
@@ -24,6 +25,7 @@ The US Core Profiles were originally designed to meet the 2015 Edition certifica
 The table below lists the US Core Profile and FHIR Resources used for the corresponding USCDI Data elements:
 
 {% include uscdi_table.md %}
+</div>
 
 ### Changes Between Major Version of FHIR
 
@@ -368,6 +370,8 @@ US Core servers are not required to resolve full URLs that are external to their
 In order to manage the number of search results returned, the server may choose to return the results in a series of pages. The search result set contains the URLs that the client uses to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
 
 ------------------------------------------------------------------------
-[^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset&action=edit&section=1
+<!--
+[^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset#Time_zones_and_time_offsets
+-->
 
 {% include link-list.md %}

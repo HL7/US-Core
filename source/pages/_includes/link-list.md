@@ -232,3 +232,4 @@
 [us-core-race]: SearchParameter-us-core-race.html
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
 [reference]: {{site.data.fhir.path}}references.html
+[timezone extension]: {{site.data.fhir.path}}extension-tz-code.html
