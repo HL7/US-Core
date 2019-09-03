@@ -1,4 +1,4 @@
-This profile sets minimum expectations for the [Provenance] resource to record, search and fetch Provenance information associated with a record. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. This FHIR Provenance profile here covers the minimal (basic) information to support lineage of information.      
+This profile sets minimum expectations for the [Provenance] resource to record, search and fetch Provenance information associated with a record. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. This FHIR Provenance profile here covers the minimal (basic) information to support lineage of information. Prior to reviewing this profile, implementers are encouraged to read the [Basic Provenance] guidance page which documents several key use cases.       
 
 **Example Usage Scenarios:**
 
