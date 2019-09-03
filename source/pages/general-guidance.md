@@ -223,12 +223,75 @@ The following guidelines outline how to request and return a resource in the req
 * Clients MAY request language/locale using the http `Accept-Language` header.  < link >
 * Servers SHOULD make reasonable efforts to translate what can be safely translated.
 * Servers SHOULD populate the Resource's `language` element which is reasonably based on the underlying language of record, *not* the requested language.
-    * Servers SHALL use the http://hl7.org/fhir/StructureDefinition/language extension when the language of a display, etc is known to be different to the stated (or inferred) language.
+    * Servers SHALL use the <http://hl7.org/fhir/StructureDefinition/language> extension when the language of a display, etc is known to be different to the stated (or inferred) language.
 
-          <todo  example snippet>
+    Example
+    ~~~
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Patient xmlns="http://hl7.org/fhir">
+            <id value="language-example-1"/>
+            <meta>
+            [...snip...]
+            </meta>
+            <language value="es"/>
+            <!--0..1 Language of the resource content in this case Spanish-->
+            <text>
+            [...snip...]
+            </text>
+            <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
+                <extension url="ombCategory">
+                    <valueCoding>
+                        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                        <code value="2106-3"/>
+                        <display value="White">
+                            <!--Human Language extension-->
+                            <extension url="http://hl7.org/fhir/StructureDefinition/language">
+                                <valueCode value="en"/>
+                                <!--English is different from stated language-->
+                            </extension>
+                        </display>
+                    </valueCoding>
+                </extension>
+            [...snip...]
+    ~~~
 
-* Servers SHALL use the http://hl7.org/fhir/StructureDefinition/translation where they wish to provide language translations.
-        <todo  example snippet>
+* Servers SHALL use the <http://hl7.org/fhir/StructureDefinition/translation> where they wish to provide language translations.
+
+  Example
+  ~~~
+      <?xml version="1.0" encoding="UTF-8"?>
+      <Patient xmlns="http://hl7.org/fhir">
+          <id value="language-example-2"/>
+          <meta>
+          [...snip...]
+          </meta>
+          <language value="en"/>
+          <!--0..1 Language of the resource content: English-->
+          <text>
+          [...snip...]
+          </text>
+          <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
+              <extension url="ombCategory">
+                  <valueCoding>
+                      <system value="urn:oid:2.16.840.1.113883.6.238"/>
+                      <code value="2106-3"/>
+                      <display value="White">
+                      <!-- Translation -->
+                      <extension
+                           url="http://hl7.org/fhir/StructureDefinition/translation" >
+                       <extension url="lang"> <!-- 1..1 Code for Language -->
+                        <valueCode value="es"/><!-- 0..1 Value of extension -->
+                       </extension>
+                       <extension url="content"> <!-- 1..1 Content in other Language -->
+                        <valueString value="Blanca">
+                       </extension>
+                      </extension>
+                      </display>
+                  </valueCoding>
+              </extension>
+              [...snip...]
+  ~~~
+
 * Servers SHALL make discoverable what languages it can support.
   - via its CapabilityStatement
   - other means
