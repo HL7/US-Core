@@ -24,7 +24,7 @@
 	<differential>
 		<element id="Provenance">
 			<path value="Provenance"/>
-			<short value="US Core Provenance - DRAFT"/>
+			<short value="US Core Provenance"/>
 			<definition value="The US Core Provenance Profile is based upon the Argonaut Data Query requirements."/>
 			<alias value="Basic Provenance"/>
 			<mustSupport value="false"/>
@@ -72,11 +72,11 @@
 			<path value="Provenance.agent.type"/>
 			<min value="0"/>
 			<max value="1"/>
-			
+
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
-		
+
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 			<binding>
@@ -84,15 +84,52 @@
 				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-provenance-participant-type"/>
 			</binding>
 		</element>
-		<element id="Provenance.agent:ProvenanceAuthorSlice">
+
+		<element id="Provenance.agent.who">
+			<path value="Provenance.agent.who"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Provenance.agent.onBehalfOf">
+
+			<path value="Provenance.agent.onBehalfOf"/>
+			<!-- short value="SHALL be present when Provenance.agent.who is a Practitioner or device."/ -->
+			<min value="0"/>
+			<max value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+			</type>
+			<constraint>
+				<key value="provenance-1"/>
+				<severity value="error"/>
+				<human value="onBehalfOf SHALL be present when Provenance.agent.who is a Practitioner or Device"/>
+				<expression value="($this.agent.who.resolve().is Practitioner or Device) implies exists()"/>
+			</constraint>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+
+		<element id="Provenance.agent:ProvenanceAuthor">
 			<path value="Provenance.agent"/>
-			<sliceName value="ProvenanceAuthorSlice"/>
+			<sliceName value="ProvenanceAuthor"/>
 			<min value="0"/>
 			<max value="*"/>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
-		<element id="Provenance.agent:author.type">
+		<element id="Provenance.agent.type:ProvenanceAuthor">
 			<path value="Provenance.agent.type"/>
 			<min value="1"/>
 			<max value="1"/>
@@ -111,53 +148,19 @@
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
-		<element id="Provenance.agent.who">
-			<path value="Provenance.agent.who"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="Provenance.agent.onBehalfOf">
-			<path value="Provenance.agent.onBehalfOf"/>
-			<!-- short value="SHALL be present when Provenance.agent.who is a Practitioner or device."/ -->
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
-			</type>
-			<constraint>
-				<key value="provenance-1"/>
-				<severity value="error"/>
-				<human value="onBehalfOf SHALL be present when Provenance.agent.who is a Practitioner or Device"/>
-				<expression value="($this.agent.who.resolve().is Practitioner or Device) implies exists()"/>
-			</constraint>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="Provenance.agent:ProvenanceTransmitterSlice">
+		<element id="Provenance.agent:ProvenanceTransmitter">
 			<path value="Provenance.agent"/>
-			<sliceName value="ProvenanceTransmitterSlice"/>
+			<sliceName value="ProvenanceTransmitter"/>
 			<min value="0"/>
 			<max value="1"/>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
-		<element id="Provenance.agent:transmitter.type">
+		<element id="Provenance.agent.type:ProvenanceTransmitter">
 			<path value="Provenance.agent.type"/>
 			<min value="1"/>
 			<max value="1"/>
-			
+
 			<type>
 				<code value="CodeableConcept"/>
 			</type>
@@ -168,43 +171,10 @@
 					<code value="transmitter"/>
 				</coding>
 			</patternCodeableConcept>
-			
+
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
-		<element id="Provenance.agent.who">
-			<path value="Provenance.agent.who"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"/>
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
-				<targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
-			</type>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
-		<element id="Provenance.agent.onBehalfOf">
-			<path value="Provenance.agent.onBehalfOf"/>
-			<!-- short value="SHALL be present when Provenance.agent.who is a Practitioner or device."/ -->
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
-			</type>
-			<constraint>
-				<key value="provenance-1"/>
-				<severity value="error"/>
-				<human value="onBehalfOf SHALL be present when Provenance.agent.who is a Device"/>
-				<expression value="($this.agent.who.resolve().is Device) implies exists()"/>
-			</constraint>
-			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
+
 	</differential>
 </StructureDefinition>

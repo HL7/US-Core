@@ -8,7 +8,10 @@ catch(exception){
 }
 
 if (!currentTabIndex)
-  {% if site.default_profile_view %}
+  // to show summaries as default view for comment ballot - need to fix javascipt so can link directly to tabs.
+  {% if site.summary_view_pages contains page.name %}
+  currentTabIndex = '0';
+  {% elsif site.default_profile_view %}
   currentTabIndex = '{{site.default_profile_view}}';
   {% else %}
   currentTabIndex = '1';

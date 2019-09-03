@@ -155,7 +155,7 @@ This profile builds on <a href= "{{site.data.structuredefinitions.{{[id]}}.basep
 {% unless "{{[id]}}" contains "extension"%}
   <div id="all-tbl-summ">
     <div id="all-tbl-summ-inner">
-     <a name="summary"> </a>
+     <!--<a name="summary"> </a>-->
    {% if site.summaries %}
      {% capture my-include %}{% include {{[id]}}-summary.md id="{{[id]}}" %}{% endcapture %}{{ my-include | markdownify }}
    {% else %}
