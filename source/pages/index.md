@@ -23,16 +23,16 @@ All comments for this STU Update must be logged as new [GForge Tracker](http://h
 
 In order meet the proposed ONC [U.S. Core Data for Interoperability (USCDI)] regulatory requirements for access to patient data, this STU Update of the US Core Implementation Guide has added new content. Structured Documents and the [Argonaut Project Team](https://argonautwiki.hl7.org/Argonaut_2019_Projects#Argonaut_R4) have spent the last several months reviewing, testing and providing invaluable feedback on these and other topics including most notably:
 
-- A US Core Provenance Profile and guidance on fetching Provenance for patient data.
-- Guidance on fetching a patient's medications
-- Recasting the US Core Device profile into a US Core Implantable Device profile
-- A US Core spO2 by Pulse Oximetry profile
+- A [US Core Provenance Profile] and [Basic Provenance] guidance on fetching Provenance for patient data.
+- [Medication List Guidance] for fetching a patient's medications
+- Recasting the US Core Device profile into a [US Core Implantable Device Profile]
+- A US Core spO2 by [US Core Pulse Oximetry Profile]
 - Making server search requirements less opaque and requiring search by multiple statuses
-- Guidance when the source has no data
-- General guidelines and considerations for DSTU2 to R4 Conversion
-- Guidance for language support
-- Considerations for fetching data for multiple patients
-- Future considerations for times offset and timezone guidelines
+- Guidance when the source has [no data](general-guidance.html#missing-data)
+- General guidelines and considerations for [DSTU2 to R4 Conversion](r2-r4-guidance.html)
+- Guidance for [language support](general-guidance.html#language-support)
+- Considerations for fetching data for [multiple patients](general-guidance.html#searching-multiple-patients)
+- Future considerations for [times offset and timezone guidelines](future-of-us-core.html#candidates-under-consideration)
 
 These sections as well as several other clarifications, corrections and technical changes that are listed in the sections below have been reviewed and voted on by the members of the [HL7 International Structured Documents WorkGroup](http://www.hl7.org/Special/committees/structure/index.cfm) who is sponsoring this STU Update comment period and reconciliation of the comments.
 
@@ -59,7 +59,7 @@ The following pages, page sections and artifacts are open to review and comment 
 
 
 
-The following pages and sections have be removed (Links to US Core Implementation Guide (v3.0.0: STU3)):
+The following pages and sections have be **removed** (Links to US Core Implementation Guide (v3.0.0: STU3)):
 
 - [US Core MedicationStatement Profile and SearchParameters](http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-medicationstatement.html)  (GF#22751 Add med list guidance and update MedRequest profile to support med list)
 - [Extensible + Max-ValueSet binding for CodeableConcept Datatype](http://hl7.org/fhir/us/core/STU3/general-guidance.html#max-binding) (GF#23773 remove MaxValue Extension from 4 extensible valuesets)
