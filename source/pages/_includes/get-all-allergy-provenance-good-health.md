@@ -24,7 +24,7 @@ A Server returns a search Bundle resource containing all the Allergies for the p
     "link": [
         {
             "relation": "self",
-            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples"
+            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance??patient=Examples&us-core-includeprovenance"
         }
     ],
     "entry": [
