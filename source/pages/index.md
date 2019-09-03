@@ -27,7 +27,7 @@ In order meet the proposed ONC [U.S. Core Data for Interoperability (USCDI)] reg
 - [Medication List Guidance] for fetching a patient's medications
 - Recasting the US Core Device profile into a [US Core Implantable Device Profile]
 - A US Core spO2 by [US Core Pulse Oximetry Profile]
-- Making server search requirements less opaque and requiring search by multiple statuses
+- Updated search to support [requiring search by multiple statuses](general-guidance.html#search-for-servers-requiring-status)
 - Guidance when the source has [no data](general-guidance.html#missing-data)
 - General guidelines and considerations for [DSTU2 to R4 Conversion](r2-r4-guidance.html)
 - Guidance for [language support](general-guidance.html#language-support)
