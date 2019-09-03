@@ -68,19 +68,22 @@
                 </meta>
                 <identifier>
                     <use value="official"/>
-                    <type>
+                    <!-- causing unknown validation error
+                   <type>
                         <coding>
-                            <system value="http://terminology.hl7.org/CodeSystem/identifier-type"/>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
                             <code value="SB"/>
                             <display value="Social Beneficiary Identifier"/>
                         </coding>
                         <text value="US Social Security Number"/>
                     </type>
+                  -->
                     <system value="http://hl7.org/fhir/sid/us-ssn"/>
                     <value value="000001011"/>
                 </identifier>
                 <identifier>
                     <use value="official"/>
+                    <!-- causing unknown validation error
                     <type>
                         <coding>
                             <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
@@ -89,19 +92,22 @@
                         </coding>
                         <text value="US National Provider Identifier"/>
                     </type>
+                  -->
                     <system value="http://hl7.org/fhir/sid/us-npi"/>
                     <value value="9999991011"/>
                 </identifier>
                 <identifier>
                     <use value="official"/>
+                    <!-- causing unknown validation error
                     <type>
                         <coding>
-                            <system value="http://terminology.hl7.org/CodeSystem/identifier-type"/>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
                             <code value="SB"/>
                             <display value="Social Beneficiary Identifier"/>
                         </coding>
                         <text value="Michigan Common Key Service Identifier"/>
                     </type>
+                  -->
                     <system value="http://mihin.org/fhir/cks"/>
                     <value value="d46f70565a1042f6a6ece48dd81b408f"/>
                 </identifier>
