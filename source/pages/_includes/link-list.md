@@ -217,7 +217,8 @@
 [how to search by string]: {{site.data.fhir.path}}search.html#string
 [how to search by the logical id]: {{site.data.fhir.path}}references.html#logical
 [how to search by token]: {{site.data.fhir.path}}search.html#token
-[include]: {{site.data.fhir.path}}search.html#include
+[`_include`]: {{site.data.fhir.path}}search.html#include
+[`_revinclude`]: {{site.data.fhir.path}}search.html#include
 [logical view]: {{site.data.fhir.path}}formats.html#table
 [managing returned resources]: {{site.data.fhir.path}}search.html#return
 [mapping]: general-guidance.html
