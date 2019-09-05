@@ -23,6 +23,6 @@ The following search parameters, search parameter combinations SHALL be supporte
 
       1. GET [base]/AllergyIntolerance?_id=[id]&_revinclude=Provenance:target
 
-        *Implementation Notes:* Fetches a bundle of a resource of a particular type (within the clients authorization scope) and any corresponding Provenance resources. ([how to search by token])
+      *Implementation Notes:* Fetches a bundle of a resource of a particular type (within the clients authorization scope) and any corresponding Provenance resources. ([how to search by token])
 
 {% include link-list.md %}

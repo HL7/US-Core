@@ -3,16 +3,16 @@
 Get “all allergies” for a patient and all corresponding Provenance records.
 
 
-    GET [base]/AllergyIntolerance?patient=1234599&us-core-includeprovenance
+    GET [base]/AllergyIntolerance?patient=1234599&_revinclude=Provenance:target
 
 **Response:**
 
-A Server returns a search Bundle resource containing all the Allergies for the patient and corresponding Provenance records. 
+A Server returns a search Bundle resource containing all the Allergies for the patient and corresponding Provenance records.
 
 
     HTTP/1.1 200 OK
     [other headers]
-    
+
     {
     "resourceType": "Bundle",
     "id": "c887e62f-6166-419f-8268-b5ecd6c7b901",
@@ -24,7 +24,7 @@ A Server returns a search Bundle resource containing all the Allergies for the p
     "link": [
         {
             "relation": "self",
-            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance??patient=Examples99&us-core-includeprovenance"
+            "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?patient=Examples99&_revinclude=Provenance:target"
         }
     ],
     "entry": [
@@ -142,4 +142,3 @@ A Server returns a search Bundle resource containing all the Allergies for the p
         }
     ]
 }
-    

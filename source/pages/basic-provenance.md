@@ -48,7 +48,7 @@ The Figure below represents information from two different organizations to a cl
 
  Dr. Reconciled is the latest author after updating the reaction on 5/15/2019 and accepting to the local data store. The acceptance of the information is them taking over the responsibility.
 
- `GET /AllergyIntolerance?patient=[ID]&us-core-includeprovenance`
+ `GET /AllergyIntolerance?patient=[ID]&_revinclude=Provenance:target`
 
 Good Health Organization Provenance
 {% include examplebutton_default.html example="get-all-allergy-provenance-good-health" b_title = "Click Here to See 'Get Allergy Information for a Patient at Good Health' Example" %}
@@ -107,16 +107,5 @@ For the new content, the HIE is the Author so the following is recommenced:
    - Provenance.agent.onBehalfOf set to the HIE organization
 - Provenance.agent.type = transmitter
   - Provenance.agent.who set to the HIE organization
-
-
-### Development of `us-core-includeprovenance` parameter
-
-The original design in this guide required support for the `_revinclude` parameter (see [Including other resources in result]({{site.data.fhir.path}}search.html#revinclude)) to retrieve a Provenance Record. After discussing this approach at length with the Argonaut community, and client developers, the US Core guidance shifted to the custom parameter `us-core-includeprovenance`.
-
-Functionally, the searches
-
-`GET /AllergyIntolerance?patient=[ID]&_revinclude=Provenance:target` and `GET /AllergyIntolerance?patient=[ID]&us-core-includeprovenance` are equivalent.
-
-Implementers found the name `_revinclude` non-intuitive, and were concerned clients would assume if FHIR servers supported this for Provenance, they would be adding support for other use cases. None of the servers that participated in the development of this guide have `_revinclude` in their current development roadmap.
 
 {% include link-list.md %}
