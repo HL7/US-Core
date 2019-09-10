@@ -7,11 +7,11 @@ The following search parameters, search parameter combinations SHALL be supporte
 
 1. **SHALL** support searching for all resources of a particular type for a patient and all the Provenance records for those resources using a combination of the `patient` and **[`_revinclude`]** search parameters:
 
-    `GET [base]/[Resource]?_id=[id]&_revinclude=Provenance:target`
+    `GET [base]/[Resource]?patient=[id]&_revinclude=Provenance:target`
 
     Example:
 
-      1. GET [base]/AllergyIntolerance?_id=[id]&_revinclude=Provenance:target
+      1. GET [base]/AllergyIntolerance?patient=[id]5&_revinclude=Provenance:target
 
     *Implementation Notes:* Fetches a bundle of all resources of a particular type for the specified patient ([how to search by reference]) and any corresponding Provenance resources.
 
