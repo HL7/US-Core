@@ -1,11 +1,10 @@
 #!/bin/bash
 # exit when any command fails
 set -e
-homepath=$PWD
 path1=/Users/ehaas/Downloads/org.hl7.fhir.igpublisher.jar
 path2=/Users/ehaas/Downloads/org.hl7.fhir.igpublisher-old.jar
 path3=/Users/ehaas/Documents/FHIR/IG-tools/
-while getopts ds:tonp option
+while getopts ds:tonpw option
 do
  case "${option}"
  in
@@ -15,20 +14,20 @@ do
  o) PUB=1;;
  n) USEDEF=1;;
  p) UPDATE=1;;
- a) RUNALL=1;;
+ w) WATCH=1;;
  esac
 done
 echo "================================================================="
 echo === Publish $SOURCE IG!!! $(date -u) ===
 echo see 'local workflow.md' file for how to use
 echo "Optional Parameters"
-echo '-a parameter = run build then run summary, search parameter and capstatement scripts then rerun build  = ' $RUNALL
 echo '-d parameter = create definitions files  = ' $DEFN
 echo '-n parameter = use definitions source directory definition files  = ' $USEDEF
 echo '-s parameter = source directory = ' $SOURCE
 echo '-t parameter for no terminology server (run faster and offline)= ' $NA
 echo '-o parameter for running previous version of the igpublisher= ' $PUB
 echo '-p parameter for downloading latest version of the igpublisher from source = ' $UPDATE
+echo '-w parameter for using watch on igpublisher from source default is off = ' $WATCH
 echo ' current directory =' $PWD
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
@@ -40,7 +39,7 @@ echo "================================================================="
 echo === get the latest ig-pub file ===
 echo "================================================================="
 #mv /Users/ehaas/Downloads/org.hl7.fhir.igpublisher.jar /Users/ehaas/Downloads/org.hl7.fhir.igpublisher-old.jar
-#  use the -L flag for redirects
+# _L flag for redirects
 curl -L https://github.com/FHIR/latest-ig-publisher/raw/master/org.hl7.fhir.publisher.jar -o /Users/ehaas/Downloads/org.hl7.fhir.igpublisher.jar
 sleep 3
 fi
@@ -56,7 +55,6 @@ if [[ $DEFN ]]; then
 fi
 
 if [[ $USEDEF ]]; then
-
   echo "================================================================="
   echo === use definition files from relative path ../$SOURCE ===
   echo "================================================================="
@@ -68,27 +66,19 @@ if [[ $USEDEF ]]; then
   git status
 fi
 
-if [[ $PUB ]]; then
+if [[ $WATCH ]]; then
   echo "================================================================="
-  echo === run last known good version of the igpublisherrun most recent version of the igpublisher ===
+  echo ===un most recent version of the igpublisher with watch on ===
+  echo "================================================================="
+  java -jar ${path1} -ig ig.json -watch -tx $NA
+elif [[ $PUB ]]; then
+  echo "================================================================="
+  echo === run last known good version of the igpublisher run most recent version of the igpublisher ===
   echo "================================================================="
   java -jar ${path2} -ig ig.json -watch -tx $NA
 else
   echo "================================================================="
-  echo ===run most recent version of the igpublisher ===
+  echo ===run igpublisher just once \(no watch option\)===
   echo "================================================================="
-  java -jar ${path1} -ig ig.json -watch -tx $NA
-fi
-
-if [[ $RUNALL ]]; then
-
-  echo "================================================================="
-  echo === run summary maker /Users/ehaas/Documents/Python/MyNotebooks/Summary-maker/summary_maker.py===
-  echo "================================================================="
-  cd /Users/ehaas/Documents/Python/MyNotebooks/Summary-maker
-  venv37
-  python3.7 summary_maker.py
-  deactivate
-  cd $homepath
-  echo "done......"
+  java -jar ${path1} -ig ig.json -tx $NA
 fi
