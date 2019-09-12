@@ -10,23 +10,23 @@ The following search parameters, search parameter combinations SHALL be supporte
 
     - including optional support for these `_include` parameters: `PractitionerRole:endpoint,PractitionerRole:practitioner`
 
-    `GET [base]/PractitionerRole?specialty={[system]}|[code]`
+    `GET [base]/PractitionerRole?specialty={[system]}|[code]{&_include=PractitionerRole:practitioner}{&_include=PractitionerRole?endpoint}`
 
     Example:
-    
-      1. GET [base]/PractitionerRole?specialty=http://nucc.org/provider-taxonomy\|208D0000X
 
-    *Implementation Notes:* Fetches a bundle containing  PractitionerRole resources matching the specialty ([how to search by token])
+      1. GET [base]/PractitionerRole?specialty=http://nucc.org/provider-taxonomy\|208D0000X&_include=PractitionerRole:practitioner&_include=PractitionerRole?endpoint
+
+    *Implementation Notes:* Fetches a bundle containing  PractitionerRole resources matching the specialty ([how to search by token]).  SHOULD support the _include for PractionerRole.practitioner and PractitionerRole.endpoint. ([how to search by reference])
 
 1. **SHALL** support searching practitioner role by practitioner name and identifier using chained parameters using the **[`practitioner`](SearchParameter-us-core-practitionerrole-practitioner.html)** search parameter:
 
     - including support for these chained parameters: `practitioner.identifier,practitioner.name`
     - including optional support for these `_include` parameters: `PractitionerRole:endpoint,PractitionerRole:practitioner`
 
-    `GET [base]/PractitionerRole?practitioner=[reference]`
+    `GET [base]/PractitionerRole?practitioner=[reference]{&_include=PractitionerRole:practitioner}{&_include=PractitionerRole?endpoint}`
 
     Example:
-    
+
       1. GET [base]/PractitionerRole?practitioner.identifier=http://hl7.org/fhir/sid/us-npi\|97860456&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole?endpoint
       1. GET [base]/PractitionerRole?practitioner.name=Henry&amp;_include=PractitionerRole:practitioner&amp;_include=PractitionerRole?endpoint
 
