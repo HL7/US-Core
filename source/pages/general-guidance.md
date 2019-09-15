@@ -84,11 +84,14 @@ If the source system does not have data for a *Must Support* data element, the d
         - if the value set does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
    - *required* binding strength (CodeableConcept or code datatypes):
       - use the appropriate "unknown" concept code from the value set if available
-      - For the following data elements no appropriate "unknown" concept code is available, therefore the element must be populated:
-          - `Immunization.status`
+      - For the following status elements no appropriate "unknown" concept code is available, therefore the element must be populated:
+          - `AllergyIntolerance.clinicalStatus`
+          - `Condition.clinicalStatus`
           - `DocumentReference.status`
-          - `CarePlan.text.status`
+          - `Immunization.status`
           - `Goal.lifecycleStatus`
+
+        If one of these a status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a query for the resource.
 </div>
 
 ### Using Codes in US Core profiles
