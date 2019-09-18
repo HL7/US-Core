@@ -20,7 +20,7 @@ In addition, the following data-elements must be supported if the data is presen
 
 **Each Device must support:**
 
-1.  the Device Identifier (UDI-DI)
+1. The Device Identifier (UDI-DI)
 1. A Unique Device Identifier (UDI) numeric or alphanumeric code
    - either as the Human Readable Form (HRF) string representation of the barcode
    - or the Automatic Identification and Data Capture (AIDC) representation.
