@@ -15,12 +15,12 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 1.  a code identifying the type of device
 1.  a patient
-1.  the Device Identifier (UDI-DI)
 
 In addition, the following data-elements must be supported if the data is present in the sending system ([Must Support] definition):
 
 **Each Device must support:**
 
+1.  the Device Identifier (UDI-DI)
 1. A Unique Device Identifier (UDI) numeric or alphanumeric code
    - either as the Human Readable Form (HRF) string representation of the barcode
    - or the Automatic Identification and Data Capture (AIDC) representation.
