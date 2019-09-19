@@ -10,6 +10,8 @@ Description: The Argonaut experience dictates robust implementation guides that 
 
 The Contents of [US Core Implementation Guide CI Build( V3.0.0)](https://build.fhir.org/ig/HL7/US-Core-R4/) have been forked on June 1, 2019 to create the starting point for this implementation guide.
 
+The Contents of [Argo R4 build] have been merged back into this IG on Aug 30th, 2019 to create [US Core Implementation Guide CI Build( V3.0.1)] for STU comment at HL7.
+
 ### Tentative Argonaut R4 Timeline
 
 - March 2019
