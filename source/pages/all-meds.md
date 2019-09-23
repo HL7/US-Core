@@ -81,7 +81,7 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 #### Get All *Active* Medications
 
-1. Get all *active* medications for a patient by querying MedicationRequest using the `patient`,  and `intent` ="order" `status`="active" search parameters.  See [MedicationRequest Quick Start] for further details.
+1. Get all *active* medications for a patient by querying MedicationRequest using the `patient`,  and `intent` = "order" `status` = "active" search parameters.  See [MedicationRequest Quick Start] for further details.  Note that the client should also consider MedicationRequests with a status of "unknown" and whether to query those as well.
 
    `GET /MedicationRequest?patient=[id]&intent=order&status=active{&_include=MedicationRequest:medication}`
 
