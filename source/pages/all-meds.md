@@ -62,14 +62,15 @@ This IG focuses on access to a patient's medications.  It is therefore important
 1. Only MedicationRequest resources with an `intent` of ‘order’
 1. The MedicationRequest **SHALL** include all medications directly derived from the system's orders.
 1. The MedicationRequest **SHALL** include all prescribed and "self-prescribed" medications reported by the Provider, Patient or Related Person.
-  -  **SHALL** use `reported[x]` to indicate the MedicationRequest record was captured as a secondary 'reported' record rather than an original primary source-of-truth record. It may also indicate the source of the report.
-  -  When recording 'self-prescribed' orders, **SHOULD** use the `requester` to indicate the Patient or RelatedPerson as the prescriber.
+  -  **SHALL** use `reported[x]` to indicate the MedicationRequest record was captured as a secondary "reported" record rather than an original primary source-of-truth record. It may also indicate the source of the report.
+  -  When recording "self-prescribed" medications **SHALL** use `intent` = "order"
+  -  When recording "self-prescribed" orders, **SHOULD** use the `requester` to indicate the Patient or RelatedPerson as the prescriber.
 1. The `encounter` element **SHOULD** be supported.  Searching by context (i.e., for a given inpatient encounter) will return all medications ordered during that encounter, which can include both medications administered in hospital as well as prescribed or discharge medications, which are intended to be taken at home.
 1. The `category` and `encounter`  elements **MAY** be used together to get the intersection of medications for a given encounter (i.e., the context) that were administered during as an inpatient (i.e., the category).
 
 #### Get All Medications
 
-1. Get all medications for a patient by querying MedicationRequest using the `patient` search parameter and `intent` search parameter = 'order'.  See [MedicationRequest Quick Start] for further details.
+1. Get all medications for a patient by querying MedicationRequest using the `patient` search parameter and `intent` search parameter = "order".  See [MedicationRequest Quick Start] for further details.
 
    `GET /MedicationRequest?patient=[id]&intent=order{&_include=MedicationRequest:medication}`
 
