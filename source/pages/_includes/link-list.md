@@ -234,4 +234,4 @@
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
 [reference]: {{site.data.fhir.path}}references.html
 [timezone extension]: {{site.data.fhir.path}}extension-tz-code.html
-[`Accept-Language`]: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
+[`Accept-Language`]: https://www.ietf.org/rfc/rfc2616.txt
