@@ -19,7 +19,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each MedicationRequest must have:**
 
 1.  a status
-1.  {: .note-to-balloters}an intent code to indicate whether an order or proposal
+1.  {: .note-to-balloters}an intent code
 1.  a medication
 1.  a patient
 1.  a date for when written
