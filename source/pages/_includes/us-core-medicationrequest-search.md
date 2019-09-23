@@ -1,4 +1,4 @@
-<div class="note-to-balloters" markdown="1">
+
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
 
@@ -53,9 +53,9 @@ The following search parameters, search parameter combinations and search parame
 
     Example:
 
-      1. GET [base]/MedicationRequest?patient=1137192&amp;effective=ge2019
-      1. GET [base]/MedicationStatement?patient=1137192&amp;effective=ge2019&amp;_include=MedicationRequest:medication
+      1. GET [base]/MedicationRequest?patient=1137192&amp;authoredon=ge2019
+      1. GET [base]/MedicationRequest?patient=1137192&amp;authoredon=ge2019&amp;_include=MedicationRequest:medication
 
     *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient and intent  code = `order` and authoredon date ([how to search by reference] and [how to search by token] and [how to search by date])
-</div>
+
 {% include link-list.md %}
