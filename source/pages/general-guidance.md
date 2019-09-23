@@ -411,7 +411,7 @@ For searches where the client does not supply a status parameter, an implementat
 
    - For example, in a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, `entered-in-error` but not `refuted`, the search parameter is referring to an unsupported code since `refuted` is not known to the server.
 
-   {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
+     {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
 
 - **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.
 - Follow the [deleted data](#representing-deleted-information) guidance above.
@@ -420,9 +420,9 @@ For searches where the client does not supply a status parameter, an implementat
 <div class="note-to-balloters" markdown="1">
 ### Searching multiple patients
 
-Currently most EHRs permit queries that provide a singles patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described the standard FHIR REST API. Instead, a user facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data.
+Currently most EHRs permit queries that provide a single patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described in the standard FHIR REST API. Instead, a user facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data.
 
-However, neither specification defines how a user facing provider apps is able to seek realtime "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core]
+However, neither specification defines how a user facing provider app is able to seek realtime "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core]
 </div>
 
 ### Compartment Based Search

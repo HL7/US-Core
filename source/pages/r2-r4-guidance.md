@@ -21,7 +21,7 @@ There are several consideration for the user and developer experience when trans
 
 ### Endpoint Discoverability
 
-FHIR Version - a client should know which version they are dealing with without having inspect metadata on each endpoint
+FHIR Version - a client should know which version they are dealing with without having to inspect metadata on each endpoint
 
 * A server **SHOULD** make explicit which version of Argo/US Core on their FHIR endpoint
    - e.g., "DSTU2" or “R4" path component or separate files based on version
@@ -30,7 +30,7 @@ FHIR Version - a client should know which version they are dealing with without 
 
 ### No Guarantee that Resource IDs are Preserved
 
-In some FHIR servers the identifier of the underlying clinical data is not maintained across FHIR versions. Client applications must plan on deduplication methods that don't rely on a common identifier across FHIR versions.publication.
+In some FHIR servers the identifier of the underlying clinical data is not maintained across FHIR versions. Client applications must plan on deduplication methods that don't rely on a common identifier across FHIR versions.
 
 * Servers **SHOULD** maintain a stable common identifier for a resource across versions.
 

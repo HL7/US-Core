@@ -10,7 +10,7 @@ topofpage: true
 
 <!-- end TOC -->
 The guidance below addresses how a patient or a provider can access a patients' active, historical and future (planned) medications list.  This use case adopts the use cases defined as part of the Argonaut Project and US Core, specifically within the scope of accessing medication information as prescribed in the proposed ONC U.S. Core Data for Interoperability (USCDI).
-\This section provide specific guidance on how to to access “all medications” and “all active medications” for a patient using  a query on MedicationRequest*.  Note that in prior versions of this guide, a query on *MedicationStatement* was required. This change is due to underlying changes in the FHIR Release 4 pharmacy resources.[^1]
+This section provide specific guidance on how to to access “all medications” and “all active medications” for a patient using a query on *MedicationRequest*.  Note that in prior versions of this guide, a query on *MedicationStatement* was required. This change is due to underlying changes in the FHIR Release 4 pharmacy resources.[^1]
 
 ### Background on the FHIR Medications resources
 
@@ -20,7 +20,7 @@ The guidance below addresses how a patient or a provider can access a patients' 
 The FHIR specification defines 5 FHIR pharmacy resources concerned with the ordering, dispensing, administration and recording of medications.  This guide provides guidance for accessing a patient's medications using the following 2 resources:
 
   - [Medication]\:  Represents the medication itself
-  - [MedicationRequest]\: Represents an authorization to dispense and administer a medication (aka prescription or order).
+  - [MedicationRequest]\: Represents an authorization to dispense and administer a medication a prescription, and an order to administer a medication.
 
 The following 3 resources are introduced here to provide background and  define the relationships between the pharmacy resources. This guide does *not* use them for accessing a patient's medications:
 
@@ -45,7 +45,7 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 #### Options for Representing Medication
 
- This guide supports representing a medication using either a code or a reference to a Medication resource. Typically, a code will be used to represent either a branded (for example, Crestor 10mg tablet) or a generic (for example, Rosuvastatin 10mg tablet) medication.  When using a code, the code  **SHALL** follow the [extensible] binding rules to [Medication Clinical Drug (RxNorm)] - i.e. unless the concept is not covered by RxNorm, the RxNorm code **SHALL** be used.  More information about using codes can be found in the [General Guidance Section] and the [FHIR Terminology] section.  A medication resource is typically used when information that is not included as part of the RxNorm code is required.  For example, the Medication resource is the only way to correctly represent compounded or extemporaneously prepared medication.  When referencing the Medication resource, the resource may be included in the bundle returned, an external resource, or a [contained] if the resource can't stand alone. These options are shown in figure 3 below.  The server application **MAY** choose any combination of these methods, but if an external reference to Medication is used, the server **SHALL** support the include parameter for searching this element. The client application **MUST** support all methods. The [MedicationRequest examples] show these different methods. Additional guidance is provided below and in the [US Core Server Capability Statement] section.
+ This guide supports representing a medication using either a code or a reference to a Medication resource. Typically, a code will be used to represent either a branded (for example, Crestor 10mg tablet) or a generic (for example, Rosuvastatin 10mg tablet) medication.  When using a code, the code  **SHALL** follow the [extensible] binding rules to [Medication Clinical Drug (RxNorm)] - i.e. unless the concept is not covered by RxNorm, the RxNorm code **SHALL** be used.  More information about using codes can be found in the [General Guidance] Section and the [FHIR Terminology] section.  A medication resource is typically used when information that is not included as part of the RxNorm code is required.  For example, the Medication resource is the only way to correctly represent compounded or extemporaneously prepared medication.  When referencing the Medication resource, the resource may be included in the bundle returned, an external resource, or a [contained] if the resource can't stand alone. These options are shown in figure 3 below.  The server application **MAY** choose any combination of these methods, but if an external reference to Medication is used, the server **SHALL** support the include parameter for searching this element. The client application **MUST** support all methods. The [MedicationRequest examples] show these different methods. Additional guidance is provided below and in the [US Core Server Capability Statement] section.
 
 {% include img.html img="ArgoR4Meds_4.svg" caption="Figure 3: Ways to Represent the Medication" %}
 

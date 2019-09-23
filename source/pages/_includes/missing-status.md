@@ -3,7 +3,7 @@
 
 The following example is based upon the following scenario:
 
-Patient 1137192 uses an App to request all his encounters from the provider. The provider system requires status and rejects they request returning a `404` and an OperationOutcome specifying that a status parameter is required for this search.
+Patient 1137192 uses an App to request all his encounters from the provider. The provider system requires status and rejects the request returning a `404` and an OperationOutcome specifying that a status parameter is required for this search.
 
 **Request:**
 

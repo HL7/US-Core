@@ -19,7 +19,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1. A status
 1. An classification such as inpatient, outpatient or emergency
 1. An encounter type
-1. abs patient
+1. A patient
 
 **Each Encounter must support:**
 
