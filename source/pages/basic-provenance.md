@@ -3,7 +3,7 @@ title: Basic Provenance Guidance
 layout: default
 topofpage: true
 ---
-​This section provides implementers with important definitions to create and share the Provenance Resource.
+​This section provides implementers with important definitions to create and share the Provenance Resource[^1].
 
 {:.no_toc}
 
@@ -107,5 +107,7 @@ For the new content, the HIE is the Author so the following is recommenced:
    - Provenance.agent.onBehalfOf set to the HIE organization
 - Provenance.agent.type = transmitter
   - Provenance.agent.who set to the HIE organization
+
+[^1]: This Basic Provenance guidance and [[US Core Provenance Profile]] is provisional and may change in future releases. It is based on feedback from the HL7 and Argonaut communities. However, there was incomplete testing of this approach.
 
 {% include link-list.md %}
