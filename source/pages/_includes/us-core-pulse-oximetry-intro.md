@@ -23,7 +23,7 @@ In addition to the mandatory and must support data elements in the FHIR Oxygen S
 
 **Profile specific implementation guidance:**
 
-- inspired oxygen concentration may be expressed as [component observations] when measured at the same time as the pulse oximetry measurements. They are expressed as either inhaled oxygen flow rate (e.g. 6 liters/min) or as inhaled oxygen concentration ( e.g. 40% oxygen)
+- Inspired oxygen therapy may be represented with [component] observations when measured at the same time as the pulse oximetry measurements. They are expressed as either inhaled oxygen flow rate (e.g. 6 liters/min) and as inhaled oxygen concentration (e.g. 40% oxygen)
 
 ### Examples
 
