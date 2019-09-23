@@ -43,7 +43,7 @@ In the context of US Core, *Must Support* on any data element SHALL be interpret
 
 
 * NOTE: Typically *US Core Responder* Actor = Server and *US Core Requestor Actor* = Client
-* NOTE: US Core Responders who do not have the capability to store or return a data element tagged as Supported in US Core profiles can still claim conformance to the US Core profiles per the US Core conformance resources.
+* NOTE: US Core Responders who do not have the capability to store or return a *Must Support* element for a particular US Core profile can still claim conformance to the US Core profile per the US Core conformance resources.
 * NOTE: The above definition of Supported is derived from HL7v2 concept "Required but may be empty - RE" described in HL7v2 V28_CH02B_Conformance.doc.
 * NOTE: Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
 
