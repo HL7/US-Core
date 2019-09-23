@@ -26,7 +26,19 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Profile specific implementation guidance:**
 
-* *No Known Allergies* may be represented using the US Core-AllergyIntolerance profile with appropriate negation code in AllergyIntolerence.code.
+* *No Known Allergies* may be represented using the US Core-AllergyIntolerance profile with appropriate negation code in `AllergyIntolerence.code` and the appropriate verification status in `AllergyIntolerance.verificationStatus`.
+
+  If a patient has not been asked about their allergies, this would be represented as:
+
+    * `AllergyIntolerance.code` = "716186003" (No known allergy (situation))
+
+    * `AllergyIntolerance.verificationStatus` = "unconfirmed"
+
+  If a patient has been asked, but has indicated they have no known allergies, this would be represented by a resource with:
+
+  * `AllergyIntolerance.code` = "716186003" (No known allergy (situation))
+
+  * `AllergyIntolerance.verificationStatus` = "verified"
 
 ### Examples
 
