@@ -34,7 +34,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
     * `AllergyIntolerance.verificationStatus` = "unconfirmed"
 
-  If a patient has been asked, but has indicated they have no known allergies, this would be represented by a resource with:
+  If a patient has been asked, but has indicated they have no known allergies, this would be represented as:
 
   * `AllergyIntolerance.code` = "716186003" (No known allergy (situation))
 
