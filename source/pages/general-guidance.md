@@ -400,6 +400,8 @@ Note that the patient may be *implicit* in the context in some implementations (
 <div class="note-to-balloters" markdown="1">
 ### Search for Servers Requiring Status
 
+>Servers are *strongly* encouraged to support a query for resources without requiring a status. If business requirements prohibit returning all Resources with all statuses they SHALL follow the guidelines here.
+
 For searches where the client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.  These systems are allowed to reject such requests as follows:
 
 - **SHALL** return an http `404` status
