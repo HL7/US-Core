@@ -223,7 +223,7 @@ There is a basic need be able to access records in your language, and the data p
 
 The following guidelines outline how to request and return a resource in the requested language.
 
-* Clients MAY request language/locale using the http `Accept-Language` header.  < link >
+* Clients MAY request language/locale using the http [`Accept-Language`] header.
 * Servers SHOULD make reasonable efforts to translate what can be safely translated.
 * Servers SHOULD populate the Resource's `language` element which is reasonably based on the underlying language of record, *not* the requested language.
     * Servers SHALL use the <http://hl7.org/fhir/StructureDefinition/language> extension when the language of a display, etc is known to be different to the stated (or inferred) language.
