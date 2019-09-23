@@ -73,7 +73,7 @@ A Health Information Exchange (HIE) is an organization and a technology to facil
 
 {% include img.html img="Provenance_HIE_Single_Org_Device.svg" caption="Figure 3: HIE Redistribution - No clinical content transformation" %}
 
-Since no clinical content is changed in the HIE redistribution the best scenario is a single Provenance Record with:
+Since no clinical content is changed in the HIE redistribution the best scenario is a Provenance Record with:
 - Provenance.agent.type = author
   - Provenance.agent.who set to the practitioner who authored the content (i.e. not the HIE)
   - Provenance.agent.onBehalfOf set to the organization that author acted on behalf of before sharing with the HIE

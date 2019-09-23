@@ -407,13 +407,14 @@ For searches where the client does not supply a status parameter, an implementat
 - **SHALL** return an http `400` status
 - **SHALL** return an [OperationOutcome] specifying that status(es) must be present.
 - **SHALL NOT** restrict search results ( i.e. apply 'hidden' filters) when a client includes status parameters in the query.
+  - If a system doesn't support a specific status code value that is queried, search results **SHOULD** return an http `200` status with search bundle containing resources matching the search criteria *and* an OperationOutcome warning the client which status code value is not supported.
+
+   - For example, in a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, `entered-in-error` but not `refuted`, the search parameter is referring to an unsupported code since `refuted` is not known to the server.
+
+   {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
+
 - **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.
 - Follow the [deleted data](#representing-deleted-information) guidance above.
-- If a system doesn't support a specific status that is queried, search results **SHOULD** return an http `200` status with search bundle containing resources matching the search criteria *and* an OperationOutcome warning the client which status value is not supported.
-
-   - For example, in a query enumerating all the `AllergyIntolerance.verificationStatus` statuses to a system that supports concepts `unconfirmed`, `confirmed`, `entered-in-error` but not `refuted`, the search parameter is referring to an unknown code since `refuted` is not known to the server.
-
-{% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
 </div>
 
 <div class="note-to-balloters" markdown="1">
