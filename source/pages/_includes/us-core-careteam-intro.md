@@ -5,7 +5,7 @@ This profile sets minimum expectations for the [CareTeam] resource for identifyi
 The following are example usage scenarios for the US Core-CareTeam profile:
 
 -   Query for a Patient's CareTeam
--   Record or update a Patient's CareTeam
+-   [Record or update]a Patient's CareTeam
 
 
 ### Mandatory and Must Support Data Elements
