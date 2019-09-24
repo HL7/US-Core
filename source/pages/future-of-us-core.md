@@ -35,28 +35,13 @@ The US Core implementation Guide will grow following these steps:
 
 A new US Regulatory requirement may jump over some of these steps, however, regulators should be discouraged from skipping pilot testing. Without pilot testing it's difficult to understand how a change will affect real-world implementation.
 
-In the January ballot of 2019 we tested this process with the FDA requesting US Core include all the component parts of UDI. In prior efforts, the FDA had successfully enhanced the base FHIR specification to include the UDI components, reaching step 3. In the summer of 2019 FDA plans to pilot these proposed new requirements within the Argonaut community the results of which will inform updates to the planned fall 2019 STU release.
-
-#### Future Requirements Under Considerations
-
-**Update and Create Expectations**
-
-At the time of publication this guide does not cover writing and updating data in context of US Core profiles. Specific issues that we need consider when define expected behavior and full write support include:
-
-- Write failure scenarios (insufficient data to create)
-- Writing and updating data in the context of the Must Support fields
-- Pilot Testing
 
 
-**Pilot Testing**
+#### Future Candidate Requirements Under Considerations
 
-Additional pilot Testing of UDI elements in a US Core Implantable Device Profile
+The following items were submitted during a US Core ballot, Argonaut review and testing, and STU comment for consideration to add to us core. Additional requirements gathering is required before testing may occur on these items:
 
-#### Candidates under consideration
-
-The following items were submitted during a US Core ballot, Argonaut review and testing, and STU comment. Additional requirements gathering is required before testing may occur on these items:
-
-- Additional pilot Testing of UDI elements in a US Core Implantable Device Profile
+- Additional pilot Testing of UDI elements in a US Core Implantable Device Profile. In the January ballot of 2019 we tested this process with the FDA requesting US Core include all the component parts of UDI. In prior efforts, the FDA had successfully enhanced the base FHIR specification to include the UDI components.
 * [ServiceRequest] - The CDS hooks community, and other implementers are gathering requirements for the ServiceRequest Resource.
 * {: .note-to-balloters}[Coverage] - Several US implementation guides including Da Vinci CRD, Argonaut Scheduling, and QI Core have defined requirements for the Coverage Resource.
 * {: .note-to-balloters}Searching for multiple patients has been called out in the ONC Health IT Certification Program.  Defining capabilities for multiple patient access would focus on querying real time data for a user facing provider app across patients. Examples of the type of queries that would be addressed include searching for all of a provider's patients:
