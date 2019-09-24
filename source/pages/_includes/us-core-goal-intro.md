@@ -33,3 +33,5 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 
 [Goal]: {{site.data.fhir.path}}goal.html
+
+{% include link-list.md %}
