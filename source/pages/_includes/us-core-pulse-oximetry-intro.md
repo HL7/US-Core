@@ -5,7 +5,7 @@ This profile sets minimum expectations for the [Observation] resource to record,
 The following are example usage scenarios for the US Core Pulse Oximetry Profile:
 
 - Query for pulse oximety observations for a patient
--[Record or update]  pulse oximety observations belonging to a patient
+- [Record or update]  pulse oximety observations belonging to a patient
 
 ### Mandatory and Must Support Data Elements
 

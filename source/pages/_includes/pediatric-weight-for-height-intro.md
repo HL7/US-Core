@@ -5,7 +5,7 @@ This profile sets minimum expectations for the [Observation] resource to record,
 The following are example usage scenarios for the US Core Pediatric Weight for Height Observation Profile:
 
 - Query for pediatric weight observations belonging to a pediatric patient
-- [Record or update]  pediatric weight observations belonging to a pediatric patient
+- [Record or update] pediatric weight observations belonging to a pediatric patient
 
 ### Mandatory and Must Support Data Elements
 
