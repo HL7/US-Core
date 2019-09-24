@@ -37,3 +37,5 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 
 [CareTeam]:  {{site.data.fhir.path}}careteam.html
+
+{% include link-list.md %}
