@@ -5,7 +5,7 @@ This profile sets minimum expectations for the [Observation] resource to record,
 The following are example usage scenarios for the US Core Pediatric BMI for Age Observation Profile:
 
 - Query for BMI observations belonging to a pediatric patient
--[Record or update]  BMI observations belonging to a pediatric patient
+- [Record or update]  BMI observations belonging to a pediatric patient
 
 ### Mandatory and Must Support Data Elements
 
