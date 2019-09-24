@@ -1,15 +1,12 @@
-Punch list
-- add to connectathon: Dynamic Health IT server
-- (see US core punch list)
-- update prov examples from rev include
-- gforge for SD to vote on for Provenance?
-- git issues?
-- review trackers and apply any outstanding
-- collate and highlight stuff to ballot
-- names and versions
+
 
 
 possible final hand edits
 
+remove comments to balloters section
+fix for ie10
 add include write-and-docref.md to docref search.md
+make sure Us Core changed to US core
+text invariants
+
 (see US core punch list)
