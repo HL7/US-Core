@@ -8,7 +8,7 @@ profile. See the [Medication List Guidance] section for guidance on accessing a 
 -   Fetching all medications that have been prescribed to a particular patient
 -   Fetching all *active* medications that have been prescribed to  particular patient
 -   Fetching all medications that have been prescribed to particular patient during a particular encounter
--  [Record or update] medications that have been prescribed for a particular
+-  [Record or update]  medications that have been prescribed for a particular
     patient
 
 ### Mandatory and Must Support Data Elements

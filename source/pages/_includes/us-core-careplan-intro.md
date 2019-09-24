@@ -5,7 +5,7 @@
 The following are example usage scenarios for the US Core-CarePlan profile:
 
 -   Query for a care plan belonging to a Patient
--   [Record or update]an existing care plan
+-   [Record or update] an existing care plan
 
 
 ### Mandatory and Must Support Data Elements

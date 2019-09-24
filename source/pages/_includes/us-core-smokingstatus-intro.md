@@ -6,7 +6,7 @@ The following are example usage scenarios for the US Core-SmokingStatus
 profile:
 
 - Query for the Smoking Status of a patient
-- [Record or update]the Smoking Status of a patient
+- [Record or update] the Smoking Status of a patient
 
 ### Mandatory and Must Support Data Elements
 

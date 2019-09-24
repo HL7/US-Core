@@ -7,7 +7,7 @@ The following are example usage scenarios for the US Core Encounter profile:
 
 -   Query for a specific patient encounter
 -   Query for recent patient encounters
--   [Record or update]an encounter
+-   [Record or update] an encounter
 
 ### Mandatory and Must Support Data Elements
 

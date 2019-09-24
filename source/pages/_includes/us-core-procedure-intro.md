@@ -5,7 +5,7 @@ This profile sets minimum expectations for the [Procedure] resource to record, s
 The following are example usage scenarios for the US Core-Procedure profile:
 
 -   Query for procedures performed on a Patient
--  [Record or update] a procedure performed on a Patient
+-  [Record or update]  a procedure performed on a Patient
 
 
 ### Mandatory and Must Support Data Elements
