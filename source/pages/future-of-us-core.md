@@ -41,19 +41,19 @@ A new US Regulatory requirement may jump over some of these steps, however, regu
 
 The following items were submitted during a US Core ballot, Argonaut review and testing, and STU comment for consideration to add to us core. Additional requirements gathering is required before testing may occur on these items:
 
-- Additional pilot Testing of UDI elements in a US Core Implantable Device Profile. In the January ballot of 2019 we tested this process with the FDA requesting US Core include all the component parts of UDI. In prior efforts, the FDA had successfully enhanced the base FHIR specification to include the UDI components.
+- **Additional pilot Testing of UDI elements** - In the January ballot of 2019 we tested this process with the FDA requesting US Core include all the component parts of UDI. In prior efforts, the FDA had successfully enhanced the base FHIR specification to include the UDI components.
 * [ServiceRequest] - The CDS hooks community, and other implementers are gathering requirements for the ServiceRequest Resource.
 * {: .note-to-balloters}[Coverage] - Several US implementation guides including Da Vinci CRD, Argonaut Scheduling, and QI Core have defined requirements for the Coverage Resource.
-* {: .note-to-balloters}Searching for multiple patients has been called out in the ONC Health IT Certification Program.  Defining capabilities for multiple patient access would focus on querying real time data for a user facing provider app across patients. Examples of the type of queries that would be addressed include searching for all of a provider's patients:
+* {: .note-to-balloters}**Searching for Multiple Patients** - Searching for multiple patients has been called out in the ONC Health IT Certification Program.  Defining capabilities for multiple patient access would focus on querying real time data for a user facing provider app across patients. Examples of the type of queries that would be addressed include searching for all of a provider's patients:
     - with recent lab results  
     - currently in the Emergency Department
     - with an Allergy to X
-* {: .note-to-balloters}Clients currently face challenges displaying the source data's times and timezone regardless of the end user's current timezone.  A solution is to define requirements and/or best practices for servers to preserve and represent time offsets and timezones.  
+* {: .note-to-balloters}**Timezones and Time Offsets** - Clients currently face challenges displaying the source data's times and timezone regardless of the end user's current timezone.  A solution is to define requirements and/or best practices for servers to preserve and represent time offsets and timezones.  
 >A *timezone* is a geographical region in which residents observe the same standard time. A *time offset* is an amount of time subtracted from or added to Coordinated Universal Time (UTC) time to get the current civil time, whether it is standard time or daylight saving time (DST).[^1]
 
   Common practice is to preserve the source data time offsets either as the original offset or converted to Coordinated Universal Time (UTC) time. Making this a requirement is one consideration.  Another consideration is the addition of server best practices for preserving source timezones using the FHIR standard [timezone extension]. A third consideration is providing a client algorithm for resolving time offsets and timezones.
 
-* Very little guidance is provided on writing and updating data in the context of US Core profiles. There are multiple issues that will need to be considered when defining expected behavior by the various actors to support updates and writes to the data including:
+* **Writing and Updating** - Very little guidance is provided on writing and updating data in the context of US Core profiles. There are multiple issues that will need to be considered when defining expected behavior by the various actors to support updates and writes to the data including:
 
   - Defining the overall approach
     -  direct updates to a particular resource via FHIR RESTful transactions
