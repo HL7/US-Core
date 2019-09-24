@@ -6,7 +6,7 @@ The following are example usage scenarios for the US Core AllergyIntolerance
  profile:
 
 -   Query for Allergies belonging to a Patient
--   Record or update a Patient Allergy
+-   [Record or update] a Patient Allergy
 
 ### Mandatory and Must Support Data Elements
 

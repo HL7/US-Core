@@ -53,7 +53,7 @@ The following items were submitted during a US Core ballot, Argonaut review and 
 
   Common practice is to preserve the source data time offsets either as the original offset or converted to Coordinated Universal Time (UTC) time. Making this a requirement is one consideration.  Another consideration is the addition of server best practices for preserving source timezones using the FHIR standard [timezone extension]. A third consideration is providing a client algorithm for resolving time offsets and timezones.
 
-* At the time of publication this guide provides very little guidance on writing and updating data in context of US Core profiles. There are multiple issues that will need to be considered when defining expected behavior by the various actors to support updates and writes to the data including:
+* Very little guidance is provided on writing and updating data in the context of US Core profiles. There are multiple issues that will need to be considered when defining expected behavior by the various actors to support updates and writes to the data including:
 
   - Defining the overall approach
     -  direct updates to a particular resource via FHIR RESTful transactions
