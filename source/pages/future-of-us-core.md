@@ -39,14 +39,24 @@ In the January ballot of 2019 we tested this process with the FDA requesting US 
 
 #### Future Requirements Under Considerations
 
+**Update and Create Expectations**
+
+At the time of publication this guide does not cover writing and updating data in context of US Core profiles. Specific issues that we need consider when define expected behavior and full write support include:
+
+- Write failure scenarios (insufficient data to create)
+- Writing and updating data in the context of the Must Support fields
+- Pilot Testing
+
+
 **Pilot Testing**
 
-Additional UDI elements in a US Core Implantable Device Profile
+Additional pilot Testing of UDI elements in a US Core Implantable Device Profile
 
 #### Candidates under consideration
 
-The following items were submitted during a US Core ballot or STU comment. Additional requirements gathering is required before testing may occur on these items:
+The following items were submitted during a US Core ballot, Argonaut review and testing, and STU comment. Additional requirements gathering is required before testing may occur on these items:
 
+- Additional pilot Testing of UDI elements in a US Core Implantable Device Profile
 * [ServiceRequest] - The CDS hooks community, and other implementers are gathering requirements for the ServiceRequest Resource.
 * {: .note-to-balloters}[Coverage] - Several US implementation guides including Da Vinci CRD, Argonaut Scheduling, and QI Core have defined requirements for the Coverage Resource.
 * {: .note-to-balloters}Searching for multiple patients has been called out in the ONC Health IT Certification Program.  Defining capabilities for multiple patient access would focus on querying real time data for a user facing provider app across patients. Examples of the type of queries that would be addressed include searching for all of a provider's patients:
@@ -58,6 +68,14 @@ The following items were submitted during a US Core ballot or STU comment. Addit
 
   Common practice is to preserve the source data time offsets either as the original offset or converted to Coordinated Universal Time (UTC) time. Making this a requirement is one consideration.  Another consideration is the addition of server best practices for preserving source timezones using the FHIR standard [timezone extension]. A third consideration is providing a client algorithm for resolving time offsets and timezones.
 
+* At the time of publication this guide provides very little guidance on writing and updating data in context of US Core profiles. There are multiple issues that will need to be considered when defining expected behavior by the various actors to support updates and writes to the data including:
+
+  - Defining the overall approach
+    -  direct updates to a particular resource via FHIR RESTful transactions
+    - new Profiles to represent the context and issue and request
+  - Write failure scenarios (e.g., insufficient data to create)
+  - Writing and updating data in the context of the Must Support fields
+  - Indicating the source of update
 
 ------------------------------------------------------------------------
 [^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset#Time_zones_and_time_offsets
