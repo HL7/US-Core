@@ -5,7 +5,7 @@
 The following are example usage scenarios for the US Core DiagnosticReport Profile for Laboratory Results Reporting:
 
 -   Query for lab reports belonging to a Patient
--   Record a lab report for a specific Patient
+-  [Record or update] a lab report for a specific Patient
 
 ### Mandatory and Must Support Data Elements
 

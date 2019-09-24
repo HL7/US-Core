@@ -6,7 +6,7 @@ The following are example usage scenarios for the US Core-Core Immunization
 profile:
 
 -   Query for immunizations belonging to a Patient
--   Record immunizations belonging to a Patient
+-  [Record or update] immunizations belonging to a Patient
 
 ### Mandatory and Must Support Data Elements
 

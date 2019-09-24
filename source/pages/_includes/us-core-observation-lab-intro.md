@@ -5,7 +5,7 @@
 The following are example usage scenarios for the US Core-Results profile:
 
 -   Query for lab results belonging to a Patient
--   Record lab results belonging to a Patient
+-  [Record or update] lab results belonging to a Patient
 
 ### Mandatory and Must Support Data Elements
 

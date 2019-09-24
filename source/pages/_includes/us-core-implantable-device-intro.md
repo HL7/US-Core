@@ -5,7 +5,7 @@
 The following are example usage scenarios for the US Core Implantable Device profile:
 
 -   Query for a Patient's Implantable Devices
--   Record a Patient Implantable Device
+-  [Record or update] a Patient Implantable Device
 
 ### Mandatory and Must Support Data Elements
 
