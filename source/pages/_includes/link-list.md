@@ -143,6 +143,7 @@
 [Practitioner]: {{site.data.fhir.path}}practitioner.html
 [ProcedureStatus]: {{site.data.fhir.path}}valueset-procedure-status.html
 [Procedure]: {{site.data.fhir.path}}procedure.html
+[Provenance Agent Type]: ValueSet-us-core-provenance-participant-type.html
 [Procedures Note (28570-0)]: https://loinc.org/28570-0.html
 [Profiles and Extensions]: profiles.html
 [Profiles]: profiles.html "Profiles and Extensions Page"

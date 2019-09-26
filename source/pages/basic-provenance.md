@@ -85,28 +85,11 @@ Since no clinical content is changed in the HIE redistribution the best scenario
 
 #### HIE Transformation
 
-Different from Use Case 3 - HIE Redistribution, Use Case 4 includes transformation of data. Information is received (e.g. v2 lab, other CDs) and transformed by a HIE, stored, and then passed in a new format (e.g. CCD). Source data is not manipulated beyond transforming into a new format.
-Transformation of data from one format to another does not change the authorship of the information. The HIE is only the author/author organization if they produce and include new information.
-For example, if a v2 lab message is received and stored into the HIE, and then subsequently included in a CDA document, the author/author organization is the lab that sent the original message. The addition of terminology translations, or additional identifiers, should not influence the authorship of the information.
-Alternatively, the HIE is the author/author organization if they created new information, such as calculation of a quality measure score. If specific clinical elements were included to support the quality calculation, they would reference their original author/author organization
-
+Different from Use Case 3 - HIE Redistribution, Use Case 4 includes transformation of data. Information is received (e.g. v2 lab, other CDs) and transformed by a HIE, stored, and then passed in a new format (e.g. CCD or FHIR). 
 
 {% include img.html img="Provenance_HIE_Multi_Org_Device.svg" caption="Figure 4: HIE Transformation - Clinical content is transformed" %}
 
-In figure 4, each different stripe in the folder represents a different Resource. For the 3 items where the information is carried from the original system the best scenario is a single Provenance Record for each Resource with:
-- Provenance.agent.type = author
-  - Provenance.agent.who set to the practitioner who authored the content (i.e. not the HIE)
-  - Provenance.agent.onBehalfOf set to the organization that author acted on behalf of before sharing with the HIE
-- Provenance.agent.type = transmitter
-  - Provenance.agent.who set to the HIE organization
-
-This matches the requirements of HIE Redistribution.
-
-For the new content, the HIE is the Author so the following is recommended:
-- Provenance.agent.type = author
-   - Provenance.agent.onBehalfOf set to the HIE organization
-- Provenance.agent.type = transmitter
-  - Provenance.agent.who set to the HIE organization
+Transformation of data from one format to another **MAY** change the authorship of the information, where the HIE is the author/author organization. The original data source must be maintained by the HIE. An `agent.type=assembler`, `agent.type=transmitter`, or other agents from [Provenance Agent Type] value set **MAY** also be included. Due to insufficient implementer guidance the Basic Provenance guidance here doesn’t specify how to assign authorship for this use case. HL7 plans to gather additional input and include in the HL7 Basic Provenance Informative guide for C-CDA and FHIR.
 
 <br />
 
