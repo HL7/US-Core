@@ -1,4 +1,4 @@
-When referencing a medication, the [MedicationStatement] and [MedicationRequest] resources can either use a code or refer to a [Medication] resource.  This profile sets minimum expectations for the Medication resource to record search and fetch medications associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
+When referencing a medication, the [MedicationStatement] and [MedicationRequest] resources can either use a code or refer to a [Medication] resource.  This profile sets minimum expectations for the Medication resource to record, search, and fetch medications associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
 
 **Example Usage Scenarios:**
 

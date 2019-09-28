@@ -1,7 +1,7 @@
 
 ###### Scope and Usage
 
-This profile sets minimum expectations for the [PractitionerRole] resource to record, search and fetch the practitioner role for a practitioner.  It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the PractitionerRole resource when using this profile.  The requirements for the US Core Practitioner were drawn from the [Argonaut Provider Directory], [IHE Healthcare Provider Directory] and the [ONC Provider Directory Workshop].
+This profile sets minimum expectations for the [PractitionerRole] resource to record, search, and fetch the practitioner role for a practitioner.  It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the PractitionerRole resource when using this profile.  The requirements for the US Core Practitioner were drawn from the [Argonaut Provider Directory], [IHE Healthcare Provider Directory] and the [ONC Provider Directory Workshop].
 
 
 ### Mandatory and Must Support Data Elements
