@@ -45,15 +45,15 @@
 | Smoking Status| [US Core Smoking Status Observation Profile]| Observation|
 | Unique Device Identifier(s) for a Patient's Implantable Device(s) | [US Core Implantable Device Profile]| Device |
 | Vital Signs:| ||
-| Diastolic blood pressure| [Blood pressure systolic and diastolic] (From FHIR Core Profiles for Observation) | Observation|
-| Systolic blood pressure | [Blood pressure systolic and diastolic] (From FHIR Core Profiles for Observation) | Observation|
-| Body height | [Body height] (From FHIR Core Profiles for Observation) | Observation|
-| Body weight | [Body weight] (From FHIR Core Profiles for Observation) | Observation|
-| Heart rate| [Heart rate] (From FHIR Core Profiles for Observation)| Observation|
-| Respiratory rate| [Respiratory rate] (From FHIR Core Profiles for Observation)| Observation|
-| Body temperature| [Body temperature] (From FHIR Core Profiles for Observation)| Observation|
-| Pulse oximetry| [US Core Pulse Oximetry Profile] (Builds on FHIR Core Profiles for Observation) | Observation|
-| Inhaled oxygen concentration| [US Core Pulse Oximetry Profile] (Builds on FHIR Core Profiles for Observation)| Observation|
-| BMI percentile per age and sex for youth 2-20 | [US Core Pediatric BMI for Age Observation Profile] (Builds on FHIR Core Profiles for Observation) | Observation|
-| Weights for age per length and sex| [US Core Pediatric Weight for Height Observation Profile] (Builds on FHIR Core Profiles for Observation)| Observation|
-| Occipital-frontal circumference for children < 3 years old| [Head circumference] (From FHIR Core Profiles for Observation)| Observation|
+| Diastolic blood pressure| [Blood pressure systolic and diastolic] (FHIR Core Profile) | Observation|
+| Systolic blood pressure | [Blood pressure systolic and diastolic] (FHIR Core Profile) | Observation|
+| Body height | [Body height] (FHIR Core Profile) | Observation|
+| Body weight | [Body weight] (FHIR Core Profile) | Observation|
+| Heart rate| [Heart rate] (FHIR Core Profile)| Observation|
+| Respiratory rate| [Respiratory rate] (FHIR Core Profile)| Observation|
+| Body temperature| [Body temperature] (FHIR Core Profile)| Observation|
+| Pulse oximetry| [US Core Pulse Oximetry Profile] (Builds on FHIR Core Profile) | Observation|
+| Inhaled oxygen concentration| [US Core Pulse Oximetry Profile] (Builds on FHIR Core Profile)| Observation|
+| BMI percentile per age and sex for youth 2-20 | [US Core Pediatric BMI for Age Observation Profile] (Builds on FHIR Core Profile) | Observation|
+| Weights for age per length and sex| [US Core Pediatric Weight for Height Observation Profile] (Builds on FHIR Core Profile)| Observation|
+| Occipital-frontal circumference for children < 3 years old| [Head circumference] (FHIR Core Profile)| Observation|
