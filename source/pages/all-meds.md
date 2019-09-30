@@ -62,7 +62,7 @@ This IG focuses on access to a patient's medications.  It is therefore important
 **Requirements to access "all medications" and "all *active* medications" for a patient:**
 
 1. A MedicationRequest resource query **SHALL** be all that is required.
-   - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
+   - See the General Guidance section for additional rules and expectations for [Servers Requiring Status].
 1. Only MedicationRequest resources with an `intent` of ‘order’
 1. The MedicationRequest **SHALL** include all medications directly derived from the system's orders.
 1. The MedicationRequest **SHALL** include all prescribed and "self-prescribed" medications reported by the Provider, Patient or Related Person.

@@ -237,3 +237,4 @@
 [timezone extension]: {{site.data.fhir.path}}extension-tz-code.html
 [`Accept-Language`]: https://www.ietf.org/rfc/rfc2616.txt
 [Record or update]: future-of-us-core.html#future-candidate-requirements-under-considerations
+[Servers Requiring Status]: general-guidance.html#search-for-servers-requiring-status
