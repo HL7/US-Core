@@ -1,9 +1,9 @@
 
 **Storyboard for this example**
 
-The following example is based upon the following scenario:
+This example is based upon the following scenario:
 
-Patient 1137192 uses an App to request all his encounters from the provider. The provider system requires status and rejects the request returning a `404` and an OperationOutcome specifying that a status parameter is required for this search.
+Patient 1137192 uses an App to request all his encounters from the provider. The provider system requires status and rejects the request returning a `400` and an OperationOutcome specifying that a status parameter is required for this search.
 
 **Request:**
 
@@ -13,9 +13,9 @@ Get “all encounters” for a patient 1137192 by querying Encounter using the p
 
 **Response:**
 
-Instead of returning a search Bundle resource containing all the Encounter for the patient, the server return a `404 Not Found` and an OperationOutcome detailing hat a status parameter is required for this search.
+Instead of returning a search Bundle resource containing all the Encounter for the patient, the server return a `400 Not Found` and an OperationOutcome detailing hat a status parameter is required for this search.
 
-    HTTP/1.1 404 Not Found
+    HTTP/1.1 400 Not Found
     [other headers]
     {
       "resourceType": "OperationOutcome",

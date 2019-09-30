@@ -1,7 +1,7 @@
 
 **Storyboard for this example**
 
-The following example is based upon the following scenario:
+This example is based upon the following scenario:
 
 Patient Brian Z uses an App to request all his medications from a single provider, Dr Cayr. This test scenario exercises a mix of routine meds, unusual schedule meds and as-needed meds. All meds are in the outpatient setting only.
 

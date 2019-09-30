@@ -1,7 +1,7 @@
 
 **Storyboard for this example**
 
-The following example is based upon the following scenario.
+This example is based upon the following scenario.
 
 Patient Brain Z has presented with the same condition (pneumonia) as in a previous inpatient encounter. Provider A (Dr Cayr) uses a desktop or mobile application to request all the medications from this previous inpatient encounter (Encounter A).
 
