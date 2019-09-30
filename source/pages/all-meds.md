@@ -22,11 +22,11 @@ The FHIR specification defines 5 FHIR pharmacy resources concerned with the orde
   - [Medication]\:  Represents the medication itself
   - [MedicationRequest]\: An order or request for both supply of the medication and the instructions for administration of the medication to a patient, and patient reported medications.
 
-The following 3 resources are introduced here to provide background and  define the relationships between the pharmacy resources. This guide does *not* use them for accessing a patient's medications:
+The following 3 resources are introduced here to provide background and  define the relationships between the pharmacy resources. **This guide does not use them for accessing a patient's medications**:
 
   - [MedicationDispense]\: Represents a response to a prescription - provision of a supply of a medication.
   - [MedicationAdministration]\: Represents the consumption or administration of a medication.
-  - [MedicationStatement]\: Represents the record for past present and future medications use.
+  - [MedicationStatement]\: A record of a medication that is being consumed by a patient.
 
 Details about each resource can be found in the FHIR specification.  A general discussion regarding the interaction between these resources is described in the FHIR [Medications Module] and the [Guide to Resources] Sections.
 
