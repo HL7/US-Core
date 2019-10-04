@@ -21,12 +21,9 @@ There are several consideration for the user and developer experience when trans
 
 ### Endpoint Discoverability
 
-FHIR Version - a client should know which version they are dealing with without having to inspect metadata on each endpoint
+A server may make explicit which version of Argo/US Core on their FHIR endpoint (e.g., "DSTU2" or “R4" path component or separate files based on version). However best practice is to inspect the [endpoint metadata](http://hl7.org/fhir/R4/http.html) on each endpoint to discover the information about a server's capabilities including the FHIR version and the US Core Profile version that is supported:
 
-* A server **SHOULD** make explicit which version of Argo/US Core on their FHIR endpoint
-   - e.g., "DSTU2" or “R4" path component or separate files based on version
-
-   A single best practice may be defined in a future version of this guide through continued engagement with the implementer community.
+`GET [base]/metadata{?mode=[mode]} {&_format=[mime-type]}`
 
 ### No Guarantee that Resource IDs are Preserved
 
