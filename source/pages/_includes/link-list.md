@@ -71,6 +71,7 @@
 [FHIR Binary Resource]: http://hl7.org/fhir/binary.html
 [FHIR Bulk Data Access (Flat FHIR)]: http://hl7.org/fhir/uv/bulkdata/STU1/
 [FHIR Communications]: {{site.data.fhir.path}}security.html#http
+[FHIR Communications Security]: {{site.data.fhir.path}}security.html#http
 [FHIR Conformance Rules]: {{site.data.fhir.path}}conformance-rules.html
 [FHIR Data Types]: {{site.data.fhir.path}}datatypes.html
 [FHIR Digital Signatures]: {{site.data.fhir.path}}security.html#digital%20signatures
