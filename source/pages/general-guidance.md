@@ -296,9 +296,9 @@ The following guidelines outline how to request and return a resource in the req
                 [...snip...]
     ~~~
 
-* Servers SHALL make discoverable what languages it can support.
-  - via its CapabilityStatement
-  - other means
+* Servers **SHOULD** make it known what languages are supported in their CapabilityStatement(s) using this extension ([converted from a new element] for a future version of CapabilityStatement):
+
+    `http://hl7.org/fhir/5.0/StructureDefinition/extension-CapablilityStatement.acceptLanguage`
 
 For further guidance on language and locale for generation of the resource narrative, see the [Multi-language support for Narratives] in the core specification.
 
