@@ -33,6 +33,7 @@ With each major version in FHIR, the core data models have undergone changes.  T
 ### Claiming Conformance to a US Core Profile
 
 To claim conformance to a US Core Profile US Core Servers **SHALL**:
+
   - Be able to populate all profile data elements that have a minimum cardinality >= 1 and/or flagged as *Must Support* as defined by that profile’s StructureDefinition.
   - Conform to the [US Core Server Capability Statement] expectations for that profile’s type.
 
@@ -40,7 +41,6 @@ To claim conformance to a US Core Profile US Core Servers **SHALL**:
 ### Must Support
 
 For querying and reading US Core Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows (see the Future of US Core page for [writing and updating] US Core Profiles.) :
-
 
 * US Core Responders **SHALL** be capable of populating all data elements as part of the query results as specified by the [US Core Server Capability Statement].
 * US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words US Core Requestors **SHOULD** be capable of displaying the data elements for human use or storing it for other purposes.
