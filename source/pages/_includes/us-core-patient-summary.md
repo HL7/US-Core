@@ -23,7 +23,7 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [ContactPointSystem](http://hl7.org/fhir/ValueSet/contact-point-system)
    - which must have a  string value  in `Patient.telecom.value`
-   - {: .note-to-balloters}which should have a  code value  in `Patient.telecom.use`
+   - which should have a  code value  in `Patient.telecom.use`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [ContactPointUse](http://hl7.org/fhir/ValueSet/contact-point-use)
 1.  A  date  in `Patient.birthDate`
@@ -34,7 +34,7 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [USPS Two Letter Alphabetic Codes](ValueSet-us-core-usps-state.html)
    - which should have a  string value  in `Patient.address.postalCode`
-   - {: .note-to-balloters}which should have a  Period value  in `Patient.address.period`
+   - which should have a  Period value  in `Patient.address.period`
 1. One or more  Communications  in `Patient.communication`
    - which must have a  CodeableConcept value  in `Patient.communication.language`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)

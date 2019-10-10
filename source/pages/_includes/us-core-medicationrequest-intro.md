@@ -19,7 +19,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each MedicationRequest must have:**
 
 1.  a status
-1.  {: .note-to-balloters}an intent code
+1.  an intent code
 1.  a medication
 1.  a patient
 1.  a date for when written
@@ -27,12 +27,12 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each MedicationRequest must support:**
 
-1. {: .note-to-balloters}the `reported` flag signaling that information is from a secondary source such as a patient.
-1. {: .note-to-balloters}the encounter
+1. the `reported` flag signaling that information is from a secondary source such as a patient.
+1. the encounter
 1. the prescription *Sig*
 **Profile specific implementation guidance:**
 
-* {: .note-to-balloters}See the [Medication List Guidance] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
+* See the [Medication List Guidance] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
 *  The MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
     *  When referencing a Medication resource,  the resource may be [contained] or an external resource.
     *  The server application MAY choose any combination of these methods, but if an external reference to Medication is used, the server SHALL support the [`_include`] parameter for searching this element.

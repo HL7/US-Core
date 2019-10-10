@@ -13,68 +13,6 @@ layout: default
 
 <!-- end TOC -->
 
-<!-- ************ NOTE TO BALLOTERS ************-->
-
-<div class="note-to-balloters" markdown="1">
-
-**STU Update Comment Review**
-
-All comments for this STU Update must be logged as new [GForge Tracker](http://hl7.org/fhir-issues) items under the *Specification* "US Core". **Content open for review is highlighted in pink and marked with the text "Open for STU Comment" as demonstrated here. Any comments outside of these boundaries will be dispositioned as "Not Related" for this STU Comment period.**
-
-In order meet the proposed ONC [U.S. Core Data for Interoperability (USCDI)] regulatory requirements for access to patient data, this STU Update of the US Core Implementation Guide has added new content. Structured Documents and the [Argonaut Project Team](https://argonautwiki.hl7.org/Argonaut_2019_Projects#Argonaut_R4) have spent the last several months reviewing, testing and providing invaluable feedback on these and other topics including most notably:
-
-- A [US Core Provenance Profile] and [Basic Provenance] guidance on fetching Provenance for patient data.
-- [Medication List Guidance] for fetching a patient's medications
-- Recasting the US Core Device profile into a [US Core Implantable Device Profile]
-- A US Core spO2 by [US Core Pulse Oximetry Profile]
-- Updated search to support [requiring search by multiple statuses](general-guidance.html#search-for-servers-requiring-status)
-- Guidance when the source has [no data](general-guidance.html#missing-data)
-- General guidelines and considerations for [DSTU2 to R4 Conversion](r2-r4-guidance.html)
-- Guidance for [language support](general-guidance.html#language-support)
-- Considerations for fetching data for [multiple patients](general-guidance.html#searching-multiple-patients)
-- Future considerations for [times offset and timezone guidelines](future-of-us-core.html#candidates-under-consideration)
-
-These sections as well as several other clarifications, corrections and technical changes that are listed in the sections below have been reviewed and voted on by the members of the [HL7 International Structured Documents WorkGroup](http://www.hl7.org/Special/committees/structure/index.cfm) who is sponsoring this STU Update comment period and reconciliation of the comments.
-
-The following pages, page sections and artifacts are open to review and comment for this US Core Implementation Guide (v3.0.1: STU3) STU Update:
-- 2.1.1.5 [Missing Data](general-guidance.html#missing-data) (GF#22276 update guidance on when source has no data)
-- 2.1.1.8 [Language Support](general-guidance.html#language-support) (GF#22753 Add language support guidance )
-- 2.1.1.12 [Search for Servers Requiring Status](general-guidance.html#search-for-servers-requiring-status) (GF#22754 Provide guidance on Search filters and hidden default values by EHRs)
-- 2.1.1.13 [Searching multiple patients](general-guidance.html#searching-multiple-patients)(GF#23734 add guidance on multiple patients)
--  2.3 - [Medication List Guidance](all-meds.html) (GF#22751 Add med list guidance and update MedRequest profile to support med list)
--  2.4 - [Basic Provenance](basic-provenance.html)
--  2.5 - [DSTU2 to R4 Conversion](r2-r4-guidance.html) (GF#22755 Add R2 to R4 conversion and guidance)
-- 2.6.1.1.3 [Candidates under consideration](future-of-us-core.html#candidates-under-consideration) (GF#20571 Add a Coverage Profile to US Core to Support Interactions with Payers, GF#23734 add guidance on multiple patients,GF#23778 add timezone and time offset guidance)
-- 3.2.1.2 - [Structure Definition US Core PractitionerRole](StructureDefinition-us-core-practitionerrole.html#profile) **See changes highlighted in ‘Text Summary’ tab** (GF#23041 us-core-practitionerrole change cardinality of code role from 0..1 to 1..\*)
-- 3.8 - [StructureDefinition US Core Provenance](StructureDefinition-us-core-provenance.html)
-- 3.11.1.3 - [StructureDefinition US Core Patient](StructureDefinition-us-core-patient.html#profile) **See changes highlighted in ‘Text Summary’ tab** (GF#23735 add telecom.use and address.period to Patient) Note
-- 3.12 - [StructureDefinition US Core Pulse Oximetry](StructureDefinition-us-core-pulse-oximetry.html) (GF#20616 Add FIO2 to vitals as isted in USCDI)
-- 3.16.1.2 - [StructureDefinition US Core DocumentReference](StructureDefinition-us-core-documentreference.html#profile) **See changes highlighted in ‘Text Summary’ tab** (GF#22806 Update US Core DocumentReference.identifier to 0..\*)
-- 3.23.1.1 - [StructureDefinition US Core Organization](StructureDefinition-us-core-organization.html#mandatory-and-must-support-data-elements) **See changes highlighted in ‘Text Summary’ tab** (GF#22771 Update Organization requirements to support more than just provider directory)
-- 3.28.1.1 - [Structure Definition US Core MedicationRequest](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements) **See changes highlighted in ‘Text Summary’ tab** (GF#22751 Add med list guidance and update MedRequest profile to support med list)
-- 3.28.1.4 - [MedicationRequest Quick Start](StructureDefinition-us-core-medicationrequest.html#search) (GF#22751 Add med list guidance and update MedRequest profile to support med list)
-- 3.29 - [StructureDefinition US Core Implantable Device](StructureDefinition-us-core-implantable-device.html) (GF#22851 Rename US Core Device Profile, GF#19796 Clarify that this US Core Device profile is actually US Core Implanted Device Profile rather than a generic US Core Device, GF#20971 Add UDI Elements including Parsed UDI-DI and applicable UDI-PIs, GF#22901 Update Device Intro and Examples per FDA)
-- 5.1.1 - [US Core Encounter Type](ValueSet-us-core-encounter-type.html) (GF#22853 Add SNOMED back to Encounter Type Value Set)
-- 5.1.1 - [US Core Procedure Code](ValueSet-us-core-procedure-code.html) (GF#23053 US Core Procedure Code Value Set Description and Content Don't Match)
-
-
-
-The following pages and sections have be **removed** (Links to US Core Implementation Guide (v3.0.0: STU3)):
-
-- [US Core MedicationStatement Profile and SearchParameters](http://hl7.org/fhir/us/core/STU3/StructureDefinition-us-core-medicationstatement.html)  (GF#22751 Add med list guidance and update MedRequest profile to support med list)
-- [Extensible + Max-ValueSet binding for CodeableConcept Datatype](http://hl7.org/fhir/us/core/STU3/general-guidance.html#max-binding) (GF#23773 remove MaxValue Extension from 4 extensible valuesets)
-- [Syntax for searches limited by patient](http://hl7.org/fhir/us/core/STU3/general-guidance.html#syntax-for-searches-limited-by-patient) (GF#22750 Remove extra patient search syntax from US Core)
-
-Other technical Corrections that cannot be highlighted since they are embeded in the JSON and XML Representations (Comments on these structures will be considered during this STU Update period).
-- Added conformance expectation of SHALL for the `multipleOR` SearchParameter element for all status parameters.  An example of this can be seen [here](SearchParameter-us-core-careplan-status.html). (GF#22756 Add SHALL support multipleOR on Statuses)
-- Converted fixed values to patterns for US Core CarePlan Profile, US Core Pediatric Weight for Height Observation Profile, US Core Pediatric BMI for Age Observation Profile, US Core Practitioner Profile and US Core Organization Profile, and US Core Pulse Oximetry Profile (GF#22772 change careplan slice discriminator from pattern to slice for easier reading in diff)
-- Remove  `CapabilityStatement.rest.resource.profile` elements from CapabilityStatements. (GF#23779 remove base profile element from CapabilityStatements)
-
-
-</div>
-
-<!-- ************ END NOTE TO BALLOTERS ************-->
-
 ### Introduction
 
 The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for accessing patient data. The [Argonaut] pilot implementations, ONC [2015 Edition Common Clinical Data Set (CCDS)], and the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)] provided the requirements for this guide.  The prior Argonaut search and vocabulary requirements, based on FHIR DSTU2, are updated in this guide to support FHIR Version R4. This guide was used as the basis for further testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by [DAF-Research], [QI-Core], and [CIMI].  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.

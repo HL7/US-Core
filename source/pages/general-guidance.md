@@ -41,19 +41,18 @@ In the context of US Core, *Must Support* on any data element SHALL be interpret
 * In situations where information on a particular data element is missing and the US Core Responder knows the precise reason for the absence of data, US Core Responders SHALL send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
 * US Core Requestors SHALL be able to process resource instances containing data elements asserting missing information.
 
-
 * NOTE: Typically *US Core Responder* Actor = Server and *US Core Requestor Actor* = Client
-* NOTE: US Core Responders who do not have the capability to store or return a *Must Support* element for a particular US Core profile can still claim conformance to the US Core profile per the US Core conformance resources.
-* NOTE: The above definition of Supported is derived from HL7v2 concept "Required but may be empty - RE" described in HL7v2 V28_CH02B_Conformance.doc.
+* NOTE: The expectation is that US Core Responders who have have the *capability to store* a US Core *MustSupport* data element SHALL return the data as described above. However, US Core Responders who do *not* have the *capability to store* a US Core *MustSupport* data element can still claim conformance to the US Core profile per the US Core conformance resources.
+* NOTE: The above definition of *MustSupport* is derived from HL7v2 concept "Required but may be empty - RE" described in HL7v2 V28_CH02B_Conformance.doc.
 * NOTE: Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
 
 ### Referencing US Core profiles
 
 Many of the profiles in this guide [reference] other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core CareTeam Profile] references US Core Patient.  For any other references not formally defined in a US Core profiles, the referenced resource SHOULD be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.
 
-There are scenarios when [contained] resources are used in US Core profiles. They occur when the content referred to in the contained resource does not have an independent existence apart from the resource that contains it.  For example, the [Medication List Guidance] page describes how a contained Medication in MedicationRequest is used for representing the medication. When referencing a contained resource in a US Core profile, the contained resource **SHOULD** be a US Core profile if a US Core profile exists for the resource type. 
+There are scenarios when [contained] resources are used in US Core profiles. They occur when the content referred to in the contained resource does not have an independent existence apart from the resource that contains it.  For example, the [Medication List Guidance] page describes how a contained Medication in MedicationRequest is used for representing the medication. When referencing a contained resource in a US Core profile, the contained resource **SHOULD** be a US Core profile if a US Core profile exists for the resource type.
 
-<div class="note-to-balloters" markdown="1">
+
 ### Missing Data
 
 If the source system does not have data for a *Must Support* data element, the data element is omitted from the resource as described above.  If the source system does not have data for a *required* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
@@ -94,7 +93,7 @@ If the source system does not have data for a *Must Support* data element, the d
           - `Goal.lifecycleStatus`
 
         If one of these a status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a query for the resource.
-</div>
+
 
 ### Using Codes in US Core profiles
 
@@ -214,7 +213,7 @@ Clinical information that has been removed from the patient's record needs to be
 
   - A provider facing system MAY be supplied with additional details that the patient viewing system would typically not have access to.
 
-<div class="note-to-balloters" markdown="1">
+
 ### Language Support
 
 There is a basic need be able to access records in your language, and the data provider should do their best to translate (safely) to the language being requested. Understanding that this will be variably complete depending on the nature of the record. For example translating the following elements is relatively straightforward:
@@ -302,7 +301,7 @@ The following guidelines outline how to request and return a resource in the req
   - other means
 
 For further guidance on language and locale for generation of the resource narrative, see the [Multi-language support for Narratives] in the core specification.
-</div>
+
 
 <!--
 ### Timezone and Time Offsets (*STRAWMAN PROPOSAL*)
@@ -399,7 +398,7 @@ Note that the patient may be *implicit* in the context in some implementations (
 
 `GET [base]/[Resource-type]{?other-parameters}`
 
-<div class="note-to-balloters" markdown="1">
+
 ### Search for Servers Requiring Status
 
 >Servers are *strongly* encouraged to support a query for resources *without* requiring a status parameter.  However, if business requirements prohibit this they **SHALL** follow the guidelines here.
@@ -417,15 +416,15 @@ For searches where the client does not supply a status parameter, an implementat
 
 - **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.
 - Follow the [deleted data](#representing-deleted-information) guidance above.
-</div>
 
-<div class="note-to-balloters" markdown="1">
+
+
 ### Searching multiple patients
 
 Currently most EHRs permit queries that provide a single patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described in the standard FHIR REST API. Instead, a user facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data.
 
 However, neither specification defines how a user facing provider app is able to seek realtime "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core]
-</div>
+
 
 ### Compartment Based Search
 

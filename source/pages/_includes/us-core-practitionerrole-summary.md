@@ -5,7 +5,7 @@
 1.  A Organization Reference  in `PractitionerRole.organization`
 
 #### Summary of the Must Support Requirements
-1. {: .note-to-balloters}One or more  CodeableConcepts  in `PractitionerRole.code`
+1. One or more  CodeableConcepts  in `PractitionerRole.code`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [US Core Provider Role (NUCC)](ValueSet-us-core-provider-role.html)
 1. One or more  CodeableConcepts  in `PractitionerRole.specialty`

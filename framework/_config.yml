@@ -16,21 +16,17 @@ showExamples:  # 'true' if want to display Examples tab -currently no template f
 showPsuedoJson: # 'true' if want to display Psuedo JSON profile view'
 showPsuedoXML: # 'true' if want to display Psuedo JSON profile view'
 default_profile_view: 1  # choice of 0|1|2|3 for summary|differential|full|all views in profile
-summary_view_pages:  # to show summaries as default view for comment ballot
-- StructureDefinition-us-core-practitionerrole.html
-- StructureDefinition-us-core-patient.html
-- StructureDefinition-us-core-documentreference.html
-- StructureDefinition-us-core-medicationrequest.html
+summary_view_pages:  # list of pages to show summaries as default view for comment ballot
 ballot_pages: # list of pages to highlight for balloters/comments  names = html pages for ig pub generated artifacts and file names for pages
-- all-meds.md #page.name = source file name for "static" pages
+#- all-meds.md #page.name = source file name for "static" pages
 #- StructureDefinition-template-basic.html # page.name file name for ig-pub generated html_pages
-- basic-provenance.md
-- r2-r4-guidance.md
-- StructureDefinition-us-core-provenance.html
-- StructureDefinition-us-core-pulse-oximetry.html
-- StructureDefinition-us-core-implantable-device.html
-- ValueSet-us-core-encounter-type.html
-- ValueSet-us-core-procedure-code.html
+#- basic-provenance.md
+#- r2-r4-guidance.md
+#- StructureDefinition-us-core-provenance.html
+#- StructureDefinition-us-core-pulse-oximetry.html
+#- StructureDefinition-us-core-implantable-device.html
+#- ValueSet-us-core-encounter-type.html
+#- ValueSet-us-core-procedure-code.html
 example_types:  # for matching type to Type
 - Account
 - ActivityDefinition

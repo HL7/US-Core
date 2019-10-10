@@ -12,7 +12,6 @@ The following are example usage scenarios for the US Core-Organization profile:
 
 The following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.  
 
-<div class="note-to-balloters" markdown="1">
 **Each Organization must have:**
 
 1.  A status of the organization
@@ -25,8 +24,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
    - National Provider Identifier (NPI) for organizations
    - Clinical Laboratory Improvement Amendments (CLIA) for laboratories.
 1.  A list of contact information
-1.  A communication endpoint
-</div>
 
 **Profile specific implementation guidance:**
 
