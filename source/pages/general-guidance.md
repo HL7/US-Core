@@ -259,9 +259,7 @@ The following guidelines outline how to request and return a resource in the req
               [...snip...]
       ~~~
 
-* Servers SHALL use the <http://hl7.org/fhir/StructureDefinition/translation> where they wish to provide language translations when the intent is indicate that the:
-    1. The server is providing additional translations (by its own choice)
-    1. The is providing a translation in response to a different Accept-Language than what the resource is stored in.
+* Servers SHALL use the <http://hl7.org/fhir/StructureDefinition/translation> extension when the server is providing additional translations by its own choice or in response to a different `Accept-Language` than what the resource is stored in.
 
     Example
     ~~~
@@ -298,7 +296,7 @@ The following guidelines outline how to request and return a resource in the req
                 [...snip...]
     ~~~
 
-* Servers **SHOULD** make it known what languages are supported in their CapabilityStatement(s) using this extension ([converted from a new element] for a future version of CapabilityStatement):
+* Servers **SHOULD** make it known what languages are supported in their CapabilityStatement(s) using this extension[^1]:
 
     `http://hl7.org/fhir/5.0/StructureDefinition/extension-CapablilityStatement.acceptLanguage`
 
@@ -444,5 +442,6 @@ In order to manage the number of search results returned, the server may choose 
 <!--
 [^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset#Time_zones_and_time_offsets
 -->
+[^1]: This extension is [converted from a new element] in a future version of CapabilityStatement.
 
 {% include link-list.md %}
