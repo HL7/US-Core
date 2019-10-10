@@ -1347,7 +1347,7 @@
     <Cell ss:StyleID="s109"><Data ss:Type="String">0..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s109"><Data ss:Type="String">boolean|Reference(Patient){http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient}|Reference(Practitioner){http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner}|Reference(PractitionerRole){http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole}|Reference(Organization){http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization}|Reference(RelatedPerson)</Data><NamedCell
+    <Cell ss:StyleID="s109"><Data ss:Type="String">boolean|Reference(Patient){http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient}|Reference(Practitioner){http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner}|Reference(PractitionerRole)|Reference(Organization){http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization}|Reference(RelatedPerson)</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1500,7 +1500,7 @@
     <Cell ss:StyleID="s109"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s109"><Data ss:Type="String">Reference(Practitioner){http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner}|Reference(PractitionerRole){http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole}|Reference(Organization){http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization}|Reference(Patient){http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient}|Reference(Device){http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device}|Reference(RelatedPerson)</Data><NamedCell
+    <Cell ss:StyleID="s109"><Data ss:Type="String">Reference(Practitioner){http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner}|Reference(PractitionerRole)|Reference(Organization){http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization}|Reference(Patient){http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient}|Reference(Device){http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device}|Reference(RelatedPerson)</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
