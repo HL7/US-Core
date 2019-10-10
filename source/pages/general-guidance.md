@@ -259,7 +259,9 @@ The following guidelines outline how to request and return a resource in the req
               [...snip...]
       ~~~
 
-* Servers SHALL use the <http://hl7.org/fhir/StructureDefinition/translation> where they wish to provide language translations.
+* Servers SHALL use the <http://hl7.org/fhir/StructureDefinition/translation> where they wish to provide language translations when the intent is indicate that the:
+    1. The server is providing additional translations (by its own choice)
+    1. The is providing a translation in response to a different Accept-Language than what the resource is stored in.
 
     Example
     ~~~
