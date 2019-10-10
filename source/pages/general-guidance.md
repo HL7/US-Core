@@ -50,7 +50,7 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 * US Core Requestors **SHALL** be able to process resource instances containing data elements asserting missing information.
 
 * NOTE: Typically *US Core Responder* Actor = Server and *US Core Requestor Actor* = Client
-* NOTE: The above definition of *MustSupport* is derived from HL7v2 concept "Required but may be empty - RE" described in HL7v2 V28_CH02B_Conformance.doc.
+* NOTE: The above definition of *Must Support* is derived from HL7v2 concept "Required but may be empty - RE" described in HL7v2 V28_CH02B_Conformance.doc.
 * NOTE: Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
 
 ### Referencing US Core profiles
