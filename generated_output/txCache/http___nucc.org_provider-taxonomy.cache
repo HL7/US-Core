@@ -17370,3 +17370,75 @@ v: {
   "error" : "The display \"Allopathic &amp; Osteopathic Physicians:General Practice\" is not a valid display for the code {http://nucc.org/provider-taxonomy}208D00000X - should be one of [\"General Practice\"]"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://nucc.org/provider-taxonomy",
+    "code" : "207RC0000X",
+    "display" : "Allopathic &amp; Osteopathic Physicians:Internal Medicine:Cardiovascular Disease"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://nucc.org/provider-taxonomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "223366009"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "224930009"
+      }]
+    }]
+  }
+}, "lang":"null"}####
+v: {
+  "display" : "Cardiovascular Disease",
+  "severity" : "warning",
+  "error" : "The display \"Allopathic &amp; Osteopathic Physicians:Internal Medicine:Cardiovascular Disease\" is not a valid display for the code {http://nucc.org/provider-taxonomy}207RC0000X - should be one of [\"Cardiovascular Disease\"]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://nucc.org/provider-taxonomy",
+    "code" : "208D00000X",
+    "display" : "Allopathic &amp; Osteopathic Physicians:General Practice"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://nucc.org/provider-taxonomy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "223366009"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "224930009"
+      }]
+    }]
+  }
+}, "lang":"null"}####
+v: {
+  "display" : "General Practice",
+  "severity" : "warning",
+  "error" : "The display \"Allopathic &amp; Osteopathic Physicians:General Practice\" is not a valid display for the code {http://nucc.org/provider-taxonomy}208D00000X - should be one of [\"General Practice\"]"
+}
+-------------------------------------------------------------------------------------

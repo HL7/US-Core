@@ -18,12 +18,3 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
 #### Summary of the Must Support Requirements
 1. One or more Performer References  in `DiagnosticReport.performer`
 1. One or more Result References  in `DiagnosticReport.result`
- with the following constraints: *DiagnosticReport.result or  DiagnosticReport.presentedForm or both SHALL be present.*
-1. One or more  Medias  in `DiagnosticReport.media`
-1. One or more  Attachments  in `DiagnosticReport.presentedForm`
- with the following constraints: *DiagnosticReport.result or  DiagnosticReport.presentedForm or both SHALL be present.*
-
-#### Summary of Constraints
-1. DiagnosticReport.result or  DiagnosticReport.presentedForm or both SHALL be present.
-1. DiagnosticReport.result or  DiagnosticReport.presentedForm or both SHALL be present.
-1. DiagnosticReport.result or  DiagnosticReport.presentedForm or both SHALL be present.

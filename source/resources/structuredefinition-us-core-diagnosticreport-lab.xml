@@ -35,13 +35,13 @@
 			<definition value="The US Core Diagnostic Report Profile is based upon the core FHIR DiagnosticReport Resource and created to meet the 2015 Edition Common Clinical Data Set &#39;Laboratory test(s) and Laboratory value(s)/result(s)&#39; requirements."/>
 			<alias value="Lab Result"/>
 			<alias value="Lab Report"/>
-			<constraint>
+			<!--constraint>
 				<key value="us-core-7"/>
 				<severity value="error"/>
 				<human value="DiagnosticReport.result or  DiagnosticReport.presentedForm or both SHALL be present."/>
 				<expression value="result.exists() or presentedForm.exists()"/>
 				<xpath value="f:result or f:presentedForm"/>
-			</constraint>
+			</constraint-->
 			<mustSupport value="false"/>
 			<isModifier value="false"/>
 		</element>
@@ -172,16 +172,17 @@
 				<code value="Reference"/>
 				<targetProfile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"/>
 			</type>
-			<constraint>
+			<!--constraint>
 				<key value="us-core-7"/>
 				<severity value="error"/>
 				<human value="DiagnosticReport.result or  DiagnosticReport.presentedForm or both SHALL be present."/>
 				<expression value="result.exists() or presentedForm.exists()"/>
 				<xpath value="f:result or f:presentedForm"/>
-			</constraint>
+			</constraint-->
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
+		<!--
 		<element id="DiagnosticReport.media">
 			<path value="DiagnosticReport.media"/>
 			<min value="0"/>
@@ -206,5 +207,6 @@
 			<mustSupport value="true"/>
 			<isModifier value="false"/>
 		</element>
+		-->
 	</differential>
 </StructureDefinition>

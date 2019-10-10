@@ -26,7 +26,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  the encounter the report occurred within
 1.  instant the report was released
 1.  an author (actor) producing the report
-1.  an image
 1.  a reference to the full report (presentedForm)
 
 **Profile specific implementation guidance:**

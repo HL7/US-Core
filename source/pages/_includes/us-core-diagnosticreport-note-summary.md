@@ -17,5 +17,4 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
 1.  A Encounter Reference  in `DiagnosticReport.encounter`
 1.  An  instant  in `DiagnosticReport.issued`
 1. One or more Performer References  in `DiagnosticReport.performer`
-1. One or more  Medias  in `DiagnosticReport.media`
 1. One or more  Attachments  in `DiagnosticReport.presentedForm`

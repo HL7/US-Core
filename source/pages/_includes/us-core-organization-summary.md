@@ -23,7 +23,6 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [USPS Two Letter Alphabetic Codes](ValueSet-us-core-usps-state.html)
    - which should have a  string value  in `Organization.address.postalCode`
    - which should have a  string value  in `Organization.address.country`
-1. One or more Endpoint References  in `Organization.endpoint`
 
 #### Summary of Constraints
 1. The organization SHALL at least have a name or an identifier, and possibly more than one

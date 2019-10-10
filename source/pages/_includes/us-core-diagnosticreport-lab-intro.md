@@ -19,11 +19,11 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.   a patient
 1.   a time indicating when the measurement was taken
 1.   a time indicating when the measurement was reported
-1.   at least one structured(Observation reference) or unstructured(narrative/text based) result
 
 **Each DiagnosticReport must support:**
 
 1.   who issues the report
+1.   a result
 
 **Profile specific implementation guidance:**
 
