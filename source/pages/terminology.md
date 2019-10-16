@@ -26,11 +26,12 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 **Externally Published code systems**
 
 |URI|Source|Comment|OID (for non-FHIR systems)|
-|---|---|---|---|           
+|---|---|---|---|
+|`urn:oid:2.16.840.1.113883.6.285`|CMS|[*Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes*](https://www.cms.gov/Medicare/Coding/MedHCPCSGenInfo/HCPCS_Coding_Questions.html)|2.16.840.1.113883.6.285|
 |`http://hl7.org/fhir/sid/icd-10-cm`|[CMS](http://www.cms.gov/Medicare/Coding/ICD10/)|*International Classification of Diseases, 10th Revision, Clinical Modification (ICD-10-CM)* -  See [Using ICD-[X] with FHIR]({{site.data.fhir.path}}icd.html#4.2.11).|2.16.840.1.113883.6.90|
 |`http://www.icd10data.com/icd10pcs`|[CMS](http://www.cms.gov/Medicare/Coding/ICD10/)|*International Classification of Diseases, 10th Revision, Procedure Coding System (ICD-10-PCS)* -  See [ICD-10 PCS Codes](http://www.icd10data.com/icd10pcs) for online access to codes for general information purposes. |2.16.840.1.113883.6.4|
 |`http://hl7.org/fhir/us/sid/cdt`|[ADA](http://www.ada.org/en/publications/cdt)|*Code on Dental Procedures and Nomenclature*|2.16.840.1.113883.6.13|
-|`https://www.usps.com`|[USPS](http://pe.usps.com/text/pub28/28apb.htm)|*United States Postal Service Two–Letter State and Possession Abbreviations*|2.16.840.1.113883.3.88.12.80.1|
+|`https://www.usps.com`|[USPS](http://pe.usps.com/text/pub28/28apb.html)|*United States Postal Service Two–Letter State and Possession Abbreviations*|2.16.840.1.113883.3.88.12.80.1|
 {:.grid}
 
 <!--

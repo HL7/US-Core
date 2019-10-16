@@ -1,5 +1,10 @@
 <!-- ************ NOTE TO BALLOTERS ************-->
 
+<div class="note-to-balloters" markdown="1">
+
+**STU Update Comment Review**
+
+All comments for this STU Update must be logged as new [GForge Tracker](http://hl7.org/fhir-issues) items under the *Specification* "US Core". **Content open for review is highlighted in pink and marked with the text "Open for STU Comment" as demonstrated here. Any comments outside of these boundaries will be dispositioned as "Not Related" for this STU Comment period.**
 
 In order meet the proposed ONC [U.S. Core Data for Interoperability (USCDI)] regulatory requirements for access to patient data, this STU Update of the US Core Implementation Guide has added new content. Structured Documents and the [Argonaut Project Team](https://argonautwiki.hl7.org/Argonaut_2019_Projects#Argonaut_R4) have spent the last several months reviewing, testing and providing invaluable feedback on these and other topics including most notably:
 
@@ -13,14 +18,10 @@ In order meet the proposed ONC [U.S. Core Data for Interoperability (USCDI)] reg
 - Guidance for [language support](general-guidance.html#language-support)
 - Considerations for fetching data for [multiple patients](general-guidance.html#searching-multiple-patients)
 - Future considerations for [times offset and timezone guidelines](future-of-us-core.html#candidates-under-consideration)
-- Future Considerations for [writing and updating data](future-of-us-core.html#candidates-under-consideration)
-- Update [security page](security.html) to reflect current testing.
-- Clarify [definition of MustSupport](general-guidance.html#must-support) to reflect the intent that the server must be able to populate a MustSupport element in order to claim conformance to the profile.
-- Expanding bindings for Procedure and Condition codes for quality measures and other purposes.
 
 These sections as well as several other clarifications, corrections and technical changes that are listed in the sections below have been reviewed and voted on by the members of the [HL7 International Structured Documents WorkGroup](http://www.hl7.org/Special/committees/structure/index.cfm) who is sponsoring this STU Update comment period and reconciliation of the comments.
 
-The following pages, page sections and artifacts have been changed for this version US Core Implementation Guide:
+The following pages, page sections and artifacts are open to review and comment for this US Core Implementation Guide (v3.0.1: STU3) STU Update:
 - 2.1.1.5 [Missing Data](general-guidance.html#missing-data) (GF#22276 update guidance on when source has no data)
 - 2.1.1.8 [Language Support](general-guidance.html#language-support) (GF#22753 Add language support guidance )
 - 2.1.1.12 [Search for Servers Requiring Status](general-guidance.html#search-for-servers-requiring-status) (GF#22754 Provide guidance on Search filters and hidden default values by EHRs)
@@ -52,8 +53,9 @@ The following pages and sections have be **removed** (Links to US Core Implement
 Other technical Corrections that cannot be highlighted since they are embeded in the JSON and XML Representations (Comments on these structures will be considered during this STU Update period).
 - Added conformance expectation of SHALL for the `multipleOR` SearchParameter element for all status parameters.  An example of this can be seen [here](SearchParameter-us-core-careplan-status.html). (GF#22756 Add SHALL support multipleOR on Statuses)
 - Converted fixed values to patterns for US Core CarePlan Profile, US Core Pediatric Weight for Height Observation Profile, US Core Pediatric BMI for Age Observation Profile, US Core Practitioner Profile and US Core Organization Profile, and US Core Pulse Oximetry Profile (GF#22772 change careplan slice discriminator from pattern to slice for easier reading in diff)
-- Converted fixed values to patterns for US Core CarePlan Profile, US Core Pediatric Weight for Height Observation Profile, US Core Pediatric BMI for Age Observation Profile, US Core Practitioner Profile and US Core Organization Profile, and US Core Pulse Oximetry Profile (GF#22772 change careplan slice discriminator from pattern to slice for easier reading in diff)
 - Remove  `CapabilityStatement.rest.resource.profile` elements from CapabilityStatements. (GF#23779 remove base profile element from CapabilityStatements)
 
+
+</div>
 
 <!-- ************ END NOTE TO BALLOTERS ************-->
