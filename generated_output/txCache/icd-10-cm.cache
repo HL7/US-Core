@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Not implemented"
+}
+-------------------------------------------------------------------------------------

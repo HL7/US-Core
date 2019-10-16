@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="us-core-problem"/>
-	<text>
-		<status value="generated"/>
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<h2>Problem Value Set</h2>
-			<p>This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions)</p>
-			<p>
-				<b>Copyright Statement:</b> This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
-      </p>
-			<p>This value set includes codes from the following code systems:</p>
-			<ul>
-				<li>No current problems or disability 160245001</li>
-				<li>Include codes from http://snomed.info/sct where concept  is-a  404684003</li>
-				<li>Include codes from http://snomed.info/sct where concept  is-a  243796009</li>
-			</ul>
-		</div>
-	</text>
 	<url value="http://hl7.org/fhir/us/core/ValueSet/us-core-problem"/>
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
@@ -35,7 +19,7 @@
 		</telecom>
 	</contact>
 	<description value="This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions).   ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical information."/>
-	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. ICD-9 and ICD-10 are copyrighted by the [World Health Organization \(WHO\)](https://www.who.int/classifications/icd/en/), which owns and publishes the classification. WHO has authorized the development of an adaptation of ICD-9 and ICD-10 to ICD-9-CM to ICD-10-CM for use in the United States for U.S. government purposes."/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. ICD-9 and ICD-10 are copyrighted by the World Health Organization (WHO) which owns and publishes the classification.  See https://www.who.int/classifications/icd/en. WHO has authorized the development of an adaptation of ICD-9 and ICD-10 to ICD-9-CM to ICD-10-CM for use in the United States for U.S. government purposes. "/>
 	<compose>
 		<include>
 			<system value="http://snomed.info/sct"/>
