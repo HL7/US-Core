@@ -136,6 +136,7 @@
 [Observation Value Absent Reason]: http://hl7.org/fhir/ValueSet/data-absent-reason
 [Observation]: {{site.data.fhir.path}}observation.html
 [Office of the National Coordinator for Health Information Technology (ONC)]: http://www.healthit.gov/newsroom/about-onc
+[OperationOutcome]: {{site.data.fhir.path}}operationoutcome.html
 [Organization]: {{site.data.fhir.path}}organization.html
 [Oxygen saturation]: {{site.data.fhir.path}}oxygensat.html
 [Pathology (LP7839-6)]: https://loinc.org/LP7839-6
