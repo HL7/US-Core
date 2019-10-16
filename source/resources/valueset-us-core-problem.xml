@@ -35,7 +35,7 @@
 		</telecom>
 	</contact>
 	<description value="This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions)"/>
-	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical information."/>
 	<compose>
 		<include>
 			<system value="http://snomed.info/sct"/>
@@ -58,6 +58,12 @@
 				<op value="is-a"/>
 				<value value="243796009"/>
 			</filter>
+		</include>
+		<include>
+			<system value="http://hl7.org/fhir/sid/icd-10"/>
+		</include>
+		<include>
+			<system value="http://hl7.org/fhir/sid/icd-9-cm"/>
 		</include>
 	</compose>
 </ValueSet>
