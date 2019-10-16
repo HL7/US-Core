@@ -41123,3 +41123,49 @@ v: {
   "error" : "The code provided (http://snomed.info/sct#116154003) is not  valid in the value set USCoreCareTeamProviderRoles"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "442311008",
+    "display" : "Liveborn born in hospital"
+  }],
+  "text" : "Single liveborn, born in hospital"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "160245001"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "404684003"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "243796009"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm"
+    }]
+  }
+}, "lang":"null"}####
+v: {
+  "display" : "Liveborn born in hospital",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
