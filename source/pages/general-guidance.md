@@ -40,7 +40,7 @@ To claim conformance to a US Core Profile US Core Servers **SHALL**:
 
 ### Must Support
 
-For querying and reading US Core Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows (see the Future of US Core page for [writing and updating] US Core Profiles.) :
+For querying and reading US Core Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows (see the [Future of US Core] page for writing and updating US Core Profiles.) :
 
 * US Core Responders **SHALL** be capable of populating all data elements as part of the query results as specified by the [US Core Server Capability Statement].
 * US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words US Core Requestors **SHOULD** be capable of displaying the data elements for human use or storing it for other purposes.
