@@ -18,7 +18,7 @@
 			<value value="http://hl7.org/fhir"/>
 		</telecom>
 	</contact>
-	<description value="This example value set defines a set of codes that can be used to indicate the type of procedure: a specific code indicating type of procedure performed, from CPT or SNOMED CT."/>
+	<description value="This example value set defines a set of codes that can be used to indicate the type of procedure: a specific code indicating type of procedure performed, from CPT, SNOMED CT, or HCPCS Level II Alphanumeric Codes."/>
 	<copyright value="CPT copyright 2014 American Medical Association. All rights reserved. This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
 	<compose>
 		<include>
@@ -31,7 +31,12 @@
 				<op value="is-a"/>
 				<value value="71388002"/>
 			</filter>
-		</include><!--
+		</include>
+		<include>
+			<system value="urn:oid:2.16.840.1.113883.6.285"/>
+		</include>
+		
+		<!--
     <include>
       <system value="http://www.icd10data.com/icd10pcs"/>
     </include>
