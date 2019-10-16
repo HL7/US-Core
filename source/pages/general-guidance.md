@@ -107,12 +107,12 @@ If the source system does not have data for a *Must Support* data element, the d
 #### Required binding for CodeableConcept Datatype
 {:.no_toc}
 
-Required binding to a value set definition means that one of the codes from the specified value set SHALL be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
+Required binding to a value set definition means that one of the codes from the specified value set **SHALL** be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
 
 #### Extensible binding for CodeableConcept Datatype
 {:.no_toc}
 
-Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values SHALL be from the specified value set if a code applies, but if no suitable
+Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values **SHALL** be from the specified value set if a code applies, but if no suitable
  code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
 
 #### Using multiple codes with CodeableConcept Datatype
@@ -210,13 +210,13 @@ Both the [Vital Signs Profile] and [US Core Laboratory Result Observation Profil
 
 Clinical information that has been removed from the patient's record needs to be represented in a way so that client systems know they can delete them.
 
-- A FHIR server SHOULD not delete resources.
+- A FHIR server **SHOULD** not delete resources.
 
-- The resource status SHOULD be updated to the appropriate status such as  `entered-in-error` or `inactive`, and these resources SHOULD *still* be searchable by client applications.
+- The resource status **SHOULD** be updated to the appropriate status such as  `entered-in-error` or `inactive`, and these resources **SHOULD** *still* be searchable by client applications.
 
 - If the status is `entered-in-error`:
 
-  - for patient viewing systems the content of resource SHOULD be removed. In other words a blank resource.
+  - for patient viewing systems the content of resource **SHOULD** be removed. In other words a blank resource.
 
   - A provider facing system MAY be supplied with additional details that the patient viewing system would typically not have access to.
 
@@ -232,9 +232,9 @@ There is a basic need be able to access records in your language, and the data p
 The following guidelines outline how to request and return a resource in the requested language.
 
 * Clients MAY request language/locale using the http [`Accept-Language`] header.
-* Servers SHOULD make reasonable efforts to translate what can be safely translated.
-* Servers SHOULD populate the Resource's `language` element which is reasonably based on the underlying language of record, *not* the requested language.
-    * Servers SHALL use the <http://hl7.org/fhir/StructureDefinition/language> extension when the language of a display, etc is known to be different to the stated (or inferred) language.
+* Servers **SHOULD** make reasonable efforts to translate what can be safely translated.
+* Servers **SHOULD** populate the Resource's `language` element which is reasonably based on the underlying language of record, *not* the requested language.
+    * Servers **SHALL** use the <http://hl7.org/fhir/StructureDefinition/language> extension when the language of a display, etc is known to be different to the stated (or inferred) language.
 
       Example
       ~~~
@@ -266,7 +266,7 @@ The following guidelines outline how to request and return a resource in the req
               [...snip...]
       ~~~
 
-* Servers SHALL use the <http://hl7.org/fhir/StructureDefinition/translation> extension when the server is providing additional translations by its own choice or in response to a different `Accept-Language` than what the resource is stored in.
+* Servers **SHALL** use the <http://hl7.org/fhir/StructureDefinition/translation> extension when the server is providing additional translations by its own choice or in response to a different `Accept-Language` than what the resource is stored in.
 
     Example
     ~~~
