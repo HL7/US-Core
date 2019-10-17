@@ -175,6 +175,7 @@
 [US Core CarePlan Profile]: StructureDefinition-us-core-careplan.html
 [US Core CareTeam Profile]: StructureDefinition-us-core-careteam.html
 [US Core Condition Category Codes]: ValueSet-us-core-condition-category.html
+[US Core Condition Code]: ValueSet-us-core-condition-code.html
 [US Core Condition Profile]: StructureDefinition-us-core-condition.html
 [US Core DiagnosticReport Category Codes]: ValueSet-us-core-diagnosticreport-category.html
 [US Core DiagnosticReport Profile for Laboratory Results Reporting]: StructureDefinition-us-core-diagnosticreport-lab.html
