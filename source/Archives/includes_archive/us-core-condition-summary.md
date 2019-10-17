@@ -10,7 +10,7 @@
 
 
   [extensible]: {{site.data.fhir.path}}terminologies.html#extensible
-  [Problem Value Set]: ValueSet-us-core-problem.html
+  [Problem Value Set]: valueset-us-core-condition-code.html
   [Invariants]: {{site.data.fhir.path}}condition.html#invs
   [Condition Clinical Status Codes]: {{site.data.fhir.path}}valueset-condition-clinical.html
   [ConditionVerificationStatus]: {{site.data.fhir.path}}valueset-condition-ver-status.html

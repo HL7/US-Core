@@ -6,7 +6,7 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [US Core Condition Category Codes](ValueSet-us-core-condition-category.html)
 1.  A  CodeableConcept  in `Condition.code`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
- binding to [US Core Problem](ValueSet-us-core-problem.html)
+ binding to [US Core Condition Code](valueset-us-core-condition-code.html)
 1.  A Patient Reference  in `Condition.subject`
 
 #### Summary of the Must Support Requirements
