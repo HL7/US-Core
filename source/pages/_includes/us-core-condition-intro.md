@@ -1,4 +1,4 @@
-﻿This profile sets minimum expectations for the [Condition] resource to record, search, and fetch a  list of Conditions associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
+﻿This profile sets minimum expectations for the [Condition] resource to record, search, and fetch a  list of conditions associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
 
 **Example Usage Scenarios:**
 
