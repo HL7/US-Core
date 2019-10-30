@@ -25,11 +25,11 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Home]\: The home page provides the introduction and background for {{site.title}}.
 - [Guidance]\: These pages provides overall guidance in using the profiles and transactions defined in this guide.
-  - [General Guidance] provides guidance, definitions and requirements common to all {{site.title}} actors used in this guide..
+  - [General Guidance] provides guidance, definitions and requirements common to all {{site.title}} actors used in this guide.
   - [Clinical Notes Guidance] gives guidance on the interactions between Consumers and Producers of clinical notes.
-  - [Medication List Guidance] gives guidance on how a patient or provider can access a patients medications.
+  - [Medication List Guidance] gives guidance on how a patient or provider can access a patient's medications.
   - [Basic Provenance] provides implementers with important definitions to create and share the Provenance Resource.
-  - [DSTU2 to R4 Conversion] considers the user and developer experience when transitioning from DSTU2 to R4.
+  - [DSTU2 to R4 Conversion] considers the user and developer experience when transitioning from FHIR DSTU2 to FHIR R4.
   - [Future of US Core] outlines the approach to adding new content to {{site.title}}.
 - [FHIR Artifacts]\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative introduction, formal definition and a "Quick Start" guide to the supported search transaction for each {{site.title}} Profile.

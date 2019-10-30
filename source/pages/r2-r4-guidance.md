@@ -17,7 +17,7 @@ layout: default
 
 ### Introduction
 
-There are several consideration for the user and developer experience when transitioning from DSTU2 to R4.  To ensure a smoother upgrade path the following the guidance is provided.
+There are several consideration for the user and developer experience when transitioning from FHIR DSTU2 to FHIR R4.  To ensure a smoother upgrade path the following the guidance is provided.
 
 ### Endpoint Discoverability
 

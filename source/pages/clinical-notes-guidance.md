@@ -3,7 +3,7 @@ title: Clinical Notes Guidance
 layout: default
 topofpage: true
 ---
-​This section provides implementers with important definitions and requirements and guidance to create, use, and share Clinical Notes.
+​This section provides implementers with important definitions, requirements, and guidance to create, use, and share Clinical Notes.
 
 {:.no_toc}
 
@@ -95,9 +95,9 @@ Note that not all scanned information stored through DocumentReference will be e
 
 #### Support Requirements
 
-This guide requires systems implement the US Core Clinical Notes DocumentReference profile and to support a *minimum* of all five Common Clinical Notes listed above. Systems and may extend there capabilities to other [Document types] as well.
+This guide requires systems implement the [US Core DocumentReference Profile] and to support a *minimum* of all five Common Clinical Notes listed above. Systems and may extend there capabilities to the full [US Core DocumentReference Type Value Set].
 
-This guide requires systems implement the US Core Clinical Notes DiagnosticReport profile and to support a *minimum* of the three report categories:
+This guide requires systems implement the [US Core DiagnosticReport Profile for Report and Note exchange] and to support a *minimum* of the three report categories:
 
 * [Cardiology (LP29708-2)]
 * [Pathology (LP7839-6)]

@@ -48,7 +48,7 @@
 [Coverage]: {{site.data.fhir.path}}coverage.html
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
 [DSTU2 to R4 Conversion]: r2-r4-guidance.html
-[Data Access Framework]: http://wiki.siframework.org/Data+Access+Framework+Homepage
+[Data Access Framework]: https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Home
 [DataAbsentReason Code System]: {{site.data.fhir.path}}codesystem-data-absent-reason.html
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
 [Device search parameters]: {{site.data.fhir.path}}device.html#search
@@ -96,7 +96,7 @@
 [General Security Considerations]: security.html
 [Guidance]: guidance.html
 [Guide to Resources]: {{site.data.fhir.path}}resourceguide.html
-[HL7 U.S. Data Access Framework (DAF)]: http://wiki.siframework.org/Data+Access+Framework+Homepage
+[HL7 U.S. Data Access Framework (DAF)]: https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Home
 [HTTP]: {{site.data.fhir.path}}http.html
 [Head circumference]: {{site.data.fhir.path}}headcircum.html
 [Heart rate]: {{site.data.fhir.path}}heartrate.html

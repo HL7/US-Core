@@ -3,8 +3,8 @@ title: General Guidance
 layout: default
 ---
 
-This section outlines important definitions and interpretations and requirements common to all US Core actors used in this guide.
-The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used below and in this guide are defined in [FHIR Conformance Rules].
+This section outlines important definitions, interpretations, and requirements common to all US Core actors used in this guide.
+The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
 
 ---
 
@@ -45,7 +45,7 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 * US Core Responders **SHALL** be capable of populating all data elements as part of the query results as specified by the [US Core Server Capability Statement].
 * US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words US Core Requestors **SHOULD** be capable of displaying the data elements for human use or storing it for other purposes.
 * In situations where information on a particular data element is not present and the reason for absence is unknown, US Core Responders **SHALL NOT** include the data elements in the resource instance returned as part of the query results.
-* When querying US Core Responders, US Core Requestors **SHALL** interpret missing data elements within resource instances as data not present in the US Core Responder's systems.
+* When querying US Core Responders, US Core Requestors **SHALL** interpret missing data elements within resource instances as data not present in the US Core Responder's system.
 * In situations where information on a particular data element is missing and the US Core Responder knows the precise reason for the absence of data, US Core Responders **SHALL** send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
 * US Core Requestors **SHALL** be able to process resource instances containing data elements asserting missing information.
 
@@ -218,7 +218,7 @@ Clinical information that has been removed from the patient's record needs to be
 
   - for patient viewing systems the content of resource **SHOULD** be removed. In other words a blank resource.
 
-  - A provider facing system MAY be supplied with additional details that the patient viewing system would typically not have access to.
+  - A provider facing system **MAY** be supplied with additional details that the patient viewing system would typically not have access to.
 
 
 ### Language Support
@@ -428,7 +428,7 @@ For searches where the client does not supply a status parameter, an implementat
 
 ### Searching multiple patients
 
-Currently most EHRs permit queries that provide a single patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described in the standard FHIR REST API. Instead, a user facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data.
+Currently, most EHRs permit queries that provide a single patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described in the standard FHIR REST API. Instead, a user facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data.
 
 However, neither specification defines how a user facing provider app is able to seek realtime "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core]
 

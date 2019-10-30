@@ -43,7 +43,7 @@ The following items were submitted during a US Core ballot, Argonaut review and 
 
 - **Additional pilot Testing of UDI elements** - In the January ballot of 2019 we tested this process with the FDA requesting US Core include all the component parts of UDI. In prior efforts, the FDA had successfully enhanced the base FHIR specification to include the UDI components.
 * [ServiceRequest] - The CDS hooks community, and other implementers are gathering requirements for the ServiceRequest Resource.
-* [Coverage] - Several US implementation guides including Da Vinci CRD, Argonaut Scheduling, and QI Core have defined requirements for the Coverage Resource.
+* [Coverage] - Several US implementation guides including Da Vinci Coverage Requirements Discovery (CRD), Argonaut Scheduling, and QI Core have defined requirements for the Coverage Resource.
 * **Searching for Multiple Patients** - Searching for multiple patients has been called out in the ONC Health IT Certification Program.  Defining capabilities for multiple patient access would focus on querying real time data for a user facing provider app across patients. Examples of the type of queries that would be addressed include searching for all of a provider's patients:
     - with recent lab results  
     - currently in the Emergency Department
