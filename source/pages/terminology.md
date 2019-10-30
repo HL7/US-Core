@@ -10,7 +10,8 @@ This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part 
 
 These value sets have been defined for this implementation guide.
 
-<!-- {% include list-simple-valuesets.xhtml %} -->
+<!-- {% raw %}{% include list-simple-valuesets.xhtml %}{% endraw %} -->
+
 <li><a href="ValueSet-birthsex.html">Birth Sex</a></li>
 <li><a href="ValueSet-detailed-ethnicity.html">Detailed ethnicity</a></li>
 <li><a href="ValueSet-detailed-race.html">Detailed Race</a></li>
@@ -49,7 +50,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 **Code systems published in this IG** - Includes US Core defined code systems and externally defined code systems
 
-<!-- {% include list-simple-codesystems.xhtml %} -->
+<!-- {% raw %}{% include list-simple-codesystems.xhtml %}{% endraw %} -->
 
 <li><a href="CodeSystem-cdcrec.html">Race &amp; Ethnicity - CDC</a></li>
 <li><a href="CodeSystem-careplan-category.html">US Core CarePlan Category Extension Codes</a></li>
