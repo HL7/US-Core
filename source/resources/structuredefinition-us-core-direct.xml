@@ -30,139 +30,9 @@
 	<type value="Extension"/>
 	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
 	<derivation value="constraint"/>
-	<snapshot>
-		<element id="Extension:direct">
-			<path value="Extension"/>
-			<!--
-			<sliceName value="direct"/>
-			-->
-			<short value="Email is a &quot;direct&quot; email"/>
-			<definition value="This email address is associated with a [direct](http://wiki.directproject.org/Addressing+Specification) service."/>
-			<comment value="This extension can only be used on contact points where the system = &#39;email&#39;."/>
-			<min value="0"/>
-			<max value="1"/>
-			<base>
-				<path value="Extension"/>
-				<min value="0"/>
-				<max value="*"/>
-			</base>
-			<condition value="ele-1"/>
-			<constraint>
-				<key value="ele-1"/>
-				<severity value="error"/>
-				<human value="All FHIR elements must have a @value or children"/>
-				<expression value="children().count() &gt; id.count()"/>
-				<xpath value="@value|f:*|h:div"/>
-				<source value="Element"/>
-			</constraint>
-			<constraint>
-				<key value="ext-1"/>
-				<severity value="error"/>
-				<human value="Must have either extensions or value[x], not both"/>
-				<expression value="extension.exists() != value.exists()"/>
-				<xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &#39;value&#39;)])"/>
-				<source value="Extension"/>
-			</constraint>
-			<isModifier value="false"/>
-			<mapping>
-				<identity value="v2"/>
-				<map value="No v2 equivalent"/>
-			</mapping>
-			<mapping>
-				<identity value="rim"/>
-				<map value="No RIM equivalent"/>
-			</mapping>
-		</element>
-		<element id="Extension:direct.id">
-			<path value="Extension.id"/>
-			<representation value="xmlAttr"/>
-			<short value="xml:id (or equivalent in JSON)"/>
-			<definition value="unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
-			<min value="0"/>
-			<max value="1"/>
-			<base>
-				<path value="Element.id"/>
-				<min value="0"/>
-				<max value="1"/>
-			</base>
-			<type>
-				<code value="string"/>
-			</type>
-			<mapping>
-				<identity value="rim"/>
-				<map value="n/a"/>
-			</mapping>
-		</element>
-		<element id="Extension:direct.extension">
-			<path value="Extension.extension"/>
-			<short value="Additional Content defined by implementations"/>
-			<definition value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-			<comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-			<alias value="extensions"/>
-			<alias value="user content"/>
-			<min value="0"/>
-			<max value="*"/>
-			<base>
-				<path value="Element.extension"/>
-				<min value="0"/>
-				<max value="*"/>
-			</base>
-			<type>
-				<code value="Extension"/>
-			</type>
-			<mapping>
-				<identity value="rim"/>
-				<map value="n/a"/>
-			</mapping>
-		</element>
-		<element id="Extension:direct.url">
-			<path value="Extension.url"/>
-			<representation value="xmlAttr"/>
-			<short value="identifies the meaning of the extension"/>
-			<definition value="Source of the definition for the extension code - a logical name or a URL."/>
-			<comment value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension."/>
-			<min value="1"/>
-			<max value="1"/>
-			<base>
-				<path value="Extension.url"/>
-				<min value="1"/>
-				<max value="1"/>
-			</base>
-			<type>
-				<code value="uri"/>
-			</type>
-			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct"/>
-			<mapping>
-				<identity value="rim"/>
-				<map value="N/A"/>
-			</mapping>
-		</element>
-		<element id="Extension:direct.valueBoolean">
-			<path value="Extension.valueBoolean"/>
-			<short value="Value of extension"/>
-			<definition value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
-			<min value="0"/>
-			<max value="1"/>
-			<base>
-				<path value="Extension.value[x]"/>
-				<min value="0"/>
-				<max value="1"/>
-			</base>
-			<type>
-				<code value="boolean"/>
-			</type>
-			<mapping>
-				<identity value="rim"/>
-				<map value="N/A"/>
-			</mapping>
-		</element>
-	</snapshot>
 	<differential>
-		<element id="Extension:direct">
+		<element id="Extension">
 			<path value="Extension"/>
-			<!--
-			<sliceName value="direct"/>
-			-->
 			<short value="Email is a &quot;direct&quot; email"/>
 			<definition value="This email address is associated with a &quot;direct&quot; service - e.g. http://wiki.directproject.org/Addressing+Specification. This extension can only be used on contact points where the system = 'email'"/>
 			<comment value="This extension can only be used on contact points where the system = &#39;email&#39;."/>
@@ -178,11 +48,11 @@
 				<map value="No RIM equivalent"/>
 			</mapping>
 		</element>
-		<element id="Extension:direct.url">
+		<element id="Extension.url">
 			<path value="Extension.url"/>
 			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct"/>
 		</element>
-		<element id="Extension:direct.valueBoolean">
+		<element id="Extension.valueBoolean">
 			<path value="Extension.valueBoolean"/>
 			<min value="0"/>
 			<max value="1"/>
