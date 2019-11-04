@@ -3,7 +3,7 @@
 #### Summary of the Mandatory Requirements
 1.  A  code  in `Encounter.status`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
- binding to [EncounterStatus](http://hl7.org/fhir/ValueSet/encounter-status|4.0.0)
+ binding to [EncounterStatus](http://hl7.org/fhir/ValueSet/encounter-status|4.0.1)
 1.  A  Coding  in `Encounter.class`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [V3 Value SetActEncounterCode](http://terminology.hl7.org/ValueSet/v3-ActEncounterCode)

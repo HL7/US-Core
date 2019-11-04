@@ -15,7 +15,7 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
       - which must have a  Attachment value  in `DocumentReference.content.attachment`
          - which must have a  code value  in `DocumentReference.content.attachment.contentType`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
- binding to [MimeType](http://hl7.org/fhir/ValueSet/mimetypes|4.0.0)
+ binding to [MimeType](http://hl7.org/fhir/ValueSet/mimetypes|4.0.1)
          - which should have a  base64Binary value  in `DocumentReference.content.attachment.data`
          - which should have an  url value  in `DocumentReference.content.attachment.url`
       - which should have a  Coding value  in `DocumentReference.content.format`

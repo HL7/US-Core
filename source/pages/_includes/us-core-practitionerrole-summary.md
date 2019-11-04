@@ -15,7 +15,7 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
 1. One or more  ContactPoints  in `PractitionerRole.telecom`
    - which must have a  code value  in `PractitionerRole.telecom.system`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
- binding to [ContactPointSystem](http://hl7.org/fhir/ValueSet/contact-point-system|4.0.0)
+ binding to [ContactPointSystem](http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1)
    - which must have a  string value  in `PractitionerRole.telecom.value`
 1. One or more Endpoint References  in `PractitionerRole.endpoint`
 
