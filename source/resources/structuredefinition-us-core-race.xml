@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
 	<id value="us-core-race"/>
 	<url value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"/>
-	<version value="1.0.1"/>
+	<version value="3.1.0"/>
 	<name value="USCoreRaceExtension"/>
 	<title value="US Core Race Extension"/>
 	<status value="active"/>
@@ -21,7 +21,7 @@
 - Native Hawaiian or Other Pacific Islander&#xA;
 - White."/>
 	<purpose value="Complies with 2015 Edition Common Clinical Data Set for patient race."/>
-	<fhirVersion value="1.8.0"/>
+	<fhirVersion value="4.0.1"/>
 	<mapping>
 		<identity value="rim"/>
 		<uri value="http://hl7.org/v3"/>
@@ -51,8 +51,7 @@
 		- White."/>
 			<min value="0"/>
 			<max value="1"/>
-			<isModifier value="false"/>
-		</element>
+					</element>
 		<element id="Extension.extension:ombcategory">
 			<path value="Extension.extension"/>
 			<sliceName value="ombCategory"/>
@@ -64,8 +63,7 @@
 				<code value="Extension"/>
 			</type>
 			<mustSupport value="true"/>
-			<isModifier value="false"/>
-			<mapping>
+						<mapping>
 				<identity value="iso11179"/>
 				<map value="/ClinicalDocument/recordTarget/patientRole/patient/raceCode"/>
 			</mapping>
@@ -102,8 +100,7 @@
 			<type>
 				<code value="Extension"/>
 			</type>
-			<isModifier value="false"/>
-			<mapping>
+						<mapping>
 				<identity value="iso11179"/>
 				<map value="/ClinicalDocument/recordTarget/patientRole/patient/sdtc:raceCode"/>
 			</mapping>
@@ -141,8 +138,7 @@
 				<code value="Extension"/>
 			</type>
 			<mustSupport value="true"/>
-			<isModifier value="false"/>
-		</element>
+					</element>
 		<element id="Extension.extension:text.url">
 			<path value="Extension.extension.url"/>
 			<min value="1"/>
@@ -166,5 +162,10 @@
 			<max value="1"/>
 			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"/>
 		</element>
+		<element id="Extension.value[x]">
+	<path value="Extension.value[x]"/>
+	<min value="0"/>
+	<max value="0"/>
+</element>
 	</differential>
 </StructureDefinition>
