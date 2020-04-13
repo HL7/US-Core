@@ -1,0 +1,28 @@
+QA issues with latest build:
+
+... 2274 html files, 0 pages invalid xhtml (0%)
+... 447028 links, 0 broken links (0%)
+Errors: 1490  Warnings: 36  Info: 228
+
+Update CSS for markup of sections - done
+
+list of trackers  Server
+Jira Grouping = USCore Updates 2020
+
+
+added CMS Trackers with inferno Rob Scanlon
+
+
+As Brett and I dug into the changes to make intent = "plan" for patient reported meds we found that trying to define a simple search for all meds is impossible because intent = "plan" is not limited to reported medications
+
+updated section with inline edits.
+
+A couple of options to consider for searching for all meds...
+
+1) search in Three parts:
+
+    1. provider part or parameters: patient = [id] , intent = 'order' same as is currently documented
+    1. reported meds part A parameters: patient = [id] , intent = 'plan' and define a new searchparameter reportedBoolean = True
+    1.  reported meds part B parameters: patient = [id] , intent = 'plan' define a new searchparameter and use the `missing` modifier to get reportedReference:missing = False
+
+2) create a single custom query ( aka $get_all_meds ) and define additional parameters that can be used with it:  `status` = "active", `encounter` = "[id]"
