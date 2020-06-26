@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://build.fhir.org/device.xsd">
+	<id value="us-core-race"/>
+	<url value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"/>
+	<version value="1.0.1"/>
+	<name value="USCoreRaceExtension"/>
+	<title value="US Core Race Extension"/>
+	<status value="active"/>
+	<date value="2019-05-21"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://www.healthit.gov"/>
+		</telecom>
+	</contact>
+	<description value="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:&#xA;&#xA;
+- American Indian or Alaska Native&#xA;
+- Asian&#xA;
+- Black or African American&#xA;
+- Native Hawaiian or Other Pacific Islander&#xA;
+- White."/>
+	<purpose value="Complies with 2015 Edition Common Clinical Data Set for patient race."/>
+	<fhirVersion value="1.8.0"/>
+	<mapping>
+		<identity value="rim"/>
+		<uri value="http://hl7.org/v3"/>
+		<name value="RIM Mapping"/>
+	</mapping>
+	<kind value="complex-type"/>
+	<abstract value="false"/>
+	<context>
+		<type value="element"/>
+		<expression value="Patient"/>
+	</context>
+	<type value="Extension"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="Extension">
+			<path value="Extension"/>
+			<!--
+			<sliceName value="race"/>
+			-->
+			<short value="US Core Race Extension"/>
+			<definition value="Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:&#xA;&#xA;
+		- American Indian or Alaska Native&#xA;
+		- Asian&#xA;
+		- Black or African American&#xA;
+		- Native Hawaiian or Other Pacific Islander&#xA;
+		- White."/>
+			<min value="0"/>
+			<max value="1"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Extension.extension:ombcategory">
+			<path value="Extension.extension"/>
+			<sliceName value="ombCategory"/>
+			<short value="American Indian or Alaska Native|Asian|Black or African American|Native Hawaiian or Other Pacific Islander|White"/>
+			<definition value="The 5 race category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.whitehouse.gov/omb/fedreg_1997standards)."/>
+			<min value="0"/>
+			<max value="5"/>
+			<type>
+				<code value="Extension"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="iso11179"/>
+				<map value="/ClinicalDocument/recordTarget/patientRole/patient/raceCode"/>
+			</mapping>
+		</element>
+		<element id="Extension.extension:ombcategory.url">
+			<path value="Extension.extension.url"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="ombCategory"/>
+		</element>
+		<element id="Extension.extension:ombcategory.valueCoding">
+			<path value="Extension.extension.valueCoding"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<binding>
+				<strength value="required"/>
+				<description value="The 5 race category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.whitehouse.gov/omb/fedreg_1997standards)."/>
+				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/omb-race-category"/>
+			</binding>
+		</element>
+		<element id="Extension.extension:detailed">
+			<path value="Extension.extension"/>
+			<sliceName value="detailed"/>
+			<short value="Extended race codes"/>
+			<definition value="The 900+ CDC race codes that are grouped under one of the 5 OMB race category codes:."/>
+			<min value="0"/>
+			<max value="*"/>
+			<type>
+				<code value="Extension"/>
+			</type>
+			<isModifier value="false"/>
+			<mapping>
+				<identity value="iso11179"/>
+				<map value="/ClinicalDocument/recordTarget/patientRole/patient/sdtc:raceCode"/>
+			</mapping>
+		</element>
+		<element id="Extension.extension:detailed.url">
+			<path value="Extension.extension.url"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="detailed"/>
+		</element>
+		<element id="Extension.extension:detailed.valueCoding">
+			<path value="Extension.extension.valueCoding"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Coding"/>
+			</type>
+			<binding>
+				<strength value="required"/>
+				<description value="The [900+ CDC Race codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 5 OMB race category codes."/>
+				<valueSet value="http://hl7.org/fhir/us/core/ValueSet/detailed-race"/>
+			</binding>
+		</element>
+		<element id="Extension.extension:text">
+			<path value="Extension.extension"/>
+			<sliceName value="text"/>
+			<short value="Race Text"/>
+			<definition value="Plain text representation of the race concept(s)."/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="Extension"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Extension.extension:text.url">
+			<path value="Extension.extension.url"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="text"/>
+		</element>
+		<element id="Extension.extension:text.valueString">
+			<path value="Extension.extension.valueString"/>
+			<min value="1"/>
+			<max value="1"/>
+			<type>
+				<code value="string"/>
+			</type>
+		</element>
+		<element id="Extension.url">
+			<path value="Extension.url"/>
+			<min value="1"/>
+			<max value="1"/>
+			<fixedUri value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"/>
+		</element>
+	</differential>
+</StructureDefinition>
