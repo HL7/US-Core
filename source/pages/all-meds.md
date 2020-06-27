@@ -67,8 +67,8 @@ This IG focuses on access to a patient's medications.  It is therefore important
      1. See the General Guidance section for additional rules and expectations for [Servers Requiring Status].
   1. **SHALL** include all MedicationRequest resources with an `intent` = "order" representing authorized medication orders directly derived from the system's orders.
   1. **SHALL** include all prescribed and "self-prescribed" MedicationRequest resources with an `intent` = "plan" representing *reported* medications
-    1.  **SHALL** use the `reported[x]` element to indicate the MedicationRequest record was captured as a secondary "reported" record rather than an original primary source-of-truth record. It may also indicate the source of the report.
-    1.  When recording "self-prescribed" medication, **SHOULD** use the `requester` element to indicate the Patient or RelatedPerson as the prescriber.
+     1. **SHALL** use the `reported[x]` element to indicate the MedicationRequest record was captured as a secondary "reported" record rather than an original primary source-of-truth record. It may also indicate the source of the report.
+     1.  When recording "self-prescribed" medication, **SHOULD** use the `requester` element to indicate the Patient or RelatedPerson as the prescriber.
 
 1. The `encounter` element **SHOULD** be supported.  Searching by context (i.e., for a given inpatient encounter) will return all medications ordered during that encounter, which can include both medications administered in hospital as well as prescribed or discharge medications, which are intended to be taken at home.
 1. The `category` and `encounter`  elements **MAY** be used together to get the intersection of medications for a given encounter (i.e., the context) that were administered during as an inpatient (i.e., the category).
