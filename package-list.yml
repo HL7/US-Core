@@ -85,9 +85,9 @@ list:
 
       1. Clinical Notes Guidance need fix wording for DiagnosticReports (FHIR-25455)
 
-      1. Data Absent Reason on Patient.name conflicts with Invariant us-core-8 (FHIR-25249)
+      1. FIX Invariant [us-core-8](StructureDefinition-us-core-patient-definitions.html#Patient.name) to allow for Data Absent Reason Extension on Patient name.(FHIR-25249)
 
-      1. Link to LOINC LP29708-2 is broken in US Core guidance (FHIR-25213)
+      1. Fix Link to LOINC LP29708-2 (FHIR-25213)
 
       1. Updated [guidance](all-meds.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter) for conveying "Patient-Reported medications" (FHIR-25035)
 
