@@ -16,12 +16,12 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>17500</WindowHeight>
+  <WindowHeight>18880</WindowHeight>
   <WindowWidth>32767</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <TabRatio>913</TabRatio>
-  <ActiveSheet>2</ActiveSheet>
+  <ActiveSheet>3</ActiveSheet>
   <FirstVisibleSheet>1</FirstVisibleSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
@@ -1030,7 +1030,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">date</Data></Cell>
-    <Cell ss:StyleID="s78" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-08-19T16:59:57.270</Data></Cell>
+    <Cell ss:StyleID="s78" ss:Formula="=NOW()"><Data ss:Type="DateTime">2020-06-27T10:08:23.140</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">published.structure</Data></Cell>
@@ -2955,7 +2955,6 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Zoom>140</Zoom>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -3053,9 +3052,9 @@
     <Cell ss:StyleID="s112"><Data ss:Type="String">value[x] or data absent reason</Data></Cell>
     <Cell ss:StyleID="s112"><Data ss:Type="String">error</Data></Cell>
     <Cell ss:StyleID="s112"><Data ss:Type="String">Observation</Data></Cell>
-    <Cell ss:StyleID="s112"><Data ss:Type="String">If there is no component or related element then either a value[x] or a data absent reason must be present</Data></Cell>
-    <Cell ss:StyleID="s126"><Data ss:Type="String">(component.empty() and related.empty()) implies (dataAbsentReason or value)</Data></Cell>
-    <Cell ss:StyleID="s127"><Data ss:Type="String">exists(f:component) or exists(f:related) or exists(f:*[starts-with(local-name(.), 'value)]) or exists(f:dataAbsentReason)</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="String">If there is no component or hasMember element then either a value[x] or a data absent reason must be present</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="30">
     <Cell ss:StyleID="s125"><Data ss:Type="String">us-core-3</Data></Cell>
@@ -3485,6 +3484,8 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Zoom>140</Zoom>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -3504,8 +3505,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>10</ActiveRow>
-     <ActiveCol>1</ActiveCol>
+     <ActiveRow>15</ActiveRow>
+     <ActiveCol>4</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

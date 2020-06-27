@@ -81,7 +81,7 @@ list:
 
       1. duplicate URL causes validation failure. (FHIR-25536)
 
-      1. "US Core Observation Lab: Invariant for ""An Observation without a value, SHALL include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it"" is wrong" (FHIR-25459)
+      1. FIX Invariant [us-core-8](StructureDefinition-us-core-patient-definitions.html#Patient.name) (FHIR-25459)
 
       1. Corrected the wording "should support" to "shall support" in [Clinical Notes Guidance](clinical-notes-guidance.html#clinical-notes) (FHIR-25455)
 
