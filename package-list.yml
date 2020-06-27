@@ -1,0 +1,253 @@
+package-id: hl7.fhir.us.core
+title: US Core
+canonical: 'http://hl7.org/fhir/us/core'
+introduction: >-
+  The US Core Profiles were originally designed to meet the 2015 Edition
+  certification criterion for Patient Selection 170.315(g)(7), and Application
+  Access – Data Category Request 170.315(g)(8). They were created for each item
+  in the 2015 Edition Common Clinical Data Set (CCDS). The Location,
+  Organization, and Practitioner Profiles are not called out specifically in the
+  certification criteria but are included because they are directly referenced
+  by other profiles. The US Core Profiles are informed by the prior Data Access
+  Framework and the [Argonaut DSTU2](http://www.fhir.org/guides/argonaut/r2/)
+  Implementation Guides. However, the profiles here are stand alone and include
+  new requirements from the latest proposed ONC [U.S. Core Data for
+  Interoperability
+  (USCDI)](https://www.healthit.gov/isa/us-core-data-interoperability-uscdi) and
+  includes all the [API Resource Collection in Health
+  (ARCH)](https://www.healthit.gov/isa/api-resource-collection-health-arch)
+  resources.  This implementation guide forms the foundation to build future US
+  Realm FHIR implementation guides and its content will continue to grow to meet
+  the needs of US implementers.
+list:
+  - version: current
+    desc: Continuous Integration Build for US Core (latest in version control)
+    path: 'http://build.fhir.org/ig/HL7/US-Core-R4'
+    status: ci-build
+    current: true
+  - version: 3.1.1
+    date: '2020-6-30'
+    desc: >
+      This update addresses several technical corrections and errata and clarifications are listed in the sections below. They have been reviewed
+      and voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this errata release and reconciliation of the comments.:
+
+      1. Remove Must Support References to non US Core Profiles (FHIR-27876)
+
+      1. Add reaction to allergies (FHIR-27867)
+
+      1. Add Reference to US Core Patient in Vitals Signs Profiles  (FHIR-27857)
+
+      1. US Core Pulse Oximetry Profile: observation.value and component.value constraints are different (FHIR-27846)
+
+      1. US Core Pulse Oximetry Profile Text Summary has incorrect UCUM Unit for Oxygen Concentration (FHIR-27845)
+
+      1. Expand Procedure Codes Value Set to include ICD-10 PCS codes (FHIR-27836)
+
+      1. "US Core Procedure includes CDT in text, not Value Set" (FHIR-27737)
+
+      1. Pediatric vitals should include referenced growth chart (FHIR-27549)
+
+      1. Missing USCDI vs Head Occipital-frontal Circumference Percentile (Birth - 36 months) (FHIR-27542)
+
+      1. typo in example GET use (FHIR-27536)
+
+      1. CLIA should not be must support for organization (FHIR-27158)
+
+      1. Change Description of ICD-10-PCS Value Set (FHIR-27116)
+
+      1. Fix allergy Intolerance verificationStatus example (FHIR-27096)
+
+      1. US Core heart-rate example is not conformant to http://hl7.org/fhir/StructureDefinition/heartrate (FHIR-27086)
+
+      1. Update smoking status ValueSet (FHIR-27082)
+
+      1. Syntax error in FHIRPath constraint (FHIR-27065)
+
+      1. fix invalid json snippet (FHIR-27001)
+
+      1. various technical corrections (FHIR-26840)
+
+      1. CapabilityStatement.implementationGuide has wrong value for canonical url (FHIR-26686)
+
+      1. Fix ValueSet-us-core-procedure-icd10pcs (FHIR-26679)
+
+      1. Invalid FHIRPath constraint in US Core Condition profile (FHIR-26605)
+
+      1. make values in direct and birth sex extensions min=1 (FHIR-26459)
+
+      1. change valueQuantity min to 0 (FHIR-26363)
+
+      1. add page TOC to Clinical Notes and Provenance pages (FHIR-25785)
+
+      1. duplicate URL causes validation failure. (FHIR-25536)
+
+      1. "US Core Observation Lab: Invariant for ""An Observation without a value, SHALL include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it"" is wrong" (FHIR-25459)
+
+      1. Clinical Notes Guidance need fix wording for DiagnosticReports (FHIR-25455)
+
+      1. Data Absent Reason on Patient.name conflicts with Invariant us-core-8 (FHIR-25249)
+
+      1. Link to LOINC LP29708-2 is broken in US Core guidance (FHIR-25213)
+
+      1. "MedicationRequest can not be used for conveying ""Patient-Reported medications""" (FHIR-25035)
+
+    path: 'http://hl7.org/fhir/us/core/STU3.1.1'
+    status: trial-use
+    sequence: STU3
+    fhirversion: 4.0.1
+  - version: 3.1.0
+    date: '2019-10-31'
+    desc: >
+      In order meet the proposed *ONC U.S. Core Data for Interoperability**
+      (USCDI) regulatory requirements for access to patient data, this STU
+      Update of the US Core Implementation Guide has added new content.
+      Structured Documents and the [Argonaut Project
+      Team](https://argonautwiki.hl7.org/Argonaut_2019_Projects#Argonaut_R4)
+      have spent the last several months reviewing, testing and providing
+      invaluable feedback on these and other topics including most notably:
+
+      1) A US Core Provenance Profile and Basic Provenance guidance on fetching
+      Provenance for patient data.
+
+      2) Medication List Guidance for fetching a patient's medications
+
+      3) Recasting the US Core Device profile into a US Core Implantable Device
+      Profile
+
+      4) A US Core spO2 by US Core Pulse Oximetry Profile
+
+      5) Updated search to support requiring search by multiple statuses
+
+      6) Guidance when the source has no data
+
+      7) General guidelines and considerations for DSTU2 to R4 Conversion
+
+      8) Guidance for language support
+
+      9) Considerations for fetching data for multiple patients]
+
+      10) Future considerations for times offset and timezone guidelines
+
+      11) Future Considerations for writing and updating data
+
+      12) Update security pageto reflect current testing.
+
+      13) Clarify definition of MustSupport to reflect the intent that the
+      server must be able to populate a MustSupport element in order to claim
+      conformance to the profile.
+
+      14) Expanding bindings for Procedure and Condition codes for quality
+      measures and other purposes.
+
+      These sections as well as several other clarifications, corrections and
+      technical changes that are listed in the sections below have been reviewed
+      and voted on by the members of the [HL7 International Structured Documents
+      WorkGroup](http://www.hl7.org/Special/committees/structure/index.cfm) who
+      is sponsoring this STU Update comment period and reconciliation of the
+      comments.
+    path: 'http://hl7.org/fhir/us/core/STU3.1'
+    status: trial-use
+    sequence: STU3
+    fhirversion: 4.0.1
+  - version: 3.0.1
+    date: '2019-09-01'
+    desc: >-
+      In order meet the proposed ONC U.S. Core Data for Interoperability (USCDI)
+      regulatory requirements for access to patient data, this STU Update for
+      Comment Version of the US Core Implementation Guide has added new content.
+      The Argonaut Project Team has spent the last several months reviewing,
+      testing and providing invaluable feedback on these and other topics
+      including most notably:
+
+      1) A US Core Provenance Profile and guidance on fetching Provenance for
+      patient data.
+
+      2) Guidance on fetching a patient’s medications
+
+      3) A US Core spO2 by Pulse Oximetry profile
+
+      4) Recasting the US Core Device profile into a US Core Implantable Device
+      profile
+
+      5) Making server search requirements less opaque and requiring search by
+      multiple statuses.
+
+      6) Guidance when the source has no data
+
+      7) General guidelines and considerations for DSTU2 to R4 Conversion
+
+      8) Guidance for language support
+
+      9) Considerations for Fetching data for multiple patients
+
+      10) Future considerations for times offset and timezone guidelines
+
+      These sections as well as several other clarifications, corrections and
+      technical changes that are listed in the sections below have been reviewed
+      and voted on by the members of the HL7 International Structured Documents
+      WorkGroup who is sponsoring this STU Update comment period and
+      reconciliation of the comments.
+    path: 'http://hl7.org/fhir/us/core/2019Sep'
+    status: ballot
+    sequence: STU3
+    fhirversion: 4.0.0
+  - version: 3.0.0
+    date: '2019-06-15'
+    desc: >-
+      FHIR R4 version of US Core which added profiles for exchanging Clinical
+      Notes, expanded search expectations, and updated guidance as a results of
+      comments from balloters.
+    path: 'http://hl7.org/fhir/us/core/STU3'
+    status: trial-use
+    sequence: STU3
+    fhirversion: 4.0.0
+  - version: 2.1.0
+    date: '2018-12-04'
+    desc: 'STU 3 Ballot #1. First ballot on FHIR R4.'
+    path: 'http://hl7.org/fhir/us/core/2019Jan'
+    status: ballot
+    sequence: STU3
+    fhirversion: 4.0.0
+  - version: 2.0.0
+    date: '2018-12-04'
+    desc: |
+      Publication added the following profiles:
+      1)US Core DocumentReference Profile
+      2)US Core Encounter Profile
+      3)US Core PractitionerRole Profile
+    path: 'http://hl7.org/fhir/us/core/STU2'
+    status: trial-use
+    sequence: STU2
+    fhirversion: 3.0.1
+  - version: 1.1.0
+    date: '2017-12-20'
+    desc: STU2 Ballot
+    path: 'http://hl7.org/fhir/us/core/2108Jan'
+    status: ballot
+    sequence: STU2
+    fhirversion: 3.0.1
+  - version: 1.0.1
+    date: '2017-11-02'
+    desc: >-
+      This version corrects technical errata from the original publication and
+      for FHIR R3.
+    path: 'http://hl7.org/fhir/us/core/1.0.1'
+    status: trial-use
+    sequence: STU1
+    fhirversion: 3.0.1
+  - version: 1.0.0
+    date: '2017-03-21'
+    desc: >-
+      The first official published version of this IG published immediately
+      following the release of FHIR STU3
+    path: 'http://hl7.org/fhir/us/core/STU1'
+    status: trial-use
+    sequence: STU1
+    fhirversion: 3.0.1
+  - version: 0.0.0
+    date: '2017-12-06'
+    desc: STU1 Ballot
+    path: 'http://hl7.org/fhir/us/core/2017Jan'
+    status: ballot
+    sequence: STU1
+    fhirversion: 1.8.0

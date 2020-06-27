@@ -35,12 +35,18 @@ find . -name '.DS_Store' -type f -delete
 sleep 1
 # git status
 if [[ $UPDATE ]]; then
-echo "================================================================="
-echo === get the latest ig-pub file ===
-echo "================================================================="
-#mv /Users/ehaas/Downloads/org.hl7.fhir.igpublisher.jar /Users/ehaas/Downloads/org.hl7.fhir.igpublisher-old.jar
-# _L flag for redirects
-curl -L https://github.com/FHIR/latest-ig-publisher/raw/master/org.hl7.fhir.publisher.jar -o /Users/ehaas/Downloads/org.hl7.fhir.igpublisher.jar
+echo "========================================================================"
+echo "Downloading most recent publisher to:"
+echo ~/Downloads/org.hl7.fhir.igpublisher.jar
+echo "... it's ~100 MB, so this may take a bit"
+echo "========================================================================"
+mv ~/Downloads/org.hl7.fhir.igpublisher.jar ~/Downloads/org.hl7.fhir.igpublisher-old.jar \
+|| mv ../../../Downloads/org.hl7.fhir.igpublisher.jar ../../../Downloads/org.hl7.fhir.igpublisher-old.jar
+curl -L https://storage.googleapis.com/ig-build/org.hl7.fhir.publisher.jar \
+-o ~/Downloads/org.hl7.fhir.igpublisher.jar \
+|| curl -L https://storage.googleapis.com/ig-build/org.hl7.fhir.publisher.jar \
+-o ../../../Downloads/org.hl7.fhir.igpublisher.jar
+echo "===========================   Done  ===================================="
 sleep 3
 fi
 
