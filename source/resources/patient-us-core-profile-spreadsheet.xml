@@ -9,17 +9,17 @@
   <Author>Grahame</Author>
   <LastAuthor>Eric Haas</LastAuthor>
   <Created>2012-03-19T11:12:07Z</Created>
-  <LastSaved>2020-06-27T15:48:30Z</LastSaved>
+  <LastSaved>2020-06-27T16:03:15Z</LastSaved>
   <Version>16.00</Version>
  </DocumentProperties>
  <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>17540</WindowHeight>
-  <WindowWidth>32767</WindowWidth>
-  <WindowTopX>32767</WindowTopX>
-  <WindowTopY>32767</WindowTopY>
+  <WindowHeight>17040</WindowHeight>
+  <WindowWidth>28040</WindowWidth>
+  <WindowTopX>380</WindowTopX>
+  <WindowTopY>460</WindowTopY>
   <ActiveSheet>4</ActiveSheet>
   <FirstVisibleSheet>2</FirstVisibleSheet>
   <RefModeR1C1/>
@@ -994,7 +994,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">date</Data></Cell>
-    <Cell ss:StyleID="s77" ss:Formula="=NOW()"><Data ss:Type="DateTime">2020-06-27T08:49:52.610</Data></Cell>
+    <Cell ss:StyleID="s77" ss:Formula="=NOW()"><Data ss:Type="DateTime">2020-06-27T09:03:12.700</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">published.structure</Data></Cell>
@@ -6609,8 +6609,8 @@
         html:Face="Tahoma" x:Family="Swiss" html:Size="8" html:Color="#000000">Optional - OCL expression of the rule</Font>       </ss:Data></Comment><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s92"><Data ss:Type="String">XPath</Data><Comment ss:Author=""><ss:Data
-       xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">        </Font><Font
-        html:Face="Tahoma" x:Family="Swiss" html:Size="8" html:Color="#000000">XPath 2 expression.  See wiki or make Lloyd do it :&gt;</Font><Font
+       xmlns="http://www.w3.org/TR/REC-html40"><Font html:Face="Tahoma"
+        x:Family="Swiss" html:Size="8" html:Color="#000000">XPath 2 expression.  See wiki or make Lloyd do it :&gt;</Font><Font
         html:Color="#000000">       </Font></ss:Data></Comment><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
    </Row>
@@ -6621,7 +6621,7 @@
     <Cell ss:StyleID="s110"><Data ss:Type="String">Patient.name</Data></Cell>
     <Cell ss:StyleID="s110"><Data ss:Type="String">Either Patient.name.given and/or Patient.name.family SHALL be present or a Data Absent Reason Extension SHALL be present.</Data></Cell>
     <Cell ss:StyleID="s110"><Data ss:Type="String">(family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists())</Data></Cell>
-    <Cell ss:StyleID="s126"><Data ss:Type="String">((f:given or f:family)  and not(f:extension[@url=&quot;http://hl7.org/fhir/StructureDefinition/data-absent-reason&quot;]))  or (f:extension[@url=&quot;http://hl7.org/fhir/StructureDefinition/data-absent-reason&quot;] and  (f:given or f:family))</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">((f:given or f:family)  and not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason']))  or (f:extension[@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason'] and  (f:given or f:family))</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s125"/>
@@ -7058,7 +7058,7 @@
    <SplitHorizontal>1</SplitHorizontal>
    <TopRowBottomPane>1</TopRowBottomPane>
    <SplitVertical>2</SplitVertical>
-   <LeftColumnRightPane>2</LeftColumnRightPane>
+   <LeftColumnRightPane>5</LeftColumnRightPane>
    <ActivePane>0</ActivePane>
    <Panes>
     <Pane>
@@ -7066,13 +7066,14 @@
     </Pane>
     <Pane>
      <Number>1</Number>
+     <ActiveCol>2</ActiveCol>
     </Pane>
     <Pane>
      <Number>2</Number>
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveCol>5</ActiveCol>
+     <ActiveRow>8</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
