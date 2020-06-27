@@ -24,7 +24,7 @@ Specifically, this implementation guide defines the exchange of the following fi
 1. [Procedures Note (28570-0)]
 1. [Progress Note (11506-3)]
 
-and three DiagnosticReport categories which systems should support.
+and three DiagnosticReport categories which systems shall support.
 
 1. [Cardiology (LP29708-2)]
 1. [Pathology (LP7839-6)]
