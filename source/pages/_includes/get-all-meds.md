@@ -22,7 +22,7 @@ Item|Date|Script|Source|Notes
 Get “all medications” for a patient by querying MedicationRequest using the patient search parameter.
 
 
-    GET [base]/MedicationRequest?patient=test2&intent=order
+    GET [base]/MedicationRequest?patient=test2&intent=order,plan
 
 **Response:**
 
@@ -47,6 +47,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
           "id" : "mr-example-1",
      ...snip...
           "status" : "active",
+          "intent" : "order",
           "medicationCodeableConcept" : {
             "coding" : [
               {
@@ -67,6 +68,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
           "id" : "mr-example-2",
           ...snip...
           "status" : "active",
+          "intent" : "order",
           "medicationCodeableConcept" : {
             "coding" : [
               {
@@ -86,7 +88,8 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
           "resourceType" : "MedicationRequest",
           "id" : "mr-example-3",
     ...snip...
-          "status" : "completed",
+        "status" : "completed",
+        "intent" : "order",
           "medicationCodeableConcept" : {
             "coding" : [
               {
@@ -107,6 +110,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
           "id" : "mr-example-4",
     ...snip...
           "status" : "completed",
+          "intent" : "plan",
           "medicationCodeableConcept" : {
             "coding" : [
               {
@@ -127,6 +131,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
           "id" : "mr-example-5",
     ...snip...
           "status" : "active",
+          "intent" : "plan",
           "medicationCodeableConcept" : {
             "coding" : [
               {

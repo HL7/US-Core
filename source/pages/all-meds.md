@@ -61,38 +61,39 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 **Requirements to access "all medications" and "all *active* medications" for a patient:**
 
-1. A MedicationRequest resource query **SHALL** be all that is required.
-   - See the General Guidance section for additional rules and expectations for [Servers Requiring Status].
-1. Only MedicationRequest resources with an `intent` of ‘order’
-1. The MedicationRequest **SHALL** include all medications directly derived from the system's orders.
-1. The MedicationRequest **SHALL** include all prescribed and "self-prescribed" medications reported by the Provider, Patient or Related Person.
-  -  **SHALL** use `reported[x]` to indicate the MedicationRequest record was captured as a secondary "reported" record rather than an original primary source-of-truth record. It may also indicate the source of the report.
-  -  When recording "self-prescribed" medications **SHALL** use `intent` = "order"
-  -  When recording "self-prescribed" orders, **SHOULD** use the `requester` to indicate the Patient or RelatedPerson as the prescriber.
+1. A MedicationRequest resource query:
+
+  1. **SHALL** be all that is required.
+     1. See the General Guidance section for additional rules and expectations for [Servers Requiring Status].
+  1. **SHALL** include all MedicationRequest resources with an `intent` = "order" representing authorized medication orders directly derived from the system's orders.
+  1. **SHALL** include all prescribed and "self-prescribed" MedicationRequest resources with an `intent` = "plan" representing *reported* medications
+    1.  **SHALL** use the `reported[x]` element to indicate the MedicationRequest record was captured as a secondary "reported" record rather than an original primary source-of-truth record. It may also indicate the source of the report.
+    1.  When recording "self-prescribed" medication, **SHOULD** use the `requester` element to indicate the Patient or RelatedPerson as the prescriber.
+
 1. The `encounter` element **SHOULD** be supported.  Searching by context (i.e., for a given inpatient encounter) will return all medications ordered during that encounter, which can include both medications administered in hospital as well as prescribed or discharge medications, which are intended to be taken at home.
 1. The `category` and `encounter`  elements **MAY** be used together to get the intersection of medications for a given encounter (i.e., the context) that were administered during as an inpatient (i.e., the category).
 
 #### Get All Medications
 
-1. Get all medications for a patient by querying MedicationRequest using the `patient` search parameter and `intent` search parameter = "order".  See [MedicationRequest Quick Start] for further details.
+1. Get all medications for a patient by querying MedicationRequest using the `patient` search parameter and `intent` search parameter = "order,plan".  See [MedicationRequest Quick Start] for further details.
 
-   `GET /MedicationRequest?patient=[id]&intent=order{&_include=MedicationRequest:medication}`
+   `GET /MedicationRequest?patient=[id]&intent=order,plan{&_include=MedicationRequest:medication}`
 
       {% include examplebutton_default.html example="get-all-meds" b_title = "Click Here to See 'Get All Medications' Example" %}
 
 #### Get All *Active* Medications
 
-1. Get all *active* medications for a patient by querying MedicationRequest using the `patient`,  and `intent` = "order" `status` = "active" search parameters.  See [MedicationRequest Quick Start] for further details.  Note that the client should also consider MedicationRequests with a status of "unknown" and whether to query those as well.
+1. Get all *active* medications for a patient by querying MedicationRequest using the `patient`,  and `intent` = "order,plan" `status` = "active" search parameters.  See [MedicationRequest Quick Start] for further details.  Note that the client should also consider MedicationRequests with a status of "unknown" and whether to query those as well.
 
-   `GET /MedicationRequest?patient=[id]&intent=order&status=active{&_include=MedicationRequest:medication}`
+   `GET /MedicationRequest?patient=[id]&intent=order,plan&status=active{&_include=MedicationRequest:medication}`
 
         {% include examplebutton_default.html example="get-all-active-meds" b_title = "Click Here to See 'Get All *Active* Medications' Example" %}
 
 #### Get All Medications for an Encounter
 
-1. Get “all medications” for an encounter by querying MedicationRequest using the `patient` and `encounter` and `intent` ="order" search parameters.  See [MedicationRequest Quick Start] for further details.
+1. Get “all medications” for an encounter by querying MedicationRequest using the `patient` and `encounter` and `intent` ="order,plan" search parameters.  See [MedicationRequest Quick Start] for further details.
 
-   `GET /MedicationRequest?patient=[id]&intent=order&encounter=[id]{&_include=MedicationRequest:medication}`
+   `GET /MedicationRequest?patient=[id]&intent=order,plan&encounter=[id]{&_include=MedicationRequest:medication}`
 
       {% include examplebutton_default.html example="get-all-enc-meds" b_title = "Click Here to See 'Get All Medications for an Encounter' Example" %}
 

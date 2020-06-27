@@ -21,7 +21,7 @@ Item|Date|Script|Source|Notes
 Get “all active medications” for a patient by querying MedicationRequest using the patient and status= "active" search parameters.
 
 
-    GET [base]/MedicationRequest?patient=test2&intent=order&status=active
+    GET [base]/MedicationRequest?patient=test2&intent=order,plan&status=active
 
 **Response:**
 
@@ -46,6 +46,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
           "id" : "mr-example-1",
     ...snip...
           "status" : "active",
+          "intent" : "order",
           "medicationCodeableConcept" : {
             "coding" : [
               {
@@ -66,6 +67,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
           "id" : "mr-example-2",
     ...snip...
           "status" : "active",
+          "intent" : "order",
           "medicationCodeableConcept" : {
             "coding" : [
               {
@@ -86,6 +88,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
           "id" : "mr-example-5",
     ...snip...
           "status" : "active",
+          "intent" : "plan",
           "medicationCodeableConcept" : {
             "coding" : [
               {

@@ -23,7 +23,7 @@ Item|Date|Script|Source|Notes
 Get “all medications” for a patient inpatient encounter by querying MedicationRequest using the patient and encounter search parameters.
 
 
-    GET [base]/MedicationRequest?patient=test2&intent=order&encounter=A
+    GET [base]/MedicationRequest?patient=test2&intent=order,plan&encounter=A
 
 **Response:**
 
@@ -53,6 +53,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
         "display": "Inpatient Encounter A"
       },
       "status": "completed",
+      "intent": "order",
       "medicationCodeableConcept": {
         "coding": [
           {
@@ -75,6 +76,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
           "display": "Inpatient Encounter A"
         },
         "status": "completed",
+          "intent": "order",
         "medicationCodeableConcept": {
           "coding": [
             {
@@ -110,6 +112,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
               "display": "Inpatient Encounter A"
             },
             "status": "completed",
+            "intent": "order",
             "medicationReference": {
                 "reference": "#med-1"
               },
@@ -124,6 +127,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
             "display": "Inpatient Encounter A"
           },
           "status": "completed",
+          "intent": "order",
           "medicationCodeableConcept": {
             "coding": [
               {
@@ -144,6 +148,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
             "display": "Inpatient Encounter A"
           },
           "status": "active",
+          "intent": "order",
           "medicationCodeableConcept": {
             "coding": [
               {
@@ -165,6 +170,7 @@ A Server returns a search Bundle resource containing all the MedicationRequests 
             "display": "Inpatient Encounter A"
           },
           "status": "active",
+          "intent": "order",
           "medicationCodeableConcept": {
             "coding": [
               {
