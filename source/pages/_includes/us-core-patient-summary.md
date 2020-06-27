@@ -41,4 +41,4 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [Language codes with language and optionally a region modifier](ValueSet-simple-language.html)
 
 #### Summary of Constraints
-1. Patient.name.given or Patient.name.family or both SHALL be present
+1. Either Patient.name.given and/or Patient.name.family SHALL be present or a Data Absent Reason Extension SHALL be present.

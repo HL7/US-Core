@@ -8,6 +8,8 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
       - which must have at least  a  Coding value  in `Observation.code.coding`
          - which must have a fixed `Observation.code.coding.system` = `http://loinc.org`
          - which must have a fixed `Observation.code.coding.code` = `59576-9`
+
+#### Summary of the Must Support Requirements         
 1.  A  Quantity  in `Observation.valueQuantity`
       - which must have a  decimal value  in `Observation.valueQuantity.value`
       - which must have a  string value  in `Observation.valueQuantity.unit`

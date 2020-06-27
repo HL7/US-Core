@@ -14,11 +14,14 @@ In addition to the mandatory and must support data elements in the FHIR Vital Si
 **Each Observation must have:**
 
 1.  a fixed code for pediatric weight for height and age measurement
+
+**Each Observation must support:**
+
 1.  a result value
 
 **Profile specific implementation guidance:**
 
-- none
+- An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it.
 
 ### Examples
 
