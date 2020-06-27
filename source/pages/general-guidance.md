@@ -1,6 +1,7 @@
 ---
 title: General Guidance
 layout: default
+topofpage: true
 ---
 
 This section outlines important definitions, interpretations, and requirements common to all US Core actors used in this guide.

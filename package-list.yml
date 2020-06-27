@@ -77,15 +77,15 @@ list:
 
       1. change valueQuantity min to 0 (FHIR-26363)
 
-      1. add page TOC to Clinical Notes and Provenance pages (FHIR-25785)
+      1. Add page contents to [Clinical Notes](clinical-notes-guidance.html) and [Basic Provenance](basic-provenance.html) pages (FHIR-25785)
 
-      1. duplicate URL causes validation failure. (FHIR-25536)
+      1. Fix duplicate URL causing validation failure. (FHIR-25536)
 
-      1. FIX Invariant [us-core-8](StructureDefinition-us-core-patient-definitions.html#Patient.name) (FHIR-25459)
+      1. Fix Invariant [us-core-8](StructureDefinition-us-core-patient-definitions.html#Patient.name) (FHIR-25459)
 
       1. Corrected the wording "should support" to "shall support" in [Clinical Notes Guidance](clinical-notes-guidance.html#clinical-notes) (FHIR-25455)
 
-      1. FIX Invariant [us-core-8](StructureDefinition-us-core-patient-definitions.html#Patient.name) to allow for Data Absent Reason Extension on Patient name.(FHIR-25249)
+      1. Fix Invariant [us-core-8](StructureDefinition-us-core-patient-definitions.html#Patient.name) to allow for Data Absent Reason Extension on Patient name.(FHIR-25249)
 
       1. Fix Link to LOINC LP29708-2 (FHIR-25213)
 
