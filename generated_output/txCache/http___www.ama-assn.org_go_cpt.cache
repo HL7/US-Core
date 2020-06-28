@@ -345,3 +345,37 @@ v: {
   "error" : "The code system \"http://www.ama-assn.org/go/cpt\" in the include in \"http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code\" is not known; The code system \"http://www.ama-assn.org/go/cpt\" is not known for the code \"33249\"; The code provided (http://www.ama-assn.org/go/cpt#33249, (Insertion or replacement of permanent implantable defibrillator system with transvenous lead(s), single or dual chamber)) is not  valid in the value set USCoreProcedureCodes"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "99201"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://www.ama-assn.org/go/cpt' is unknown"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "33249"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://www.ama-assn.org/go/cpt' is unknown"
+}
+-------------------------------------------------------------------------------------

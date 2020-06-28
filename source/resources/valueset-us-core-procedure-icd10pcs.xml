@@ -10,6 +10,7 @@
 	<publisher value="HL7 US Realm Steering Committee"/>
 	<contact>
 		<telecom>
+
 			<system value="other"/>
 			<value value="http://hl7.org/fhir"/>
 		</telecom>
@@ -29,7 +30,7 @@
       </filter>
     </include>
     --><include>
-			<system value="http://www.icd10data.com/icd10pcs"/>
+			<system value="http://www.cms.gov/Medicare/Coding/ICD10"/>
 		</include>
 	</compose>
 </ValueSet>

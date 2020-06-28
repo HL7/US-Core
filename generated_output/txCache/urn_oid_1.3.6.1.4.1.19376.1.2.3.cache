@@ -113,3 +113,21 @@ v: {
   "error" : "The code system \"urn:oid:1.3.6.1.4.1.19376.1.2.3\" is not known; The code provided (urn:oid:1.3.6.1.4.1.19376.1.2.3#urn:hl7-org:sdwg:ccda-structuredBody:2.1) is not  valid in the value set DocumentReferenceFormatCodeSet"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.3.6.1.4.1.19376.1.2.3",
+  "code" : "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+  "display" : "Documents following C-CDA constraints using a structured body"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem' is unknown"
+}
+-------------------------------------------------------------------------------------
