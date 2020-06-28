@@ -102,7 +102,7 @@
 [Heart rate]: {{site.data.fhir.path}}heartrate.html
 [History & Physical Note (34117-2)]: https://loinc.org/34117-2.html
 [Home]: index.html "Home Page"
-[ICD-10-PCS codes]: http://www.icd10data.com/icd10pcs
+[ICD-10-PCS codes]: http://www.cms.gov/Medicare/Coding/ICD10
 [IHE Healthcare Provider Directory]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf
 [IHE MHD]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_MHD.pdf
 [IHE XDS]: https://wiki.ihe.net/index.php/Cross-Enterprise_Document_Sharing
