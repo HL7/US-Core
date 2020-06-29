@@ -51,15 +51,15 @@ list:
 
       1. TODO typo in example GET use (FHIR-27536)
 
-      1. TODO CLIA should not be must support for organization (FHIR-27158)
+      1. Correct requirements for supporting [CLIA identifiers](StructureDefinition-us-core-organization.html#mandatory-and-must-support-data-elements) (FHIR-27158)
 
-      1. TODO Change Description of ICD-10-PCS Value Set (FHIR-27116)
+      1. Change Description of [ICD-10-PCS Value Set](ValueSet-us-core-procedure-icd10pcs.html) (FHIR-27116)
 
-      1. TODO Fix allergy Intolerance verificationStatus example (FHIR-27096)
+      1. Correct [AllergyIntolerance guidance](StructureDefinition-us-core-allergyintolerance.html#mandatory-and-must-support-data-elements) for verificationStatus (FHIR-27096)
 
-      1. TODO US Core heart-rate example is not conformant to http://hl7.org/fhir/StructureDefinition/heartrate (FHIR-27086)
+      1. Fix example [US Core heart-rate example](Observation-heart-rate.html) (FHIR-27086)
 
-      1. ******Discuss Update smoking status ValueSet (FHIR-27082)  do we really want to do this how about a preferred + max binding?
+      1. ******Discuss Update smoking status ValueSet (FHIR-27082)  do we really want to do this how about a preferred +/- max binding?
 
       1. Fix invariant [provenance-1](StructureDefinition-us-core-provenance-definitions.html#who) (FHIR-27065)
 
