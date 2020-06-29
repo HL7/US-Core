@@ -11,7 +11,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/DocumentReference[id]`
 
     Example:
-    
+
       1. GET [base]/DocumentReference/2169591
       1. GET [base]/DocumentReference?_id=2169591
 
@@ -22,7 +22,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/DocumentReference?patient=[reference]`
 
     Example:
-    
+
       1. GET [base]/DocumentReference?patient=1137192
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient. See the implementation notes above for how to access the actual document. ([how to search by reference])
@@ -32,7 +32,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/DocumentReference?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note`
 
     Example:
-    
+
       1. GET [base]/DocumentReference?patient=1235541&amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category\|clinical-note
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and category = `clinical-note`.  See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token])
@@ -44,7 +44,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/DocumentReference?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]/DocumentReference?patient=1235541&amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category\|clinical-note&amp;date=ge2019
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and category = `clinical=note` and date. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token] and [how to search by date])
@@ -54,7 +54,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/DocumentReference?patient=[reference]&type={[system]}|[code]`
 
     Example:
-    
+
       1. GET [base]/DocumentReference?patient=1316024&amp;type=http://loinc.org\|18842-5
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token])
@@ -70,7 +70,7 @@ The following search parameter combinations SHOULD be supported.:
     `GET [base]/DocumentReference?patient=[reference]&status={[system]}|[code]{,{[system]}|[code],...}`
 
     Example:
-    
+
       1. GET [base]/DocumentReference?patient=1235541
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and status. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token])
@@ -82,9 +82,11 @@ The following search parameter combinations SHOULD be supported.:
     `GET [base]/DocumentReference?patient=[reference]&type={[system]}|[code]&period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]/DocumentReference?patient=2169591&amp;type=http://loinc.org \|34133-9&amp;period=ge2019
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type and period. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token] and [how to search by date])
+
+{% include write-and-docref.md %}
 
 {% include link-list.md %}
