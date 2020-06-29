@@ -69,9 +69,9 @@ list:
 
       1. Correction on USCDI Table change 'MedicationStatement' to 'MedicationRequest' (FHIR-26840).
 
-      1. TODO Clarify that Location/PractitionerRole are not being referenced by other resources intentionally as part of a previous tracker item see Encounter , PractitionerRole for location references. and Provenance for PR  Tracker (FHIR-27876) above  (FHIR-26840).
+      1. Clarify that US Core Location/PractitionerRole are [not being referenced](StructureDefinition-us-core-encounter.html#mandatory-and-must-support-data-elements) by other resources (FHIR-26840).
 
-      1. TODO Add Write to DocRef QuickStart (removed from 3.1.0 in editing error) (FHIR-26840).
+      1. Correct editing error restoring Write and Operation capability guidance into [DocumentReference QuickStart](StructureDefinition-us-core-documentreference.html#quick-start) (FHIR-26840).
 
       1. Clarify [guidance](general-guidance.html#search-for-servers-requiring-status) that servers SHALL support search with status if status required (FHIR-26840).
 
