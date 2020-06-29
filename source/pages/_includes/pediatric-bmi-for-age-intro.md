@@ -22,6 +22,7 @@ In addition to the mandatory and must support data elements in the FHIR Vital Si
 **Profile specific implementation guidance:**
 
 - An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it.
+- The Observation.subject **SHALL** conform to [US Core Patient Profile].
 
 ### Examples
 
