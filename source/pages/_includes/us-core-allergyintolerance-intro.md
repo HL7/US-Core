@@ -18,11 +18,12 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  a code which tells you what the patient is allergic to
 1.  a patient
 
-*The status element has the following constraints: SHALL be present if verification status is not entered-in-error and SHALL NOT be present if verification Status is entered-in-error.
+*The clinicalStatus element has the following constraints: SHALL be present if verification status is not entered-in-error and SHALL NOT be present if verification Status is entered-in-error.
 
 **Each AllergyIntolerance must support:**
 
-1.  a verification status
+1. a verification status
+1. a reaction manifestation
 
 **Profile specific implementation guidance:**
 
