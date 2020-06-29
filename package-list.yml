@@ -65,11 +65,21 @@ list:
 
       1. fix invalid json snippet (FHIR-27001)
 
-      1. various technical corrections (FHIR-26840)
+      1. Remove Provenance requirement from Medication, Location, Practitioner, PractitionerRole, and Organization in [CapabilityStatement](CapabilityStatement-us-core-server.html#resource--details) (FHIR-26840).
+
+      1. In USCDI Table = change 'MedicationStatement' change to 'MedicationRequest' (Remove MedicationStatement on guidance page) (FHIR-26840).
+
+      1. Clarify that Location/PractitionerRole are not being referenced by other resources intentionally as part of a previous tracker item (FHIR-26840).
+
+      1. Add Write to DocRef QuickStart (removed from 3.1.0 in editing error) (FHIR-26840).
+
+      1. Add explicit statement - SHALL support search with status if status required to the guidance page section the For Servers Requiring Status (FHIR-26840).
+
+      1. Clarify text in clinical notes guidance on 'minimum required' to reference only the DocRef. and that the DiagnosticReport codes are strongly suggested but not required as id defined in the profile's bindings (FHIR-26840).
 
       1. Correct canonical url for ImplementationGuide (FHIR-26686).
 
-      1. Update system URI for [ICD-10 procedure codes](ValueSet-us-core-procedure-icd10pcs.html) (FHIR-26679).
+      1. Correct system URI for [ICD-10 procedure codes](ValueSet-us-core-procedure-icd10pcs.html) (FHIR-26679).
 
       1. Fix invariant [us-core-1](StructureDefinition-us-core-condition-definitions.html#Condition) (FHIR-26605).
 
@@ -89,7 +99,7 @@ list:
 
       1. Fix Link to LOINC LP29708-2 (FHIR-25213).
 
-      1. Updated [guidance](all-meds.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter) for conveying "Patient-Reported medications" (FHIR-25035).
+      1. Corrected [guidance](all-meds.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter) for conveying "Patient-Reported medications" (FHIR-25035).
 
     path: 'http://hl7.org/fhir/us/core/STU3.1.1'
     status: trial-use
