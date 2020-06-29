@@ -21,7 +21,7 @@
 | Tests | [US Core Laboratory Result Observation Profile], [US Core DiagnosticReport Profile for Laboratory Results Reporting]| Observation, DiagnosticReport ||
 | Values/Results| [US Core Laboratory Result Observation Profile], [US Core DiagnosticReport Profile for Laboratory Results Reporting]| Observation, DiagnosticReport|
 | Medications:| ||
-| Medications | [US Core Medication Profile], <!--[US Core Medication Statement Profile]-->, [US Core Medication Request Profile]| Medication, MedicationStatement<!--, MedicationRequest--> |
+| Medications | [US Core Medication Profile], <!--[US Core Medication Statement Profile],--> [US Core Medication Request Profile]| Medication,<!-- MedicationStatement,--> MedicationRequest |
 | Medication Allergies| [US Core Allergies Profile] | AllergyIntolerance |
 |Patient Demographics:| ||
 | First Name| [US Core Patient Profile] | Patient.name.given |
@@ -38,10 +38,10 @@
 | Phone Number| [US Core Patient Profile] | Patient.telecom|
 | Problems| [US Core Condition Profile] | Condition|
 | Procedures| [US Core Procedure Profile] | Procedure|
-| Provenance: | [US Core Provenance Profile] | -|
-| Author| [US Core Provenance Profile] | -|
-| Author Time Stamp | [US Core Provenance Profile] | -|
-| Author Organization | [US Core Provenance Profile] | -|
+| Provenance: | [US Core Provenance Profile] |Provenance|
+| Author| [US Core Provenance Profile] | Provenance.agent|
+| Author Time Stamp | [US Core Provenance Profile] | Provenance.recorded|
+| Author Organization | [US Core Provenance Profile] | Provenance.agent|
 | Smoking Status| [US Core Smoking Status Observation Profile]| Observation|
 | Unique Device Identifier(s) for a Patient's Implantable Device(s) | [US Core Implantable Device Profile]| Device |
 | Vital Signs:| ||

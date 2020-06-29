@@ -1,5 +1,5 @@
 USCDI Data Element | US Core Profile | FHIR Resource
----|---|---| ---
+---|---|---
 (1) |  Patient Name | [US Core Patient Profile] | Patient
 (2) |  Sex | [US Core Patient Profile] | Patient
 (3) |  Date of birth | [US Core Patient Profile] | Patient
