@@ -19,7 +19,8 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 5.  managingOrganization
 
 **Additional Profile specific implementation guidance:**
-- none
+
+* As a result of implementation feedback, the US Core Location  and PractitionerRole Profiles are not explicitly referenced in any US Core Profile. However they **SHOULD** be used as the default profile if referenced by another US Core profile. See this guidance on [Referencing US Core Profiles].
 
 ### Examples
 

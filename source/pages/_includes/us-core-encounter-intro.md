@@ -33,6 +33,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Profile specific implementation guidance:**
 
 * To search for an encounter diagnosis, query for Condition resources that reference the Encounter of interest and have a category of `encounter-diagnosis`.   An example search is shown in the [Condition Quick Start] section.
+* As a result of implementation feedback, the base FHIR Location resource is being referenced by `Encounter.location`.  However, it **SHOULD** conform to US Core Location. See this guidance on [Referencing US Core Profiles].
 
 ### Examples
 

@@ -243,3 +243,4 @@
 [writing and updating]: future-of-us-core.html#future-candidate-requirements-under-considerations
 [Servers Requiring Status]: general-guidance.html#search-for-servers-requiring-status
 [converted from a new element]: {{site.data.fhir.path}}versions.html#extensions
+[Referencing US Core Profiles]: general-guidance.html#referencing-us-core-profiles

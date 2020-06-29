@@ -56,7 +56,7 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 
 ### Referencing US Core profiles
 
-Many of the profiles in this guide [reference] other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core CareTeam Profile] references US Core Patient.  For any other references not formally defined in a US Core profiles, the referenced resource **SHOULD** be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.
+Many of the profiles in this guide [reference] other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core CareTeam Profile] references US Core Patient.  For any other references to base FHIR resource[^2] or not formally defined in a US Core profiles, the referenced resource **SHOULD** be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.
 
 There are scenarios when [contained] resources are used in US Core profiles. They occur when the content referred to in the contained resource does not have an independent existence apart from the resource that contains it.  For example, the [Medication List Guidance] page describes how a contained Medication in MedicationRequest is used for representing the medication. When referencing a contained resource in a US Core profile, the contained resource **SHOULD** be a US Core profile if a US Core profile exists for the resource type.
 
@@ -453,5 +453,7 @@ In order to manage the number of search results returned, the server may choose 
 [^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset#Time_zones_and_time_offsets
 -->
 [^1]: This extension is [converted from a new element] in a future version of CapabilityStatement.
+
+[^2]: For example, the base Location resource is being referenced by the US Core Encounter and US Core PractitionerRole resources.
 
 {% include link-list.md %}
