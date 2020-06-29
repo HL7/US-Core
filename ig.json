@@ -10,7 +10,6 @@
     "observation-us-core-pediatric-weight-for-height-spreadsheet.xml",
     "condition-us-core-profile-spreadsheet.xml",
     "organization-us-core-profile-spreadsheet.xml",
-    "observation-us-core-smokingstatus-profile-spreadsheet.xml",
     "careplan-us-core-profile-spreadsheet.xml",
     "careteam-us-core-profile-spreadsheet.xml",
     "documentreference-us-core-profile-spreadsheet.xml",
@@ -306,6 +305,10 @@
       "source": "valueset-us-core-observation-ccdasmokingstatus.xml",
       "base": "ValueSet-us-core-observation-smokingstatus.html"
     },
+    "ValueSet/us-core-observation-smokingstatus-max": {
+      "source": "valueset-us-core-observation-smokingstatus-max.xml",
+      "base": "ValueSet-us-core-observation-smokingstatus-max.html"
+    },
     "Condition/hc1": {
       "source": "hc1.xml",
       "base": "Condition-hc1.html"
@@ -388,6 +391,7 @@
     },
     "StructureDefinition/us-core-smokingstatus": {
       "defns": "StructureDefinition-us-core-smokingstatus-definitions.html",
+      "source": "structuredefinition-us-core-observation-smokingstatus.json",
       "base": "StructureDefinition-us-core-smokingstatus.html"
     },
     "Observation/bp-data-absent": {
