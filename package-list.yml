@@ -59,11 +59,11 @@ list:
 
       1. TODO US Core heart-rate example is not conformant to http://hl7.org/fhir/StructureDefinition/heartrate (FHIR-27086)
 
-      1. TODO Update smoking status ValueSet (FHIR-27082)
+      1. TODO Update smoking status ValueSet (FHIR-27082) discuss do we really want to say all of SNOMED?
 
-      1. TODO Syntax error in FHIRPath constraint (FHIR-27065)
+      1. Fix invariant [provenance-1](StructureDefinition-us-core-provenance-definitions.html#who) (FHIR-27065)
 
-      1. TODO fix invalid json snippet (FHIR-27001)
+      1. Fix invalid [json snippet](general-guidance.html#missing-data) (FHIR-27001)
 
       1. Remove Provenance requirement from Medication, Location, Practitioner, PractitionerRole, and Organization in [CapabilityStatement](CapabilityStatement-us-core-server.html#resource--details) (FHIR-26840).
 
