@@ -52067,3 +52067,38 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "35637008",
+  "display" : "Alcohol rehabilitation"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.285"
+    },
+    {
+      "system" : "http://www.cms.gov/Medicare/Coding/ICD10"
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.13"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+v: {
+  "display" : "Alcohol rehabilitation",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
