@@ -409,12 +409,14 @@ Note that the patient may be *implicit* in the context in some implementations (
 
 ### Search for Servers Requiring Status
 
->Servers are *strongly* encouraged to support a query for resources *without* requiring a status parameter.  However, if business requirements prohibit this they **SHALL** follow the guidelines here.
+Servers are *strongly* encouraged to support a query for resources *without* requiring a status parameter.  However, if business requirements prohibit this they **SHALL** follow the guidelines here.
+{: .highlight-note}
 
 For searches where the client does not supply a status parameter, an implementation's business rules may override the FHIR RESTful search expectations and require a status parameter to be provided.  These systems are allowed to reject such requests as follows:
 
 - **SHALL** return an http `400` status
 - **SHALL** return an [OperationOutcome] specifying that status(es) must be present.
+- **SHALL** support search with status if status required
 - **SHALL NOT** restrict search results ( i.e. apply 'hidden' filters) when a client includes status parameters in the query.
   - If a system doesn't support a specific status code value that is queried, search results **SHOULD** return an http `200` status with search bundle containing resources matching the search criteria *and* an OperationOutcome warning the client which status code value is not supported.
 
