@@ -28,7 +28,7 @@
     "derivedFrom": "http://hl7.org/fhir/SearchParameter/clinical-date",
     "description": "When the procedure occurred or is occurring<br />\n<em>NOTE</em>: This US Core SearchParameter definition extends the usage context of\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">capabilitystatement-expectation</a>\n extension to formally express implementer expectations for these elements:<br />\n - multipleAnd<br />\n - multipleOr<br />\n - modifier<br />\n - comparator<br />\n - chain<br />\n ",
     "experimental": false,
-    "expression": "Procedure.occurrence",
+    "expression": "Procedure.performed",
     "modifier": [
         "missing"
     ],
@@ -40,7 +40,7 @@
     "type": "date",
     "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-procedure-date",
     "version": "4.1.0",
-    "xpath": "f:Procedure/f:occurrenceDateTime",
+    "xpath": "f:Procedure/f:performedDateTime",
     "xpathUsage": "normal",
     "resourceType": "SearchParameter",
     "_multipleOr": {
