@@ -39,7 +39,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
   * `AllergyIntolerance.code` = "716186003" (No known allergy (situation))
 
-  * `AllergyIntolerance.verificationStatus` = "verified"
+  * `AllergyIntolerance.verificationStatus` = "confirmed"
 
 ### Examples
 
