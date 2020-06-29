@@ -23,8 +23,8 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
    - which should have a  Quantity value  in `Observation.component.valueQuantity`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [Vital Signs Units](http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1)
-   - which should have a  decimal value  in `Observation.component.valueQuantity.value`
-   - which should have a  string value  in `Observation.component.valueQuantity.unit`
+   - which must have a  decimal value  in `Observation.component.valueQuantity.value`
+   - which must have a  string value  in `Observation.component.valueQuantity.unit`
    - which must have a fixed `Observation.component.valueQuantity.system` = `http://unitsofmeasure.org`
    - which must have a fixed `Observation.component.valueQuantity.code` = `l/min`
 1.  A  Component  in `Observation.component`
@@ -38,10 +38,10 @@ with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
    - which should have a  Quantity value  in `Observation.component.valueQuantity`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
  binding to [Vital Signs Units](http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1)
-   - which should have a  decimal value  in `Observation.component.valueQuantity.value`
-   - which should have a  string value  in `Observation.component.valueQuantity.unit`
+   - which must have a  decimal value  in `Observation.component.valueQuantity.value`
+   - which must have a  string value  in `Observation.component.valueQuantity.unit`
    - which must have a fixed `Observation.component.valueQuantity.system` = `http://unitsofmeasure.org`
-   - which must have a fixed `Observation.component.valueQuantity.code` = `l/min`
+   - which must have a fixed `Observation.component.valueQuantity.code` = `%`
 
 #### Summary of Constraints
 1. If Observation.code is the same as an Observation.component.code then the value element associated with the code SHALL NOT be present
