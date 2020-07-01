@@ -31,6 +31,12 @@ list:
       This update addresses several technical corrections and errata and clarifications are listed in the sections below. They have been reviewed
       and voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this errata release and reconciliation of the comments.:
 
+      1. Fix FHIRPath Expression in [USCoreGoalTargetDate](SearchParameter-us-core-goal-target-date.html) (FHIR-27892).
+
+      1. Fix FHIRPath Expression in [USCoreProcedureDate](SearchParameter-us-core-procedure-date.html)(FHIR-27887).
+
+      1. Add omitted ["ge" comparators to SearchParameters](SearchParameter-us-core-goal-target-date.html) (FHIR-27893).
+
       1. Remove Must Support References to non US Core Profiles (FHIR-27876)
 
       1. Add reaction to allergies (FHIR-27867)
