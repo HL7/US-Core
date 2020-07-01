@@ -1,4 +1,7 @@
-
+- The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
+  - Variables surrounded by "\[\]" are mandatory for the client to supply
+  - Variables surrounded by "\{\}" is optional *for the client* to supply
+  - Servers must support token searches by `system|code` and `code` [(how to search by token)]
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
 
@@ -19,7 +22,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 1. **SHALL** support searching a patient by an identifier such as a MPI using the **[`identifier`](SearchParameter-us-core-patient-identifier.html)** search parameter:
 
-    `GET [base]/Patient?identifier={[system]}|[code]`
+    `GET [base]/Patient?identifier={system|}[code]`
 
     Example:
     
@@ -49,7 +52,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 1. **SHALL** support searching using the combination of the **[`gender`](SearchParameter-us-core-patient-gender.html)** and **[`name`](SearchParameter-us-core-patient-name.html)** search parameters:
 
-    `GET [base]/Patient?gender={[system]}|[code]&name=[string]`
+    `GET [base]/Patient?gender={system|}[code]&name=[string]`
 
     Example:
     
@@ -74,12 +77,14 @@ The following search parameter combinations SHOULD be supported.:
 
 1. **SHOULD** support searching using the combination of the **[`family`](SearchParameter-us-core-patient-family.html)** and **[`gender`](SearchParameter-us-core-patient-gender.html)** search parameters:
 
-    `GET [base]/Patient?family=[string]&gender={[system]}|[code]`
+    `GET [base]/Patient?family=[string]&gender={system|}[code]`
 
     Example:
     
       1. GET [base]/Patient?family=Shaw&amp;gender=female
 
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified family and gender ([how to search by string] and [how to search by token])
+
+
 
 {% include link-list.md %}

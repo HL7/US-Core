@@ -1,4 +1,7 @@
-
+- The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
+  - Variables surrounded by "\[\]" are mandatory for the client to supply
+  - Variables surrounded by "\{\}" is optional *for the client* to supply
+  - Servers must support token searches by `system|code` and `code` [(how to search by token)]
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
 
@@ -60,5 +63,7 @@ The following search parameter combinations SHOULD be supported.:
       1. GET [base]/Location?address-postalcode=48104
 
      *Implementation Notes:* Fetches a bundle of all Location resources for the ZIP code ([how to search by string])
+
+
 
 {% include link-list.md %}

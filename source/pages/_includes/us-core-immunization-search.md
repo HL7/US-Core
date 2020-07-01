@@ -1,4 +1,7 @@
-
+- The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
+  - Variables surrounded by "\[\]" are mandatory for the client to supply
+  - Variables surrounded by "\{\}" is optional *for the client* to supply
+  - Servers must support token searches by `system|code` and `code` [(how to search by token)]
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
 
@@ -35,12 +38,14 @@ The following search parameter combinations SHOULD be supported.:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-immunization-patient.html)** and **[`status`](SearchParameter-us-core-immunization-status.html)** search parameters:
 
-    `GET [base]/Immunization?patient=[reference]&status={[system]}|[code]`
+    `GET [base]/Immunization?patient=[reference]&status={system|}[code]`
 
     Example:
     
       1. GET [base]/Immunization?patient=1137192&amp;status=completed
 
     *Implementation Notes:* Fetches a bundle of all Immunization resources for the specified patient and status ([how to search by reference] and [how to search by date])
+
+
 
 {% include link-list.md %}

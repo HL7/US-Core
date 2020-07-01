@@ -1,4 +1,7 @@
-
+- The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
+  - Variables surrounded by "\[\]" are mandatory for the client to supply
+  - Variables surrounded by "\{\}" is optional *for the client* to supply
+  - Servers must support token searches by `system|code` and `code` [(how to search by token)]
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
 
@@ -23,7 +26,7 @@ The following search parameter combinations SHOULD be supported.:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-goal-patient.html)** and **[`lifecycle-status`](SearchParameter-us-core-goal-lifecycle-status.html)** search parameters:
 
-    `GET [base]/Goal?patient=[reference]&lifecycle-status={[system]}|[code]`
+    `GET [base]/Goal?patient=[reference]&lifecycle-status={system|}[code]`
 
     Example:
     
@@ -42,5 +45,7 @@ The following search parameter combinations SHOULD be supported.:
       1. GET [base]/Goal?patient=1137192&amp;target-date=ge2015-01-14&amp;target-date=le2019-01-14
 
     *Implementation Notes:* Fetches a bundle of all Goal resources for the specified patient and target-date ([how to search by reference] and [how to search by date])
+
+
 
 {% include link-list.md %}

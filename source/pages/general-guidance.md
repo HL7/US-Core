@@ -386,14 +386,16 @@ For more information see the [FHIR RESTful API]
 
 For searching a resource, interactions on profile pages are defined with the following syntax:
 
- **`GET [base]/[Resource-type]?[parameter1]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]{&parameter2={:m1|m2|...}={c1|c2|...}[value1{,value2,...}&...}`**
+ **`GET [base]/[Resource-type]?[parameter1]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]{&[parameter2]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]&...}`**
 
 -   GET is the HTTP verb used for fetching a resource
--   Content surrounded by \[\] is mandatory, and will be replaced by the string literal identified.
+-   Variables surrounded by "\[\]" are mandatory *for the client* to supply, and will be replaced by the string literal identified.
+-   Variables surrounded by "\{\}" are optional *for the client* to supply, and will be replaced by the string literal identified.
     -   base: The Service Root URL (e.g. “<https://fhir-open-api-dstu2.smarthealthit.org>”)
     -  Resource-type: The name of a resource type (e.g. “Patient”)
     -  parameter: the search parameters as defined for the particular interaction (e.g."?patient=Patient/123")
     -  value: the search parameter value for a particular search
+       - note for values of type `token` [(how to search by token)], the syntax `{system|}[code]` means that the system value is optional *for the client* to supply
     - \{:m1|m2|...}: The list of supported search parameter modifiers
     - {c1|c2|...}: The list of supported search parameter comparators
     - {,value2,...}: Optional multiple 'OR' Values
