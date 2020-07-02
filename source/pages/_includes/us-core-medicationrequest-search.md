@@ -1,7 +1,4 @@
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
-  - Variables surrounded by "\[\]" are mandatory for the client to supply
-  - Variables surrounded by "\{\}" is optional *for the client* to supply
-  - Servers must support token searches by `system|code` and `code` [(how to search by token)]
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
 
@@ -15,7 +12,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/MedicationRequest?patient=[reference]&intent=order,plan`
 
     Example:
-    
+
       1. GET [base]/MedicationRequest?patient=14676&amp;intent=order,plan
       1. GET [base]/MedicationRequest?patient=14676&amp;intent=order,plan&amp;_include=MedicationRequest:medication
 
@@ -28,7 +25,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/MedicationRequest?patient=[reference]&intent=order,plan&status={system|}[code]{,{system|}[code],...}`
 
     Example:
-    
+
       1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active
       1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active&amp;_include=MedicationRequest:medication
 
@@ -45,7 +42,7 @@ The following search parameter combinations SHOULD be supported.:
     `GET [base]/MedicationRequest?patient=[reference]&intent=order,plan&encounter=[reference]`
 
     Example:
-    
+
       1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active&amp;encounter=Encounter/123
       1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active&amp;&amp;encounter=Encounter/123&amp;_include=MedicationRequest:medication
 
@@ -59,7 +56,7 @@ The following search parameter combinations SHOULD be supported.:
     `GET [base]/MedicationRequest?patient=[reference]&intent=order,plan&authoredon={gt|lt|ge|le}[date]{&authoredon={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;authoredon=ge2019
       1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;authoredon=ge2019&amp;_include=MedicationRequest:medication
 

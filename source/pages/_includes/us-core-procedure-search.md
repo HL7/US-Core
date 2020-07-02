@@ -1,7 +1,4 @@
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
-  - Variables surrounded by "\[\]" are mandatory for the client to supply
-  - Variables surrounded by "\{\}" is optional *for the client* to supply
-  - Servers must support token searches by `system|code` and `code` [(how to search by token)]
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
 
@@ -14,7 +11,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/Procedure?patient=[reference]`
 
     Example:
-    
+
       1. GET [base]/Procedure?patient=1291938
 
     *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient ([how to search by reference])
@@ -26,7 +23,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/Procedure?patient=[reference]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]/Procedure?patient=1137192&amp;date=ge2019-01-14
 
     *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient and date ([how to search by reference] and [how to search by token])
@@ -42,7 +39,7 @@ The following search parameter combinations SHOULD be supported.:
     `GET [base]/Procedure?patient=[reference]&status={system|}[code]{,{system|}[code],...}`
 
     Example:
-    
+
       1. GET [base]/Procedure?patient=1137192&amp;status=completed
 
     *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient and status ([how to search by reference] and [how to search by token])
@@ -55,7 +52,7 @@ The following search parameter combinations SHOULD be supported.:
     `GET [base]/Procedure?patient=[reference]&code={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]/Procedure?patient=1137192&amp;date=ge2019-01-14&amp;code=http://snomed.info/sct\|35637008
 
     *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient and date and procedure code(s).  SHOULD support search by multiple codes. ([how to search by reference] and [how to search by token] and [how to search by date])

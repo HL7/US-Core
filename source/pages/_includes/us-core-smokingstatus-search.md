@@ -1,7 +1,4 @@
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
-  - Variables surrounded by "\[\]" are mandatory for the client to supply
-  - Variables surrounded by "\{\}" is optional *for the client* to supply
-  - Servers must support token searches by `system|code` and `code` [(how to search by token)]
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
 
@@ -15,7 +12,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/Observation?patient=[reference]&code=http://loinc.org|72166-2`
 
     Example:
-    
+
       1. GET [base]/Observation?patient=1032702&amp;code=http://loinc.org\|72166-2
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code. ([how to search by reference] and [how to search by token])
