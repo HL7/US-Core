@@ -19,6 +19,10 @@ layout: default
 This update addresses several technical corrections and errata and clarifications are listed in the sections below. They have been reviewed
 and voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this errata release and reconciliation of the comments.:
 
+1. Clarified [token search syntax](general-guidance.html#search-syntax) (FHIR-27897).
+
+1. Corrected [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference-definitions.html#DocumentReference.content) to support multiple attachments (FHIR-25778).
+
 1. Fix FHIRPath Expression in [USCoreGoalTargetDate](SearchParameter-us-core-goal-target-date.html) (FHIR-27892).
 
 1. Fix FHIRPath Expression in [USCoreProcedureDate](SearchParameter-us-core-procedure-date.html)(FHIR-27887).
