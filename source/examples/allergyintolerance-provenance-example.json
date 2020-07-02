@@ -9,12 +9,12 @@
   "link": [
     {
       "relation": "self",
-      "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples"
+      "url": "http://example.org/fhir/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples"
     }
   ],
   "entry": [
     {
-      "fullUrl": "http://hapi.fhir.org/baseR4/AllergyIntolerance/79613",
+      "fullUrl": "http://example.org/fhir/AllergyIntolerance/79613",
       "resource": {
         "resourceType": "AllergyIntolerance",
         "id": "79613",
@@ -83,7 +83,7 @@
       }
     },
     {
-      "fullUrl": "http://hapi.fhir.org/baseR4/Provenance/79614",
+      "fullUrl": "http://example.org/fhir/Provenance/79614",
       "resource": {
         "resourceType": "Provenance",
         "id": "79614",

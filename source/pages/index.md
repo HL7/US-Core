@@ -19,6 +19,8 @@ layout: default
 This update addresses several technical corrections and errata and clarifications are listed in the sections below. They have been reviewed
 and voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this errata release and reconciliation of the comments.:
 
+1. Update [Federal Register link](ValueSet-omb-race-category.html) for OMB race and ethnicity category classifications. (FHIR- ).
+
 1. Clarified [token search syntax](general-guidance.html#search-syntax) (FHIR-27897).
 
 1. Corrected [US Core DocumentReference Profile](StructureDefinition-us-core-documentreference-definitions.html#DocumentReference.content) to support multiple attachments (FHIR-25778).
