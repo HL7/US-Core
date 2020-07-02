@@ -141,14 +141,8 @@
         ],
         "mustSupport": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
-              "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus-max"
-            }
-          ],
-          "strength": "preferred",
-          "description": "This value set enumerates codes SNOMED CT codes historically used for the current smoking status of a patient. Current US regulation which no longer requires that only these be used for smoking status.",
+          "strength": "extensible",
+          "description": "This value set represents a patient’s smoking behavior using concepts from SNOMED CT.",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus"
         },
         "mapping": [
