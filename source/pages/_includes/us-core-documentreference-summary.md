@@ -11,7 +11,7 @@ with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [US Core DocumentReference Category](ValueSet-us-core-documentreference-category.html)
 1.  A Patient Reference  in `DocumentReference.subject`
-1.  A  Content  in `DocumentReference.content`
+1.  One or more Content  in `DocumentReference.content`
       - which must have a  Attachment value  in `DocumentReference.content.attachment`
          - which must have a  code value  in `DocumentReference.content.attachment.contentType`
 with a [required](http://hl7.org/fhir/R4/terminologies.html#required)
