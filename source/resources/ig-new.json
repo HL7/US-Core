@@ -304,7 +304,7 @@
     },
     {
       "reference" : {
-        "reference" : "Observation/head-circumference"
+        "reference" : "Observation/ofc-percentile"
       },
       "exampleBoolean" : true
     },
@@ -623,6 +623,12 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/pediatric-bmi-for-age"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/head-occipital-frontal-circumference-percentile"
       },
       "exampleBoolean" : false
     },
@@ -1460,7 +1466,12 @@
         },
         {
           "nameUrl" : "StructureDefinition-pediatric-bmi-for-age.html",
-          "title" : "StructureDefinition Pediatric Bmi For Age",
+          "title" : "StructureDefinition Pediatric BMI For Age",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-head-occipital-frontal-circumference-percentile.html",
+          "title" : "StructureDefinition Pediatric Head Occipital-frontal Circumference Percentile",
           "generation" : "generated"
         },
         {

@@ -758,9 +758,9 @@
       "source": "urine-ketone.json",
       "base": "Observation-urine-ketone.html"
     },
-    "Observation/head-circumference": {
-      "source": "head-circumference.json",
-      "base": "Observation-head-circumference.html"
+    "Observation/ofc-percentile": {
+      "source": "ofc-percentile.json",
+      "base": "Observation-ofc-percentile.html"
     },
     "StructureDefinition/us-core-direct": {
       "defns": "StructureDefinition-us-core-direct-definitions.html",
@@ -947,6 +947,11 @@
     "StructureDefinition/pediatric-bmi-for-age": {
       "defns": "StructureDefinition-pediatric-bmi-for-age-definitions.html",
       "base": "StructureDefinition-pediatric-bmi-for-age.html"
+    },
+    "StructureDefinition/-head-occipital-frontal-circumference-percentile": {
+      "source": "structuredefinition-head-occipital-frontal-circumference-percentile.json",
+      "defns": "StructureDefinition--head-occipital-frontal-circumference-percentile-definitions.html",
+      "base": "StructureDefinition--head-occipital-frontal-circumference-percentile.html"
     },
     "SearchParameter/us-core-allergyintolerance-patient": {
       "source": "searchparameter-us-core-allergyintolerance-patient.json",

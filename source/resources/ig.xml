@@ -301,7 +301,7 @@
   </resource>
   <resource>
     <reference>
-      <reference value="Observation/head-circumference"/>
+      <reference value="Observation/ofc-percentile"/>
     </reference>
     <exampleBoolean value="true"/>
   </resource>
@@ -617,12 +617,22 @@
     </reference>
     <exampleBoolean value="false"/>
   </resource>
+
   <resource>
     <reference>
       <reference value="StructureDefinition/pediatric-bmi-for-age"/>
     </reference>
     <exampleBoolean value="false"/>
   </resource>
+
+  <resource>
+    <reference>
+      <reference value="StructureDefinition/head-occipital-frontal-circumference-percentile"/>
+    </reference>
+    <exampleBoolean value="false"/>
+  </resource>
+
+
   <resource>
     <reference>
       <reference value="StructureDefinition/us-core-allergyintolerance"/>
@@ -1463,9 +1473,16 @@
       </page>
       <page>
         <nameUrl value="StructureDefinition-pediatric-bmi-for-age.html"/>
-        <title value="StructureDefinition Pediatric Bmi For Age"/>
+        <title value="StructureDefinition Pediatric BMI For Age"/>
         <generation value="generated"/>
       </page>
+
+      <page>
+        <nameUrl value="StructureDefinition-head-occipital-frontal-circumference-percentile.html"/>
+        <title value="StructureDefinition Pediatric Head Occipital-frontal Circumference Percentile"/>
+        <generation value="generated"/>
+      </page>
+
       <page>
         <nameUrl value="StructureDefinition-us-core-allergyintolerance.html"/>
         <title value="StructureDefinition US Core AllergyIntolerance"/>

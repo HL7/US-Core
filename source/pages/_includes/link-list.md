@@ -245,3 +245,4 @@
 [converted from a new element]: {{site.data.fhir.path}}versions.html#extensions
 [Referencing US Core Profiles]: general-guidance.html#referencing-us-core-profiles
 [differential view]: {{site.data.fhir.path}}profiling.html#snapshot
+[Head Circumference]: {{site.data.fhir.path}}headcircum.html

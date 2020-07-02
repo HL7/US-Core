@@ -39,9 +39,9 @@ list:
 
       1. [Remove Must Support References](general-guidance.html#referencing-us-core-profiles) to non US Core Profiles (FHIR-27876)
 
-      1. Add reaction to allergies (FHIR-27867)
+      1. Add missing [reaction](StructureDefinition-us-core-allergyintolerance-definitions.html#AllergyIntolerance.reaction) to the US Core AllergyIntolerance Profile (FHIR-27867).
 
-      1. Add Reference to US Core Patient in Vitals Signs Profiles  (FHIR-27857)
+      1. Clarify [reference to US Core Patient](StructureDefinition-pediatric-bmi-for-age.html#mandatory-and-must-support-data-elements) in Vitals Signs Profiles (FHIR-27857).
 
       1. US Core Pulse Oximetry Profile: observation.value and component.value constraints are different (FHIR-27846)
 
@@ -53,7 +53,7 @@ list:
 
       1. TODO Pediatric vitals should include referenced growth chart (FHIR-27549)
 
-      1. TODO Missing USCDI vs Head Occipital-frontal Circumference Percentile (Birth - 36 months) (FHIR-27542)
+      1. Added Missing [USCDI vs Head Occipital-frontal Circumference Percentile Profile](StructureDefinition-head-occipital-frontal-circumference-percentile.html) (FHIR-27542).
 
       1. Correct requirements for supporting [CLIA identifiers](StructureDefinition-us-core-organization.html#mandatory-and-must-support-data-elements) (FHIR-27158)
 
@@ -61,9 +61,9 @@ list:
 
       1. Correct [AllergyIntolerance guidance](StructureDefinition-us-core-allergyintolerance.html#mandatory-and-must-support-data-elements) for verificationStatus (FHIR-27096)
 
-      1. REMOVE aleady fixFix example [US Core heart-rate example](Observation-heart-rate.html) (FHIR-27086)
+      1. REMOVE aleady fixed example [US Core heart-rate example](Observation-heart-rate.html) (FHIR-27086)
 
-      1. ******Discuss Update smoking status ValueSet (FHIR-27082)  do we really want to do this how about a preferred +/- max binding?
+      1. ******TOOO Update smoking status ValueSet (FHIR-27082)  do we really want to do this how about a preferred +/- max binding?
 
       1. Fix invariant [provenance-1](StructureDefinition-us-core-provenance-definitions.html#who) (FHIR-27065)
 
