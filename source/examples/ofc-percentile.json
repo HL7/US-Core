@@ -30,7 +30,8 @@
     "text": "Head Occipital-frontal circumference Percentile"
   },
   "subject": {
-    "reference": "Patient/example"
+    "display": "Infant Example",
+    "reference": "Patient/infant-example"
   },
   "effectiveDateTime": "2020-07-01",
   "valueQuantity": {
@@ -38,5 +39,8 @@
     "unit": "%",
     "system": "http://unitsofmeasure.org",
     "code": "%"
-  }
+  },
+  "note": [{
+    "text": "WHO Males, 0-2 years Chart"
+  }]
 }

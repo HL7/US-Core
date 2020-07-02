@@ -35,7 +35,8 @@ and voted on by the members of the [HL7 International Cross-Group Projects WorkG
 
 1. Clarify [reference to US Core Patient](StructureDefinition-pediatric-bmi-for-age.html#mandatory-and-must-support-data-elements) in Vitals Signs Profiles (FHIR-27857).
 
-1. US Core Pulse Oximetry Profile: observation.value and component.value constraints are different (FHIR-27846)
+1. Corrected [US Core Pulse Oximetry Profile](StructureDefinition-us-core-pulse-oximetry.html#formal-views-of-profile-content) component.valueQuantity.code and component.valueQuantity.unit
+min from 0 to 1 to be consistent with the valueQuantity constraints within US Core (FHIR-27846)
 
 1. Correct UCUM Unit in [US Core Pulse Oximetry Profile Text Summary](StructureDefinition-us-core-pulse-oximetry.html#summary-of-the-must-support-requirements) (FHIR-27845)
 
@@ -43,7 +44,7 @@ and voted on by the members of the [HL7 International Cross-Group Projects WorkG
 
 1. Update [Procedure Codes Value Set](ValueSet-us-core-procedure-code.html) to include CDT codes (FHIR-27737)
 
-1. *******TODO**** Pediatric vitals should include referenced growth chart (FHIR-27549)
+1. Clarify that pediatric vital sign percentile Observations should [reference growth chart](/StructureDefinition-pediatric-bmi-for-age.html#mandatory-and-must-support-data-elements) (FHIR-27549),
 
 1. Added Missing [USCDI vs Head Occipital-frontal Circumference Percentile Profile](StructureDefinition-head-occipital-frontal-circumference-percentile.html) (FHIR-27542).
 

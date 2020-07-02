@@ -351,6 +351,12 @@ resources:
   Patient/example:
     source: patient-example.xml
     base: Patient-example.html
+  Patient/infant-example:
+    source: patient-infant-example.json
+    base: Patient-infant-example.html
+  Patient/child-example:
+    source: patient-child-example.json
+    base: Patient-child-example.html
   ValueSet/us-core-observation-smoking-status-status:
     source: valueset-us-core-observation-status-smoking-status.xml
     base: ValueSet-us-core-observation-smoking-status-status.html

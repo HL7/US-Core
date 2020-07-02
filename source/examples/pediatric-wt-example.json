@@ -1,46 +1,49 @@
 {
-   "status": "final",
-   "category": [
-      {
-         "text": "Vital Signs",
-         "coding": [
-            {
-               "code": "vital-signs",
-               "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-               "display": "Vital Signs"
-            }
-         ]
-      }
-   ],
-   "code": {
-      "text": "BMI",
+  "status": "final",
+  "category": [
+    {
+      "text": "Vital Signs",
       "coding": [
-         {
-            "code": "77606-2",
-            "system": "http://loinc.org",
-            "display": "Weight-for-length Per age and gender"
-         }
+        {
+          "code": "vital-signs",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Vital Signs"
+        }
       ]
-   },
-   "resourceType": "Observation",
-   "valueQuantity": {
-      "code": "%",
-      "unit": "%",
-      "value": 65,
-      "system": "http://unitsofmeasure.org"
-   },
-   "meta": {
-      "profile": [
-         "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height"
-      ]
-   },
-   "encounter": {
-      "display": "GP Visit"
-   },
-   "effectiveDateTime": "2019-05-04T12:12:29-07:00",
-   "id": "pediatric-wt-example",
-   "subject": {
-      "display": "Infant Amy Shaw",
-      "reference": "Patient/example"
-   }
+    }
+  ],
+  "code": {
+    "text": "BMI",
+    "coding": [
+      {
+        "code": "77606-2",
+        "system": "http://loinc.org",
+        "display": "Weight-for-length Per age and gender"
+      }
+    ]
+  },
+  "resourceType": "Observation",
+  "valueQuantity": {
+    "code": "%",
+    "unit": "%",
+    "value": 65,
+    "system": "http://unitsofmeasure.org"
+  },
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height"
+    ]
+  },
+  "encounter": {
+    "display": "GP Visit"
+  },
+  "effectiveDateTime": "2020-07-02",
+  "id": "pediatric-wt-example",
+  "subject": {
+    "display": "Infant Example",
+    "reference": "Patient/infant-example"
+  },
+  "note": [{
+    "text": "WHO Males, 0-2 years Chart"
+  }]
 }
