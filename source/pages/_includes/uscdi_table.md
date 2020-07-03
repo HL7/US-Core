@@ -1,5 +1,9 @@
 | USCDI v1 Summary of Data Classes and Data Elements| US Core Profile | FHIR Resource|
 |---|---|---|
+| Allergies and Intolerances: | ||
+| Substance (Medication) | [US Core Allergies Profile]| AllergyIntolerance |
+| Substance (Drug Class) | [US Core Allergies Profile]| AllergyIntolerance |
+| Reaction | [US Core Allergies Profile]| AllergyIntolerance |
 | Assessment and Plan of Treatment| [US Core CarePlan Profile]| CarePlan |
 | Care Team Members | [US Core CareTeam Profile]| CareTeam |
 | Clinical Notes: | ||
@@ -39,7 +43,6 @@
 | Problems| [US Core Condition Profile] | Condition|
 | Procedures| [US Core Procedure Profile] | Procedure|
 | Provenance: | [US Core Provenance Profile] |Provenance|
-| Author| [US Core Provenance Profile] | Provenance.agent|
 | Author Time Stamp | [US Core Provenance Profile] | Provenance.recorded|
 | Author Organization | [US Core Provenance Profile] | Provenance.agent|
 | Smoking Status| [US Core Smoking Status Observation Profile]| Observation|
@@ -54,6 +57,6 @@
 | Body temperature| [Body temperature] (FHIR Core Profile)| Observation|
 | Pulse oximetry| [US Core Pulse Oximetry Profile] (Builds on FHIR Core Profile) | Observation|
 | Inhaled oxygen concentration| [US Core Pulse Oximetry Profile] (Builds on FHIR Core Profile)| Observation|
-| BMI percentile per age and sex for youth 2-20 | [US Core Pediatric BMI for Age Observation Profile] (Builds on FHIR Core Profile) | Observation|
-| Weights for age per length and sex| [US Core Pediatric Weight for Height Observation Profile] (Builds on FHIR Core Profile)| Observation|
-| Occipital-frontal circumference for children < 3 years old| [Head circumference] (FHIR Core Profile)| Observation|
+| BMI Percentile (2-20 years old) | [US Core Pediatric BMI for Age Observation Profile] (Builds on FHIR Core Profile) | Observation|
+| Weight-for-length Percentile (Birth - 36 months)| [US Core Pediatric Weight for Height Observation Profile] (Builds on FHIR Core Profile)| Observation|
+| Occipital-frontal Head Circumference Percentile (Birth - 36 months)| [US Core Pediatric Head Occipital Frontal Circumference Observation Profile] (Builds on FHIR Core Profile)| Observation|
