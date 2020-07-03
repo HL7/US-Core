@@ -19,7 +19,7 @@ topofpage: true
 
 Clinical notes are a key component to communicate the current status of a patient. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing and even handwritten notes by a providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems.
 
-Specifically, this implementation guide defines the exchange of the following five "Common Clinical Notes" which systems are required to support...
+Specifically, this implementation guide defines the exchange of the following five "Common Clinical Notes" which systems **SHALL** support.
 
 1. [Consultation Note (11488-4)]
 1. [Discharge Summary (18842-5)]
@@ -27,7 +27,7 @@ Specifically, this implementation guide defines the exchange of the following fi
 1. [Procedures Note (28570-0)]
 1. [Progress Note (11506-3)]
 
-and three DiagnosticReport categories which systems shall support.
+and three DiagnosticReport categories which systems **SHALL** support.
 
 1. [Cardiology (LP29708-2)]
 1. [Pathology (LP7839-6)]
