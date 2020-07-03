@@ -14,22 +14,14 @@ layout: default
 <!-- end TOC -->
 
 <div markdown='1' class="highlight-note">
-
-### Outstanding QA issues:
-
-1. [LP Codes](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.231-.20LOINC.20Part.20code)
-1. [NDC codes](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.232-.20ndc.20codes)
-1.[required binding in vitals profiles](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.233-.20nasty.20profiling.20error)
-1. [expectation-extension context violations](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/new.20validation.20error.20on.20extensions)
-1. [SEARCHPARAMETER_EXP_WRONG](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/search.20parameter.20warning)
-1. CapabilityStatement Errors...
-
 ### Temporary Change Notes For Review of Applied Trackers
 
 This update addresses several technical corrections and errata and clarifications are listed in the sections below. They have been reviewed
 and voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this errata release and reconciliation of the comments.:
 
-1. Update [Federal Register link](ValueSet-omb-race-category.html) for OMB race and ethnicity category classifications. (FHIR- ).
+1. Corrected errors in [DiagnosticReport Cardiology Example](DiagnosticReport-cardiology-report.html) (FHIR-27913)
+
+1. Update [Federal Register link](ValueSet-omb-race-category.html) for OMB race and ethnicity category classifications. (FHIR-27907)
 
 1. Clarified [token search syntax](general-guidance.html#search-syntax) (FHIR-27897).
 
@@ -111,7 +103,7 @@ min from 0 to 1 to be consistent with the valueQuantity constraints within US Co
 
 ### Introduction
 
-The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for accessing patient data. The [Argonaut] pilot implementations, ONC [2015 Edition Common Clinical Data Set (CCDS)], and the latest ONC [U.S. Core Data for Interoperability (USCDI) v1] provided the requirements for this guide.  The prior Argonaut search and vocabulary requirements, based on FHIR DSTU2, are updated in this guide to support FHIR Version R4. This guide was used as the basis for further testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by [DAF-Research], [QI-Core], and [CIMI].  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
+The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for accessing patient data. The [Argonaut] pilot implementations, ONC [2015 Edition Common Clinical Data Set (CCDS)], and the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)] provided the requirements for this guide.  The prior Argonaut search and vocabulary requirements, based on FHIR DSTU2, are updated in this guide to support FHIR Version R4. This guide was used as the basis for further testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by [DAF-Research], [QI-Core], and [CIMI].  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
 
 These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the [Office of the National Coordinator for Health Information Technology (ONC)] sponsored [Data Access Framework] (DAF) project. For more information on how DAF became US Core see the [US Core change notes](change-notes.html).
 
