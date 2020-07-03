@@ -1,0 +1,8 @@
+Outstanding QA issues:
+
+1. [ ] [LP Codes](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.231-.20LOINC.20Part.20code)
+1. [ ] [NDC codes](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.232-.20ndc.20codes)
+1. [ ] [required binding in vitals profiles](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.233-.20nasty.20profiling.20error)
+1. [ ] [expectation-extension context violations](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/new.20validation.20error.20on.20extensions)
+1. [ ] [SEARCHPARAMETER_EXP_WRONG](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/search.20parameter.20warning)
+1. [ ] CapabilityStatement Errors

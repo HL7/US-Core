@@ -7,28 +7,37 @@
     ]
   },
   "status": "final",
-  "category":[ {
-    "coding": [
-      {
-        "system": "http://loinc.org",
-        "code": "LP29684-5",
-        "display": "Radiology"
-      }
-    ],
-    "text": "Radiology"
-  }],
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "LP29708-2",
+          "display": "Cardiology"
+        }
+      ],
+      "text": "Cardiology"
+    }
+  ],
   "code": {
     "coding": [
       {
         "system": "http://loinc.org",
-        "code": "36134-5",
-        "display": "MR Abdomen W contrast IV"
+        "code": "45033-8",
+        "display": "Cardiovascular physiologic and EKG assessment panel"
       }
     ],
-    "text": "MR Abdomen W contrast IV"
+    "text": "Cardiovascular physiologic and EKG assessment panel"
   },
   "subject": {
     "reference": "Patient/example"
   },
-  "effectiveDateTime": "2011-01-01T21:39:30.000Z"
+  "effectiveDateTime": "2011-01-01T21:39:30.000Z",
+  "presentedForm": [
+    {
+      "contentType": "application/pdf",
+      "url": "http://example.org/pdfdownloads/cardiopanel-report-123.pdf",
+      "hash": "EQH/..AgME"
+    }
+  ]
 }
