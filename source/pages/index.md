@@ -50,7 +50,7 @@ min from 0 to 1 to be consistent with the valueQuantity constraints within US Co
 
 1. Clarify that pediatric vital sign percentile Observations should [reference growth chart](/StructureDefinition-pediatric-bmi-for-age.html#mandatory-and-must-support-data-elements) (FHIR-27549),
 
-1. Added Missing [USCDI vs Head Occipital-frontal Circumference Percentile Profile](StructureDefinition-head-occipital-frontal-circumference-percentile.html) (FHIR-27542).
+1. Added Missing [US core Head Occipital-frontal Circumference Percentile Profile](StructureDefinition-head-occipital-frontal-circumference-percentile.html) (FHIR-27542).
 
 1. Correct requirements for supporting [CLIA identifiers](StructureDefinition-us-core-organization.html#mandatory-and-must-support-data-elements) (FHIR-27158)
 
@@ -60,7 +60,7 @@ min from 0 to 1 to be consistent with the valueQuantity constraints within US Co
 
 1. REMOVE aleady fixed example [US Core heart-rate example](Observation-heart-rate.html) (FHIR-27086)
 
-1. Update smoking status ValueSet (FHIR-27082).
+1. Update [smoking status ValueSet](ValueSet-us-core-observation-smokingstatus.html) (FHIR-27082).
 
 1. Fix invariant [provenance-1](StructureDefinition-us-core-provenance-definitions.html#who) (FHIR-27065)
 
@@ -68,7 +68,7 @@ min from 0 to 1 to be consistent with the valueQuantity constraints within US Co
 
 1. Remove Provenance requirement from Medication, Location, Practitioner, PractitionerRole, and Organization in [CapabilityStatement](CapabilityStatement-us-core-server.html#resource--details) (FHIR-26840).
 
-1. Correction on USCDI Table change 'MedicationStatement' to 'MedicationRequest' (FHIR-26840).
+1. Correction on [USCDI Table](general-guidance.html#us-core-data-for-interoperability-and-2015-edition-common-clinical-data-set) change 'MedicationStatement' to 'MedicationRequest' (FHIR-26840).
 
 1. Clarify that US Core Location/PractitionerRole are [not being referenced](StructureDefinition-us-core-encounter.html#mandatory-and-must-support-data-elements) by other resources (FHIR-26840).
 
