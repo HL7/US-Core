@@ -1,13 +1,13 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "head-occipital-frontal-circumference-percentile",
-  "url": "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile",
+  "id": "pediatric-bmi-for-age",
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age",
   "version": "3.1.1",
-  "name": "UsCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile",
-  "title": "US Core Pediatric Head Occipital-frontal Circumference Percentile Profile",
+  "name": "USCorePediatricBMIforAgeObservationProfile",
+  "title": "US Core Pediatric BMI for Age Observation Profile",
   "status": "active",
   "experimental": false,
-  "date": "2020-07-01",
+  "date": "2020-06-27",
   "publisher": "HL7 US Realm Steering Committee",
   "contact": [
     {
@@ -19,7 +19,7 @@
       ]
     }
   ],
-  "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving pediatric Pediatric Head Occipital-frontal Circumference Percentile observations.",
+  "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving pediatric BMI observations.",
   "jurisdiction": [
     {
       "coding": [
@@ -42,13 +42,13 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "definition": "This profile defines how to represent head occipital-frontal circumference percentile for patients from birth to 36 months of age in FHIR using a standard LOINC code and UCUM units of measure.",
+        "definition": "This profile defines how to represent BMI percentile per age and sex for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units of measure.",
         "mustSupport": false
       },
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Head Occipital-frontal circumference Percentile",
+        "short": "BMI percentile per age and sex for youth 2-20",
         "comment": "additional codes that translate or map to this code are allowed.  For example a more granular LOINC code or code that is used locally in a system.",
         "alias": [
           "Test",
@@ -63,7 +63,7 @@
           "coding": [
             {
               "system": "http://loinc.org",
-              "code": "8289-1"
+              "code": "59576-9"
             }
           ]
         },
@@ -72,8 +72,6 @@
       {
         "id": "Observation.subject",
         "path": "Observation.subject",
-        "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",

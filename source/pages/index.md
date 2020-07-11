@@ -19,6 +19,8 @@ layout: default
 This update addresses several technical corrections and errata and clarifications are listed in the sections below. They have been reviewed
 and voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this errata release and reconciliation of the comments.:
 
+1. Corrected technical errors in [pediatric profiles StructureDefinitions](profiles.html#profiles) (FHIR-27946)
+
 1. Corrected errors in [DiagnosticReport Cardiology Example](DiagnosticReport-cardiology-report.html) (FHIR-27913)
 
 1. Update [Federal Register link](ValueSet-omb-race-category.html) for OMB race and ethnicity category classifications. (FHIR-27907)

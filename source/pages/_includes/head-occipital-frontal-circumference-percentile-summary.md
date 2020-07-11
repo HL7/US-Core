@@ -1,6 +1,7 @@
 **Observation**
 
 #### Summary of the Mandatory Requirements
+1.  A Patient Reference  in `Observation.subject`
 1.  A  CodeableConcept  in `Observation.code`  = the pattern "{"coding": [{"code": "8289-1", "system": "http://loinc.org"}]}"
 
 #### Summary of the Must Support Requirements

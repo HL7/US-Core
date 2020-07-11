@@ -1,6 +1,7 @@
 **Observation**
 
 #### Summary of the Mandatory Requirements
+1.  A Patient Reference  in `Observation.subject`
 1.  A  CodeableConcept  in `Observation.code`
 with an [extensible](http://hl7.org/fhir/R4/terminologies.html#extensible)
  binding to [Vital Signs](http://hl7.org/fhir/ValueSet/observation-vitalsignresult)

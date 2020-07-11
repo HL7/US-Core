@@ -13,6 +13,7 @@ In addition to the mandatory and must support data elements in the FHIR Vital Si
 
 **Each Observation must have:**
 
+1.  a patient
 1.  a fixed code for head occipital frontal circumference percentile measurement
 
 **Each Observation must support:**
@@ -22,7 +23,6 @@ In addition to the mandatory and must support data elements in the FHIR Vital Si
 **Profile specific implementation guidance:**
 
 - An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it.
-- The Observation.subject **SHALL** conform to [US Core Patient Profile].
 - Information about the growth chart tables used to determine percentiles should be supplied in `Observation.note.text` (for example, 'WHO Males, 0-2 years Chart').
 - For representing the raw OFC measurements use the FHIR Vital Signs [Head Circumference] Profile.
 

@@ -6,7 +6,6 @@ spreadsheets:
   - implantable-device-us-core-profile-spreadsheet.xml
   - medicationrequest-us-core-profile-spreadsheet.xml
   - goal-us-core-profile-spreadsheet.xml
-  - observation-us-core-pediatric-weight-for-height-spreadsheet.xml
   - condition-us-core-profile-spreadsheet.xml
   - organization-us-core-profile-spreadsheet.xml
   - careplan-us-core-profile-spreadsheet.xml
@@ -20,7 +19,6 @@ spreadsheets:
   - encounter-us-core-profile-spreadsheet.xml
   - practitioner-us-core-profile-spreadsheet.xml
   - allergyintolerance-us-core-profile-spreadsheet.xml
-  - observation-us-core-pediatric-bmi-for age-spreadsheet.xml
   - us-core-observation-lab-profile-spreadsheet.xml
   - practitionerrole-us-core-profile-spreadsheet.xml
   - immunization-us-core-profile-spreadsheet.xml
@@ -88,6 +86,7 @@ resources:
     source: pediatric-wt-example.json
     base: Observation-pediatric-wt-example.html
   StructureDefinition/pediatric-weight-for-height:
+    source: structuredefinition-pediatric-weight-for-height.json
     defns: StructureDefinition-pediatric-weight-for-height-definitions.html
     base: StructureDefinition-pediatric-weight-for-height.html
   StructureDefinition/us-core-provenance:
@@ -722,7 +721,9 @@ resources:
   ValueSet/us-core-narrative-status:
     source: valueset-us-core-narrative-status.xml
     base: ValueSet-us-core-narrative-status.html
+
   StructureDefinition/pediatric-bmi-for-age:
+    source: structuredefinition-pediatric-bmi-for-age.json
     defns: StructureDefinition-pediatric-bmi-for-age-definitions.html
     base: StructureDefinition-pediatric-bmi-for-age.html
 
