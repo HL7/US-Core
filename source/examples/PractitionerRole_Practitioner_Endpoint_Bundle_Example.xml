@@ -45,10 +45,16 @@
                     <display value="Health Level Seven International"/>
                 </location>
                 <endpoint>
+                    <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct">
+                      <valueBoolean value="false"/>
+                    </extension>
                     <reference value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
                     <display value="Westwood Physicians Organization ADT"/>
                 </endpoint>
                 <endpoint>
+                    <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct">
+                      <valueBoolean value="true"/>
+                    </extension>
                     <reference value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
                     <display value="Brenda.Jennings.Richard.MD@direct.example.org"/>
                 </endpoint>

@@ -19,6 +19,8 @@ layout: default
 This update addresses several technical corrections and errata and clarifications are listed in the sections below. They have been reviewed
 and voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this errata release and reconciliation of the comments.:
 
+1. Added example of US Core Direct Extension to [PractitionerRole Example](Bundle-66c8856b-ba11-4876-8aa8-467aad8c11a2.html) (FHIR-27947)
+
 1. Corrected technical errors in [pediatric profiles StructureDefinitions](profiles.html#profiles) (FHIR-27946)
 
 1. Corrected errors in [DiagnosticReport Cardiology Example](DiagnosticReport-cardiology-report.html) (FHIR-27913)
