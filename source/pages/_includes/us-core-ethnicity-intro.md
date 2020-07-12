@@ -8,3 +8,5 @@ This Complex Extension for ethnicity allows one or more ethnicity codes of which
 
 
 Context of Use: [US Core Patient Profile]({{site.data.structuredefinitions.us-core-patient.path}})
+
+ Example can be found in [Patient-example](Patient-example.html)
