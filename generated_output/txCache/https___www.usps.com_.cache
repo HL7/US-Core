@@ -511,16 +511,6 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "https://www.usps.com/",
-  "code" : "UM"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The code \"UM\" is not valid in the system https://www.usps.com/; The code provided (https://www.usps.com/#UM) is not  valid in the value set All codes known to the system"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "https://www.usps.com/",
   "code" : "UT"
 }, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
@@ -809,10 +799,6 @@ v: {
         "display" : "Texas"
       },
       {
-        "code" : "UM",
-        "display" : "U.S. Minor Outlying Islands"
-      },
-      {
         "code" : "UT",
         "display" : "Utah"
       },
@@ -852,8 +838,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e314220e-5d45-46e2-ba02-27c21b17fcd0",
-    "timestamp" : "2020-07-03T19:24:03.610Z",
+    "identifier" : "urn:uuid:3d933282-fe8f-4839-b5d7-234864793cbd",
+    "timestamp" : "2020-07-14T18:04:06.492Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
