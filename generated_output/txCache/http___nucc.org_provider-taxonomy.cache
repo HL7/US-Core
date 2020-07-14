@@ -21972,3 +21972,42 @@ e: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://nucc.org/provider-taxonomy",
+  "code" : "208D00000X"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://nucc.org/provider-taxonomy",
+      "filter" : [{
+        "property" : "abstract",
+        "op" : "=",
+        "value" : "false"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The filter \"abstract = false\" was not understood in the context of http://nucc.org/provider-taxonomy"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://nucc.org/provider-taxonomy",
+      "filter" : [{
+        "property" : "abstract",
+        "op" : "=",
+        "value" : "false"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: The filter \"abstract = false\" was not understood in the context of http://nucc.org/provider-taxonomy"
+}
+-------------------------------------------------------------------------------------

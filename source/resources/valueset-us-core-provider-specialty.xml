@@ -20,8 +20,8 @@
     <include>
       <system value="http://nucc.org/provider-taxonomy"/>
       <filter>
-        <property value="child"/>
-        <op value="exists"/>
+        <property value="abstract"/>
+        <op value="="/>
         <value value="false"/>
       </filter>
     </include>

@@ -54,11 +54,11 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 * NOTE: The above definition of *Must Support* is derived from HL7v2 concept "Required but may be empty - RE" described in HL7v2 V28_CH02B_Conformance.doc.
 * NOTE: Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
 
-### Referencing US Core profiles
+### Referencing US Core Profiles
 
-Many of the profiles in this guide [reference] other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core CareTeam Profile] references US Core Patient.  For any other references to base FHIR resource[^2] or not formally defined in a US Core profiles, the referenced resource **SHOULD** be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.  US Core Resources in the [differential view] and marked as "Must Support" follow the Must Support rules listed above.  Other resources allowed in the base FHIR specification may be referenced even though the current publication framework does not display them.  For example, RelatedPerson is an allowed target reference in `DocumentReference.author`.
+Many of the profiles in this guide [reference] other FHIR resources that are also US Core Profiles.  This is defined in the formal profile definitions.  For example, [US Core CareTeam Profile] references US Core Patient.  For any other references to base FHIR resources[^2] or not formally defined in a US Core Profiles, the referenced resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.  US Core Resources in the [differential view] and marked as "Must Support" follow the Must Support rules listed above.  Other resources allowed in the base FHIR specification may be referenced even though the current publication framework does not display them.  For example, RelatedPerson is an allowed target reference in `DocumentReference.author`.
 
-There are scenarios when [contained] resources are used in US Core profiles. They occur when the content referred to in the contained resource does not have an independent existence apart from the resource that contains it.  For example, the [Medication List Guidance] page describes how a contained Medication in MedicationRequest is used for representing the medication. When referencing a contained resource in a US Core profile, the contained resource **SHOULD** be a US Core profile if a US Core profile exists for the resource type.
+There are scenarios when [contained] resources are used in US Core Profiles. They occur when the content referred to in the contained resource does not have an independent existence apart from the resource that contains it.  For example, the [Medication List Guidance] page describes how a contained Medication in MedicationRequest is used for representing the medication. When referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.
 
 
 ### Missing Data
@@ -107,7 +107,7 @@ If the source system does not have data for a *Must Support* data element, the d
         If one of these a status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a query for the resource.
 
 
-### Using Codes in US Core profiles
+### Using Codes in US Core Profiles
 
 #### Required binding for CodeableConcept Datatype
 {:.no_toc}
@@ -366,18 +366,18 @@ Client algorithm for resolving time offsets and timezones.
 
 -->
 
-### Read(Fetch) syntax
+### Read(Fetch) Syntax
 
 For fetching a resource interactions on profile pages are defined with the following syntax:
 
  **`GET [base]/[Resource-type]/[id] {parameters}`**
 
 -   GET is the HTTP verb used for fetching a resource
--   Content surrounded by \[\] is mandatory, and will be replaced by the string literal identified.
+-   Content surrounded by \[\] is mandatory *for the client* to supply, and will be replaced by the string literal identified.
     -   base: The Service Root URL (e.g. “<https://fhir-open-api-dstu2.smarthealthit.org>”)
     -   Resource-type: The name of a resource type (e.g. “Patient”)
     -   id: The Logical Id of a resource(e.g. “24342”)
--   Content surrounded by {} is optional
+-   Content surrounded by {} is optional *for the client* to supply, and will be replaced by the string literal identified.
     -   parameters: URL parameters as defined for the particular interaction (e.g."?\_format=xml"}
 
 For more information see the [FHIR RESTful API]
@@ -435,7 +435,7 @@ For searches where the client does not supply a status parameter, an implementat
 
 
 
-### Searching multiple patients
+### Searching Multiple Patients
 
 Currently, most EHRs permit queries that provide a single patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described in the standard FHIR REST API. Instead, a user facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data.
 

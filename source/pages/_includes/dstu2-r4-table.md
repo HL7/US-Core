@@ -22,6 +22,7 @@
 |-|US Core Location Profile|New Profile in R4|
 |-|US Core Organization Profile|New Profile in R4|
 |-|US Core Pediatric BMI for Age Observation Profile|New Profile in R4 based on the FHIR Vital Signs Profile|
+|-|US Core Pediatric Head Occipital-frontal Circumference Percentile Profile|New Profile in R4 based on the FHIR Vital Signs Profile|
 |-|US Core Pediatric Weight for Height Observation Profile|New Profile in R4 based on the FHIR Vital Signs Profile|
 |-|US Core Practitioner Profile|New Profile in R4|
 |-|US Core PractitionerRole Profile|New Profile in R4|
