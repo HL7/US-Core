@@ -69,7 +69,7 @@ min from 0 to 1 to be consistent with the valueQuantity constraints within US Co
 
 1. REMOVE aleady fixed example [US Core heart-rate example](Observation-heart-rate.html) ([FHIR-27086](https://jira.hl7.org/browse/FHIR-27086))
 
-1. Update [smoking status ValueSet](ValueSet-us-core-observation-smokingstatus.html) ([FHIR-27082](https://jira.hl7.org/browse/FHIR-27082)).
+1. Update [smoking status codes](StructureDefinition-us-core-smokingstatus-definitions.html#Observation.valueCodeableConcept) to align with USCDI ([FHIR-27082](https://jira.hl7.org/browse/FHIR-27082)).
 
 1. Fix invariant [provenance-1](StructureDefinition-us-core-provenance-definitions.html#who) ([FHIR-27065](https://jira.hl7.org/browse/FHIR-27065))
 

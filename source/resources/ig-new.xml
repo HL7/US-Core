@@ -577,6 +577,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/us-core-observation-smokingstatus-max"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/omb-race-category"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -1624,7 +1630,12 @@
         </page>
         <page>
           <nameUrl value="ValueSet-us-core-observation-smokingstatus.html"/>
-          <title value="ValueSet US Core Observation Smokingstatus"/>
+          <title value="ValueSet US Core Observation Smokingstatus Preferred"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="ValueSet-us-core-observation-smokingstatus-max.html"/>
+          <title value="ValueSet US Core Observation Smokingstatus Max-Binding"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -1684,7 +1695,7 @@
         </page>
         <page>
           <nameUrl value="ValueSet-us-core-observation-smoking-status-status.html"/>
-          <title value="ValueSet US Core Observation Smoking Status Status"/>
+          <title value="ValueSet US Core Observation SmokingStatus Status"/>
           <generation value="generated"/>
         </page>
         <page>

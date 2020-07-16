@@ -42,7 +42,7 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "definition": "The US Core Smoking Status Observation Profile is based upon the core FHIR Observation Resource and created to meet the 2015 Edition Common Clinical Data Set 'Smoking status' requirements.",
+        "definition": "The US Core Smoking Status Observation Profile is based upon the core FHIR Observation Resource and created to meet the USCDI Data Set 'Smoking status' requirements.",
         "alias": [
           "Obs"
         ],
@@ -141,8 +141,14 @@
         ],
         "mustSupport": true,
         "binding": {
-          "strength": "extensible",
-          "description": "This value set represents a patient’s smoking behavior using concepts from SNOMED CT.",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+              "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus-max"
+            }
+          ],
+          "strength": "preferred",
+          "description": "This value set enumerates codes SNOMED CT codes historically used for the current smoking status of a patient with a maximum required binding to Snomed CT codes.",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus"
         },
         "mapping": [

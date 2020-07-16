@@ -203,8 +203,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:48f0308c-13ca-4217-8d5d-199b42407d37",
-    "timestamp" : "2020-07-14T18:00:29.604Z",
+    "identifier" : "urn:uuid:bef70d1b-fcf2-437a-8d66-1ad27f80e1af",
+    "timestamp" : "2020-07-16T20:41:38.176Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -304,8 +304,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:f33085fc-91f8-4f66-b607-aec765b78c25",
-    "timestamp" : "2020-07-14T18:00:29.947Z",
+    "identifier" : "urn:uuid:f8ff3652-0e1b-4fc2-85bc-76add600ccd8",
+    "timestamp" : "2020-07-16T20:41:38.457Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -918,16 +918,28 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Access violation at address 00000000006BA5AD in module 'FHIRServer.exe'. Read of address 000000000000CF7D"
+  "display" : "CBC panel - Blood by Automated count",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "58410-2",
   "display" : "Complete blood count (hemogram) panel - Blood by Automated count"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "CLASSTYPE",
+        "op" : "=",
+        "value" : "1"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "CBC panel - Blood by Automated count",
   "severity" : "warning",
@@ -2480,16 +2492,28 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Access violation at address 00000000006BA5AD in module 'FHIRServer.exe'. Read of address 0000000000003D2B"
+  "display" : "Comprehensive metabolic 2000 panel - Serum or Plasma",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "24323-8",
   "display" : "Comprehensive metabolic 2000 panel - Serum or Plasma"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "CLASSTYPE",
+        "op" : "=",
+        "value" : "1"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "Comprehensive metabolic 2000 panel - Serum or Plasma",
   "severity" : null,
@@ -54506,16 +54530,35 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Access violation at address 00000000006BA5AD in module 'FHIRServer.exe'. Read of address 000000000000672C"
+  "display" : "Summary of episode note",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "34133-9",
   "display" : "Summary of episode note"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "concept" : [{
+        "code" : "UNK",
+        "display" : "unknown"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "DOC"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "Summary of episode note",
   "severity" : null,
@@ -54830,16 +54873,28 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "Access violation at address 00000000006BA5AD in module 'FHIRServer.exe'. Read of address 0000000000003D4D"
+  "display" : "Urinalysis complete panel - Urine",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "24356-8",
   "display" : "Urinalysis complete panel - Urine"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "CLASSTYPE",
+        "op" : "=",
+        "value" : "1"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "Urinalysis complete panel - Urine",
   "severity" : null,
@@ -55831,8 +55886,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:bef783c9-8c93-4dec-860f-8ae7c84ec04a",
-    "timestamp" : "2020-07-14T18:06:55.072Z",
+    "identifier" : "urn:uuid:37cbf961-752b-48df-9dbc-527c91388d9e",
+    "timestamp" : "2020-07-16T20:47:05.227Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -55876,8 +55931,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:4baf9fa7-07c2-4bef-88e8-70a36e13f323",
-    "timestamp" : "2020-07-14T18:07:37.037Z",
+    "identifier" : "urn:uuid:84614fe4-8162-432b-bd4b-fe9f955e8ace",
+    "timestamp" : "2020-07-16T20:47:40.427Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -55934,8 +55989,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e024f596-046a-41fd-8f54-840b93056e06",
-    "timestamp" : "2020-07-14T18:07:37.412Z",
+    "identifier" : "urn:uuid:fdc61f65-8109-4827-ba0a-0c9a410ce9bb",
+    "timestamp" : "2020-07-16T20:47:40.771Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
