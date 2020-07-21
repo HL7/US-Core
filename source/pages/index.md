@@ -18,7 +18,15 @@ layout: default
 ### Change Notes for Ver 3.1.1 Technical Errata to US Core For Review:
 
 This update addresses several technical corrections and errata and clarifications listed below. They have been reviewed
-and voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) which is sponsoring this errata release and reconciliation of the comments. **To make a comment against a particular errata click on the tracker link (for example, [FHIR-27975](https://jira.hl7.org/browse/FHIR-27975)) and post a comment.** Note that comments for review of this errata release are limited to these items.  If you wish to comment on other content in this guide which are outside the scope of this errata release, you can log a new tracker for *future* consideration.  New trackers can be made by clicking on the link in the page footer entitled "Propose a change":
+and voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) which is sponsoring this errata release and reconciliation of the comments. **To make a comment against a particular errata:**
+
+ 1. Create a new Jira tracker (New trackers can be made by clicking on the link in the page footer entitled "Propose a change"
+ 1. Reference the tracker in the *Advanced* Tab's *Related Issues* field
+ 1. add "US-Core-Errata" in the *Advanced* Tab's *Grouping* field
+
+ (see [example tracker](https://jira.hl7.org/browse/FHIR-28106))
+
+review of this errata release are limited to these items.  If you wish to comment on other content in this guide which are outside the scope of this errata release, you can log a new tracker for *future* consideration.  :
 
 >There are several outstanding ig publishing qa issues for this release which are summarized [here](https://hackmd.io/eCMBtXYnQV-0ea8YgVoHlQ?view).  These are currently being resolved in cooperation with the FHIR ig publishing team.
 
@@ -67,7 +75,7 @@ min from 0 to 1 to be consistent with the valueQuantity constraints within US Co
 
 1. Correct [AllergyIntolerance guidance](StructureDefinition-us-core-allergyintolerance.html#mandatory-and-must-support-data-elements) for verificationStatus ([FHIR-27096](https://jira.hl7.org/browse/FHIR-27096))
 
-1. REMOVE aleady fixed example [US Core heart-rate example](Observation-heart-rate.html) ([FHIR-27086](https://jira.hl7.org/browse/FHIR-27086))
+1. Fix example [US Core heart-rate example](Observation-heart-rate.html) ([FHIR-27086](https://jira.hl7.org/browse/FHIR-27086))
 
 1. Update [smoking status codes](StructureDefinition-us-core-smokingstatus-definitions.html#Observation.valueCodeableConcept) to align with USCDI ([FHIR-27082](https://jira.hl7.org/browse/FHIR-27082)).
 
@@ -75,9 +83,9 @@ min from 0 to 1 to be consistent with the valueQuantity constraints within US Co
 
 1. Fix invalid [json snippet](general-guidance.html#missing-data) ([FHIR-27001](https://jira.hl7.org/browse/FHIR-27001))
 
-1. Remove Provenance requirement from Medication, Location, Practitioner, PractitionerRole, and Organization in [CapabilityStatement](CapabilityStatement-us-core-server.html#resource--details) ([FHIR-26840](https://jira.hl7.org/browse/FHIR-26840)).
+1. Remove Provenance requirement from Medication, Location, Practitioner, PractitionerRole, and Organization and correct copy and paste error to Provenance searchType support in [CapabilityStatement](CapabilityStatement-us-core-server.html#resource--details) ([FHIR-26840](https://jira.hl7.org/browse/FHIR-26840)).
 
-1. Correction on [USCDI Table](general-guidance.html#us-core-data-for-interoperability-and-2015-edition-common-clinical-data-set) change 'MedicationStatement' to 'MedicationRequest' ([FHIR-26840](https://jira.hl7.org/browse/FHIR-26840)).
+1. Correction on [USCDI Table](general-guidance.html#us-core-data-for-interoperability-and-2015-edition-common-clinical-data-set) change 'MedicationStatement' to 'MedicationRequest' and remove references to MedicationStatement in the Medication Profile and CapabilityStatements ([FHIR-26840](https://jira.hl7.org/browse/FHIR-26840)).
 
 1. Clarify that US Core Location/PractitionerRole are [not being referenced](StructureDefinition-us-core-encounter.html#mandatory-and-must-support-data-elements) by other resources ([FHIR-26840](https://jira.hl7.org/browse/FHIR-26840)).
 
