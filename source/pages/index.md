@@ -30,6 +30,8 @@ review of this errata release are limited to these items.  If you wish to commen
 
 >There are several outstanding ig publishing qa issues for this release which are summarized [here](https://hackmd.io/eCMBtXYnQV-0ea8YgVoHlQ?view).  These are currently being resolved in cooperation with the FHIR ig publishing team.
 
+1. Correct copy/paste error in [Goal Profile](StructureDefinition-us-core-goal-definitions.html#Goal.lifecycleStatus) ([FHIR-28109](https://jira.hl7.org/browse/FHIR-28109))
+
 1. Correct [US Core Provider Speciality (NUCC) ValueSet ](ValueSet-us-core-provider-specialty.html) to hide abstract grouping codes ([FHIR-27975](https://jira.hl7.org/browse/FHIR-27975))
 
 1. Added example of US Core Direct Extension to [Practitioner-2 Example](Practitioner-practitioner-2.html) ([FHIR-27947](https://jira.hl7.org/browse/FHIR-27947))
