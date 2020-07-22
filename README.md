@@ -2,7 +2,9 @@
 #  Welcome to the Argonaut R4 Implementation Guide Repository
 
 Authors:  Eric Haas, Brett Marquard
-<!--
+
+
+<!-- foo 
 
 ### Udpate Argonaut Data Query DSTU2 IG to FHIR Version R4.
 
@@ -17,7 +19,7 @@ The Contents of [Argo R4 build] have been merged back into this IG on Aug 30th, 
 - March 2019
   - Launch!
 - April – May 2019
-  - -->Clear plan for incorporation into US Core OR Argonaut Stamp on US CORE?<--
+  - Clear plan for incorporation into US Core OR Argonaut Stamp on US CORE?
   - Prioritize sprints
   - Discuss May connectathon?
   - Sprints on priority areas
