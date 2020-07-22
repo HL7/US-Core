@@ -1,6 +1,8 @@
 
 #  Welcome to the Argonaut R4 Implementation Guide Repository
 
+US Core Implementation Guide (FHIR IG) [Publication (Version) History](http://hl7.org/fhir/us/core/history.html)
+
 Authors:  Eric Haas, Brett Marquard
 
 
@@ -53,7 +55,7 @@ GitHub will automatically trigger a new build whenever you commit changes.
 
 ### Find your rendered IG automatically available at
 
-http://build.fhir.org/ig/argonautproject/R4/branches/master/index.html
+https://build.fhir.org/ig/HL7/US-Core-R4/
 
 ### For a build log see
 
