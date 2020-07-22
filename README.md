@@ -1,7 +1,7 @@
 
 #  Welcome to the Argonaut R4 Implementation Guide Repository
 
-US Core Implementation Guide (FHIR IG) [Publication (Version) History](http://hl7.org/fhir/us/core/history.html)
+**US Core Implementation Guide (FHIR IG) [Publication (Version) History](http://hl7.org/fhir/us/core/history.html)**
 
 Authors:  Eric Haas, Brett Marquard
 
