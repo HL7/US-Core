@@ -2,7 +2,7 @@
 #  Welcome to the Argonaut R4 Implementation Guide Repository
 
 Authors:  Eric Haas, Brett Marquard
-
+<!--
 
 ### Udpate Argonaut Data Query DSTU2 IG to FHIR Version R4.
 
@@ -41,6 +41,9 @@ The Contents of [Argo R4 build] have been merged back into this IG on Aug 30th, 
 - Biweekly calls (more if needed)
 
 -----
+
+-->
+
 GitHub will automatically trigger a new build whenever you commit changes.
 
 *Note: a build takes 2-3 minutes to complete. You should see a notification at https://chat.fhir.org/#narrow/stream/142-committers.2Fnotification/topic/ig-build.
