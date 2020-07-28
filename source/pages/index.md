@@ -30,7 +30,9 @@ review of this errata release are limited to these items.  If you wish to commen
 
 >There are several outstanding ig publishing qa issues for this release which are summarized [here](https://hackmd.io/eCMBtXYnQV-0ea8YgVoHlQ?view).  These are currently being resolved in cooperation with the FHIR ig publishing team.
 
-1. Correct copy/paste error in [Goal Profile](StructureDefinition-us-core-goal-definitions.html#Goal.lifecycleStatus) ([FHIR-28109](https://jira.hl7.org/browse/FHIR-28109))
+1. **review period comments** Add guidance for representing patient name suffix and previous patient name to the [US Core Patient Profile](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements) ([FHIR-28129](https://jira.hl7.org/browse/FHIR-28129))
+
+1. **review period comments** Correct copy/paste error in [Goal Profile](StructureDefinition-us-core-goal-definitions.html#Goal.lifecycleStatus) ([FHIR-28109](https://jira.hl7.org/browse/FHIR-28109))
 
 1. Correct [US Core Provider Speciality (NUCC) ValueSet ](ValueSet-us-core-provider-specialty.html) to hide abstract grouping codes ([FHIR-27975](https://jira.hl7.org/browse/FHIR-27975))
 
@@ -79,13 +81,13 @@ min from 0 to 1 to be consistent with the valueQuantity constraints within US Co
 
 1. Fix example [US Core heart-rate example](Observation-heart-rate.html) ([FHIR-27086](https://jira.hl7.org/browse/FHIR-27086))
 
-1. Update [smoking status codes](StructureDefinition-us-core-smokingstatus-definitions.html#Observation.valueCodeableConcept) to align with USCDI ([FHIR-27082](https://jira.hl7.org/browse/FHIR-27082)).
+1. **review period comments** Update [smoking status codes](StructureDefinition-us-core-smokingstatus-definitions.html#Observation.valueCodeableConcept) to align with USCDI ([FHIR-27082](https://jira.hl7.org/browse/FHIR-27082)).
 
 1. Fix invariant [provenance-1](StructureDefinition-us-core-provenance-definitions.html#who) ([FHIR-27065](https://jira.hl7.org/browse/FHIR-27065))
 
 1. Fix invalid [json snippet](general-guidance.html#missing-data) ([FHIR-27001](https://jira.hl7.org/browse/FHIR-27001))
 
-1. Remove Provenance requirement from Medication, Location, Practitioner, PractitionerRole, and Organization and correct copy and paste error to Provenance searchType support in [CapabilityStatement](CapabilityStatement-us-core-server.html#resource--details) ([FHIR-26840](https://jira.hl7.org/browse/FHIR-26840)).
+1. **review period comments** Remove Provenance requirement from Medication, Location, Practitioner, PractitionerRole, and Organization and correct copy and paste error to Medication and Provenance searchType support in [CapabilityStatement](CapabilityStatement-us-core-server.html#resource--details) ([FHIR-26840](https://jira.hl7.org/browse/FHIR-26840), [FHIR-28161](https://jira.hl7.org/browse/FHIR-28161)).
 
 1. Correction on [USCDI Table](general-guidance.html#us-core-data-for-interoperability-and-2015-edition-common-clinical-data-set) change 'MedicationStatement' to 'MedicationRequest' and remove references to MedicationStatement in the Medication Profile and CapabilityStatements ([FHIR-26840](https://jira.hl7.org/browse/FHIR-26840)).
 

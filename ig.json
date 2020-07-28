@@ -16,7 +16,6 @@
         "procedure-us-core-profile-spreadsheet.xml",
         "location-us-core-profile-spreadsheet.xml",
         "observation-us-core-pulse-oximetry-spreadsheet.xml",
-        "patient-us-core-profile-spreadsheet.xml",
         "encounter-us-core-profile-spreadsheet.xml",
         "practitioner-us-core-profile-spreadsheet.xml",
         "allergyintolerance-us-core-profile-spreadsheet.xml",
@@ -225,6 +224,7 @@
             "base": "ValueSet-us-core-diagnosticreport-report-and-note-codes.html"
         },
         "StructureDefinition/us-core-patient": {
+            "source": "structuredefinition-us-core-patient.json",
             "defns": "StructureDefinition-us-core-patient-definitions.html",
             "base": "StructureDefinition-us-core-patient.html"
         },
@@ -455,7 +455,7 @@
             "base": "SearchParameter-us-core-encounter-class.html"
         },
         "Patient/example": {
-            "source": "patient-example.xml",
+            "source": "patient-example.json",
             "base": "Patient-example.html"
         },
         "Patient/infant-example": {
