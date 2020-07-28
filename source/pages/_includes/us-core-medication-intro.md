@@ -5,7 +5,7 @@ When referencing a medication, the  [MedicationRequest] resource can either use 
 Queries on Medication resource are expected to be within the context of a MedicationRequest resource query. The following are
 example usage scenarios for the US Core Medication profile:
 
--   Query for Medications with a particular code
+-   Read Medication resources referenced in MedicationRequest resources.
 
 ### Mandatory and Must Support Data Elements
 
