@@ -203,8 +203,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c3b4cb5e-f102-484f-924a-1bf9f91e8d88",
-    "timestamp" : "2020-07-21T22:00:15.962Z",
+    "identifier" : "urn:uuid:8f110abc-23d8-4961-8356-4d30e287fd27",
+    "timestamp" : "2020-07-29T05:11:40.918Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -304,8 +304,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:8924c5d6-7f95-470f-8d6f-edc92885c4ef",
-    "timestamp" : "2020-07-21T22:00:16.228Z",
+    "identifier" : "urn:uuid:68d31906-7e37-4cb5-abdd-4d051e0ecac5",
+    "timestamp" : "2020-07-29T05:11:41.199Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -326,6 +326,171 @@ e: {
   }
 },
   "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "18842-5"
+      },
+      {
+        "code" : "11488-4"
+      },
+      {
+        "code" : "34117-2"
+      },
+      {
+        "code" : "11506-3"
+      },
+      {
+        "code" : "28570-0"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:d9b38e4b-0474-4293-b38e-a1f182b942fd",
+    "timestamp" : "2020-07-29T05:13:00.309Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://loinc.org|2.68"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "18842-5",
+      "display" : "Discharge summary"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11488-4",
+      "display" : "Consult note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "34117-2",
+      "display" : "History and physical note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11506-3",
+      "display" : "Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28570-0",
+      "display" : "Procedure note"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LP29684-5",
+        "display" : "Radiology"
+      },
+      {
+        "code" : "LP29708-2",
+        "display" : "Cardiology"
+      },
+      {
+        "code" : "LP7839-6",
+        "display" : "Pathology"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:2748a7f2-5583-4bc0-89bc-4580e3c8dc08",
+    "timestamp" : "2020-07-29T05:17:23.996Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://loinc.org|2.68"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "LP29684-5",
+      "display" : "Radiology"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LP29708-2",
+      "display" : "Cardiology"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LP7839-6",
+      "display" : "Pathology"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "CLASSTYPE",
+        "op" : "=",
+        "value" : "1"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Access violation at address 00000000006BA5AD in module 'FHIRServer.exe'. Read of address 0000000000000009"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "DOC"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Access violation at address 00000000006BA5AD in module 'FHIRServer.exe'. Read of address 0000000000000676"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -55840,23 +56005,6 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "filter" : [{
-        "property" : "SCALE_TYP",
-        "op" : "=",
-        "value" : "DOC"
-      }]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Access violation at address 00000000006BA5AD in module 'FHIRServer.exe'. Read of address 0000000000000676"
-}
--------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -55886,8 +56034,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:0098708a-b912-4c6e-b8e1-b4af5ddb55d0",
-    "timestamp" : "2020-07-21T22:06:19.963Z",
+    "identifier" : "urn:uuid:79cf0752-75dc-41cf-87d6-a9f75bb9c82f",
+    "timestamp" : "2020-07-29T05:22:45.887Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -55931,8 +56079,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:dd610877-aa53-418b-83b3-2cdfb51be478",
-    "timestamp" : "2020-07-21T22:06:56.710Z",
+    "identifier" : "urn:uuid:a6a4d19b-dd46-475d-9ffa-2da208199259",
+    "timestamp" : "2020-07-29T05:22:46.356Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -55989,8 +56137,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:114d19c0-e728-4177-82db-8a3f7931625a",
-    "timestamp" : "2020-07-21T22:06:57.054Z",
+    "identifier" : "urn:uuid:84242ddc-9b69-493a-9cf4-a9c4b71ff1f6",
+    "timestamp" : "2020-07-29T05:22:46.668Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

@@ -1,0 +1,219 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "18842-5"
+      },
+      {
+        "code" : "11488-4"
+      },
+      {
+        "code" : "34117-2"
+      },
+      {
+        "code" : "11506-3"
+      },
+      {
+        "code" : "28570-0"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:c8023a69-11ea-4cf0-96f3-4de2b20d393d",
+    "timestamp" : "2020-07-29T05:13:00.043Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://loinc.org|2.68"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "18842-5",
+      "display" : "Discharge summary"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11488-4",
+      "display" : "Consult note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "34117-2",
+      "display" : "History and physical note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "11506-3",
+      "display" : "Progress note"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "28570-0",
+      "display" : "Procedure note"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LP29684-5",
+        "display" : "Radiology"
+      },
+      {
+        "code" : "LP29708-2",
+        "display" : "Cardiology"
+      },
+      {
+        "code" : "LP7839-6",
+        "display" : "Pathology"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:6ea7e91c-d5ed-4714-8020-99117d10b569",
+    "timestamp" : "2020-07-29T05:17:23.762Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://loinc.org|2.68"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "LP29684-5",
+      "display" : "Radiology"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LP29708-2",
+      "display" : "Cardiology"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LP7839-6",
+      "display" : "Pathology"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "CLASSTYPE",
+        "op" : "=",
+        "value" : "1"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Access violation at address 00000000006BA5AD in module 'FHIRServer.exe'. Read of address 0000000000000009"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Access violation at address 00000000006BA5AD in module 'FHIRServer.exe'. Read of address 0000000000000009"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "DOC"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Access violation at address 00000000006BA5AD in module 'FHIRServer.exe'. Read of address 0000000000000676"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "72166-2",
+        "display" : "Tobacco smoking status NHIS"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:83fe4ab8-d232-42f0-b840-b5ad29003ad9",
+    "timestamp" : "2020-07-29T05:18:39.231Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://loinc.org|2.68"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "72166-2",
+      "display" : "Tobacco smoking status NHIS"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
