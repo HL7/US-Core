@@ -5,8 +5,7 @@
 
 Authors:  Eric Haas, Brett Marquard
 
-
-<!-- foo 
+<!--
 
 ### Udpate Argonaut Data Query DSTU2 IG to FHIR Version R4.
 
@@ -35,9 +34,9 @@ The Contents of [Argo R4 build] have been merged back into this IG on Aug 30th, 
    - Updates from connectathon
 - Winter 2019
    - Published IG
-   
+
  ## Collaboration tools
- 
+
 - Slides on Google Slides ([folder](https://drive.google.com/drive/folders/1lr2OHmhdbu0pj5zKmDA_tdQdhiTzUJeV))
 - Offline discussions on [Zulip](https://chat.fhir.org/#narrow/stream/argonaut)
 - Development of the guidance and FHIR artifacts will be here on GitHub
