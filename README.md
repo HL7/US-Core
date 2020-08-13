@@ -54,10 +54,10 @@ GitHub will automatically trigger a new build whenever you commit changes.
 
 ### Find your rendered IG automatically available at
 
-https://build.fhir.org/ig/HL7/US-Core-R4/
+https://build.fhir.org/ig/HL7/US-Core/
 
 ### For a build log see
 
-http://build.fhir.org/ig/HL7/US-Core-R4/branches/master/qa.html
+http://build.fhir.org/ig/HL7/US-Core/branches/master/qa.html
 
 ---
