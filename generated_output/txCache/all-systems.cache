@@ -761,3 +761,115 @@ e: {
   "error" : "Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt"
 }
 -------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://snomed.info/sct",
+    "code" : "35637008",
+    "display" : "Alcohol rehabilitation"
+  },
+  {
+    "system" : "http://www.cms.gov/Medicare/Coding/ICD10",
+    "code" : "HZ30ZZZ",
+    "display" : "Individual Counseling for Substance Abuse Treatment, Cognitive"
+  }],
+  "text" : "Alcohol rehabilitation"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.285"
+    },
+    {
+      "system" : "http://www.cms.gov/Medicare/Coding/ICD10"
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.13"
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "CodeSystem uri 'urn:oid:2.16.840.1.113883.6.285' is unknown (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "2708-6",
+    "display" : "Oxygen saturation in Arterial blood"
+  },
+  {
+    "system" : "http://loinc.org",
+    "code" : "59408-5",
+    "display" : "Oxygen saturation in Arterial blood by Pulse oximetry"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150456",
+    "display" : "MDC_PULS_OXIM_SAT_O2"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "85353-1"
+      },
+      {
+        "code" : "9279-1"
+      },
+      {
+        "code" : "8867-4"
+      },
+      {
+        "code" : "2708-6"
+      },
+      {
+        "code" : "8310-5"
+      },
+      {
+        "code" : "8302-2"
+      },
+      {
+        "code" : "9843-4"
+      },
+      {
+        "code" : "29463-7"
+      },
+      {
+        "code" : "39156-5"
+      },
+      {
+        "code" : "85354-9"
+      },
+      {
+        "code" : "8480-6"
+      },
+      {
+        "code" : "8462-4"
+      },
+      {
+        "code" : "8478-0"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "Oxygen saturation in Arterial blood",
+  "severity" : "warning",
+  "error" : "The code system \"urn:iso:std:iso:11073:10101\" is not known (encountered paired with code = \"150456\") (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
