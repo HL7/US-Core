@@ -10,7 +10,7 @@
 | Consultation Note | [US Core DocumentReference Profile] | DocumentReference|
 | Discharge | [US Core DocumentReference Profile] | DocumentReference|
 | Summary Note| [US Core DocumentReference Profile] | DocumentReference|
-| History & Physical| [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
+| History & Physical| [US Core DocumentReference Profile] | DocumentReference |
 | Imaging Narrative | [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Laboratory Report Narrative | [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Pathology Report Narrative| [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
