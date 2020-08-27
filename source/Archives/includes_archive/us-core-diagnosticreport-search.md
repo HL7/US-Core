@@ -18,7 +18,7 @@
   - GET [base]/DiagnosticReport?patient=1032702&code=24323-8
 
 
-- Search for all cbc (LOINC = 58410-2 *Complete blood count (hemogram) panel - Blood by Automated count*), metabolic panel, and urinalysis panels (LOINC = 24356-8 *Urinalysis complete panel - Urine*) for a patient
+- Search for all cbc (LOINC = 58410-2 *CBC panel - Blood by Automated count*), metabolic panel, and urinalysis panels (LOINC = 24356-8 *Urinalysis complete panel - Urine*) for a patient
   - GET [base]/DiagnosticReport?patient=1032702&code=24323-8,58410-2,24356-8
 
 *Support:* Mandatory support search by a laboratory order code. SHOULD support search by multiple order codes.

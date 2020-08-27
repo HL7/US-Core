@@ -1,46 +1,51 @@
 {
-   "status": "final",
-   "category": [
-      {
-         "text": "Vital Signs",
-         "coding": [
-            {
-               "code": "vital-signs",
-               "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-               "display": "Vital Signs"
-            }
-         ]
-      }
-   ],
-   "code": {
-      "text": "BMI",
+  "status": "final",
+  "category": [
+    {
+      "text": "Vital Signs",
       "coding": [
-         {
-            "code": "59576-9",
-            "system": "http://loinc.org",
-            "display": "Body mass index (BMI) [Percentile] Per age and gender"
-         }
+        {
+          "code": "vital-signs",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Vital Signs"
+        }
       ]
-   },
-   "resourceType": "Observation",
-   "valueQuantity": {
-      "code": "%",
-      "unit": "%",
-      "value": 65,
-      "system": "http://unitsofmeasure.org"
-   },
-   "meta": {
-      "profile": [
-         "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age"
-      ]
-   },
-   "encounter": {
-      "display": "GP Visit"
-   },
-   "effectiveDateTime": "2019-05-04T12:12:29-07:00",
-   "id": "pediatric-bmi-example",
-   "subject": {
-      "display": "Infant Amy Shaw",
-      "reference": "Patient/example"
-   }
+    }
+  ],
+  "code": {
+    "text": "BMI",
+    "coding": [
+      {
+        "code": "59576-9",
+        "system": "http://loinc.org",
+        "display": "Body mass index (BMI) [Percentile] Per age and sex"
+      }
+    ]
+  },
+  "resourceType": "Observation",
+  "valueQuantity": {
+    "code": "%",
+    "unit": "%",
+    "value": 65,
+    "system": "http://unitsofmeasure.org"
+  },
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age"
+    ]
+  },
+  "encounter": {
+    "display": "GP Visit"
+  },
+  "effectiveDateTime": "2019-05-04T12:12:29-07:00",
+  "id": "pediatric-bmi-example",
+  "subject": {
+    "display": "Child Example",
+    "reference": "Patient/child-example"
+  },
+  "note": [
+    {
+      "text": "CDC Males, 2-20 years Chart"
+    }
+  ]
 }

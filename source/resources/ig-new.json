@@ -220,6 +220,18 @@
     },
     {
       "reference" : {
+        "reference" : "Patient/child-example"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Patient/infant-example"
+      },
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
         "reference" : "Observation/temperature"
       },
       "exampleBoolean" : true
@@ -304,7 +316,7 @@
     },
     {
       "reference" : {
-        "reference" : "Observation/head-circumference"
+        "reference" : "Observation/ofc-percentile"
       },
       "exampleBoolean" : true
     },
@@ -568,6 +580,12 @@
     },
     {
       "reference" : {
+        "reference" : "ValueSet/us-core-observation-smokingstatus-max"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/omb-race-category"
       },
       "exampleBoolean" : false
@@ -617,6 +635,12 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/pediatric-bmi-for-age"
+      },
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/head-occipital-frontal-circumference-percentile"
       },
       "exampleBoolean" : false
     },
@@ -1454,7 +1478,12 @@
         },
         {
           "nameUrl" : "StructureDefinition-pediatric-bmi-for-age.html",
-          "title" : "StructureDefinition Pediatric Bmi For Age",
+          "title" : "StructureDefinition Pediatric BMI For Age",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-head-occipital-frontal-circumference-percentile.html",
+          "title" : "StructureDefinition Pediatric Head Occipital-frontal Circumference Percentile",
           "generation" : "generated"
         },
         {
@@ -1604,7 +1633,12 @@
         },
         {
           "nameUrl" : "ValueSet-us-core-observation-smokingstatus.html",
-          "title" : "ValueSet US Core Observation Smokingstatus",
+          "title" : "ValueSet US Core Observation Smokingstatus Preferred",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "ValueSet-us-core-observation-smokingstatus-max.html",
+          "title" : "ValueSet US Core Observation Smokingstatus Max-Binding",
           "generation" : "generated"
         },
         {
@@ -1664,7 +1698,7 @@
         },
         {
           "nameUrl" : "ValueSet-us-core-observation-smoking-status-status.html",
-          "title" : "ValueSet US Core Observation Smoking Status Status",
+          "title" : "ValueSet US Core Observation SmokingStatus Status",
           "generation" : "generated"
         },
         {

@@ -168,7 +168,7 @@
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
 [Surgical Operation Note (11504-8)]: https://loinc.org/11504-8.html
 [Terminology]: terminology.html "Terminology Page"
-[U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/topic/laws-regulation-and-policy/notice-proposed-rulemaking-improve-interoperability-health
+[U.S. Core Data for Interoperability (USCDI) v1]: https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf
 [UCUM Codes value set]: {{site.data.fhir.path}}valueset-ucum-units.html
 [UCUM]: http://unitsofmeasure.org
 [US Core Allergies Profile]: StructureDefinition-us-core-allergyintolerance.html
@@ -194,6 +194,7 @@
 [US Core Patient Profile]: StructureDefinition-us-core-patient.html
 [US Core Pediatric BMI for Age Observation Profile]: StructureDefinition-pediatric-bmi-for-age.html
 [US Core Pediatric Weight for Height Observation Profile]: StructureDefinition-pediatric-weight-for-height.html
+[US Core Pediatric Head Occipital Frontal Circumference Observation Profile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
 [US Core Procedure Profile]: StructureDefinition-us-core-procedure.html
 [US Core Provenance Profile]: StructureDefinition-us-core-provenance.html
 [US Core Pulse Oximetry Profile]: StructureDefinition-us-core-pulse-oximetry.html
@@ -243,3 +244,6 @@
 [writing and updating]: future-of-us-core.html#future-candidate-requirements-under-considerations
 [Servers Requiring Status]: general-guidance.html#search-for-servers-requiring-status
 [converted from a new element]: {{site.data.fhir.path}}versions.html#extensions
+[Referencing US Core Profiles]: general-guidance.html#referencing-us-core-profiles
+[differential view]: {{site.data.fhir.path}}profiling.html#snapshot
+[Head Circumference]: {{site.data.fhir.path}}headcircum.html

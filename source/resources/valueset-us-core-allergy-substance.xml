@@ -18,16 +18,19 @@
 			<value value="http://www.hl7.org/Special/committees/usrealm/index.cfm"/>
 		</telecom>
 	</contact>
-	<description value="Documentation of substances suspected of (or not suspected of) causing an allergy or intolerance reaction in an individual. **Inclusion Criteria:** specific or general substances to which a patient may be exposed and which may be suspected of causing an adverse reaction; assertions refuting these suspicions. This includes:
+	<description value="Documentation of substances suspected of (or not suspected of) causing an allergy or intolerance reaction in an individual. **Inclusion Criteria:** specific or general substances to which a patient may be exposed and which may be suspected of causing an adverse reaction; assertions refuting these suspicions. This includes:&#xA;&#xA;
+1. Common dietary substances for allergy and intolerance documentation (SNOMEDCT)&#xA;
+2. Common drug classes for allergy and intolerance documentation (SNOMEDCT)&#xA;
+3. Common drug substances for allergy and intolerance documentation (RXNORM)&#xA;
+4. Common environmental substances for allergy and intolerance documentation (SNOMEDCT)&#xA;
+5. Common refutations and null values for substance causes for allergy and intolerance documentation (SNOMEDCT)&#xA;&#xA;
 
-1. Common dietary substances for allergy and intolerance documentation (SNOMEDCT)
-2. Common drug classes for allergy and intolerance documentation (SNOMEDCT)
-3. Common drug substances for allergy and intolerance documentation (RXNORM)
-4. Common environmental substances for allergy and intolerance documentation (SNOMEDCT)
-5. Common refutations and null values for substance causes for allergy and intolerance documentation (SNOMEDCT)
+**Exclusion Criteria:** actual conditions caused by exposure (reactions, allergies)&#xA;"/>
+	<copyright value="This value set includes content from:&#xA;
 
-**Exclusion Criteria:** actual conditions caused by exposure (reactions, allergies)"/>
-	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+1. SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.&#xA;
+
+2. RxNorm: Using RxNorm codes of type SAB=RXNORM as this specification describes [does not require](https://www.nlm.nih.gov/research/umls/rxnorm/docs/prescribe.html) a UMLS license. Access to the full set of RxNorm definitions, and/or additional use of other RxNorm structures and information requires a UMLS license. The use of RxNorm in this specification is pursuant to HL7's status as a licensee of the NLM UMLS. HL7's license does not convey the right to use RxNorm to any users of this specification; implementers must acquire a license to use RxNorm in their own right.&#xA;"/>
 	<compose>
 		<include>
 			<system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>

@@ -1,8 +1,11 @@
 
 #  Welcome to the Argonaut R4 Implementation Guide Repository
 
+**US Core Implementation Guide (FHIR IG) [Publication (Version) History](http://hl7.org/fhir/us/core/history.html)**
+
 Authors:  Eric Haas, Brett Marquard
 
+<!--
 
 ### Udpate Argonaut Data Query DSTU2 IG to FHIR Version R4.
 
@@ -17,7 +20,7 @@ The Contents of [Argo R4 build] have been merged back into this IG on Aug 30th, 
 - March 2019
   - Launch!
 - April – May 2019
-  - -->Clear plan for incorporation into US Core OR Argonaut Stamp on US CORE?<--
+  - Clear plan for incorporation into US Core OR Argonaut Stamp on US CORE?
   - Prioritize sprints
   - Discuss May connectathon?
   - Sprints on priority areas
@@ -31,9 +34,9 @@ The Contents of [Argo R4 build] have been merged back into this IG on Aug 30th, 
    - Updates from connectathon
 - Winter 2019
    - Published IG
-   
+
  ## Collaboration tools
- 
+
 - Slides on Google Slides ([folder](https://drive.google.com/drive/folders/1lr2OHmhdbu0pj5zKmDA_tdQdhiTzUJeV))
 - Offline discussions on [Zulip](https://chat.fhir.org/#narrow/stream/argonaut)
 - Development of the guidance and FHIR artifacts will be here on GitHub
@@ -41,6 +44,9 @@ The Contents of [Argo R4 build] have been merged back into this IG on Aug 30th, 
 - Biweekly calls (more if needed)
 
 -----
+
+-->
+
 GitHub will automatically trigger a new build whenever you commit changes.
 
 *Note: a build takes 2-3 minutes to complete. You should see a notification at https://chat.fhir.org/#narrow/stream/142-committers.2Fnotification/topic/ig-build.
@@ -48,10 +54,10 @@ GitHub will automatically trigger a new build whenever you commit changes.
 
 ### Find your rendered IG automatically available at
 
-http://build.fhir.org/ig/argonautproject/R4/branches/master/index.html
+https://build.fhir.org/ig/HL7/US-Core/
 
 ### For a build log see
 
-http://build.fhir.org/ig/HL7/US-Core-R4/branches/master/qa.html
+http://build.fhir.org/ig/HL7/US-Core/branches/master/qa.html
 
 ---

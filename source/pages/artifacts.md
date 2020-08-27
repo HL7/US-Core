@@ -4,7 +4,7 @@ layout: default
 ---
 
 - [Profiles and Extensions]
-- [SearchParameters and Operations]
+- [Search Parameters and Operations]
 - [Terminology]
 - [Capability Statements]
 

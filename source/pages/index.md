@@ -15,7 +15,7 @@ layout: default
 
 ### Introduction
 
-The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for accessing patient data. The [Argonaut] pilot implementations, ONC [2015 Edition Common Clinical Data Set (CCDS)], and the latest proposed ONC [U.S. Core Data for Interoperability (USCDI)] provided the requirements for this guide.  The prior Argonaut search and vocabulary requirements, based on FHIR DSTU2, are updated in this guide to support FHIR Version R4. This guide was used as the basis for further testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by [DAF-Research], [QI-Core], and [CIMI].  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
+The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for accessing patient data. The [Argonaut] pilot implementations, ONC [2015 Edition Common Clinical Data Set (CCDS)], and ONC [U.S. Core Data for Interoperability (USCDI) v1] provided the requirements for this guide.  The prior Argonaut search and vocabulary requirements, based on FHIR DSTU2, are updated in this guide to support FHIR Version R4. This guide was used as the basis for further testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by [DAF-Research], [QI-Core], and [CIMI].  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
 
 These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the [Office of the National Coordinator for Health Information Technology (ONC)] sponsored [Data Access Framework] (DAF) project. For more information on how DAF became US Core see the [US Core change notes](change-notes.html).
 
@@ -33,7 +33,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   - [Future of US Core] outlines the approach to adding new content to {{site.title}}.
 - [FHIR Artifacts]\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative introduction, formal definition and a "Quick Start" guide to the supported search transaction for each {{site.title}} Profile.
-  - [Search Parameters and Operations]\: This page lists the{{site.title}} defined Operations and Search Parameters that are used in US Core transactions.
+  - [Search Parameters and Operations]\: This page lists the {{site.title}} defined Operations and Search Parameters that are used in US Core transactions.
   - [Terminology]\: This page lists the value sets and code system defined for {{site.title}} profiles.
   - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various {{site.title}} actors.
 - [Security]\: General security requirements and recommendations for {{site.title}} actors.
@@ -58,7 +58,7 @@ The list of US Core Profiles is shown below.  Each profile defines the minimum m
 
 - In addition US Core uses the [Vital Signs Profile] from the FHIR Specification.
 
-See the General Guidance page for a [mapping] to the USCDI.
+See the General Guidance page for a [mapping] to the U.S. Core Data for Interoperability (USCDI).
 
 ### US Core Conformance Requirements
 

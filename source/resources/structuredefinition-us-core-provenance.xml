@@ -112,7 +112,7 @@
 				<key value="provenance-1"/>
 				<severity value="error"/>
 				<human value="onBehalfOf SHALL be present when Provenance.agent.who is a Practitioner or Device"/>
-				<expression value="($this.agent.who.resolve().is Practitioner or Device) implies exists()"/>
+				<expression value="(($this.agent.who.resolve() is Practitioner) or ($this.agent.who.resolve() is Device)) implies exists()"/>
 			</constraint>
 			<mustSupport value="true"/>
 			<isModifier value="false"/>

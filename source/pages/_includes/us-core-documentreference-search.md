@@ -1,4 +1,4 @@
-
+- The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
 
@@ -51,7 +51,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`type`](SearchParameter-us-core-documentreference-type.html)** search parameters:
 
-    `GET [base]/DocumentReference?patient=[reference]&type={[system]}|[code]`
+    `GET [base]/DocumentReference?patient=[reference]&type={system|}[code]`
 
     Example:
 
@@ -65,9 +65,9 @@ The following search parameters and search parameter combinations SHALL be suppo
 The following search parameter combinations SHOULD be supported.:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`status`](SearchParameter-us-core-documentreference-status.html)** search parameters:
-    - including support for composite *OR* search on `status` (e.g.`status={[system]}|[code],{[system]}|[code],...`)
+    - including support for composite *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&status={[system]}|[code]{,{[system]}|[code],...}`
+    `GET [base]/DocumentReference?patient=[reference]&status={system|}[code]{,{system|}[code],...}`
 
     Example:
 
@@ -79,7 +79,7 @@ The following search parameter combinations SHOULD be supported.:
     - including support for these `period` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `period` (e.g.`period=[date]&period=[date]]&...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&type={[system]}|[code]&period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]&...}`
+    `GET [base]/DocumentReference?patient=[reference]&type={system|}[code]&period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]&...}`
 
     Example:
 
@@ -87,6 +87,7 @@ The following search parameter combinations SHOULD be supported.:
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type and period. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token] and [how to search by date])
 
-{% include write-and-docref.md %}
+
+  {% include write-and-docref.md %}
 
 {% include link-list.md %}

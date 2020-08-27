@@ -25,6 +25,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 * The PractitionerRole.endpoint is where a [Direct address] may be represented.
 * Clients can request servers return the Practitioner resource and Endpoint resources by using `_include`. See [Quick Start].
+* As a result of implementation feedback, the US Core Location  and PractitionerRole Profiles are not explicitly referenced in any US Core Profile. However they **SHOULD** be used as the default profile if referenced by another US Core profile. See this guidance on [Referencing US Core Profiles].
 
 #### Examples
 

@@ -217,6 +217,18 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Patient/child-example"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/infant-example"/>
+      </reference>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Observation/temperature"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -301,7 +313,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Observation/head-circumference"/>
+        <reference value="Observation/ofc-percentile"/>
       </reference>
       <exampleBoolean value="true"/>
     </resource>
@@ -565,6 +577,12 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/us-core-observation-smokingstatus-max"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/omb-race-category"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -614,6 +632,12 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/pediatric-bmi-for-age"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/head-occipital-frontal-circumference-percentile"/>
       </reference>
       <exampleBoolean value="false"/>
     </resource>
@@ -1451,7 +1475,12 @@
         </page>
         <page>
           <nameUrl value="StructureDefinition-pediatric-bmi-for-age.html"/>
-          <title value="StructureDefinition Pediatric Bmi For Age"/>
+          <title value="StructureDefinition Pediatric BMI For Age"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-head-occipital-frontal-circumference-percentile.html"/>
+          <title value="StructureDefinition Pediatric Head Occipital-frontal Circumference Percentile"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -1601,7 +1630,12 @@
         </page>
         <page>
           <nameUrl value="ValueSet-us-core-observation-smokingstatus.html"/>
-          <title value="ValueSet US Core Observation Smokingstatus"/>
+          <title value="ValueSet US Core Observation Smokingstatus Preferred"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="ValueSet-us-core-observation-smokingstatus-max.html"/>
+          <title value="ValueSet US Core Observation Smokingstatus Max-Binding"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -1661,7 +1695,7 @@
         </page>
         <page>
           <nameUrl value="ValueSet-us-core-observation-smoking-status-status.html"/>
-          <title value="ValueSet US Core Observation Smoking Status Status"/>
+          <title value="ValueSet US Core Observation SmokingStatus Status"/>
           <generation value="generated"/>
         </page>
         <page>

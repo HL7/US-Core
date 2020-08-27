@@ -8,3 +8,6 @@ This Complex Extension for race allows one or more race codes of which:
 
 
 Context of Use: [US Core Patient Profile]({{site.data.structuredefinitions.us-core-patient.path}})
+
+
+ Example can be found in [Patient-example](Patient-example.html)
