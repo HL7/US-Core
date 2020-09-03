@@ -8,15 +8,13 @@
 | Care Team Members | [US Core CareTeam Profile]| CareTeam |
 | Clinical Notes: | ||
 | Consultation Note | [US Core DocumentReference Profile] | DocumentReference|
-| Discharge | [US Core DocumentReference Profile] | DocumentReference|
-| Summary Note| [US Core DocumentReference Profile] | DocumentReference|
+| Discharge Summary Note| [US Core DocumentReference Profile] | DocumentReference|
 | History & Physical| [US Core DocumentReference Profile] | DocumentReference |
 | Imaging Narrative | [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Laboratory Report Narrative | [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Pathology Report Narrative| [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Procedure Note| [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Progress Note | [US Core DocumentReference Profile] | DocumentReference|
-| Consultation Note | [US Core DocumentReference Profile] | DocumentReference|
 | Goals:| ||
 | Patient Goals | [US Core Goal Profile]| Goal |
 | Health Concerns | [US Core Condition Profile] | Condition|
