@@ -6,12 +6,12 @@
     <link>
         <relation value="self"/>
         <url
-            value="http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole?_id=PractitionerRole-1&amp;_include=PractitionerRole%3Apractitioner&amp;_include=PractitionerRole%3Aendpoint"
+            value="http://52.90.126.238:8080/fhir/r4/PractitionerRole?_id=PractitionerRole-1&amp;_include=PractitionerRole%3Apractitioner&amp;_include=PractitionerRole%3Aendpoint"
         />
     </link>
     <entry>
         <fullUrl
-            value="http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole/PractitionerRole-1"/>
+            value="http://52.90.126.238:8080/fhir/r4/PractitionerRole/PractitionerRole-1"/>
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
                 <id value="PractitionerRole-1"/>
@@ -45,11 +45,11 @@
                     <display value="Health Level Seven International"/>
                 </location>
                 <endpoint>
-                    <reference value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+                    <reference value="http://52.90.126.238:8080/fhir/r4/Endpoint/Endpoint-71"/>
                     <display value="Westwood Physicians Organization ADT"/>
                 </endpoint>
                 <endpoint>
-                    <reference value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+                    <reference value="http://52.90.126.238:8080/fhir/r4/Endpoint/Endpoint-71"/>
                     <display value="Brenda.Jennings.Richard.MD@direct.example.org"/>
                 </endpoint>
             </PractitionerRole>
@@ -59,7 +59,7 @@
         </search>
     </entry>
     <entry>
-        <fullUrl value="http://52.90.126.238:8080/fhir/baseDstu3/Practitioner/Practitioner-1011"/>
+        <fullUrl value="http://52.90.126.238:8080/fhir/r4/Practitioner/Practitioner-1011"/>
         <resource>
             <Practitioner xmlns="http://hl7.org/fhir">
                 <id value="Practitioner-1011"/>
@@ -171,7 +171,7 @@
         </search>
     </entry>
     <entry>
-        <fullUrl value="http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71"/>
+        <fullUrl value="http://52.90.126.238:8080/fhir/r4/Endpoint/Endpoint-71"/>
         <resource>
             <Endpoint xmlns="http://hl7.org/fhir">
                 <id value="71"/>
