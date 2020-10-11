@@ -2,45 +2,25 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.us.davinci-cdex
-canonical: http://hl7.org/fhir/us/davinci-cdex
-name: DaVinciCDex
-title: Da Vinci Clinical Data Exchange (CDex) Implementation Guide
+id: hl7.fhir.us.core
+canonical: 'http://hl7.org/fhir/us/core'
+name: USCore
+title: US Core Implementation Guide
 status: active
 publisher:
-  name: HL7 International - Patient Care Work Group
-  url: 'http://www.hl7.org/Special/committees/patientcare/index.cfm'
+  name: HL7 International - US Realm Steering Committee
+  url: 'http://www.hl7.org/Special/committees/usrealm/index.cfm'
 jurisdiction: 'urn:iso:std:iso:3166#US'
 copyright: >-
-  Used by permission of HL7 International all rights reserved Creative Commons License
+  Used by permission of HL7 International, all rights reserved Creative Commons License
 description: >-
-  This IG provides detailed guidance that helps implementers use FHIR-based interactions and resources relevant to support specific exchanges of clinical information between provider and payers.  It focuses on two FHIR transaction approaches for requesting information:
+  The US Core Implementation Guide is based on FHIR Version R4 and defines the minimum conformance requirements for accessing patient data. The Argonaut pilot implementations, ONC 2015 Edition Common Clinical Data Set (CCDS), and ONC U.S. Core Data for Interoperability (USCDI) v1 provided the requirements for this guide. The prior Argonaut search and vocabulary requirements, based on FHIR DSTU2, are updated in this guide to support FHIR Version R4. This guide was used as the basis for further testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by DAF-Research, QI-Core, and CIMI. Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
 
-   - Direct Query
-   - Task Based Approach:
-
-  The types of clinical data is not limited to FHIR resources, but includes C-CDA documents, pdfs, text files and other types of data. There may be requests for payloads of clinical records of care such as CCD Documents, clinical data sets that may be represented in a FHIR bundles, and clinical data such as a specific FHIR resource. By using the FHIR standard and implementing this guide the quality of information shared can be improved.   Payers can be explicit about the data they are requesting, as opposed to general requests which often result in providers sending more information than might be necessary to make sure claims are supported. Benefits resulting from the information exchange interaction include:
-
-    - improve care coordination
-    - support risk adjustment
-    - ease quality management
-    - facilitate claims auditing and confirm medical necessity
-    - improve member experience
-    - support orders and referrals
-
+  These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the Office of the National Coordinator for Health Information Technology (ONC) sponsored Data Access Framework (DAF) project. For more information on how DAF became US Core see the US Core change notes.
 license: CC0-1.0
-date: 2020-10-01
-version: 0.2.0
+date: 2020-10-10
+version: 3.2.0
 fhirVersion: 4.0.1
-dependencies:
-  hl7.fhir.us.core:
-    uri: 'http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core'
-    version: 3.1.1
-    id: uscore
-  hl7.fhir.us.davinci-hrex:
-    uri: 'http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex'
-    version: current
-    id: hrex
 parameters:
   path-resource:
     - input/resources
@@ -71,22 +51,18 @@ releaselabel: CI Build
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Framework: framework.html
-      #General Guidance: general-guidance.html
-      #Direct Query: direct-query.html
-      #Using Task: using-task.html
-      #Using Subscriptions: using-subscriptions.html
-  #Example Scenarios:
-      #Improving Care Coordination: improving-care-coordination.html
-      #Building Accurate Risk Profiles and Health Records: building-accurate-risk-profiles.html
-      #Supporting Quality Management: support-quality-management.html
-      #Confirming Medical Necessity: confirming-medical-necessity.html
-      #Improving Member Experience: improving-member-experience.html
-      #Tracking Referrals and Orders: tracking-referrals-and-orders.html
-  #Table of Contents: toc.html
-  FHIR Artifacts:
-      Profiles: profiles.html
+  Guidance: #guidance.html
+      General Guidance: general-guidance.html
+      Clinical Notes Guidance: clinical-notes-guidance.html
+      Medication List Guidance: all-meds.html
+      Basic Provenance: basic-provenance.html
+      DSTU2 to R4 Conversion: r2-r4-guidance.html
+      Future of US Core: future-of-us-core.html
+  FHIR Artifacts: #artifact.html
+      Profiles and Extensions: profiles.html
+      Search Parameters and Operations: searchparameters.html
       Terminology: terminology.html
-      CapabilityStatements: capabilitystatements.html
-      Examples: examples.html
+      Capability Statements: capstatements.html
+  Security: security.html
+  Examples: examples.html
   Downloads: downloads.html
