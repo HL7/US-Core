@@ -43,13 +43,19 @@ Thumbs.db
 # FHIR IG Publisher local build directories #
 #############################################
 
-generated_output/qa
-generated_output/temp
-output
-archived
-validation
-validateme
-my_notes
+/output/
+/input-cache/
+/temp/
+/template/
+/node_modules/
+/save/
+/bin/
+/target/
+/docs/
+publish.sh
+push_to_autobuild.sh
+SUSHI-GENERATED-FILES.mdv
+/my-notes/
 
 # Altova files #
 ################

@@ -1,0 +1,218 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-diagnosticreport-note",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
+    "version": "3.1.1",
+    "name": "USCoreDiagnosticReportProfileNoteExchange",
+    "title": "US Core DiagnosticReport Profile for Report and Note exchange",
+    "status": "active",
+    "date": "2019-05-21",
+    "publisher": "HL7 US Realm Steering Committee",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.healthit.gov"
+                }
+            ]
+        }
+    ],
+    "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with clinical notes for a patient",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "US",
+                    "display": "United States of America"
+                }
+            ]
+        }
+    ],
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "DiagnosticReport",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "DiagnosticReport",
+                "path": "DiagnosticReport",
+                "short": "US Core Diagnostic Report Profile for Report and Note exchange",
+                "definition": "The US Core Diagnostic Report Profile for Report and Note exchange is based upon the requirements of the Argonauts to exchang imaginge reports.",
+                "alias": [
+                    "Imaging Report",
+                    "Radiology Report"
+                ],
+                "mustSupport": false,
+                "isModifier": false
+            },
+            {
+                "id": "DiagnosticReport.status",
+                "path": "DiagnosticReport.status",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false,
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+                }
+            },
+            {
+                "id": "DiagnosticReport.category",
+                "path": "DiagnosticReport.category",
+                "alias": [
+                    "Department",
+                    "Sub-department",
+                    "service",
+                    "discipline"
+                ],
+                "min": 1,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"
+                }
+            },
+            {
+                "id": "DiagnosticReport.code",
+                "path": "DiagnosticReport.code",
+                "short": "US Core Report Code",
+                "definition": "The test, panel, report, or note that was ordered.",
+                "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false,
+                "binding": {
+                    "strength": "extensible",
+                    "description": "LOINC codes",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes"
+                }
+            },
+            {
+                "id": "DiagnosticReport.subject",
+                "path": "DiagnosticReport.subject",
+                "short": "The subject of the report - usually, but not always, the patient",
+                "definition": "The subject of the report. Usually, but not always, this is a patient. However diagnostic services also perform analyses on specimens collected from a variety of other sources.",
+                "requirements": "SHALL know the subject context.",
+                "alias": [
+                    "Patient"
+                ],
+                "min": 1,
+                "max": "1",
+                "base": {
+                    "path": "DiagnosticReport.subject",
+                    "min": 0,
+                    "max": "1"
+                },
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false,
+                "isSummary": true
+            },
+            {
+                "id": "DiagnosticReport.encounter",
+                "path": "DiagnosticReport.encounter",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "DiagnosticReport.effective[x]",
+                "path": "DiagnosticReport.effective[x]",
+                "short": "Time of the report or note",
+                "definition": "This is the Datetime or Period when the report or note was written.",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Period"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "DiagnosticReport.issued",
+                "path": "DiagnosticReport.issued",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "instant"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "DiagnosticReport.performer",
+                "path": "DiagnosticReport.performer",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "DiagnosticReport.presentedForm",
+                "path": "DiagnosticReport.presentedForm",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "Attachment"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            }
+        ]
+    }
+}

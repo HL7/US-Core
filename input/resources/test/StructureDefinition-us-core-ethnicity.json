@@ -1,0 +1,206 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-ethnicity",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+    "version": "3.1.1",
+    "name": "USCoreEthnicityExtension",
+    "title": "US Core Ethnicity Extension",
+    "status": "active",
+    "date": "2019-05-21T00:00:00-04:00",
+    "publisher": "HL7 US Realm Steering Committee",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.healthit.gov"
+                }
+            ]
+        }
+    ],
+    "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "US",
+                    "display": "United States of America"
+                }
+            ]
+        }
+    ],
+    "purpose": "Complies with 2015 Edition Common Clinical Data Set for patient race.",
+    "fhirVersion": "4.0.1",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Patient"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "path": "Extension",
+                "short": "US Core ethnicity Extension",
+                "definition": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:ombCategory",
+                "path": "Extension.extension",
+                "sliceName": "ombCategory",
+                "short": "Hispanic or Latino|Not Hispanic or Latino",
+                "definition": "The 2 ethnicity category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension"
+                    }
+                ],
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "iso11179",
+                        "map": "/ClinicalDocument/recordTarget/patientRole/patient/ethnicGroupCode"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:ombCategory.url",
+                "path": "Extension.extension.url",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "fixedUri": "ombCategory"
+            },
+            {
+                "id": "Extension.extension:ombCategory.value[x]",
+                "path": "Extension.extension.value[x]",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Coding"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "description": "The 2 ethnicity category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category"
+                }
+            },
+            {
+                "id": "Extension.extension:detailed",
+                "path": "Extension.extension",
+                "sliceName": "detailed",
+                "short": "Extended ethnicity codes",
+                "definition": "The 41 CDC ethnicity codes that are grouped under one of the 2 OMB ethnicity category codes.",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "Extension"
+                    }
+                ],
+                "mapping": [
+                    {
+                        "identity": "iso11179",
+                        "map": "/ClinicalDocument/recordTarget/patientRole/patient/sdtc:ethnicGroupCode"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:detailed.url",
+                "path": "Extension.extension.url",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "fixedUri": "detailed"
+            },
+            {
+                "id": "Extension.extension:detailed.value[x]",
+                "path": "Extension.extension.value[x]",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Coding"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "description": "The 41 [CDC ethnicity codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 2 OMB ethnicity category codes.",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity"
+                }
+            },
+            {
+                "id": "Extension.extension:text",
+                "path": "Extension.extension",
+                "sliceName": "text",
+                "short": "ethnicity Text",
+                "definition": "Plain text representation of the ethnicity concept(s).",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Extension.extension:text.url",
+                "path": "Extension.extension.url",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "fixedUri": "text"
+            },
+            {
+                "id": "Extension.extension:text.value[x]",
+                "path": "Extension.extension.value[x]",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "min": 1,
+                "max": "1",
+                "fixedUri": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "min": 0,
+                "max": "0"
+            }
+        ]
+    }
+}

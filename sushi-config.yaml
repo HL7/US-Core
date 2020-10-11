@@ -1,0 +1,92 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.us.davinci-cdex
+canonical: http://hl7.org/fhir/us/davinci-cdex
+name: DaVinciCDex
+title: Da Vinci Clinical Data Exchange (CDex) Implementation Guide
+status: active
+publisher:
+  name: HL7 International - Patient Care Work Group
+  url: 'http://www.hl7.org/Special/committees/patientcare/index.cfm'
+jurisdiction: 'urn:iso:std:iso:3166#US'
+copyright: >-
+  Used by permission of HL7 International all rights reserved Creative Commons License
+description: >-
+  This IG provides detailed guidance that helps implementers use FHIR-based interactions and resources relevant to support specific exchanges of clinical information between provider and payers.  It focuses on two FHIR transaction approaches for requesting information:
+
+   - Direct Query
+   - Task Based Approach:
+
+  The types of clinical data is not limited to FHIR resources, but includes C-CDA documents, pdfs, text files and other types of data. There may be requests for payloads of clinical records of care such as CCD Documents, clinical data sets that may be represented in a FHIR bundles, and clinical data such as a specific FHIR resource. By using the FHIR standard and implementing this guide the quality of information shared can be improved.   Payers can be explicit about the data they are requesting, as opposed to general requests which often result in providers sending more information than might be necessary to make sure claims are supported. Benefits resulting from the information exchange interaction include:
+
+    - improve care coordination
+    - support risk adjustment
+    - ease quality management
+    - facilitate claims auditing and confirm medical necessity
+    - improve member experience
+    - support orders and referrals
+
+license: CC0-1.0
+date: 2020-10-01
+version: 0.2.0
+fhirVersion: 4.0.1
+dependencies:
+  hl7.fhir.us.core:
+    uri: 'http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core'
+    version: 3.1.1
+    id: uscore
+  hl7.fhir.us.davinci-hrex:
+    uri: 'http://hl7.org/fhir/us/davinci-hrex/ImplementationGuide/hl7.fhir.us.davinci-hrex'
+    version: current
+    id: hrex
+parameters:
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+  path-pages:
+    - input/pagecontent
+    - fsh-generated/includes
+  active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'true'
+  excludexml: 'true'
+  excludejsn: 'false'
+  excludettl: 'true'
+  excludemap: 'true'
+  excludeexample: 'true'
+  generate:
+    - xml
+    - json
+copyrightyear: '2020+'
+releaselabel: CI Build
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Framework: framework.html
+      #General Guidance: general-guidance.html
+      #Direct Query: direct-query.html
+      #Using Task: using-task.html
+      #Using Subscriptions: using-subscriptions.html
+  #Example Scenarios:
+      #Improving Care Coordination: improving-care-coordination.html
+      #Building Accurate Risk Profiles and Health Records: building-accurate-risk-profiles.html
+      #Supporting Quality Management: support-quality-management.html
+      #Confirming Medical Necessity: confirming-medical-necessity.html
+      #Improving Member Experience: improving-member-experience.html
+      #Tracking Referrals and Orders: tracking-referrals-and-orders.html
+  #Table of Contents: toc.html
+  FHIR Artifacts:
+      Profiles: profiles.html
+      Terminology: terminology.html
+      CapabilityStatements: capabilitystatements.html
+      Examples: examples.html
+  Downloads: downloads.html

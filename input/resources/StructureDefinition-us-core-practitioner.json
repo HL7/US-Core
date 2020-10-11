@@ -1,0 +1,139 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-practitioner",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+    "version": "3.1.1",
+    "name": "USCorePractitionerProfile",
+    "title": "US Core Practitioner Profile",
+    "status": "active",
+    "experimental": false,
+    "date": "2019-09-02",
+    "publisher": "HL7 US Realm Steering Committee",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.healthit.gov"
+                }
+            ]
+        }
+    ],
+    "description": "The practitioner(s) referenced in US Core profiles.",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "US",
+                    "display": "United States of America"
+                }
+            ]
+        }
+    ],
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Practitioner",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Practitioner",
+                "path": "Practitioner",
+                "definition": "This is basic constraint on provider for use in US Core resources.",
+                "alias": [
+                    "Provider"
+                ],
+                "mustSupport": false
+            },
+            {
+                "id": "Practitioner.identifier",
+                "path": "Practitioner.identifier",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "comment": "NPI must be supported as the identifier system in the US, Tax id is allowed, Local id is allowed in addition to an another identifier supplied by a jurisdictional authority such as a practitioner's *Drug Enforcement Administration (DEA)* number.",
+                "min": 1,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "Identifier"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.identifier.system",
+                "path": "Practitioner.identifier.system",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.identifier.value",
+                "path": "Practitioner.identifier.value",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.identifier:NPI",
+                "path": "Practitioner.identifier",
+                "sliceName": "NPI",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Identifier"
+                    }
+                ],
+                "patternIdentifier": {
+                    "system": "http://hl7.org/fhir/sid/us-npi"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.name",
+                "path": "Practitioner.name",
+                "min": 1,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "HumanName"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Practitioner.name.family",
+                "path": "Practitioner.name.family",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "mustSupport": true
+            }
+        ]
+    }
+}

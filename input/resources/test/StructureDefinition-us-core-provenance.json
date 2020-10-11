@@ -1,0 +1,223 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-provenance",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance",
+    "version": "3.1.1",
+    "name": "USCoreProvenance",
+    "title": "US Core Provenance Profile",
+    "status": "active",
+    "date": "2019-08-05",
+    "publisher": "HL7 US Realm Steering Committee",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.healthit.gov"
+                }
+            ]
+        }
+    ],
+    "description": "Draft set of requirements to satisfy Basic Provenance Requirements.",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "US",
+                    "display": "United States of America"
+                }
+            ]
+        }
+    ],
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Provenance",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Provenance",
+                "path": "Provenance",
+                "short": "US Core Provenance",
+                "definition": "The US Core Provenance Profile is based upon the Argonaut Data Query requirements.",
+                "alias": [
+                    "Basic Provenance"
+                ],
+                "mustSupport": false,
+                "isModifier": false
+            },
+            {
+                "id": "Provenance.target",
+                "path": "Provenance.target",
+                "short": "The Resource this Provenance record supports",
+                "min": 1,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/StructureDefinition/Resource"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Provenance.recorded",
+                "path": "Provenance.recorded",
+                "short": "Timestamp when the activity was recorded / updated",
+                "definition": "The instant of time at which the activity was recorded.",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "instant"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Provenance.agent",
+                "path": "Provenance.agent",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "type"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 1,
+                "max": "*",
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Provenance.agent.type",
+                "path": "Provenance.agent.type",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-provenance-participant-type"
+                }
+            },
+            {
+                "id": "Provenance.agent.who",
+                "path": "Provenance.agent.who",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Provenance.agent.onBehalfOf",
+                "path": "Provenance.agent.onBehalfOf",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+                        ]
+                    }
+                ],
+                "constraint": [
+                    {
+                        "key": "provenance-1",
+                        "severity": "error",
+                        "human": "onBehalfOf SHALL be present when Provenance.agent.who is a Practitioner or Device",
+                        "expression": "(($this.agent.who.resolve() is Practitioner) or ($this.agent.who.resolve() is Device)) implies exists()"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Provenance.agent:ProvenanceAuthor",
+                "path": "Provenance.agent",
+                "sliceName": "ProvenanceAuthor",
+                "min": 0,
+                "max": "*",
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Provenance.agent:ProvenanceAuthor.type",
+                "path": "Provenance.agent.type",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                            "code": "author"
+                        }
+                    ]
+                },
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Provenance.agent:ProvenanceTransmitter",
+                "path": "Provenance.agent",
+                "sliceName": "ProvenanceTransmitter",
+                "definition": "The entity that provided the copy to your system.",
+                "min": 0,
+                "max": "1",
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Provenance.agent:ProvenanceTransmitter.type",
+                "path": "Provenance.agent.type",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+                            "code": "transmitter"
+                        }
+                    ]
+                },
+                "mustSupport": true,
+                "isModifier": false
+            }
+        ]
+    }
+}
