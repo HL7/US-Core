@@ -1,0 +1,1 @@
+This folder contains binary files such as images (including source files such as powerpoint slided), scv, pdf etc.  which are used as static files in Jekyll:  see https://jekyllrb.com/docs/static-files/
