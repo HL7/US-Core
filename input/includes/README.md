@@ -3,7 +3,7 @@ This folder contains include files in md and html format.  which are used as pag
 
 note the following are custom includes for generation of content:
 
-
+~~~
 ├── example-list-generator.md
 ├── examplebutton.html
 ├── examplebutton_default.html
@@ -13,8 +13,10 @@ note the following are custom includes for generation of content:
 ├── img-small.html
 ├── img.html
 ├── schematron-list-generator.md
-
+~~~
 
 the link-list file consolidates all the IG links in a single file for easier maintainance
 
+~~~
 ├── link-list.md
+~~~
