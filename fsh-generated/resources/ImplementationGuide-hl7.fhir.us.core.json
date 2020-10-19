@@ -1342,7 +1342,6 @@
         "reference": {
           "reference": "DocumentReference/episode-summary"
         },
-        "description": "Pulmonology clinic acute visit",
         "name": "episode-summary",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
       },
@@ -1399,7 +1398,6 @@
         "reference": {
           "reference": "Location/hl7east"
         },
-        "description": "HL7 Headquarters - East",
         "name": "hl7east",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
       },
@@ -1800,6 +1798,11 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "_README.html",
+          "title": "README",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "all-examples.html",
           "title": "All Examples",
           "generation": "markdown"
@@ -2022,11 +2025,6 @@
         {
           "nameUrl": "terminology.html",
           "title": "Terminology",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "toc.html",
-          "title": "Toc",
           "generation": "markdown"
         }
       ]
