@@ -42,8 +42,18 @@ list:
 
       These changes have be voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this release and reconciliation of the ballot comments.:
 
-      1. [Recommend against using SSN](StructureDefinition-us-core-patient.html#F24903) for Patient.identifier ([FHIR-24903](https://jira.hl7.org/browse/FHIR-24903))
-      1. Updated [CPT copyright](ValueSet-us-core-encounter-type.html#F27770) to current year ([FHIR-27770](https://jira.hl7.org/browse/FHIR-27770))
+      1. Add a required category to smoking status
+      1. Use of US Core Profile when not explicitly referenced when using Contained resources
+      1. Observation.hasMember Vital Signs Panel Profile Reference Choice
+      1. Observation.value[x] for Lab Data Type Choice
+      1. Immunization.occurrence[x] Data Type Choice
+      1. DiagnosticReport.effective[x] for Note Data Type Choice
+      1. MedicationRequest.reportedReference Reference Choice
+      1. DiagnosticReport.performer for Lab Reference Choice
+      1. Clarify search by date precision conformance expectations ([FHIR-27906](https://jira.hl7.org/browse/FHIR-27906)) [See Change Here](rel link address.html#F27906)
+      1. Clarify search by reference conformance expectations ([FHIR-27905](https://jira.hl7.org/browse/FHIR-27905)) [See Change Here](general-guidance.html#F27905)
+      1. Recommend against using SSN for Patient.identifier ([FHIR-24903](https://jira.hl7.org/browse/FHIR-24903)) [See Change Here](StructureDefinition-us-core-patient.html#F24903)
+      1. Updated CPT copyright to current year ([FHIR-27770](https://jira.hl7.org/browse/FHIR-27770)) [See Change Here](ValueSet-us-core-encounter-type.html#F27770)
 
     path: 'http://hl7.org/fhir/us/core/STU3.2'
     status: trial-use

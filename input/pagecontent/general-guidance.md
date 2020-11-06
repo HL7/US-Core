@@ -393,7 +393,8 @@ For searching a resource, interactions on profile pages are defined with the fol
     -  Resource-type: The name of a resource type (e.g. “Patient”)
     -  parameter: the search parameters as defined for the particular interaction (e.g."?patient=Patient/123")
     -  value: the search parameter value for a particular search
-       - note for values of type `token` [(how to search by token)], the syntax `{system|}[code]` means that the system value is optional *for the client* to supply
+       - for values of searchparameter `token` [(how to search by token)], the syntax `{system|}[code]` means that the system value is optional *for the client* to supply
+       - {:.new-content #f27905}for values of searchparameter `reference` [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply
     - \{:m1|m2|...}: The list of supported search parameter modifiers
     - {c1|c2|...}: The list of supported search parameter comparators
     - {,value2,...}: Optional multiple 'OR' Values
@@ -410,7 +411,17 @@ Note that the patient may be *implicit* in the context in some implementations (
 
 `GET [base]/[Resource-type]{?other-parameters}`
 
+#### Date Precision Expectations
 
+{:.new-content #f27906}
+The table below summarizes the date precision the client **SHALL** provide when searching using the searchparameter `date` [(how to search by date)].
+
+|SearchParameter|Element Datatype|Minimum Precision|Example|
+|---|----|---|---|
+|date|date|day|`GET [base]/Patient?family=Shaw&birthdate=2007-03-20`|
+|date|dateTime, Period|time + time zone|`?`|
+|date + comparators le,ge,lt,gt prefixed to the value|date, dateTime, Period|day|`GET [base]Observation?patient=555580&category=laboratory&date=ge2018-03-14`|
+{:.grid .new-content}
 ### Search for Servers Requiring Status
 
 Servers are *strongly* encouraged to support a query for resources *without* requiring a status parameter.  However, if business requirements prohibit this they **SHALL** follow the guidelines here.
