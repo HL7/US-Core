@@ -216,6 +216,7 @@
 [component]:  {{site.data.fhir.path}}observation.html#gr-comp
 [composites]: {{site.data.fhir.path}}search.html#combining
 [contained]: {{site.data.fhir.path}}references.html#contained
+[Contained resources]: {{site.data.fhir.path}}references.html#contained
 [core specification]: {{site.data.fhir.path}}extensibility.html#2.20.0.2.2
 [extensible]: {{site.data.fhir.path}}terminologies.html#extensible
 [how to search by date]: {{site.data.fhir.path}}search.html#date

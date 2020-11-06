@@ -43,8 +43,10 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 
 Many of the profiles in this guide [reference] other FHIR resources that are also US Core Profiles.  This is defined in the formal profile definitions.  For example, [US Core CareTeam Profile] references US Core Patient.  For any other references to base FHIR resources[^2] or not formally defined in a US Core Profiles, the referenced resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.  US Core Resources in the [differential view] and marked as "Must Support" follow the Must Support rules listed above.  Other resources allowed in the base FHIR specification may be referenced even though the current publication framework does not display them.  For example, RelatedPerson is an allowed target reference in `DocumentReference.author`.
 
-There are scenarios when [contained] resources are used in US Core Profiles. They occur when the content referred to in the contained resource does not have an independent existence apart from the resource that contains it.  For example, the [Medication List Guidance] page describes how a contained Medication in MedicationRequest is used for representing the medication. When referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.
+### Contained Resources
 
+[Contained resources] **SHOULD NOT** be used when responding to a query. The only time contained resource can be used is when the source data exists only within the context of the FHIR transaction. For example, the [Medication List Guidance] page describes how a contained Medication in MedicationRequest is used for representing the medication.  Further guidance about the general use case for contained can be found in the base FHIR specification.  When referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.
+{:.new-content #f28396}
 
 ### Missing Data
 
