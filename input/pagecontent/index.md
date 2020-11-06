@@ -1,3 +1,9 @@
+<div markdown="1" class="note-to-balloters">
+{{ site.data.package-list.list[1].desc }}
+
+Where possible, new and updated content will be highlighted with green text and background
+{:.new-content}
+</div>
 
 ### Introduction
 

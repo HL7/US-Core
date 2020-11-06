@@ -210,6 +210,19 @@ Clinical information that has been removed from the patient's record needs to be
 
   - A provider facing system **MAY** be supplied with additional details that the patient viewing system would typically not have access to.
 
+<div class=new-content markdown="1">
+### Representing Entered in Error and Deleted Information
+
+Clinical information that has been removed from the patient's record needs  to be represented by the FHIR Server in a way so that Clients can expose the corrected information to their end users.
+
+**Server Recommendations:**
+- A FHIR Server **SHOULD NOT** delete resources.
+- A FHIR server  **SHOULD** update  the appropriate  resource status to `entered-in-error` or `inactive`.
+- A FHIR Server  **SHOULD**  allow these resources to be searchable by client applications.
+- If the FHIR server has updated the resource status to `entered-in-error`:
+    -  For *patient facing* applications, A FHIR Server  **SHOULD** remove the contents of resource  leaving only an id and status.   Note this typically will not be conformant with the US Core or FHIR StructureDefinitions.
+    - For *provider facing* applications,  the content **MAY** be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.
+</div>
 
 ### Language Support
 

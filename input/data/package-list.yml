@@ -25,6 +25,29 @@ list:
     path: 'http://build.fhir.org/ig/HL7/US-Core-R4'
     status: ci-build
     current: true
+  - version: 3.2
+    date: '2021-1-30'
+    desc: >-
+      This version addresses the following key issues:
+
+      1. Clarification of the Must Support definitions as it relates to:
+        - Polymorphic datatypes, which of the possible types must be supported
+        - Reference datatype (Reference, canonical) which of the target types must be supported
+        - For the vital signs profile in the Core Specification which profiles must be supported
+        - other???
+      1. Publishing a set US Core Vital Signs independent of the FHIR core profile upon which it is based
+      1. Linking terminology directly to the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) - NIH where applicable
+      1. Migrating to the standard set of FHIR IG templates for publishing
+      1. Addressing a total of 95 outstanding trackers.
+
+      These changes have be voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this release and reconciliation of the ballot comments.:
+
+      1. [Recommend against using SSN](StructureDefinition-us-core-patient.html#F24903) for Patient.identifier ([FHIR-24903](https://jira.hl7.org/browse/FHIR-24903))
+
+    path: 'http://hl7.org/fhir/us/core/STU3.2'
+    status: trial-use
+    sequence: STU3
+    fhirversion: 4.0.1
   - version: 3.1.1
     date: '2020-6-30'
     desc: >-
