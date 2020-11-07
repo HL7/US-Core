@@ -46,29 +46,6 @@ list:
 
       These changes have be voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this release and reconciliation of the ballot comments.:
 
-      1. Add a required category to smoking status
-
-      1. Use of US Core Profile when not explicitly referenced when using Contained resources ([FHIR-28396](https://jira.hl7.org/browse/FHIR-28396)) [See Change Here](general-guidance.html#F28396)
-
-      1. Observation.hasMember Vital Signs Panel Profile Reference Choice
-
-      1. Observation.value[x] for Lab Data Type Choice
-
-      1. Immunization.occurrence[x] Data Type Choice
-
-      1. DiagnosticReport.effective[x] for Note Data Type Choice
-
-      1. MedicationRequest.reportedReference Reference Choice
-
-      1. DiagnosticReport.performer for Lab Reference Choice
-
-      1. Clarify search by date precision conformance expectations ([FHIR-27906](https://jira.hl7.org/browse/FHIR-27906)) [See Change Here](general-guidance.html#F27906)
-
-      1. Clarify search by reference conformance expectations ([FHIR-27905](https://jira.hl7.org/browse/FHIR-27905)) [See Change Here](general-guidance.html#F27905)
-
-      1. Recommend against using SSN for Patient.identifier ([FHIR-24903](https://jira.hl7.org/browse/FHIR-24903)) [See Change Here](StructureDefinition-us-core-patient.html#F24903)
-
-      1. Updated CPT copyright to current year ([FHIR-27770](https://jira.hl7.org/browse/FHIR-27770)) [See Change Here](ValueSet-us-core-encounter-type.html#F27770)
 
       1. Update Allergy substances value set to use new SCT drug class concepts ([FHIR-29322](https://jira.hl7.org/browse/FHIR-29322)) [See Change Here](rel-link.html#FHIR-29322)
 
@@ -133,6 +110,96 @@ list:
       1. Update Definition for US Core Smoking Status ([FHIR-26059](https://jira.hl7.org/browse/FHIR-26059)) [See Change Here](rel-link.html#FHIR-26059)
 
       1. Allow PractitionerRole in US Core laboratory DiagnosticReport.performer ([FHIR-25120](https://jira.hl7.org/browse/FHIR-25120)) [See Change Here](rel-link.html#FHIR-25120)
+
+      1. US-Core-1 constraint causes validation error on Observation.effectivePeriod ([FHIR-29658](https://jira.hl7.org/browse/FHIR-29658)) [See Change Here](rel-link.html#FHIR-29658)
+
+      1. Extensible bindings including broad SNOMED CT value sets are nonsensical ([FHIR-29563](https://jira.hl7.org/browse/FHIR-29563)) [See Change Here](rel-link.html#FHIR-29563)
+
+      1. Update definition of author in Provenance Participation type ([FHIR-28516](https://jira.hl7.org/browse/FHIR-28516)) [See Change Here](rel-link.html#FHIR-28516)
+
+      1. "Clarify ""or other endpoint"" for DiagnosticReport.content.attachment.url" ([FHIR-28472](https://jira.hl7.org/browse/FHIR-28472)) [See Change Here](rel-link.html#FHIR-28472)
+
+      1. Add a required category to smoking status ([FHIR-28436](https://jira.hl7.org/browse/FHIR-28436)) [See Change Here](rel-link.html#FHIR-28436)
+
+      1. Use of US Core Profile when not explicitly referenced when using Contained resources ([FHIR-28396](https://jira.hl7.org/browse/FHIR-28396)) [See Change Here](general-guidance.html#FHIR-28396)
+
+      1. DocumentReference.custodian to be Optional ([FHIR-28393](https://jira.hl7.org/browse/FHIR-28393)) [See Change Here](rel-link.html#FHIR-28393)
+
+      1. Encounter.serviceProvider Must Support and Encounter.location.location Optional ([FHIR-28392](https://jira.hl7.org/browse/FHIR-28392)) [See Change Here](rel-link.html#FHIR-28392)
+
+      1. Observation.hasMember Vital Signs Panel Profile Reference Choice ([FHIR-28391](https://jira.hl7.org/browse/FHIR-28391)) [See Change Here](rel-link.html#FHIR-28391)
+
+      1. Observation.value[x] for Lab Data Type Choice ([FHIR-28390](https://jira.hl7.org/browse/FHIR-28390)) [See Change Here](rel-link.html#FHIR-28390)
+
+      1. Observation.effective[x] for Lab Data Type Choice ([FHIR-28389](https://jira.hl7.org/browse/FHIR-28389)) [See Change Here](rel-link.html#FHIR-28389)
+
+      1. Immunization.occurrence[x] Data Type Choice ([FHIR-28388](https://jira.hl7.org/browse/FHIR-28388)) [See Change Here](rel-link.html#FHIR-28388)
+
+      1. DiagnosticReport.effective[x] for Note Data Type Choice ([FHIR-28387](https://jira.hl7.org/browse/FHIR-28387)) [See Change Here](rel-link.html#FHIR-28387)
+
+      1. DiagnosticReport.effective[x] for Lab Data Type Choice ([FHIR-28385](https://jira.hl7.org/browse/FHIR-28385)) [See Change Here](rel-link.html#FHIR-28385)
+
+      1. Provenance.agent.who Reference Choice ([FHIR-28383](https://jira.hl7.org/browse/FHIR-28383)) [See Change Here](rel-link.html#FHIR-28383)
+
+      1. MedicationRequest.requester Reference Choice ([FHIR-28382](https://jira.hl7.org/browse/FHIR-28382)) [See Change Here](rel-link.html#FHIR-28382)
+
+      1. MedicationRequest.reportedReference Reference Choice ([FHIR-28381](https://jira.hl7.org/browse/FHIR-28381)) [See Change Here](rel-link.html#FHIR-28381)
+
+      1. DocumentReference.author Reference Choice ([FHIR-28380](https://jira.hl7.org/browse/FHIR-28380)) [See Change Here](rel-link.html#FHIR-28380)
+
+      1. DiagnosticReport.performer for Note Reference Choice ([FHIR-28379](https://jira.hl7.org/browse/FHIR-28379)) [See Change Here](rel-link.html#FHIR-28379)
+
+      1. DiagnosticReport.performer for Lab Reference Choice ([FHIR-28378](https://jira.hl7.org/browse/FHIR-28378)) [See Change Here](rel-link.html#FHIR-28378)
+
+      1. CareTeam.participant.member Reference Choice ([FHIR-28376](https://jira.hl7.org/browse/FHIR-28376)) [See Change Here](rel-link.html#FHIR-28376)
+
+      1. Define a primary Vs principal Vs other type of encounter-specific condition ([FHIR-28186](https://jira.hl7.org/browse/FHIR-28186)) [See Change Here](rel-link.html#FHIR-28186)
+
+      1. Make Provenance.occurred mustSupport ([FHIR-28163](https://jira.hl7.org/browse/FHIR-28163)) [See Change Here](rel-link.html#FHIR-28163)
+
+      1. example tracker ([FHIR-28106](https://jira.hl7.org/browse/FHIR-28106)) [See Change Here](rel-link.html#FHIR-28106)
+
+      1. deleted resources requirements and guidance are unclear ([FHIR-28091](https://jira.hl7.org/browse/FHIR-28091)) [See Change Here](rel-link.html#FHIR-28091)
+
+      1. Clarify search by date precision conformance expectations ([FHIR-27906](https://jira.hl7.org/browse/FHIR-27906)) [See Change Here](general-guidance.html#FHIR-27906)
+
+      1. Clarify search by reference conformance expectations ([FHIR-27905](https://jira.hl7.org/browse/FHIR-27905)) [See Change Here](general-guidance.html#FHIR-27905)
+
+      1. Modify cardinality for resource element Condition.category from (1..*) to (0..*). ([FHIR-27904](https://jira.hl7.org/browse/FHIR-27904)) [See Change Here](rel-link.html#FHIR-27904)
+
+      1. Address non-implantable device and how to document usage ([FHIR-27896](https://jira.hl7.org/browse/FHIR-27896)) [See Change Here](rel-link.html#FHIR-27896)
+
+      1. Expand US Core Document Reference Category to add additional categories ([FHIR-27837](https://jira.hl7.org/browse/FHIR-27837)) [See Change Here](rel-link.html#FHIR-27837)
+
+      1. Resource constraints based on Jurisdiction which are not well documented ([FHIR-27810](https://jira.hl7.org/browse/FHIR-27810)) [See Change Here](rel-link.html#FHIR-27810)
+
+      1. Updated CPT copyright to current year ([FHIR-27770](https://jira.hl7.org/browse/FHIR-27770)) [See Change Here](ValueSet-us-core-encounter-type.html#F27770)
+
+      1. CareTeam  ([FHIR-27769](https://jira.hl7.org/browse/FHIR-27769)) [See Change Here](rel-link.html#FHIR-27769)
+
+      1. US Core MedicationRequest variance – encounter ([FHIR-27732](https://jira.hl7.org/browse/FHIR-27732)) [See Change Here](rel-link.html#FHIR-27732)
+
+      1. US Core Server Capability Statement *requires* support for HTTP status 410-deleted ([FHIR-26597](https://jira.hl7.org/browse/FHIR-26597)) [See Change Here](rel-link.html#FHIR-26597)
+
+      1. Value set for Document Reference Category missing OID ([FHIR-26414](https://jira.hl7.org/browse/FHIR-26414)) [See Change Here](rel-link.html#FHIR-26414)
+
+      1. US Core Narrative Status value set missing OID and proper expansion content ([FHIR-26391](https://jira.hl7.org/browse/FHIR-26391)) [See Change Here](rel-link.html#FHIR-26391)
+
+      1. US Core Condition Category missing OID / URI ([FHIR-26387](https://jira.hl7.org/browse/FHIR-26387)) [See Change Here](rel-link.html#FHIR-26387)
+
+      1. Enhance value set definition for US Core Procedure Codes ([FHIR-26297](https://jira.hl7.org/browse/FHIR-26297)) [See Change Here](rel-link.html#FHIR-26297)
+
+      1. Enhance logical definition for US Core Diagnostic Report Laboratory Codes ([FHIR-26296](https://jira.hl7.org/browse/FHIR-26296)) [See Change Here](rel-link.html#FHIR-26296)
+
+      1. Change US Core Condition Code Value Set Logical Definition ([FHIR-26060](https://jira.hl7.org/browse/FHIR-26060)) [See Change Here](rel-link.html#FHIR-26060)
+
+      1. Enhance US Core Diagnostic Report Laboratory Codes value set Definition ([FHIR-26057](https://jira.hl7.org/browse/FHIR-26057)) [See Change Here](rel-link.html#FHIR-26057)
+
+      1. Extension of Specialty Primary Indicator to PractitionerRole resource ([FHIR-25264](https://jira.hl7.org/browse/FHIR-25264)) [See Change Here](rel-link.html#FHIR-25264)
+
+      1. Recommend against using SSN for Patient.identifier ([FHIR-24903](https://jira.hl7.org/browse/FHIR-24903)) [See Change Here](StructureDefinition-us-core-patient.html#FHIR-24903)
+
+
 
     path: 'http://hl7.org/fhir/us/core/STU3.2'
     status: trial-use

@@ -49,7 +49,7 @@ Many of the profiles in this guide [reference] other FHIR resources that are als
 ### Contained Resources
 
 [Contained resources] **SHOULD NOT** be used when responding to a query. The only time contained resource can be used is when the source data exists only within the context of the FHIR transaction. For example, the [Medication List Guidance] page describes how a contained Medication in MedicationRequest is used for representing the medication.  If referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.  
-{:.new-content #F28396}
+{:.new-content #FHIR-28396}
 
 ### Missing Data
 
@@ -215,7 +215,8 @@ Clinical information that has been removed from the patient's record needs to be
 
   - A provider facing system **MAY** be supplied with additional details that the patient viewing system would typically not have access to.
 
-<div class=new-content markdown="1">
+<div class=new-content id="FHIR-28091 markdown="1">
+
 ### Representing Entered in Error and Deleted Information
 
 Clinical information that has been removed from the patient's record needs  to be represented by the FHIR Server in a way so that Clients can expose the corrected information to their end users.
@@ -399,7 +400,7 @@ For searching a resource, interactions on profile pages are defined with the fol
     -  parameter: the search parameters as defined for the particular interaction (e.g."?patient=Patient/123")
     -  value: the search parameter value for a particular search
        - for values of searchparameter `token` [(how to search by token)], the syntax `{system|}[code]` means that the system value is optional *for the client* to supply
-       - {:.new-content #F27905}for values of searchparameter `reference` [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply
+       - {:.new-content #FHIR-27905}for values of searchparameter `reference` [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply
     - \{:m1|m2|...}: The list of supported search parameter modifiers
     - {c1|c2|...}: The list of supported search parameter comparators
     - {,value2,...}: Optional multiple 'OR' Values
@@ -418,7 +419,7 @@ Note that the patient may be *implicit* in the context in some implementations (
 
 #### Date Precision Expectations
 
-{:.new-content #F27906}
+{:.new-content #FHIR-27906}
 The table below summarizes the date precision the client **SHALL** provide when searching using the searchparameter `date` [(how to search by date)].
 
 |SearchParameter|Element Datatype|Minimum Precision|Example|
