@@ -215,7 +215,7 @@ Clinical information that has been removed from the patient's record needs to be
 
   - A provider facing system **MAY** be supplied with additional details that the patient viewing system would typically not have access to.
 
-<div class=new-content id="FHIR-28091 markdown="1">
+<div class="new-content" id="FHIR-28091" markdown="1">
 
 ### Representing Entered in Error and Deleted Information
 
