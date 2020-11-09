@@ -28,7 +28,7 @@ list:
   - version: 3.2
     date: '2021-1-30'
     desc: >-
-      This version addresses the following key issues:
+      These changes in this version have be voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this release and reconciliation of trackers comments.  This version addresses the following key issues:
 
       1. Clarification of the Must Support definitions as it relates to:
         - Polymorphic datatypes, which of the possible types must be supported
@@ -39,17 +39,18 @@ list:
 
       1. Linking terminology directly to the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) - NIH where applicable
 
-      1. Migrating to the standard set of FHIR IG templates for publishing
+      1. Migrating to the standard set of HL7 FHIR IG templates for publishing. Due to restrictions on customizable content, the following features of prior versions are no longer available:
+
+         - Full narrative text summaries of profiles
+         - Copy Button for profile URls
 
       1. Addressing a total of 95 outstanding trackers.
 
-
-      These changes have be voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this release and reconciliation of the ballot comments.:
-
+      **Trackers items and links to the updated content:**
 
       1. Update Allergy substances value set to use new SCT drug class concepts ([FHIR-29322](https://jira.hl7.org/browse/FHIR-29322)) [See Change Here](rel-link.html#FHIR-29322)
 
-      1. Update Organization Quick Start Example Search ([FHIR-29269](https://jira.hl7.org/browse/FHIR-29269)) [See Change Here](rel-link.html#FHIR-29269)
+      1. Update Organization Quick Start Example Search ([FHIR-29269](https://jira.hl7.org/browse/FHIR-29269)) [See Change Here](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-organization.html#FHIR-29269)
 
       1. birthsex binding applied to wrong element in US Core Patient differential ([FHIR-29262](https://jira.hl7.org/browse/FHIR-29262)) [See Change Here](rel-link.html#FHIR-29262)
 

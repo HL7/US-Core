@@ -1,4 +1,3 @@
-
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
@@ -13,7 +12,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     Example:
 
-      1. GET [base]/Location?name=Health
+      1. {:.new-content #FHIR-28942}GET [base]/Organization?name=Health
 
     *Implementation Notes:* Fetches a bundle of all Organization resources that match the name ([how to search by string])
 
@@ -23,12 +22,8 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     Example:
 
-      1. GET [base]/Location?address=Arbor
+      1. {:.new-content #FHIR-28942}GET [base]/Organization?address=Arbor
 
     *Implementation Notes:* Fetches a bundle of all Organization resources that match the address string ([how to search by string])
-
-
-
-
 
 {% include link-list.md %}
