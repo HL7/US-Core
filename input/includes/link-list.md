@@ -254,7 +254,6 @@
 [US Core Location Profile]: StructureDefinition-us-core-location.html
 [US Core MedicationRequest Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Organization Profile]: StructureDefinition-us-core-organization.html
-[US Core Pediatric Head Occipital-frontal Circumference Percentile Profile]:
-StructureDefinition-head-occipital-frontal-circumference-percentile.html
+[US Core Pediatric Head Occipital-frontal Circumference Percentile Profile]: StructureDefinition-head-occipital-frontal-circumference-percentile.html
 [US Core Practitioner Profile]: StructureDefinition-us-core-practitioner.html
 [US Core PractitionerRole Profile]: StructureDefinition-us-core-practitionerrole.html
