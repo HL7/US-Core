@@ -23,7 +23,7 @@ The following Profiles and have been defined for this implementation guide.
 - [US Core Location Profile]
 - [US Core Medication Profile]
 - {:.new-content #FHIR-28258}[US Core MedicationRequest Profile]
-- [US Core Organization Profile]
+- {:.new-content #FHIR-28216}[US Core Organization Profile]
 - {:.new-content #FHIR-29262}[US Core Patient Profile]
 - [US Core Pediatric BMI for Age Observation Profile]
 - [US Core Pediatric Head Occipital-frontal Circumference Percentile

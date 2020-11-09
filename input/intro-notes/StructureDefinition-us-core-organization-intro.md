@@ -25,6 +25,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
    - **SHALL** support National Provider Identifier (NPI) for organizations
    - **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) for laboratories.
 1.  A list of contact information
+1.  An address
 
 **Profile specific implementation guidance:**
 
