@@ -39,9 +39,10 @@ list:
 
       1. Linking terminology directly to the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) - NIH where applicable
 
-      1. Migrating to the standard set of HL7 FHIR IG templates for publishing.  Although we strove to minimize the differences between this version and the previous versions of US Core there some changes to note:
+      1. Migrating to the standard set of HL7 FHIR IG templates for publishing.  Although we strove to minimize the differences between this version and the previous versions of US Core, these changes are notable:
          - Additional Features include:
-              - Additio of Vocabulary and Constraint tables to the profile pages
+              - Addition of vocabulary and constraint tables to the profile pages
+              - Addition of a summary table and to the profile page introduction
          - Due to restrictions on customizable content, the following features of prior versions are no longer available:
              - Full narrative text summaries of profiles
              - Copy Button for profile URls
@@ -60,7 +61,7 @@ list:
 
       1. us-core-12 invariant interpretation ([FHIR-28942](https://jira.hl7.org/browse/FHIR-28942)) [See Changes Here](StructureDefinition-us-core-implantable-device.html)
 
-      1. Incorrect Description Observation.component (Pulse Ox) ([FHIR-28934](https://jira.hl7.org/browse/FHIR-28934)) [See Change Here](rel-link.html#FHIR-28934)
+      1. Incorrect Description Observation.component (Pulse Ox) ([FHIR-28934](https://jira.hl7.org/browse/FHIR-28934)) [See Change Here](StructureDefinition-us-core-pulse-oximetry.html#FHIR-28934)
 
       1. "References should be constrained to us ""value"" not ""identifier""" ([FHIR-28573](https://jira.hl7.org/browse/FHIR-28573)) [See Change Here](general-guidance.html#FHIR-28573)
 
