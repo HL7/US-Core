@@ -23,6 +23,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each Immunization must support:**
 
 1.  a statusReason if the vaccine wasn't given
+1.  {:.new-content #FHIR-28452}a flag to indicate whether the vaccine was reported by patient rather than directly administered
 
 **Profile specific implementation guidance:**
 
