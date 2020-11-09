@@ -3,8 +3,38 @@
 
 The following Profiles and have been defined for this implementation guide.
 
+<!-- {% raw %}
 {% include list-simple-profiles.xhtml %}
+{% endraw %} -->
 
+
+- [US Core AllergyIntolerance Profile]
+- [US Core CarePlan Profile]
+- [US Core CareTeam Profile]
+- [US Core Condition Profile]
+- [US Core DiagnosticReport Profile for Laboratory Results Reporting]
+- [US Core DiagnosticReport Profile for Report and Note exchange]
+- [US Core DocumentReference Profile]
+- [US Core Encounter Profile]
+- [US Core Goal Profile]
+- [US Core Immunization Profile]
+- {:.new-content #FHIR-28942}[US Core Implantable Device Profile]
+- [US Core Laboratory Result Observation Profile]
+- [US Core Location Profile]
+- [US Core Medication Profile]
+- [US Core MedicationRequest Profile]
+- [US Core Organization Profile]
+- {:.new-content #FHIR-29262}[US Core Patient Profile]
+- [US Core Pediatric BMI for Age Observation Profile]
+- [US Core Pediatric Head Occipital-frontal Circumference Percentile
+Profile]
+- [US Core Pediatric Weight for Height Observation Profile]
+- [US Core Practitioner Profile]
+- [US Core PractitionerRole Profile]
+- [US Core Procedure Profile]
+- [US Core Provenance Profile]
+- [US Core Pulse Oximetry Profile]
+- [US Core Smoking Status Observation Profile]
 - In addition US Core uses the [Vital Signs Profile] from the FHIR Specification.  The expanded US Core [Vital Signs Quick Start] section provides guidance on vital signs search.
 
 

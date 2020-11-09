@@ -249,3 +249,12 @@
 [Referencing US Core Profiles]: general-guidance.html#referencing-us-core-profiles
 [differential view]: {{site.data.fhir.path}}profiling.html#snapshot
 [Head Circumference]: {{site.data.fhir.path}}headcircum.html
+[US Core AllergyIntolerance Profile]: StructureDefinition-us-core-allergyintolerance.html
+[US Core Encounter Profile]: StructureDefinition-us-core-encounter.html
+[US Core Location Profile]: StructureDefinition-us-core-location.html
+[US Core MedicationRequest Profile]: StructureDefinition-us-core-medicationrequest.html
+[US Core Organization Profile]: StructureDefinition-us-core-organization.html
+[US Core Pediatric Head Occipital-frontal Circumference Percentile Profile]:
+StructureDefinition-head-occipital-frontal-circumference-percentile.html
+[US Core Practitioner Profile]: StructureDefinition-us-core-practitioner.html
+[US Core PractitionerRole Profile]: StructureDefinition-us-core-practitionerrole.html

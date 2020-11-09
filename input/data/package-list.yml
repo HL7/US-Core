@@ -39,22 +39,26 @@ list:
 
       1. Linking terminology directly to the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) - NIH where applicable
 
-      1. Migrating to the standard set of HL7 FHIR IG templates for publishing. Due to restrictions on customizable content, the following features of prior versions are no longer available:
-
-         - Full narrative text summaries of profiles
-         - Copy Button for profile URls
+      1. Migrating to the standard set of HL7 FHIR IG templates for publishing.  Although we strove to minimize the differences between this version and the previous versions of US Core there some changes to note:
+         - Additional Features include:
+              - Additio of Vocabulary and Constraint tables to the profile pages
+         - Due to restrictions on customizable content, the following features of prior versions are no longer available:
+             - Full narrative text summaries of profiles
+             - Copy Button for profile URls
 
       1. Addressing a total of 95 outstanding trackers.
 
-      **Trackers items and links to the updated content:**
+
+         **Trackers items and links to the updated content:**
+
 
       1. Update Allergy substances value set to use new SCT drug class concepts ([FHIR-29322](https://jira.hl7.org/browse/FHIR-29322)) [See Change Here](rel-link.html#FHIR-29322)
 
-      1. Update Organization Quick Start Example Search. ([FHIR-29269](https://jira.hl7.org/browse/FHIR-29269)) [See Change Here](https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-organization.html#FHIR-29269)
+      1. Update Organization Quick Start Example Search. ([FHIR-29269](https://jira.hl7.org/browse/FHIR-29269)) [See Change Here](StructureDefinition-us-core-organization.html#FHIR-29269)
 
-      1. birthsex binding applied to wrong element in US Core Patient differential ([FHIR-29262](https://jira.hl7.org/browse/FHIR-29262)) [See Change Here](rel-link.html#FHIR-29262)
+      1. birthsex binding applied to wrong element in US Core Patient differential ([FHIR-29262](https://jira.hl7.org/browse/FHIR-29262)) [See Change Here](StructureDefinition-us-core-patient.profile.json.html)
 
-      1. us-core-12 invariant interpretation ([FHIR-28942](https://jira.hl7.org/browse/FHIR-28942)) [See Change Here](rel-link.html#FHIR-28942)
+      1. us-core-12 invariant interpretation ([FHIR-28942](https://jira.hl7.org/browse/FHIR-28942)) [See Changes Here](StructureDefinition-us-core-implantable-device.html)
 
       1. Incorrect Description Observation.component (Pulse Ox) ([FHIR-28934](https://jira.hl7.org/browse/FHIR-28934)) [See Change Here](rel-link.html#FHIR-28934)
 
