@@ -33,7 +33,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1. an ethnicity
 1. a birth sex*
 
-<div markdown="1" class="new-content" id="FHIR-27731"
+<div markdown="1" class="new-content" id="FHIR-27731">
 
 **Additional USCDI v1 Requirements**
 
