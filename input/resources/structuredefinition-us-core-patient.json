@@ -456,7 +456,7 @@
         "path": "Patient.communication",
         "min": 0,
         "max": "*",
-        "mustSupport": true,
+        "mustSupport": false,
         "mapping": [
           {
             "identity": "argonaut-dq-dstu2",
@@ -474,7 +474,7 @@
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": false,
+        "mustSupport": true,
         "binding": {
           "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/simple-language"
