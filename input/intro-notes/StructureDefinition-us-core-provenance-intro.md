@@ -16,7 +16,7 @@ The following data-elements are mandatory (i.e. data MUST be present) or must be
 
 **Each Provenance must have:**
 
-1.  resource(s) the Provenance record is supporting (target)
+1.  {:.new-content #FHIR-28165}a reference to the resource(s) the Provenance record is supporting (target)
 1.  a date and time for the activity
 
 
