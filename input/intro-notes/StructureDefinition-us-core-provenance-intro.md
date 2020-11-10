@@ -21,10 +21,9 @@ The following data-elements are mandatory (i.e. data MUST be present) or must be
 1.  a date and time for the activity
 
 
-**Each Provenance must support:**
+**Each Provenance must support:** 
 
-1.  an author responsible for the update
-1.  the author organization responsible for the information
+1.  {:.new-content #FHIR-28516} the author organization responsible for the information
 1.  the transmitter that provided the information
 1.  the transmitter organization responsible for the transmission (if the transmitter is a device the transmitter organization must also be valued).
 
