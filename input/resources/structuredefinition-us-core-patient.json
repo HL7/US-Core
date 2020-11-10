@@ -65,7 +65,7 @@
             ]
           }
         ],
-        "mustSupport": true,
+        "mustSupport": false,
         "mapping": [
           {
             "identity": "argonaut-dq-dstu2",
@@ -87,7 +87,7 @@
             ]
           }
         ],
-        "mustSupport": true,
+        "mustSupport": false,
         "mapping": [
           {
             "identity": "argonaut-dq-dstu2",
@@ -109,7 +109,7 @@
             ]
           }
         ],
-        "mustSupport": true,
+        "mustSupport": false,
         "mapping": [
           {
             "identity": "argonaut-dq-dstu2",
@@ -242,11 +242,33 @@
         ]
       },
       {
+        "id": "Patient.name.suffix",
+        "path": "Patient.name.suffix",
+        "mustSupport": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "NA"
+          }
+        ]
+      },
+      {
+        "id": "Patient.name.period",
+        "path": "Patient.name.period",
+        "mustSupport": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "NA"
+          }
+        ]
+      },
+      {
         "id": "Patient.telecom",
         "path": "Patient.telecom",
         "min": 0,
         "max": "*",
-        "mustSupport": true,
+        "mustSupport": false,
         "mapping": [
           {
             "identity": "argonaut-dq-dstu2",
@@ -452,7 +474,7 @@
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true,
+        "mustSupport": false,
         "binding": {
           "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/simple-language"

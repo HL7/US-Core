@@ -33,6 +33,22 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1. an ethnicity
 1. a birth sex*
 
+<div markdown="1" class="new-content" id="fhir-27727 fhir-27728 fhir-27729 fhir-27730 fhir-27731"
+
+**Additional USCDI v1 Requirements**
+
+For ONC's USCDI requirments, each Patient must also support the following elements. These elements are included in the formal definition of the profile below. The patient examples include of all of these elements as well.
+
+1. contact detail (e.g. a telephone number or an email address)
+1. a communication language
+1. a race
+1. an ethnicity
+1. a birth sex*
+1. previous name
+1. suffix
+
+</div>
+
 **Profile specific implementation guidance:**
 - Note that *Previous Name* and *Suffix* are listed in the U.S. Core Data for Interoperability.
   - Suffix is represented using the `Patient.name.suffix` element.
