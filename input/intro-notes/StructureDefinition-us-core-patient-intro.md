@@ -37,7 +37,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Additional USCDI v1 Requirements**
 
-For ONC's USCDI requirments, each Patient must also support the following elements. These elements are included in the formal definition of the profile below. The patient examples include of all of these elements as well.
+For ONC's USCDI requirements, each Patient must also support the following elements. These elements are included in the formal definition of the profile below. The patient examples include of all of these elements as well.
 
 1. contact detail (e.g. a telephone number or an email address)
 1. a communication language
