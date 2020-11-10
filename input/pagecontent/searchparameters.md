@@ -34,7 +34,7 @@ This section lists the search parameters definitions that are used within the ca
   - [category](SearchParameter-us-core-condition-category.html)
   - [clinical-status](SearchParameter-us-core-condition-clinical-status.html)
   - [patient](SearchParameter-us-core-condition-patient.html)
-  - [onset-date](SearchParameter-us-core-condition-onset-date.html)
+  - {:.new-content #FHIR-28181}[onset-date](SearchParameter-us-core-condition-onset-date.html)
   - [code](SearchParameter-us-core-condition-code.html)
 
 
