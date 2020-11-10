@@ -18,7 +18,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  a status
 1.  a code for smoking observation
 1.  a patient
-1.  a date representing when the smoking status was recorded
+1.  {:.new-content #FHIR-28090}when the observation occurred
 1.  a result value code for smoking status
 
 **Profile specific implementation guidance:**

@@ -34,7 +34,7 @@ Profile]
 - [US Core Procedure Profile]
 - {:.new-content #FHIR-28165}[US Core Provenance Profile]
 - {:.new-content #FHIR-28934}[US Core Pulse Oximetry Profile]
-- [US Core Smoking Status Observation Profile]
+- {:.new-content #FHIR-28090}[US Core Smoking Status Observation Profile]
 - In addition US Core uses the [Vital Signs Profile] from the FHIR Specification.  The expanded US Core [Vital Signs Quick Start] section provides guidance on vital signs search.
 
 
