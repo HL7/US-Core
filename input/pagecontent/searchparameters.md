@@ -84,7 +84,7 @@ This section lists the search parameters definitions that are used within the ca
 
 
 **Location**
-  - [name](SearchParameter-us-core-location-name.html)
+  - {:.new-content #FHIR-28181}[name](SearchParameter-us-core-location-name.html)
   - [address](SearchParameter-us-core-location-address.html)
   - [address-city](SearchParameter-us-core-location-address-city.html)
   - [address-state](SearchParameter-us-core-location-address-state.html)
@@ -115,7 +115,7 @@ This section lists the search parameters definitions that are used within the ca
 
 
 **Organization**
-  - [name](SearchParameter-us-core-organization-name.html)
+  - {:.new-content #FHIR-28181}[name](SearchParameter-us-core-organization-name.html)
   - [address](SearchParameter-us-core-organization-address.html)
 
 
