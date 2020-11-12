@@ -1,6 +1,6 @@
 
 ﻿This profile sets minimum expectations for the [Device] resource to record, search, and fetch UDI information associated with a patient's implantable device(s). It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  The profile is intended to *only* be used for implantable devices.  For non-implantable devices (for example, software or crutches) use the base FHIR Device resource or other use case specific Device profile.
-{{:.new-content #FHIR-27896}}
+{{:.new-content #FHIR-27810}}
 
 **Example Usage Scenarios:**
 
