@@ -12,7 +12,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     Example:
 
-      1. {:.new-content #FHIR-28942}GET [base]/Organization?name=Health
+      1. {:.new-content #FHIR-29269}GET [base]/Organization?name=Health
 
     *Implementation Notes:* Fetches a bundle of all Organization resources that match the name ([how to search by string])
 
@@ -22,7 +22,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     Example:
 
-      1. {:.new-content #FHIR-28942}GET [base]/Organization?address=Arbor
+      1. {:.new-content #FHIR-29269}GET [base]/Organization?address=Arbor
 
     *Implementation Notes:* Fetches a bundle of all Organization resources that match the address string ([how to search by string])
 
