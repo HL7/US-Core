@@ -21,5 +21,12 @@
 				<display value="Health Concern"/>
 			</concept>
 		</include>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<concept>
+				<code value="16100001"/>
+				<display value="Death diagnosis"/>
+			</concept>
+		</include>
 	</compose>
 </ValueSet>
