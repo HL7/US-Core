@@ -31,7 +31,7 @@ HTTP/1.1 200 OK
    "timestamp": "2018-11-13T02:55:48.405Z",
    "parameter": [
      {
-       "name": "DiagnosticReport.codes",
+       "name": "context",
        "valueString": "DiagnosticReport.codes"
      },
      {

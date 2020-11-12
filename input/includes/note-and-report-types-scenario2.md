@@ -31,8 +31,8 @@ HTTP/1.1 200 OK
     "timestamp": "2018-11-13T02:55:48.405Z",
     "parameter": [
       {
-        "name": "DocumentReference.type",
-        "valueString": "DiagnosticReport.codes"
+        "name": "context",
+        "valueString": "DocumentReference.type"
       },
       {
         "name": "contextDirection",
