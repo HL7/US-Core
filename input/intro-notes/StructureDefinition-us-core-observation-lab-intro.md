@@ -31,6 +31,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 * Additional codes that translate or map to the Observation code or category codes are allowed.  For example:
    -  providing both a local code and LOINC code
    -  providing a more specific category codes such as 'chemistry', [SNOMED CT] concept, or system specific codes in addition to the 'laboratory' category code.
+* Systems **SHOULD** support `Observation.effectivePeriod` to accurately represent laboratory tests that are collected over a period of time (for example, a 24-Hour Urine Collection test).
 * An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it .
    - For Further guidance see the [Observation Grouping] section in FHIR Specification.
 * See the [General Guidance Section] for further guidance on using UCUM
