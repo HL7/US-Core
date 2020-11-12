@@ -17,7 +17,7 @@ The following Profiles and have been defined for this implementation guide.
 - [US Core DocumentReference Profile]
 - [US Core Encounter Profile]
 - [US Core Goal Profile]
-- [US Core Immunization Profile]
+- {:.new-content #FHIR-28388}[US Core Immunization Profile]
 - {:.new-content #FHIR-28942}[US Core Implantable Device Profile]
 - {:.new-content #FHIR-29658}[US Core Laboratory Result Observation Profile]
 - [US Core Location Profile]
