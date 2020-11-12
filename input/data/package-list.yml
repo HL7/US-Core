@@ -117,7 +117,7 @@ list:
 
       1. Update Definition for US Core Smoking Status ([FHIR-26059](https://jira.hl7.org/browse/FHIR-26059)) [See Change Here](ValueSet-us-core-observation-smokingstatus.html#FHIR-26059)
 
-      1. Allow PractitionerRole in US Core laboratory DiagnosticReport.performer ([FHIR-25120](https://jira.hl7.org/browse/FHIR-25120)) [See Change Here](rel-link.html#FHIR-25120)
+      1. Allow PractitionerRole in US Core laboratory DiagnosticReport.performer ([FHIR-25120](https://jira.hl7.org/browse/FHIR-25120)) [See Change Here](StructureDefinition-us-core-diagnosticreport-lab.html#DiagnosticReport.performer)
 
       1. Fix US-Core-1 constraint on Observation.effectivePeriod ([FHIR-29658](https://jira.hl7.org/browse/FHIR-29658)) [See Change Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.effective[x])
 
@@ -125,7 +125,7 @@ list:
 
       1. Remove text 'an author responsible for the update'. Keep author organization ([FHIR-28516](https://jira.hl7.org/browse/FHIR-28516)) [See Change Here](StructureDefinition-us-core-provenance.html#FHIR-28516)
 
-      1. "Clarify ""or other endpoint"" for DiagnosticReport.content.attachment.url" ([FHIR-28472](https://jira.hl7.org/browse/FHIR-28472)) [See Change Here](rel-link.html#FHIR-28472)
+      1. "Clarify ""or other endpoint"" for DocumentReference.content.attachment.url" ([FHIR-28472](https://jira.hl7.org/browse/FHIR-28472)) [See Change Here](rel-link.html#FHIR-28472)
 
       1. Add a required category to smoking status ([FHIR-28436](https://jira.hl7.org/browse/FHIR-28436)) [See Change Here](rel-link.html#FHIR-28436)
 
@@ -155,9 +155,9 @@ list:
 
       1. DocumentReference.author Reference Choice ([FHIR-28380](https://jira.hl7.org/browse/FHIR-28380)) [See Change Here](rel-link.html#FHIR-28380)
 
-      1. DiagnosticReport.performer for Note Reference Choice ([FHIR-28379](https://jira.hl7.org/browse/FHIR-28379)) [See Change Here](rel-link.html#FHIR-28379)
+      1. Add must support reference type choices for DiagnosticReport.performer for Note ([FHIR-28379](https://jira.hl7.org/browse/FHIR-28379)) [See Change Here](rel-link.html#FHIR-28379)
 
-      1. DiagnosticReport.performer for Lab Reference Choice ([FHIR-28378](https://jira.hl7.org/browse/FHIR-28378)) [See Change Here](rel-link.html#FHIR-28378)
+      1. Add must support reference type choices for DiagnosticReport.performer for Lab ([FHIR-28378](https://jira.hl7.org/browse/FHIR-28378)) [See Change Here]((StructureDefinition-us-core-diagnosticreport-lab.html#DiagnosticReport.performer))
 
       1. CareTeam.participant.member Reference Choice ([FHIR-28376](https://jira.hl7.org/browse/FHIR-28376)) [See Change Here](rel-link.html#FHIR-28376)
 
