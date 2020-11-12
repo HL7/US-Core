@@ -1,238 +1,271 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-documentreference",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
-    "version": "3.1.1",
-    "name": "USCoreDocumentReferenceProfile",
-    "title": "US Core DocumentReference Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2020-07-02",
-    "publisher": "HL7 US Realm Steering Committee",
-    "contact": [
+  "resourceType": "StructureDefinition",
+  "id": "us-core-documentreference",
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
+  "version": "3.1.1",
+  "name": "USCoreDocumentReferenceProfile",
+  "title": "US Core DocumentReference Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-07-02",
+  "publisher": "HL7 US Realm Steering Committee",
+  "contact": [
+    {
+      "telecom": [
         {
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "http://www.healthit.gov"
-                }
-            ]
+          "system": "url",
+          "value": "http://www.healthit.gov"
         }
-    ],
-    "description": "The document reference profile used in US Core.",
-    "jurisdiction": [
-        {
-            "coding": [
-                {
-                    "system": "urn:iso:std:iso:3166",
-                    "code": "US",
-                    "display": "United States of America"
-                }
-            ]
-        }
-    ],
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "DocumentReference",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "DocumentReference",
-                "path": "DocumentReference",
-                "definition": "This is a basic constraint on DocumentRefernce for use in the US Core IG.",
-                "mustSupport": false
-            },
-            {
-                "id": "DocumentReference.identifier",
-                "path": "DocumentReference.identifier",
-                "min": 0,
-                "max": "*",
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.status",
-                "path": "DocumentReference.status",
-                "min": 1,
-                "max": "1",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/document-reference-status"
-                }
-            },
-            {
-                "id": "DocumentReference.type",
-                "path": "DocumentReference.type",
-                "min": 1,
-                "max": "1",
-                "mustSupport": true,
-                "binding": {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet",
-                            "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-note-type"
-                        }
-                    ],
-                    "strength": "required",
-                    "description": "All LOINC  values whose SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor concept 'unknown'",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type"
-                }
-            },
-            {
-                "id": "DocumentReference.category",
-                "path": "DocumentReference.category",
-                "min": 1,
-                "max": "*",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "extensible",
-                    "description": "The US Core DocumentReferences Type Value Set is a &#39;starter set&#39; of categories supported for fetching and storing clinical notes.",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category"
-                }
-            },
-            {
-                "id": "DocumentReference.subject",
-                "path": "DocumentReference.subject",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.date",
-                "path": "DocumentReference.date",
-                "min": 0,
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.author",
-                "path": "DocumentReference.author",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.custodian",
-                "path": "DocumentReference.custodian",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content",
-                "path": "DocumentReference.content",
-                "min": 1,
-                "max": "*",
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content.attachment",
-                "path": "DocumentReference.content.attachment",
-                "min": 1,
-                "max": "1",
-                "constraint": [
-                    {
-                        "key": "us-core-6",
-                        "severity": "error",
-                        "human": "DocumentReference.content.attachment.url or  DocumentReference.content.attachment.data or both SHALL be present.",
-                        "expression": "url.exists() or data.exists()",
-                        "xpath": "f:url or f:content"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content.attachment.contentType",
-                "path": "DocumentReference.content.attachment.contentType",
-                "min": 1,
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content.attachment.data",
-                "path": "DocumentReference.content.attachment.data",
-                "min": 0,
-                "max": "1",
-                "condition": [
-                    "us-core-6"
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content.attachment.url",
-                "path": "DocumentReference.content.attachment.url",
-                "min": 0,
-                "max": "1",
-                "condition": [
-                    "us-core-6"
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.content.format",
-                "path": "DocumentReference.content.format",
-                "min": 0,
-                "max": "1",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "extensible",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/formatcodes"
-                }
-            },
-            {
-                "id": "DocumentReference.context",
-                "path": "DocumentReference.context",
-                "min": 0,
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.context.encounter",
-                "path": "DocumentReference.context.encounter",
-                "min": 0,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "DocumentReference.context.period",
-                "path": "DocumentReference.context.period",
-                "mustSupport": true
-            }
-        ]
+      ]
     }
+  ],
+  "description": "The document reference profile used in US Core.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference",
+        "path": "DocumentReference",
+        "definition": "This is a basic constraint on DocumentRefernce for use in the US Core IG.",
+        "mustSupport": false
+      },
+      {
+        "id": "DocumentReference.identifier",
+        "path": "DocumentReference.identifier",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.status",
+        "path": "DocumentReference.status",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/document-reference-status"
+        }
+      },
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet",
+              "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-note-type"
+            }
+          ],
+          "strength": "required",
+          "description": "All LOINC  values whose SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor concept 'unknown'",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type"
+        }
+      },
+      {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "The US Core DocumentReferences Type Value Set is a &#39;starter set&#39; of categories supported for fetching and storing clinical notes.",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category"
+        }
+      },
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.date",
+        "path": "DocumentReference.date",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.author",
+        "path": "DocumentReference.author",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/StructureDefinition/Device"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": true
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": false
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": false
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": false
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": false
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.custodian",
+        "path": "DocumentReference.custodian",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content",
+        "path": "DocumentReference.content",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment",
+        "path": "DocumentReference.content.attachment",
+        "min": 1,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "us-core-6",
+            "severity": "error",
+            "human": "DocumentReference.content.attachment.url or  DocumentReference.content.attachment.data or both SHALL be present.",
+            "expression": "url.exists() or data.exists()",
+            "xpath": "f:url or f:content"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.data",
+        "path": "DocumentReference.content.attachment.data",
+        "min": 0,
+        "max": "1",
+        "condition": [
+          "us-core-6"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "min": 0,
+        "max": "1",
+        "condition": [
+          "us-core-6"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.format",
+        "path": "DocumentReference.content.format",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/ValueSet/formatcodes"
+        }
+      },
+      {
+        "id": "DocumentReference.context",
+        "path": "DocumentReference.context",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.encounter",
+        "path": "DocumentReference.context.encounter",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.period",
+        "path": "DocumentReference.context.period",
+        "mustSupport": true
+      }
+    ]
+  }
 }

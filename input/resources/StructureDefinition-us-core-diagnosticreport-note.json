@@ -197,7 +197,31 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": true
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": true
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": false
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
             ]
           }
         ],
