@@ -201,20 +201,6 @@ Both the [Vital Signs Profile] and [US Core Laboratory Result Observation Profil
  }
 ```
 
-### Representing Deleted Information
-
-Clinical information that has been removed from the patient's record needs to be represented in a way so that client systems know they can delete them.
-
-- A FHIR server **SHOULD** not delete resources.
-
-- The resource status **SHOULD** be updated to the appropriate status such as  `entered-in-error` or `inactive`, and these resources **SHOULD** *still* be searchable by client applications.
-
-- If the status is `entered-in-error`:
-
-  - for patient viewing systems the content of resource **SHOULD** be removed. In other words a blank resource.
-
-  - A provider facing system **MAY** be supplied with additional details that the patient viewing system would typically not have access to.
-
 <div class="new-content" id="FHIR-28091" markdown="1">
 
 ### Representing Entered in Error and Deleted Information
