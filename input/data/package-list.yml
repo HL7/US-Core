@@ -99,7 +99,7 @@ list:
 
       1. Invalid link to SNOMED CT browser for smoking status concepts ([FHIR-28123](https://jira.hl7.org/browse/FHIR-28123)) [See Change Here](rel-link.html#FHIR-28123)
 
-      1. Timing association for smoking status ([FHIR-28090](https://jira.hl7.org/browse/FHIR-28090)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/branches/master/StructureDefinition-us-core-smokingstatus-definitions.html#Observation.effectiveDateTime)
+      1. Timing association for smoking status changed from `issued` to `effectiveDateTime` ([FHIR-28090](https://jira.hl7.org/browse/FHIR-28090)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/branches/master/StructureDefinition-us-core-smokingstatus-definitions.html#Observation.effectiveDateTime)
 
       1. Remove Must Support from Patient.telecom ([FHIR-27731](https://jira.hl7.org/browse/FHIR-27731)) [See Change Here](StructureDefinition-us-core-patient.html#FHIR-27731)
 
@@ -119,7 +119,7 @@ list:
 
       1. Allow PractitionerRole in US Core laboratory DiagnosticReport.performer ([FHIR-25120](https://jira.hl7.org/browse/FHIR-25120)) [See Change Here](rel-link.html#FHIR-25120)
 
-      1. US-Core-1 constraint causes validation error on Observation.effectivePeriod ([FHIR-29658](https://jira.hl7.org/browse/FHIR-29658)) [See Change Here](rel-link.html#FHIR-29658)
+      1. Fix US-Core-1 constraint on Observation.effectivePeriod ([FHIR-29658](https://jira.hl7.org/browse/FHIR-29658)) [See Change Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.effective[x])
 
       1. Extensible bindings including broad SNOMED CT value sets are nonsensical ([FHIR-29563](https://jira.hl7.org/browse/FHIR-29563)) [See Change Here](rel-link.html#FHIR-29563)
 
@@ -137,9 +137,9 @@ list:
 
       1. Observation.hasMember Vital Signs Panel Profile Reference Choice ([FHIR-28391](https://jira.hl7.org/browse/FHIR-28391)) [See Change Here](rel-link.html#FHIR-28391)
 
-      1. Observation.value[x] for Lab Data Type Choice ([FHIR-28390](https://jira.hl7.org/browse/FHIR-28390)) [See Change Here](rel-link.html#FHIR-28390)
+      1. Add must support type choices for Observation.value[x] for for Lab Observation Profile ([FHIR-28390](https://jira.hl7.org/browse/FHIR-28390)) [See Change Here](StructureDefinition-us-core-observation-lab.html#Observation.value[x])
 
-      1. Observation.effective[x] for Lab Data Type Choice ([FHIR-28389](https://jira.hl7.org/browse/FHIR-28389)) [See Change Here](rel-link.html#FHIR-28389)
+      1. Add must support type choices for Observation.effective[x] for Lab Observation Profile ([FHIR-28389](https://jira.hl7.org/browse/FHIR-28389)) [See Change Here](StructureDefinition-us-core-observation-lab.html#Observation.effective[x])
 
       1. Immunization.occurrence[x] Data Type Choice ([FHIR-28388](https://jira.hl7.org/browse/FHIR-28388)) [See Change Here](rel-link.html#FHIR-28388)
 

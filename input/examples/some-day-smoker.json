@@ -1,46 +1,46 @@
 {
-   "status": "final",
-   "category": [
+  "status": "final",
+  "category": [
+    {
+      "text": "Social History",
+      "coding": [
+        {
+          "code": "social-history",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Social History"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "text": "Tobacco smoking status",
+    "coding": [
       {
-         "text": "Social History",
-         "coding": [
-            {
-               "code": "social-history",
-               "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-               "display": "Social History"
-            }
-         ]
+        "code": "72166-2",
+        "system": "http://loinc.org",
+        "display": "Tobacco smoking status"
       }
-   ],
-   "code": {
-      "text": "Tobacco smoking status",
-      "coding": [
-         {
-            "code": "72166-2",
-            "system": "http://loinc.org",
-            "display": "Tobacco smoking status"
-         }
-      ]
-   },
-   "resourceType": "Observation",
-   "issued": "2016-03-18T05:27:04Z",
-   "meta": {
-      "profile": [
-         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
-      ]
-   },
-   "valueCodeableConcept": {
-      "text": "Current some day smoker",
-      "coding": [
-         {
-            "code": "428041000124106",
-            "system": "http://snomed.info/sct"
-         }
-      ]
-   },
-   "id": "some-day-smoker",
-   "subject": {
-      "display": "Amy Shaw",
-      "reference": "Patient/example"
-   }
+    ]
+  },
+  "resourceType": "Observation",
+  "effectiveDateTime": "2016-03-18T05:27:04Z",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
+    ]
+  },
+  "valueCodeableConcept": {
+    "text": "Current some day smoker",
+    "coding": [
+      {
+        "code": "428041000124106",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "id": "some-day-smoker",
+  "subject": {
+    "display": "Amy Shaw",
+    "reference": "Patient/example"
+  }
 }
