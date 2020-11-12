@@ -1,217 +1,241 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-diagnosticreport-lab",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab",
-    "version": "3.1.1",
-    "name": "USCoreDiagnosticReportProfileLaboratoryReporting",
-    "title": "US Core DiagnosticReport Profile for Laboratory Results Reporting",
-    "status": "active",
-    "experimental": false,
-    "date": "2019-05-21",
-    "publisher": "HL7 US Realm Steering Committee",
-    "contact": [
+  "resourceType": "StructureDefinition",
+  "id": "us-core-diagnosticreport-lab",
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab",
+  "version": "3.1.1",
+  "name": "USCoreDiagnosticReportProfileLaboratoryReporting",
+  "title": "US Core DiagnosticReport Profile for Laboratory Results Reporting",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-05-21",
+  "publisher": "HL7 US Realm Steering Committee",
+  "contact": [
+    {
+      "telecom": [
         {
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "http://www.healthit.gov"
-                }
-            ]
+          "system": "url",
+          "value": "http://www.healthit.gov"
         }
-    ],
-    "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with laboratory results for a patient",
-    "jurisdiction": [
-        {
-            "coding": [
-                {
-                    "system": "urn:iso:std:iso:3166",
-                    "code": "US",
-                    "display": "United States of America"
-                }
-            ]
-        }
-    ],
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "DiagnosticReport",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "DiagnosticReport",
-                "path": "DiagnosticReport",
-                "definition": "The US Core Diagnostic Report Profile is based upon the core FHIR DiagnosticReport Resource and created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
-                "alias": [
-                    "Lab Result",
-                    "Lab Report"
-                ],
-                "mustSupport": false,
-                "isModifier": false
-            },
-            {
-                "id": "DiagnosticReport.status",
-                "path": "DiagnosticReport.status",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "code"
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
-                }
-            },
-            {
-                "id": "DiagnosticReport.category",
-                "path": "DiagnosticReport.category",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "pattern",
-                            "path": "$this"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 1,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false
-            },
-            {
-                "id": "DiagnosticReport.category:LaboratorySlice",
-                "path": "DiagnosticReport.category",
-                "sliceName": "LaboratorySlice",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "patternCodeableConcept": {
-                    "coding": [
-                        {
-                            "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
-                            "code": "LAB"
-                        }
-                    ]
-                },
-                "mustSupport": true,
-                "isModifier": false
-            },
-            {
-                "id": "DiagnosticReport.code",
-                "path": "DiagnosticReport.code",
-                "short": "US Core Laboratory Report Order Code",
-                "definition": "The test, panel or battery that was ordered.",
-                "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false,
-                "binding": {
-                    "strength": "extensible",
-                    "description": "LOINC codes",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-lab-codes"
-                }
-            },
-            {
-                "id": "DiagnosticReport.subject",
-                "path": "DiagnosticReport.subject",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-                        ]
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false
-            },
-            {
-                "id": "DiagnosticReport.effective[x]",
-                "path": "DiagnosticReport.effective[x]",
-                "short": "Specimen Collection Datetime or Period",
-                "definition": "This is the Specimen Collection Datetime or Period which is the physically relevent dateTime for laboratory tests.",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "dateTime"
-                    },
-                    {
-                        "code": "Period"
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false
-            },
-            {
-                "id": "DiagnosticReport.issued",
-                "path": "DiagnosticReport.issued",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "instant"
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false
-            },
-            {
-                "id": "DiagnosticReport.performer",
-                "path": "DiagnosticReport.performer",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-                        ]
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false
-            },
-            {
-                "id": "DiagnosticReport.result",
-                "path": "DiagnosticReport.result",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-                        ]
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false
-            }
-        ]
+      ]
     }
+  ],
+  "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with laboratory results for a patient",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "definition": "The US Core Diagnostic Report Profile is based upon the core FHIR DiagnosticReport Resource and created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
+        "alias": [
+          "Lab Result",
+          "Lab Report"
+        ],
+        "mustSupport": false,
+        "isModifier": false
+      },
+      {
+        "id": "DiagnosticReport.status",
+        "path": "DiagnosticReport.status",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+        }
+      },
+      {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "DiagnosticReport.category:LaboratorySlice",
+        "path": "DiagnosticReport.category",
+        "sliceName": "LaboratorySlice",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+              "code": "LAB"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "short": "US Core Laboratory Report Order Code",
+        "definition": "The test, panel or battery that was ordered.",
+        "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "strength": "extensible",
+          "description": "LOINC codes",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-lab-codes"
+        }
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "short": "Specimen Collection Datetime or Period",
+        "definition": "This is the Specimen Collection Datetime or Period which is the physically relevent dateTime for laboratory tests.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "DiagnosticReport.issued",
+        "path": "DiagnosticReport.issued",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "DiagnosticReport.performer",
+        "path": "DiagnosticReport.performer",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
+              "http://hl7.org/fhir/StructureDefinition/us-core-practitionerrole"
+            ],
+            "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": true
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": false
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": false
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      }
+    ]
+  }
 }
