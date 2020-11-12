@@ -131,7 +131,7 @@ list:
 
       1. Use of US Core Profile when not explicitly referenced when using Contained resources ([FHIR-28396](https://jira.hl7.org/browse/FHIR-28396)) [See Change Here](general-guidance.html#FHIR-28396)
 
-      1. DocumentReference.custodian to be Optional ([FHIR-28393](https://jira.hl7.org/browse/FHIR-28393)) [See *Proposed* Change Here](StructureDefinition-us-core-resource-documentreference.html#FHIR-28393)
+      1. DocumentReference.custodian to be Optional ([FHIR-28393](https://jira.hl7.org/browse/FHIR-28393)) [See *Proposed* Change Here](StructureDefinition-us-core-documentreference.html#FHIR-28393)
 
       1. Encounter.serviceProvider Must Support and Encounter.location.location Optional ([FHIR-28392](https://jira.hl7.org/browse/FHIR-28392)) [See Change Here](rel-link.html#FHIR-28392)
 
@@ -169,9 +169,9 @@ list:
 
       1. Add "Cause of Death" to category codes to meet the Public Health Use Case for VRDR ([FHIR-27904](https://jira.hl7.org/browse/FHIR-27904)) [See Change Here](ValueSet-us-core-condition-category.html)
 
-      1. Address non-implantable device and how to document usage ([FHIR-27896](https://jira.hl7.org/browse/FHIR-27896)) [See Change Here](rel-link.html#FHIR-27896)
+      1. Address non-implantable device and how to document usage ([FHIR-27896](https://jira.hl7.org/browse/FHIR-27896)) [See Change Here](StructureDefinition-us-core-implantable-device.html#FHIR-27896)
 
-      1. Resource constraints based on Jurisdiction which are not well documented ([FHIR-27810](https://jira.hl7.org/browse/FHIR-27810)) [See Change Here](rel-link.html#FHIR-27810)
+      1. Resource constraints based on Jurisdiction which are not well documented ([FHIR-27810](https://jira.hl7.org/browse/FHIR-27810)) [See Change Here](StructureDefinition-us-core-implantable-device.html#FHIR-27896)
 
       1. Updated CPT copyright to current year ([FHIR-27770](https://jira.hl7.org/browse/FHIR-27770)) [See Change Here](ValueSet-us-core-encounter-type.html#F27770)
 
