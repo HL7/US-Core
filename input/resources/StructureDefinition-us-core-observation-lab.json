@@ -195,13 +195,13 @@
         "max": "1",
         "type": [
           {
-            "code": "dateTime",
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
                 "valueBoolean": true
               }
-            ]
+            ],
+            "code": "dateTime"
           },
           {
             "code": "Period"

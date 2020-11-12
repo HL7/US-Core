@@ -156,7 +156,13 @@
         "min": 1,
         "max": "1",
         "type": [
-          {
+          {          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
+                "valueBoolean": true
+              }
+            ],
             "code": "dateTime"
           },
           {
@@ -191,7 +197,7 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
-              "http://hl7.org/fhir/StructureDefinition/us-core-practitionerrole"
+              "http://hl7.org/fhir/StructureDefinition/us-core-practitionetrrole"
             ],
             "_targetProfile": [
               {
