@@ -13,7 +13,7 @@ The following Profiles and have been defined for this implementation guide.
 - [US Core CareTeam Profile]
 - [US Core Condition Profile]
 - {:.new-content #FHIR-25120}[US Core DiagnosticReport Profile for Laboratory Results Reporting]
-- [US Core DiagnosticReport Profile for Report and Note exchange]
+- {:.new-content #FHIR-28387}[US Core DiagnosticReport Profile for Report and Note exchange]
 - [US Core DocumentReference Profile]
 - [US Core Encounter Profile]
 - [US Core Goal Profile]
