@@ -135,10 +135,10 @@ where:
 
 **Examples**
 
+{:.new-content #FHIR-26625}
 {% include examplebutton.html example="note-and-report-types-scenario1" b_title = "Click on Here To See Scenario 1 Example" %}
 {:.new-content #FHIR-26625}
 {% include examplebutton.html example="note-and-report-types-scenario2" b_title = "Click on Here To See Scenario 2 Example" %}
-{:.new-content #FHIR-26625}
 {% include examplebutton.html example="note-and-report-types-scenario3" b_title = "Click on Here To See Scenario 3 Example" %}
 {% include examplebutton.html example="note-and-report-types-scenario4" b_title = "Click on Here To See Scenario 4 Example" %}
 
