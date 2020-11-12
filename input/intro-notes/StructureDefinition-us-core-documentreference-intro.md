@@ -42,6 +42,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.
    -  The format code is `urn:hl7-org:sdwg:ccda-structuredBody:2.1`
 -   The `content.url` may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]), FHIR Document Bundle (i.e [base]/Bundle/[id] or other endpoint.
+    - {:.new-content #FHIR-28472}If the endpoint is outside of the FHIR base URL, it **SHOULD NOT** require additional authorization to access.
 
 #### Examples
 
