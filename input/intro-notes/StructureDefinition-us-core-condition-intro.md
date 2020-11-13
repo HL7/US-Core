@@ -32,9 +32,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 * The 2015 Certification rule requires the use of SNOMED CT for problem list entries. Following the rules for [required] binding to coded data types, ICD or other local codes can be used as translations to SNOMED CT.
 * The [US Core Condition Code] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and may be used as the primary code for current encounter diagnoses.
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.  An example search is shown in the [Quick Start](#search) section below.
-* {:.new-content #FHIR-27951}The Encounter resource can represent a reason using either a code using `Encounter.reasonCode`, or a reference using `Encounter.reasonReference` to  Condition or other resource.
-   * Although both are marked as must support, the server systems are not required to support both a code and a reference and **SHALL** choose to support at least one of these elements.
-   * The client application **SHALL** support both elements.
 
 ### Examples
 

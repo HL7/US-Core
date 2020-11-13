@@ -35,7 +35,8 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 * See the [Medication List Guidance] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
 *  The MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
     *  When referencing a Medication resource,  the resource may be [contained] or an external resource.
-    *  {:.new-content #FHIR-28395}The server systems are not required to support both a code and a reference and MAY choose any combination of these methods, but if an external reference to Medication is used, the server SHALL support the [`_include`] parameter for searching this element.
+    *  {:.new-content #FHIR-28395}The server systems are not required to support both a code and a reference, but **SHALL** support *at least one* of these methods.
+    * If an external reference to Medication is used, the server SHALL support the [`_include`] parameter for searching this element.
     *  The client application SHALL support all methods.  
 *  Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
 
