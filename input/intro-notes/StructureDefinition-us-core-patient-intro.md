@@ -28,10 +28,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1. contact detail (e.g. a telephone number or an email address)
 1. a birth date
 1. an address
-1. a communication language
-1. a race
-1. an ethnicity
-1. a birth sex*
 
 <div markdown="1" class="new-content" id="FHIR-27731">
 
