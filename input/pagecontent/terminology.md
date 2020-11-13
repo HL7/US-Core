@@ -38,6 +38,7 @@ These value sets have been defined for this implementation guide.
 *   [US Core Vaccine Administered Value Set (CVX)](ValueSet-us-core-vaccines-cvx.html)
 *   [US Core Vaccine National Drug Codes (NDC)](ValueSet-us-core-ndc-vaccine-codes.html)
 *   {:.new-content #FHIR-26833}[USPS Two Letter Alphabetic Codes](ValueSet-us-core-usps-state.html)
+
 ### Code Systems
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of codes system names used in FHIR. The following additional names (URIs) have been identified for this implementation guide,   If a URI is listed here, it **SHALL** be used in the US Core profiles in preference to any other code system name.
