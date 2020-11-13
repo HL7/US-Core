@@ -183,6 +183,8 @@ list:
 
       1. Recommend against using SSN for Patient.identifier ([FHIR-24903](https://jira.hl7.org/browse/FHIR-24903)) [See Change Here](StructureDefinition-us-core-patient.html#FHIR-24903)
 
+      1. Remove identifier (OID) from ValueSet: US Core Encounter Type ([FHIR-29691](https://jira.hl7.org/browse/FHIR-29691)) [See Change Here](ValueSet-us-core-encounter-type.html)
+
     path: 'http://hl7.org/fhir/us/core/STU3.2'
     status: trial-use
     sequence: STU3
