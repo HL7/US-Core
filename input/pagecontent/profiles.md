@@ -10,7 +10,7 @@ The following Profiles and have been defined for this implementation guide.
 
 - [US Core AllergyIntolerance Profile]
 - [US Core CarePlan Profile]
-- [US Core CareTeam Profile]
+- {:.new-content #FHIR-27769}[US Core CareTeam Profile]
 - {:.new-content #FHIR-29563}[US Core Condition Profile]
 - {:.new-content #FHIR-25120}[US Core DiagnosticReport Profile for Laboratory Results Reporting]
 - {:.new-content #FHIR-28387}[US Core DiagnosticReport Profile for Report and Note exchange]
