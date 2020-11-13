@@ -121,7 +121,9 @@ list:
 
       1. Fix US-Core-1 constraint on Observation.effectivePeriod ([FHIR-29658](https://jira.hl7.org/browse/FHIR-29658)) [See Change Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.effective[x])
 
-      1. Extensible bindings including broad SNOMED CT value sets are nonsensical ([FHIR-29563](https://jira.hl7.org/browse/FHIR-29563)) [See Change Here](rel-link.html#FHIR-29563)
+      1. Change bindings from extensible to required for Condition.code value set: US Core Condition Category Codes Procedure.code value set: US Core Procedure Codes ([FHIR-29563](https://jira.hl7.org/browse/FHIR-29563)) See Changes Here:
+            - [1](StructureDefinition-us-core-condition-definitions.html#Condition.code)
+            - [2](StructureDefinition-us-core-procedure-definitions.html#Procedure.code)
 
       1. Remove text 'an author responsible for the update'. Keep author organization ([FHIR-28516](https://jira.hl7.org/browse/FHIR-28516)) [See Change Here](StructureDefinition-us-core-provenance.html#FHIR-28516)
 
@@ -169,7 +171,7 @@ list:
 
       1. Add "Cause of Death" to category codes to meet the Public Health Use Case for VRDR ([FHIR-27904](https://jira.hl7.org/browse/FHIR-27904)) [See Change Here](ValueSet-us-core-condition-category.html)
 
-      1. Address non-implantable device and how to document usage ([FHIR-27896](https://jira.hl7.org/browse/FHIR-27896), [FHIR-23715](https://jira.hl7.org/browse/FHIR-23715)) [See Change Here](future-of-us-core#FHIR-27896)
+      1. Address non-implantable device and how to document usage ([FHIR-27896](https://jira.hl7.org/browse/FHIR-27896), [FHIR-23715](https://jira.hl7.org/browse/FHIR-23715), [FHIR-23715](https://jira.hl7.org/browse/FHIR-23715)) [See Change Here](future-of-us-core#FHIR-27896)
 
       1. Resource constraints based on Jurisdiction which are not well documented ([FHIR-27810](https://jira.hl7.org/browse/FHIR-27810)) [See Change Here](StructureDefinition-us-core-implantable-device.html#FHIR-27810)
 

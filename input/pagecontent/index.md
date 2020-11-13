@@ -22,7 +22,6 @@
      - [ ] errors
      - [ ] read through for typos and grammar
 
-
 </div>
 
 <div markdown="1" class="note-to-balloters">
