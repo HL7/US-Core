@@ -29,7 +29,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Profile specific implementation guidance:**
 
 * The [US Core Condition Category Codes] support the separate types of conditions so API consumers can separate health concerns, problems, and encounter diagnoses.
-* The 2015 Certification rule requires the use of SNOMED CT for problem list entries. Following the rules for [extensible] binding to coded data types, ICD or other local codes can be used as translations to SNOMED CT.
+* The 2015 Certification rule requires the use of SNOMED CT for problem list entries. Following the rules for [required] binding to coded data types, ICD or other local codes can be used as translations to SNOMED CT.
 * The [US Core Condition Code] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and may be used as the primary code for current encounter diagnoses.
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.  An example search is shown in the [Quick Start](#search) section below.
 
