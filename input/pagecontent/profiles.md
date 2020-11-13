@@ -15,7 +15,7 @@ The following Profiles and have been defined for this implementation guide.
 - {:.new-content #FHIR-25120}[US Core DiagnosticReport Profile for Laboratory Results Reporting]
 - {:.new-content #FHIR-28387}[US Core DiagnosticReport Profile for Report and Note exchange]
 - {:.new-content #FHIR-28380}[US Core DocumentReference Profile]
-- [US Core Encounter Profile]
+- {:.new-content #FHIR-27951}[US Core Encounter Profile]
 - {:.new-content #FHIR-28477}[US Core Goal Profile]
 - {:.new-content #FHIR-28388}[US Core Immunization Profile]
 - {:.new-content #FHIR-28942}[US Core Implantable Device Profile]

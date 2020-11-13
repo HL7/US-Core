@@ -162,6 +162,8 @@ list:
 
       1. Add must support reference type choices for CareTeam.participant.member Reference ([FHIR-28376](https://jira.hl7.org/browse/FHIR-28376)) [See Change Here](StructureDefinition-us-core-careteam-definitions.html#CareTeam.participant.member)
 
+      1. Add must support and type choices for Encounter.reasonReference ([FHIR-27951](https://jira.hl7.org/browse/FHIR-27951)) [See Change Here](StructureDefinition-us-core-encounter-definitions.html#Encounter.reasonReference)
+
       1. Clarify deleted resources requirements and guidance ([FHIR-28091](https://jira.hl7.org/browse/FHIR-28091)) [See Change Here](general-guidance.html#FHIR-28091)
 
       1. Clarify search by date precision conformance expectations ([FHIR-27906](https://jira.hl7.org/browse/FHIR-27906)) [See Change Here](general-guidance.html#FHIR-27906)
@@ -187,8 +189,8 @@ list:
       1. Remove identifier (OID) from ValueSet: US Core Encounter Type ([FHIR-29691](https://jira.hl7.org/browse/FHIR-29691)) [See Change Here](ValueSet-us-core-encounter-type.html)
 
       1. Review vocabulary to align with CCDA and use VSAC valueset where possible ([FHIR-22488](https://jira.hl7.org/browse/FHIR-22488)) [See Changes Here]:
-          - [1](StructureDefinition-us-core-condition-definitions.html#Condition.code)
-          - [2](StructureDefinition-us-core-procedure-definitions.html#Procedure.code)
+          - [1](#.html)
+          - [2](#.html)
 
     path: 'http://hl7.org/fhir/us/core/STU3.2'
     status: trial-use
