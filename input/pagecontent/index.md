@@ -1,8 +1,35 @@
+<div markdown="1" class="bg-info">
+
+**punch list**:
+
+- [ ] Finish [Resolving Trackers](https://confluence.hl7.org/display/CGP/US+Core+January+2021+Ballot)
+- [ ] Finish Applying Resolved Trackers
+     - [ ] Document Search requirements in CapabilityStatements
+     - [ ] Add Vitals profile
+     - [ ] Various vocab issues
+- [ ] Review survey and complete updates to choices of types and References
+    - need new Tracker or apply to existing?
+- [ ] Replace value sets with links to VSAC where possible
+- [ ] Rewrite Must Support section
+    - own page?
+    - examples?
+    - screen shots of SD tree?
+- [ ] Add note to balloters whether want custom summaires
+- [ ] QA
+     - [ ] warnings on name and description waiting for Sushi to implement see [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Adding.20Description.20for.20Examples.20to.20ImplementationGuide.20-.20how)
+     - [ ] bad links as a result of template migration
+     - [ ] errors
+     - [ ] read through for typos and grammar
+
+</div>
+
 <div markdown="1" class="note-to-balloters">
-{{ site.data.package-list.list[1].desc }}
 
 Where possible, new and updated content will be highlighted with green text and background
 {:.new-content}
+
+{{ site.data.package-list.list[1].desc }}
+
 </div>
 
 ### Introduction
