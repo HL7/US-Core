@@ -510,9 +510,8 @@ definition:
         name: USCoreConditionCode
         reference:
             reference: SearchParameter/us-core-condition-code
-    -   description: "Date related onsets (dateTime and Period)<br />\n<em>NOTE</em>:\
-            \ This US Core SearchParameter definition extends the usage context of\n\
-            <a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\"\
+    -   description: "<br />\n<em>NOTE</em>: This US Core SearchParameter definition\
+            \ extends the usage context of\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\"\
             >capabilitystatement-expectation</a>\n extension to formally express implementer\
             \ conformance expectations for these elements:<br />\n - multipleAnd<br\
             \ />\n - multipleOr<br />\n - comparator<br />\n - modifier<br />\n -\
@@ -878,9 +877,8 @@ definition:
         name: USCoreLocationAddress
         reference:
             reference: SearchParameter/us-core-location-address
-    -   description: "A portion of the location's name or alias<br />\n<em>NOTE</em>:\
-            \ This US Core SearchParameter definition extends the usage context of\n\
-            <a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\"\
+    -   description: "<br />\n<em>NOTE</em>: This US Core SearchParameter definition\
+            \ extends the usage context of\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\"\
             >capabilitystatement-expectation</a>\n extension to formally express implementer\
             \ conformance expectations for these elements:<br />\n - multipleAnd<br\
             \ />\n - multipleOr<br />\n - comparator<br />\n - modifier<br />\n -\
@@ -1011,9 +1009,8 @@ definition:
         name: USCoreOrganizationAddress
         reference:
             reference: SearchParameter/us-core-organization-address
-    -   description: "A portion of the organization's name or alias<br />\n<em>NOTE</em>:\
-            \ This US Core SearchParameter definition extends the usage context of\n\
-            <a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\"\
+    -   description: "<br />\n<em>NOTE</em>: This US Core SearchParameter definition\
+            \ extends the usage context of\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\"\
             >capabilitystatement-expectation</a>\n extension to formally express implementer\
             \ conformance expectations for these elements:<br />\n - multipleAnd<br\
             \ />\n - multipleOr<br />\n - comparator<br />\n - modifier<br />\n -\
@@ -1415,7 +1412,9 @@ definition:
         reference:
             reference: ValueSet/us-core-observation-smokingstatus-max
     -   description: This value set enumerates a preferred set of SNOMED CT codes
-            historically used for the current smoking status of a patient.
+            historically used for the current smoking status of a patient. The concept
+            descriptors are from the [US edition of SNOMED](https://www.nlm.nih.gov/healthit/snomedct/us_edition.html)
+            and where the international concept descripters can also be found
         exampleBoolean: false
         name: US Core Smoking Status Preferred
         reference:
@@ -1810,6 +1809,11 @@ definition:
         name: weight
         reference:
             reference: Observation/weight
+dependsOn:
+-   id: vsac
+    packageId: us.nlm.vsac
+    uri: http://fhir.org/packages/us.nlm.vsac/
+    version: 0.1.0
 description: 'The US Core Implementation Guide is based on FHIR Version R4 and defines
     the minimum conformance requirements for accessing patient data. The Argonaut
     pilot implementations, ONC 2015 Edition Common Clinical Data Set (CCDS), and ONC
