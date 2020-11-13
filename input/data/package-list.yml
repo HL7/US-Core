@@ -37,7 +37,11 @@ list:
         - other?
         (see individual trackers below for details)
       1. Publishing a set US Core Vital Signs independent of the FHIR core profile upon which it is based (see individual trackers below for details)
-        - US Core Careteam Provider Roles Value Set --> [Care Team Member Function]
+        |UC Core Value Set|VSAC Replacment OID|
+        |---|---|
+        |US Core Careteam Provider Roles Value Set|2.16.840.1.113762.1.4.1099.30|
+
+        (To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the '{OID}' with an OID from the table above.  Note that you will need a current UMLS account to view the value sets)
 
       1. Linking terminology directly to the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) - NIH where applicable
 
@@ -193,8 +197,6 @@ list:
       1. Review vocabulary to align with CCDA and use VSAC valueset where possible ([FHIR-22488](https://jira.hl7.org/browse/FHIR-22488)) [See Changes Here]:
           - [1](#.html)
           - [2](#.html)
-
-      [Care Team Member Function]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1099.30/expansion
 
     path: 'http://hl7.org/fhir/us/core/STU3.2'
     status: trial-use
