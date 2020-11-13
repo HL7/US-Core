@@ -10,6 +10,7 @@
 - [ ] Review survey and complete updates to choices of types and References
     - need new Tracker or apply to existing?
 - [ ] Replace value sets with links to VSAC where possible
+      -  see [this spreadsheet](https://docs.google.com/spreadsheets/d/1BtRNsmrez2D8cm_81qhBaiU0aMmXGAIVDNwXCVAu2tE/edit#gid=0)
 - [ ] Rewrite Must Support section
     - own page?
     - examples?
