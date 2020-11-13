@@ -44,7 +44,7 @@ list:
               - Addition of vocabulary and constraint tables to the profile pages
               - Addition of a summary table and to the profile page introduction
          - Due to restrictions on customizable content, the following features of prior versions are no longer available:
-             - Full narrative text summaries of profiles  **NOTE: We are seeking feedback on whether to retain these full narrative text summaries for this guide (an example of this can be seen [here](http://hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html#formal-views-of-profile-content) by clicking on the "Text Summary" tab)*
+             - Full narrative text summaries of profiles  **NOTE: We are seeking feedback on whether to retain these full narrative text summaries for this guide (an example can be seen [here](http://hl7.org/fhir/us/core/StructureDefinition-us-core-allergyintolerance.html#formal-views-of-profile-content) by clicking on the "Text Summary" tab)***
 
       1. Addressing a total of 95 outstanding trackers.
 
@@ -162,7 +162,7 @@ list:
 
       1. Add must support reference type choices for CareTeam.participant.member Reference ([FHIR-28376](https://jira.hl7.org/browse/FHIR-28376)) [See Change Here](StructureDefinition-us-core-careteam-definitions.html#CareTeam.participant.member)
 
-      1. Add must support and type choices for Encounter.reasonReference ([FHIR-27951](https://jira.hl7.org/browse/FHIR-27951)) [See Change Here](StructureDefinition-us-core-encounter-definitions.html#Encounter.reasonReference)
+      1. Add choice for and type choices for Encounter.reasonReference ([FHIR-27951](https://jira.hl7.org/browse/FHIR-27951)) [See Change Here](StructureDefinition-us-core-encounter-definitions.html#Encounter.reasonReference)
 
       1. Clarify deleted resources requirements and guidance ([FHIR-28091](https://jira.hl7.org/browse/FHIR-28091)) [See Change Here](general-guidance.html#FHIR-28091)
 
