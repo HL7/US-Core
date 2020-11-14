@@ -64,6 +64,16 @@
    "meta": {
       "profile": [
          "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+      ],
+      "extension": [
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+            "valueString": "Blood Pressure Example"
+         },
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+            "valueMarkdown": "This is a blood pressure example for the *Vitalsigns Profile*."
+         }
       ]
    },
    "encounter": {

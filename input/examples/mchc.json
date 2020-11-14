@@ -61,7 +61,17 @@
          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       ],
       "versionId": "879",
-      "lastUpdated": "2016-03-09T15:29:57.124+00:00"
+      "lastUpdated": "2016-03-09T15:29:57.124+00:00",
+      "extension": [
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+            "valueString": "Mchc Example"
+         },
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+            "valueMarkdown": "This is a mchc example for the *Us Core Observation Lab Profile*."
+         }
+      ]
    },
    "effectiveDateTime": "2005-07-05",
    "id": "mchc",

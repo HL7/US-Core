@@ -1,54 +1,64 @@
 {
-   "status": "final", 
+   "status": "final",
    "category": [
       {
-         "text": "Laboratory", 
+         "text": "Laboratory",
          "coding": [
             {
-               "code": "laboratory", 
-               "system": "http://terminology.hl7.org/CodeSystem/observation-category", 
+               "code": "laboratory",
+               "system": "http://terminology.hl7.org/CodeSystem/observation-category",
                "display": "Laboratory"
             }
          ]
       }
-   ], 
+   ],
    "code": {
-      "text": "APPEARANCE", 
+      "text": "APPEARANCE",
       "coding": [
          {
-            "code": "32167-9", 
-            "system": "http://loinc.org", 
+            "code": "32167-9",
+            "system": "http://loinc.org",
             "display": "Clarity of Urine"
          }
       ]
-   }, 
-   "resourceType": "Observation", 
+   },
+   "resourceType": "Observation",
    "referenceRange": [
       {
          "text": "Clear"
       }
-   ], 
+   ],
    "meta": {
       "profile": [
          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      ], 
-      "versionId": "206432", 
-      "lastUpdated": "2016-04-18T03:33:00.502+00:00"
-   }, 
+      ],
+      "versionId": "206432",
+      "lastUpdated": "2016-04-18T03:33:00.502+00:00",
+      "extension": [
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+            "valueString": "Urine Clarity Example"
+         },
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+            "valueMarkdown": "This is a urine clarity example for the *Us Core Observation Lab Profile*."
+         }
+      ]
+   },
    "valueCodeableConcept": {
-      "text": "Hazy", 
+      "text": "Hazy",
       "coding": [
          {
-            "code": "81858005", 
-            "system": "http://snomed.info/sct", 
+            "code": "81858005",
+            "system": "http://snomed.info/sct",
             "display": "Cloudy"
          }
       ]
-   }, 
-   "effectiveDateTime": "2005-07-05", 
-   "id": "urine-clarity", 
+   },
+   "effectiveDateTime": "2005-07-05",
+   "id": "urine-clarity",
    "subject": {
-      "display": "Amy Shaw", 
+      "display": "Amy Shaw",
       "reference": "Patient/example"
    }
 }

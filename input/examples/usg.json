@@ -47,7 +47,17 @@
          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       ],
       "versionId": "206588",
-      "lastUpdated": "2016-04-18T04:10:12.426+00:00"
+      "lastUpdated": "2016-04-18T04:10:12.426+00:00",
+      "extension": [
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+            "valueString": "Usg Example"
+         },
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+            "valueMarkdown": "This is a usg example for the *Us Core Observation Lab Profile*."
+         }
+      ]
    },
    "effectiveDateTime": "2005-07-05",
    "id": "usg",

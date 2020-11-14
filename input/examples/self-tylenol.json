@@ -1,0 +1,54 @@
+{
+   "resourceType": "MedicationRequest",
+   "id": "self-tylenol",
+   "identifier": [
+      {
+         "use": "official",
+         "system": "http://acme.org/prescriptions",
+         "value": "12345689"
+      }
+   ],
+   "status": "active",
+   "intent": "plan",
+   "reportedBoolean": true,
+   "medicationCodeableConcept": {
+      "coding": [
+         {
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "1187314",
+            "display": "Tylenol PM Pill"
+         }
+      ],
+      "text": "Tylenol PM Pill"
+   },
+   "subject": {
+      "reference": "Patient/example",
+      "display": "Amy V. Shaw"
+   },
+   "encounter": {
+      "reference": "Encounter/example-1",
+      "display": "Office Visit"
+   },
+   "authoredOn": "2019-06-24",
+   "requester": {
+      "reference": "Patient/example",
+      "display": "**self-prescribed**"
+   },
+   "dosageInstruction": [
+      {
+         "text": "Takes 1-2 tablets once daily at bedtime as needed for restless legs"
+      }
+   ],
+   "meta": {
+      "extension": [
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+            "valueString": "Self Tylenol Example"
+         },
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+            "valueMarkdown": "This is a self tylenol example for the *Medicationrequest Profile*."
+         }
+      ]
+   }
+}

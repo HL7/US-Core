@@ -68,6 +68,16 @@
    "meta": {
       "profile": [
          "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+      ],
+      "extension": [
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+            "valueString": "Bp Data Absent Example"
+         },
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+            "valueMarkdown": "This is a bp data absent example for the *Vitalsigns Profile*."
+         }
       ]
    },
    "encounter": {

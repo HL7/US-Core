@@ -1,54 +1,64 @@
 {
-   "status": "final", 
+   "status": "final",
    "category": [
       {
-         "text": "Laboratory", 
+         "text": "Laboratory",
          "coding": [
             {
-               "code": "laboratory", 
-               "system": "http://terminology.hl7.org/CodeSystem/observation-category", 
+               "code": "laboratory",
+               "system": "http://terminology.hl7.org/CodeSystem/observation-category",
                "display": "Laboratory"
             }
          ]
       }
-   ], 
+   ],
    "code": {
-      "text": "LEUK ESTERASE", 
+      "text": "LEUK ESTERASE",
       "coding": [
          {
-            "code": "5799-2", 
-            "system": "http://loinc.org", 
+            "code": "5799-2",
+            "system": "http://loinc.org",
             "display": "Leukocyte esterase [Presence] in Urine by Test strip"
          }
       ]
-   }, 
-   "resourceType": "Observation", 
+   },
+   "resourceType": "Observation",
    "referenceRange": [
       {
          "text": "Negative"
       }
-   ], 
+   ],
    "meta": {
       "profile": [
          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      ], 
-      "versionId": "206552", 
-      "lastUpdated": "2016-04-18T03:58:45.747+00:00"
-   }, 
+      ],
+      "versionId": "206552",
+      "lastUpdated": "2016-04-18T03:58:45.747+00:00",
+      "extension": [
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+            "valueString": "Urine Leukocyte Esterase Example"
+         },
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+            "valueMarkdown": "This is a urine leukocyte esterase example for the *Us Core Observation Lab Profile*."
+         }
+      ]
+   },
    "valueCodeableConcept": {
-      "text": "2+", 
+      "text": "2+",
       "coding": [
          {
-            "code": "260348001", 
-            "system": "http://snomed.info/sct", 
+            "code": "260348001",
+            "system": "http://snomed.info/sct",
             "display": "++"
          }
       ]
-   }, 
-   "effectiveDateTime": "2005-07-05", 
-   "id": "urine-leukocyte-esterase", 
+   },
+   "effectiveDateTime": "2005-07-05",
+   "id": "urine-leukocyte-esterase",
    "subject": {
-      "display": "Amy Shaw", 
+      "display": "Amy Shaw",
       "reference": "Patient/example"
    }
 }

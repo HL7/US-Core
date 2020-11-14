@@ -50,7 +50,17 @@
          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       ],
       "versionId": "206612",
-      "lastUpdated": "2016-04-18T04:20:46.618+00:00"
+      "lastUpdated": "2016-04-18T04:20:46.618+00:00",
+      "extension": [
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+            "valueString": "Urobilinogen Example"
+         },
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+            "valueMarkdown": "This is a urobilinogen example for the *Us Core Observation Lab Profile*."
+         }
+      ]
    },
    "effectiveDateTime": "2005-07-05",
    "id": "urobilinogen",

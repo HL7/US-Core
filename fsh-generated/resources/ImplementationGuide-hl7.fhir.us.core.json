@@ -1154,588 +1154,672 @@
         "reference": {
           "reference": "Device/udi-2"
         },
-        "name": "udi-2",
+        "description": "This is a Device defib example for the *Us Core Implantable Device Profile*.",
+        "name": "Device Defib Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
       },
       {
         "reference": {
           "reference": "Device/udi-3"
         },
-        "name": "udi-3",
+        "description": "This is a Device knee example for the *Us Core Implantable Device Profile*.",
+        "name": "Device Knee Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
       },
       {
         "reference": {
           "reference": "DiagnosticReport/cardiology-report"
         },
-        "name": "cardiology-report",
+        "description": "This is a DiagnosticReport cardiology report example for the *Us Core Diagnosticreport Note Profile*.",
+        "name": "Diagnosticreport Cardiology Report Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
       },
       {
         "reference": {
           "reference": "DiagnosticReport/chest-xray-report"
         },
-        "name": "chest-xray-report",
+        "description": "This is a DiagnosticReport chest xray report example for the *Us Core Diagnosticreport Note Profile*.",
+        "name": "Diagnosticreport Chest Xray Report Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
       },
       {
         "reference": {
           "reference": "Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2"
         },
-        "name": "66c8856b-ba11-4876-8aa8-467aad8c11a2",
+        "description": "This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example example for the *Bundle Profile*.",
+        "name": "Practitionerrole_Practitioner_Endpoint_Bundle_Example Example",
         "exampleBoolean": true
       },
       {
         "reference": {
           "reference": "Procedure/defib-implant"
         },
-        "name": "defib-implant",
+        "description": "This is a Procedure R4 defib implant example for the *Us Core Procedure Profile*.",
+        "name": "Procedure R4 Defib Implant Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
       },
       {
         "reference": {
           "reference": "Organization/acme-lab"
         },
-        "name": "acme-lab",
+        "description": "This is a acme lab example for the *Us Core Organization Profile*.",
+        "name": "Acme Lab Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
       },
       {
         "reference": {
           "reference": "AllergyIntolerance/example"
         },
-        "name": "example",
+        "description": "This is a allergyintolerance example for the *Us Core Allergyintolerance Profile*.",
+        "name": "Allergyintolerance Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
       },
       {
         "reference": {
           "reference": "Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901"
         },
-        "name": "c887e62f-6166-419f-8268-b5ecd6c7b901",
+        "description": "This is a allergyintolerance provenance example for the *Bundle Profile*.",
+        "name": "Allergyintolerance Provenance Example",
         "exampleBoolean": true
       },
       {
         "reference": {
           "reference": "Observation/blood-glucose"
         },
-        "name": "blood-glucose",
+        "description": "This is a blood glucose example for the *Us Core Observation Lab Profile*.",
+        "name": "Blood Glucose Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/blood-pressure"
         },
-        "name": "blood-pressure",
+        "description": "This is a blood pressure example for the *Vitalsigns Profile*.",
+        "name": "Blood Pressure Example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
       },
       {
         "reference": {
           "reference": "Observation/bmi"
         },
-        "name": "bmi",
+        "description": "This is a bmi example for the *Vitalsigns Profile*.",
+        "name": "Bmi Example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
       },
       {
         "reference": {
           "reference": "Observation/bp-data-absent"
         },
-        "name": "bp-data-absent",
+        "description": "This is a bp data absent example for the *Vitalsigns Profile*.",
+        "name": "Bp Data Absent Example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
       },
       {
         "reference": {
           "reference": "Observation/bun"
         },
-        "name": "bun",
+        "description": "This is a bun example for the *Us Core Observation Lab Profile*.",
+        "name": "Bun Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "CareTeam/example"
         },
-        "name": "example",
+        "description": "This is a careteam example for the *Us Core Careteam Profile*.",
+        "name": "Careteam Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
       },
       {
         "reference": {
           "reference": "DiagnosticReport/cbc"
         },
-        "name": "cbc",
+        "description": "This is a cbc example for the *Us Core Diagnosticreport Lab Profile*.",
+        "name": "Cbc Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
       },
       {
         "reference": {
           "reference": "CarePlan/colonoscopy"
         },
-        "name": "colonoscopy",
+        "description": "This is a colonoscopy example for the *Us Core Careplan Profile*.",
+        "name": "Colonoscopy Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
       },
       {
         "reference": {
           "reference": "Condition/example"
         },
-        "name": "example",
+        "description": "This is a condition example for the *Us Core Condition Profile*.",
+        "name": "Condition Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
       },
       {
         "reference": {
           "reference": "Encounter/1036"
         },
-        "name": "1036",
+        "description": "This is a encounter 1036 example for the *Encounter Profile*.",
+        "name": "Encounter 1036 Example",
         "exampleBoolean": true
       },
       {
         "reference": {
           "reference": "Encounter/example-1"
         },
-        "name": "example-1",
+        "description": "This is a encounter 1 example for the *Us Core Encounter Profile*.",
+        "name": "Encounter 1 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
       },
       {
         "reference": {
           "reference": "DocumentReference/episode-summary"
         },
-        "name": "episode-summary",
+        "description": "This is a episode summary example for the *Us Core Documentreference Profile*.",
+        "name": "Episode Summary Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
       },
       {
         "reference": {
           "reference": "Observation/erythrocytes"
         },
-        "name": "erythrocytes",
+        "description": "This is a erythrocytes example for the *Us Core Observation Lab Profile*.",
+        "name": "Erythrocytes Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Organization/example-organization-2"
         },
-        "name": "example-organization-2",
+        "description": "This is a organization 2 example for the *Us Core Organization Profile*.",
+        "name": "Organization 2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
       },
       {
         "reference": {
           "reference": "Goal/goal-1"
         },
-        "name": "goal-1",
+        "description": "This is a goal 1 example for the *Us Core Goal Profile*.",
+        "name": "Goal 1 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
       },
       {
         "reference": {
           "reference": "Condition/hc1"
         },
-        "name": "hc1",
+        "description": "This is a hc1 example for the *Us Core Condition Profile*.",
+        "name": "Hc1 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
       },
       {
         "reference": {
           "reference": "Observation/heart-rate"
         },
-        "name": "heart-rate",
+        "description": "This is a heart rate example for the *Vitalsigns Profile*.",
+        "name": "Heart Rate Example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
       },
       {
         "reference": {
           "reference": "Observation/height"
         },
-        "name": "height",
+        "description": "This is a height example for the *Vitalsigns Profile*.",
+        "name": "Height Example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
       },
       {
         "reference": {
           "reference": "Observation/hemoglobin"
         },
-        "name": "hemoglobin",
+        "description": "This is a hemoglobin example for the *Us Core Observation Lab Profile*.",
+        "name": "Hemoglobin Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Location/hl7east"
         },
-        "name": "hl7east",
+        "description": "This is a hl7east example for the *Us Core Location Profile*.",
+        "name": "Hl7East Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
       },
       {
         "reference": {
           "reference": "Immunization/imm-1"
         },
-        "name": "imm-1",
+        "description": "This is a imm 1 example for the *Us Core Immunization Profile*.",
+        "name": "Imm 1 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
       },
       {
         "reference": {
           "reference": "Observation/length"
         },
-        "name": "length",
+        "description": "This is a length example for the *Vitalsigns Profile*.",
+        "name": "Length Example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
       },
       {
         "reference": {
           "reference": "Observation/mchc"
         },
-        "name": "mchc",
+        "description": "This is a mchc example for the *Us Core Observation Lab Profile*.",
+        "name": "Mchc Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "DiagnosticReport/metabolic-panel"
         },
-        "name": "metabolic-panel",
+        "description": "This is a metabolic panel example for the *Us Core Diagnosticreport Lab Profile*.",
+        "name": "Metabolic Panel Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
       },
       {
         "reference": {
           "reference": "Observation/neutrophils"
         },
-        "name": "neutrophils",
+        "description": "This is a neutrophils example for the *Us Core Observation Lab Profile*.",
+        "name": "Neutrophils Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/satO2-fiO2"
         },
-        "name": "satO2-fiO2",
+        "description": "This is a observation satO2 fiO2 example for the *Us Core Pulse Oximetry Profile*.",
+        "name": "Observation Sato2 Fio2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
       },
       {
         "reference": {
           "reference": "Observation/ofc-percentile"
         },
-        "name": "ofc-percentile",
+        "description": "This is a ofc percentile example for the *Head Occipital Frontal Circumference Percentile Profile*.",
+        "name": "Ofc Percentile Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile"
       },
       {
         "reference": {
           "reference": "Observation/oxygen-saturation"
         },
-        "name": "oxygen-saturation",
+        "description": "This is a oxygen saturation example for the *Vitalsigns Profile*.",
+        "name": "Oxygen Saturation Example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
       },
       {
         "reference": {
           "reference": "Patient/child-example"
         },
-        "name": "child-example",
+        "description": "This is a patient child example for the *Us Core Patient Profile*.",
+        "name": "Patient Child Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
       },
       {
         "reference": {
           "reference": "Patient/example"
         },
-        "name": "example",
+        "description": "This is a patient example for the *Us Core Patient Profile*.",
+        "name": "Patient Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
       },
       {
         "reference": {
           "reference": "Patient/infant-example"
         },
-        "name": "infant-example",
+        "description": "This is a patient infant example for the *Us Core Patient Profile*.",
+        "name": "Patient Infant Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
       },
       {
         "reference": {
           "reference": "Observation/pediatric-bmi-example"
         },
-        "name": "pediatric-bmi-example",
+        "description": "This is a pediatric bmi example for the *Pediatric Bmi For Age Profile*.",
+        "name": "Pediatric Bmi Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age"
       },
       {
         "reference": {
           "reference": "Observation/pediatric-wt-example"
         },
-        "name": "pediatric-wt-example",
+        "description": "This is a pediatric wt example for the *Pediatric Weight For Height Profile*.",
+        "name": "Pediatric Wt Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height"
       },
       {
         "reference": {
           "reference": "Practitioner/practitioner-1"
         },
-        "name": "practitioner-1",
+        "description": "This is a practitioner 1 example for the *Us Core Practitioner Profile*.",
+        "name": "Practitioner 1 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
       },
       {
         "reference": {
           "reference": "Practitioner/practitioner-2"
         },
-        "name": "practitioner-2",
+        "description": "This is a practitioner 2 example for the *Us Core Practitioner Profile*.",
+        "name": "Practitioner 2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
       },
       {
         "reference": {
           "reference": "Procedure/rehab"
         },
-        "name": "rehab",
+        "description": "This is a rehab example for the *Us Core Procedure Profile*.",
+        "name": "Rehab Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
       },
       {
         "reference": {
           "reference": "Observation/respiratory-rate"
         },
-        "name": "respiratory-rate",
+        "description": "This is a respiratory rate example for the *Vitalsigns Profile*.",
+        "name": "Respiratory Rate Example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
       },
       {
         "reference": {
           "reference": "Organization/saint-luke-w-endpoint"
         },
-        "name": "saint-luke-w-endpoint",
+        "description": "This is a saint luke w endpoint example for the *Us Core Organization Profile*.",
+        "name": "Saint Luke W Endpoint Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
       },
       {
         "reference": {
           "reference": "MedicationRequest/self-tylenol"
         },
-        "name": "self-tylenol",
+        "description": "This is a self tylenol example for the *Medicationrequest Profile*.",
+        "name": "Self Tylenol Example",
         "exampleBoolean": true
       },
       {
         "reference": {
           "reference": "Observation/serum-calcium"
         },
-        "name": "serum-calcium",
+        "description": "This is a serum calcium example for the *Us Core Observation Lab Profile*.",
+        "name": "Serum Calcium Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/serum-chloride"
         },
-        "name": "serum-chloride",
+        "description": "This is a serum chloride example for the *Us Core Observation Lab Profile*.",
+        "name": "Serum Chloride Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/serum-co2"
         },
-        "name": "serum-co2",
+        "description": "This is a serum co2 example for the *Us Core Observation Lab Profile*.",
+        "name": "Serum Co2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/serum-creatinine"
         },
-        "name": "serum-creatinine",
+        "description": "This is a serum creatinine example for the *Us Core Observation Lab Profile*.",
+        "name": "Serum Creatinine Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/serum-potassium"
         },
-        "name": "serum-potassium",
+        "description": "This is a serum potassium example for the *Us Core Observation Lab Profile*.",
+        "name": "Serum Potassium Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/serum-sodium"
         },
-        "name": "serum-sodium",
+        "description": "This is a serum sodium example for the *Us Core Observation Lab Profile*.",
+        "name": "Serum Sodium Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/serum-total-bilirubin"
         },
-        "name": "serum-total-bilirubin",
+        "description": "This is a serum total bilirubin example for the *Us Core Observation Lab Profile*.",
+        "name": "Serum Total Bilirubin Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/some-day-smoker"
         },
-        "name": "some-day-smoker",
+        "description": "This is a some day smoker example for the *Us Core Smokingstatus Profile*.",
+        "name": "Some Day Smoker Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
       },
       {
         "reference": {
           "reference": "Observation/temperature"
         },
-        "name": "temperature",
+        "description": "This is a temperature example for the *Vitalsigns Profile*.",
+        "name": "Temperature Example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
       },
       {
         "reference": {
           "reference": "Device/udi-1"
         },
-        "name": "udi-1",
+        "description": "This is a udi 1 example for the *Us Core Implantable Device Profile*.",
+        "name": "Udi 1 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
       },
       {
         "reference": {
           "reference": "DiagnosticReport/urinalysis"
         },
-        "name": "urinalysis",
+        "description": "This is a urinalysis example for the *Us Core Diagnosticreport Lab Profile*.",
+        "name": "Urinalysis Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-bacteria"
         },
-        "name": "urine-bacteria",
+        "description": "This is a urine bacteria example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Bacteria Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-bilirubin"
         },
-        "name": "urine-bilirubin",
+        "description": "This is a urine bilirubin example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Bilirubin Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-cells"
         },
-        "name": "urine-cells",
+        "description": "This is a urine cells example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Cells Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-clarity"
         },
-        "name": "urine-clarity",
+        "description": "This is a urine clarity example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Clarity Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-color"
         },
-        "name": "urine-color",
+        "description": "This is a urine color example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Color Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-epi-cells"
         },
-        "name": "urine-epi-cells",
+        "description": "This is a urine epi cells example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Epi Cells Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-glucose"
         },
-        "name": "urine-glucose",
+        "description": "This is a urine glucose example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Glucose Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-hemoglobin"
         },
-        "name": "urine-hemoglobin",
+        "description": "This is a urine hemoglobin example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Hemoglobin Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-ketone"
         },
-        "name": "urine-ketone",
+        "description": "This is a urine ketone example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Ketone Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-leukocyte-esterase"
         },
-        "name": "urine-leukocyte-esterase",
+        "description": "This is a urine leukocyte esterase example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Leukocyte Esterase Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-nitrite"
         },
-        "name": "urine-nitrite",
+        "description": "This is a urine nitrite example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Nitrite Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-ph"
         },
-        "name": "urine-ph",
+        "description": "This is a urine ph example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Ph Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-protein"
         },
-        "name": "urine-protein",
+        "description": "This is a urine protein example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Protein Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-rbcs"
         },
-        "name": "urine-rbcs",
+        "description": "This is a urine rbcs example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Rbcs Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-sediment"
         },
-        "name": "urine-sediment",
+        "description": "This is a urine sediment example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Sediment Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urine-wbcs"
         },
-        "name": "urine-wbcs",
+        "description": "This is a urine wbcs example for the *Us Core Observation Lab Profile*.",
+        "name": "Urine Wbcs Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/urobilinogen"
         },
-        "name": "urobilinogen",
+        "description": "This is a urobilinogen example for the *Us Core Observation Lab Profile*.",
+        "name": "Urobilinogen Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Medication/uscore-med1"
         },
-        "name": "uscore-med1",
+        "description": "This is a uscore med1 example for the *Us Core Medication Profile*.",
+        "name": "Uscore Med1 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
       },
       {
         "reference": {
           "reference": "Medication/uscore-med2"
         },
-        "name": "uscore-med2",
+        "description": "This is a uscore med2 example for the *Us Core Medication Profile*.",
+        "name": "Uscore Med2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
       },
       {
         "reference": {
           "reference": "MedicationRequest/uscore-mo1"
         },
-        "name": "uscore-mo1",
+        "description": "This is a uscore mo1 example for the *Us Core Medicationrequest Profile*.",
+        "name": "Uscore Mo1 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
       },
       {
         "reference": {
           "reference": "MedicationRequest/uscore-mo2"
         },
-        "name": "uscore-mo2",
+        "description": "This is a uscore mo2 example for the *Us Core Medicationrequest Profile*.",
+        "name": "Uscore Mo2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
       },
       {
         "reference": {
           "reference": "Bundle/uscore-mo3"
         },
-        "name": "uscore-mo3",
+        "description": "This is a uscore mo3 example for the *Bundle Profile*.",
+        "name": "Uscore Mo3 Example",
         "exampleBoolean": true
       },
       {
         "reference": {
           "reference": "Observation/usg"
         },
-        "name": "usg",
+        "description": "This is a usg example for the *Us Core Observation Lab Profile*.",
+        "name": "Usg Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
           "reference": "Observation/vitals-panel"
         },
-        "name": "vitals-panel",
+        "description": "This is a vitals panel example for the *Vitalsigns Profile*.",
+        "name": "Vitals Panel Example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
       },
       {
         "reference": {
           "reference": "Observation/weight"
         },
-        "name": "weight",
+        "description": "This is a weight example for the *Vitalsigns Profile*.",
+        "name": "Weight Example",
         "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
       }
     ],

@@ -21,7 +21,7 @@
             "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
          }
       ]
-   }, 
+   },
    "resourceType": "Observation",
    "valueQuantity": {
       "code": "%",
@@ -32,6 +32,16 @@
    "meta": {
       "profile": [
          "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+      ],
+      "extension": [
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+            "valueString": "Oxygen Saturation Example"
+         },
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+            "valueMarkdown": "This is a oxygen saturation example for the *Vitalsigns Profile*."
+         }
       ]
    },
    "encounter": {

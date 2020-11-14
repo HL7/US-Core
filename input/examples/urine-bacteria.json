@@ -1,54 +1,64 @@
 {
-   "status": "final", 
+   "status": "final",
    "category": [
       {
-         "text": "Laboratory", 
+         "text": "Laboratory",
          "coding": [
             {
-               "code": "laboratory", 
-               "system": "http://terminology.hl7.org/CodeSystem/observation-category", 
+               "code": "laboratory",
+               "system": "http://terminology.hl7.org/CodeSystem/observation-category",
                "display": "Laboratory"
             }
          ]
       }
-   ], 
+   ],
    "code": {
-      "text": "BACTERIA", 
+      "text": "BACTERIA",
       "coding": [
          {
-            "code": "25145-4", 
-            "system": "http://loinc.org", 
+            "code": "25145-4",
+            "system": "http://loinc.org",
             "display": "Bacteria [Presence] in Urine sediment by Light microscopy"
          }
       ]
-   }, 
-   "resourceType": "Observation", 
+   },
+   "resourceType": "Observation",
    "referenceRange": [
       {
          "text": "0-1+"
       }
-   ], 
+   ],
    "meta": {
       "profile": [
          "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      ], 
-      "versionId": "206540", 
-      "lastUpdated": "2016-04-18T03:56:41.250+00:00"
-   }, 
+      ],
+      "versionId": "206540",
+      "lastUpdated": "2016-04-18T03:56:41.250+00:00",
+      "extension": [
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+            "valueString": "Urine Bacteria Example"
+         },
+         {
+            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+            "valueMarkdown": "This is a urine bacteria example for the *Us Core Observation Lab Profile*."
+         }
+      ]
+   },
    "valueCodeableConcept": {
-      "text": "4+", 
+      "text": "4+",
       "coding": [
          {
-            "code": "260350009", 
-            "system": "http://snomed.info/sct", 
+            "code": "260350009",
+            "system": "http://snomed.info/sct",
             "display": "++++"
          }
       ]
-   }, 
-   "effectiveDateTime": "2005-07-05", 
-   "id": "urine-bacteria", 
+   },
+   "effectiveDateTime": "2005-07-05",
+   "id": "urine-bacteria",
    "subject": {
-      "display": "Amy Shaw", 
+      "display": "Amy Shaw",
       "reference": "Patient/example"
    }
 }
