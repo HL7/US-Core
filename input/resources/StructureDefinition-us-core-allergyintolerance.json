@@ -1,146 +1,146 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-allergyintolerance",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance",
-    "version": "3.1.1",
-    "name": "USCoreAllergyIntolerance",
-    "title": "US Core AllergyIntolerance Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2020-06-29",
-    "publisher": "HL7 US Realm Steering Committee",
-    "contact": [
+  "resourceType": "StructureDefinition",
+  "id": "us-core-allergyintolerance",
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance",
+  "version": "3.1.1",
+  "name": "USCoreAllergyIntolerance",
+  "title": "US Core AllergyIntolerance Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-06-29",
+  "publisher": "HL7 US Realm Steering Committee",
+  "contact": [
+    {
+      "telecom": [
         {
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "http://www.healthit.gov"
-                }
-            ]
+          "system": "url",
+          "value": "http://www.healthit.gov"
         }
-    ],
-    "description": "Defines constraints and extensions on the AllergyIntolerance resource for the minimal set of data to query and retrieve allergy information.",
-    "jurisdiction": [
-        {
-            "coding": [
-                {
-                    "system": "urn:iso:std:iso:3166",
-                    "code": "US",
-                    "display": "United States of America"
-                }
-            ]
-        }
-    ],
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "AllergyIntolerance",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "AllergyIntolerance",
-                "path": "AllergyIntolerance",
-                "definition": "The US Core Allergies Profile is based upon the core FHIR AllergyIntolerance Resource and created to meet the 2015 Edition Common Clinical Data Set 'Medical allergies' requirements.",
-                "mustSupport": false,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "AllergyIntolerance"
-                    }
-                ]
-            },
-            {
-                "id": "AllergyIntolerance.clinicalStatus",
-                "path": "AllergyIntolerance.clinicalStatus",
-                "min": 0,
-                "max": "1",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "AllergyIntolerance.status"
-                    }
-                ]
-            },
-            {
-                "id": "AllergyIntolerance.verificationStatus",
-                "path": "AllergyIntolerance.verificationStatus",
-                "min": 0,
-                "max": "1",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-verification"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "AllergyIntolerance.status"
-                    }
-                ]
-            },
-            {
-                "id": "AllergyIntolerance.code",
-                "path": "AllergyIntolerance.code",
-                "min": 1,
-                "max": "1",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "extensible",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-allergy-substance"
-                },
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "AllergyIntolerance.substance"
-                    }
-                ]
-            },
-            {
-                "id": "AllergyIntolerance.patient",
-                "path": "AllergyIntolerance.patient",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-                        ]
-                    }
-                ],
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "AllergyIntolerance.patient"
-                    }
-                ]
-            },
-            {
-                "id": "AllergyIntolerance.reaction",
-                "path": "AllergyIntolerance.reaction",
-                "min": 0,
-                "max": "*",
-                "mustSupport": true
-            },
-            {
-                "id": "AllergyIntolerance.reaction.manifestation",
-                "path": "AllergyIntolerance.reaction.manifestation",
-                "min": 1,
-                "max": "*",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "extensible",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/clinical-findings"
-                }
-            }
-        ]
+      ]
     }
+  ],
+  "description": "Defines constraints and extensions on the AllergyIntolerance resource for the minimal set of data to query and retrieve allergy information.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "AllergyIntolerance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "AllergyIntolerance",
+        "path": "AllergyIntolerance",
+        "definition": "The US Core Allergies Profile is based upon the core FHIR AllergyIntolerance Resource and created to meet the 2015 Edition Common Clinical Data Set 'Medical allergies' requirements.",
+        "mustSupport": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "AllergyIntolerance"
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.clinicalStatus",
+        "path": "AllergyIntolerance.clinicalStatus",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "AllergyIntolerance.status"
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus",
+        "path": "AllergyIntolerance.verificationStatus",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-verification"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "AllergyIntolerance.status"
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.code",
+        "path": "AllergyIntolerance.code",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://vsac.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1186.8"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "AllergyIntolerance.substance"
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.patient",
+        "path": "AllergyIntolerance.patient",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "AllergyIntolerance.patient"
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.reaction",
+        "path": "AllergyIntolerance.reaction",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "AllergyIntolerance.reaction.manifestation",
+        "path": "AllergyIntolerance.reaction.manifestation",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/ValueSet/clinical-findings"
+        }
+      }
+    ]
+  }
 }

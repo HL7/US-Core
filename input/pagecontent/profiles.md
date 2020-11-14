@@ -8,7 +8,7 @@ The following Profiles and have been defined for this implementation guide.
 {% endraw %} -->
 
 
-- [US Core AllergyIntolerance Profile]
+- {:.new-content #FHIR-29322}[US Core AllergyIntolerance Profile]
 - [US Core CarePlan Profile]
 - {:.new-content #FHIR-27769}[US Core CareTeam Profile]
 - {:.new-content #FHIR-29563}[US Core Condition Profile]
