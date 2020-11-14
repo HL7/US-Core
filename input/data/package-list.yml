@@ -69,6 +69,7 @@ list:
       **Trackers items and links to the updated content**
       listed below are the resolved trackers for this version:
 
+      1. Must Support Over Interpreted ([FHIR-28375](https://jira.hl7.org/browse/FHIR-28375)) [See Change Here](StructureDefinition-us-core-allergyintolerance-definitions.html#AllergyIntolerance.code)
 
       1. Replace the US Core Update Allergy substances value set with VSAC reference ([FHIR-29322](https://jira.hl7.org/browse/FHIR-29322)) [See Change Here](StructureDefinition-us-core-allergyintolerance-definitions.html#AllergyIntolerance.code)
 
@@ -113,7 +114,7 @@ list:
 
       1. "Updated guidance regarding gender and sex." ([FHIR-28138](https://jira.hl7.org/browse/FHIR-28138)) [See Change Here](StructureDefinition-us-core-patient.html#FHIR-28138)
 
-      1. Replace the US Core Smoking Status with VSAC reference ([FHIR-28123](https://jira.hl7.org/browse/FHIR-28123),[FHIR-26059](https://jira.hl7.org/browse/FHIR-26059)) [See Change Here](StructureDefinition-us-core-us-core-smokingstatus-definitions.html#Observation.code)
+      1. Replace the US Core Smoking Status with VSAC reference ([FHIR-28123](https://jira.hl7.org/browse/FHIR-28123),[FHIR-26059](https://jira.hl7.org/browse/FHIR-26059)) [See Change Here](StructureDefinition-us-core-us-core-smokingstatus-definitions.html#Observation.value[x]:valueCodeableConcept)
 
       1. Timing association for smoking status changed from `issued` to `effectiveDateTime` ([FHIR-28090](https://jira.hl7.org/browse/FHIR-28090)) [See Change Here](StructureDefinition-us-core-smokingstatus-definitions.html#Observation.effectiveDateTime)
 
@@ -178,6 +179,8 @@ list:
       1. Add must support reference type choices for CareTeam.participant.member Reference ([FHIR-28376](https://jira.hl7.org/browse/FHIR-28376)) [See Change Here](StructureDefinition-us-core-careteam-definitions.html#CareTeam.participant.member)
 
       1. Add choice for and type choices for Encounter.reasonReference ([FHIR-27951](https://jira.hl7.org/browse/FHIR-27951)) [See Change Here](StructureDefinition-us-core-encounter.html#FHIR-27951)
+
+      1. Add choice for Procedure.performed[x] ([FHIR-29695](https://jira.hl7.org/browse/FHIR-29695)) [See Change Here](StructureDefinition-us-core-procedure-definitions.html#Procedure.performed[x])
 
       1. Clarify deleted resources requirements and guidance ([FHIR-28091](https://jira.hl7.org/browse/FHIR-28091)) [See Change Here](general-guidance.html#FHIR-28091)
 
@@ -272,7 +275,7 @@ list:
 
       1. Fix example [US Core heart-rate example](http://hl7.org/fhir/us/core/STU3.1.1/Observation-heart-rate.html) ([FHIR-27086](https://jira.hl7.org/browse/FHIR-27086))
 
-      1. **review period comments** Update [smoking status codes](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-smokingstatus-definitions.html#Observation.valueCodeableConcept) to align with USCDI ([FHIR-27082](https://jira.hl7.org/browse/FHIR-27082)).
+      1. **review period comments** Update [smoking status codes](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-smokingstatus-definitions.html#Observation.value[x]:valueCodeableConcept) to align with USCDI ([FHIR-27082](https://jira.hl7.org/browse/FHIR-27082)).
 
       1. Fix invariant [provenance-1](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-provenance-definitions.html#who) ([FHIR-27065](https://jira.hl7.org/browse/FHIR-27065))
 

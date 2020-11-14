@@ -30,7 +30,7 @@ The following Profiles and have been defined for this implementation guide.
 Profile]
 - [US Core Pediatric Weight for Height Observation Profile]
 - {:.new-content #FHIR-28227}[US Core Practitioner Profile]
-- [US Core PractitionerRole Profile]
+- {:.new-content #FHIR-22488}[US Core PractitionerRole Profile]
 - {:.new-content #FHIR-29563}[US Core Procedure Profile]
 - {:.new-content #FHIR-28165}[US Core Provenance Profile]
 - {:.new-content #FHIR-28934}[US Core Pulse Oximetry Profile]
@@ -48,7 +48,7 @@ The following [Extensions]({{site.data.fhir.path}}extensibility.html) have been 
 {% include list-simple-extensions.xhtml %}
 {% endraw %} -->
 
-- {{:.new-content #FHIR-22488}}[US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
+- {:.new-content #FHIR-22488}[US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
 - [US Core Direct email Extension](StructureDefinition-us-core-direct.html)
 - {:.new-content #FHIR-22488}[US Core Race Extension](StructureDefinition-us-core-race.html)
 - [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html)

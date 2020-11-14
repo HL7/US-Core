@@ -1,4 +1,4 @@
-<div markdown="1" class="bg-info">
+1. 1. <div markdown="1" class="bg-info">
 
 **punch list**:
 
@@ -7,9 +7,23 @@
      - [ ] Document Search requirements in CapabilityStatements
      - [ ] Add Vitals profile
      - [ ] Various vocab issues
+       - [ ] FHIR-29322 still open
 - [ ] Review survey and complete updates to choices of types and References
     - need new Tracker or apply to existing?
-- [ ] Replace value sets with links to VSAC where possible
+    1. CareTeam.participant.member
+    1. DiagnosticReport.performer
+    1. DiagnosticReport.effective[x]
+    1. DocumentReference.author
+    1. Goal.target.due
+    1. Immunization.occurrence[x]
+    1. Laboratory Observation.effective[x]
+    1. Laboratory Value[x]
+    1. MedicationRequest.reported[x]
+    1. MedicationRequest.requester
+    1. MedicationRequest.medication[x]
+    1. **Procedure.performed[x]**
+    1. Provenance.agent.who
+- [X] Replace value sets with links to VSAC where possible
       -  see [this spreadsheet](https://docs.google.com/spreadsheets/d/1BtRNsmrez2D8cm_81qhBaiU0aMmXGAIVDNwXCVAu2tE/edit#gid=0)
 - [ ] Rewrite Must Support section
     - own page?
