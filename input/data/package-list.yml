@@ -43,7 +43,7 @@ list:
         |Detailed ethnicity|Detailed Ethnicity|2.16.840.1.114222.4.11.877|
         |Detailed Race|Race|2.16.840.1.113883.1.11.14914|
         |OMB Ethnicity Categories|Ethnicity|2.16.840.1.114222.4.11.837|
-        |US Core CareTeam Provider Roles|Care Team Member Function|2.16.840.1.113762.1.4.1099.30/Latest|
+        |US Core CareTeam Provider Roles|Care Team Member Function|2.16.840.1.113762.1.4.1099.30|
         |US Core Medication Codes (RxNorm)|Medication Clinical Drug|2.16.840.1.113762.1.4.1010.4|
         |US Core Provider Speciality (NUCC)|Healthcare Provider Taxonomy|2.16.840.1.114222.4.11.1066|
         |US Core Smoking Status|Smoking Status|2.16.840.1.113883.11.20.9.38|
@@ -206,7 +206,7 @@ list:
       1. Review vocabulary to align with CCDA and use VSAC valueset where possible ([FHIR-22488](https://jira.hl7.org/browse/FHIR-22488)) [See Changes Here:
           - [Detailed ethnicity --> Detailed Ethnicity](StructureDefinition-us-core-ethnicity.html#profile)
           - [Detailed Race --> Race](StructureDefinition-us-core-race.html#profile)
-          - [OMB Ethnicity --> Categories|Ethnicity](StructureDefinition-us-core-ethnicity.html#profile)
+          - [OMB Ethnicity --> Categories\|Ethnicity](StructureDefinition-us-core-ethnicity.html#profile)
           - [US Core Medication Codes (RxNorm) --> Medication Clinical Drug](StructureDefinition-us-core-medicationrequest-definitions.html#MedicationRequest.medication[x]) and [here](StructureDefinition-us-core-medication.html#Medication.code)
           - [US Core Provider Speciality (NUCC) --> Healthcare Provider Taxonomy](StructureDefinition-us-core-practitionerrole-definitions.html#PractitionerRole.specialty)
           - [US Core Vaccine Administered Value Set (CVX) --> CVX Vaccines Administered Vaccine Set](StructureDefinition-us-core-immunization-definitions.html#Immunization.vaccineCode)
