@@ -8,10 +8,7 @@ These value sets have been defined for this implementation guide.
 <!-- {% raw %}{% include list-simple-valuesets.xhtml %}{% endraw %} -->
 
 *   [Birth Sex](ValueSet-birthsex.html)
-*   [Detailed ethnicity](ValueSet-detailed-ethnicity.html)
-*   [Detailed Race](ValueSet-detailed-race.html)
 *   [Language codes with language and optionally a region modifier](ValueSet-simple-language.html)
-*   [OMB Ethnicity Categories](ValueSet-omb-ethnicity-category.html)
 *   [OMB Race Categories](ValueSet-omb-race-category.html)
 *   [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
 *   [US Core Common substances for allergy and intolerance documentation including refutations](ValueSet-us-core-allergy-substance.html)
@@ -24,17 +21,14 @@ These value sets have been defined for this implementation guide.
 *   [US Core DocumentReference Type](ValueSet-us-core-documentreference-type.html)
 *   {:.new-content #FHIR-27770}[US Core Encounter Type](ValueSet-us-core-encounter-type.html)
 *   [US Core ICD-10-PCS Procedure Codes](ValueSet-us-core-procedure-icd10pcs.html)
-*   [US Core Medication Codes (RxNorm)](ValueSet-us-core-medication-codes.html)
 *   [US Core Narrative Status](ValueSet-us-core-narrative-status.html)
 *   [US Core Observation Value Codes (SNOMED-CT)](ValueSet-us-core-observation-value-codes.html)
 *   [US Core Procedure Codes](ValueSet-us-core-procedure-code.html)
 *   [US Core Provenance Participant Type Codes](ValueSet-us-core-provenance-participant-type.html)
 *   [US Core Provider Role (NUCC)](ValueSet-us-core-provider-role.html)
-*   [US Core Provider Speciality (NUCC)](ValueSet-us-core-provider-specialty.html)
 *   {:.new-content #FHIR-26059}[US Core Smoking Status](ValueSet-us-core-observation-smokingstatus.html)
 *   [US Core Status for Smoking Status Observation](ValueSet-us-core-observation-smoking-status-status.html)
 *   [US Core Smoking Status Observation Codes](ValueSet-us-core-smoking-status-observation-codes.html)
-*   [US Core Vaccine Administered Value Set (CVX)](ValueSet-us-core-vaccines-cvx.html)
 *   [US Core Vaccine National Drug Codes (NDC)](ValueSet-us-core-ndc-vaccine-codes.html)
 *   {:.new-content #FHIR-26833}[USPS Two Letter Alphabetic Codes](ValueSet-us-core-usps-state.html)
 
