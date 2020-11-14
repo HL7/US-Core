@@ -1257,6 +1257,43 @@ definition:
         name: Language codes with language and optionally a region modifier
         reference:
             reference: ValueSet/simple-language
+    -   description: 'Documentation of substances suspected of (or not suspected of)
+            causing an allergy or intolerance reaction in an individual. **Inclusion
+            Criteria:** specific or general substances to which a patient may be exposed
+            and which may be suspected of causing an adverse reaction; assertions
+            refuting these suspicions. This includes:
+
+
+
+            1. Common dietary substances for allergy and intolerance documentation
+            (SNOMEDCT)
+
+
+            2. Common drug classes for allergy and intolerance documentation (SNOMEDCT)
+
+
+            3. Common drug substances for allergy and intolerance documentation (RXNORM)
+
+
+            4. Common environmental substances for allergy and intolerance documentation
+            (SNOMEDCT)
+
+
+            5. Common refutations and null values for substance causes for allergy
+            and intolerance documentation (SNOMEDCT)
+
+
+
+
+            **Exclusion Criteria:** actual conditions caused by exposure (reactions,
+            allergies)
+
+            '
+        exampleBoolean: false
+        name: US Core Common substances for allergy and intolerance documentation
+            including refutations
+        reference:
+            reference: ValueSet/us-core-allergy-substance
     -   description: Codes for assigning sex at birth as specified by the [Office
             of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc)
         exampleBoolean: false
