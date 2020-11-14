@@ -27,7 +27,7 @@ list:
     current: true
   - version: 3.2
     date: '2021-1-30'
-    desc: >-
+    desc: |-
       These changes in this version have be voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this release and reconciliation of trackers comments.  This version addresses the following key issues:
 
       1. Clarification of the Must Support definitions as it relates to:
@@ -49,11 +49,11 @@ list:
         |US Core Smoking Status|Smoking Status|2.16.840.1.113883.11.20.9.38|
         |US Core Vaccine Administered Value Set (CVX)|CVX Vaccines Administered Vaccine Set|2.16.840.1.113762.1.4.1010.6|
 
-        <!--|US Core Common substances for allergy and intolerance documentation including refutationse|Common substances for allergy and intolerance documentation including refutations|2.16.840.1.113762.1.4.1186.8|-->
+        <!-- |US Core Common substances for allergy and intolerance documentation including refutationse|Common substances for allergy and intolerance documentation including refutations|2.16.840.1.113762.1.4.1186.8| -->
 
         (To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the '{OID}' with an OID from the table above.  Note that you will need a current UMLS account to view the value sets)
 
-      1. Linking terminology directly to the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) - NIH where applicable
+      3. Linking terminology directly to the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) - NIH where applicable
 
       1. Migrating to the standard set of HL7 FHIR IG templates for publishing.  Although we strove to minimize the differences between this version and the previous versions of US Core, these changes are notable:
          - Additional Features include:
