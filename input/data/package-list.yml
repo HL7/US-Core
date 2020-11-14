@@ -37,9 +37,9 @@ list:
         - other?
         (see individual trackers below for details)
       1. Publishing a set US Core Vital Signs independent of the FHIR core profile upon which it is based (see individual trackers below for details)
-        |UC Core Value Set|VSAC Replacment OID|
-        |---|---|
-        |US Core Careteam Provider Roles Value Set|2.16.840.1.113762.1.4.1099.30|
+        |UC Core Value Set|VSAC Value Set|OID|
+        |---|---|---|
+        |US Core Careteam Provider Roles Value Set|Care Team Member Function|2.16.840.1.113762.1.4.1099.30|
 
         (To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the '{OID}' with an OID from the table above.  Note that you will need a current UMLS account to view the value sets)
 
@@ -184,7 +184,7 @@ list:
 
       1. Updated CPT copyright to current year ([FHIR-27770](https://jira.hl7.org/browse/FHIR-27770)) [See Change Here](ValueSet-us-core-encounter-type.html#F27770)
 
-      1. Change binding for CareTeam.participant.role from NUCC to Care Team Member Function, replace the US Core Careteam Provider Roles Value Set with VSAC reference  ([FHIR-27769](https://jira.hl7.org/browse/FHIR-27769)) [See Change Here](rel-link.html#FHIR-27769)
+      1. Change binding for CareTeam.participant.role from NUCC to Care Team Member Function, replace the US Core Careteam Provider Roles Value Set with VSAC reference  ([FHIR-27769](https://jira.hl7.org/browse/FHIR-27769)) [See Change Here](StructureDefinition-us-core-careteam-definitions.html#CareTeam.participant.role)
 
       1. Remove US Core Server Capability Statement *requires* support for HTTP status 410-deleted ([FHIR-26597](https://jira.hl7.org/browse/FHIR-26597)) [See Change Here](CapabilityStatement-us-core-server.html#behavior)
 
