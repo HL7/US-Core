@@ -177,8 +177,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "description": "Prescribable medications",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes"
+          "valueSet": "http://vsac.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4"
         },
         "mapping": [
           {
@@ -310,4 +309,5 @@
       }
     ]
   }
+}
 }

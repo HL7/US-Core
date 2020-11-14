@@ -1,187 +1,187 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-practitionerrole",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-    "version": "3.1.1",
-    "name": "USCorePractitionerRoleProfile",
-    "title": "US Core PractitionerRole Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2019-08-11",
-    "publisher": "HL7 US Realm Steering Committee",
-    "contact": [
+  "resourceType": "StructureDefinition",
+  "id": "us-core-practitionerrole",
+  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+  "version": "3.1.1",
+  "name": "USCorePractitionerRoleProfile",
+  "title": "US Core PractitionerRole Profile",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-08-11",
+  "publisher": "HL7 US Realm Steering Committee",
+  "contact": [
+    {
+      "telecom": [
         {
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "http://www.healthit.gov"
-                }
-            ]
+          "system": "url",
+          "value": "http://www.healthit.gov"
         }
-    ],
-    "description": "The practitioner roles referenced in the US Core profiles.",
-    "jurisdiction": [
-        {
-            "coding": [
-                {
-                    "system": "urn:iso:std:iso:3166",
-                    "code": "US",
-                    "display": "United States of America"
-                }
-            ]
-        }
-    ],
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
-    "abstract": false,
-    "type": "PractitionerRole",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
-            {
-                "id": "PractitionerRole",
-                "path": "PractitionerRole",
-                "definition": "This is basic constraint on PractitionerRole for use in US Core resources.",
-                "constraint": [
-                    {
-                        "key": "pd-1",
-                        "severity": "error",
-                        "human": "SHALL have contact information or a reference to an Endpoint",
-                        "expression": "telecom or endpoint",
-                        "xpath": "exists(f:telecom) or exists(f:endpoint)"
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "PractitionerRole.practitioner",
-                "path": "PractitionerRole.practitioner",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "PractitionerRole.organization",
-                "path": "PractitionerRole.organization",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "PractitionerRole.code",
-                "path": "PractitionerRole.code",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "mustSupport": true,
-                "binding": {
-                    "strength": "extensible",
-                    "description": "Provider role codes consisting of NUCC Health Care Provider Taxonomy Code Set for providers.",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role"
-                }
-            },
-            {
-                "id": "PractitionerRole.specialty",
-                "path": "PractitionerRole.specialty",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "mustSupport": true,
-                "binding": {
-                    "strength": "extensible",
-                    "description": "Provider specialty codes consist of NUCC Health Care Provider Taxonomy Code Set for providers.",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-provider-specialty"
-                }
-            },
-            {
-                "id": "PractitionerRole.location",
-                "path": "PractitionerRole.location",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/StructureDefinition/Location"
-                        ]
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "PractitionerRole.telecom",
-                "path": "PractitionerRole.telecom",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "ContactPoint"
-                    }
-                ],
-                "condition": [
-                    "pd-1"
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "PractitionerRole.telecom.system",
-                "path": "PractitionerRole.telecom.system",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "code"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "PractitionerRole.telecom.value",
-                "path": "PractitionerRole.telecom.value",
-                "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "string"
-                    }
-                ],
-                "mustSupport": true
-            },
-            {
-                "id": "PractitionerRole.endpoint",
-                "path": "PractitionerRole.endpoint",
-                "min": 0,
-                "max": "*",
-                "condition": [
-                    "pd-1"
-                ],
-                "mustSupport": true
-            }
-        ]
+      ]
     }
+  ],
+  "description": "The practitioner roles referenced in the US Core profiles.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "PractitionerRole",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "PractitionerRole",
+        "path": "PractitionerRole",
+        "definition": "This is basic constraint on PractitionerRole for use in US Core resources.",
+        "constraint": [
+          {
+            "key": "pd-1",
+            "severity": "error",
+            "human": "SHALL have contact information or a reference to an Endpoint",
+            "expression": "telecom or endpoint",
+            "xpath": "exists(f:telecom) or exists(f:endpoint)"
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "PractitionerRole.practitioner",
+        "path": "PractitionerRole.practitioner",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.organization",
+        "path": "PractitionerRole.organization",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.code",
+        "path": "PractitionerRole.code",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "Provider role codes consisting of NUCC Health Care Provider Taxonomy Code Set for providers.",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role"
+        }
+      },
+      {
+        "id": "PractitionerRole.specialty",
+        "path": "PractitionerRole.specialty",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://vsac.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066"
+        }
+      },
+      {
+        "id": "PractitionerRole.location",
+        "path": "PractitionerRole.location",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Location"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.telecom",
+        "path": "PractitionerRole.telecom",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ContactPoint"
+          }
+        ],
+        "condition": [
+          "pd-1"
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.telecom.system",
+        "path": "PractitionerRole.telecom.system",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.telecom.value",
+        "path": "PractitionerRole.telecom.value",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.endpoint",
+        "path": "PractitionerRole.endpoint",
+        "min": 0,
+        "max": "*",
+        "condition": [
+          "pd-1"
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}
 }

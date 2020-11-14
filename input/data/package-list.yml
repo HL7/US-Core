@@ -204,9 +204,13 @@ list:
 
       1. Remove identifier (OID) from ValueSet: US Core Encounter Type ([FHIR-29691](https://jira.hl7.org/browse/FHIR-29691)) [See Change Here](ValueSet-us-core-encounter-type.html)
 
-      1. Review vocabulary to align with CCDA and use VSAC valueset where possible ([FHIR-22488](https://jira.hl7.org/browse/FHIR-22488)) [See Changes Here]:
-          - [1](#.html)
-          - [2](#.html)
+      1. Review vocabulary to align with CCDA and use VSAC valueset where possible ([FHIR-22488](https://jira.hl7.org/browse/FHIR-22488)) [See Changes Here:
+          - [Detailed ethnicity --> Detailed Ethnicity]()
+          - [Detailed Race --> Race]()
+          - [OMB Ethnicity --> Categories|Ethnicity]()
+          - [US Core Medication Codes (RxNorm) --> Medication Clinical Drug]()
+          - [US Core Provider Speciality (NUCC) --> Healthcare Provider Taxonomy]()
+          - [US Core Vaccine Administered Value Set (CVX) --> CVX Vaccines Administered Vaccine Set]()
 
     path: 'http://hl7.org/fhir/us/core/STU3.2'
     status: trial-use
