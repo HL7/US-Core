@@ -15,7 +15,7 @@
     - own page?
     - examples?
     - screen shots of SD tree?
-- [ ] Add note to balloters whether want custom summaires
+- [X] Add note to balloters whether want custom summaries
 - [ ] QA
      - [ ] review applied trackers
      - [ ] warnings on name and description waiting for Sushi to implement see [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Adding.20Description.20for.20Examples.20to.20ImplementationGuide.20-.20how)
