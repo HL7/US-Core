@@ -8,7 +8,7 @@
      - [ ] Add Vitals profile
      - [ ] Various vocab issues
        - [ ] FHIR-29322 still open
-- [ ] Review survey and complete updates to choices of types and References
+- [X] Review survey and complete updates to choices of types and References
     - need new Tracker or apply to existing?
     1. CareTeam.participant.member
     1. DiagnosticReport.performer
@@ -21,14 +21,15 @@
     1. MedicationRequest.reported[x]
     1. MedicationRequest.requester
     1. MedicationRequest.medication[x]
-    1. **Procedure.performed[x]**
+    1. **Procedure.performed[x]
     1. Provenance.agent.who
 - [X] Replace value sets with links to VSAC where possible
       -  see [this spreadsheet](https://docs.google.com/spreadsheets/d/1BtRNsmrez2D8cm_81qhBaiU0aMmXGAIVDNwXCVAu2tE/edit#gid=0)
 - [ ] Rewrite Must Support section
-    - own page?
-    - examples?
-    - screen shots of SD tree?
+    - [ ] own page
+    - [ ] draft [here](https://docs.google.com/document/d/1LenTi2KJ7-qcU4HLeDquXoHqpFbAxsV6uIfC6CqMsUU/edit?usp=sharing)
+        - examples?
+        - screen shots of SD tree?
 - [X] Add note to balloters whether want custom summaries
 - [ ] QA
      - [ ] review applied trackers
