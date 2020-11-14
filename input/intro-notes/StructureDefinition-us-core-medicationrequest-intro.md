@@ -27,17 +27,20 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each MedicationRequest must support:**
 
-1. the `reported` flag signaling that information is from a secondary source such as a patient.
+1. The `reported` flag  or reference signaling that information is from a secondary source such as a patient.
 1. the encounter
 1. the prescription *Sig*
 **Profile specific implementation guidance:**
 
 * See the [Medication List Guidance] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
 *  The MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
-    *  When referencing a Medication resource,  the resource may be [contained] or an external resource.
+    *  When referencing a Medication resource, the resource may be [contained] or an external resource.
     *  {:.new-content #FHIR-28395}The server systems are not required to support both a code and a reference, but **SHALL** support *at least one* of these methods.
     * If an external reference to Medication is used, the server SHALL support the [`_include`] parameter for searching this element.
-    *  The client application SHALL support all methods.  
+    *  The client application SHALL support all methods.
+* {:.new-content #FHIR-28381}The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or other resource.
+   *   Although both are marked as must support, the server systems are not required to support both a boolean and a reference, but **SHALL** choose to support at least one of these elements.
+   * The client application **SHALL** support both elements.
 *  Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
 
 ### Examples

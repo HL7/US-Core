@@ -1,4 +1,4 @@
-1. 1. <div markdown="1" class="bg-info">
+<div markdown="1" class="bg-info">
 
 **punch list**:
 
@@ -21,7 +21,7 @@
     1. MedicationRequest.reported[x]
     1. MedicationRequest.requester
     1. MedicationRequest.medication[x]
-    1. **Procedure.performed[x]
+    1. Procedure.performed[x]
     1. Provenance.agent.who
 - [X] Replace value sets with links to VSAC where possible
       -  see [this spreadsheet](https://docs.google.com/spreadsheets/d/1BtRNsmrez2D8cm_81qhBaiU0aMmXGAIVDNwXCVAu2tE/edit#gid=0)
