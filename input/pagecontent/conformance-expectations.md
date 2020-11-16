@@ -44,7 +44,8 @@ For example, the [US Core DocumentReference Profile] author US Core Practitioner
 
 Systems can support other references but this is not a requirement of US Core. 
 
-- insert image from google doc-
+
+{% include img.html img="Must_Support_DocumentReference.jpg" caption="Figure 1: US Core DocumentReference.author" %}
 
 #### Must Support - Elements
 
@@ -52,23 +53,25 @@ In certain profiles only specific elements are labeled as *Must Support*.
 
 For example, the [US Core Laboratory Result Observation Profile] effectiveDateTime is labeled *Must Support*. When claiming conformance to the [US Core Laboratory Result Observation Profile]:
 
-* US Core Responders **SHALL** be capable of populating Obervation.effectiveDateTime.
-* US Core Requestors **SHALL** be capable of processing Obervation.effectiveDateTime
+* US Core Responders **SHALL** be capable of populating Observation.effectiveDateTime.
+* US Core Requestors **SHALL** be capable of processing Observation.effectiveDateTime.
 
 Systems can support the other elements, but this is not a requirement of US Core. 
 
-- insert image from google doc-
+
+{% include img.html img="Must_Support_Observation.effective.jpg" caption="Figure 2: US Core Observation.effectiveDateTime" %}
 
 For the [US Core Laboratory Result Observation Profile] value element, multiple elements are labeled *Must Support*.
 
 When claiming conformance to the [US Core Laboratory Result Observation Profile]:
 
-* US Core Responders **SHALL** be capable of populating Obervation.valueQuantity, Obervation.valueCodeableConcept, and Obervation.valueString.
-* US Core Requestors **SHALL** be capable of processing  Obervation.valueQuantity, Obervation.valueCodeableConcept, and Obervation.valueString.
+* US Core Responders **SHALL** be capable of populating Observation.valueQuantity, Observation.valueCodeableConcept, and Observation.valueString.
+* US Core Requestors **SHALL** be capable of processing Observation.valueQuantity, Observation.valueCodeableConcept, and Observation.valueString.
 
 Systems can support the other elements, but this is not a requirement of US Core.
 
-- insert image from google doc-
+
+{% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 3: US Core Observation.value[x]" %}
 
 
 {% include link-list.md %}
