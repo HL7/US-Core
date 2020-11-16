@@ -39,6 +39,7 @@
 [ConceptMap]: {{site.data.fhir.path}}conceptmap.html
 [Condition Quick Start]: StructureDefinition-us-core-condition.html#search
 [Condition]: {{site.data.fhir.path}}condition.html
+[Conformance Expectations]: conformance-expectations.html  "Conformance Expectations Page"
 [Conformance Requirements for Client]: CapabilityStatement-us-core-r4-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-us-core-server.html "Conformance Requirements for Server Page"
 [Conformance Requirements]: capstatements.html "CapabilityStatements defined for this Guide"
@@ -77,6 +78,7 @@
 [FHIR Data Types]: {{site.data.fhir.path}}datatypes.html
 [FHIR Digital Signatures]: {{site.data.fhir.path}}security.html#digital%20signatures
 [FHIR Documents]: {{site.data.fhir.path}}documents.html
+[FHIR Must Support]: {{site.data.fhir.path}}conformance-rules.html#mustSupport
 [FHIR Paging]: {{site.data.fhir.path}}http.html#paging
 [FHIR Provenance]: {{site.data.fhir.path}}provenance.html
 [FHIR RESTful API]: {{site.data.fhir.path}}http.html

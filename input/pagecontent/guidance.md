@@ -1,5 +1,6 @@
 
 - [General Guidance]
+- [Conformance Expectations]
 - [Clinical Notes Guidance]
 - [Medication List Guidance]
 - [Basic Provenance]
