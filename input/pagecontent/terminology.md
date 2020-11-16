@@ -40,7 +40,6 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 <!-- {% raw %}{% include list-simple-codesystems.xhtml %}{% endraw %} -->
 
-*   [Race & Ethnicity - CDC](CodeSystem-cdcrec.html)
 *   [US Core CarePlan Category Extension Codes](CodeSystem-careplan-category.html)
 *   [US Core Condition Category Extension Codes](CodeSystem-condition-category.html)
 *   [US Core DocumentReferences Category Codes](CodeSystem-us-core-documentreference-category.html)
