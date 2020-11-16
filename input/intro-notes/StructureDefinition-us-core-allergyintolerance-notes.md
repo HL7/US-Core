@@ -1,7 +1,10 @@
+### Quick Start
+{:#search}
+
+Below is an overview of the required set of Server RESTful FHIR interactions - for example, search and read operations - for this profile. See the [Conformance requirements](capstatements.html) for a complete list of supported RESTful interactions for this IG.
+
 
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
-
-
 
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
