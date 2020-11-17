@@ -41,7 +41,7 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 
 ### Referencing US Core Profiles
 
-The search expectations and US Core Profiles have been developed and thoroughly tested using only *logical FHIR ids*.  Therefore a [reference] to a US Core resource **SHOULD** include a logical id (`Reference.reference`), not an identifier (`Reference.identifier`).
+The search expectations and US Core Profiles have been developed and tested using *logical FHIR ids*.  Therefore a [reference] to a US Core resource **SHOULD** include a logical id (`Reference.reference`), not an identifier (`Reference.identifier`).
 {:.new-content #FHIR-28573}
 
 Many of the profiles in this guide [reference] other FHIR resources that are also US Core Profiles.  This is defined in the formal profile definitions.  For example, [US Core CareTeam Profile] references US Core Patient.  For any other references to base FHIR resources[^2] or not formally defined in a US Core Profiles, the referenced resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.  US Core Resources in the [differential view] and marked as "Must Support" follow the Must Support rules listed above.  Other resources allowed in the base FHIR specification may be referenced even though the current publication framework does not display them.  For example, RelatedPerson is an allowed target reference in `DocumentReference.author`.

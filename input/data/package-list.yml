@@ -28,13 +28,13 @@ list:
   - version: 3.2
     date: '2021-1-30'
     desc: |-
-      These changes in this version have be voted on by the members of the [HL7 International Cross-Group Projects WorkGroup](http://www.hl7.org/Special/committees/cgp/index.cfm) who is sponsoring this release and reconciliation of trackers comments.  This version addresses the following key issues:
+      The changes in this version have been voted on by the members of the sponsoring work group [HL7 International Cross-Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).  This version addresses the following key issues:
 
       1. Clarification of the Must Support definitions as it relates to:
         - Polymorphic datatypes, which of the possible types must be supported
         - Reference datatype (Reference, canonical) which of the target types must be supported
-        - For the vital signs profile in the Core Specification which profiles must be supported
-        - other?
+        - The vital signs profile in the Core Specification which profiles must be supported
+        - New [Conformance Expectations] page
         (see individual trackers below for details)
       1. Publishing a set US Core Vital Signs independent of the FHIR core profile upon which it is based (see individual trackers below for details)
 
@@ -50,7 +50,7 @@ list:
         |US Core Vaccine Administered Value Set (CVX)|CVX Vaccines Administered Vaccine Set|2.16.840.1.113762.1.4.1010.6|
         {:.grid}
 
-        (To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the '{OID}' with an OID from the table above.  Note that you will need a current UMLS account to view the value sets)
+        (To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the '{OID}' with an OID from the table above.  Note that you will need a current UMLS account to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html).)
 
       3. Linking terminology directly to the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) - NIH where applicable
 
@@ -73,7 +73,7 @@ list:
 
       1. Update Organization Quick Start Example Search. ([FHIR-29269](https://jira.hl7.org/browse/FHIR-29269)) [See Change Here](StructureDefinition-us-core-organization.html#FHIR-29269)
 
-      1. birthsex binding applied to wrong element in US Core Patient differential ([FHIR-29262](https://jira.hl7.org/browse/FHIR-29262)) [See Change Here](StructureDefinition-us-core-patient.profile.json.html)
+      1. birthsex binding applied to the wrong element in US Core Patient StructuredDefinition/differential ([FHIR-29262](https://jira.hl7.org/browse/FHIR-29262)) [See Change Here](StructureDefinition-us-core-patient.profile.json.html)
 
       1. us-core-12 invariant interpretation ([FHIR-28942](https://jira.hl7.org/browse/FHIR-28942)) [See Changes Here](StructureDefinition-us-core-implantable-device.html#FHIR-28942)
 
@@ -85,7 +85,7 @@ list:
 
       1. Make Provenance.author optional ([FHIR-28517](https://jira.hl7.org/browse/FHIR-28517)) [See Change Here](rel-link.html#FHIR-28517)
 
-      1. Add must support type choices for US Core Goal.target.due[x]. ([FHIR-28477](https://jira.hl7.org/browse/FHIR-28477)) [See Change Here](StructureDefinition-us-core-goal-definitions.html#Goal.target.due[x])
+      1. Add must support type choices for US Core Goal.target.due[x]. ([FHIR-28477](https://jira.hl7.org/browse/FHIR-28477)) [See Change Here](StructureDefinition-us-core-goal-definitions.html)
 
       1. Immunization Profile Mandatory and Must Support Intro is missing attributes ([FHIR-28452](https://jira.hl7.org/browse/FHIR-28452)) [See Change Here](StructureDefinition-us-core-immunization.html#FHIR-28452)
 
