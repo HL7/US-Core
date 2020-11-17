@@ -1,0 +1,4869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd-CURRENT/valueset.xsd">
+	<id value="cdcrec"/>
+	<url value="urn:oid:2.16.840.1.113883.6.238"/>
+	<identifier>
+		<value value="2.16.840.1.113883.6.238"/>
+	</identifier>
+	<version value="1.0.1"/>
+	<name value="RaceAndEthnicityCDC"/>
+	<title value="Race &amp; Ethnicity - CDC"/>
+	<status value="active"/>
+	<experimental value="false"/>
+	<date value="2019-05-21"/>
+	<publisher value="HL7 US Realm Steering Committee"/>
+	<contact>
+		<telecom>
+			<system value="url"/>
+			<value value="http://hl7.org"/>
+		</telecom>
+	</contact>
+	<description value=" The U.S. Centers for Disease Control and Prevention (CDC) has prepared a code set for use in codingrace and ethnicity data. This code set is based on current federal standards for classifying data onrace and ethnicity, specifically the minimum race and ethnicity categories defined by the U.S. Office ofManagement and Budget (OMB) and a more detailed set of race and ethnicity categories maintainedby the U.S. Bureau of the Census (BC). The main purpose of the code set is to facilitate use of federalstandards for classifying data on race and ethnicity when these data are exchanged, stored, retrieved,or analyzed in electronic form. At the same time, the code set can be applied to paper-based recordsystems to the extent that these systems are used to collect, maintain, and report data on race andethnicity in accordance with current federal standards. Source: [Race and Ethnicity Code Set Version 1.0](https://www.cdc.gov/phin/resources/vocabulary/documents/cdc-race--ethnicity-background-and-purpose.pdf)."/>
+	<caseSensitive value="true"/>
+	<hierarchyMeaning value="is-a"/>
+	<content value="complete"/>
+	<count value="966"/>
+	<property>
+		<code value="abstract"/>
+		<description value="True if an element is considered 'abstract' - in other words, the code is not for use as a real concept"/>
+		<type value="boolean"/>
+	</property>
+	<concept>
+		<code value="1000-9"/>
+		<display value="Race"/>
+		<definition value="Race, Note that this is an abstract 'grouping' concept and not for use as a real concept"/>
+		<property>
+			<code value="abstract"/>
+			<valueBoolean value="true"/>
+		</property>
+		<concept>
+			<code value="1002-5"/>
+			<display value="American Indian or Alaska Native"/>
+			<definition value="American Indian or Alaska Native"/>
+			<concept>
+				<code value="1004-1"/>
+				<display value="American Indian"/>
+				<definition value="American Indian"/>
+			</concept>
+			<concept>
+				<code value="1735-0"/>
+				<display value="Alaska Native"/>
+				<definition value="Alaska Native"/>
+			</concept>
+			<concept>
+				<code value="1006-6"/>
+				<display value="Abenaki"/>
+				<definition value="Abenaki"/>
+			</concept>
+			<concept>
+				<code value="1008-2"/>
+				<display value="Algonquian"/>
+				<definition value="Algonquian"/>
+			</concept>
+			<concept>
+				<code value="1010-8"/>
+				<display value="Apache"/>
+				<definition value="Apache"/>
+			</concept>
+			<concept>
+				<code value="1021-5"/>
+				<display value="Arapaho"/>
+				<definition value="Arapaho"/>
+			</concept>
+			<concept>
+				<code value="1026-4"/>
+				<display value="Arikara"/>
+				<definition value="Arikara"/>
+			</concept>
+			<concept>
+				<code value="1028-0"/>
+				<display value="Assiniboine"/>
+				<definition value="Assiniboine"/>
+			</concept>
+			<concept>
+				<code value="1030-6"/>
+				<display value="Assiniboine Sioux"/>
+				<definition value="Assiniboine Sioux"/>
+			</concept>
+			<concept>
+				<code value="1033-0"/>
+				<display value="Bannock"/>
+				<definition value="Bannock"/>
+			</concept>
+			<concept>
+				<code value="1035-5"/>
+				<display value="Blackfeet"/>
+				<definition value="Blackfeet"/>
+			</concept>
+			<concept>
+				<code value="1037-1"/>
+				<display value="Brotherton"/>
+				<definition value="Brotherton"/>
+			</concept>
+			<concept>
+				<code value="1039-7"/>
+				<display value="Burt Lake Band"/>
+				<definition value="Burt Lake Band"/>
+			</concept>
+			<concept>
+				<code value="1041-3"/>
+				<display value="Caddo"/>
+				<definition value="Caddo"/>
+			</concept>
+			<concept>
+				<code value="1044-7"/>
+				<display value="Cahuilla"/>
+				<definition value="Cahuilla"/>
+			</concept>
+			<concept>
+				<code value="1053-8"/>
+				<display value="California Tribes"/>
+				<definition value="California Tribes"/>
+			</concept>
+			<concept>
+				<code value="1068-6"/>
+				<display value="Canadian and Latin American Indian"/>
+				<definition value="Canadian and Latin American Indian"/>
+			</concept>
+			<concept>
+				<code value="1076-9"/>
+				<display value="Catawba"/>
+				<definition value="Catawba"/>
+			</concept>
+			<concept>
+				<code value="1078-5"/>
+				<display value="Cayuse"/>
+				<definition value="Cayuse"/>
+			</concept>
+			<concept>
+				<code value="1080-1"/>
+				<display value="Chehalis"/>
+				<definition value="Chehalis"/>
+			</concept>
+			<concept>
+				<code value="1082-7"/>
+				<display value="Chemakuan"/>
+				<definition value="Chemakuan"/>
+			</concept>
+			<concept>
+				<code value="1086-8"/>
+				<display value="Chemehuevi"/>
+				<definition value="Chemehuevi"/>
+			</concept>
+			<concept>
+				<code value="1088-4"/>
+				<display value="Cherokee"/>
+				<definition value="Cherokee"/>
+			</concept>
+			<concept>
+				<code value="1100-7"/>
+				<display value="Cherokee Shawnee"/>
+				<definition value="Cherokee Shawnee"/>
+			</concept>
+			<concept>
+				<code value="1102-3"/>
+				<display value="Cheyenne"/>
+				<definition value="Cheyenne"/>
+			</concept>
+			<concept>
+				<code value="1106-4"/>
+				<display value="Cheyenne-Arapaho"/>
+				<definition value="Cheyenne-Arapaho"/>
+			</concept>
+			<concept>
+				<code value="1108-0"/>
+				<display value="Chickahominy"/>
+				<definition value="Chickahominy"/>
+			</concept>
+			<concept>
+				<code value="1112-2"/>
+				<display value="Chickasaw"/>
+				<definition value="Chickasaw"/>
+			</concept>
+			<concept>
+				<code value="1114-8"/>
+				<display value="Chinook"/>
+				<definition value="Chinook"/>
+			</concept>
+			<concept>
+				<code value="1123-9"/>
+				<display value="Chippewa"/>
+				<definition value="Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1150-2"/>
+				<display value="Chippewa Cree"/>
+				<definition value="Chippewa Cree"/>
+			</concept>
+			<concept>
+				<code value="1153-6"/>
+				<display value="Chitimacha"/>
+				<definition value="Chitimacha"/>
+			</concept>
+			<concept>
+				<code value="1155-1"/>
+				<display value="Choctaw"/>
+				<definition value="Choctaw"/>
+			</concept>
+			<concept>
+				<code value="1162-7"/>
+				<display value="Chumash"/>
+				<definition value="Chumash"/>
+			</concept>
+			<concept>
+				<code value="1165-0"/>
+				<display value="Clear Lake"/>
+				<definition value="Clear Lake"/>
+			</concept>
+			<concept>
+				<code value="1167-6"/>
+				<display value="Coeur D&apos;Alene"/>
+				<definition value="Coeur D&apos;Alene"/>
+			</concept>
+			<concept>
+				<code value="1169-2"/>
+				<display value="Coharie"/>
+				<definition value="Coharie"/>
+			</concept>
+			<concept>
+				<code value="1171-8"/>
+				<display value="Colorado River"/>
+				<definition value="Colorado River"/>
+			</concept>
+			<concept>
+				<code value="1173-4"/>
+				<display value="Colville"/>
+				<definition value="Colville"/>
+			</concept>
+			<concept>
+				<code value="1175-9"/>
+				<display value="Comanche"/>
+				<definition value="Comanche"/>
+			</concept>
+			<concept>
+				<code value="1178-3"/>
+				<display value="Coos, Lower Umpqua, Siuslaw"/>
+				<definition value="Coos, Lower Umpqua, Siuslaw"/>
+			</concept>
+			<concept>
+				<code value="1180-9"/>
+				<display value="Coos"/>
+				<definition value="Coos"/>
+			</concept>
+			<concept>
+				<code value="1182-5"/>
+				<display value="Coquilles"/>
+				<definition value="Coquilles"/>
+			</concept>
+			<concept>
+				<code value="1184-1"/>
+				<display value="Costanoan"/>
+				<definition value="Costanoan"/>
+			</concept>
+			<concept>
+				<code value="1186-6"/>
+				<display value="Coushatta"/>
+				<definition value="Coushatta"/>
+			</concept>
+			<concept>
+				<code value="1189-0"/>
+				<display value="Cowlitz"/>
+				<definition value="Cowlitz"/>
+			</concept>
+			<concept>
+				<code value="1191-6"/>
+				<display value="Cree"/>
+				<definition value="Cree"/>
+			</concept>
+			<concept>
+				<code value="1193-2"/>
+				<display value="Creek"/>
+				<definition value="Creek"/>
+			</concept>
+			<concept>
+				<code value="1207-0"/>
+				<display value="Croatan"/>
+				<definition value="Croatan"/>
+			</concept>
+			<concept>
+				<code value="1209-6"/>
+				<display value="Crow"/>
+				<definition value="Crow"/>
+			</concept>
+			<concept>
+				<code value="1211-2"/>
+				<display value="Cupeno"/>
+				<definition value="Cupeno"/>
+			</concept>
+			<concept>
+				<code value="1214-6"/>
+				<display value="Delaware"/>
+				<definition value="Delaware"/>
+			</concept>
+			<concept>
+				<code value="1222-9"/>
+				<display value="Diegueno"/>
+				<definition value="Diegueno"/>
+			</concept>
+			<concept>
+				<code value="1233-6"/>
+				<display value="Eastern Tribes"/>
+				<definition value="Eastern Tribes"/>
+			</concept>
+			<concept>
+				<code value="1250-0"/>
+				<display value="Esselen"/>
+				<definition value="Esselen"/>
+			</concept>
+			<concept>
+				<code value="1252-6"/>
+				<display value="Fort Belknap"/>
+				<definition value="Fort Belknap"/>
+			</concept>
+			<concept>
+				<code value="1254-2"/>
+				<display value="Fort Berthold"/>
+				<definition value="Fort Berthold"/>
+			</concept>
+			<concept>
+				<code value="1256-7"/>
+				<display value="Fort Mcdowell"/>
+				<definition value="Fort Mcdowell"/>
+			</concept>
+			<concept>
+				<code value="1258-3"/>
+				<display value="Fort Hall"/>
+				<definition value="Fort Hall"/>
+			</concept>
+			<concept>
+				<code value="1260-9"/>
+				<display value="Gabrieleno"/>
+				<definition value="Gabrieleno"/>
+			</concept>
+			<concept>
+				<code value="1262-5"/>
+				<display value="Grand Ronde"/>
+				<definition value="Grand Ronde"/>
+			</concept>
+			<concept>
+				<code value="1264-1"/>
+				<display value="Gros Ventres"/>
+				<definition value="Gros Ventres"/>
+			</concept>
+			<concept>
+				<code value="1267-4"/>
+				<display value="Haliwa"/>
+				<definition value="Haliwa"/>
+			</concept>
+			<concept>
+				<code value="1269-0"/>
+				<display value="Hidatsa"/>
+				<definition value="Hidatsa"/>
+			</concept>
+			<concept>
+				<code value="1271-6"/>
+				<display value="Hoopa"/>
+				<definition value="Hoopa"/>
+			</concept>
+			<concept>
+				<code value="1275-7"/>
+				<display value="Hoopa Extension"/>
+				<definition value="Hoopa Extension"/>
+			</concept>
+			<concept>
+				<code value="1277-3"/>
+				<display value="Houma"/>
+				<definition value="Houma"/>
+			</concept>
+			<concept>
+				<code value="1279-9"/>
+				<display value="Inaja-Cosmit"/>
+				<definition value="Inaja-Cosmit"/>
+			</concept>
+			<concept>
+				<code value="1281-5"/>
+				<display value="Iowa"/>
+				<definition value="Iowa"/>
+			</concept>
+			<concept>
+				<code value="1285-6"/>
+				<display value="Iroquois"/>
+				<definition value="Iroquois"/>
+			</concept>
+			<concept>
+				<code value="1297-1"/>
+				<display value="Juaneno"/>
+				<definition value="Juaneno"/>
+			</concept>
+			<concept>
+				<code value="1299-7"/>
+				<display value="Kalispel"/>
+				<definition value="Kalispel"/>
+			</concept>
+			<concept>
+				<code value="1301-1"/>
+				<display value="Karuk"/>
+				<definition value="Karuk"/>
+			</concept>
+			<concept>
+				<code value="1303-7"/>
+				<display value="Kaw"/>
+				<definition value="Kaw"/>
+			</concept>
+			<concept>
+				<code value="1305-2"/>
+				<display value="Kickapoo"/>
+				<definition value="Kickapoo"/>
+			</concept>
+			<concept>
+				<code value="1309-4"/>
+				<display value="Kiowa"/>
+				<definition value="Kiowa"/>
+			</concept>
+			<concept>
+				<code value="1312-8"/>
+				<display value="Klallam"/>
+				<definition value="Klallam"/>
+			</concept>
+			<concept>
+				<code value="1317-7"/>
+				<display value="Klamath"/>
+				<definition value="Klamath"/>
+			</concept>
+			<concept>
+				<code value="1319-3"/>
+				<display value="Konkow"/>
+				<definition value="Konkow"/>
+			</concept>
+			<concept>
+				<code value="1321-9"/>
+				<display value="Kootenai"/>
+				<definition value="Kootenai"/>
+			</concept>
+			<concept>
+				<code value="1323-5"/>
+				<display value="Lassik"/>
+				<definition value="Lassik"/>
+			</concept>
+			<concept>
+				<code value="1325-0"/>
+				<display value="Long Island"/>
+				<definition value="Long Island"/>
+			</concept>
+			<concept>
+				<code value="1331-8"/>
+				<display value="Luiseno"/>
+				<definition value="Luiseno"/>
+			</concept>
+			<concept>
+				<code value="1340-9"/>
+				<display value="Lumbee"/>
+				<definition value="Lumbee"/>
+			</concept>
+			<concept>
+				<code value="1342-5"/>
+				<display value="Lummi"/>
+				<definition value="Lummi"/>
+			</concept>
+			<concept>
+				<code value="1344-1"/>
+				<display value="Maidu"/>
+				<definition value="Maidu"/>
+			</concept>
+			<concept>
+				<code value="1348-2"/>
+				<display value="Makah"/>
+				<definition value="Makah"/>
+			</concept>
+			<concept>
+				<code value="1350-8"/>
+				<display value="Maliseet"/>
+				<definition value="Maliseet"/>
+			</concept>
+			<concept>
+				<code value="1352-4"/>
+				<display value="Mandan"/>
+				<definition value="Mandan"/>
+			</concept>
+			<concept>
+				<code value="1354-0"/>
+				<display value="Mattaponi"/>
+				<definition value="Mattaponi"/>
+			</concept>
+			<concept>
+				<code value="1356-5"/>
+				<display value="Menominee"/>
+				<definition value="Menominee"/>
+			</concept>
+			<concept>
+				<code value="1358-1"/>
+				<display value="Miami"/>
+				<definition value="Miami"/>
+			</concept>
+			<concept>
+				<code value="1363-1"/>
+				<display value="Miccosukee"/>
+				<definition value="Miccosukee"/>
+			</concept>
+			<concept>
+				<code value="1365-6"/>
+				<display value="Micmac"/>
+				<definition value="Micmac"/>
+			</concept>
+			<concept>
+				<code value="1368-0"/>
+				<display value="Mission Indians"/>
+				<definition value="Mission Indians"/>
+			</concept>
+			<concept>
+				<code value="1370-6"/>
+				<display value="Miwok"/>
+				<definition value="Miwok"/>
+			</concept>
+			<concept>
+				<code value="1372-2"/>
+				<display value="Modoc"/>
+				<definition value="Modoc"/>
+			</concept>
+			<concept>
+				<code value="1374-8"/>
+				<display value="Mohegan"/>
+				<definition value="Mohegan"/>
+			</concept>
+			<concept>
+				<code value="1376-3"/>
+				<display value="Mono"/>
+				<definition value="Mono"/>
+			</concept>
+			<concept>
+				<code value="1378-9"/>
+				<display value="Nanticoke"/>
+				<definition value="Nanticoke"/>
+			</concept>
+			<concept>
+				<code value="1380-5"/>
+				<display value="Narragansett"/>
+				<definition value="Narragansett"/>
+			</concept>
+			<concept>
+				<code value="1382-1"/>
+				<display value="Navajo"/>
+				<definition value="Navajo"/>
+			</concept>
+			<concept>
+				<code value="1387-0"/>
+				<display value="Nez Perce"/>
+				<definition value="Nez Perce"/>
+			</concept>
+			<concept>
+				<code value="1389-6"/>
+				<display value="Nomalaki"/>
+				<definition value="Nomalaki"/>
+			</concept>
+			<concept>
+				<code value="1391-2"/>
+				<display value="Northwest Tribes"/>
+				<definition value="Northwest Tribes"/>
+			</concept>
+			<concept>
+				<code value="1403-5"/>
+				<display value="Omaha"/>
+				<definition value="Omaha"/>
+			</concept>
+			<concept>
+				<code value="1405-0"/>
+				<display value="Oregon Athabaskan"/>
+				<definition value="Oregon Athabaskan"/>
+			</concept>
+			<concept>
+				<code value="1407-6"/>
+				<display value="Osage"/>
+				<definition value="Osage"/>
+			</concept>
+			<concept>
+				<code value="1409-2"/>
+				<display value="Otoe-Missouria"/>
+				<definition value="Otoe-Missouria"/>
+			</concept>
+			<concept>
+				<code value="1411-8"/>
+				<display value="Ottawa"/>
+				<definition value="Ottawa"/>
+			</concept>
+			<concept>
+				<code value="1416-7"/>
+				<display value="Paiute"/>
+				<definition value="Paiute"/>
+			</concept>
+			<concept>
+				<code value="1439-9"/>
+				<display value="Pamunkey"/>
+				<definition value="Pamunkey"/>
+			</concept>
+			<concept>
+				<code value="1441-5"/>
+				<display value="Passamaquoddy"/>
+				<definition value="Passamaquoddy"/>
+			</concept>
+			<concept>
+				<code value="1445-6"/>
+				<display value="Pawnee"/>
+				<definition value="Pawnee"/>
+			</concept>
+			<concept>
+				<code value="1448-0"/>
+				<display value="Penobscot"/>
+				<definition value="Penobscot"/>
+			</concept>
+			<concept>
+				<code value="1450-6"/>
+				<display value="Peoria"/>
+				<definition value="Peoria"/>
+			</concept>
+			<concept>
+				<code value="1453-0"/>
+				<display value="Pequot"/>
+				<definition value="Pequot"/>
+			</concept>
+			<concept>
+				<code value="1456-3"/>
+				<display value="Pima"/>
+				<definition value="Pima"/>
+			</concept>
+			<concept>
+				<code value="1460-5"/>
+				<display value="Piscataway"/>
+				<definition value="Piscataway"/>
+			</concept>
+			<concept>
+				<code value="1462-1"/>
+				<display value="Pit River"/>
+				<definition value="Pit River"/>
+			</concept>
+			<concept>
+				<code value="1464-7"/>
+				<display value="Pomo"/>
+				<definition value="Pomo"/>
+			</concept>
+			<concept>
+				<code value="1474-6"/>
+				<display value="Ponca"/>
+				<definition value="Ponca"/>
+			</concept>
+			<concept>
+				<code value="1478-7"/>
+				<display value="Potawatomi"/>
+				<definition value="Potawatomi"/>
+			</concept>
+			<concept>
+				<code value="1487-8"/>
+				<display value="Powhatan"/>
+				<definition value="Powhatan"/>
+			</concept>
+			<concept>
+				<code value="1489-4"/>
+				<display value="Pueblo"/>
+				<definition value="Pueblo"/>
+			</concept>
+			<concept>
+				<code value="1518-0"/>
+				<display value="Puget Sound Salish"/>
+				<definition value="Puget Sound Salish"/>
+			</concept>
+			<concept>
+				<code value="1541-2"/>
+				<display value="Quapaw"/>
+				<definition value="Quapaw"/>
+			</concept>
+			<concept>
+				<code value="1543-8"/>
+				<display value="Quinault"/>
+				<definition value="Quinault"/>
+			</concept>
+			<concept>
+				<code value="1545-3"/>
+				<display value="Rappahannock"/>
+				<definition value="Rappahannock"/>
+			</concept>
+			<concept>
+				<code value="1547-9"/>
+				<display value="Reno-Sparks"/>
+				<definition value="Reno-Sparks"/>
+			</concept>
+			<concept>
+				<code value="1549-5"/>
+				<display value="Round Valley"/>
+				<definition value="Round Valley"/>
+			</concept>
+			<concept>
+				<code value="1551-1"/>
+				<display value="Sac and Fox"/>
+				<definition value="Sac and Fox"/>
+			</concept>
+			<concept>
+				<code value="1556-0"/>
+				<display value="Salinan"/>
+				<definition value="Salinan"/>
+			</concept>
+			<concept>
+				<code value="1558-6"/>
+				<display value="Salish"/>
+				<definition value="Salish"/>
+			</concept>
+			<concept>
+				<code value="1560-2"/>
+				<display value="Salish and Kootenai"/>
+				<definition value="Salish and Kootenai"/>
+			</concept>
+			<concept>
+				<code value="1562-8"/>
+				<display value="Schaghticoke"/>
+				<definition value="Schaghticoke"/>
+			</concept>
+			<concept>
+				<code value="1564-4"/>
+				<display value="Scott Valley"/>
+				<definition value="Scott Valley"/>
+			</concept>
+			<concept>
+				<code value="1566-9"/>
+				<display value="Seminole"/>
+				<definition value="Seminole"/>
+			</concept>
+			<concept>
+				<code value="1573-5"/>
+				<display value="Serrano"/>
+				<definition value="Serrano"/>
+			</concept>
+			<concept>
+				<code value="1576-8"/>
+				<display value="Shasta"/>
+				<definition value="Shasta"/>
+			</concept>
+			<concept>
+				<code value="1578-4"/>
+				<display value="Shawnee"/>
+				<definition value="Shawnee"/>
+			</concept>
+			<concept>
+				<code value="1582-6"/>
+				<display value="Shinnecock"/>
+				<definition value="Shinnecock"/>
+			</concept>
+			<concept>
+				<code value="1584-2"/>
+				<display value="Shoalwater Bay"/>
+				<definition value="Shoalwater Bay"/>
+			</concept>
+			<concept>
+				<code value="1586-7"/>
+				<display value="Shoshone"/>
+				<definition value="Shoshone"/>
+			</concept>
+			<concept>
+				<code value="1602-2"/>
+				<display value="Shoshone Paiute"/>
+				<definition value="Shoshone Paiute"/>
+			</concept>
+			<concept>
+				<code value="1607-1"/>
+				<display value="Siletz"/>
+				<definition value="Siletz"/>
+			</concept>
+			<concept>
+				<code value="1609-7"/>
+				<display value="Sioux"/>
+				<definition value="Sioux"/>
+			</concept>
+			<concept>
+				<code value="1643-6"/>
+				<display value="Siuslaw"/>
+				<definition value="Siuslaw"/>
+			</concept>
+			<concept>
+				<code value="1645-1"/>
+				<display value="Spokane"/>
+				<definition value="Spokane"/>
+			</concept>
+			<concept>
+				<code value="1647-7"/>
+				<display value="Stewart"/>
+				<definition value="Stewart"/>
+			</concept>
+			<concept>
+				<code value="1649-3"/>
+				<display value="Stockbridge"/>
+				<definition value="Stockbridge"/>
+			</concept>
+			<concept>
+				<code value="1651-9"/>
+				<display value="Susanville"/>
+				<definition value="Susanville"/>
+			</concept>
+			<concept>
+				<code value="1653-5"/>
+				<display value="Tohono O&apos;Odham"/>
+				<definition value="Tohono O&apos;Odham"/>
+			</concept>
+			<concept>
+				<code value="1659-2"/>
+				<display value="Tolowa"/>
+				<definition value="Tolowa"/>
+			</concept>
+			<concept>
+				<code value="1661-8"/>
+				<display value="Tonkawa"/>
+				<definition value="Tonkawa"/>
+			</concept>
+			<concept>
+				<code value="1663-4"/>
+				<display value="Tygh"/>
+				<definition value="Tygh"/>
+			</concept>
+			<concept>
+				<code value="1665-9"/>
+				<display value="Umatilla"/>
+				<definition value="Umatilla"/>
+			</concept>
+			<concept>
+				<code value="1667-5"/>
+				<display value="Umpqua"/>
+				<definition value="Umpqua"/>
+			</concept>
+			<concept>
+				<code value="1670-9"/>
+				<display value="Ute"/>
+				<definition value="Ute"/>
+			</concept>
+			<concept>
+				<code value="1675-8"/>
+				<display value="Wailaki"/>
+				<definition value="Wailaki"/>
+			</concept>
+			<concept>
+				<code value="1677-4"/>
+				<display value="Walla-Walla"/>
+				<definition value="Walla-Walla"/>
+			</concept>
+			<concept>
+				<code value="1679-0"/>
+				<display value="Wampanoag"/>
+				<definition value="Wampanoag"/>
+			</concept>
+			<concept>
+				<code value="1683-2"/>
+				<display value="Warm Springs"/>
+				<definition value="Warm Springs"/>
+			</concept>
+			<concept>
+				<code value="1685-7"/>
+				<display value="Wascopum"/>
+				<definition value="Wascopum"/>
+			</concept>
+			<concept>
+				<code value="1687-3"/>
+				<display value="Washoe"/>
+				<definition value="Washoe"/>
+			</concept>
+			<concept>
+				<code value="1692-3"/>
+				<display value="Wichita"/>
+				<definition value="Wichita"/>
+			</concept>
+			<concept>
+				<code value="1694-9"/>
+				<display value="Wind River"/>
+				<definition value="Wind River"/>
+			</concept>
+			<concept>
+				<code value="1696-4"/>
+				<display value="Winnebago"/>
+				<definition value="Winnebago"/>
+			</concept>
+			<concept>
+				<code value="1700-4"/>
+				<display value="Winnemucca"/>
+				<definition value="Winnemucca"/>
+			</concept>
+			<concept>
+				<code value="1702-0"/>
+				<display value="Wintun"/>
+				<definition value="Wintun"/>
+			</concept>
+			<concept>
+				<code value="1704-6"/>
+				<display value="Wiyot"/>
+				<definition value="Wiyot"/>
+			</concept>
+			<concept>
+				<code value="1707-9"/>
+				<display value="Yakama"/>
+				<definition value="Yakama"/>
+			</concept>
+			<concept>
+				<code value="1709-5"/>
+				<display value="Yakama Cowlitz"/>
+				<definition value="Yakama Cowlitz"/>
+			</concept>
+			<concept>
+				<code value="1711-1"/>
+				<display value="Yaqui"/>
+				<definition value="Yaqui"/>
+			</concept>
+			<concept>
+				<code value="1715-2"/>
+				<display value="Yavapai Apache"/>
+				<definition value="Yavapai Apache"/>
+			</concept>
+			<concept>
+				<code value="1717-8"/>
+				<display value="Yokuts"/>
+				<definition value="Yokuts"/>
+			</concept>
+			<concept>
+				<code value="1722-8"/>
+				<display value="Yuchi"/>
+				<definition value="Yuchi"/>
+			</concept>
+			<concept>
+				<code value="1724-4"/>
+				<display value="Yuman"/>
+				<definition value="Yuman"/>
+			</concept>
+			<concept>
+				<code value="1732-7"/>
+				<display value="Yurok"/>
+				<definition value="Yurok"/>
+			</concept>
+			<concept>
+				<code value="1011-6"/>
+				<display value="Chiricahua"/>
+				<definition value="Chiricahua"/>
+			</concept>
+			<concept>
+				<code value="1012-4"/>
+				<display value="Fort Sill Apache"/>
+				<definition value="Fort Sill Apache"/>
+			</concept>
+			<concept>
+				<code value="1013-2"/>
+				<display value="Jicarilla Apache"/>
+				<definition value="Jicarilla Apache"/>
+			</concept>
+			<concept>
+				<code value="1014-0"/>
+				<display value="Lipan Apache"/>
+				<definition value="Lipan Apache"/>
+			</concept>
+			<concept>
+				<code value="1015-7"/>
+				<display value="Mescalero Apache"/>
+				<definition value="Mescalero Apache"/>
+			</concept>
+			<concept>
+				<code value="1016-5"/>
+				<display value="Oklahoma Apache"/>
+				<definition value="Oklahoma Apache"/>
+			</concept>
+			<concept>
+				<code value="1017-3"/>
+				<display value="Payson Apache"/>
+				<definition value="Payson Apache"/>
+			</concept>
+			<concept>
+				<code value="1018-1"/>
+				<display value="San Carlos Apache"/>
+				<definition value="San Carlos Apache"/>
+			</concept>
+			<concept>
+				<code value="1019-9"/>
+				<display value="White Mountain Apache"/>
+				<definition value="White Mountain Apache"/>
+			</concept>
+			<concept>
+				<code value="1022-3"/>
+				<display value="Northern Arapaho"/>
+				<definition value="Northern Arapaho"/>
+			</concept>
+			<concept>
+				<code value="1023-1"/>
+				<display value="Southern Arapaho"/>
+				<definition value="Southern Arapaho"/>
+			</concept>
+			<concept>
+				<code value="1024-9"/>
+				<display value="Wind River Arapaho"/>
+				<definition value="Wind River Arapaho"/>
+			</concept>
+			<concept>
+				<code value="1031-4"/>
+				<display value="Fort Peck Assiniboine Sioux"/>
+				<definition value="Fort Peck Assiniboine Sioux"/>
+			</concept>
+			<concept>
+				<code value="1042-1"/>
+				<display value="Oklahoma Cado"/>
+				<definition value="Oklahoma Cado"/>
+			</concept>
+			<concept>
+				<code value="1045-4"/>
+				<display value="Agua Caliente Cahuilla"/>
+				<definition value="Agua Caliente Cahuilla"/>
+			</concept>
+			<concept>
+				<code value="1046-2"/>
+				<display value="Augustine"/>
+				<definition value="Augustine"/>
+			</concept>
+			<concept>
+				<code value="1047-0"/>
+				<display value="Cabazon"/>
+				<definition value="Cabazon"/>
+			</concept>
+			<concept>
+				<code value="1048-8"/>
+				<display value="Los Coyotes"/>
+				<definition value="Los Coyotes"/>
+			</concept>
+			<concept>
+				<code value="1049-6"/>
+				<display value="Morongo"/>
+				<definition value="Morongo"/>
+			</concept>
+			<concept>
+				<code value="1050-4"/>
+				<display value="Santa Rosa Cahuilla"/>
+				<definition value="Santa Rosa Cahuilla"/>
+			</concept>
+			<concept>
+				<code value="1051-2"/>
+				<display value="Torres-Martinez"/>
+				<definition value="Torres-Martinez"/>
+			</concept>
+			<concept>
+				<code value="1054-6"/>
+				<display value="Cahto"/>
+				<definition value="Cahto"/>
+			</concept>
+			<concept>
+				<code value="1055-3"/>
+				<display value="Chimariko"/>
+				<definition value="Chimariko"/>
+			</concept>
+			<concept>
+				<code value="1056-1"/>
+				<display value="Coast Miwok"/>
+				<definition value="Coast Miwok"/>
+			</concept>
+			<concept>
+				<code value="1057-9"/>
+				<display value="Digger"/>
+				<definition value="Digger"/>
+			</concept>
+			<concept>
+				<code value="1058-7"/>
+				<display value="Kawaiisu"/>
+				<definition value="Kawaiisu"/>
+			</concept>
+			<concept>
+				<code value="1059-5"/>
+				<display value="Kern River"/>
+				<definition value="Kern River"/>
+			</concept>
+			<concept>
+				<code value="1060-3"/>
+				<display value="Mattole"/>
+				<definition value="Mattole"/>
+			</concept>
+			<concept>
+				<code value="1061-1"/>
+				<display value="Red Wood"/>
+				<definition value="Red Wood"/>
+			</concept>
+			<concept>
+				<code value="1062-9"/>
+				<display value="Santa Rosa"/>
+				<definition value="Santa Rosa"/>
+			</concept>
+			<concept>
+				<code value="1063-7"/>
+				<display value="Takelma"/>
+				<definition value="Takelma"/>
+			</concept>
+			<concept>
+				<code value="1064-5"/>
+				<display value="Wappo"/>
+				<definition value="Wappo"/>
+			</concept>
+			<concept>
+				<code value="1065-2"/>
+				<display value="Yana"/>
+				<definition value="Yana"/>
+			</concept>
+			<concept>
+				<code value="1066-0"/>
+				<display value="Yuki"/>
+				<definition value="Yuki"/>
+			</concept>
+			<concept>
+				<code value="1069-4"/>
+				<display value="Canadian Indian"/>
+				<definition value="Canadian Indian"/>
+			</concept>
+			<concept>
+				<code value="1070-2"/>
+				<display value="Central American Indian"/>
+				<definition value="Central American Indian"/>
+			</concept>
+			<concept>
+				<code value="1071-0"/>
+				<display value="French American Indian"/>
+				<definition value="French American Indian"/>
+			</concept>
+			<concept>
+				<code value="1072-8"/>
+				<display value="Mexican American Indian"/>
+				<definition value="Mexican American Indian"/>
+			</concept>
+			<concept>
+				<code value="1073-6"/>
+				<display value="South American Indian"/>
+				<definition value="South American Indian"/>
+			</concept>
+			<concept>
+				<code value="1074-4"/>
+				<display value="Spanish American Indian"/>
+				<definition value="Spanish American Indian"/>
+			</concept>
+			<concept>
+				<code value="1083-5"/>
+				<display value="Hoh"/>
+				<definition value="Hoh"/>
+			</concept>
+			<concept>
+				<code value="1084-3"/>
+				<display value="Quileute"/>
+				<definition value="Quileute"/>
+			</concept>
+			<concept>
+				<code value="1089-2"/>
+				<display value="Cherokee Alabama"/>
+				<definition value="Cherokee Alabama"/>
+			</concept>
+			<concept>
+				<code value="1090-0"/>
+				<display value="Cherokees of Northeast Alabama"/>
+				<definition value="Cherokees of Northeast Alabama"/>
+			</concept>
+			<concept>
+				<code value="1091-8"/>
+				<display value="Cherokees of Southeast Alabama"/>
+				<definition value="Cherokees of Southeast Alabama"/>
+			</concept>
+			<concept>
+				<code value="1092-6"/>
+				<display value="Eastern Cherokee"/>
+				<definition value="Eastern Cherokee"/>
+			</concept>
+			<concept>
+				<code value="1093-4"/>
+				<display value="Echota Cherokee"/>
+				<definition value="Echota Cherokee"/>
+			</concept>
+			<concept>
+				<code value="1094-2"/>
+				<display value="Etowah Cherokee"/>
+				<definition value="Etowah Cherokee"/>
+			</concept>
+			<concept>
+				<code value="1095-9"/>
+				<display value="Northern Cherokee"/>
+				<definition value="Northern Cherokee"/>
+			</concept>
+			<concept>
+				<code value="1096-7"/>
+				<display value="Tuscola"/>
+				<definition value="Tuscola"/>
+			</concept>
+			<concept>
+				<code value="1097-5"/>
+				<display value="United Keetowah Band of Cherokee"/>
+				<definition value="United Keetowah Band of Cherokee"/>
+			</concept>
+			<concept>
+				<code value="1098-3"/>
+				<display value="Western Cherokee"/>
+				<definition value="Western Cherokee"/>
+			</concept>
+			<concept>
+				<code value="1103-1"/>
+				<display value="Northern Cheyenne"/>
+				<definition value="Northern Cheyenne"/>
+			</concept>
+			<concept>
+				<code value="1104-9"/>
+				<display value="Southern Cheyenne"/>
+				<definition value="Southern Cheyenne"/>
+			</concept>
+			<concept>
+				<code value="1109-8"/>
+				<display value="Eastern Chickahominy"/>
+				<definition value="Eastern Chickahominy"/>
+			</concept>
+			<concept>
+				<code value="1110-6"/>
+				<display value="Western Chickahominy"/>
+				<definition value="Western Chickahominy"/>
+			</concept>
+			<concept>
+				<code value="1115-5"/>
+				<display value="Clatsop"/>
+				<definition value="Clatsop"/>
+			</concept>
+			<concept>
+				<code value="1116-3"/>
+				<display value="Columbia River Chinook"/>
+				<definition value="Columbia River Chinook"/>
+			</concept>
+			<concept>
+				<code value="1117-1"/>
+				<display value="Kathlamet"/>
+				<definition value="Kathlamet"/>
+			</concept>
+			<concept>
+				<code value="1118-9"/>
+				<display value="Upper Chinook"/>
+				<definition value="Upper Chinook"/>
+			</concept>
+			<concept>
+				<code value="1119-7"/>
+				<display value="Wakiakum Chinook"/>
+				<definition value="Wakiakum Chinook"/>
+			</concept>
+			<concept>
+				<code value="1120-5"/>
+				<display value="Willapa Chinook"/>
+				<definition value="Willapa Chinook"/>
+			</concept>
+			<concept>
+				<code value="1121-3"/>
+				<display value="Wishram"/>
+				<definition value="Wishram"/>
+			</concept>
+			<concept>
+				<code value="1124-7"/>
+				<display value="Bad River"/>
+				<definition value="Bad River"/>
+			</concept>
+			<concept>
+				<code value="1125-4"/>
+				<display value="Bay Mills Chippewa"/>
+				<definition value="Bay Mills Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1126-2"/>
+				<display value="Bois Forte"/>
+				<definition value="Bois Forte"/>
+			</concept>
+			<concept>
+				<code value="1127-0"/>
+				<display value="Burt Lake Chippewa"/>
+				<definition value="Burt Lake Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1128-8"/>
+				<display value="Fond du Lac"/>
+				<definition value="Fond du Lac"/>
+			</concept>
+			<concept>
+				<code value="1129-6"/>
+				<display value="Grand Portage"/>
+				<definition value="Grand Portage"/>
+			</concept>
+			<concept>
+				<code value="1130-4"/>
+				<display value="Grand Traverse Band of Ottawa/Chippewa"/>
+				<definition value="Grand Traverse Band of Ottawa/Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1131-2"/>
+				<display value="Keweenaw"/>
+				<definition value="Keweenaw"/>
+			</concept>
+			<concept>
+				<code value="1132-0"/>
+				<display value="Lac Courte Oreilles"/>
+				<definition value="Lac Courte Oreilles"/>
+			</concept>
+			<concept>
+				<code value="1133-8"/>
+				<display value="Lac du Flambeau"/>
+				<definition value="Lac du Flambeau"/>
+			</concept>
+			<concept>
+				<code value="1134-6"/>
+				<display value="Lac Vieux Desert Chippewa"/>
+				<definition value="Lac Vieux Desert Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1135-3"/>
+				<display value="Lake Superior"/>
+				<definition value="Lake Superior"/>
+			</concept>
+			<concept>
+				<code value="1136-1"/>
+				<display value="Leech Lake"/>
+				<definition value="Leech Lake"/>
+			</concept>
+			<concept>
+				<code value="1137-9"/>
+				<display value="Little Shell Chippewa"/>
+				<definition value="Little Shell Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1138-7"/>
+				<display value="Mille Lacs"/>
+				<definition value="Mille Lacs"/>
+			</concept>
+			<concept>
+				<code value="1139-5"/>
+				<display value="Minnesota Chippewa"/>
+				<definition value="Minnesota Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1140-3"/>
+				<display value="Ontonagon"/>
+				<definition value="Ontonagon"/>
+			</concept>
+			<concept>
+				<code value="1141-1"/>
+				<display value="Red Cliff Chippewa"/>
+				<definition value="Red Cliff Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1142-9"/>
+				<display value="Red Lake Chippewa"/>
+				<definition value="Red Lake Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1143-7"/>
+				<display value="Saginaw Chippewa"/>
+				<definition value="Saginaw Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1144-5"/>
+				<display value="St. Croix Chippewa"/>
+				<definition value="St. Croix Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1145-2"/>
+				<display value="Sault Ste. Marie Chippewa"/>
+				<definition value="Sault Ste. Marie Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1146-0"/>
+				<display value="Sokoagon Chippewa"/>
+				<definition value="Sokoagon Chippewa"/>
+			</concept>
+			<concept>
+				<code value="1147-8"/>
+				<display value="Turtle Mountain"/>
+				<definition value="Turtle Mountain"/>
+			</concept>
+			<concept>
+				<code value="1148-6"/>
+				<display value="White Earth"/>
+				<definition value="White Earth"/>
+			</concept>
+			<concept>
+				<code value="1151-0"/>
+				<display value="Rocky Boy&apos;s Chippewa Cree"/>
+				<definition value="Rocky Boy&apos;s Chippewa Cree"/>
+			</concept>
+			<concept>
+				<code value="1156-9"/>
+				<display value="Clifton Choctaw"/>
+				<definition value="Clifton Choctaw"/>
+			</concept>
+			<concept>
+				<code value="1157-7"/>
+				<display value="Jena Choctaw"/>
+				<definition value="Jena Choctaw"/>
+			</concept>
+			<concept>
+				<code value="1158-5"/>
+				<display value="Mississippi Choctaw"/>
+				<definition value="Mississippi Choctaw"/>
+			</concept>
+			<concept>
+				<code value="1159-3"/>
+				<display value="Mowa Band of Choctaw"/>
+				<definition value="Mowa Band of Choctaw"/>
+			</concept>
+			<concept>
+				<code value="1160-1"/>
+				<display value="Oklahoma Choctaw"/>
+				<definition value="Oklahoma Choctaw"/>
+			</concept>
+			<concept>
+				<code value="1163-5"/>
+				<display value="Santa Ynez"/>
+				<definition value="Santa Ynez"/>
+			</concept>
+			<concept>
+				<code value="1176-7"/>
+				<display value="Oklahoma Comanche"/>
+				<definition value="Oklahoma Comanche"/>
+			</concept>
+			<concept>
+				<code value="1187-4"/>
+				<display value="Alabama Coushatta"/>
+				<definition value="Alabama Coushatta"/>
+			</concept>
+			<concept>
+				<code value="1194-0"/>
+				<display value="Alabama Creek"/>
+				<definition value="Alabama Creek"/>
+			</concept>
+			<concept>
+				<code value="1195-7"/>
+				<display value="Alabama Quassarte"/>
+				<definition value="Alabama Quassarte"/>
+			</concept>
+			<concept>
+				<code value="1196-5"/>
+				<display value="Eastern Creek"/>
+				<definition value="Eastern Creek"/>
+			</concept>
+			<concept>
+				<code value="1197-3"/>
+				<display value="Eastern Muscogee"/>
+				<definition value="Eastern Muscogee"/>
+			</concept>
+			<concept>
+				<code value="1198-1"/>
+				<display value="Kialegee"/>
+				<definition value="Kialegee"/>
+			</concept>
+			<concept>
+				<code value="1199-9"/>
+				<display value="Lower Muscogee"/>
+				<definition value="Lower Muscogee"/>
+			</concept>
+			<concept>
+				<code value="1200-5"/>
+				<display value="Machis Lower Creek Indian"/>
+				<definition value="Machis Lower Creek Indian"/>
+			</concept>
+			<concept>
+				<code value="1201-3"/>
+				<display value="Poarch Band"/>
+				<definition value="Poarch Band"/>
+			</concept>
+			<concept>
+				<code value="1202-1"/>
+				<display value="Principal Creek Indian Nation"/>
+				<definition value="Principal Creek Indian Nation"/>
+			</concept>
+			<concept>
+				<code value="1203-9"/>
+				<display value="Star Clan of Muscogee Creeks"/>
+				<definition value="Star Clan of Muscogee Creeks"/>
+			</concept>
+			<concept>
+				<code value="1204-7"/>
+				<display value="Thlopthlocco"/>
+				<definition value="Thlopthlocco"/>
+			</concept>
+			<concept>
+				<code value="1205-4"/>
+				<display value="Tuckabachee"/>
+				<definition value="Tuckabachee"/>
+			</concept>
+			<concept>
+				<code value="1212-0"/>
+				<display value="Agua Caliente"/>
+				<definition value="Agua Caliente"/>
+			</concept>
+			<concept>
+				<code value="1215-3"/>
+				<display value="Eastern Delaware"/>
+				<definition value="Eastern Delaware"/>
+			</concept>
+			<concept>
+				<code value="1216-1"/>
+				<display value="Lenni-Lenape"/>
+				<definition value="Lenni-Lenape"/>
+			</concept>
+			<concept>
+				<code value="1217-9"/>
+				<display value="Munsee"/>
+				<definition value="Munsee"/>
+			</concept>
+			<concept>
+				<code value="1218-7"/>
+				<display value="Oklahoma Delaware"/>
+				<definition value="Oklahoma Delaware"/>
+			</concept>
+			<concept>
+				<code value="1219-5"/>
+				<display value="Rampough Mountain"/>
+				<definition value="Rampough Mountain"/>
+			</concept>
+			<concept>
+				<code value="1220-3"/>
+				<display value="Sand Hill"/>
+				<definition value="Sand Hill"/>
+			</concept>
+			<concept>
+				<code value="1223-7"/>
+				<display value="Campo"/>
+				<definition value="Campo"/>
+			</concept>
+			<concept>
+				<code value="1224-5"/>
+				<display value="Capitan Grande"/>
+				<definition value="Capitan Grande"/>
+			</concept>
+			<concept>
+				<code value="1225-2"/>
+				<display value="Cuyapaipe"/>
+				<definition value="Cuyapaipe"/>
+			</concept>
+			<concept>
+				<code value="1226-0"/>
+				<display value="La Posta"/>
+				<definition value="La Posta"/>
+			</concept>
+			<concept>
+				<code value="1227-8"/>
+				<display value="Manzanita"/>
+				<definition value="Manzanita"/>
+			</concept>
+			<concept>
+				<code value="1228-6"/>
+				<display value="Mesa Grande"/>
+				<definition value="Mesa Grande"/>
+			</concept>
+			<concept>
+				<code value="1229-4"/>
+				<display value="San Pasqual"/>
+				<definition value="San Pasqual"/>
+			</concept>
+			<concept>
+				<code value="1230-2"/>
+				<display value="Santa Ysabel"/>
+				<definition value="Santa Ysabel"/>
+			</concept>
+			<concept>
+				<code value="1231-0"/>
+				<display value="Sycuan"/>
+				<definition value="Sycuan"/>
+			</concept>
+			<concept>
+				<code value="1234-4"/>
+				<display value="Attacapa"/>
+				<definition value="Attacapa"/>
+			</concept>
+			<concept>
+				<code value="1235-1"/>
+				<display value="Biloxi"/>
+				<definition value="Biloxi"/>
+			</concept>
+			<concept>
+				<code value="1236-9"/>
+				<display value="Georgetown (Eastern Tribes)"/>
+				<definition value="Georgetown (Eastern Tribes)"/>
+			</concept>
+			<concept>
+				<code value="1237-7"/>
+				<display value="Moor"/>
+				<definition value="Moor"/>
+			</concept>
+			<concept>
+				<code value="1238-5"/>
+				<display value="Nansemond"/>
+				<definition value="Nansemond"/>
+			</concept>
+			<concept>
+				<code value="1239-3"/>
+				<display value="Natchez"/>
+				<definition value="Natchez"/>
+			</concept>
+			<concept>
+				<code value="1240-1"/>
+				<display value="Nausu Waiwash"/>
+				<definition value="Nausu Waiwash"/>
+			</concept>
+			<concept>
+				<code value="1241-9"/>
+				<display value="Nipmuc"/>
+				<definition value="Nipmuc"/>
+			</concept>
+			<concept>
+				<code value="1242-7"/>
+				<display value="Paugussett"/>
+				<definition value="Paugussett"/>
+			</concept>
+			<concept>
+				<code value="1243-5"/>
+				<display value="Pocomoke Acohonock"/>
+				<definition value="Pocomoke Acohonock"/>
+			</concept>
+			<concept>
+				<code value="1244-3"/>
+				<display value="Southeastern Indians"/>
+				<definition value="Southeastern Indians"/>
+			</concept>
+			<concept>
+				<code value="1245-0"/>
+				<display value="Susquehanock"/>
+				<definition value="Susquehanock"/>
+			</concept>
+			<concept>
+				<code value="1246-8"/>
+				<display value="Tunica Biloxi"/>
+				<definition value="Tunica Biloxi"/>
+			</concept>
+			<concept>
+				<code value="1247-6"/>
+				<display value="Waccamaw-Siousan"/>
+				<definition value="Waccamaw-Siousan"/>
+			</concept>
+			<concept>
+				<code value="1248-4"/>
+				<display value="Wicomico"/>
+				<definition value="Wicomico"/>
+			</concept>
+			<concept>
+				<code value="1265-8"/>
+				<display value="Atsina"/>
+				<definition value="Atsina"/>
+			</concept>
+			<concept>
+				<code value="1272-4"/>
+				<display value="Trinity"/>
+				<definition value="Trinity"/>
+			</concept>
+			<concept>
+				<code value="1273-2"/>
+				<display value="Whilkut"/>
+				<definition value="Whilkut"/>
+			</concept>
+			<concept>
+				<code value="1282-3"/>
+				<display value="Iowa of Kansas-Nebraska"/>
+				<definition value="Iowa of Kansas-Nebraska"/>
+			</concept>
+			<concept>
+				<code value="1283-1"/>
+				<display value="Iowa of Oklahoma"/>
+				<definition value="Iowa of Oklahoma"/>
+			</concept>
+			<concept>
+				<code value="1286-4"/>
+				<display value="Cayuga"/>
+				<definition value="Cayuga"/>
+			</concept>
+			<concept>
+				<code value="1287-2"/>
+				<display value="Mohawk"/>
+				<definition value="Mohawk"/>
+			</concept>
+			<concept>
+				<code value="1288-0"/>
+				<display value="Oneida"/>
+				<definition value="Oneida"/>
+			</concept>
+			<concept>
+				<code value="1289-8"/>
+				<display value="Onondaga"/>
+				<definition value="Onondaga"/>
+			</concept>
+			<concept>
+				<code value="1290-6"/>
+				<display value="Seneca"/>
+				<definition value="Seneca"/>
+			</concept>
+			<concept>
+				<code value="1291-4"/>
+				<display value="Seneca Nation"/>
+				<definition value="Seneca Nation"/>
+			</concept>
+			<concept>
+				<code value="1292-2"/>
+				<display value="Seneca-Cayuga"/>
+				<definition value="Seneca-Cayuga"/>
+			</concept>
+			<concept>
+				<code value="1293-0"/>
+				<display value="Tonawanda Seneca"/>
+				<definition value="Tonawanda Seneca"/>
+			</concept>
+			<concept>
+				<code value="1294-8"/>
+				<display value="Tuscarora"/>
+				<definition value="Tuscarora"/>
+			</concept>
+			<concept>
+				<code value="1295-5"/>
+				<display value="Wyandotte"/>
+				<definition value="Wyandotte"/>
+			</concept>
+			<concept>
+				<code value="1306-0"/>
+				<display value="Oklahoma Kickapoo"/>
+				<definition value="Oklahoma Kickapoo"/>
+			</concept>
+			<concept>
+				<code value="1307-8"/>
+				<display value="Texas Kickapoo"/>
+				<definition value="Texas Kickapoo"/>
+			</concept>
+			<concept>
+				<code value="1310-2"/>
+				<display value="Oklahoma Kiowa"/>
+				<definition value="Oklahoma Kiowa"/>
+			</concept>
+			<concept>
+				<code value="1313-6"/>
+				<display value="Jamestown"/>
+				<definition value="Jamestown"/>
+			</concept>
+			<concept>
+				<code value="1314-4"/>
+				<display value="Lower Elwha"/>
+				<definition value="Lower Elwha"/>
+			</concept>
+			<concept>
+				<code value="1315-1"/>
+				<display value="Port Gamble Klallam"/>
+				<definition value="Port Gamble Klallam"/>
+			</concept>
+			<concept>
+				<code value="1326-8"/>
+				<display value="Matinecock"/>
+				<definition value="Matinecock"/>
+			</concept>
+			<concept>
+				<code value="1327-6"/>
+				<display value="Montauk"/>
+				<definition value="Montauk"/>
+			</concept>
+			<concept>
+				<code value="1328-4"/>
+				<display value="Poospatuck"/>
+				<definition value="Poospatuck"/>
+			</concept>
+			<concept>
+				<code value="1329-2"/>
+				<display value="Setauket"/>
+				<definition value="Setauket"/>
+			</concept>
+			<concept>
+				<code value="1332-6"/>
+				<display value="La Jolla"/>
+				<definition value="La Jolla"/>
+			</concept>
+			<concept>
+				<code value="1333-4"/>
+				<display value="Pala"/>
+				<definition value="Pala"/>
+			</concept>
+			<concept>
+				<code value="1334-2"/>
+				<display value="Pauma"/>
+				<definition value="Pauma"/>
+			</concept>
+			<concept>
+				<code value="1335-9"/>
+				<display value="Pechanga"/>
+				<definition value="Pechanga"/>
+			</concept>
+			<concept>
+				<code value="1336-7"/>
+				<display value="Soboba"/>
+				<definition value="Soboba"/>
+			</concept>
+			<concept>
+				<code value="1337-5"/>
+				<display value="Twenty-Nine Palms"/>
+				<definition value="Twenty-Nine Palms"/>
+			</concept>
+			<concept>
+				<code value="1338-3"/>
+				<display value="Temecula"/>
+				<definition value="Temecula"/>
+			</concept>
+			<concept>
+				<code value="1345-8"/>
+				<display value="Mountain Maidu"/>
+				<definition value="Mountain Maidu"/>
+			</concept>
+			<concept>
+				<code value="1346-6"/>
+				<display value="Nishinam"/>
+				<definition value="Nishinam"/>
+			</concept>
+			<concept>
+				<code value="1359-9"/>
+				<display value="Illinois Miami"/>
+				<definition value="Illinois Miami"/>
+			</concept>
+			<concept>
+				<code value="1360-7"/>
+				<display value="Indiana Miami"/>
+				<definition value="Indiana Miami"/>
+			</concept>
+			<concept>
+				<code value="1361-5"/>
+				<display value="Oklahoma Miami"/>
+				<definition value="Oklahoma Miami"/>
+			</concept>
+			<concept>
+				<code value="1366-4"/>
+				<display value="Aroostook"/>
+				<definition value="Aroostook"/>
+			</concept>
+			<concept>
+				<code value="1383-9"/>
+				<display value="Alamo Navajo"/>
+				<definition value="Alamo Navajo"/>
+			</concept>
+			<concept>
+				<code value="1384-7"/>
+				<display value="Canoncito Navajo"/>
+				<definition value="Canoncito Navajo"/>
+			</concept>
+			<concept>
+				<code value="1385-4"/>
+				<display value="Ramah Navajo"/>
+				<definition value="Ramah Navajo"/>
+			</concept>
+			<concept>
+				<code value="1392-0"/>
+				<display value="Alsea"/>
+				<definition value="Alsea"/>
+			</concept>
+			<concept>
+				<code value="1393-8"/>
+				<display value="Celilo"/>
+				<definition value="Celilo"/>
+			</concept>
+			<concept>
+				<code value="1394-6"/>
+				<display value="Columbia"/>
+				<definition value="Columbia"/>
+			</concept>
+			<concept>
+				<code value="1395-3"/>
+				<display value="Kalapuya"/>
+				<definition value="Kalapuya"/>
+			</concept>
+			<concept>
+				<code value="1396-1"/>
+				<display value="Molala"/>
+				<definition value="Molala"/>
+			</concept>
+			<concept>
+				<code value="1397-9"/>
+				<display value="Talakamish"/>
+				<definition value="Talakamish"/>
+			</concept>
+			<concept>
+				<code value="1398-7"/>
+				<display value="Tenino"/>
+				<definition value="Tenino"/>
+			</concept>
+			<concept>
+				<code value="1399-5"/>
+				<display value="Tillamook"/>
+				<definition value="Tillamook"/>
+			</concept>
+			<concept>
+				<code value="1400-1"/>
+				<display value="Wenatchee"/>
+				<definition value="Wenatchee"/>
+			</concept>
+			<concept>
+				<code value="1401-9"/>
+				<display value="Yahooskin"/>
+				<definition value="Yahooskin"/>
+			</concept>
+			<concept>
+				<code value="1412-6"/>
+				<display value="Burt Lake Ottawa"/>
+				<definition value="Burt Lake Ottawa"/>
+			</concept>
+			<concept>
+				<code value="1413-4"/>
+				<display value="Michigan Ottawa"/>
+				<definition value="Michigan Ottawa"/>
+			</concept>
+			<concept>
+				<code value="1414-2"/>
+				<display value="Oklahoma Ottawa"/>
+				<definition value="Oklahoma Ottawa"/>
+			</concept>
+			<concept>
+				<code value="1417-5"/>
+				<display value="Bishop"/>
+				<definition value="Bishop"/>
+			</concept>
+			<concept>
+				<code value="1418-3"/>
+				<display value="Bridgeport"/>
+				<definition value="Bridgeport"/>
+			</concept>
+			<concept>
+				<code value="1419-1"/>
+				<display value="Burns Paiute"/>
+				<definition value="Burns Paiute"/>
+			</concept>
+			<concept>
+				<code value="1420-9"/>
+				<display value="Cedarville"/>
+				<definition value="Cedarville"/>
+			</concept>
+			<concept>
+				<code value="1421-7"/>
+				<display value="Fort Bidwell"/>
+				<definition value="Fort Bidwell"/>
+			</concept>
+			<concept>
+				<code value="1422-5"/>
+				<display value="Fort Independence"/>
+				<definition value="Fort Independence"/>
+			</concept>
+			<concept>
+				<code value="1423-3"/>
+				<display value="Kaibab"/>
+				<definition value="Kaibab"/>
+			</concept>
+			<concept>
+				<code value="1424-1"/>
+				<display value="Las Vegas"/>
+				<definition value="Las Vegas"/>
+			</concept>
+			<concept>
+				<code value="1425-8"/>
+				<display value="Lone Pine"/>
+				<definition value="Lone Pine"/>
+			</concept>
+			<concept>
+				<code value="1426-6"/>
+				<display value="Lovelock"/>
+				<definition value="Lovelock"/>
+			</concept>
+			<concept>
+				<code value="1427-4"/>
+				<display value="Malheur Paiute"/>
+				<definition value="Malheur Paiute"/>
+			</concept>
+			<concept>
+				<code value="1428-2"/>
+				<display value="Moapa"/>
+				<definition value="Moapa"/>
+			</concept>
+			<concept>
+				<code value="1429-0"/>
+				<display value="Northern Paiute"/>
+				<definition value="Northern Paiute"/>
+			</concept>
+			<concept>
+				<code value="1430-8"/>
+				<display value="Owens Valley"/>
+				<definition value="Owens Valley"/>
+			</concept>
+			<concept>
+				<code value="1431-6"/>
+				<display value="Pyramid Lake"/>
+				<definition value="Pyramid Lake"/>
+			</concept>
+			<concept>
+				<code value="1432-4"/>
+				<display value="San Juan Southern Paiute"/>
+				<definition value="San Juan Southern Paiute"/>
+			</concept>
+			<concept>
+				<code value="1433-2"/>
+				<display value="Southern Paiute"/>
+				<definition value="Southern Paiute"/>
+			</concept>
+			<concept>
+				<code value="1434-0"/>
+				<display value="Summit Lake"/>
+				<definition value="Summit Lake"/>
+			</concept>
+			<concept>
+				<code value="1435-7"/>
+				<display value="Utu Utu Gwaitu Paiute"/>
+				<definition value="Utu Utu Gwaitu Paiute"/>
+			</concept>
+			<concept>
+				<code value="1436-5"/>
+				<display value="Walker River"/>
+				<definition value="Walker River"/>
+			</concept>
+			<concept>
+				<code value="1437-3"/>
+				<display value="Yerington Paiute"/>
+				<definition value="Yerington Paiute"/>
+			</concept>
+			<concept>
+				<code value="1442-3"/>
+				<display value="Indian Township"/>
+				<definition value="Indian Township"/>
+			</concept>
+			<concept>
+				<code value="1443-1"/>
+				<display value="Pleasant Point Passamaquoddy"/>
+				<definition value="Pleasant Point Passamaquoddy"/>
+			</concept>
+			<concept>
+				<code value="1446-4"/>
+				<display value="Oklahoma Pawnee"/>
+				<definition value="Oklahoma Pawnee"/>
+			</concept>
+			<concept>
+				<code value="1451-4"/>
+				<display value="Oklahoma Peoria"/>
+				<definition value="Oklahoma Peoria"/>
+			</concept>
+			<concept>
+				<code value="1454-8"/>
+				<display value="Marshantucket Pequot"/>
+				<definition value="Marshantucket Pequot"/>
+			</concept>
+			<concept>
+				<code value="1457-1"/>
+				<display value="Gila River Pima-Maricopa"/>
+				<definition value="Gila River Pima-Maricopa"/>
+			</concept>
+			<concept>
+				<code value="1458-9"/>
+				<display value="Salt River Pima-Maricopa"/>
+				<definition value="Salt River Pima-Maricopa"/>
+			</concept>
+			<concept>
+				<code value="1465-4"/>
+				<display value="Central Pomo"/>
+				<definition value="Central Pomo"/>
+			</concept>
+			<concept>
+				<code value="1466-2"/>
+				<display value="Dry Creek"/>
+				<definition value="Dry Creek"/>
+			</concept>
+			<concept>
+				<code value="1467-0"/>
+				<display value="Eastern Pomo"/>
+				<definition value="Eastern Pomo"/>
+			</concept>
+			<concept>
+				<code value="1468-8"/>
+				<display value="Kashia"/>
+				<definition value="Kashia"/>
+			</concept>
+			<concept>
+				<code value="1469-6"/>
+				<display value="Northern Pomo"/>
+				<definition value="Northern Pomo"/>
+			</concept>
+			<concept>
+				<code value="1470-4"/>
+				<display value="Scotts Valley"/>
+				<definition value="Scotts Valley"/>
+			</concept>
+			<concept>
+				<code value="1471-2"/>
+				<display value="Stonyford"/>
+				<definition value="Stonyford"/>
+			</concept>
+			<concept>
+				<code value="1472-0"/>
+				<display value="Sulphur Bank"/>
+				<definition value="Sulphur Bank"/>
+			</concept>
+			<concept>
+				<code value="1475-3"/>
+				<display value="Nebraska Ponca"/>
+				<definition value="Nebraska Ponca"/>
+			</concept>
+			<concept>
+				<code value="1476-1"/>
+				<display value="Oklahoma Ponca"/>
+				<definition value="Oklahoma Ponca"/>
+			</concept>
+			<concept>
+				<code value="1479-5"/>
+				<display value="Citizen Band Potawatomi"/>
+				<definition value="Citizen Band Potawatomi"/>
+			</concept>
+			<concept>
+				<code value="1480-3"/>
+				<display value="Forest County"/>
+				<definition value="Forest County"/>
+			</concept>
+			<concept>
+				<code value="1481-1"/>
+				<display value="Hannahville"/>
+				<definition value="Hannahville"/>
+			</concept>
+			<concept>
+				<code value="1482-9"/>
+				<display value="Huron Potawatomi"/>
+				<definition value="Huron Potawatomi"/>
+			</concept>
+			<concept>
+				<code value="1483-7"/>
+				<display value="Pokagon Potawatomi"/>
+				<definition value="Pokagon Potawatomi"/>
+			</concept>
+			<concept>
+				<code value="1484-5"/>
+				<display value="Prairie Band"/>
+				<definition value="Prairie Band"/>
+			</concept>
+			<concept>
+				<code value="1485-2"/>
+				<display value="Wisconsin Potawatomi"/>
+				<definition value="Wisconsin Potawatomi"/>
+			</concept>
+			<concept>
+				<code value="1490-2"/>
+				<display value="Acoma"/>
+				<definition value="Acoma"/>
+			</concept>
+			<concept>
+				<code value="1491-0"/>
+				<display value="Arizona Tewa"/>
+				<definition value="Arizona Tewa"/>
+			</concept>
+			<concept>
+				<code value="1492-8"/>
+				<display value="Cochiti"/>
+				<definition value="Cochiti"/>
+			</concept>
+			<concept>
+				<code value="1493-6"/>
+				<display value="Hopi"/>
+				<definition value="Hopi"/>
+			</concept>
+			<concept>
+				<code value="1494-4"/>
+				<display value="Isleta"/>
+				<definition value="Isleta"/>
+			</concept>
+			<concept>
+				<code value="1495-1"/>
+				<display value="Jemez"/>
+				<definition value="Jemez"/>
+			</concept>
+			<concept>
+				<code value="1496-9"/>
+				<display value="Keres"/>
+				<definition value="Keres"/>
+			</concept>
+			<concept>
+				<code value="1497-7"/>
+				<display value="Laguna"/>
+				<definition value="Laguna"/>
+			</concept>
+			<concept>
+				<code value="1498-5"/>
+				<display value="Nambe"/>
+				<definition value="Nambe"/>
+			</concept>
+			<concept>
+				<code value="1499-3"/>
+				<display value="Picuris"/>
+				<definition value="Picuris"/>
+			</concept>
+			<concept>
+				<code value="1500-8"/>
+				<display value="Piro"/>
+				<definition value="Piro"/>
+			</concept>
+			<concept>
+				<code value="1501-6"/>
+				<display value="Pojoaque"/>
+				<definition value="Pojoaque"/>
+			</concept>
+			<concept>
+				<code value="1502-4"/>
+				<display value="San Felipe"/>
+				<definition value="San Felipe"/>
+			</concept>
+			<concept>
+				<code value="1503-2"/>
+				<display value="San Ildefonso"/>
+				<definition value="San Ildefonso"/>
+			</concept>
+			<concept>
+				<code value="1504-0"/>
+				<display value="San Juan Pueblo"/>
+				<definition value="San Juan Pueblo"/>
+			</concept>
+			<concept>
+				<code value="1505-7"/>
+				<display value="San Juan De"/>
+				<definition value="San Juan De"/>
+			</concept>
+			<concept>
+				<code value="1506-5"/>
+				<display value="San Juan"/>
+				<definition value="San Juan"/>
+			</concept>
+			<concept>
+				<code value="1507-3"/>
+				<display value="Sandia"/>
+				<definition value="Sandia"/>
+			</concept>
+			<concept>
+				<code value="1508-1"/>
+				<display value="Santa Ana"/>
+				<definition value="Santa Ana"/>
+			</concept>
+			<concept>
+				<code value="1509-9"/>
+				<display value="Santa Clara"/>
+				<definition value="Santa Clara"/>
+			</concept>
+			<concept>
+				<code value="1510-7"/>
+				<display value="Santo Domingo"/>
+				<definition value="Santo Domingo"/>
+			</concept>
+			<concept>
+				<code value="1511-5"/>
+				<display value="Taos"/>
+				<definition value="Taos"/>
+			</concept>
+			<concept>
+				<code value="1512-3"/>
+				<display value="Tesuque"/>
+				<definition value="Tesuque"/>
+			</concept>
+			<concept>
+				<code value="1513-1"/>
+				<display value="Tewa"/>
+				<definition value="Tewa"/>
+			</concept>
+			<concept>
+				<code value="1514-9"/>
+				<display value="Tigua"/>
+				<definition value="Tigua"/>
+			</concept>
+			<concept>
+				<code value="1515-6"/>
+				<display value="Zia"/>
+				<definition value="Zia"/>
+			</concept>
+			<concept>
+				<code value="1516-4"/>
+				<display value="Zuni"/>
+				<definition value="Zuni"/>
+			</concept>
+			<concept>
+				<code value="1519-8"/>
+				<display value="Duwamish"/>
+				<definition value="Duwamish"/>
+			</concept>
+			<concept>
+				<code value="1520-6"/>
+				<display value="Kikiallus"/>
+				<definition value="Kikiallus"/>
+			</concept>
+			<concept>
+				<code value="1521-4"/>
+				<display value="Lower Skagit"/>
+				<definition value="Lower Skagit"/>
+			</concept>
+			<concept>
+				<code value="1522-2"/>
+				<display value="Muckleshoot"/>
+				<definition value="Muckleshoot"/>
+			</concept>
+			<concept>
+				<code value="1523-0"/>
+				<display value="Nisqually"/>
+				<definition value="Nisqually"/>
+			</concept>
+			<concept>
+				<code value="1524-8"/>
+				<display value="Nooksack"/>
+				<definition value="Nooksack"/>
+			</concept>
+			<concept>
+				<code value="1525-5"/>
+				<display value="Port Madison"/>
+				<definition value="Port Madison"/>
+			</concept>
+			<concept>
+				<code value="1526-3"/>
+				<display value="Puyallup"/>
+				<definition value="Puyallup"/>
+			</concept>
+			<concept>
+				<code value="1527-1"/>
+				<display value="Samish"/>
+				<definition value="Samish"/>
+			</concept>
+			<concept>
+				<code value="1528-9"/>
+				<display value="Sauk-Suiattle"/>
+				<definition value="Sauk-Suiattle"/>
+			</concept>
+			<concept>
+				<code value="1529-7"/>
+				<display value="Skokomish"/>
+				<definition value="Skokomish"/>
+			</concept>
+			<concept>
+				<code value="1530-5"/>
+				<display value="Skykomish"/>
+				<definition value="Skykomish"/>
+			</concept>
+			<concept>
+				<code value="1531-3"/>
+				<display value="Snohomish"/>
+				<definition value="Snohomish"/>
+			</concept>
+			<concept>
+				<code value="1532-1"/>
+				<display value="Snoqualmie"/>
+				<definition value="Snoqualmie"/>
+			</concept>
+			<concept>
+				<code value="1533-9"/>
+				<display value="Squaxin Island"/>
+				<definition value="Squaxin Island"/>
+			</concept>
+			<concept>
+				<code value="1534-7"/>
+				<display value="Steilacoom"/>
+				<definition value="Steilacoom"/>
+			</concept>
+			<concept>
+				<code value="1535-4"/>
+				<display value="Stillaguamish"/>
+				<definition value="Stillaguamish"/>
+			</concept>
+			<concept>
+				<code value="1536-2"/>
+				<display value="Suquamish"/>
+				<definition value="Suquamish"/>
+			</concept>
+			<concept>
+				<code value="1537-0"/>
+				<display value="Swinomish"/>
+				<definition value="Swinomish"/>
+			</concept>
+			<concept>
+				<code value="1538-8"/>
+				<display value="Tulalip"/>
+				<definition value="Tulalip"/>
+			</concept>
+			<concept>
+				<code value="1539-6"/>
+				<display value="Upper Skagit"/>
+				<definition value="Upper Skagit"/>
+			</concept>
+			<concept>
+				<code value="1552-9"/>
+				<display value="Iowa Sac and Fox"/>
+				<definition value="Iowa Sac and Fox"/>
+			</concept>
+			<concept>
+				<code value="1553-7"/>
+				<display value="Missouri Sac and Fox"/>
+				<definition value="Missouri Sac and Fox"/>
+			</concept>
+			<concept>
+				<code value="1554-5"/>
+				<display value="Oklahoma Sac and Fox"/>
+				<definition value="Oklahoma Sac and Fox"/>
+			</concept>
+			<concept>
+				<code value="1567-7"/>
+				<display value="Big Cypress"/>
+				<definition value="Big Cypress"/>
+			</concept>
+			<concept>
+				<code value="1568-5"/>
+				<display value="Brighton"/>
+				<definition value="Brighton"/>
+			</concept>
+			<concept>
+				<code value="1569-3"/>
+				<display value="Florida Seminole"/>
+				<definition value="Florida Seminole"/>
+			</concept>
+			<concept>
+				<code value="1570-1"/>
+				<display value="Hollywood Seminole"/>
+				<definition value="Hollywood Seminole"/>
+			</concept>
+			<concept>
+				<code value="1571-9"/>
+				<display value="Oklahoma Seminole"/>
+				<definition value="Oklahoma Seminole"/>
+			</concept>
+			<concept>
+				<code value="1574-3"/>
+				<display value="San Manual"/>
+				<definition value="San Manual"/>
+			</concept>
+			<concept>
+				<code value="1579-2"/>
+				<display value="Absentee Shawnee"/>
+				<definition value="Absentee Shawnee"/>
+			</concept>
+			<concept>
+				<code value="1580-0"/>
+				<display value="Eastern Shawnee"/>
+				<definition value="Eastern Shawnee"/>
+			</concept>
+			<concept>
+				<code value="1587-5"/>
+				<display value="Battle Mountain"/>
+				<definition value="Battle Mountain"/>
+			</concept>
+			<concept>
+				<code value="1588-3"/>
+				<display value="Duckwater"/>
+				<definition value="Duckwater"/>
+			</concept>
+			<concept>
+				<code value="1589-1"/>
+				<display value="Elko"/>
+				<definition value="Elko"/>
+			</concept>
+			<concept>
+				<code value="1590-9"/>
+				<display value="Ely"/>
+				<definition value="Ely"/>
+			</concept>
+			<concept>
+				<code value="1591-7"/>
+				<display value="Goshute"/>
+				<definition value="Goshute"/>
+			</concept>
+			<concept>
+				<code value="1592-5"/>
+				<display value="Panamint"/>
+				<definition value="Panamint"/>
+			</concept>
+			<concept>
+				<code value="1593-3"/>
+				<display value="Ruby Valley"/>
+				<definition value="Ruby Valley"/>
+			</concept>
+			<concept>
+				<code value="1594-1"/>
+				<display value="Skull Valley"/>
+				<definition value="Skull Valley"/>
+			</concept>
+			<concept>
+				<code value="1595-8"/>
+				<display value="South Fork Shoshone"/>
+				<definition value="South Fork Shoshone"/>
+			</concept>
+			<concept>
+				<code value="1596-6"/>
+				<display value="Te-Moak Western Shoshone"/>
+				<definition value="Te-Moak Western Shoshone"/>
+			</concept>
+			<concept>
+				<code value="1597-4"/>
+				<display value="Timbi-Sha Shoshone"/>
+				<definition value="Timbi-Sha Shoshone"/>
+			</concept>
+			<concept>
+				<code value="1598-2"/>
+				<display value="Washakie"/>
+				<definition value="Washakie"/>
+			</concept>
+			<concept>
+				<code value="1599-0"/>
+				<display value="Wind River Shoshone"/>
+				<definition value="Wind River Shoshone"/>
+			</concept>
+			<concept>
+				<code value="1600-6"/>
+				<display value="Yomba"/>
+				<definition value="Yomba"/>
+			</concept>
+			<concept>
+				<code value="1603-0"/>
+				<display value="Duck Valley"/>
+				<definition value="Duck Valley"/>
+			</concept>
+			<concept>
+				<code value="1604-8"/>
+				<display value="Fallon"/>
+				<definition value="Fallon"/>
+			</concept>
+			<concept>
+				<code value="1605-5"/>
+				<display value="Fort McDermitt"/>
+				<definition value="Fort McDermitt"/>
+			</concept>
+			<concept>
+				<code value="1610-5"/>
+				<display value="Blackfoot Sioux"/>
+				<definition value="Blackfoot Sioux"/>
+			</concept>
+			<concept>
+				<code value="1611-3"/>
+				<display value="Brule Sioux"/>
+				<definition value="Brule Sioux"/>
+			</concept>
+			<concept>
+				<code value="1612-1"/>
+				<display value="Cheyenne River Sioux"/>
+				<definition value="Cheyenne River Sioux"/>
+			</concept>
+			<concept>
+				<code value="1613-9"/>
+				<display value="Crow Creek Sioux"/>
+				<definition value="Crow Creek Sioux"/>
+			</concept>
+			<concept>
+				<code value="1614-7"/>
+				<display value="Dakota Sioux"/>
+				<definition value="Dakota Sioux"/>
+			</concept>
+			<concept>
+				<code value="1615-4"/>
+				<display value="Flandreau Santee"/>
+				<definition value="Flandreau Santee"/>
+			</concept>
+			<concept>
+				<code value="1616-2"/>
+				<display value="Fort Peck"/>
+				<definition value="Fort Peck"/>
+			</concept>
+			<concept>
+				<code value="1617-0"/>
+				<display value="Lake Traverse Sioux"/>
+				<definition value="Lake Traverse Sioux"/>
+			</concept>
+			<concept>
+				<code value="1618-8"/>
+				<display value="Lower Brule Sioux"/>
+				<definition value="Lower Brule Sioux"/>
+			</concept>
+			<concept>
+				<code value="1619-6"/>
+				<display value="Lower Sioux"/>
+				<definition value="Lower Sioux"/>
+			</concept>
+			<concept>
+				<code value="1620-4"/>
+				<display value="Mdewakanton Sioux"/>
+				<definition value="Mdewakanton Sioux"/>
+			</concept>
+			<concept>
+				<code value="1621-2"/>
+				<display value="Miniconjou"/>
+				<definition value="Miniconjou"/>
+			</concept>
+			<concept>
+				<code value="1622-0"/>
+				<display value="Oglala Sioux"/>
+				<definition value="Oglala Sioux"/>
+			</concept>
+			<concept>
+				<code value="1623-8"/>
+				<display value="Pine Ridge Sioux"/>
+				<definition value="Pine Ridge Sioux"/>
+			</concept>
+			<concept>
+				<code value="1624-6"/>
+				<display value="Pipestone Sioux"/>
+				<definition value="Pipestone Sioux"/>
+			</concept>
+			<concept>
+				<code value="1625-3"/>
+				<display value="Prairie Island Sioux"/>
+				<definition value="Prairie Island Sioux"/>
+			</concept>
+			<concept>
+				<code value="1626-1"/>
+				<display value="Prior Lake Sioux"/>
+				<definition value="Prior Lake Sioux"/>
+			</concept>
+			<concept>
+				<code value="1627-9"/>
+				<display value="Rosebud Sioux"/>
+				<definition value="Rosebud Sioux"/>
+			</concept>
+			<concept>
+				<code value="1628-7"/>
+				<display value="Sans Arc Sioux"/>
+				<definition value="Sans Arc Sioux"/>
+			</concept>
+			<concept>
+				<code value="1629-5"/>
+				<display value="Santee Sioux"/>
+				<definition value="Santee Sioux"/>
+			</concept>
+			<concept>
+				<code value="1630-3"/>
+				<display value="Sisseton-Wahpeton"/>
+				<definition value="Sisseton-Wahpeton"/>
+			</concept>
+			<concept>
+				<code value="1631-1"/>
+				<display value="Sisseton Sioux"/>
+				<definition value="Sisseton Sioux"/>
+			</concept>
+			<concept>
+				<code value="1632-9"/>
+				<display value="Spirit Lake Sioux"/>
+				<definition value="Spirit Lake Sioux"/>
+			</concept>
+			<concept>
+				<code value="1633-7"/>
+				<display value="Standing Rock Sioux"/>
+				<definition value="Standing Rock Sioux"/>
+			</concept>
+			<concept>
+				<code value="1634-5"/>
+				<display value="Teton Sioux"/>
+				<definition value="Teton Sioux"/>
+			</concept>
+			<concept>
+				<code value="1635-2"/>
+				<display value="Two Kettle Sioux"/>
+				<definition value="Two Kettle Sioux"/>
+			</concept>
+			<concept>
+				<code value="1636-0"/>
+				<display value="Upper Sioux"/>
+				<definition value="Upper Sioux"/>
+			</concept>
+			<concept>
+				<code value="1637-8"/>
+				<display value="Wahpekute Sioux"/>
+				<definition value="Wahpekute Sioux"/>
+			</concept>
+			<concept>
+				<code value="1638-6"/>
+				<display value="Wahpeton Sioux"/>
+				<definition value="Wahpeton Sioux"/>
+			</concept>
+			<concept>
+				<code value="1639-4"/>
+				<display value="Wazhaza Sioux"/>
+				<definition value="Wazhaza Sioux"/>
+			</concept>
+			<concept>
+				<code value="1640-2"/>
+				<display value="Yankton Sioux"/>
+				<definition value="Yankton Sioux"/>
+			</concept>
+			<concept>
+				<code value="1641-0"/>
+				<display value="Yanktonai Sioux"/>
+				<definition value="Yanktonai Sioux"/>
+			</concept>
+			<concept>
+				<code value="1654-3"/>
+				<display value="Ak-Chin"/>
+				<definition value="Ak-Chin"/>
+			</concept>
+			<concept>
+				<code value="1655-0"/>
+				<display value="Gila Bend"/>
+				<definition value="Gila Bend"/>
+			</concept>
+			<concept>
+				<code value="1656-8"/>
+				<display value="San Xavier"/>
+				<definition value="San Xavier"/>
+			</concept>
+			<concept>
+				<code value="1657-6"/>
+				<display value="Sells"/>
+				<definition value="Sells"/>
+			</concept>
+			<concept>
+				<code value="1668-3"/>
+				<display value="Cow Creek Umpqua"/>
+				<definition value="Cow Creek Umpqua"/>
+			</concept>
+			<concept>
+				<code value="1671-7"/>
+				<display value="Allen Canyon"/>
+				<definition value="Allen Canyon"/>
+			</concept>
+			<concept>
+				<code value="1672-5"/>
+				<display value="Uintah Ute"/>
+				<definition value="Uintah Ute"/>
+			</concept>
+			<concept>
+				<code value="1673-3"/>
+				<display value="Ute Mountain Ute"/>
+				<definition value="Ute Mountain Ute"/>
+			</concept>
+			<concept>
+				<code value="1680-8"/>
+				<display value="Gay Head Wampanoag"/>
+				<definition value="Gay Head Wampanoag"/>
+			</concept>
+			<concept>
+				<code value="1681-6"/>
+				<display value="Mashpee Wampanoag"/>
+				<definition value="Mashpee Wampanoag"/>
+			</concept>
+			<concept>
+				<code value="1688-1"/>
+				<display value="Alpine"/>
+				<definition value="Alpine"/>
+			</concept>
+			<concept>
+				<code value="1689-9"/>
+				<display value="Carson"/>
+				<definition value="Carson"/>
+			</concept>
+			<concept>
+				<code value="1690-7"/>
+				<display value="Dresslerville"/>
+				<definition value="Dresslerville"/>
+			</concept>
+			<concept>
+				<code value="1697-2"/>
+				<display value="Ho-chunk"/>
+				<definition value="Ho-chunk"/>
+			</concept>
+			<concept>
+				<code value="1698-0"/>
+				<display value="Nebraska Winnebago"/>
+				<definition value="Nebraska Winnebago"/>
+			</concept>
+			<concept>
+				<code value="1705-3"/>
+				<display value="Table Bluff"/>
+				<definition value="Table Bluff"/>
+			</concept>
+			<concept>
+				<code value="1712-9"/>
+				<display value="Barrio Libre"/>
+				<definition value="Barrio Libre"/>
+			</concept>
+			<concept>
+				<code value="1713-7"/>
+				<display value="Pascua Yaqui"/>
+				<definition value="Pascua Yaqui"/>
+			</concept>
+			<concept>
+				<code value="1718-6"/>
+				<display value="Chukchansi"/>
+				<definition value="Chukchansi"/>
+			</concept>
+			<concept>
+				<code value="1719-4"/>
+				<display value="Tachi"/>
+				<definition value="Tachi"/>
+			</concept>
+			<concept>
+				<code value="1720-2"/>
+				<display value="Tule River"/>
+				<definition value="Tule River"/>
+			</concept>
+			<concept>
+				<code value="1725-1"/>
+				<display value="Cocopah"/>
+				<definition value="Cocopah"/>
+			</concept>
+			<concept>
+				<code value="1726-9"/>
+				<display value="Havasupai"/>
+				<definition value="Havasupai"/>
+			</concept>
+			<concept>
+				<code value="1727-7"/>
+				<display value="Hualapai"/>
+				<definition value="Hualapai"/>
+			</concept>
+			<concept>
+				<code value="1728-5"/>
+				<display value="Maricopa"/>
+				<definition value="Maricopa"/>
+			</concept>
+			<concept>
+				<code value="1729-3"/>
+				<display value="Mohave"/>
+				<definition value="Mohave"/>
+			</concept>
+			<concept>
+				<code value="1730-1"/>
+				<display value="Quechan"/>
+				<definition value="Quechan"/>
+			</concept>
+			<concept>
+				<code value="1731-9"/>
+				<display value="Yavapai"/>
+				<definition value="Yavapai"/>
+			</concept>
+			<concept>
+				<code value="1733-5"/>
+				<display value="Coast Yurok"/>
+				<definition value="Coast Yurok"/>
+			</concept>
+			<concept>
+				<code value="1737-6"/>
+				<display value="Alaska Indian"/>
+				<definition value="Alaska Indian"/>
+			</concept>
+			<concept>
+				<code value="1840-8"/>
+				<display value="Eskimo"/>
+				<definition value="Eskimo"/>
+			</concept>
+			<concept>
+				<code value="1966-1"/>
+				<display value="Aleut"/>
+				<definition value="Aleut"/>
+			</concept>
+			<concept>
+				<code value="1739-2"/>
+				<display value="Alaskan Athabascan"/>
+				<definition value="Alaskan Athabascan"/>
+			</concept>
+			<concept>
+				<code value="1811-9"/>
+				<display value="Southeast Alaska"/>
+				<definition value="Southeast Alaska"/>
+			</concept>
+			<concept>
+				<code value="1740-0"/>
+				<display value="Ahtna"/>
+				<definition value="Ahtna"/>
+			</concept>
+			<concept>
+				<code value="1741-8"/>
+				<display value="Alatna"/>
+				<definition value="Alatna"/>
+			</concept>
+			<concept>
+				<code value="1742-6"/>
+				<display value="Alexander"/>
+				<definition value="Alexander"/>
+			</concept>
+			<concept>
+				<code value="1743-4"/>
+				<display value="Allakaket"/>
+				<definition value="Allakaket"/>
+			</concept>
+			<concept>
+				<code value="1744-2"/>
+				<display value="Alanvik"/>
+				<definition value="Alanvik"/>
+			</concept>
+			<concept>
+				<code value="1745-9"/>
+				<display value="Anvik"/>
+				<definition value="Anvik"/>
+			</concept>
+			<concept>
+				<code value="1746-7"/>
+				<display value="Arctic"/>
+				<definition value="Arctic"/>
+			</concept>
+			<concept>
+				<code value="1747-5"/>
+				<display value="Beaver"/>
+				<definition value="Beaver"/>
+			</concept>
+			<concept>
+				<code value="1748-3"/>
+				<display value="Birch Creek"/>
+				<definition value="Birch Creek"/>
+			</concept>
+			<concept>
+				<code value="1749-1"/>
+				<display value="Cantwell"/>
+				<definition value="Cantwell"/>
+			</concept>
+			<concept>
+				<code value="1750-9"/>
+				<display value="Chalkyitsik"/>
+				<definition value="Chalkyitsik"/>
+			</concept>
+			<concept>
+				<code value="1751-7"/>
+				<display value="Chickaloon"/>
+				<definition value="Chickaloon"/>
+			</concept>
+			<concept>
+				<code value="1752-5"/>
+				<display value="Chistochina"/>
+				<definition value="Chistochina"/>
+			</concept>
+			<concept>
+				<code value="1753-3"/>
+				<display value="Chitina"/>
+				<definition value="Chitina"/>
+			</concept>
+			<concept>
+				<code value="1754-1"/>
+				<display value="Circle"/>
+				<definition value="Circle"/>
+			</concept>
+			<concept>
+				<code value="1755-8"/>
+				<display value="Cook Inlet"/>
+				<definition value="Cook Inlet"/>
+			</concept>
+			<concept>
+				<code value="1756-6"/>
+				<display value="Copper Center"/>
+				<definition value="Copper Center"/>
+			</concept>
+			<concept>
+				<code value="1757-4"/>
+				<display value="Copper River"/>
+				<definition value="Copper River"/>
+			</concept>
+			<concept>
+				<code value="1758-2"/>
+				<display value="Dot Lake"/>
+				<definition value="Dot Lake"/>
+			</concept>
+			<concept>
+				<code value="1759-0"/>
+				<display value="Doyon"/>
+				<definition value="Doyon"/>
+			</concept>
+			<concept>
+				<code value="1760-8"/>
+				<display value="Eagle"/>
+				<definition value="Eagle"/>
+			</concept>
+			<concept>
+				<code value="1761-6"/>
+				<display value="Eklutna"/>
+				<definition value="Eklutna"/>
+			</concept>
+			<concept>
+				<code value="1762-4"/>
+				<display value="Evansville"/>
+				<definition value="Evansville"/>
+			</concept>
+			<concept>
+				<code value="1763-2"/>
+				<display value="Fort Yukon"/>
+				<definition value="Fort Yukon"/>
+			</concept>
+			<concept>
+				<code value="1764-0"/>
+				<display value="Gakona"/>
+				<definition value="Gakona"/>
+			</concept>
+			<concept>
+				<code value="1765-7"/>
+				<display value="Galena"/>
+				<definition value="Galena"/>
+			</concept>
+			<concept>
+				<code value="1766-5"/>
+				<display value="Grayling"/>
+				<definition value="Grayling"/>
+			</concept>
+			<concept>
+				<code value="1767-3"/>
+				<display value="Gulkana"/>
+				<definition value="Gulkana"/>
+			</concept>
+			<concept>
+				<code value="1768-1"/>
+				<display value="Healy Lake"/>
+				<definition value="Healy Lake"/>
+			</concept>
+			<concept>
+				<code value="1769-9"/>
+				<display value="Holy Cross"/>
+				<definition value="Holy Cross"/>
+			</concept>
+			<concept>
+				<code value="1770-7"/>
+				<display value="Hughes"/>
+				<definition value="Hughes"/>
+			</concept>
+			<concept>
+				<code value="1771-5"/>
+				<display value="Huslia"/>
+				<definition value="Huslia"/>
+			</concept>
+			<concept>
+				<code value="1772-3"/>
+				<display value="Iliamna"/>
+				<definition value="Iliamna"/>
+			</concept>
+			<concept>
+				<code value="1773-1"/>
+				<display value="Kaltag"/>
+				<definition value="Kaltag"/>
+			</concept>
+			<concept>
+				<code value="1774-9"/>
+				<display value="Kluti Kaah"/>
+				<definition value="Kluti Kaah"/>
+			</concept>
+			<concept>
+				<code value="1775-6"/>
+				<display value="Knik"/>
+				<definition value="Knik"/>
+			</concept>
+			<concept>
+				<code value="1776-4"/>
+				<display value="Koyukuk"/>
+				<definition value="Koyukuk"/>
+			</concept>
+			<concept>
+				<code value="1777-2"/>
+				<display value="Lake Minchumina"/>
+				<definition value="Lake Minchumina"/>
+			</concept>
+			<concept>
+				<code value="1778-0"/>
+				<display value="Lime"/>
+				<definition value="Lime"/>
+			</concept>
+			<concept>
+				<code value="1779-8"/>
+				<display value="Mcgrath"/>
+				<definition value="Mcgrath"/>
+			</concept>
+			<concept>
+				<code value="1780-6"/>
+				<display value="Manley Hot Springs"/>
+				<definition value="Manley Hot Springs"/>
+			</concept>
+			<concept>
+				<code value="1781-4"/>
+				<display value="Mentasta Lake"/>
+				<definition value="Mentasta Lake"/>
+			</concept>
+			<concept>
+				<code value="1782-2"/>
+				<display value="Minto"/>
+				<definition value="Minto"/>
+			</concept>
+			<concept>
+				<code value="1783-0"/>
+				<display value="Nenana"/>
+				<definition value="Nenana"/>
+			</concept>
+			<concept>
+				<code value="1784-8"/>
+				<display value="Nikolai"/>
+				<definition value="Nikolai"/>
+			</concept>
+			<concept>
+				<code value="1785-5"/>
+				<display value="Ninilchik"/>
+				<definition value="Ninilchik"/>
+			</concept>
+			<concept>
+				<code value="1786-3"/>
+				<display value="Nondalton"/>
+				<definition value="Nondalton"/>
+			</concept>
+			<concept>
+				<code value="1787-1"/>
+				<display value="Northway"/>
+				<definition value="Northway"/>
+			</concept>
+			<concept>
+				<code value="1788-9"/>
+				<display value="Nulato"/>
+				<definition value="Nulato"/>
+			</concept>
+			<concept>
+				<code value="1789-7"/>
+				<display value="Pedro Bay"/>
+				<definition value="Pedro Bay"/>
+			</concept>
+			<concept>
+				<code value="1790-5"/>
+				<display value="Rampart"/>
+				<definition value="Rampart"/>
+			</concept>
+			<concept>
+				<code value="1791-3"/>
+				<display value="Ruby"/>
+				<definition value="Ruby"/>
+			</concept>
+			<concept>
+				<code value="1792-1"/>
+				<display value="Salamatof"/>
+				<definition value="Salamatof"/>
+			</concept>
+			<concept>
+				<code value="1793-9"/>
+				<display value="Seldovia"/>
+				<definition value="Seldovia"/>
+			</concept>
+			<concept>
+				<code value="1794-7"/>
+				<display value="Slana"/>
+				<definition value="Slana"/>
+			</concept>
+			<concept>
+				<code value="1795-4"/>
+				<display value="Shageluk"/>
+				<definition value="Shageluk"/>
+			</concept>
+			<concept>
+				<code value="1796-2"/>
+				<display value="Stevens"/>
+				<definition value="Stevens"/>
+			</concept>
+			<concept>
+				<code value="1797-0"/>
+				<display value="Stony River"/>
+				<definition value="Stony River"/>
+			</concept>
+			<concept>
+				<code value="1798-8"/>
+				<display value="Takotna"/>
+				<definition value="Takotna"/>
+			</concept>
+			<concept>
+				<code value="1799-6"/>
+				<display value="Tanacross"/>
+				<definition value="Tanacross"/>
+			</concept>
+			<concept>
+				<code value="1800-2"/>
+				<display value="Tanaina"/>
+				<definition value="Tanaina"/>
+			</concept>
+			<concept>
+				<code value="1801-0"/>
+				<display value="Tanana"/>
+				<definition value="Tanana"/>
+			</concept>
+			<concept>
+				<code value="1802-8"/>
+				<display value="Tanana Chiefs"/>
+				<definition value="Tanana Chiefs"/>
+			</concept>
+			<concept>
+				<code value="1803-6"/>
+				<display value="Tazlina"/>
+				<definition value="Tazlina"/>
+			</concept>
+			<concept>
+				<code value="1804-4"/>
+				<display value="Telida"/>
+				<definition value="Telida"/>
+			</concept>
+			<concept>
+				<code value="1805-1"/>
+				<display value="Tetlin"/>
+				<definition value="Tetlin"/>
+			</concept>
+			<concept>
+				<code value="1806-9"/>
+				<display value="Tok"/>
+				<definition value="Tok"/>
+			</concept>
+			<concept>
+				<code value="1807-7"/>
+				<display value="Tyonek"/>
+				<definition value="Tyonek"/>
+			</concept>
+			<concept>
+				<code value="1808-5"/>
+				<display value="Venetie"/>
+				<definition value="Venetie"/>
+			</concept>
+			<concept>
+				<code value="1809-3"/>
+				<display value="Wiseman"/>
+				<definition value="Wiseman"/>
+			</concept>
+			<concept>
+				<code value="1813-5"/>
+				<display value="Tlingit-Haida"/>
+				<definition value="Tlingit-Haida"/>
+			</concept>
+			<concept>
+				<code value="1837-4"/>
+				<display value="Tsimshian"/>
+				<definition value="Tsimshian"/>
+			</concept>
+			<concept>
+				<code value="1814-3"/>
+				<display value="Angoon"/>
+				<definition value="Angoon"/>
+			</concept>
+			<concept>
+				<code value="1815-0"/>
+				<display value="Central Council of Tlingit and Haida Tribes"/>
+				<definition value="Central Council of Tlingit and Haida Tribes"/>
+			</concept>
+			<concept>
+				<code value="1816-8"/>
+				<display value="Chilkat"/>
+				<definition value="Chilkat"/>
+			</concept>
+			<concept>
+				<code value="1817-6"/>
+				<display value="Chilkoot"/>
+				<definition value="Chilkoot"/>
+			</concept>
+			<concept>
+				<code value="1818-4"/>
+				<display value="Craig"/>
+				<definition value="Craig"/>
+			</concept>
+			<concept>
+				<code value="1819-2"/>
+				<display value="Douglas"/>
+				<definition value="Douglas"/>
+			</concept>
+			<concept>
+				<code value="1820-0"/>
+				<display value="Haida"/>
+				<definition value="Haida"/>
+			</concept>
+			<concept>
+				<code value="1821-8"/>
+				<display value="Hoonah"/>
+				<definition value="Hoonah"/>
+			</concept>
+			<concept>
+				<code value="1822-6"/>
+				<display value="Hydaburg"/>
+				<definition value="Hydaburg"/>
+			</concept>
+			<concept>
+				<code value="1823-4"/>
+				<display value="Kake"/>
+				<definition value="Kake"/>
+			</concept>
+			<concept>
+				<code value="1824-2"/>
+				<display value="Kasaan"/>
+				<definition value="Kasaan"/>
+			</concept>
+			<concept>
+				<code value="1825-9"/>
+				<display value="Kenaitze"/>
+				<definition value="Kenaitze"/>
+			</concept>
+			<concept>
+				<code value="1826-7"/>
+				<display value="Ketchikan"/>
+				<definition value="Ketchikan"/>
+			</concept>
+			<concept>
+				<code value="1827-5"/>
+				<display value="Klawock"/>
+				<definition value="Klawock"/>
+			</concept>
+			<concept>
+				<code value="1828-3"/>
+				<display value="Pelican"/>
+				<definition value="Pelican"/>
+			</concept>
+			<concept>
+				<code value="1829-1"/>
+				<display value="Petersburg"/>
+				<definition value="Petersburg"/>
+			</concept>
+			<concept>
+				<code value="1830-9"/>
+				<display value="Saxman"/>
+				<definition value="Saxman"/>
+			</concept>
+			<concept>
+				<code value="1831-7"/>
+				<display value="Sitka"/>
+				<definition value="Sitka"/>
+			</concept>
+			<concept>
+				<code value="1832-5"/>
+				<display value="Tenakee Springs"/>
+				<definition value="Tenakee Springs"/>
+			</concept>
+			<concept>
+				<code value="1833-3"/>
+				<display value="Tlingit"/>
+				<definition value="Tlingit"/>
+			</concept>
+			<concept>
+				<code value="1834-1"/>
+				<display value="Wrangell"/>
+				<definition value="Wrangell"/>
+			</concept>
+			<concept>
+				<code value="1835-8"/>
+				<display value="Yakutat"/>
+				<definition value="Yakutat"/>
+			</concept>
+			<concept>
+				<code value="1838-2"/>
+				<display value="Metlakatla"/>
+				<definition value="Metlakatla"/>
+			</concept>
+			<concept>
+				<code value="1842-4"/>
+				<display value="Greenland Eskimo"/>
+				<definition value="Greenland Eskimo"/>
+			</concept>
+			<concept>
+				<code value="1844-0"/>
+				<display value="Inupiat Eskimo"/>
+				<definition value="Inupiat Eskimo"/>
+			</concept>
+			<concept>
+				<code value="1891-1"/>
+				<display value="Siberian Eskimo"/>
+				<definition value="Siberian Eskimo"/>
+			</concept>
+			<concept>
+				<code value="1896-0"/>
+				<display value="Yupik Eskimo"/>
+				<definition value="Yupik Eskimo"/>
+			</concept>
+			<concept>
+				<code value="1845-7"/>
+				<display value="Ambler"/>
+				<definition value="Ambler"/>
+			</concept>
+			<concept>
+				<code value="1846-5"/>
+				<display value="Anaktuvuk"/>
+				<definition value="Anaktuvuk"/>
+			</concept>
+			<concept>
+				<code value="1847-3"/>
+				<display value="Anaktuvuk Pass"/>
+				<definition value="Anaktuvuk Pass"/>
+			</concept>
+			<concept>
+				<code value="1848-1"/>
+				<display value="Arctic Slope Inupiat"/>
+				<definition value="Arctic Slope Inupiat"/>
+			</concept>
+			<concept>
+				<code value="1849-9"/>
+				<display value="Arctic Slope Corporation"/>
+				<definition value="Arctic Slope Corporation"/>
+			</concept>
+			<concept>
+				<code value="1850-7"/>
+				<display value="Atqasuk"/>
+				<definition value="Atqasuk"/>
+			</concept>
+			<concept>
+				<code value="1851-5"/>
+				<display value="Barrow"/>
+				<definition value="Barrow"/>
+			</concept>
+			<concept>
+				<code value="1852-3"/>
+				<display value="Bering Straits Inupiat"/>
+				<definition value="Bering Straits Inupiat"/>
+			</concept>
+			<concept>
+				<code value="1853-1"/>
+				<display value="Brevig Mission"/>
+				<definition value="Brevig Mission"/>
+			</concept>
+			<concept>
+				<code value="1854-9"/>
+				<display value="Buckland"/>
+				<definition value="Buckland"/>
+			</concept>
+			<concept>
+				<code value="1855-6"/>
+				<display value="Chinik"/>
+				<definition value="Chinik"/>
+			</concept>
+			<concept>
+				<code value="1856-4"/>
+				<display value="Council"/>
+				<definition value="Council"/>
+			</concept>
+			<concept>
+				<code value="1857-2"/>
+				<display value="Deering"/>
+				<definition value="Deering"/>
+			</concept>
+			<concept>
+				<code value="1858-0"/>
+				<display value="Elim"/>
+				<definition value="Elim"/>
+			</concept>
+			<concept>
+				<code value="1859-8"/>
+				<display value="Golovin"/>
+				<definition value="Golovin"/>
+			</concept>
+			<concept>
+				<code value="1860-6"/>
+				<display value="Inalik Diomede"/>
+				<definition value="Inalik Diomede"/>
+			</concept>
+			<concept>
+				<code value="1861-4"/>
+				<display value="Inupiaq"/>
+				<definition value="Inupiaq"/>
+			</concept>
+			<concept>
+				<code value="1862-2"/>
+				<display value="Kaktovik"/>
+				<definition value="Kaktovik"/>
+			</concept>
+			<concept>
+				<code value="1863-0"/>
+				<display value="Kawerak"/>
+				<definition value="Kawerak"/>
+			</concept>
+			<concept>
+				<code value="1864-8"/>
+				<display value="Kiana"/>
+				<definition value="Kiana"/>
+			</concept>
+			<concept>
+				<code value="1865-5"/>
+				<display value="Kivalina"/>
+				<definition value="Kivalina"/>
+			</concept>
+			<concept>
+				<code value="1866-3"/>
+				<display value="Kobuk"/>
+				<definition value="Kobuk"/>
+			</concept>
+			<concept>
+				<code value="1867-1"/>
+				<display value="Kotzebue"/>
+				<definition value="Kotzebue"/>
+			</concept>
+			<concept>
+				<code value="1868-9"/>
+				<display value="Koyuk"/>
+				<definition value="Koyuk"/>
+			</concept>
+			<concept>
+				<code value="1869-7"/>
+				<display value="Kwiguk"/>
+				<definition value="Kwiguk"/>
+			</concept>
+			<concept>
+				<code value="1870-5"/>
+				<display value="Mauneluk Inupiat"/>
+				<definition value="Mauneluk Inupiat"/>
+			</concept>
+			<concept>
+				<code value="1871-3"/>
+				<display value="Nana Inupiat"/>
+				<definition value="Nana Inupiat"/>
+			</concept>
+			<concept>
+				<code value="1872-1"/>
+				<display value="Noatak"/>
+				<definition value="Noatak"/>
+			</concept>
+			<concept>
+				<code value="1873-9"/>
+				<display value="Nome"/>
+				<definition value="Nome"/>
+			</concept>
+			<concept>
+				<code value="1874-7"/>
+				<display value="Noorvik"/>
+				<definition value="Noorvik"/>
+			</concept>
+			<concept>
+				<code value="1875-4"/>
+				<display value="Nuiqsut"/>
+				<definition value="Nuiqsut"/>
+			</concept>
+			<concept>
+				<code value="1876-2"/>
+				<display value="Point Hope"/>
+				<definition value="Point Hope"/>
+			</concept>
+			<concept>
+				<code value="1877-0"/>
+				<display value="Point Lay"/>
+				<definition value="Point Lay"/>
+			</concept>
+			<concept>
+				<code value="1878-8"/>
+				<display value="Selawik"/>
+				<definition value="Selawik"/>
+			</concept>
+			<concept>
+				<code value="1879-6"/>
+				<display value="Shaktoolik"/>
+				<definition value="Shaktoolik"/>
+			</concept>
+			<concept>
+				<code value="1880-4"/>
+				<display value="Shishmaref"/>
+				<definition value="Shishmaref"/>
+			</concept>
+			<concept>
+				<code value="1881-2"/>
+				<display value="Shungnak"/>
+				<definition value="Shungnak"/>
+			</concept>
+			<concept>
+				<code value="1882-0"/>
+				<display value="Solomon"/>
+				<definition value="Solomon"/>
+			</concept>
+			<concept>
+				<code value="1883-8"/>
+				<display value="Teller"/>
+				<definition value="Teller"/>
+			</concept>
+			<concept>
+				<code value="1884-6"/>
+				<display value="Unalakleet"/>
+				<definition value="Unalakleet"/>
+			</concept>
+			<concept>
+				<code value="1885-3"/>
+				<display value="Wainwright"/>
+				<definition value="Wainwright"/>
+			</concept>
+			<concept>
+				<code value="1886-1"/>
+				<display value="Wales"/>
+				<definition value="Wales"/>
+			</concept>
+			<concept>
+				<code value="1887-9"/>
+				<display value="White Mountain"/>
+				<definition value="White Mountain"/>
+			</concept>
+			<concept>
+				<code value="1888-7"/>
+				<display value="White Mountain Inupiat"/>
+				<definition value="White Mountain Inupiat"/>
+			</concept>
+			<concept>
+				<code value="1889-5"/>
+				<display value="Mary&apos;s Igloo"/>
+				<definition value="Mary&apos;s Igloo"/>
+			</concept>
+			<concept>
+				<code value="1892-9"/>
+				<display value="Gambell"/>
+				<definition value="Gambell"/>
+			</concept>
+			<concept>
+				<code value="1893-7"/>
+				<display value="Savoonga"/>
+				<definition value="Savoonga"/>
+			</concept>
+			<concept>
+				<code value="1894-5"/>
+				<display value="Siberian Yupik"/>
+				<definition value="Siberian Yupik"/>
+			</concept>
+			<concept>
+				<code value="1897-8"/>
+				<display value="Akiachak"/>
+				<definition value="Akiachak"/>
+			</concept>
+			<concept>
+				<code value="1898-6"/>
+				<display value="Akiak"/>
+				<definition value="Akiak"/>
+			</concept>
+			<concept>
+				<code value="1899-4"/>
+				<display value="Alakanuk"/>
+				<definition value="Alakanuk"/>
+			</concept>
+			<concept>
+				<code value="1900-0"/>
+				<display value="Aleknagik"/>
+				<definition value="Aleknagik"/>
+			</concept>
+			<concept>
+				<code value="1901-8"/>
+				<display value="Andreafsky"/>
+				<definition value="Andreafsky"/>
+			</concept>
+			<concept>
+				<code value="1902-6"/>
+				<display value="Aniak"/>
+				<definition value="Aniak"/>
+			</concept>
+			<concept>
+				<code value="1903-4"/>
+				<display value="Atmautluak"/>
+				<definition value="Atmautluak"/>
+			</concept>
+			<concept>
+				<code value="1904-2"/>
+				<display value="Bethel"/>
+				<definition value="Bethel"/>
+			</concept>
+			<concept>
+				<code value="1905-9"/>
+				<display value="Bill Moore&apos;s Slough"/>
+				<definition value="Bill Moore&apos;s Slough"/>
+			</concept>
+			<concept>
+				<code value="1906-7"/>
+				<display value="Bristol Bay Yupik"/>
+				<definition value="Bristol Bay Yupik"/>
+			</concept>
+			<concept>
+				<code value="1907-5"/>
+				<display value="Calista Yupik"/>
+				<definition value="Calista Yupik"/>
+			</concept>
+			<concept>
+				<code value="1908-3"/>
+				<display value="Chefornak"/>
+				<definition value="Chefornak"/>
+			</concept>
+			<concept>
+				<code value="1909-1"/>
+				<display value="Chevak"/>
+				<definition value="Chevak"/>
+			</concept>
+			<concept>
+				<code value="1910-9"/>
+				<display value="Chuathbaluk"/>
+				<definition value="Chuathbaluk"/>
+			</concept>
+			<concept>
+				<code value="1911-7"/>
+				<display value="Clark&apos;s Point"/>
+				<definition value="Clark&apos;s Point"/>
+			</concept>
+			<concept>
+				<code value="1912-5"/>
+				<display value="Crooked Creek"/>
+				<definition value="Crooked Creek"/>
+			</concept>
+			<concept>
+				<code value="1913-3"/>
+				<display value="Dillingham"/>
+				<definition value="Dillingham"/>
+			</concept>
+			<concept>
+				<code value="1914-1"/>
+				<display value="Eek"/>
+				<definition value="Eek"/>
+			</concept>
+			<concept>
+				<code value="1915-8"/>
+				<display value="Ekuk"/>
+				<definition value="Ekuk"/>
+			</concept>
+			<concept>
+				<code value="1916-6"/>
+				<display value="Ekwok"/>
+				<definition value="Ekwok"/>
+			</concept>
+			<concept>
+				<code value="1917-4"/>
+				<display value="Emmonak"/>
+				<definition value="Emmonak"/>
+			</concept>
+			<concept>
+				<code value="1918-2"/>
+				<display value="Goodnews Bay"/>
+				<definition value="Goodnews Bay"/>
+			</concept>
+			<concept>
+				<code value="1919-0"/>
+				<display value="Hooper Bay"/>
+				<definition value="Hooper Bay"/>
+			</concept>
+			<concept>
+				<code value="1920-8"/>
+				<display value="Iqurmuit (Russian Mission)"/>
+				<definition value="Iqurmuit (Russian Mission)"/>
+			</concept>
+			<concept>
+				<code value="1921-6"/>
+				<display value="Kalskag"/>
+				<definition value="Kalskag"/>
+			</concept>
+			<concept>
+				<code value="1922-4"/>
+				<display value="Kasigluk"/>
+				<definition value="Kasigluk"/>
+			</concept>
+			<concept>
+				<code value="1923-2"/>
+				<display value="Kipnuk"/>
+				<definition value="Kipnuk"/>
+			</concept>
+			<concept>
+				<code value="1924-0"/>
+				<display value="Koliganek"/>
+				<definition value="Koliganek"/>
+			</concept>
+			<concept>
+				<code value="1925-7"/>
+				<display value="Kongiganak"/>
+				<definition value="Kongiganak"/>
+			</concept>
+			<concept>
+				<code value="1926-5"/>
+				<display value="Kotlik"/>
+				<definition value="Kotlik"/>
+			</concept>
+			<concept>
+				<code value="1927-3"/>
+				<display value="Kwethluk"/>
+				<definition value="Kwethluk"/>
+			</concept>
+			<concept>
+				<code value="1928-1"/>
+				<display value="Kwigillingok"/>
+				<definition value="Kwigillingok"/>
+			</concept>
+			<concept>
+				<code value="1929-9"/>
+				<display value="Levelock"/>
+				<definition value="Levelock"/>
+			</concept>
+			<concept>
+				<code value="1930-7"/>
+				<display value="Lower Kalskag"/>
+				<definition value="Lower Kalskag"/>
+			</concept>
+			<concept>
+				<code value="1931-5"/>
+				<display value="Manokotak"/>
+				<definition value="Manokotak"/>
+			</concept>
+			<concept>
+				<code value="1932-3"/>
+				<display value="Marshall"/>
+				<definition value="Marshall"/>
+			</concept>
+			<concept>
+				<code value="1933-1"/>
+				<display value="Mekoryuk"/>
+				<definition value="Mekoryuk"/>
+			</concept>
+			<concept>
+				<code value="1934-9"/>
+				<display value="Mountain Village"/>
+				<definition value="Mountain Village"/>
+			</concept>
+			<concept>
+				<code value="1935-6"/>
+				<display value="Naknek"/>
+				<definition value="Naknek"/>
+			</concept>
+			<concept>
+				<code value="1936-4"/>
+				<display value="Napaumute"/>
+				<definition value="Napaumute"/>
+			</concept>
+			<concept>
+				<code value="1937-2"/>
+				<display value="Napakiak"/>
+				<definition value="Napakiak"/>
+			</concept>
+			<concept>
+				<code value="1938-0"/>
+				<display value="Napaskiak"/>
+				<definition value="Napaskiak"/>
+			</concept>
+			<concept>
+				<code value="1939-8"/>
+				<display value="Newhalen"/>
+				<definition value="Newhalen"/>
+			</concept>
+			<concept>
+				<code value="1940-6"/>
+				<display value="New Stuyahok"/>
+				<definition value="New Stuyahok"/>
+			</concept>
+			<concept>
+				<code value="1941-4"/>
+				<display value="Newtok"/>
+				<definition value="Newtok"/>
+			</concept>
+			<concept>
+				<code value="1942-2"/>
+				<display value="Nightmute"/>
+				<definition value="Nightmute"/>
+			</concept>
+			<concept>
+				<code value="1943-0"/>
+				<display value="Nunapitchukv"/>
+				<definition value="Nunapitchukv"/>
+			</concept>
+			<concept>
+				<code value="1944-8"/>
+				<display value="Oscarville"/>
+				<definition value="Oscarville"/>
+			</concept>
+			<concept>
+				<code value="1945-5"/>
+				<display value="Pilot Station"/>
+				<definition value="Pilot Station"/>
+			</concept>
+			<concept>
+				<code value="1946-3"/>
+				<display value="Pitkas Point"/>
+				<definition value="Pitkas Point"/>
+			</concept>
+			<concept>
+				<code value="1947-1"/>
+				<display value="Platinum"/>
+				<definition value="Platinum"/>
+			</concept>
+			<concept>
+				<code value="1948-9"/>
+				<display value="Portage Creek"/>
+				<definition value="Portage Creek"/>
+			</concept>
+			<concept>
+				<code value="1949-7"/>
+				<display value="Quinhagak"/>
+				<definition value="Quinhagak"/>
+			</concept>
+			<concept>
+				<code value="1950-5"/>
+				<display value="Red Devil"/>
+				<definition value="Red Devil"/>
+			</concept>
+			<concept>
+				<code value="1951-3"/>
+				<display value="St. Michael"/>
+				<definition value="St. Michael"/>
+			</concept>
+			<concept>
+				<code value="1952-1"/>
+				<display value="Scammon Bay"/>
+				<definition value="Scammon Bay"/>
+			</concept>
+			<concept>
+				<code value="1953-9"/>
+				<display value="Sheldon&apos;s Point"/>
+				<definition value="Sheldon&apos;s Point"/>
+			</concept>
+			<concept>
+				<code value="1954-7"/>
+				<display value="Sleetmute"/>
+				<definition value="Sleetmute"/>
+			</concept>
+			<concept>
+				<code value="1955-4"/>
+				<display value="Stebbins"/>
+				<definition value="Stebbins"/>
+			</concept>
+			<concept>
+				<code value="1956-2"/>
+				<display value="Togiak"/>
+				<definition value="Togiak"/>
+			</concept>
+			<concept>
+				<code value="1957-0"/>
+				<display value="Toksook"/>
+				<definition value="Toksook"/>
+			</concept>
+			<concept>
+				<code value="1958-8"/>
+				<display value="Tulukskak"/>
+				<definition value="Tulukskak"/>
+			</concept>
+			<concept>
+				<code value="1959-6"/>
+				<display value="Tuntutuliak"/>
+				<definition value="Tuntutuliak"/>
+			</concept>
+			<concept>
+				<code value="1960-4"/>
+				<display value="Tununak"/>
+				<definition value="Tununak"/>
+			</concept>
+			<concept>
+				<code value="1961-2"/>
+				<display value="Twin Hills"/>
+				<definition value="Twin Hills"/>
+			</concept>
+			<concept>
+				<code value="1962-0"/>
+				<display value="Georgetown (Yupik-Eskimo)"/>
+				<definition value="Georgetown (Yupik-Eskimo)"/>
+			</concept>
+			<concept>
+				<code value="1963-8"/>
+				<display value="St. Mary&apos;s"/>
+				<definition value="St. Mary&apos;s"/>
+			</concept>
+			<concept>
+				<code value="1964-6"/>
+				<display value="Umkumiate"/>
+				<definition value="Umkumiate"/>
+			</concept>
+			<concept>
+				<code value="1968-7"/>
+				<display value="Alutiiq Aleut"/>
+				<definition value="Alutiiq Aleut"/>
+			</concept>
+			<concept>
+				<code value="1972-9"/>
+				<display value="Bristol Bay Aleut"/>
+				<definition value="Bristol Bay Aleut"/>
+			</concept>
+			<concept>
+				<code value="1984-4"/>
+				<display value="Chugach Aleut"/>
+				<definition value="Chugach Aleut"/>
+			</concept>
+			<concept>
+				<code value="1990-1"/>
+				<display value="Eyak"/>
+				<definition value="Eyak"/>
+			</concept>
+			<concept>
+				<code value="1992-7"/>
+				<display value="Koniag Aleut"/>
+				<definition value="Koniag Aleut"/>
+			</concept>
+			<concept>
+				<code value="2002-4"/>
+				<display value="Sugpiaq"/>
+				<definition value="Sugpiaq"/>
+			</concept>
+			<concept>
+				<code value="2004-0"/>
+				<display value="Suqpigaq"/>
+				<definition value="Suqpigaq"/>
+			</concept>
+			<concept>
+				<code value="2006-5"/>
+				<display value="Unangan Aleut"/>
+				<definition value="Unangan Aleut"/>
+			</concept>
+			<concept>
+				<code value="1969-5"/>
+				<display value="Tatitlek"/>
+				<definition value="Tatitlek"/>
+			</concept>
+			<concept>
+				<code value="1970-3"/>
+				<display value="Ugashik"/>
+				<definition value="Ugashik"/>
+			</concept>
+			<concept>
+				<code value="1973-7"/>
+				<display value="Chignik"/>
+				<definition value="Chignik"/>
+			</concept>
+			<concept>
+				<code value="1974-5"/>
+				<display value="Chignik Lake"/>
+				<definition value="Chignik Lake"/>
+			</concept>
+			<concept>
+				<code value="1975-2"/>
+				<display value="Egegik"/>
+				<definition value="Egegik"/>
+			</concept>
+			<concept>
+				<code value="1976-0"/>
+				<display value="Igiugig"/>
+				<definition value="Igiugig"/>
+			</concept>
+			<concept>
+				<code value="1977-8"/>
+				<display value="Ivanof Bay"/>
+				<definition value="Ivanof Bay"/>
+			</concept>
+			<concept>
+				<code value="1978-6"/>
+				<display value="King Salmon"/>
+				<definition value="King Salmon"/>
+			</concept>
+			<concept>
+				<code value="1979-4"/>
+				<display value="Kokhanok"/>
+				<definition value="Kokhanok"/>
+			</concept>
+			<concept>
+				<code value="1980-2"/>
+				<display value="Perryville"/>
+				<definition value="Perryville"/>
+			</concept>
+			<concept>
+				<code value="1981-0"/>
+				<display value="Pilot Point"/>
+				<definition value="Pilot Point"/>
+			</concept>
+			<concept>
+				<code value="1982-8"/>
+				<display value="Port Heiden"/>
+				<definition value="Port Heiden"/>
+			</concept>
+			<concept>
+				<code value="1985-1"/>
+				<display value="Chenega"/>
+				<definition value="Chenega"/>
+			</concept>
+			<concept>
+				<code value="1986-9"/>
+				<display value="Chugach Corporation"/>
+				<definition value="Chugach Corporation"/>
+			</concept>
+			<concept>
+				<code value="1987-7"/>
+				<display value="English Bay"/>
+				<definition value="English Bay"/>
+			</concept>
+			<concept>
+				<code value="1988-5"/>
+				<display value="Port Graham"/>
+				<definition value="Port Graham"/>
+			</concept>
+			<concept>
+				<code value="1993-5"/>
+				<display value="Akhiok"/>
+				<definition value="Akhiok"/>
+			</concept>
+			<concept>
+				<code value="1994-3"/>
+				<display value="Agdaagux"/>
+				<definition value="Agdaagux"/>
+			</concept>
+			<concept>
+				<code value="1995-0"/>
+				<display value="Karluk"/>
+				<definition value="Karluk"/>
+			</concept>
+			<concept>
+				<code value="1996-8"/>
+				<display value="Kodiak"/>
+				<definition value="Kodiak"/>
+			</concept>
+			<concept>
+				<code value="1997-6"/>
+				<display value="Larsen Bay"/>
+				<definition value="Larsen Bay"/>
+			</concept>
+			<concept>
+				<code value="1998-4"/>
+				<display value="Old Harbor"/>
+				<definition value="Old Harbor"/>
+			</concept>
+			<concept>
+				<code value="1999-2"/>
+				<display value="Ouzinkie"/>
+				<definition value="Ouzinkie"/>
+			</concept>
+			<concept>
+				<code value="2000-8"/>
+				<display value="Port Lions"/>
+				<definition value="Port Lions"/>
+			</concept>
+			<concept>
+				<code value="2007-3"/>
+				<display value="Akutan"/>
+				<definition value="Akutan"/>
+			</concept>
+			<concept>
+				<code value="2008-1"/>
+				<display value="Aleut Corporation"/>
+				<definition value="Aleut Corporation"/>
+			</concept>
+			<concept>
+				<code value="2009-9"/>
+				<display value="Aleutian"/>
+				<definition value="Aleutian"/>
+			</concept>
+			<concept>
+				<code value="2010-7"/>
+				<display value="Aleutian Islander"/>
+				<definition value="Aleutian Islander"/>
+			</concept>
+			<concept>
+				<code value="2011-5"/>
+				<display value="Atka"/>
+				<definition value="Atka"/>
+			</concept>
+			<concept>
+				<code value="2012-3"/>
+				<display value="Belkofski"/>
+				<definition value="Belkofski"/>
+			</concept>
+			<concept>
+				<code value="2013-1"/>
+				<display value="Chignik Lagoon"/>
+				<definition value="Chignik Lagoon"/>
+			</concept>
+			<concept>
+				<code value="2014-9"/>
+				<display value="King Cove"/>
+				<definition value="King Cove"/>
+			</concept>
+			<concept>
+				<code value="2015-6"/>
+				<display value="False Pass"/>
+				<definition value="False Pass"/>
+			</concept>
+			<concept>
+				<code value="2016-4"/>
+				<display value="Nelson Lagoon"/>
+				<definition value="Nelson Lagoon"/>
+			</concept>
+			<concept>
+				<code value="2017-2"/>
+				<display value="Nikolski"/>
+				<definition value="Nikolski"/>
+			</concept>
+			<concept>
+				<code value="2018-0"/>
+				<display value="Pauloff Harbor"/>
+				<definition value="Pauloff Harbor"/>
+			</concept>
+			<concept>
+				<code value="2019-8"/>
+				<display value="Qagan Toyagungin"/>
+				<definition value="Qagan Toyagungin"/>
+			</concept>
+			<concept>
+				<code value="2020-6"/>
+				<display value="Qawalangin"/>
+				<definition value="Qawalangin"/>
+			</concept>
+			<concept>
+				<code value="2021-4"/>
+				<display value="St. George"/>
+				<definition value="St. George"/>
+			</concept>
+			<concept>
+				<code value="2022-2"/>
+				<display value="St. Paul"/>
+				<definition value="St. Paul"/>
+			</concept>
+			<concept>
+				<code value="2023-0"/>
+				<display value="Sand Point"/>
+				<definition value="Sand Point"/>
+			</concept>
+			<concept>
+				<code value="2024-8"/>
+				<display value="South Naknek"/>
+				<definition value="South Naknek"/>
+			</concept>
+			<concept>
+				<code value="2025-5"/>
+				<display value="Unalaska"/>
+				<definition value="Unalaska"/>
+			</concept>
+			<concept>
+				<code value="2026-3"/>
+				<display value="Unga"/>
+				<definition value="Unga"/>
+			</concept>
+		</concept>
+		<concept>
+			<code value="2028-9"/>
+			<display value="Asian"/>
+			<definition value="Asian"/>
+			<concept>
+				<code value="2029-7"/>
+				<display value="Asian Indian"/>
+				<definition value="Asian Indian"/>
+			</concept>
+			<concept>
+				<code value="2030-5"/>
+				<display value="Bangladeshi"/>
+				<definition value="Bangladeshi"/>
+			</concept>
+			<concept>
+				<code value="2031-3"/>
+				<display value="Bhutanese"/>
+				<definition value="Bhutanese"/>
+			</concept>
+			<concept>
+				<code value="2032-1"/>
+				<display value="Burmese"/>
+				<definition value="Burmese"/>
+			</concept>
+			<concept>
+				<code value="2033-9"/>
+				<display value="Cambodian"/>
+				<definition value="Cambodian"/>
+			</concept>
+			<concept>
+				<code value="2034-7"/>
+				<display value="Chinese"/>
+				<definition value="Chinese"/>
+			</concept>
+			<concept>
+				<code value="2035-4"/>
+				<display value="Taiwanese"/>
+				<definition value="Taiwanese"/>
+			</concept>
+			<concept>
+				<code value="2036-2"/>
+				<display value="Filipino"/>
+				<definition value="Filipino"/>
+			</concept>
+			<concept>
+				<code value="2037-0"/>
+				<display value="Hmong"/>
+				<definition value="Hmong"/>
+			</concept>
+			<concept>
+				<code value="2038-8"/>
+				<display value="Indonesian"/>
+				<definition value="Indonesian"/>
+			</concept>
+			<concept>
+				<code value="2039-6"/>
+				<display value="Japanese"/>
+				<definition value="Japanese"/>
+			</concept>
+			<concept>
+				<code value="2040-4"/>
+				<display value="Korean"/>
+				<definition value="Korean"/>
+			</concept>
+			<concept>
+				<code value="2041-2"/>
+				<display value="Laotian"/>
+				<definition value="Laotian"/>
+			</concept>
+			<concept>
+				<code value="2042-0"/>
+				<display value="Malaysian"/>
+				<definition value="Malaysian"/>
+			</concept>
+			<concept>
+				<code value="2043-8"/>
+				<display value="Okinawan"/>
+				<definition value="Okinawan"/>
+			</concept>
+			<concept>
+				<code value="2044-6"/>
+				<display value="Pakistani"/>
+				<definition value="Pakistani"/>
+			</concept>
+			<concept>
+				<code value="2045-3"/>
+				<display value="Sri Lankan"/>
+				<definition value="Sri Lankan"/>
+			</concept>
+			<concept>
+				<code value="2046-1"/>
+				<display value="Thai"/>
+				<definition value="Thai"/>
+			</concept>
+			<concept>
+				<code value="2047-9"/>
+				<display value="Vietnamese"/>
+				<definition value="Vietnamese"/>
+			</concept>
+			<concept>
+				<code value="2048-7"/>
+				<display value="Iwo Jiman"/>
+				<definition value="Iwo Jiman"/>
+			</concept>
+			<concept>
+				<code value="2049-5"/>
+				<display value="Maldivian"/>
+				<definition value="Maldivian"/>
+			</concept>
+			<concept>
+				<code value="2050-3"/>
+				<display value="Nepalese"/>
+				<definition value="Nepalese"/>
+			</concept>
+			<concept>
+				<code value="2051-1"/>
+				<display value="Singaporean"/>
+				<definition value="Singaporean"/>
+			</concept>
+			<concept>
+				<code value="2052-9"/>
+				<display value="Madagascar"/>
+				<definition value="Madagascar"/>
+			</concept>
+		</concept>
+		<concept>
+			<code value="2054-5"/>
+			<display value="Black or African American"/>
+			<definition value="Black or African American"/>
+			<concept>
+				<code value="2056-0"/>
+				<display value="Black"/>
+				<definition value="Black"/>
+			</concept>
+			<concept>
+				<code value="2058-6"/>
+				<display value="African American"/>
+				<definition value="African American"/>
+			</concept>
+			<concept>
+				<code value="2060-2"/>
+				<display value="African"/>
+				<definition value="African"/>
+			</concept>
+			<concept>
+				<code value="2067-7"/>
+				<display value="Bahamian"/>
+				<definition value="Bahamian"/>
+			</concept>
+			<concept>
+				<code value="2068-5"/>
+				<display value="Barbadian"/>
+				<definition value="Barbadian"/>
+			</concept>
+			<concept>
+				<code value="2069-3"/>
+				<display value="Dominican"/>
+				<definition value="Dominican"/>
+			</concept>
+			<concept>
+				<code value="2070-1"/>
+				<display value="Dominica Islander"/>
+				<definition value="Dominica Islander"/>
+			</concept>
+			<concept>
+				<code value="2071-9"/>
+				<display value="Haitian"/>
+				<definition value="Haitian"/>
+			</concept>
+			<concept>
+				<code value="2072-7"/>
+				<display value="Jamaican"/>
+				<definition value="Jamaican"/>
+			</concept>
+			<concept>
+				<code value="2073-5"/>
+				<display value="Tobagoan"/>
+				<definition value="Tobagoan"/>
+			</concept>
+			<concept>
+				<code value="2074-3"/>
+				<display value="Trinidadian"/>
+				<definition value="Trinidadian"/>
+			</concept>
+			<concept>
+				<code value="2075-0"/>
+				<display value="West Indian"/>
+				<definition value="West Indian"/>
+			</concept>
+			<concept>
+				<code value="2061-0"/>
+				<display value="Botswanan"/>
+				<definition value="Botswanan"/>
+			</concept>
+			<concept>
+				<code value="2062-8"/>
+				<display value="Ethiopian"/>
+				<definition value="Ethiopian"/>
+			</concept>
+			<concept>
+				<code value="2063-6"/>
+				<display value="Liberian"/>
+				<definition value="Liberian"/>
+			</concept>
+			<concept>
+				<code value="2064-4"/>
+				<display value="Namibian"/>
+				<definition value="Namibian"/>
+			</concept>
+			<concept>
+				<code value="2065-1"/>
+				<display value="Nigerian"/>
+				<definition value="Nigerian"/>
+			</concept>
+			<concept>
+				<code value="2066-9"/>
+				<display value="Zairean"/>
+				<definition value="Zairean"/>
+			</concept>
+		</concept>
+		<concept>
+			<code value="2076-8"/>
+			<display value="Native Hawaiian or Other Pacific Islander"/>
+			<definition value="Native Hawaiian or Other Pacific Islander"/>
+			<concept>
+				<code value="2078-4"/>
+				<display value="Polynesian"/>
+				<definition value="Polynesian"/>
+			</concept>
+			<concept>
+				<code value="2085-9"/>
+				<display value="Micronesian"/>
+				<definition value="Micronesian"/>
+			</concept>
+			<concept>
+				<code value="2100-6"/>
+				<display value="Melanesian"/>
+				<definition value="Melanesian"/>
+			</concept>
+			<concept>
+				<code value="2500-7"/>
+				<display value="Other Pacific Islander"/>
+				<definition value="Other Pacific Islander"/>
+			</concept>
+			<concept>
+				<code value="2079-2"/>
+				<display value="Native Hawaiian"/>
+				<definition value="Native Hawaiian"/>
+			</concept>
+			<concept>
+				<code value="2080-0"/>
+				<display value="Samoan"/>
+				<definition value="Samoan"/>
+			</concept>
+			<concept>
+				<code value="2081-8"/>
+				<display value="Tahitian"/>
+				<definition value="Tahitian"/>
+			</concept>
+			<concept>
+				<code value="2082-6"/>
+				<display value="Tongan"/>
+				<definition value="Tongan"/>
+			</concept>
+			<concept>
+				<code value="2083-4"/>
+				<display value="Tokelauan"/>
+				<definition value="Tokelauan"/>
+			</concept>
+			<concept>
+				<code value="2086-7"/>
+				<display value="Guamanian or Chamorro"/>
+				<definition value="Guamanian or Chamorro"/>
+			</concept>
+			<concept>
+				<code value="2087-5"/>
+				<display value="Guamanian"/>
+				<definition value="Guamanian"/>
+			</concept>
+			<concept>
+				<code value="2088-3"/>
+				<display value="Chamorro"/>
+				<definition value="Chamorro"/>
+			</concept>
+			<concept>
+				<code value="2089-1"/>
+				<display value="Mariana Islander"/>
+				<definition value="Mariana Islander"/>
+			</concept>
+			<concept>
+				<code value="2090-9"/>
+				<display value="Marshallese"/>
+				<definition value="Marshallese"/>
+			</concept>
+			<concept>
+				<code value="2091-7"/>
+				<display value="Palauan"/>
+				<definition value="Palauan"/>
+			</concept>
+			<concept>
+				<code value="2092-5"/>
+				<display value="Carolinian"/>
+				<definition value="Carolinian"/>
+			</concept>
+			<concept>
+				<code value="2093-3"/>
+				<display value="Kosraean"/>
+				<definition value="Kosraean"/>
+			</concept>
+			<concept>
+				<code value="2094-1"/>
+				<display value="Pohnpeian"/>
+				<definition value="Pohnpeian"/>
+			</concept>
+			<concept>
+				<code value="2095-8"/>
+				<display value="Saipanese"/>
+				<definition value="Saipanese"/>
+			</concept>
+			<concept>
+				<code value="2096-6"/>
+				<display value="Kiribati"/>
+				<definition value="Kiribati"/>
+			</concept>
+			<concept>
+				<code value="2097-4"/>
+				<display value="Chuukese"/>
+				<definition value="Chuukese"/>
+			</concept>
+			<concept>
+				<code value="2098-2"/>
+				<display value="Yapese"/>
+				<definition value="Yapese"/>
+			</concept>
+			<concept>
+				<code value="2101-4"/>
+				<display value="Fijian"/>
+				<definition value="Fijian"/>
+			</concept>
+			<concept>
+				<code value="2102-2"/>
+				<display value="Papua New Guinean"/>
+				<definition value="Papua New Guinean"/>
+			</concept>
+			<concept>
+				<code value="2103-0"/>
+				<display value="Solomon Islander"/>
+				<definition value="Solomon Islander"/>
+			</concept>
+			<concept>
+				<code value="2104-8"/>
+				<display value="New Hebrides"/>
+				<definition value="New Hebrides"/>
+			</concept>
+		</concept>
+		<concept>
+			<code value="2106-3"/>
+			<display value="White"/>
+			<definition value="White"/>
+			<concept>
+				<code value="2108-9"/>
+				<display value="European"/>
+				<definition value="European"/>
+			</concept>
+			<concept>
+				<code value="2118-8"/>
+				<display value="Middle Eastern or North African"/>
+				<definition value="Middle Eastern or North African"/>
+			</concept>
+			<concept>
+				<code value="2129-5"/>
+				<display value="Arab"/>
+				<definition value="Arab"/>
+			</concept>
+			<concept>
+				<code value="2109-7"/>
+				<display value="Armenian"/>
+				<definition value="Armenian"/>
+			</concept>
+			<concept>
+				<code value="2110-5"/>
+				<display value="English"/>
+				<definition value="English"/>
+			</concept>
+			<concept>
+				<code value="2111-3"/>
+				<display value="French"/>
+				<definition value="French"/>
+			</concept>
+			<concept>
+				<code value="2112-1"/>
+				<display value="German"/>
+				<definition value="German"/>
+			</concept>
+			<concept>
+				<code value="2113-9"/>
+				<display value="Irish"/>
+				<definition value="Irish"/>
+			</concept>
+			<concept>
+				<code value="2114-7"/>
+				<display value="Italian"/>
+				<definition value="Italian"/>
+			</concept>
+			<concept>
+				<code value="2115-4"/>
+				<display value="Polish"/>
+				<definition value="Polish"/>
+			</concept>
+			<concept>
+				<code value="2116-2"/>
+				<display value="Scottish"/>
+				<definition value="Scottish"/>
+			</concept>
+			<concept>
+				<code value="2119-6"/>
+				<display value="Assyrian"/>
+				<definition value="Assyrian"/>
+			</concept>
+			<concept>
+				<code value="2120-4"/>
+				<display value="Egyptian"/>
+				<definition value="Egyptian"/>
+			</concept>
+			<concept>
+				<code value="2121-2"/>
+				<display value="Iranian"/>
+				<definition value="Iranian"/>
+			</concept>
+			<concept>
+				<code value="2122-0"/>
+				<display value="Iraqi"/>
+				<definition value="Iraqi"/>
+			</concept>
+			<concept>
+				<code value="2123-8"/>
+				<display value="Lebanese"/>
+				<definition value="Lebanese"/>
+			</concept>
+			<concept>
+				<code value="2124-6"/>
+				<display value="Palestinian"/>
+				<definition value="Palestinian"/>
+			</concept>
+			<concept>
+				<code value="2125-3"/>
+				<display value="Syrian"/>
+				<definition value="Syrian"/>
+			</concept>
+			<concept>
+				<code value="2126-1"/>
+				<display value="Afghanistani"/>
+				<definition value="Afghanistani"/>
+			</concept>
+			<concept>
+				<code value="2127-9"/>
+				<display value="Israeili"/>
+				<definition value="Israeili"/>
+			</concept>
+		</concept>
+		<concept>
+			<code value="2131-1"/>
+			<display value="Other Race"/>
+			<definition value="Note that this term remains in the table for completeness, even though within HL7, the notion of Other code is deprecated."/>
+		</concept>
+	</concept>
+	<concept>
+		<code value="2133-7"/>
+		<display value="Ethnicity"/>
+		<definition value="Ethnicity Note that this is an abstract 'grouping' concept and not for use as a real concept"/>
+		<property>
+			<code value="abstract"/>
+			<valueBoolean value="true"/>
+		</property>
+		<concept>
+			<code value="2135-2"/>
+			<display value="Hispanic or Latino"/>
+			<definition value="Hispanic or Latino"/>
+			<concept>
+				<code value="2137-8"/>
+				<display value="Spaniard"/>
+				<definition value="Spaniard"/>
+			</concept>
+			<concept>
+				<code value="2148-5"/>
+				<display value="Mexican"/>
+				<definition value="Mexican"/>
+			</concept>
+			<concept>
+				<code value="2155-0"/>
+				<display value="Central American"/>
+				<definition value="Central American"/>
+			</concept>
+			<concept>
+				<code value="2165-9"/>
+				<display value="South American"/>
+				<definition value="South American"/>
+			</concept>
+			<concept>
+				<code value="2178-2"/>
+				<display value="Latin American"/>
+				<definition value="Latin American"/>
+			</concept>
+			<concept>
+				<code value="2180-8"/>
+				<display value="Puerto Rican"/>
+				<definition value="Puerto Rican"/>
+			</concept>
+			<concept>
+				<code value="2182-4"/>
+				<display value="Cuban"/>
+				<definition value="Cuban"/>
+			</concept>
+			<concept>
+				<code value="2184-0"/>
+				<display value="Dominican"/>
+				<definition value="Dominican"/>
+			</concept>
+			<concept>
+				<code value="2138-6"/>
+				<display value="Andalusian"/>
+				<definition value="Andalusian"/>
+			</concept>
+			<concept>
+				<code value="2139-4"/>
+				<display value="Asturian"/>
+				<definition value="Asturian"/>
+			</concept>
+			<concept>
+				<code value="2140-2"/>
+				<display value="Castillian"/>
+				<definition value="Castillian"/>
+			</concept>
+			<concept>
+				<code value="2141-0"/>
+				<display value="Catalonian"/>
+				<definition value="Catalonian"/>
+			</concept>
+			<concept>
+				<code value="2142-8"/>
+				<display value="Belearic Islander"/>
+				<definition value="Belearic Islander"/>
+			</concept>
+			<concept>
+				<code value="2143-6"/>
+				<display value="Gallego"/>
+				<definition value="Gallego"/>
+			</concept>
+			<concept>
+				<code value="2144-4"/>
+				<display value="Valencian"/>
+				<definition value="Valencian"/>
+			</concept>
+			<concept>
+				<code value="2145-1"/>
+				<display value="Canarian"/>
+				<definition value="Canarian"/>
+			</concept>
+			<concept>
+				<code value="2146-9"/>
+				<display value="Spanish Basque"/>
+				<definition value="Spanish Basque"/>
+			</concept>
+			<concept>
+				<code value="2149-3"/>
+				<display value="Mexican American"/>
+				<definition value="Mexican American"/>
+			</concept>
+			<concept>
+				<code value="2150-1"/>
+				<display value="Mexicano"/>
+				<definition value="Mexicano"/>
+			</concept>
+			<concept>
+				<code value="2151-9"/>
+				<display value="Chicano"/>
+				<definition value="Chicano"/>
+			</concept>
+			<concept>
+				<code value="2152-7"/>
+				<display value="La Raza"/>
+				<definition value="La Raza"/>
+			</concept>
+			<concept>
+				<code value="2153-5"/>
+				<display value="Mexican American Indian"/>
+				<definition value="Mexican American Indian"/>
+			</concept>
+			<concept>
+				<code value="2156-8"/>
+				<display value="Costa Rican"/>
+				<definition value="Costa Rican"/>
+			</concept>
+			<concept>
+				<code value="2157-6"/>
+				<display value="Guatemalan"/>
+				<definition value="Guatemalan"/>
+			</concept>
+			<concept>
+				<code value="2158-4"/>
+				<display value="Honduran"/>
+				<definition value="Honduran"/>
+			</concept>
+			<concept>
+				<code value="2159-2"/>
+				<display value="Nicaraguan"/>
+				<definition value="Nicaraguan"/>
+			</concept>
+			<concept>
+				<code value="2160-0"/>
+				<display value="Panamanian"/>
+				<definition value="Panamanian"/>
+			</concept>
+			<concept>
+				<code value="2161-8"/>
+				<display value="Salvadoran"/>
+				<definition value="Salvadoran"/>
+			</concept>
+			<concept>
+				<code value="2162-6"/>
+				<display value="Central American Indian"/>
+				<definition value="Central American Indian"/>
+			</concept>
+			<concept>
+				<code value="2163-4"/>
+				<display value="Canal Zone"/>
+				<definition value="Canal Zone"/>
+			</concept>
+			<concept>
+				<code value="2166-7"/>
+				<display value="Argentinean"/>
+				<definition value="Argentinean"/>
+			</concept>
+			<concept>
+				<code value="2167-5"/>
+				<display value="Bolivian"/>
+				<definition value="Bolivian"/>
+			</concept>
+			<concept>
+				<code value="2168-3"/>
+				<display value="Chilean"/>
+				<definition value="Chilean"/>
+			</concept>
+			<concept>
+				<code value="2169-1"/>
+				<display value="Colombian"/>
+				<definition value="Colombian"/>
+			</concept>
+			<concept>
+				<code value="2170-9"/>
+				<display value="Ecuadorian"/>
+				<definition value="Ecuadorian"/>
+			</concept>
+			<concept>
+				<code value="2171-7"/>
+				<display value="Paraguayan"/>
+				<definition value="Paraguayan"/>
+			</concept>
+			<concept>
+				<code value="2172-5"/>
+				<display value="Peruvian"/>
+				<definition value="Peruvian"/>
+			</concept>
+			<concept>
+				<code value="2173-3"/>
+				<display value="Uruguayan"/>
+				<definition value="Uruguayan"/>
+			</concept>
+			<concept>
+				<code value="2174-1"/>
+				<display value="Venezuelan"/>
+				<definition value="Venezuelan"/>
+			</concept>
+			<concept>
+				<code value="2175-8"/>
+				<display value="South American Indian"/>
+				<definition value="South American Indian"/>
+			</concept>
+			<concept>
+				<code value="2176-6"/>
+				<display value="Criollo"/>
+				<definition value="Criollo"/>
+			</concept>
+		</concept>
+		<concept>
+			<code value="2186-5"/>
+			<display value="Not Hispanic or Latino"/>
+			<definition value="Note that this term remains in the table for completeness, even though within HL7, the notion of &quot;not otherwise coded&quot; term is deprecated."/>
+		</concept>
+	</concept>
+</CodeSystem>

@@ -41,11 +41,219 @@
       "id": "vsac",
       "packageId": "us.nlm.vsac",
       "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
-      "version": "0.1.0"
+      "version": "0.3.0"
     }
   ],
   "definition": {
     "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-allergyintolerance"
+        },
+        "description": "Defines constraints and extensions on the AllergyIntolerance resource for the minimal set of data to query and retrieve allergy information.",
+        "exampleBoolean": false,
+        "name": "US Core AllergyIntolerance Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-birthsex"
+        },
+        "description": "A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc). This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9).",
+        "exampleBoolean": false,
+        "name": "US Core Birth Sex Extension"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-careplan"
+        },
+        "description": "Defines constraints and extensions on the CarePlan resource for the minimal set of data to query and retrieve a patient's Care Plan.",
+        "exampleBoolean": false,
+        "name": "US Core CarePlan Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-careteam"
+        },
+        "description": "Defines constraints and extensions on the CareTeam resource for the minimal set of data to query and retrieve a patient's Care Team.",
+        "exampleBoolean": false,
+        "name": "US Core CareTeam Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-condition"
+        },
+        "description": "Defines constraints and extensions on the Condition resource for the minimal set of data to query and retrieve problems and health concerns information.",
+        "exampleBoolean": false,
+        "name": "US Core Condition Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-diagnosticreport-lab"
+        },
+        "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with laboratory results for a patient",
+        "exampleBoolean": false,
+        "name": "US Core DiagnosticReport Profile for Laboratory Results Reporting"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-diagnosticreport-note"
+        },
+        "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with clinical notes for a patient",
+        "exampleBoolean": false,
+        "name": "US Core DiagnosticReport Profile for Report and Note exchange"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-direct"
+        },
+        "description": "This email address is associated with a [direct](http://wiki.directproject.org/Addressing+Specification) service.  This extension can only be used on contact points where the system = 'email'",
+        "exampleBoolean": false,
+        "name": "US Core Direct email Extension"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-documentreference"
+        },
+        "description": "The document reference profile used in US Core.",
+        "exampleBoolean": false,
+        "name": "US Core DocumentReference Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-encounter"
+        },
+        "description": "The Encounter referenced in the US Core profiles.",
+        "exampleBoolean": false,
+        "name": "US Core Encounter Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-ethnicity"
+        },
+        "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.",
+        "exampleBoolean": false,
+        "name": "US Core Ethnicity Extension"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-goal"
+        },
+        "description": "Defines constraints and extensions on the Goal resource for the minimal set of data to query and retrieve a patient's goal(s).",
+        "exampleBoolean": false,
+        "name": "US Core Goal Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-immunization"
+        },
+        "description": "Defines constraints and extensions on the Immunization resource for the minimal set of data to query and retrieve  patient's immunization information.",
+        "exampleBoolean": false,
+        "name": "US Core Immunization Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-implantable-device"
+        },
+        "description": "Defines constraints and extensions on the Device resource for the minimal set of data to query and retrieve a patient's implantable device(s).",
+        "exampleBoolean": false,
+        "name": "US Core Implantable Device Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-location"
+        },
+        "description": "Defines basic constraints and extensions on the Location resource for use with other US Core resources",
+        "exampleBoolean": false,
+        "name": "US Core Location Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-medication"
+        },
+        "description": "Defines constraints and extensions on the Medication resource for the minimal set of data to query and retrieve patient retrieving patient's medication information.",
+        "exampleBoolean": false,
+        "name": "US Core Medication Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-medicationrequest"
+        },
+        "description": "Defines constraints and extensions on the MedicationRequest resource for the minimal set of data to query and retrieve prescription information.",
+        "exampleBoolean": false,
+        "name": "US Core MedicationRequest Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-observation-lab"
+        },
+        "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve laboratory test results",
+        "exampleBoolean": false,
+        "name": "US Core Laboratory Result Observation Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-organization"
+        },
+        "description": "Defines basic constraints and extensions on the Organization resource for use with other US Core resources",
+        "exampleBoolean": false,
+        "name": "US Core Organization Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-practitioner"
+        },
+        "description": "The practitioner(s) referenced in US Core profiles.",
+        "exampleBoolean": false,
+        "name": "US Core Practitioner Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-practitionerrole"
+        },
+        "description": "The practitioner roles referenced in the US Core profiles.",
+        "exampleBoolean": false,
+        "name": "US Core PractitionerRole Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-procedure"
+        },
+        "description": "Defines constraints and extensions on the Procedure resource for the minimal set of data to query and retrieve patient's procedure information.",
+        "exampleBoolean": false,
+        "name": "US Core Procedure Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-provenance"
+        },
+        "description": "Draft set of requirements to satisfy Basic Provenance Requirements.",
+        "exampleBoolean": false,
+        "name": "US Core Provenance Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-pulse-oximetry"
+        },
+        "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving inspired O2 by pulse oximetry observations.",
+        "exampleBoolean": false,
+        "name": "US Core Pulse Oximetry Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-race"
+        },
+        "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.",
+        "exampleBoolean": false,
+        "name": "US Core Race Extension"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-smokingstatus"
+        },
+        "description": "Defines constraints and extensions on the Observation  resource for the minimal set of data to query and retrieve patient's Smoking Status information.",
+        "exampleBoolean": false,
+        "name": "US Core Smoking Status Observation Profile"
+      },
       {
         "reference": {
           "reference": "CapabilityStatement/us-core-client"
@@ -728,219 +936,11 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-allergyintolerance"
-        },
-        "description": "Defines constraints and extensions on the AllergyIntolerance resource for the minimal set of data to query and retrieve allergy information.",
-        "exampleBoolean": false,
-        "name": "US Core AllergyIntolerance Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-birthsex"
-        },
-        "description": "A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc). This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9).",
-        "exampleBoolean": false,
-        "name": "US Core Birth Sex Extension"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-careplan"
-        },
-        "description": "Defines constraints and extensions on the CarePlan resource for the minimal set of data to query and retrieve a patient's Care Plan.",
-        "exampleBoolean": false,
-        "name": "US Core CarePlan Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-careteam"
-        },
-        "description": "Defines constraints and extensions on the CareTeam resource for the minimal set of data to query and retrieve a patient's Care Team.",
-        "exampleBoolean": false,
-        "name": "US Core CareTeam Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-condition"
-        },
-        "description": "Defines constraints and extensions on the Condition resource for the minimal set of data to query and retrieve problems and health concerns information.",
-        "exampleBoolean": false,
-        "name": "US Core Condition Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-diagnosticreport-lab"
-        },
-        "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with laboratory results for a patient",
-        "exampleBoolean": false,
-        "name": "US Core DiagnosticReport Profile for Laboratory Results Reporting"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-diagnosticreport-note"
-        },
-        "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with clinical notes for a patient",
-        "exampleBoolean": false,
-        "name": "US Core DiagnosticReport Profile for Report and Note exchange"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-direct"
-        },
-        "description": "This email address is associated with a [direct](http://wiki.directproject.org/Addressing+Specification) service.  This extension can only be used on contact points where the system = 'email'",
-        "exampleBoolean": false,
-        "name": "US Core Direct email Extension"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-documentreference"
-        },
-        "description": "The document reference profile used in US Core.",
-        "exampleBoolean": false,
-        "name": "US Core DocumentReference Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-encounter"
-        },
-        "description": "The Encounter referenced in the US Core profiles.",
-        "exampleBoolean": false,
-        "name": "US Core Encounter Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-ethnicity"
-        },
-        "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.",
-        "exampleBoolean": false,
-        "name": "US Core Ethnicity Extension"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-goal"
-        },
-        "description": "Defines constraints and extensions on the Goal resource for the minimal set of data to query and retrieve a patient's goal(s).",
-        "exampleBoolean": false,
-        "name": "US Core Goal Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-immunization"
-        },
-        "description": "Defines constraints and extensions on the Immunization resource for the minimal set of data to query and retrieve  patient's immunization information.",
-        "exampleBoolean": false,
-        "name": "US Core Immunization Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-implantable-device"
-        },
-        "description": "Defines constraints and extensions on the Device resource for the minimal set of data to query and retrieve a patient's implantable device(s).",
-        "exampleBoolean": false,
-        "name": "US Core Implantable Device Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-location"
-        },
-        "description": "Defines basic constraints and extensions on the Location resource for use with other US Core resources",
-        "exampleBoolean": false,
-        "name": "US Core Location Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-medication"
-        },
-        "description": "Defines constraints and extensions on the Medication resource for the minimal set of data to query and retrieve patient retrieving patient's medication information.",
-        "exampleBoolean": false,
-        "name": "US Core Medication Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-medicationrequest"
-        },
-        "description": "Defines constraints and extensions on the MedicationRequest resource for the minimal set of data to query and retrieve prescription information.",
-        "exampleBoolean": false,
-        "name": "US Core MedicationRequest Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-observation-lab"
-        },
-        "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve laboratory test results",
-        "exampleBoolean": false,
-        "name": "US Core Laboratory Result Observation Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-organization"
-        },
-        "description": "Defines basic constraints and extensions on the Organization resource for use with other US Core resources",
-        "exampleBoolean": false,
-        "name": "US Core Organization Profile"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/us-core-patient"
         },
         "description": "Defines constraints and extensions on the patient resource for the minimal set of data to query and retrieve patient demographic information.",
         "exampleBoolean": false,
         "name": "US Core Patient Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-practitioner"
-        },
-        "description": "The practitioner(s) referenced in US Core profiles.",
-        "exampleBoolean": false,
-        "name": "US Core Practitioner Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-practitionerrole"
-        },
-        "description": "The practitioner roles referenced in the US Core profiles.",
-        "exampleBoolean": false,
-        "name": "US Core PractitionerRole Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-procedure"
-        },
-        "description": "Defines constraints and extensions on the Procedure resource for the minimal set of data to query and retrieve patient's procedure information.",
-        "exampleBoolean": false,
-        "name": "US Core Procedure Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-provenance"
-        },
-        "description": "Draft set of requirements to satisfy Basic Provenance Requirements.",
-        "exampleBoolean": false,
-        "name": "US Core Provenance Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-pulse-oximetry"
-        },
-        "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving inspired O2 by pulse oximetry observations.",
-        "exampleBoolean": false,
-        "name": "US Core Pulse Oximetry Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-race"
-        },
-        "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.",
-        "exampleBoolean": false,
-        "name": "US Core Race Extension"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-smokingstatus"
-        },
-        "description": "Defines constraints and extensions on the Observation  resource for the minimal set of data to query and retrieve patient's Smoking Status information.",
-        "exampleBoolean": false,
-        "name": "US Core Smoking Status Observation Profile"
       },
       {
         "reference": {
@@ -957,14 +957,6 @@
         "description": "This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47). This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,   and a 3 character code if a 2 character code does not exist. It points back to [RFC 5646](https://tools.ietf.org/html/rfc5646), however only the language codes are required, all other elements are optional.",
         "exampleBoolean": false,
         "name": "Language codes with language and optionally a region modifier"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-allergy-substance"
-        },
-        "description": "Documentation of substances suspected of (or not suspected of) causing an allergy or intolerance reaction in an individual. **Inclusion Criteria:** specific or general substances to which a patient may be exposed and which may be suspected of causing an adverse reaction; assertions refuting these suspicions. This includes:\n\n\r\n1. Common dietary substances for allergy and intolerance documentation (SNOMEDCT)\n\r\n2. Common drug classes for allergy and intolerance documentation (SNOMEDCT)\n\r\n3. Common drug substances for allergy and intolerance documentation (RXNORM)\n\r\n4. Common environmental substances for allergy and intolerance documentation (SNOMEDCT)\n\r\n5. Common refutations and null values for substance causes for allergy and intolerance documentation (SNOMEDCT)\n\n\r\n\r\n**Exclusion Criteria:** actual conditions caused by exposure (reactions, allergies)\n",
-        "exampleBoolean": false,
-        "name": "US Core Common substances for allergy and intolerance documentation including refutations"
       },
       {
         "reference": {
@@ -1144,6 +1136,54 @@
       },
       {
         "reference": {
+          "reference": "Device/udi-2"
+        },
+        "description": "This is a Device defib example for the *Us Core Implantable Device Profile*.",
+        "name": "Device Defib Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
+      },
+      {
+        "reference": {
+          "reference": "Device/udi-3"
+        },
+        "description": "This is a Device knee example for the *Us Core Implantable Device Profile*.",
+        "name": "Device Knee Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/cardiology-report"
+        },
+        "description": "This is a DiagnosticReport cardiology report example for the *Us Core Diagnosticreport Note Profile*.",
+        "name": "Diagnosticreport Cardiology Report Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/chest-xray-report"
+        },
+        "description": "This is a DiagnosticReport chest xray report example for the *Us Core Diagnosticreport Note Profile*.",
+        "name": "Diagnosticreport Chest Xray Report Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2"
+        },
+        "description": "This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example example for the *Bundle Profile*.",
+        "name": "Practitionerrole_Practitioner_Endpoint_Bundle_Example Example",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Procedure/defib-implant"
+        },
+        "description": "This is a Procedure R4 defib implant example for the *Us Core Procedure Profile*.",
+        "name": "Procedure R4 Defib Implant Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+      },
+      {
+        "reference": {
           "reference": "Organization/acme-lab"
         },
         "description": "This is a acme lab example for the *Us Core Organization Profile*.",
@@ -1237,38 +1277,6 @@
         "description": "This is a condition example for the *Us Core Condition Profile*.",
         "name": "Condition Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
-      },
-      {
-        "reference": {
-          "reference": "Device/udi-2"
-        },
-        "description": "This is a Device defib example for the *Us Core Implantable Device Profile*.",
-        "name": "Device Defib Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
-      },
-      {
-        "reference": {
-          "reference": "Device/udi-3"
-        },
-        "description": "This is a Device knee example for the *Us Core Implantable Device Profile*.",
-        "name": "Device Knee Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
-      },
-      {
-        "reference": {
-          "reference": "DiagnosticReport/cardiology-report"
-        },
-        "description": "This is a DiagnosticReport cardiology report example for the *Us Core Diagnosticreport Note Profile*.",
-        "name": "Diagnosticreport Cardiology Report Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
-      },
-      {
-        "reference": {
-          "reference": "DiagnosticReport/chest-xray-report"
-        },
-        "description": "This is a DiagnosticReport chest xray report example for the *Us Core Diagnosticreport Note Profile*.",
-        "name": "Diagnosticreport Chest Xray Report Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
       },
       {
         "reference": {
@@ -1477,22 +1485,6 @@
         "description": "This is a practitioner 2 example for the *Us Core Practitioner Profile*.",
         "name": "Practitioner 2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-      },
-      {
-        "reference": {
-          "reference": "Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2"
-        },
-        "description": "This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example example for the *Bundle Profile*.",
-        "name": "Practitionerrole_Practitioner_Endpoint_Bundle_Example Example",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Procedure/defib-implant"
-        },
-        "description": "This is a Procedure R4 defib implant example for the *Us Core Procedure Profile*.",
-        "name": "Procedure R4 Defib Implant Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
       },
       {
         "reference": {

@@ -11,7 +11,6 @@ These value sets have been defined for this implementation guide.
 *   [Language codes with language and optionally a region modifier](ValueSet-simple-language.html)
 *   [OMB Race Categories](ValueSet-omb-race-category.html)
 *   [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
-*   [US Core Common substances for allergy and intolerance documentation including refutations](ValueSet-us-core-allergy-substance.html)
 *   {:.new-content #FHIR-27904}[US Core Condition Category Codes](ValueSet-us-core-condition-category.html)
 *   {:.new-content #FHIR-26060}[US Core Condition Code](ValueSet-us-core-condition-code.html)
 *   [US Core Diagnostic Report Laboratory Codes](ValueSet-us-core-diagnosticreport-lab-codes.html)
