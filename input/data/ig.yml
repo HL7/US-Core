@@ -15,14 +15,11 @@ definition:
             nameUrl: index.html
             title: Home
         -   generation: markdown
-            nameUrl: all-meds.html
-            title: All Meds
-        -   generation: markdown
             nameUrl: basic-provenance.html
             title: Basic Provenance
         -   generation: markdown
-            nameUrl: capstatements.html
-            title: Capstatements
+            nameUrl: capability-statements.html
+            title: Capability Statements
         -   generation: markdown
             nameUrl: clinical-notes-guidance.html
             title: Clinical Notes Guidance
@@ -32,6 +29,9 @@ definition:
         -   generation: markdown
             nameUrl: downloads.html
             title: Downloads
+        -   generation: markdown
+            nameUrl: DSTU2-to-R4-conversion.html
+            title: DSTU 2 to R 4 Conversion
         -   generation: markdown
             nameUrl: examples.html
             title: Examples
@@ -45,17 +45,17 @@ definition:
             nameUrl: guidance.html
             title: Guidance
         -   generation: markdown
+            nameUrl: medication-list-guidance.html
+            title: Medication List Guidance
+        -   generation: markdown
             nameUrl: operations.html
             title: Operations
         -   generation: markdown
-            nameUrl: profiles.html
-            title: Profiles
+            nameUrl: profiles-and-extensions.html
+            title: Profiles and Extensions
         -   generation: markdown
-            nameUrl: r2-r4-guidance.html
-            title: R 2 R 4 Guidance
-        -   generation: markdown
-            nameUrl: searchparameters.html
-            title: Searchparameters
+            nameUrl: search-parameters-and-operations.html
+            title: Search Parameters and Operations
         -   generation: markdown
             nameUrl: security.html
             title: Security
@@ -1840,7 +1840,7 @@ dependsOn:
 -   id: vsac
     packageId: us.nlm.vsac
     uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-    version: 0.1.0
+    version: 0.3.0
 description: 'The US Core Implementation Guide is based on FHIR Version R4 and defines
     the minimum conformance requirements for accessing patient data. The Argonaut
     pilot implementations, ONC 2015 Edition Common Clinical Data Set (CCDS), and ONC
