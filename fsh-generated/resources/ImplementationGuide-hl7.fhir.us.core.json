@@ -64,6 +64,46 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-bloodpressure"
+        },
+        "description": "Defines constraints and extensions on Observation to represent diastolic and systolic blood pressure observations with a standard LOINC codes and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "exampleBoolean": false,
+        "name": "US Core Blood Pressure Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-bmi"
+        },
+        "description": "Defines constraints and extensions on Observation to represent Body Mass Index (BMI) observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "exampleBoolean": false,
+        "name": "US Core BMI Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-bodyheight"
+        },
+        "description": "Defines constraints and extensions on Observation to represent body height observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "exampleBoolean": false,
+        "name": "US Core Body Height Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-bodytemperature"
+        },
+        "description": "Defines constraints and extensions on Observation to represent body temperature observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "exampleBoolean": false,
+        "name": "US Core Body Temperature Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-bodyweight"
+        },
+        "description": "Defines constraints and extensions on Observation to represent body weight observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "exampleBoolean": false,
+        "name": "US Core Body Weight Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-careplan"
         },
         "description": "Defines constraints and extensions on the CarePlan resource for the minimal set of data to query and retrieve a patient's Care Plan.",
@@ -141,6 +181,14 @@
         "description": "Defines constraints and extensions on the Goal resource for the minimal set of data to query and retrieve a patient's goal(s).",
         "exampleBoolean": false,
         "name": "US Core Goal Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-heartrate"
+        },
+        "description": "Defines constraints and extensions on Observation to represent heart rate observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "exampleBoolean": false,
+        "name": "US Core Heart Rate Profile"
       },
       {
         "reference": {
@@ -248,6 +296,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-respiratoryrate"
+        },
+        "description": "Defines constraints and extensions on Observation to represent respiratory rate observations resource using a standard LOINC code and UCUM units of measure for use in querying and retrieving vital signs observation. This profile is derived from the US Core Vital Signs Profile.",
+        "exampleBoolean": false,
+        "name": "US Core Respiratory Rate Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-smokingstatus"
         },
         "description": "Defines constraints and extensions on the Observation  resource for the minimal set of data to query and retrieve patient's Smoking Status information.",
@@ -256,7 +312,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/uscore-vitalsigns"
+          "reference": "StructureDefinition/us-core-vitalsigns"
         },
         "description": "FHIR Vital Signs Profile",
         "exampleBoolean": false,
@@ -314,7 +370,7 @@
         "reference": {
           "reference": "ConceptMap/ndc-cvx"
         },
-        "description": "Unit of Use [NDC code] (https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) mapping  to the [CVX Vaccine codes](https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx).  Note: source = NDC and target = CVX",
+        "description": "Unit of Use NDC code (https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp) mapping  to the [CVX Vaccines Administered Vaccine Set](http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.6).  Note: source = NDC and target = CVX",
         "exampleBoolean": false,
         "name": "US Core NDC to CVX Code Mapping"
       },
@@ -1148,7 +1204,7 @@
         },
         "description": "The vital sign codes from the base FHIR and US Core Vital Signs.",
         "exampleBoolean": false,
-        "name": "Us Core Vital Signs ValueSet"
+        "name": "US Core Vital Signs ValueSet"
       },
       {
         "reference": {

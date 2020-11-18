@@ -1,0 +1,109 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-bodyweight",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyweight",
+    "version": "3.2.0",
+    "name": "USCoreBodyWeightProfile",
+    "title": "US Core Body Weight Profile",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-11-17",
+    "description": "Defines constraints and extensions on Observation to represent body weight observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+    "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-vitalsigns",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Observation",
+                "path": "Observation",
+                "short": "US Core Body Weight Profile",
+                "definition": "Defines constraints and extensions on Observation to represent body weight observations with a standard LOINC code and UCUM units of measure.  This profile is derived from the US Core Vital Signs Profile."
+            },
+            {
+                "id": "Observation.code",
+                "path": "Observation.code",
+                "short": "Body Weight",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "29463-7"
+                        }
+                    ]
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.valueQuantity",
+                "path": "Observation.valueQuantity",
+                "min": 0,
+                "max": "1",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.valueQuantity.value",
+                "path": "Observation.valueQuantity.value",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "decimal"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.valueQuantity.unit",
+                "path": "Observation.valueQuantity.unit",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.valueQuantity.system",
+                "path": "Observation.valueQuantity.system",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "fixedUri": "http://unitsofmeasure.org",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.valueQuantity.code",
+                "path": "Observation.valueQuantity.code",
+                "short": "Coded responses from the common UCUM units for vital signs value set.",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/ucum-bodyweight|4.0.1"
+                }
+            }
+        ]
+    }
+}

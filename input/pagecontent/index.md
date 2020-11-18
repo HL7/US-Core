@@ -9,9 +9,10 @@
         - [ ] Add Vitals Profiles
      - [ ] Add Vitals profile
         - [ ] SDs
+             - [ ] look at pulse ox and head circumference
         - [ ] VS
         - [ ] Intros and Quick Starts
-        - [X] to term and profile lists
+        - [ ] to term and profile lists
      - [ ] Updates to Quick Starts for updated search requirements
        - [ ] add Intros to QuickStarts
        - [ ] don't forget added requirements for DocRef. (PractitionerRole, and Provenance?)

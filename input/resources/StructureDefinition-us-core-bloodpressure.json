@@ -1,0 +1,229 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-bloodpressure",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bloodpressure",
+    "version": "3.2.0",
+    "name": "USCoreBloodPressureProfile",
+    "title": "US Core Blood Pressure Profile",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-11-17",
+    "description": "Defines constraints and extensions on Observation to represent diastolic and systolic blood pressure observations with a standard LOINC codes and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+    "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-vitalsigns",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Observation",
+                "path": "Observation",
+                "short": "US Core Blood Pressure Profile",
+                "definition": "Defines constraints and extensions on Observation to represent diastolic and systolic blood pressure observations with a standard LOINC codes and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile."
+            },
+            {
+                "id": "Observation.code",
+                "path": "Observation.code",
+                "short": "Blood Pressure",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "85354-9"
+                        }
+                    ]
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component",
+                "path": "Observation.component",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "code"
+                        }
+                    ],
+                    "ordered": false,
+                    "rules": "open"
+                },
+                "min": 2,
+                "max": "*",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:systolic",
+                "path": "Observation.component",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:systolic.code",
+                "path": "Observation.component.code",
+                "min": 1,
+                "max": "1",
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8480-6"
+                        }
+                    ]
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:systolic.valueQuantity",
+                "path": "Observation.component.valueQuantity",
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:systolic.valueQuantity.value",
+                "path": "Observation.component.valueQuantity.value",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "decimal"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:systolic.valueQuantity.unit",
+                "path": "Observation.component.valueQuantity.unit",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:systolic.valueQuantity.system",
+                "path": "Observation.component.valueQuantity.system",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "fixedUri": "http://unitsofmeasure.org",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:systolic.valueQuantity.code",
+                "path": "Observation.component.valueQuantity.code",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "fixedCode": "mm[Hg]",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:diastolic",
+                "path": "Observation.component",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:diastolic.code",
+                "path": "Observation.component.code",
+                "min": 1,
+                "max": "1",
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "8462-4"
+                        }
+                    ]
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:diastolic.valueQuantity",
+                "path": "Observation.component.valueQuantity",
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:diastolic.valueQuantity.value",
+                "path": "Observation.component.valueQuantity.value",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "decimal"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:diastolic.valueQuantity.unit",
+                "path": "Observation.component.valueQuantity.unit",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:diastolic.valueQuantity.system",
+                "path": "Observation.component.valueQuantity.system",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "fixedUri": "http://unitsofmeasure.org",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.component:diastolic.valueQuantity.code",
+                "path": "Observation.component.valueQuantity.code",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "fixedCode": "mm[Hg]",
+                "mustSupport": true
+            }
+        ]
+    }
+}
