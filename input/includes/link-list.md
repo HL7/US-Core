@@ -113,7 +113,7 @@
 [Implantable device list]: https://www.healthit.gov/test-method/implantable-device-list
 [LOINC]: http://loinc.org
 [Location]:  {{site.data.fhir.path}}location.html
-[Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
+[Medication Clinical Drug (RxNorm)]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion
 [Medication List Guidance]: medication-list-guidance.html
 [MedicationRequest examples]: StructureDefinition-us-core-medicationrequest.html#examples
 [MedicationRequest Quick Start]: StructureDefinition-us-core-medicationrequest.html#search

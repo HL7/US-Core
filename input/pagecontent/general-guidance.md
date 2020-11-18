@@ -432,7 +432,7 @@ For searches where the client does not supply a status parameter, an implementat
      {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
 
 - **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.
-- Follow the [deleted data](#representing-deleted-information) guidance above.
+- Follow the [deleted data](#representing-entered-in-error-and-deleted-information) guidance above.
 
 
 
