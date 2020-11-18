@@ -31,8 +31,7 @@
     1. Procedure.performed[x]
     1. Provenance.agent.who
 - [X] Replace value sets with links to VSAC where possible
-      -  see [this spreadsheet](https://docs.google.com/spreadsheets/d/1BtRNsmrez2D8cm_81qhBaiU0aMmXGAIVDNwXCVAu2tE/edit#gid=0)
-- [ ] Undo Replacing value sets with links to VSAC and explain why this was not possible with a note balloters askng whether they want separate logins to be able to see the value sets.       
+      -  see [this spreadsheet](https://docs.google.com/spreadsheets/d/1BtRNsmrez2D8cm_81qhBaiU0aMmXGAIVDNwXCVAu2tE/edit#gid=0)      
 - [ ] Rewrite Must Support section
     - [ ] own page
     - [ ] draft [here](https://docs.google.com/document/d/1LenTi2KJ7-qcU4HLeDquXoHqpFbAxsV6uIfC6CqMsUU/edit?usp=sharing)
