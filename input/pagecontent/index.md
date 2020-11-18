@@ -4,8 +4,15 @@
 
 - [ ] Finish [Resolving Trackers](https://confluence.hl7.org/display/CGP/US+Core+January+2021+Ballot)
 - [ ] Finish Applying Resolved Trackers
-     - [ ] Document Search requirements in CapabilityStatements
+     - [ ] Update CapStatements to reflect changes
+        - [ ] Document Search requirements in CapabilityStatements
+        - [ ] Add Vitals Profiles
      - [ ] Add Vitals profile
+        - [ ] SDs
+        - [ ] VS
+        - [ ] Intros and Quick Starts
+     - [ ] Updates to Quick Starts for updated search requirements
+       - [ ] don't forget added requirements for DocRef. (PractitionerRole, and Provenance?)
      - [ ] Various vocab issues
        - [ ] FHIR-29322
 - [X] Review survey and complete updates to choices of types and References
