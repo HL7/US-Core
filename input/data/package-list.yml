@@ -38,8 +38,8 @@ list:
         (see individual trackers below for details)
       1. Publishing a set US Core Vital Signs independent of the FHIR core profile upon which it is based (see individual trackers below for details)
       1. Linking terminology directly to the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) - NIH where applicable
-        Note that you will need log in using a current UMLS account to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html).)
-
+         - Note that you will need log in using a current UMLS account to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html).)
+         - To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the '{OID}' with the OID from the table below.
         |US Core Value Set|VSAC Value Set|VSAC OID|
         |---|---|---|
         |Detailed ethnicity|Detailed Ethnicity|2.16.840.1.114222.4.11.877|
@@ -51,7 +51,6 @@ list:
         |US Core Smoking Status|Smoking Status|2.16.840.1.113883.11.20.9.38|
         |US Core Vaccine Administered Value Set (CVX)|CVX Vaccines Administered Vaccine Set|2.16.840.1.113762.1.4.1010.6|
         {:.grid}
-        (To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the '{OID}' with an OID from the table above.
       4. Migrating to the standard set of HL7 FHIR IG templates for publishing.  Although we strove to minimize the differences between this version and the previous versions of US Core, these changes are notable:
          - Additional Features include:
               - Addition of vocabulary and constraint tables to the profile pages
