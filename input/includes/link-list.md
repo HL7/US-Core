@@ -26,7 +26,7 @@
 [CPT-4/HCPC for procedures]: {{site.data.fhir.path}}valueset-procedure-code.html
 [CVX crosswalk table]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
 [CVX vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx
-[Capability Statements]: capstatements.html
+[Capability Statements]: capability-statements.html
 [CapabilityStatement]: {{site.data.fhir.path}}capabilitystatement.html
 [Cardiology (LP29708-2)]: https://loinc.org/LP29708-2
 [CarePlan]: {{site.data.fhir.path}}careplan.html
@@ -42,14 +42,14 @@
 [Conformance Expectations]: conformance-expectations.html  "Conformance Expectations Page"
 [Conformance Requirements for Client]: CapabilityStatement-us-core-r4-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-us-core-server.html "Conformance Requirements for Server Page"
-[Conformance Requirements]: capstatements.html "CapabilityStatements defined for this Guide"
+[Conformance Requirements]: capability-statements.html "CapabilityStatements defined for this Guide"
 [Conformance requirements for the US Core Server]: CapabilityStatement-us-core-server.html
 [Conformance]: daf-core-DocumentReference-conformance.html
 [Consent]: {{site.data.fhir.path}}consent.html
 [Consultation Note (11488-4)]: https://loinc.org/11488-4.html
 [Coverage]: {{site.data.fhir.path}}coverage.html
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
-[DSTU2 to R4 Conversion]: r2-r4-guidance.html
+[DSTU2 to R4 Conversion]: DSTU2-to-R4-conversion.html
 [Data Access Framework]: https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Home
 [DataAbsentReason Code System]: {{site.data.fhir.path}}codesystem-data-absent-reason.html
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
@@ -114,7 +114,7 @@
 [LOINC]: http://loinc.org
 [Location]:  {{site.data.fhir.path}}location.html
 [Medication Clinical Drug (RxNorm)]: ValueSet-us-core-medication-codes.html
-[Medication List Guidance]: all-meds.html
+[Medication List Guidance]: medication-list-guidance.html
 [MedicationRequest examples]: StructureDefinition-us-core-medicationrequest.html#examples
 [MedicationRequest Quick Start]: StructureDefinition-us-core-medicationrequest.html#search
 [MedicationRequestStatus]: {{site.data.fhir.path}}valueset-medicationrequest-status.html
@@ -150,8 +150,8 @@
 [Procedure]: {{site.data.fhir.path}}procedure.html
 [Provenance Agent Type]: ValueSet-us-core-provenance-participant-type.html
 [Procedures Note (28570-0)]: https://loinc.org/28570-0.html
-[Profiles and Extensions]: profiles.html
-[Profiles]: profiles.html "Profiles and Extensions Page"
+[Profiles and Extensions]: profiles-and-extensions.html
+[Profiles]: profiles-and-extensions.html "Profiles and Extensions Page"
 [Progress Note (11506-3)]: https://loinc.org/11506-3.html
 [Provenance]: {{site.data.fhir.path}}provenance.html
 [QI-Core]:http://hl7.org/fhir/us/qicore/
@@ -164,7 +164,7 @@
 [SNOMED CT]: http://snomed.info/sct
 [SNOMED CT]: {{site.data.fhir.path}}valueset-procedure-code.html
 [Search Parameter Registry]: {{site.data.fhir.path}}searchparameter-registry.html
-[Search Parameters and Operations]: searchparameters.html
+[Search Parameters and Operations]: search-parameters-and-operations.html
 [Security Labels]: {{site.data.fhir.path}}security-labels.html
 [Security]: security.html
 [ServiceRequest]: {{site.data.fhir.path}}servicerequest.html
