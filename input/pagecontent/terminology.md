@@ -30,6 +30,7 @@ These value sets have been defined for this implementation guide.
 *   [US Core Smoking Status Observation Codes](ValueSet-us-core-smoking-status-observation-codes.html)
 *   [US Core Vaccine National Drug Codes (NDC)](ValueSet-us-core-ndc-vaccine-codes.html)
 *   {:.new-content #FHIR-26833}[USPS Two Letter Alphabetic Codes](ValueSet-us-core-usps-state.html)
+*   {:.new-content #FHIR-28391}[US Core Vital Signs ValueSet](ValueSet-us-core-vital-signs)
 
 ### Code Systems
 
