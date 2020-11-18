@@ -1,14 +1,14 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "us-core-bodyheight",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyheight",
-    "version": "3.2.0",
-    "name": "USCoreBodyHeightProfile",
-    "title": "US Core Body Height Profile",
+    "id": "pediatric-bmi-for-age",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age",
+    "version": "3.1.1",
+    "name": "USCorePediatricBMIforAgeObservationProfile",
+    "title": "US Core Pediatric BMI for Age Observation Profile",
     "status": "active",
     "experimental": false,
-    "date": "2020-11-17",
-    "description": "Defines constraints on Observation to represent body height observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+    "date": "2020-11-18",
+    "description": "Defines constraints on Observation to represent to represent BMI percentile per age and sex for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
     "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -21,13 +21,14 @@
             {
                 "id": "Observation",
                 "path": "Observation",
-                "short": "US Core Body Height Profile",
-                "definition": "Defines constraints on Observation to represent body height observations with a standard LOINC code and UCUM units of measure.  This profile is derived from the US Core Vital Signs Profile."
+                "short": "US Core Pediatric BMI for Age Observation Profile",
+                "definition": "Defines constraints on Observation to represent to represent BMI percentile per age and sex for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+                "mustSupport": false
             },
             {
                 "id": "Observation.code",
                 "path": "Observation.code",
-                "short": "Body Height",
+                "short": "BMI percentile per age and sex for youth 2-20",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -37,7 +38,7 @@
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "8302-2"
+                            "code": "59576-9"
                         }
                     ]
                 },
@@ -98,11 +99,8 @@
                         "code": "code"
                     }
                 ],
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/ucum-bodylength|4.0.1"
-                }
+                "fixedCode": "%",
+                "mustSupport": true
             }
         ]
     }

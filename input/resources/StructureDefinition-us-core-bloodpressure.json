@@ -8,7 +8,7 @@
     "status": "active",
     "experimental": false,
     "date": "2020-11-17",
-    "description": "Defines constraints and extensions on Observation to represent diastolic and systolic blood pressure observations with a standard LOINC codes and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+    "description": "Defines constraints on Observation to represent diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
     "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -22,7 +22,7 @@
                 "id": "Observation",
                 "path": "Observation",
                 "short": "US Core Blood Pressure Profile",
-                "definition": "Defines constraints and extensions on Observation to represent diastolic and systolic blood pressure observations with a standard LOINC codes and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile."
+                "definition": "Defines constraints on Observation to represent diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile."
             },
             {
                 "id": "Observation.code",
@@ -64,6 +64,7 @@
                 "id": "Observation.component:systolic",
                 "path": "Observation.component",
                 "sliceName": "systolic",
+                "short": "Systolic Blood Pressure",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true
@@ -71,6 +72,7 @@
             {
                 "id": "Observation.component:systolic.code",
                 "path": "Observation.component.code",
+                "short": "Systolic Blood Pressure Code",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -147,6 +149,7 @@
                 "id": "Observation.component:diastolic",
                 "path": "Observation.component",
                 "sliceName": "diastolic",
+                "short": "Diastolic Blood Pressure",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true
@@ -154,6 +157,7 @@
             {
                 "id": "Observation.component:diastolic.code",
                 "path": "Observation.component.code",
+                "short": "Diastolic Blood Pressure Code",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {

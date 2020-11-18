@@ -61,9 +61,9 @@ The following [Extensions]({{site.data.fhir.path}}extensibility.html) have been 
 {% include list-simple-extensions.xhtml %}
 {% endraw %} -->
 
-- diastolic[US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
+- [US Core Ethnicity Extension](StructureDefinition-us-core-ethnicity.html)
 - [US Core Direct email Extension](StructureDefinition-us-core-direct.html)
-- diastolic[US Core Race Extension](StructureDefinition-us-core-race.html)
+- [US Core Race Extension](StructureDefinition-us-core-race.html)
 - [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html)
 
 {% include link-list.md %}

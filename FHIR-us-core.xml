@@ -103,7 +103,12 @@
 <artifact deprecated="true" key="StructureDefinition" name="StructureDefinition"/>
 <artifact id="Observation/temperature" key="Observation-temperature" name="Temperature Example"/>
 <artifact id="StructureDefinition/us-core-allergyintolerance" key="StructureDefinition-us-core-allergyintolerance" name="US Core AllergyIntolerance Profile"/>
+<artifact id="StructureDefinition/us-core-bmi" key="StructureDefinition-us-core-bmi" name="US Core BMI Profile"/>
 <artifact id="StructureDefinition/us-core-birthsex" key="StructureDefinition-us-core-birthsex" name="US Core Birth Sex Extension"/>
+<artifact id="StructureDefinition/us-core-bloodpressure" key="StructureDefinition-us-core-bloodpressure" name="US Core Blood Pressure Profile"/>
+<artifact id="StructureDefinition/us-core-bodyheight" key="StructureDefinition-us-core-bodyheight" name="US Core Body Height Profile"/>
+<artifact id="StructureDefinition/us-core-bodytemperature" key="StructureDefinition-us-core-bodytemperature" name="US Core Body Temperature Profile"/>
+<artifact id="StructureDefinition/us-core-bodyweight" key="StructureDefinition-us-core-bodyweight" name="US Core Body Weight Profile"/>
 <artifact id="CodeSystem/careplan-category" key="CodeSystem-careplan-category" name="US Core CarePlan Category Extension Codes"/>
 <artifact id="StructureDefinition/us-core-careplan" key="StructureDefinition-us-core-careplan" name="US Core CarePlan Profile"/>
 <artifact id="StructureDefinition/us-core-careteam" key="StructureDefinition-us-core-careteam" name="US Core CareTeam Profile"/>
@@ -128,6 +133,7 @@
 <artifact id="StructureDefinition/us-core-ethnicity" key="StructureDefinition-us-core-ethnicity" name="US Core Ethnicity Extension"/>
 <artifact id="OperationDefinition/docref" key="OperationDefinition-docref" name="US Core Fetch DocumentReferences"/>
 <artifact id="StructureDefinition/us-core-goal" key="StructureDefinition-us-core-goal" name="US Core Goal Profile"/>
+<artifact id="StructureDefinition/us-core-heartrate" key="StructureDefinition-us-core-heartrate" name="US Core Heart Rate Profile"/>
 <artifact id="ValueSet/us-core-procedure-icd10pcs" key="ValueSet-us-core-procedure-icd10pcs" name="US Core ICD-10-PCS Procedure Codes"/>
 <artifact id="StructureDefinition/us-core-immunization" key="StructureDefinition-us-core-immunization" name="US Core Immunization Profile"/>
 <artifact id="StructureDefinition/us-core-implantable-device" key="StructureDefinition-us-core-implantable-device" name="US Core Implantable Device Profile"/>
@@ -153,6 +159,7 @@
 <artifact id="ValueSet/us-core-provider-role" key="ValueSet-us-core-provider-role" name="US Core Provider Role (NUCC)"/>
 <artifact id="StructureDefinition/us-core-pulse-oximetry" key="StructureDefinition-us-core-pulse-oximetry" name="US Core Pulse Oximetry Profile"/>
 <artifact id="StructureDefinition/us-core-race" key="StructureDefinition-us-core-race" name="US Core Race Extension"/>
+<artifact id="StructureDefinition/us-core-respiratoryrate" key="StructureDefinition-us-core-respiratoryrate" name="US Core Respiratory Rate Profile"/>
 <artifact id="CapabilityStatement/us-core-server" key="CapabilityStatement-us-core-server" name="US Core Server CapabilityStatement"/>
 <artifact id="ValueSet/us-core-observation-smokingstatus-max" key="ValueSet-us-core-observation-smokingstatus-max" name="US Core Smoking Status Max-Binding"/>
 <artifact id="ValueSet/us-core-smoking-status-observation-codes" key="ValueSet-us-core-smoking-status-observation-codes" name="US Core Smoking Status Observation Codes"/>
@@ -160,6 +167,8 @@
 <artifact id="ValueSet/us-core-observation-smokingstatus" key="ValueSet-us-core-observation-smokingstatus" name="US Core Smoking Status Preferred"/>
 <artifact id="ValueSet/us-core-observation-smoking-status-status" key="ValueSet-us-core-observation-smoking-status-status" name="US Core Status for Smoking Status Observation"/>
 <artifact id="ValueSet/us-core-ndc-vaccine-codes" key="ValueSet-us-core-ndc-vaccine-codes" name="US Core Vaccine National Drug Codes (NDC)"/>
+<artifact id="StructureDefinition/us-core-vitalsigns" key="StructureDefinition-us-core-vitalsigns" name="US Core Vital Signs Profile"/>
+<artifact id="ValueSet/us-core-vital-signs" key="ValueSet-us-core-vital-signs" name="US Core Vital Signs ValueSet"/>
 <artifact deprecated="true" id="ImplementationGuide/hl7.fhir.us.core" key="ImplementationGuide-hl7.fhir.us.core" name="USCore"/>
 <artifact deprecated="true" id="ValueSet/us-core-allergy-substance" key="ValueSet-us-core-allergy-substance" name="USCoreAllergySubstance"/>
 <artifact id="SearchParameter/us-core-allergyintolerance-clinical-status" key="SearchParameter-us-core-allergyintolerance-clinical-status" name="USCoreAllergyintoleranceClinicalStatus"/>
@@ -272,13 +281,14 @@
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page deprecated="true" key="methodology" name="(methodology)"/>
-<page key="all-meds" name="All Meds"/>
 <page deprecated="true" key="argonauts" name="Argnonauts" url="argnonauts"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="basic-provenance" name="Basic Provenance"/>
-<page key="capstatements" name="Capstatements"/>
+<page key="capstatements" name="Capability Statements"/>
 <page key="clinical-notes-guidance" name="Clinical Notes Guidance"/>
 <page key="conformance-expectations" name="Conformance Expectations"/>
+<page key="DSTU2-to-R4-conversion" name="DSTU 2 to R 4 Conversion"/>
+<page deprecated="true" key="r2-r4-guidance" name="DSTU2 to R4 Conversion"/>
 <page key="downloads" name="Downloads"/>
 <page key="all-examples" name="Examples"/>
 <page key="future-of-us-core" name="Future of Us Core"/>
@@ -286,11 +296,11 @@
 <page key="guidance" name="Guidance"/>
 <page key="index" name="Home"/>
 <page deprecated="true" key="iglist" name="Implementation Registry (registry/iglist)" url="registry"/>
+<page key="all-meds" name="Medication List Guidance"/>
 <page key="operations" name="Operations"/>
-<page key="profiles" name="Profiles"/>
-<page key="r2-r4-guidance" name="R 2 R 4 Guidance"/>
+<page key="profiles" name="Profiles and Extensions"/>
 <page deprecated="true" key="schemas-schematrons" name="Schemas &amp; Schematrons"/>
-<page key="searchparameters" name="Searchparameters"/>
+<page key="searchparameters" name="Search Parameters and Operations"/>
 <page key="security" name="Security"/>
 <page key="toc" name="Table of Contents"/>
 <page deprecated="true" key="terminologies-systems" name="Terminologies - Systems" url="terminologies-systems"/>

@@ -36,16 +36,16 @@
   "fhirVersion": [
     "4.0.1"
   ],
-  "dependsOn": [
-    {
-      "id": "vsac",
-      "packageId": "us.nlm.vsac",
-      "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
-      "version": "0.3.0"
-    }
-  ],
   "definition": {
     "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/head-occipital-frontal-circumference-percentile"
+        },
+        "description": "Defines constraints on the Observation resource to represent head occipital-frontal circumference percentile for patients from birth to 36 months of age in FHIR using a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "exampleBoolean": false,
+        "name": "US Core Pediatric Head Occipital-frontal Circumference Percentile Profile"
+      },
       {
         "reference": {
           "reference": "StructureDefinition/us-core-allergyintolerance"
@@ -66,7 +66,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-bloodpressure"
         },
-        "description": "Defines constraints and extensions on Observation to represent diastolic and systolic blood pressure observations with a standard LOINC codes and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "description": "Defines constraints on Observation to represent diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
         "name": "US Core Blood Pressure Profile"
       },
@@ -74,7 +74,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-bmi"
         },
-        "description": "Defines constraints and extensions on Observation to represent Body Mass Index (BMI) observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "description": "Defines constraints on Observation to represent Body Mass Index (BMI) observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
         "name": "US Core BMI Profile"
       },
@@ -82,15 +82,15 @@
         "reference": {
           "reference": "StructureDefinition/us-core-bodyheight"
         },
-        "description": "Defines constraints and extensions on Observation to represent body height observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "description": "Defines constraints on Observation to represent body height observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
         "name": "US Core Body Height Profile"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-bodytemperature"
+          "reference": "StructureDefinition/us-core-bodytempurature"
         },
-        "description": "Defines constraints and extensions on Observation to represent body temperature observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "description": "Defines constraints on Observation to represent body temperature observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
         "name": "US Core Body Temperature Profile"
       },
@@ -98,7 +98,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-bodyweight"
         },
-        "description": "Defines constraints and extensions on Observation to represent body weight observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "description": "Defines constraints on Observation to represent body weight observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
         "name": "US Core Body Weight Profile"
       },
@@ -184,9 +184,17 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-headcircumference"
+        },
+        "description": "Defines constraints on Observation to represent head circumference observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "exampleBoolean": false,
+        "name": "US Core Head Circumference Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-heartrate"
         },
-        "description": "Defines constraints and extensions on Observation to represent heart rate observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "description": "Defines constraints on Observation to represent heart rate observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
         "name": "US Core Heart Rate Profile"
       },
@@ -248,6 +256,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/pediatric-bmi-for-age"
+        },
+        "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving pediatric BMI observations.",
+        "exampleBoolean": false,
+        "name": "US Core Pediatric BMI for Age Observation Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pediatric-weight-for-height"
+        },
+        "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving pediatric Weight-for-length per age and gender observations.",
+        "exampleBoolean": false,
+        "name": "US Core Pediatric Weight for Height Observation Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-practitioner"
         },
         "description": "The practitioner(s) referenced in US Core profiles.",
@@ -282,7 +306,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-pulse-oximetry"
         },
-        "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving inspired O2 by pulse oximetry observations.",
+        "description": "Defines constraints on the Observation resource to represent inspired O2 by pulse oximetry and inspired oxygen concentration observations with a standard LOINC codes and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
         "name": "US Core Pulse Oximetry Profile"
       },
@@ -298,7 +322,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-respiratoryrate"
         },
-        "description": "Defines constraints and extensions on Observation to represent respiratory rate observations resource using a standard LOINC code and UCUM units of measure for use in querying and retrieving vital signs observation. This profile is derived from the US Core Vital Signs Profile.",
+        "description": "Defines constraints on Observation to represent respiratory rate observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
         "name": "US Core Respiratory Rate Profile"
       },
@@ -314,7 +338,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-vitalsigns"
         },
-        "description": "FHIR Vital Signs Profile",
+        "description": "Defines constraints on the Observation resource to represent vital signs observation.  This profile is used as the base definition for the other US Core Vital Signs Profiles and based on the FHIR VitalSigns Profile.",
         "exampleBoolean": false,
         "name": "US Core Vital Signs Profile"
       },
@@ -973,30 +997,6 @@
         "description": "Returns patients with a race extension matching the specified code.",
         "exampleBoolean": false,
         "name": "USCoreRace"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/head-occipital-frontal-circumference-percentile"
-        },
-        "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving pediatric Pediatric Head Occipital-frontal Circumference Percentile observations.",
-        "exampleBoolean": false,
-        "name": "US Core Pediatric Head Occipital-frontal Circumference Percentile Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/pediatric-bmi-for-age"
-        },
-        "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving pediatric BMI observations.",
-        "exampleBoolean": false,
-        "name": "US Core Pediatric BMI for Age Observation Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/pediatric-weight-for-height"
-        },
-        "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving pediatric Weight-for-length per age and gender observations.",
-        "exampleBoolean": false,
-        "name": "US Core Pediatric Weight for Height Observation Profile"
       },
       {
         "reference": {

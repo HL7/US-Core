@@ -8,7 +8,7 @@
     "status": "active",
     "experimental": false,
     "date": "2020-11-17",
-    "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving vital signs observation.  This profile is used as the base definition for the other US Core Vital Signs Profiles.",
+    "description": "Defines constraints on the Observation resource to represent vital signs observation.  This profile is used as the base definition for the other US Core Vital Signs Profiles and based on the FHIR VitalSigns Profile.",
     "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -22,7 +22,7 @@
                 "id": "Observation",
                 "path": "Observation",
                 "short": "US Core Vital Signs Profile",
-                "definition": "Defines constraints and extensions on the Observation resource for use in querying and retrieving vital signs observation.  This profile is used as the base definition for the other US Core Vital Signs Profiles."
+                "definition": "Defines constraints on the Observation resource to represent vital signs observation.  This profile is used as the base definition for the other US Core Vital Signs Profiles and based on the FHIR VitalSigns Profile."
             },
             {
                 "id": "Observation.status",
@@ -119,6 +119,14 @@
             {
                 "id": "Observation.subject",
                 "path": "Observation.subject",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
                 "mustSupport": true
             },
             {
@@ -143,6 +151,7 @@
             {
                 "id": "Observation.value[x]",
                 "path": "Observation.value[x]",
+                "short": "Vital Signs Value",
                 "definition": "Vital Signs value are typically recorded using the Quantity data type.",
                 "type": [
                     {
