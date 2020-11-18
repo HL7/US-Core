@@ -39,15 +39,23 @@ In certain profiles only specific resource references are labeled as *Must Suppo
 
 For example, the [US Core DocumentReference Profile] author US Core Practitioner Profile is labeled *Must Support*. When claiming conformance to the [US Core DocumentReference Profile]:
 
-* US Core Responders **SHALL** be capable of providing a DocumentReference.author US Core Practitioner Profile.
-* US Core Requestors **SHALL** be capable of processing a DocumentReference.author US Core Practitioner Profile.
+* US Core Responders **SHALL** be capable of providing a DocumentReference.author with a valid reference to a US Core Practitioner Profile.
+* US Core Requestors **SHALL** be capable of processing a DocumentReference.author with a valid reference to a US Core Practitioner Profile.
 
 Systems can support other references but this is not a requirement of US Core. 
 
-
 {% include img.html img="Must_Support_DocumentReference.jpg" caption="Figure 1: US Core DocumentReference.author" %}
 
-#### Must Support - Elements
+In certain profiles only a single resource reference is present on an element labeled *Must Support*. 
+
+For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must Support*. When claiming conformance to the [US Core AllergyIntolerance Profile]:
+
+* US Core Responders **SHALL** be capable of providing an AllergyIntolerance.patient with a valid reference to a US Core Patient Profile.
+* US Core Requestors **SHALL** be capable of processing an AllergyIntolerance.patienta with a valid reference to a US Core Patient Profile.
+
+{% include img.html img="Must_Support_AllergyIntolerance.jpg" caption="Figure 2: US Core AllergyIntolerance.patient" %}
+
+#### Must Support - Choice of Data Types
 
 In certain profiles only specific elements are labeled as *Must Support*. 
 
@@ -59,7 +67,7 @@ For example, the [US Core Laboratory Result Observation Profile] effectiveDateTi
 Systems can support the other elements, but this is not a requirement of US Core. 
 
 
-{% include img.html img="Must_Support_Observation.effective.jpg" caption="Figure 2: US Core Observation.effectiveDateTime" %}
+{% include img.html img="Must_Support_Observation.effective.jpg" caption="Figure 3: US Core Observation.effectiveDateTime" %}
 
 For the [US Core Laboratory Result Observation Profile] value element, multiple elements are labeled *Must Support*.
 
@@ -71,7 +79,7 @@ When claiming conformance to the [US Core Laboratory Result Observation Profile]
 Systems can support the other elements, but this is not a requirement of US Core.
 
 
-{% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 3: US Core Observation.value[x]" %}
+{% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 4: US Core Observation.value[x]" %}
 
 
 {% include link-list.md %}
