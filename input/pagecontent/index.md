@@ -13,6 +13,7 @@
         - [ ] VS
         - [ ] Intros and Quick Starts
         - [ ] to term and profile lists
+        - [ ] update examples
      - [ ] Updates to Quick Starts for updated search requirements
        - [ ] add Intros to QuickStarts
        - [ ] don't forget added requirements for DocRef. (PractitionerRole, and Provenance?)
