@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "us-core-vital-signs",
+  "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-vital-signs",
+  "name": "UsCoreVitalSigns",
+  "title": "Us Core Vital Signs ValueSet",
+  "status": "active",
+  "experimental": false,
+  "date": "2020-11-17",
+  "description": "The vital sign codes from the base FHIR and US Core Vital Signs.",
+  "copyright": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "59576-9"
+          },
+          {
+            "code": "8289-1"
+          },
+          {
+            "code": "77606-2"
+          },
+          {
+            "code": "59408-5"
+          },
+          {
+            "code": "3150-0"
+          },
+          {
+            "code": "3151-8"
+          }
+        ]
+      },
+      {
+        "valueset": "http://hl7.org/fhir/ValueSet/observation-vitalsignresult"
+      }
+    ]
+  }
+}

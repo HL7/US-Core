@@ -287,6 +287,11 @@ definition:
         name: US Core Smoking Status Observation Profile
         reference:
             reference: StructureDefinition/us-core-smokingstatus
+    -   description: FHIR Vital Signs Profile
+        exampleBoolean: false
+        name: US Core Vital Signs Profile
+        reference:
+            reference: StructureDefinition/uscore-vitalsigns
     -   description: "\u200BThe Section describes the expected capabilities of the\
             \ US Core Client which is responsible for creating and initiating the\
             \ queries for information about an individual patient. The complete list\
@@ -1367,6 +1372,11 @@ definition:
         name: USPS Two Letter Alphabetic Codes
         reference:
             reference: ValueSet/us-core-usps-state
+    -   description: The vital sign codes from the base FHIR and US Core Vital Signs.
+        exampleBoolean: false
+        name: Us Core Vital Signs ValueSet
+        reference:
+            reference: ValueSet/us-core-vital-signs
     -   description: This is a Device defib example for the *Us Core Implantable Device
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
