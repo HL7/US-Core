@@ -38,8 +38,9 @@ list:
         (see individual trackers below for details)
       1. Publishing a set US Core Vital Signs independent of the FHIR core profile upon which it is based (see individual trackers below for details)
       1. Linking terminology directly to the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) - NIH where applicable
-         - Note that you will need log in using a current UMLS account to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html).)
+         - Note that you will need log in using a UMLS API Key which require a current UMLS account to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html).)
          - To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the '{OID}' with the OID from the table below.
+
         |US Core Value Set|VSAC Value Set|VSAC OID|
         |---|---|---|
         |Detailed ethnicity|Detailed Ethnicity|2.16.840.1.114222.4.11.877|
