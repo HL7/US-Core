@@ -260,7 +260,7 @@
 [US Core Practitioner Profile]: StructureDefinition-us-core-practitioner.html
 [US Core PractitionerRole Profile]: StructureDefinition-us-core-practitionerrole.html
 [HL7 Gender Harmony Project]: https://confluence.hl7.org/display/VOC/The+Gender+Harmony+Project
-[US Core Vital Signs Profile]: StrucstureDefinition-us-core-vitalsigns.html
+[US Core Vital Signs Profile]: StructureDefinition-us-core-vitalsigns.html
 [US Core Respiratory Rate Profile]: StructureDefinition-us-core-respiratoryrate.html
 [US Core Heart Rate Profile]: StructureDefinition-us-core-heartrate.html
 [US Core Body Temperature Profile]: StructureDefinition-us-core-bodytemperature.html
