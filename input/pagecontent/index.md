@@ -11,7 +11,7 @@
         - [ ] SDs
         - [ ] VS
         - [ ] Intros and Quick Starts
-        - [ ] to term and profile lists
+        - [X] to term and profile lists
      - [ ] Updates to Quick Starts for updated search requirements
        - [ ] don't forget added requirements for DocRef. (PractitionerRole, and Provenance?)
      - [ ] Various vocab issues
