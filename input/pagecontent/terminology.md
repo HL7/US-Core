@@ -27,10 +27,10 @@ These value sets have been defined for this implementation guide.
 *   [US Core Provider Role (NUCC)](ValueSet-us-core-provider-role.html)
 *   {:.new-content #FHIR-26059}[US Core Smoking Status](ValueSet-us-core-observation-smokingstatus.html)
 *   [US Core Status for Smoking Status Observation](ValueSet-us-core-observation-smoking-status-status.html)
-*   [US Core Smoking Status Observation Codes](ValueSet-us-core-smoking-status-observation-codes.html)
+*   [US Core Smoking Status Observation Codes](ValueSet-us-core-smoking-status-observation-codes.html)ß
 *   [US Core Vaccine National Drug Codes (NDC)](ValueSet-us-core-ndc-vaccine-codes.html)
 *   {:.new-content #FHIR-26833}[USPS Two Letter Alphabetic Codes](ValueSet-us-core-usps-state.html)
-*   {:.new-content #FHIR-28391}[US Core Vital Signs ValueSet](ValueSet-us-core-vital-signs)
+*   {:.new-content #FHIR-28391}[US Core Vital Signs ValueSet](ValueSet-us-core-vital-signs.html)
 
 ### Code Systems
 
