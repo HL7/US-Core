@@ -7,10 +7,10 @@
      - [ ] Document Search requirements in CapabilityStatements
      - [ ] Add Vitals profile
      - [ ] Various vocab issues
-       - [ ] FHIR-29322 still open
+       - [ ] FHIR-29322
 - [X] Review survey and complete updates to choices of types and References
     - need new Tracker or apply to existing?
-    1. CareTeam.participant.member
+    1. CareTeam.participant.members
     1. DiagnosticReport.performer
     1. DiagnosticReport.effective[x]
     1. DocumentReference.author
@@ -25,6 +25,7 @@
     1. Provenance.agent.who
 - [X] Replace value sets with links to VSAC where possible
       -  see [this spreadsheet](https://docs.google.com/spreadsheets/d/1BtRNsmrez2D8cm_81qhBaiU0aMmXGAIVDNwXCVAu2tE/edit#gid=0)
+- [ ] Undo Replacing value sets with links to VSAC and explain why this was not possible with a note balloters askng whether they want separate logins to be able to see the value sets.       
 - [ ] Rewrite Must Support section
     - [ ] own page
     - [ ] draft [here](https://docs.google.com/document/d/1LenTi2KJ7-qcU4HLeDquXoHqpFbAxsV6uIfC6CqMsUU/edit?usp=sharing)
