@@ -211,6 +211,9 @@ list:
           - [US Core Provider Speciality (NUCC) --> Healthcare Provider Taxonomy](StructureDefinition-us-core-practitionerrole.html)
           - [US Core Vaccine Administered Value Set (CVX) --> CVX Vaccines Administered Vaccine Set](StructureDefinition-us-core-immunization.html)
 
+      1. Remove remove CVS-NDC mapping table ([FHIR-29745](https://jira.hl7.org/browse/FHIR-29745)) [See Change Here](StructureDefinition-us-core-immunization.html#FHIR-29745)
+
+
     path: 'http://hl7.org/fhir/us/core/STU3.2'
     status: trial-use
     sequence: STU3

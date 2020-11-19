@@ -24,8 +24,8 @@
 [Body weight]: {{site.data.fhir.path}}bodyweight.html
 [CIMI]:http://www.hl7.org/Special/Committees/cimi/index.cfm
 [CPT-4/HCPC for procedures]: {{site.data.fhir.path}}valueset-procedure-code.html
-[CVX crosswalk table]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
-[CVX vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx
+[CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
+[CVX vaccine codes]: https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
 [Capability Statements]: capability-statements.html
 [CapabilityStatement]: {{site.data.fhir.path}}capabilitystatement.html
 [Cardiology (LP29708-2)]: https://loinc.org/LP29708-2
@@ -128,7 +128,6 @@
 [MimeType]: http://www.rfc-editor.org/bcp/bcp13.txt#
 [Multi-language support for Narratives]: {{site.data.fhir.path}}narrative.html#lang
 [Must Support]: general-guidance.html#must-support
-[NDC to CVX ConceptMap]: ConceptMap-ndc-cvx.html
 [NDC vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
 [NamingSystem]: {{site.data.fhir.path}}namingsystem.html
 [Narrative]: {{site.data.fhir.path}}security.html#narrative

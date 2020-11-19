@@ -28,8 +28,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Profile specific implementation guidance:**
 
 - \*Use the status code: `not-done` to represent that an immunization was *not* given.
-- NDC codes as a translational data element:
-Based upon the 2015 Edition Certification Requirements, [CVX vaccine codes] are required and the [NDC vaccine codes] SHOULD be supported as translations to them.  A [NDC to CVX ConceptMap] is provided and is based upon the CDC's [CVX crosswalk table]. A translation is illustrated in the example below.
+- {:.new-content #FHIR-29745}Based upon the ONC U.S. Core Data for Interoperability (USCDI) v1 requirements, [CVX vaccine codes] are required and the [NDC vaccine codes] **SHOULD** be supported as translations to them.  An up to date [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] is provided by the CDC's. A translation is illustrated in the example below.
 
 ### Examples
 
