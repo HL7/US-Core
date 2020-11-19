@@ -76,7 +76,7 @@ list:
 
       1. us-core-12 invariant interpretation ([FHIR-28942](https://jira.hl7.org/browse/FHIR-28942)) [See Changes Here](StructureDefinition-us-core-implantable-device.html#FHIR-28942)
 
-      1. Incorrect Description Observation.component (Pulse Ox) ([FHIR-28934](https://jira.hl7.org/browse/FHIR-28934)) [See Change Here](StructureDefinition-us-core-pulse-oximetry.html#FHIR-28934)
+      1. Incorrect Description Observation.component (Pulse Ox) ([FHIR-28934](https://jira.hl7.org/browse/FHIR-28934)) [See Change Here](StructureDefinition-us-core-pulse-oximetry-definitions.html#Observation.component)
 
       1. References should be constrained to use `reference` not `identifier` ([FHIR-28573](https://jira.hl7.org/browse/FHIR-28573)) [See Change Here](general-guidance.html#FHIR-28573)
 
@@ -88,7 +88,7 @@ list:
 
       1. Immunization Profile Mandatory and Must Support Intro is missing attributes ([FHIR-28452](https://jira.hl7.org/browse/FHIR-28452)) [See Change Here](StructureDefinition-us-core-immunization.html#FHIR-28452)
 
-      1. DiagnosticReport-cardiology-report JSON and XML samples contain invalid hashes ([FHIR-28408](https://jira.hl7.org/browse/FHIR-28408)) [See Change Here](DiagnosticReport-cardiology-report.json.html#FHIR-28408)
+      1. DiagnosticReport-cardiology-report JSON and XML samples contain invalid hashes ([FHIR-28408](https://jira.hl7.org/browse/FHIR-28408)) [See Change Here](DiagnosticReport-cardiology-report.json.html)
 
       1. MedicationRequest.medication[x] ([FHIR-28395](https://jira.hl7.org/browse/FHIR-28395)) [See Change Here](StructureDefinition-us-core-medicationrequest.html#FHIR-28395)
 
@@ -107,11 +107,11 @@ list:
 
       1. Make Provenance.target.reference mandatory ([FHIR-28165](https://jira.hl7.org/browse/FHIR-28165)) [See Change Here](StructureDefinition-us-core-provenance-definitions.html#Provenance.target)
 
-      1. Missing narrative Element ([FHIR-28159](https://jira.hl7.org/browse/FHIR-28159)) [See Change Here](Patient-example.html#FHIR-28159)
+      1. Missing narrative Element ([FHIR-28159](https://jira.hl7.org/browse/FHIR-28159)) [See Change Here](Patient-example.html)
 
       1. "Updated guidance regarding gender and sex." ([FHIR-28138](https://jira.hl7.org/browse/FHIR-28138)) [See Change Here](StructureDefinition-us-core-patient.html#FHIR-28138)
 
-      1. Replace the US Core Smoking Status with VSAC reference ([FHIR-28123](https://jira.hl7.org/browse/FHIR-28123),[FHIR-26059](https://jira.hl7.org/browse/FHIR-26059)) [See Change Here](StructureDefinition-us-core-us-core-smokingstatus-definitions.html#Observation.value[x]:valueCodeableConcept)
+      1. Replace the US Core Smoking Status with VSAC reference ([FHIR-28123](https://jira.hl7.org/browse/FHIR-28123),[FHIR-26059](https://jira.hl7.org/browse/FHIR-26059)) [See Change Here](StructureDefinition-us-core-smokingstatus-definitions.html#Observation.value[x]:valueCodeableConcept)
 
       1. Timing association for smoking status changed from `issued` to `effectiveDateTime` ([FHIR-28090](https://jira.hl7.org/browse/FHIR-28090)) [See Change Here](StructureDefinition-us-core-smokingstatus-definitions.html#Observation.effectiveDateTime)
 
@@ -153,7 +153,7 @@ list:
 
       1. Add must support type choices for Observation.value[x] for for Lab Observation Profile ([FHIR-28390](https://jira.hl7.org/browse/FHIR-28390)) [See Change Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.value[x])
 
-      1. Add must support type choices for Observation.effective[x] for Lab Observation Profile ([FHIR-28389](https://jira.hl7.org/browse/FHIR-28389)) [See Change Here](StructureDefinition-us-core-observation-lab.html#Observation.effective[x])
+      1. Add must support type choices for Observation.effective[x] for Lab Observation Profile ([FHIR-28389](https://jira.hl7.org/browse/FHIR-28389)) [See Change Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.effective[x])
 
       1. Add must support type choices for Immunization.occurrence[x] ([FHIR-28388](https://jira.hl7.org/browse/FHIR-28388)) [See Change Here](StructureDefinition-us-core-immunization-definitions.html#Immunization.occurrence[x])
 
