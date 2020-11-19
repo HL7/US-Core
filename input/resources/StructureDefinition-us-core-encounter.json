@@ -297,6 +297,21 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Encounter.serviceProvider",
+        "path": "Encounter.serviceProvider",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+            ]
+          }
+        ],
+        "mustSupport": true
       }
     ]
   }
