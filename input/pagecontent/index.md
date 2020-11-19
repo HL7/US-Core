@@ -14,7 +14,7 @@
         - [X] add/edit Intros and Quick Starts
         - [X] term and profile lists
         - [X] update examples
-        - [ ] update USCDI table
+        - [X] update USCDI table
      - [ ] Updates to Quick Starts for updated search requirements
        - [ ] add Intros to QuickStarts
        - [ ] don't forget added requirements for DocRef. (PractitionerRole, and Provenance?)
