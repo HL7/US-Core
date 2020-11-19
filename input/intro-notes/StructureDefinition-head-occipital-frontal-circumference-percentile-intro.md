@@ -25,7 +25,7 @@ The following are example usage scenarios for the US Core Pediatric Head Occipit
 
 - An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it.
 - Information about the growth chart tables used to determine percentiles should be supplied in `Observation.note.text` (for example, 'WHO Males, 0-2 years Chart').
-- For representing the raw OFC measurements use the FHIR Vital Signs [Head Circumference] Profile.
+- For representing the raw OFC measurements use the [US Core Head Circumference Profile].
 
 ### Examples
 
