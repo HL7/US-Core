@@ -1,12 +1,12 @@
 
-This profile sets minimum expectations for the [Observation] resource to record, search, and fetch pediatric weight for height and age observations associated with a patient. It is based on the [US Core Vital Signs Profile] and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile.
+This profile sets minimum expectations for the [Observation] resource to record, search, and fetch body mass index (BMI) observations associated with a patient. It is based on the [US Core Vital Signs Profile] and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile.
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core Pediatric Weight for Height Observation Profile:
+The following are example usage scenarios for the US Core BMI Profile:
 
-- Query for pediatric weight observations belonging to a pediatric patient
-- [Record or update] pediatric weight observations belonging to a pediatric patient
+- Query for body mass index (BMI) observations
+- [Record or update] body mass index (BMI) observations
 
 ### Mandatory and Must Support Data Elements
 
@@ -15,7 +15,7 @@ The following are example usage scenarios for the US Core Pediatric Weight for H
 **Each Observation must have:**
 
 1. a patient
-1. a fixed code for pediatric weight for height and age measurement
+1. a fixed code for body mass index (BMI)
 
 **Each Observation must support:**
 
@@ -24,10 +24,9 @@ The following are example usage scenarios for the US Core Pediatric Weight for H
 **Profile specific implementation guidance:**
 
 - An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it.
-- Information about the growth chart tables used to determine percentiles should be supplied in `Observation.note.text` (for example, 'WHO Males, 0-2 years Chart').
 
 ### Examples
 
-- [Pediatric Weight for Height Example](Observation-pediatric-wt-example.html)
+- [Bmi Example](Observation-bmi.html)
 
 {% include link-list.md %}
