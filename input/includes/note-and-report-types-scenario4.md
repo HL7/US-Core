@@ -1,5 +1,5 @@
 
-A client determines the category of reports they can access through DiagnosticReport. The server responds with Radiology, Pathology ,and Cardiology report categories:
+A client determines the category of reports they can access through DiagnosticReport. The server responds with Radiology, Pathology, and Cardiology report categories:
 
 **Request for DiagnosticReport report type**
 

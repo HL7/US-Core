@@ -4,7 +4,7 @@ A client is only interested in retrieving notes by class (Note, DocumentReferenc
 **Request for DocumentReference note categories**
 
 ~~~
-GET [base]/ValueSet/$expand?context=DocumentReference.class&contextDirection=outgoing
+GET [base]/ValueSet/$expand?context=DocumentReference.category&contextDirection=outgoing
 ~~~
 
 **Response**
