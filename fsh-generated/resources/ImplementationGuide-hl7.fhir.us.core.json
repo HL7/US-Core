@@ -88,7 +88,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-bodytempurature"
+          "reference": "StructureDefinition/us-core-bodytemperature"
         },
         "description": "Defines constraints on Observation to represent body temperature observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
@@ -1410,7 +1410,8 @@
         "reference": {
           "reference": "Observation/head-circumference"
         },
-        "name": "head-circumference",
+        "description": "This is a head circumference example for the *US Core Head Circumference Profile*.",
+        "name": "Head Circumference Example",
         "exampleBoolean": true
       },
       {

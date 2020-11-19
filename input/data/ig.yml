@@ -162,7 +162,7 @@ definition:
         exampleBoolean: false
         name: US Core Body Temperature Profile
         reference:
-            reference: StructureDefinition/us-core-bodytempurature
+            reference: StructureDefinition/us-core-bodytemperature
     -   description: Defines constraints on Observation to represent body weight observations
             with a standard LOINC code and UCUM units of measure. This profile is
             derived from the US Core Vital Signs Profile.
@@ -1581,8 +1581,10 @@ definition:
         name: Hc1 Example
         reference:
             reference: Condition/hc1
-    -   exampleBoolean: true
-        name: head-circumference
+    -   description: This is a head circumference example for the *US Core Head Circumference
+            Profile*.
+        exampleBoolean: true
+        name: Head Circumference Example
         reference:
             reference: Observation/head-circumference
     -   description: This is a heart rate example for the *Vitalsigns Profile*.
