@@ -68,7 +68,7 @@
 [DocumentReference]: {{site.data.fhir.path}}documentreference.html
 [Downloads]: downloads.html "Downloads Page"
 [Encounter]: {{site.data.fhir.path}}encounter.html
-[Examples]: all-examples.html
+[Examples]: examples.html
 [FHIR Artifacts]: artifacts.html
 [FHIR Binary Resource]: http://hl7.org/fhir/binary.html
 [FHIR Bulk Data Access (Flat FHIR)]: http://hl7.org/fhir/uv/bulkdata/STU1/
@@ -270,3 +270,4 @@
 [US Core Blood Pressure Profile]: StructureDefinition-us-core-bloodpressure.html
 [US Core Head Circumference Profile]: StructureDefinition-us-core-headcircumference.html
 [vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
+[US Core change notes](http://hl7.org/fhir/us/core/history.html).
