@@ -34,6 +34,7 @@ The following Profiles and have been defined for this implementation guide.
 - {:.new-content #FHIR-28391}[US Core Vital Signs Profile]
   - {:.new-content #FHIR-28391}[US Core Blood Pressure Profile]
   - {:.new-content #FHIR-28391}[US Core BMI Profile]
+  - {:.new-content #FHIR-28391}[US Core Head Circumference Profile]
   - {:.new-content #FHIR-28391}[US Core Body Height Profile]
   - {:.new-content #FHIR-28391}[US Core Body Weight Profile]
   - {:.new-content #FHIR-28391}[US Core Body Temperature Profile]

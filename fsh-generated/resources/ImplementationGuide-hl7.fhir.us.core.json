@@ -1292,7 +1292,7 @@
         },
         "description": "This is a blood pressure example for the *Vitalsigns Profile*.",
         "name": "Blood Pressure Example",
-        "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bloodpressure"
       },
       {
         "reference": {
@@ -1300,15 +1300,15 @@
         },
         "description": "This is a bmi example for the *Vitalsigns Profile*.",
         "name": "Bmi Example",
-        "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi"
       },
       {
         "reference": {
           "reference": "Observation/bp-data-absent"
         },
-        "description": "This is a bp data absent example for the *Vitalsigns Profile*.",
+        "description": "This is a bp data absent example for the *Vitalsigns Profile* showing how to reprsesent blood pressure with a missing diastolic measurement.",
         "name": "Bp Data Absent Example",
-        "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bloodpressure"
       },
       {
         "reference": {
@@ -1408,11 +1408,18 @@
       },
       {
         "reference": {
+          "reference": "Observation/head-circumference"
+        },
+        "name": "head-circumference",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Observation/heart-rate"
         },
         "description": "This is a heart rate example for the *Vitalsigns Profile*.",
         "name": "Heart Rate Example",
-        "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heartrate"
       },
       {
         "reference": {
@@ -1420,7 +1427,7 @@
         },
         "description": "This is a height example for the *Vitalsigns Profile*.",
         "name": "Height Example",
-        "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyheight"
       },
       {
         "reference": {
@@ -1450,9 +1457,9 @@
         "reference": {
           "reference": "Observation/length"
         },
-        "description": "This is a length example for the *Vitalsigns Profile*.",
+        "description": "This is a length example for the *Vitalsigns Profile* which shows how body length (typically used for infants) is represented using 8306-3 -*Body height - lying* as an additional observation code.",
         "name": "Length Example",
-        "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyheight"
       },
       {
         "reference": {
@@ -1482,7 +1489,7 @@
         "reference": {
           "reference": "Observation/satO2-fiO2"
         },
-        "description": "This is a observation satO2 fiO2 example for the *Us Core Pulse Oximetry Profile*.",
+        "description": "This is a observation satO2 fiO2 example for the *Us Core Pulse Oximetry Profile* representing a spO2 value with a for a patient on 6 l/min of O2 suppplemental oxygen.",
         "name": "Observation Sato2 Fio2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
       },
@@ -1498,9 +1505,9 @@
         "reference": {
           "reference": "Observation/oxygen-saturation"
         },
-        "description": "This is a oxygen saturation example for the *Vitalsigns Profile*.",
+        "description": "This is a typical oxygen saturation example for the *US Core Pulse Oximetry Profile* on room air where no oxygen concentration is recorded.",
         "name": "Oxygen Saturation Example",
-        "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
       },
       {
         "reference": {
@@ -1572,7 +1579,7 @@
         },
         "description": "This is a respiratory rate example for the *Vitalsigns Profile*.",
         "name": "Respiratory Rate Example",
-        "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratoryrate"
       },
       {
         "reference": {
@@ -1660,7 +1667,7 @@
         },
         "description": "This is a temperature example for the *Vitalsigns Profile*.",
         "name": "Temperature Example",
-        "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodytemperature"
       },
       {
         "reference": {
@@ -1864,19 +1871,11 @@
       },
       {
         "reference": {
-          "reference": "Observation/vitals-panel"
-        },
-        "description": "This is a vitals panel example for the *Vitalsigns Profile*.",
-        "name": "Vitals Panel Example",
-        "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
-      },
-      {
-        "reference": {
           "reference": "Observation/weight"
         },
         "description": "This is a weight example for the *Vitalsigns Profile*.",
         "name": "Weight Example",
-        "exampleCanonical": "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyweight"
       }
     ],
     "page": {

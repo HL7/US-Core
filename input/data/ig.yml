@@ -1500,17 +1500,18 @@ definition:
         reference:
             reference: Observation/blood-glucose
     -   description: This is a blood pressure example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/StructureDefinition/vitalsigns
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bloodpressure
         name: Blood Pressure Example
         reference:
             reference: Observation/blood-pressure
     -   description: This is a bmi example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/StructureDefinition/vitalsigns
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi
         name: Bmi Example
         reference:
             reference: Observation/bmi
-    -   description: This is a bp data absent example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/StructureDefinition/vitalsigns
+    -   description: This is a bp data absent example for the *Vitalsigns Profile*
+            showing how to reprsesent blood pressure with a missing diastolic measurement.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bloodpressure
         name: Bp Data Absent Example
         reference:
             reference: Observation/bp-data-absent
@@ -1577,13 +1578,17 @@ definition:
         name: Hc1 Example
         reference:
             reference: Condition/hc1
+    -   exampleBoolean: true
+        name: head-circumference
+        reference:
+            reference: Observation/head-circumference
     -   description: This is a heart rate example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/StructureDefinition/vitalsigns
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-heartrate
         name: Heart Rate Example
         reference:
             reference: Observation/heart-rate
     -   description: This is a height example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/StructureDefinition/vitalsigns
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyheight
         name: Height Example
         reference:
             reference: Observation/height
@@ -1603,8 +1608,10 @@ definition:
         name: Imm 1 Example
         reference:
             reference: Immunization/imm-1
-    -   description: This is a length example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/StructureDefinition/vitalsigns
+    -   description: This is a length example for the *Vitalsigns Profile* which shows
+            how body length (typically used for infants) is represented using 8306-3
+            -*Body height - lying* as an additional observation code.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyheight
         name: Length Example
         reference:
             reference: Observation/length
@@ -1626,7 +1633,8 @@ definition:
         reference:
             reference: Observation/neutrophils
     -   description: This is a observation satO2 fiO2 example for the *Us Core Pulse
-            Oximetry Profile*.
+            Oximetry Profile* representing a spO2 value with a for a patient on 6
+            l/min of O2 suppplemental oxygen.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
         name: Observation Sato2 Fio2 Example
         reference:
@@ -1637,8 +1645,9 @@ definition:
         name: Ofc Percentile Example
         reference:
             reference: Observation/ofc-percentile
-    -   description: This is a oxygen saturation example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/StructureDefinition/vitalsigns
+    -   description: This is a typical oxygen saturation example for the *US Core
+            Pulse Oximetry Profile* on room air where no oxygen concentration is recorded.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
         name: Oxygen Saturation Example
         reference:
             reference: Observation/oxygen-saturation
@@ -1687,7 +1696,7 @@ definition:
         reference:
             reference: Procedure/rehab
     -   description: This is a respiratory rate example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/StructureDefinition/vitalsigns
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratoryrate
         name: Respiratory Rate Example
         reference:
             reference: Observation/respiratory-rate
@@ -1751,7 +1760,7 @@ definition:
         reference:
             reference: Observation/some-day-smoker
     -   description: This is a temperature example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/StructureDefinition/vitalsigns
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodytemperature
         name: Temperature Example
         reference:
             reference: Observation/temperature
@@ -1899,13 +1908,8 @@ definition:
         name: Usg Example
         reference:
             reference: Observation/usg
-    -   description: This is a vitals panel example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/StructureDefinition/vitalsigns
-        name: Vitals Panel Example
-        reference:
-            reference: Observation/vitals-panel
     -   description: This is a weight example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/StructureDefinition/vitalsigns
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyweight
         name: Weight Example
         reference:
             reference: Observation/weight

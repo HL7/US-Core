@@ -268,3 +268,4 @@
 [US Core Body Height Profile]: StructureDefinition-us-core-bodyheight.html
 [US Core BMI Profile]: StructureDefinition-us-core-bmi.html
 [US Core Blood Pressure Profile]: StructureDefinition-us-core-bloodpressure.html
+[US Core Head Circumference Profile]: StructureDefinition-us-core-headcircumference.html

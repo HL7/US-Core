@@ -19,6 +19,11 @@
             "code": "8306-3",
             "system": "http://loinc.org",
             "display": "Body height --lying"
+         },
+         {
+            "code": "8302-2",
+            "system": "http://loinc.org",
+            "display": "Body height"
          }
       ]
    },
@@ -31,7 +36,7 @@
    },
    "meta": {
       "profile": [
-         "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyheight"
       ],
       "extension": [
          {
@@ -40,7 +45,7 @@
          },
          {
             "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-            "valueMarkdown": "This is a length example for the *Vitalsigns Profile*."
+            "valueMarkdown": "This is a length example for the *Vitalsigns Profile* which shows how body length (typically used for infants) is represented using 8306-3 -*Body height - lying* as an additional observation code."
          }
       ]
    },

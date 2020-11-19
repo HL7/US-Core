@@ -8,9 +8,9 @@
         - [ ] Document Search requirements in CapabilityStatements
         - [ ] Add Vitals Profiles
      - [ ] Add Vitals profile
-        - [ ] SDs
-             - [ ] look at pulse ox and head circumference
-        - [ ] VS
+        - [X] SDs
+             - [X] look at pulse ox and head circumference
+        - [X] VS
         - [ ] Intros and Quick Starts
         - [ ] to term and profile lists
         - [ ] update examples
