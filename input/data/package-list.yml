@@ -66,9 +66,9 @@ list:
       **Trackers items and links to the updated content**
       listed below are the resolved trackers for this version:
 
-      1. Must Support Over Interpreted ([FHIR-28375](https://jira.hl7.org/browse/FHIR-28375)) [See Change Here](StructureDefinition-us-core-allergyintolerance-definitions.html#AllergyIntolerance.code)
+      1. Must Support Over Interpreted ([FHIR-28375](https://jira.hl7.org/browse/FHIR-28375)) [See Change Here](StructureDefinition-us-core-allergyintolerance.html)
 
-      1. Replace the US Core Update Allergy substances value set with VSAC reference ([FHIR-29322](https://jira.hl7.org/browse/FHIR-29322)) [See Change Here](StructureDefinition-us-core-allergyintolerance-definitions.html#AllergyIntolerance.code)
+      1. Replace the US Core Update Allergy substances value set with VSAC reference ([FHIR-29322](https://jira.hl7.org/browse/FHIR-29322)) [See Change Here](StructureDefinition-us-core-allergyintolerance.html)
 
       1. Update Organization Quick Start Example Search. ([FHIR-29269](https://jira.hl7.org/browse/FHIR-29269)) [See Change Here](StructureDefinition-us-core-organization.html#FHIR-29269)
 
@@ -76,7 +76,7 @@ list:
 
       1. us-core-12 invariant interpretation ([FHIR-28942](https://jira.hl7.org/browse/FHIR-28942)) [See Changes Here](StructureDefinition-us-core-implantable-device.html#FHIR-28942)
 
-      1. Incorrect Description Observation.component (Pulse Ox) ([FHIR-28934](https://jira.hl7.org/browse/FHIR-28934)) [See Change Here](StructureDefinition-us-core-pulse-oximetry-definitions.html#Observation.component)
+      1. Incorrect Description Observation.component (Pulse Ox) ([FHIR-28934](https://jira.hl7.org/browse/FHIR-28934)) [See Change Here](StructureDefinition-us-core-pulse-oximetry.html)
 
       1. References should be constrained to use `reference` not `identifier` ([FHIR-28573](https://jira.hl7.org/browse/FHIR-28573)) [See Change Here](general-guidance.html#FHIR-28573)
 
@@ -94,7 +94,7 @@ list:
 
       1. Fix MedicationRequest.encounter reference ([FHIR-28258](https://jira.hl7.org/browse/FHIR-28258)) [See Change Here](StructureDefinition-us-core-medicationrequest.html)
 
-      1. Fix typo: "an another" -> "another" ([FHIR-28227](https://jira.hl7.org/browse/FHIR-28227)) [See Change Here](StructureDefinition-us-core-practitioner-definitions.html#Practitioner.identifier)
+      1. Fix typo: "an another" -> "another" ([FHIR-28227](https://jira.hl7.org/browse/FHIR-28227)) [See Change Here](StructureDefinition-us-core-practitioner.html)
 
       1. Declare mustSupport on Organization telecom children ([FHIR-28216](https://jira.hl7.org/browse/FHIR-28216)) [See Change Here](StructureDefinition-us-core-organization.html)
 
@@ -111,7 +111,7 @@ list:
 
       1. "Updated guidance regarding gender and sex." ([FHIR-28138](https://jira.hl7.org/browse/FHIR-28138)) [See Change Here](StructureDefinition-us-core-patient.html#FHIR-28138)
 
-      1. Replace the US Core Smoking Status with VSAC reference ([FHIR-28123](https://jira.hl7.org/browse/FHIR-28123),[FHIR-26059](https://jira.hl7.org/browse/FHIR-26059)) [See Change Here](StructureDefinition-us-core-smokingstatus-definitions.html#Observation.value[x]:valueCodeableConcept)
+      1. Replace the US Core Smoking Status with VSAC reference ([FHIR-28123](https://jira.hl7.org/browse/FHIR-28123),[FHIR-26059](https://jira.hl7.org/browse/FHIR-26059)) [See Change Here](StructureDefinition-us-core-smokingstatus.html)
 
       1. Timing association for smoking status changed from `issued` to `effectiveDateTime` ([FHIR-28090](https://jira.hl7.org/browse/FHIR-28090)) [See Change Here](StructureDefinition-us-core-smokingstatus.html)
 
@@ -131,7 +131,7 @@ list:
 
       1. Add must support reference type choices for US Core laboratory DiagnosticReport.performer ([FHIR-25120](https://jira.hl7.org/browse/FHIR-25120)) [See Change Here](StructureDefinition-us-core-diagnosticreport-lab.html)
 
-      1. Fix US-Core-1 constraint on Observation.effectivePeriod ([FHIR-29658](https://jira.hl7.org/browse/FHIR-29658)) [See Change Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.effective[x])
+      1. Fix US-Core-1 constraint on Observation.effectivePeriod ([FHIR-29658](https://jira.hl7.org/browse/FHIR-29658)) [See Change Here](StructureDefinition-us-core-observation-lab.html)
 
       1. Change bindings from extensible to required for Condition.code value set: US Core Condition Category Codes Procedure.code value set: US Core Procedure Codes ([FHIR-29563](https://jira.hl7.org/browse/FHIR-29563)) See Changes Here:
             - [1 StructureDefinition-us-core-condition-definitions](StructureDefinition-us-core-condition.html)
@@ -151,33 +151,33 @@ list:
 
       1. Observation.hasMember Vital Signs Panel Profile Reference Choice ([FHIR-28391](https://jira.hl7.org/browse/FHIR-28391)) [See Change Here](profiles-and-extensions.html#FHIR-28391)
 
-      1. Add must support type choices for Observation.value[x] for for Lab Observation Profile ([FHIR-28390](https://jira.hl7.org/browse/FHIR-28390)) [See Change Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.value[x])
+      1. Add must support type choices for Observation.value[x] for for Lab Observation Profile ([FHIR-28390](https://jira.hl7.org/browse/FHIR-28390)) [See Change Here](StructureDefinition-us-core-observation-lab.html)
 
-      1. Add must support type choices for Observation.effective[x] for Lab Observation Profile ([FHIR-28389](https://jira.hl7.org/browse/FHIR-28389)) [See Change Here](StructureDefinition-us-core-observation-lab-definitions.html#Observation.effective[x])
+      1. Add must support type choices for Observation.effective[x] for Lab Observation Profile ([FHIR-28389](https://jira.hl7.org/browse/FHIR-28389)) [See Change Here](StructureDefinition-us-core-observation-lab.html)
 
-      1. Add must support type choices for Immunization.occurrence[x] ([FHIR-28388](https://jira.hl7.org/browse/FHIR-28388)) [See Change Here](StructureDefinition-us-core-immunization-definitions.html#Immunization.occurrence[x])
+      1. Add must support type choices for Immunization.occurrence[x] ([FHIR-28388](https://jira.hl7.org/browse/FHIR-28388)) [See Change Here](StructureDefinition-us-core-immunization.html)
 
-      1. Add must support type choices for DiagnosticReport.effective[x] for Note Data ([FHIR-28387](https://jira.hl7.org/browse/FHIR-28387)) [See Change Here](StructureDefinition-us-core-diagnosticreport-note-definitions.html#DiagnosticReport.effective[x])
+      1. Add must support type choices for DiagnosticReport.effective[x] for Note Data ([FHIR-28387](https://jira.hl7.org/browse/FHIR-28387)) [See Change Here](StructureDefinition-us-core-diagnosticreport-note.html)
 
-      1. Add must support type choices for DiagnosticReport.effective[x] for Lab Data Type ([FHIR-28385](https://jira.hl7.org/browse/FHIR-28385)) [See Change Here](StructureDefinition-us-core-diagnosticreport-lab-definitions.html#DiagnosticReport.effective[x])
+      1. Add must support type choices for DiagnosticReport.effective[x] for Lab Data Type ([FHIR-28385](https://jira.hl7.org/browse/FHIR-28385)) [See Change Here](StructureDefinition-us-core-diagnosticreport-lab.html)
 
-      1. Add must support reference type choices for Provenance.agent.who Reference ([FHIR-28383](https://jira.hl7.org/browse/FHIR-28383)) [See Change Here](StructureDefinition-us-core-provenance-definitions.html#Provenance.agent.who)
+      1. Add must support reference type choices for Provenance.agent.who Reference ([FHIR-28383](https://jira.hl7.org/browse/FHIR-28383)) [See Change Here](StructureDefinition-us-core-provenance.html)
 
-      1. Add must support reference type choices for MedicationRequest.requester Reference ([FHIR-28382](https://jira.hl7.org/browse/FHIR-28382)) [See Change Here](StructureDefinition-us-core-medicationrequest-definitions.html#MedicationRequest.requester)
+      1. Add must support reference type choices for MedicationRequest.requester Reference ([FHIR-28382](https://jira.hl7.org/browse/FHIR-28382)) [See Change Here](StructureDefinition-us-core-medicationrequest.html)
 
       1. Add must support reference type choices for MedicationRequest.reported Choice ([FHIR-28381](https://jira.hl7.org/browse/FHIR-28381)) [See Change Here](StructureDefinition-us-core-medicationrequest.html#FHIR-28381)
 
-      1. Add must support reference type choices for  DocumentReference.author Reference ([FHIR-28380](https://jira.hl7.org/browse/FHIR-28380)) [See Change Here](StructureDefinition-us-core-documentreference-definitions.html#DocumentReference.author)
+      1. Add must support reference type choices for  DocumentReference.author Reference ([FHIR-28380](https://jira.hl7.org/browse/FHIR-28380)) [See Change Here](StructureDefinition-us-core-documentreference.html)
 
-      1. Add must support reference type choices for DiagnosticReport.performer for Note ([FHIR-28379](https://jira.hl7.org/browse/FHIR-28379)) [See Change Here](StructureDefinition-us-core-diagnosticreport-note-definitions.html#DiagnosticReport.performer)
+      1. Add must support reference type choices for DiagnosticReport.performer for Note ([FHIR-28379](https://jira.hl7.org/browse/FHIR-28379)) [See Change Here](StructureDefinition-us-core-diagnosticreport-note.html)
 
-      1. Add must support reference type choices for DiagnosticReport.performer for Lab ([FHIR-28378](https://jira.hl7.org/browse/FHIR-28378)) [See Change Here](StructureDefinition-us-core-diagnosticreport-lab-definitions.html#DiagnosticReport.performer)
+      1. Add must support reference type choices for DiagnosticReport.performer for Lab ([FHIR-28378](https://jira.hl7.org/browse/FHIR-28378)) [See Change Here](StructureDefinition-us-core-diagnosticreport-lab.html)
 
-      1. Add must support reference type choices for CareTeam.participant.member Reference ([FHIR-28376](https://jira.hl7.org/browse/FHIR-28376)) [See Change Here](StructureDefinition-us-core-careteam-definitions.html#CareTeam.participant.member)
+      1. Add must support reference type choices for CareTeam.participant.member Reference ([FHIR-28376](https://jira.hl7.org/browse/FHIR-28376)) [See Change Here](StructureDefinition-us-core-careteam.html)
 
       1. Add choice for and type choices for Encounter.reasonReference ([FHIR-27951](https://jira.hl7.org/browse/FHIR-27951)) [See Change Here](StructureDefinition-us-core-encounter.html#FHIR-27951)
 
-      1. Add choice for Procedure.performed[x] ([FHIR-29695](https://jira.hl7.org/browse/FHIR-29695)) [See Change Here](StructureDefinition-us-core-procedure-definitions.html#Procedure.performed[x])
+      1. Add choice for Procedure.performed[x] ([FHIR-29695](https://jira.hl7.org/browse/FHIR-29695)) [See Change Here](StructureDefinition-us-core-procedure.html)
 
       1. Clarify deleted resources requirements and guidance ([FHIR-28091](https://jira.hl7.org/browse/FHIR-28091)) [See Change Here](general-guidance.html#FHIR-28091)
 
@@ -193,7 +193,7 @@ list:
 
       1. Updated CPT copyright to current year ([FHIR-27770](https://jira.hl7.org/browse/FHIR-27770)) [See Change Here](ValueSet-us-core-encounter-type.html#FHIR-27770)
 
-      1. Change binding for CareTeam.participant.role from NUCC to Care Team Member Function, replace the US Core Careteam Provider Roles Value Set with VSAC reference  ([FHIR-27769](https://jira.hl7.org/browse/FHIR-27769)) [See Change Here](StructureDefinition-us-core-careteam-definitions.html#CareTeam.participant.role)
+      1. Change binding for CareTeam.participant.role from NUCC to Care Team Member Function, replace the US Core Careteam Provider Roles Value Set with VSAC reference  ([FHIR-27769](https://jira.hl7.org/browse/FHIR-27769)) [See Change Here](StructureDefinition-us-core-careteam.html)
 
       1. Remove US Core Server Capability Statement *requires* support for HTTP status 410-deleted ([FHIR-26597](https://jira.hl7.org/browse/FHIR-26597)) [See Change Here](CapabilityStatement-us-core-server.html#behavior)
 
@@ -207,9 +207,9 @@ list:
           - [Detailed ethnicity --> Detailed Ethnicity](StructureDefinition-us-core-ethnicity.html#profile)
           - [Detailed Race --> Race](StructureDefinition-us-core-race.html#profile)
           - [OMB Ethnicity --> Categories\|Ethnicity](StructureDefinition-us-core-ethnicity.html#profile)
-          - [US Core Medication Codes (RxNorm) --> Medication Clinical Drug](StructureDefinition-us-core-medicationrequest-definitions.html#MedicationRequest.medication[x]) and [here](StructureDefinition-us-core-medication.html#Medication.code)
-          - [US Core Provider Speciality (NUCC) --> Healthcare Provider Taxonomy](StructureDefinition-us-core-practitionerrole-definitions.html#PractitionerRole.specialty)
-          - [US Core Vaccine Administered Value Set (CVX) --> CVX Vaccines Administered Vaccine Set](StructureDefinition-us-core-immunization-definitions.html#Immunization.vaccineCode)
+          - [US Core Medication Codes (RxNorm) --> Medication Clinical Drug](StructureDefinition-us-core-medicationrequest.html) and [here](StructureDefinition-us-core-medication.html#Medication.code)
+          - [US Core Provider Speciality (NUCC) --> Healthcare Provider Taxonomy](StructureDefinition-us-core-practitionerrole.html)
+          - [US Core Vaccine Administered Value Set (CVX) --> CVX Vaccines Administered Vaccine Set](StructureDefinition-us-core-immunization.html)
 
     path: 'http://hl7.org/fhir/us/core/STU3.2'
     status: trial-use
