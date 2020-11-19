@@ -11,7 +11,7 @@
         - [X] SDs
              - [X] look at pulse ox and head circumference
         - [X] VS
-        - [ ] add/edit Intros and Quick Starts
+        - [X] add/edit Intros and Quick Starts
         - [X] term and profile lists
         - [X] update examples
         - [ ] update USCDI table
@@ -104,8 +104,6 @@ The following actors are part of the US Core IG:
 The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the *Quick Start* Section of the profile page.
 
 {% include list-simple-profiles.xhtml %}
-
-- In addition US Core uses the [Vital Signs Profile] from the FHIR Specification.
 
 See the General Guidance page for a [mapping] to the U.S. Core Data for Interoperability (USCDI).
 

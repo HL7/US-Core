@@ -47,15 +47,15 @@
 | Smoking Status| [US Core Smoking Status Observation Profile]| Observation|
 | Unique Device Identifier(s) for a Patient's Implantable Device(s) | [US Core Implantable Device Profile]| Device |
 | Vital Signs:| ||
-| Diastolic blood pressure| [Blood pressure systolic and diastolic] (FHIR Core Profile) | Observation|
-| Systolic blood pressure | [Blood pressure systolic and diastolic] (FHIR Core Profile) | Observation|
-| Body height | [Body height] (FHIR Core Profile) | Observation|
-| Body weight | [Body weight] (FHIR Core Profile) | Observation|
-| Heart rate| [Heart rate] (FHIR Core Profile)| Observation|
-| Respiratory rate| [Respiratory rate] (FHIR Core Profile)| Observation|
-| Body temperature| [Body temperature] (FHIR Core Profile)| Observation|
-| Pulse oximetry| [US Core Pulse Oximetry Profile] (Builds on FHIR Core Profile) | Observation|
-| Inhaled oxygen concentration| [US Core Pulse Oximetry Profile] (Builds on FHIR Core Profile)| Observation|
-| BMI Percentile (2-20 years old) | [US Core Pediatric BMI for Age Observation Profile] (Builds on FHIR Core Profile) | Observation|
-| Weight-for-length Percentile (Birth - 36 months)| [US Core Pediatric Weight for Height Observation Profile] (Builds on FHIR Core Profile)| Observation|
-| Occipital-frontal Head Circumference Percentile (Birth - 36 months)| [US Core Pediatric Head Occipital Frontal Circumference Observation Profile] (Builds on FHIR Core Profile)| Observation|
+| Diastolic blood pressure| [US Core Blood Pressure Profile] (Builds on Us Core Vital Signs Profile) | Observation|
+| Systolic blood pressure | [US Core Blood Pressure Profile] (Builds on Us Core Vital Signs Profile) | Observation|
+| Body height | [US Core Body Height Profile] (Builds on Us Core Vital Signs Profile) | Observation|
+| Body weight | [US Core Body Weight Profile] (Builds on Us Core Vital Signs Profile) | Observation|
+| Heart rate| [US Core Heart Rate Profile] (Builds on Us Core Vital Signs Profile)| Observation|
+| Respiratory rate| [US Core Respiratory Rate Profile] (Builds on Us Core Vital Signs Profile)| Observation|
+| Body temperature| [US Core Body Temperature Profile] (Builds on Us Core Vital Signs Profile)| Observation|
+| Pulse oximetry| [US Core Pulse Oximetry Profile] (Builds on Us Core Vital Signs Profile) | Observation|
+| Inhaled oxygen concentration| [US Core Pulse Oximetry Profile] (Builds on Us Core Vital Signs Profile)| Observation|
+| BMI Percentile (2-20 years old) | [US Core Pediatric BMI for Age Observation Profile] (Builds on Us Core Vital Signs Profile) | Observation|
+| Weight-for-length Percentile (Birth - 36 months)| [US Core Pediatric Weight for Height Observation Profile] (Builds on Us Core Vital Signs Profile)| Observation|
+| Occipital-frontal Head Circumference Percentile (Birth - 36 months)| [US Core Pediatric Head Occipital Frontal Circumference Observation Profile] (Builds on Us Core Vital Signs Profile)| Observation|
