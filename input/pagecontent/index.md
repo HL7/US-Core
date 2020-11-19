@@ -11,9 +11,10 @@
         - [X] SDs
              - [X] look at pulse ox and head circumference
         - [X] VS
-        - [ ] Intros and Quick Starts
-        - [ ] to term and profile lists
-        - [ ] update examples
+        - [ ] add/edit Intros and Quick Starts
+        - [X] term and profile lists
+        - [X] update examples
+        - [ ] update USCDI table
      - [ ] Updates to Quick Starts for updated search requirements
        - [ ] add Intros to QuickStarts
        - [ ] don't forget added requirements for DocRef. (PractitionerRole, and Provenance?)

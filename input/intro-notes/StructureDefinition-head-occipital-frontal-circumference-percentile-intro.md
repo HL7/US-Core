@@ -1,5 +1,5 @@
 
-This profile sets minimum expectations for the [Observation] resource to record, search, and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patients from birth to 37 Months of age. It is based on the FHIR [Vital Signs Profile] and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile.
+This profile sets minimum expectations for the [Observation] resource to record, search, and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patients from birth to 37 Months of age. It is based on the [US Core Vital Signs Profile] and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile.
 
 **Example Usage Scenarios:**
 
@@ -10,7 +10,7 @@ The following are example usage scenarios for the US Core Pediatric Head Occipit
 
 ### Mandatory and Must Support Data Elements
 
-In addition to the mandatory and must support data elements in the FHIR Vital Signs Profile, the following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.
+*In addition* to the mandatory and must support data elements in the US Core Vital Signs Profile, the following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and terminology requirements.  The "Snapshot Table (Must Support)" tab displays all the mandatory and must support data elements for this profile and the those inherited from the US Core Vital Signs Profile.  Note that this profile also conforms to the base FHIR [Vital Signs Profile].
 
 **Each Observation must have:**
 
