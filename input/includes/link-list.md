@@ -270,4 +270,4 @@
 [US Core Blood Pressure Profile]: StructureDefinition-us-core-bloodpressure.html
 [US Core Head Circumference Profile]: StructureDefinition-us-core-headcircumference.html
 [vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
-[US Core History](http://hl7.org/fhir/us/core/history.html).
+[US Core change notes]: http://hl7.org/fhir/us/core/history.html
