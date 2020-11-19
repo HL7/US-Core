@@ -269,3 +269,4 @@
 [US Core BMI Profile]: StructureDefinition-us-core-bmi.html
 [US Core Blood Pressure Profile]: StructureDefinition-us-core-bloodpressure.html
 [US Core Head Circumference Profile]: StructureDefinition-us-core-headcircumference.html
+[vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
