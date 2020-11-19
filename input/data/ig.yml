@@ -438,13 +438,6 @@ definition:
         name: US Core Provenance Participant Type Extension Codes
         reference:
             reference: CodeSystem/us-core-provenance-participant-type
-    -   description: 'Unit of Use NDC code (https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp)
-            mapping  to the [CVX Vaccines Administered Vaccine Set](http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.6).  Note:
-            source = NDC and target = CVX'
-        exampleBoolean: false
-        name: US Core NDC to CVX Code Mapping
-        reference:
-            reference: ConceptMap/ndc-cvx
     -   description: "This operation is used to return all the references to documents\
             \ related to a patient.\r\n\n\n\r\nThe operation takes the optional input\
             \ parameters:\r\n\n\r\n - patient id\n\r\n - start date\n\r\n - end date\n\
@@ -470,13 +463,11 @@ definition:
         name: US Core Fetch DocumentReferences
         reference:
             reference: OperationDefinition/docref
-    -   description: "active | inactive | resolved<br />\n<em>NOTE</em>: This US Core\
-            \ SearchParameter definition extends the usage context of\n<a href=\"\
-            http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\"\
-            >capabilitystatement-expectation</a>\n extension to formally express implementer\
-            \ conformance expectations for these elements:<br />\n - multipleAnd<br\
-            \ />\n - multipleOr<br />\n - comparator<br />\n - modifier<br />\n -\
-            \ chain<br />\n\n "
+    -   description: "\n**NOTE**: This US Core SearchParameter definition extends\
+            \ the usage context of\n[capabilitystatement-expectation](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ extension to formally express implementer conformance expectations for\
+            \ these elements:\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n\
+            \ - chain\n\n"
         exampleBoolean: false
         name: USCoreAllergyintoleranceClinicalStatus
         reference:
