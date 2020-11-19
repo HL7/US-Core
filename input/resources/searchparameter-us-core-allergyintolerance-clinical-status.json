@@ -16,7 +16,7 @@
     ],
     "date": "2020-07-01T21:51:57.193068Z",
     "derivedFrom": "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status",
-    "description": "active | inactive | resolved<br />\n<em>NOTE</em>: This US Core SearchParameter definition extends the usage context of\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">capabilitystatement-expectation</a>\n extension to formally express implementer conformance expectations for these elements:<br />\n - multipleAnd<br />\n - multipleOr<br />\n - comparator<br />\n - modifier<br />\n - chain<br />\n\n ",
+    "description": "\n**NOTE**: This US Core SearchParameter definition extends the usage context of\n[capabilitystatement-expectation](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n extension to formally express implementer conformance expectations for these elements:\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain\n\n",
     "experimental": false,
     "expression": "AllergyIntolerance.clinicalStatus",
     "name": "USCoreAllergyintoleranceClinicalStatus",
