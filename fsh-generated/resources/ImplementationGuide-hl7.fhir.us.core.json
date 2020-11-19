@@ -1128,14 +1128,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/us-core-observation-smokingstatus"
-        },
-        "description": "This value set enumerates a preferred set of SNOMED CT codes historically used for the current smoking status of a patient. The concept descriptors are from the [US edition of SNOMED](https://www.nlm.nih.gov/healthit/snomedct/us_edition.html) and where the international concept descripters can also be found",
-        "exampleBoolean": false,
-        "name": "US Core Smoking Status Preferred"
-      },
-      {
-        "reference": {
           "reference": "ValueSet/us-core-observation-smoking-status-status"
         },
         "description": "Codes providing the status of an observation for smoking status. Constrained to `final`and `entered-in-error`.",
@@ -1356,7 +1348,7 @@
         },
         "description": "This is a encounter 1036 example for the *Encounter Profile*.",
         "name": "Encounter 1036 Example",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
       },
       {
         "reference": {
@@ -1596,7 +1588,7 @@
         },
         "description": "This is a self tylenol example for the *Medicationrequest Profile*.",
         "name": "Self Tylenol Example",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
       },
       {
         "reference": {

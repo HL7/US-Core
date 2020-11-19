@@ -1382,14 +1382,6 @@ definition:
         name: US Core Smoking Status Max-Binding
         reference:
             reference: ValueSet/us-core-observation-smokingstatus-max
-    -   description: This value set enumerates a preferred set of SNOMED CT codes
-            historically used for the current smoking status of a patient. The concept
-            descriptors are from the [US edition of SNOMED](https://www.nlm.nih.gov/healthit/snomedct/us_edition.html)
-            and where the international concept descripters can also be found
-        exampleBoolean: false
-        name: US Core Smoking Status Preferred
-        reference:
-            reference: ValueSet/us-core-observation-smokingstatus
     -   description: Codes providing the status of an observation for smoking status.
             Constrained to `final`and `entered-in-error`.
         exampleBoolean: false
@@ -1544,7 +1536,7 @@ definition:
         reference:
             reference: Condition/example
     -   description: This is a encounter 1036 example for the *Encounter Profile*.
-        exampleBoolean: true
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
         name: Encounter 1036 Example
         reference:
             reference: Encounter/1036
@@ -1712,7 +1704,7 @@ definition:
         reference:
             reference: Organization/saint-luke-w-endpoint
     -   description: This is a self tylenol example for the *Medicationrequest Profile*.
-        exampleBoolean: true
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
         name: Self Tylenol Example
         reference:
             reference: MedicationRequest/self-tylenol
