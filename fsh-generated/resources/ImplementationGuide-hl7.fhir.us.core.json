@@ -258,7 +258,7 @@
         "reference": {
           "reference": "StructureDefinition/pediatric-bmi-for-age"
         },
-        "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving pediatric BMI observations.",
+        "description": "Defines constraints on Observation to represent to represent BMI percentile per age and sex for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
         "name": "US Core Pediatric BMI for Age Observation Profile"
       },
@@ -266,7 +266,7 @@
         "reference": {
           "reference": "StructureDefinition/pediatric-weight-for-height"
         },
-        "description": "Defines constraints and extensions on the Observation resource for use in querying and retrieving pediatric Weight-for-length per age and gender observations.",
+        "description": "Defines constraints on the Observation resource to represent pediatric Weight-for-length per age and gender observations in FHIR with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
         "name": "US Core Pediatric Weight for Height Observation Profile"
       },
