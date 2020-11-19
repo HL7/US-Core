@@ -1,4 +1,4 @@
 
-See the [Vital Signs Quick Start] section for how to search by vital signs.
+{% include vitals-quickstart.md %}
 
 {% include link-list.md %}
