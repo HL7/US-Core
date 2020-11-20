@@ -1,14 +1,14 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "us-core-bodyweight",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyweight",
+    "id": "us-core-head-body-temperature",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-temperature",
     "version": "3.2.0",
-    "name": "USCoreBodyWeightProfile",
-    "title": "US Core Body Weight Profile",
+    "name": "USCoreBodyTemperatureProfile",
+    "title": "US Core Body Temperature Profile",
     "status": "active",
     "experimental": false,
     "date": "2020-11-17",
-    "description": "Defines constraints on Observation to represent body weight observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+    "description": "Defines constraints on Observation to represent body temperature observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
     "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -21,13 +21,13 @@
             {
                 "id": "Observation",
                 "path": "Observation",
-                "short": "US Core Body Weight Profile",
-                "definition": "Defines constraints on Observation to represent body weight observations with a standard LOINC code and UCUM units of measure.  This profile is derived from the US Core Vital Signs Profile."
+                "short": "US Core Body Temperature Profile",
+                "definition": "Defines constraints on Observation to represent body temperature observations with a standard LOINC code and UCUM units of measure.  This profile is derived from the US Core Vital Signs Profile."
             },
             {
                 "id": "Observation.code",
                 "path": "Observation.code",
-                "short": "Body Weight",
+                "short": "Body Temperature",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -37,7 +37,7 @@
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "29463-7"
+                            "code": "8310-5"
                         }
                     ]
                 },
@@ -101,7 +101,7 @@
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/ucum-bodyweight|4.0.1"
+                    "valueSet": "http://hl7.org/fhir/ValueSet/ucum-bodytemp|4.0.1"
                 }
             }
         ]

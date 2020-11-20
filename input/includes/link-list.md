@@ -260,13 +260,13 @@
 [US Core PractitionerRole Profile]: StructureDefinition-us-core-practitionerrole.html
 [HL7 Gender Harmony Project]: https://confluence.hl7.org/display/VOC/The+Gender+Harmony+Project
 [US Core Vital Signs Profile]: StructureDefinition-us-core-vitalsigns.html
-[US Core Respiratory Rate Profile]: StructureDefinition-us-core-respiratoryrate.html
-[US Core Heart Rate Profile]: StructureDefinition-us-core-heartrate.html
-[US Core Body Temperature Profile]: StructureDefinition-us-core-bodytemperature.html
-[US Core Body Weight Profile]: StructureDefinition-us-core-bodyweight.html
-[US Core Body Height Profile]: StructureDefinition-us-core-bodyheight.html
+[US Core Respiratory Rate Profile]: StructureDefinition-us-core-respiratory-rate.html
+[US Core Heart Rate Profile]: StructureDefinition-us-core-heart-rate.html
+[US Core Body Temperature Profile]: StructureDefinition-us-core-head-body-temperature.html
+[US Core Body Weight Profile]: StructureDefinition-us-core-head-body-weight.html
+[US Core Body Height Profile]: StructureDefinition-us-core-head-body-height.html
 [US Core BMI Profile]: StructureDefinition-us-core-bmi.html
-[US Core Blood Pressure Profile]: StructureDefinition-us-core-bloodpressure.html
-[US Core Head Circumference Profile]: StructureDefinition-us-core-headcircumference.html
+[US Core Blood Pressure Profile]: StructureDefinition-us-core-blood-pressure.html
+[US Core Head Circumference Profile]: StructureDefinition-us-core-head-circumference.html
 [vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
 [US Core change notes]: http://hl7.org/fhir/us/core/history.html

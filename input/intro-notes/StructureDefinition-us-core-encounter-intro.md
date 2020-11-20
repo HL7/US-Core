@@ -34,7 +34,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Profile specific implementation guidance:**
 
 * To search for an encounter diagnosis, query for Condition resources that reference the Encounter of interest and have a category of `encounter-diagnosis`.   An example search is shown in the [Condition Quick Start] section.
-* As a result of implementation feedback, the base FHIR Location resource is being referenced by `Encounter.location`.  However, it **SHOULD** conform to US Core Location. See this guidance on [Referencing US Core Profiles].
 * {:.new-content #FHIR-27951}The Encounter resource can represent a reason using either a code with `Encounter.reasonCode`, or a reference with `Encounter.reasonReference` to  Condition or other resource.
    * Although both are marked as must support, the server systems are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements.
    * The client application **SHALL** support both elements.

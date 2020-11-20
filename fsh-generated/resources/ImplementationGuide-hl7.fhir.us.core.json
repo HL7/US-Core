@@ -64,7 +64,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-bloodpressure"
+          "reference": "StructureDefinition/us-core-blood-pressure"
         },
         "description": "Defines constraints on Observation to represent diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
@@ -80,7 +80,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-bodyheight"
+          "reference": "StructureDefinition/us-core-head-body-height"
         },
         "description": "Defines constraints on Observation to represent body height observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
@@ -88,7 +88,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-bodytemperature"
+          "reference": "StructureDefinition/us-core-head-body-temperature"
         },
         "description": "Defines constraints on Observation to represent body temperature observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
@@ -96,7 +96,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-bodyweight"
+          "reference": "StructureDefinition/us-core-head-body-weight"
         },
         "description": "Defines constraints on Observation to represent body weight observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
@@ -184,7 +184,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-headcircumference"
+          "reference": "StructureDefinition/us-core-head-circumference"
         },
         "description": "Defines constraints on Observation to represent head circumference observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
@@ -192,7 +192,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-heartrate"
+          "reference": "StructureDefinition/us-core-heart-rate"
         },
         "description": "Defines constraints on Observation to represent heart rate observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
@@ -320,7 +320,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-respiratoryrate"
+          "reference": "StructureDefinition/us-core-respiratory-rate"
         },
         "description": "Defines constraints on Observation to represent respiratory rate observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
@@ -858,7 +858,7 @@
         "reference": {
           "reference": "SearchParameter/us-core-organization-name"
         },
-        "description": "<br />\n<em>NOTE</em>: This US Core SearchParameter definition extends the usage context of\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">capabilitystatement-expectation</a>\n extension to formally express implementer conformance expectations for these elements:<br />\n - multipleAnd<br />\n - multipleOr<br />\n - comparator<br />\n - modifier<br />\n - chain<br />\n\n ",
+        "description": "**A portion of the organization's name or alias**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
         "name": "USCoreOrganizationName"
       },
@@ -1276,7 +1276,7 @@
         },
         "description": "This is a blood pressure example for the *Vitalsigns Profile*.",
         "name": "Blood Pressure Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bloodpressure"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
       },
       {
         "reference": {
@@ -1292,7 +1292,7 @@
         },
         "description": "This is a bp data absent example for the *Vitalsigns Profile* showing how to reprsesent blood pressure with a missing diastolic measurement.",
         "name": "Bp Data Absent Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bloodpressure"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
       },
       {
         "reference": {
@@ -1404,7 +1404,7 @@
         },
         "description": "This is a heart rate example for the *Vitalsigns Profile*.",
         "name": "Heart Rate Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heartrate"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
       },
       {
         "reference": {
@@ -1412,7 +1412,7 @@
         },
         "description": "This is a height example for the *Vitalsigns Profile*.",
         "name": "Height Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyheight"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-height"
       },
       {
         "reference": {
@@ -1444,7 +1444,7 @@
         },
         "description": "This is a length example for the *Vitalsigns Profile* which shows how body length (typically used for infants) is represented using 8306-3 -*Body height - lying* as an additional observation code.",
         "name": "Length Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyheight"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-height"
       },
       {
         "reference": {
@@ -1564,7 +1564,7 @@
         },
         "description": "This is a respiratory rate example for the *Vitalsigns Profile*.",
         "name": "Respiratory Rate Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratoryrate"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
       },
       {
         "reference": {
@@ -1652,7 +1652,7 @@
         },
         "description": "This is a temperature example for the *Vitalsigns Profile*.",
         "name": "Temperature Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodytemperature"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-temperature"
       },
       {
         "reference": {
@@ -1860,7 +1860,7 @@
         },
         "description": "This is a weight example for the *Vitalsigns Profile*.",
         "name": "Weight Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyweight"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-weight"
       }
     ],
     "page": {

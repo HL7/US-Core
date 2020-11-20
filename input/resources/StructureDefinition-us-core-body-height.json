@@ -1,14 +1,14 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "us-core-respiratoryrate",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratoryrate",
+    "id": "us-core-head-body-height",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-height",
     "version": "3.2.0",
-    "name": "USCoreRespiratoryRateProfile",
-    "title": "US Core Respiratory Rate Profile",
+    "name": "USCoreBodyHeightProfile",
+    "title": "US Core Body Height Profile",
     "status": "active",
     "experimental": false,
     "date": "2020-11-17",
-    "description": "Defines constraints on Observation to represent respiratory rate observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+    "description": "Defines constraints on Observation to represent body height observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
     "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -21,13 +21,13 @@
             {
                 "id": "Observation",
                 "path": "Observation",
-                "short": "US Core Respiratory Rate Profile",
-                "definition": "Defines constraints on Observation to represent respiratory rate observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile."
+                "short": "US Core Body Height Profile",
+                "definition": "Defines constraints on Observation to represent body height observations with a standard LOINC code and UCUM units of measure.  This profile is derived from the US Core Vital Signs Profile."
             },
             {
                 "id": "Observation.code",
                 "path": "Observation.code",
-                "short": "Respiratory Rate",
+                "short": "Body Height",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -37,7 +37,7 @@
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "9279-1"
+                            "code": "8302-2"
                         }
                     ]
                 },
@@ -98,8 +98,11 @@
                         "code": "code"
                     }
                 ],
-                "fixedCode": "/min",
-                "mustSupport": true
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/ucum-bodylength|4.0.1"
+                }
             }
         ]
     }

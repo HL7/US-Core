@@ -1,14 +1,14 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "us-core-bodytemperature",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodytemperature",
+    "id": "us-core-head-circumference",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference",
     "version": "3.2.0",
-    "name": "USCoreBodyTemperatureProfile",
-    "title": "US Core Body Temperature Profile",
+    "name": "USCoreHeadCircumferenceProfile",
+    "title": "US Core Head Circumference Profile",
     "status": "active",
     "experimental": false,
-    "date": "2020-11-17",
-    "description": "Defines constraints on Observation to represent body temperature observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+    "date": "2020-11-18",
+    "description": "Defines constraints on Observation to represent head circumference observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
     "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -21,13 +21,13 @@
             {
                 "id": "Observation",
                 "path": "Observation",
-                "short": "US Core Body Temperature Profile",
-                "definition": "Defines constraints on Observation to represent body temperature observations with a standard LOINC code and UCUM units of measure.  This profile is derived from the US Core Vital Signs Profile."
+                "short": "US Core Head Circumference Profile",
+                "definition": "Defines constraints on Observation to represent head circumference observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile."
             },
             {
                 "id": "Observation.code",
                 "path": "Observation.code",
-                "short": "Body Temperature",
+                "short": "Head Circumference",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -37,7 +37,7 @@
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "8310-5"
+                            "code": "9843-4"
                         }
                     ]
                 },
@@ -101,7 +101,7 @@
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/ucum-bodytemp|4.0.1"
+                    "valueSet": "http://hl7.org/fhir/ValueSet/ucum-bodylength|4.0.1"
                 }
             }
         ]

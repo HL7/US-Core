@@ -141,7 +141,7 @@ definition:
         exampleBoolean: false
         name: US Core Blood Pressure Profile
         reference:
-            reference: StructureDefinition/us-core-bloodpressure
+            reference: StructureDefinition/us-core-blood-pressure
     -   description: Defines constraints on Observation to represent Body Mass Index
             (BMI) observations with a standard LOINC code and UCUM units of measure.
             This profile is derived from the US Core Vital Signs Profile.
@@ -155,21 +155,21 @@ definition:
         exampleBoolean: false
         name: US Core Body Height Profile
         reference:
-            reference: StructureDefinition/us-core-bodyheight
+            reference: StructureDefinition/us-core-head-body-height
     -   description: Defines constraints on Observation to represent body temperature
             observations with a standard LOINC code and UCUM units of measure. This
             profile is derived from the US Core Vital Signs Profile.
         exampleBoolean: false
         name: US Core Body Temperature Profile
         reference:
-            reference: StructureDefinition/us-core-bodytemperature
+            reference: StructureDefinition/us-core-head-body-temperature
     -   description: Defines constraints on Observation to represent body weight observations
             with a standard LOINC code and UCUM units of measure. This profile is
             derived from the US Core Vital Signs Profile.
         exampleBoolean: false
         name: US Core Body Weight Profile
         reference:
-            reference: StructureDefinition/us-core-bodyweight
+            reference: StructureDefinition/us-core-head-body-weight
     -   description: Defines constraints and extensions on the CarePlan resource for
             the minimal set of data to query and retrieve a patient's Care Plan.
         exampleBoolean: false
@@ -244,14 +244,14 @@ definition:
         exampleBoolean: false
         name: US Core Head Circumference Profile
         reference:
-            reference: StructureDefinition/us-core-headcircumference
+            reference: StructureDefinition/us-core-head-circumference
     -   description: Defines constraints on Observation to represent heart rate observations
             with a standard LOINC code and UCUM units of measure. This profile is
             derived from the US Core Vital Signs Profile.
         exampleBoolean: false
         name: US Core Heart Rate Profile
         reference:
-            reference: StructureDefinition/us-core-heartrate
+            reference: StructureDefinition/us-core-heart-rate
     -   description: Defines constraints and extensions on the Immunization resource
             for the minimal set of data to query and retrieve  patient's immunization
             information.
@@ -362,7 +362,7 @@ definition:
         exampleBoolean: false
         name: US Core Respiratory Rate Profile
         reference:
-            reference: StructureDefinition/us-core-respiratoryrate
+            reference: StructureDefinition/us-core-respiratory-rate
     -   description: Defines constraints and extensions on the Observation  resource
             for the minimal set of data to query and retrieve patient's Smoking Status
             information.
@@ -1077,12 +1077,10 @@ definition:
         name: USCoreOrganizationAddress
         reference:
             reference: SearchParameter/us-core-organization-address
-    -   description: "<br />\n<em>NOTE</em>: This US Core SearchParameter definition\
-            \ extends the usage context of\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\"\
-            >capabilitystatement-expectation</a>\n extension to formally express implementer\
-            \ conformance expectations for these elements:<br />\n - multipleAnd<br\
-            \ />\n - multipleOr<br />\n - comparator<br />\n - modifier<br />\n -\
-            \ chain<br />\n\n "
+    -   description: "**A portion of the organization's name or alias**  \n**NOTE**:\
+            \ This US Core SearchParameter definition extends the usage context of\
+            \ the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
         name: USCoreOrganizationName
         reference:
@@ -1486,7 +1484,7 @@ definition:
         reference:
             reference: Observation/blood-glucose
     -   description: This is a blood pressure example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bloodpressure
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure
         name: Blood Pressure Example
         reference:
             reference: Observation/blood-pressure
@@ -1497,7 +1495,7 @@ definition:
             reference: Observation/bmi
     -   description: This is a bp data absent example for the *Vitalsigns Profile*
             showing how to reprsesent blood pressure with a missing diastolic measurement.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bloodpressure
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure
         name: Bp Data Absent Example
         reference:
             reference: Observation/bp-data-absent
@@ -1571,12 +1569,12 @@ definition:
         reference:
             reference: Observation/head-circumference
     -   description: This is a heart rate example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-heartrate
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate
         name: Heart Rate Example
         reference:
             reference: Observation/heart-rate
     -   description: This is a height example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyheight
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-height
         name: Height Example
         reference:
             reference: Observation/height
@@ -1599,7 +1597,7 @@ definition:
     -   description: This is a length example for the *Vitalsigns Profile* which shows
             how body length (typically used for infants) is represented using 8306-3
             -*Body height - lying* as an additional observation code.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyheight
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-height
         name: Length Example
         reference:
             reference: Observation/length
@@ -1684,7 +1682,7 @@ definition:
         reference:
             reference: Procedure/rehab
     -   description: This is a respiratory rate example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratoryrate
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate
         name: Respiratory Rate Example
         reference:
             reference: Observation/respiratory-rate
@@ -1748,7 +1746,7 @@ definition:
         reference:
             reference: Observation/some-day-smoker
     -   description: This is a temperature example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodytemperature
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-temperature
         name: Temperature Example
         reference:
             reference: Observation/temperature
@@ -1897,7 +1895,7 @@ definition:
         reference:
             reference: Observation/usg
     -   description: This is a weight example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bodyweight
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-weight
         name: Weight Example
         reference:
             reference: Observation/weight

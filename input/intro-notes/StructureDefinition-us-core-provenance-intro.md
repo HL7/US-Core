@@ -21,7 +21,7 @@ The following data-elements are mandatory (i.e. data MUST be present) or must be
 1.  a date and time for the activity
 
 
-**Each Provenance must support:** 
+**Each Provenance must support:**
 
 1.  {:.new-content #FHIR-28516} the author organization responsible for the information
 1.  the transmitter that provided the information
@@ -31,8 +31,8 @@ The following data-elements are mandatory (i.e. data MUST be present) or must be
 
 {% include prov-white-list.md %}
 
--  If a system receives a provider in `Provenance.agent.who` as free text they must capture who sent them the information as the organization. On request they  **SHALL** provide this organization as the source and **MAY** include the free text provider.
-- {:.new-content #FHIR-28179}Systems that need to know the activity has occurred SHOULD populate the activity.
+*  If a system receives a provider in `Provenance.agent.who` as free text they must capture who sent them the information as the organization. On request they  **SHALL** provide this organization as the source and **MAY** include the free text provider.
+* {:.new-content #FHIR-28179}Systems that need to know the activity has occurred **SHOULD** populate the activity.
 
 ### Examples
 

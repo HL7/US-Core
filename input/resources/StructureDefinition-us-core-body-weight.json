@@ -1,14 +1,14 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "us-core-heartrate",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heartrate",
+    "id": "us-core-head-body-weight",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-weight",
     "version": "3.2.0",
-    "name": "USCoreHeartRateProfile",
-    "title": "US Core Heart Rate Profile",
+    "name": "USCoreBodyWeightProfile",
+    "title": "US Core Body Weight Profile",
     "status": "active",
     "experimental": false,
     "date": "2020-11-17",
-    "description": "Defines constraints on Observation to represent heart rate observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+    "description": "Defines constraints on Observation to represent body weight observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
     "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -21,13 +21,13 @@
             {
                 "id": "Observation",
                 "path": "Observation",
-                "short": "US Core Heart Rate Profile",
-                "definition": "Defines constraints on Observation to represent heart rate observations with a standard LOINC code and UCUM units of measure.  This profile is derived from the US Core Vital Signs Profile."
+                "short": "US Core Body Weight Profile",
+                "definition": "Defines constraints on Observation to represent body weight observations with a standard LOINC code and UCUM units of measure.  This profile is derived from the US Core Vital Signs Profile."
             },
             {
                 "id": "Observation.code",
                 "path": "Observation.code",
-                "short": "Heart Rate",
+                "short": "Body Weight",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -37,7 +37,7 @@
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            "code": "8867-4"
+                            "code": "29463-7"
                         }
                     ]
                 },
@@ -98,8 +98,11 @@
                         "code": "code"
                     }
                 ],
-                "fixedCode": "/min",
-                "mustSupport": true
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/ucum-bodyweight|4.0.1"
+                }
             }
         ]
     }

@@ -240,7 +240,7 @@ Patient.address is a must support element with type = ['HumanName'] <<<< MS on s
 
 ### us-core-birthsex
 - Extension
-### us-core-bloodpressure
+### us-core-blood-pressure
 - Observation
    - Observation.status is min== 1 with must support == True element with type = ['code']
 
@@ -346,7 +346,7 @@ Patient.address is a must support element with type = ['HumanName'] <<<< MS on s
 
    - Observation.component.dataAbsentReason is min== 0 with must support == True element with type = ['CodeableConcept']
 
-### us-core-bodyheight
+### us-core-head-body-height
 - Observation
    - Observation.status is min== 1 with must support == True element with type = ['code']
 
@@ -388,7 +388,7 @@ Patient.address is a must support element with type = ['HumanName'] <<<< MS on s
 
    - Observation.component.dataAbsentReason is min== 0 with must support == True element with type = ['CodeableConcept']
 
-### us-core-bodytemperature
+### us-core-head-body-temperature
 - Observation
    - Observation.status is min== 1 with must support == True element with type = ['code']
 
@@ -430,7 +430,7 @@ Patient.address is a must support element with type = ['HumanName'] <<<< MS on s
 
    - Observation.component.dataAbsentReason is min== 0 with must support == True element with type = ['CodeableConcept']
 
-### us-core-bodyweight
+### us-core-head-body-weight
 - Observation
    - Observation.status is min== 1 with must support == True element with type = ['code']
 
@@ -648,7 +648,7 @@ Patient.address is a must support element with type = ['HumanName'] <<<< MS on s
 
    - Goal.target.due[x] is min== 0 with must support == True element with type = ['date', 'Duration']
 
-### us-core-headcircumference
+### us-core-head-circumference
 - Observation
    - Observation.status is min== 1 with must support == True element with type = ['code']
 
@@ -690,7 +690,7 @@ Patient.address is a must support element with type = ['HumanName'] <<<< MS on s
 
    - Observation.component.dataAbsentReason is min== 0 with must support == True element with type = ['CodeableConcept']
 
-### us-core-heartrate
+### us-core-heart-rate
 - Observation
    - Observation.status is min== 1 with must support == True element with type = ['code']
 
@@ -1042,7 +1042,7 @@ Patient.address is a must support element with type = ['HumanName'] <<<< MS on s
 
    - Extension.extension:text is min== 1 with must support == True element with type = ['Extension']
 
-### us-core-respiratoryrate
+### us-core-respiratory-rate
 - Observation
    - Observation.status is min== 1 with must support == True element with type = ['code']
 
