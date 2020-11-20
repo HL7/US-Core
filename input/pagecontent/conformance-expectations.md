@@ -1100,7 +1100,7 @@ Patient.address is a must support element with type = ['HumanName'] <<<< MS on s
 
    - Observation.value[x]:valueCodeableConcept is min== 1 with must support == True element with type = ['CodeableConcept']
 
-### us-core-vitalsigns
+### us-core-vital-signs
 - Observation
    - Observation.status is min== 1 with must support == True element with type = ['code']
 

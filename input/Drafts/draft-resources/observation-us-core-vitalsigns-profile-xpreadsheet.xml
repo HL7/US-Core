@@ -972,7 +972,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s72"><Data ss:Type="String">id</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="String">observation-us-core-vitalsigns</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">observation-us-core-vital-signs</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">name</Data></Cell>
@@ -980,7 +980,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">display</Data></Cell>
-    <Cell ss:StyleID="s76"><Data ss:Type="String">US-Core-VitalSigns</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">us-core-vital-signs</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">author.name</Data></Cell>
@@ -1008,7 +1008,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">published.structure</Data></Cell>
-    <Cell ss:StyleID="s76"><Data ss:Type="String">US-Core-VitalSigns</Data></Cell>
+    <Cell ss:StyleID="s76"><Data ss:Type="String">us-core-vital-signs</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">version</Data></Cell>
@@ -1029,7 +1029,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
-    <Cell ss:StyleID="s81"><Data ss:Type="String">observation-us-core-vitalsigns-profile-introduction.xml</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">observation-us-core-vital-signs-profile-introduction.xml</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s82"><Data ss:Type="String">publication.status</Data></Cell>
@@ -1037,7 +1037,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s83"><Data ss:Type="String">notes</Data></Cell>
-    <Cell ss:StyleID="s81"><Data ss:Type="String">observation-us-core-vitalsigns-profile-notes.xml</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">observation-us-core-vital-signs-profile-notes.xml</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0"/>
   </Table>
@@ -1080,10 +1080,10 @@
    <x:PageLayoutZoom>0</x:PageLayoutZoom>
   </WorksheetOptions>
  </Worksheet>
- <Worksheet ss:Name="US-Core-VitalSigns">
+ <Worksheet ss:Name="us-core-vital-signs">
   <Names>
    <NamedRange ss:Name="_FilterDatabase"
-    ss:RefersTo="='US-Core-VitalSigns'!R1C1:R75C24" ss:Hidden="1"/>
+    ss:RefersTo="='us-core-vital-signs'!R1C1:R75C24" ss:Hidden="1"/>
   </Names>
   <Table ss:ExpandedColumnCount="25" ss:ExpandedRowCount="76" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s84" ss:DefaultColumnWidth="54"
@@ -1660,7 +1660,7 @@
     <Cell ss:StyleID="s106"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Observation){http://hl7.org/fhir/us/core/StructureDefinition/us-core-vitalsigns}</Data><NamedCell
+    <Cell ss:StyleID="s106"><Data ss:Type="String">Reference(Observation){http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s106"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -6054,10 +6054,10 @@
    xmlns="urn:schemas-microsoft-com:office:excel">
   </AutoFilter>
  </Worksheet>
- <Worksheet ss:Name="US-Core-VitalSigns-Inv">
+ <Worksheet ss:Name="us-core-vital-signs-Inv">
   <Names>
    <NamedRange ss:Name="_FilterDatabase"
-    ss:RefersTo="='US-Core-VitalSigns-Inv'!R1C1:R2C7" ss:Hidden="1"/>
+    ss:RefersTo="='us-core-vital-signs-Inv'!R1C1:R2C7" ss:Hidden="1"/>
   </Names>
   <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="51" x:FullColumns="1"
    x:FullRows="1" ss:StyleID="s119" ss:DefaultColumnWidth="54"

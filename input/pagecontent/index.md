@@ -6,7 +6,7 @@
 - [ ] Finish Applying Resolved Trackers
      - [ ] Update CapStatements to reflect changes
         - [ ] Document Search requirements in CapabilityStatements
-        - [ ] Add Vitals Profiles
+        - [X] Add Vitals Profiles
      - [ ] Add Vitals profile
         - [X] SDs
              - [X] look at pulse ox and head circumference
@@ -16,9 +16,9 @@
         - [X] update examples
         - [X] update USCDI table
      - [ ] Updates to Quick Starts for updated search requirements
-       - [ ] add Intros to QuickStarts
+       - [X] add Intros to QuickStarts
        - [ ] don't forget added requirements for DocRef. (PractitionerRole, and Provenance?)
-     - [ ] Various vocab issues
+     - [ ] Various vocab issues with VSAC
        - [ ] FHIR-29322
 - [X] Review survey and complete updates to choices of types and References
     - need new Tracker or apply to existing?
@@ -38,17 +38,23 @@
 - [X] Replace value sets with links to VSAC where possible
       -  see [this spreadsheet](https://docs.google.com/spreadsheets/d/1BtRNsmrez2D8cm_81qhBaiU0aMmXGAIVDNwXCVAu2tE/edit#gid=0)      
 - [ ] Rewrite Must Support section
-    - [ ] own page
+    - [X] own page
     - [ ] draft [here](https://docs.google.com/document/d/1LenTi2KJ7-qcU4HLeDquXoHqpFbAxsV6uIfC6CqMsUU/edit?usp=sharing)
         - examples?
         - screen shots of SD tree?
+        - mandatory (min=1)
+        - bindings
+        - patterns
+        - must support for primitive, complex, coded and backbone elements
+        - the must support tab = tagged as must support + pattern + min = 1
+        - reference when data is missing
 - [X] Add note to balloters whether want custom summaries
 - [ ] QA
      - [ ] review applied trackers
      - [X] warnings on name and description waiting for Sushi to implement see [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Adding.20Description.20for.20Examples.20to.20ImplementationGuide.20-.20how)
-     - [ ] bad #search links as a result of template migration
+     - [X] bad #search links as a result of template migration
      - [ ] errors
-     - [ ] fix bad markdown in SPs
+     - [X] fix bad markdown in SPs
      - [ ] read through for typos and grammar
 
 </div>
