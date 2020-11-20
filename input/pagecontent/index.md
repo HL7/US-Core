@@ -1,13 +1,13 @@
 <div markdown="1" class="bg-info">
 
 **punch list**:
-
-- [ ] Finish [Resolving Trackers](https://confluence.hl7.org/display/CGP/US+Core+January+2021+Ballot)
+<--
+- [X] Finish [Resolving Trackers](https://confluence.hl7.org/display/CGP/US+Core+January+2021+Ballot)
 - [ ] Finish Applying Resolved Trackers
      - [ ] Update CapStatements to reflect changes
         - [ ] Document Search requirements in CapabilityStatements
         - [X] Add Vitals Profiles
-     - [ ] Add Vitals profile
+     - [X] Add Vitals profile
         - [X] SDs
              - [X] look at pulse ox and head circumference
         - [X] VS
@@ -49,6 +49,7 @@
         - the must support tab = tagged as must support + pattern + min = 1
         - reference when data is missing
 - [X] Add note to balloters whether want custom summaries
+-->
 - [ ] QA
      - [ ] review applied trackers
      - [X] warnings on name and description waiting for Sushi to implement see [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Adding.20Description.20for.20Examples.20to.20ImplementationGuide.20-.20how)
