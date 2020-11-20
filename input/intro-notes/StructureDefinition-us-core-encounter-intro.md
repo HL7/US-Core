@@ -35,13 +35,13 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 * To search for an encounter diagnosis, query for Condition resources that reference the Encounter of interest and have a category of `encounter-diagnosis`.   An example search is shown in the [Condition Quick Start] section.
 * {:.new-content #FHIR-27951}The Encounter resource can represent a reason using either a code with `Encounter.reasonCode`, or a reference with `Encounter.reasonReference` to  Condition or other resource.
-   * Although both are marked as must support, the server systems are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements.
+   * Although both are marked as must support, servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements.
    * The client application **SHALL** support both elements.
-   * if `Encounter.reasonReference` references an Observation, it **SHOULD** conform to a US Core Observation if applicable. ( for example, a laboratory result should conform to the [US Core Laboratory Result Observation Profile])
-* {:.new-content #FHIR-28392}The intent of this profile is to support *where the encounter occurred*.  The location address can be represented by either by the Location referenced by `Encounter.location.location` or indirectly through the Organization referenced by `Encounter.serviceProvider`.
-  * Although both are marked as must support, the server systems are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
+   * If `Encounter.reasonReference` references an Observation, it **SHOULD** conform to a US Core Observation if applicable. For example, a laboratory result **SHOULD** conform to the [US Core Laboratory Result Observation Profile].
+* {:.new-content #FHIR-28392}This profile supports *where the encounter occurred*.  The location address can be represented by either by the Location referenced by `Encounter.location.location` or indirectly through the Organization referenced by `Encounter.serviceProvider`.
+  * Although both are marked as must support, servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
   * The client application **SHALL** support both elements.
-  * if using `Encounter.location.location` it **SHOULD** conform to US Core Location.  However, as a result of implementation feedback, it **MAY**  reference the base FHIR Location resource.  See this guidance on [Referencing US Core Profiles]
+  * If using `Encounter.location.location` it **SHOULD** conform to US Core Location.  However, as a result of implementation feedback, it **MAY**  reference the base FHIR Location resource.  See this guidance on [Referencing US Core Profiles].
 
 ### Examples
 
