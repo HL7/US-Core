@@ -346,7 +346,7 @@ Patient.address is a must support element with type = ['HumanName'] <<<< MS on s
 
    - Observation.component.dataAbsentReason is min== 0 with must support == True element with type = ['CodeableConcept']
 
-### us-core-head-body-height
+### us-core-body-height
 - Observation
    - Observation.status is min== 1 with must support == True element with type = ['code']
 
@@ -388,7 +388,7 @@ Patient.address is a must support element with type = ['HumanName'] <<<< MS on s
 
    - Observation.component.dataAbsentReason is min== 0 with must support == True element with type = ['CodeableConcept']
 
-### us-core-head-body-temperature
+### us-core-body-temperature
 - Observation
    - Observation.status is min== 1 with must support == True element with type = ['code']
 
@@ -430,7 +430,7 @@ Patient.address is a must support element with type = ['HumanName'] <<<< MS on s
 
    - Observation.component.dataAbsentReason is min== 0 with must support == True element with type = ['CodeableConcept']
 
-### us-core-head-body-weight
+### us-core-body-weight
 - Observation
    - Observation.status is min== 1 with must support == True element with type = ['code']
 

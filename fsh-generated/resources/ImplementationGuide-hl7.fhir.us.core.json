@@ -80,7 +80,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-head-body-height"
+          "reference": "StructureDefinition/us-core-body-height"
         },
         "description": "Defines constraints on Observation to represent body height observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
@@ -88,7 +88,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-head-body-temperature"
+          "reference": "StructureDefinition/us-core-body-temperature"
         },
         "description": "Defines constraints on Observation to represent body temperature observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
@@ -96,7 +96,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-head-body-weight"
+          "reference": "StructureDefinition/us-core-body-weight"
         },
         "description": "Defines constraints on Observation to represent body weight observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
         "exampleBoolean": false,
@@ -1412,7 +1412,7 @@
         },
         "description": "This is a height example for the *Vitalsigns Profile*.",
         "name": "Height Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-height"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height"
       },
       {
         "reference": {
@@ -1444,7 +1444,7 @@
         },
         "description": "This is a length example for the *Vitalsigns Profile* which shows how body length (typically used for infants) is represented using 8306-3 -*Body height - lying* as an additional observation code.",
         "name": "Length Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-height"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height"
       },
       {
         "reference": {
@@ -1652,7 +1652,7 @@
         },
         "description": "This is a temperature example for the *Vitalsigns Profile*.",
         "name": "Temperature Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-temperature"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature"
       },
       {
         "reference": {
@@ -1860,7 +1860,7 @@
         },
         "description": "This is a weight example for the *Vitalsigns Profile*.",
         "name": "Weight Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-weight"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight"
       }
     ],
     "page": {

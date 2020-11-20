@@ -155,21 +155,21 @@ definition:
         exampleBoolean: false
         name: US Core Body Height Profile
         reference:
-            reference: StructureDefinition/us-core-head-body-height
+            reference: StructureDefinition/us-core-body-height
     -   description: Defines constraints on Observation to represent body temperature
             observations with a standard LOINC code and UCUM units of measure. This
             profile is derived from the US Core Vital Signs Profile.
         exampleBoolean: false
         name: US Core Body Temperature Profile
         reference:
-            reference: StructureDefinition/us-core-head-body-temperature
+            reference: StructureDefinition/us-core-body-temperature
     -   description: Defines constraints on Observation to represent body weight observations
             with a standard LOINC code and UCUM units of measure. This profile is
             derived from the US Core Vital Signs Profile.
         exampleBoolean: false
         name: US Core Body Weight Profile
         reference:
-            reference: StructureDefinition/us-core-head-body-weight
+            reference: StructureDefinition/us-core-body-weight
     -   description: Defines constraints and extensions on the CarePlan resource for
             the minimal set of data to query and retrieve a patient's Care Plan.
         exampleBoolean: false
@@ -1574,7 +1574,7 @@ definition:
         reference:
             reference: Observation/heart-rate
     -   description: This is a height example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-height
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height
         name: Height Example
         reference:
             reference: Observation/height
@@ -1597,7 +1597,7 @@ definition:
     -   description: This is a length example for the *Vitalsigns Profile* which shows
             how body length (typically used for infants) is represented using 8306-3
             -*Body height - lying* as an additional observation code.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-height
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height
         name: Length Example
         reference:
             reference: Observation/length
@@ -1746,7 +1746,7 @@ definition:
         reference:
             reference: Observation/some-day-smoker
     -   description: This is a temperature example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-temperature
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature
         name: Temperature Example
         reference:
             reference: Observation/temperature
@@ -1895,7 +1895,7 @@ definition:
         reference:
             reference: Observation/usg
     -   description: This is a weight example for the *Vitalsigns Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-body-weight
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight
         name: Weight Example
         reference:
             reference: Observation/weight
