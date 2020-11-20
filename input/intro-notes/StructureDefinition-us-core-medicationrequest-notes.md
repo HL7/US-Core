@@ -1,12 +1,3 @@
-
----
-
-**Quick Start**{:#search style="font-size: 20px;"}
-
----
-
-Below is an overview of the required set of Server RESTful FHIR interactions - for example, search and read operations - for this profile. See the [Capability Statements] for a complete list of supported RESTful interactions for this IG.
-
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
@@ -18,10 +9,10 @@ The following search parameters and search parameter combinations SHALL be suppo
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-medicationrequest-patient.html)** and **[`intent`](SearchParameter-us-core-medicationrequest-intent.html)** search parameters:
     - including support for composite *OR* search on `intent` (e.g.`intent={system|}[code],{system|}[code],...`)
 
-    `GET [base]/MedicationRequest?patient=[reference]&intent=order,plan`
+    `GET [base]/MedicationRequest?patient={Type/}[id]&intent=order,plan`
 
     Example:
-
+    
       1. GET [base]/MedicationRequest?patient=14676&amp;intent=order,plan
       1. GET [base]/MedicationRequest?patient=14676&amp;intent=order,plan&amp;_include=MedicationRequest:medication
 
@@ -31,10 +22,10 @@ The following search parameters and search parameter combinations SHALL be suppo
     - including support for composite *OR* search on `intent` (e.g.`intent={system|}[code],{system|}[code],...`)
     - including support for composite *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
-    `GET [base]/MedicationRequest?patient=[reference]&intent=order,plan&status={system|}[code]{,{system|}[code],...}`
+    `GET [base]/MedicationRequest?patient={Type/}[id]&intent=order,plan&status={system|}[code]{,{system|}[code],...}`
 
     Example:
-
+    
       1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active
       1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active&amp;_include=MedicationRequest:medication
 
@@ -48,10 +39,10 @@ The following search parameter combinations SHOULD be supported.:
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-medicationrequest-patient.html)** and **[`intent`](SearchParameter-us-core-medicationrequest-intent.html)** and **[`encounter`](SearchParameter-us-core-medicationrequest-encounter.html)** search parameters:
     - including support for composite *OR* search on `intent` (e.g.`intent={system|}[code],{system|}[code],...`)
 
-    `GET [base]/MedicationRequest?patient=[reference]&intent=order,plan&encounter=[reference]`
+    `GET [base]/MedicationRequest?patient={Type/}[id]&intent=order,plan&encounter={Type/}[id]`
 
     Example:
-
+    
       1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active&amp;encounter=Encounter/123
       1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active&amp;&amp;encounter=Encounter/123&amp;_include=MedicationRequest:medication
 
@@ -62,12 +53,12 @@ The following search parameter combinations SHOULD be supported.:
     - including support for these `authoredon` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `authoredon` (e.g.`authoredon=[date]&authoredon=[date]]&...`)
 
-    `GET [base]/MedicationRequest?patient=[reference]&intent=order,plan&authoredon={gt|lt|ge|le}[date]{&authoredon={gt|lt|ge|le}[date]&...}`
+    `GET [base]/MedicationRequest?patient={Type/}[id]&intent=order,plan&authoredon={gt|lt|ge|le}[date]{&authoredon={gt|lt|ge|le}[date]&...}`
 
     Example:
-
-      1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;authoredon=ge2019
-      1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;authoredon=ge2019&amp;_include=MedicationRequest:medication
+    
+      1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;authoredon=ge2019-01-01T00:00:00Z
+      1. GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;authoredon=ge2019-01-01T00:00:00Z&amp;_include=MedicationRequest:medication
 
     *Implementation Notes:* Fetches a bundle of all MedicationRequest resources for the specified patient and intent  code = `order,plan` and authoredon date ([how to search by reference] and [how to search by token] and [how to search by date])
 

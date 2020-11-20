@@ -1,12 +1,3 @@
-
----
-
-**Quick Start**{:#search style="font-size: 20px;"}
-
----
-
-Below is an overview of the required set of Server RESTful FHIR interactions - for example, search and read operations - for this profile. See the [Capability Statements] for a complete list of supported RESTful interactions for this IG.
-
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
@@ -20,8 +11,8 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/Organization?name=[string]`
 
     Example:
-
-      1. {:.new-content #FHIR-29269}GET [base]/Organization?name=Health
+    
+      1. GET [base]/Organization?name=Health
 
     *Implementation Notes:* Fetches a bundle of all Organization resources that match the name ([how to search by string])
 
@@ -30,9 +21,13 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/Organization?address=[string]`
 
     Example:
-
-      1. {:.new-content #FHIR-29269}GET [base]/Organization?address=Arbor
+    
+      1. GET [base]/Organization?address=Arbor
 
     *Implementation Notes:* Fetches a bundle of all Organization resources that match the address string ([how to search by string])
+
+
+
+
 
 {% include link-list.md %}

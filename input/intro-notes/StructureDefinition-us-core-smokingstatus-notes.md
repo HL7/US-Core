@@ -1,12 +1,3 @@
-
----
-
-**Quick Start**{:#search style="font-size: 20px;"}
-
----
-
-Below is an overview of the required set of Server RESTful FHIR interactions - for example, search and read operations - for this profile. See the [Capability Statements] for a complete list of supported RESTful interactions for this IG.
-
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
@@ -18,10 +9,10 @@ The following search parameters and search parameter combinations SHALL be suppo
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`code`](SearchParameter-us-core-observation-code.html)** search parameters:
     - including optional support for composite *OR* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
 
-    `GET [base]/Observation?patient=[reference]&code=http://loinc.org|72166-2`
+    `GET [base]/Observation?patient={Type/}[id]&code=http://loinc.org|72166-2`
 
     Example:
-
+    
       1. GET [base]/Observation?patient=1032702&amp;code=http://loinc.org\|72166-2
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code. ([how to search by reference] and [how to search by token])

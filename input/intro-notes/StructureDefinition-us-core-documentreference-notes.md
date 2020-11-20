@@ -1,12 +1,3 @@
-
----
-
-**Quick Start**{:#search style="font-size: 20px;"}
-
----
-
-Below is an overview of the required set of Server RESTful FHIR interactions - for example, search and read operations - for this profile. See the [Capability Statements] for a complete list of supported RESTful interactions for this IG.
-
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
@@ -20,7 +11,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/DocumentReference[id]`
 
     Example:
-
+    
       1. GET [base]/DocumentReference/2169591
       1. GET [base]/DocumentReference?_id=2169591
 
@@ -28,20 +19,20 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 1. **SHALL** support searching for all documentreferences for a patient using the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** search parameter:
 
-    `GET [base]/DocumentReference?patient=[reference]`
+    `GET [base]/DocumentReference?patient={Type/}[id]`
 
     Example:
-
+    
       1. GET [base]/DocumentReference?patient=1137192
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient. See the implementation notes above for how to access the actual document. ([how to search by reference])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`category`](SearchParameter-us-core-documentreference-category.html)** search parameters:
 
-    `GET [base]/DocumentReference?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note`
+    `GET [base]/DocumentReference?patient={Type/}[id]&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note`
 
     Example:
-
+    
       1. GET [base]/DocumentReference?patient=1235541&amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category\|clinical-note
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and category = `clinical-note`.  See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token])
@@ -50,20 +41,20 @@ The following search parameters and search parameter combinations SHALL be suppo
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
+    `GET [base]/DocumentReference?patient={Type/}[id]&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
-
-      1. GET [base]/DocumentReference?patient=1235541&amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category\|clinical-note&amp;date=ge2019
+    
+      1. GET [base]/DocumentReference?patient=1235541&amp;category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category\|clinical-note&amp;date=ge2020-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and category = `clinical=note` and date. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token] and [how to search by date])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`type`](SearchParameter-us-core-documentreference-type.html)** search parameters:
 
-    `GET [base]/DocumentReference?patient=[reference]&type={system|}[code]`
+    `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]`
 
     Example:
-
+    
       1. GET [base]/DocumentReference?patient=1316024&amp;type=http://loinc.org\|18842-5
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token])
@@ -76,10 +67,10 @@ The following search parameter combinations SHOULD be supported.:
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`status`](SearchParameter-us-core-documentreference-status.html)** search parameters:
     - including support for composite *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&status={system|}[code]{,{system|}[code],...}`
+    `GET [base]/DocumentReference?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
 
     Example:
-
+    
       1. GET [base]/DocumentReference?patient=1235541
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and status. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token])
@@ -88,11 +79,11 @@ The following search parameter combinations SHOULD be supported.:
     - including support for these `period` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `period` (e.g.`period=[date]&period=[date]]&...`)
 
-    `GET [base]/DocumentReference?patient=[reference]&type={system|}[code]&period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]&...}`
+    `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]&period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]&...}`
 
     Example:
-
-      1. GET [base]/DocumentReference?patient=2169591&amp;type=http://loinc.org \|34133-9&amp;period=ge2019
+    
+      1. GET [base]/DocumentReference?patient=2169591&amp;type=http://loinc.org \|34133-9&amp;period=ge2020-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type and period. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token] and [how to search by date])
 
