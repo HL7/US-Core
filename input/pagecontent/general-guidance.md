@@ -384,7 +384,7 @@ Note that the patient may be *implicit* in the context in some implementations (
 
 `GET [base]/[Resource-type]{?other-parameters}`
 
-<div class="new-content" markdown="1">
+<div class="new-content" markdown="1" name="FHIR-27906">
 
 #### Date Precision Expectations
 
