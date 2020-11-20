@@ -27,8 +27,8 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Profile specific implementation guidance:**
 
-- \*Use the status code: `not-done` to represent that an immunization was *not* given.
-- {:.new-content #FHIR-29745}Based upon the ONC U.S. Core Data for Interoperability (USCDI) v1 requirements, [CVX vaccine codes] are required and the [NDC vaccine codes] **SHOULD** be supported as translations to them.  An up to date [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] is provided by the CDC's. The example illustrates using both the CVS and NDC codes based upon this table.
+- Use the status code: `not-done` to represent that an immunization was *not* given.
+- {:.new-content #FHIR-29745}Based upon the ONC U.S. Core Data for Interoperability (USCDI) v1 requirements, [CVX vaccine codes] are required and the [NDC vaccine codes] **SHOULD** be supported as a translation. CDC provides the [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] to assist implementers. The example [Immunization-imm-1](Immunization-imm-1.html) illustrates using both the CVX and NDC codes based upon this table.
 
 ### Examples
 
