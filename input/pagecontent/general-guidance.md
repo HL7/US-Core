@@ -365,7 +365,7 @@ For searching a resource, interactions on profile pages are defined with the fol
        - When searching using the `token` type searchparameter [(how to search by token)], the syntax `{system|}[code]` means that the system value is optional *for the client* to supply.:
          * The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
          * The server **SHALL** support both.
-       - {:.new-content #FHIR-27905}When searching using the `reference` type searchparameter [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply: 
+       - {:.new-content #FHIR-27905}When searching using the `reference` type searchparameter [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply:
          * The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
          * The server **SHALL** support both.
     - \{:m1|m2|...}: The list of supported search parameter modifiers
@@ -389,8 +389,8 @@ Note that the patient may be *implicit* in the context in some implementations (
 #### Date Precision Expectations
 
 When searching using the `date` type searchparameter [(how to search by date)]:
-* The client **SHALL** provide datetime data precise to the *day* for elements of datatype `date` and  to the *second + time offset* for elements of datatype `dateTime`.
-* The server **SHALL** support datetime data precise to the *day* for elements of datatype `date` and  to the *second + time offset* for elements of datatype `dateTime`.
+* The client **SHALL** provide values precise to the *day* for elements of datatype `date` and to the *second + time offset* for elements of datatype `dateTime`.
+* The server **SHALL** support values precise to the *day* for elements of datatype `date` and  to the *second + time offset* for elements of datatype `dateTime`.
 
 The table below summarizes the date precision:
 
