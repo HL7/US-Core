@@ -127,7 +127,7 @@
 [Medications Module]: {{site.data.fhir.path}}medications-module.html
 [MimeType]: http://www.rfc-editor.org/bcp/bcp13.txt#
 [Multi-language support for Narratives]: {{site.data.fhir.path}}narrative.html#lang
-[Must Support]: general-guidance.html#must-support
+[Must Support]: conformance-expectations.html#must-support
 [NDC vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
 [NamingSystem]: {{site.data.fhir.path}}namingsystem.html
 [Narrative]: {{site.data.fhir.path}}security.html#narrative
