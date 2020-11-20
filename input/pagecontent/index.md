@@ -6,8 +6,8 @@
 
 - [X] Finish [Resolving Trackers](https://confluence.hl7.org/display/CGP/US+Core+January+2021+Ballot)
 - [ ] Finish Applying Resolved Trackers
-     - [ ] Update CapStatements to reflect changes
-        - [ ] Document Search requirements in CapabilityStatements
+     - [X] Update CapStatements to reflect changes
+        - [X] Document Search requirements in CapabilityStatements
         - [X] Add Vitals Profiles
      - [X] Add Vitals profile
         - [X] SDs
@@ -19,7 +19,7 @@
         - [X] update USCDI table
      - [ ] Updates to Quick Starts for updated search requirements
        - [X] add Intros to QuickStarts
-       - [ ] don't forget added requirements for DocRef. (PractitionerRole, and Provenance?)
+       - [X] don't forget added requirements for DocRef. (PractitionerRole, and Provenance?)
      - [ ] Various vocab issues with VSAC
        - [ ] FHIR-29322
 - [X] Review survey and complete updates to choices of types and References
