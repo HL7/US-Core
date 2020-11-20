@@ -24,8 +24,12 @@
 		<include>
 			<system value="http://snomed.info/sct"/>
 			<concept>
+				<extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-definition" >				
+					<valueString value="Death diagnosis, or cause of death is a contextual qualifier indicating the problem represented caused the patient's death."/>
+				</extension>
 				<code value="16100001"/>
 				<display value="Death diagnosis"/>
+				
 			</concept>
 		</include>
 	</compose>
