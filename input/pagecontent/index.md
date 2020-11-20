@@ -56,10 +56,14 @@
 
 - [ ] QA
      - [ ] review applied trackers
-     - [X] warnings on name and description waiting for Sushi to implement see [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Adding.20Description.20for.20Examples.20to.20ImplementationGuide.20-.20how)
-     - [X] bad #search links as a result of template migration
      - [ ] errors
-     - [X] fix bad markdown in SPs
+       - [ ] example name and defintion error [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Adding.20Description.20for.20Examples.20to.20ImplementationGuide.20-.20how/near/217444410)
+
+            The extension http://hl7.org/fhir/StructureDefinition/instance-name is unknown, and not allowed here
+            error	URL value 'http://hl7.org/fhir/StructureDefinition/instance-name' does not resolve
+            error	The extension http://hl7.org/fhir/StructureDefinition/instance-description is unknown, and not allowed here
+            error	URL value 'http://hl7.org/fhir/StructureDefinition/instance-description' does not resolve
+        - [ ] VSAC link errors
      - [ ] read through for typos and grammar
 
 </div>

@@ -32,7 +32,4 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 - [Goal-1](Goal-goal-1.html)
 
-
-[Goal]: {{site.data.fhir.path}}goal.html
-
 {% include link-list.md %}

@@ -270,3 +270,4 @@
 [US Core Head Circumference Profile]: StructureDefinition-us-core-head-circumference.html
 [vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
 [US Core change notes]: http://hl7.org/fhir/us/core/history.html
+[Goal]: {{site.data.fhir.path}}goal.html
