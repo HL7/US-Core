@@ -404,20 +404,15 @@ definition:
         name: US Core Server CapabilityStatement
         reference:
             reference: CapabilityStatement/us-core-server
-    -   description: 'Set of codes that are needed for implementation of the US-Core
-            profiles. These codes are used as extensions to the FHIR and US Core value
-            sets.
-
-            '
+    -   description: Set of codes that are needed for implementation of the US-Core
+            CarePlan Profile. These codes are used as extensions to the FHIR ValueSet.
         exampleBoolean: false
         name: US Core CarePlan Category Extension Codes
         reference:
             reference: CodeSystem/careplan-category
-    -   description: 'Set of codes that are needed for implementation of the US-Core
-            profiles. These codes are used as extensions to the FHIR and US Core value
-            sets.
-
-            '
+    -   description: Set of codes that are needed for implementation of the US-Core
+            Condition Profile. These codes are used as extensions to the FHIR and
+            US Core value sets.
         exampleBoolean: false
         name: US Core Condition Category Extension Codes
         reference:
@@ -429,11 +424,9 @@ definition:
         name: US Core DocumentReferences Category Codes
         reference:
             reference: CodeSystem/us-core-documentreference-category
-    -   description: 'Set of codes that are needed for implementation of the US-Core
-            profiles. These codes are used as extensions to the FHIR and US Core value
+    -   description: Set of codes that are needed for implementation of the US-Core
+            Provenance Profile. These codes are used as extensions to the FHIR value
             sets.
-
-            '
         exampleBoolean: false
         name: US Core Provenance Participant Type Extension Codes
         reference:
@@ -1202,9 +1195,9 @@ definition:
         name: US Core Provenance Participant Type Codes
         reference:
             reference: ValueSet/us-core-provenance-participant-type
-    -   description: 'Provider roles codes which are composed of the NUCC Health Care
+    -   description: Provider roles codes which are composed of the NUCC Health Care
             Provider Taxonomy Code Set classification codes for providers. Only concepts
-            with a classification and no specialization are included. '
+            with a classification and no specialization are included.
         exampleBoolean: false
         name: US Core Provider Role (NUCC)
         reference:
