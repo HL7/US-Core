@@ -12,11 +12,18 @@ This page defines the rules for interpreting profile elements and subelements la
 
 To claim conformance to a US Core Profile US Core Servers **SHALL**:
 
-  - Be able to populate all profile data elements that have a minimum cardinality >= 1 and/or flagged as *Must Support* as defined by that profile’s StructureDefinition.
+  - Be able to populate all profile data elements that mandatory - in other words, have a minimum cardinality >= 1 -  and/or flagged as *Must Support* as defined by that profile’s StructureDefinition.
   - Conform to the [US Core Server Capability Statement] expectations for that profile’s type.
 
+### The Must Support View
 
-### Must Support
+  Each profile provide a formal view of all the Must Support Elements in a tree under the awkwardly named "Snapshot Table (Must Support)". All the elements presented in the view are mandatory and must support elements for conformance to the profile and include the US Core Profile and any inherited must support elements.
+
+### Mandatory Elements
+
+  When an element is mandatory (min=1), the data is expected to always be present. Very rarely it may not be and we have provided [specific guidance] when the data is missing.  The convention in this guide is to mark all min=1 elements as must support unless the are nested under optional element.
+
+### Must Support Elements
 
 For querying and reading US Core Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows (see the [Future of US Core] page for writing and updating US Core Profiles.) :
 
@@ -32,6 +39,44 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 * NOTE: Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
 
 
+ (example)
+#### Must Support - Coded Elements
+Coded elements (CodeableConcept, Coding, and code datatypes) marked as Must Support following the rules for their respective bindings.
+
+(example)
+
+##### Required binding for CodeableConcept Datatype
+
+Required binding to a value set definition means that one of the codes from the specified value set **SHALL** be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
+
+##### Extensible binding for CodeableConcept Datatype
+
+Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values **SHALL** be from the specified value set if a code applies, but if no suitable
+ code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
+
+##### Defined Pattern Elements
+
+The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern[x]] which is used almost exclusively for the CodeableConcept and Coding  datatypes. It specifies "a value that the value in the instance SHALL follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example."  If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* values that shall be present.
+
+(example)
+
+#### Must Support - Primitive Element
+
+Primitive elements are are single elements with a primitive value. If they are marked as must support, the either the value or an extension meets this requirement.
+
+#### Must Support - Complex Elements
+
+Complex element are composed of primitive and/or other complex elements.  There are specific interpretations for must support for:
+
+- CodeableConcept
+- Coding
+- Reference
+
+which are discused separately.  In general for any complex element the must support is met if any of the sub-elements (including extensions) are present.
+If any sub-element is mark as must support it must meet the must support requirements as well and satisfies the must support requirement for the parent element.
+
+(example where no sub elements are MS)
+(example where have MS sub Elements)
 
 #### Must Support - Resource References
 
@@ -80,6 +125,20 @@ Systems can support the other elements, but this is not a requirement of US Core
 
 
 {% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 4: US Core Observation.value[x]" %}
+
+
+#### Must Support - Choice of elements
+
+There are several instances in this Guide where there is a choice of supporting one or another element to meet the must support requirement. These are:
+
+....
+
+Although both are marked as must support, the server systems are not required to support both a boolean and a reference, but SHALL choose to support at least one of these elements. The client application SHALL support both elements.  There is no way to define this in a computable way, but these instances are clearly documented.
+
+(example)
+
+
+
 
 <div markdown="1" class="bg-info">
 
