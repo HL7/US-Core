@@ -1,14 +1,4 @@
-
----
-
-**Quick Start**{:#search style="font-size: 20px;"}
-
----
-
-Below is an overview of the required set of Server RESTful FHIR interactions - for example, search and read operations - for this profile. See the [Capability Statements] for a complete list of supported RESTful interactions for this IG.
-
-- See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
-- See the [General Guidance] section for additional guidance on searching for multiple patients.
+{% include quickstart-intro.md %}
 
 #### Mandatory Search Parameters:
 
