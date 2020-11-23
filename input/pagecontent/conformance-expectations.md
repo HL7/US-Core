@@ -47,18 +47,21 @@ Coded elements (CodeableConcept, Coding, and code datatypes) marked as Must Supp
 
 ##### Required binding for CodeableConcept Datatype
 
-Required binding to a value set definition means that one of the codes from the specified value set **SHALL** be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
+[Required Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
+
+[US Core AllergyIntolerance Profile] - AllergyIntolerance.clinicalStatus
 
 ##### Extensible binding for CodeableConcept Datatype
 
-Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values **SHALL** be from the specified value set if a code applies, but if no suitable
- code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
+[Extensible Binding] to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values **SHALL** be from the specified value set if a code applies, but if no suitable code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
+
+[US Core AllergyIntolerance Profile] - AllergyIntolerance.code
 
 ##### Defined Pattern Elements
 
-The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern[x]] which is used almost exclusively for the CodeableConcept and Coding  datatypes. It specifies "a value that the value in the instance SHALL follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example."  If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* values that shall be present.
+The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern[x]] which is used almost exclusively for the CodeableConcept and Coding  datatypes. It specifies "a value that the value in the instance **SHALL** follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example."  If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* values that shall be present.
 
-(example)
+[US Core DiagnosticReport Profile for Laboratory Results Reporting] - DiagnosticReport.category
 
 #### Must Support - Primitive Element
 

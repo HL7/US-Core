@@ -69,6 +69,7 @@
 [Downloads]: downloads.html "Downloads Page"
 [Encounter]: {{site.data.fhir.path}}encounter.html
 [Examples]: examples.html
+[Extensible Binding]: {{site.data.fhir.path}}terminologies.html#extensible
 [FHIR Artifacts]: artifacts.html
 [FHIR Binary Resource]: http://hl7.org/fhir/binary.html
 [FHIR Bulk Data Access (Flat FHIR)]: http://hl7.org/fhir/uv/bulkdata/STU1/
@@ -159,6 +160,7 @@
 [Radiology (LP29684-5)]: https://loinc.org/LP29684-5
 [Referral Note (57133-1)]: https://loinc.org/57133-1.html
 [Respiratory rate]: {{site.data.fhir.path}}resprate.html
+[Required Binding]: {{site.data.fhir.path}}terminologies.html#required
 [SMART App Launch Framework]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
 [SNOMED CT]: http://snomed.info/sct
 [SNOMED CT]: {{site.data.fhir.path}}valueset-procedure-code.html
