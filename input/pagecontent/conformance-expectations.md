@@ -129,13 +129,12 @@ Systems can support the other elements, but this is not a requirement of US Core
 
 #### Must Support - Choice of elements
 
-There are several instances in this Guide where there is a choice of supporting one or another element to meet the must support requirement. These are:
+There are several instances in this Guide where there is a choice of supporting one or another element to meet the must support requirement. Examples:
 
-- here...
-- here...
-- here...
+- [US Core Medication Request Profile] - The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or other resource.
+- [US Core Encounter Profile] - Although both are marked as must support, servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
 
-Although both are marked as must support, the server systems are not required to support both a boolean and a reference, but SHALL choose to support at least one of these elements. The client application SHALL support both elements.  There is no way to define this in a computable way, but these instances are clearly documented.
+Although both are marked as must support, the server systems are not required to support both a boolean and a reference, but **SHALL** choose to support at least one of these elements. The client application **SHALL** support both elements.  There is no way to define this in a computable way, but these instances are clearly documented.
 
 (example)
 
