@@ -34,9 +34,9 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 * In situations where information on a particular data element is missing and the US Core Responder knows the precise reason for the absence of data, US Core Responders **SHALL** send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
 * US Core Requestors **SHALL** be able to process resource instances containing data elements asserting missing information.
 
-* NOTE: Typically *US Core Responder* Actor = Server and *US Core Requestor Actor* = Client
-* NOTE: The above definition of *Must Support* is derived from HL7v2 concept "Required but may be empty - RE" described in HL7v2 V28_CH02B_Conformance.doc.
-* NOTE: Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
+The terms *US Core Responder* Actor *US Core Requestor Actor* are used throughout the guide and typically refer to a server or a client.
+
+Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
 
 
  (example)
@@ -138,8 +138,6 @@ There are several instances in this Guide where there is a choice of supporting 
 - [US Core Encounter Profile] - Although both are marked as must support, servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
 
 Although both are marked as must support, the server systems are not required to support both a boolean and a reference, but **SHALL** choose to support at least one of these elements. The client application **SHALL** support both elements.  There is no way to define this in a computable way, but these instances are clearly documented.
-
-(example)
 
 
 {% include link-list.md %}
