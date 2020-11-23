@@ -49,7 +49,7 @@ The Contents of [Argo R4 build] have been merged back into this IG on Aug 30th, 
 
 GitHub will automatically trigger a new build whenever you commit changes.
 
-*Note: a build takes 2-3 minutes to complete. You should see a notification at https://chat.fhir.org/#narrow/stream/142-committers.2Fnotification/topic/ig-build.
+*Note: a build takes 2-3 minutes to complete. You should see a notification at https://chat.fhir.org/#narrow/stream/179297-committers.2Fnotification.
 *
 
 ### Find your rendered IG automatically available at
