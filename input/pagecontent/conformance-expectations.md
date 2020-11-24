@@ -6,7 +6,19 @@ The base [FHIR Must Support] guidance requires specifications define exactly the
 
 This page defines the rules for interpreting profile elements and subelements labeled *Must Support* for requesters and responders.
 
-<!-- end TOC -->
+### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
+
+Each profile provides a several different formal views of all the Must Support Elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".  In the "Differential Table" view all the must support elements defined for the profile are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is illustrated in figure 1 below.
+
+  {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
+
+In the "Snapshot Table" view in Figure 2, all the must support elements defined for the profile - and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile - are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is shown in figure 2 below.
+
+  {% include img.html img="Must_Support_Snapshot_View.png" caption="Figure 2: Snapshot Table View" %}
+
+ In the awkwardly named "Snapshot Table (Must Support)" view, all the elements presented in the view are either mandatory or must support elements for conformance to the profile . These elements are defined in the US Core Profile, mandatory elements inherited from the base specification and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile. See figure 3 below for an example of this view.
+
+  {% include img.html img="Must_Support_MS_View.png" caption="Figure 3: 'Must Support' View" %}
 
 ### Claiming Conformance to a US Core Profile
 
@@ -193,26 +205,11 @@ Systems can support the other elements, but this is not a requirement of US Core
 
 #### Must Support - Choice of Profile Elements
 
-There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the must support requirement. Examples:
+There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the must support requirement. For Example:
 
 - [US Core Medication Request Profile] - The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or other resource.
 - [US Core Encounter Profile] - Although both are marked as must support, servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
 
 Although both are marked as must support, the server systems are not required to support both a boolean and a reference, but **SHALL** choose to support at least one of these elements. The client application **SHALL** support both elements.  There is no way to define this in a computable way, but these instances are clearly documented.
-
-### The Must Support Flag and Must Support View
-
-Each profile provides a several different formal views of all the Must Support Elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".  In the "Differential Table" view all the must support elements defined for the profile are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is illustrated in figure 1 below.
-
-  {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
-
-In the "Snapshot Table" view in Figure 2, all the must support elements defined for the profile - and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile - are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is shown in figure 2 below.
-
-  {% include img.html img="Must_Support_Snapshot_View.png" caption="Figure 2: Snapshot Table View" %}
-
- In the awkwardly named "Snapshot Table (Must Support)" view, all the elements presented in the view are either mandatory or must support elements for conformance to the profile . These elements are defined in the US Core Profile, mandatory elements inherited from the base specification and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile. See figure 3 below for an example of this view.
-
-  {% include img.html img="Must_Support_MS_View.png" caption="Figure 3: 'Must Support' View" %}
-
 
 {% include link-list.md %}
