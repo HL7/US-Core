@@ -73,6 +73,7 @@ If the source system does not have data for a *Must Support* data element, the d
 
         If one of these a status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a query for the resource.
 
+<!--{%raw%}
 
 ### Using Codes in US Core Profiles
 
@@ -143,6 +144,8 @@ Example of translation of CVX vaccine code to NDC code.
         ]
       },
 ~~~
+{% endraw %}
+-->
 
 ####  Using UCUM codes in the [Quantity] datatype
 {:.no_toc}
