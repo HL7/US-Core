@@ -15,23 +15,9 @@ To claim conformance to a US Core Profile US Core Servers **SHALL**:
   - Be able to populate all profile data elements that mandatory - in other words, have a minimum cardinality >= 1 -  and/or flagged as *Must Support* as defined by that profile’s StructureDefinition.
   - Conform to the [US Core Server Capability Statement] expectations for that profile’s type.
 
-### The Must Support Flag and Must Suport View
-
-Each profile provides a several different formal views of all the Must Support Elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".  In the "Differential Table" view all the must support elements defined for the profile are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is illustrated in figure 1 below.
-
-  {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
-
-In the "Snapshot Table" view in Figure 2, all the must support elements defined for the profile - and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile - are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is shown in figure 2 below.
-
-  {% include img.html img="Must_Support_Snapshot_View.png" caption="Figure 2: Snapshot Table View" %}
-
- In the awkwardly named "Snapshot Table (Must Support)" view, all the elements presented in the view are either mandatory or must support elements for conformance to the profile . These elements are defined in the US Core Profile, mandatory elements inherited from the base specification and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile. See figure 3 below for an example of this view.
-
-  {% include img.html img="Must_Support_MS_View.png" caption="Figure 3: 'Must Support' View" %}
-
 ### Mandatory Elements
 
-  When an element is mandatory (min=1), the data is expected to always be present. Very rarely it may not be, and specific guidance is provided for [missing data].  The convention in this guide is to mark all min=1 elements as must support unless the are nested under optional element. An example of this is the
+  When an element is mandatory (min=1), the data is expected to always be present. Very rarely it may not be, and specific guidance is provided for [missing data].  The convention in this guide is to mark all min=1 elements as must support unless the are nested under optional element. An example of this is [`CarePlan.status`].
 
 ### Must Support Elements
 
@@ -49,17 +35,14 @@ The terms *US Core Responder* Actor *US Core Requestor Actor* are used throughou
 Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
 
 
- (example)
 #### Must Support - Coded Elements
 Coded elements (CodeableConcept, Coding, and code datatypes) marked as Must Support following the rules for their respective bindings.
-
-(example)
 
 ##### Required binding for CodeableConcept Datatype
 
 [Required Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
 
-[US Core AllergyIntolerance Profile] - AllergyIntolerance.clinicalStatus
+  {% include img.html img="Must_Support_AllergyIntolerance_clinicalStatus.png" caption="Figure 1: US Core AllergyIntolerance.clinicalStatus" %}
 
 ##### Extensible binding for CodeableConcept Datatype
 
@@ -67,29 +50,97 @@ Coded elements (CodeableConcept, Coding, and code datatypes) marked as Must Supp
 
 [US Core AllergyIntolerance Profile] - AllergyIntolerance.code
 
+  {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 1: US Core AllergyIntolerance.code" %}
+
+##### Using multiple codes with CodeableConcept Datatype
+{:.no_toc}
+
+Alternate codes may be provided in addition to the standard codes defined in required or extensible value sets. The alternate codes are called “translations”. These translations may be equivalent to or narrower in meaning to the standard concept code.
+
+Example of multiple translation for Body Weight concept code.
+
+~~~
+    "code": {
+        "coding": [
+         {
+            "system": "http://loinc.org",  //NOTE:this is the standard concept defined in the value set//
+            "code": "29463-7",
+            "display": "Body Weight"
+          },
+    //NOTE:this is a translation to a more specific concept
+         {
+            "system": "http://loinc.org",
+            "code": "3141-9",
+            "display": "Body Weight Measured"
+          },
+    //NOTE:this is a translation to a different code system (Snomed CT)
+         {
+            "system": "http://snomed.info/sct",
+            "code":  “364589006”,
+            "display": "Body Weight"
+          }
+    //NOTE:this is a translation to a locally defined code
+         {
+            "system": "http://AcmeHealthCare.org",
+            "code":  “BWT”,
+            "display": "Body Weight"
+          }
+        ],
+        "text": "weight"
+      },
+~~~
+
+Example of translation of CVX vaccine code to NDC code.
+
+~~~
+    "vaccineCode" : {
+        "coding" : [
+          {
+            "system" : "{{site.data.fhir.path}}sid/cvx",
+            "code" : "158",
+            "display" : "influenza, injectable, quadrivalent"
+          },
+          {
+            "system" : "{{site.data.fhir.path}}sid/ndc",
+            "code" : "49281-0623-78",
+            "display" : "FLUZONE QUADRIVALENT"
+          }
+        ]
+      },
+~~~
+
+
 ##### Defined Pattern Elements
 
 The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern[x]] which is used almost exclusively for the CodeableConcept and Coding  datatypes. It specifies "a value that the value in the instance **SHALL** follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example."  If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* values that shall be present.
 
 [US Core DiagnosticReport Profile for Laboratory Results Reporting] - DiagnosticReport.category
 
+  {% include img.html img="Must_Support_DiagnosticReport_category.png" caption="Figure 1: US Core DiagnosticReport.category" %}
+
 #### Must Support - Primitive Element
 
 Primitive elements are are single elements with a primitive value. If they are marked as must support, the either the value or an extension meets this requirement.
 
+  {% include img.html img="Must_Support_DiagnosticReport_status.png" caption="Figure 1: US Core DiagnosticReport.status" %}
+
 #### Must Support - Complex Elements
 
-Complex element are composed of primitive and/or other complex elements.  There are specific interpretations for must support for:
+Complex element are composed of primitive and/or other complex elements.  The specific interpretations for must support for:
 
 - CodeableConcept
 - Coding
 - Reference
 
-which are discused separately.  In general for any complex element the must support is met if any of the sub-elements (including extensions) are present.
-If any sub-element is mark as must support it must meet the must support requirements as well and satisfies the must support requirement for the parent element.
+are discused separately.  In general for any complex element the must support is met if any of the sub-elements (including extensions) are present. If any sub-element is mark as must support it must meet the must support requirements as well and satisfies the must support requirement for the parent element.
 
-(example where no sub elements are MS)
-(example where have MS sub Elements)
+Example Where A Complex Elements Has No Must Support Sub-Elements:
+
+  {% include img.html img="Must_Support_DiagnosticReport_presentForm.png" caption="Figure 1: US Core DiagnosticReport.presentedForm" %}
+
+Example Where A Complex Elements Has Must Support Sub-Elements:
+
+  {% include img.html img="input/images/Must_Support_Patient_name.png" caption="Figure 1: US Core Patient.name" %}
 
 #### Must Support - Resource References
 
@@ -140,14 +191,28 @@ Systems can support the other elements, but this is not a requirement of US Core
 {% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 4: US Core Observation.value[x]" %}
 
 
-#### Must Support - Choice of elements
+#### Must Support - Choice of Profile Elements
 
-There are several instances in this Guide where there is a choice of supporting one or another element to meet the must support requirement. Examples:
+There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the must support requirement. Examples:
 
 - [US Core Medication Request Profile] - The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or other resource.
 - [US Core Encounter Profile] - Although both are marked as must support, servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
 
 Although both are marked as must support, the server systems are not required to support both a boolean and a reference, but **SHALL** choose to support at least one of these elements. The client application **SHALL** support both elements.  There is no way to define this in a computable way, but these instances are clearly documented.
+
+### The Must Support Flag and Must Support View
+
+Each profile provides a several different formal views of all the Must Support Elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".  In the "Differential Table" view all the must support elements defined for the profile are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is illustrated in figure 1 below.
+
+  {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
+
+In the "Snapshot Table" view in Figure 2, all the must support elements defined for the profile - and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile - are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is shown in figure 2 below.
+
+  {% include img.html img="Must_Support_Snapshot_View.png" caption="Figure 2: Snapshot Table View" %}
+
+ In the awkwardly named "Snapshot Table (Must Support)" view, all the elements presented in the view are either mandatory or must support elements for conformance to the profile . These elements are defined in the US Core Profile, mandatory elements inherited from the base specification and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile. See figure 3 below for an example of this view.
+
+  {% include img.html img="Must_Support_MS_View.png" caption="Figure 3: 'Must Support' View" %}
 
 
 {% include link-list.md %}
