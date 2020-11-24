@@ -137,7 +137,7 @@ Example of translation of CVX vaccine code to NDC code.
 
 The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern[x]] which is used almost exclusively for the CodeableConcept and Coding  datatypes. It specifies "a value that the value in the instance **SHALL** follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example."  If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* element values that the server **SHALL** be capable of providing.
 
-For example the [US Core DiagnosticReport Profile for Laboratory Results Reporting] category element is defined with a pattern requiring fixed values in DiagnosticReport.category.coding.system  and DiagnosticReport.category.coding.code for a Coding element. When claiming conformance to this profile:
+For example the [US Core DiagnosticReport Profile for Laboratory Results Reporting] category element is defined with a pattern requiring fixed values in `DiagnosticReport.category.coding.system`  and `DiagnosticReport.category.coding.code` for a Coding element. When claiming conformance to this profile:
 
 - US Core Responders **SHALL** provide these values in a `DiagnosticReport.category`
 - US Core Requestors **SHALL** be capable of processing these values `DiagnosticReport.category`
@@ -151,7 +151,7 @@ Primitive elements are are single elements with a primitive value. If they are m
 For example, the [US Core DiagnosticReport Profile] issued element is a primitive `instant` datatype. When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in a `DiagnosticReport.issued`
-- US Core Requestors SHALL be capable of processing the value `DiagnosticReport.issued`
+- US Core Requestors **SHALL** be capable of processing the value `DiagnosticReport.issued`
 
   {% include img.html img="Must_Support_DiagnosticReport_issued.png" caption="Figure 7: US Core DiagnosticReport.issued" %}
 
