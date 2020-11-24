@@ -139,13 +139,20 @@ Example of translation of CVX vaccine code to NDC code.
 
 The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern[x]] which is used almost exclusively for the CodeableConcept and Coding  datatypes. It specifies "a value that the value in the instance **SHALL** follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example."  If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* values that shall be present.
 
-[US Core DiagnosticReport Profile for Laboratory Results Reporting] - DiagnosticReport.category
+For example the [US Core DiagnosticReport Profile for Laboratory Results Reporting] category element is defined with a pattern requiring fixed values in DiagnosticReport.category.coding.system  and DiagnosticReport.category.coding.code for a Coding element
+
+- US Core Responders **SHALL** provide these values in a `DiagnosticReport.category`
+- US Core Requestors SHALL be capable of processing these values `DiagnosticReport.category`
 
   {% include img.html img="Must_Support_DiagnosticReport_category.png" caption="Figure 1: US Core DiagnosticReport.category" %}
 
 #### Must Support - Primitive Element
 
 Primitive elements are are single elements with a primitive value. If they are marked as must support, the either the value or an extension meets this requirement.
+
+For example, the [US Core DiagnosticReport Profile] status element is a primitive code datatype:
+
+-
 
   {% include img.html img="Must_Support_DiagnosticReport_status.png" caption="Figure 1: US Core DiagnosticReport.status" %}
 
@@ -157,7 +164,7 @@ Complex element are composed of primitive and/or other complex elements.  The sp
 - Coding
 - Reference
 
-are discused separately.  In general for any complex element the must support is met if any of the sub-elements (including extensions) are present. If any sub-element is mark as must support it must meet the must support requirements as well and satisfies the must support requirement for the parent element.
+are discussed in detail above and below.  In general, for any complex element the must support is met if any of the sub-elements (including extensions) are present. If any sub-element is mark as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
 
 Example Where A Complex Elements Has No Must Support Sub-Elements:
 
