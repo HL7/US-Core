@@ -47,8 +47,9 @@ list:
           - [US Core Heart Rate Profile]
           - [US Core Respiratory Rate Profile]
       1. Linking terminology directly to the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) - NIH where applicable
-         - Note that you will need log in using a UMLS API Key which require a current UMLS account to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html).)
-         - To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the '{OID}' with the OID from the table below.
+
+          - We are seeking to resolve several technical and policy glitches when using VSAC directly prior to publishing which include the requirement to log in using your own UMLS API Key requiring a current UMLS account to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html).)
+          - To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the '{OID}' with the OID from the table below.
 
         |US Core Value Set|VSAC Value Set|VSAC OID|
         |---|---|---|
