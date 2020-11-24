@@ -273,3 +273,4 @@
 [vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
 [US Core change notes]: http://hl7.org/fhir/us/core/history.html
 [Goal]: {{site.data.fhir.path}}goal.html
+[missing data]: general-guidance.html#missing-data
