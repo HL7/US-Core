@@ -54,6 +54,11 @@ Coded elements (CodeableConcept, Coding, and code datatypes) marked as Must Supp
 
 [Required Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
 
+For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has a required binding to the AllergyIntoleranceClinicalStatusCodes ValueSet. When claiming conformance to this profile:
+
+- US Core Responders **SHALL** provide a code *exclusively* from this valueset in  `AllergyIntolerance.clinicalStatus.code`.
+- US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.clinicalStatus.code`.
+
 [US Core AllergyIntolerance Profile] - AllergyIntolerance.clinicalStatus
   
       {% include img.html img="Must_Support_AllergyIntolerance_clinicalStatus.png" caption="Figure 4: US Core AllergyIntolerance.clinicalStatus" %}
@@ -61,6 +66,14 @@ Coded elements (CodeableConcept, Coding, and code datatypes) marked as Must Supp
 ##### Extensible binding for CodeableConcept Datatype
 
 [Extensible Binding] to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values **SHALL** be from the specified value set if a code applies, but if no suitable code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
+
+For example, the [US Core AllergyIntolerance Profile] code element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
+
+- US Core Responders **SHALL** provide:
+  - a code from this valueset in `AllergyIntolerance.code.code` *if the concept exists* in the value set
+  - or an alternative code *if the concept does not exist* in the value set
+  - or text in `AllergyIntolerance.code.text`if only text is available.
+- US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.code.code` or text in `AllergyIntolerance.code.text`
 
 [US Core AllergyIntolerance Profile] - AllergyIntolerance.code
 
