@@ -160,7 +160,7 @@ For example, the [US Core DiagnosticReport Profile] issued element is a primitiv
 Complex element are composed of primitive and/or other complex elements.  This page provides guidance for the following complex datatypes:
 
 - [`CodeableConcept`](#must-support---coded-elements)
-- [`Coding`]((#must-support---coded-elements))
+- [`Coding`](#must-support---coded-elements)
 - [`Reference`](#must-support---resource-references)
 
 For any complex element marked as must support, The server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is mark as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
