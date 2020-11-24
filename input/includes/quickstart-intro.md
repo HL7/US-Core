@@ -2,6 +2,7 @@
 ---
 
 **Quick Start**{:#search style="font-size: 20px;"}
+<a name="quick-start"> </a>
 
 ---
 
