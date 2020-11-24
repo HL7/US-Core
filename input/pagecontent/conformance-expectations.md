@@ -48,11 +48,11 @@ Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful
 
 
 #### Must Support - Coded Elements
-Coded elements (CodeableConcept, Coding, and code datatypes) marked as Must Support following the rules for their respective bindings.
+In addition the guidance provided by [FHIR Terminology], Coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) marked as Must Support following the rules for their respective bindings.
 
-##### Required binding for CodeableConcept Datatype
+##### Required bindings Coded Elements
 
-[Required Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
+[Required Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used. For `CodeableConcept` using only text is *not* valid, but multiple codings (translations) are permitted as is discussed below.
 
 For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has a required binding to the AllergyIntoleranceClinicalStatusCodes ValueSet. When claiming conformance to this profile:
 
@@ -63,7 +63,7 @@ For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has
 
 ##### Extensible binding for CodeableConcept Datatype
 
-[Extensible Binding] to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values **SHALL** be from the specified value set if a code applies, but if no suitable code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
+[Extensible Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used if the concept applies, but if no suitable code exists in the value set, alternate code(s) may be provided in its place.  For `CodeableConcept` multiple codings are permitted and this rule applies to one of the codings.  Also for `CodeableConcept` if only text is available, then just text may be used.  
 
 For example, the [US Core AllergyIntolerance Profile] code element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
@@ -72,8 +72,6 @@ For example, the [US Core AllergyIntolerance Profile] code element has an extens
   - or an alternative code *if the concept does not exist* in the value set
   - or text in `AllergyIntolerance.code.text`if only text is available.
 - US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.code.code` or text in `AllergyIntolerance.code.text`
-
-[US Core AllergyIntolerance Profile] - AllergyIntolerance.code
 
   {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 1: US Core AllergyIntolerance.code" %}
 
@@ -137,40 +135,47 @@ Example of translation of CVX vaccine code to NDC code.
 
 ##### Defined Pattern Elements
 
-The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern[x]] which is used almost exclusively for the CodeableConcept and Coding  datatypes. It specifies "a value that the value in the instance **SHALL** follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example."  If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* values that shall be present.
+The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern[x]] which is used almost exclusively for the CodeableConcept and Coding  datatypes. It specifies "a value that the value in the instance **SHALL** follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example."  If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* element values that the server **SHALL** be capable of providing.
 
-For example the [US Core DiagnosticReport Profile for Laboratory Results Reporting] category element is defined with a pattern requiring fixed values in DiagnosticReport.category.coding.system  and DiagnosticReport.category.coding.code for a Coding element
+For example the [US Core DiagnosticReport Profile for Laboratory Results Reporting] category element is defined with a pattern requiring fixed values in DiagnosticReport.category.coding.system  and DiagnosticReport.category.coding.code for a Coding element. When claiming conformance to this profile:
 
 - US Core Responders **SHALL** provide these values in a `DiagnosticReport.category`
-- US Core Requestors SHALL be capable of processing these values `DiagnosticReport.category`
+- US Core Requestors **SHALL** be capable of processing these values `DiagnosticReport.category`
 
   {% include img.html img="Must_Support_DiagnosticReport_category.png" caption="Figure 1: US Core DiagnosticReport.category" %}
 
 #### Must Support - Primitive Element
 
-Primitive elements are are single elements with a primitive value. If they are marked as must support, the either the value or an extension meets this requirement.
+Primitive elements are are single elements with a primitive value. If they are marked as must support, then the server **SHALL** be capable of providing the element value to meet the must support requirement.
 
-For example, the [US Core DiagnosticReport Profile] status element is a primitive code datatype:
+For example, the [US Core DiagnosticReport Profile] issued element is a primitive `instant` datatype. When claiming conformance to this profile:
 
--
+- US Core Responders **SHALL** be capable of providing a value in a `DiagnosticReport.issued`
+- US Core Requestors SHALL be capable of processing the value `DiagnosticReport.issued`
 
-  {% include img.html img="Must_Support_DiagnosticReport_status.png" caption="Figure 1: US Core DiagnosticReport.status" %}
+  {% include img.html img="Must_Support_DiagnosticReport_issued.png" caption="Figure 1: US Core DiagnosticReport.issued" %}
 
 #### Must Support - Complex Elements
 
-Complex element are composed of primitive and/or other complex elements.  The specific interpretations for must support for:
+Complex element are composed of primitive and/or other complex elements.  The specific interpretations for must support for the following datatypes:
 
-- CodeableConcept
-- Coding
-- Reference
+- `CodeableConcept`
+- `Coding`
+- `Reference`
 
-are discussed in detail above and below.  In general, for any complex element the must support is met if any of the sub-elements (including extensions) are present. If any sub-element is mark as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
+are discussed in detail above and below.  For any complex element marked as must support, The server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is mark as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
 
-Example Where A Complex Elements Has No Must Support Sub-Elements:
+For example, the [US Core Laboratory Result Observation Profile] presentedForm element is labeled must support and has no must support sub-elements. When claiming conformance to this profile:
+
+- US Core Responders **SHALL** be capable of providing a value in `DiagnosticReport.presentedForm` sub-element.
+- US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.presentedForm`.
 
   {% include img.html img="Must_Support_DiagnosticReport_presentForm.png" caption="Figure 1: US Core DiagnosticReport.presentedForm" %}
 
-Example Where A Complex Elements Has Must Support Sub-Elements:
+For example, the [US Core Patient Profile] name element is labeled must support and has must support sub-elements "family" and "given". When claiming conformance to this profile:
+
+- US Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
+- US Core Requestors **SHALL** be capable of processing the value in value in `Patient.name.family` and `Patient.name.given`.
 
   {% include img.html img="input/images/Must_Support_Patient_name.png" caption="Figure 1: US Core Patient.name" %}
 
