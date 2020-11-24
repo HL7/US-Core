@@ -34,9 +34,9 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 * In situations where information on a particular data element is missing and the US Core Responder knows the precise reason for the absence of data, US Core Responders **SHALL** send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
 * US Core Requestors **SHALL** be able to process resource instances containing data elements asserting missing information.
 
-* NOTE: Typically *US Core Responder* Actor = Server and *US Core Requestor Actor* = Client
-* NOTE: The above definition of *Must Support* is derived from HL7v2 concept "Required but may be empty - RE" described in HL7v2 V28_CH02B_Conformance.doc.
-* NOTE: Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
+The terms *US Core Responder* Actor *US Core Requestor Actor* are used throughout the guide and typically refer to a server or a client.
+
+Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
 
 
  (example)
@@ -47,18 +47,21 @@ Coded elements (CodeableConcept, Coding, and code datatypes) marked as Must Supp
 
 ##### Required binding for CodeableConcept Datatype
 
-Required binding to a value set definition means that one of the codes from the specified value set **SHALL** be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
+[Required Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
+
+[US Core AllergyIntolerance Profile] - AllergyIntolerance.clinicalStatus
 
 ##### Extensible binding for CodeableConcept Datatype
 
-Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values **SHALL** be from the specified value set if a code applies, but if no suitable
- code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
+[Extensible Binding] to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values **SHALL** be from the specified value set if a code applies, but if no suitable code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
+
+[US Core AllergyIntolerance Profile] - AllergyIntolerance.code
 
 ##### Defined Pattern Elements
 
-The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern[x]] which is used almost exclusively for the CodeableConcept and Coding  datatypes. It specifies "a value that the value in the instance SHALL follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example."  If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* values that shall be present.
+The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern[x]] which is used almost exclusively for the CodeableConcept and Coding  datatypes. It specifies "a value that the value in the instance **SHALL** follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example."  If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* values that shall be present.
 
-(example)
+[US Core DiagnosticReport Profile for Laboratory Results Reporting] - DiagnosticReport.category
 
 #### Must Support - Primitive Element
 
@@ -129,15 +132,12 @@ Systems can support the other elements, but this is not a requirement of US Core
 
 #### Must Support - Choice of elements
 
-There are several instances in this Guide where there is a choice of supporting one or another element to meet the must support requirement. These are:
+There are several instances in this Guide where there is a choice of supporting one or another element to meet the must support requirement. Examples:
 
-- here...
-- here...
-- here...
+- [US Core Medication Request Profile] - The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or other resource.
+- [US Core Encounter Profile] - Although both are marked as must support, servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
 
-Although both are marked as must support, the server systems are not required to support both a boolean and a reference, but SHALL choose to support at least one of these elements. The client application SHALL support both elements.  There is no way to define this in a computable way, but these instances are clearly documented.
-
-(example)
+Although both are marked as must support, the server systems are not required to support both a boolean and a reference, but **SHALL** choose to support at least one of these elements. The client application **SHALL** support both elements.  There is no way to define this in a computable way, but these instances are clearly documented.
 
 
 {% include link-list.md %}
