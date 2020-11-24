@@ -17,7 +17,9 @@ To claim conformance to a US Core Profile US Core Servers **SHALL**:
 
 ### The Must Support View
 
-  Each profile provide a formal view of all the Must Support Elements in a tree under the awkwardly named "Snapshot Table (Must Support)". All the elements presented in the view are mandatory and must support elements for conformance to the profile and include the US Core Profile and any inherited must support elements.
+  Each profile provides a formal view of all the Must Support Elements in a tree format under the awkwardly named "Snapshot Table (Must Support)" as shown in figure 1 below.  All the elements presented in the view are either mandatory or must support elements for conformance to the profile. These elements are defined in the US Core Profile, mandatory elements inherited from the base specification, and. for the US Core Vital Signs profiles. any mandatory or must support elements inherited from the FHIR base Vital Signs profile.
+
+  {% include img.html img="Must_Support_DocumentReference.jpg" caption="Figure 1: 'Must Support' Profile View" %}
 
 ### Mandatory Elements
 
