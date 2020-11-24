@@ -79,7 +79,7 @@
 [FHIR Data Types]: {{site.data.fhir.path}}datatypes.html
 [FHIR Digital Signatures]: {{site.data.fhir.path}}security.html#digital%20signatures
 [FHIR Documents]: {{site.data.fhir.path}}documents.html
-[FHIR Must Support]: {{site.data.fhir.path}}conformance-expectations.html#must-support-elements
+[FHIR Must Support]: {{site.data.fhir.path}}profiling.html#mustsupport
 [FHIR Paging]: {{site.data.fhir.path}}http.html#paging
 [FHIR Provenance]: {{site.data.fhir.path}}provenance.html
 [FHIR RESTful API]: {{site.data.fhir.path}}http.html
@@ -128,7 +128,7 @@
 [Medications Module]: {{site.data.fhir.path}}medications-module.html
 [MimeType]: http://www.rfc-editor.org/bcp/bcp13.txt#
 [Multi-language support for Narratives]: {{site.data.fhir.path}}narrative.html#lang
-[Must Support]: conformance-expectations.html#must-support
+[Must Support]: conformance-expectations.html#must-support-elements
 [NDC vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
 [NamingSystem]: {{site.data.fhir.path}}namingsystem.html
 [Narrative]: {{site.data.fhir.path}}security.html#narrative
