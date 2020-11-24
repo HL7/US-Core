@@ -19,15 +19,15 @@ To claim conformance to a US Core Profile US Core Servers **SHALL**:
 
 Each profile provides a several different formal views of all the Must Support Elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".  In the "Differential Table" view all the must support elements defined for the profile are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is illustrated in figure 1 below.
 
-  {% include img.html img="Must_Support_DocumentReference.jpg" caption="Figure 1: Differential Table View" %}
+  {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
 
 In the "Snapshot Table" view in Figure 2, all the must support elements defined for the profile - and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile - are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is shown in figure 2 below.
 
-  {% include img.html img="Must_Support_DocumentReference.jpg" caption="Figure 2: Snapshot Table View" %}
+  {% include img.html img="Must_Support_Snapshot_View.png" caption="Figure 2: Snapshot Table View" %}
 
  In the awkwardly named "Snapshot Table (Must Support)" view, all the elements presented in the view are either mandatory or must support elements for conformance to the profile . These elements are defined in the US Core Profile, mandatory elements inherited from the base specification and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile. See figure 3 below for an example of this view.
 
-  {% include img.html img="Must_Support_DocumentReference.jpg" caption="Figure 3: 'Must Support' View" %}
+  {% include img.html img="Must_Support_MS_View.png" caption="Figure 3: 'Must Support' View" %}
 
 ### Mandatory Elements
 
