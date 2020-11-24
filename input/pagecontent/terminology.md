@@ -1,5 +1,5 @@
 
-This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part of the US Core implementation Guide. For more information on using codes in resources, see the [guidance section](general-guidance.html#using-codes-in-us-core-profiles) as well as in the [FHIR specification]({{site.data.fhir.path}}terminologies.html).
+This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part of the US Core implementation Guide. For more information on using codes in Us Core, see the [FHIR Terminology] section in the FHIR specification and [Must Support - Coded Elements] in this guide.
 
 ### Value Sets
 

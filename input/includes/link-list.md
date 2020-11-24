@@ -275,3 +275,4 @@
 [Goal]: {{site.data.fhir.path}}goal.html
 [missing data]: general-guidance.html#missing-data
 [`CarePlan.status`]: {{site.data.fhir.path}}careplan.html
+[Must Support - Coded Elements]: conformance-expectations.html#must-support---coded-elements
