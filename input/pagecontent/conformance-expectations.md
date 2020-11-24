@@ -170,14 +170,14 @@ For example, the [US Core Laboratory Result Observation Profile] presentedForm e
 - US Core Responders **SHALL** be capable of providing a value in `DiagnosticReport.presentedForm` sub-element.
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.presentedForm`.
 
-  {% include img.html img="Must_Support_DiagnosticReport_presentForm.png" caption="Figure 1: US Core DiagnosticReport.presentedForm" %}
+  {% include img.html img="Must_Support_DiagnosticReport_presentedForm.png" caption="Figure 1: US Core DiagnosticReport.presentedForm" %}
 
 For example, the [US Core Patient Profile] name element is labeled must support and has must support sub-elements "family" and "given". When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
 - US Core Requestors **SHALL** be capable of processing the value in value in `Patient.name.family` and `Patient.name.given`.
 
-  {% include img.html img="input/images/Must_Support_Patient_name.png" caption="Figure 1: US Core Patient.name" %}
+  {% include img.html img="Must_Support_Patient_name.png" caption="Figure 1: US Core Patient.name" %}
 
 #### Must Support - Resource References
 
