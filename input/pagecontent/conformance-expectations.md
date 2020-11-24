@@ -8,15 +8,15 @@ This page defines the rules for interpreting profile elements and subelements la
 
 ### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
 
-Each profile provides a several different formal views of all the Must Support Elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".  In the "Differential Table" view all the must support elements defined for the profile are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is illustrated in figure 1 below.
+Each profile provides a several different formal views of all the must support elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".  In the "Differential Table" view all the must support elements defined for the profile are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is illustrated in figure 1.
 
   {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
 
-In the "Snapshot Table" view in Figure 2, all the must support elements defined for the profile - and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile - are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is shown in figure 2 below.
+In the "Snapshot Table" view in Figure 2, all the must support elements defined for the profile , and any mandatory or must support elements inherited from a base profile (e.g. [US Core Body Height Profile] based on [Vital Signs Profile]), are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of the "Snapshot Table" is shown in figure 2.
 
   {% include img.html img="Must_Support_Snapshot_View.png" caption="Figure 2: Snapshot Table View" %}
 
- In the awkwardly named "Snapshot Table (Must Support)" view, all the elements presented in the view are either mandatory or must support elements for conformance to the profile . These elements are defined in the US Core Profile, mandatory elements inherited from the base specification and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile. See figure 3 below for an example of this view.
+ In the "Snapshot Table (Must Support)" view, all the elements presented in the view are either mandatory or must support elements for conformance to the profile . These elements are defined in the US Core Profile, mandatory elements inherited from the base specification and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile. An example of the "Snapshot Table (Must Support)" is shown in figure 3.
 
   {% include img.html img="Must_Support_MS_View.png" caption="Figure 3: 'Must Support' View" %}
 
@@ -59,7 +59,7 @@ For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has
 - US Core Responders **SHALL** provide a code *exclusively* from this valueset in  `AllergyIntolerance.clinicalStatus.code`.
 - US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.clinicalStatus.code`.
 
-  {% include img.html img="Must_Support_AllergyIntolerance_clinicalStatus.png" caption="Figure 1: US Core AllergyIntolerance.clinicalStatus" %}
+  {% include img.html img="Must_Support_AllergyIntolerance_clinicalStatus.png" caption="Figure 4: US Core AllergyIntolerance.clinicalStatus" %}
 
 ##### Extensible binding for CodeableConcept Datatype
 
@@ -73,7 +73,7 @@ For example, the [US Core AllergyIntolerance Profile] code element has an extens
   - or text in `AllergyIntolerance.code.text`if only text is available.
 - US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.code.code` or text in `AllergyIntolerance.code.text`
 
-  {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 1: US Core AllergyIntolerance.code" %}
+  {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 5: US Core AllergyIntolerance.code" %}
 
 ##### Using multiple codes with CodeableConcept Datatype
 {:.no_toc}
@@ -142,7 +142,7 @@ For example the [US Core DiagnosticReport Profile for Laboratory Results Reporti
 - US Core Responders **SHALL** provide these values in a `DiagnosticReport.category`
 - US Core Requestors **SHALL** be capable of processing these values `DiagnosticReport.category`
 
-  {% include img.html img="Must_Support_DiagnosticReport_category.png" caption="Figure 1: US Core DiagnosticReport.category" %}
+  {% include img.html img="Must_Support_DiagnosticReport_category.png" caption="Figure 6: US Core DiagnosticReport.category" %}
 
 #### Must Support - Primitive Element
 
@@ -153,31 +153,31 @@ For example, the [US Core DiagnosticReport Profile] issued element is a primitiv
 - US Core Responders **SHALL** be capable of providing a value in a `DiagnosticReport.issued`
 - US Core Requestors SHALL be capable of processing the value `DiagnosticReport.issued`
 
-  {% include img.html img="Must_Support_DiagnosticReport_issued.png" caption="Figure 1: US Core DiagnosticReport.issued" %}
+  {% include img.html img="Must_Support_DiagnosticReport_issued.png" caption="Figure 7: US Core DiagnosticReport.issued" %}
 
 #### Must Support - Complex Elements
 
-Complex element are composed of primitive and/or other complex elements.  The specific interpretations for must support for the following datatypes:
+Complex element are composed of primitive and/or other complex elements.  This page provides guidance for the following complex datatypes:
 
-- `CodeableConcept`
-- `Coding`
-- `Reference`
+- [`CodeableConcept`](#must-support---coded-elements)
+- [`Coding`]((#must-support---coded-elements))
+- [`Reference`](#must-support---resource-references)
 
-are discussed in detail above and below.  For any complex element marked as must support, The server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is mark as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
+For any complex element marked as must support, The server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is mark as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
 
 For example, the [US Core Laboratory Result Observation Profile] presentedForm element is labeled must support and has no must support sub-elements. When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in `DiagnosticReport.presentedForm` sub-element.
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.presentedForm`.
 
-  {% include img.html img="Must_Support_DiagnosticReport_presentedForm.png" caption="Figure 1: US Core DiagnosticReport.presentedForm" %}
+  {% include img.html img="Must_Support_DiagnosticReport_presentedForm.png" caption="Figure 8: US Core DiagnosticReport.presentedForm" %}
 
 For example, the [US Core Patient Profile] name element is labeled must support and has must support sub-elements "family" and "given". When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
 - US Core Requestors **SHALL** be capable of processing the value in value in `Patient.name.family` and `Patient.name.given`.
 
-  {% include img.html img="Must_Support_Patient_name.png" caption="Figure 1: US Core Patient.name" %}
+  {% include img.html img="Must_Support_Patient_name.png" caption="Figure 9: US Core Patient.name" %}
 
 #### Must Support - Resource References
 
@@ -190,7 +190,7 @@ For example, the [US Core DocumentReference Profile] author US Core Practitioner
 
 Systems can support other references but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_DocumentReference.jpg" caption="Figure 1: US Core DocumentReference.author" %}
+{% include img.html img="Must_Support_DocumentReference.jpg" caption="Figure 10: US Core DocumentReference.author" %}
 
 In certain profiles only a single resource reference is present on an element labeled *Must Support*.
 
@@ -199,7 +199,7 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 * US Core Responders **SHALL** be capable of providing an AllergyIntolerance.patient with a valid reference to a US Core Patient Profile.
 * US Core Requestors **SHALL** be capable of processing an AllergyIntolerance.patienta with a valid reference to a US Core Patient Profile.
 
-{% include img.html img="Must_Support_AllergyIntolerance.jpg" caption="Figure 2: US Core AllergyIntolerance.patient" %}
+{% include img.html img="Must_Support_AllergyIntolerance.jpg" caption="Figure 11: US Core AllergyIntolerance.patient" %}
 
 #### Must Support - Choice of Data Types
 
@@ -213,7 +213,7 @@ For example, the [US Core Laboratory Result Observation Profile] effectiveDateTi
 Systems can support the other elements, but this is not a requirement of US Core.
 
 
-{% include img.html img="Must_Support_Observation.effective.jpg" caption="Figure 3: US Core Observation.effectiveDateTime" %}
+{% include img.html img="Must_Support_Observation.effective.jpg" caption="Figure 12: US Core Observation.effectiveDateTime" %}
 
 For the [US Core Laboratory Result Observation Profile] value element, multiple elements are labeled *Must Support*.
 
@@ -225,7 +225,7 @@ When claiming conformance to the [US Core Laboratory Result Observation Profile]
 Systems can support the other elements, but this is not a requirement of US Core.
 
 
-{% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 4: US Core Observation.value[x]" %}
+{% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 13: US Core Observation.value[x]" %}
 
 
 #### Must Support - Choice of Profile Elements
