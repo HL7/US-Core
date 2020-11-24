@@ -39,9 +39,9 @@
     1. Provenance.agent.who
 - [X] Replace value sets with links to VSAC where possible
       -  see [this spreadsheet](https://docs.google.com/spreadsheets/d/1BtRNsmrez2D8cm_81qhBaiU0aMmXGAIVDNwXCVAu2tE/edit#gid=0)      
-- [ ] Rewrite Must Support section
+- [X] Rewrite Must Support section
     - [X] own page
-    - [ ] draft [here](https://docs.google.com/document/d/1LenTi2KJ7-qcU4HLeDquXoHqpFbAxsV6uIfC6CqMsUU/edit?usp=sharing)
+    - [X] draft [here](https://docs.google.com/document/d/1LenTi2KJ7-qcU4HLeDquXoHqpFbAxsV6uIfC6CqMsUU/edit?usp=sharing)
         - examples?
         - screen shots of SD tree?
         - mandatory (min=1)
