@@ -64,6 +64,8 @@
             error	The extension http://hl7.org/fhir/StructureDefinition/instance-description is unknown, and not allowed here
             error	URL value 'http://hl7.org/fhir/StructureDefinition/instance-description' does not resolve
         - [ ] VSAC link errors
+        - [ ] update JIRA
+        - [ ] update `input/ignoreWarnings.txt`
      - [ ] read through for typos and grammar
 
 </div>
