@@ -68,7 +68,7 @@
           - [ ] NDC/CVX codes [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core)
           - [ ] CDCREC codes [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/cdcrec.20code.20errors.20in.20US.20Core)
         - [ ] us ed Snomed errors [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20ed.20Snomed.20for.20US.20Core)
-        - [ ] update JIRA
+        - [X] update JIRA (update jira file for us core #119)
         - [ ] update `input/ignoreWarnings.txt`
           - [ ] [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20Warnings.20we.20want.20to.20suppress)
      - [ ] read through for typos and grammar
