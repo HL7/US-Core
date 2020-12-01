@@ -55,7 +55,7 @@
 -->
 
 - [ ] QA
-     - [ ] review applied trackers
+     - [X] review applied trackers
      - [ ] errors and warnings
 
        <!--
@@ -68,7 +68,7 @@
             -->
 
         - [ ] VSAC link errors
-        
+
           <!--
            - [ ] See this [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/VSAC.2FPhinVads.20Warnings)
             -->
