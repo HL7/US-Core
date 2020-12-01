@@ -131,7 +131,7 @@ The [Capability Statements] page outlines conformance requirements and expectati
 ----
 
 
-Primary Authors: Brett Marquard, Eric Haas
+Primary Authors: Brett Marquard, Eric Haas, Gay Dolin
 
 Secondary Authors: Grahame Grieve, Nagesh Bashyam
 
