@@ -49,7 +49,14 @@
       }
    ],
    "code": {
-      "text": "Cost of medications"
+     "coding": [
+        {
+           "system": " http://snomed.info/sct",
+           "code": "247824007",
+           "display": "Fear of becoming fat"
+        }
+     ],
+      "text": "Fear of becoming fat"
    },
    "subject": {
       "reference": "Patient/example",
