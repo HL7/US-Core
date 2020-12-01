@@ -19,7 +19,6 @@ These value sets have been defined for this implementation guide.
 *   [US Core DocumentReference Category](ValueSet-us-core-documentreference-category.html)
 *   [US Core DocumentReference Type](ValueSet-us-core-documentreference-type.html)
 *   [US Core Encounter Type](ValueSet-us-core-encounter-type.html)
-*   [US Core ICD-10-PCS Procedure Codes](ValueSet-us-core-procedure-icd10pcs.html)
 *   [US Core Narrative Status](ValueSet-us-core-narrative-status.html)
 *   [US Core Observation Value Codes (SNOMED-CT)](ValueSet-us-core-observation-value-codes.html)
 *   [US Core Procedure Codes](ValueSet-us-core-procedure-code.html)
