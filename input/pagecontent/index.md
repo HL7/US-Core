@@ -70,7 +70,7 @@
         - [ ] us ed Snomed errors [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20ed.20Snomed.20for.20US.20Core)
         - [X] update JIRA (update jira file for us core #119)
         - [ ] update `input/ignoreWarnings.txt`
-          - [ ] [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20Warnings.20we.20want.20to.20suppress)
+          - [X] [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20Warnings.20we.20want.20to.20suppress)
      - [ ] read through for typos and grammar
 
 </div>
