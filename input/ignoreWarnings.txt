@@ -1,1 +1,17 @@
 == Suppressed Messages ==
+# Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated are not recognized by the validator due to IP restrictions
+WARNING: Procedure/defib-implant: Procedure.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code because the value set or code system is not known to the validator]
+WARNING: Encounter/example-1: Encounter.type[0]: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or code system is not known to the validator]
+WARNING: Encounter/1036: Encounter.type[0]: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or code system is not known to the validator]
+# Circular US Core Warnings since this is US Core:
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+# Several examples derived from this profile are provided in this guide.
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'): The Implementation Guide contains no examples for this profile
