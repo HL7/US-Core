@@ -56,7 +56,7 @@
 
 - [ ] QA
      - [ ] review applied trackers
-     - [ ] errors
+     - [ ] errors and warnings
        - [X] example name and definition error [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Adding.20Description.20for.20Examples.20to.20ImplementationGuide.20-.20how/near/217444410)
 
             The extension http://hl7.org/fhir/StructureDefinition/instance-name is unknown, and not allowed here
@@ -64,8 +64,13 @@
             error	The extension http://hl7.org/fhir/StructureDefinition/instance-description is unknown, and not allowed here
             error	URL value 'http://hl7.org/fhir/StructureDefinition/instance-description' does not resolve
         - [ ] VSAC link errors
+          - [ ] See this [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/VSAC.2FPhinVads.20Warnings)
+          - [ ] NDC/CVX codes [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core)
+          - [ ] CDCREC codes [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/cdcrec.20code.20errors.20in.20US.20Core)
+        - [ ] us ed Snomed errors [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20ed.20Snomed.20for.20US.20Core)
         - [ ] update JIRA
         - [ ] update `input/ignoreWarnings.txt`
+          - [ ] [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20Warnings.20we.20want.20to.20suppress)
      - [ ] read through for typos and grammar
 
 </div>
