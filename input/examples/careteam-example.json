@@ -1,78 +1,78 @@
 {
-   "resourceType": "CareTeam",
-   "id": "example",
-   "meta": {
-      "profile": [
-         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
-      ],
-      "extension": [
-         {
-            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-            "valueString": "Careteam Example"
-         },
-         {
-            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-            "valueMarkdown": "This is a careteam example for the *Us Core Careteam Profile*."
-         }
-      ]
-   },
-   "status": "active",
-   "name": "US-Core example CareTeam",
-   "subject": {
-      "reference": "Patient/example",
-      "display": "Amy V. Shaw"
-   },
-   "participant": [
+  "resourceType": "CareTeam",
+  "id": "example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+    ],
+    "extension": [
       {
-         "role": [
-            {
-               "coding": [
-                  {
-                     "system": "http://nucc.org/provider-taxonomy",
-                     "code": "207RC0000X",
-                     "display": "Cardiovascular Disease"
-                  }
-               ]
-            }
-         ],
-         "member": {
-            "reference": "Practitioner/practitioner-1",
-            "display": "Ronald Bone, MD"
-         }
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Careteam Example"
       },
       {
-         "role": [
-            {
-               "coding": [
-                  {
-                     "system": "http://nucc.org/provider-taxonomy",
-                     "code": "208D00000X",
-                     "display": "General Practice"
-                  }
-               ]
-            }
-         ],
-         "member": {
-            "reference": "Practitioner/practitioner-2",
-            "display": "Kathy Fielding, MD"
-         }
-      },
-      {
-         "role": [
-            {
-               "coding": [
-                  {
-                     "system": "http://snomed.info/sct",
-                     "code": "116154003",
-                     "display": "Patient (person)"
-                  }
-               ]
-            }
-         ],
-         "member": {
-            "reference": "Patient/example",
-            "display": "Amy V. Shaw"
-         }
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a careteam example for the *Us Core Careteam Profile*."
       }
-   ]
+    ]
+  },
+  "status": "active",
+  "name": "US-Core example CareTeam",
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy V. Shaw"
+  },
+  "participant": [
+    {
+      "role": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": 17561000,
+              "display": "Cardiologist"
+            }
+          ]
+        }
+      ],
+      "member": {
+        "reference": "Practitioner/practitioner-1",
+        "display": "Ronald Bone, MD"
+      }
+    },
+    {
+      "role": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": 453231000124104,
+              "display": "Primary care provider"
+            }
+          ]
+        }
+      ],
+      "member": {
+        "reference": "Practitioner/practitioner-2",
+        "display": "Kathy Fielding, MD"
+      }
+    },
+    {
+      "role": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "116154003",
+              "display": "Patient (person)"
+            }
+          ]
+        }
+      ],
+      "member": {
+        "reference": "Patient/example",
+        "display": "Amy V. Shaw"
+      }
+    }
+  ]
 }
