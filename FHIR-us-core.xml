@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="http://build.fhir.org/ig/HL7/US-Core" defaultVersion="current" defaultWorkgroup="" gitUrl="https://github.com/HL7/US-Core" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/core"><version code="current" url="http://build.fhir.org/ig/HL7/US-Core"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="http://build.fhir.org/ig/HL7/US-Core-R4" defaultVersion="current" defaultWorkgroup="" gitUrl="https://github.com/HL7/US-Core" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/core"><version code="current" url="http://build.fhir.org/ig/HL7/US-Core-R4"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -45,6 +45,7 @@
 <artifact deprecated="true" key="Goal" name="Goal"/>
 <artifact id="Goal/goal-1" key="Goal-goal-1" name="Goal 1 Example"/>
 <artifact id="Condition/hc1" key="Condition-hc1" name="Hc1 Example"/>
+<artifact id="Observation/head-circumference" key="Observation-head-circumference" name="Head Circumference Example"/>
 <artifact id="Observation/heart-rate" key="Observation-heart-rate" name="Heart Rate Example"/>
 <artifact id="Observation/height" key="Observation-height" name="Height Example"/>
 <artifact id="Observation/hemoglobin" key="Observation-hemoglobin" name="Hemoglobin Example"/>
@@ -105,10 +106,10 @@
 <artifact id="StructureDefinition/us-core-allergyintolerance" key="StructureDefinition-us-core-allergyintolerance" name="US Core AllergyIntolerance Profile"/>
 <artifact id="StructureDefinition/us-core-bmi" key="StructureDefinition-us-core-bmi" name="US Core BMI Profile"/>
 <artifact id="StructureDefinition/us-core-birthsex" key="StructureDefinition-us-core-birthsex" name="US Core Birth Sex Extension"/>
-<artifact id="StructureDefinition/us-core-bloodpressure" key="StructureDefinition-us-core-bloodpressure" name="US Core Blood Pressure Profile"/>
-<artifact id="StructureDefinition/us-core-bodyheight" key="StructureDefinition-us-core-bodyheight" name="US Core Body Height Profile"/>
-<artifact id="StructureDefinition/us-core-bodytemperature" key="StructureDefinition-us-core-bodytemperature" name="US Core Body Temperature Profile"/>
-<artifact id="StructureDefinition/us-core-bodyweight" key="StructureDefinition-us-core-bodyweight" name="US Core Body Weight Profile"/>
+<artifact id="StructureDefinition/us-core-blood-pressure" key="StructureDefinition-us-core-blood-pressure" name="US Core Blood Pressure Profile"/>
+<artifact id="StructureDefinition/us-core-body-height" key="StructureDefinition-us-core-body-height" name="US Core Body Height Profile"/>
+<artifact id="StructureDefinition/us-core-body-temperature" key="StructureDefinition-us-core-body-temperature" name="US Core Body Temperature Profile"/>
+<artifact id="StructureDefinition/us-core-body-weight" key="StructureDefinition-us-core-body-weight" name="US Core Body Weight Profile"/>
 <artifact id="CodeSystem/careplan-category" key="CodeSystem-careplan-category" name="US Core CarePlan Category Extension Codes"/>
 <artifact id="StructureDefinition/us-core-careplan" key="StructureDefinition-us-core-careplan" name="US Core CarePlan Profile"/>
 <artifact id="StructureDefinition/us-core-careteam" key="StructureDefinition-us-core-careteam" name="US Core CareTeam Profile"/>
@@ -133,7 +134,8 @@
 <artifact id="StructureDefinition/us-core-ethnicity" key="StructureDefinition-us-core-ethnicity" name="US Core Ethnicity Extension"/>
 <artifact id="OperationDefinition/docref" key="OperationDefinition-docref" name="US Core Fetch DocumentReferences"/>
 <artifact id="StructureDefinition/us-core-goal" key="StructureDefinition-us-core-goal" name="US Core Goal Profile"/>
-<artifact id="StructureDefinition/us-core-heartrate" key="StructureDefinition-us-core-heartrate" name="US Core Heart Rate Profile"/>
+<artifact id="StructureDefinition/us-core-head-circumference" key="StructureDefinition-us-core-head-circumference" name="US Core Head Circumference Profile"/>
+<artifact id="StructureDefinition/us-core-heart-rate" key="StructureDefinition-us-core-heart-rate" name="US Core Heart Rate Profile"/>
 <artifact id="ValueSet/us-core-procedure-icd10pcs" key="ValueSet-us-core-procedure-icd10pcs" name="US Core ICD-10-PCS Procedure Codes"/>
 <artifact id="StructureDefinition/us-core-immunization" key="StructureDefinition-us-core-immunization" name="US Core Immunization Profile"/>
 <artifact id="StructureDefinition/us-core-implantable-device" key="StructureDefinition-us-core-implantable-device" name="US Core Implantable Device Profile"/>
@@ -141,7 +143,6 @@
 <artifact id="StructureDefinition/us-core-location" key="StructureDefinition-us-core-location" name="US Core Location Profile"/>
 <artifact id="StructureDefinition/us-core-medication" key="StructureDefinition-us-core-medication" name="US Core Medication Profile"/>
 <artifact id="StructureDefinition/us-core-medicationrequest" key="StructureDefinition-us-core-medicationrequest" name="US Core MedicationRequest Profile"/>
-<artifact id="ConceptMap/ndc-cvx" key="ConceptMap-ndc-cvx" name="US Core NDC to CVX Code Mapping"/>
 <artifact id="ValueSet/us-core-narrative-status" key="ValueSet-us-core-narrative-status" name="US Core Narrative Status"/>
 <artifact id="ValueSet/us-core-observation-value-codes" key="ValueSet-us-core-observation-value-codes" name="US Core Observation Value Codes (SNOMED-CT)"/>
 <artifact id="StructureDefinition/us-core-organization" key="StructureDefinition-us-core-organization" name="US Core Organization Profile"/>
@@ -159,15 +160,13 @@
 <artifact id="ValueSet/us-core-provider-role" key="ValueSet-us-core-provider-role" name="US Core Provider Role (NUCC)"/>
 <artifact id="StructureDefinition/us-core-pulse-oximetry" key="StructureDefinition-us-core-pulse-oximetry" name="US Core Pulse Oximetry Profile"/>
 <artifact id="StructureDefinition/us-core-race" key="StructureDefinition-us-core-race" name="US Core Race Extension"/>
-<artifact id="StructureDefinition/us-core-respiratoryrate" key="StructureDefinition-us-core-respiratoryrate" name="US Core Respiratory Rate Profile"/>
+<artifact id="StructureDefinition/us-core-respiratory-rate" key="StructureDefinition-us-core-respiratory-rate" name="US Core Respiratory Rate Profile"/>
 <artifact id="CapabilityStatement/us-core-server" key="CapabilityStatement-us-core-server" name="US Core Server CapabilityStatement"/>
 <artifact id="ValueSet/us-core-observation-smokingstatus-max" key="ValueSet-us-core-observation-smokingstatus-max" name="US Core Smoking Status Max-Binding"/>
 <artifact id="ValueSet/us-core-smoking-status-observation-codes" key="ValueSet-us-core-smoking-status-observation-codes" name="US Core Smoking Status Observation Codes"/>
 <artifact id="StructureDefinition/us-core-smokingstatus" key="StructureDefinition-us-core-smokingstatus" name="US Core Smoking Status Observation Profile"/>
-<artifact id="ValueSet/us-core-observation-smokingstatus" key="ValueSet-us-core-observation-smokingstatus" name="US Core Smoking Status Preferred"/>
 <artifact id="ValueSet/us-core-observation-smoking-status-status" key="ValueSet-us-core-observation-smoking-status-status" name="US Core Status for Smoking Status Observation"/>
-<artifact id="ValueSet/us-core-ndc-vaccine-codes" key="ValueSet-us-core-ndc-vaccine-codes" name="US Core Vaccine National Drug Codes (NDC)"/>
-<artifact id="StructureDefinition/us-core-vitalsigns" key="StructureDefinition-us-core-vitalsigns" name="US Core Vital Signs Profile"/>
+<artifact id="StructureDefinition/us-core-vital-signs" key="StructureDefinition-us-core-vital-signs" name="US Core Vital Signs Profile"/>
 <artifact id="ValueSet/us-core-vital-signs" key="ValueSet-us-core-vital-signs" name="US Core Vital Signs ValueSet"/>
 <artifact deprecated="true" id="ImplementationGuide/hl7.fhir.us.core" key="ImplementationGuide-hl7.fhir.us.core" name="USCore"/>
 <artifact deprecated="true" id="ValueSet/us-core-allergy-substance" key="ValueSet-us-core-allergy-substance" name="USCoreAllergySubstance"/>
@@ -224,6 +223,7 @@
 <artifact id="SearchParameter/us-core-medicationrequest-intent" key="SearchParameter-us-core-medicationrequest-intent" name="USCoreMedicationrequestIntent"/>
 <artifact id="SearchParameter/us-core-medicationrequest-patient" key="SearchParameter-us-core-medicationrequest-patient" name="USCoreMedicationrequestPatient"/>
 <artifact id="SearchParameter/us-core-medicationrequest-status" key="SearchParameter-us-core-medicationrequest-status" name="USCoreMedicationrequestStatus"/>
+<artifact deprecated="true" id="ConceptMap/ndc-cvx" key="ConceptMap-ndc-cvx" name="USCoreNDCtoCVXCodeMapping"/>
 <artifact id="SearchParameter/us-core-observation-category" key="SearchParameter-us-core-observation-category" name="USCoreObservationCategory"/>
 <artifact id="SearchParameter/us-core-observation-code" key="SearchParameter-us-core-observation-code" name="USCoreObservationCode"/>
 <artifact id="SearchParameter/us-core-observation-date" key="SearchParameter-us-core-observation-date" name="USCoreObservationDate"/>
@@ -249,6 +249,7 @@
 <artifact deprecated="true" id="ValueSet/us-core-provider-specialty" key="ValueSet-us-core-provider-specialty" name="USCoreProviderSpecialityNucc"/>
 <artifact id="SearchParameter/us-core-race" key="SearchParameter-us-core-race" name="USCoreRace"/>
 <artifact deprecated="true" id="ValueSet/us-core-vaccines-cvx" key="ValueSet-us-core-vaccines-cvx" name="USCoreVaccineAdministeredValueSetCvx"/>
+<artifact deprecated="true" id="ValueSet/us-core-ndc-vaccine-codes" key="ValueSet-us-core-ndc-vaccine-codes" name="USCoreVaccineNationalDrugCode"/>
 <artifact id="ValueSet/us-core-usps-state" key="ValueSet-us-core-usps-state" name="USPS Two Letter Alphabetic Codes"/>
 <artifact id="Device/udi-1" key="Device-udi-1" name="Udi 1 Example"/>
 <artifact id="DiagnosticReport/urinalysis" key="DiagnosticReport-urinalysis" name="Urinalysis Example"/>
@@ -269,6 +270,7 @@
 <artifact id="Observation/urine-sediment" key="Observation-urine-sediment" name="Urine Sediment Example"/>
 <artifact id="Observation/urine-wbcs" key="Observation-urine-wbcs" name="Urine Wbcs Example"/>
 <artifact id="Observation/urobilinogen" key="Observation-urobilinogen" name="Urobilinogen Example"/>
+<artifact deprecated="true" id="ValueSet/us-core-observation-smokingstatus" key="ValueSet-us-core-observation-smokingstatus" name="UsCoreSmokingStatusPreferred"/>
 <artifact id="Medication/uscore-med1" key="Medication-uscore-med1" name="Uscore Med1 Example"/>
 <artifact id="Medication/uscore-med2" key="Medication-uscore-med2" name="Uscore Med2 Example"/>
 <artifact id="MedicationRequest/uscore-mo1" key="MedicationRequest-uscore-mo1" name="Uscore Mo1 Example"/>
@@ -276,7 +278,7 @@
 <artifact id="Bundle/uscore-mo3" key="Bundle-uscore-mo3" name="Uscore Mo3 Example"/>
 <artifact id="Observation/usg" key="Observation-usg" name="Usg Example"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
-<artifact id="Observation/vitals-panel" key="Observation-vitals-panel" name="Vitals Panel Example"/>
+<artifact deprecated="true" id="Observation/vitals-panel" key="Observation-vitals-panel" name="Vitals-panel"/>
 <artifact id="Observation/weight" key="Observation-weight" name="Weight Example"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>

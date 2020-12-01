@@ -5,6 +5,7 @@ WARNING: The jira specification file appears to be out of date with the versions
 WARNING: Procedure/defib-implant: Procedure.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code because the value set or code system is not known to the validator]
 WARNING: Encounter/example-1: Encounter.type[0]: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or code system is not known to the validator]
 WARNING: Encounter/1036: Encounter.type[0]: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or code system is not known to the validator]
+WARNING: ValueSet.where(id = 'us-core-procedure-code'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 # Circular US Core Warnings since this is US Core:
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
