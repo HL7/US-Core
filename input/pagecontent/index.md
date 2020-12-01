@@ -57,7 +57,7 @@
 - [ ] QA
      - [ ] review applied trackers
      - [ ] errors
-       - [ ] example name and defintion error [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Adding.20Description.20for.20Examples.20to.20ImplementationGuide.20-.20how/near/217444410)
+       - [X] example name and definition error [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Adding.20Description.20for.20Examples.20to.20ImplementationGuide.20-.20how/near/217444410)
 
             The extension http://hl7.org/fhir/StructureDefinition/instance-name is unknown, and not allowed here
             error	URL value 'http://hl7.org/fhir/StructureDefinition/instance-name' does not resolve

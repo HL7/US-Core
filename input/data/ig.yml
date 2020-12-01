@@ -1686,6 +1686,11 @@ definition:
         name: Weight Example
         reference:
             reference: Observation/weight
+dependsOn:
+-   id: vsac
+    packageId: us.nlm.vsac
+    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
+    version: 0.3.0
 description: 'The US Core Implementation Guide is based on FHIR Version R4 and defines
     the minimum conformance requirements for accessing patient data. The Argonaut
     pilot implementations, ONC 2015 Edition Common Clinical Data Set (CCDS), and ONC
