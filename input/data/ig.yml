@@ -67,7 +67,7 @@ definition:
     -   code: copyrightyear
         value: 2020+
     -   code: releaselabel
-        value: CI Build
+        value: ballot
     -   code: path-resource
         value: input/resources
     -   code: path-resource
@@ -1351,7 +1351,7 @@ definition:
             reference: Condition/hc1
     -   description: This is a head circumference example for the *US Core Head Circumference
             Profile*.
-        exampleBoolean: true
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference
         name: Head Circumference Example
         reference:
             reference: Observation/head-circumference
