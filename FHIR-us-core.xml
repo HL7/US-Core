@@ -136,7 +136,6 @@
 <artifact id="StructureDefinition/us-core-goal" key="StructureDefinition-us-core-goal" name="US Core Goal Profile"/>
 <artifact id="StructureDefinition/us-core-head-circumference" key="StructureDefinition-us-core-head-circumference" name="US Core Head Circumference Profile"/>
 <artifact id="StructureDefinition/us-core-heart-rate" key="StructureDefinition-us-core-heart-rate" name="US Core Heart Rate Profile"/>
-<artifact id="ValueSet/us-core-procedure-icd10pcs" key="ValueSet-us-core-procedure-icd10pcs" name="US Core ICD-10-PCS Procedure Codes"/>
 <artifact id="StructureDefinition/us-core-immunization" key="StructureDefinition-us-core-immunization" name="US Core Immunization Profile"/>
 <artifact id="StructureDefinition/us-core-implantable-device" key="StructureDefinition-us-core-implantable-device" name="US Core Implantable Device Profile"/>
 <artifact id="StructureDefinition/us-core-observation-lab" key="StructureDefinition-us-core-observation-lab" name="US Core Laboratory Result Observation Profile"/>
@@ -209,6 +208,7 @@
 <artifact id="SearchParameter/us-core-goal-lifecycle-status" key="SearchParameter-us-core-goal-lifecycle-status" name="USCoreGoalLifecycleStatus"/>
 <artifact id="SearchParameter/us-core-goal-patient" key="SearchParameter-us-core-goal-patient" name="USCoreGoalPatient"/>
 <artifact id="SearchParameter/us-core-goal-target-date" key="SearchParameter-us-core-goal-target-date" name="USCoreGoalTargetDate"/>
+<artifact deprecated="true" id="ValueSet/us-core-procedure-icd10pcs" key="ValueSet-us-core-procedure-icd10pcs" name="USCoreIcd_10PcsProcedureCodes"/>
 <artifact id="SearchParameter/us-core-immunization-date" key="SearchParameter-us-core-immunization-date" name="USCoreImmunizationDate"/>
 <artifact id="SearchParameter/us-core-immunization-patient" key="SearchParameter-us-core-immunization-patient" name="USCoreImmunizationPatient"/>
 <artifact id="SearchParameter/us-core-immunization-status" key="SearchParameter-us-core-immunization-status" name="USCoreImmunizationStatus"/>

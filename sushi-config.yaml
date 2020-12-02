@@ -27,16 +27,16 @@ dependencies:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
     version: 0.3.0
     id: vsac
-parameters:
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
     - input/resources
     - fsh-generated/resources
   path-pages:
     - input/pagecontent
-    - input/intros
-    - input/notes
-    - input/summaries
+    - input/intro-notes
     - fsh-generated/includes
+    #- input/summaries
+  path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
   active-tables: 'false'
   apply-contact: 'true'
   apply-jurisdiction: 'true'
@@ -44,12 +44,12 @@ parameters:
   apply-version: 'true'
   show-inherited-invariants: 'false'
   usage-stats-opt-out: 'true'
-  excludexml: 'true'
+  excludexml: 'false'
   excludejsn: 'false'
   excludettl: 'true'
   excludemap: 'true'
   excludeexample: 'true'
-  generate:
+  generate: #what does this do - todo: remove and see
     - xml
     - json
 copyrightyear: '2020+'

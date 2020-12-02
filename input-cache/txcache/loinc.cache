@@ -371,8 +371,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:c332c010-fb01-4f45-8729-ca58aa98ffef",
-    "timestamp" : "2020-12-01T17:52:52.005Z",
+    "identifier" : "urn:uuid:454ed213-e097-47ab-9308-0920017fb9dd",
+    "timestamp" : "2020-12-02T20:33:35.209Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -486,8 +486,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:b3eaf52f-9c3f-4fa9-b9e5-78af3f1f9756",
-    "timestamp" : "2020-12-01T17:52:52.146Z",
+    "identifier" : "urn:uuid:38f502f5-11bf-4545-a201-ca4bce4cc8f3",
+    "timestamp" : "2020-12-02T20:33:35.365Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -552,8 +552,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:a18292c7-3a3e-4eae-af44-d35926ab61ca",
-    "timestamp" : "2020-12-01T17:52:52.458Z",
+    "identifier" : "urn:uuid:d58a3a27-bdd4-4e0c-b408-41fa708fd647",
+    "timestamp" : "2020-12-02T13:25:25.440Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5588,8 +5588,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:8c1db3dc-f189-405f-b0c0-d91ee4f4a0ff",
-    "timestamp" : "2020-12-01T17:52:52.849Z",
+    "identifier" : "urn:uuid:925ce95f-16be-44e6-8c00-6eff84ae3a17",
+    "timestamp" : "2020-12-02T13:25:33.940Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5640,8 +5640,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:6c441ad2-965a-4152-af3d-83d38ec8579f",
-    "timestamp" : "2020-12-01T17:53:23.286Z",
+    "identifier" : "urn:uuid:e7dbd8cc-178e-475e-a2a4-4991af72f7e7",
+    "timestamp" : "2020-12-02T13:23:56.675Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5709,8 +5709,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:13a57240-7b25-4192-9d4e-5d507fe82916",
-    "timestamp" : "2020-12-01T17:55:49.943Z",
+    "identifier" : "urn:uuid:63726823-b430-4547-a185-e292005c3e5c",
+    "timestamp" : "2020-12-02T13:25:25.315Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5765,8 +5765,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:f46a6a96-6191-42a5-b1f6-2d918aa08e16",
-    "timestamp" : "2020-12-01T17:55:50.349Z",
+    "identifier" : "urn:uuid:0236a7ec-d9bb-4a07-9bfd-46ccea3fbe6a",
+    "timestamp" : "2020-12-02T13:25:25.362Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -10806,8 +10806,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:ab50a38f-63de-45c8-9e21-1455ba726044",
-    "timestamp" : "2020-12-01T17:55:51.224Z",
+    "identifier" : "urn:uuid:c9414977-6f7f-4a58-b7f0-0c2086cb9c90",
+    "timestamp" : "2020-12-02T13:25:25.487Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -18475,16 +18475,44 @@ v: {
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
 v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "CodeSystem uri '' is unknown (from http://tx.fhir.org/r4)"
+  "display" : "Body height",
+  "severity" : null,
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "8306-3",
   "display" : "Body height --lying"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "59576-9"
+      },
+      {
+        "code" : "8289-1"
+      },
+      {
+        "code" : "77606-2"
+      },
+      {
+        "code" : "59408-5"
+      },
+      {
+        "code" : "3150-0"
+      },
+      {
+        "code" : "3151-8"
+      }]
+    },
+    {
+      "valueSet" : ["http://hl7.org/fhir/ValueSet/observation-vitalsignresult"]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
 v: {
   "display" : "Body height --lying",
   "severity" : null,
@@ -18493,11 +18521,10 @@ v: {
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
-  "code" : "8302-2",
-  "display" : "Body height"
+  "code" : "8306-3"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
-  "display" : "Body height",
+  "display" : "Body height --lying",
   "severity" : null,
   "error" : ""
 }
@@ -19665,8 +19692,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:dfb1e0af-4f5d-4519-9436-e70797539da5",
-    "timestamp" : "2020-12-01T18:00:04.818Z",
+    "identifier" : "urn:uuid:531b9b40-f9db-4c07-8762-cf2f5bc3dc68",
+    "timestamp" : "2020-12-02T20:42:56.925Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -24708,8 +24735,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9f8b0559-f824-4796-ae18-9c97a65614d3",
-    "timestamp" : "2020-12-01T18:00:57.756Z",
+    "identifier" : "urn:uuid:6934c16d-3ca7-477b-951f-970ff4ad67f5",
+    "timestamp" : "2020-12-02T20:44:17.878Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -24773,8 +24800,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:d725b402-45e3-46db-a80a-65528fff9d55",
-    "timestamp" : "2020-12-01T18:01:00.834Z",
+    "identifier" : "urn:uuid:8de0f7ac-786a-4868-8a2f-aa917713ca67",
+    "timestamp" : "2020-12-02T20:44:25.612Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -24820,8 +24847,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:de348f2b-9652-4f3a-94d3-a136caa47fb9",
-    "timestamp" : "2020-12-01T18:01:06.021Z",
+    "identifier" : "urn:uuid:e9201947-b1ff-4ce3-903e-9150682c9ff9",
+    "timestamp" : "2020-12-02T20:44:34.596Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -24857,8 +24884,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:89abcaca-d712-4d73-8ca1-5f8507926c29",
-    "timestamp" : "2020-12-01T18:01:13.370Z",
+    "identifier" : "urn:uuid:b0eb5842-f152-46fd-86be-6e1cc9d602ae",
+    "timestamp" : "2020-12-02T20:44:45.534Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -29903,8 +29930,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:2d0b44eb-d77d-4d2f-a4ee-1e0c1b17cbbe",
-    "timestamp" : "2020-12-01T18:02:03.584Z",
+    "identifier" : "urn:uuid:0c3273e7-438b-430c-9904-203df8dbc6cd",
+    "timestamp" : "2020-12-02T20:45:35.940Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -30000,8 +30027,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:a28faf45-4548-406a-a444-57af233e419e",
-    "timestamp" : "2020-12-01T18:02:03.865Z",
+    "identifier" : "urn:uuid:f297a3ab-daf0-4a62-bea1-90bf5aa969c8",
+    "timestamp" : "2020-12-02T20:45:36.190Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

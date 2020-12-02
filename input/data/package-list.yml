@@ -232,6 +232,7 @@ list:
 
       1. Since CarePlan.text.div is min== 1 add must support == true element to be consisten with US Core design ([FHIR-29765](https://jira.hl7.org/browse/FHIR-29765)) [See Change Here](StructureDefinition-us-core-careplan.html)
 
+      1. Remove unused US Core ICD-10-PCS Procedure Codes valueset ([FHIR-29822](https://jira.hl7.org/browse/FHIR-29822))
 
     path: 'http://hl7.org/fhir/us/core/STU3.2'
     status: trial-use

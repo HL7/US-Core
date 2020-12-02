@@ -75,13 +75,11 @@ definition:
     -   code: path-pages
         value: input/pagecontent
     -   code: path-pages
-        value: input/intros
-    -   code: path-pages
-        value: input/notes
-    -   code: path-pages
-        value: input/summaries
+        value: input/intro-notes
     -   code: path-pages
         value: fsh-generated/includes
+    -   code: path-expansion-params
+        value: ../../input/_resources/exp-params.json
     -   code: active-tables
         value: 'false'
     -   code: apply-contact
@@ -97,7 +95,7 @@ definition:
     -   code: usage-stats-opt-out
         value: 'true'
     -   code: excludexml
-        value: 'true'
+        value: 'false'
     -   code: excludejsn
         value: 'false'
     -   code: excludettl
