@@ -144,7 +144,7 @@
 [OperationOutcome]: {{site.data.fhir.path}}operationoutcome.html
 [Organization]: {{site.data.fhir.path}}organization.html
 [Oxygen saturation]: {{site.data.fhir.path}}oxygensat.html
-[Laboratory Report Narrative (11502-2)]: https://loinc.org/11502-2.html 
+[Pathology Report Narrative (11526-1)]: https://loinc.org/11526-1.html 
 [Pathology (LP7839-6)]: https://loinc.org/LP7839-6
 [Patient]: {{site.data.fhir.path}}patient.html
 [PractitionerRole]: {{site.data.fhir.path}}practitionerrole.html
