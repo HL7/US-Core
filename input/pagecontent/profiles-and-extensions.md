@@ -29,7 +29,6 @@ The following Profiles and have been defined for this implementation guide.
 - [US Core PractitionerRole Profile]
 - [US Core Procedure Profile]
 - [US Core Provenance Profile]
-- [US Core Pulse Oximetry Profile]
 - [US Core Smoking Status Observation Profile]
 - {:.new-content #FHIR-28391}[US Core Vital Signs Profile]
   - {:.new-content #FHIR-28391}[US Core Blood Pressure Profile]
