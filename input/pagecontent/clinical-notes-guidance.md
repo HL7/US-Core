@@ -5,13 +5,17 @@
 
 Clinical notes are a key component to communicate the current status of a patient. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing and even handwritten notes by a providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems.
 
-Specifically, this implementation guide defines the exchange of the following five "Common Clinical Notes" which systems **SHALL** support.
+Specifically, this implementation guide defines the exchange of the following eight "Common Clinical Notes" which systems **SHALL** support.
 
 1. [Consultation Note (11488-4)]
 1. [Discharge Summary (18842-5)]
 1. [History & Physical Note (34117-2)]
 1. [Procedures Note (28570-0)]
 1. [Progress Note (11506-3)]
+1. {:.new-content #FHIR-29824}[Imaging Narrative (18748-4)]
+1. {:.new-content #FHIR-29824}[Laboratory Report Narrative (11502-2)]
+1. {:.new-content #FHIR-29824}[Pathology Report Narrative (11526-1)]
+ 
 
 and three DiagnosticReport categories which systems **SHALL** support.
 
@@ -84,7 +88,7 @@ Note that not all scanned information stored through DocumentReference will be e
 
 #### Support Requirements
 
-This guide requires systems implement the [US Core DocumentReference Profile] and to support a *minimum* of all five Common Clinical Notes listed above. Systems and may extend there capabilities to the full [US Core DocumentReference Type Value Set].
+This guide requires systems implement the [US Core DocumentReference Profile] and to support a *minimum* of all eight Common Clinical Notes listed above. Systems and may extend there capabilities to the full [US Core DocumentReference Type Value Set]. {:.new-content #FHIR-29824} This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
 
 This guide requires systems implement the [US Core DiagnosticReport Profile for Report and Note exchange] and to support a *minimum* of the three report categories:
 
@@ -92,7 +96,14 @@ This guide requires systems implement the [US Core DiagnosticReport Profile for 
 * [Pathology (LP7839-6)]
 * [Radiology (LP29684-5)]
 
-Other categories may be supported as well.  
+Other categories may be supported as well. {:.new-content #FHIR-29824} The servers that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
+
+{:.new-content #FHIR-29824} The following **SHOULD** be exposed via DiagnosticReport
+* Imaging Narrative
+* Laboratory Report Narrative
+* Pathology Report Narrative
+* Procedure Note
+
 
 A method for discovery of the types of notes and reports that a server supports is described in the [section below](#using-expand).
 
@@ -190,28 +201,6 @@ A record of a clinical assessment performed to determine what problem(s) may aff
 
 However, in existing EHRs, the clinical impression is often contained with in a broader note construct and the Argonauts didn't find the boundary between a clinical note and ClinicalImpression clear enough to leverage the resources to share clinical notes.
 
-### Future Work
-
-#### ONC 2019 NPRM
- The Office of the National Coordinator (ONC) published a new [Notice of Proposed Rulemaking](https://www.healthit.gov/topic/laws-regulation-and-policy/notice-proposed-rulemaking-improve-interoperability-health) on March 4, 2019 which required these Clinical Notes:
-* Consultation Note
-* Discharge Summary Note
-* History & Physical
-* Imaging Narrative
-* Laboratory Report Narrative
-* Pathology Report Narrative
-* Procedure Note
-* Progress Note
-
-All of these clinical notes **SHALL** be exposed via DocumentReference. This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
-
-The following **SHOULD** be exposed via DiagnosticReport
-* Imaging Narrative
-* Laboratory Report Narrative
-* Pathology Report Narrative
-* Procedure Note
-
-The servers that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.     
 
 ---
 footnotes:

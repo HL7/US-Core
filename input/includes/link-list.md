@@ -110,8 +110,10 @@
 [IHE Healthcare Provider Directory]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf
 [IHE MHD]: http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_MHD.pdf
 [IHE XDS]: https://wiki.ihe.net/index.php/Cross-Enterprise_Document_Sharing
+[Imaging Narrative (18748-4)]: https://loinc.org/18748-4.html 
 [Immunization]:  {{site.data.fhir.path}}immunization.html
 [Implantable device list]: https://www.healthit.gov/test-method/implantable-device-list
+[Laboratory Report Narrative (11502-2)]: https://loinc.org/11502-2.html 
 [LOINC]: http://loinc.org
 [Location]:  {{site.data.fhir.path}}location.html
 [Medication Clinical Drug (RxNorm)]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion
@@ -142,6 +144,7 @@
 [OperationOutcome]: {{site.data.fhir.path}}operationoutcome.html
 [Organization]: {{site.data.fhir.path}}organization.html
 [Oxygen saturation]: {{site.data.fhir.path}}oxygensat.html
+[Laboratory Report Narrative (11502-2)]: https://loinc.org/11502-2.html 
 [Pathology (LP7839-6)]: https://loinc.org/LP7839-6
 [Patient]: {{site.data.fhir.path}}patient.html
 [PractitionerRole]: {{site.data.fhir.path}}practitionerrole.html
