@@ -75,9 +75,9 @@
 
           - [ ] Immunization Example: imm-1.json NDC/CVX codes [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core) WIP per GG should be fixed.
           - [ ] Patient Examples: patient-child-example.json,patient-infant-example.json, patient-example.json and ValueSet-omb-race-category.json CDCREC codes and code system value ( OID vs ? defined in package or by VSAC ????) [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/cdcrec.20code.20errors.20in.20US.20Core) per 12/2 FMG won't be able to sort out by ballot.
-             - [ ] Note to balloters that CDCREC code system using VSAC is an open issue
+             - [X] Note to balloters that CDCREC code system using VSAC is an open issue
           - [ ] Pulse Ox Example: observation-satO2-fiO2 [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.233-.20nasty.20profiling.20error) per 12/2 FMG won't be able to sort out by ballot.
-             - [ ] make a note that is technical not conformant with the base fhir profile until existing tracker gets fixed.
+             - [X] make an STU note that is technically not conformant with the base FHIR vital profile.
         - [ ] Procedure Example:  rehab.json. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20core.20procedure.20example.20error) per GG will get fixed.
         - [X] CareTeam Example: careteam-example.json: US Ed Snomed Errors [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20ed.20Snomed.20for.20US.20Core)
         - [X] valueset-simple-language.xml "Error from server: Language valuesets cannot be expanded as they are based on a grammar" this error is still extant from prior version of US Core and has yet to be resolved. per 12/2 FMG per GG won't ok to get variance on this one.
