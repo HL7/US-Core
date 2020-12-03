@@ -261,18 +261,6 @@ INFORMATION: ValueSet/us-core-provider-role: ValueSet: Validate resource against
 INFORMATION: ValueSet/us-core-smoking-status-observation-codes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/us-core-usps-state: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/us-core-vital-signs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-
-
-
-
-
-
-
-
-
-
-
-
 # Code not from base FHIR preferred valueset since extensibly bound to NUCC for US Core
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[0].resource.ofType(PractitionerRole).specialty[0]: None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-practice-codes (http://hl7.org/fhir/ValueSet/c80-practice-codes), and a code is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
 # Examples demonstrate use of additional identifiers
@@ -287,17 +275,17 @@ INFORMATION: Practitioner/practitioner-2: Practitioner.identifier[0]: This eleme
 INFORMATION: Practitioner/practitioner-2: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 INFORMATION: Organization/saint-luke-w-endpoint: Organization.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 INFORMATION: Organization/saint-luke-w-endpoint: Organization.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
-#CodeSystem OID is taken from the base FHIR valueset http://hl7.org/fhir/ValueSet/endpoint-payload-type, IHE CodeSystem documented in base spec is not recognized by validator possibly due to IP issues.
+# Code System OID is taken from the base FHIR valueset http://hl7.org/fhir/ValueSet/endpoint-payload-type, IHE CodeSystem documented in base spec is not recognized by validator possibly due to IP issues.
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[2].resource.ofType(Endpoint).payloadType[0].coding[0]: Code System URI 'urn:oid:1.3.6.1.4.1.19376.1.2.3' is unknown so the code cannot be validated
 INFORMATION: DocumentReference/episode-summary: DocumentReference.content[0].format: Code System URI 'urn:oid:1.3.6.1.4.1.19376.1.2.3' is unknown so the code cannot be validated
-#Code System not recognized due to IP issues
+# Code System not recognized due to IP issues
 INFORMATION: Procedure/defib-implant: Procedure.code.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
 INFORMATION: Encounter/example-1: Encounter.type[0].coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
-#The URI urn:iso:std:iso:11073:10101 identifies the MDC code system. as specified here: http://hl7.org/fhir/R4/mdc.html
+#T he URI urn:iso:std:iso:11073:10101 identifies the MDC code system. as specified here: http://hl7.org/fhir/R4/mdc.html
 INFORMATION: Observation/satO2-fiO2: Observation.code.coding[2]: Code System URI 'urn:iso:std:iso:11073:10101' is unknown so the code cannot be validated
 INFORMATION: Observation/satO2-fiO2: Observation.code.coding[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
 INFORMATION: Organization/saint-luke-w-endpoint: Organization.contained.ofType(Endpoint).payloadType[0].coding[0]: Code System URI 'urn:oid:1.3.6.1.4.1.19376.1.2.3' is unknown so the code cannot be validated
-#Examples provided in Bundle (e.g. PractitionerRole_Practitioner_Endpoint_Bundle_Example, Allergyintolerance Provenance Example)
+# Examples provided in Bundle (e.g. PractitionerRole_Practitioner_Endpoint_Bundle_Example, Allergyintolerance Provenance Example)
 INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole'): The Implementation Guide contains no explicitly linked examples for this profile
 INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance'): The Implementation Guide contains no explicitly linked examples for this profile
 # Using standard extension for CS
