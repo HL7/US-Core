@@ -38,7 +38,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
    * Although both are marked as must support, servers are not required to support both a code and a reference, but they **SHALL** support *at least one* of these elements.
    * The client application **SHALL** support both elements.
    * If `Encounter.reasonReference` references an Observation, it **SHOULD** conform to a US Core Observation if applicable. For example, a laboratory result **SHOULD** conform to the [US Core Laboratory Result Observation Profile].
-* {:.new-content #FHIR-28392}This profile supports *where the encounter occurred*.  The location address can be represented by either by the Location referenced by `Encounter.location.location` or indirectly through the Organization referenced by `Encounter.serviceProvider`.
+* {:.new-content #FHIR-28392}This profile supports *where the encounter occurred*.  The location address can be represented by the Location referenced by `Encounter.location.location` or indirectly through the Organization referenced by `Encounter.serviceProvider`.
   * Although both are marked as must support, servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
   * The client application **SHALL** support both elements.
   * If using `Encounter.location.location` it **SHOULD** conform to US Core Location.  However, as a result of implementation feedback, it **MAY**  reference the base FHIR Location resource.  See this guidance on [Referencing US Core Profiles].

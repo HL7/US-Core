@@ -8,7 +8,9 @@ This page defines the rules for interpreting profile elements and subelements la
 
 ### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
 
-Each profile provides a several different formal views of all the must support elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".  In the "Differential Table" view all the must support elements defined for the profile are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is illustrated in figure 1.
+Each profile provides a several different formal views of all the must support elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".
+
+The elements labeled *Must Support* in the "Differential Table" view are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is illustrated in figure 1.
 
   {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
 
@@ -24,7 +26,7 @@ In the "Snapshot Table" view in Figure 2, all the must support elements defined 
 
 To claim conformance to a US Core Profile US Core Servers **SHALL**:
 
-  - Be able to populate all profile data elements that mandatory - in other words, have a minimum cardinality >= 1 -  and/or flagged as *Must Support* as defined by that profile’s StructureDefinition.
+  - Be able to populate all profile data elements that are mandatory - in other words, have a minimum cardinality >= 1 -  and/or flagged as *Must Support* as defined by that profile’s StructureDefinition.
   - Conform to the [US Core Server Capability Statement] expectations for that profile’s type.
 
 ### Mandatory Elements
@@ -52,7 +54,7 @@ In addition the guidance provided by [FHIR Terminology], Coded elements (`Codeab
 
 ##### Required bindings Coded Elements
 
-[Required Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used. For `CodeableConcept` using only text is *not* valid, but multiple codings (translations) are permitted as is discussed below.
+[Required binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used. For `CodeableConcept` using only text is *not* valid, but multiple codings (translations) are permitted as is discussed below.
 
 For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has a required binding to the AllergyIntoleranceClinicalStatusCodes ValueSet. When claiming conformance to this profile:
 
@@ -135,7 +137,7 @@ Example of translation of CVX vaccine code to NDC code.
 
 ##### Defined Pattern Elements
 
-The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern[x]] which is used almost exclusively for the CodeableConcept and Coding  datatypes. It specifies "a value that the value in the instance **SHALL** follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example."  If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* element values that the server **SHALL** be capable of providing.
+The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern] which is used almost exclusively for the CodeableConcept and Coding  datatypes. If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* element values that the server **SHALL** be capable of providing.
 
 For example the [US Core DiagnosticReport Profile for Laboratory Results Reporting] category element is defined with a pattern requiring fixed values in `DiagnosticReport.category.coding.system`  and `DiagnosticReport.category.coding.code` for a Coding element. When claiming conformance to this profile:
 
@@ -165,7 +167,7 @@ Complex element are composed of primitive and/or other complex elements.  This p
 
 For any complex element marked as must support, The server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is mark as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
 
-For example, the [US Core Laboratory Result Observation Profile] presentedForm element is labeled must support and has no must support sub-elements. When claiming conformance to this profile:
+For example, the [US Core DiagnosticReport Profile for Report and Note exchange] presentedForm element is labeled must support and has no must support sub-elements. When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in `DiagnosticReport.presentedForm` sub-element.
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.presentedForm`.
@@ -178,6 +180,8 @@ For example, the [US Core Patient Profile] name element is labeled must support 
 - US Core Requestors **SHALL** be capable of processing the value in value in `Patient.name.family` and `Patient.name.given`.
 
   {% include img.html img="Must_Support_Patient_name.png" caption="Figure 9: US Core Patient.name" %}
+
+Systems can support the other elements, but this is not a requirement of US Core. The [U.S. Core Data for Interoperability (USCDI) v1] requires systems support `suffix`.
 
 #### Must Support - Resource References
 
@@ -232,9 +236,9 @@ Systems can support the other elements, but this is not a requirement of US Core
 
 There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the must support requirement. For Example:
 
-- [US Core Medication Request Profile] - The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or other resource.
-- [US Core Encounter Profile] - Although both are marked as must support, servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
+- [US Core Medication Request Profile] - The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or other resource. Although both are marked as must support, servers are not required to support both a boolean and a reference, but **SHALL** choose to support *at least one* of these elements.
+- [US Core Encounter Profile] - The location address can be represented by the Location referenced by `Encounter.location.location` or indirectly through the Organization referenced by `Encounter.serviceProvider`. Although both are marked as must support, servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
 
-Although both are marked as must support, the server systems are not required to support both a boolean and a reference, but **SHALL** choose to support at least one of these elements. The client application **SHALL** support both elements.  There is no way to define this in a computable way, but these instances are clearly documented.
+ The client application **SHALL** support both elements.  There is no way to define this in a computable way, but these instances are clearly documented.
 
 {% include link-list.md %}
