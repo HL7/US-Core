@@ -181,7 +181,7 @@ For example, the [US Core Patient Profile] name element is labeled must support 
 
   {% include img.html img="Must_Support_Patient_name.png" caption="Figure 9: US Core Patient.name" %}
 
-Systems can support the other elements, but this is not a requirement of US Core. The [U.S. Core Data for Interoperability (USCDI) v1] requires systems support `suffix`.
+Systems can support the other elements, but this is not a requirement of US Core. The [U.S. Core Data for Interoperability (USCDI) v1] may require other elements, for example `suffix`.
 
 #### Must Support - Resource References
 

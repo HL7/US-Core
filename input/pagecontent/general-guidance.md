@@ -3,7 +3,7 @@ This section outlines important definitions, interpretations, and requirements c
 The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
 
 <!-- end TOC -->
-### U.S. Core Data for Interoperability and 2015 Edition Common Clinical Data Set
+### U.S. Core Data for Interoperability
 
 The US Core Profiles were originally designed to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access – Data Category Request 170.315(g)(8). They were created for each item in the [2015 Edition Common Clinical Data Set (CCDS)].  The Location, Organization, and Practitioner Profiles are not called out specifically in the certification criteria but are included because they are directly referenced by other profiles.  The US Core Profiles are informed by the prior [Data Access Framework] and the [Argonaut Data Query] Implementation Guides. However, the profiles here are stand alone and include requirements from the [U.S. Core Data for Interoperability (USCDI) v1].
 
@@ -185,7 +185,7 @@ Both the [US Core Vital Signs Profile] and [US Core Laboratory Result Observatio
 
 ### Representing Entered in Error and Deleted Information
 
-Clinical information that has been removed from the patient's record needs  to be represented by the FHIR Server in a way so that Clients can expose the corrected information to their end users.
+Clinical information that has been entered-in-error in the patient's record needs to be represented by the FHIR Server in a way so that Clients can expose the corrected information to their end users.
 
 **Server Recommendations:**
 - A FHIR Server **SHOULD NOT** delete resources.
@@ -208,7 +208,7 @@ The following guidelines outline how to request and return a resource in the req
 
 * Clients MAY request language/locale using the http [`Accept-Language`] header.
 * Servers **SHOULD** make reasonable efforts to translate what can be safely translated.
-* Servers **SHOULD** populate the Resource's `language` element which is reasonably based on the underlying language of record, *not* the requested language.
+* Servers **SHOULD** populate the Resource's `language` element with a code which is based on the underlying language of record, *not* the requested language.
     * Servers **SHALL** use the <http://hl7.org/fhir/StructureDefinition/language> extension when the language of a display, etc is known to be different to the stated (or inferred) language.
 
       Example
