@@ -15,7 +15,7 @@ Specifically, this implementation guide defines the exchange of the following ei
 1. {:.new-content #FHIR-29824}[Imaging Narrative (18748-4)]
 1. {:.new-content #FHIR-29824}[Laboratory Report Narrative (11502-2)]
 1. {:.new-content #FHIR-29824}[Pathology Report Narrative (11526-1)]
- 
+
 
 and three DiagnosticReport categories which systems **SHALL** support.
 
@@ -88,7 +88,7 @@ Note that not all scanned information stored through DocumentReference will be e
 
 #### Support Requirements
 
-This guide requires systems implement the [US Core DocumentReference Profile] and to support a *minimum* of all eight Common Clinical Notes listed above. Systems and may extend there capabilities to the full [US Core DocumentReference Type Value Set]. {:.new-content #FHIR-29824}This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
+This guide requires systems implement the [US Core DocumentReference Profile] and to support a *minimum* of all eight Common Clinical Notes listed above. Systems and may extend there capabilities to the full [US Core DocumentReference Type Value Set]. This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
 
 This guide requires systems implement the [US Core DiagnosticReport Profile for Report and Note exchange] and to support a *minimum* of the three report categories:
 
@@ -96,10 +96,11 @@ This guide requires systems implement the [US Core DiagnosticReport Profile for 
 * [Pathology (LP7839-6)]
 * [Radiology (LP29684-5)]
 
+Other categories may be supported as well.
 
-<div markdown="1" class="new-content" id="FHIR-27731">
+<div markdown="1" class="new-content" id="FHIR-29824">
 
-Other categories may be supported as well. The servers that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
+The servers that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
 
 The following **SHOULD** be exposed via DiagnosticReport
 * Imaging Narrative
