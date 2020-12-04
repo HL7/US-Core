@@ -96,14 +96,18 @@ This guide requires systems implement the [US Core DiagnosticReport Profile for 
 * [Pathology (LP7839-6)]
 * [Radiology (LP29684-5)]
 
-Other categories may be supported as well. {:.new-content #FHIR-29824}The servers that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
 
-{:.new-content #FHIR-29824}The following **SHOULD** be exposed via DiagnosticReport
+<div markdown="1" class="new-content" id="FHIR-27731">
+
+Other categories may be supported as well. The servers that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
+
+The following **SHOULD** be exposed via DiagnosticReport
 * Imaging Narrative
 * Laboratory Report Narrative
 * Pathology Report Narrative
 * Procedure Note
 
+</div>
 
 A method for discovery of the types of notes and reports that a server supports is described in the [section below](#using-expand).
 
