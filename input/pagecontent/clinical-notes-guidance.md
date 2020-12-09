@@ -5,7 +5,9 @@
 
 Clinical notes are a key component to communicate the current status of a patient. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing and even handwritten notes by a providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems.
 
-Specifically, this implementation guide defines the exchange of the following eight "Common Clinical Notes" which systems **SHALL** support.
+This implementation guide defines how systems exchange eight "Common Clinical Notes" and three DiagnosticReport categories.
+
+Systems **SHALL** support, at *minimum*, these eight "Common Clinical Notes":
 
 1. [Consultation Note (11488-4)]
 1. [Discharge Summary (18842-5)]
@@ -16,8 +18,7 @@ Specifically, this implementation guide defines the exchange of the following ei
 1. {:.new-content #FHIR-29824}[Laboratory Report Narrative (11502-2)]
 1. {:.new-content #FHIR-29824}[Pathology Report Narrative (11526-1)]
 
-
-and three DiagnosticReport categories which systems **SHALL** support.
+Systems **SHALL** support, at *minimum*, these three DiagnosticReport categories:
 
 1. [Cardiology (LP29708-2)]
 1. [Pathology (LP7839-6)]
@@ -43,7 +44,7 @@ There is no single best practice for representing a scanned, or narrative-only r
 
 {% include img-portrait.html img="DiagnosticReport_DocumentReference_Resource_Overlap.png" caption="Figure 1: DiagnosticReport and DocumentReference Report Overlap" %}
 
-In order to enable consistent access to scanned narrative-only clinical reports the Argonaut Clinical Note Server **SHALL** expose these reports through *both* DiagnosticReport and DocumentReference by representing the same attachment url using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify the duplicate data.
+In order to enable consistent access to scanned narrative-only clinical reports the Clinical Note Server **SHALL** expose these reports through *both* DiagnosticReport and DocumentReference by representing the same attachment url using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify the duplicate data.
 
 * DocumentReference.content.attachment.url
 * DiagnosticReport.presentedForm.url
