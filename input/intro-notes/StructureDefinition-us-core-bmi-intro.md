@@ -27,6 +27,6 @@ The following are example usage scenarios for the US Core BMI Profile:
 
 ### Examples
 
-- [Bmi Example](Observation-bmi.html)
+- [BMI Example](Observation-bmi.html)
 
 {% include link-list.md %}
