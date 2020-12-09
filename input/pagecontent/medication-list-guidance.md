@@ -1,5 +1,5 @@
 
-The guidance below addresses how a patient or a provider can access a patients' active, historical and future (planned) medications list.  This use case adopts the use cases defined as part of the Argonaut Project and US Core, specifically within the scope of accessing medication information as prescribed in the ONC U.S. Core Data for Interoperability (USCDI) v1.
+The guidance below addresses how a patient or a provider can access a patient's active, historical and future (planned) medications list.  This use case adopts the use cases defined as part of the Argonaut Project and US Core, specifically within the scope of accessing medication information as prescribed in the ONC U.S. Core Data for Interoperability (USCDI) v1.
 This section provide specific guidance on how to to access “all medications” and “all active medications” for a patient using a query on *MedicationRequest*.  Note that in prior versions of this guide, a query on *MedicationStatement* was required. Because of underlying changes in the FHIR Release 4 pharmacy resources, this guide doesn't require use of *MedicationStatement* since an "active" medication list can be obtained using only MedicationRequest.[^1]
 
 ### Background on the FHIR Medications resources
@@ -29,7 +29,7 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 #### Sources of a MedicationRequest
 
- Several sources may be used to create a MedicationRequest as is shown in Figure 2 below. The information may captured directly a system's medication orders or reported by a provider.  A patient or related person may also report the information (or provide some type of record) including "self-prescribed" orders.  For example, oftentimes the patient is the *only* source of information when the patient reports Cannabis or OTC medication use.
+ Several sources may be used to create a MedicationRequest as is shown in Figure 2 below. The information may be captured directly a system's medication orders or reported by a provider.  A patient or related person may also report the information (or provide some type of record) including "self-prescribed" orders.  For example, oftentimes the patient is the *only* source of information when the patient reports Cannabis or OTC medication use.
 
 {% include img.html img="ArgoR4Meds_3.svg" caption="Figure 2: MedicationRequest Information Sources" %}
 
@@ -43,7 +43,7 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 **Definitions**
 
-- "medication" is defined in this IG to include all prescribed and "self-prescribed" medications directly ordered by a provider or reported by the provider, patient or related person including ethical drugs, over the counter (OTC) medication, and other substances taken for medical and/or recreational use.
+- "Medication" is defined in this IG to include all prescribed and "self-prescribed" medications directly ordered by a provider or reported by the provider, patient or related person including ethical drugs, over the counter (OTC) medication, and other substances taken for medical and/or recreational use.
 - "All medications" is defined in this IG to include all historical, active, future prescribed medications and medications that are entered in error and whose status is unknown.
 - "Active medications" is defined in this IG to include all medications with an active status. Active medications do not include past, future, unknown status, and entered in error medications.
 
@@ -51,9 +51,7 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 **Requirements to access "all medications" and "all *active* medications" for a patient:**
 
-1. A MedicationRequest resource query:
-
-  1. **SHALL** be all that is required.
+  1. A MedicationRequest resource query **SHALL** be all that is required.
      1. See the General Guidance section for additional rules and expectations for [Servers Requiring Status].
   1. **SHALL** include all MedicationRequest resources with an `intent` = "order" representing authorized medication orders directly derived from the system's orders.
   1. **SHALL** include all prescribed and "self-prescribed" MedicationRequest resources with an `intent` = "plan" representing *reported* medications
@@ -91,7 +89,7 @@ See the [US Core Server Capability Statement] for a complete list of supported R
 
 #### De-duplication of Data
 
-Medications may be duplicated in a medication list when multiple sources of data are used to generate the list.  To provide a list of a patients’ medications, it may be necessary to “de-duplicate” the medications on the list. The deduplication activity **MAY** be provided by the server but **SHOULD** be provided by the client.
+Medications may be duplicated in a medication list when multiple sources of data are used to generate the list.  To provide a list of a patient’s medications, it may be necessary to “de-duplicate” the medications on the list. The deduplication activity **MAY** be provided by the server but **SHOULD** be provided by the client.
 
 This specification does not specify deduplication best practices, however systems can consider the following approaches:
 
@@ -102,5 +100,6 @@ This specification does not specify deduplication best practices, however system
 {% include link-list.md %}
 
 ---
+Footnotes
 [^1]: It is anticipated that there will be further changes to the medication resources in future versions of FHIR which may lead to changes in our guidance for fetching patient medications in future versions of this guide.
 <br />

@@ -101,7 +101,7 @@ Other categories may be supported as well.
 
 <div markdown="1" class="new-content" id="FHIR-29824">
 
-The servers that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
+The vendors that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology in their servers. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
 
 The following **SHOULD** be exposed via DiagnosticReport
 * Imaging Narrative
@@ -111,7 +111,7 @@ The following **SHOULD** be exposed via DiagnosticReport
 
 </div>
 
-A method for discovery of the types of notes and reports that a server supports is described in the [section below](#using-expand).
+A method for discovery of the types of notes and reports that a server supports is described in [Determining Server Note Type Support](#using-expand).
 
 Note that this guide focuses on exposing existing information, and not how systems allow their users to capture information. The contents of the notes or reports, even using standard LOINC concepts, may vary widely by health system or even location. For example, CT Spleen WO contrast (LOINC 30621-7) may include individual sections for history, impressions, conclusions, or just an impressions section. Discharge Summaries may have different facility or regulatory content requirements.
 
@@ -209,7 +209,7 @@ However, in existing EHRs, the clinical impression is often contained with in a 
 
 
 ---
-footnotes:
+Footnotes
 
 [^1]: Storing scanned reports as a DiagnosticReport, with appropriate categorization, enables clients to access the scanned reports along with DiagnosticReports containing discrete information. For example, a client can request all DiagnosticReport.category="LAB" and receive reports with discrete information and any scanned reports. However, not all systems store and categorize Lab reports with DiagnosticReport.
 
