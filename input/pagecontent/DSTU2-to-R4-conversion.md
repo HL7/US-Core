@@ -23,7 +23,7 @@ In an upgraded R4 endpoint any data in DSTU2 should be in R4. However, not all d
   - Exceptions
     - MedicationStatement *MAY* be deprecated and the data **SHALL** be mapped to MedicationRequest.  
        - See the [Medication List Guidance] section for guidance on accessing a patient's medications
-    - care teams as represented by CarePlan in DSTU2 SHALL be replaced by and the data mapped to CareTeam in R4
+    - Care teams as represented by CarePlan in DSTU2 SHALL be replaced by and the data mapped to CareTeam in R4
 
 * Servers **SHALL** make available the same information in DSTU2 and R4 where the more recent standard allows.  (e.g., patient Rhonda Jones is available on both)
   - Exceptions
