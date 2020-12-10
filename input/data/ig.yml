@@ -1204,26 +1204,26 @@ definition:
         name: US Core Vital Signs ValueSet
         reference:
             reference: ValueSet/us-core-vital-signs
-    -   description: This is a Device defib example for the *Us Core Implantable Device
+    -   description: This is a Device defib example for the *US Core Implantable Device
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
         name: Device Defib Example
         reference:
             reference: Device/udi-2
-    -   description: This is a Device knee example for the *Us Core Implantable Device
+    -   description: This is a Device knee example for the *US Core Implantable Device
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
         name: Device Knee Example
         reference:
             reference: Device/udi-3
     -   description: This is a DiagnosticReport cardiology report example for the
-            *Us Core Diagnosticreport Note Profile*.
+            *US Core Diagnosticreport Note Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
         name: Diagnosticreport Cardiology Report Example
         reference:
             reference: DiagnosticReport/cardiology-report
     -   description: This is a DiagnosticReport chest xray report example for the
-            *Us Core Diagnosticreport Note Profile*.
+            *US Core Diagnosticreport Note Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
         name: Diagnosticreport Chest Xray Report Example
         reference:
@@ -1234,18 +1234,18 @@ definition:
         name: Practitionerrole_Practitioner_Endpoint_Bundle_Example Example
         reference:
             reference: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2
-    -   description: This is a Procedure R4 defib implant example for the *Us Core
+    -   description: This is a Procedure R4 defib implant example for the *US Core
             Procedure Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
         name: Procedure R4 Defib Implant Example
         reference:
             reference: Procedure/defib-implant
-    -   description: This is a acme lab example for the *Us Core Organization Profile*.
+    -   description: This is a acme lab example for the *US Core Organization Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
         name: Acme Lab Example
         reference:
             reference: Organization/acme-lab
-    -   description: This is a allergyintolerance example for the *Us Core Allergyintolerance
+    -   description: This is a allergyintolerance example for the *US Core Allergyintolerance
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance
         name: Allergyintolerance Example
@@ -1257,7 +1257,7 @@ definition:
         name: Allergyintolerance Provenance Example
         reference:
             reference: Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901
-    -   description: This is a blood glucose example for the *Us Core Observation
+    -   description: This is a blood glucose example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Blood Glucose Example
@@ -1268,38 +1268,38 @@ definition:
         name: Blood Pressure Example
         reference:
             reference: Observation/blood-pressure
-    -   description: This is a bmi example for the *Vitalsigns Profile*.
+    -   description: This is a BMI example for the *Vitalsigns Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi
-        name: Bmi Example
+        name: BMI Example
         reference:
             reference: Observation/bmi
     -   description: This is a bp data absent example for the *Vitalsigns Profile*
             showing how to reprsesent blood pressure with a missing diastolic measurement.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure
-        name: Bp Data Absent Example
+        name: BP Data Absent Example
         reference:
             reference: Observation/bp-data-absent
-    -   description: This is a bun example for the *Us Core Observation Lab Profile*.
+    -   description: This is a BUN example for the *US Core Observation Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-        name: Bun Example
+        name: BUN Example
         reference:
             reference: Observation/bun
-    -   description: This is a careteam example for the *Us Core Careteam Profile*.
+    -   description: This is a careteam example for the *US Core Careteam Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
         name: Careteam Example
         reference:
             reference: CareTeam/example
-    -   description: This is a cbc example for the *Us Core Diagnosticreport Lab Profile*.
+    -   description: This is a CBC example for the *US Core Diagnosticreport Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
-        name: Cbc Example
+        name: CBC Example
         reference:
             reference: DiagnosticReport/cbc
-    -   description: This is a colonoscopy example for the *Us Core Careplan Profile*.
+    -   description: This is a colonoscopy example for the *US Core Careplan Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan
         name: Colonoscopy Example
         reference:
             reference: CarePlan/colonoscopy
-    -   description: This is a condition example for the *Us Core Condition Profile*.
+    -   description: This is a condition example for the *US Core Condition Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
         name: Condition Example
         reference:
@@ -1309,37 +1309,37 @@ definition:
         name: Encounter 1036 Example
         reference:
             reference: Encounter/1036
-    -   description: This is a encounter 1 example for the *Us Core Encounter Profile*.
+    -   description: This is a encounter 1 example for the *US Core Encounter Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
         name: Encounter 1 Example
         reference:
             reference: Encounter/example-1
-    -   description: This is a episode summary example for the *Us Core Documentreference
+    -   description: This is a episode summary example for the *US Core Documentreference
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
         name: Episode Summary Example
         reference:
             reference: DocumentReference/episode-summary
-    -   description: This is a erythrocytes example for the *Us Core Observation Lab
+    -   description: This is a erythrocytes example for the *US Core Observation Lab
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Erythrocytes Example
         reference:
             reference: Observation/erythrocytes
-    -   description: This is a organization 2 example for the *Us Core Organization
+    -   description: This is a organization 2 example for the *US Core Organization
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
         name: Organization 2 Example
         reference:
             reference: Organization/example-organization-2
-    -   description: This is a goal 1 example for the *Us Core Goal Profile*.
+    -   description: This is a goal 1 example for the *US Core Goal Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal
         name: Goal 1 Example
         reference:
             reference: Goal/goal-1
-    -   description: This is a hc1 example for the *Us Core Condition Profile*.
+    -   description: This is a hc1 example for the *US Core Condition Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
-        name: Hc1 Example
+        name: HC1 Example
         reference:
             reference: Condition/hc1
     -   description: This is a head circumference example for the *US Core Head Circumference
@@ -1358,18 +1358,18 @@ definition:
         name: Height Example
         reference:
             reference: Observation/height
-    -   description: This is a hemoglobin example for the *Us Core Observation Lab
+    -   description: This is a hemoglobin example for the *US Core Observation Lab
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Hemoglobin Example
         reference:
             reference: Observation/hemoglobin
-    -   description: This is a hl7east example for the *Us Core Location Profile*.
+    -   description: This is a HL7East example for the *US Core Location Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
-        name: Hl7East Example
+        name: HL7East Example
         reference:
             reference: Location/hl7east
-    -   description: This is a imm 1 example for the *Us Core Immunization Profile*.
+    -   description: This is a imm 1 example for the *US Core Immunization Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization
         name: Imm 1 Example
         reference:
@@ -1381,34 +1381,34 @@ definition:
         name: Length Example
         reference:
             reference: Observation/length
-    -   description: This is a mchc example for the *Us Core Observation Lab Profile*.
+    -   description: This is a MCHC example for the *US Core Observation Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-        name: Mchc Example
+        name: MCHC Example
         reference:
             reference: Observation/mchc
-    -   description: This is a metabolic panel example for the *Us Core Diagnosticreport
+    -   description: This is a metabolic panel example for the *US Core Diagnosticreport
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
         name: Metabolic Panel Example
         reference:
             reference: DiagnosticReport/metabolic-panel
-    -   description: This is a neutrophils example for the *Us Core Observation Lab
+    -   description: This is a neutrophils example for the *US Core Observation Lab
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Neutrophils Example
         reference:
             reference: Observation/neutrophils
-    -   description: This is a observation satO2 fiO2 example for the *Us Core Pulse
+    -   description: This is a observation satO2 fiO2 example for the *US Core Pulse
             Oximetry Profile* representing a spO2 value with a for a patient on 6
             l/min of O2 suppplemental oxygen.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
-        name: Observation Sato2 Fio2 Example
+        name: Observation SatO2 FiO2 Example
         reference:
             reference: Observation/satO2-fiO2
-    -   description: This is a ofc percentile example for the *Head Occipital Frontal
+    -   description: This is a OFC percentile example for the *Head Occipital Frontal
             Circumference Percentile Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile
-        name: Ofc Percentile Example
+        name: OFC Percentile Example
         reference:
             reference: Observation/ofc-percentile
     -   description: This is a typical oxygen saturation example for the *US Core
@@ -1417,25 +1417,25 @@ definition:
         name: Oxygen Saturation Example
         reference:
             reference: Observation/oxygen-saturation
-    -   description: This is a patient child example for the *Us Core Patient Profile*.
+    -   description: This is a patient child example for the *US Core Patient Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
         name: Patient Child Example
         reference:
             reference: Patient/child-example
-    -   description: This is a patient example for the *Us Core Patient Profile*.
+    -   description: This is a patient example for the *US Core Patient Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
         name: Patient Example
         reference:
             reference: Patient/example
-    -   description: This is a patient infant example for the *Us Core Patient Profile*.
+    -   description: This is a patient infant example for the *US Core Patient Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
         name: Patient Infant Example
         reference:
             reference: Patient/infant-example
-    -   description: This is a pediatric bmi example for the *Pediatric Bmi For Age
+    -   description: This is a pediatric BMI example for the *Pediatric BMI For Age
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age
-        name: Pediatric Bmi Example
+        name: Pediatric BMI Example
         reference:
             reference: Observation/pediatric-bmi-example
     -   description: This is a pediatric wt example for the *Pediatric Weight For
@@ -1444,19 +1444,19 @@ definition:
         name: Pediatric Wt Example
         reference:
             reference: Observation/pediatric-wt-example
-    -   description: This is a practitioner 1 example for the *Us Core Practitioner
+    -   description: This is a practitioner 1 example for the *US Core Practitioner
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
         name: Practitioner 1 Example
         reference:
             reference: Practitioner/practitioner-1
-    -   description: This is a practitioner 2 example for the *Us Core Practitioner
+    -   description: This is a practitioner 2 example for the *US Core Practitioner
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
         name: Practitioner 2 Example
         reference:
             reference: Practitioner/practitioner-2
-    -   description: This is a rehab example for the *Us Core Procedure Profile*.
+    -   description: This is a rehab example for the *US Core Procedure Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
         name: Rehab Example
         reference:
@@ -1466,7 +1466,7 @@ definition:
         name: Respiratory Rate Example
         reference:
             reference: Observation/respiratory-rate
-    -   description: This is a saint luke w endpoint example for the *Us Core Organization
+    -   description: This is a saint luke w endpoint example for the *US Core Organization
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
         name: Saint Luke W Endpoint Example
@@ -1477,49 +1477,49 @@ definition:
         name: Self Tylenol Example
         reference:
             reference: MedicationRequest/self-tylenol
-    -   description: This is a serum calcium example for the *Us Core Observation
+    -   description: This is a serum calcium example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Serum Calcium Example
         reference:
             reference: Observation/serum-calcium
-    -   description: This is a serum chloride example for the *Us Core Observation
+    -   description: This is a serum chloride example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Serum Chloride Example
         reference:
             reference: Observation/serum-chloride
-    -   description: This is a serum co2 example for the *Us Core Observation Lab
+    -   description: This is a serum CO2 example for the *US Core Observation Lab
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-        name: Serum Co2 Example
+        name: Serum CO2 Example
         reference:
             reference: Observation/serum-co2
-    -   description: This is a serum creatinine example for the *Us Core Observation
+    -   description: This is a serum creatinine example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Serum Creatinine Example
         reference:
             reference: Observation/serum-creatinine
-    -   description: This is a serum potassium example for the *Us Core Observation
+    -   description: This is a serum potassium example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Serum Potassium Example
         reference:
             reference: Observation/serum-potassium
-    -   description: This is a serum sodium example for the *Us Core Observation Lab
+    -   description: This is a serum sodium example for the *US Core Observation Lab
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Serum Sodium Example
         reference:
             reference: Observation/serum-sodium
-    -   description: This is a serum total bilirubin example for the *Us Core Observation
+    -   description: This is a serum total bilirubin example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Serum Total Bilirubin Example
         reference:
             reference: Observation/serum-total-bilirubin
-    -   description: This is a some day smoker example for the *Us Core Smokingstatus
+    -   description: This is a some day smoker example for the *US Core Smokingstatus
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus
         name: Some Day Smoker Example
@@ -1530,148 +1530,148 @@ definition:
         name: Temperature Example
         reference:
             reference: Observation/temperature
-    -   description: This is a udi 1 example for the *Us Core Implantable Device Profile*.
+    -   description: This is a UDI 1 example for the *US Core Implantable Device Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
-        name: Udi 1 Example
+        name: UDI 1 Example
         reference:
             reference: Device/udi-1
-    -   description: This is a urinalysis example for the *Us Core Diagnosticreport
+    -   description: This is a urinalysis example for the *US Core Diagnosticreport
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
         name: Urinalysis Example
         reference:
             reference: DiagnosticReport/urinalysis
-    -   description: This is a urine bacteria example for the *Us Core Observation
+    -   description: This is a urine bacteria example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Bacteria Example
         reference:
             reference: Observation/urine-bacteria
-    -   description: This is a urine bilirubin example for the *Us Core Observation
+    -   description: This is a urine bilirubin example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Bilirubin Example
         reference:
             reference: Observation/urine-bilirubin
-    -   description: This is a urine cells example for the *Us Core Observation Lab
+    -   description: This is a urine cells example for the *US Core Observation Lab
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Cells Example
         reference:
             reference: Observation/urine-cells
-    -   description: This is a urine clarity example for the *Us Core Observation
+    -   description: This is a urine clarity example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Clarity Example
         reference:
             reference: Observation/urine-clarity
-    -   description: This is a urine color example for the *Us Core Observation Lab
+    -   description: This is a urine color example for the *US Core Observation Lab
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Color Example
         reference:
             reference: Observation/urine-color
-    -   description: This is a urine epi cells example for the *Us Core Observation
+    -   description: This is a urine epi cells example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Epi Cells Example
         reference:
             reference: Observation/urine-epi-cells
-    -   description: This is a urine glucose example for the *Us Core Observation
+    -   description: This is a urine glucose example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Glucose Example
         reference:
             reference: Observation/urine-glucose
-    -   description: This is a urine hemoglobin example for the *Us Core Observation
+    -   description: This is a urine hemoglobin example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Hemoglobin Example
         reference:
             reference: Observation/urine-hemoglobin
-    -   description: This is a urine ketone example for the *Us Core Observation Lab
+    -   description: This is a urine ketone example for the *US Core Observation Lab
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Ketone Example
         reference:
             reference: Observation/urine-ketone
-    -   description: This is a urine leukocyte esterase example for the *Us Core Observation
+    -   description: This is a urine leukocyte esterase example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Leukocyte Esterase Example
         reference:
             reference: Observation/urine-leukocyte-esterase
-    -   description: This is a urine nitrite example for the *Us Core Observation
+    -   description: This is a urine nitrite example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Nitrite Example
         reference:
             reference: Observation/urine-nitrite
-    -   description: This is a urine ph example for the *Us Core Observation Lab Profile*.
+    -   description: This is a urine pH example for the *US Core Observation Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-        name: Urine Ph Example
+        name: Urine pH Example
         reference:
             reference: Observation/urine-ph
-    -   description: This is a urine protein example for the *Us Core Observation
+    -   description: This is a urine protein example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Protein Example
         reference:
             reference: Observation/urine-protein
-    -   description: This is a urine rbcs example for the *Us Core Observation Lab
+    -   description: This is a urine RBCsexample for the *US Core Observation Lab
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-        name: Urine Rbcs Example
+        name: Urine RBCsExample
         reference:
             reference: Observation/urine-rbcs
-    -   description: This is a urine sediment example for the *Us Core Observation
+    -   description: This is a urine sediment example for the *US Core Observation
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urine Sediment Example
         reference:
             reference: Observation/urine-sediment
-    -   description: This is a urine wbcs example for the *Us Core Observation Lab
+    -   description: This is a urine WBCsexample for the *US Core Observation Lab
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-        name: Urine Wbcs Example
+        name: Urine WBCsExample
         reference:
             reference: Observation/urine-wbcs
-    -   description: This is a urobilinogen example for the *Us Core Observation Lab
+    -   description: This is a urobilinogen example for the *US Core Observation Lab
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: Urobilinogen Example
         reference:
             reference: Observation/urobilinogen
-    -   description: This is a uscore med1 example for the *Us Core Medication Profile*.
+    -   description: This is a uscore med1 example for the *US Core Medication Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
         name: Uscore Med1 Example
         reference:
             reference: Medication/uscore-med1
-    -   description: This is a uscore med2 example for the *Us Core Medication Profile*.
+    -   description: This is a uscore med2 example for the *US Core Medication Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
         name: Uscore Med2 Example
         reference:
             reference: Medication/uscore-med2
-    -   description: This is a uscore mo1 example for the *Us Core Medicationrequest
+    -   description: This is a uscore mo1 example for the *US Core Medicationrequest
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
-        name: Uscore Mo1 Example
+        name: Uscore MO1 Example
         reference:
             reference: MedicationRequest/uscore-mo1
-    -   description: This is a uscore mo2 example for the *Us Core Medicationrequest
+    -   description: This is a uscore MO2 example for the *US Core Medicationrequest
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
-        name: Uscore Mo2 Example
+        name: Uscore MO2 Example
         reference:
             reference: MedicationRequest/uscore-mo2
     -   description: This is a uscore mo3 example for the *Bundle Profile*.
         exampleBoolean: true
-        name: Uscore Mo3 Example
+        name: Uscore MO3 Example
         reference:
             reference: Bundle/uscore-mo3
-    -   description: This is a usg example for the *Us Core Observation Lab Profile*.
+    -   description: This is a USG example for the *US Core Observation Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-        name: Usg Example
+        name: USG Example
         reference:
             reference: Observation/usg
     -   description: This is a weight example for the *Vitalsigns Profile*.
