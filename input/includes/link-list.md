@@ -249,8 +249,8 @@
 [reference]: {{site.data.fhir.path}}references.html
 [timezone extension]: {{site.data.fhir.path}}extension-tz-code.html
 [`Accept-Language`]: https://www.ietf.org/rfc/rfc2616.txt
-[Record or update]: future-of-US-core.html#future-candidate-requirements-under-considerations
-[writing and updating]: future-of-US-core.html#future-candidate-requirements-under-considerations
+[Record or update]: future-of-US-core.html#future-candidate-requirements-under-consideration
+[writing and updating]: future-of-US-core.html#future-candidate-requirements-under-consideration
 [Servers Requiring Status]: general-guidance.html#search-for-servers-requiring-status
 [converted from a new element]: {{site.data.fhir.path}}versions.html#extensions
 [Referencing US Core Profiles]: general-guidance.html#referencing-us-core-profiles
