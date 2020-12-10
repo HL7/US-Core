@@ -1,11 +1,7 @@
 
-This section outlines the approach to adding new content to US Core.
-
-### Future of US Core
-
 The US Core FHIR profiles are designed to be the base set of requirements for FHIR implementation in the US. All US Realm implementation guides **SHALL** use the US Core profiles or **SHALL** explicitly state why they are unable to use. Throughout the development of US Core, implementers, government, and clinical community have brought forward additional requirements for US Core. This section outlines the approach to growth, and is holding place for items that with additional profiling and testing will be added to US Core.
 
-#### Growth Path of US Core
+### Growth Path of US Core
 
 The US Core implementation Guide will grow following these steps:
 
@@ -21,7 +17,7 @@ A new US Regulatory requirement may jump over some of these steps, however, regu
 
 
 
-#### Future Candidate Requirements Under Consideration
+### Future Candidate Requirements Under Consideration
 
 The following items were submitted during a US Core ballot, Argonaut review and testing, and STU comment for consideration to add to us core. Additional requirements gathering is required before testing may occur on these items:
 
