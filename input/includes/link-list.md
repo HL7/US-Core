@@ -95,7 +95,7 @@
 [FHIR Version R4]: {{site.data.fhir.path}}index.html "FHIR Version R4 Specification Home Page"
 [FHIR Version STU3]: http://hl7.org/fhir/STU3/index.html "FHIR Version STU3 Specification Home Page"
 [Formal Profile Definition]: #profile
-[Future of US Core]: future-of-us-core.html
+[Future of US Core]: future-of-US-core.html
 [General Guidance Section]: general-guidance.html#using-ucum-codes-in-the-quantity-datatype
 [General Guidance]: general-guidance.html  "General Guidance Page"
 [General Security Considerations]: security.html
@@ -249,8 +249,8 @@
 [reference]: {{site.data.fhir.path}}references.html
 [timezone extension]: {{site.data.fhir.path}}extension-tz-code.html
 [`Accept-Language`]: https://www.ietf.org/rfc/rfc2616.txt
-[Record or update]: future-of-us-core.html#future-candidate-requirements-under-considerations
-[writing and updating]: future-of-us-core.html#future-candidate-requirements-under-considerations
+[Record or update]: future-of-US-core.html#future-candidate-requirements-under-considerations
+[writing and updating]: future-of-US-core.html#future-candidate-requirements-under-considerations
 [Servers Requiring Status]: general-guidance.html#search-for-servers-requiring-status
 [converted from a new element]: {{site.data.fhir.path}}versions.html#extensions
 [Referencing US Core Profiles]: general-guidance.html#referencing-us-core-profiles
