@@ -11,7 +11,7 @@ The US Core implementation Guide will grow following these steps:
 
 {% include img.html img="US_Core_Growth_Path.jpg" caption="Figure 1: Growth Path of US Core" %}
 
-1. Declare candidacy - this step can be completed by presenting to the US Realm Steering Committee through a Project Scope Statement.
+1. Declare candidacy - this step can be completed by presenting a Project Proposal to the US Realm Steering Committee.
 1. Get published - development a formal profile, implementation guide, or get requirements directly published in  FHIR Core. The initial publication could be an outside consortium, or vendor publication.
 1. Pilot - coordinate with 3 or more implementers an in-person or virtual connectathon. This is the time to identify issues with the new proposal.
 1. Propose candidate for US Core to US Realm Steering Committee - receive formal approval from the US Realm SC to add.
@@ -21,7 +21,7 @@ A new US Regulatory requirement may jump over some of these steps, however, regu
 
 
 
-#### Future Candidate Requirements Under Considerations
+#### Future Candidate Requirements Under Consideration
 
 The following items were submitted during a US Core ballot, Argonaut review and testing, and STU comment for consideration to add to us core. Additional requirements gathering is required before testing may occur on these items:
 
@@ -48,6 +48,7 @@ The following items were submitted during a US Core ballot, Argonaut review and 
   - Indicating the source of update
 
 ------------------------------------------------------------------------
+Footnotes
 [^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset#Time_zones_and_time_offsets
 
 

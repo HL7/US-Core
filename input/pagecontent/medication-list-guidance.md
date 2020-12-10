@@ -1,5 +1,5 @@
 
-The guidance below addresses how a patient or a provider can access a patients' active, historical and future (planned) medications list.  This use case adopts the use cases defined as part of the Argonaut Project and US Core, specifically within the scope of accessing medication information as prescribed in the ONC U.S. Core Data for Interoperability (USCDI) v1.
+The guidance below addresses how a patient or a provider can access a patient's active, historical and future (planned) medications list.  This use case adopts the use cases defined as part of the Argonaut Project and US Core, specifically within the scope of accessing medication information as prescribed in the ONC U.S. Core Data for Interoperability (USCDI) v1.
 This section provide specific guidance on how to to access “all medications” and “all active medications” for a patient using a query on *MedicationRequest*.  Note that in prior versions of this guide, a query on *MedicationStatement* was required. Because of underlying changes in the FHIR Release 4 pharmacy resources, this guide doesn't require use of *MedicationStatement* since an "active" medication list can be obtained using only MedicationRequest.[^1]
 
 ### Background on the FHIR Medications resources
@@ -51,9 +51,9 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 **Requirements to access "all medications" and "all *active* medications" for a patient:**
 
-1. A MedicationRequest resource query:
-
-  1. **SHALL** be all that is required.
+A MedicationRequest resource query:
+  
+  1.  **SHALL** be all that is required.
      1. See the General Guidance section for additional rules and expectations for [Servers Requiring Status].
   1. **SHALL** include all MedicationRequest resources with an `intent` = "order" representing authorized medication orders directly derived from the system's orders.
   1. **SHALL** include all prescribed and "self-prescribed" MedicationRequest resources with an `intent` = "plan" representing *reported* medications
@@ -91,7 +91,7 @@ See the [US Core Server Capability Statement] for a complete list of supported R
 
 #### De-duplication of Data
 
-Medications may be duplicated in a medication list when multiple sources of data are used to generate the list.  To provide a list of a patient's medications, it may be necessary to “de-duplicate” the medications on the list. The deduplication activity **MAY** be provided by the server but **SHOULD** be provided by the client.
+Medications may be duplicated in a medication list when multiple sources of data are used to generate the list.  To provide a list of a patient’s medications, it may be necessary to “de-duplicate” the medications on the list. The deduplication activity **MAY** be provided by the server but **SHOULD** be provided by the client.
 
 This specification does not specify deduplication best practices, however systems can consider the following approaches:
 
@@ -102,5 +102,6 @@ This specification does not specify deduplication best practices, however system
 {% include link-list.md %}
 
 ---
+Footnotes
 [^1]: It is anticipated that there will be further changes to the medication resources in future versions of FHIR which may lead to changes in our guidance for fetching patient medications in future versions of this guide.
 <br />

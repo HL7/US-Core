@@ -5,7 +5,10 @@
 
 Clinical notes are a key component to communicate the current status of a patient. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing and even handwritten notes by a providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems.
 
-This implementation guide defines the exchange of:
+
+This implementation guide defines how systems exchange eight "Common Clinical Notes" and three DiagnosticReport categories.
+
+Systems **SHALL** support, at *minimum*, these eight "Common Clinical Notes":
 
 - Eight "Common Clinical Notes" which systems **SHALL** support:
 
@@ -18,8 +21,7 @@ This implementation guide defines the exchange of:
   1. {:.new-content #FHIR-29824}[Laboratory Report Narrative (11502-2)]
   1. {:.new-content #FHIR-29824}[Pathology Report Narrative (11526-1)]
 
-
-- Three DiagnosticReport categories which systems **SHALL** support:
+Systems **SHALL** support, at *minimum*, these three DiagnosticReport categories:
 
   1. [Cardiology (LP29708-2)]
   1. [Pathology (LP7839-6)]
@@ -45,7 +47,7 @@ There is no single best practice for representing a scanned, or narrative-only r
 
 {% include img-portrait.html img="DiagnosticReport_DocumentReference_Resource_Overlap.png" caption="Figure 1: DiagnosticReport and DocumentReference Report Overlap" %}
 
-In order to enable consistent access to scanned narrative-only clinical reports a Server **SHALL** expose these reports through *both* DiagnosticReport and DocumentReference by representing the same attachment url using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify the duplicate data.
+In order to enable consistent access to scanned narrative-only clinical reports the Clinical Note Server **SHALL** expose these reports through *both* DiagnosticReport and DocumentReference by representing the same attachment url using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify the duplicate data.
 
 * DocumentReference.content.attachment.url
 * DiagnosticReport.presentedForm.url
@@ -102,7 +104,7 @@ Other categories may be supported as well.
 
 <div markdown="1" class="new-content" id="FHIR-29824">
 
-The implementers that participated in testing and informed development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
+The vendors that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology in their servers. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
 
 The following **SHOULD** be exposed via DiagnosticReport
 * Imaging Narrative
@@ -209,7 +211,8 @@ A record of a clinical assessment performed to determine what problem(s) may aff
 However, in existing EHRs, the clinical impression is often contained with in a broader note construct and the Argonauts didn't find the boundary between a clinical note and ClinicalImpression clear enough to leverage the resources to share clinical notes.
 
 ---
-Footnotes:
+
+Footnotes
 
 [^1]: Storing scanned reports as a DiagnosticReport, with appropriate categorization, enables clients to access the scanned reports along with DiagnosticReports containing discrete information. For example, a client can request all DiagnosticReport.category="LAB" and receive reports with discrete information and any scanned reports. However, not all systems store and categorize Lab reports with DiagnosticReport.
 

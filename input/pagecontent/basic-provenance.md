@@ -3,7 +3,7 @@
 
 ### Basic Provenance
 
-The FHIR [Provenance] Resource provides a foundation for assessing authenticity, enabling trust, and allowing reproducibility. It isn't scoped to a specific use case, nor limits the number of Provenance records associated with a Resource. The basic guidance here, and in the [US Core Provenance Profile] focuses on a key subset of elements, the 'last hop', and specific use cases. The guidance here does not preclude more advanced use cases or additional elements.
+The FHIR [Provenance] Resource provides a foundation for assessing authenticity, enabling trust, and allowing reproducibility. It isn't scoped to a specific use case, nor does it limit the number of Provenance records associated with a Resource. The basic guidance here, and in the [US Core Provenance Profile] focuses on a key subset of elements, the 'last hop', and specific use cases. The guidance here does not preclude more advanced use cases or additional elements.
 
 Full Provenance of a Resource requires details from the original creator of a Resource and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches, and display to end user, and agreed the most important information is the last organization making a meaningful clinical update to the data, and the prior system providing the data, the 'last hop'.  Participants didn't dispute the potential need to recreate the full chain, but didn't see this as relevant to the immediate end-user.
 
@@ -83,7 +83,7 @@ Transformation of data from one format to another **MAY** change the authorship 
 <br />
 
 ---
-
+Footnotes
 [^1]: This Basic Provenance guidance and [US Core Provenance Profile] is provisional and may change in future releases. Although, it is based on feedback from the HL7 and Argonaut communities, there was incomplete testing of this approach prior to publication.
 
 {% include link-list.md %}
