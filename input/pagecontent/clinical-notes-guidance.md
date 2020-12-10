@@ -5,23 +5,25 @@
 
 Clinical notes are a key component to communicate the current status of a patient. In the context of this implementation guide, the term "clinical notes" refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing and even handwritten notes by a providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems.
 
-Specifically, this implementation guide defines the exchange of the following eight "Common Clinical Notes" which systems **SHALL** support.
+This implementation guide defines the exchange of:
 
-1. [Consultation Note (11488-4)]
-1. [Discharge Summary (18842-5)]
-1. [History & Physical Note (34117-2)]
-1. [Procedures Note (28570-0)]
-1. [Progress Note (11506-3)]
-1. {:.new-content #FHIR-29824}[Imaging Narrative (18748-4)]
-1. {:.new-content #FHIR-29824}[Laboratory Report Narrative (11502-2)]
-1. {:.new-content #FHIR-29824}[Pathology Report Narrative (11526-1)]
+- Eight "Common Clinical Notes" which systems **SHALL** support:
+
+  1. [Consultation Note (11488-4)]
+  1. [Discharge Summary (18842-5)]
+  1. [History & Physical Note (34117-2)]
+  1. [Procedures Note (28570-0)]
+  1. [Progress Note (11506-3)]
+  1. {:.new-content #FHIR-29824}[Imaging Narrative (18748-4)]
+  1. {:.new-content #FHIR-29824}[Laboratory Report Narrative (11502-2)]
+  1. {:.new-content #FHIR-29824}[Pathology Report Narrative (11526-1)]
 
 
-and three DiagnosticReport categories which systems **SHALL** support.
+- Three DiagnosticReport categories which systems **SHALL** support:
 
-1. [Cardiology (LP29708-2)]
-1. [Pathology (LP7839-6)]
-1. [Radiology (LP29684-5)]
+  1. [Cardiology (LP29708-2)]
+  1. [Pathology (LP7839-6)]
+  1. [Radiology (LP29684-5)]
 
 The Argonaut project team provided this initial list to HL7 after surveying the participants in Argonaut and the US Veterans Administration (VA). They represent the *minimum* set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types such as:
 
@@ -43,7 +45,7 @@ There is no single best practice for representing a scanned, or narrative-only r
 
 {% include img-portrait.html img="DiagnosticReport_DocumentReference_Resource_Overlap.png" caption="Figure 1: DiagnosticReport and DocumentReference Report Overlap" %}
 
-In order to enable consistent access to scanned narrative-only clinical reports the Argonaut Clinical Note Server **SHALL** expose these reports through *both* DiagnosticReport and DocumentReference by representing the same attachment url using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify the duplicate data.
+In order to enable consistent access to scanned narrative-only clinical reports a Server **SHALL** expose these reports through *both* DiagnosticReport and DocumentReference by representing the same attachment url using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify the duplicate data.
 
 * DocumentReference.content.attachment.url
 * DiagnosticReport.presentedForm.url
@@ -100,7 +102,7 @@ Other categories may be supported as well.
 
 <div markdown="1" class="new-content" id="FHIR-29824">
 
-The servers that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
+The implementers that participated in testing and informed development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
 
 The following **SHOULD** be exposed via DiagnosticReport
 * Imaging Narrative
@@ -110,7 +112,7 @@ The following **SHOULD** be exposed via DiagnosticReport
 
 </div>
 
-A method for discovery of the types of notes and reports that a server supports is described in the [section below](#using-expand).
+A method for discovery of the types of notes and reports that a server supports is described in the [Determining Server Note Type](#using-expand) section below.
 
 Note that this guide focuses on exposing existing information, and not how systems allow their users to capture information. The contents of the notes or reports, even using standard LOINC concepts, may vary widely by health system or even location. For example, CT Spleen WO contrast (LOINC 30621-7) may include individual sections for history, impressions, conclusions, or just an impressions section. Discharge Summaries may have different facility or regulatory content requirements.
 
@@ -134,7 +136,7 @@ Common client search scenarios include:
 
 <br/>
 
-### Determining Server Note Type Support Using The Value Set Expansion Operation ($expand)
+### Determining Server Note Type
 {: #using-expand}
 
 In addition to inspecting a server CapabilityStatement, a client can determine the note and report types support by a server by invoking the standard FHIR Value Set Expansion ([$expand]) operation defined in the **FHIR R4 specification**. Because servers may support different read and write formats, it also is used to determine the formats (for example, text, pdf) the server supports read and write transactions. A FHIR server claiming support to this guide **SHOULD** support the $expand operation.
@@ -206,9 +208,8 @@ A record of a clinical assessment performed to determine what problem(s) may aff
 
 However, in existing EHRs, the clinical impression is often contained with in a broader note construct and the Argonauts didn't find the boundary between a clinical note and ClinicalImpression clear enough to leverage the resources to share clinical notes.
 
-
 ---
-footnotes:
+Footnotes:
 
 [^1]: Storing scanned reports as a DiagnosticReport, with appropriate categorization, enables clients to access the scanned reports along with DiagnosticReports containing discrete information. For example, a client can request all DiagnosticReport.category="LAB" and receive reports with discrete information and any scanned reports. However, not all systems store and categorize Lab reports with DiagnosticReport.
 
