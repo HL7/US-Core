@@ -62,13 +62,12 @@
             error	URL value 'http://hl7.org/fhir/StructureDefinition/instance-name' does not resolve
             error	The extension http://hl7.org/fhir/StructureDefinition/instance-description is unknown, and not allowed here
             error	URL value 'http://hl7.org/fhir/StructureDefinition/instance-description' does not resolve
-            -->
 
         - [ ] VSAC link errors
 
-          <!--
+
            - [ ] See this [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/VSAC.2FPhinVads.20Warnings)
-            -->
+
 
           - [ ] Immunization Example: imm-1.json NDC/CVX codes [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core) WIP per GG should be fixed.
           - [ ] Patient Examples: patient-child-example.json,patient-infant-example.json, patient-example.json and ValueSet-omb-race-category.json CDCREC codes and code system value ( OID vs ? defined in package or by VSAC ????) [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/cdcrec.20code.20errors.20in.20US.20Core) per 12/2 FMG won't be able to sort out by ballot.
