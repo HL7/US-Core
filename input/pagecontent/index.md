@@ -51,9 +51,6 @@
         - the must support tab = tagged as must support + pattern + min = 1
         - reference when data is missing
 - [X] Add note to balloters whether want custom summaries
-
--->
-
 - [ ] QA
      - [X] review applied trackers
      - [ ] errors and warnings
@@ -85,7 +82,8 @@
         - [ ] update `input/ignoreWarnings.txt`
           - [X] [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20Warnings.20we.20want.20to.20suppress)
           - [ ] add all the informative message too
-     - [ ] read through for typos and grammar
+     - [X] read through for typos and grammar
+-->
 
 </div>
 
