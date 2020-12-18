@@ -45,6 +45,7 @@ The following items were submitted during a US Core ballot, Argonaut review and 
 
 ------------------------------------------------------------------------
 Footnotes
+
 [^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset#Time_zones_and_time_offsets
 
 

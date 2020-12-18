@@ -450,6 +450,8 @@ In order to manage the number of search results returned, the server may choose 
 <!--
 [^1]: https://en.wikipedia.org/w/index.php?title=UTC_offset#Time_zones_and_time_offsets
 -->
+Footnotes:
+
 [^1]: This extension is [converted from a new element] in a future version of CapabilityStatement.
 
 [^2]: For example, the base Location resource is being referenced by the US Core Encounter and US Core PractitionerRole resources.

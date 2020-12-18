@@ -52,7 +52,7 @@ This IG focuses on access to a patient's medications.  It is therefore important
 **Requirements to access "all medications" and "all *active* medications" for a patient:**
 
 A MedicationRequest resource query:
-  
+
   1.  **SHALL** be all that is required.
      1. See the General Guidance section for additional rules and expectations for [Servers Requiring Status].
   1. **SHALL** include all MedicationRequest resources with an `intent` = "order" representing authorized medication orders directly derived from the system's orders.
@@ -103,5 +103,6 @@ This specification does not specify deduplication best practices, however system
 
 ---
 Footnotes
+
 [^1]: It is anticipated that there will be further changes to the medication resources in future versions of FHIR which may lead to changes in our guidance for fetching patient medications in future versions of this guide.
 <br />

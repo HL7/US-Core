@@ -84,6 +84,7 @@ Transformation of data from one format to another **MAY** change the authorship 
 
 ---
 Footnotes
+
 [^1]: This Basic Provenance guidance and [US Core Provenance Profile] is provisional and may change in future releases. Although, it is based on feedback from the HL7 and Argonaut communities, there was incomplete testing of this approach prior to publication.
 
 {% include link-list.md %}
