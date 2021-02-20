@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="http://build.fhir.org/ig/HL7/US-Core-R4" defaultVersion="current" defaultWorkgroup="" gitUrl="https://github.com/HL7/US-Core" xsi:noNamespaceSchemaLocation="../schemas/specification.xsd" url="http://hl7.org/fhir/us/core"><version code="current" url="http://build.fhir.org/ig/HL7/US-Core-R4"/>
-<version code="0.1" deprecated="true"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="http://build.fhir.org/ig/HL7/US-Core-R4" defaultVersion="current" defaultWorkgroup="" gitUrl="https://github.com/HL7/US-Core" url="http://hl7.org/fhir/us/core">
+<version code="current" url="http://build.fhir.org/ig/HL7/US-Core-R4"/>
+<version code="3.0.1" deprecated="true"/>
+<version code="2.0.0" deprecated="true"/>
+<version code="1.0.1" deprecated="true"/>
+<version code="1.0.0" deprecated="true"/>
+<version code="1.0" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -9,17 +14,17 @@
 <artifact id="AllergyIntolerance/example" key="AllergyIntolerance-example" name="Allergyintolerance Example"/>
 <artifact id="Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901" key="Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901" name="Allergyintolerance Provenance Example"/>
 <artifact deprecated="true" key="AuditEvent" name="AuditEvent"/>
+<artifact id="Observation/bmi" key="Observation-bmi" name="BMI Example"/>
+<artifact id="Observation/bp-data-absent" key="Observation-bp-data-absent" name="BP Data Absent Example"/>
+<artifact id="Observation/bun" key="Observation-bun" name="BUN Example"/>
 <artifact deprecated="true" key="Binary" name="Binary"/>
 <artifact id="ValueSet/birthsex" key="ValueSet-birthsex" name="Birth Sex"/>
 <artifact id="Observation/blood-glucose" key="Observation-blood-glucose" name="Blood Glucose Example"/>
 <artifact id="Observation/blood-pressure" key="Observation-blood-pressure" name="Blood Pressure Example"/>
-<artifact id="Observation/bmi" key="Observation-bmi" name="Bmi Example"/>
-<artifact id="Observation/bp-data-absent" key="Observation-bp-data-absent" name="Bp Data Absent Example"/>
-<artifact id="Observation/bun" key="Observation-bun" name="Bun Example"/>
+<artifact id="DiagnosticReport/cbc" key="DiagnosticReport-cbc" name="CBC Example"/>
 <artifact deprecated="true" key="CarePlan" name="CarePlan"/>
 <artifact deprecated="true" key="CareTeam" name="CareTeam"/>
 <artifact id="CareTeam/example" key="CareTeam-example" name="Careteam Example"/>
-<artifact id="DiagnosticReport/cbc" key="DiagnosticReport-cbc" name="Cbc Example"/>
 <artifact id="CarePlan/colonoscopy" key="CarePlan-colonoscopy" name="Colonoscopy Example"/>
 <artifact deprecated="true" key="Composition" name="Composition"/>
 <artifact deprecated="true" key="Condition" name="Condition"/>
@@ -44,19 +49,19 @@
 <artifact deprecated="true" key="FamilyHistory" name="FamilyMemberHistory"/>
 <artifact deprecated="true" key="Goal" name="Goal"/>
 <artifact id="Goal/goal-1" key="Goal-goal-1" name="Goal 1 Example"/>
-<artifact id="Condition/hc1" key="Condition-hc1" name="Hc1 Example"/>
+<artifact id="Condition/hc1" key="Condition-hc1" name="HC1 Example"/>
+<artifact id="Location/hl7east" key="Location-hl7east" name="HL7East Example"/>
 <artifact id="Observation/head-circumference" key="Observation-head-circumference" name="Head Circumference Example"/>
 <artifact id="Observation/heart-rate" key="Observation-heart-rate" name="Heart Rate Example"/>
 <artifact id="Observation/height" key="Observation-height" name="Height Example"/>
 <artifact id="Observation/hemoglobin" key="Observation-hemoglobin" name="Hemoglobin Example"/>
-<artifact id="Location/hl7east" key="Location-hl7east" name="Hl7East Example"/>
 <artifact id="Immunization/imm-1" key="Immunization-imm-1" name="Imm 1 Example"/>
 <artifact deprecated="true" key="Immunization" name="Immunization"/>
 <artifact id="ValueSet/simple-language" key="ValueSet-simple-language" name="Language codes with language and optionally a region modifier"/>
 <artifact id="Observation/length" key="Observation-length" name="Length Example"/>
 <artifact deprecated="true" key="List" name="List"/>
 <artifact deprecated="true" key="Location" name="Location"/>
-<artifact id="Observation/mchc" key="Observation-mchc" name="Mchc Example"/>
+<artifact id="Observation/mchc" key="Observation-mchc" name="MCHC Example"/>
 <artifact deprecated="true" key="Measure" name="Measure"/>
 <artifact deprecated="true" key="Medication" name="Medication"/>
 <artifact deprecated="true" key="MedicationAdministration" name="MedicationAdministration"/>
@@ -65,10 +70,10 @@
 <artifact deprecated="true" key="MedicationStatement" name="MedicationUsage (MedicationStatement)"/>
 <artifact id="DiagnosticReport/metabolic-panel" key="DiagnosticReport-metabolic-panel" name="Metabolic Panel Example"/>
 <artifact id="Observation/neutrophils" key="Observation-neutrophils" name="Neutrophils Example"/>
+<artifact id="Observation/ofc-percentile" key="Observation-ofc-percentile" name="OFC Percentile Example"/>
 <artifact id="ValueSet/omb-race-category" key="ValueSet-omb-race-category" name="OMB Race Categories"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
-<artifact id="Observation/satO2-fiO2" key="Observation-satO2-fiO2" name="Observation Sato2 Fio2 Example"/>
-<artifact id="Observation/ofc-percentile" key="Observation-ofc-percentile" name="Ofc Percentile Example"/>
+<artifact id="Observation/satO2-fiO2" key="Observation-satO2-fiO2" name="Observation SatO2 FiO2 Example"/>
 <artifact deprecated="true" id="ValueSet/omb-ethnicity-category" key="ValueSet-omb-ethnicity-category" name="OmbEthnicityCategories"/>
 <artifact deprecated="true" key="Organization" name="Organization"/>
 <artifact id="Organization/example-organization-2" key="Organization-example-organization-2" name="Organization 2 Example"/>
@@ -77,7 +82,7 @@
 <artifact id="Patient/child-example" key="Patient-child-example" name="Patient Child Example"/>
 <artifact id="Patient/example" key="Patient-example" name="Patient Example"/>
 <artifact id="Patient/infant-example" key="Patient-infant-example" name="Patient Infant Example"/>
-<artifact id="Observation/pediatric-bmi-example" key="Observation-pediatric-bmi-example" name="Pediatric Bmi Example"/>
+<artifact id="Observation/pediatric-bmi-example" key="Observation-pediatric-bmi-example" name="Pediatric BMI Example"/>
 <artifact id="Observation/pediatric-wt-example" key="Observation-pediatric-wt-example" name="Pediatric Wt Example"/>
 <artifact deprecated="true" key="Practitioner" name="Practitioner"/>
 <artifact id="Practitioner/practitioner-1" key="Practitioner-practitioner-1" name="Practitioner 1 Example"/>
@@ -92,9 +97,9 @@
 <artifact id="Observation/respiratory-rate" key="Observation-respiratory-rate" name="Respiratory Rate Example"/>
 <artifact id="Organization/saint-luke-w-endpoint" key="Organization-saint-luke-w-endpoint" name="Saint Luke W Endpoint Example"/>
 <artifact id="MedicationRequest/self-tylenol" key="MedicationRequest-self-tylenol" name="Self Tylenol Example"/>
+<artifact id="Observation/serum-co2" key="Observation-serum-co2" name="Serum CO2 Example"/>
 <artifact id="Observation/serum-calcium" key="Observation-serum-calcium" name="Serum Calcium Example"/>
 <artifact id="Observation/serum-chloride" key="Observation-serum-chloride" name="Serum Chloride Example"/>
-<artifact id="Observation/serum-co2" key="Observation-serum-co2" name="Serum Co2 Example"/>
 <artifact id="Observation/serum-creatinine" key="Observation-serum-creatinine" name="Serum Creatinine Example"/>
 <artifact id="Observation/serum-potassium" key="Observation-serum-potassium" name="Serum Potassium Example"/>
 <artifact id="Observation/serum-sodium" key="Observation-serum-sodium" name="Serum Sodium Example"/>
@@ -103,6 +108,7 @@
 <artifact deprecated="true" key="Specimen" name="Specimen"/>
 <artifact deprecated="true" key="StructureDefinition" name="StructureDefinition"/>
 <artifact id="Observation/temperature" key="Observation-temperature" name="Temperature Example"/>
+<artifact id="Device/udi-1" key="Device-udi-1" name="UDI 1 Example"/>
 <artifact id="StructureDefinition/us-core-allergyintolerance" key="StructureDefinition-us-core-allergyintolerance" name="US Core AllergyIntolerance Profile"/>
 <artifact id="StructureDefinition/us-core-bmi" key="StructureDefinition-us-core-bmi" name="US Core BMI Profile"/>
 <artifact id="StructureDefinition/us-core-birthsex" key="StructureDefinition-us-core-birthsex" name="US Core Birth Sex Extension"/>
@@ -250,8 +256,8 @@
 <artifact id="SearchParameter/us-core-race" key="SearchParameter-us-core-race" name="USCoreRace"/>
 <artifact deprecated="true" id="ValueSet/us-core-vaccines-cvx" key="ValueSet-us-core-vaccines-cvx" name="USCoreVaccineAdministeredValueSetCvx"/>
 <artifact deprecated="true" id="ValueSet/us-core-ndc-vaccine-codes" key="ValueSet-us-core-ndc-vaccine-codes" name="USCoreVaccineNationalDrugCode"/>
+<artifact id="Observation/usg" key="Observation-usg" name="USG Example"/>
 <artifact id="ValueSet/us-core-usps-state" key="ValueSet-us-core-usps-state" name="USPS Two Letter Alphabetic Codes"/>
-<artifact id="Device/udi-1" key="Device-udi-1" name="Udi 1 Example"/>
 <artifact id="DiagnosticReport/urinalysis" key="DiagnosticReport-urinalysis" name="Urinalysis Example"/>
 <artifact id="Observation/urine-bacteria" key="Observation-urine-bacteria" name="Urine Bacteria Example"/>
 <artifact id="Observation/urine-bilirubin" key="Observation-urine-bilirubin" name="Urine Bilirubin Example"/>
@@ -264,19 +270,18 @@
 <artifact id="Observation/urine-ketone" key="Observation-urine-ketone" name="Urine Ketone Example"/>
 <artifact id="Observation/urine-leukocyte-esterase" key="Observation-urine-leukocyte-esterase" name="Urine Leukocyte Esterase Example"/>
 <artifact id="Observation/urine-nitrite" key="Observation-urine-nitrite" name="Urine Nitrite Example"/>
-<artifact id="Observation/urine-ph" key="Observation-urine-ph" name="Urine Ph Example"/>
 <artifact id="Observation/urine-protein" key="Observation-urine-protein" name="Urine Protein Example"/>
-<artifact id="Observation/urine-rbcs" key="Observation-urine-rbcs" name="Urine Rbcs Example"/>
+<artifact id="Observation/urine-rbcs" key="Observation-urine-rbcs" name="Urine RBCsExample"/>
 <artifact id="Observation/urine-sediment" key="Observation-urine-sediment" name="Urine Sediment Example"/>
-<artifact id="Observation/urine-wbcs" key="Observation-urine-wbcs" name="Urine Wbcs Example"/>
+<artifact id="Observation/urine-wbcs" key="Observation-urine-wbcs" name="Urine WBCsExample"/>
+<artifact id="Observation/urine-ph" key="Observation-urine-ph" name="Urine pH Example"/>
 <artifact id="Observation/urobilinogen" key="Observation-urobilinogen" name="Urobilinogen Example"/>
 <artifact deprecated="true" id="ValueSet/us-core-observation-smokingstatus" key="ValueSet-us-core-observation-smokingstatus" name="UsCoreSmokingStatusPreferred"/>
+<artifact id="MedicationRequest/uscore-mo1" key="MedicationRequest-uscore-mo1" name="Uscore MO1 Example"/>
+<artifact id="MedicationRequest/uscore-mo2" key="MedicationRequest-uscore-mo2" name="Uscore MO2 Example"/>
+<artifact id="Bundle/uscore-mo3" key="Bundle-uscore-mo3" name="Uscore MO3 Example"/>
 <artifact id="Medication/uscore-med1" key="Medication-uscore-med1" name="Uscore Med1 Example"/>
 <artifact id="Medication/uscore-med2" key="Medication-uscore-med2" name="Uscore Med2 Example"/>
-<artifact id="MedicationRequest/uscore-mo1" key="MedicationRequest-uscore-mo1" name="Uscore Mo1 Example"/>
-<artifact id="MedicationRequest/uscore-mo2" key="MedicationRequest-uscore-mo2" name="Uscore Mo2 Example"/>
-<artifact id="Bundle/uscore-mo3" key="Bundle-uscore-mo3" name="Uscore Mo3 Example"/>
-<artifact id="Observation/usg" key="Observation-usg" name="Usg Example"/>
 <artifact deprecated="true" key="ValueSet" name="ValueSet"/>
 <artifact deprecated="true" id="Observation/vitals-panel" key="Observation-vitals-panel" name="Vitals-panel"/>
 <artifact id="Observation/weight" key="Observation-weight" name="Weight Example"/>
@@ -293,7 +298,7 @@
 <page deprecated="true" key="r2-r4-guidance" name="DSTU2 to R4 Conversion"/>
 <page key="downloads" name="Downloads"/>
 <page key="all-examples" name="Examples"/>
-<page key="future-of-us-core" name="Future of Us Core"/>
+<page key="future-of-us-core" name="Future of US Core"/>
 <page key="general-guidance" name="General Guidance"/>
 <page key="guidance" name="Guidance"/>
 <page key="index" name="Home"/>

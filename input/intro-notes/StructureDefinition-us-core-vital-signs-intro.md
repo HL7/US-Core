@@ -36,10 +36,12 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Profile specific implementation guidance:**
 
-- Additional codes that translate or map to the Observation code or category codes are allowed.  For example:
-   -  providing both a local code and LOINC code
+- Additional codes that translate or map to the Observation code or category codes are allowed. For example:
+   -  providing a local system specific code
    -  providing a more specific codes such as 8306-3 - *Body height - lying* in addition to 8302-2 - *Body height*.
    - Additional optional qualifier LOINC codes are provided in FHIR core specification [vital signs table].
+
+  Note that the code system value **SHOULD** be supplied for each additional code.
 - An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it.
 - Implementers may use this profile as a base for other vital signs in addition to those in this guide.
 
