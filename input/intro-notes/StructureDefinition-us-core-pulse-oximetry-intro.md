@@ -24,6 +24,7 @@ In addition to the mandatory and must support data elements in the FHIR Oxygen S
 
 **Profile specific implementation guidance:**
 
+- See the implementation guidance section for the [US Core Vital Signs Profile]
 - Inspired oxygen therapy may be represented with [component] observations when measured at the same time as the pulse oximetry measurements. They are expressed as inhaled oxygen flow rate (e.g., 6 liters/min) and as inhaled oxygen concentration (e.g., 40% oxygen).
   - {:.stu-note}This profile is technically non-conformant with the base FHIR vitals profile which defines a *required* binding that excludes the concept for `L/min` for `Observation.component.value(x)`. This is a known issue and a [change request](https://jira.hl7.org/browse/FHIR-27911) has been logged to correct it.  Validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile until the next version of the base specification is published.
 - Many pulse oximetry readings are taken while the patient is breathing room air.  The concept of "room air" (unmodified, ambient air) should be represented as an inhaled oxygen flow rate of 0 liters/min.

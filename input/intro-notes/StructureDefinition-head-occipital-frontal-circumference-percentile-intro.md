@@ -1,4 +1,5 @@
 
+
 This profile sets minimum expectations for the [Observation] resource to record, search, and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patients from birth to 37 Months of age. It is based on the [US Core Vital Signs Profile] and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile.
 
 **Example Usage Scenarios:**
@@ -23,7 +24,7 @@ The following are example usage scenarios for the US Core Pediatric Head Occipit
 
 **Profile specific implementation guidance:**
 
-- An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it.
+- See the implementation guidance section for the [US Core Vital Signs Profile]
 - Information about the growth chart tables used to determine percentiles should be supplied in `Observation.note.text` (for example, 'WHO Males, 0-2 years Chart').
 - For representing the raw OFC measurements use the [US Core Head Circumference Profile].
 

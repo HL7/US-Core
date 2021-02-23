@@ -23,7 +23,7 @@ The following are example usage scenarios for the US Core Body Temperature Profi
 
 **Profile specific implementation guidance:**
 
-- An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it.
+- See the implementation guidance section for the [US Core Vital Signs Profile]
 
 ### Examples
 
