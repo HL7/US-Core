@@ -20,7 +20,7 @@ The following are example usage scenarios for the US Core Blood Pressure Profile
 1.  a fixed *component* code for diastolic blood pressure
 
 **Each Observation must support:**
-
+healt
 1.  a result value for systolic blood pressure
 1.  a result value for diastolic blood pressure
 
@@ -28,6 +28,7 @@ The following are example usage scenarios for the US Core Blood Pressure Profile
 
 - See the implementation guidance section for the [US Core Vital Signs Profile]
 - An Observation without a systolic or diastolic result value, **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
+
 
 ### Examples
 
