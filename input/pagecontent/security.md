@@ -1,4 +1,6 @@
 
+### Patient Privacy and Security
+
 US Core transactions often make use of patient-specific information which could be exploited by malicious actors resulting in exposure of patient data. For this reason, all US Core transactions must be secured appropriately with access to limited authorized individuals, data protected in transit, and appropriate audit measures taken.
 
 Implementers **SHOULD** be aware of these [security considerations] associated with FHIR transactions, particularly those related to:
@@ -25,5 +27,9 @@ For the purposes of US Core, security conformance requirements are as follows:
 -   Systems **SHOULD** provide Provenance statements using the [US Core Provenance Profile] resource and associated requirements.
 -   Systems **MAY** implement the [FHIR Digital Signatures] and provide feedback on its appropriateness for US Core transactions.
 -   Systems **MAY** protect the confidentiality of data at rest via encryption and associated access controls. The policies and methods used are outside the scope of this specification.
+
+### Clinical Safety
+
+When implementing FHIR and US Core, implementers need to be aware of the risks and tradeoffs and are encouraged to review the [clinical safety] section in the core specification.
 
 {% include link-list.md %}

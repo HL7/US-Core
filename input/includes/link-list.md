@@ -280,3 +280,4 @@
 [missing data]: general-guidance.html#missing-data
 [`CarePlan.status`]: {{site.data.fhir.path}}careplan.html
 [Must Support - Coded Elements]: conformance-expectations.html#must-support---coded-elements
+[clinical safety]:  http://hl7.org/fhir/safety.html
