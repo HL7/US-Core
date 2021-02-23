@@ -159,13 +159,13 @@ For example, the [US Core DiagnosticReport Profile] issued element is a primitiv
 
 #### Must Support - Complex Elements
 
-Complex element are composed of primitive and/or other complex elements.  This page provides guidance for the following complex datatypes:
+Complex element are composed of primitive and/or other complex elements.  In addition to the general guidance for complex elements in this section, there is additional must support guidance in other sections for the following complex datatypes:
 
 - [`CodeableConcept`](#must-support---coded-elements)
 - [`Coding`](#must-support---coded-elements)
 - [`Reference`](#must-support---resource-references)
 
-For any complex element marked as must support, The server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is mark as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
+For any complex element marked as must support, The server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
 
 For example, the [US Core DiagnosticReport Profile for Report and Note exchange] presentedForm element is labeled must support and has no must support sub-elements. When claiming conformance to this profile:
 
@@ -180,6 +180,8 @@ For example, the [US Core Patient Profile] name element is labeled must support 
 - US Core Requestors **SHALL** be capable of processing the value in value in `Patient.name.family` and `Patient.name.given`.
 
   {% include img.html img="Must_Support_Patient_name.png" caption="Figure 9: US Core Patient.name" %}
+
+On the other hand, if any sub-element is marked as must support and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure you must support the sub-element(s) marked as must support. There are no examples of US Core profiles that have this structure defined.
 
 Systems can support the other elements, but this is not a requirement of US Core. The [U.S. Core Data for Interoperability (USCDI) v1] may require other elements, for example `suffix`.
 
