@@ -73,4 +73,26 @@ The following concept mappings have been defined as part of the this guide.
 
 -->
 
+### Using Value Set Authority Center (VSAC)
+
+This guide links terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable using a is a RESTful API service for accessing the VSAC value sets and supported code systems.
+
+  - It is a requirement of VSAC to log in using your own *UMLS API Key* to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html).  (See the screen shots below)
+  - The Value sets in VSAC are specified using a VSAC value set OID.  
+  - The retrieval of a value set using the FHIR API structure using just the OID provided will only retrieve the value set definition, when available, and to obtain the expansion, the expansion operation is used.
+
+ For example, the [US Core Smoking Status Observation Profile] valueCodeableConcept element has a preferred binding to the Smoking Status value set in VSAC (`https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.38/expansion`) By clicking on the following link:
+
+ {% include img.html img="vsac-1.png" caption="Figure 1: VSAC link" %}
+
+The reader is redirected to the VSAC login page to enter an API Key:
+
+ {% include img.html img="vsac-2.png" caption="Figure 2: VSAC API-Key Login" %}
+
+After successfully entered the API-Key the value set is displayed.
+
+ {% include img.html img="vsac-3.png" caption="Figure 3: VSAC Smoking Status ValueSet" %}
+
+Note that only one login is required per session.
+
 {% include link-list.md %}
