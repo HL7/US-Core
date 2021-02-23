@@ -2,9 +2,9 @@
 This section outlines important definitions, interpretations, and requirements common to all US Core actors used in this guide.
 The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
 
-The base [FHIR Must Support] guidance requires specifications define exactly the support expected for elements labeled *Must Support*.  
+The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications, identifying the specific profiles and RESTful transactions that need to be supported. Note that the individual US Core profiles identify the structural constraints, terminology bindings and invariants.  Similarly, the individual US Core SearchParameter and Operation resources specify how they are understood by the server. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles and the search parameters applicable to each of the US Core actors.
 
-This page defines the rules for interpreting profile elements and subelements labeled *Must Support* for requesters and responders.
+The base [FHIR Must Support] guidance requires specifications define exactly the support expected for elements labeled *Must Support*.  This page defines the rules for interpreting profile elements and subelements labeled *Must Support* for requesters and responders.
 
 ### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
 
