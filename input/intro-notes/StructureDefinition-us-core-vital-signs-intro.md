@@ -21,7 +21,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each Observation must have:**
 
-
 1. a status
 1. a category code of "vital-signs"
 1. a [LOINC] code, if available, which tells you what is being measured
@@ -42,7 +41,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
    -  providing a more specific codes such as 8306-3 - *Body height - lying* in addition to 8302-2 - *Body height*.  Several additional observation codes are provided in the FHIR core specification [vital signs table].
 
   Note that the code system value **SHOULD** be supplied for each additional code.
-- The observations **MAY** have [component] observations. For example, to qualify the vital sign observation 8310-5 - *Body temperature*, 8327-9 - Body temperature measurement site (oral, forehead, rectal, etc) may be used as a component observation. Several of these are provided in the FHIR core specification [vital signs table].
+- The observations **MAY** have [component] observations. For example, to qualify the vital sign observation 8310-5 - *Body temperature*, 8327-9 - *Body temperature measurement site** (oral, forehead, rectal, etc) may be used as a component observation. Several of these are provided in the FHIR core specification [vital signs table].
 - An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it.
 - Implementers may use this profile as a base for other vital signs in addition to those in this guide.
 
