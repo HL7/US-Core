@@ -36,7 +36,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Profile specific implementation guidance:**
 
-- Additional codes that translate or map to the Observation code or category codes are allowed. For example:
+- The observations **MAY** have additional codes that translate or map to the Observation code or category codes. For example:
    -  providing a local system specific code
    -  providing a more specific codes such as 8306-3 - *Body height - lying* in addition to 8302-2 - *Body height*.  Several additional observation codes are provided in the FHIR core specification [vital signs table].
 
