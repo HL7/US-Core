@@ -1,0 +1,109 @@
+{
+    "id": "us-core-practitionerrole-practitioner",
+    "base": [
+        "PractitionerRole"
+    ],
+    "code": "practitioner",
+    "contact": [
+        {
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.hl7.org/Special/committees/usrealm/index.cfm"
+                }
+            ]
+        }
+    ],
+    "date": "2019-05-15T23:49:04.108452Z",
+    "derivedFrom": "http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner",
+    "description": "Practitioner that is able to provide the defined services for the organization<br />\n<em>NOTE</em>: This US Core SearchParameter definition extends the usage context of\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">capabilitystatement-expectation</a>\n extension to formally express implementer expectations for these elements:<br />\n - multipleAnd<br />\n - multipleOr<br />\n - modifier<br />\n - comparator<br />\n - chain<br />\n ",
+    "experimental": false,
+    "expression": "PractitionerRole.practitioner",
+    "modifier": [
+        "missing",
+        "type",
+        "identifier"
+    ],
+    "multipleAnd": true,
+    "multipleOr": true,
+    "name": "USCorePractitionerrolePractitioner",
+    "publisher": "HL7 International - US Realm Steering Committee",
+    "status": "active",
+    "target": [
+        "Practitioner"
+    ],
+    "type": "reference",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-practitionerrole-practitioner",
+    "version": "4.1.0",
+    "xpath": "f:PractitionerRole/f:practitioner",
+    "xpathUsage": "normal",
+    "resourceType": "SearchParameter",
+    "_multipleOr": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueCode": "MAY"
+            }
+        ]
+    },
+    "_multipleAnd": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                "valueCode": "MAY"
+            }
+        ]
+    },
+    "_modifier": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "MAY"
+                }
+            ]
+        }
+    ],
+    "chain": [
+        "identifier",
+        "name"
+    ],
+    "_chain": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "SHALL"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "SHALL"
+                }
+            ]
+        }
+    ],
+    "text": {
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SearchParameter: USCorePractitionerrolePractitioner</h2><p><b> description</b> : Practitioner that is able to provide the defined services for the organization<br></br>\n<em>NOTE</em>: This US Core SearchParameter definition extends the usage context of\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">capabilitystatement-expectation</a>\n extension to formally express implementer expectations for these elements:<br></br>\n - multipleAnd<br></br>\n - multipleOr<br></br>\n - modifier<br></br>\n - comparator<br></br>\n - chain<br></br>\n </p><br></br><p><b> id</b> us-core-practitionerrole-practitioner</p><p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-practitionerrole-practitioner</b>\n\t\t\t</p><p><b> version</b> : 4.1.0</p><p><b> name</b> : USCorePractitionerrolePractitioner</p><p><b> derivedFrom</b> : http://hl7.org/fhir/SearchParameter/PractitionerRole-practitioner\n\t\t\t</p><p><b> status</b> : active</p><p><b> experimental</b>  False</p><p><b> date</b> : 2019-05-15</p><p><b> publisher</b> : HL7 International - US Realm Steering Committee</p><p><b> contact</b> : http://www.hl7.org/Special/committees/usrealm/index.cfm</p><p><b> useContext</b> : </p><p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span>\n\t\t\t</p><!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  --><p><b> code</b> : <code>practitioner</code>\n\t\t\t</p><p><b> base</b> :PractitionerRole</p><p><b> type</b> : reference</p><p><b> expression</b> : <code>PractitionerRole.practitioner</code>\n\t\t\t</p><p><b> xpath</b> : <code>f:PractitionerRole/f:practitioner</code>\n\t\t\t</p><p><b> xpathUsage</b> : normal</p><p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p><p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p><p><b> modifier</b> : <code>missing</code>  (Conformance Expectation =  MAY)</p><p><b> modifier</b> : <code>type</code>  (Conformance Expectation =  MAY)</p><p><b> modifier</b> : <code>identifier</code>  (Conformance Expectation =  MAY)</p><p><b> chain</b> : <code>identifier</code>  (Conformance Expectation = SHALL)</p><p><b> chain</b> : <code>name</code>  (Conformance Expectation = SHALL)</p></div>",
+        "status": "generated"
+    }
+}
