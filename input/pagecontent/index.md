@@ -1,61 +1,17 @@
 <div markdown="1" class="bg-info">
 
-<!--
+
 
 **punch list**:
 
-- [X] Finish [Resolving Trackers](https://confluence.hl7.org/display/CGP/US+Core+January+2021+Ballot)
+- [X] Finish [Resolving Trackers]https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=12001)
 - [ ] Finish Applying Resolved Trackers
-     - [X] Update CapStatements to reflect changes
-        - [X] Document Search requirements in CapabilityStatements
-        - [X] Add Vitals Profiles
-     - [X] Add Vitals profile
-        - [X] SDs
-             - [X] look at pulse ox and head circumference
-        - [X] VS
-        - [X] add/edit Intros and Quick Starts
-        - [X] term and profile lists
-        - [X] update examples
-        - [X] update USCDI table
-     - [ ] Updates to Quick Starts for updated search requirements
-       - [X] add Intros to QuickStarts
-       - [X] don't forget added requirements for DocRef. (PractitionerRole, and Provenance?)
-     - [ ] Various vocab issues with VSAC
-       - [ ] FHIR-29322
-- [X] Review survey and complete updates to choices of types and References
-    - need new Tracker or apply to existing?
-    1. CareTeam.participant.members
-    1. DiagnosticReport.performer
-    1. DiagnosticReport.effective[x]
-    1. DocumentReference.author
-    1. Goal.target.due
-    1. Immunization.occurrence[x]
-    1. Laboratory Observation.effective[x]
-    1. Laboratory Value[x]
-    1. MedicationRequest.reported[x]
-    1. MedicationRequest.requester
-    1. MedicationRequest.medication[x]
-    1. Procedure.performed[x]
-    1. Provenance.agent.who
-- [X] Replace value sets with links to VSAC where possible
-      -  see [this spreadsheet](https://docs.google.com/spreadsheets/d/1BtRNsmrez2D8cm_81qhBaiU0aMmXGAIVDNwXCVAu2tE/edit#gid=0)      
-- [X] Rewrite Must Support section
-    - [X] own page
-    - [X] draft [here](https://docs.google.com/document/d/1LenTi2KJ7-qcU4HLeDquXoHqpFbAxsV6uIfC6CqMsUU/edit?usp=sharing)
-        - examples?
-        - screen shots of SD tree?
-        - mandatory (min=1)
-        - bindings
-        - patterns
-        - must support for primitive, complex, coded and backbone elements
-        - the must support tab = tagged as must support + pattern + min = 1
-        - reference when data is missing
-- [X] Add note to balloters whether want custom summaries
 - [ ] QA
-     - [X] review applied trackers
+     - [] review applied trackers
      - [ ] errors and warnings
 
-       <!--
+<!--
+
         - [X] example name and definition error [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Adding.20Description.20for.20Examples.20to.20ImplementationGuide.20-.20how/near/217444410)
 
             The extension http://hl7.org/fhir/StructureDefinition/instance-name is unknown, and not allowed here
@@ -77,21 +33,17 @@
         - [ ] Procedure Example:  rehab.json. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20core.20procedure.20example.20error) per GG will get fixed.
         - [X] CareTeam Example: careteam-example.json: US Ed Snomed Errors [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20ed.20Snomed.20for.20US.20Core)
         - [X] valueset-simple-language.xml "Error from server: Language valuesets cannot be expanded as they are based on a grammar" this error is still extant from prior version of US Core and has yet to be resolved. per 12/2 FMG per GG won't ok to get variance on this one.
-        - [X] update JIRA (update jira file for us core #119)
+        - [X] update JIRA (update jira file for us czsore #119)
         - [ ] update `input/ignoreWarnings.txt`
           - [X] [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20Warnings.20we.20want.20to.20suppress)
           - [ ] add all the informative message too
      - [X] read through for typos and grammar
 -->
 
-</div>
-
-<div markdown="1" class="note-to-balloters">
-
 Where possible, new and updated content will be highlighted with green text and background
 {:.new-content}
 
-{{ site.data.package-list.list[1].desc }}
+{{ site.data.package-list.list[0].desc }}
 
 </div>
 
