@@ -27,7 +27,7 @@ The following are example usage scenarios for the US Core Blood Pressure Profile
 **Profile specific implementation guidance:**
 
 - See the implementation guidance section for the [US Core Vital Signs Profile]
-- An Observation without a systolic or diastolic result value, **SHALL** include a reason why the data is absent in 'Observation.component.dataAbsentReason'
+- An Observation without a systolic or diastolic result value, **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
 
 ### Examples
 
