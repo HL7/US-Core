@@ -209,15 +209,14 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 
 #### Must Support - Choice of Data Types
 
-In certain profiles only specific elements are labeled as *Must Support*.
+Some elements allow different data types (e.g. Observation.effective[x]) for their content. In these situations, only specific data type choice elements are labeled as *Must Support*.
 
 For example, the [US Core Laboratory Result Observation Profile] effectiveDateTime is labeled *Must Support*. When claiming conformance to the [US Core Laboratory Result Observation Profile]:
 
 * US Core Responders **SHALL** be capable of populating Observation.effectiveDateTime.
 * US Core Requestors **SHALL** be capable of processing Observation.effectiveDateTime.
 
-Systems can support the other elements, but this is not a requirement of US Core.
-
+Systems **MAY** support populating and processing other choice elements (such as, Observation.effectivePeriod) but this is not a requirement of US Core.
 
 {% include img.html img="Must_Support_Observation.effective.jpg" caption="Figure 12: US Core Observation.effectiveDateTime" %}
 
