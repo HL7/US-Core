@@ -8,19 +8,19 @@ The base [FHIR Must Support] guidance requires specifications define exactly the
 
 ### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
 
-Each profile provides a several different formal views of all the must support elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".
+Each profile provides several different formal views of all the must support elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".
 
-The elements labeled *Must Support* in the "Differential Table" view are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is illustrated in figure 1.
+The elements labeled *Must Support* in the "Differential Table" view are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of this is illustrated in Figure 1.
 
   {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
 
-In the "Snapshot Table" view in Figure 2, all the must support elements defined for the profile , and any mandatory or must support elements inherited from a base profile (e.g. [US Core Body Height Profile] based on [Vital Signs Profile]), are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of the "Snapshot Table" is shown in figure 2.
+In the "Snapshot Table" view in Figure 2, all the must support elements defined for the profile, and any mandatory or must support elements inherited from a base profile (e.g. [US Core Body Height Profile] based on [Vital Signs Profile]), are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. An example of the "Snapshot Table" is shown in Figure 2.
 
   {% include img.html img="Must_Support_Snapshot_View.png" caption="Figure 2: Snapshot Table View" %}
 
- In the "Snapshot Table (Must Support)" view, all the elements presented in the view are either mandatory or must support elements for conformance to the profile . These elements are defined in the US Core Profile, mandatory elements inherited from the base specification and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile. An example of the "Snapshot Table (Must Support)" is shown in figure 3.
+ In the "Snapshot Table (Must Support)" view, all the elements presented in the view are either mandatory or must support elements for conformance to the profile. These elements are defined in the US Core Profile, mandatory elements inherited from the base specification and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile. An example of the "Snapshot Table (Must Support)" is shown in Figure  3.
 
-  {% include img.html img="Must_Support_MS_View.png" caption="Figure 3: 'Must Support' View" %}
+  {% include img.html img="Must_Support_MS_View.png" caption="Figure 3: Snapshot Table (Must Support) View" %}
 
 ### Claiming Conformance to a US Core Profile
 
@@ -35,7 +35,7 @@ To claim conformance to a US Core Profile US Core Servers **SHALL**:
 
 ### Must Support Elements
 
-For querying and reading US Core Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows (see the [Future of US Core] page for writing and updating US Core Profiles.) :
+For querying and reading US Core Profiles, *Must Support* on any profile data element **SHALL** be interpreted as follows (see the [Future of US Core] page for writing and updating US Core Profiles):
 
 * US Core Responders **SHALL** be capable of populating all data elements as part of the query results as specified by the [US Core Server Capability Statement].
 * US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words US Core Requestors **SHOULD** be capable of displaying the data elements for human use or storing it for other purposes.
@@ -50,7 +50,7 @@ Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful
 
 
 #### Must Support - Coded Elements
-In addition the guidance provided by [FHIR Terminology], Coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) marked as Must Support following the rules for their respective bindings.
+In addition to the guidance provided by [FHIR Terminology], Coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) which are marked as Must Support follow the rules for their respective bindings.
 
 ##### Required bindings Coded Elements
 
@@ -65,7 +65,7 @@ For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has
 
 ##### Extensible binding for CodeableConcept Datatype
 
-[Extensible Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used if the concept applies, but if no suitable code exists in the value set, alternate code(s) may be provided in its place.  For `CodeableConcept` multiple codings are permitted and this rule applies to one of the codings.  Also for `CodeableConcept` if only text is available, then just text may be used.  
+[Extensible Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used if an applicable concept is present, but if no suitable code exists in the value set, alternate code(s) may be provided in its place.  For `CodeableConcept` multiple codings are permitted and this rule applies to one of the codings.  Also for `CodeableConcept` if only text is available, then just text may be used.  
 
 For example, the [US Core AllergyIntolerance Profile] code element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
@@ -80,7 +80,7 @@ For example, the [US Core AllergyIntolerance Profile] code element has an extens
 ##### Using multiple codes with CodeableConcept Datatype
 {:.no_toc}
 
-Alternate codes may be provided in addition to the standard codes defined in required or extensible value sets. The alternate codes are called “translations”. These translations may be equivalent to or narrower in meaning to the standard concept code.
+Alternate codes may be provided in addition than the standard codes defined in required or extensible value sets. The alternate codes are called “translations”. These translations may be equivalent to or narrower in meaning to the standard concept code.
 
 Example of multiple translation for Body Weight concept code.
 
@@ -142,7 +142,7 @@ The StructureDefinitions define the US Core Profiles and the [ElementDefinition.
 For example the [US Core DiagnosticReport Profile for Laboratory Results Reporting] category element is defined with a pattern requiring fixed values in `DiagnosticReport.category.coding.system`  and `DiagnosticReport.category.coding.code` for a Coding element. When claiming conformance to this profile:
 
 - US Core Responders **SHALL** provide these values in a `DiagnosticReport.category`
-- US Core Requestors **SHALL** be capable of processing these values `DiagnosticReport.category`
+- US Core Requestors **SHALL** be capable of processing these values in `DiagnosticReport.category`
 
   {% include img.html img="Must_Support_DiagnosticReport_category.png" caption="Figure 6: US Core DiagnosticReport.category" %}
 
@@ -153,7 +153,7 @@ Primitive elements are are single elements with a primitive value. If they are m
 For example, the [US Core DiagnosticReport Profile] issued element is a primitive `instant` datatype. When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in a `DiagnosticReport.issued`
-- US Core Requestors **SHALL** be capable of processing the value `DiagnosticReport.issued`
+- US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.issued`
 
   {% include img.html img="Must_Support_DiagnosticReport_issued.png" caption="Figure 7: US Core DiagnosticReport.issued" %}
 
@@ -165,7 +165,7 @@ Complex element are composed of primitive and/or other complex elements.  In add
 - [`Coding`](#must-support---coded-elements)
 - [`Reference`](#must-support---resource-references)
 
-For any complex element marked as must support, The server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
+For any complex element marked as must support, the server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
 
 For example, the [US Core DiagnosticReport Profile for Report and Note exchange] presentedForm element is labeled must support and has no must support sub-elements. When claiming conformance to this profile:
 
@@ -202,8 +202,8 @@ In certain profiles only a single resource reference is present on an element la
 
 For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must Support*. When claiming conformance to the [US Core AllergyIntolerance Profile]:
 
-* US Core Responders **SHALL** be capable of providing an AllergyIntolerance.patient with a valid reference to a US Core Patient Profile.
-* US Core Requestors **SHALL** be capable of processing an AllergyIntolerance.patienta with a valid reference to a US Core Patient Profile.
+* US Core Responders **SHALL** be capable of providing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
+* US Core Requestors **SHALL** be capable of processing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 
 {% include img.html img="Must_Support_AllergyIntolerance.jpg" caption="Figure 11: US Core AllergyIntolerance.patient" %}
 
@@ -213,8 +213,8 @@ Some elements allow different data types (e.g. Observation.effective[x]) for the
 
 For example, the [US Core Laboratory Result Observation Profile] effectiveDateTime is labeled *Must Support*. When claiming conformance to the [US Core Laboratory Result Observation Profile]:
 
-* US Core Responders **SHALL** be capable of populating Observation.effectiveDateTime.
-* US Core Requestors **SHALL** be capable of processing Observation.effectiveDateTime.
+* US Core Responders **SHALL** be capable of populating `Observation.effectiveDateTime`.
+* US Core Requestors **SHALL** be capable of processing `Observation.effectiveDateTime`.
 
 Systems **MAY** support populating and processing other choice elements (such as, Observation.effectivePeriod) but this is not a requirement of US Core.
 
@@ -224,8 +224,8 @@ For the [US Core Laboratory Result Observation Profile] value element, multiple 
 
 When claiming conformance to the [US Core Laboratory Result Observation Profile]:
 
-* US Core Responders **SHALL** be capable of populating Observation.valueQuantity, Observation.valueCodeableConcept, and Observation.valueString.
-* US Core Requestors **SHALL** be capable of processing Observation.valueQuantity, Observation.valueCodeableConcept, and Observation.valueString.
+* US Core Responders **SHALL** be capable of populating `Observation.valueQuantity`, `Observation.valueCodeableConcep`t, and `Observation.valueStrin`g.
+* US Core Requestors **SHALL** be capable of processing `Observation.valueQuantity`, `Observation.valueCodeableConcept`, and `Observation.valueString`.
 
 Systems can support the other elements, but this is not a requirement of US Core.
 
