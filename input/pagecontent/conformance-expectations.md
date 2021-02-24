@@ -235,7 +235,7 @@ Systems can support the other elements, but this is not a requirement of US Core
 
 #### Must Support - Choice of Profile Elements
 
-There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the must support requirement.  In such instances, the server **SHALL** support at least one such element, and the client application **SHALL** support all such elements. There is no way to define this in a computable way, but these instances are clearly documented in the Profile specific implementation guidance sections.
+There are several instances in this Guide where there is a choice of supporting one or another profile element to meet the must support requirement.  In such instances, the server **SHALL** support at least one such element, and the client application **SHALL** support all such elements. There is no way to define this in a computable way, but these instances are clearly documented in the *Profile specific implementation guidance* sections.
 
 For example:
 
