@@ -72,11 +72,11 @@ list:
       1. **Resolved - change required**:Typo ([FHIR-30460](https://jira.hl7.org/browse/FHIR-30460)) [See Change Here](#.html)
       1. **Triaged**:Encounter Type codes should reuse C-CDA encounter Type code ([FHIR-30470](https://jira.hl7.org/browse/FHIR-30470)) [See Change Here](#.html)
       1. **Triaged**:Should US Core Procedure Value set include LOINC? ([FHIR-30478](https://jira.hl7.org/browse/FHIR-30478)) [See Change Here](#.html)
-      1. **Triaged**:Clarify Missing Data language for for coded data elements with required binding strength ([FHIR-30630](https://jira.hl7.org/browse/FHIR-30630)) [See Change Here](#.html)
+      1. **Triaged**:Clarify Missing Data language for coded data elements with required binding strength ([FHIR-30630](https://jira.hl7.org/browse/FHIR-30630)) [See Change Here](#.html)
       1. **Resolved - change required**:Affirmative vote on ballot. ([FHIR-30653](https://jira.hl7.org/browse/FHIR-30653)) [See Change Here](#.html)
       1. **Triaged**:Update the definition to explicitly say the value set is composed of ISO 639-1 and ISO 639-2. ([FHIR-30654](https://jira.hl7.org/browse/FHIR-30654)) [See Change Here](#.html)
       1. **Applied**:Change URL for Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes([FHIR-30655](https://jira.hl7.org/browse/FHIR-30655)) See Changes [Here](http://build.fhir.org/ig/HL7/US-Core/terminology.html#using-value-set-authority-center-vsac) and [Here](http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code)
-      1. **Resolved - change required**:In table of US CORE  and VSAC Value Sets, Provider Speciality should read Provider Specialty. ([FHIR-30656](https://jira.hl7.org/browse/FHIR-30656)) [See Change Here](#.html)
+      1. **Resolved - change required**:In table of US CORE  and VSAC Value Sets, Provider Specialty should read Provider Specialty. ([FHIR-30656](https://jira.hl7.org/browse/FHIR-30656)) [See Change Here](#.html)
       1. **Triaged**:WG should explain the relationship between US CORE and an evolving USCDI more directly. ([FHIR-30657](https://jira.hl7.org/browse/FHIR-30657)) [See Change Here](#.html)
       1. **Applied**:Correct 2 bullet points in section 1.2. ([FHIR-30658](https://jira.hl7.org/browse/FHIR-30658)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/index.html)
       1. **Triaged**:Use Cases should include an example of a payer sending USCDI info to a physician. ([FHIR-30659](https://jira.hl7.org/browse/FHIR-30659)) [See Change Here](#.html)
@@ -100,7 +100,7 @@ list:
       1. **Applied**:Clarify what is meant by "support the other elements." ([FHIR-30680](https://jira.hl7.org/browse/FHIR-30680)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/conformance-expectations.html#must-support---choice-of-data-types)
       1. **Resolved - change required**:Typo related to grammar ([FHIR-30681](https://jira.hl7.org/browse/FHIR-30681)) [See Change Here](#.html)
       1. **Resolved - no change**:What does “it” refer to? ([FHIR-30682](https://jira.hl7.org/browse/FHIR-30682))
-      1. **Resolved - change required**:Fix typos ([FHIR-30683](https://jira.hl7.org/browse/FHIR-30683)) [See Change Here](#.html)
+      1. **Applied**:Fix typos ([FHIR-30683](https://jira.hl7.org/browse/FHIR-30683)) Various Changes
       1. **Triaged**:Consider removing these note types based on the LOINC comment to USCDI. ([FHIR-30684](https://jira.hl7.org/browse/FHIR-30684)) [See Change Here](#.html)
       1. **Triaged**:Well done. Make explicit. ([FHIR-30685](https://jira.hl7.org/browse/FHIR-30685)) [See Change Here](#.html)
       1. **Triaged**:Use member, not component, per the core spec. ([FHIR-30686](https://jira.hl7.org/browse/FHIR-30686)) [See Change Here](#.html)
@@ -169,7 +169,7 @@ list:
         |OMB Ethnicity Categories|Ethnicity|2.16.840.1.114222.4.11.837|Yes|
         |US Core CareTeam Provider Roles|Care Team Member Function|2.16.840.1.113762.1.4.1099.30|Yes|
         |US Core Medication Codes (RxNorm)|Medication Clinical Drug|2.16.840.1.113762.1.4.1010.4|Yes|
-        |US Core Provider Speciality (NUCC)|Healthcare Provider Taxonomy|2.16.840.1.114222.4.11.1066|No|
+        |US Core Provider Specialty (NUCC)|Healthcare Provider Taxonomy|2.16.840.1.114222.4.11.1066|No|
         |US Core Smoking Status|Smoking Status|2.16.840.1.113883.11.20.9.38|Yes|
         |US Core Vaccine Administered Value Set (CVX)|CVX Vaccines Administered Vaccine Set|2.16.840.1.113762.1.4.1010.6|Yes|
         |US Core Common substances for allergy and intolerance documentation including refutations|Common substances for allergy and intolerance documentation including refutations|2.16.840.1.113762.1.4.1186.8|No|
@@ -188,7 +188,7 @@ list:
       **Trackers items and links to the updated content**
       listed below are the resolved trackers for this version:
 
-      1. Must Support Over Interpreted ([FHIR-28375](https://jira.hl7.org/browse/FHIR-28375)) Changes throughoughout the profiles -- added conformance page [See Change Here](conformance-expectations.html)
+      1. Must Support Over Interpreted ([FHIR-28375](https://jira.hl7.org/browse/FHIR-28375)) Changes throughout the profiles -- added conformance page [See Change Here](conformance-expectations.html)
 
       1. Replace the US Core Update Allergy substances value set with VSAC reference ([FHIR-29322](https://jira.hl7.org/browse/FHIR-29322)) [See Change Here](StructureDefinition-us-core-allergyintolerance.html)
 
@@ -273,7 +273,7 @@ list:
 
       1. Observation.hasMember Vital Signs Panel Profile Reference Choice ([FHIR-28391](https://jira.hl7.org/browse/FHIR-28391)) [See Change Here](profiles-and-extensions.html#FHIR-28391)
 
-      1. Add must support type choices for Observation.value[x] for for Lab Observation Profile ([FHIR-28390](https://jira.hl7.org/browse/FHIR-28390)) [See Change Here](StructureDefinition-us-core-observation-lab.html)
+      1. Add must support type choices for Observation.value[x] for Lab Observation Profile ([FHIR-28390](https://jira.hl7.org/browse/FHIR-28390)) [See Change Here](StructureDefinition-us-core-observation-lab.html)
 
       1. Add must support type choices for Observation.effective[x] for Lab Observation Profile ([FHIR-28389](https://jira.hl7.org/browse/FHIR-28389)) [See Change Here](StructureDefinition-us-core-observation-lab.html)
 
@@ -336,12 +336,12 @@ list:
           - [Detailed Race --> Race](StructureDefinition-us-core-race.html#profile)
           - [OMB Ethnicity --> Categories\|Ethnicity](StructureDefinition-us-core-ethnicity.html#profile)
           - [US Core Medication Codes (RxNorm) --> Medication Clinical Drug](StructureDefinition-us-core-medicationrequest.html) and [here](StructureDefinition-us-core-medication.html#Medication.code)
-          - [US Core Provider Speciality (NUCC) --> Healthcare Provider Taxonomy](StructureDefinition-us-core-practitionerrole.html)
+          - [US Core Provider Specialty (NUCC) --> Healthcare Provider Taxonomy](StructureDefinition-us-core-practitionerrole.html)
           - [US Core Vaccine Administered Value Set (CVX) --> CVX Vaccines Administered Vaccine Set](StructureDefinition-us-core-immunization.html)
 
-      1. Remove remove CVS-NDC mapping table ([FHIR-29745](https://jira.hl7.org/browse/FHIR-29745)) [See Change Here](StructureDefinition-us-core-immunization.html#FHIR-29745)
+      1. Remove CVS-NDC mapping table ([FHIR-29745](https://jira.hl7.org/browse/FHIR-29745)) [See Change Here](StructureDefinition-us-core-immunization.html#FHIR-29745)
 
-      1. Since CarePlan.text.div is min== 1 add must support == true element to be consisten with US Core design ([FHIR-29765](https://jira.hl7.org/browse/FHIR-29765)) [See Change Here](StructureDefinition-us-core-careplan.html)
+      1. Since CarePlan.text.div is min== 1 add must support == true element to be consistent with US Core design ([FHIR-29765](https://jira.hl7.org/browse/FHIR-29765)) [See Change Here](StructureDefinition-us-core-careplan.html)
 
       1. Remove unused US Core ICD-10-PCS Procedure Codes valueset ([FHIR-29822](https://jira.hl7.org/browse/FHIR-29822))
 
@@ -361,7 +361,7 @@ list:
 
       1. Correct copy/paste error in [Goal Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-goal-definitions.html#Goal.lifecycleStatus) ([FHIR-28109](https://jira.hl7.org/browse/FHIR-28109))
 
-      1. Correct [US Core Provider Speciality (NUCC) ValueSet ](http://hl7.org/fhir/us/core/STU3.1.1/ValueSet-us-core-provider-specialty.html) to hide abstract grouping codes ([FHIR-27975](https://jira.hl7.org/browse/FHIR-27975))
+      1. Correct [US Core Provider Specialty (NUCC) ValueSet ](http://hl7.org/fhir/us/core/STU3.1.1/ValueSet-us-core-provider-specialty.html) to hide abstract grouping codes ([FHIR-27975](https://jira.hl7.org/browse/FHIR-27975))
 
       1. Added example of US Core Direct Extension to [Practitioner-2 Example](http://hl7.org/fhir/us/core/STU3.1.1/Practitioner-practitioner-2.html) ([FHIR-27947](https://jira.hl7.org/browse/FHIR-27947))
 
