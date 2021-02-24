@@ -4,7 +4,7 @@ The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are 
 
 The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications, identifying the specific profiles and RESTful transactions that need to be supported. Note that the individual US Core profiles identify the structural constraints, terminology bindings and invariants.  Similarly, the individual US Core SearchParameter and Operation resources specify how they are understood by the server. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles and the search parameters applicable to each of the US Core actors.
 
-The base [FHIR Must Support] guidance requires specifications define exactly the support expected for elements labeled *Must Support*.  This page defines the rules for interpreting profile elements and subelements labeled *Must Support* for requesters and responders.
+The base [FHIR Must Support] guidance requires specifications to define exactly the support expected for profile elements labeled *Must Support*.  This page defines the rules for interpreting profile elements and subelements labeled *Must Support* for requesters and responders.
 
 ### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
 
@@ -165,7 +165,7 @@ Complex element are composed of primitive and/or other complex elements.  In add
 - [`Coding`](#must-support---coded-elements)
 - [`Reference`](#must-support---resource-references)
 
-For any complex element marked as must support, the server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as must support it must meet the must support requirements as well and it satisfies the must support requirement for the parent element.
+For any complex element marked as must support, the server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as must support it must meet the must support requirements as well and satisfy the must support requirement for the parent element.
 
 For example, the [US Core DiagnosticReport Profile for Report and Note exchange] presentedForm element is labeled must support and has no must support sub-elements. When claiming conformance to this profile:
 
