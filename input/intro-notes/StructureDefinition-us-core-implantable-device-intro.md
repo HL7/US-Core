@@ -40,8 +40,8 @@ In addition, the following data-elements must be supported if the data is presen
   - The Parse UDI API allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
 - {:.new-content #FHIR-28942}Implantable medical devices that have UDI information **SHALL** represent this information in either `carrierAIDC` or `carrierHRF`.
      - Although both are marked as must support, the server systems are not required to support both `carrierAIDC` and `carrierHRF`, but **SHALL** support at least one of these elements.
-     - The client application SHALL support both elements.
-     - UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants.
+     - The client application **SHALL** support both elements.
+     - UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer (`manufacturer`) model number (`model`) information is available, it **SHOULD** be included to support historical reports of implantable medical devices
 - For Implantable medical devices that have UDI information, at least one of the Production Identifiers (UDI-PI) **SHALL** be present.
 - Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type. Note: The Device.type is too granular to differentiate implantable vs. non-implantable devices.  
 - In the [Quick Start] section below, searching for all devices is described. Records of implanted devices **MAY** be queried against UDI data including:
