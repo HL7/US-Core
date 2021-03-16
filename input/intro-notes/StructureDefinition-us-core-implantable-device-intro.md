@@ -44,6 +44,7 @@ In addition, the following data-elements must be supported if the data is presen
      - The client application **SHALL** support both elements.
      - UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer (`manufacturer`) model number (`model`) information is available, they **SHOULD** be included to support historical reports of implantable medical devices
 - {:.new-content #FHIR-28942}For Implantable medical devices that have UDI information, *any* of the five UDI-PI elements SHALL be represented in the corresponding US Core Implantable Device Profile element:
+
   |UDI-PI element|US Core Implantable Device Profile element|
   |---|--|
   |manufacture date|Device.manufactureDate|
@@ -51,6 +52,7 @@ In addition, the following data-elements must be supported if the data is presen
   |lot number|Device.lotNumber|
   |serial number|Device.serialNumber|
   |distinct identifier|Device.distinctIdentifier|
+
 - Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type. Note: The Device.type is too granular to differentiate implantable vs. non-implantable devices.  
 - In the [Quick Start] section below, searching for all devices is described. Records of implanted devices **MAY** be queried against UDI data including:
 
