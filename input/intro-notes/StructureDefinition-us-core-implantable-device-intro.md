@@ -52,6 +52,7 @@ In addition, the following data-elements must be supported if the data is presen
   |lot number|Device.lotNumber|
   |serial number|Device.serialNumber|
   |distinct identifier|Device.distinctIdentifier|
+  {:.grid}
 
 - Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type. Note: The Device.type is too granular to differentiate implantable vs. non-implantable devices.  
 - In the [Quick Start] section below, searching for all devices is described. Records of implanted devices **MAY** be queried against UDI data including:
