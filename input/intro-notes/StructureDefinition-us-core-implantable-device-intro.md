@@ -43,7 +43,7 @@ In addition, the following data-elements must be supported if the data is presen
      - Although both are marked as must support, the server systems are not required to support both `carrierAIDC` and `carrierHRF`, but **SHALL** support at least one of these elements.
      - The client application **SHALL** support both elements.
      - UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer (`manufacturer`) model number (`model`) information is available, they **SHOULD** be included to support historical reports of implantable medical devices
-- {:.new-content #FHIR-28942}For Implantable medical devices that have UDI information, *all* of the following five UDI-PI elements that are present **SHALL** be represented in the corresponding US Core Implantable Device Profile element:
+- {:.new-content #FHIR-28942}For Implantable medical devices that have UDI information, *any* of the five UDI-PI elements *SHALL* be represented in the corresponding US Core Implantable Device Profile element:
 
   |UDI-PI element|US Core Implantable Device Profile element|
   |---|--|
