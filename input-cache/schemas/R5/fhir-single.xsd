@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Mon, Feb 22, 2021 22:45+0000 for FHIR v4.5.0 
+  Generated on Mon, Mar 1, 2021 19:05+0000 for FHIR v4.5.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.5.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -32611,6 +32611,87 @@ description of the substance according to standardised sets of properties.</xs:d
               <xs:documentation xml:lang="en">Indication or reason for use of the medication that applies to the specific administration guideline.</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="dosingGuideline" type="MedicationKnowledge.DosingGuideline" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The guidelines for the dosage of the medication for the indication.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MedicationKnowledge.DosingGuideline">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Information about a medication that is used to support knowledge.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="treatmentIntent" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The overall intention of the treatment, for example, prophylactic, supporative, curative, etc.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="dosage" type="MedicationKnowledge.Dosage" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Dosage for the medication for the specific guidelines.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="administrationTreatment" minOccurs="0" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The type of the treatment that the guideline applies to, for example, long term therapy, first line treatment, etc.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="patientCharacteristic" type="MedicationKnowledge.PatientCharacteristic" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MedicationKnowledge.Dosage">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Information about a medication that is used to support knowledge.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="type" minOccurs="1" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The type or category of dosage for a given medication (for example, prophylaxis, maintenance, therapeutic, etc.).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:element name="dosage" minOccurs="1" maxOccurs="unbounded" type="Dosage">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Dosage for the medication for the specific guidelines.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="MedicationKnowledge.PatientCharacteristic">
+    <xs:annotation>
+      <xs:documentation xml:lang="en">Information about a medication that is used to support knowledge.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BackboneElement">
+        <xs:sequence>
+          <xs:element name="type" minOccurs="1" maxOccurs="1" type="CodeableConcept">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The categorization of the specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).</xs:documentation>
+           </xs:annotation>
+          </xs:element>
+          <xs:choice minOccurs="0" maxOccurs="1" >
+            <xs:annotation>
+              <xs:documentation xml:lang="en">The specific characteristic (e.g. height, weight, gender, etc.).</xs:documentation>
+            </xs:annotation>
+            <xs:element name="valueCodeableConcept" type="CodeableConcept"/>
+            <xs:element name="valueQuantity" type="Quantity"/>
+            <xs:element name="valueRange" type="Range"/>
+          </xs:choice>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -41176,7 +41257,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
         <xs:sequence>
           <xs:element name="url" minOccurs="0" maxOccurs="1" type="uri">
             <xs:annotation>
-              <xs:documentation xml:lang="en">An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this questionnaire is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the questionnaire is stored on different servers.</xs:documentation>
+              <xs:documentation xml:lang="en">An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this questionnaire is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the questionnaire is stored on different servers.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">

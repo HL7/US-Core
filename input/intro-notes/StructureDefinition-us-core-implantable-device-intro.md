@@ -26,12 +26,13 @@ In addition, the following data-elements must be supported if the data is presen
 1. A Unique Device Identifier (UDI) numeric or alphanumeric code
    - either as the Human Readable Form (HRF) string representation of the barcode
    - or the Automatic Identification and Data Capture (AIDC) representation.
-1. The following parsed Production Identifiers (UDI-PI) from the UDI
-     - the manufacture date
-     - the expiration date
-     - the lot number
-     - the serial number
-     - the distinct identifier (i.e., the distinct identification code)
+<div class='new-content' markdown='1'>
+1. the manufacture date
+1. the expiration date
+1. the lot number
+1. the serial number
+1. the distinct identifier (i.e., the distinct identification code)
+</div>
 
 **Profile specific implementation guidance:**
 
@@ -42,7 +43,14 @@ In addition, the following data-elements must be supported if the data is presen
      - Although both are marked as must support, the server systems are not required to support both `carrierAIDC` and `carrierHRF`, but **SHALL** support at least one of these elements.
      - The client application **SHALL** support both elements.
      - UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer (`manufacturer`) model number (`model`) information is available, they **SHOULD** be included to support historical reports of implantable medical devices
-- For Implantable medical devices that have UDI information, at least one of the Production Identifiers (UDI-PI) **SHALL** be present.
+- {:.new-content #FHIR-28942}For Implantable medical devices that have UDI information, *any* of the five UDI-PI elements SHALL be represented in the corresponding US Core Implantable Device Profile element:
+  |UDI-PI element|US Core Implantable Device Profile element|
+  |---|--|
+  |manufacture date|Device.manufactureDate|
+  |expiration date|Device.expirationDate|
+  |lot number|Device.lotNumber|
+  |serial number|Device.serialNumber|
+  |distinct identifier|Device.distinctIdentifier|
 - Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type. Note: The Device.type is too granular to differentiate implantable vs. non-implantable devices.  
 - In the [Quick Start] section below, searching for all devices is described. Records of implanted devices **MAY** be queried against UDI data including:
 

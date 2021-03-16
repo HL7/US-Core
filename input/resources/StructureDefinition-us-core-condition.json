@@ -146,7 +146,45 @@
             "code": "CodeableConcept"
           }
         ],
-        "mustSupport": true,
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding",
+        "path": "Condition.code.coding",
+        "min": 1,
+        "max": "*",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:Snomed",
+        "path": "Condition.code.coding",
+        "sliceName": "Snomed",
+        "short": "US Core Condition Category Code Binding",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "patternCoding": {
+          "system": "http://snomed.info/sct"
+        },
         "binding": {
           "strength": "required",
           "description": "Valueset to describe the actual problem experienced by the patient",
@@ -157,7 +195,85 @@
             "identity": "argonaut-dq-dstu2",
             "map": "Condition.code"
           }
-        ]
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:Snomed.code",
+        "path": "Condition.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:Snomed:icd-10-cm",
+        "path": "Condition.code.coding",
+        "sliceName": "icd-10-cm",
+        "short": "US Core Condition Category Code Binding",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "patternCoding": {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm"
+        },
+        "binding": {
+          "strength": "required",
+          "description": "Valueset to describe the actual problem experienced by the patient",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.code"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:icd-10-cm.code",
+        "path": "Condition.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:icd-9-cm",
+        "path": "Condition.code.coding",
+        "sliceName": "icd-9-cm",
+        "short": "US Core Condition Category Code Binding",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "patternCoding": {
+          "system": "http://hl7.org/fhir/sid/icd-9-cm"
+        },
+        "binding": {
+          "strength": "required",
+          "description": "Valueset to describe the actual problem experienced by the patient",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.code"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.code.coding:Snomed:icd-9-cm.code",
+        "path": "Condition.code.coding.code",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
       },
       {
         "id": "Condition.subject",

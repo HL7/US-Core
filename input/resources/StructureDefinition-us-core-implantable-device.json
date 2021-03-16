@@ -50,13 +50,6 @@
             "human": "Implantable medical devices that have UDI information SHALL represent this information in either carrierAIDC or carrierHRF.",
             "expression": "udiCarrier.empty() or (udiCarrier.carrierAIDC.exists() or udiCarrier.carrierHRF.exists())",
             "xpath": "not(f:udiCarrier) or (f:carrierHRF or f:carrierAIDC)"
-          },
-          {
-            "key": "us-core-9",
-            "severity": "error",
-            "human": "For implantable medical devices that have UDI information,  at least one of the Production Identifiers (UDI-PI) SHALL be present.",
-            "expression": "udiCarrier.empty() or (manufactureDate.exists() or expirationDate.exists() or lotNumber.exists() or serialNumber.exists() or distinctIdentifier.exists())",
-            "xpath": "not(f:udiCarrier) or (f:manufactureDate or f:expirationDate or f:lotNumber or f:serialNumber or f:distinctIdentifier)"
           }
         ],
         "mustSupport": false,
@@ -142,9 +135,6 @@
         "path": "Device.distinctIdentifier",
         "min": 0,
         "max": "1",
-        "condition": [
-          "us-core-9"
-        ],
         "mustSupport": false,
         "mapping": [
           {
@@ -158,9 +148,6 @@
         "path": "Device.manufactureDate",
         "min": 0,
         "max": "1",
-        "condition": [
-          "us-core-9"
-        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -174,9 +161,6 @@
         "path": "Device.expirationDate",
         "min": 0,
         "max": "1",
-        "condition": [
-          "us-core-9"
-        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -190,9 +174,6 @@
         "path": "Device.lotNumber",
         "min": 0,
         "max": "1",
-        "condition": [
-          "us-core-9"
-        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -206,9 +187,6 @@
         "path": "Device.serialNumber",
         "min": 0,
         "max": "1",
-        "condition": [
-          "us-core-9"
-        ],
         "mustSupport": true,
         "mapping": [
           {
