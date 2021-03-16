@@ -22,16 +22,16 @@ In addition, the following data-elements must be supported if the data is presen
 
 **Each Device must support:**
 
+<div class='new-content' markdown='1'>
 1. The Device Identifier (UDI-DI)
 1. A Unique Device Identifier (UDI) numeric or alphanumeric code
    - either as the Human Readable Form (HRF) string representation of the barcode
    - or the Automatic Identification and Data Capture (AIDC) representation.
-<div class='new-content' markdown='1'>
-3. the manufacture date
-4. the expiration date
-5. the lot number
-6. the serial number
-7. the distinct identifier (i.e., the distinct identification code)
+1. the manufacture date
+1. the expiration date
+1. the lot number
+1. the serial number
+1. the distinct identifier (i.e., the distinct identification code)
 </div>
 
 **Profile specific implementation guidance:**
