@@ -22,14 +22,15 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  an intent code
 1.  a medication (see guidance below)
 1.  a patient
-1.  a date for when written
 1.  a prescriber
 
 **Each MedicationRequest must support:**
 
 1. The `reported` flag  or reference signaling that information is from a secondary source such as a patient.
 1. the encounter
+1.  a date for when written
 1. the prescription *Sig*
+
 **Profile specific implementation guidance:**
 
 * See the [Medication List Guidance] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
