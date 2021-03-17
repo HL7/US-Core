@@ -13,16 +13,16 @@ The following are example usage scenarios for the US Core Implantable Device pro
 
 The following data-elements are mandatory (i.e data MUST be present) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.
 
-**Each Device must have:**
+<span class='bg-success' markdown='1'>**Each Implantable Device must have:**</span>
 
 1.  a code identifying the type of device
 1.  a patient
 
 In addition, the following data-elements must be supported if the data is present in the sending system ([Must Support] definition):
 
-**Each Device must support:**
-
 <div class='new-content' markdown='1'>
+**Each Implantable Device must support:**
+
 1. The Device Identifier (UDI-DI)
 1. A Unique Device Identifier (UDI) numeric or alphanumeric code
    - either as the Human Readable Form (HRF) string representation of the barcode
@@ -43,7 +43,7 @@ In addition, the following data-elements must be supported if the data is presen
      - Although both are marked as must support, the server systems are not required to support both `carrierAIDC` and `carrierHRF`, but **SHALL** support at least one of these elements.
      - The client application **SHALL** support both elements.
      - UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer (`manufacturer`) model number (`model`) information is available, they **SHOULD** be included to support historical reports of implantable medical devices
-- {:.new-content #FHIR-28942}For Implantable medical devices that have UDI information, *any* of the five UDI-PI elements *SHALL* be represented in the corresponding US Core Implantable Device Profile element:
+- {:.new-content #FHIR-28942}For Implantable medical devices that have UDI information, all five UDI-PI elements present **SHALL** be represented in the corresponding US Core Implantable Device Profile element:
 
   |UDI-PI element|US Core Implantable Device Profile element|
   |---|--|
