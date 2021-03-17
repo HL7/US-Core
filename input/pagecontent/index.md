@@ -53,7 +53,7 @@ The US Core Implementation Guide is based on [FHIR Version R4] and defines the m
 
 This release is the first of yearly US Core updates to reflect changes to [U.S. Core Data for Interoperability (USCDI) v1] and requests from the US Realm FHIR community.  This Approach is outlined in the figure below:
 
-{% include img.html img="yearly-update.png" caption="Figure 1: US Core Yearly Updates" %}
+{% include img.html img="yearly-updates.png" caption="Figure 1: US Core Yearly Updates" %}
 
 ### Background
 
