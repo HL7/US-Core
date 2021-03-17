@@ -196,6 +196,10 @@ Clinical information that has been entered-in-error in the patient's record need
     - For *provider facing* applications,  the content **MAY** be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.
 </div>
 
+### Narrative
+
+The [US Core CarePlan Profile] requires a narrative summary of the patient assessment and plan of treatment. However, *any* US Core Profile **MAY** include a human-readable narrative that contains a summary of the resource and may be used to represent the content of the resource to a human.  For further guidance, refer the [Narrative documentation] in the FHIR Specification.
+
 ### Language Support
 
 There is a basic need be able to access records in your language, and the data provider should do their best to translate (safely) to the language being requested. Understanding that this will be variably complete depending on the nature of the record. For example translating the following elements is relatively straightforward:

@@ -135,6 +135,7 @@
 [NDC vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
 [NamingSystem]: {{site.data.fhir.path}}namingsystem.html
 [Narrative]: {{site.data.fhir.path}}security.html#narrative
+[Narrative documentation]: {{site.data.fhir.path}}narrative.html
 [Nurse Note (34746-8)]: https://loinc.org/34746-8.html
 [ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf
 [ONC Provider Directory Workshop]: https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents
