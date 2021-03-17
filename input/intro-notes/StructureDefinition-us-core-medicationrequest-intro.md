@@ -28,7 +28,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 1. The `reported` flag  or reference signaling that information is from a secondary source such as a patient.
 1. the encounter
-1.  a date for when written
+1. a date for when written{:. bg-success}
 1. the prescription *Sig*
 
 **Profile specific implementation guidance:**
