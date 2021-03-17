@@ -52,7 +52,7 @@ In order to enable consistent access to scanned narrative-only clinical reports 
 * DocumentReference.content.attachment.url
 * DiagnosticReport.presentedForm.url
 
-For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2) This guide requires servers implement the duplicate reference to allow a client to find a Pathology report, or other Diagnostic Reports, in either Resource. <span markdown='1' class='new-content'>If servers properly categorized scanned reports and used the correct resource per report type (e.g. Pathology scan in DiagnosticReport) this wouldn’t be required, however at the time of this IG's development, this duplication requirement is necessary due to a lack of consistency in proper use of these resources.</span>
+For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2) This guide requires servers implement the duplicate reference to allow a client to find a Pathology report, or other Diagnostic Reports, in either Resource. <span markdown='1' class='bg-success'>If servers properly categorized scanned reports and used the correct resource per report type (e.g. Pathology scan in DiagnosticReport) this wouldn’t be required, however at the time of this IG's development, this duplication requirement is necessary due to a lack of consistency in proper use of these resources.</span>
 
 {% include img.html img="both-url.jpg" caption="Figure 2: Expose a PDF Report Through Both DiagnosticReport and DocumentReference" %}
 
