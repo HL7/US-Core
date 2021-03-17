@@ -79,7 +79,7 @@ list:
       1. **Triaged**:Use Cases should include an example of a payer sending USCDI info to a physician. ([FHIR-30659](https://jira.hl7.org/browse/FHIR-30659)) [See Change Here](#.html)
       1. **Triaged**:Suggest moving sentence about relevance of authorship change up to the end of the first paragraph under 2.2.1. ([FHIR-30660](https://jira.hl7.org/browse/FHIR-30660)) [See Change Here](#.html)
       1. **Triaged**:Draft v2 of USCDI removes Imaging, Lab, and Path narratives out of the Clinical Notes data class. ([FHIR-30661](https://jira.hl7.org/browse/FHIR-30661)) [See Change Here](#.html)
-      1. **Triaged**:Clarify so that the duplication requirement for scanned documents in DocumentReference and DiagnosticReport is unambiguous. ([FHIR-30662](https://jira.hl7.org/browse/FHIR-30662)) [See Change Here](#.html)
+      1. **Applied**:Clarify the duplication requirement for scanned documents in DocumentReference and DiagnosticReport. ([FHIR-30662](https://jira.hl7.org/browse/FHIR-30662)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/clinical-notes-guidance.html#fhir-resources-to-exchange-clinical-notes)
       1. **Triaged**:How will US CORE accommodate granular resource requests? ([FHIR-30663](https://jira.hl7.org/browse/FHIR-30663)) [See Change Here](#.html)
       1. **Triaged**:Recommend adding clarifying language to this section. ([FHIR-30664](https://jira.hl7.org/browse/FHIR-30664)) [See Change Here](#.html)
       1. **Triaged**:Clarify that developers and implementers will retain data visualization between DSTU2 to R4 upgrades. ([FHIR-30665](https://jira.hl7.org/browse/FHIR-30665)) [See Change Here](#.html)
@@ -116,6 +116,7 @@ list:
       1. **Resolved - change required**:fix text in $docref description ([FHIR-30810](https://jira.hl7.org/browse/FHIR-30810)) [See Change Here](#.html)
       1. **Triaged**: mandating that CapabilityStatement.implementationGuide refer to US Core ([FHIR-30889](https://jira.hl7.org/browse/FHIR-30889)) [See Change Here](#.html)
       1. **Applied**: Add binding so Vitals will render it in differential view ([FHIR-31391](https://jira.hl7.org/browse/FHIR-31391)) [See Change Here](http://hl7.org/fhir/us/core/2021JAN/StructureDefinition-us-core-vital-signs.html#profile)
+      1. **Applied**: Update to URI from OID for CDT in Procedure Code ValueSet ([FHIR-31556](https://jira.hl7.org/browse/FHIR-31556)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-us-core-procedure-code.html)
 
     path: 'http://build.fhir.org/ig/HL7/US-Core-R4'
     status: ci-build
