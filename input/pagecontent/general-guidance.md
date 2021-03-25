@@ -30,7 +30,7 @@ When responding to a query, servers **SHOULD NOT** use inline [contained] resour
 
 ### Missing Data
 
-If the source system does not have data for a *Must Support* data element, the data element is omitted from the resource as described above.  If the source system does not have data for a *required* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
+If the source system does not have data for a *Must Support* data element <span class="new-content" markdown="1">with a minimum cardinality = 0, the data element **MAY**</span> be omitted from the resource.  If the source system does not have data for a *mandatory* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
 
 1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
   - Use the code `unknown` - The value is expected to exist but is not known.
@@ -62,16 +62,42 @@ If the source system does not have data for a *Must Support* data element, the d
       - if there is neither text or coded data:
         - use the appropriate "unknown" concept code from the value set if available
         - if the value set does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
+
+        <div class="new-content" markdown="1">
+        Example: AllergyIntolerance resource where the manifestation is unknown.
+        ~~~
+        ...
+        "reaction" : [
+          {
+            "manifestation" : [
+              {
+                "coding" : [
+                  {
+                    "system" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "code" : "unknown",
+                    "display" : "unknown"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+        ...
+        ~~~
+        </div>
    - *required* binding strength (CodeableConcept or code datatypes):
       - use the appropriate "unknown" concept code from the value set if available
-      - For the following status elements no appropriate "unknown" concept code is available, therefore the element must be populated:
+      - {:.new-content}if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant
+
+        - For the US Core profiles, the following mandatory status elements with required binding have no appropriate "unknown" concept code:
           - `AllergyIntolerance.clinicalStatus`
           - `Condition.clinicalStatus`
           - `DocumentReference.status`
           - `Immunization.status`
           - `Goal.lifecycleStatus`
 
-        If one of these a status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a query for the resource.
+        If one of these status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource, or, if returning a response to a search, the problematic resource **SHALL** be excluded from the search set and a *warning* OperationOutcome **SHOULD** be included indicating that additional search results were found but could not be compliantly expressed and have been suppressed.
+        {:.new-content}
 
 <!--{%raw%}
 
