@@ -30,7 +30,7 @@ When responding to a query, servers **SHOULD NOT** use inline [contained] resour
 
 ### Missing Data
 
-If the source system does not have data for a *Must Support* data element <span class="bg-success" markdown="1">with a minimum cardinality = 0, the data element **MAY**</span> be omitted from the resource.  If the source system does not have data for a *mandatory* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
+If the source system does not have data for an element <span class="bg-success" markdown="1">with a minimum cardinality = 0 (including elements labeled *Must Support*), the data element **MAY**</span> be omitted from the resource.  If the source system does not have data for a *Mandatory* element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
 
 1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
   - Use the code `unknown` - The value is expected to exist but is not known.
@@ -87,7 +87,7 @@ If the source system does not have data for a *Must Support* data element <span 
         </div>
    - *required* binding strength (CodeableConcept or code datatypes):
       - use the appropriate "unknown" concept code from the value set if available
-      - if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant{:.new-content}
+      - {:.new-content}if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant
 
         - For the US Core profiles, the following mandatory status elements with required binding have no appropriate "unknown" concept code:
           - `AllergyIntolerance.clinicalStatus`
@@ -96,85 +96,17 @@ If the source system does not have data for a *Must Support* data element <span 
           - `Immunization.status`
           - `Goal.lifecycleStatus`
 
-        If one of these status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource, or, if returning a response to a search, the problematic resource **SHALL** be excluded from the search set and a *warning* OperationOutcome **SHOULD** be included indicating that additional search results were found but could not be compliantly expressed and have been suppressed.
+        If one of these status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set and a *warning* OperationOutcome **SHOULD** be included indicating that additional search results were found but could not be compliantly expressed and have been suppressed.
         {:.new-content}
 
-<!--{%raw%}
+<div class="new-content" markdown="1">
 
-### Using Codes in US Core Profiles
+###  Suppressed Data
 
-#### Required binding for CodeableConcept Datatype
-{:.no_toc}
+In situations where the specific piece of data is hidden due a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know and should be avoided. For elements with a minimum cardinality = 0 (including elements labeled *Must Support*), the element **SHOULD** be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code `unknown` following the guidance on *Missing Data* in the section above.
+</div>
 
-Required binding to a value set definition means that one of the codes from the specified value set **SHALL** be used and using only text is not valid. Multiple codings (translations) are permitted as is discussed below.
-
-#### Extensible binding for CodeableConcept Datatype
-{:.no_toc}
-
-Extensible binding to a value set definition for this IG means that if the data type is CodeableConcept, then one of the coding values **SHALL** be from the specified value set if a code applies, but if no suitable
- code exists in the value set, alternate code(s) may be provided in its place. If only text available, then just text may be used.
-
-#### Using multiple codes with CodeableConcept Datatype
-{:.no_toc}
-
-Alternate codes may be provided in addition to the standard codes defined in required or extensible value sets. The alternate codes are called “translations”. These translations may be equivalent to or narrower in meaning to the standard concept code.
-
-Example of multiple translation for Body Weight concept code.
-
-~~~
-    "code": {
-        "coding": [
-         {
-            "system": "http://loinc.org",  //NOTE:this is the standard concept defined in the value set//
-            "code": "29463-7",
-            "display": "Body Weight"
-          },
-    //NOTE:this is a translation to a more specific concept
-         {
-            "system": "http://loinc.org",
-            "code": "3141-9",
-            "display": "Body Weight Measured"
-          },
-    //NOTE:this is a translation to a different code system (Snomed CT)
-         {
-            "system": "http://snomed.info/sct",
-            "code":  “364589006”,
-            "display": "Body Weight"
-          }
-    //NOTE:this is a translation to a locally defined code
-         {
-            "system": "http://AcmeHealthCare.org",
-            "code":  “BWT”,
-            "display": "Body Weight"
-          }
-        ],
-        "text": "weight"
-      },
-~~~
-
-Example of translation of CVX vaccine code to NDC code.
-
-~~~
-    "vaccineCode" : {
-        "coding" : [
-          {
-            "system" : "{{site.data.fhir.path}}sid/cvx",
-            "code" : "158",
-            "display" : "influenza, injectable, quadrivalent"
-          },
-          {
-            "system" : "{{site.data.fhir.path}}sid/ndc",
-            "code" : "49281-0623-78",
-            "display" : "FLUZONE QUADRIVALENT"
-          }
-        ]
-      },
-~~~
-{% endraw %}
--->
-
-####  Using UCUM codes in the [Quantity] datatype
-{:.no_toc}
+###  Using UCUM codes in the [Quantity] datatype
 
 Both the [US Core Vital Signs Profile] and [US Core Laboratory Result Observation Profile] bind the `valueQuantity` datatypes to the [UCUM] code system.  A FHIR [UCUM Codes value set] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or the units are missing altogether which will likely occur in the real world.  
 
