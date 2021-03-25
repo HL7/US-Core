@@ -30,7 +30,7 @@ When responding to a query, servers **SHOULD NOT** use inline [contained] resour
 
 ### Missing Data
 
-If the source system does not have data for a *Must Support* data element <span class="new-content" markdown="1">with a minimum cardinality = 0, the data element **MAY**</span> be omitted from the resource.  If the source system does not have data for a *mandatory* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
+If the source system does not have data for a *Must Support* data element <span class="bg-success" markdown="1">with a minimum cardinality = 0, the data element **MAY**</span> be omitted from the resource.  If the source system does not have data for a *mandatory* data element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
 
 1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
   - Use the code `unknown` - The value is expected to exist but is not known.
@@ -87,7 +87,7 @@ If the source system does not have data for a *Must Support* data element <span 
         </div>
    - *required* binding strength (CodeableConcept or code datatypes):
       - use the appropriate "unknown" concept code from the value set if available
-      - {:.new-content}if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant
+      - if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant{:.new-content}
 
         - For the US Core profiles, the following mandatory status elements with required binding have no appropriate "unknown" concept code:
           - `AllergyIntolerance.clinicalStatus`
