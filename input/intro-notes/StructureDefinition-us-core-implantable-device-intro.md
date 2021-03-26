@@ -24,9 +24,7 @@ In addition, the following data-elements must be supported if the data is presen
 **Each Implantable Device must support:**
 
 1. The Device Identifier (UDI-DI)
-1. A Unique Device Identifier (UDI) numeric or alphanumeric code
-   - either as the Human Readable Form (HRF) string representation of the barcode
-   - or the Automatic Identification and Data Capture (AIDC) representation.
+1. A Unique Device Identifier (UDI) numeric or alphanumeric code as the Human Readable Form (HRF) string representation of the barcode
 1. the manufacture date
 1. the expiration date
 1. the lot number
@@ -39,10 +37,8 @@ In addition, the following data-elements must be supported if the data is presen
 - This profile supports the requirement to retrieve an 170.315(a)(14) [Implantable device list](https://www.healthit.gov/test-method/implantable-device-list). Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:
   - The [AccessGUDID API](https://www.fda.gov/medical-devices/global-unique-device-identification-database-gudid/accessgudid-public) provides access to device records in GUDID including safety information and UDI. It includes APIs to query and download a complete list of implantable devices registered in GUDID.
   - The Parse UDI API allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
-- {:.new-content #FHIR-28942}Implantable medical devices that have UDI information **SHALL** represent this information in either `carrierAIDC` or `carrierHRF`.
-     - Although both are marked as must support, the server systems are not required to support both `carrierAIDC` and `carrierHRF`, but **SHALL** support at least one of these elements.
-     - The client application **SHALL** support both elements.
-     - UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer (`manufacturer`) model number (`model`) information is available, they **SHOULD** be included to support historical reports of implantable medical devices
+- {:.new-content #FHIR-28942}Implantable medical devices that have UDI information **SHALL** represent this information in `Device.carrierHRF`.
+     - UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer (`Device.manufacturer`) model number (`Device.model`) information is available, they **SHOULD** be included to support historical reports of implantable medical devices
 - {:.new-content #FHIR-28942}For Implantable medical devices that have UDI information, all five UDI-PI elements present **SHALL** be represented in the corresponding US Core Implantable Device Profile element:
 
   |UDI-PI element|US Core Implantable Device Profile element|
