@@ -17,9 +17,10 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each DocumentReference must have:**
 
 1.  a status
-1.  a document category
 1.  a code describing the type of document
+1.  a document category
 1.  a patient
+1.  the document referenced (i.e. content)
 1.  the MIME type (i.e. contentType) of the document
 1.  an address (e.g. url) where the document can be retrieved or the content as inline base64 encoded data
 
