@@ -278,7 +278,8 @@
 [vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
 [US Core change notes]: http://hl7.org/fhir/us/core/history.html
 [Goal]: {{site.data.fhir.path}}goal.html
-[missing data]: general-guidance.html#missing-data
+[Missing Data]: general-guidance.html#missing-data
+[Suppressed Data]: general-guidance.html#missing-data
 [`CarePlan.status`]: {{site.data.fhir.path}}careplan.html
 [Must Support - Coded Elements]: conformance-expectations.html#must-support---coded-elements
 [clinical safety]:  http://hl7.org/fhir/safety.html
