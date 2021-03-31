@@ -10,11 +10,11 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each PractitionerRole must have:**
 
-1. An associated practitioner
 1. An associated organization
 
 **Each PractitionerRole must support:**
 
+1. An associated practitioner
 1. A role
 1. A specialty
 1. An associated location
