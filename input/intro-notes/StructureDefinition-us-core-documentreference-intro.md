@@ -20,7 +20,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1.  a code describing the type of document
 1.  a document category
 1.  a patient
-1.  the document referenced (i.e. content) as either an address (e.g. url) where the document can be retrieved or the content as inline base64 encoded data
+1.  {:.new-content}the document referenced (i.e. content) as either an address (e.g. url) where the document can be retrieved or the content as inline base64 encoded data
 1.  the MIME type (i.e. contentType) of the document
 
 **Each DocumentReference must support:**
