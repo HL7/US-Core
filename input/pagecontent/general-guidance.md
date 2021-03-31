@@ -30,7 +30,8 @@ When responding to a query, servers **SHOULD NOT** use inline [contained] resour
 
 ### Missing Data
 
-If the source system does not have data for an element <span class="bg-success" markdown="1">with a minimum cardinality = 0 (including elements labeled *Must Support*), the data element **MAY**</span> be omitted from the resource.  If the source system does not have data for a *Mandatory* element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
+There are situations when information on a particular data element is missing and the source system does not know reason for the absence of data. If the source system does not have data for an element with a minimum cardinality = 0 (including elements labeled *Must Support*), the data element is omitted from the resource.  If the source system does not have data for a *Mandatory* element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
+{:.new-content}
 
 1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
   - Use the code `unknown` - The value is expected to exist but is not known.
