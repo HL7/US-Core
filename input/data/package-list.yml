@@ -114,6 +114,7 @@ list:
       1. **Triaged**: mandating that CapabilityStatement.implementationGuide refer to US Core ([FHIR-30889](https://jira.hl7.org/browse/FHIR-30889)) [See Change Here](#.html)
       1. **Applied**: Add binding so Vitals will render it in differential view ([FHIR-31391](https://jira.hl7.org/browse/FHIR-31391)) [See Change Here](http://hl7.org/fhir/us/core/2021JAN/StructureDefinition-us-core-vital-signs.html#profile)
       1. **Applied**: Update to URI from OID for CDT in Procedure Code ValueSet ([FHIR-31556](https://jira.hl7.org/browse/FHIR-31556)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-us-core-procedure-code.html)
+      1. **Applied**: Add DocumentReference.content is under "must have" list ([FHIR-31364](https://jira.hl7.org/browse/FHIR-31556)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
 
     path: 'http://build.fhir.org/ig/HL7/US-Core-R4'
     status: ci-build
