@@ -31,7 +31,7 @@ To claim conformance to a US Core Profile US Core Servers **SHALL**:
 
 ### Mandatory Elements
 
-When an element is mandatory (min=1), the data is expected to always be present. Very rarely it may not be and guidance for when data is missingis provided in the [Missing Data] section and in the next section.  The convention in this guide is to mark all min=1 elements as must support unless the are nested under optional element. An example of this is [`CarePlan.status`].
+When an element is mandatory (min=1), the data is expected to always be present. <span markdown="1" class="bg-success"> Very rarely it may not be and guidance for when data is missing is provided in the [Missing Data] section and in the next section.</span>  The convention in this guide is to mark all min=1 elements as must support unless the are nested under optional element. An example of this is [`CarePlan.status`].
 
 ### Must Support Elements
 
@@ -41,7 +41,7 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 * US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words US Core Requestors **SHOULD** be capable of displaying the data elements for human use or storing it for other purposes.
 * In situations where information on a particular data element is not present and the reason for absence is unknown, US Core Responders **SHALL NOT** include the data elements in the resource instance returned as part of the query results.
 * When querying US Core Responders, US Core Requestors **SHALL** interpret missing data elements within resource instances as data not present in the US Core Responder's system.
-* In situations where information on a particular data element is missing or suppressed refer to the the guidance for [Missing Data] and [Suppressed Data].  In situations where information on a particular data element is missing *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information.  This is done by following the same methodology outlined in the [Missing Data] section, but using the appropriate reason code instead of `unknown`.
+* {:.new-content}In situations where information on a particular data element is missing or suppressed refer to the the guidance for [Missing Data] and [Suppressed Data].  In situations where information on a particular data element is missing *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information.  This is done by following the same methodology outlined in the [Missing Data] section, but using the appropriate reason code instead of `unknown`.
 * US Core Requestors **SHALL** be able to process resource instances containing data elements asserting missing information.
 
 The terms *US Core Responder* Actor *US Core Requestor Actor* are used throughout the guide and typically refer to a server or a client.
