@@ -5,142 +5,6 @@
     "include" : [{
       "system" : "http://loinc.org",
       "concept" : [{
-        "code" : "85353-1"
-      },
-      {
-        "code" : "9279-1"
-      },
-      {
-        "code" : "8867-4"
-      },
-      {
-        "code" : "2708-6"
-      },
-      {
-        "code" : "8310-5"
-      },
-      {
-        "code" : "8302-2"
-      },
-      {
-        "code" : "9843-4"
-      },
-      {
-        "code" : "29463-7"
-      },
-      {
-        "code" : "39156-5"
-      },
-      {
-        "code" : "85354-9"
-      },
-      {
-        "code" : "8480-6"
-      },
-      {
-        "code" : "8462-4"
-      },
-      {
-        "code" : "8478-0"
-      }]
-    }]
-  }
-}}####
-e: {
-  "valueSet" : {
-  "resourceType" : "ValueSet",
-  "status" : "active",
-  "expansion" : {
-    "identifier" : "urn:uuid:ecff25e9-7262-421f-a503-245ecf5987bb",
-    "timestamp" : "2020-12-02T13:23:17.097Z",
-    "parameter" : [{
-      "name" : "limitedExpansion",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "excludeNested",
-      "valueBoolean" : true
-    },
-    {
-      "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
-    }],
-    "contains" : [{
-      "system" : "http://loinc.org",
-      "code" : "85353-1",
-      "display" : "Vital signs, weight, height, head circumference, oxygen saturation and BMI panel"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "9279-1",
-      "display" : "Respiratory rate"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "8867-4",
-      "display" : "Heart rate"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "2708-6",
-      "display" : "Oxygen saturation in Arterial blood"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "8310-5",
-      "display" : "Body temperature"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "8302-2",
-      "display" : "Body height"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "9843-4",
-      "display" : "Head Occipital-frontal circumference"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "29463-7",
-      "display" : "Body weight"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "39156-5",
-      "display" : "Body mass index (BMI) [Ratio]"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "85354-9",
-      "display" : "Blood pressure panel with all children optional"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "8480-6",
-      "display" : "Systolic blood pressure"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "8462-4",
-      "display" : "Diastolic blood pressure"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "8478-0",
-      "display" : "Mean blood pressure"
-    }]
-  }
-},
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://loinc.org",
-      "concept" : [{
         "code" : "18842-5"
       },
       {
@@ -163,8 +27,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e7dbd8cc-178e-475e-a2a4-4991af72f7e7",
-    "timestamp" : "2020-12-02T13:23:56.675Z",
+    "identifier" : "urn:uuid:a3e56178-95dd-4e09-a704-353f62c56a47",
+    "timestamp" : "2021-04-01T21:08:21.948Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -232,8 +96,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:63726823-b430-4547-a185-e292005c3e5c",
-    "timestamp" : "2020-12-02T13:25:25.315Z",
+    "identifier" : "urn:uuid:9675b3e6-356c-47b4-b387-0d3e2d40bd12",
+    "timestamp" : "2021-04-01T21:10:41.605Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -288,8 +152,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:0236a7ec-d9bb-4a07-9bfd-46ccea3fbe6a",
-    "timestamp" : "2020-12-02T13:25:25.362Z",
+    "identifier" : "urn:uuid:2cfe1581-10f2-4203-838e-6e6fa2e002c4",
+    "timestamp" : "2021-04-01T21:10:41.808Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5324,8 +5188,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:d58a3a27-bdd4-4e0c-b408-41fa708fd647",
-    "timestamp" : "2020-12-02T13:25:25.440Z",
+    "identifier" : "urn:uuid:bfe5462e-b5f0-4233-993b-3ccbe3818538",
+    "timestamp" : "2021-04-01T21:10:42.214Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -10365,8 +10229,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:c9414977-6f7f-4a58-b7f0-0c2086cb9c90",
-    "timestamp" : "2020-12-02T13:25:25.487Z",
+    "identifier" : "urn:uuid:82b9b6d9-0f66-496a-817f-f6d81a7c7a01",
+    "timestamp" : "2021-04-01T21:10:43.402Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -15401,8 +15265,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:925ce95f-16be-44e6-8c00-6eff84ae3a17",
-    "timestamp" : "2020-12-02T13:25:33.940Z",
+    "identifier" : "urn:uuid:1de26176-04e6-4e7a-ada0-4c42f3e81f1d",
+    "timestamp" : "2021-04-01T21:10:56.589Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -15419,6 +15283,222 @@ e: {
       "system" : "http://loinc.org",
       "code" : "72166-2",
       "display" : "Tobacco smoking status NHIS"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "59576-9"
+      },
+      {
+        "code" : "8289-1"
+      },
+      {
+        "code" : "77606-2"
+      },
+      {
+        "code" : "59408-5"
+      },
+      {
+        "code" : "3150-0"
+      },
+      {
+        "code" : "3151-8"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:a6405444-adcb-42f6-9410-5166654b7d68",
+    "timestamp" : "2021-04-01T21:10:57.120Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://loinc.org|2.68"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "59576-9",
+      "display" : "Body mass index (BMI) [Percentile] Per age and sex"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "8289-1",
+      "display" : "Head Occipital-frontal circumference Percentile"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "77606-2",
+      "display" : "Weight-for-length Per age and sex"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "59408-5",
+      "display" : "Oxygen saturation in Arterial blood by Pulse oximetry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "3150-0",
+      "display" : "Inhaled oxygen concentration"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "3151-8",
+      "display" : "Inhaled oxygen flow rate"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "85353-1"
+      },
+      {
+        "code" : "9279-1"
+      },
+      {
+        "code" : "8867-4"
+      },
+      {
+        "code" : "2708-6"
+      },
+      {
+        "code" : "8310-5"
+      },
+      {
+        "code" : "8302-2"
+      },
+      {
+        "code" : "9843-4"
+      },
+      {
+        "code" : "29463-7"
+      },
+      {
+        "code" : "39156-5"
+      },
+      {
+        "code" : "85354-9"
+      },
+      {
+        "code" : "8480-6"
+      },
+      {
+        "code" : "8462-4"
+      },
+      {
+        "code" : "8478-0"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:53c46097-9f9e-4ee9-b149-68b095bb18bf",
+    "timestamp" : "2021-04-01T21:10:57.527Z",
+    "parameter" : [{
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueString" : "http://loinc.org|2.68"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "85353-1",
+      "display" : "Vital signs, weight, height, head circumference, oxygen saturation and BMI panel"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "9279-1",
+      "display" : "Respiratory rate"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "8867-4",
+      "display" : "Heart rate"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "2708-6",
+      "display" : "Oxygen saturation in Arterial blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "8310-5",
+      "display" : "Body temperature"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "8302-2",
+      "display" : "Body height"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "9843-4",
+      "display" : "Head Occipital-frontal circumference"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "29463-7",
+      "display" : "Body weight"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "39156-5",
+      "display" : "Body mass index (BMI) [Ratio]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "85354-9",
+      "display" : "Blood pressure panel with all children optional"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "8480-6",
+      "display" : "Systolic blood pressure"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "8462-4",
+      "display" : "Diastolic blood pressure"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "8478-0",
+      "display" : "Mean blood pressure"
     }]
   }
 },

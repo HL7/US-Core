@@ -12,8 +12,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:e8f0b3d5-5ee4-4d80-a3d7-221d9eb7eca5",
-    "timestamp" : "2020-12-02T13:25:25.222Z",
+    "identifier" : "urn:uuid:09182f46-6f76-497a-bfda-6bf299645e62",
+    "timestamp" : "2021-04-01T21:10:40.730Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -24,12 +24,17 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://hl7.org/fhir/sid/icd-9-cm|2012"
+      "valueString" : "http://hl7.org/fhir/sid/icd-9-cm|2015"
     }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+      "code" : "CLASSIFICATION OF PROCEDURES",
+      "display" : "CLASSIFICATION OF PROCEDURES"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm",
       "code" : "87-99",
-      "display" : "Miscellaneous Diagnostic And Therapeutic Procedures"
+      "display" : "MISCELLANEOUS DIAGNOSTIC AND THERAPEUTIC PROCEDURES"
     },
     {
       "system" : "http://hl7.org/fhir/sid/icd-9-cm",
@@ -90,6 +95,46 @@ e: {
       "system" : "http://hl7.org/fhir/sid/icd-9-cm",
       "code" : "99.09",
       "display" : "Transfusion of other substance"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+      "code" : "CLASSIFICATION OF DISEASES AND INJURIES",
+      "display" : "CLASSIFICATION OF DISEASES AND INJURIES"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+      "code" : "390-459",
+      "display" : "DISEASES OF THE CIRCULATORY SYSTEM"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+      "code" : "410-414",
+      "display" : "ISCHEMIC HEART DISEASE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+      "code" : "410",
+      "display" : "Acute myocardial infarction"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+      "code" : "410.9",
+      "display" : "Acute myocardial infarction of unspecified site"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+      "code" : "410.90",
+      "display" : "Acute myocardial infarction of unspecified site, episode of care unspecified"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+      "code" : "410.91",
+      "display" : "Acute myocardial infarction of unspecified site, initial episode of care"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm",
+      "code" : "410.92",
+      "display" : "Acute myocardial infarction of unspecified site, subsequent episode of care"
     }]
   }
 },

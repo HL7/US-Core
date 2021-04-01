@@ -1,0 +1,138 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "concept" : [{
+        "code" : "1002-5",
+        "display" : "American Indian or Alaska Native"
+      },
+      {
+        "code" : "2028-9",
+        "display" : "Asian"
+      },
+      {
+        "code" : "2054-5",
+        "display" : "Black or African American"
+      },
+      {
+        "code" : "2076-8",
+        "display" : "Native Hawaiian or Other Pacific Islander"
+      },
+      {
+        "code" : "2106-3",
+        "display" : "White"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "concept" : [{
+        "code" : "UNK",
+        "display" : "Unknown"
+      },
+      {
+        "code" : "ASKU",
+        "display" : "Asked but no answer"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.238"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category"
+    },
+    {
+      "system" : "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
+      "concept" : [{
+        "code" : "health-concern",
+        "display" : "Health Concern"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
+          "valueString" : "Death diagnosis, or cause of death is a contextual qualifier indicating the problem represented caused the patient's death."
+        }],
+        "code" : "16100001",
+        "display" : "Death diagnosis"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/us/core/CodeSystem/condition-category"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "308335008"
+      }]
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.285"
+    },
+    {
+      "system" : "http://www.cms.gov/Medicare/Coding/ICD10"
+    },
+    {
+      "system" : "urn:oid:2.16.840.1.113883.6.13"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type"
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type"
+}
+-------------------------------------------------------------------------------------

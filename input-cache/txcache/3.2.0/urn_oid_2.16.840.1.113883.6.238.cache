@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "concept" : [{
+        "code" : "1002-5",
+        "display" : "American Indian or Alaska Native"
+      },
+      {
+        "code" : "2028-9",
+        "display" : "Asian"
+      },
+      {
+        "code" : "2054-5",
+        "display" : "Black or African American"
+      },
+      {
+        "code" : "2076-8",
+        "display" : "Native Hawaiian or Other Pacific Islander"
+      },
+      {
+        "code" : "2106-3",
+        "display" : "White"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.238"
+}
+-------------------------------------------------------------------------------------
