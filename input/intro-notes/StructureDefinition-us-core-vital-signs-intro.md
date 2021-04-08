@@ -31,7 +31,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 1.  a result value
     - if the result value is a numeric quantity, a standard [UCUM] unit
-1.  a reason if the value is absent
+1.  a reason if the value is absent*
 1.  component results
 
 **Profile specific implementation guidance:**
@@ -43,6 +43,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
   Note that the code system value **SHOULD** be supplied for each additional code.
 - The observations **MAY** have [component] observations. For example, to qualify the vital sign observation 8310-5 - *Body temperature*, 8327-9 - *Body temperature measurement site** (oral, forehead, rectal, etc) may be used as a component observation. Several of these are provided in the FHIR core specification [vital signs table].
 - An Observation without a value, **SHALL** include a reason why the data is absent *unless* there are 1) component observations, or 2) reporting vital signs panel components using  `Observation.hasMember`.
+  - \*Systems that never provide an observation without a value are not required to support `Observation.dataAbsentReason`
 - Implementers may use this profile as a base for other vital signs in addition to those in this guide.
 
 ### Examples
