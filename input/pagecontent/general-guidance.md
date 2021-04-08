@@ -320,7 +320,8 @@ For more information see the [FHIR RESTful API]
 
 ### Search Syntax
 
-For searching a resource, interactions on profile pages are defined with the following syntax:
+The [FHIR RESTful Search API] requires that servers that support search **SHALL** support both the HTTP `GET` and `POST` commands. However, for this guide all the search interactions use the `GET` command with the following syntax:
+{: .new-content}
 
  **`GET [base]/[Resource-type]?[parameter1]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]{&[parameter2]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]&...}`**
 
