@@ -24,7 +24,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1. a status
 1. a category code of "vital-signs"
 1. a [LOINC] code, if available, which tells you what is being measured
-1  a patient
+1.  a patient
 1. a clinically relevant time
 
 **Each Observation must support:**
