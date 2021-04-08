@@ -282,4 +282,5 @@
 [Suppressed Data]: general-guidance.html#missing-data
 [`CarePlan.status`]: {{site.data.fhir.path}}careplan.html
 [Must Support - Coded Elements]: conformance-expectations.html#must-support---coded-elements
-[clinical safety]:  http://hl7.org/fhir/safety.html
+[clinical safety]:  {{site.data.fhir.path}}safety.html
+[LOINC scale type to FHIR data type mapping]: {{site.data.fhir.path}}loinc.html#dataelements
