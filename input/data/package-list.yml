@@ -32,7 +32,6 @@ list:
 
       **Status**: **Summary**:(**Jira Issue**) **Link to Change**
       1. **Applied**:Update PractitionerRole.practitioner to )..1 MS ([FHIR-29681](https://jira.hl7.org/browse/FHIR-29681)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-practitionerrole.html#profile)
-      1. **Triaged**:Observation.dataAbsentReason should be optional ([FHIR-29700](https://jira.hl7.org/browse/FHIR-29700)) [See Change Here](#.html)
       1. **Triaged**:CareTeam Mandatory Search composite OR search ([FHIR-29768](https://jira.hl7.org/browse/FHIR-29768)) [See Change Here](#.html)
       1. **Applied**:Provide guidance on the population of narrative ([FHIR-29777](https://jira.hl7.org/browse/FHIR-29777)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#narrative)
       1. **Applied**: Change $docref start and end input parameter types from `date` to `dateTime` ([FHIR-29825](https://jira.hl7.org/browse/FHIR-29825)) [See Change Here](#.html)
@@ -48,9 +47,8 @@ list:
       1. **Triaged**:Remove required binding on procedure and condition ([FHIR-30109](https://jira.hl7.org/browse/FHIR-30109)) [See Change Here](#.html)
       1. **Applied**:Update DocumentReference CCD operation ([FHIR-30110](https://jira.hl7.org/browse/FHIR-30110)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/OperationDefinition-docref.html)
       1. **Applied**:Update DocumentReference MustSupport to choice of data or url ([FHIR-30111](https://jira.hl7.org/browse/FHIR-30111)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
-      1. **Triaged**:Reference to 3 new document types - addressing corresponding metadat ([FHIR-30112](https://jira.hl7.org/browse/FHIR-30112)) [See Change Here](#.html)
+      1. **Resolved - change required**:Reference to 3 new document types - addressing corresponding metadat ([FHIR-30112](https://jira.hl7.org/browse/FHIR-30112)) [See Change Here](#.html)
       1. **Applied**:Typo ([FHIR-30113](https://jira.hl7.org/browse/FHIR-30113))
-      1. **Triaged**:Need to update the value set and tighten the binding strength on dischargeDisposition ([FHIR-30212](https://jira.hl7.org/browse/FHIR-30212)) [See Change Here](#.html)
       1. **Applied**:Clarify Must Support of Complex elements ([FHIR-30321](https://jira.hl7.org/browse/FHIR-30321)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/conformance-expectations.html#must-support---complex-elements)
       1. **Triaged**:DiagnosticReport for Laboratory Result Reporting issued should be optional ([FHIR-30328](https://jira.hl7.org/browse/FHIR-30328)) [See Change Here](#.html)
       1. **Applied**:Clarify that VSAC FHIR API only retrieves a definition ([FHIR-30344](https://jira.hl7.org/browse/FHIR-30344)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/terminology.html#using-value-set-authority-center-vsac)
