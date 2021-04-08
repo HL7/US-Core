@@ -84,7 +84,7 @@
 [FHIR Paging]: {{site.data.fhir.path}}http.html#paging
 [FHIR Provenance]: {{site.data.fhir.path}}provenance.html
 [FHIR RESTful API]: {{site.data.fhir.path}}http.html
-[FHIR RESTful Search API]: {{site.data.fhir.path}}search.html
+[FHIR RESTful Search API]: {{site.data.fhir.path}}http.html#search
 [FHIR RESTful operations]: {{site.data.fhir.path}}operations.html
 [FHIR Resource]: {{site.data.fhir.path}}resource.html
 [FHIR Search]: {{site.data.fhir.path}}search.html
