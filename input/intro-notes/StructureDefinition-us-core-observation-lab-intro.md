@@ -37,6 +37,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
    - {:.bg-success}\*Systems that never provide an observation without a value are not required to support `Observation.dataAbsentReason`
 * See the [General Guidance Section] for further guidance on using UCUM
 * {:.bg-success}See the [LOINC scale type to FHIR data type mapping] for guidance on which `Observation.value[x]` data type to use based on the LOINC Type of Scale.
+
 ### Examples
 
  - [observation-usg](Observation-usg.html)
