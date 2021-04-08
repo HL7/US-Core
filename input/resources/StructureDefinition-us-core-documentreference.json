@@ -186,19 +186,6 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.custodian",
-        "path": "DocumentReference.custodian",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "DocumentReference.content",
         "path": "DocumentReference.content",
         "min": 1,
