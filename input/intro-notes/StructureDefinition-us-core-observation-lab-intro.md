@@ -35,7 +35,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 * An Observation without a value, **SHALL** include a reason why the data is absent unless there are component observations, or references to other Observations that are grouped within it.
    - For Further guidance see the [Observation Grouping] section in FHIR Specification.
 * See the [General Guidance Section] for further guidance on using UCUM
-
+* See the [LOINC scale type to FHIR data type mapping] for guidance on which `Observation.value[x]` data type to use based on the LOINC Type of Scale.
 ### Examples
 
  - [observation-usg](Observation-usg.html)
