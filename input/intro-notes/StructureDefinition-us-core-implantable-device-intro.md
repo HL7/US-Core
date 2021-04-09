@@ -36,19 +36,30 @@ In addition, the following data-elements must be supported if the data is presen
 
 - This profile supports the requirement to retrieve an 170.315(a)(14) [Implantable device list](https://www.healthit.gov/test-method/implantable-device-list). Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:
   - The [AccessGUDID API](https://www.fda.gov/medical-devices/global-unique-device-identification-database-gudid/accessgudid-public) provides access to device records in GUDID including safety information and UDI. It includes APIs to query and download a complete list of implantable devices registered in GUDID.
-  - The Parse UDI API allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
-- {:.new-content #FHIR-28942}Implantable medical devices that have UDI information **SHALL** represent this information in `Device.carrierHRF`.
-     - UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer (`Device.manufacturer`) model number (`Device.model`) information is available, they **SHOULD** be included to support historical reports of implantable medical devices
-- {:.new-content #FHIR-28942}For Implantable medical devices that have UDI information, all five UDI-PI elements present **SHALL** be represented in the corresponding US Core Implantable Device Profile element:
+  - {:.bg-danger}The Parse UDI API allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
+  - {:.new-content}A unique device identifier (UDI) is a unique alphanumeric code that generally consists of mandatory Device identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements. These UDI components and their mapping to the US Core Implantable Device Profile elements are listed in the table below:
 
-  |UDI-PI element|US Core Implantable Device Profile element|
-  |---|--|
-  |manufacture date|Device.manufactureDate|
-  |expiration date|Device.expirationDate|
-  |lot number|Device.lotNumber|
-  |serial number|Device.serialNumber|
-  |distinct identifier|Device.distinctIdentifier|
+  |UDI component|UDI-PI element?|US Core Implantable Device Profile element|
+  |---|---|---|
+  |UDI alphanumeric code||Device.udiCarrier.carrierHRF|
+  |DI||Device.udiCarrier.deviceIdentifier|
+  |manufacture date|X|Device.manufactureDate|
+  |expiration date|X|Device.expirationDate|
+  |lot number|X|Device.lotNumber|
+  |serial number|X|Device.serialNumber|
+  |distinct identifier|X|Device.distinctIdentifier|
   {:.grid}
+
+
+- {:.new-content #FHIR-28942}Implantable medical devices that have UDI information **SHALL** represent the UDI code in `Device.udiCarrier.carrierHRF`.
+   - All of the five UDI-PI elements that are present **SHALL** be represented in the corresponding US Core Implantable Device Profile element.
+   - UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer and/or model number information is available, they **SHOULD** be included to support historical reports of implantable medical devices as follows:
+
+   |data element|US Core Implantable Device Profile element|
+   |---|---|
+   |manufacturer|Device.manufacturer|
+   |model|Device.model|
+   {:.grid}
 
 - Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type. Note: The Device.type is too granular to differentiate implantable vs. non-implantable devices.  
 - In the [Quick Start] section below, searching for all devices is described. Records of implanted devices **MAY** be queried against UDI data including:
