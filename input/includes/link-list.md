@@ -284,3 +284,4 @@
 [Must Support - Coded Elements]: conformance-expectations.html#must-support---coded-elements
 [clinical safety]:  {{site.data.fhir.path}}safety.html
 [LOINC scale type to FHIR data type mapping]: {{site.data.fhir.path}}loinc.html#dataelements
+[HL7 Cross Paradigm Implementation Guide: UDI Pattern]: http://www.hl7.org/documentcenter/private/standards/HL7_IG_UDI_R2_2020JUN.pdf
