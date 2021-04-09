@@ -35,7 +35,7 @@ In addition, the following data-elements must be supported if the data is presen
 **Profile specific implementation guidance:**
 
 - {:.bg-success}This profile supports the requirement to retrieve an 170.315(a)(14) [Implantable device list](https://www.healthit.gov/test-method/implantable-device-list) and follows the [HL7 Cross Paradigm Implementation Guide: UDI Pattern] guidelines for exchanging information about the use of and/or implantation of medical devices in patients.
-  - A unique device identifier (UDI) is a unique numeric or alphanumeric code. There is a machine-readable version as well as a human-readable version of the UDI - the Automatic Identification and Data Capture (AIDC) and  Human Readable Form string (HRF). This profile specifies that only the HRF must be supported.  The UDI generally consists of a mandatory Device identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements.  The UDI components are mapped to the US Core Implantable Device Profile elements in the table below:
+  - A unique device identifier (UDI) is a unique numeric or alphanumeric code. There is a machine-readable version as well as a human-readable version of the UDI - the Automatic Identification and Data Capture (AIDC) and  Human Readable Form string (HRF). This profile specifies that only the HRF must be supported.  The UDI generally consists of a mandatory Device identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements.  The UDI and its components are mapped to the US Core Implantable Device Profile elements in the table below:
 
     |UDI component|US Core Implantable Device Profile element|
     |---|---|
@@ -50,7 +50,7 @@ In addition, the following data-elements must be supported if the data is presen
 
   -  {:.bg-success}Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:
       - The [AccessGUDID API](https://www.fda.gov/medical-devices/global-unique-device-identification-database-gudid/accessgudid-public) provides access to device records in GUDID including safety information and UDI. It includes APIs to query and download a complete list of implantable devices registered in GUDID.
-     - The [Parse UDI API](https://accessgudid.nlm.nih.gov/resources/developers/parse_udi_api) allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
+      - The [Parse UDI API](https://accessgudid.nlm.nih.gov/resources/developers/parse_udi_api) allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
 
 - {:.new-content #FHIR-28942}Implantable medical devices that have UDI information **SHALL** represent the UDI code in `Device.udiCarrier.carrierHRF`.
    - All of the five UDI-PI elements that are present **SHALL** be represented in the corresponding US Core Implantable Device Profile element.
