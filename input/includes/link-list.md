@@ -284,4 +284,3 @@
 [Must Support - Coded Elements]: conformance-expectations.html#must-support---coded-elements
 [clinical safety]:  {{site.data.fhir.path}}safety.html
 [LOINC scale type to FHIR data type mapping]: {{site.data.fhir.path}}loinc.html#dataelements
-[^1]: The [Parse UDI API](https://accessgudid.nlm.nih.gov/resources/developers/parse_udi_api) allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).

@@ -36,7 +36,7 @@ In addition, the following data-elements must be supported if the data is presen
 
 - This profile supports the requirement to retrieve an 170.315(a)(14) [Implantable device list](https://www.healthit.gov/test-method/implantable-device-list). Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:
   - The [AccessGUDID API](https://www.fda.gov/medical-devices/global-unique-device-identification-database-gudid/accessgudid-public) provides access to device records in GUDID including safety information and UDI. It includes APIs to query and download a complete list of implantable devices registered in GUDID.
-  - {:.new-content}A unique device identifier (UDI) is a unique alphanumeric code that generally consists of mandatory Device identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements. These UDI components and their mapping to the US Core Implantable Device Profile elements are listed in the table below[^1]:
+  - {:.new-content}A unique device identifier (UDI) is a unique alphanumeric code that generally consists of mandatory Device identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements. These UDI components and their mapping to the US Core Implantable Device Profile elements are listed in the table below:
     |UDI component|US Core Implantable Device Profile element|
     |---|---|
     |UDI alphanumeric code|Device.udiCarrier.carrierHRF|
@@ -47,7 +47,7 @@ In addition, the following data-elements must be supported if the data is presen
     |serial number (UDI-PI element)|Device.serialNumber|
     |distinct identifier (UDI-PI element)|Device.distinctIdentifier|
     {:.grid}
-
+  - The [Parse UDI API](https://accessgudid.nlm.nih.gov/resources/developers/parse_udi_api) allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
 
 - {:.new-content #FHIR-28942}Implantable medical devices that have UDI information **SHALL** represent the UDI code in `Device.udiCarrier.carrierHRF`.
    - All of the five UDI-PI elements that are present **SHALL** be represented in the corresponding US Core Implantable Device Profile element.
