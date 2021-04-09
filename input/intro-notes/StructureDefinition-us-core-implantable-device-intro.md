@@ -80,7 +80,4 @@ In addition, the following data-elements must be supported if the data is presen
 - [Device-UDI-2](Device-udi-2.html)
 - [Device-UDI-3](Device-udi-3.html)
 
----
-[^1]: The [Parse UDI API](https://accessgudid.nlm.nih.gov/resources/developers/parse_udi_api) allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
-
 {% include link-list.md %}
