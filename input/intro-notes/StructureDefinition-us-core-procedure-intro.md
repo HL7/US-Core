@@ -23,7 +23,8 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Profile specific implementation guidance:**
 
- - Procedure codes can be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, or CDT.
+ - Procedure codes can be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT. LOINC.
+   - Only LOINC concepts that reflect actual procedures **SHOULD** be used
  - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` with a reference to the [US Core Implantable Device Profile].
 
 ### Examples
