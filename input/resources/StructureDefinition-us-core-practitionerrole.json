@@ -54,7 +54,7 @@
           {
             "key": "us-core-13",
             "severity": "error",
-            "human": "**SHALL** have a practitioner, an organization, a healthcare service, or a location.",
+            "human": "SHALL have a practitioner, an organization, a healthcare service, or a location.",
             "expression": "practitioner or organization or healthcareService or location ",
             "xpath": "exists(f:practitioner) or exists(f:organization) or exists(f:healthcareService) or exists(f:location)"
           }
