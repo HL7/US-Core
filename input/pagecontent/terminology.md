@@ -72,7 +72,7 @@ The following concept mappings have been defined as part of the this guide.
 </p>
 
 -->
-
+<div class="new-content" markdown="1">
 ### Using Value Set Authority Center (VSAC)
 
 This guide links terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable using a RESTful API service for accessing the VSAC value sets and supported code systems.
@@ -94,5 +94,6 @@ After successfully entered the API Key the value set can be inspected, downloade
  {% include img.html img="vsac-3.png" caption="Figure 3: VSAC Smoking Status ValueSet" %}
 
 Note that only one login is required per session.
+</div>
 
 {% include link-list.md %}
