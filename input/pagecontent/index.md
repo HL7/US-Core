@@ -12,11 +12,12 @@
 - [ ] remove all new content and green highlighted formatting
 - [ ] update title and version to 2.0.0
 - [ ] update package-list.json
-      - in pl.yml
-          - update current to ver 2.0.0
-          - change base path of changes from build to version 2.0.0
-      - remove this blue info box/change log from home page
-      - update package-list.json from pl.yml
+
+     - in pl.yml
+        - update current to ver 2.0.0
+        - change base path of changes from build to version 2.0.0
+    - remove this blue info box/change log from home page
+    - update package-list.json from pl.yml
 
 
 <!--
