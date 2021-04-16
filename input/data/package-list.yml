@@ -108,6 +108,7 @@ list:
       1. **Applied**: Add reference to Mapping from LOINC scale type to FHIR data type ([FHIR-31084](https://jira.hl7.org/browse/FHIR-31084)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
       1. **Applied**: Update Observation.value[x] definition ([FHIR-31083](https://jira.hl7.org/browse/FHIR-31083)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab-definitions.html#Observation.value[x])
       1. **Applied**: Add LOINC to procedure codes ([FHIR-31514](https://jira.hl7.org/browse/FHIR-31514)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-us-core-procedure-code.html)
+      1. **Applied**: Make PractitionerRole.organization must support and add invariant ([FHIR-29680](https://jira.hl7.org/browse/FHIR-29680)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-practitionerrole.html)
 
     path: 'http://build.fhir.org/ig/HL7/US-Core-R4'
     status: ci-build

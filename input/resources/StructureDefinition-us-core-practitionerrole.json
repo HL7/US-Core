@@ -50,6 +50,13 @@
             "human": "SHALL have contact information or a reference to an Endpoint",
             "expression": "telecom or endpoint",
             "xpath": "exists(f:telecom) or exists(f:endpoint)"
+          },
+          {
+            "key": "us-core-13",
+            "severity": "error",
+            "human": "**SHALL** have a practitioner, an organization, a healthcare service, or a location.",
+            "expression": "practitioner or organization or healthcareService or location ",
+            "xpath": "exists(f:practitioner) or exists(f:organization) or exists(f:healthcareService) or exists(f:location)"
           }
         ],
         "mustSupport": false
@@ -67,12 +74,15 @@
             ]
           }
         ],
+        "condition": [
+          "us-core-13"
+        ],
         "mustSupport": true
       },
       {
         "id": "PractitionerRole.organization",
         "path": "PractitionerRole.organization",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "type": [
           {
@@ -81,6 +91,9 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
             ]
           }
+        ],
+        "condition": [
+          "us-core-13"
         ],
         "mustSupport": true
       },
@@ -118,6 +131,13 @@
         }
       },
       {
+        "id": "PractitionerRole.healthcareService",
+        "path": "PractitionerRole.healthcareService",
+        "condition": [
+          "us-core-13"
+        ]
+      },
+      {
         "id": "PractitionerRole.location",
         "path": "PractitionerRole.location",
         "min": 0,
@@ -129,6 +149,9 @@
               "http://hl7.org/fhir/StructureDefinition/Location"
             ]
           }
+        ],
+        "condition": [
+          "us-core-13"
         ],
         "mustSupport": true
       },
