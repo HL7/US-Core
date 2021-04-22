@@ -148,7 +148,7 @@
         ],
         "mustSupport": true,
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "description": "Valueset to describe the actual problem experienced by the patient",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
         },
