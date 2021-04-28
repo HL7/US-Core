@@ -92,6 +92,13 @@
           }
         ]
       },
+	  {
+        "id": "MedicationRequest.category",
+        "path": "MedicationRequest.category",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+       },
       {
         "id": "MedicationRequest.reported[x]",
         "path": "MedicationRequest.reported[x]",
