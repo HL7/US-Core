@@ -98,6 +98,11 @@
         "min": 0,
         "max": "*",
         "mustSupport": true
+		   "binding": {
+          "strength": "preferred",
+          "description": "The type of medication order.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/medicationrequest-category"
+        },
        },
       {
         "id": "MedicationRequest.reported[x]",
