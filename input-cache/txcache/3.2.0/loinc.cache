@@ -27,8 +27,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:a3e56178-95dd-4e09-a704-353f62c56a47",
-    "timestamp" : "2021-04-01T21:08:21.948Z",
+    "identifier" : "urn:uuid:42c93f49-a9c6-4282-bae1-7c0ffd916d15",
+    "timestamp" : "2021-04-28T16:49:53.024Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -39,7 +39,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.69"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -96,8 +96,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9675b3e6-356c-47b4-b387-0d3e2d40bd12",
-    "timestamp" : "2021-04-01T21:10:41.605Z",
+    "identifier" : "urn:uuid:dcfe33f6-d123-4dfe-970c-773083788e30",
+    "timestamp" : "2021-04-28T16:52:26.602Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -108,7 +108,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.69"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -152,8 +152,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:2cfe1581-10f2-4203-838e-6e6fa2e002c4",
-    "timestamp" : "2021-04-01T21:10:41.808Z",
+    "identifier" : "urn:uuid:7e2e5662-666d-4825-a354-ab36c01cb2fb",
+    "timestamp" : "2021-04-28T16:52:26.774Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -164,7 +164,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.69"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -654,7 +654,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10363-0",
-      "display" : "Barbiturates [Presence] in Unspecified specimen"
+      "display" : "Barbiturates [Presence] in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -1554,7 +1554,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10525-4",
-      "display" : "Microscopic observation [Identifier] in Unspecified specimen by Cyto stain"
+      "display" : "Microscopic observation [Identifier] in Specimen by Cyto stain"
     },
     {
       "system" : "http://loinc.org",
@@ -1629,7 +1629,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10539-5",
-      "display" : "Glipizide [Mass/volume] in Serum or Plasma"
+      "display" : "glipiZIDE [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
@@ -1639,7 +1639,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10540-3",
-      "display" : "Glyburide [Mass/volume] in Serum or Plasma"
+      "display" : "glyBURIDE [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
@@ -2179,12 +2179,12 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10638-5",
-      "display" : "Thermophilic Actinomycetes colony count [#/volume] in Unspecified specimen by Organism specific culture"
+      "display" : "Thermophilic Actinomycetes colony count [#/volume] in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10639-3",
-      "display" : "Thermophilic Actinomycetes identified in Unspecified specimen by Organism specific culture"
+      "display" : "Thermophilic Actinomycetes identified in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
@@ -2214,7 +2214,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10644-3",
-      "display" : "Arthropod identified in Unspecified specimen"
+      "display" : "Arthropod identified in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -2329,7 +2329,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10665-8",
-      "display" : "Fungus colony count [#/volume] in Unspecified specimen by Environmental culture"
+      "display" : "Fungus colony count [#/volume] in Specimen by Environmental culture"
     },
     {
       "system" : "http://loinc.org",
@@ -2339,17 +2339,17 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10667-4",
-      "display" : "Fungus identified in Unspecified specimen by Animal inoculation"
+      "display" : "Fungus identified in Specimen by Animal inoculation"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10668-2",
-      "display" : "Fungus identified in Unspecified specimen by Environmental culture"
+      "display" : "Fungus identified in Specimen by Environmental culture"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10669-0",
-      "display" : "Fungus identified in Unspecified specimen by Sticky tape for environmental fungus"
+      "display" : "Fungus identified in Specimen by Sticky tape for environmental fungus"
     },
     {
       "system" : "http://loinc.org",
@@ -2364,12 +2364,12 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10671-6",
-      "display" : "Helminth identified in Unspecified specimen"
+      "display" : "Helminth identified in Specimen"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10672-4",
-      "display" : "Helminth+Arthropod identified in Unspecified specimen"
+      "display" : "Helminth+Arthropod identified in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -2599,7 +2599,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10713-6",
-      "display" : "Prototheca identified in Unspecified specimen by Culture"
+      "display" : "Prototheca identified in Specimen by Culture"
     },
     {
       "system" : "http://loinc.org",
@@ -2614,7 +2614,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10716-9",
-      "display" : "Schistosoma sp identified in Unspecified specimen by Organism specific culture"
+      "display" : "Schistosoma sp identified in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
@@ -2739,7 +2739,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10739-1",
-      "display" : "Virus identified in Unspecified specimen by Electron microscopy"
+      "display" : "Virus identified in Specimen by Electron microscopy"
     },
     {
       "system" : "http://loinc.org",
@@ -3349,7 +3349,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10850-6",
-      "display" : "Cyclospora cayetanensis [Presence] in Unspecified specimen"
+      "display" : "Cyclospora cayetanensis [Presence] in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -3364,7 +3364,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10853-0",
-      "display" : "Isospora belli [Presence] in Unspecified specimen by Acid fast stain.Kinyoun modified"
+      "display" : "Isospora belli [Presence] in Specimen by Acid fast stain.Kinyoun modified"
     },
     {
       "system" : "http://loinc.org",
@@ -3384,7 +3384,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10857-1",
-      "display" : "Microsporidia identified in Unspecified specimen by Light microscopy"
+      "display" : "Microsporidia identified in Specimen by Light microscopy"
     },
     {
       "system" : "http://loinc.org",
@@ -3404,7 +3404,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10860-5",
-      "display" : "Varicella zoster virus [Presence] in Unspecified specimen by Organism specific culture"
+      "display" : "Varicella zoster virus [Presence] in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
@@ -3709,7 +3709,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10915-7",
-      "display" : "Phencyclidine [Mass/volume] in Unspecified specimen"
+      "display" : "Phencyclidine [Mass/volume] in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -3724,7 +3724,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10918-1",
-      "display" : "Zinc [Mass/volume] in Unspecified specimen"
+      "display" : "Zinc [Mass/volume] in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -4754,7 +4754,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "11102-1",
-      "display" : "Charcot-leyden crystals [type] in Unspecified specimen by Trichrome stain"
+      "display" : "Charcot-leyden crystals [type] in Specimen by Trichrome stain"
     },
     {
       "system" : "http://loinc.org",
@@ -5188,8 +5188,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:bfe5462e-b5f0-4233-993b-3ccbe3818538",
-    "timestamp" : "2021-04-01T21:10:42.214Z",
+    "identifier" : "urn:uuid:563d3fa6-350d-4bcc-a1f1-2ae32ce15f53",
+    "timestamp" : "2021-04-28T16:52:26.899Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5200,7 +5200,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.69"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -7235,7 +7235,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10363-0",
-      "display" : "Barbiturates [Presence] in Unspecified specimen"
+      "display" : "Barbiturates [Presence] in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -8135,7 +8135,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10525-4",
-      "display" : "Microscopic observation [Identifier] in Unspecified specimen by Cyto stain"
+      "display" : "Microscopic observation [Identifier] in Specimen by Cyto stain"
     },
     {
       "system" : "http://loinc.org",
@@ -8210,7 +8210,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10539-5",
-      "display" : "Glipizide [Mass/volume] in Serum or Plasma"
+      "display" : "glipiZIDE [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
@@ -8220,7 +8220,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10540-3",
-      "display" : "Glyburide [Mass/volume] in Serum or Plasma"
+      "display" : "glyBURIDE [Mass/volume] in Serum or Plasma"
     },
     {
       "system" : "http://loinc.org",
@@ -8760,12 +8760,12 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10638-5",
-      "display" : "Thermophilic Actinomycetes colony count [#/volume] in Unspecified specimen by Organism specific culture"
+      "display" : "Thermophilic Actinomycetes colony count [#/volume] in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10639-3",
-      "display" : "Thermophilic Actinomycetes identified in Unspecified specimen by Organism specific culture"
+      "display" : "Thermophilic Actinomycetes identified in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
@@ -8795,7 +8795,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10644-3",
-      "display" : "Arthropod identified in Unspecified specimen"
+      "display" : "Arthropod identified in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -8910,7 +8910,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10665-8",
-      "display" : "Fungus colony count [#/volume] in Unspecified specimen by Environmental culture"
+      "display" : "Fungus colony count [#/volume] in Specimen by Environmental culture"
     },
     {
       "system" : "http://loinc.org",
@@ -8920,17 +8920,17 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10667-4",
-      "display" : "Fungus identified in Unspecified specimen by Animal inoculation"
+      "display" : "Fungus identified in Specimen by Animal inoculation"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10668-2",
-      "display" : "Fungus identified in Unspecified specimen by Environmental culture"
+      "display" : "Fungus identified in Specimen by Environmental culture"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10669-0",
-      "display" : "Fungus identified in Unspecified specimen by Sticky tape for environmental fungus"
+      "display" : "Fungus identified in Specimen by Sticky tape for environmental fungus"
     },
     {
       "system" : "http://loinc.org",
@@ -8945,12 +8945,12 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10671-6",
-      "display" : "Helminth identified in Unspecified specimen"
+      "display" : "Helminth identified in Specimen"
     },
     {
       "system" : "http://loinc.org",
       "code" : "10672-4",
-      "display" : "Helminth+Arthropod identified in Unspecified specimen"
+      "display" : "Helminth+Arthropod identified in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -9180,7 +9180,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10713-6",
-      "display" : "Prototheca identified in Unspecified specimen by Culture"
+      "display" : "Prototheca identified in Specimen by Culture"
     },
     {
       "system" : "http://loinc.org",
@@ -9195,7 +9195,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10716-9",
-      "display" : "Schistosoma sp identified in Unspecified specimen by Organism specific culture"
+      "display" : "Schistosoma sp identified in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
@@ -9320,7 +9320,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10739-1",
-      "display" : "Virus identified in Unspecified specimen by Electron microscopy"
+      "display" : "Virus identified in Specimen by Electron microscopy"
     },
     {
       "system" : "http://loinc.org",
@@ -9940,7 +9940,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10850-6",
-      "display" : "Cyclospora cayetanensis [Presence] in Unspecified specimen"
+      "display" : "Cyclospora cayetanensis [Presence] in Specimen"
     },
     {
       "system" : "http://loinc.org",
@@ -9955,7 +9955,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10853-0",
-      "display" : "Isospora belli [Presence] in Unspecified specimen by Acid fast stain.Kinyoun modified"
+      "display" : "Isospora belli [Presence] in Specimen by Acid fast stain.Kinyoun modified"
     },
     {
       "system" : "http://loinc.org",
@@ -9975,7 +9975,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10857-1",
-      "display" : "Microsporidia identified in Unspecified specimen by Light microscopy"
+      "display" : "Microsporidia identified in Specimen by Light microscopy"
     },
     {
       "system" : "http://loinc.org",
@@ -9995,7 +9995,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "10860-5",
-      "display" : "Varicella zoster virus [Presence] in Unspecified specimen by Organism specific culture"
+      "display" : "Varicella zoster virus [Presence] in Specimen by Organism specific culture"
     },
     {
       "system" : "http://loinc.org",
@@ -10229,8 +10229,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:82b9b6d9-0f66-496a-817f-f6d81a7c7a01",
-    "timestamp" : "2021-04-01T21:10:43.402Z",
+    "identifier" : "urn:uuid:760167a4-aa7a-452b-abba-f2808919cf7f",
+    "timestamp" : "2021-04-28T16:52:27.430Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -10241,7 +10241,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.69"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -13001,7 +13001,7 @@ e: {
     {
       "system" : "http://loinc.org",
       "code" : "25038-1",
-      "display" : "Courtesy consultation Unspecified body region Document"
+      "display" : "Courtesy consultation Document"
     },
     {
       "system" : "http://loinc.org",
@@ -15265,8 +15265,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:1de26176-04e6-4e7a-ada0-4c42f3e81f1d",
-    "timestamp" : "2021-04-01T21:10:56.589Z",
+    "identifier" : "urn:uuid:b1e74e68-a591-41b6-9bb7-f168d7366727",
+    "timestamp" : "2021-04-28T16:52:38.071Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -15277,7 +15277,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.69"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -15320,8 +15320,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:a6405444-adcb-42f6-9410-5166654b7d68",
-    "timestamp" : "2021-04-01T21:10:57.120Z",
+    "identifier" : "urn:uuid:96d33b06-c236-4799-9a7d-33fa4620d4b7",
+    "timestamp" : "2021-04-28T16:52:38.305Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -15332,7 +15332,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.69"
     }],
     "contains" : [{
       "system" : "http://loinc.org",
@@ -15421,8 +15421,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:53c46097-9f9e-4ee9-b149-68b095bb18bf",
-    "timestamp" : "2021-04-01T21:10:57.527Z",
+    "identifier" : "urn:uuid:15b43ed3-e0cc-49a9-bdb8-09029d9231c9",
+    "timestamp" : "2021-04-28T16:52:38.383Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -15433,7 +15433,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://loinc.org|2.68"
+      "valueString" : "http://loinc.org|2.69"
     }],
     "contains" : [{
       "system" : "http://loinc.org",

@@ -51,6 +51,49 @@ v: {
   "resourceType" : "ValueSet",
   "compose" : {
     "include" : [{
+      "system" : "urn:oid:2.16.840.1.113883.6.238",
+      "concept" : [{
+        "code" : "1002-5",
+        "display" : "American Indian or Alaska Native"
+      },
+      {
+        "code" : "2028-9",
+        "display" : "Asian"
+      },
+      {
+        "code" : "2054-5",
+        "display" : "Black or African American"
+      },
+      {
+        "code" : "2076-8",
+        "display" : "Native Hawaiian or Other Pacific Islander"
+      },
+      {
+        "code" : "2106-3",
+        "display" : "White"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+      "concept" : [{
+        "code" : "UNK",
+        "display" : "Unknown"
+      },
+      {
+        "code" : "ASKU",
+        "display" : "Asked but no answer"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.238"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
       "system" : "http://www.ama-assn.org/go/cpt"
     },
     {
@@ -62,18 +105,21 @@ v: {
       }]
     },
     {
-      "system" : "urn:oid:2.16.840.1.113883.6.285"
+      "system" : "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
     },
     {
       "system" : "http://www.cms.gov/Medicare/Coding/ICD10"
     },
     {
-      "system" : "urn:oid:2.16.840.1.113883.6.13"
+      "system" : "http://ada.org/cdt"
+    },
+    {
+      "system" : "http://loinc.org"
     }]
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.285"
+  "error" : "Error from server: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -214,13 +260,16 @@ v: {
       }]
     },
     {
-      "system" : "urn:oid:2.16.840.1.113883.6.285"
+      "system" : "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
     },
     {
       "system" : "http://www.cms.gov/Medicare/Coding/ICD10"
     },
     {
-      "system" : "urn:oid:2.16.840.1.113883.6.13"
+      "system" : "http://ada.org/cdt"
+    },
+    {
+      "system" : "http://loinc.org"
     }]
   }
 }, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
@@ -299,78 +348,6 @@ v: {
       }]
     },
     {
-      "system" : "urn:oid:2.16.840.1.113883.6.285"
-    },
-    {
-      "system" : "http://www.cms.gov/Medicare/Coding/ICD10"
-    },
-    {
-      "system" : "urn:oid:2.16.840.1.113883.6.13"
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:oid:2.16.840.1.113883.6.238",
-      "concept" : [{
-        "code" : "1002-5",
-        "display" : "American Indian or Alaska Native"
-      },
-      {
-        "code" : "2028-9",
-        "display" : "Asian"
-      },
-      {
-        "code" : "2054-5",
-        "display" : "Black or African American"
-      },
-      {
-        "code" : "2076-8",
-        "display" : "Native Hawaiian or Other Pacific Islander"
-      },
-      {
-        "code" : "2106-3",
-        "display" : "White"
-      }]
-    },
-    {
-      "system" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-      "concept" : [{
-        "code" : "UNK",
-        "display" : "Unknown"
-      },
-      {
-        "code" : "ASKU",
-        "display" : "Asked but no answer"
-      }]
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.238"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : false, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.ama-assn.org/go/cpt"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "71388002"
-      }]
-    },
-    {
       "system" : "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
     },
     {
@@ -378,35 +355,9 @@ e: {
     },
     {
       "system" : "http://ada.org/cdt"
-    }]
-  }
-}}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://www.ama-assn.org/go/cpt"
     },
     {
-      "system" : "http://snomed.info/sct",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "71388002"
-      }]
-    },
-    {
-      "system" : "http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets"
-    },
-    {
-      "system" : "http://www.cms.gov/Medicare/Coding/ICD10"
-    },
-    {
-      "system" : "http://ada.org/cdt"
+      "system" : "http://loinc.org"
     }]
   }
 }}####

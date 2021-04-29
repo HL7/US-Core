@@ -15,8 +15,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:9ae89c61-f6c8-47b0-82a0-438799e27577",
-    "timestamp" : "2021-04-01T21:08:23.120Z",
+    "identifier" : "urn:uuid:dcfcf48d-6d83-4942-bc50-a36b04d00065",
+    "timestamp" : "2021-04-29T15:04:19.327Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -27,7 +27,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210301"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -65,8 +65,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:c726b6be-5f0f-47a7-9252-9311971dfc16",
-    "timestamp" : "2021-04-01T21:08:23.448Z",
+    "identifier" : "urn:uuid:b37b586a-47ea-41d9-bbed-1c877092d570",
+    "timestamp" : "2021-04-29T15:04:19.702Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -77,7 +77,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210301"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -118,11 +118,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "144008",
       "display" : "Normal peripheral vision"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "147001",
-      "display" : "Superficial foreign body of scrotum without major open wound but with infection"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -607,7 +602,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "586008",
-      "display" : "Contact dermatitis due to primrose"
+      "display" : "Contact dermatitis caused by poison primrose"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -748,11 +743,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "718004",
       "display" : "Acute bronchiolitis with obstruction"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "733007",
-      "display" : "Superficial foreign body of groin without major open wound but with infection"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -963,11 +953,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "904002",
       "display" : "Pinard's sign"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "908004",
-      "display" : "Superficial injury of interscapular region without infection"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1381,11 +1366,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "1317001",
-      "display" : "Injury of ovary without open wound into abdominal cavity"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "1318006",
       "display" : "Post-translational genetic protein processing"
     },
@@ -1428,11 +1408,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "1361009",
       "display" : "Leukocoria"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "1363007",
-      "display" : "Fetal or neonatal effect of chronic maternal respiratory disease"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1518,11 +1493,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "1418007",
       "display" : "Hypoplastic chondrodystrophy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "1419004",
-      "display" : "Injury of prostate without open wound into abdominal cavity"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -1806,11 +1776,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "1708003",
-      "display" : "Open dislocation of clavicle"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "1714005",
       "display" : "Photokeratitis"
     },
@@ -2051,11 +2016,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "1909000",
-      "display" : "Impairment level: better eye: severe impairment: lesser eye: near-total impairment"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "1922008",
       "display" : "Congenital absence of urethra"
     },
@@ -2141,11 +2101,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "1989002",
-      "display" : "Burn of vagina AND/OR uterus"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "2004005",
       "display" : "Normal blood pressure"
     },
@@ -2193,11 +2148,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "2055003",
       "display" : "Recurrent erosion of cornea"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "2058001",
-      "display" : "Bilateral loss of labyrinthine reactivity"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2378,11 +2328,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "2216005",
       "display" : "Nocturnal emission"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "2217001",
-      "display" : "Superficial injury of perineum without infection"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2846,11 +2791,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "2630008",
-      "display" : "Open wound of finger without complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "2634004",
       "display" : "Decreased blood erythrocyte volume"
     },
@@ -2998,11 +2938,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "2786004",
       "display" : "Epithelial ovarian tumor, FIGO stage III"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "2790002",
-      "display" : "Impairment level: one eye: total impairment: other eye: not specified"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3191,11 +3126,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "2973002",
-      "display" : "Pelvic organ injury without open wound into abdominal cavity"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "2978006",
       "display" : "Aneurysm of conjunctiva"
     },
@@ -3328,11 +3258,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "3073006",
       "display" : "Ruvalcaba syndrome"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "3084004",
-      "display" : "Nonvenomous insect bite of gum without infection"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -3781,11 +3706,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "3503000",
-      "display" : "Gender identity disorder of adolescence, previously asexual"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "3506008",
       "display" : "Stenosis of retinal artery"
     },
@@ -4186,11 +4106,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "3903005",
-      "display" : "Traumatic pneumothorax without open wound into thorax"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "3908001",
       "display" : "Infestation by Haematopinus"
     },
@@ -4378,11 +4293,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "4103001",
       "display" : "Complex partial seizures with consciousness impaired"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "4106009",
-      "display" : "Rotator cuff syndrome"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4583,11 +4493,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "4275001",
       "display" : "Spasm of conjugate gaze"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "4278004",
-      "display" : "Superficial foreign body of axilla without major open wound but with infection"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -4856,11 +4761,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "4490000",
-      "display" : "Impairment level: better eye: moderate impairment: lesser eye: near-total impairment"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "4494009",
       "display" : "Diverticulitis of large intestine"
     },
@@ -4913,11 +4813,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "4526003",
       "display" : "Poisoning by probenecid"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "4528002",
-      "display" : "Senecio jacobea poisoning"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5031,11 +4926,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "4646004",
-      "display" : "Impairment level: one eye: profound impairment: other eye: not specified"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "4654002",
       "display" : "Posteruptive color change of tooth"
     },
@@ -5078,6 +4968,116 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "4688008",
       "display" : "Poisoning by griseofulvin"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4690009",
+      "display" : "Metabolic acidosis due to paraldehyde"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4702003",
+      "display" : "Inherited disorder of folate metabolism"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4708004",
+      "display" : "Disability evaluation, disability 35%"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4711003",
+      "display" : "Congenital anomaly of bile ducts"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4721006",
+      "display" : "Basic motor learning problem"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4724003",
+      "display" : "Acute radial nerve palsy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4733001",
+      "display" : "Orunga virus disease"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4740000",
+      "display" : "Herpes zoster"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4749004",
+      "display" : "Naso-palatine duct cyst"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4750004",
+      "display" : "Open fracture of medial condyle of humerus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4754008",
+      "display" : "Gynecomastia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4760008",
+      "display" : "Chronic dacryoadenitis"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4763005",
+      "display" : "Frostbite of hand"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4771009",
+      "display" : "Poisoning by cephalosporin group antibiotic"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4776004",
+      "display" : "Lichen planus"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4783006",
+      "display" : "Maternal diabetes mellitus with hypoglycemia affecting fetus OR newborn"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4787007",
+      "display" : "Fetal or neonatal effect of breech delivery and extraction"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4788002",
+      "display" : "Closed fracture of zygoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4800001",
+      "display" : "Pyuria"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4805006",
+      "display" : "Functional aphasia"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4806007",
+      "display" : "Bjerrum scotoma"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "4817008",
+      "display" : "Primary degenerative dementia of the Alzheimer type, senile onset, with delirium"
     }]
   }
 },
@@ -5110,8 +5110,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:cfae14e2-9824-4a86-8b31-9b323b410712",
-    "timestamp" : "2021-04-01T21:09:09.151Z",
+    "identifier" : "urn:uuid:ba6a3011-887b-4b4b-b307-44b6f4f3efa9",
+    "timestamp" : "2021-04-29T15:05:14.702Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -5122,7 +5122,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210301"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -5136,73 +5136,13 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "2769005",
-      "display" : "Unilateral caudal displacement of diaphragm"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "5462009",
-      "display" : "Breast reconstruction, unilateral, with single pedicle TRAM flap"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "6192003",
-      "display" : "Unilateral mammography"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "7729001",
-      "display" : "Unilateral traumatic amputation of arm with complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "13117000",
       "display" : "Absence of stress"
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "14252008",
-      "display" : "Unilateral vasotomy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "15274006",
-      "display" : "Breast reconstruction, unilateral, with single pedicle TRAM flap and opposite breast reduction/mastopexy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "20210009",
-      "display" : "Unilateral traumatic amputation at OR above elbow with complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "20729004",
-      "display" : "Complete unilateral cleft palate"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "28281004",
       "display" : "No bacterial antibody present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "29150008",
-      "display" : "Unilateral excision of hydrocele"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "30459002",
-      "display" : "Unilateral traumatic amputation of leg with complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "33159007",
-      "display" : "Unilateral oophorectomy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "33678008",
-      "display" : "Disease ruled out after examination"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5216,28 +5156,8 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "37012003",
-      "display" : "Frontal sinusotomy by transorbital approach, unilateral"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "40462002",
       "display" : "Planned tracheostomy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "40893006",
-      "display" : "Partial unilateral paresis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "41302009",
-      "display" : "Breast reconstruction, unilateral, with bipedicle TRAM flap and opposite breast reduction/mastopexy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "41518004",
-      "display" : "Diagnostic radiography with contrast media, unilateral"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5246,83 +5166,8 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "43000004",
-      "display" : "Unilateral loss of labyrinthine reactivity"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "45145000",
-      "display" : "Unilateral emphysema"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "46029008",
-      "display" : "Unilateral wedge resection of ovary"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "46508005",
-      "display" : "Unilateral traumatic amputation of leg at OR above knee with complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "47354006",
-      "display" : "Unilateral destruction of fallopian tube"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "47426000",
-      "display" : "Unilateral removal of ovo-testis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "47768001",
-      "display" : "Breast reconstruction, unilateral, with bipedicle TRAM flap"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "48591001",
-      "display" : "Positive contrast bronchography, unilateral"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "51436006",
-      "display" : "Unilateral traumatic amputation below elbow without complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "52787007",
-      "display" : "Unilateral paralysis of tongue"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "55618006",
-      "display" : "Unilateral traumatic amputation of leg without complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "56330003",
-      "display" : "Unilateral traumatic amputation at OR above elbow without complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "57177007",
       "display" : "Family history of"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "57600009",
-      "display" : "Unilateral segmental vasectomy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "58064004",
-      "display" : "Posterior vestibuloplasty, unilateral"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "60521000",
-      "display" : "Venography of adrenal, unilateral"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5331,23 +5176,8 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "61269006",
-      "display" : "Electromyography, cranial nerve supplied muscles, unilateral"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "63196005",
-      "display" : "Diagnostic radiography with contrast media by injection, positive contrast, unilateral"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "65329004",
       "display" : "Lhermitte's phenomenon"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "66325000",
-      "display" : "Partial unilateral vulvectomy"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5361,53 +5191,8 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "71101001",
-      "display" : "Unilateral modified radical neck dissection"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "71738007",
-      "display" : "Partial unilateral paralysis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "72375002",
-      "display" : "Unilateral traumatic amputation of leg below knee with complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "72604007",
-      "display" : "Unilateral radical neck dissection"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "75151002",
-      "display" : "Unilateral vulvectomy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "75844008",
-      "display" : "Diagnostic radiography with contrast media by injection, positive and negative contrast, unilateral"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "77291009",
-      "display" : "Complete unilateral paresis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "81585005",
-      "display" : "Unilateral hypoactive labyrinth"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "81765008",
       "display" : "No pain"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "81993002",
-      "display" : "Unilateral condylar hyperplasia of mandible"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5416,33 +5201,8 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "82630002",
-      "display" : "Unilateral bisection of ovary"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "85125009",
-      "display" : "Unilateral retrograde pyelography"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "86699002",
       "display" : "Absence of fever"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "86914005",
-      "display" : "Unilateral traumatic amputation of foot without complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "88500006",
-      "display" : "Unilateral traumatic amputation of leg at OR above knee without complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "88715005",
-      "display" : "Complete unilateral paralysis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5451,38 +5211,8 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "91436001",
-      "display" : "Diagnostic radiography with contrast media by injection, unilateral"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "91559009",
-      "display" : "Unilateral traumatic amputation of leg below knee without complication"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "95667004",
-      "display" : "Unilateral facial paresis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "95672008",
-      "display" : "Unilateral sensory loss of face and trunk, opposite sides"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "95721006",
-      "display" : "Unilateral cataract"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "102905003",
       "display" : "Absence of guilt"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "103006007",
-      "display" : "Unilateral headache"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5493,21 +5223,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "105480006",
       "display" : "Refusal of treatment by patient"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "109719008",
-      "display" : "Unilateral coronoid hyperplasia of mandible"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "109723000",
-      "display" : "Unilateral coronoid hypoplasia of mandible"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "111690007",
-      "display" : "Unilateral traumatic amputation of arm without complication"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5678,11 +5393,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "124746006",
       "display" : "Trousseau sign positive"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "127377003",
-      "display" : "Unilateral paresis"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6772,7 +6482,7 @@ e: {
     {
       "system" : "http://snomed.info/sct",
       "code" : "161416007",
-      "display" : "H/O: malaria"
+      "display" : "History of malaria"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -6881,11 +6591,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "161462004",
-      "display" : "H/O: Failed blood donor test"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "161464003",
       "display" : "H/O: psychiatric disorder"
     },
@@ -6968,11 +6673,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "161483005",
       "display" : "H/O: Bell's palsy"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "161486002",
-      "display" : "H/O: eye disorder"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8056,11 +7756,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "162358006",
-      "display" : "Unilateral earache"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "162363005",
       "display" : "Ear discharge absent"
     },
@@ -8191,26 +7886,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "162780006",
-      "display" : "O/E - edema not present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "162784002",
-      "display" : "Unilateral leg edema"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "162811006",
-      "display" : "O/E - cataract present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "162838004",
-      "display" : "On examination - unilateral thyroid swelling"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "162881001",
       "display" : "Depth of respiratory system examination"
     },
@@ -8218,21 +7893,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "162882008",
       "display" : "Respiratory system not examined"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "162963000",
-      "display" : "O/E - no adventitious sounds"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "162971001",
-      "display" : "O/E - consolidation present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "162972008",
-      "display" : "O/E - cavitation"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8246,41 +7906,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "163045005",
-      "display" : "O/E - no arterial bruit"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163046006",
-      "display" : "O/E - carotid bruit present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163047002",
-      "display" : "O/E - femoral bruit present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163048007",
-      "display" : "O/E - renal bruit present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163068001",
-      "display" : "O/E - no cardiac thrill"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163084000",
-      "display" : "O/E - pericardial rub absent"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163088002",
-      "display" : "O/E - no cardiac murmur"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "163127007",
       "display" : "Depth of GIT examination"
     },
@@ -8288,71 +7913,6 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "163128002",
       "display" : "GIT not examined"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163142005",
-      "display" : "O/E - mouth examined"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163198005",
-      "display" : "On examination - no abdominal movement"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163207001",
-      "display" : "On examination - no intra-abdominal movement"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163213005",
-      "display" : "On examination - no abdominal pain on palpation"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163225008",
-      "display" : "O/E - no guarding on palpation"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163237005",
-      "display" : "O/E - no rebound tenderness"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163249006",
-      "display" : "O/E - no abdominal rigidity"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163253008",
-      "display" : "O/E - liver not palpable"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163266008",
-      "display" : "O/E - liver not painful"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163271001",
-      "display" : "O/E - gallbladder not palpable"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163279004",
-      "display" : "On examination - abdominal mass not palpated"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163310006",
-      "display" : "O/E - ascites not demonstrated"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163316000",
-      "display" : "O/E - no hernia demonstrated"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8366,66 +7926,6 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "163354000",
-      "display" : "O/E - kidney palpated"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163355004",
-      "display" : "O/E - kidneys not palpable"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163361001",
-      "display" : "O/E - bladder not palpable"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163375008",
-      "display" : "O/E - no scrotal swelling"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163423003",
-      "display" : "O/E - no vaginal discharge"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163458001",
-      "display" : "O/E - no nipple discharge"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163466005",
-      "display" : "O/E - no breast lump palpable"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163492003",
-      "display" : "O/E - breast lump not tethered"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163536000",
-      "display" : "O/E - no fetal movements"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163543006",
-      "display" : "O/E - fetal heart not heard"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163557008",
-      "display" : "O/E - VE - pelvis not adequate"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163560001",
-      "display" : "O/E - VE - cervix not ripe"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "163581001",
       "display" : "Depth of nervous system examination"
     },
@@ -8436,263 +7936,8 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "163589004",
-      "display" : "O/E - no fit/convulsion seen"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163599009",
-      "display" : "O/E - no paralysis"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163628001",
-      "display" : "Sensory system not examined"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163631000",
-      "display" : "O/E - no trophic changes"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163657002",
-      "display" : "O/E - no muscle contracture"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163663006",
-      "display" : "O/E - no involuntary movements"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163731007",
-      "display" : "O/E - analgesia present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163757005",
-      "display" : "O/E - no suppression"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163763001",
-      "display" : "O/E - no visual agnosia"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163764007",
-      "display" : "O/E - visual agnosia present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163772009",
-      "display" : "O/E - past pointing present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163773004",
-      "display" : "O/E - dysdiadochokinesia"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163846005",
-      "display" : "O/E - no clonus"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163900009",
-      "display" : "O/E - CNS not examined"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163904000",
-      "display" : "O/E - no raised I/C pressure"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163909005",
-      "display" : "O/E - meningism absent"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163913003",
-      "display" : "O/E - Kernig's sign negative"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163915005",
-      "display" : "O/E-Brudzinski's sign negative"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "163918007",
-      "display" : "O/E - no speech defect"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164016004",
-      "display" : "O/E - ptosis absent"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164041006",
-      "display" : "O/E - accommod-pupil not react"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164073000",
-      "display" : "O/E - no nystagmus"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164140005",
-      "display" : "O/E - not clinically anemic"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164163000",
-      "display" : "O/E - spleen not palpable"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "164176006",
       "display" : "ENT examination not performed"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164183004",
-      "display" : "O/E - no nasal discharge"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164212007",
-      "display" : "O/E - no discharge from ear"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164220009",
-      "display" : "O/E - ear not painful"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164273009",
-      "display" : "O/E - no laryngeal signs"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164286000",
-      "display" : "O/E - temperature not taken"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164321005",
-      "display" : "O/E - skin not examined"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164329007",
-      "display" : "O/E - no macules"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164332005",
-      "display" : "O/E - ecchymoses present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164333000",
-      "display" : "O/E - capillary nevi present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164336008",
-      "display" : "O/E - papules not present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164340004",
-      "display" : "O/E - skin nodules not present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164344008",
-      "display" : "O/E - vesicles not present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164348006",
-      "display" : "O/E - skin bullae not present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164355008",
-      "display" : "O/E - no pustules present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164362004",
-      "display" : "O/E - weals not present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164366001",
-      "display" : "O/E - skin scales not present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164372001",
-      "display" : "O/E - no skin burrows"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164376003",
-      "display" : "O/E - blackheads not present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164377007",
-      "display" : "O/E - blackheads present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164380008",
-      "display" : "O/E - no skin plaque"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164384004",
-      "display" : "O/E - skin cyst not present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164390000",
-      "display" : "O/E - no skin fissures"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164396006",
-      "display" : "O/E - no skin ulcer"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164400006",
-      "display" : "O/E - no skin scarring"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164406000",
-      "display" : "O/E - no skin crust"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164415007",
-      "display" : "O/E - skin sinus not present"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164445005",
-      "display" : "O/E - extremities not examined"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -8701,58 +7946,8 @@ e: {
     },
     {
       "system" : "http://snomed.info/sct",
-      "code" : "164507007",
-      "display" : "O/E - no joint abnormality"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164525000",
-      "display" : "O/E - joint not swollen"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164549002",
-      "display" : "O/E - joint not stiff"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164558009",
-      "display" : "O/E - no joint contraction"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164574004",
-      "display" : "O/E - no bone abnormal"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164588000",
-      "display" : "O/E - no bone abnormality"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164598006",
-      "display" : "O/E-no soft tissue abnormality"
-    },
-    {
-      "system" : "http://snomed.info/sct",
       "code" : "164618002",
       "display" : "General sign qualifications"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164682005",
-      "display" : "O/E - sign not tethered"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164689001",
-      "display" : "O/E - sign not painful"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "164695000",
-      "display" : "O/E - sign not pulsatile"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -10123,6 +9318,811 @@ e: {
       "system" : "http://snomed.info/sct",
       "code" : "169704000",
       "display" : "Antenatal blood group screening not done"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "169705004",
+      "display" : "Antenatal blood group screening done"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "169708002",
+      "display" : "Antenatal sickle screening not done"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "169709005",
+      "display" : "Antenatal sickle cell screening done"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "169795009",
+      "display" : "Triple test not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "169796005",
+      "display" : "Double test not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "169818001",
+      "display" : "Born before arrival"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170100005",
+      "display" : "Child not examined at birth"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170108003",
+      "display" : "Child not examined at 10 days"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170116007",
+      "display" : "Child 6 week examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170117003",
+      "display" : "Child 6 week examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170125001",
+      "display" : "8-9 month exam not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170126000",
+      "display" : "8-9 month exam not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170134006",
+      "display" : "18 month examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170135007",
+      "display" : "18 month examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170143002",
+      "display" : "2.5 year examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170144008",
+      "display" : "2.5 year examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170152006",
+      "display" : "3.5 year examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170153001",
+      "display" : "3.5 year examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170161006",
+      "display" : "4.5 year examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170162004",
+      "display" : "4.5 year examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170170009",
+      "display" : "10 year examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170171008",
+      "display" : "10 year examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170179005",
+      "display" : "15 year examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170180008",
+      "display" : "15 year examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170256002",
+      "display" : "Child 1 year examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170257006",
+      "display" : "Child 1 year examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170265009",
+      "display" : "Child 6 month examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170266005",
+      "display" : "Child 6 month examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170274006",
+      "display" : "Child 21 month examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170275007",
+      "display" : "Child 21 month examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170283001",
+      "display" : "Child 3 year exam not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170284007",
+      "display" : "Child 3 year exam not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170292003",
+      "display" : "Child 39 month examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170293008",
+      "display" : "Child 39 month examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170302007",
+      "display" : "Child 8 week examination not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170304008",
+      "display" : "Child 8 week examination not attended"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170337005",
+      "display" : "Pneumococcal vaccination given"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170358004",
+      "display" : "First smallpox vaccination - successful"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170359007",
+      "display" : "First smallpox vaccination - unsuccessful"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170428009",
+      "display" : "First Haemophilus influenzae type B and diphtheria, tetanus and pertussis vaccine given"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170429001",
+      "display" : "2nd HiB and DTP vaccine given"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170430006",
+      "display" : "Third Haemophilus influenzae type B and diphtheria, tetanus and pertussis vaccine given"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170459006",
+      "display" : "Anti-D immunoglobulin given"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170576007",
+      "display" : "Cardiac treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170585007",
+      "display" : "Cardiac disease treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170586008",
+      "display" : "Treatment for hypertension started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170587004",
+      "display" : "Hypertensive treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170588009",
+      "display" : "Treatment for hypertension stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170614009",
+      "display" : "Inhaler technique observed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170618007",
+      "display" : "Respiratory treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170619004",
+      "display" : "Respiratory disease treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170620005",
+      "display" : "Respiratory disease treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170621009",
+      "display" : "Home oxygen supply stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170622002",
+      "display" : "Oral steroids started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170624001",
+      "display" : "Oral steroids stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170640003",
+      "display" : "No peak flow meter at home"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170647000",
+      "display" : "Asthma prophylactic medication used"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170673005",
+      "display" : "GIT treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170674004",
+      "display" : "GIT dis.treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170675003",
+      "display" : "GIT treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170685002",
+      "display" : "Psychiatric treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170686001",
+      "display" : "Psychiatric treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170687005",
+      "display" : "Psychiatric treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170688000",
+      "display" : "Lithium stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170689008",
+      "display" : "Injectable phenothiazine stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170698006",
+      "display" : "Neurological disorder treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170699003",
+      "display" : "Neurological disorder treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170700002",
+      "display" : "Neurological disorder treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170710006",
+      "display" : "Epilepsy treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170711005",
+      "display" : "Epilepsy treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170712003",
+      "display" : "Epilepsy treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170723004",
+      "display" : "Ophthalmological treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170724005",
+      "display" : "Ophthalmological treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170725006",
+      "display" : "Ophthalmological treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170739006",
+      "display" : "Gout treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170761001",
+      "display" : "Diabetic treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170789003",
+      "display" : "Thyroid disease treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170798000",
+      "display" : "Treatment of obesity changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170799008",
+      "display" : "Treatment of obesity started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170800007",
+      "display" : "Treatment of obesity stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170803009",
+      "display" : "Ideal weight discussed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170815008",
+      "display" : "Endocrine disease treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170816009",
+      "display" : "Endocrine disease treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170821007",
+      "display" : "B12 injections started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170826002",
+      "display" : "B12 injections stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170832007",
+      "display" : "Blood disorder treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170833002",
+      "display" : "Blood disorder treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170834008",
+      "display" : "Blood disorder treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170841002",
+      "display" : "Allergy treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170842009",
+      "display" : "Allergic disorder treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170843004",
+      "display" : "Allergic disorder treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170851001",
+      "display" : "Rheumatology disorder treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170853003",
+      "display" : "Rheumatology disorder treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170854009",
+      "display" : "Rheumatology disorder treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170861008",
+      "display" : "Skin disorder treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170862001",
+      "display" : "Skin disorder treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170863006",
+      "display" : "Skin disorder treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170870006",
+      "display" : "Gynecological disorder treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170871005",
+      "display" : "Gynecological disorder treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170872003",
+      "display" : "Gynecological disorder treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170880005",
+      "display" : "Urinary disorder treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170881009",
+      "display" : "Urinary disorder treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170882002",
+      "display" : "Urinary disorder treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170892005",
+      "display" : "ENT treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170893000",
+      "display" : "ENT disease treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170894006",
+      "display" : "ENT disease treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170902003",
+      "display" : "Ostomy treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170903008",
+      "display" : "Ostomy - treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170904002",
+      "display" : "Ostomy - treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170910002",
+      "display" : "High risk treatment changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170911003",
+      "display" : "High risk treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170912005",
+      "display" : "High risk treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170918009",
+      "display" : "Warfarin dose changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170919001",
+      "display" : "Warfarin therapy stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170920007",
+      "display" : "Warfarin therapy started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170928000",
+      "display" : "Repeat prescription treatment started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170929008",
+      "display" : "Repeat prescription treatment stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170954008",
+      "display" : "HRT contraindicated"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170955009",
+      "display" : "HRT started"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170957001",
+      "display" : "HRT changed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170958006",
+      "display" : "HRT stopped"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170978003",
+      "display" : "Counseling not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170982001",
+      "display" : "Counseling of benefit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170983006",
+      "display" : "Counseling of no benefit"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170985004",
+      "display" : "Person counseled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170986003",
+      "display" : "Patient counseled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170987007",
+      "display" : "Family counseled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170988002",
+      "display" : "Relative counseled"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170992009",
+      "display" : "Counseled by a doctor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170993004",
+      "display" : "Counseled by a nurse"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170995006",
+      "display" : "Counseled by a midwife"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170996007",
+      "display" : "Counseled by a social worker"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170997003",
+      "display" : "Counseled by counselor"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "170998008",
+      "display" : "Counseled by voluntary worker"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171024009",
+      "display" : "Advice about treatment given"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171034000",
+      "display" : "Health education not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171035004",
+      "display" : "Health education given"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171103002",
+      "display" : "Screening not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171152003",
+      "display" : "Cancer of cervix screening not wanted"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171277005",
+      "display" : "Sensitivity C/I - immunization"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171284002",
+      "display" : "Pertussis vaccine contraindicated"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "171339001",
+      "display" : "Special examination performed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "178504005",
+      "display" : "Dislocated jaw reduced"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "180863000",
+      "display" : "Operation abandoned"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "180911008",
+      "display" : "Barium meal performed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182521000",
+      "display" : "Bronchus catheterized"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182816009",
+      "display" : "Therapeutic prescription"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182817000",
+      "display" : "Drug prescription"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182819002",
+      "display" : "Replacement therapy"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182822000",
+      "display" : "Reducing dose prescribed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182827006",
+      "display" : "Prescription issued for patient on vacation"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182833002",
+      "display" : "Medication given"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182834008",
+      "display" : "Drug course completed"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182840001",
+      "display" : "Drug treatment stopped - medical advice"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182841002",
+      "display" : "Dr stopped drugs - ineffective"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182842009",
+      "display" : "Doctor stopped drugs - side effect"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182843004",
+      "display" : "Dr stopped drugs -inconvenient"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182844005",
+      "display" : "Doctor stopped drugs - patient dislikes"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182845006",
+      "display" : "Doctor stopped drugs - avoid interaction"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182846007",
+      "display" : "Doctor stopped drugs - medical aim achieved"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "182849000",
+      "display" : "No drug therapy prescribed"
     }]
   }
 },
@@ -10155,8 +10155,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:41de4e68-b8bc-4790-93ce-21aad10bdb14",
-    "timestamp" : "2021-04-01T21:09:54.183Z",
+    "identifier" : "urn:uuid:5a03e13e-f035-491f-ac85-d7409a7401d3",
+    "timestamp" : "2021-04-29T15:06:06.405Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -10167,7 +10167,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210301"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -15196,8 +15196,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:d83e7672-9b9b-4804-8d5c-54be488654b4",
-    "timestamp" : "2021-04-01T21:10:43.855Z",
+    "identifier" : "urn:uuid:1e7db2ae-23e4-4547-8b63-8998ac084044",
+    "timestamp" : "2021-04-29T15:09:52.936Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true
@@ -15208,7 +15208,7 @@ e: {
     },
     {
       "name" : "version",
-      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20200901"
+      "valueString" : "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20210301"
     }],
     "contains" : [{
       "system" : "http://snomed.info/sct",
@@ -16072,8 +16072,8 @@ e: {
       "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
       "valueBoolean" : true
     }],
-    "identifier" : "urn:uuid:9fa037df-604a-44e8-9cca-0f372884547c",
-    "timestamp" : "2021-04-01T21:10:52.417Z",
+    "identifier" : "urn:uuid:4197f8ec-fcf9-4ff0-be2a-cab136718cd5",
+    "timestamp" : "2021-04-29T15:10:12.733Z",
     "parameter" : [{
       "name" : "limitedExpansion",
       "valueBoolean" : true

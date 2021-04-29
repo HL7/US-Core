@@ -23,8 +23,8 @@ In addition, the following data-elements must be supported if the data is presen
 <div class='new-content' markdown='1'>
 **Each Implantable Device must support:**
 
-1. The Device Identifier (UDI-DI)
 1. A Unique Device Identifier (UDI) numeric or alphanumeric code as the Human Readable Form (HRF) string representation of the barcode
+1. The Device Identifier (UDI-DI)
 1. the manufacture date
 1. the expiration date
 1. the lot number
@@ -35,7 +35,8 @@ In addition, the following data-elements must be supported if the data is presen
 **Profile specific implementation guidance:**
 
 - {:.bg-success}This profile supports the requirement to retrieve an 170.315(a)(14) [Implantable device list](https://www.healthit.gov/test-method/implantable-device-list) and follows the [HL7 Cross Paradigm Implementation Guide: UDI Pattern] guidelines for exchanging information about the use of and/or implantation of medical devices in patients.
-  - A unique device identifier (UDI) is a unique numeric or alphanumeric code. There is a machine-readable version as well as a human-readable version of the UDI - the Automatic Identification and Data Capture (AIDC) and  Human Readable Form string (HRF). This profile specifies that only the HRF must be supported.  The UDI generally consists of a mandatory Device identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements.  The UDI and its components are mapped to the US Core Implantable Device Profile elements in the table below:
+  - A unique device identifier (UDI) is a unique numeric or alphanumeric code. There is a machine-readable version (AIDC - the Automatic Identification and Data Capture) as well as a human-readable version of the UDI (HRF - Human Readable Form string). This profile specifies that only the HRF must be supported. Considering the complexity of parsing AIDCs there is *no expectation* at this time that one converts an AIDC to HRF upon receipt from a FHIR source that is not conformant to this profile or is using another interchange standard (e.g., C-CDA, HL7 v2, etc).
+  - The UDI generally consists of a mandatory Device identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements.  The UDI and its components are mapped to the US Core Implantable Device Profile elements in the table below:
 
     |UDI component|US Core Implantable Device Profile element|
     |---|---|
@@ -53,14 +54,15 @@ In addition, the following data-elements must be supported if the data is presen
       - The [Parse UDI API](https://accessgudid.nlm.nih.gov/resources/developers/parse_udi_api) allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).
 
 - {:.new-content #FHIR-28942}Implantable medical devices that have UDI information **SHALL** represent the UDI code in `Device.udiCarrier.carrierHRF`.
-   - All of the five UDI-PI elements that are present **SHALL** be represented in the corresponding US Core Implantable Device Profile element.
-   - UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer and/or model number information is available, they **SHOULD** be included to support historical reports of implantable medical devices as follows:
+   - All of the five UDI-PI elements that are present in the UDI code **SHALL** be represented in the corresponding US Core Implantable Device Profile element.
 
-     |data element|US Core Implantable Device Profile element|
-     |---|---|
-     |manufacturer|Device.manufacturer|
-     |model|Device.model|
-     {:.grid .bg-success}
+ UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer and/or model number information is available, they **SHOULD** be included to support historical reports of implantable medical devices as follows:
+
+   |data element|US Core Implantable Device Profile element|
+   |---|---|
+   |manufacturer|Device.manufacturer|
+   |model|Device.model|
+   {:.grid .bg-success}
 
 - Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type. Note: The Device.type is too granular to differentiate implantable vs. non-implantable devices.  
 - In the [Quick Start] section below, searching for all devices is described. Records of implanted devices **MAY** be queried against UDI data including:
