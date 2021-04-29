@@ -54,8 +54,8 @@ In addition, the following data-elements must be supported if the data is presen
 
 - {:.new-content #FHIR-28942}Implantable medical devices that have UDI information **SHALL** represent the UDI code in `Device.udiCarrier.carrierHRF`.
    - All of the five UDI-PI elements that are present in the UDI code **SHALL** be represented in the corresponding US Core Implantable Device Profile element.
-
- UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer and/or model number information is available, they **SHOULD** be included to support historical reports of implantable medical devices as follows:
+   
+   UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer and/or model number information is available, they **SHOULD** be included to support historical reports of implantable medical devices as follows:
 
    |data element|US Core Implantable Device Profile element|
    |---|---|
