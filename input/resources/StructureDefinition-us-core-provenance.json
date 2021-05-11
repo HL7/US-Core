@@ -190,7 +190,7 @@
             "key": "provenance-1",
             "severity": "error",
             "human": "onBehalfOf SHALL be present when Provenance.agent.who is a Practitioner or Device",
-            "expression": "(($this.agent.who.resolve() is Practitioner) or ($this.agent.who.resolve() is Device)) implies exists()"
+            "expression": "((%resource.agent.who.resolve() is Practitioner) or (%resource.agent.who.resolve() is Device)) implies exists()"
           }
         ],
         "mustSupport": true,
