@@ -50,7 +50,7 @@ list:
          - [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-procedure.html#profile)
       1. **Applied**:Update DocumentReference CCD operation ([FHIR-30110](https://jira.hl7.org/browse/FHIR-30110)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/OperationDefinition-docref.html)
       1. **Applied**:Update DocumentReference MustSupport to choice of data or url ([FHIR-30111](https://jira.hl7.org/browse/FHIR-30111)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
-      1. **Resolved - change required**:Reference to 3 new document types - addressing corresponding metadat ([FHIR-30112](https://jira.hl7.org/browse/FHIR-30112)) [See Change Here](#.html)
+      1. **Applied**:Reference to 3 new document types - addressing corresponding metadat ([FHIR-30112](https://jira.hl7.org/browse/FHIR-30112)) [See Change Here](https://build.fhir.org/ig/HL7/US-Core/clinical-notes-guidance.html#clinical-notes) AND [See Change Here](https://build.fhir.org/ig/HL7/US-Core/clinical-notes-guidance.html#support-requirements)
       1. **Applied**:Typo ([FHIR-30113](https://jira.hl7.org/browse/FHIR-30113))
       1. **Applied**:Clarify Must Support of Complex elements ([FHIR-30321](https://jira.hl7.org/browse/FHIR-30321)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/conformance-expectations.html#must-support---complex-elements)
       1. **Applied**:Clarify that VSAC FHIR API only retrieves a definition ([FHIR-30344](https://jira.hl7.org/browse/FHIR-30344)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/terminology.html#using-value-set-authority-center-vsac)
@@ -99,7 +99,7 @@ list:
       1. **Resolved - change required**:Confusing for commercial vendor.  Reads very confusing. ([FHIR-30783](https://jira.hl7.org/browse/FHIR-30783)) [See Change Here](#.html)
       1. **Resolved - change required**:Loosen the requirement for including patient or state clearly on the home page that US Core is insufficient for many public health use cases. ([FHIR-30787](https://jira.hl7.org/browse/FHIR-30787)) [See Change Here](#.html)
       1. **Applied**: Add MedicationAdministration to the Future Page. ([FHIR-30788](https://jira.hl7.org/browse/FHIR-30788)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/future-of-US-core.html#future-candidate-requirements-under-consideration)
-      1. **Resolved - change required**: Fix text in $docref description ([FHIR-30810](https://jira.hl7.org/browse/FHIR-30810)) [See Change Here](#.html)
+      1. **Applied**: Fix text in $docref description ([FHIR-30810](https://jira.hl7.org/browse/FHIR-30810)) [See Change Here](https://build.fhir.org/ig/HL7/US-Core/OperationDefinition-docref.html)
       1. **Resolved - change required**: Mandate that CapabilityStatement.implementationGuide refer to US Core ([FHIR-30889](https://jira.hl7.org/browse/FHIR-30889)) [See Change Here](#.html)
       1. **Applied**: Add binding so Vitals will render it in differential view ([FHIR-31391](https://jira.hl7.org/browse/FHIR-31391)) [See Change Here](http://hl7.org/fhir/us/core/2021JAN/StructureDefinition-us-core-vital-signs.html#profile)
       1. **Applied**: Update to URI from OID for CDT in Procedure Code ValueSet ([FHIR-31556](https://jira.hl7.org/browse/FHIR-31556)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-us-core-procedure-code.html)
@@ -111,6 +111,7 @@ list:
       1. **Applied**: Update Observation.value[x] definition ([FHIR-31083](https://jira.hl7.org/browse/FHIR-31083)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab-definitions.html#Observation.value[x])
       1. **Applied**: Add LOINC to procedure codes ([FHIR-31514](https://jira.hl7.org/browse/FHIR-31514)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-us-core-procedure-code.html)
       1. **Applied**: Make PractitionerRole.organization must support and add invariant ([FHIR-29680](https://jira.hl7.org/browse/FHIR-29680)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-practitionerrole.html)
+      1. **Applied**: Fix FHIRPath constraint for provenance-1([FHIR-31020](https://jira.hl7.org/browse/FHIR-31020)) [See Change Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html)
 
     path: 'http://build.fhir.org/ig/HL7/US-Core-R4'
     status: ci-build
