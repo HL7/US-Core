@@ -67,11 +67,7 @@ For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has
 
 [Extensible Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used if an applicable concept is present, but if no suitable code exists in the value set, alternate code(s) may be provided in its place.  For `CodeableConcept` multiple codings are permitted and this rule applies to one of the codings.  Also for `CodeableConcept` if only text is available, then just text may be used.
 
-<div markdown="1" class="new-content">
-Although the FHIR guidance for extensible bindings indicates that *all conceptual overlaps* including free text be mapped the coded values in the bindings, US Core guidance provides more flexibility for situations where implementers cannot fully comply with the FHIR base guidance. This flexibility is sometimes necessary and expected for legacy and text only data. For newly recorded, non legacy data, a system **SHOULD** meet the conformance of the value set.
-</div>
-
-For example, the [US Core AllergyIntolerance Profile] code element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
+To illustrate extensible binding for CodeableConcept datatype, the [US Core AllergyIntolerance Profile] code element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
 - US Core Responders **SHALL** provide:
   - a code from this valueset in `AllergyIntolerance.code.code` *if the concept exists* in the value set
@@ -80,6 +76,12 @@ For example, the [US Core AllergyIntolerance Profile] code element has an extens
 - US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.code.code` or text in `AllergyIntolerance.code.text`
 
   {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 5: US Core AllergyIntolerance.code" %}
+
+<div markdown="1" class="new-content">
+Although the FHIR guidance for extensible bindings indicates that *all conceptual overlaps* including free text be mapped the coded values in the bindings, US Core guidance provides more flexibility for situations where implementers cannot fully comply with the FHIR base guidance. This flexibility is sometimes necessary and expected for legacy and text only data. For newly recorded, non legacy data, a system **SHOULD** meet the conformance of the value set.
+
+For example, the [US Core Procedure Codes] and  [US Core Condition Code] value sets contain a number of high-level abstract codes. For data not captured by the system transmitting the information, the coded data should be automatically converted to a fine-grained code from the specified value set. If this is not possible, the system can provide the existing code or the free text, *and a high-level abstract code*, such as SNOMED CT 'Procedure', to remain conformant with the extensible binding.
+</div>
 
 ##### Using multiple codes with CodeableConcept Datatype
 {:.no_toc}
