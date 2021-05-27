@@ -320,8 +320,10 @@ For more information see the [FHIR RESTful API]
 
 ### Search Syntax
 
-The [FHIR RESTful Search API] requires that servers that support search **SHALL** support both the HTTP `GET` and `POST` commands. However, for this guide all the search interactions use the `GET` command with the following syntax:
+The [FHIR RESTful Search API] requires that servers that support search **SHALL** support the http `POST` based search. However, for all the supported search interactions in this guide, servers **SHALL** also support the `GET` based search. Note that these requirements for parameters apply to both `GET` and `POST` based queries.
 {: .new-content}
+
+For this guide, all the search interactions use the `GET` command with the following syntax:
 
  **`GET [base]/[Resource-type]?[parameter1]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]{&[parameter2]{:m1|m2|...}={c1|c2|...}[value1{,value2,...}]&...}`**
 
