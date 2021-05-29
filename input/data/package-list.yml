@@ -117,6 +117,10 @@ list:
       1. **Applied**: Add guidance to BMI Profile([FHIR-32658](https://jira.hl7.org/browse/FHIR-32658)) [See Change Here](https://build.fhir.org/ig/HL7/StructureDefinition-us-core-bmi.html)
       1. **Applied**: Write usage note for non-vaccination CVX codes([FHIR-31899](https://jira.hl7.org/browse/FHIR-31899)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html#mandatory-and-must-support-data-elements)
       1. **Applied**: Clarify that Extensible binding can always provide a mapped code([FHIR-31899](https://jira.hl7.org/browse/FHIR-31899)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/conformance-expectations.html#extensible-binding-for-codeableconcept-datatype)
+      1. **Resolved - change required**: Clarify RESTFul requirements([FHIR-31490](https://jira.hl7.org/browse/FHIR-31490)) See Changes:
+         - [Here](http://build.fhir.org/ig/HL7/US-Core/index.html#how-to-read-this-guide)
+         - [Here](http://build.fhir.org/ig/HL7/US-Core/conformance-expectations.html#conformance-expectations)
+         - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance.html#notes)
     path: 'http://build.fhir.org/ig/HL7/US-Core-R4'
     status: ci-build
     current: true
