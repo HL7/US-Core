@@ -76,7 +76,8 @@ This Guide is divided into several pages which are listed at the top of each pag
 
 - [Home]\: The home page provides the introduction and background for US Core.
 - [Guidance]\: These pages provides overall guidance in using the profiles and transactions defined in this guide.
-  - [General Guidance] provides guidance, definitions and requirements common to all  actors used in this guide.
+  - [General Guidance] provides guidance, definitions and requirements common to all actors used in this guide.
+  - {:.new-content}[Conformance Expectations] defines what 'conformance to US Core' means, how the CapabilityStatements are used, and the expectations for mandatory and must supports elements in the US Core Profiles.
   - [Clinical Notes Guidance] gives guidance on the interactions between Consumers and Producers of clinical notes.
   - [Medication List Guidance] gives guidance on how a patient or provider can access a patient's medications.
   - [Basic Provenance] provides implementers with important definitions to create and share the Provenance Resource.

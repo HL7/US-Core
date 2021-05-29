@@ -42,6 +42,7 @@
 [Conformance Expectations]: conformance-expectations.html  "Conformance Expectations Page"
 [Conformance Requirements for Client]: CapabilityStatement-us-core-r4-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-us-core-server.html "Conformance Requirements for Server Page"
+[US Core Server CapabilityStatement]: CapabilityStatement-us-core-server.html
 [Conformance Requirements]: capability-statements.html "CapabilityStatements defined for this Guide"
 [Conformance requirements for the US Core Server]: CapabilityStatement-us-core-server.html
 [Conformance]: daf-core-DocumentReference-conformance.html

@@ -1,10 +1,32 @@
 
-This section outlines important definitions, interpretations, and requirements common to all US Core actors used in this guide.
+This page defines what 'conformance to US Core' means, how the CapabilityStatements are used, and the expectations for mandatory and must supports elements in the US Core Profiles.
+{:.new-content}
+
 The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
 
-The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications, identifying the specific profiles and RESTful transactions that need to be supported. Note that the individual US Core profiles identify the structural constraints, terminology bindings and invariants.  Similarly, the individual US Core SearchParameter and Operation resources specify how they are understood by the server. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles and the search parameters applicable to each of the US Core actors.
+<div markdown="1" class="new-content">
+### Conforming to US Core
 
-The base [FHIR Must Support] guidance requires specifications to define exactly the support expected for profile elements labeled *Must Support*.  This page defines the rules for interpreting profile elements and subelements labeled *Must Support* for requesters and responders.
+The [Profiles and Extensions] page list the US Core Profiles and have been defined for this implementation guide.  Each US Core Profile [StructureDefinition] defines the *minimum* elements, extensions, vocabularies and value sets which SHALL be present when using the profile. Each Profile page has a “Quick Start” guide to the supported FHIR RESTfUL transactions for each Profile
+
+The Profile elements consist of both *Mandatory* and *Must Support* elements.  *Mandatory* elements are elements with an minimum cardinality of 1 (min=1). The base [FHIR Must Support] guidance requires specifications to define exactly the support expected for profile elements labeled *Must Support*.  The sections below illustrate how these elements are displayed and define the rules for interpreting profile elements and subelements labeled *Must Support* for requesters and responders.
+
+The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications.  The [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need to be supported. Note that the individual US Core profiles identify the structural constraints, terminology bindings and invariants.  Similarly, the individual US Core SearchParameter and Operation resources specify how they are understood by the server. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles and the search parameters applicable to each of the US Core actors.
+
+There are two different ways to 'conform' to US Core:
+
+1. Conforming to *only* one or more US Core Profiles
+1. Conforming to *both* US Core Profiles  *and* the FHIR RESTful interactions defined for them.
+
+#### Conforming To US Core Profiles
+
+Systems may support a US Core Profile content structure only and no FHIR RESTful interactions defined for them. Similarly implementation guides may adopt a US Core Profile or derive a profile based upon it.  In this case implementers are using the content model without any expectations to implement the supported FHIR RESTful interactions defined in “Quick Start” section for each profile.
+
+#### Conforming To US Core Profiles And FHIR Restful Interactions
+
+Systems claiming conformance to *both* US Core profiles (in other words, the content structure) *and* the RESTful interactions defined for them means conforming to the US Core CapabilityStatement.  This is done by implementing all or parts of the USCore CapabilityStatement into their capabilities.
+
+</div>
 
 ### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
 
