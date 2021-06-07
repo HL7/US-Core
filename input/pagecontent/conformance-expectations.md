@@ -1,31 +1,101 @@
 
-This page defines what 'conformance to US Core' means, how the CapabilityStatements are used, and the expectations for mandatory and must supports elements in the US Core Profiles.
+This page defines what 'conformance to US Core' means, how the CapabilityStatements are used, and the expectations for mandatory and must supports elements in the US Core Profiles.  Note that the conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
 {:.new-content}
 
-The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
-
 <div markdown="1" class="new-content">
-### Conforming to US Core
 
-The [Profiles and Extensions] page list the US Core Profiles and have been defined for this implementation guide.  Each US Core Profile [StructureDefinition] defines the *minimum* elements, extensions, vocabularies and value sets which SHALL be present when using the profile. Each Profile page has a “Quick Start” guide to the supported FHIR RESTfUL transactions for each Profile
+### US Core Conformance Artifacts:
 
-The Profile elements consist of both *Mandatory* and *Must Support* elements.  *Mandatory* elements are elements with an minimum cardinality of 1 (min=1). The base [FHIR Must Support] guidance requires specifications to define exactly the support expected for profile elements labeled *Must Support*.  The sections below illustrate how these elements are displayed and define the rules for interpreting profile elements and subelements labeled *Must Support* for requesters and responders.
+The [Profiles and Extensions] page list the US Core Profiles and have been defined for this implementation guide.  Core Profile [StructureDefinitions] defines the *minimum* elements, extensions, vocabularies and value sets which SHALL be present when using the profile. Each Profile page has a “Quick Start” guide to the supported FHIR RESTfUL transactions for each Profile
+
+The Profile elements consist of both *Mandatory* and *Must Support* elements.  *Mandatory* elements are elements with an minimum cardinality of 1 (min=1). The base [FHIR Must Support] guidance requires specifications to define exactly the support expected for profile elements labeled *Must Support*.  The sections below illustrate how these elements are displayed and define the rules for interpreting profile elements and subelements labeled *Mandatory* and *Must Support* for requesters and responders.
 
 The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications.  The [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need to be supported. Note that the individual US Core profiles identify the structural constraints, terminology bindings and invariants.  Similarly, the individual US Core SearchParameter and Operation resources specify how they are understood by the server. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles and the search parameters applicable to each of the US Core actors.
 
-There are two different ways to 'conform' to US Core:
+### Conforming to US Core
 
-1. Conforming to *only* one or more US Core Profiles
-1. Conforming to *both* US Core Profiles  *and* the FHIR RESTful interactions defined for them.
+There are two different ways to implement US Core:
 
-#### Conforming To US Core Profiles
+1. Support one or more US Core Profiles
+1. Conform to one or more US Core Profiles
 
-Systems may support a US Core Profile content structure only and no FHIR RESTful interactions defined for them. Similarly implementation guides may adopt a US Core Profile or derive a profile based upon it.  In this case implementers are using the content model without any expectations to implement the supported FHIR RESTful interactions defined in “Quick Start” section for each profile.
+#### Supporting a US Core Profiles
 
-#### Conforming To US Core Profiles And FHIR Restful Interactions
+Systems may support only the resources as profiled by US Core to represent clinical information.  They are using the profile's content model without any expectations to implement the the US Core transactions.
 
-Systems claiming conformance to *both* US Core profiles (in other words, the content structure) *and* the RESTful interactions defined for them means conforming to the US Core CapabilityStatement.  This is done by implementing all or parts of the USCore CapabilityStatement into their capabilities.
+An example scenario would be a server using only the [FHIR Bulk Data Access (Flat FHIR)] approach to export resources needed for the US Core Data for Interoperability.  For this server, the US Core transactions are unnecessary.
 
+To support a US Core Profile, a server:
+
+- **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition.
+- **SHOULD** declare support for a US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
+    - the US Core Profile's official or "canonical" URL can be found on each US Core Profile page
+
+      example CapabilityStatement snippet for a server supporting the US Core Patient Profile:
+      ~~~json
+      {
+        "resourceType": "CapabilityStatement",
+        ...
+        "rest": [
+          {
+            "mode": "server",
+            ...
+            "resource": [
+              ...
+              {
+                "type": "Patient",
+                "supportedProfile": [
+                  "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                ],
+                ...
+              }
+            ]
+          }
+        ]
+      }
+      ~~~
+
+
+#### Claiming Conformance to a US Core Profile
+
+Systems that claim conformance to US Core profiles are claiming support for *both* the content structure US Core Profile content structure *and* the RESTful interactions defined for it.  This is done by implementing all or parts of the USCore CapabilityStatement into their capabilities.
+
+An example scenario would be a server that certifies to the [21st Century Cures Act for accessing patient data].
+
+To claim conformance to a US Core Profile a server:
+
+- **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition.
+- **SHALL** declare conformance with the the [US Core Server Capability Statement] by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`
+- **SHOULD** declare support for a US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
+    - the US Core Profile's official or "canonical" URL can be found on each US Core Profile page
+
+    example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:
+    ~~~json
+    {
+      "resourceType": "CapabilityStatement",
+      ...
+      "instantiates": [
+        "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server"
+      ],
+      ...
+      "rest": [
+        {
+          "mode": "server",
+          ...
+          "resource": [
+            ...
+            {
+              "type": "Patient",
+              "supportedProfile": [
+                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+              ],
+              ...
+            }
+          ]
+        }
+      ]
+    }
+    ~~~
 </div>
 
 ### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
@@ -43,13 +113,6 @@ In the "Snapshot Table" view in Figure 2, all the must support elements defined 
  In the "Snapshot Table (Must Support)" view, all the elements presented in the view are either mandatory or must support elements for conformance to the profile. These elements are defined in the US Core Profile, mandatory elements inherited from the base specification and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile. An example of the "Snapshot Table (Must Support)" is shown in Figure  3.
 
   {% include img.html img="Must_Support_MS_View.png" caption="Figure 3: Snapshot Table (Must Support) View" %}
-
-### Claiming Conformance to a US Core Profile
-
-To claim conformance to a US Core Profile US Core Servers **SHALL**:
-
-  - Be able to populate all profile data elements that are mandatory - in other words, have a minimum cardinality >= 1 -  and/or flagged as *Must Support* as defined by that profile’s StructureDefinition.
-  - Conform to the [US Core Server Capability Statement] expectations for that profile’s type.
 
 ### Mandatory Elements
 
