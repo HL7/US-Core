@@ -32,7 +32,7 @@ To support a US Core Profile, a server:
     - the US Core Profile's official or "canonical" URL can be found on each US Core Profile page
 
       example CapabilityStatement snippet for a server supporting the US Core Patient Profile:
-      ~~~json
+      ~~~
       {
         "resourceType": "CapabilityStatement",
         ...
