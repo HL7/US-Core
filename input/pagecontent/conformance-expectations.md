@@ -66,36 +66,14 @@ To claim conformance to a US Core Profile a server:
 
 - **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition.
 - **SHALL** declare conformance with the the [US Core Server Capability Statement] by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`
-- **SHOULD** declare support for a US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
-    - the US Core Profile's official or "canonical" URL can be found on each US Core Profile page
+    - The US Core Profile's official or "canonical" URL can be found on each US Core Profile page
+- **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.
+    - Declare support for the US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
+    - Declare support for the US Core Profile's FHIR RESTful transactions
 
     example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:
-    ~~~json
-    {
-      "resourceType": "CapabilityStatement",
-      ...
-      "instantiates": [
-        "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server"
-      ],
-      ...
-      "rest": [
-        {
-          "mode": "server",
-          ...
-          "resource": [
-            ...
-            {
-              "type": "Patient",
-              "supportedProfile": [
-                "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-              ],
-              ...
-            }
-          ]
-        }
-      ]
-    }
-    ~~~
+
+    {% include examplebutton_default.html example="conform_patient.md" b_title = "Click Here an example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:" %}
 </div>
 
 ### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
