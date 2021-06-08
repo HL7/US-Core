@@ -4,15 +4,19 @@
 
 **punch list**:
 
-- [ ] [Resolve Trackers]https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=12001)
+- [X] [Resolve Trackers](https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=12001)
 - [ ] Apply Trackers
+    - [ ] Remaining unapplied trackers - publishing issues
+
+      - [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783): Making the differential tab the default view, see publishing plans here:  https://github.com/HL7/ig-template-base/issues/161  timeline unknown.
+      
+
 - [ ] QA
      - [ ] review applied trackers
-     - [ ] errors and warnings
+     - [ ] errors and warnings (qa.html)
 - [ ] remove all new content and green highlighted formatting
 - [ ] update title and version to 2.0.0
 - [ ] update package-list.json
-
      - in pl.yml
         - update current to ver 2.0.0
         - change base path of changes from build to version 2.0.0
