@@ -6,10 +6,17 @@
 
 - [X] [Resolve Trackers](https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=12001)
 - [ ] Apply Trackers
-    - [ ] Remaining unapplied trackers - publishing issues
+    - [ ] Remaining unapplied trackers:
 
-      - [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783): Making the differential tab the default view, see publishing plans here:  https://github.com/HL7/ig-template-base/issues/161  timeline unknown.
-      
+     **Publishing Issues**
+
+      - [ ] **Resolved - change required**:Confusing for commercial vendor.  Reads very confusing. ([FHIR-30783](https://jira.hl7.org/browse/FHIR-30783)) proposal is to make the differential tab the default view, see publishing plans here:  https://github.com/HL7/ig-template-base/issues/161  timeline unknown.
+      - [ ] **Resolved - change required**:In most of the data elements – “Binding is from base FHIR and US Core Vital Signs”  Need this to be one single combined listing ([FHIR-30780](https://jira.hl7.org/browse/FHIR-30780)) proposal is to limit the terminology and invariants to view shown. see: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Different.20views.20for.20tables.20and.20invariants timeline unknown.
+      - [ ] **Resolved - change required**:Why are there separate codes for USCoreVitalSigns and the Systolic.value and the diastolic value? ([FHIR-30779](https://jira.hl7.org/browse/FHIR-30779)) proposal is to work with publishing to "clean up" terminology and invariants to view shown. see: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Different.20views.20for.20tables.20and.20invariants timeline unknown.
+
+      **Terminology Issues**
+
+       - [ ] **Resolved - change required**:
 
 - [ ] QA
      - [ ] review applied trackers
