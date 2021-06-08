@@ -78,8 +78,10 @@ list:
       1. **Applied**:Add provenance to writing/updating guidance? ([FHIR-30666](https://jira.hl7.org/browse/FHIR-30666)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/future-of-US-core.html)
       1. **Applied**:Clarify Code System section and update codesystem table ([FHIR-30667](https://jira.hl7.org/browse/FHIR-30667)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/terminology.html#code-systems)
       1. **Resolved - change required**::Clarify that the manufacturer and model information is available, it SHOULD be included to support historical reports of implantable medical devices. ([FHIR-30669](https://jira.hl7.org/browse/FHIR-30669)) [[See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-implantable-device.html#mandatory-and-must-support-data-elements)
-      1. **Resolved - change required**:Clarify that servers are not required to support both udi_HRF and udi_AIDC but they SHALL support at least one of these elements. ([FHIR-30670](https://jira.hl7.org/browse/FHIR-30670)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-implantable-device.html#mandatory-and-must-support-data-elements)
-      1. **Applied**: Clarify UDI information. ([FHIR-30672](https://jira.hl7.org/browse/FHIR-30672)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core-R4/output/StructureDefinition-us-core-implantable-device.html#mandatory-and-must-support-data-elements)
+      1. **Applied**: Make udi_HRF a *Must Support* element. ([FHIR-30670](https://jira.hl7.org/browse/FHIR-30670)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-implantable-device.html#mandatory-and-must-support-data-elements)
+      1. **Applied**: Clarify UDI information. ([FHIR-30672](https://jira.hl7.org/browse/FHIR-30672)) See Changes:
+          - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-implantable-device.html#mandatory-and-must-support-data-elements)
+          - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-implantable-device.html#profile)
       1. **Applied**:Clarify text ([FHIR-30673](https://jira.hl7.org/browse/FHIR-30673)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/conformance-expectations.html#conformance-expectations)
       1. **Applied**:Typos ([FHIR-30674](https://jira.hl7.org/browse/FHIR-30674))
       1. **Applied**:Clarify prohibition on using contained resources. ([FHIR-30677](https://jira.hl7.org/browse/FHIR-30677)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#contained-resources)
@@ -97,7 +99,7 @@ list:
       1. **Resolved - change required**:In most of the data elements – “Binding is from base FHIR and US Core Vital Signs”  Need this to be one single combined listing ([FHIR-30780](https://jira.hl7.org/browse/FHIR-30780)) [See Change Here](#.html)
       1. **Applied**: Typo grammar. All codes SHALL have an system value.  Correction “a value system”. ([FHIR-30782](https://jira.hl7.org/browse/FHIR-30782)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html#mandatory-and-must-support-data-elements)
       1. **Resolved - change required**:Confusing for commercial vendor.  Reads very confusing. ([FHIR-30783](https://jira.hl7.org/browse/FHIR-30783)) [See Change Here](#.html)
-      1. **Applied**: Loosen the requirement for including patient or state clearly on the home page that US Core is insufficient for many public health use cases. ([FHIR-30787](https://jira.hl7.org/browse/FHIR-30787)) See Changes:
+      1. **Applied**: Clarify resource search requirements CapabilityStatements and provide guidance on search for multiple patients using Bulk data ([FHIR-30787](https://jira.hl7.org/browse/FHIR-30787)) See Changes:
          - [Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#searching-multiple-patients)
          - [Here](http://build.fhir.org/ig/HL7/US-Core/CapabilityStatement-us-core-server.html#condition)
       1. **Applied**: Add MedicationAdministration to the Future Page. ([FHIR-30788](https://jira.hl7.org/browse/FHIR-30788)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/future-of-US-core.html#future-candidate-requirements-under-consideration)
