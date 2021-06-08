@@ -59,11 +59,14 @@ Where possible, new and updated content will be highlighted with green text and 
 
 ### Introduction
 <div class='new-content' markdown='1'>
-The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for accessing patient data.  US Core has benefitted from testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing.  This guide and the US Core profiles have become the foundation for US Realm FHIR implementation guides.  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
 
-This release is the first of yearly US Core updates to reflect changes to [U.S. Core Data for Interoperability (USCDI) v1] and requests from the US Realm FHIR community.  This Approach is outlined in the figure below:
+The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources and FHIR RESTful interactions for accessing patient data. There are two different ways to implement US Core: 1) system may support only the resources as profiled by US Core to represent clinical information, 2) systems can claim conformance to *both* the  US Core Profile content structure *and* the RESTful interactions defined for it.  For a detailed description between these different usages of US Core see the [Conformance Expectations] page.
+
+US Core has benefitted from testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing.  This guide and the US Core profiles have become the foundation for US Realm FHIR implementation guides.  This release is the first of yearly US Core updates to reflect changes to [U.S. Core Data for Interoperability (USCDI) v1] and requests from the US Realm FHIR community.  This Approach is outlined in the figure below:
 
 {% include img.html img="yearly-updates.png" caption="Figure 1: US Core Yearly Updates" %}
+
+Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
 
 ### Background
 
@@ -108,7 +111,7 @@ US Core Responder
 
 ### US Core Profiles
 
-The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the *Quick Start* Section of the profile page.
+The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the *Quick Start* Section of the profile page <span class="bg-success">when conforming to the US Core [Capability Statements]</span> for this profile.
 
 {% include list-simple-profiles.xhtml %}
 
