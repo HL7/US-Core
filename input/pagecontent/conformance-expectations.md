@@ -73,7 +73,7 @@ To claim conformance to a US Core Profile a server:
 
     example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:
 
-    {% include examplebutton_default.html example="conform_patient.md" b_title = "Click Here an example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:" %}
+    {% include examplebutton_default.html example="conform_patient" b_title = "Click Here an example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:" %}
 </div>
 
 ### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
