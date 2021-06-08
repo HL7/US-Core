@@ -16,20 +16,14 @@
           [
             {
               "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                      "valueCode": "SHALL"
-                    },
-                    {
-                      "url": "required",
-                      "valueString": "birthdate"
-                    },
-                    {
-                      "url": "required",
-                      "valueString": "name"
-                    }
+                  {
+                    "url": "required",
+                    "valueString": "birthdate"
+                  },
+                  {
+                    "url": "required",
+                    "valueString": "name"
+                  }
                   ],
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
                 },
