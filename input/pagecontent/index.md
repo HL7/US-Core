@@ -14,7 +14,9 @@
 
     **Terminology Issues**
 
-    - [ ] **Resolved - change required**:
+    - [ ] valueset-simple-language.xml QA error "Error from server: Language valuesets cannot be expanded as they are based on a grammar" ([FHIR-30107](https://jira.hl7.org/browse/FHIR-30107)) this error is still extant from prior version of US Core and has yet to be resolved. per 12/2 FMG per GG ok to get variance on this one. Proposal is to work with publishing to fix and create stu note and suppress the error in the meantime.   see:  https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/language.20valueset.20expansion.20error
+
+
 
 - [ ] QA
      - [ ] review applied trackers
@@ -51,7 +53,7 @@
              - [X] make an STU note that is technically not conformant with the base FHIR vital profile.
         - [ ] Procedure Example:  rehab.json. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20core.20procedure.20example.20error) per GG will get fixed.
         - [X] CareTeam Example: careteam-example.json: US Ed Snomed Errors [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20ed.20Snomed.20for.20US.20Core)
-        - [X] valueset-simple-language.xml "Error from server: Language valuesets cannot be expanded as they are based on a grammar" this error is still extant from prior version of US Core and has yet to be resolved. per 12/2 FMG per GG won't ok to get variance on this one.
+
         - [X] update JIRA (update jira file for us czsore #119)
         - [ ] update `input/ignoreWarnings.txt`
           - [X] [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20Warnings.20we.20want.20to.20suppress)
