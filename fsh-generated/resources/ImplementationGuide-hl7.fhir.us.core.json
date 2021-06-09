@@ -402,7 +402,7 @@
         "reference": {
           "reference": "OperationDefinition/docref"
         },
-        "description": "This operation is used to return all the references to documents related to a patient. \n\n The operation takes the optional input parameters: \n  - patient id\n  - start date\n  - end date\n  - document type \n\n and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type \"searchset\" containing [DocumentReference](http://hl7.org/fhir/documentreference.html) resources for the patient. The DocumentReference resources **SHOULD** conform to the [US Core DocumentReference\n Profiles](http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference). If the server has or can create documents that are related to the patient, and that are available for the given user, the server returns the DocumentReference resources needed to support the records.  The principle intended use for this operation is to provide a provider or patient with access to their available document information. \n\n This operation is *different* from a search by patient and type and date range because: \n\n 1. It is used to request a server *generate* a document based on the specified parameters. \n\n 1. If no parameters are specified, the server SHALL return a DocumentReference to the patient's most current CCD \n\n 1. If the server cannot *generate* a document based on the specified parameters, the operation will return an empty search bundle. \n\n This operation is the *same* as a FHIR RESTful search by patient,type and date range because: \n\n 1. References for *existing* documents that meet the requirements of the request SHOULD also be returned unless the client indicates they are only interested in 'on-demand' documents using the *on-demand* parameter.",
+        "description": "This operation is used to return all the references to documents related to a patient. \n\n The operation requires a patient id and takes the optional input parameters: \n  - start date\n  - end date\n  - document type \n\n and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type \"searchset\" containing [DocumentReference](http://hl7.org/fhir/documentreference.html) resources for the patient. The DocumentReference resources **SHOULD** conform to the [US Core DocumentReference\n Profiles](http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference). If the server has or can create documents that are related to the patient, and that are available for the given user, the server returns the DocumentReference resources needed to support the records.  The principle intended use for this operation is to provide a provider or patient with access to their available document information. \n\n This operation is *different* from a search by patient and type and date range because: \n\n 1. It is used to request a server *generate* a document based on the specified parameters. \n\n 1. If no parameters are specified, the server SHALL return a DocumentReference to the patient's most current CCD \n\n 1. If the server cannot *generate* a document based on the specified parameters, the operation will return an empty search bundle. \n\n This operation is the *same* as a FHIR RESTful search by patient,type and date range because: \n\n 1. References for *existing* documents that meet the requirements of the request SHOULD also be returned unless the client indicates they are only interested in 'on-demand' documents using the *on-demand* parameter.",
         "exampleBoolean": false,
         "name": "US Core Fetch DocumentReference"
       },
@@ -1138,7 +1138,7 @@
         "reference": {
           "reference": "ValueSet/us-core-procedure-code"
         },
-        "description": "Concepts from CPT, SNOMED CT, HCPCS Level II Alphanumeric Codes, ICD-10-PCS and CDT code systems that can be used to indicate the type of procedure performed.",
+        "description": "Concepts from CPT, SNOMED CT, HCPCS Level II Alphanumeric Codes, ICD-10-PCS,CDT and LOINC code systems that can be used to indicate the type of procedure performed.",
         "exampleBoolean": false,
         "name": "US Core Procedure Codes"
       },
@@ -1862,12 +1862,54 @@
       "page": [
         {
           "nameUrl": "index.html",
-          "title": "Home",
+          "title": "Index",
           "generation": "markdown"
         },
         {
-          "nameUrl": "basic-provenance.html",
-          "title": "Basic Provenance",
+          "nameUrl": "guidance.html",
+          "title": "Guidance",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "general-guidance.html",
+              "title": "General Guidance",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "conformance-expectations.html",
+              "title": "Conformance Expectations",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "clinical-notes-guidance.html",
+              "title": "Clinical Notes Guidance",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "medication-list-guidance.html",
+              "title": "Medication List Guidance",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "basic-provenance.html",
+              "title": "Basic Provenance",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "DSTU2-to-R4-conversion.html",
+              "title": "DSTU2 to R4 Conversion",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "future-of-US-core.html",
+              "title": "Future of US Core",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "profiles-and-extensions.html",
+          "title": "Profiles and Extensions",
           "generation": "markdown"
         },
         {
@@ -1876,63 +1918,13 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "clinical-notes-guidance.html",
-          "title": "Clinical Notes Guidance",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "conformance-expectations.html",
-          "title": "Conformance Expectations",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "downloads.html",
-          "title": "Downloads",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "DSTU2-to-R4-conversion.html",
-          "title": "DSTU 2 to R 4 Conversion",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "examples.html",
-          "title": "Examples",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "future-of-US-core.html",
-          "title": "Future of US Core",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "general-guidance.html",
-          "title": "General Guidance",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "guidance.html",
-          "title": "Guidance",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "medication-list-guidance.html",
-          "title": "Medication List Guidance",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "operations.html",
-          "title": "Operations",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "profiles-and-extensions.html",
-          "title": "Profiles and Extensions",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "search-parameters-and-operations.html",
           "title": "Search Parameters and Operations",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminology",
           "generation": "markdown"
         },
         {
@@ -1941,8 +1933,13 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "terminology.html",
-          "title": "Terminology",
+          "nameUrl": "examples.html",
+          "title": "Examples",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
           "generation": "markdown"
         }
       ]

@@ -27,6 +27,25 @@ dependencies:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
     version: 0.3.0
     id: vsac
+pages:
+  index.md:
+  guidance.md:
+    general-guidance.md:
+    conformance-expectations.md:
+    clinical-notes-guidance.md:
+    medication-list-guidance.md:
+    basic-provenance.md:
+    DSTU2-to-R4-conversion.md:
+      title: DSTU2 to R4 Conversion
+    future-of-US-core.md:
+      title: Future of US Core
+  profiles-and-extensions.md:
+  capability-statements.md:
+  search-parameters-and-operations.md:
+  terminology.md:
+  security.md:
+  examples.md:
+  downloads.md:
 parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
     - input/resources

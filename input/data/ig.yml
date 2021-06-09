@@ -13,55 +13,53 @@ definition:
         page:
         -   generation: markdown
             nameUrl: index.html
-            title: Home
-        -   generation: markdown
-            nameUrl: basic-provenance.html
-            title: Basic Provenance
-        -   generation: markdown
-            nameUrl: capability-statements.html
-            title: Capability Statements
-        -   generation: markdown
-            nameUrl: clinical-notes-guidance.html
-            title: Clinical Notes Guidance
-        -   generation: markdown
-            nameUrl: conformance-expectations.html
-            title: Conformance Expectations
-        -   generation: markdown
-            nameUrl: downloads.html
-            title: Downloads
-        -   generation: markdown
-            nameUrl: DSTU2-to-R4-conversion.html
-            title: DSTU 2 to R 4 Conversion
-        -   generation: markdown
-            nameUrl: examples.html
-            title: Examples
-        -   generation: markdown
-            nameUrl: future-of-US-core.html
-            title: Future of US Core
-        -   generation: markdown
-            nameUrl: general-guidance.html
-            title: General Guidance
+            title: Index
         -   generation: markdown
             nameUrl: guidance.html
+            page:
+            -   generation: markdown
+                nameUrl: general-guidance.html
+                title: General Guidance
+            -   generation: markdown
+                nameUrl: conformance-expectations.html
+                title: Conformance Expectations
+            -   generation: markdown
+                nameUrl: clinical-notes-guidance.html
+                title: Clinical Notes Guidance
+            -   generation: markdown
+                nameUrl: medication-list-guidance.html
+                title: Medication List Guidance
+            -   generation: markdown
+                nameUrl: basic-provenance.html
+                title: Basic Provenance
+            -   generation: markdown
+                nameUrl: DSTU2-to-R4-conversion.html
+                title: DSTU2 to R4 Conversion
+            -   generation: markdown
+                nameUrl: future-of-US-core.html
+                title: Future of US Core
             title: Guidance
-        -   generation: markdown
-            nameUrl: medication-list-guidance.html
-            title: Medication List Guidance
-        -   generation: markdown
-            nameUrl: operations.html
-            title: Operations
         -   generation: markdown
             nameUrl: profiles-and-extensions.html
             title: Profiles and Extensions
         -   generation: markdown
+            nameUrl: capability-statements.html
+            title: Capability Statements
+        -   generation: markdown
             nameUrl: search-parameters-and-operations.html
             title: Search Parameters and Operations
+        -   generation: markdown
+            nameUrl: terminology.html
+            title: Terminology
         -   generation: markdown
             nameUrl: security.html
             title: Security
         -   generation: markdown
-            nameUrl: terminology.html
-            title: Terminology
+            nameUrl: examples.html
+            title: Examples
+        -   generation: markdown
+            nameUrl: downloads.html
+            title: Downloads
         title: Table of Contents
     parameter:
     -   code: copyrightyear
@@ -429,10 +427,10 @@ definition:
         reference:
             reference: CodeSystem/us-core-provenance-participant-type
     -   description: "This operation is used to return all the references to documents\
-            \ related to a patient. \n\n The operation takes the optional input parameters:\
-            \ \n  - patient id\n  - start date\n  - end date\n  - document type \n\
-            \n and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type \"\
-            searchset\" containing [DocumentReference](http://hl7.org/fhir/documentreference.html)\
+            \ related to a patient. \n\n The operation requires a patient id and takes\
+            \ the optional input parameters: \n  - start date\n  - end date\n  - document\
+            \ type \n\n and returns a [Bundle](http://hl7.org/fhir/bundle.html) of\
+            \ type \"searchset\" containing [DocumentReference](http://hl7.org/fhir/documentreference.html)\
             \ resources for the patient. The DocumentReference resources **SHOULD**\
             \ conform to the [US Core DocumentReference\n Profiles](http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference).\
             \ If the server has or can create documents that are related to the patient,\
@@ -1189,8 +1187,8 @@ definition:
         reference:
             reference: ValueSet/us-core-observation-value-codes
     -   description: Concepts from CPT, SNOMED CT, HCPCS Level II Alphanumeric Codes,
-            ICD-10-PCS and CDT code systems that can be used to indicate the type
-            of procedure performed.
+            ICD-10-PCS,CDT and LOINC code systems that can be used to indicate the
+            type of procedure performed.
         exampleBoolean: false
         name: US Core Procedure Codes
         reference:
