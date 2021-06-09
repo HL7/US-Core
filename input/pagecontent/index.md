@@ -5,7 +5,7 @@
 **punch list**:
 
 - [X] [Resolve Trackers](https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=12001)
-- [ ] Apply Trackers
+- [X] Apply Trackers
 
     **Publishing Issues**
     - [ ] **Resolved - change required**:Confusing for commercial vendor.  Reads very confusing. ([FHIR-30783](https://jira.hl7.org/browse/FHIR-30783)) proposal is to make the differential tab the default view, see publishing plans here:  https://github.com/HL7/ig-template-base/issues/161  timeline unknown.
@@ -22,7 +22,7 @@
 - [ ] QA
      - [ ] review applied trackers
      - [ ] errors and warnings  (see above)
-     - [ ] update **gnoreWarnings.txt
+     - [ ] update ignoreWarnings.txt
 - [ ] remove all new content and green highlighted formatting
 - [ ] update title and version to 2.0.0
 - [ ] update package-list.json
