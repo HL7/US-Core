@@ -21,8 +21,8 @@
     - [ ] **Resolved - change required**:Pulse Ox Example: observation-satO2-fiO2 ([FHIR-27845](https://jira.hl7.org/browse/FHIR-27845)) Proposed Jira ticket to resolve in base made an STU note that is technically not conformant with the base FHIR vital profile and suppress the error in the meantime. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.233-.20nasty.20profiling.20error)
 - [ ] QA
      - [ ] review applied trackers
-     - [ ] errors and warnings  (see above)
-     - [ ] update ignoreWarnings.txt
+     - [X] errors and warnings  (see above)
+     - [X] update ignoreWarnings.txt
 - [ ] remove all new content and green highlighted formatting
 - [ ] update title and version to 2.0.0
 - [ ] update jira tracker file
