@@ -91,14 +91,16 @@ There are situations when information on a particular data element is missing an
       - {:.new-content}if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant
 
         - For the US Core profiles, the following mandatory status elements with required binding have no appropriate "unknown" concept code:
-          - `AllergyIntolerance.clinicalStatus`
-          - `Condition.clinicalStatus`
+          - `AllergyIntolerance.clinicalStatus`*
+          - `Condition.clinicalStatus`*
           - `DocumentReference.status`
           - `Immunization.status`
           - `Goal.lifecycleStatus`
 
+        *The clinicalStatus element has the following constraints: SHALL be present if verification status is not entered-in-error and SHALL NOT be present if verification Status is entered-in-error.
+        
         If one of these status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set and a *warning* OperationOutcome **SHOULD** be included indicating that additional search results were found but could not be compliantly expressed and have been suppressed.
-        {:.new-content}
+            {:.new-content}
 
 <div class="new-content" markdown="1">
 
