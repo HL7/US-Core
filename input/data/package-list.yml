@@ -35,9 +35,9 @@ list:
       1. **Applied**:Change CareTeam `status` search parameter compositeOR expectation to SHOULD ([FHIR-29768](https://jira.hl7.org/browse/FHIR-29768)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/SearchParameter-us-core-careteam-status.html)
       1. **Applied**:Provide guidance on the population of narrative ([FHIR-29777](https://jira.hl7.org/browse/FHIR-29777)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#narrative)
       1. **Applied**: Change $docref start and end input parameter types from `date` to `dateTime` ([FHIR-29825](https://jira.hl7.org/browse/FHIR-29825)) [See Change Here](#.html)
-      1. **Resolved - change required**:The history file markdown rendering of the table ([FHIR-30100](https://jira.hl7.org/browse/FHIR-30100)) [See Change Here](#.html)
+      1. **Applied**: The history file markdown rendering of the table ([FHIR-30100](https://jira.hl7.org/browse/FHIR-30100)) [See Change Here](http://hl7.org/fhir/us/core/history.html)
       1. **Applied**:footnote rendering - pre-applied ([FHIR-30101](https://jira.hl7.org/browse/FHIR-30101)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#guidance-on-limiting-the-number-of-search-results)
-      1. **Triaged**:Random Section Numbering (Reminder for tooling issue) ([FHIR-30102](https://jira.hl7.org/browse/FHIR-30102)) [See Change Here](#.html)
+      1. **Applied**:Random Section Numbering (Reminder for tooling issue) ([FHIR-30102](https://jira.hl7.org/browse/FHIR-30102)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/toc.html)
       1. **Applied**:Move section 1.5 US Core Conformance Requirements ([FHIR-30103](https://jira.hl7.org/browse/FHIR-30103)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/conformance-expectations.html)
       1. **Applied**:Make custodian optional on document reference ([FHIR-30108](https://jira.hl7.org/browse/FHIR-30108)) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-documentreference.html)
       1. **Applied**:Remove required binding on procedure and condition ([FHIR-30109](https://jira.hl7.org/browse/FHIR-30109)) See Changes:
@@ -153,18 +153,73 @@ list:
         - Enumerated (extensional) value sets can also be downloaded as a FHIR ValueSet resource. To do this, use the link `https://cts.nlm.nih.gov/fhir/ValueSet/{OID}` in your browser replacing the '{OID}' with the OID from the table below.
         - **NOTE that the Code System value used in FHIR® Terminology Service for VSAC Resources for Race and Ethnicity (CDCREC) concepts *does not* align with historical and current usage of OIDs in C-CDA and US Core. This issue has not been resolved in time for publication of the ballot version of this guide. As a result validation errors may occur when validating against this version of the US Core Patient Profile. Feedback on which code system value to use is welcome.**
 
-        |US Core Value Set|VSAC Value Set|VSAC OID|extensional?|
-        |---|---|---|---|
-        |Detailed ethnicity|Detailed Ethnicity|2.16.840.1.114222.4.11.877|No|
-        |Detailed Race|Race|2.16.840.1.113883.1.11.14914|No|
-        |OMB Ethnicity Categories|Ethnicity|2.16.840.1.114222.4.11.837|Yes|
-        |US Core CareTeam Provider Roles|Care Team Member Function|2.16.840.1.113762.1.4.1099.30|Yes|
-        |US Core Medication Codes (RxNorm)|Medication Clinical Drug|2.16.840.1.113762.1.4.1010.4|Yes|
-        |US Core Provider Specialty (NUCC)|Healthcare Provider Taxonomy|2.16.840.1.114222.4.11.1066|No|
-        |US Core Smoking Status|Smoking Status|2.16.840.1.113883.11.20.9.38|Yes|
-        |US Core Vaccine Administered Value Set (CVX)|CVX Vaccines Administered Vaccine Set|2.16.840.1.113762.1.4.1010.6|Yes|
-        |US Core Common substances for allergy and intolerance documentation including refutations|Common substances for allergy and intolerance documentation including refutations|2.16.840.1.113762.1.4.1186.8|No|
-        {:.grid}
+        <table class="grid">
+        <thead>
+        <tr class="header">
+        <th>US Core Value Set</th>
+        <th>VSAC Value Set</th>
+        <th>VSAC OID</th>
+        <th>extensional?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="odd">
+        <td>Detailed ethnicity</td>
+        <td>Detailed Ethnicity</td>
+        <td>2.16.840.1.114222.4.11.877</td>
+        <td>No</td>
+        </tr>
+        <tr class="even">
+        <td>Detailed Race</td>
+        <td>Race</td>
+        <td>2.16.840.1.113883.1.11.14914</td>
+        <td>No</td>
+        </tr>
+        <tr class="odd">
+        <td>OMB Ethnicity Categories</td>
+        <td>Ethnicity</td>
+        <td>2.16.840.1.114222.4.11.837</td>
+        <td>Yes</td>
+        </tr>
+        <tr class="even">
+        <td>US Core CareTeam Provider Roles</td>
+        <td>Care Team Member Function</td>
+        <td>2.16.840.1.113762.1.4.1099.30</td>
+        <td>Yes</td>
+        </tr>
+        <tr class="odd">
+        <td>US Core Medication Codes (RxNorm)</td>
+        <td>Medication Clinical Drug</td>
+        <td>2.16.840.1.113762.1.4.1010.4</td>
+        <td>Yes</td>
+        </tr>
+        <tr class="even">
+        <td>US Core Provider Specialty (NUCC)</td>
+        <td>Healthcare Provider Taxonomy</td>
+        <td>2.16.840.1.114222.4.11.1066</td>
+        <td>No</td>
+        </tr>
+        <tr class="odd">
+        <td>US Core Smoking Status</td>
+        <td>Smoking Status</td>
+        <td>2.16.840.1.113883.11.20.9.38</td>
+        <td>Yes</td>
+        </tr>
+        <tr class="even">
+        <td>US Core Vaccine Administered Value Set (CVX)</td>
+        <td>CVX Vaccines Administered Vaccine Set</td>
+        <td>2.16.840.1.113762.1.4.1010.6</td>
+        <td>Yes</td>
+        </tr>
+        <tr class="odd">
+        <td>US Core Common substances for allergy and intolerance documentation including refutations</td>
+        <td>Common substances for allergy and intolerance documentation including refutations</td>
+        <td>2.16.840.1.113762.1.4.1186.8</td>
+        <td>No</td>
+        </tr>
+        </tbody>
+        </table>
+
       4. Migrating to the standard set of HL7 FHIR IG templates for publishing.  Although we strove to minimize the differences between this version and the previous versions of US Core, these changes are notable:
          - Additional Features include:
               - Addition of vocabulary and constraint tables to the profile pages

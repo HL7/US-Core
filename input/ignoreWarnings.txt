@@ -1,4 +1,7 @@
 == Suppressed Messages ==
+# Proposed Jira ticket to resolve in base made an STU note that is technically not conformant with the base FHIR vital profile and suppress the error in the meantime.
+#ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
+#ERROR: StructureDefinition/us-core-vital-signs: StructureDefinition: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
 # These errors,warnings,and info messages are still extant from ballot version of US Core and the code-system OID conflict has yet to be resolved with publishing/terminology server and VSAC. see: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/cdcrec.20code.20errors.20in.20US.20Core and https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Race.20Code.20System
 #WARNING: ValueSet/omb-race-category: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
 #WARNING: ValueSet.where(id = 'omb-race-category'): Error from server: Unable to provide support for code system urn:oid:2.16.840.1.113883.6.238

@@ -18,7 +18,7 @@
     - [ ] **Resolved - change required**: Procedure Example:rehab.json. QA Issue - code system not found([FHIR-30107](https://jira.hl7.org/browse/FHIR-30107)) Proposal is to work with publishing to fix  suppress the warnings in the meantime. see[Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20core.20procedure.20example.20error)
     - [ ] **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC Patient ([FHIR-30105](https://jira.hl7.org/browse/FHIR-30105)) CDCREC codes and code system value not aligned with VSAC. Proposal is to work with publishing to fix and suppress the warnings in the meantime. [Zulip1](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/cdcrec.20code.20errors.20in.20US.20Core) and [Zulip2](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Race.20Code.20System)
     - [ ] **Resolved - change required**:imm-1.json NDC/CVX codes QA Error ([FHIR-30104](https://jira.hl7.org/browse/FHIR-30104)) should be fixed if not suppress warning. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core)
-
+    - [ ] **Resolved - change required**:Pulse Ox Example: observation-satO2-fiO2 ([FHIR-27845](https://jira.hl7.org/browse/FHIR-27845)) Proposed Jira ticket to resolve in base made an STU note that is technically not conformant with the base FHIR vital profile and suppress the error in the meantime. [Zulip]((https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.233-.20nasty.20profiling.20error))
 
 - [ ] QA
      - [ ] review applied trackers
@@ -41,18 +41,7 @@
             error	URL value 'http://hl7.org/fhir/StructureDefinition/instance-name' does not resolve
             error	The extension http://hl7.org/fhir/StructureDefinition/instance-description is unknown, and not allowed here
             error	URL value 'http://hl7.org/fhir/StructureDefinition/instance-description' does not resolve
-
-        - [ ] VSAC link errors
-
-
-           - [ ] See this [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/VSAC.2FPhinVads.20Warnings)
-
-
-          - [ ] Immunization Example: imm-1.json NDC/CVX codes [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core) WIP per GG should be fixed.
-          - [ ] Patient Examples: patient-child-example.json,patient-infant-example.json, patient-example.json and ValueSet-omb-race-category.json CDCREC codes and code system value ( OID vs ? defined in package or by VSAC ????) [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/cdcrec.20code.20errors.20in.20US.20Core) per 12/2 FMG won't be able to sort out by ballot.
-             - [X] Note to balloters that CDCREC code system using VSAC is an open issue
-          - [ ] Pulse Ox Example: observation-satO2-fiO2 [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.233-.20nasty.20profiling.20error) per 12/2 FMG won't be able to sort out by ballot.
-             - [X] make an STU note that is technically not conformant with the base FHIR vital profile.
+          -
         - [ ] Procedure Example:  rehab.json. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20core.20procedure.20example.20error) per GG will get fixed.
         - [X] CareTeam Example: careteam-example.json: US Ed Snomed Errors [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20ed.20Snomed.20for.20US.20Core)
 
