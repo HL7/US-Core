@@ -25,6 +25,7 @@
      - [ ] update ignoreWarnings.txt
 - [ ] remove all new content and green highlighted formatting
 - [ ] update title and version to 2.0.0
+- [ ] update jira tracker file
 - [ ] update package-list.json
      - in pl.yml
         - update current to ver 2.0.0
