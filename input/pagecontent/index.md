@@ -19,10 +19,10 @@
     - [ ] **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC Patient ([FHIR-30105](https://jira.hl7.org/browse/FHIR-30105)) CDCREC codes and code system value not aligned with VSAC. Proposal is to work with publishing to fix and suppress the warnings in the meantime. [Zulip1](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/cdcrec.20code.20errors.20in.20US.20Core) and [Zulip2](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Race.20Code.20System)
     - [ ] **Resolved - change required**:imm-1.json NDC/CVX codes QA Error ([FHIR-30104](https://jira.hl7.org/browse/FHIR-30104)) should be fixed if not suppress warning. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core)
     - [ ] **Resolved - change required**:Pulse Ox Example: observation-satO2-fiO2 ([FHIR-27845](https://jira.hl7.org/browse/FHIR-27845)) Proposed Jira ticket to resolve in base made an STU note that is technically not conformant with the base FHIR vital profile and suppress the error in the meantime. [Zulip]((https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.233-.20nasty.20profiling.20error))
-
 - [ ] QA
      - [ ] review applied trackers
-     - [ ] errors and warnings (qa.html)
+     - [ ] errors and warnings  (see above)
+     - [ ] update **gnoreWarnings.txt
 - [ ] remove all new content and green highlighted formatting
 - [ ] update title and version to 2.0.0
 - [ ] update package-list.json
@@ -31,26 +31,6 @@
         - change base path of changes from build to version 2.0.0
     - remove this blue info box/change log from home page
     - update package-list.json from pl.yml
-
-
-<!--
-
-        - [X] example name and definition error [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Adding.20Description.20for.20Examples.20to.20ImplementationGuide.20-.20how/near/217444410)
-
-            The extension http://hl7.org/fhir/StructureDefinition/instance-name is unknown, and not allowed here
-            error	URL value 'http://hl7.org/fhir/StructureDefinition/instance-name' does not resolve
-            error	The extension http://hl7.org/fhir/StructureDefinition/instance-description is unknown, and not allowed here
-            error	URL value 'http://hl7.org/fhir/StructureDefinition/instance-description' does not resolve
-          -
-        - [ ] Procedure Example:  rehab.json. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20core.20procedure.20example.20error) per GG will get fixed.
-        - [X] CareTeam Example: careteam-example.json: US Ed Snomed Errors [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20ed.20Snomed.20for.20US.20Core)
-
-        - [X] update JIRA (update jira file for us czsore #119)
-        - [ ] update `input/ignoreWarnings.txt`
-          - [X] [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20Warnings.20we.20want.20to.20suppress)
-          - [ ] add all the informative message too
-     - [X] read through for typos and grammar
--->
 
 Where possible, new and updated content will be highlighted with green text and background
 {:.new-content}
