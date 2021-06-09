@@ -4,12 +4,13 @@ The publication tooling is unable to expand the language value set because they 
 
 |ISO 639-2 Code|ISO 639-1 Code|English name of Language|
 |---|---|---|
-eng|en|English|
+|eng|en|English|
 |spa|es|Spanish|
 |chi (B), zho (T)|zh |Chinese|
 |fre (B), fra (T)|fr|French|
 |tgl|tl|Tagalog|
 |vie|vi|Vietnamese|
-{.:grid}
+{:.grid}
+
 </div>
 </div>

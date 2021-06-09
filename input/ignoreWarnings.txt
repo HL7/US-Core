@@ -1,4 +1,6 @@
 == Suppressed Messages ==
+# This error is still extant from prior version of US Core and has yet to be resolved. per 12/2 FMG per GG ok to get variance on this one. see:  https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/language.20valueset.20expansion.20error
+ERROR: ValueSet.where(id = 'simple-language'): Error from server: Language valuesets cannot be expanded as they are based on a grammar
 # update jira file for us core #119 (https://github.com/HL7/JIRA-Spec-Artifacts/pull/119)
 WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
 # Code System URI 'http:// www.ama-assn.org/go/cpt' is unknown so the code cannot be validated are not recognized by the validator due to IP restrictions
