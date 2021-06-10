@@ -44,7 +44,7 @@ Where possible, new and updated content will be highlighted with green text and 
 <div class='new-content' markdown='1'>
 
 The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. There are two different ways to implement US Core: 
-1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information 
+1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information. 
 1. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
 
 For a detailed description between these different usages of US Core the [Conformance Expectations] page.
