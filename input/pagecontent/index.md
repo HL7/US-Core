@@ -20,9 +20,10 @@
     - [ ] **Resolved - change required**:imm-1.json NDC/CVX codes QA Error ([FHIR-30104](https://jira.hl7.org/browse/FHIR-30104)) should be fixed if not suppress warning. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core)
     - [ ] **Resolved - change required**:Pulse Ox Example: observation-satO2-fiO2 ([FHIR-27845](https://jira.hl7.org/browse/FHIR-27845)) Proposed Jira ticket to resolve in base made an STU note that is technically not conformant with the base FHIR vital profile and suppress the error in the meantime. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.233-.20nasty.20profiling.20error)
 - [ ] QA
-     - [ ] review applied trackers
+     - [X] review applied trackers
      - [X] errors and warnings  (see above)
      - [X] update ignoreWarnings.txt
+     - [ ] final read through
 - [ ] remove all new content and green highlighted formatting
 - [ ] update title and version to 2.0.0
 - [ ] update jira tracker file
@@ -43,8 +44,8 @@ Where possible, new and updated content will be highlighted with green text and 
 ### Introduction
 <div class='new-content' markdown='1'>
 
-The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. There are two different ways to implement US Core: 
-1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information. 
+The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. There are two different ways to implement US Core:
+1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information.
 1. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
 
 For a detailed description between these different usages of US Core the [Conformance Expectations] page.
