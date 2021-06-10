@@ -6,4 +6,4 @@
 
 ---
 
-Below is an overview of the required set of Server RESTful FHIR interactions   - for example, search and read operations - <span class="bg-success">when conforming to the US Core [Capability Statements]</span> for this profile.  See the [US Core Server CapabilityStatement] for a complete list of supported RESTful interactions for this IG. <span class="bg-success">Note that systems that support only the Profile content structure are not required to support these interactions.</span>
+<span class="bg-success">Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profile’s information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions.  See the [US Core Server CapabilityStatement] for a complete list of supported RESTful interactions for this IG. </span>

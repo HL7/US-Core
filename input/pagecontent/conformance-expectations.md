@@ -1,5 +1,5 @@
 
-This page defines what 'conformance to US Core' means, how the CapabilityStatements are used, and the expectations for mandatory and must supports elements in the US Core Profiles.  Note that the conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
+This page defines how CapabilityStatements are used and the expectations for mandatory and must support elements in the US Core Profiles. It provides guidance on how a system may support *only* the resources as profiled by US Core to represent clinical information (Profile Support) versus a system claiming conformance to *both* the US Core Profile content structure *and* the RESTful interactions defined for it (Profile Support + Interaction Support).  Note that the conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
 {:.new-content}
 
 <div markdown="1" class="new-content">
@@ -16,14 +16,14 @@ The [Capability Statements] page outlines conformance requirements and expectati
 
 There are two different ways to implement US Core:
 
-1. Support one or more US Core Profiles
-1. Conform to one or more US Core Profiles
+1. Profile Only Support:  Systems may support *only* the US Core Profiles to represent clinical information 
+1. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
 
-#### Supporting a US Core Profiles
+#### Profile Only Support
 
-Systems may support only the resources as profiled by US Core to represent clinical information.  They are using the profile's content model without any expectations to implement the the US Core transactions.
+Systems may deploy, and support, only one or more US Core Profiles to represent clinical information. They are using the profile’s content model without any expectations to implement the US Core interactions.
 
-An example scenario would be a server using only the [FHIR Bulk Data Access (Flat FHIR)] approach to export resources needed for the US Core Data for Interoperability.  For this server, the US Core transactions are unnecessary.
+An example scenario would be a server using only the [FHIR Bulk Data Access (Flat FHIR)] approach to export resources needed for the US Core Data for Interoperability.  For this server, the US Core.interactions are unnecessary.
 
 To support a US Core Profile, a server:
 
@@ -56,11 +56,12 @@ To support a US Core Profile, a server:
       ~~~
 
 
-#### Claiming Conformance to a US Core Profile
+#### Profile Support + Interaction Support
 
-Systems that claim conformance to US Core profiles are claiming support for *both* the content structure US Core Profile content structure *and* the RESTful interactions defined for it.  This is done by implementing all or parts of the USCore CapabilityStatement into their capabilities.
+Systems may deploy, and support one or more US Core Profiles to represent clinical information *and* the US Core interactions to access the information. Systems that implement *both* can claim conformance to US Core Profile content structure *and* the RESTful interactions defined for it. This is done by implementing all or parts of the USCore CapabilityStatement into their capabilities.
 
-An example scenario would be a server that certifies to the [21st Century Cures Act for accessing patient data].
+A server that certifies to the [21st Century Cures Act for accessing patient data] must implement all components in the USCDI and the US Core CapabilityStatement.
+
 
 To claim conformance to a US Core Profile a server:
 

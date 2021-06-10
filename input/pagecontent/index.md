@@ -43,7 +43,11 @@ Where possible, new and updated content will be highlighted with green text and 
 ### Introduction
 <div class='new-content' markdown='1'>
 
-The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources and FHIR RESTful interactions for accessing patient data. There are two different ways to implement US Core: 1) system may support only the resources as profiled by US Core to represent clinical information, 2) systems can claim conformance to *both* the  US Core Profile content structure *and* the RESTful interactions defined for it.  For more information how these two ways to implement US Core differ, see the [Conformance Expectations] page.
+The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. There are two different ways to implement US Core: 
+1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information 
+1. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
+
+For a detailed description between these different usages of US Core the [Conformance Expectations] page.
 
 US Core has benefitted from testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing.  This guide and the US Core profiles have become the foundation for US Realm FHIR implementation guides.  This release is the first of yearly US Core updates to reflect changes to [U.S. Core Data for Interoperability (USCDI) v1] and requests from the US Realm FHIR community.  This Approach is outlined in the figure below:
 
@@ -63,7 +67,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Home]\: The home page provides the introduction and background for US Core.
 - [Guidance]\: These pages provides overall guidance in using the profiles and transactions defined in this guide.
   - [General Guidance] provides guidance, definitions and requirements common to all actors used in this guide.
-  - {:.new-content}[Conformance Expectations] defines what 'conformance to US Core' means, how the CapabilityStatements are used, and the expectations for mandatory and must supports elements in the US Core Profiles.
+  - {:.new-content}[Conformance Expectations] defines how CapabilityStatements are used and the expectations for mandatory and must support elements in the US Core Profiles. It provides guidance on how a system may support *only* the resources as profiled by US Core to represent clinical information (Profile Support) versus a system claiming conformance to *both* the US Core Profile content structure *and* the RESTful interactions defined for it (Profile Support + Interaction Support).
   - [Clinical Notes Guidance] gives guidance on the interactions between Consumers and Producers of clinical notes.
   - [Medication List Guidance] gives guidance on how a patient or provider can access a patient's medications.
   - [Basic Provenance] provides implementers with important definitions to create and share the Provenance Resource.
