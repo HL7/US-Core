@@ -48,7 +48,7 @@ The US Core Implementation Guide is based on [FHIR Version R4] and defines the m
 1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information.
 1. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
 
-For a detailed description between these different usages of US Core the [Conformance Expectations] page.
+For a detailed description between these different usages of US Core, see the [Conformance Expectations] page.
 
 US Core has benefitted from testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing.  This guide and the US Core profiles have become the foundation for US Realm FHIR implementation guides.  This release is the first of yearly US Core updates to reflect changes to [U.S. Core Data for Interoperability (USCDI) v1] and requests from the US Realm FHIR community.  This Approach is outlined in the figure below:
 

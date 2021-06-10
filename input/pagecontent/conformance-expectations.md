@@ -16,7 +16,7 @@ The [Capability Statements] page outlines conformance requirements and expectati
 
 There are two different ways to implement US Core:
 
-1. Profile Only Support:  Systems may support *only* the US Core Profiles to represent clinical information. 
+1. Profile Only Support:  Systems may support *only* the US Core Profiles to represent clinical information.
 1. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
 
 #### Profile Only Support
@@ -67,10 +67,11 @@ To claim conformance to a US Core Profile a server:
 
 - **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition.
 - **SHALL** declare conformance with the the [US Core Server Capability Statement] by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`
-    - The US Core Profile's official or "canonical" URL can be found on each US Core Profile page
+
 - **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.
     - Declare support for the US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
     - Declare support for the US Core Profile's FHIR RESTful transactions
+        - The US Core Profile's official or "canonical" URL can be found on each US Core Profile page
 
     example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:
 
