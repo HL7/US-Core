@@ -1069,6 +1069,12 @@ definition:
         name: US Core Patient Profile
         reference:
             reference: StructureDefinition/us-core-patient
+    -   description: The 41 [CDC ethnicity codes](http://www.cdc.gov/phin/resources/vocabulary/index.html)
+            that are grouped under one of the 2 OMB ethnicity category codes.
+        exampleBoolean: false
+        name: Detailed ethnicity
+        reference:
+            reference: ValueSet/detailed-ethnicity
     -   description: The codes for the ethnicity categories - 'Hispanic or Latino'
             and 'Non Hispanic or Latino' - as defined by the [OMB Standards for Maintaining,
             Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical
