@@ -135,7 +135,7 @@ list:
 
       - [ ] **Resolved - change required**: valueset-simple-language.xml QA error "Error from server: Language valuesets cannot be expanded as they are based on a grammar" ([FHIR-30107](https://jira.hl7.org/browse/FHIR-30107)) this error is still extant from prior version of US Core and has yet to be resolved. Work with publishing to fix and created [STU note](http://build.fhir.org/ig/HL7/US-Core/ValueSet-simple-language.html#notes). see [Zulip chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/language.20valueset.20expansion.20error)
       - [ ] **Resolved - change required**: Procedure Example:rehab.json. QA Issue - code system not found([FHIR-30107](https://jira.hl7.org/browse/FHIR-30107)) Proposal is to work with terminology server team to fix. see [Zulip chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20core.20procedure.20example.20error)
-      - [ ] **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC Patient ([FHIR-30105](https://jira.hl7.org/browse/FHIR-30105)) CDCREC codes and code system value not aligned with VSAC. Proposal is to publish the code system in USCore, until HTA works this out and add a note that expecting the codesystem to migrate to HTA soon. [Zulip chat1](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/cdcrec.20code.20errors.20in.20US.20Core) and [Zulip chat2](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Race.20Code.20System) and [Zulip chat3](https://chat.fhir.org/#narrow/stream/179202-terminology/topic/US.20CDCREC.20codessystems.20in.20HTA)
+      - [ ] **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC Patient ([FHIR-30105](https://jira.hl7.org/browse/FHIR-30105)) CDCREC codes and code system value not aligned with VSAC. Proposal is to publish the [CDCREC code system in USCore]() until HTA works this out and add an STU note informing users that the codesystem will move to [HL7 Terminology](https://terminology.hl7.org/). [Zulip chat1](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/cdcrec.20code.20errors.20in.20US.20Core) and [Zulip chat2](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Race.20Code.20System) and [Zulip chat3](https://chat.fhir.org/#narrow/stream/179202-terminology/topic/US.20CDCREC.20codessystems.20in.20HTA)
       - [ ] **Resolved - change required**:imm-1.json NDC/CVX codes QA Error ([FHIR-30104](https://jira.hl7.org/browse/FHIR-30104)) Woking with terminology server team to correct. see [Zulip chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core)
       - [ ] **Resolved - change required**:Pulse Ox Example: observation-satO2-fiO2 ([FHIR-27845](https://jira.hl7.org/browse/FHIR-27845)) Proposed Jira ticket to resolve in base made an [STU note](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-pulse-oximetry.html#mandatory-and-must-support-data-elements) that is technically not conformant with the base FHIR vital profile. See [Zulip chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.233-.20nasty.20profiling.20error)
 
@@ -179,9 +179,9 @@ list:
         - Enumerated (extensional) value sets can also be downloaded as a FHIR ValueSet resource. To do this, use the link `https://cts.nlm.nih.gov/fhir/ValueSet/{OID}` in your browser replacing the '{OID}' with the OID from the table below.
         - **NOTE that the Code System value used in FHIR® Terminology Service for VSAC Resources for Race and Ethnicity (CDCREC) concepts *does not* align with historical and current usage of OIDs in C-CDA and US Core. This issue has not been resolved in time for publication of the ballot version of this guide. As a result validation errors may occur when validating against this version of the US Core Patient Profile. Feedback on which code system value to use is welcome.**
 
-        <table class="grid">
+        <table class='grid'>
         <thead>
-        <tr class="header">
+        <tr class='header'>
         <th>US Core Value Set</th>
         <th>VSAC Value Set</th>
         <th>VSAC OID</th>
@@ -189,55 +189,55 @@ list:
         </tr>
         </thead>
         <tbody>
-        <tr class="odd">
+        <tr class='odd'>
         <td>Detailed ethnicity</td>
         <td>Detailed Ethnicity</td>
         <td>2.16.840.1.114222.4.11.877</td>
         <td>No</td>
         </tr>
-        <tr class="even">
+        <tr class='even'>
         <td>Detailed Race</td>
         <td>Race</td>
         <td>2.16.840.1.113883.1.11.14914</td>
         <td>No</td>
         </tr>
-        <tr class="odd">
+        <tr class='odd'>
         <td>OMB Ethnicity Categories</td>
         <td>Ethnicity</td>
         <td>2.16.840.1.114222.4.11.837</td>
         <td>Yes</td>
         </tr>
-        <tr class="even">
+        <tr class='even'>
         <td>US Core CareTeam Provider Roles</td>
         <td>Care Team Member Function</td>
         <td>2.16.840.1.113762.1.4.1099.30</td>
         <td>Yes</td>
         </tr>
-        <tr class="odd">
+        <tr class='odd'>
         <td>US Core Medication Codes (RxNorm)</td>
         <td>Medication Clinical Drug</td>
         <td>2.16.840.1.113762.1.4.1010.4</td>
         <td>Yes</td>
         </tr>
-        <tr class="even">
+        <tr class='even'>
         <td>US Core Provider Specialty (NUCC)</td>
         <td>Healthcare Provider Taxonomy</td>
         <td>2.16.840.1.114222.4.11.1066</td>
         <td>No</td>
         </tr>
-        <tr class="odd">
+        <tr class='odd'>
         <td>US Core Smoking Status</td>
         <td>Smoking Status</td>
         <td>2.16.840.1.113883.11.20.9.38</td>
         <td>Yes</td>
         </tr>
-        <tr class="even">
+        <tr class='even'>
         <td>US Core Vaccine Administered Value Set (CVX)</td>
         <td>CVX Vaccines Administered Vaccine Set</td>
         <td>2.16.840.1.113762.1.4.1010.6</td>
         <td>Yes</td>
         </tr>
-        <tr class="odd">
+        <tr class='odd'>
         <td>US Core Common substances for allergy and intolerance documentation including refutations</td>
         <td>Common substances for allergy and intolerance documentation including refutations</td>
         <td>2.16.840.1.113762.1.4.1186.8</td>
