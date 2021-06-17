@@ -1,7 +1,9 @@
 == Suppressed Messages ==
+# imm-1.json NDC/CVX codes QA Error ([FHIR-30104](https://jira.hl7.org/browse/FHIR-30104)) Work with terminology server team to correct. see [Zulip chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core)
+ERROR: Immunization/imm-1: Immunization.vaccineCode.coding[1]: The code "49281-0633-15" is not valid in the system http://hl7.org/fhir/sid/ndc; The code provided (http://hl7.org/fhir/sid/ndc#49281-0633-15) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/ndc#49281-0633-15'
 # unknown VSAC Valueset and HTA codesystem issue
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[0].resource.ofType(PractitionerRole).specialty[0]: None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/c80-practice-codes (http://hl7.org/fhir/ValueSet/c80-practice-codes), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
-# html table embedded in markdown documenetation element
+# html table embedded in markdown documentation element
 INFORMATION: CapabilityStatement/us-core-client: CapabilityStatement.rest[0].resource[4].documentation: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[4].documentation: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 # Proposed Jira ticket to resolve in base made an STU note that is technically not conformant with the base FHIR vital profile and suppress the error in the meantime.
