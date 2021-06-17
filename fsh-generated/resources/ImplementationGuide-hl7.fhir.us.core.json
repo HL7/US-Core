@@ -6,7 +6,7 @@
   "name": "USCore",
   "title": "US Core Implementation Guide",
   "status": "active",
-  "date": "2020-10-10",
+  "date": "2021-06-16",
   "publisher": "HL7 International - US Realm Steering Committee",
   "contact": [
     {
@@ -37,12 +37,6 @@
     "4.0.1"
   ],
   "dependsOn": [
-    {
-      "packageId": "hl7.fhir.uv.bulkdata",
-      "version": "1.0.1",
-      "uri": "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata",
-      "id": "hl7_fhir_uv_bulkdata"
-    },
     {
       "id": "vsac",
       "packageId": "us.nlm.vsac",
@@ -1953,11 +1947,11 @@
     "parameter": [
       {
         "code": "copyrightyear",
-        "value": "2020+"
+        "value": "2021+"
       },
       {
         "code": "releaselabel",
-        "value": "STU"
+        "value": "STU3 Release"
       },
       {
         "code": "path-resource",

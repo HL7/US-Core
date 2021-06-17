@@ -5,7 +5,7 @@ contact:
         value: http://www.hl7.org/Special/committees/usrealm/index.cfm
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons
     License
-date: '2020-10-10'
+date: '2021-06-16'
 definition:
     page:
         generation: html
@@ -63,9 +63,9 @@ definition:
         title: Table of Contents
     parameter:
     -   code: copyrightyear
-        value: 2020+
+        value: 2021+
     -   code: releaselabel
-        value: STU
+        value: STU3 Release
     -   code: path-resource
         value: input/resources
     -   code: path-resource
@@ -1698,10 +1698,6 @@ definition:
         reference:
             reference: Observation/weight
 dependsOn:
--   id: hl7_fhir_uv_bulkdata
-    packageId: hl7.fhir.uv.bulkdata
-    uri: http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata
-    version: 1.0.1
 -   id: vsac
     packageId: us.nlm.vsac
     uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac

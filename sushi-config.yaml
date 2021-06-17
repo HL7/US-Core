@@ -19,11 +19,11 @@ description: >-
   These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the Office of the National Coordinator for Health Information Technology (ONC) sponsored Data Access Framework (DAF) project. For more information on how DAF became US Core see the US Core change notes.
 
 license: CC0-1.0
-date: 2020-10-10
+date: 2021-06-16
 version: 4.0.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.uv.bulkdata: 1.0.1
+  #hl7.fhir.uv.bulkdata: 1.0.1
   us.nlm.vsac:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
     version: 0.3.0
@@ -72,8 +72,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   generate: #what does this do - todo: remove and see
     - xml
     - json
-copyrightyear: '2020+'
-releaselabel: STU
+copyrightyear: '2021+'
+releaselabel: STU3 Release
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
