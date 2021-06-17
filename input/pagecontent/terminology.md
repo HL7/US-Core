@@ -9,6 +9,7 @@ These value sets have been defined for this implementation guide.
 
 *   [Birth Sex](ValueSet-birthsex.html)
 *   [Language codes with language and optionally a region modifier](ValueSet-simple-language.html)
+*   [OMB Ethnicity Categories](ValueSet-omb-ethnicity-category.html)
 *   [OMB Race Categories](ValueSet-omb-race-category.html)
 *   [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
 *   [US Core Condition Category Codes](ValueSet-us-core-condition-category.html)
@@ -39,10 +40,12 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 <!-- {% raw %}{% include list-simple-codesystems.xhtml %}{% endraw %} -->
 
+*   [Race & Ethnicity - CDC](CodeSystem-cdcrec.html)
 *   [US Core CarePlan Category Extension Codes](CodeSystem-careplan-category.html)
 *   [US Core Condition Category Extension Codes](CodeSystem-condition-category.html)
 *   [US Core DocumentReferences Category Codes](CodeSystem-us-core-documentreference-category.html)
 *   [US Core Provenance Participant Type Extension Codes](CodeSystem-us-core-provenance-participant-type.html)
+
 
 <br />
 
