@@ -1698,6 +1698,10 @@ definition:
         reference:
             reference: Observation/weight
 dependsOn:
+-   id: hl7_fhir_uv_bulkdata
+    packageId: hl7.fhir.uv.bulkdata
+    uri: http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata
+    version: 1.0.1
 -   id: vsac
     packageId: us.nlm.vsac
     uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac

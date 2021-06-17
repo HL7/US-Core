@@ -121,6 +121,24 @@ list:
          - [Here](http://build.fhir.org/ig/HL7/US-Core/conformance-expectations.html#conformance-expectations)
          - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance.html#notes)
 
+      **Known issues:**
+
+      We're working to fix these issues that may come up when using US CORE.  We will correct them in a future version of the guide
+
+      Publishing
+
+      - [ ] **Resolved - change required**:Confusing for commercial vendor.  Reads very confusing. ([FHIR-30783](https://jira.hl7.org/browse/FHIR-30783)) proposal is to make the differential tab the default view, see publishing plans here:  https://github.com/HL7/ig-template-base/issues/161  timeline unknown.
+      - [ ] **Resolved - change required**:In most of the data elements – “Binding is from base FHIR and US Core Vital Signs”  Need this to be one single combined listing ([FHIR-30780](https://jira.hl7.org/browse/FHIR-30780)) proposal is to limit the terminology and invariants to view shown. see: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Different.20views.20for.20tables.20and.20invariants timeline unknown.
+      - [ ] **Resolved - change required**:Why are there separate codes for USCoreVitalSigns and the Systolic.value and the diastolic value? ([FHIR-30779](https://jira.hl7.org/browse/FHIR-30779)) proposal is to work with publishing to "clean up" terminology and invariants to view shown. see: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Different.20views.20for.20tables.20and.20invariants timeline unknown.
+
+      Terminology
+
+      - [ ] **Resolved - change required**: valueset-simple-language.xml QA error "Error from server: Language valuesets cannot be expanded as they are based on a grammar" ([FHIR-30107](https://jira.hl7.org/browse/FHIR-30107)) this error is still extant from prior version of US Core and has yet to be resolved. per 12/2 FMG per GG ok to get variance on this one. Proposal is to work with publishing to fix and create stu note and suppress the error in the meantime.   see:  https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/language.20valueset.20expansion.20error
+      - [ ] **Resolved - change required**: Procedure Example:rehab.json. QA Issue - code system not found([FHIR-30107](https://jira.hl7.org/browse/FHIR-30107)) Proposal is to work with publishing to fix suppress the warnings in the meantime. see[Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20core.20procedure.20example.20error)
+      - [ ] **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC Patient ([FHIR-30105](https://jira.hl7.org/browse/FHIR-30105)) CDCREC codes and code system value not aligned with VSAC. Proposal is to publish the code system in USCore, until HTA works this out and add a note that expecting the codesystem to migrate to HTA soon. [Zulip1](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/cdcrec.20code.20errors.20in.20US.20Core) and [Zulip2](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Race.20Code.20System) and [Zulip3](https://chat.fhir.org/#narrow/stream/179202-terminology/topic/US.20CDCREC.20codessystems.20in.20HTA)
+      - [ ] **Resolved - change required**:imm-1.json NDC/CVX codes QA Error ([FHIR-30104](https://jira.hl7.org/browse/FHIR-30104)) should be fixed if not suppress warning. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core)
+      - [ ] **Resolved - change required**:Pulse Ox Example: observation-satO2-fiO2 ([FHIR-27845](https://jira.hl7.org/browse/FHIR-27845)) Proposed Jira ticket to resolve in base made an STU note that is technically not conformant with the base FHIR vital profile and suppress the error in the meantime. [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.233-.20nasty.20profiling.20error)
+
     path: 'http://build.fhir.org/ig/HL7/US-Core-R4'
     status: ci-build
     current: true

@@ -38,6 +38,12 @@
   ],
   "dependsOn": [
     {
+      "packageId": "hl7.fhir.uv.bulkdata",
+      "version": "1.0.1",
+      "uri": "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata",
+      "id": "hl7_fhir_uv_bulkdata"
+    },
+    {
       "id": "vsac",
       "packageId": "us.nlm.vsac",
       "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
