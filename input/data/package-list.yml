@@ -143,6 +143,14 @@ list:
     status: ci-build
     current: true
 
+  - version: '4.0.0'
+    date: '2021-06-30'
+    desc: update with current desc prior to publishing
+    path: 'http://hl7.org/fhir/us/core/STU4.0.0'
+    status: trial-use
+    sequence: STU3
+    fhirversion: 4.0.1
+
   - version: '3.2.0'
     date: '2021-1-30'
     desc: |-
@@ -415,6 +423,7 @@ list:
     status: trial-use
     sequence: STU3
     fhirversion: 4.0.1
+
   - version: 3.1.1
     date: '2020-6-30'
     desc: >-
@@ -518,6 +527,7 @@ list:
     status: trial-use
     sequence: STU3
     fhirversion: 4.0.1
+
   - version: 3.1.0
     date: '2019-10-31'
     desc: >
