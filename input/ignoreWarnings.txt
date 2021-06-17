@@ -1,4 +1,9 @@
 == Suppressed Messages ==
+# unknown VSAC Valueset and HTA codesystem issue
+INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[0].resource.ofType(PractitionerRole).specialty[0]: None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/c80-practice-codes (http://hl7.org/fhir/ValueSet/c80-practice-codes), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
+# html table embedded in markdown documenetation element
+INFORMATION: CapabilityStatement/us-core-client: CapabilityStatement.rest[0].resource[4].documentation: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[4].documentation: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 # Proposed Jira ticket to resolve in base made an STU note that is technically not conformant with the base FHIR vital profile and suppress the error in the meantime.
 ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
 ERROR: StructureDefinition/us-core-vital-signs: StructureDefinition: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
@@ -27,6 +32,10 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureD
 # Several examples derived from this profile are provided in this guide.
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'): The Implementation Guide contains no examples for this profile
 # Info messages confirming validated against the appropriate profiles
+INFORMATION: CodeSystem/cdcrec: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+INFORMATION: ValueSet/detailed-ethnicity: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/detailed-race: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+INFORMATION: ValueSet/omb-ethnicity-category: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ImplementationGuide/hl7.fhir.us.core: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
 INFORMATION: Device/udi-2: Device: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
 INFORMATION: Device/udi-3: Device: Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
