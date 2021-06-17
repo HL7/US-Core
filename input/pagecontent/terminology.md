@@ -42,12 +42,6 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 <!-- {% raw %}{% include list-simple-codesystems.xhtml %}{% endraw %} -->
 
-<div markdown="1" class="new-content">
-<div markdown="1" class="stu-note">
-In the future, the Race & Ethnicity - CDC code system and value sets will migrate from US Core to [HL7 Terminology](https://terminology.hl7.org/).
-</div>
-</div>
-
 *   [Race & Ethnicity - CDC](CodeSystem-cdcrec.html)*
 *   [US Core CarePlan Category Extension Codes](CodeSystem-careplan-category.html)
 *   [US Core Condition Category Extension Codes](CodeSystem-condition-category.html)
