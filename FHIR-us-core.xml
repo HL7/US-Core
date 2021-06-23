@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="http://build.fhir.org/ig/HL7/US-Core-R4" defaultVersion="current" defaultWorkgroup="" gitUrl="https://github.com/HL7/US-Core" url="http://hl7.org/fhir/us/core">
-<version code="current" url="http://build.fhir.org/ig/HL7/US-Core-R4"/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="" defaultWorkgroup="" gitUrl="https://github.com/HL7/US-Core" url="http://hl7.org/fhir/us/core">
 <version code="3.0.1" deprecated="true"/>
 <version code="2.0.0" deprecated="true"/>
 <version code="1.0.1" deprecated="true"/>
@@ -31,8 +30,8 @@
 <artifact id="Condition/example" key="Condition-example" name="Condition Example"/>
 <artifact deprecated="true" key="Conformance" name="Conformance"/>
 <artifact deprecated="true" key="Coverage" name="Coverage"/>
-<artifact deprecated="true" id="ValueSet/detailed-ethnicity" key="ValueSet-detailed-ethnicity" name="DetailedEthnicity"/>
-<artifact deprecated="true" id="ValueSet/detailed-race" key="ValueSet-detailed-race" name="DetailedRace"/>
+<artifact id="ValueSet/detailed-race" key="ValueSet-detailed-race" name="Detailed Race"/>
+<artifact id="ValueSet/detailed-ethnicity" key="ValueSet-detailed-ethnicity" name="Detailed ethnicity"/>
 <artifact deprecated="true" key="Device" name="Device"/>
 <artifact id="Device/udi-2" key="Device-udi-2" name="Device Defib Example"/>
 <artifact id="Device/udi-3" key="Device-udi-3" name="Device Knee Example"/>
@@ -71,10 +70,10 @@
 <artifact id="DiagnosticReport/metabolic-panel" key="DiagnosticReport-metabolic-panel" name="Metabolic Panel Example"/>
 <artifact id="Observation/neutrophils" key="Observation-neutrophils" name="Neutrophils Example"/>
 <artifact id="Observation/ofc-percentile" key="Observation-ofc-percentile" name="OFC Percentile Example"/>
+<artifact id="ValueSet/omb-ethnicity-category" key="ValueSet-omb-ethnicity-category" name="OMB Ethnicity Categories"/>
 <artifact id="ValueSet/omb-race-category" key="ValueSet-omb-race-category" name="OMB Race Categories"/>
 <artifact deprecated="true" key="Observation" name="Observation"/>
 <artifact id="Observation/satO2-fiO2" key="Observation-satO2-fiO2" name="Observation SatO2 FiO2 Example"/>
-<artifact deprecated="true" id="ValueSet/omb-ethnicity-category" key="ValueSet-omb-ethnicity-category" name="OmbEthnicityCategories"/>
 <artifact deprecated="true" key="Organization" name="Organization"/>
 <artifact id="Organization/example-organization-2" key="Organization-example-organization-2" name="Organization 2 Example"/>
 <artifact id="Observation/oxygen-saturation" key="Observation-oxygen-saturation" name="Oxygen Saturation Example"/>
@@ -92,7 +91,7 @@
 <artifact deprecated="true" key="Procedure" name="Procedure"/>
 <artifact id="Procedure/defib-implant" key="Procedure-defib-implant" name="Procedure R4 Defib Implant Example"/>
 <artifact deprecated="true" key="Provenance" name="Provenance"/>
-<artifact deprecated="true" id="CodeSystem/cdcrec" key="CodeSystem-cdcrec" name="RaceAndEthnicityCDC"/>
+<artifact id="CodeSystem/cdcrec" key="CodeSystem-cdcrec" name="Race &amp; Ethnicity - CDC"/>
 <artifact id="Procedure/rehab" key="Procedure-rehab" name="Rehab Example"/>
 <artifact id="Observation/respiratory-rate" key="Observation-respiratory-rate" name="Respiratory Rate Example"/>
 <artifact id="Organization/saint-luke-w-endpoint" key="Organization-saint-luke-w-endpoint" name="Saint Luke W Endpoint Example"/>
@@ -294,17 +293,15 @@
 <page key="capstatements" name="Capability Statements"/>
 <page key="clinical-notes-guidance" name="Clinical Notes Guidance"/>
 <page key="conformance-expectations" name="Conformance Expectations"/>
-<page key="DSTU2-to-R4-conversion" name="DSTU 2 to R 4 Conversion"/>
-<page deprecated="true" key="r2-r4-guidance" name="DSTU2 to R4 Conversion"/>
+<page key="r2-r4-guidance" name="DSTU2 to R4 Conversion"/>
 <page key="downloads" name="Downloads"/>
 <page key="all-examples" name="Examples"/>
 <page key="future-of-us-core" name="Future of US Core"/>
 <page key="general-guidance" name="General Guidance"/>
 <page key="guidance" name="Guidance"/>
-<page key="index" name="Home"/>
 <page deprecated="true" key="iglist" name="Implementation Registry (registry/iglist)" url="registry"/>
+<page key="index" name="Index"/>
 <page key="all-meds" name="Medication List Guidance"/>
-<page key="operations" name="Operations"/>
 <page key="profiles" name="Profiles and Extensions"/>
 <page deprecated="true" key="schemas-schematrons" name="Schemas &amp; Schematrons"/>
 <page key="searchparameters" name="Search Parameters and Operations"/>
