@@ -55,6 +55,10 @@ For ONC's USCDI requirements, each Patient must support the following additional
 ### Examples
 
 - [Patient-example](Patient-example.html)
+- [Patient Infant Example](Patient-infant-example.html)
+- [Patient Child Example](Patient-child-example.html)
+
+
 
 
 {% include link-list.md %}
