@@ -11,6 +11,7 @@
      - [X] review applied trackers
      - [X] errors and warnings  (see above)
      - [X] update ignoreWarnings.txt
+     - [ ] update to latest ig publisher and review address any new validation checks
      - [ ] final read through
 - [ ] remove all new content and green highlighted formatting
 - [X] update title and version to 4.0.0
