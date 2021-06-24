@@ -10,16 +10,16 @@
      - [X] errors and warnings  (see above)
      - [X] update ignoreWarnings.txt
      - [X] update to latest ig publisher and review address any new validation checks
-     - [ ] final read through
+     - [X] final read through
 - [X] remove all new content and green highlighted formatting
 - [X] update title and version to 4.0.0
-- [ ] update jira tracker file
-- [ ] update package-list.json
+- [X] update Jira tracker file
+- [X] update package-list.json
      - in pl.yml
         - update current to ver 4.0.0
         - change base path of changes from build to version 4.0.0
         - update package-list.json from pl.yml
-- [ ] remove this blue info box/change log from home page
+- [X] remove this blue info box/change log from home page
 
 
 Where possible, new and updated content will be highlighted with green text and background
