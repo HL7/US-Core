@@ -53,7 +53,7 @@ This IG focuses on access to a patient's medications.  It is therefore important
 
 A MedicationRequest resource query:
 
-  1.  **SHALL** be all that is required.
+  1. **SHALL** be all that is required.
      1. See the General Guidance section for additional rules and expectations for [Servers Requiring Status].
   1. **SHALL** include all MedicationRequest resources with an `intent` = "order" representing authorized medication orders directly derived from the system's orders.
   1. **SHALL** include all prescribed and "self-prescribed" MedicationRequest resources with an `intent` = "plan" representing *reported* medications

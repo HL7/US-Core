@@ -6,7 +6,7 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters and search parameter combinations SHALL be supported.:
+The following search parameters and search parameter combinations SHALL be supported:
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** search parameters:
 
@@ -44,7 +44,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported.:
+The following search parameter combinations SHOULD be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`status`](SearchParameter-us-core-observation-status.html)** search parameters:
     - including support for composite *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)

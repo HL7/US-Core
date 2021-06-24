@@ -6,7 +6,7 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters and search parameter combinations SHALL be supported.:
+The following search parameters and search parameter combinations SHALL be supported:
 
 1. **SHALL** support fetching a Patient using the **[`_id`](SearchParameter-us-core-patient-id.html)** search parameter:
 
@@ -62,7 +62,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported.:
+The following search parameter combinations SHOULD be supported:
 
 1. **SHOULD** support searching using the combination of the **[`birthdate`](SearchParameter-us-core-patient-birthdate.html)** and **[`family`](SearchParameter-us-core-patient-family.html)** search parameters:
 

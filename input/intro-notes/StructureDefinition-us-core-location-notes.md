@@ -6,7 +6,7 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters and search parameter combinations SHALL be supported.:
+The following search parameters and search parameter combinations SHALL be supported:
 
 1. **SHALL** support searching by location name using the **[`name`](SearchParameter-us-core-location-name.html)** search parameter:
 
@@ -31,7 +31,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported.:
+The following search parameter combinations SHOULD be supported:
 
 1. **SHOULD** support searching using the **[`address-city`](SearchParameter-us-core-location-address-city.html)** search parameter:
 

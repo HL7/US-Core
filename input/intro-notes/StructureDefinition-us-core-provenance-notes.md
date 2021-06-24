@@ -2,7 +2,7 @@
 
 #### Mandatory Search Parameters:
 
-The following search parameters, search parameter combinations SHALL be supported.  Any listed search parameter [modifiers], [comparators], [chains] and [composites] SHALL also be supported UNLESS they are listed as "optional" in which case they SHOULD be supported.:
+The following search parameters, search parameter combinations SHALL be supported.  Any listed search parameter [modifiers], [comparators], [chains] and [composites] SHALL also be supported UNLESS they are listed as "optional" in which case they SHOULD be supported:
 
 1. **SHALL** support searching for all US Core Profile resource types  [listed above](#prov-white-list) for a patient and all the Provenance records for those resources using a combination of the `patient` and **[`_revinclude`]** search parameters:
 
