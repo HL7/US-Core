@@ -11,7 +11,7 @@ Profile:
 ###### Mandatory Data Elements and Terminology
 
 
-The following data-elements are mandatory (i.e data MUST be present). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) are provided as links in the table below to view the formal summary, definitions, and  terminology requirements.  
+The following data-elements must always be present ([Mandatory] definition]). These are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [**Formal Profile Definition**](#profile) are provided as links in the table below to view the formal summary, definitions, and  terminology requirements.  
 
 **Each Observation must have:**
 
