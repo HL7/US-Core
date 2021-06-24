@@ -1,6 +1,12 @@
 
 The US Core FHIR profiles are designed to be the base set of requirements for FHIR implementation in the US. All US Realm implementation guides **SHALL** use the US Core profiles or **SHALL** explicitly state why they are unable to use. Throughout the development of US Core, implementers, government, and clinical community have brought forward additional requirements for US Core. This section outlines the approach to growth, and is holding place for items that with additional profiling and testing will be added to US Core.
 
+### US Core Yearly Updates
+
+Yearly US Core updates to reflect changes to U.S. Core Data for Interoperability (USCDI) v1 and requests from the US Realm FHIR community. This Approach is outlined in the figure below:
+
+{% include img.html img="yearly-updates.png" caption="Figure 1: US Core Yearly Updates" %}
+
 ### Growth Path of US Core
 
 The US Core implementation Guide will grow following these steps:
