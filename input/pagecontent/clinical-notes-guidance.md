@@ -10,8 +10,6 @@ This implementation guide defines how systems exchange eight "Common Clinical No
 
 Systems **SHALL** support, at *minimum*, these eight "Common Clinical Notes":
 
-- Eight "Common Clinical Notes" which systems **SHALL** support:
-
   1. [Consultation Note (11488-4)]
   1. [Discharge Summary (18842-5)]
   1. [History & Physical Note (34117-2)]
