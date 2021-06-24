@@ -41,12 +41,12 @@ Unless sufficient number of commenters request that this element (`DocumentRefer
 - For a C-CDA Clinical Summary of Care (CCD):
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.
    -  The format code is `urn:hl7-org:sdwg:ccda-structuredBody:2.1`
-- {:.bg-success}The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.attachment.url` or the content as inline base64 encoded data using `DocumentReference.attachment.data`.
+- The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.attachment.url` or the content as inline base64 encoded data using `DocumentReference.attachment.data`.
     -  Although both are marked as must support, the server system is not required to support both an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
     -  The client application SHALL support both elements.
     -  The `content.url` may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]), FHIR Document Bundle (i.e [base]/Bundle/[id] or other endpoint.
         - If the endpoint is outside of the FHIR base URL, it **SHOULD NOT** require additional authorization to access.
-- {:.bg-success}The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
+- The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
    - Some system may also expose the same organization in referenced Encounter in 'Encounter.serviceProvider'.
 
 

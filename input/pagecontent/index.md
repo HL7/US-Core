@@ -11,7 +11,7 @@
      - [X] review applied trackers
      - [X] errors and warnings  (see above)
      - [X] update ignoreWarnings.txt
-     - [ ] update to latest ig publisher and review address any new validation checks
+     - [X] update to latest ig publisher and review address any new validation checks
      - [ ] final read through
 - [ ] remove all new content and green highlighted formatting
 - [X] update title and version to 4.0.0
@@ -25,14 +25,14 @@
 
 
 Where possible, new and updated content will be highlighted with green text and background
-{:.new-content}
+{: .new-content}
 
 {{ site.data.package-list.list[0].desc }}
 
 </div>
 
 ### Introduction
-<div class='new-content' markdown='1'>
+
 
 The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. There are two different ways to implement US Core:
 1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information.
@@ -49,7 +49,7 @@ Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content w
 ### Background
 
 The US Core requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the [Office of the National Coordinator for Health Information Technology (ONC)] sponsored [Data Access Framework] (DAF) project. The Argonaut Data Query Implementation Guide superseded DAF and documented security and authorization and the querying of the [2015 Edition Common Clinical Data Set (CCDS)] and static documents.  US Core descended directly from the Argonaut guide to support FHIR Version STU3 and eventually FHIR R4 and The ONC [U.S. Core Data for Interoperability (USCDI) v1].
-</div>
+
 
 ### How to read this Guide
 
@@ -58,7 +58,7 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Home]\: The home page provides the introduction and background for US Core.
 - [Guidance]\: These pages provides overall guidance in using the profiles and transactions defined in this guide.
   - [General Guidance] provides guidance, definitions and requirements common to all actors used in this guide.
-  - {:.new-content}[Conformance Expectations] defines how CapabilityStatements are used and the expectations for mandatory and must support elements in the US Core Profiles. It provides guidance on how a system may support *only* the resources as profiled by US Core to represent clinical information (Profile Support) versus a system claiming conformance to *both* the US Core Profile content structure *and* the RESTful interactions defined for it (Profile Support + Interaction Support).
+  - [Conformance Expectations] defines how CapabilityStatements are used and the expectations for mandatory and must support elements in the US Core Profiles. It provides guidance on how a system may support *only* the resources as profiled by US Core to represent clinical information (Profile Support) versus a system claiming conformance to *both* the US Core Profile content structure *and* the RESTful interactions defined for it (Profile Support + Interaction Support).
   - [Clinical Notes Guidance] gives guidance on the interactions between Consumers and Producers of clinical notes.
   - [Medication List Guidance] gives guidance on how a patient or provider can access a patient's medications.
   - [Basic Provenance] provides implementers with important definitions to create and share the Provenance Resource.
@@ -73,30 +73,26 @@ This Guide is divided into several pages which are listed at the top of each pag
 - [Examples]\: List of links to all the examples used in this guide.
 - [Downloads]\: This page provides links to downloadable artifacts.
 
-
-
 ### US Core Actors
 
 The following actors are part of the US Core IG:
 
-<div class="bg-success" markdown="1">
 US Core Requestor
 : An application that initiates a data access request to retrieve patient data. This can be thought of as the client in a client-server interaction. The terms "US Core Requestor" and "Client" are used interchangeably throughout this guide and are not meant to limit this actor to only patient and provider apps, the same technology can be used by payers and other users. Consider these terms as a short-hand notation for something like “user application”
 
 US Core Responder
 : A product that responds to the data access request providing patient data. This can be thought of as the server in a client-server interaction. The terms "US Core Responder" and "Server" and "EHR" are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems.  The same technology can be used in HIEs, care coordination platforms, population health systems, etc. Consider these terms as a short-hand notation for something like “interoperable healthcare platform".
-</div>
+
 
 ### US Core Profiles
 
-The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the *Quick Start* Section of the profile page <span class="bg-success">when conforming to the US Core [Capability Statements]</span> for this profile.
+The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the *Quick Start* Section of the profile page when conforming to the US Core [Capability Statements] for this profile.
 
 {% include list-simple-profiles.xhtml %}
 
 See the General Guidance page for a [mapping] to the U.S. Core Data for Interoperability (USCDI).
 
 ----
-
 
 Primary Authors: Brett Marquard, Eric Haas, Gay Dolin
 

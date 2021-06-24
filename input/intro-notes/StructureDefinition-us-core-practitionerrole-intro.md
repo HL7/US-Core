@@ -10,8 +10,8 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Each PractitionerRole must support:**
 
-1. {:.new-content}An associated organization
-1. {:.new-content}An associated practitioner
+1. An associated organization
+1. An associated practitioner
 1. A role
 1. A specialty
 1. An associated location
@@ -20,7 +20,7 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
 **Profile specific implementation guidance:**
 
-* {:.new-content}At least one of the following elements must be present:
+* At least one of the following elements must be present:
     - `PractitionerRole.practitioner`
     - `PractitionerRole.organization`
     - `PractitionerRole.healthcareService`

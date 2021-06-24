@@ -17,16 +17,16 @@ Systems **SHALL** support, at *minimum*, these eight "Common Clinical Notes":
   1. [History & Physical Note (34117-2)]
   1. [Procedures Note (28570-0)]
   1. [Progress Note (11506-3)]
-  1. {:.new-content #FHIR-29824}[Imaging Narrative (18748-4)]
-  1. {:.new-content #FHIR-29824}[Laboratory Report Narrative (11502-2)]
-  1. {:.new-content #FHIR-29824}[Pathology Report Narrative (11526-1)]
+  1. [Imaging Narrative (18748-4)]
+  1. [Laboratory Report Narrative (11502-2)]
+  1. [Pathology Report Narrative (11526-1)]
 
 Systems **SHALL** support, at *minimum*, these three DiagnosticReport categories:
 
   1. [Cardiology (LP29708-2)]
   1. [Pathology (LP7839-6)]
   1. [Radiology (LP29684-5)]
-  
+
 A DiagnostisReport category query allows a Client to retrieve multiple documents in a single query (see [Support Requirements](#support-requirements)).
 
 The Argonaut project team provided this initial list to HL7 after surveying the participants in Argonaut and the US Veterans Administration (VA). They represent the *minimum* set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types such as:
@@ -54,7 +54,7 @@ In order to enable consistent access to scanned narrative-only clinical reports 
 * DocumentReference.content.attachment.url
 * DiagnosticReport.presentedForm.url
 
-For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2) This guide requires servers implement the duplicate reference to allow a client to find a Pathology report, or other Diagnostic Reports, in either Resource. <span markdown='1' class='bg-success'>If servers properly categorized scanned reports and used the correct resource per report type (e.g. Pathology scan in DiagnosticReport) this wouldn’t be required, however at the time of this IG's development, this duplication requirement is necessary due to a lack of consistency in proper use of these resources.</span>
+For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2) This guide requires servers implement the duplicate reference to allow a client to find a Pathology report, or other Diagnostic Reports, in either Resource. If servers properly categorized scanned reports and used the correct resource per report type (e.g. Pathology scan in DiagnosticReport) this wouldn’t be required, however at the time of this IG's development, this duplication requirement is necessary due to a lack of consistency in proper use of these resources.
 
 {% include img.html img="both-url.jpg" caption="Figure 2: Expose a PDF Report Through Both DiagnosticReport and DocumentReference" %}
 
@@ -104,8 +104,6 @@ This guide requires systems implement the [US Core DiagnosticReport Profile for 
 
 Other categories may be supported as well.
 
-<div markdown="1" class="new-content" id="FHIR-29824">
-
 The vendors that participated in the development of this guide didn't differentiate between the Diagnostic Report categories of Imaging and Radiology in their servers. Client applications that query with category code of [Radiology (LP29684-5)] will receive Radiology and other imaging reports.
 
 The following **SHOULD** be exposed via DiagnosticReport
@@ -114,8 +112,7 @@ The following **SHOULD** be exposed via DiagnosticReport
 * Pathology Report Narrative
 * Procedure Note
 
-Servers that support DiagnosticReport will include the clinical note narrative content in DiagnosticReport.presentedForm. 
-</div>
+Servers that support DiagnosticReport will include the clinical note narrative content in DiagnosticReport.presentedForm.
 
 A method for discovery of the types of notes and reports that a server supports is described in the [Determining Server Note Type](#using-expand) section below.
 
@@ -158,11 +155,11 @@ where:
 
 **Examples**
 
-{:.new-content #FHIR-26625}
+
 {% include examplebutton.html example="note-and-report-types-scenario1" b_title = "Click on Here To See Scenario 1 Example" %}
-{:.new-content #FHIR-26625}
+
 {% include examplebutton.html example="note-and-report-types-scenario2" b_title = "Click on Here To See Scenario 2 Example" %}
-{:.new-content #FHIR-26625}
+
 {% include examplebutton.html example="note-and-report-types-scenario3" b_title = "Click on Here To See Scenario 3 Example" %}
 {% include examplebutton.html example="note-and-report-types-scenario4" b_title = "Click on Here To See Scenario 4 Example" %}
 

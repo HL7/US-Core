@@ -19,19 +19,19 @@ With each major version in FHIR, the core data models have undergone changes.  T
 ### Referencing US Core Profiles
 
 The search expectations and US Core Profiles have been developed and tested using *logical FHIR ids*.  Therefore a [reference] to a US Core resource **SHOULD** include a logical id (`Reference.reference`), not an identifier (`Reference.identifier`).
-{:.new-content #FHIR-28573}
+
 
 Many of the profiles in this guide [reference] other FHIR resources that are also US Core Profiles.  This is defined in the formal profile definitions.  For example, [US Core CareTeam Profile] references US Core Patient.  For any other references to base FHIR resources[^2] or not formally defined in a US Core Profiles, the referenced resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.  US Core Resources in the [differential view] and marked as "Must Support" follow the Must Support rules described in [Conformance Expectations].  Other resources allowed in the base FHIR specification may be referenced even though the current publication framework does not display them.  For example, RelatedPerson is an allowed target reference in `DocumentReference.author`.
 
 ### Contained Resources
 
 When responding to a query, servers **SHOULD NOT** use inline [contained] resources to represent the returned data. The only time contained resource can be used is when the source data exists only within the context of the FHIR transaction. For example, the [Medication List Guidance] page describes how a contained Medication in MedicationRequest is used for representing the medication.  If referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.  
-{:.new-content #FHIR-28396}
+
 
 ### Missing Data
 
 There are situations when information on a particular data element is missing and the source system does not know reason for the absence of data. If the source system does not have data for an element with a minimum cardinality = 0 (including elements labeled *Must Support*), the data element is omitted from the resource.  If the source system does not have data for a *Mandatory* element (in other words, where the minimum cardinality is > 0), the core specification provides guidance which is summarized below:
-{:.new-content}
+
 
 1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
   - Use the code `unknown` - The value is expected to exist but is not known.
@@ -64,7 +64,6 @@ There are situations when information on a particular data element is missing an
         - use the appropriate "unknown" concept code from the value set if available
         - if the value set does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
 
-        <div class="new-content" markdown="1">
         Example: AllergyIntolerance resource where the manifestation is unknown.
         ~~~
         ...
@@ -85,10 +84,10 @@ There are situations when information on a particular data element is missing an
         ]
         ...
         ~~~
-        </div>
+
    - *required* binding strength (CodeableConcept or code datatypes):
       - use the appropriate "unknown" concept code from the value set if available
-      - {:.new-content}if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant
+      - if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant
 
         - For the US Core profiles, the following mandatory status elements with required binding have no appropriate "unknown" concept code:
           - `AllergyIntolerance.clinicalStatus`*
@@ -98,16 +97,12 @@ There are situations when information on a particular data element is missing an
           - `Goal.lifecycleStatus`
 
         *The clinicalStatus element has the following constraints: SHALL be present if verification status is not entered-in-error and SHALL NOT be present if verification Status is entered-in-error.
-        
-        If one of these status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set and a *warning* OperationOutcome **SHOULD** be included indicating that additional search results were found but could not be compliantly expressed and have been suppressed.
-            {:.new-content}
 
-<div class="new-content" markdown="1">
+        If one of these status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set and a *warning* OperationOutcome **SHOULD** be included indicating that additional search results were found but could not be compliantly expressed and have been suppressed.
 
 ###  Suppressed Data
 
 In situations where the specific piece of data is hidden due to a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know and should be avoided. For elements with a minimum cardinality = 0 (including elements labeled *Must Support*), the element **SHOULD** be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code `unknown` following the guidance on *Missing Data* in the section above.
-</div>
 
 ###  Using UCUM codes in the [Quantity] datatype
 
@@ -142,8 +137,6 @@ Both the [US Core Vital Signs Profile] and [US Core Laboratory Result Observatio
  }
 ```
 
-<div class="new-content" id="FHIR-28091" markdown="1">
-
 ### Representing Entered in Error and Deleted Information
 
 Clinical information that has been entered-in-error in the patient's record needs to be represented by the FHIR Server in a way so that Clients can expose the corrected information to their end users.
@@ -155,14 +148,10 @@ Clinical information that has been entered-in-error in the patient's record need
 - If the FHIR server has updated the resource status to `entered-in-error`:
     -  For *patient facing* applications, A FHIR Server  **SHOULD** remove the contents of resource  leaving only an id and status.   Note this typically will not be conformant with the US Core or FHIR StructureDefinitions.
     - For *provider facing* applications,  the content **MAY** be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.
-</div>
-
-<div class="new-content"  markdown="1">
 
 ### Narrative
 
 The [US Core CarePlan Profile] requires a narrative summary of the patient assessment and plan of treatment. However, *any* US Core Profile **MAY** include a human-readable narrative that contains a summary of the resource and may be used to represent the content of the resource to a human.  For further guidance, refer the [Narrative documentation] in the FHIR Specification.
-</div>
 
 ### Language Support
 
@@ -323,7 +312,6 @@ For more information see the [FHIR RESTful API]
 ### Search Syntax
 
 The [FHIR RESTful Search API] requires that servers that support search **SHALL** support the http `POST` based search. However, for all the supported search interactions in this guide, servers **SHALL** also support the `GET` based search. Note that these requirements for parameters apply to both `GET` and `POST` based queries.
-{: .new-content}
 
 For this guide, all the search interactions use the `GET` command with the following syntax:
 
@@ -339,7 +327,7 @@ For this guide, all the search interactions use the `GET` command with the follo
        - When searching using the `token` type searchparameter [(how to search by token)], the syntax `{system|}[code]` means that the system value is optional *for the client* to supply.:
          * The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
          * The server **SHALL** support both.
-       - {:.new-content #FHIR-27905}When searching using the `reference` type searchparameter [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply:
+       - When searching using the `reference` type searchparameter [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply:
          * The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
          * The server **SHALL** support both.
     - \{:m1|m2|...}: The list of supported search parameter modifiers
@@ -358,8 +346,6 @@ Note that the patient may be *implicit* in the context in some implementations (
 
 `GET [base]/[Resource-type]{?other-parameters}`
 
-<div class="new-content" markdown="1" id="FHIR-27906">
-
 #### Date Precision Expectations
 
 When searching using the `date` type searchparameter [(how to search by date)]:
@@ -373,8 +359,6 @@ The table below summarizes the date precision:
 |date|date|day|`GET [base]/Patient?family=Shaw&birthdate=2007-03-20`|
 |date|dateTime, Period|second + time offset|`GET [base]Observation?patient=555580&category=laboratory&date=ge2018-03-14T00:00:00-08:00`|
 {:.grid}
-
-</div>
 
 ### Search for Servers Requiring Status
 
@@ -400,7 +384,7 @@ For searches where the client does not supply a status parameter, an implementat
 
 ### Searching Multiple Patients
 
-Currently, most EHRs permit queries that provide a single patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described in the standard FHIR REST API. Instead, a user facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data <span markdown="1" class="bg-success">or for population-level queries for public health surveillance.</span>
+Currently, most EHRs permit queries that provide a single patient id, but do not support the comma separated query or a query where the patient parameter is omitted as described in the standard FHIR REST API. Instead, a user facing app can perform multiple "parallel" queries on a list of patient ids.  Alternatively, the [FHIR Bulk Data Access (Flat FHIR)] specification can be used to perform a "back end" system level query to access a large volumes of information on a group of individuals or when trying to identify and query against an unknown population such as when looking for population based research data or for population-level queries for public health surveillance.
 
 However, neither specification defines how a user facing provider app is able to seek realtime "operational" data on multiple patients (such as all patients with recent lab results). Opportunities to add this capability to this guide are discussed in [Future of US Core]
 

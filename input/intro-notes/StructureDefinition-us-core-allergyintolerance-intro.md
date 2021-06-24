@@ -32,9 +32,9 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 
   If a patient has not been asked about their allergies, this would be represented as:
 
-    * `AllergyIntolerance.code` = <span markdown ="1" class="bg-success">“1631000175102" (Patient not asked (contextual qualifier) (qualifier value))</span>
+    * `AllergyIntolerance.code` = “1631000175102" (Patient not asked (contextual qualifier) (qualifier value))
 
-    * `AllergyIntolerance.verificationStatus` = "unconfirmed" <span markdown ="1" class="bg-success">or empty (in other words, then element omitted)</span>
+    * `AllergyIntolerance.verificationStatus` = "unconfirmed" or empty (in other words, then element omitted)
 
   If a patient has been asked, but has indicated they have no known allergies, this would be represented as:
 

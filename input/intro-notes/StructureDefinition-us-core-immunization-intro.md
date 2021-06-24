@@ -23,12 +23,12 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each Immunization must support:**
 
 1.  a statusReason if the vaccine wasn't given
-1.  {:.new-content #FHIR-28452}a flag to indicate whether the vaccine was reported by someone other than the person who administered the vaccine.
+1.  a flag to indicate whether the vaccine was reported by someone other than the person who administered the vaccine.
 
 **Profile specific implementation guidance:**
 
 - Use the status code: `not-done` to represent that an immunization was *not* given.
-- {:.new-content #FHIR-29745}Based upon the ONC U.S. Core Data for Interoperability (USCDI) v1 requirements, [CVX vaccine codes] are required and the [NDC vaccine codes] **SHOULD** be supported as a translation. CDC provides the [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] to assist implementers. The example [Immunization-imm-1](Immunization-imm-1.html) illustrates using both the CVX and NDC codes based upon this table.
+- Based upon the ONC U.S. Core Data for Interoperability (USCDI) v1 requirements, [CVX vaccine codes] are required and the [NDC vaccine codes] **SHOULD** be supported as a translation. CDC provides the [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] to assist implementers. The example [Immunization-imm-1](Immunization-imm-1.html) illustrates using both the CVX and NDC codes based upon this table.
   - Note that the CVX code system contains some concepts that are  procedures, medications, or substances rather than immunizations. Implementers should not use these non-vaccine-related CVX codes.
 
 ### Examples

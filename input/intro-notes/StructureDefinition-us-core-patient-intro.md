@@ -28,8 +28,6 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 1. a birth date
 1. an address
 
-<div markdown="1" class="new-content" id="FHIR-27731">
-
 **Additional USCDI v1 Requirements**
 
 For ONC's USCDI requirements, each Patient must support the following additional elements. These elements are included in the formal definition of the profile. The patient examples include all of these elements.
@@ -42,15 +40,13 @@ For ONC's USCDI requirements, each Patient must support the following additional
 1. previous name
 1. suffix
 
-</div>
-
 **Profile specific implementation guidance:**
 - Note that *Previous Name* and *Suffix* are listed in the U.S. Core Data for Interoperability.
   - Suffix is represented using the `Patient.name.suffix` element.
   - Previous name is represented by providing an end date in the `Patient.name.period` element for a previous name.
   - The patient example below demonstrates the usage of both of these elements.
-- {:.new-content #FHIR-28138}\*The [HL7 Gender Harmony Project] is modeling gender and sex information which includes data elements, value sets, code systems. Upon completion and adoption by the HL7, US Core will update these concepts to align with the base FHIR resource and the Gender Harmony project recommendations. In the interim, guidance and background for representing patient gender and sex in FHIR can be found [here]({{site.data.fhir.path}}patient.html#gender).  In addition implementers may find the American Clinical Laboratory Association (ACLA) [best practice guidelines](http://www.acla.com/acla-best-practice-recommendation-for-administrative-and-clinical-patient-gender-used-for-laboratory-testing-and-reporting/) for administrative and clinical gender related to laboratory testing and reporting helpful.
-- {:.new-content #FHIR-24903}\*The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`. There is increasing concern over the use of Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have actively purged them from their systems and filter them out of incoming data.
+- \*The [HL7 Gender Harmony Project] is modeling gender and sex information which includes data elements, value sets, code systems. Upon completion and adoption by the HL7, US Core will update these concepts to align with the base FHIR resource and the Gender Harmony project recommendations. In the interim, guidance and background for representing patient gender and sex in FHIR can be found [here]({{site.data.fhir.path}}patient.html#gender).  In addition implementers may find the American Clinical Laboratory Association (ACLA) [best practice guidelines](http://www.acla.com/acla-best-practice-recommendation-for-administrative-and-clinical-patient-gender-used-for-laboratory-testing-and-reporting/) for administrative and clinical gender related to laboratory testing and reporting helpful.
+- \*The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`. There is increasing concern over the use of Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have actively purged them from their systems and filter them out of incoming data.
 
 ### Examples
 

@@ -35,7 +35,7 @@ This section lists the search parameters definitions that are used within the ca
   - [category](SearchParameter-us-core-condition-category.html)
   - [clinical-status](SearchParameter-us-core-condition-clinical-status.html)
   - [patient](SearchParameter-us-core-condition-patient.html)
-  - {:.new-content #FHIR-28181}[onset-date](SearchParameter-us-core-condition-onset-date.html)
+  - [onset-date](SearchParameter-us-core-condition-onset-date.html)
   - [code](SearchParameter-us-core-condition-code.html)
 
 
@@ -85,7 +85,7 @@ This section lists the search parameters definitions that are used within the ca
 
 
 **Location**
-  - {:.new-content #FHIR-28181}[name](SearchParameter-us-core-location-name.html)
+  - [name](SearchParameter-us-core-location-name.html)
   - [address](SearchParameter-us-core-location-address.html)
   - [address-city](SearchParameter-us-core-location-address-city.html)
   - [address-state](SearchParameter-us-core-location-address-state.html)
@@ -116,7 +116,7 @@ This section lists the search parameters definitions that are used within the ca
 
 
 **Organization**
-  - {:.new-content #FHIR-28181}[name](SearchParameter-us-core-organization-name.html)
+  - [name](SearchParameter-us-core-organization-name.html)
   - [address](SearchParameter-us-core-organization-address.html)
 
 

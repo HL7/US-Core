@@ -31,12 +31,12 @@ These value sets have been defined for this implementation guide.
 *   [US Core Smoking Status Observation Codes](ValueSet-us-core-smoking-status-observation-codes.html)
 * [US Core Observation Smokingstatus Max-Binding](ValueSet-us-core-observation-smokingstatus-max.html)
 *   [USPS Two Letter Alphabetic Codes](ValueSet-us-core-usps-state.html)
-*   {:.new-content #FHIR-28391}[US Core Vital Signs ValueSet](ValueSet-us-core-vital-signs.html)
+*   [US Core Vital Signs ValueSet](ValueSet-us-core-vital-signs.html)
 
 ### Code Systems
 
 See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.html) for a complete discussion on code systems and a list of codes system names used in FHIR.  Most code systems used in this guide are defined in the base FHIR specification. The following code systems are unique to this guide and not listed in the base FHIR specification.  If a URI is listed here, it **SHALL** be used in the US Core profiles to identify the code system in preference to any other code system URI.
-{:.new-content}
+
 
 **Code systems published in this IG** - Includes US Core defined code systems and externally defined code systems
 
@@ -48,11 +48,10 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 *   [US Core DocumentReferences Category Codes](CodeSystem-us-core-documentreference-category.html)
 *   [US Core Provenance Participant Type Extension Codes](CodeSystem-us-core-provenance-participant-type.html)
 
-<div markdown="1" class="new-content">
 <div markdown="1" class="stu-note">
 \* In the future, the Race & Ethnicity - CDC code system and value sets will migrate from US Core to [HL7 Terminology](https://terminology.hl7.org/).
 </div>
-</div>
+
 <br />
 
 **Externally Published code systems**
@@ -63,7 +62,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 |`http://www.cms.gov/Medicare/Coding/ICD10`|[CMS](http://www.cms.gov/Medicare/Coding/ICD10/)|*International Classification of Diseases, 10th Revision, Procedure Coding System (ICD-10-PCS)* -  See [ICD-10 PCS Codes](http://www.icd10data.com/icd10pcs) for online access to codes for general information purposes. |2.16.840.1.113883.6.4|
 |`http://ada.org/cdt`|[ADA](http://www.ada.org/en/publications/cdt)|*Code on Dental Procedures and Nomenclature*|2.16.840.1.113883.6.13|
 |`https://www.usps.com`|[USPS](http://pe.usps.com/text/pub28/28apb.htm)|*United States Postal Service Two–Letter State and Possession Abbreviations*|2.16.840.1.113883.6.92|
-{:.grid .new-content}
+{:.grid}
 
 <!--
 |[urn:oid:2.16.840.1.113883.6.238](CodeSystem-cdcrec.html)|[CDC](https://www.cdc.gov/phin/resources/vocabulary/index.html)|*Race & Ethnicity - CDC* - See [CDC Race and Ethnicity Code Set Version 1.0](https://www.cdc.gov/phin/resources/vocabulary/documents/cdc-race--ethnicity-background-and-purpose.pdf).|2.16.840.1.113883.6.238

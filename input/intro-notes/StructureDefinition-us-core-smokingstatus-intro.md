@@ -16,10 +16,10 @@ The following data-elements are mandatory (i.e data MUST be present) or must be 
 **Each Observation must have:**
 
 1.  a status
-1.  {:.new-content #FHIR-28436}a category code of ‘social-history’
+1.  a category code of ‘social-history’
 1.  a code for smoking observation
 1.  a patient
-1.  {:.new-content #FHIR-28090}when the observation occurred
+1.  when the observation occurred
 1.  a result value code for smoking status
 
 **Profile specific implementation guidance:**

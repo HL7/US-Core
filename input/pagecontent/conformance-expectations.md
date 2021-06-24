@@ -1,8 +1,6 @@
 
 This page defines how CapabilityStatements are used and the expectations for mandatory and must support elements in the US Core Profiles. It provides guidance on how a system may support *only* the resources as profiled by US Core to represent clinical information (Profile Support) versus a system claiming conformance to *both* the US Core Profile content structure *and* the RESTful interactions defined for it (Profile Support + Interaction Support).  Note that the conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
-{:.new-content}
 
-<div markdown="1" class="new-content">
 
 ### US Core Conformance Artifacts:
 
@@ -76,7 +74,6 @@ To claim conformance to a US Core Profile a server:
     example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:
 
     {% include examplebutton_default.html example="conform-patient" b_title = "Click Here an example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:" %}
-</div>
 
 ### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
 
@@ -96,7 +93,7 @@ In the "Snapshot Table" view in Figure 2, all the must support elements defined 
 
 ### Mandatory Elements
 
-When an element is mandatory (min=1), the data is expected to always be present. <span markdown="1" class="bg-success"> Very rarely it may not be and guidance for when data is missing is provided in the [Missing Data] section and in the next section.</span>  The convention in this guide is to mark all min=1 elements as must support unless the are nested under optional element. An example of this is [`CarePlan.status`].
+When an element is mandatory (min=1), the data is expected to always be present. Very rarely it may not be and guidance for when data is missing is provided in the [Missing Data] section and in the next section.  The convention in this guide is to mark all min=1 elements as must support unless the are nested under optional element. An example of this is [`CarePlan.status`].
 
 ### Must Support Elements
 
@@ -106,7 +103,7 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 * US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words US Core Requestors **SHOULD** be capable of displaying the data elements for human use or storing it for other purposes.
 * In situations where information on a particular data element is not present and the reason for absence is unknown, US Core Responders **SHALL NOT** include the data elements in the resource instance returned as part of the query results.
 * When querying US Core Responders, US Core Requestors **SHALL** interpret missing data elements within resource instances as data not present in the US Core Responder's system.
-* {:.new-content}In situations where information on a particular data element is missing or suppressed refer to the the guidance for [Missing Data] and [Suppressed Data].  In situations where information on a particular data element is missing *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information.  This is done by following the same methodology outlined in the [Missing Data] section, but using the appropriate reason code instead of `unknown`.
+* In situations where information on a particular data element is missing or suppressed refer to the the guidance for [Missing Data] and [Suppressed Data].  In situations where information on a particular data element is missing *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information.  This is done by following the same methodology outlined in the [Missing Data] section, but using the appropriate reason code instead of `unknown`.
 * US Core Requestors **SHALL** be able to process resource instances containing data elements asserting missing information.
 
 The terms *US Core Responder* Actor *US Core Requestor Actor* are used throughout the guide and typically refer to a server or a client.
@@ -142,11 +139,9 @@ To illustrate extensible binding for CodeableConcept datatype, the [US Core Alle
 
   {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 5: US Core AllergyIntolerance.code" %}
 
-<div markdown="1" class="new-content">
 Although the FHIR guidance for extensible bindings indicates that *all conceptual overlaps* including free text be mapped the coded values in the bindings, US Core guidance provides more flexibility for situations where implementers cannot fully comply with the FHIR base guidance. This flexibility is sometimes necessary and expected for legacy and text only data. For newly recorded, non legacy data, a system **SHOULD** meet the conformance of the value set.
 
 For example, the [US Core Procedure Codes] and  [US Core Condition Code] value sets contain a number of high-level abstract codes. For data not captured by the system transmitting the information, the coded data should be automatically converted to a fine-grained code from the specified value set. If this is not possible, the system can provide the existing code or the free text, *and a high-level abstract code*, such as SNOMED CT 'Procedure', to remain conformant with the extensible binding.
-</div>
 
 ##### Using multiple codes with CodeableConcept Datatype
 {:.no_toc}

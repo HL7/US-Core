@@ -30,7 +30,7 @@ In an upgraded R4 endpoint any data in DSTU2 should be in R4. However, not all d
     - MedicationStatement data mapped to MedicationRequest
     - care teams as represented by CarePlan SHALL be mapped to CareTeam in R4
 * Data **SHALL** not be degraded between versions.
-* {:.new-content}When updating between versions, clients should consider the impact of any changes to data visualization on the usability for the end user and the maintenance of data integrity.
+* When updating between versions, clients should consider the impact of any changes to data visualization on the usability for the end user and the maintenance of data integrity.
 
 
 ### Authorization Across Versions
