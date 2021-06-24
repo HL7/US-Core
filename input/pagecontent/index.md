@@ -1,6 +1,4 @@
-<div markdown="1" class="bg-info">
-
-
+<!-- div markdown="1" class="bg-info">
 
 **punch list**:
 
@@ -13,7 +11,7 @@
      - [X] update ignoreWarnings.txt
      - [X] update to latest ig publisher and review address any new validation checks
      - [ ] final read through
-- [ ] remove all new content and green highlighted formatting
+- [X] remove all new content and green highlighted formatting
 - [X] update title and version to 4.0.0
 - [ ] update jira tracker file
 - [ ] update package-list.json
@@ -27,9 +25,10 @@
 Where possible, new and updated content will be highlighted with green text and background
 {: .new-content}
 
-{{ site.data.package-list.list[0].desc }}
+{% raw %}{{ site.data.package-list.list[0].desc }}{% endraw %}
 
 </div>
+-->
 
 ### Introduction
 
