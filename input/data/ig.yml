@@ -1155,7 +1155,7 @@ definition:
     -   description: This value set currently contains all of LOINC. The codes selected
             should represent discrete and narrative diagnostic observations and reports
         exampleBoolean: false
-        name: US Core Diagnosticreport Report And Note Codes
+        name: US Core DiagnosticReport Report And Note Codes
         reference:
             reference: ValueSet/us-core-diagnosticreport-report-and-note-codes
     -   description: The US Core DocumentReferences Category Value Set is a 'starter
@@ -1272,15 +1272,15 @@ definition:
         reference:
             reference: Device/udi-3
     -   description: This is a DiagnosticReport cardiology report example for the
-            *US Core Diagnosticreport Note Profile*.
+            *US Core DiagnosticReport Note Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
-        name: Diagnosticreport Cardiology Report Example
+        name: DiagnosticReport Cardiology Report Example
         reference:
             reference: DiagnosticReport/cardiology-report
     -   description: This is a DiagnosticReport chest xray report example for the
-            *US Core Diagnosticreport Note Profile*.
+            *US Core DiagnosticReport Note Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
-        name: Diagnosticreport Chest Xray Report Example
+        name: DiagnosticReport Chest Xray Report Example
         reference:
             reference: DiagnosticReport/chest-xray-report
     -   description: This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example
@@ -1344,7 +1344,7 @@ definition:
         name: Careteam Example
         reference:
             reference: CareTeam/example
-    -   description: This is a CBC example for the *US Core Diagnosticreport Lab Profile*.
+    -   description: This is a CBC example for the *US Core DiagnosticReport Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
         name: CBC Example
         reference:
@@ -1441,7 +1441,7 @@ definition:
         name: MCHC Example
         reference:
             reference: Observation/mchc
-    -   description: This is a metabolic panel example for the *US Core Diagnosticreport
+    -   description: This is a metabolic panel example for the *US Core DiagnosticReport
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
         name: Metabolic Panel Example
@@ -1590,7 +1590,7 @@ definition:
         name: UDI 1 Example
         reference:
             reference: Device/udi-1
-    -   description: This is a urinalysis example for the *US Core Diagnosticreport
+    -   description: This is a urinalysis example for the *US Core DiagnosticReport
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
         name: Urinalysis Example

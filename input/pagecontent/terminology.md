@@ -18,7 +18,7 @@ These value sets have been defined for this implementation guide.
 *   [US Core Condition Code](ValueSet-us-core-condition-code.html)
 *   [US Core Diagnostic Report Laboratory Codes](ValueSet-us-core-diagnosticreport-lab-codes.html)
 *   [US Core DiagnosticReport Category](ValueSet-us-core-diagnosticreport-category.html)
-*   [US Core Diagnosticreport Report And Note Codes](ValueSet-us-core-diagnosticreport-report-and-note-codes.html)
+*   [US Core DiagnosticReport Report And Note Codes](ValueSet-us-core-diagnosticreport-report-and-note-codes.html)
 *   [US Core DocumentReference Category](ValueSet-us-core-documentreference-category.html)
 *   [US Core DocumentReference Type](ValueSet-us-core-documentreference-type.html)
 *   [US Core Encounter Type](ValueSet-us-core-encounter-type.html)
