@@ -1,5 +1,5 @@
 == Suppressed Messages ==
-# This issue is discussed here FHIR-12956. These warnings are due to using the actual base the _id searchparameter expression instead of using Resource.
+# This issue is discussed here FHIR-12956. These warnings are due to using the actual base the _id searchparameter expression instead of using "Resource".
 WARNING: SearchParameter/us-core-documentreference-id: SearchParameter: The expression 'DocumentReference.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
 WARNING: SearchParameter/us-core-encounter-id: SearchParameter: The expression 'Encounter.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
 WARNING: SearchParameter/us-core-patient-id: SearchParameter: The expression 'Patient.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
