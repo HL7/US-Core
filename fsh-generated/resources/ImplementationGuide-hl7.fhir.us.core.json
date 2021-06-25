@@ -426,7 +426,7 @@
         },
         "description": "**active | inactive | resolved**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreAllergyintoleranceClinicalStatus"
+        "name": "USCoreAllergyIntoleranceClinicalStatus"
       },
       {
         "reference": {
@@ -434,7 +434,7 @@
         },
         "description": "**Who the sensitivity is for**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreAllergyintolerancePatient"
+        "name": "USCoreAllergyIntolerancePatient"
       },
       {
         "reference": {
@@ -442,7 +442,7 @@
         },
         "description": "**Type of plan**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreCareplanCategory"
+        "name": "USCoreCarePlanCategory"
       },
       {
         "reference": {
@@ -450,7 +450,7 @@
         },
         "description": "**Time period plan covers**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreCareplanDate"
+        "name": "USCoreCarePlanDate"
       },
       {
         "reference": {
@@ -458,7 +458,7 @@
         },
         "description": "**Who the care plan is for**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreCareplanPatient"
+        "name": "USCoreCarePlanPatient"
       },
       {
         "reference": {
@@ -466,7 +466,7 @@
         },
         "description": "**draft | active | on-hold | revoked | completed | entered-in-error | unknown**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreCareplanStatus"
+        "name": "USCoreCarePlanStatus"
       },
       {
         "reference": {
@@ -474,7 +474,7 @@
         },
         "description": "**Who care team is for**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreCareteamPatient"
+        "name": "USCoreCareTeamPatient"
       },
       {
         "reference": {
@@ -482,7 +482,7 @@
         },
         "description": "**proposed | active | suspended | inactive | entered-in-error**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreCareteamStatus"
+        "name": "USCoreCareTeamStatus"
       },
       {
         "reference": {
@@ -546,7 +546,7 @@
         },
         "description": "**Which diagnostic discipline/department created the report**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDiagnosticreportCategory"
+        "name": "USCoreDiagnosticReportCategory"
       },
       {
         "reference": {
@@ -554,7 +554,7 @@
         },
         "description": "**The code for the report, as opposed to codes for the atomic results, which are the names on the observation resource referred to from the result**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDiagnosticreportCode"
+        "name": "USCoreDiagnosticReportCode"
       },
       {
         "reference": {
@@ -562,7 +562,7 @@
         },
         "description": "**The clinically relevant time of the report**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDiagnosticreportDate"
+        "name": "USCoreDiagnosticReportDate"
       },
       {
         "reference": {
@@ -570,7 +570,7 @@
         },
         "description": "**The subject of the report if a patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDiagnosticreportPatient"
+        "name": "USCoreDiagnosticReportPatient"
       },
       {
         "reference": {
@@ -578,7 +578,7 @@
         },
         "description": "**The status of the report**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDiagnosticreportStatus"
+        "name": "USCoreDiagnosticReportStatus"
       },
       {
         "reference": {
@@ -586,7 +586,7 @@
         },
         "description": "**Categorization of document**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDocumentreferenceCategory"
+        "name": "USCoreDocumentReferenceCategory"
       },
       {
         "reference": {
@@ -594,7 +594,7 @@
         },
         "description": "**When this document reference was created**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDocumentreferenceDate"
+        "name": "USCoreDocumentReferenceDate"
       },
       {
         "reference": {
@@ -602,7 +602,7 @@
         },
         "description": "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDocumentreferenceId"
+        "name": "USCoreDocumentReferenceId"
       },
       {
         "reference": {
@@ -610,7 +610,7 @@
         },
         "description": "**Who/what is the subject of the document**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDocumentreferencePatient"
+        "name": "USCoreDocumentReferencePatient"
       },
       {
         "reference": {
@@ -618,7 +618,7 @@
         },
         "description": "**Time of service that is being documented**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDocumentreferencePeriod"
+        "name": "USCoreDocumentReferencePeriod"
       },
       {
         "reference": {
@@ -626,7 +626,7 @@
         },
         "description": "**current | superseded | entered-in-error**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDocumentreferenceStatus"
+        "name": "USCoreDocumentReferenceStatus"
       },
       {
         "reference": {
@@ -634,7 +634,7 @@
         },
         "description": "**Kind of document (LOINC if possible)**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreDocumentreferenceType"
+        "name": "USCoreDocumentReferenceType"
       },
       {
         "reference": {
@@ -794,7 +794,7 @@
         },
         "description": "**Return prescriptions written on this date**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreMedicationrequestAuthoredon"
+        "name": "USCoreMedicationRequestAuthoredon"
       },
       {
         "reference": {
@@ -802,7 +802,7 @@
         },
         "description": "**Return prescriptions with this encounter identifier**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreMedicationrequestEncounter"
+        "name": "USCoreMedicationRequestEncounter"
       },
       {
         "reference": {
@@ -810,7 +810,7 @@
         },
         "description": "**Returns prescriptions with different intents**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreMedicationrequestIntent"
+        "name": "USCoreMedicationRequestIntent"
       },
       {
         "reference": {
@@ -818,7 +818,7 @@
         },
         "description": "**Returns prescriptions for a specific patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreMedicationrequestPatient"
+        "name": "USCoreMedicationRequestPatient"
       },
       {
         "reference": {
@@ -826,7 +826,7 @@
         },
         "description": "**Status of the prescription**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCoreMedicationrequestStatus"
+        "name": "USCoreMedicationRequestStatus"
       },
       {
         "reference": {
@@ -962,7 +962,7 @@
         },
         "description": "**Practitioner that is able to provide the defined services for the organization**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCorePractitionerrolePractitioner"
+        "name": "USCorePractitionerRolePractitioner"
       },
       {
         "reference": {
@@ -970,7 +970,7 @@
         },
         "description": "**The practitioner has this specialty at an organization**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCorePractitionerroleSpecialty"
+        "name": "USCorePractitionerRoleSpecialty"
       },
       {
         "reference": {
@@ -1257,7 +1257,7 @@
           "reference": "Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2"
         },
         "description": "This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example example for the *Bundle Profile*.",
-        "name": "Practitionerrole_Practitioner_Endpoint_Bundle_Example Example",
+        "name": "PractitionerRole_Practitioner_Endpoint_Bundle_Example Example",
         "exampleBoolean": true
       },
       {
@@ -1280,8 +1280,8 @@
         "reference": {
           "reference": "AllergyIntolerance/example"
         },
-        "description": "This is a allergyintolerance example for the *US Core Allergyintolerance Profile*.",
-        "name": "Allergyintolerance Example",
+        "description": "This is a allergyintolerance example for the *US Core AllergyIntolerance Profile*.",
+        "name": "AllergyIntolerance Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
       },
       {
@@ -1289,7 +1289,7 @@
           "reference": "Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901"
         },
         "description": "This is a allergyintolerance provenance example for the *Bundle Profile*.",
-        "name": "Allergyintolerance Provenance Example",
+        "name": "AllergyIntolerance Provenance Example",
         "exampleBoolean": true
       },
       {
@@ -1336,8 +1336,8 @@
         "reference": {
           "reference": "CareTeam/example"
         },
-        "description": "This is a careteam example for the *US Core Careteam Profile*.",
-        "name": "Careteam Example",
+        "description": "This is a careteam example for the *US Core CareTeam Profile*.",
+        "name": "CareTeam Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
       },
       {
@@ -1352,7 +1352,7 @@
         "reference": {
           "reference": "CarePlan/colonoscopy"
         },
-        "description": "This is a colonoscopy example for the *US Core Careplan Profile*.",
+        "description": "This is a colonoscopy example for the *US Core CarePlan Profile*.",
         "name": "Colonoscopy Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
       },
@@ -1384,7 +1384,7 @@
         "reference": {
           "reference": "DocumentReference/episode-summary"
         },
-        "description": "This is a episode summary example for the *US Core Documentreference Profile*.",
+        "description": "This is a episode summary example for the *US Core DocumentReference Profile*.",
         "name": "Episode Summary Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
       },
@@ -1608,7 +1608,7 @@
         "reference": {
           "reference": "MedicationRequest/self-tylenol"
         },
-        "description": "This is a self tylenol example for the *Medicationrequest Profile*.",
+        "description": "This is a self tylenol example for the *MedicationRequest Profile*.",
         "name": "Self Tylenol Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
       },
@@ -1856,7 +1856,7 @@
         "reference": {
           "reference": "MedicationRequest/uscore-mo1"
         },
-        "description": "This is a uscore mo1 example for the *US Core Medicationrequest Profile*.",
+        "description": "This is a uscore mo1 example for the *US Core MedicationRequest Profile*.",
         "name": "Uscore MO1 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
       },
@@ -1864,7 +1864,7 @@
         "reference": {
           "reference": "MedicationRequest/uscore-mo2"
         },
-        "description": "This is a uscore MO2 example for the *US Core Medicationrequest Profile*.",
+        "description": "This is a uscore MO2 example for the *US Core MedicationRequest Profile*.",
         "name": "Uscore MO2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
       },

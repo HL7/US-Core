@@ -474,7 +474,7 @@ definition:
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreAllergyintoleranceClinicalStatus
+        name: USCoreAllergyIntoleranceClinicalStatus
         reference:
             reference: SearchParameter/us-core-allergyintolerance-clinical-status
     -   description: "**Who the sensitivity is for**  \n**NOTE**: This US Core SearchParameter\
@@ -482,14 +482,14 @@ definition:
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreAllergyintolerancePatient
+        name: USCoreAllergyIntolerancePatient
         reference:
             reference: SearchParameter/us-core-allergyintolerance-patient
     -   description: "**Type of plan**  \n**NOTE**: This US Core SearchParameter definition\
             \ extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreCareplanCategory
+        name: USCoreCarePlanCategory
         reference:
             reference: SearchParameter/us-core-careplan-category
     -   description: "**Time period plan covers**  \n**NOTE**: This US Core SearchParameter\
@@ -497,7 +497,7 @@ definition:
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreCareplanDate
+        name: USCoreCarePlanDate
         reference:
             reference: SearchParameter/us-core-careplan-date
     -   description: "**Who the care plan is for**  \n**NOTE**: This US Core SearchParameter\
@@ -505,7 +505,7 @@ definition:
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreCareplanPatient
+        name: USCoreCarePlanPatient
         reference:
             reference: SearchParameter/us-core-careplan-patient
     -   description: "**draft | active | on-hold | revoked | completed | entered-in-error\
@@ -513,7 +513,7 @@ definition:
             \ the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreCareplanStatus
+        name: USCoreCarePlanStatus
         reference:
             reference: SearchParameter/us-core-careplan-status
     -   description: "**Who care team is for**  \n**NOTE**: This US Core SearchParameter\
@@ -521,7 +521,7 @@ definition:
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreCareteamPatient
+        name: USCoreCareTeamPatient
         reference:
             reference: SearchParameter/us-core-careteam-patient
     -   description: "**proposed | active | suspended | inactive | entered-in-error**\
@@ -529,7 +529,7 @@ definition:
             \ context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreCareteamStatus
+        name: USCoreCareTeamStatus
         reference:
             reference: SearchParameter/us-core-careteam-status
     -   description: "**The category of the condition**  \n**NOTE**: This US Core\
@@ -593,7 +593,7 @@ definition:
             \ context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDiagnosticreportCategory
+        name: USCoreDiagnosticReportCategory
         reference:
             reference: SearchParameter/us-core-diagnosticreport-category
     -   description: "**The code for the report, as opposed to codes for the atomic\
@@ -602,7 +602,7 @@ definition:
             \ extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDiagnosticreportCode
+        name: USCoreDiagnosticReportCode
         reference:
             reference: SearchParameter/us-core-diagnosticreport-code
     -   description: "**The clinically relevant time of the report**  \n**NOTE**:\
@@ -610,7 +610,7 @@ definition:
             \ the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDiagnosticreportDate
+        name: USCoreDiagnosticReportDate
         reference:
             reference: SearchParameter/us-core-diagnosticreport-date
     -   description: "**The subject of the report if a patient**  \n**NOTE**: This\
@@ -618,7 +618,7 @@ definition:
             [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDiagnosticreportPatient
+        name: USCoreDiagnosticReportPatient
         reference:
             reference: SearchParameter/us-core-diagnosticreport-patient
     -   description: "**The status of the report**  \n**NOTE**: This US Core SearchParameter\
@@ -626,7 +626,7 @@ definition:
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDiagnosticreportStatus
+        name: USCoreDiagnosticReportStatus
         reference:
             reference: SearchParameter/us-core-diagnosticreport-status
     -   description: "**Categorization of document**  \n**NOTE**: This US Core SearchParameter\
@@ -634,7 +634,7 @@ definition:
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDocumentreferenceCategory
+        name: USCoreDocumentReferenceCategory
         reference:
             reference: SearchParameter/us-core-documentreference-category
     -   description: "**When this document reference was created**  \n**NOTE**: This\
@@ -642,7 +642,7 @@ definition:
             [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDocumentreferenceDate
+        name: USCoreDocumentReferenceDate
         reference:
             reference: SearchParameter/us-core-documentreference-date
     -   description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
@@ -650,7 +650,7 @@ definition:
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDocumentreferenceId
+        name: USCoreDocumentReferenceId
         reference:
             reference: SearchParameter/us-core-documentreference-id
     -   description: "**Who/what is the subject of the document**  \n**NOTE**: This\
@@ -658,7 +658,7 @@ definition:
             [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDocumentreferencePatient
+        name: USCoreDocumentReferencePatient
         reference:
             reference: SearchParameter/us-core-documentreference-patient
     -   description: "**Time of service that is being documented**  \n**NOTE**: This\
@@ -666,7 +666,7 @@ definition:
             [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDocumentreferencePeriod
+        name: USCoreDocumentReferencePeriod
         reference:
             reference: SearchParameter/us-core-documentreference-period
     -   description: "**current | superseded | entered-in-error**  \n**NOTE**: This\
@@ -674,7 +674,7 @@ definition:
             [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDocumentreferenceStatus
+        name: USCoreDocumentReferenceStatus
         reference:
             reference: SearchParameter/us-core-documentreference-status
     -   description: "**Kind of document (LOINC if possible)**  \n**NOTE**: This US\
@@ -682,7 +682,7 @@ definition:
             \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreDocumentreferenceType
+        name: USCoreDocumentReferenceType
         reference:
             reference: SearchParameter/us-core-documentreference-type
     -   description: "**Classification of patient encounter**  \n**NOTE**: This US\
@@ -841,7 +841,7 @@ definition:
             [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreMedicationrequestAuthoredon
+        name: USCoreMedicationRequestAuthoredon
         reference:
             reference: SearchParameter/us-core-medicationrequest-authoredon
     -   description: "**Return prescriptions with this encounter identifier**  \n\
@@ -849,7 +849,7 @@ definition:
             \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreMedicationrequestEncounter
+        name: USCoreMedicationRequestEncounter
         reference:
             reference: SearchParameter/us-core-medicationrequest-encounter
     -   description: "**Returns prescriptions with different intents**  \n**NOTE**:\
@@ -857,7 +857,7 @@ definition:
             \ the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreMedicationrequestIntent
+        name: USCoreMedicationRequestIntent
         reference:
             reference: SearchParameter/us-core-medicationrequest-intent
     -   description: "**Returns prescriptions for a specific patient**  \n**NOTE**:\
@@ -865,7 +865,7 @@ definition:
             \ the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreMedicationrequestPatient
+        name: USCoreMedicationRequestPatient
         reference:
             reference: SearchParameter/us-core-medicationrequest-patient
     -   description: "**Status of the prescription**  \n**NOTE**: This US Core SearchParameter\
@@ -873,7 +873,7 @@ definition:
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCoreMedicationrequestStatus
+        name: USCoreMedicationRequestStatus
         reference:
             reference: SearchParameter/us-core-medicationrequest-status
     -   description: "**The classification of the type of observation**  \n**NOTE**:\
@@ -1013,7 +1013,7 @@ definition:
             \ extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCorePractitionerrolePractitioner
+        name: USCorePractitionerRolePractitioner
         reference:
             reference: SearchParameter/us-core-practitionerrole-practitioner
     -   description: "**The practitioner has this specialty at an organization** \
@@ -1021,7 +1021,7 @@ definition:
             \ context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
-        name: USCorePractitionerroleSpecialty
+        name: USCorePractitionerRoleSpecialty
         reference:
             reference: SearchParameter/us-core-practitionerrole-specialty
     -   description: "**A code to identify a  procedure**  \n**NOTE**: This US Core\
@@ -1286,7 +1286,7 @@ definition:
     -   description: This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example
             example for the *Bundle Profile*.
         exampleBoolean: true
-        name: Practitionerrole_Practitioner_Endpoint_Bundle_Example Example
+        name: PractitionerRole_Practitioner_Endpoint_Bundle_Example Example
         reference:
             reference: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2
     -   description: This is a Procedure R4 defib implant example for the *US Core
@@ -1300,16 +1300,16 @@ definition:
         name: Acme Lab Example
         reference:
             reference: Organization/acme-lab
-    -   description: This is a allergyintolerance example for the *US Core Allergyintolerance
+    -   description: This is a allergyintolerance example for the *US Core AllergyIntolerance
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance
-        name: Allergyintolerance Example
+        name: AllergyIntolerance Example
         reference:
             reference: AllergyIntolerance/example
     -   description: This is a allergyintolerance provenance example for the *Bundle
             Profile*.
         exampleBoolean: true
-        name: Allergyintolerance Provenance Example
+        name: AllergyIntolerance Provenance Example
         reference:
             reference: Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901
     -   description: This is a blood glucose example for the *US Core Observation
@@ -1339,9 +1339,9 @@ definition:
         name: BUN Example
         reference:
             reference: Observation/bun
-    -   description: This is a careteam example for the *US Core Careteam Profile*.
+    -   description: This is a careteam example for the *US Core CareTeam Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
-        name: Careteam Example
+        name: CareTeam Example
         reference:
             reference: CareTeam/example
     -   description: This is a CBC example for the *US Core DiagnosticReport Lab Profile*.
@@ -1349,7 +1349,7 @@ definition:
         name: CBC Example
         reference:
             reference: DiagnosticReport/cbc
-    -   description: This is a colonoscopy example for the *US Core Careplan Profile*.
+    -   description: This is a colonoscopy example for the *US Core CarePlan Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan
         name: Colonoscopy Example
         reference:
@@ -1369,7 +1369,7 @@ definition:
         name: Encounter 1 Example
         reference:
             reference: Encounter/example-1
-    -   description: This is a episode summary example for the *US Core Documentreference
+    -   description: This is a episode summary example for the *US Core DocumentReference
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
         name: Episode Summary Example
@@ -1527,7 +1527,7 @@ definition:
         name: Saint Luke W Endpoint Example
         reference:
             reference: Organization/saint-luke-w-endpoint
-    -   description: This is a self tylenol example for the *Medicationrequest Profile*.
+    -   description: This is a self tylenol example for the *MedicationRequest Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
         name: Self Tylenol Example
         reference:
@@ -1707,13 +1707,13 @@ definition:
         name: Uscore Med2 Example
         reference:
             reference: Medication/uscore-med2
-    -   description: This is a uscore mo1 example for the *US Core Medicationrequest
+    -   description: This is a uscore mo1 example for the *US Core MedicationRequest
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
         name: Uscore MO1 Example
         reference:
             reference: MedicationRequest/uscore-mo1
-    -   description: This is a uscore MO2 example for the *US Core Medicationrequest
+    -   description: This is a uscore MO2 example for the *US Core MedicationRequest
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
         name: Uscore MO2 Example
