@@ -29,11 +29,94 @@ list:
 
   - version: 4.0.0
     desc: |-
-      Continuous Integration Build for US Core (latest in version control)
+      The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2021 HL7 balloting process.  The resolution of the community comments has been agreed to and voted on by the members of the sponsoring work group [HL7 International Cross-Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).
 
-      The January 2021 Ballot comment resolutions have been voted on by the members of the sponsoring work group [HL7 International Cross-Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).
+      The key changes are summarized below:
 
-      **January 2021 Ballot comments and links to the updated content**
+      1. New *Conformance Expectations* page
+        - Defining different ways to implement and conform to US Core.
+        - Clarification of the Must Support definitions as it relates to various FHIR elements such a choice datatype and references.
+      2. Publishing a set US Core Vital Signs independent of the FHIR core profile upon which it is based
+        - *US Core Vital Signs Profile*
+          - *US Core Blood Pressure Profile*
+          - *US Core BMI Profile*
+          - *US Core Head Circumference Profile*
+          - *US Core Body Height Profile*
+          - *US Core Body Weight Profile*
+          - *US Core Body Temperature Profile*
+          - *US Core Heart Rate Profile*
+          - *US Core Respiratory Rate Profile*
+      3. Linking terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable:
+
+        <table class='grid'>
+        <thead>
+        <tr class='header'>
+        <th>US Core Value Set</th>
+        <th>VSAC Value Set</th>
+        <th>VSAC OID</th>
+        <th>extensional?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class='odd'>
+        <td>Detailed ethnicity</td>
+        <td>Detailed Ethnicity</td>
+        <td>2.16.840.1.114222.4.11.877</td>
+        <td>No</td>
+        </tr>
+        <tr class='odd'>
+        <td>OMB Ethnicity Categories</td>
+        <td>Ethnicity</td>
+        <td>2.16.840.1.114222.4.11.837</td>
+        <td>Yes</td>
+        </tr>
+        <tr class='even'>
+        <td>US Core CareTeam Provider Roles</td>
+        <td>Care Team Member Function</td>
+        <td>2.16.840.1.113762.1.4.1099.30</td>
+        <td>Yes</td>
+        </tr>
+        <tr class='odd'>
+        <td>US Core Medication Codes (RxNorm)</td>
+        <td>Medication Clinical Drug</td>
+        <td>2.16.840.1.113762.1.4.1010.4</td>
+        <td>Yes</td>
+        </tr>
+        <tr class='even'>
+        <td>US Core Provider Specialty (NUCC)</td>
+        <td>Healthcare Provider Taxonomy</td>
+        <td>2.16.840.1.114222.4.11.1066</td>
+        <td>No</td>
+        </tr>
+        <tr class='odd'>
+        <td>US Core Smoking Status</td>
+        <td>Smoking Status</td>
+        <td>2.16.840.1.113883.11.20.9.38</td>
+        <td>Yes</td>
+        </tr>
+        <tr class='even'>
+        <td>US Core Vaccine Administered Value Set (CVX)</td>
+        <td>CVX Vaccines Administered Vaccine Set</td>
+        <td>2.16.840.1.113762.1.4.1010.6</td>
+        <td>Yes</td>
+        </tr>
+        <tr class='odd'>
+        <td>US Core Common substances for allergy and intolerance documentation including refutations</td>
+        <td>Common substances for allergy and intolerance documentation including refutations</td>
+        <td>2.16.840.1.113762.1.4.1186.8</td>
+        <td>No</td>
+        </tr>
+        </tbody>
+        </table>
+
+      4. Migrating to the standard set of HL7 FHIR IG templates for publishing.  Although we strove to minimize the differences between this version and the previous versions of US Core, these changes are notable:
+         - Additional Features include:
+              - Addition of vocabulary and constraint tables to the profile pages
+              - Addition of a summary table and to the profile page introduction
+              - Addition of "Snapshot Table (Must Support)" Tab to profile views
+         - Due to restrictions on customizable content, the full narrative text summaries of profiles is no longer available.
+
+      5. Addressing over 90 Januart 20201 Ballot related trackers resulting in the followed detailed changes.
 
       Listed below are the resolved trackers for this version:
 
