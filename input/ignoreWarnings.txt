@@ -18,7 +18,7 @@ ERROR: ValueSet.where(id = 'simple-language'): Error from server: Language value
 # This warning and info alert are still extant from ballot version of US Core and has yet to be resolved with publishing/terminology server. see: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20core.20procedure.20example.20error
 WARNING: Procedure/rehab: Procedure.code: The code "HZ30ZZZ" is not valid in the system http://www.cms.gov/Medicare/Coding/ICD10 (from http://tx.fhir.org/r4)
 INFORMATION: Procedure/rehab: Procedure.code.coding[1]: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
-# update jira file for us core #119 (https://github.com/HL7/JIRA-Spec-Artifacts/pull/119)
+# update jira file for us core commit 446577a into HL7:master 2021/06/27
 WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
 # Code System URI 'http:// www.ama-assn.org/go/cpt' is unknown so the code cannot be validated are not recognized by the validator due to IP restrictions
 WARNING: Procedure/defib-implant: Procedure.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code because the value set or code system is not known to the validator]
