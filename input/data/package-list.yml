@@ -27,7 +27,8 @@ list:
     current: true
     fhirversion: 4.0.1
   - version: 4.0.0
-    desc: >-
+    date: "2021-06-28"
+    descmd: >-
       The changes in this annual update to US Core have been reviewed and
       commented upon by the public through the January 2021 HL7 balloting
       process.  The resolution of the community comments has been agreed to and
@@ -535,13 +536,13 @@ list:
       that is technically not conformant with the base FHIR vital profile. See
       [Zulip
       chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20Core.20QA.20Issue.20.233-.20nasty.20profiling.20error)
-    path: 'http://hl7.org/fhir/us/core/STU4.0.0'
+    path: 'http://hl7.org/fhir/us/core/STU4'
     status: trial-use
     sequence: STU4
     fhirversion: 4.0.1
   - version: 3.2.0
     date: 2021-1-30
-    desc: >-
+    descmd: >-
       The changes in this version have been voted on by the members of the
       sponsoring work group [HL7 International Cross-Group
       Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).  This
@@ -1041,7 +1042,7 @@ list:
     fhirversion: 4.0.1
   - version: 3.1.1
     date: 2020-6-30
-    desc: >-
+    descmd: >-
       This update addresses several technical corrections and errata and
       clarifications. They have been reviewed and voted on by the members of the
       [HL7 International Cross-Group Projects
@@ -1260,7 +1261,7 @@ list:
     fhirversion: 4.0.1
   - version: 3.1.0
     date: '2019-10-31'
-    desc: >
+    descmd: >
       In order meet the proposed *ONC U.S. Core Data for Interoperability**
       (USCDI) regulatory requirements for access to patient data, this STU
       Update of the US Core Implementation Guide has added new content.
@@ -1314,7 +1315,7 @@ list:
     fhirversion: 4.0.1
   - version: 3.0.1
     date: '2019-09-01'
-    desc: >-
+    descmd: >-
       In order meet the proposed ONC U.S. Core Data for Interoperability (USCDI)
       regulatory requirements for access to patient data, this STU Update for
       Comment Version of the US Core Implementation Guide has added new content.
@@ -1356,7 +1357,7 @@ list:
     fhirversion: 4.0.0
   - version: 3.0.0
     date: '2019-06-15'
-    desc: >-
+    descmd: >-
       FHIR R4 version of US Core which added profiles for exchanging Clinical
       Notes, expanded search expectations, and updated guidance as a results of
       comments from balloters.
@@ -1373,7 +1374,7 @@ list:
     fhirversion: 4.0.0
   - version: 2.0.0
     date: '2018-12-04'
-    desc: |
+    descmd: |
       Publication added the following profiles:
       1)US Core DocumentReference Profile
       2)US Core Encounter Profile
