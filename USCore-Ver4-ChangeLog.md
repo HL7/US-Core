@@ -85,7 +85,7 @@ The key changes are summarized below:
         - Addition of \"Snapshot Table (Must Support)\" Tab to profile views
    - Due to restrictions on customizable content, the full narrative text summaries of profiles is no longer available.
 
-5. Addressing over 90 Januart 20201 Ballot related trackers resulting in the followed detailed changes.
+5. Addressing over 90 January 2021 Ballot related trackers resulting in the followed detailed changes.
 
 Listed below are the resolved trackers for this version:
 
