@@ -63,7 +63,7 @@ The following search parameter combinations SHOULD be supported:
 
     Example:
     
-      1. GET [base]Condition?patient=555580&amp;date=ge2018-01-14
+      1. GET [base]Condition?patient=555580&amp;onset-date=ge2018-01-14
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and date.  ([how to search by reference] and [how to search by date])
 
