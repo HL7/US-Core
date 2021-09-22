@@ -5,6 +5,9 @@ title: USCDI v2 New Stuff Slides
 
 # USCDI v2 New Stuff
 
+[![hackmd-github-sync-badge](https://hackmd.io/DF6JwJ72Q7e-1Zw40L9FLA/badge)](https://hackmd.io/DF6JwJ72Q7e-1Zw40L9FLA)
+
+
 ---
 
 ![](https://i.imgur.com/84xKUeG.png)
