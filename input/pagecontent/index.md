@@ -1,34 +1,34 @@
-<!-- div markdown="1" class="bg-info">
+<div markdown="1" class="bg-info">
 
 **punch list**:
 
-- [X] [Resolve Trackers](https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=12001)
-- [X] Apply Trackers
-  - [X] list open issues in package-list
+- [ ] [Resolve Trackers](https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=12001)
+- [ ] Apply Trackers
+  - [ ] list open issues in package-list
 - [ ] QA
-     - [X] review applied trackers
-     - [X] errors and warnings  (see above)
-     - [X] update ignoreWarnings.txt
-     - [X] update to latest ig publisher and review address any new validation checks
-     - [X] final read through
-- [X] remove all new content and green highlighted formatting
-- [X] update title and version to 4.0.0
-- [X] update Jira tracker file
-- [X] update package-list.json
+     - [ ] review applied trackers
+     - [ ] errors and warnings  (see above)
+     - [ ] update ignoreWarnings.txt
+     - [ ] update to latest ig publisher and review address any new validation checks
+     - [ ] final read through
+- [ ] remove all new content and green highlighted formatting
+- [ ] update title and version to 5.0.0
+- [ ] update package-list.json
+
      - in pl.yml
-        - update current to ver 4.0.0
+        - update current to ver .0.0
         - change base path of changes from build to version 4.0.0
         - update package-list.json from pl.yml
-- [X] remove this blue info box/change log from home page
-
+- [ ] remove this blue info box/change log from home page
+- [ ] update Jira tracker file
 
 Where possible, new and updated content will be highlighted with green text and background
 {: .new-content}
 
-{% raw %}{{ site.data.package-list.list[0].desc }}{% endraw %}
+{{ site.data.package-list.list[0].descmd }}
 
 </div>
--->
+
 
 Key updates and detailed changes between this and prior versions are available in the [US Core change notes]
 {:.stu-note}

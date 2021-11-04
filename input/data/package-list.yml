@@ -21,13 +21,61 @@ introduction: >-
   the needs of US implementers.
 list:
   - version: current
-    desc: Continuous Integration Build for US Core (latest in version control)
+    descmd: |
+      Continuous Integration Build for Da Vinci CDEX (latest in version control)
+
+      The January 2022 Ballot:
+        - Adds [United States Core Data for Interoperability (USCDI) V2](https://www.healthit.gov/sites/default/files/page/2021-07/Standards_Bulletin_2021-3.pdf) updates that the Office of the National Coordinator (ONC) published in July of 2021 with these new Data Elements and Classes:
+          - SDOH Assessments, Goals, Interventions and Problems/Health Concerns
+          - Clinical Tests and Diagnostic Imaging
+          - Patient Gender Identity and Sexual Identity
+          - Care Team Member Name, Identifier, Location, Telecom and Role
+          - Encounter Diagnosis, Disposition, Location, Time, Type
+          - Problems Date of Diagnosis and Date of Resolution
+
+        - Addressed and applied over 30 trackers submitted by implementers since the previous STU2 ballot for US Core ver 4.0.0:
+
+           **Status**: **Summary**:(**Jira Issue**) **Link to Updated Content**
+
+           1. **Resolved - change required**: US Core Birth Sex Extension [FHIR-34133](https://jira.hl7.org/browse/FHIR-34133) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Triaged**: Clarify MustSupport for Observaiton.component.value[x] vs dataAbsentReason [FHIR-34061](https://jira.hl7.org/browse/FHIR-34061) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Wrong URL resolution of http://hl7.org/fhir/us/core/OperationDefinition/docref [FHIR-34044](https://jira.hl7.org/browse/FHIR-34044) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Patient Ethnicity does not have the same Null options as Race [FHIR-34036](https://jira.hl7.org/browse/FHIR-34036) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: US Core search page is not working [FHIR-34028](https://jira.hl7.org/browse/FHIR-34028) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: US Core Procedure.performed[x] is 1..1 but not conducive with the various procedure.statuses [FHIR-33243](https://jira.hl7.org/browse/FHIR-33243) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Invalid element ids for type choice elements [FHIR-33233](https://jira.hl7.org/browse/FHIR-33233) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: docref missing actual content as mandatory element in narrative [FHIR-33160](https://jira.hl7.org/browse/FHIR-33160) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Clarify distinct between repeated search params and ""composite"" params [FHIR-33159](https://jira.hl7.org/browse/FHIR-33159) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Applied**: Condition search example has invalid ""date"" param [FHIR-33157](https://jira.hl7.org/browse/FHIR-33157) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Clarify requirement on date searches without prefix [FHIR-33156](https://jira.hl7.org/browse/FHIR-33156) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Wrong link to IG homepage from package manifest [FHIR-33132](https://jira.hl7.org/browse/FHIR-33132) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Utilize ""use"" field for patient previous name and previous address [FHIR-33080](https://jira.hl7.org/browse/FHIR-33080) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: US Core to USCDI guidance page -- add patient email [FHIR-33079](https://jira.hl7.org/browse/FHIR-33079) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: remove requirement to use 401 only where authentication failed from capabiltystatement [FHIR-33069](https://jira.hl7.org/browse/FHIR-33069) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: us-core-1 Invariant cannot fail [FHIR-33052](https://jira.hl7.org/browse/FHIR-33052) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Clarify Guidance for missing data for Coding data type element [FHIR-33048](https://jira.hl7.org/browse/FHIR-33048) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Referencing incorrect figure [FHIR-32961](https://jira.hl7.org/browse/FHIR-32961) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Change drug class value set for allergens to align with C-CDA [FHIR-32953](https://jira.hl7.org/browse/FHIR-32953) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: For Condition, US Core is binding *all* repetitions of category instead of slicing [FHIR-32857](https://jira.hl7.org/browse/FHIR-32857) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Differentials include things unchanged from base resource and/or parent profile [FHIR-32848](https://jira.hl7.org/browse/FHIR-32848) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Wrong name on BMI Profile [FHIR-32847](https://jira.hl7.org/browse/FHIR-32847) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Illegal Binding in USCoreCarePlanProfile [FHIR-32846](https://jira.hl7.org/browse/FHIR-32846) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Triaged**: Condition.encounter not Must Support yet implementation guidance references the data element as an ""and"" condition for querying [FHIR-32844](https://jira.hl7.org/browse/FHIR-32844) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: Provide a caution to the user that a query of MedicationRequest does not provide complete information. [FHIR-32720](https://jira.hl7.org/browse/FHIR-32720) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Resolved - change required**: patient search parameter definitions should only target Patient  [FHIR-32305](https://jira.hl7.org/browse/FHIR-32305) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Triaged**: Update Valuesets in PractitionerRole [FHIR-31997](https://jira.hl7.org/browse/FHIR-31997) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Duplicate**: Draft v2 of USCDI removes Imaging, Lab, and Path narratives out of the Clinical Notes data class. [FHIR-30661](https://jira.hl7.org/browse/FHIR-30661) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Triaged**: Should US Core Procedure Value set include LOINC? [FHIR-30478](https://jira.hl7.org/browse/FHIR-30478) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Duplicate**: Need to update the value set and tighten the binding strength on dischargeDisposition [FHIR-30212](https://jira.hl7.org/browse/FHIR-30212) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Triaged**: Add date search parameters to reduce latency - USCore #142 [FHIR-20119](https://jira.hl7.org/browse/FHIR-20119) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
     path: 'http://build.fhir.org/ig/HL7/US-Core'
     status: ci-build
     current: true
     fhirversion: 4.0.1
+
+
   - version: 4.0.0
-    date: "2021-06-28"
+    date: '2021-06-28'
     descmd: >-
       The changes in this annual update to US Core have been reviewed and
       commented upon by the public through the January 2021 HL7 balloting
@@ -982,9 +1030,8 @@ list:
 
       1. Change binding for CareTeam.participant.role from NUCC to Care Team
       Member Function, replace the US Core Careteam Provider Roles Value Set
-      with VSAC reference
-      ([FHIR-27769](https://jira.hl7.org/browse/FHIR-27769)) [See Change
-      Here](StructureDefinition-us-core-careteam.html)
+      with VSAC reference ([FHIR-27769](https://jira.hl7.org/browse/FHIR-27769))
+      [See Change Here](StructureDefinition-us-core-careteam.html)
 
 
       1. Remove US Core Server Capability Statement *requires* support for HTTP
