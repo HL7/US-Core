@@ -4,6 +4,24 @@
 
 - [ ] [Resolve Trackers](https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=12001)
 - [ ] Apply Trackers
+
+for profile/element updates:
+- [ ] update profile/create artifact
+- [ ]  optionally create ValueSet/Search parameter artifact
+- [ ] update uscdi table here: input/includes/uscdi_table.md
+- [ ] update intro here: input/intro-notes
+- [ ] update notes/search - using python script and upload here: input/intro-notes
+- [ ] optionally update SP and SP page
+- [ ] update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources
+- [ ] update/create Examples
+- [ ] update change log
+
+for narrative updates
+
+- [ ] update Narrative
+- [ ] optionally Update Narrative
+- [ ] update change log
+
   - [ ] list open issues in package-list
 - [ ] QA
      - [ ] review applied trackers
