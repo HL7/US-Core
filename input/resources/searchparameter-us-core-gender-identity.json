@@ -1,0 +1,34 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "us-core-gender-identity",
+  "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-gender-identity",
+  "name": "USCoreGenderIdentity",
+  "status": "active",
+  "date": "2021-11-04",
+  "description": "Returns patients with an gender-identity extension matching the specified code.",
+  "code": "gender-identity",
+  "base": [
+    "Patient"
+  ],
+  "type": "token",
+  "expression": "Patient.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/patient-genderIdentity').extension.value.code",
+  "xpath": "f:Patient/f:extension[@url='http://hl7.org/fhir/StructureDefinition/patient-genderIdentity']/f:extension/f:valueCoding/f:code/@value xpathUsage: normal",
+  "multipleOr": true,
+  "_multipleOr": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  },
+  "multipleAnd": true,
+  "_multipleAnd": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  }
+}

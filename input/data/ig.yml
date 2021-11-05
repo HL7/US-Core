@@ -532,6 +532,12 @@ definition:
         name: USCoreCareTeamStatus
         reference:
             reference: SearchParameter/us-core-careteam-status
+    -   description: Returns conditions with an [assertedDate extension](http://hl7.org/fhir/StructureDefinition/condition-assertedDate)
+            matching the specified date (dateTime).
+        exampleBoolean: false
+        name: USCoreAssertedDate
+        reference:
+            reference: SearchParameter/us-core-asserted-date
     -   description: "**The category of the condition**  \n**NOTE**: This US Core\
             \ SearchParameter definition extends the usage context of the\n[Conformance\
             \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
@@ -701,6 +707,12 @@ definition:
         name: USCoreEncounterDate
         reference:
             reference: SearchParameter/us-core-encounter-date
+    -   description: Returns encounters with an discharge-disposition matching the
+            specified code.
+        exampleBoolean: false
+        name: USCoreDischargeDisposition
+        reference:
+            reference: SearchParameter/us-core-discharge-disposition
     -   description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
             \ definition extends the usage context of the\n[Conformance expectation\
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
@@ -747,6 +759,12 @@ definition:
         name: USCoreEthnicity
         reference:
             reference: SearchParameter/us-core-ethnicity
+    -   description: Returns patients with an gender-identity extension matching the
+            specified code.
+        exampleBoolean: false
+        name: USCoreGenderIdentity
+        reference:
+            reference: SearchParameter/us-core-gender-identity
     -   description: "**proposed | planned | accepted | active | on-hold | completed\
             \ | cancelled | entered-in-error | rejected**  \n**NOTE**: This US Core\
             \ SearchParameter definition extends the usage context of the\n[Conformance\

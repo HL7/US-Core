@@ -486,6 +486,14 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-asserted-date"
+        },
+        "description": "Returns conditions with an [assertedDate extension](http://hl7.org/fhir/StructureDefinition/condition-assertedDate) matching the specified date (dateTime).",
+        "exampleBoolean": false,
+        "name": "USCoreAssertedDate"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-condition-category"
         },
         "description": "**The category of the condition**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
@@ -654,6 +662,14 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-discharge-disposition"
+        },
+        "description": "Returns encounters with an discharge-disposition matching the specified code.",
+        "exampleBoolean": false,
+        "name": "USCoreDischargeDisposition"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-encounter-id"
         },
         "description": "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
@@ -699,6 +715,14 @@
         "description": "Returns patients with an ethnicity extension matching the specified code.",
         "exampleBoolean": false,
         "name": "USCoreEthnicity"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-gender-identity"
+        },
+        "description": "Returns patients with an gender-identity extension matching the specified code.",
+        "exampleBoolean": false,
+        "name": "USCoreGenderIdentity"
       },
       {
         "reference": {
