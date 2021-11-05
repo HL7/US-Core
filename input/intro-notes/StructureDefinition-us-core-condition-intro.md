@@ -30,7 +30,8 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 5.  {:.new-content}a date of resolution
 6.  {:.new-content}a date when recorded*
 
-{:.new-content}*See the next section for how the date of diagnosis is represented in this Profile. 
+*See the next section for how the date of diagnosis is represented in this Profile.
+{:.new-content}
 
 **Profile specific implementation guidance:**
 
