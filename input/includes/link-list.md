@@ -248,7 +248,7 @@
 [security considerations]: {{site.data.fhir.path}}security.html
 [us-core-ethnicity]: SearchParameter-us-core-ethnicity.html
 [us-core-race]: SearchParameter-us-core-race.html
-[us-core-gender-identity]: SearchParameter-us-gender-identity.html
+[us-core-gender-identity]: SearchParameter-us-core-gender-identity.html
 [us-core-asserted-date]: SearchParameter-us-core-asserted-date.html
 [us-core-discharge-disposition]: SearchParameter-us-core-discharge-disposition.html
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
