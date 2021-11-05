@@ -41,9 +41,10 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.  An example search is shown in the [Quick Start](#search) section below.
     * {:.new-content}When `Condition.category` is "encounter-diagnosis" the encounter, **SHOULD** be referenced in `Condition.encounter`.
 * {:.new-content}There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDate`, or `Condition.recordedDate`.
-    * Although all three are marked as must support, the server system is not required to support both [assertedDate Extension] and `Condition.onsetDate`, but **SHALL** support  at least one of these two elements and `Condition.recordedDate`.
+    * Although all three are marked as must support, the server is not required to support all.
+	* A server **SHALL** support `Condition.recordedDate`.
+    * A server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDate`. A server may support both, which means they support all 3 locations. 
     * The client application **SHALL** support all three elements.
-The client application SHALL support both elements. 
 
 ### Examples
 

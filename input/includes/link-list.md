@@ -12,6 +12,7 @@
 [Argonaut Data Query]: http://www.fhir.org/guides/argonaut/r2/
 [Argonaut Provider Directory]: http://www.fhir.org/guides/argonaut/pd//release1/index.html
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page
+[assertedDate Extension]: http://hl7.org/fhir/R4/extension-condition-asserteddate.html
 [Audit Logging]: {{site.data.fhir.path}}security.html#audit
 [Audit Logging]: {{site.data.fhir.path}}security.html#audit%20logging
 [AuditEvent]: {{site.data.fhir.path}}auditevent.html
