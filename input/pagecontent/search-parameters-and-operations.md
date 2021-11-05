@@ -9,8 +9,7 @@ The following operations and search parameters have been defined for the US Core
 
 ### Search Parameters
 
-
-*Condition**
+**Condition**
 - {:.new-content}[us-core-asserted-date]
 
 **Encounter**
