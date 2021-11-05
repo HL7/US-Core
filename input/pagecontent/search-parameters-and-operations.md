@@ -9,16 +9,17 @@ The following operations and search parameters have been defined for the US Core
 
 ### Search Parameters
 
+
 *Condition**
-- [us-core-asserted-date]
+- {:.new-content}[us-core-asserted-date]
 
 **Encounter**
-- [us-core-discharge-disposition]
+- {:.new-content}[us-core-discharge-disposition]
 
 **Patient**
 - [us-core-race]
 - [us-core-ethnicity]
-- [us-core-gender-identity]
+- {:.new-content}[us-core-gender-identity]
 
 NOTE: The following search parameters **SHALL NOT** be interpreted on their own as requirements for server:
 This section lists the search parameters definitions that are used within the capability statement to define the search capabilities expectations for the US Core Server.  This is not a list of search requirements for the client or server.
