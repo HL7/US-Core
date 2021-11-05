@@ -67,15 +67,24 @@
         ]
       },
       {
-        "id": "Condition.clinicalStatus",
-        "path": "Condition.clinicalStatus",
+        "id": "Condition.extension:assertedDate",
+        "path": "Condition.extension",
+        "sliceName": "assertedDate",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "CodeableConcept"
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/condition-assertedDate"
+            ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.clinicalStatus",
+        "path": "Condition.clinicalStatus",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -91,13 +100,6 @@
       {
         "id": "Condition.verificationStatus",
         "path": "Condition.verificationStatus",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -115,12 +117,6 @@
         "path": "Condition.category",
         "short": "problem-list-item | encounter-diagnosis | health-concern",
         "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "condition": [
           "us-core-1"
         ],
@@ -140,12 +136,6 @@
         "id": "Condition.code",
         "path": "Condition.code",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -162,8 +152,6 @@
       {
         "id": "Condition.subject",
         "path": "Condition.subject",
-        "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -179,6 +167,80 @@
             "map": "Condition.patient"
           }
         ]
+      },
+      {
+        "id": "Condition.encounter",
+        "path": "Condition.encounter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.onset[x]",
+        "path": "Condition.onset[x]",
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "dateTime"
+          },
+          {
+            "code": "Age"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.abatement[x]",
+        "path": "Condition.abatement[x]",
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ],
+            "code": "dateTime"
+          },
+          {
+            "code": "Age"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.recordedDate",
+        "path": "Condition.recordedDate",
+        "mustSupport": true
       }
     ]
   }
