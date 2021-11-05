@@ -29,9 +29,9 @@ list:
           - [SDOH Assessments](http://build.fhir.org/ig/HL7/US-Core/#), [Goals](http://build.fhir.org/ig/HL7/US-Core/#), [Interventions](http://build.fhir.org/ig/HL7/US-Core/#) and [Problems/Health Concerns](http://build.fhir.org/ig/HL7/US-Core/#)
           - [Clinical Tests](http://build.fhir.org/ig/HL7/US-Core/#) and [(http://build.fhir.org/ig/HL7/US-Core/#)]
           - [Patient Gender Identity](http://build.fhir.org/ig/HL7/US-Core/#) and [Sexual Identity](http://build.fhir.org/ig/HL7/US-Core/#)
-          - [Care Team Member](http://build.fhir.org/ig/HL7/US-Core/#) Name, Identifier, Location, Telecom and Role
-          - [Encounter](http://build.fhir.org/ig/HL7/US-Core/#) Diagnosis, Disposition, Location, Time, Type
-          - [Problems](http://build.fhir.org/ig/HL7/US-Core/#) Date of Diagnosis and Date of Resolution
+          - [Care Team Member](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careteam.html) Name, Identifier, Location, Telecom and Role
+          - [Encounter](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-encounter.html) Diagnosis, Disposition, Location, Time, Type
+          - [Problems](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition.html) Date of Diagnosis and Date of Resolution
 
         - Addressed and applied over 30 trackers submitted by implementers since the previous STU2 ballot for US Core ver 4.0.0:
 
