@@ -25,12 +25,12 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 **Each Condition must support:**
 
 1.  a verification status
-2.  an encounter
-3.  a date of diagnosis*
-5.  a date of resolution
-6.  a date when recorded*
+2.  {:.new-content}an encounter
+3.  {:.new-content}a date of diagnosis*
+5.  {:.new-content}a date of resolution
+6.  {:.new-content}a date when recorded*
 
-*See the next section for how the date of diagnosis may be representedt in this Profile. 
+{:.new-content}*See the next section for how the date of diagnosis is represented in this Profile. 
 
 **Profile specific implementation guidance:**
 
@@ -38,7 +38,8 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 * The 2015 Certification rule requires the use of SNOMED CT for problem list entries. Following the rules for [required] binding to coded data types, ICD or other local codes can be used as translations to SNOMED CT.
 * The [US Core Condition Code] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and may be used as the primary code for current encounter diagnoses.
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.  An example search is shown in the [Quick Start](#search) section below.
-* There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDate`, or `Condition.recordedDate`.
+    * {:.new-content}When `Condition.category` is "encounter-diagnosis" the encounter, **SHOULD** be referenced in `Condition.encounter`.
+* {:.new-content}There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDate`, or `Condition.recordedDate`.
     * Although all three are marked as must support, the server system is not required to support both [assertedDate Extension] and `Condition.onsetDate`, but **SHALL** support  at least one of these two elements and `Condition.recordedDate`.
     * The client application **SHALL** support all three elements.
 The client application SHALL support both elements. 
