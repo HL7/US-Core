@@ -29,10 +29,13 @@ References:
 
 1. Date of Diagnosis vs ~~Onset date~~.
     1. Michelle (Cerner) requesting ONC to clarify 
-        1. Onset vs 
-        2. Recorded vs 
-        3. Date of Diagnosis
-1. Encounter Location: Is this the
+        1. Onset Date
+        2. AssertedDate
+        3. Recorded Date (original)
+        4. Record Date (localsystem)
+
+   >ONC Response – ONC maintains the current definition of Date of Diagnosis and have communicated that with the working groups responsible for updating appropriate exchange standards FHIR US Core and C-CDA to insure accurate representation of this data element in future versions of these standards.
+
     1. :heavy_check_mark: physical location of *where* the encounter occurred or
     2. :x: location of organization *which* provided the service?</br>
     
@@ -99,19 +102,28 @@ Structured evaluation of risk (e.g., PRAPARE, Hunger Vital Sign, AHC-HRSN screen
 
 #### US Core Proposal (assuming is *the results of a PRAPARE, Hunger Vital Sign, AHC-HRSN screening tool*)
 
-We have discussed several different options for this (see open questions above) including Observations for summaries and/or the answers to assessment tools and/or Q/QR.  Our current proposal is tentative based on further ONC and implementer input.
+We have discussed several different options for this (see open questions above) including Observations for summaries and/or the answers to assessment tools and/or Q/QR.  
 
-Based on implementer feedback, EHR's not supporting QuestionnaireResponse for this, but using observations directly.  So to support this use case and the SDOH use case in the future use the SDOHCC Observation Screening Response : http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-ObservationScreeningResponse.html profile.
+Based on:
+- Most SDOH assessment tools today don't use FHIR Q/QR for data capture 
+- Difficulty in representing stored assessment tool data as QR vs Observations for most ehrs using FHIR facades
+- And ability to convert QR to Observations ( with GRAVITY supported tools ).  I don't think EHRs (representing their customers)
+- QR not designed for sharing data. 
 
-with existing US Core search criteria for Observations
+There would be an undue on burden EHR's that are not supporting QR to support exchange of QR.
 
+The proposal is to use both the:
 
+- SDOHCC Observation Screening Response: http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-ObservationScreeningResponse.html profile.
+- SDOHCC Observation Assessment:
+http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/StructureDefinition-SDOHCC-ObservationAssessment.html 
+
+with existing US Core search criteria for Observations.
 
 ##### Next Steps
 
 - Require a detailed review of SDOH ObservationScreeningResponse MS elements
 
-- Review what current implementations capture and can expose.**
 
 ----
 
@@ -154,6 +166,8 @@ Our original proposal added category. In subsequent discussions servers question
 - Proposed updates to [US Core Goal Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-goal.html)
     *  **CREATE** `Goal.description` value set with LOINC and SNOMED (extensible). Make it clear free text goals are still allowed.
     *  **Add** SHALL search criteria for `Goal.Description`    
+    *  **ADD** Gravity provided SDOH goals Value Set to Implementation guidance section.
+    *  *Proposal* Consider Adding `Goal.achievementStatus`
     * ~~**Add** `category` 0..1 MS~~
     *  ~~Create Value set with an **extensible binding** containing a single Code: [LG41762-2 ]~~
  
@@ -200,15 +214,15 @@ conditions in which people live, learn, work, and play and their effects on heal
 
 **ADD** US Core ServiceRequest Profile to represent the intervention request. 
 
-**ADD** Guidance that existing [US Core Procedure Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html) can be used to record a completed service or intervention. (Need additional discussion on when/whether systems should use `ServiceRequest.status=completed` vs Procedure Resource)
+**ADD** Guidance that existing [US Core Procedure Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-procedure.html) can be used to record a completed service or intervention. (`ServiceRequest.status=completed` only when a Procedure associated with is completed)
 
 
 ##### Formal Definition
 
-Rendered output [US Core ServiceRequest Profile](https://healthedata1.github.io/Sushi-Sandbox/StructureDefinition-uscore-servicerequest.html)
+Rendered output [US Core ServiceRequest Profile](https://healthedata1.github.io/Sushi-Sandbox/StructureDefinition-us-core-servicerequest.html)
 
 
-<iframe src="https://healthedata1.github.io/Sushi-Sandbox/StructureDefinition-uscore-servicerequest.html" width="100%" height="500">
+<iframe src="https://healthedata1.github.io/Sushi-Sandbox/StructureDefinition-us-core-servicerequest.html" width="100%" height="500">
 </iframe>
 
 ----
@@ -543,14 +557,14 @@ A person’s internal sense of being a man, woman, both, or neither.
 
 Based on HL7 Vocabulary Gender Harmony work:
 
-**ADD** Gender Identity Observation Profile to capture historical gender with a date.
-- **Open Question** Using the existing [Gender Identity Extension](http://hl7.org/fhir/R4/extension-patient-genderidentity.html) in the Patient Profile to capture record *current* gender (This simplifies client applications locating the current gender)
-- **ADD** Guidance - Historically systems only had a single field to capture Patient Gender and Sex. FHIR Core is making strides to disambiguate  different [Patient Gender and Sex representations](http://hl7.org/fhir/R4/patient.html#gender). Implementations of US Core on legacy systems may return *Clinical Sex*, *Gender Identity*, or *Legal Sex* in `Patient.gender`.
+- **ADD** existing [Gender Identity Extension](http://hl7.org/fhir/R4/extension-patient-genderidentity.html) in the Patient Profile to capture record *current* gender (This simplifies client applications locating the current gender)
+    - Use above valueset + "UNK"
+    - **ADD** Custom Patient SearchParameter
+    - **ADD** Guidance - Historically systems only had a single field to capture Patient Gender and Sex. FHIR Core is making strides to disambiguate  different [Patient Gender and Sex representations](http://hl7.org/fhir/R4/patient.html#gender). Implementations of US Core on legacy systems may return *Clinical Sex*, *Gender Identity*, or *Legal Sex* in `Patient.gender`.
 
-**ADD** Sexual Orientation Observation
-
-
-
+- **ADD** Sexual Orientation Observation
+    - Use above valueset
+    - Use existing Observation search parameters
 
 <!-- * An extension on the Patient resource for Gender Identity vs
 
@@ -561,9 +575,8 @@ Based on HL7 Vocabulary Gender Harmony work:
 ----
 
 #### Gender Identity
-- category = `social-history`
-- code = [76691-5 Gender Identity](https://loinc.org/76691-5/)
-- valueCodeableConcept = see USCDI Vocabulary above with *required* binding
+
+- see USCDI Vocabulary above with *required* binding
 - Assuming "Choose not to disclose. nullFlavor ASKU" means:
      1. Patient leaves the question blank or 
      1. Patient tics the 'choose not to disclose'  
@@ -587,7 +600,7 @@ Example:
      1. Patient leaves the question blank or 
      1. Patient tics the 'choose not to disclose'  
      
-    and missing data uses `Observation.dataAbsentReason` with code `unknown`
+    and missing data  code `UNK`
 
 ----
 
@@ -725,12 +738,59 @@ Identifies the location or type of facility to where the patient left following 
 
 - Problems: Date of Resolution
 - Problems: Date of Diagnosis
+- Encounter Diagnosis (see above)
 
 ----
 
 ### US Core Proposal
     
-- Requirement met with [US Core Condition Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html)and **2 new elements and search requirements**.
+- Requirement met with [US Core Condition Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition.html) and **3 new elements and search requirements**.
+
+#### There is no consensus on Date of Diagnosis: :confounded: 
+
+Three Candidates none of which captures the semantics correctly:
+
+1. Extension: assertedDate
+2. Condition.onsetDate
+3. Condition.recordedDate
+
+Last Suggestion was to make all three Must Support:
+- Condition.recordedDate Must Support
+- Extension: assertedDate and/or Condition.onsetDate *conditionally* Must Support
+(Must support at least one)
+
+Then instruction for determining the date of diagnosis ( or closest thing to it )
+```flow
+st=>start: Start
+e=>end: 'Date of Diagnosis ~ assertedDate
+e2=>end: Date of Diagnosis ~ onsetDate
+e3=>end: Date of Diagnosis ~ recordedDate
+e4=>end: Date of Diagnosis ~ either assertedDate or onsetDate
+cond=>condition: assertedDate ?
+cond2=>condition: onsetDate ?
+cond3=>condition: onsetDate ?
+st->cond
+cond(yes)->cond2
+cond2(yes)->e4
+cond2(no)->e
+
+```
+```flow
+st=>start: Start
+e=>end: 'Date of Diagnosis ~ assertedDate
+e2=>end: Date of Diagnosis ~ onsetDate
+e3=>end: Date of Diagnosis ~ recordedDate
+e4=>end: Date of Diagnosis ~ either assertedDate or onsetDate
+cond=>condition: assertedDate ?
+cond2=>condition: onsetDate ?
+cond3=>condition: onsetDate ?
+st->cond
+cond(no)->cond2
+cond2(yes)->e2
+cond2(no)->e3
+
+```
+
 
 ----
 
@@ -751,10 +811,26 @@ Identifies the location or type of facility to where the patient left following 
 <p>
 Date of first determination by a qualified professional of the presence of a problem or condition affecting a patient
    </td>
-   <td>*<strong>new</strong>*<a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-definitions.html#Condition.recordedDate">Condition.recordedDate</a> 0..1 MS
+   <td>*<strong>new</strong>*
+       <ul>
+           <li>
+      <a href="http://build.fhir.org/extension-condition-asserteddate.html">Extension: assertedDate</a> 0..1 (Conditional MS)
+               </li>
+                      <li>
+      <a href="http://build.fhir.org/extension-condition-asserteddate.html">Conditon: onsetDate</a> 0..1 (Conditional MS)
+               </li>
+                      <li>
+      <a href="http://build.fhir.org/extension-condition-asserteddate.html">Conditon: recordedDate</a> 0..1 MS
+               </li>
+       </ul>
+       Conditional MS: At least one of is Must Support
    </td>
-   <td>
-   *<strong>new</strong>*<code>recorded-date</code> (see below)
+   <td><ul>
+       <li>  *<strong>new Custom SearchParameter</strong>*<code>asserted-date</code> </li>
+       <li>  *<strong>new</strong>*<code>onset-date</code></li>
+       <li>  *<strong>new </strong>*<code>recorded-date</code> </li>
+       </ul>
+       (see below)
    </td>
   </tr>
   <tr>
@@ -768,11 +844,42 @@ Date of subsiding or termination of a symptom, problem, or condition.
    *<strong>new</strong>*<code>abatement-date</code> (see below)
    </td>
   </tr>
+    <tr>
+
+   <td><strong>Encounter Diagnosis </strong>(see above)
+
+   </td>
+   <td>*<strong>new</strong>*<a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-condition-definitions.html#Condition.encounter">Condition.encounter</a> 0..1 MS
+   </td>
+   <td>
+  <p>
+Combination of the <code>patient</code>,<code>category</code>, and *<strong>new</strong>* <code>encounter</code> search parameters.
+<p>(see Encounter Diagnosis above)
+   </td>
+  </tr>
 </table>
 
 ----
 
 <!-- .slide: style="font-size: 30px;" -->
+
+- SHOULD support searching using the combination of the patient and `asserted-date` search parameters:
+
+    - including support for these `asserted-date` comparators: `gt,lt,ge,le`
+    - including optional support for composite `AND` search on asserted-date (e.g.`asserted-date=[date]&asserted-date=[date]]&...`)
+    
+    `GET [base]Condition?patient=555580&asserted-date=ge2018-01-14`
+
+----
+
+- SHOULD support searching using the combination of the patient and `onset-date` search parameters:
+
+    - including support for these `onset-date` comparators: `gt,lt,ge,le`
+    - including optional support for composite `AND` search on onset-date (e.g.`onset-date=[date]&onset-date=[date]]&...`)
+    
+    `GET [base]Condition?patient=555580&onset-date=ge2018-01-14`
+
+----
 
 - SHOULD support searching using the combination of the patient and `recorded-date` search parameters:
 
@@ -782,17 +889,24 @@ Date of subsiding or termination of a symptom, problem, or condition.
     `GET [base]Condition?patient=555580&recorded-date=ge2018-01-14`
 
 ----
-
 <!-- .slide: style="font-size: 30px;" -->
 
 - SHOULD support searching using the combination of the patient and `abatement-date` search parameters:
 
     - including support for these `abatement-date` comparators: `gt,lt,ge,le`
-    - including optional support for composite AND search on `onset-dat`e (e.g.`abatement-date=[date]&abatement-date=[date]]&...`)
+    - including optional support for composite AND search on `onset-date` (e.g.`abatement-date=[date]&abatement-date=[date]]&...`)
 
     `GET [base]Condition?patient=555580abatment-date=ge2018-01-14`
 
 ----
+
+- SHOULD support searching using the combination of the `patient` and `category` and `encounter` search parameters:
+
+
+    
+    `GET [base]/Condition?patient=1032702&category=encounter-diagnosis&encounter=123
+    
+----    
 
 <!-- .slide: style="zoom: 50%;" -->
 
@@ -827,31 +941,62 @@ CareTeam Member Identifier (`CareTeam.participant.member`)
 CareTeam Member Role (`CareTeam.participant.role`)
 
 
-CareTeam Member Location and Telecom is complicated...discussed several options:
+CareTeam Member Location and Telecom  (`CareTeam.participant.member`)
+- `Practitioner.telecom`* , `Practitioner.address`*
+- `Patient.telecom`, `patient.address`
+- `RelatedPerson.telecom`,`RelatedPerson.address`
 
+\* CareTeam Member Location and Telecom is complicated and several options were discussed at length which is summarized below:
+
+- HL7 FHIR Connectathon 28: Argonaut US Core & ONC Standardized API Criterion Track
+- Sept 2021 WGM: Patient Administration (PA) Hosting: PC Wed. Sep 22, 2021 10:30 AM - 12:00 PM
 
 | Option | Pros | Cons |
 | -------- | -------- | -------- |
-| **A)** Use telecom and address detail within each `CareTeam.participant.member`    | Uses existing FHIR structures     | - Complex - will have to teach Client applications where in each resource to locate information (e.g. PractionerRole address is `PractitionerRole.location.address` ) <br> - *Risk* - `PractionerRole` contact may not match contact information for this CareTeam. Example provided: A Midwife has office number and  personal number but is covering shifts in hospital. In order to contact that MidWife you call a ‘Pool’ (shift) number rather than the number associated with their PractitionerRole (unless hospital creates PractitionerRole for each shift).      |
-| **B)** Add address and telecom requirements at the resource level `CareTeam.telecom` and new `extension` for `CareTeam.address`  | Simple     | **Nice try** - There is not one phone number and address generic  to all members on a CareTeam.    |
-| **C)** For Practitioners, use `Practitioner.address` and `Practitioner.telecom` | Single location to locate Practitioner information     | This is not aligned with the intent and purpose of these elements in base FHIR (`Practitioner.address` is home address) and cannot support the ***role based*** contact information.     |
-| :heavy_check_mark:**D)** Add extension within `CareTeam.participant.member`for role based address and contact info for each participant. | Single location to locate information or **all** roles     | New extension, although will submit for considerations in future FHIR release.     |
+| :X:**A)** Use telecom and address detail within each `CareTeam.participant.member`    | Uses existing FHIR structures     | - PractitionerRole is not supported across the industry<br>- Complex - will have to teach Client applications where in each resource to locate information (e.g. PractionerRole address is `PractitionerRole.location.address` ) <br> - *Risk* - `PractionerRole` contact may not match contact information for this CareTeam. Example provided: A Midwife has office number and  personal number but is covering shifts in hospital. In order to contact that MidWife you call a ‘Pool’ (shift) number rather than the number associated with their PractitionerRole (unless hospital creates PractitionerRole for each shift). <br>- Certification issues surrounding *Must Support* through web of resources and elements.    |
+| :X:**B)** Add address and telecom requirements at the resource level `CareTeam.telecom` and new `extension` for `CareTeam.address`  | Simple     | **Nice try** - There is not one phone number and address generic  to all members on a CareTeam.    |
+| :question:**C)** For Practitioners, use `Practitioner.address` and `Practitioner.telecom` | Single location to locate Practitioner information     | - Not aligned with the intent and purpose of these elements in base FHIR  like supporting ***role based*** contact information.  One solution is to support multiple Practitioners for each role. <br> - Possibly out of step with international implementations  |
+| :X:**D)** Add extension within `CareTeam.participant.member`for role based address and contact info for each participant. | Single location to locate information or **all** roles     | Nonstandard extension  (although could submit for considerations in future FHIR release)     |
+
+#### **ADD** US Core RelatedPerson Profile
+
+Supports caretakers as part of CareTeam technically not required by USCDi v2, but we feel it is needed and anticipates future requirements). 
+
+##### Formal Definition RelatedPerson
+
+Prior Art:
+- [IPA](http://build.fhir.org/ig/HL7/fhir-ipa/branches/main/StructureDefinition-ipa-relatedperson.html)
+- [Dutch national profile](https://simplifier.net/nictizstu3-zib2017/nl-core-relatedperson)
+
+Rendered output [US Core RelatedPerson Profile](https://healthedata1.github.io/Sushi-Sandbox/StructureDefinition-us-core-relatedperson.html)
 
 
-
-Example if we select option D:
-
-{%gist Healthedata1/3b439b777fef4ffdc48a627c86e6878e %}
+<iframe src="https://healthedata1.github.io/Sushi-Sandbox/StructureDefinition-us-core-relatedperson.html" width="100%" height="500">
+</iframe>
 
 ----
 
+Example RelatedPerson
+
+{%gist Healthedata1/7c22bd39ab716f7d65499141ffbab0e3 %}
+
 <!-- .slide: style="font-size: 12px;" -->
 
-Search
+#### ADD New *Must Support* Elements to Practitioner
 
-**ADD** 2 **new** search requirements
-1. `_include CareTeam:participant:Practitioner`
-1. `role` (custom!)
+1. `Practitioner.telecom` 0..* MS
+1. `Practitioner.address` 0..* MS
+
+#### ADD New Search Requirements
+
+1. Careteam
+   - **SHALL** support searching using the `_include CareTeam:participant`  for Patient, RelatedPerson and Practitioner
+   - **SHALL** support searching using the **custom** `role` search parameter
+
+1. RelatedPerson
+   -  **SHALL** support searching using the `patient` search parameter
+   -  **SHOULD** support searching using the `name` search parameter
+        
 
 <table>
   <tr>
@@ -865,22 +1010,27 @@ Search
   <tr>
    <td><strong>Care Team Member Name</strong>  
    </td>
-<td><strong><a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner-definitions.html#Practitioner.name">Practitioner.name</a> 1..* MS</strong>
+<td>
 
-Add RelatedPerson
+- Practitioner.name
+- Patient.name
+- RelatedPerson.name
+
    </td>
-   <td> <p>*<strong>new</strong>*  <code>_include</code> parameter for <code>CareTeam:participant:Practitioner</code>
+   <td> <p>*<strong>new</strong>*  <code>_include</code> parameter for <code>CareTeam:participant</code>
    <p><code>GET [base]/CareTeam?_id=123&include=CareTeam:participant:Practitioner</code>
    </td>
   </tr>
   <tr>
    <td><strong>Care Team Member Identifier</strong>
    </td>
-<td><strong><a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-practitioner-definitions.html#Practitioner.identifier">Practitioner.identifier</a> 1..* MS</strong> 
+<td>
 
-Add RelatedPerson
+- Practitioner.identifier
+- Patient.identifier
+
    </td>
-   <td> See row above
+   <td> <p>*<strong>new</strong>*  <code>_include</code> parameter for <code>CareTeam:participant</code> (see above)
    </td>
   </tr>
   <tr>
@@ -900,24 +1050,15 @@ Add RelatedPerson
   
    <td><strong>Care Team Member Location</strong>
    </td>
-   
    <td>
-  
-   <p>
-   Using CareTeam extension:  Participant Address Extension 0..* MS?
-   </p>
+   
+- Practitioner.address
+- patient.address
+- RelatedPerson.address
    
    </td>
    <td>
- 
-   <!--<p> 1)Fetch all practitioners as in row. 2)Then query PractitionerRole for specific Practitioner</p>
-   <p>1) See row one above </p>
-   <p>
-   2)<code>GET [base]/PractitionerRole?practitioner.identifier=http://hl7.org/fhir/sid/us-npi|97860456</code></p>
-   
-   <p> or<code>GET [base]/PractitionerRole?practitioner.name=Henry</code>
-   </p>
-   -->
+<p>*<strong>new</strong>*  <code>_include</code> parameter for <code>CareTeam:participant</code> (see above)
    </td>
   </tr>
   <tr>
@@ -929,24 +1070,14 @@ Add RelatedPerson
 operation - General provisions concerning users: Notation for national and international telephone numbers, email addresses and web addresses (incorporated by reference in § 170.299); and ITU-T E.164, Series E: Overall Network Operation, Telephone Service, Service Operation and Human Factors, International operation - Numbering plan of the international telephone service: The international public telecommunication
 numbering plan As adopted at 45 CFR 170.207(q)(1)</p>
    <td>
-   <p>
-
-  
-   <p>
-   Using CareTeam extension:  Participant Telecom extension 0..* MS?
-   </p>
+   
+- Practitioner.telecom
+- Patient.telecom
+- RelatedPerson.telecom
    
    </td>
    <td>
-   
-   <!--<p> 1)Fetch all practitioners as in row. 2)Then query PractitionerRole for specific Practitioner</p>
-   <p>1) See row one above </p>
-   <p>
-   2)<code>GET [base]/PractitionerRole?practitioner.identifier=http://hl7.org/fhir/sid/us-npi|97860456</code></p>
-   
-   <p> or<code>GET [base]/PractitionerRole?practitioner.name=Henry</code>
-   </p>
-   -->
+<p>*<strong>new</strong>*  <code>_include</code> parameter for <code>CareTeam:participant</code> (see above)
    </td>
   </tr>
 </table>
