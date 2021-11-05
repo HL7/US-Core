@@ -1,5 +1,5 @@
 
-| USCDI v1 Summary of Data Classes and Data Elements| US Core Profile | FHIR Resource|
+| USCDI v2 Summary of Data Classes and Data Elements| US Core Profile | FHIR Resource|
 |---|---|---|
 | Allergies and Intolerances: | ||
 | Substance (Medication) | [US Core Allergies Profile]| AllergyIntolerance |
@@ -39,7 +39,9 @@
 | Preferred Language| [US Core Patient Profile] | Patient.communication|
 | Address | [US Core Patient Profile] | Patient.address|
 | Phone Number| [US Core Patient Profile] | Patient.telecom|
-| Problems| [US Core Condition Profile] | Condition|
+| Problems:| [US Core Condition Profile] | Condition|
+| Date of Resolution| [US Core Condition Profile] | Condition.abatement[x]|
+| Date of Diagnosis| [US Core Condition Profile] | Choice of assertedDate Extension, Condition.onset[x], or Condition.onsetDate|
 | Procedures| [US Core Procedure Profile] | Procedure|
 | Provenance: | [US Core Provenance Profile] |Provenance|
 | Author Time Stamp | [US Core Provenance Profile] | Provenance.recorded|
