@@ -241,8 +241,11 @@
 [managing returned resources]: {{site.data.fhir.path}}search.html#return
 [mapping]: general-guidance.html
 [modifiers]: {{site.data.fhir.path}}search.html#modifiers
-[mulipleAnd]: {{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleAnd
-[mulipleOr]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleOr
+[`multipleAnd`]: {{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleAnd
+[`multipleOr`]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleOr
+[`comparator`]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.comparator
+[`modifier`]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.modifier
+[`chain`]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.chain
 [profiles]: {{site.data.fhir.path}}profiling.html
 [quantity]: {{site.data.fhir.path}}search.html#quantity
 [search]: http://hl7.org/fhir/search.html

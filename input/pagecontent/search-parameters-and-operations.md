@@ -30,11 +30,11 @@ NOTE: The following search parameters **SHALL NOT** be interpreted on their own 
 
 These US Core SearchParameters are derived from the Base FHIR Specification to define the expectations for the following SearchParameter elements:
 
-multipleAnd
-multipleOr
-comparator
-modifier
-chain
+- [`multipleAnd`]
+- [`multipleOr`]
+- [`comparator`]
+- [`modifier`]
+- [`chain`]
 
 **AllergyIntolerance**
   - [clinical-status](SearchParameter-us-core-allergyintolerance-clinical-status.html)
