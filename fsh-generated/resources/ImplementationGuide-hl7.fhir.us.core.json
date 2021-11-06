@@ -486,6 +486,14 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-condition-abatement-date"
+        },
+        "description": "**Date-related abatements (dateTime and period)**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreConditionAbatementDate"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-condition-asserted-date"
         },
         "description": "Returns conditions with an [assertedDate extension](http://hl7.org/fhir/StructureDefinition/condition-assertedDate) matching the specified date (dateTime).",
@@ -518,6 +526,14 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-condition-encounter"
+        },
+        "description": "**Encounter created as part of**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreConditionEncounter"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-condition-onset-date"
         },
         "description": "**Date related onsets (dateTime and Period)**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
@@ -531,6 +547,14 @@
         "description": "**Who has the condition?**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
         "name": "USCoreConditionPatient"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-condition-recorded-date"
+        },
+        "description": "**Date record was first recorded**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreConditionRecordedDate"
       },
       {
         "reference": {
