@@ -1,11 +1,38 @@
 {
   "resourceType": "SearchParameter",
   "id": "us-core-gender-identity",
+  "text": {
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><!--<h2>SearchParameter: USCoreGenderIdentity</h2>--><b> description</b> : <p>Returns patients with an gender-identity extension matching the specified code.</p>\n\n\t\t\t<br></br>\n\t\t\t<p><b> id</b> us-core-gender-identity</p>\n\t\t\t<p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-gender-identity</b>\n\t\t\t</p>\n\t\t\t<p><b> version</b> : 4.1.0</p>\n\t\t\t<p><b> name</b> : USCoreGenderIdentity</p>\n\t\t\t\n\t\t\t<p><b> status</b> : active</p>\n\t\t\t\n\t\t\t<p><b> date</b> : 2021-11-04</p>\n\t\t\t<p><b> publisher</b> : HL7 International - US Realm Steering Committee</p>\n\t\t\t<p><b> contact</b> : http://www.hl7.org/Special/committees/usrealm/index.cfm</p>\n            <!--\n\t\t\t<p>\n\t\t\t\t<b> useContext</b> : </p>\n            -->\n\t\t\t<p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span>\n\t\t\t</p>\n\t\t\t<!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  -->\n\t\t\t<p><b> code</b> : <code>gender-identity</code>\n\t\t\t</p>\n\t\t\t<p><b> base</b> :Patient</p>\n\t\t\t<p><b> type</b> : token</p>\n\t\t\t<p><b> expression</b> : <code>Patient.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/patient-genderIdentity').extension.value.code</code>\n\t\t\t</p>\n\t\t\t<p><b> xpath</b> : <code>f:Patient/f:extension[@url='http://hl7.org/fhir/StructureDefinition/patient-genderIdentity']/f:extension/f:valueCoding/f:code/@value xpathUsage: normal</code>\n\t\t\t</p>\n\t\t\t<p><b> xpathUsage</b> : normal</p>\n\t\t\t<p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p>\n\t\t\t<p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n\t\t</div>",
+    "status": "generated"
+  },
   "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-gender-identity",
+  "version": "4.1.0",
   "name": "USCoreGenderIdentity",
   "status": "active",
   "date": "2021-11-04",
+  "publisher": "HL7 International - US Realm Steering Committee",
+  "contact": [
+    {
+      "name": "HL7 International - US Realm Steering Committee",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/usrealm/index.cfm"
+        }
+      ]
+    }
+  ],
   "description": "Returns patients with an gender-identity extension matching the specified code.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
   "code": "gender-identity",
   "base": [
     "Patient"
