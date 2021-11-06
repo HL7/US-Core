@@ -532,14 +532,6 @@ definition:
         name: USCoreCareTeamStatus
         reference:
             reference: SearchParameter/us-core-careteam-status
-    -   description: "**Date-related abatements (dateTime and period)**  \n**NOTE**:\
-            \ This US Core SearchParameter definition extends the usage context of\
-            \ the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
-        exampleBoolean: false
-        name: USCoreConditionAbatementDate
-        reference:
-            reference: SearchParameter/us-core-condition-abatement-date
     -   description: Returns conditions with an [assertedDate extension](http://hl7.org/fhir/StructureDefinition/condition-assertedDate)
             matching the specified date (dateTime).
         exampleBoolean: false
@@ -570,14 +562,6 @@ definition:
         name: USCoreConditionCode
         reference:
             reference: SearchParameter/us-core-condition-code
-    -   description: "**Encounter created as part of**  \n**NOTE**: This US Core SearchParameter\
-            \ definition extends the usage context of the\n[Conformance expectation\
-            \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
-        exampleBoolean: false
-        name: USCoreConditionEncounter
-        reference:
-            reference: SearchParameter/us-core-condition-encounter
     -   description: "**Date related onsets (dateTime and Period)**  \n**NOTE**: This\
             \ US Core SearchParameter definition extends the usage context of the\n\
             [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
@@ -594,14 +578,6 @@ definition:
         name: USCoreConditionPatient
         reference:
             reference: SearchParameter/us-core-condition-patient
-    -   description: "**Date record was first recorded**  \n**NOTE**: This US Core\
-            \ SearchParameter definition extends the usage context of the\n[Conformance\
-            \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
-        exampleBoolean: false
-        name: USCoreConditionRecordedDate
-        reference:
-            reference: SearchParameter/us-core-condition-recorded-date
     -   description: "**Patient information, if the resource is affixed to a person**\
             \  \n**NOTE**: This US Core SearchParameter definition extends the usage\
             \ context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
