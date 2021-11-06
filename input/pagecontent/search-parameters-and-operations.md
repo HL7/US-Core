@@ -36,6 +36,8 @@ These US Core SearchParameters are derived from the Base FHIR Specification to d
 - [`modifier`]
 - [`chain`]
 
+<!-- { % include my_sp_list.md % } -->
+
 **AllergyIntolerance**
   - [clinical-status](SearchParameter-us-core-allergyintolerance-clinical-status.html)
   - [patient](SearchParameter-us-core-allergyintolerance-patient.html)
