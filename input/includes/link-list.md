@@ -250,11 +250,11 @@
 [quantity]: {{site.data.fhir.path}}search.html#quantity
 [search]: http://hl7.org/fhir/search.html
 [security considerations]: {{site.data.fhir.path}}security.html
-[us-core-ethnicity]: SearchParameter-us-core-ethnicity.html
-[us-core-race]: SearchParameter-us-core-race.html
-[us-core-gender-identity]: SearchParameter-us-core-gender-identity.html
-[us-core-asserted-date]: SearchParameter-us-core-asserted-date.html
-[us-core-discharge-disposition]: SearchParameter-us-core-discharge-disposition.html
+[`ethnicity`]: SearchParameter-us-core-ethnicity.html
+[`race`]: SearchParameter-us-core-race.html
+[`gender-identity`]: SearchParameter-us-core-gender-identity.html
+[`asserted-date`]: SearchParameter-us-core-asserted-date.html
+[`discharge-disposition`]: SearchParameter-us-core-discharge-disposition.html
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
 [reference]: {{site.data.fhir.path}}references.html
 [timezone extension]: {{site.data.fhir.path}}extension-tz-code.html
