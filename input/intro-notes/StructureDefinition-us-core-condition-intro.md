@@ -43,12 +43,12 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 * {:.new-content}There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDate`, or `Condition.recordedDate`.
     * Although all three are marked as must support, the server is not required to support all.
 	* A server **SHALL** support `Condition.recordedDate`.
-    * A server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDate`. A server may support both, which means they support all 3 locations. 
+    * A server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDate`. A server may support both, which means they support all 3 locations.
     * The client application **SHALL** support all three elements.
 
 ### Examples
 
- - [Condition-hc1](Condition-hc1.html) is an example of a condition categorized as a "health-concern"
- - [Condition-example](Condition-example.html) is an example of a condition categorized as a "problem"
+ - {:.new-content}[Condition-hc1](Condition-hc1.html) is an example of a condition categorized as a "health-concern"
+ - {:.new-content}[Condition-example](Condition-example.html) is an example of a condition categorized as a "problem"
 
 {% include link-list.md %}
