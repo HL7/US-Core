@@ -7,13 +7,13 @@
 
 for profile/element updates:
 - [ ] update profile/create artifact
-- [ ]  optionally create ValueSet/Search parameter artifact
+- [ ] optionally create ValueSet/Search parameter artifact
 - [ ] update uscdi table here: input/includes/uscdi_table.md
-- [ ] update intro here: input/intro-notes (note highlight new content with new-content class)
-- [ ] update notes/search - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/intro-notes
+- [ ] update intro here: input/intro-notes (highlight new content with new-content class)
+- [ ] update notes/search - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/intro-notes) (mark as new content in spreadsheet to highlight new content)
 - [ ] optionally update SPs and SP page
 - [ ] update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources
-- [ ] update/create Examples
+- [ ] update/create Examples - (highlight new content with new-content class)
 - [ ] update change log
 
 for narrative updates
