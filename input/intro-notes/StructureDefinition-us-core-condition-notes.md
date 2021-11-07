@@ -45,7 +45,7 @@ The following search parameter combinations SHOULD be supported:
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and category. ([how to search by reference] and [how to search by token])
 
-1. \{:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`category`](SearchParameter-us-core-condition-category.html)** and **[`encounter`](SearchParameter-us-core-condition-encounter.html)** search parameters:
+1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`category`](SearchParameter-us-core-condition-category.html)** and **[`encounter`](SearchParameter-us-core-condition-encounter.html)** search parameters:
 
     `GET [base]/Condition?patient={Type/}[id]&category={system|}[code]&encounter={Type/}[id]`
 
@@ -77,7 +77,7 @@ The following search parameter combinations SHOULD be supported:
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and date.  ([how to search by reference] and [how to search by date])
 
-1. \{:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`asserted-date`](SearchParameter-us-core-condition-asserted-date.html)** search parameters:
+1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`asserted-date`](SearchParameter-us-core-condition-asserted-date.html)** search parameters:
     - including support for these `asserted-date` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `asserted-date` (e.g.`asserted-date=[date]&asserted-date=[date]]&...`)
 
@@ -89,7 +89,7 @@ The following search parameter combinations SHOULD be supported:
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and date.  ([how to search by reference] and [how to search by date])
 
-1. \{:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`recorded-date`](SearchParameter-us-core-condition-recorded-date.html)** search parameters:
+1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`recorded-date`](SearchParameter-us-core-condition-recorded-date.html)** search parameters:
     - including support for these `recorded-date` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `recorded-date` (e.g.`recorded-date=[date]&recorded-date=[date]]&...`)
 
@@ -101,7 +101,7 @@ The following search parameter combinations SHOULD be supported:
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and date.  ([how to search by reference] and [how to search by date])
 
-1. \{:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`abatement-date`](SearchParameter-us-core-condition-abatement-date.html)** search parameters:
+1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`abatement-date`](SearchParameter-us-core-condition-abatement-date.html)** search parameters:
     - including support for these `abatement-date` comparators: `gt,lt,ge,le`
     - including optional support for composite *AND* search on `abatement-date` (e.g.`abatement-date=[date]&abatement-date=[date]]&...`)
 
