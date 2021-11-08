@@ -47,6 +47,6 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 - [Inpatient Example](Encounter-1036.html)
 - [Outpatient Example](Encounter-example-1.html)
-- [Delivery Example](Encounter-example-delivery.html)
+- [Delivery Example](Encounter-delivery.html)
 
 {% include link-list.md %}

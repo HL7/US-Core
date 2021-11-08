@@ -11,10 +11,12 @@
     "reference": "Patient/example",
     "display": "Amy V. Shaw"
   },
-  "location": {
-    "reference": "Location/hospital",
-    "display": "Holy Family Hospital"
-  },
+  "location": [
+    {
+      "reference": "Location/hospital",
+      "display": "Holy Family Hospital"
+    }
+  ],
   "type": [
     {
       "coding": [
