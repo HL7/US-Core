@@ -10,6 +10,7 @@
 | Clinical Notes: | ||
 | Consultation Note | [US Core DocumentReference Profile] | DocumentReference|
 | Discharge Summary Note| [US Core DocumentReference Profile] | DocumentReference|
+| Laboratory: | ||
 | History & Physical| [US Core DocumentReference Profile] | DocumentReference |
 | Imaging Narrative | [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Laboratory Report Narrative | [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
