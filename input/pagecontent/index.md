@@ -7,7 +7,7 @@
 
 for profile/element updates:
 - [ ] update profile/create artifact
-- [ ] optionally create ValueSet/Search parameter artifact ( update and highlight new content in terminology page)
+- [ ] optionally create ValueSet/Search parameter artifact (update and highlight new content in terminology page)
 - [ ] update uscdi table here: input/includes/uscdi_table.md
 - [ ] update intro here: input/intro-notes (highlight new content with new-content class)
 - [ ] update notes/search - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/intro-notes) (mark as new content in spreadsheet to highlight new content)
