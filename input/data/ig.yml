@@ -1406,6 +1406,12 @@ definition:
         name: Encounter 1036 Example
         reference:
             reference: Encounter/1036
+    -   description: This is a patient delivery encounter example for the *Encounter
+            Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+        name: Encounter Delivery Example
+        reference:
+            reference: Encounter/delivery
     -   description: This is a encounter 1 example for the *US Core Encounter Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
         name: Encounter 1 Example
@@ -1478,6 +1484,12 @@ definition:
         name: Length Example
         reference:
             reference: Observation/length
+    -   description: This is an example hospital location for the *US Core Location
+            Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+        name: Example 2
+        reference:
+            reference: Location/example-2
     -   description: This is a MCHC example for the *US Core Observation Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
         name: MCHC Example

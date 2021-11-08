@@ -1422,6 +1422,14 @@
       },
       {
         "reference": {
+          "reference": "Encounter/delivery"
+        },
+        "description": "This is a patient delivery encounter example for the *Encounter Profile*.",
+        "name": "Encounter Delivery Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+      },
+      {
+        "reference": {
           "reference": "Encounter/example-1"
         },
         "description": "This is a encounter 1 example for the *US Core Encounter Profile*.",
@@ -1523,6 +1531,14 @@
         "description": "This is a length example for the *Vitalsigns Profile* which shows how body length (typically used for infants) is represented using 8306-3 -*Body height - lying* as an additional observation code.",
         "name": "Length Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height"
+      },
+      {
+        "reference": {
+          "reference": "Location/example-2"
+        },
+        "description": "This is an example hospital location for the *US Core Location Profile*.",
+        "name": "Example 2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
       },
       {
         "reference": {
