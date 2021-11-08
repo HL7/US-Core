@@ -10,13 +10,18 @@
 | Clinical Notes: | ||
 | Consultation Note | [US Core DocumentReference Profile] | DocumentReference|
 | Discharge Summary Note| [US Core DocumentReference Profile] | DocumentReference|
-| Laboratory: | ||
 | History & Physical| [US Core DocumentReference Profile] | DocumentReference |
 | Imaging Narrative | [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Laboratory Report Narrative | [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Pathology Report Narrative| [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Procedure Note| [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Progress Note | [US Core DocumentReference Profile] | DocumentReference|
+| Encounter: | [US Core Encounter Profile] ||
+| Type | [US Core Encounter Profile] |Encounter.type|
+| Diagnosis | [US Core Condition Profile] |Condition.code|
+| Time | [US Core Encounter Profile] |Encounter.period |
+| Location |[US Core Encounter Profile]  |Encounter.location.location|
+| Disposition |[US Core Encounter Profile]|Encounter.hospitalization.dischargeDisposition|
 | Goals:| ||
 | Patient Goals | [US Core Goal Profile]| Goal |
 | Health Concerns | [US Core Condition Profile] | Condition|
