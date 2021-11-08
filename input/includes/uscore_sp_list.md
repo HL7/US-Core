@@ -49,8 +49,10 @@
 - [`date`](SearchParameter-us-core-encounter-date.html)
 - [`identifier`](SearchParameter-us-core-encounter-identifier.html)
 - [`patient`](SearchParameter-us-core-encounter-patient.html)
+- {:.new-content}[`location`](SearchParameter-us-core-encounter-location.html)
 - [`status`](SearchParameter-us-core-encounter-status.html)
 - [`type`](SearchParameter-us-core-encounter-type.html)
+- {:.new-content}[`discharge-disposition`](SearchParameter-us-core-encounter-discharge-disposition.html)
 
 **Goal**
 - [`lifecycle-status`](SearchParameter-us-core-goal-lifecycle-status.html)

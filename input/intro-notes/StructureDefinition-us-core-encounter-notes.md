@@ -76,6 +76,16 @@ The following search parameter combinations SHOULD be supported:
 
     *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and type ([how to search by reference] and [how to search by token])
 
+1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-encounter-patient.html)** and **[`location`](SearchParameter-us-core-encounter-location.html)** search parameters:
+
+    `GET [base]/Encounter?patient={Type/}[id]&location={Type/}[id]`
+
+    Example:
+    
+      1. GET [base]/Encounter?patient=1137192&amp;location=Location/hospital
+
+    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and location ([how to search by reference])
+
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-encounter-patient.html)** and **[`status`](SearchParameter-us-core-encounter-status.html)** search parameters:
 
     `GET [base]/Encounter?patient={Type/}[id]&status={system|}[code]`
@@ -85,6 +95,16 @@ The following search parameter combinations SHOULD be supported:
       1. GET [base]/Encounter?patient=example1&amp;status=finished
 
     *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and status ([how to search by reference] and [how to search by token])
+
+1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-encounter-patient.html)** and **[`discharge-disposition`](SearchParameter-us-core-encounter-discharge-disposition.html)** search parameters:
+
+    `GET [base]/Encounter?patient={Type/}[id]&discharge-disposition={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/Encounter?patient=example1&amp;discharge-disposition=01
+
+    *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and discharge-disposition ([how to search by reference] and [how to search by token])
 
 
 

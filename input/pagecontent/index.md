@@ -12,9 +12,10 @@ for profile/element updates:
 - [ ] update intro here: input/intro-notes (highlight new content with new-content class)
 - [ ] update notes/search - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/intro-notes) (mark as new content in spreadsheet to highlight new content)
 - [ ] optionally update SPs and SP page
-- [ ] update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources * NOTE remember to update Cient spreadsheet from Server spreadsheet*
+ and remember to update Client spreadsheet from Server spreadsheet*
 - [ ] update/create Examples - (highlight new content with new-content class)
 - [ ] update change log
+- [ ] update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources  *NOTE do this at end and remember to update Client spreadsheet from Server spreadsheet*
 
 for narrative updates
 
