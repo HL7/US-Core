@@ -200,6 +200,8 @@
 [US Core Immunization Profile]: StructureDefinition-us-core-immunization.html
 [US Core Implantable Device Profile]: StructureDefinition-us-core-implantable-device.html
 [US Core Laboratory Result Observation Profile]: StructureDefinition-us-core-observation-lab.html
+[US Core Clinical Test Result Observation Profile]: StructureDefinition-us-core-observation-clinical-test.html
+[US Core Diagnostic Imaging Result Observation Profile]: StructureDefinition-us-core-observation-imaging.html
 [US Core Medication Profile]: StructureDefinition-us-core-medication.html
 [US Core Medication Request Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
