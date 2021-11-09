@@ -287,6 +287,12 @@ definition:
         name: US Core Laboratory Result Observation Profile
         reference:
             reference: StructureDefinition/us-core-observation-lab
+    -   description: Defines constraints and extensions on the Observation resource
+            for the minimal set of data to query and retrieve a Patient's Sexual Orientation.
+        exampleBoolean: false
+        name: US Core Sexual Orientation Observation Profile
+        reference:
+            reference: StructureDefinition/us-core-observation-sexual-orientation
     -   description: Defines basic constraints and extensions on the Organization
             resource for use with other US Core resources
         exampleBoolean: false
@@ -531,8 +537,8 @@ definition:
         name: USCoreCareTeamPatient
         reference:
             reference: SearchParameter/us-core-careteam-patient
-    -   description: Returns CareTeam resources with an participant role matching
-            the specified code.
+    -   description: Returns CareTeam resources with a participant role matching the
+            specified code.
         exampleBoolean: false
         name: USCoreCareTeamRole
         reference:

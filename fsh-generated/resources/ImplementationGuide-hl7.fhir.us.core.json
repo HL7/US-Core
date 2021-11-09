@@ -262,6 +262,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-observation-sexual-orientation"
+        },
+        "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve a Patient's Sexual Orientation.",
+        "exampleBoolean": false,
+        "name": "US Core Sexual Orientation Observation Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-organization"
         },
         "description": "Defines basic constraints and extensions on the Organization resource for use with other US Core resources",
@@ -488,7 +496,7 @@
         "reference": {
           "reference": "SearchParameter/us-core-careteam-role"
         },
-        "description": "Returns CareTeam resources with an participant role matching the specified code.",
+        "description": "Returns CareTeam resources with a participant role matching the specified code.",
         "exampleBoolean": false,
         "name": "USCoreCareTeamRole"
       },
