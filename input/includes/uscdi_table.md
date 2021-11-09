@@ -52,6 +52,7 @@
 | Provenance: | [US Core Provenance Profile] |Provenance|
 | Author Time Stamp | [US Core Provenance Profile] | Provenance.recorded|
 | Author Organization | [US Core Provenance Profile] | Provenance.agent|
+<div markdown="1" class="new-content"> | Sexual Orientation| [US Core Sexual Orientation Observation Profile] | Observation| </div>
 | Smoking Status| [US Core Smoking Status Observation Profile]| Observation|
 | Unique Device Identifier(s) for a Patient's Implantable Device(s) | [US Core Implantable Device Profile]| Device |
 | Vital Signs:| ||

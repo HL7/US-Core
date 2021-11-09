@@ -212,6 +212,7 @@
 [US Core Pulse Oximetry Profile]: StructureDefinition-us-core-pulse-oximetry.html
 [US Core Security]: security.html
 [US Core Server Capability Statement]: CapabilityStatement-us-core-server.html
+[US Core Sexual Orientation Observation Profile]: StructureDefinition-us-core-observation-sexual-orientation.html
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
 [Value sets]: terminology.html
 [Vital Signs Profile]: {{site.data.fhir.path}}observation-vitalsigns.html
