@@ -297,3 +297,4 @@
 [US Core Procedure Codes]: ValueSet-us-core-procedure-code.html
 [21st Century Cures Act for accessing patient data]: https://www.federalregister.gov/d/2020-07419/p-1177
 [Mandatory]: conformance-expectations.html#mandatory-elements
+[US Core RelatedPerson Profile]: StructureDefinition-us-core-relatedperson.html

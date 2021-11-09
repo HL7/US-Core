@@ -73,6 +73,23 @@
         "reference": "Patient/example",
         "display": "Amy V. Shaw"
       }
+    },
+    {
+      "role": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "34581001 ",
+              "display": "Niece (person)"
+            }
+          ]
+        }
+      ],
+      "member": {
+        "reference": "RelatedPerson/shaw-niece",
+        "display": "Sarah van Putten"
+      }
     }
   ]
 }
