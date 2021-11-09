@@ -1060,6 +1060,14 @@ definition:
         name: USCorePatientName
         reference:
             reference: SearchParameter/us-core-patient-name
+    -   description: "**Date-related abatements (dateTime and period)**  \n**NOTE**:\
+            \ This US Core SearchParameter definition extends the usage context of\
+            \ the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+        exampleBoolean: false
+        name: USCorePractitionerId
+        reference:
+            reference: SearchParameter/us-core-practitioner-id
     -   description: "**A practitioner's Identifier**  \n**NOTE**: This US Core SearchParameter\
             \ definition extends the usage context of the\n[Conformance expectation\
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
