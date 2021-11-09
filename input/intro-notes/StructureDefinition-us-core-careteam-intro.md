@@ -34,7 +34,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 <div markdown="1" class="new-content">
 **Profile specific implementation guidance:**
 
-In order to access care team member's names, identifiers, locations, and contact information, the CareTeam profile requires the capability to support several types of careteam members. These are references to other profiles and include the following four profiles which are marked as must support:
+In order to access care team member's names, identifiers, locations, and contact information, the CareTeam profile supports several types of care team participants. They are represented as references to other profiles and include the following four profiles which are marked as must support:
   1. US Core Practitioner Profile
   1. US Core Patient Profile
   1. US Core Practitioner RelatedPerson Profile
