@@ -14,6 +14,9 @@ NOTE: The following search parameters **SHALL NOT** be interpreted on their own 
 
 #### New Search Parameters defined by this Implementation Guide
 
+**CareTeam**
+- {:.new-content}[`role`]
+
 **Condition**
 - {:.new-content}[`asserted-date`]
 
