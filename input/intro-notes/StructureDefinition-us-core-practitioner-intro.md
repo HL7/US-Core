@@ -19,6 +19,13 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 1.  An identifier which must support an NPI if available.
 1.  A name
 
+<div markdown="1" class="new-content">
+**Each PractitionerRole must support:**
+
+1.  Contact information
+1.  An address
+</div>
+
 **Profile specific implementation guidance:**
 
 - This profile may be referenced by different capability statements, such as the [Conformance requirements for the US Core Server], or a provider directory capability statement.

@@ -11,6 +11,7 @@
 **CareTeam**
 - [`patient`](SearchParameter-us-core-careteam-patient.html)
 - [`status`](SearchParameter-us-core-careteam-status.html)
+- {:.new-content}[`role`](SearchParameter-us-core-careteam-role.html)
 
 **Condition**
 - [`category`](SearchParameter-us-core-condition-category.html)

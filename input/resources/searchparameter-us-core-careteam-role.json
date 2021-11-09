@@ -1,0 +1,36 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "us-core-careteam-role",
+  "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-careteam-role",
+  "version": "4.1.0",
+  "name": "USCoreCareTeamRole",
+  "status": "active",
+  "date": "2021-11-08",
+  "description": "Returns CareTeam resources with an participant role matching the specified code.",
+  "code": "role",
+  "base": [
+    "CareTeam"
+  ],
+  "type": "token",
+  "expression": "CareTeam.participant.role",
+  "xpath": "f:CareTeam/f:participant/f:role/@value",
+  "xpathUsage": "normal",
+  "multipleOr": true,
+  "_multipleOr": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  },
+  "multipleAnd": true,
+  "_multipleAnd": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  }
+}
