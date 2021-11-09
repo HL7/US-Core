@@ -3,18 +3,7 @@
     "base": [
         "Practitioner"
     ],
-    "code": "abatement-date",
-    "comparator": [
-        "eq",
-        "ne",
-        "gt",
-        "ge",
-        "lt",
-        "le",
-        "sa",
-        "eb",
-        "ap"
-    ],
+    "code": "_id",
     "contact": [
         {
             "telecom": [
@@ -25,15 +14,15 @@
             ]
         }
     ],
-    "date": "2021-11-09T04:48:30.356420Z",
-    "derivedFrom": "http://hl7.org/fhir/SearchParameter/Condition-abatement-date",
-    "description": "**Date-related abatements (dateTime and period)**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+    "date": "2021-11-09T17:46:37.260015Z",
+    "derivedFrom": "http://hl7.org/fhir/SearchParameter/Resource-id",
+    "description": "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
     "experimental": false,
     "expression": "Practitioner.id",
     "name": "USCorePractitionerId",
     "publisher": "HL7 International - US Realm Steering Committee",
     "status": "active",
-    "type": "date",
+    "type": "token",
     "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-practitioner-id",
     "version": "4.0.1",
     "xpath": "f:Practitioner/f:id",
@@ -57,82 +46,8 @@
             }
         ]
     },
-    "_comparator": [
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                    "valueCode": "MAY"
-                }
-            ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                    "valueCode": "MAY"
-                }
-            ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                    "valueCode": "MAY"
-                }
-            ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                    "valueCode": "MAY"
-                }
-            ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                    "valueCode": "MAY"
-                }
-            ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                    "valueCode": "MAY"
-                }
-            ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                    "valueCode": "MAY"
-                }
-            ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                    "valueCode": "MAY"
-                }
-            ]
-        },
-        {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                    "valueCode": "MAY"
-                }
-            ]
-        }
-    ],
     "text": {
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><!--<h2>SearchParameter: USCorePractitionerId</h2>--><b> description</b> : <p><strong>Date-related abatements (dateTime and period)</strong><br></br><strong>NOTE</strong>: This US Core SearchParameter definition extends the usage context of the\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">Conformance expectation extension</a></p>\n<ul><li>multipleAnd</li><li>multipleOr</li><li>comparator</li><li>modifier</li><li>chain</li></ul>\n\n\t\t\t<br></br>\n\t\t\t<p><b> id</b> us-core-practitioner-id</p>\n\t\t\t<p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-practitioner-id</b>\n\t\t\t</p>\n\t\t\t<p><b> version</b> : 4.0.1</p>\n\t\t\t<p><b> name</b> : USCorePractitionerId</p>\n\t\t\t<p><b> derivedFrom</b> : http://hl7.org/fhir/SearchParameter/Condition-abatement-date</p>\n\t\t\t<p><b> status</b> : active</p>\n\t\t\t\n\t\t\t<p><b> date</b> : 2021-11-09</p>\n\t\t\t<p><b> publisher</b> : HL7 International - US Realm Steering Committee</p>\n\t\t\t<p><b> contact</b> : http://www.hl7.org/Special/committees/usrealm/index.cfm</p>\n            <!--\n\t\t\t<p>\n\t\t\t\t<b> useContext</b> : </p>\n            -->\n\t\t\t<p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span>\n\t\t\t</p>\n\t\t\t<!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  -->\n\t\t\t<p><b> code</b> : <code>abatement-date</code>\n\t\t\t</p>\n\t\t\t<p><b> base</b> :Practitioner</p>\n\t\t\t<p><b> type</b> : date</p>\n\t\t\t<p><b> expression</b> : <code>Practitioner.id</code>\n\t\t\t</p>\n\t\t\t<p><b> xpath</b> : <code>f:Practitioner/f:id</code>\n\t\t\t</p>\n\t\t\t<p><b> xpathUsage</b> : normal</p>\n\t\t\t<p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p>\n\t\t\t<p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    <p><b> comparator</b> : <code>eq</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>ne</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>gt</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>ge</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>lt</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>le</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>sa</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>eb</code> ( Conformance Expectation = MAY)</p>\n    \n    <p><b> comparator</b> : <code>ap</code> ( Conformance Expectation = MAY)</p>\n    \n    \n    \n    \n\t\t</div>",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><!--<h2>SearchParameter: USCorePractitionerId</h2>--><b> description</b> : <p><strong>Logical id of this artifact</strong><br></br><strong>NOTE</strong>: This US Core SearchParameter definition extends the usage context of the\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">Conformance expectation extension</a></p>\n<ul><li>multipleAnd</li><li>multipleOr</li><li>comparator</li><li>modifier</li><li>chain</li></ul>\n\n\t\t\t<br></br>\n\t\t\t<p><b> id</b> us-core-practitioner-id</p>\n\t\t\t<p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-practitioner-id</b>\n\t\t\t</p>\n\t\t\t<p><b> version</b> : 4.0.1</p>\n\t\t\t<p><b> name</b> : USCorePractitionerId</p>\n\t\t\t<p><b> derivedFrom</b> : http://hl7.org/fhir/SearchParameter/Resource-id</p>\n\t\t\t<p><b> status</b> : active</p>\n\t\t\t\n\t\t\t<p><b> date</b> : 2021-11-09</p>\n\t\t\t<p><b> publisher</b> : HL7 International - US Realm Steering Committee</p>\n\t\t\t<p><b> contact</b> : http://www.hl7.org/Special/committees/usrealm/index.cfm</p>\n            <!--\n\t\t\t<p>\n\t\t\t\t<b> useContext</b> : </p>\n            -->\n\t\t\t<p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span>\n\t\t\t</p>\n\t\t\t<!--\n\t<p>\n\t\t<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p>\n  -->\n\t\t\t<p><b> code</b> : <code>_id</code>\n\t\t\t</p>\n\t\t\t<p><b> base</b> :Practitioner</p>\n\t\t\t<p><b> type</b> : token</p>\n\t\t\t<p><b> expression</b> : <code>Practitioner.id</code>\n\t\t\t</p>\n\t\t\t<p><b> xpath</b> : <code>f:Practitioner/f:id</code>\n\t\t\t</p>\n\t\t\t<p><b> xpathUsage</b> : normal</p>\n\t\t\t<p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p>\n\t\t\t<p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n\t\t</div>",
         "status": "generated"
     }
 }
