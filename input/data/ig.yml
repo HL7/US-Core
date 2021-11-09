@@ -531,6 +531,12 @@ definition:
         name: USCoreCareTeamPatient
         reference:
             reference: SearchParameter/us-core-careteam-patient
+    -   description: Returns CareTeam resources with an participant role matching
+            the specified code.
+        exampleBoolean: false
+        name: USCoreCareTeamRole
+        reference:
+            reference: SearchParameter/us-core-careteam-role
     -   description: "**proposed | active | suspended | inactive | entered-in-error**\
             \  \n**NOTE**: This US Core SearchParameter definition extends the usage\
             \ context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
