@@ -29,6 +29,20 @@ The following search parameters and search parameter combinations SHALL be suppo
     *Implementation Notes:* Fetches a bundle containing any Practitioner resources matching the identifier ([how to search by token])
 
 
+#### Optional Search Parameters:
+
+The following search parameter combinations SHOULD be supported:
+
+1. {:.new-content}**SHOULD** support searching using the **[`_id`](SearchParameter-us-core-practitioner-id.html)** search parameter:
+
+     `GET [base]/Practitioner?_id={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/Practitioner/practitioner-1
+      1. GET [base]/Practitioner?_id=practitioner-1
+
+     *Implementation Notes:* DOES THIS DO ANYTHING? ([how to search by token])
 
 
 

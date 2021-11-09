@@ -100,6 +100,7 @@
 - [`name`](SearchParameter-us-core-patient-name.html)
 
 **Practitioner**
+- {:.new-content}[`_id`](SearchParameter-us-core-practitioner-id.html)
 - [`name`](SearchParameter-us-core-practitioner-name.html)
 - [`identifier`](SearchParameter-us-core-practitioner-identifier.html)
 
