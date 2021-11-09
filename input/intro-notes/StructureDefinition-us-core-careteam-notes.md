@@ -15,13 +15,13 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/CareTeam?patient={Type/}[id]&status=active`
 
     Example:
-    
+
       1. GET [base]/CareTeam?patient=1137192&amp;status=active
       1. GET [base]/CareTeam?patient=1137192&amp;status=active&amp;_include=CareTeam:participant:RelatedPerson&amp;_include=CareTeam:participant:Patient&amp;_include=CareTeam:participant:Practitioner&amp;_include=CareTeam:participant:PractitionerRole
 
     *Implementation Notes:* Fetches a bundle of all CareTeam resources for the specified patient and status =`active` and may include CareTeam Patient, RelatedPerson and Practitioner and PractitionerRole participants.  
-To get Pactiitioner name and identifier using PractitionerRole:  
-1) Search for the careteam PractiitionerRole: GET [base]/CareTeam?patient=[id]&amp;status=active&amp;_include=CareTeam:participant:RelatedPerson  
+To get Practitioner name and identifier using PractitionerRole:  
+1) Search for the careteam PractitionerRole: GET [base]/CareTeam?patient=[id]&amp;status=active&amp;_include=CareTeam:participant:PractitionerRole
 2) using the FHIR _id from the PractitionerRole.practitioner element resource,  fetch the Practitioner resources using  GET [base]/Practitioner?_id=[id] ([how to search by reference] and [how to search by token])
 
 
@@ -36,7 +36,7 @@ The following search parameter combinations SHOULD be supported:
     `GET [base]/CareTeam?patient={Type/}[id]&role={system|}[code]{,{system|}[code],...}`
 
     Example:
-    
+
       1. GET [base]/CareTeam?patient=1137192&amp;role=http://snomed.info/sct\|17561000
 
     *Implementation Notes:* Fetches a bundle of all CareTeam resources for the specified patient and participant role ([how to search by reference] and [how to search by token])
