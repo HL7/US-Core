@@ -36,8 +36,9 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 In order to access care team member's names, identifiers, locations, and contact information, the CareTeam profile supports several types of care team participants. They are represented as references to other profiles and include the following four profiles which are marked as must support:
   1. US Core Practitioner Profile
+  1. US Core PractitionerRole Profile
   1. US Core Patient Profile
-  1. US Core Practitioner RelatedPerson Profile
+  1. US Core RelatedPerson Profile
 
   * Although *both* US Core Practitioner Profile and US Core PractitionerRole are must support, the server system is not required to support both types of references (and `_include` search parameters), but **SHALL** support *at least* one of them.
   * The client application **SHALL** support all four profile references.
