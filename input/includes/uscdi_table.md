@@ -5,7 +5,7 @@
 | Substance (Medication) | [US Core Allergies Profile]| AllergyIntolerance |
 | Substance (Drug Class) | [US Core Allergies Profile]| AllergyIntolerance |
 | Reaction | [US Core Allergies Profile]| AllergyIntolerance |
-| **Assessment and Plan of Treatment**| [US Core CarePlan Profile]| **CarePlan** |
+| **Assessment and Plan of Treatment**| [US Core CarePlan Profile]| CarePlan |
 | **Care Team Members:** | [US Core CareTeam Profile] |CareTeam.participant |
 | Name| [US Core Practitioner Profile], [US Core Patient Profile], [US Core RelatedPerson Profile]| Practitioner.name, Patient.name, RelatedPerson.name|
 | Identifier | [US Core Practitioner Profile], [US Core Patient Profile]| Practitioner.identifier, Patient.identifier |
