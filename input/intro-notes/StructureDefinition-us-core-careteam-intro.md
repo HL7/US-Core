@@ -31,9 +31,10 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 1.  a status code
 
+<div markdown="1" class="new-content">
 **Profile specific implementation guidance:**
 
-{:.new-content}In order to access care team member's names, identifiers, locations, and contact information, the CareTeam profile requires the capability to support several types of careteam members. These are references to other profiles and include the following four profiles which are marked as must support:
+In order to access care team member's names, identifiers, locations, and contact information, the CareTeam profile requires the capability to support several types of careteam members. These are references to other profiles and include the following four profiles which are marked as must support:
   1. US Core Practitioner Profile
   1. US Core Patient Profile
   1. US Core Practitioner RelatedPerson Profile
@@ -42,6 +43,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
   * The client application **SHALL** support all four profile references.
   * Bacause the US Core PractitionerRole Profile supplies the provider's location and contact information and a reference to the Practitioner, server systems **SHOULD** reference it instead of the US Core Practitioner Profile. An example of how to access the practitioner name and identifier is shown in the quick start section below.
   * Servers that supports only US Core Practitioner Profile *SHALL* provide implementation specific guidance how to access a provider's location and contact information using only the Practitioner resource.
+</div>
 
 ### Examples
 
