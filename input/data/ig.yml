@@ -352,6 +352,13 @@ definition:
         name: US Core Race Extension
         reference:
             reference: StructureDefinition/us-core-race
+    -   description: Defines constraints and extensions on the RelatedPerson resource
+            on the patient resource for the minimal set of data to query and retrieve
+            demographic information.
+        exampleBoolean: false
+        name: US Core Related Person
+        reference:
+            reference: StructureDefinition/us-core-relatedperson
     -   description: Defines constraints on Observation to represent respiratory rate
             observations with a standard LOINC code and UCUM units of measure. This
             profile is derived from the US Core Vital Signs Profile.
@@ -753,6 +760,14 @@ definition:
         name: USCoreEncounterIdentifier
         reference:
             reference: SearchParameter/us-core-encounter-identifier
+    -   description: "**Location the encounter takes place**  \n**NOTE**: This US\
+            \ Core SearchParameter definition extends the usage context of the\n[Conformance\
+            \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+        exampleBoolean: false
+        name: USCoreEncounterLocation
+        reference:
+            reference: SearchParameter/us-core-encounter-location
     -   description: "**The patient or group present at the encounter**  \n**NOTE**:\
             \ This US Core SearchParameter definition extends the usage context of\
             \ the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
@@ -1576,6 +1591,12 @@ definition:
         name: Rehab Example
         reference:
             reference: Procedure/rehab
+    -   description: This is a patient niece example for the *US Core RelatedPerson
+            Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+        name: Patient Niece Example
+        reference:
+            reference: RelatedPerson/shaw-niece
     -   description: This is a respiratory rate example for the *Vitalsigns Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate
         name: Respiratory Rate Example

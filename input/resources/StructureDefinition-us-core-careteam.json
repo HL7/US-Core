@@ -145,9 +145,25 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+              "http://hl7.org/fhir/StructureDefinition/us-core-relatedperson"
             ],
             "_targetProfile": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": true
+                  }
+                ]
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                    "valueBoolean": false
+                  }
+                ]
+              },
               {
                 "extension": [
                   {
@@ -176,23 +192,7 @@
                 "extension": [
                   {
                     "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
+                    "valueBoolean": true
                   }
                 ]
               }
