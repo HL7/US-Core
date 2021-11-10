@@ -10,13 +10,13 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** search parameters:
 
-    `GET [base]/Observation?patient={Type/}[id]&category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`
+    `GET [base]/Observation?patient={Type/}[id]&category=http://terminology.hl7.org/CodeSystem/observation-category|{{include.category | default: '[category]'}}`
 
     Example:
-    
-      1. GET [base]/Observation?patient=1134281&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|laboratory
 
-    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and a category code = `laboratory` ([how to search by reference] and [how to search by token])
+      1. GET [base]/Observation?patient=1134281&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|{{include.category | default: '[category]'}}
+
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and a category code = `{{include.category | default: '[category]'}}` ([how to search by reference] and [how to search by token])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`code`](SearchParameter-us-core-observation-code.html)** search parameters:
     - including optional support for composite *OR* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
@@ -24,7 +24,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/Observation?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}`
 
     Example:
-    
+
       1. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|2339-0
       1. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|2339-0,http://loinc.org\|25428-4,2514-8
 
@@ -37,7 +37,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/Observation?patient={Type/}[id]&category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]Observation?patient=555580&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|laboratory&amp;date=ge2018-03-14T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and date and a category code = `laboratory` ([how to search by reference] and [how to search by token] and [how to search by date])
@@ -53,7 +53,7 @@ The following search parameter combinations SHOULD be supported:
     `GET [base]/Observation?patient={Type/}[id]&category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory&status={system|}[code]{,{system|}[code],...}`
 
     Example:
-    
+
       1. GET [base]/Observation?patient=1134281&amp;category=http://terminology.hl7.org/CodeSystem/observation-category\|laboratory&amp;status=final
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and category = `laboratory` and status ([how to search by reference] and [how to search by token])
@@ -66,7 +66,7 @@ The following search parameter combinations SHOULD be supported:
     `GET [base]/Observation?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]Observation?patient=555580&amp;code=http://loinc.org\|2339-0&amp;date=ge2019-01-01T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and date and report code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
