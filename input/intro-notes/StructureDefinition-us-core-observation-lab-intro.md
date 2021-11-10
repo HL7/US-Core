@@ -28,7 +28,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Profile specific implementation guidance:**
 
-{% include observation_guidance_1.md category=imaging example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" %}
+{% include observation_guidance_1.md category="laboratory" example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" %}
 
 ### Examples
 
