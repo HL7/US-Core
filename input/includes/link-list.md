@@ -119,6 +119,8 @@
 [Implantable device list]: https://www.healthit.gov/test-method/implantable-device-list
 [Laboratory Report Narrative (11502-2)]: https://loinc.org/11502-2.html
 [LOINC]: http://loinc.org
+[ImagingStudy]:  {{site.data.fhir.path}}imagingstudy.html
+[Media]:  {{site.data.fhir.path}}media.html
 [Location]:  {{site.data.fhir.path}}location.html
 [Medication Clinical Drug (RxNorm)]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion
 [Medication List Guidance]: medication-list-guidance.html

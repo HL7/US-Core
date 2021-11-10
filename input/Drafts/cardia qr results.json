@@ -1,0 +1,58 @@
+resourceType: QuestionnaireResponse
+id: '5770422'
+meta:
+  versionId: '1'
+  lastUpdated: '2021-11-09T23:37:48.000-05:00'
+  source: '#w5yZwMfpEcrTjhfg'
+  profile:
+    - >-
+      http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7
+  tag:
+    - code: 'lformsVersion: 29.1.0'
+questionnaire: Questionnaire/5770419
+status: completed
+subject:
+  reference: Patient/pat-10044
+  display: LLOYD ABBOUD
+authored: '2021-11-10T04:37:44.830Z'
+item:
+  - linkId: /44974-4
+    text: Pulse intensity Palpation
+    answer:
+      - valueCoding:
+          code: LA11841-6
+          display: 1+
+  - linkId: /44963-7
+    text: Capillary refill Time Nail Bed
+    answer:
+      - valueDecimal: 1
+  - linkId: /8601-7
+    text: EKG impression
+    answer:
+      - valueString: Normal Sinus Rhythm (NSR)
+  - linkId: /44967-8
+    text: EKG lead
+    answer:
+      - valueString: II
+  - linkId: /8884-9
+    text: Heart rate rhythm
+    answer:
+      - valueString: Regular (R)
+  - linkId: /69428-1
+    text: Jugular vein distension
+    answer:
+      - valueCoding:
+          code: LA9634-2
+          display: Absent
+  - linkId: /44976-9
+    text: 'P-R interval {EKG lead}'
+    answer:
+      - valueDecimal: 0.2
+  - linkId: /44973-6
+    text: 'QRS dur {EKG lead}'
+    answer:
+      - valueDecimal: 60
+  - linkId: /44975-1
+    text: 'Q-T interval {EKG lead}'
+    answer:
+      - valueDecimal: 0.4

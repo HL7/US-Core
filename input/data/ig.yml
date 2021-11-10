@@ -282,6 +282,20 @@ definition:
         reference:
             reference: StructureDefinition/us-core-medicationrequest
     -   description: Defines constraints and extensions on the Observation resource
+            for the minimal set of data to query and retrieve clinical test results
+        exampleBoolean: false
+        name: US Core Clinical Test Result Observation Profile
+        reference:
+            reference: StructureDefinition/us-core-clinical-test
+    -   description: Defines constraints and extensions on the Observation resource
+            for the minimal set of data to query and retrieve structured and unstructured
+            (narrative) components of imaging test results. These observations include
+            reasons, findings, and impressions.
+        exampleBoolean: false
+        name: US Core Imaging Result Observation Profile
+        reference:
+            reference: StructureDefinition/us-core-imaging
+    -   description: Defines constraints and extensions on the Observation resource
             for the minimal set of data to query and retrieve laboratory test results
         exampleBoolean: false
         name: US Core Laboratory Result Observation Profile
@@ -1060,9 +1074,9 @@ definition:
         name: USCorePatientName
         reference:
             reference: SearchParameter/us-core-patient-name
-    -   description: "**Date-related abatements (dateTime and period)**  \n**NOTE**:\
-            \ This US Core SearchParameter definition extends the usage context of\
-            \ the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+    -   description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
+            \ definition extends the usage context of the\n[Conformance expectation\
+            \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
             \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
         exampleBoolean: false
         name: USCorePractitionerId
