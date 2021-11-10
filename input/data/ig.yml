@@ -286,7 +286,7 @@ definition:
         exampleBoolean: false
         name: US Core Clinical Test Result Observation Profile
         reference:
-            reference: StructureDefinition/us-core-clinical-test
+            reference: StructureDefinition/us-core-observation-clinical-test
     -   description: Defines constraints and extensions on the Observation resource
             for the minimal set of data to query and retrieve structured and unstructured
             (narrative) components of imaging test results. These observations include
@@ -294,7 +294,7 @@ definition:
         exampleBoolean: false
         name: US Core Imaging Result Observation Profile
         reference:
-            reference: StructureDefinition/us-core-imaging
+            reference: StructureDefinition/us-core-observation-imaging
     -   description: Defines constraints and extensions on the Observation resource
             for the minimal set of data to query and retrieve laboratory test results
         exampleBoolean: false
