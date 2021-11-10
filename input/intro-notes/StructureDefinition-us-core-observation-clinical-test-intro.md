@@ -28,7 +28,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Profile specific implementation guidance:**
 
-{% include observation_guidance_1.md category=procedure %}
+{% include observation_guidance_1.md category=procedure example1='' example2='' %}
 
 
 ### Examples

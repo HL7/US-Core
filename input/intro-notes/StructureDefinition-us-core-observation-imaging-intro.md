@@ -16,7 +16,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 **Each Observation must have:**
 
 1.   a status
-1.   a category code of 'procedure'
+1.   a category code of 'imaging'
 1.   a [LOINC] code, if available, which tells you what is being measured
 1.   a patient
 
@@ -28,7 +28,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Profile specific implementation guidance:**
 
-{% include observation_guidance_1.md category=imaging %}
+{% include observation_guidance_1.md category=imaging example1='' example2='' %}
 
 
 ### Examples

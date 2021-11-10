@@ -8,7 +8,7 @@ The following are example usage scenarios for the Diagnostic Report profile:
 -   {:.new-content}Query for a specific clinical test result such as electrocardiogram (ECG)
 -   {:.new-content}Query for a specific imaging test result
 -   Query for a specific Radiology note (e.g., 84178-3 Interventional Radiology Note)
--   Query for category of reports (e.g. all Cardiology reports) 
+-   Query for category of reports (e.g. all Cardiology reports)
 
 
 ### Mandatory and Must Support Data Elements
@@ -28,6 +28,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 1.  the encounter the report occurred within
 1.  instant the report was released
 1.  an author (actor) producing the report
+2.  {:.new-content}a reference one or more test results
 2.  {:.new-content}a reference one or more images*
 3.  {:.new-content}a reference to one or more DICOM imaging studies*
 4.  a reference to the full report (presentedForm)
