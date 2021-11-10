@@ -117,6 +117,28 @@
           }
         ]
       },
+            {
+        "id": "Patient.extension:genderIdentity",
+        "path": "Patient.extension",
+        "sliceName": "genderIdentity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/patient-genderIdentity"
+            ]
+          }
+        ],
+        "mustSupport": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Patient.extension"
+          }
+        ]
+      },
       {
         "id": "Patient.identifier",
         "path": "Patient.identifier",

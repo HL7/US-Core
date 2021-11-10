@@ -28,7 +28,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 1. a birth date
 1. an address
 
-**Additional USCDI v1 Requirements**
+**Additional USCDI Requirements**
 
 For ONC's USCDI requirements, each Patient must support the following additional elements. These elements are included in the formal definition of the profile. The patient examples include all of these elements.
 
@@ -37,8 +37,10 @@ For ONC's USCDI requirements, each Patient must support the following additional
 1. a race
 1. an ethnicity
 1. a birth sex*
+1. {:.new-content}gender identity*
 1. previous name
 1. suffix
+
 
 **Profile specific implementation guidance:**
 - Note that *Previous Name* and *Suffix* are listed in the U.S. Core Data for Interoperability.

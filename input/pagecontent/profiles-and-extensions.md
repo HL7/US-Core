@@ -26,7 +26,7 @@ The following Profiles and have been defined for this implementation guide.
 - [US Core Medication Profile]
 - [US Core MedicationRequest Profile]
 - [US Core Organization Profile]
-- [US Core Patient Profile]
+- {:.new-content}[US Core Patient Profile]
 - {:.new-content}[US Core Practitioner Profile]
 - [US Core PractitionerRole Profile]
 - [US Core Procedure Profile]
