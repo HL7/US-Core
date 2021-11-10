@@ -69,6 +69,7 @@ The following [Extensions]({{site.data.fhir.path}}extensibility.html) have been 
 - [US Core Direct email Extension](StructureDefinition-us-core-direct.html)
 - [US Core Race Extension](StructureDefinition-us-core-race.html)
 - [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html)
+- {:.new-content}[US Core Gender Identity Extension](StructureDefinition-us-core-genderIdentity.html)
 
 {% include link-list.md %}
 
