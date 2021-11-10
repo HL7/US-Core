@@ -22,7 +22,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each Observation must support:**
 
-1. a time indicating when the measurement was taken
+1. a time indicating when the observation was made
 1. a sexual orientation value
 
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="us-core-sexual-orientation"/>
+  <url value="http://hl7.org/fhir/us/core/ValueSet/us-core-sexual-orientation"/>
+  <version value="1.0.1"/>
+  <name value="USCoreSexualOrientation"/>
+  <title value="US Core Sexual Orientation"/>
+  <status value="active"/>
+  <date value="2022-06-01"/>
+  <publisher value="HL7 US Realm Steering Committee"/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <description value="The US Core Sexual Orientation Value Set includes concepts to describe a person’s sexual orientation (who they are attracted to)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="38628009"/>
+      </concept>
+      <concept>
+        <code value="20430005"/>
+      </concept>
+      <concept>
+        <code value="42035005"/>
+      </concept>
+     </include>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
+      <concept>
+        <code value="UNK"/>
+        <display value="Unknown"/>
+      </concept>
+      <concept>
+        <code value="ASKU"/>
+        <display value="Asked but no answer"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>
