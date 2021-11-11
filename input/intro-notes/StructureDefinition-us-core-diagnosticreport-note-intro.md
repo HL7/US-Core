@@ -50,6 +50,6 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 - {:.new-content}[Cardiology Report](DiagnosticReport-cardiology-report.html)
 - [Radiology Report](DiagnosticReport-chest-xray-report.html)
-- {:.new-content}[DXA Bone Density](DiagnosticReport-bone-density-report.html)
+- {:.new-content}[DXA Bone Density](DiagnosticReport-dxa-bone-density.html)
 
 {% include link-list.md %}
