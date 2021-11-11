@@ -1637,8 +1637,10 @@ definition:
         name: MCHC Example
         reference:
             reference: Observation/mchc
-    -   exampleBoolean: true
-        name: ekg-strip
+    -   description: This is an example Media image that is reference by the *US Core
+            DiagnosticReport Note Profile*.
+        exampleBoolean: true
+        name: EKG Strip Image
         reference:
             reference: Media/ekg-strip
     -   description: This is a metabolic panel example for the *US Core DiagnosticReport
