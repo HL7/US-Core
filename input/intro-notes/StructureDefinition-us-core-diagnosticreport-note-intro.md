@@ -40,7 +40,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 - See [Clinical Notes Guidance]
 - The `DiagnosticReport.category` binding must support at a minimum the [US Core DiagnosticReport Category Codes] of Cardiology, Radiology, and Pathology. Other categories may be supported.
 - A server will return how a customer has categorized their reports at a particular site. Categorization of reports is not consistent across sites. (e.g. a system may categorize an orthopedic note as cardiology.)
--  {:.new-content}The DocumentReference resource can reference both DICOM imaging studies and binary images directly by referencing [ImagingStudy] in `DocumentReference.imagingStudy`, or [Media]  in`DocumentReference.media`.
+-  {:.new-content}Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. This DiagnosticReport resource can reference both DICOM imaging studies and binary images directly by referencing [ImagingStudy] in `DocumentReference.imagingStudy`, or [Media]  in`DocumentReference.media`.
    *   Although both are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements.
    * The client application **SHALL** support both elements and target resources.
 
