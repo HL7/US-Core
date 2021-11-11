@@ -1,6 +1,4 @@
 
-- See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
-
-**No Search criteria for uscore-ethnicity extension.**
+A<!-- [`race`]-->n [`ethnicity`]<!-- [`gender-identity`]--> search parameter has been defined for this extension.  However, there are no gender identity search requirements for the client or server.
 
 {% include link-list.md %}
