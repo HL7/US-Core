@@ -48,7 +48,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 #### Examples
 
-- [Cardiology Report](DiagnosticReport-cardiology-report.html)
+- {:.new-content}[Cardiology Report](DiagnosticReport-cardiology-report.html)
 - [Radiology Report](DiagnosticReport-chest-xray-report.html)
 
 {% include link-list.md %}

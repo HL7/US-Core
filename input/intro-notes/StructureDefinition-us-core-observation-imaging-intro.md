@@ -1,4 +1,4 @@
-
+<div markdown="1" class="new-content">
 ﻿This profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve structured and unstructured (narrative) components of diagnostic imaging test results for a patient. These observations include reasons, findings, and impressions.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
 
 **Example Usage Scenarios:**
@@ -37,4 +37,5 @@ The following data-elements must always be present ([Mandatory] definition]) or 
  - [observation-usound](#.html)
  - [todo](#.html)
 
+</div>
 {% include link-list.md %}

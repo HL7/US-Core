@@ -3,8 +3,8 @@
   <id value="us-core-diagnosticreport-report-and-note-codes"/>
   <url value="http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes"/>
   <version value="4.0.1"/>
-  <name value="USCoreDiagnosticReportReportAndNoteCodes"/>
-  <title value="US Core DiagnosticReport Report And Note Codes"/>
+  <name value="USCoreClinicalTestCodes"/>
+  <title value="US Core Clinical Test Codes"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2019-05-21"/>
@@ -15,11 +15,16 @@
 			<value value="http://hl7.org/fhir"/>
 		</telecom>
 	</contact>
-  <description value="This value set currently contains all of LOINC. The codes selected should represent discrete and narrative diagnostic observations and reports"/>
+  <description value="Non laboratory LOINC concepts such as codes for observations like vital signs, hemodynamics, intake/output, EKG, obstetric ultrasound, cardiac echo and other clinical observations. The codes selected should represent discrete and narrative diagnostic observations and reports"/>
   <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
   <compose>
     <include>
       <system value="http://loinc.org"/>
+      <filter>
+        <property value="CLASSTYPE"/>
+        <op value="="/>
+        <value value="2"/>
+      </filter>
     </include>
   </compose>
 </ValueSet>
