@@ -1232,9 +1232,9 @@
         "reference": {
           "reference": "ValueSet/us-core-diagnosticreport-report-and-note-codes"
         },
-        "description": "This value set currently contains all of LOINC. The codes selected should represent discrete and narrative diagnostic observations and reports",
+        "description": "Non laboratory LOINC concepts such as codes for observations like vital signs, hemodynamics, intake/output, EKG, obstetric ultrasound, cardiac echo and other clinical observations. The codes selected should represent discrete and narrative diagnostic observations and reports",
         "exampleBoolean": false,
-        "name": "US Core DiagnosticReport Report And Note Codes"
+        "name": "US Core Clinical Test Codes"
       },
       {
         "reference": {
@@ -1382,6 +1382,14 @@
       },
       {
         "reference": {
+          "reference": "DiagnosticReport/dxa-bone-density"
+        },
+        "description": "This is a DXA Bone density quantitative measurement panel report example for the *US Core DiagnosticReport Note Profile*.",
+        "name": "DXA Bone density quantitative measurement panel Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+      },
+      {
+        "reference": {
           "reference": "Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2"
         },
         "description": "This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example example for the *Bundle Profile*.",
@@ -1499,6 +1507,54 @@
         "description": "This is a condition example for the *US Core Condition Profile*.",
         "name": "Condition Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-femur-l-armass-bmd"
+        },
+        "description": "This is a DXA Femur-L ArMass BMD Example for the *Clinical Test Result Observation Profile*.",
+        "name": "DXA Femur-L ArMass BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-femur-l-t-score-bmd"
+        },
+        "description": "This is a DXA Femur-L T-score BMD Example for the *Clinical Test Result Observation Profile*.",
+        "name": "DXA Femur-L T-score BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-femur-l-z-score-bmd"
+        },
+        "description": "This is a DXA Femur-L Z-score BMD Example for the *Clinical Test Result Observation Profile*.",
+        "name": "DXA Femur-L Z-score BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-hip-l-armass-bmd"
+        },
+        "description": "This is a DXA Hip-L ArMass BMD Example for the *Clinical Test Result Observation Profile*.",
+        "name": "DXA Hip-L ArMass BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-hip-l-t-score-bmd"
+        },
+        "description": "This is a DXA Hip-L T-score BMD Example for the *Clinical Test Result Observation Profile*.",
+        "name": "DXA Hip-L T-score BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-hip-l-z-score-bmd"
+        },
+        "description": "This is a DXA Hip-L Z-score BMD Example for the *Clinical Test Result Observation Profile*.",
+        "name": "DXA Hip-L Z-score BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
       },
       {
         "reference": {

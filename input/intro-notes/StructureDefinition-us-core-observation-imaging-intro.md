@@ -33,9 +33,8 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 ### Examples
 
-
- - [observation-usound](#.html)
- - [todo](#.html)
+ - [DXA Femur-L ArMass BMD](Observation/dxa-femur-l-armass-bmd.html)
+ - [DXA Hip-L Z-score BMD](Observation/dxa-hip-l-z-score-bmd.html)
 
 </div>
 {% include link-list.md %}
