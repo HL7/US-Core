@@ -1,6 +1,18 @@
 {
   "resourceType": "Media",
   "id": "ekg-strip",
+  "meta": {
+     "extension": [
+        {
+           "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+           "valueString": "EKG Strip Image"
+        },
+        {
+           "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+           "valueMarkdown": "This is an example Media image that is reference by the *US Core DiagnosticReport Note Profile*."
+        }d
+     ]
+  },
   "status": "completed",
   "type": {
     "coding": [
