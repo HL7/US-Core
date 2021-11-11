@@ -32,6 +32,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
    
 ### Examples
 
+[Sexual Orientation Observation Example](Observation-sexual-orientation-example.html)
+
 </div>
 
 
