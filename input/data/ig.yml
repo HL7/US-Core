@@ -1383,6 +1383,12 @@ definition:
         name: Device Knee Example
         reference:
             reference: Device/udi-3
+    -   description: This is a DXA Bone density quantitative measurement panel report
+            example for the *US Core DiagnosticReport Note Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
+        name: DXA Bone density quantitative measurement panel Example
+        reference:
+            reference: DiagnosticReport/bone-density-report
     -   description: This is a DiagnosticReport cardiology report example for the
             *US Core DiagnosticReport Note Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
@@ -1395,12 +1401,6 @@ definition:
         name: DiagnosticReport Chest Xray Report Example
         reference:
             reference: DiagnosticReport/chest-xray-report
-    -   description: This is a DXA Bone density quantitative measurement panel report
-            example for the *US Core DiagnosticReport Note Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
-        name: DXA Bone density quantitative measurement panel Example
-        reference:
-            reference: DiagnosticReport/dxa-bone-density-report
     -   description: This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example
             example for the *Bundle Profile*.
         exampleBoolean: true
