@@ -228,6 +228,12 @@ definition:
         name: US Core Ethnicity Extension
         reference:
             reference: StructureDefinition/us-core-ethnicity
+    -   description: This extension provides concepts to describe the gender a person
+            identifies as.
+        exampleBoolean: false
+        name: US Core Gender Identity Extension
+        reference:
+            reference: StructureDefinition/us-core-genderIdentity
     -   description: Defines constraints and extensions on the Goal resource for the
             minimal set of data to query and retrieve a patient's goal(s).
         exampleBoolean: false
@@ -1340,6 +1346,13 @@ definition:
         name: US Core Provider Role (NUCC)
         reference:
             reference: ValueSet/us-core-provider-role
+    -   description: "The US Core Sexual Orientation Value Set includes concepts to\
+            \ describe a person\u2019s sexual orientation (who they are attracted\
+            \ to)."
+        exampleBoolean: false
+        name: US Core Sexual Orientation
+        reference:
+            reference: ValueSet/us-core-sexual-orientation
     -   description: The US Core Smoking Status Observation Codes Value Set is a 'starter
             set' of concepts to capture smoking status.
         exampleBoolean: false
@@ -1436,6 +1449,12 @@ definition:
         name: BUN Example
         reference:
             reference: Observation/bun
+    -   description: This is a Capillary refill Time Nail Bed Example for the *Clinical
+            Test Result Observation Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+        name: Capillary refill Time Nail Bed Example
+        reference:
+            reference: Observation/capillary-refill-time-nail-bed
     -   description: This is a careteam example for the *US Core CareTeam Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
         name: CareTeam Example
@@ -1456,6 +1475,18 @@ definition:
         name: Condition Example
         reference:
             reference: Condition/example
+    -   description: This is a EKG impression Example for the *Clinical Test Result
+            Observation Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+        name: EKG impression Example
+        reference:
+            reference: Observation/ekg-impression
+    -   description: This is a EKG lead Example for the *Clinical Test Result Observation
+            Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+        name: EKG lead Example
+        reference:
+            reference: Observation/ekg-lead
     -   description: This is a encounter 1036 example for the *Encounter Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
         name: Encounter 1036 Example
@@ -1506,6 +1537,12 @@ definition:
         name: Head Circumference Example
         reference:
             reference: Observation/head-circumference
+    -   description: This is a Heart rate rhythm Example for the *Clinical Test Result
+            Observation Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+        name: Heart rate rhythm Example
+        reference:
+            reference: Observation/heart-rate-rhythm
     -   description: This is a heart rate example for the *Vitalsigns Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate
         name: Heart Rate Example
@@ -1532,6 +1569,12 @@ definition:
         name: Imm 1 Example
         reference:
             reference: Immunization/imm-1
+    -   description: This is a Jugular vein distension Example for the *Clinical Test
+            Result Observation Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+        name: Jugular vein distension Example
+        reference:
+            reference: Observation/jugular-vein-distension
     -   description: This is a length example for the *Vitalsigns Profile* which shows
             how body length (typically used for infants) is represented using 8306-3
             -*Body height - lying* as an additional observation code.
@@ -1550,6 +1593,10 @@ definition:
         name: MCHC Example
         reference:
             reference: Observation/mchc
+    -   exampleBoolean: true
+        name: ekg-strip
+        reference:
+            reference: Media/ekg-strip
     -   description: This is a metabolic panel example for the *US Core DiagnosticReport
             Lab Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
@@ -1581,6 +1628,12 @@ definition:
         name: Oxygen Saturation Example
         reference:
             reference: Observation/oxygen-saturation
+    -   description: This is a P-R interval {EKG lead} Example for the *Clinical Test
+            Result Observation Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+        name: P-R interval {EKG lead} Example
+        reference:
+            reference: Observation/p-r-interval-ekg-lead
     -   description: This is a patient child example for the *US Core Patient Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
         name: Patient Child Example
@@ -1620,6 +1673,24 @@ definition:
         name: Practitioner 2 Example
         reference:
             reference: Practitioner/practitioner-2
+    -   description: This is a Pulse intensity Palpation Example for the *Clinical
+            Test Result Observation Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+        name: Pulse intensity Palpation Example
+        reference:
+            reference: Observation/pulse-intensity-palpation
+    -   description: This is a Q-T interval {EKG lead} Example for the *Clinical Test
+            Result Observation Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+        name: Q-T interval {EKG lead} Example
+        reference:
+            reference: Observation/q-t-interval-ekg-lead
+    -   description: This is a QRS dur {EKG lead} Example for the *Clinical Test Result
+            Observation Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+        name: QRS dur {EKG lead} Example
+        reference:
+            reference: Observation/qrs-dur-ekg-lead
     -   description: This is a rehab example for the *US Core Procedure Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
         name: Rehab Example

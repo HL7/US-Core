@@ -190,6 +190,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-genderIdentity"
+        },
+        "description": "This extension provides concepts to describe the gender a person identifies as.",
+        "exampleBoolean": false,
+        "name": "US Core Gender Identity Extension"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-goal"
         },
         "description": "Defines constraints and extensions on the Goal resource for the minimal set of data to query and retrieve a patient's goal(s).",
@@ -1310,6 +1318,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/us-core-sexual-orientation"
+        },
+        "description": "The US Core Sexual Orientation Value Set includes concepts to describe a person’s sexual orientation (who they are attracted to).",
+        "exampleBoolean": false,
+        "name": "US Core Sexual Orientation"
+      },
+      {
+        "reference": {
           "reference": "ValueSet/us-core-smoking-status-observation-codes"
         },
         "description": "The US Core Smoking Status Observation Codes Value Set is a 'starter set' of concepts to capture smoking status.",
@@ -1446,6 +1462,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/capillary-refill-time-nail-bed"
+        },
+        "description": "This is a Capillary refill Time Nail Bed Example for the *Clinical Test Result Observation Profile*.",
+        "name": "Capillary refill Time Nail Bed Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+      },
+      {
+        "reference": {
           "reference": "CareTeam/example"
         },
         "description": "This is a careteam example for the *US Core CareTeam Profile*.",
@@ -1475,6 +1499,22 @@
         "description": "This is a condition example for the *US Core Condition Profile*.",
         "name": "Condition Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ekg-impression"
+        },
+        "description": "This is a EKG impression Example for the *Clinical Test Result Observation Profile*.",
+        "name": "EKG impression Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ekg-lead"
+        },
+        "description": "This is a EKG lead Example for the *Clinical Test Result Observation Profile*.",
+        "name": "EKG lead Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
       },
       {
         "reference": {
@@ -1550,6 +1590,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/heart-rate-rhythm"
+        },
+        "description": "This is a Heart rate rhythm Example for the *Clinical Test Result Observation Profile*.",
+        "name": "Heart rate rhythm Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+      },
+      {
+        "reference": {
           "reference": "Observation/heart-rate"
         },
         "description": "This is a heart rate example for the *Vitalsigns Profile*.",
@@ -1590,6 +1638,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/jugular-vein-distension"
+        },
+        "description": "This is a Jugular vein distension Example for the *Clinical Test Result Observation Profile*.",
+        "name": "Jugular vein distension Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+      },
+      {
+        "reference": {
           "reference": "Observation/length"
         },
         "description": "This is a length example for the *Vitalsigns Profile* which shows how body length (typically used for infants) is represented using 8306-3 -*Body height - lying* as an additional observation code.",
@@ -1611,6 +1667,13 @@
         "description": "This is a MCHC example for the *US Core Observation Lab Profile*.",
         "name": "MCHC Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Media/ekg-strip"
+        },
+        "name": "ekg-strip",
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -1651,6 +1714,14 @@
         "description": "This is a typical oxygen saturation example for the *US Core Pulse Oximetry Profile* on room air where no oxygen concentration is recorded.",
         "name": "Oxygen Saturation Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
+      },
+      {
+        "reference": {
+          "reference": "Observation/p-r-interval-ekg-lead"
+        },
+        "description": "This is a P-R interval {EKG lead} Example for the *Clinical Test Result Observation Profile*.",
+        "name": "P-R interval {EKG lead} Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
       },
       {
         "reference": {
@@ -1707,6 +1778,30 @@
         "description": "This is a practitioner 2 example for the *US Core Practitioner Profile*.",
         "name": "Practitioner 2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+      },
+      {
+        "reference": {
+          "reference": "Observation/pulse-intensity-palpation"
+        },
+        "description": "This is a Pulse intensity Palpation Example for the *Clinical Test Result Observation Profile*.",
+        "name": "Pulse intensity Palpation Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+      },
+      {
+        "reference": {
+          "reference": "Observation/q-t-interval-ekg-lead"
+        },
+        "description": "This is a Q-T interval {EKG lead} Example for the *Clinical Test Result Observation Profile*.",
+        "name": "Q-T interval {EKG lead} Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
+      },
+      {
+        "reference": {
+          "reference": "Observation/qrs-dur-ekg-lead"
+        },
+        "description": "This is a QRS dur {EKG lead} Example for the *Clinical Test Result Observation Profile*.",
+        "name": "QRS dur {EKG lead} Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"
       },
       {
         "reference": {
