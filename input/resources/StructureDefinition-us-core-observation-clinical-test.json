@@ -53,12 +53,39 @@
         "id": "Observation.category:procedure",
         "path": "Observation.category",
         "sliceName": "procedure",
-        "min": 1,
         "patternCodeableConcept": {
           "coding": [
             {
               "system": "http://terminology.hl7.org/CodeSystem/observation-category",
               "code": "procedure"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:exam",
+        "path": "Observation.category",
+        "sliceName": "exam",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "exam"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:activity",
+        "path": "Observation.category",
+        "sliceName": "activity",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "activity"
             }
           ]
         },

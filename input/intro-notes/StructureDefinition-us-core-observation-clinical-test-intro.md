@@ -33,8 +33,8 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 ### Examples
 
-
- - [observation-rhythm](#.html)
- - [todo](#.html)
+- [Observation Rhythm](Observation-heart-rate-rhythm.html)
+- [PR Interval EKG Lead](Observation-p-r-interval-ekg-lead.html)
+- [Capillary Refill Time Nail Bed](Observation-capillary-refill-time-nail-bed.html)
 
 {% include link-list.md %}
