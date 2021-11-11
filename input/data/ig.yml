@@ -1166,6 +1166,13 @@ definition:
         name: US Core Patient Profile
         reference:
             reference: StructureDefinition/us-core-patient
+    -   description: Defines constraints and extensions on the ServiceRequest resource
+            for the minimal set of data to query and retrieve orders associated with
+            diagnostic and clinical tests and clinical interventions for a patient
+        exampleBoolean: false
+        name: US Core Service Request
+        reference:
+            reference: StructureDefinition/us-core-servicerequest
     -   description: The 41 [CDC ethnicity codes](http://www.cdc.gov/phin/resources/vocabulary/index.html)
             that are grouped under one of the 2 OMB ethnicity category codes.
         exampleBoolean: false
@@ -1348,6 +1355,12 @@ definition:
         name: US Core Provider Role (NUCC)
         reference:
             reference: ValueSet/us-core-provider-role
+    -   description: A set of SNOMED CT and LOINC concepts to classify a requested
+            service
+        exampleBoolean: false
+        name: US Core Servicerequest Category
+        reference:
+            reference: ValueSet/us-core-servicerequest-category
     -   description: "The US Core Sexual Orientation Value Set includes concepts to\
             \ describe a person\u2019s sexual orientation (who they are attracted\
             \ to)."

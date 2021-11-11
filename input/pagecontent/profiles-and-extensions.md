@@ -32,6 +32,7 @@ The following Profiles and have been defined for this implementation guide.
 - [US Core Procedure Profile]
 - [US Core Provenance Profile]
 - {:.new-content}[US Core RelatedPerson Profile]
+- {:.new-content}[US Core ServiceRequest Profile]
 - {:.new-content}[US Core Sexual Orientation Observation Profile]
 - [US Core Smoking Status Observation Profile]
 - [US Core Vital Signs Profile]

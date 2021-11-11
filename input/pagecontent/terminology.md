@@ -29,6 +29,7 @@ These value sets have been defined for this implementation guide.
 *   [US Core Provenance Participant Type Codes](ValueSet-us-core-provenance-participant-type.html)
 *   [US Core Provider Role (NUCC)](ValueSet-us-core-provider-role.html)
 *   {:.new-content}[US Core Sexual Orientation](ValueSet-us-core-sexual-orientation.html)
+*   {:.new-content}[US Core Servicerequest Category](ValueSetus-core-servicerequest-category.html)*
 *   [US Core Status for Smoking Status Observation](ValueSet-us-core-observation-smoking-status-status.html)
 *   [US Core Smoking Status Observation Codes](ValueSet-us-core-smoking-status-observation-codes.html)
 * [US Core Observation Smokingstatus Max-Binding](ValueSet-us-core-observation-smokingstatus-max.html)
