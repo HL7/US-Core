@@ -44,12 +44,12 @@ The following data-elements must always be present ([Mandatory] definition]) or 
    *   Although both are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements.
    * The client application **SHALL** support both elements and target resources.
 
-{:.note-to-balloter}Media which is referenced in R4 is only FMM = 1 and will be removed as as in FHIR R5.   In R5 Media is replaced by DocumentReference FMM = 3.  Should this profile use an extension to reference DocumentReference instead of Media.
+{:.note-to-balloters}Media which is referenced in R4 is only FMM = 1 and will be removed as as in FHIR R5.   In R5 Media is replaced by DocumentReference FMM = 3.  Should this profile use an extension to reference DocumentReference instead of Media.
 
 #### Examples
 
 - {:.new-content}[Cardiology Report](DiagnosticReport-cardiology-report.html)
 - [Radiology Report](DiagnosticReport-chest-xray-report.html)
-- {:.new-content}[DXA Bone Density](DiagnosticReport-dxa-bone-density.html)
+- {:.new-content}[DXA Bone Density](DiagnosticReport-bone-density-report.html)
 
 {% include link-list.md %}
