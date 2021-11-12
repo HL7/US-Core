@@ -13,7 +13,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/ServiceRequest?patient={Type/}[id]`
 
     Example:
-    
+
       1. GET [base]/ServiceRequest?patient=1137192
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient ([how to search by reference])
@@ -23,7 +23,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/ServiceRequest[id]`
 
     Example:
-    
+
       1. GET [base]/ServiceRequest/1032702
       1. GET [base]/ServiceRequest?_id=1032702
 
@@ -34,7 +34,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/ServiceRequest?patient={Type/}[id]&category={system|}[code]`
 
     Example:
-    
+
       1. GET [base]/ServiceRequest?patient=f201&amp;category=http://loinc.org\|LG41762-2
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and  a category code ([how to search by reference] and [how to search by token])
@@ -45,8 +45,8 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/ServiceRequest?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}`
 
     Example:
-    
-      1. GET [base]/ServiceRequest?patient=1032702&amp;code=http://snomed.info/sct|35637008
+
+      1. GET [base]/ServiceRequest?patient=1032702&amp;code=http://snomed.info/sct\|35637008
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and  report code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token])
 
@@ -57,7 +57,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/ServiceRequest?patient={Type/}[id]&category={system|}[code]&authored={gt|lt|ge|le}[date]{&authored={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]/ServiceRequest?patient=f201&amp;category=http://loinc.org\|LG41762-2&amp;date=ge2010-01-14T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and date and a category code ([how to search by reference] and [how to search by token] and [how to search by date])
@@ -73,7 +73,7 @@ The following search parameter combinations SHOULD be supported:
     `GET [base]/ServiceRequest?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
 
     Example:
-    
+
       1. GET [base]/ServiceRequest?patient=1137192&amp;status=completed
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and status ([how to search by reference] and [how to search by token])
@@ -86,8 +86,8 @@ The following search parameter combinations SHOULD be supported:
     `GET [base]/ServiceRequest?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}&authored={gt|lt|ge|le}[date]{&authored={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
-      1. GET [base]/ServiceRequest?patient=f201&amp;code=http://snomed.info/sct|35637008&amp;date=ge2019-01-14T00:00:00Z
+
+      1. GET [base]/ServiceRequest?patient=f201&amp;code=http://snomed.info/sct\|35637008&amp;date=ge2019-01-14T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and date and service code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
 

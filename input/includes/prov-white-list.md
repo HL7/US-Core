@@ -1,3 +1,4 @@
+<li> The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core </li> resources:
 <ul id="prov-white-list">
 {%- assign black_list = "Extension,Provenance,Medication,Organization,Practitioner,PractitionerRole,Location" | split:"," -%}
 {%- for sd_hash in site.data.structuredefinitions -%}
