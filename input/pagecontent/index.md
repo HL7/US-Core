@@ -14,7 +14,7 @@ for profile/element updates:
 - [ ] optionally update SPs and SP page
 - [ ] update/create Examples - (highlight new content with new-content class)
 - [ ] update change log
-- [ ] update Provenance to include all the new resources - do at end create a liquid script as include file to update this dynamically.
+<!--- [ ] updated Provenance to include all the new resources created a liquid script as include file to update this dynamically. -->
 - [ ] update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources  *NOTE do this at end and remember to update Client spreadsheet from Server spreadsheet*
 
 for narrative updates
