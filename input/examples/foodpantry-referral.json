@@ -1,0 +1,50 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "foodpantry-referral",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "ServiceRequest Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a service request example for the *US Core Service Request Profile*."
+      }
+    ],
+    "profile": [
+      "http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-servicerequest"
+    ]
+  },
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "LG41762-2",
+          "display": "SocialDeterminantsOfHealth"
+        }
+      ],
+      "text": "Social Determinants Of Health"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "467771000124109",
+        "display": "Assistance with application for food pantry program"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "occurrence": "2021-11-20",
+  "authoredOn": "2021-11-12T10:59:38-08:00",
+  "requester": {
+    "reference": "Practitioner/practitioner-1"
+  }
+}

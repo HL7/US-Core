@@ -1686,6 +1686,14 @@
       },
       {
         "reference": {
+          "reference": "ServiceRequest/foodpantry-referral"
+        },
+        "description": "This is a service request example for the *US Core Service Request Profile*.",
+        "name": "ServiceRequest Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-servicerequest"
+      },
+      {
+        "reference": {
           "reference": "Goal/goal-1"
         },
         "description": "This is a goal 1 example for the *US Core Goal Profile*.",
@@ -2430,6 +2438,22 @@
       {
         "code": "generate",
         "value": "json"
+      },
+      {
+        "code": "no-narrative",
+        "value": "*/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "StructureDefinition/*"
+      },
+      {
+        "code": "no-validate",
+        "value": "*/*"
+      },
+      {
+        "code": "no-validate",
+        "value": "StructureDefinition/*"
       },
       {
         "code": "path-history",

@@ -106,6 +106,14 @@ definition:
         value: xml
     -   code: generate
         value: json
+    -   code: no-narrative
+        value: '*/*'
+    -   code: no-narrative
+        value: StructureDefinition/*
+    -   code: no-validate
+        value: '*/*'
+    -   code: no-validate
+        value: StructureDefinition/*
     -   code: path-history
         value: http://hl7.org/fhir/us/core/history.html
     resource:
@@ -1626,6 +1634,12 @@ definition:
         name: Organization 2 Example
         reference:
             reference: Organization/example-organization-2
+    -   description: This is a service request example for the *US Core Service Request
+            Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-servicerequest
+        name: ServiceRequest Example
+        reference:
+            reference: ServiceRequest/foodpantry-referral
     -   description: This is a goal 1 example for the *US Core Goal Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal
         name: Goal 1 Example
