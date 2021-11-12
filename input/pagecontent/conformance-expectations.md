@@ -144,7 +144,7 @@ Although the FHIR guidance for extensible bindings indicates that *all conceptua
 For example, the [US Core Procedure Codes] and  [US Core Condition Code] value sets contain a number of high-level abstract codes. For data not captured by the system transmitting the information, the coded data should be automatically converted to a fine-grained code from the specified value set. If this is not possible, the system can provide the existing code or the free text, *and a high-level abstract code*, such as SNOMED CT 'Procedure', to remain conformant with the extensible binding.
 
 ##### Using multiple codes with CodeableConcept Datatype
-{:.no_toc #tranlations}
+{:.no_toc # translations}
 
 Alternate codes may be provided in addition than the standard codes defined in required or extensible value sets. The alternate codes are called “translations”. These translations may be equivalent to or narrower in meaning to the standard concept code.
 
