@@ -32,6 +32,22 @@
       {
         "id": "ServiceRequest.category",
         "path": "ServiceRequest.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.category:us-core",
+        "path": "ServiceRequest.category",
+        "sliceName": "imaging",
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
