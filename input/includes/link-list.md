@@ -307,4 +307,4 @@
 [Mandatory]: conformance-expectations.html#mandatory-elements
 [US Core RelatedPerson Profile]: StructureDefinition-us-core-relatedperson.html
 [US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
-[Using multiple codes with CodeableConcept Datatype]: (conformance-expectations.html#translations)
+[Using multiple codes with CodeableConcept Datatype]: conformance-expectations.html#translations
