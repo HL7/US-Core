@@ -70,7 +70,7 @@
 | Assessment| [US Core Observation Screening Response],[US Core Observation Assessment] | Observation| 
 | Goals| [US Core Goal Profile] | Goal| 
 | Interventions | [US Core ServiceRequest Profile],[US Core Procedure Profile] | ServiceRequest, Procedure| 
-| Problems/Health Concerns | [US Core SDOH Condition Profile] | Condition| 
+| Problems/Health Concerns | [US Core Condition Profile] | Condition| 
 | **Smoking Status**| [US Core Smoking Status Observation Profile]| Observation|
 | **Unique Device Identifier(s) for a Patient's Implantable Device(s)** | [US Core Implantable Device Profile]| Device |
 | **Vital Signs:**| ||
