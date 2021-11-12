@@ -72,12 +72,12 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   generate: #what does this do - todo: remove and see
     - xml
     - json
-  no-narrative:
-    - '*/*'  # does not seems to work
-    - 'StructureDefinition/*'
-  no-validate:
-    - '*/*'  # does not seems to work
-    - 'StructureDefinition/*'
+  # no-narrative:
+  #   - '*/*'  # does not seems to work
+  #   - 'StructureDefinition/*'
+  # no-validate:
+  #   - '*/*'  # does not seems to work
+  #   - 'StructureDefinition/*'
 copyrightyear: '2021+'
 releaselabel: CI Build
 
