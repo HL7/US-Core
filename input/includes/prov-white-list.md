@@ -21,3 +21,15 @@
    - US Core Pulse Oximetry Profile
    - US Core Smoking Status Observation Profile
    - The Vital Signs Profile from the FHIR Specification
+
+{% assign black_list = "Extension,Provenance,Medication,Organization,Practitioner,PractitionerRole,Location" | split:"," %}
+
+{% for s in site.data.structuredefinitions %}
+  {%- unless black_list contains r.type -%}
+    {%- for r in site.data.resources -%}
+      {%- if r.name == s.basename -%}
+- {{r.title}}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endunless -%}
+{%- endfor %}
