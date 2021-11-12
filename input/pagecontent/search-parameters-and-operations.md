@@ -23,6 +23,9 @@ NOTE: The following search parameters **SHALL NOT** be interpreted on their own 
 **Encounter**
 - {:.new-content}[`discharge-disposition`]
 
+**Goal**
+- {:.new-content}[`description`]
+
 **Patient**
 - [`race`]
 - [`ethnicity`]
