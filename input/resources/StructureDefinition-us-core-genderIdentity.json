@@ -15,6 +15,18 @@
     {
       "type": "element",
       "expression": "Patient"
+    },
+    {
+      "type": "element",
+      "expression": "RelatedPerson"
+    },
+    {
+      "type": "element",
+      "expression": "Person"
+    },
+    {
+      "type": "element",
+      "expression": "Practitioner"
     }
   ],
   "type": "Extension",
@@ -22,6 +34,11 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+          "id": "Extension.url",
+          "path": "Extension.url",
+          "fixedUri": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity""
+      },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",

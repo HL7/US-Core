@@ -1,19 +1,13 @@
-This extension provides concepts to describe the gender a person identifies as. This extension is not used to describe a person's sexual orientation (who they are attracted to).
+### Profile specific implementation guidance
 
-The concepts included here are from the [HL7 Gender Harmony Project]  which is modeling gender and sex information data elements, value sets, code systems.
+- This extension provides concepts to describe the gender a person identifies as. This extension is not used to describe a person's sexual orientation (who they are attracted to).
+- The concepts included here are from the [HL7 Gender Harmony Project]  which is modeling gender and sex information data elements, value sets, code systems.
+<div markdown="1" class="stu-note">
+Under the guidance of the [HL7 Gender Harmony Project] the specified value set in this extension omits these two concepts specified in ONC's USCDI v2 Applicable Vocabulary Standards for Gender Identity:
 
-**Note**: Under the guidance of the [HL7 Gender Harmony Project] the value set required here removes two concepts specified in ONC's USCDI v2 
 - Female-to-Male (FTM)/Transgender Male/Trans Man (SNOMED CT 407377005)
--  Male-to-Female (MTF)/Transgender Female/Trans Woman (SNOMED CT 407376001)
-
-
-### US Core Gender Identity Extension
-
-This Complex Extension for race allows one or more race codes of which:
-
-- [Must Support] at least one code from Gender Identity
-
-
-Example can be found in [Patient-example](Patient-example.html)
+- Male-to-Female (MTF)/Transgender Female/Trans Woman (SNOMED CT 407376001)
+</div>
+- A<!-- [`race`]--><!--n [`ethnicity`]--> [`gender-identity`] search parameter has been defined for this extension.  However, there are no  <!--race--><!--ethnicity-->gender-identity search requirements for the client or server.
 
 {% include link-list.md %}
