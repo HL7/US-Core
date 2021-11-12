@@ -30,7 +30,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Profile specific implementation guidance:**
 
-- See [SDOH Guidance]
+- See [SDOH Guidance] for how this profile can used to representan SDOH intervention request.
 - The `ServiceRequest.category` binding must support at a minimum the [US Core ServiceRequest
 Category Codes].  Within this categorization scheme/axis, other categories codes may be supported and alternate codes may be provided *in addition* to the standard codes. See [Using multiple codes with CodeableConcept Datatype] for examples.  Other categorization schemes to be used as well.
 
