@@ -59,6 +59,7 @@
 - [`lifecycle-status`](SearchParameter-us-core-goal-lifecycle-status.html)
 - [`patient`](SearchParameter-us-core-goal-patient.html)
 - [`target-date`](SearchParameter-us-core-goal-target-date.html)
+- {:.new-content}[`description`](SearchParameter-us-core-goal-description.html)
 
 **Immunization**
 - [`patient`](SearchParameter-us-core-immunization-patient.html)

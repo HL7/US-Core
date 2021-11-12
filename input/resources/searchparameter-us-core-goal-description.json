@@ -1,0 +1,36 @@
+{
+  "id": "us-core-goal-description",
+  "base": [
+    "Goal"
+  ],
+  "code": "description",
+  "date": "2021-11-12",
+  "description": "**The code or text describing the goal**\n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+  "experimental": false,
+  "expression": "Goal.description",
+  "name": "USCoreGoalDescription",
+  "status": "active",
+  "type": "token",
+  "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-goal-description",
+  "xpath": "f:Goal/f:description",
+  "xpathUsage": "normal",
+  "resourceType": "SearchParameter",
+  "multipleOr": true,
+  "_multipleOr": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  },
+  "multipleAnd": true,
+  "_multipleAnd": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode": "MAY"
+      }
+    ]
+  }
+}

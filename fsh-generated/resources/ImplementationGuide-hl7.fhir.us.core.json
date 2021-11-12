@@ -798,6 +798,14 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-goal-description"
+        },
+        "description": "**The code or text describing the goal**\n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreGoalDescription"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-goal-lifecycle-status"
         },
         "description": "**proposed | planned | accepted | active | on-hold | completed | cancelled | entered-in-error | rejected**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
