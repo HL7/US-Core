@@ -114,3 +114,11 @@
 - [`date`](SearchParameter-us-core-procedure-date.html)
 - [`code`](SearchParameter-us-core-procedure-code.html)
 
+**ServiceRequest**
+- {:.new-content}[`status`](SearchParameter-us-core-servicerequest-status.html)
+- {:.new-content}[`patient`](SearchParameter-us-core-servicerequest-patient.html)
+- {:.new-content}[`category`](SearchParameter-us-core-servicerequest-category.html)
+- {:.new-content}[`code`](SearchParameter-us-core-servicerequest-code.html)
+- {:.new-content}[`authored`](SearchParameter-us-core-servicerequest-authored.html)
+- {:.new-content}[`_id`](SearchParameter-us-core-servicerequest-id.html)
+

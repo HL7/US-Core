@@ -1160,6 +1160,54 @@ definition:
         name: USCoreRace
         reference:
             reference: SearchParameter/us-core-race
+    -   description: "**Date request signed**  \n**NOTE**: This US Core SearchParameter\
+            \ definition extends the usage context of the\n[Conformance expectation\
+            \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+        exampleBoolean: false
+        name: USCoreServicerequestAuthored
+        reference:
+            reference: SearchParameter/us-core-servicerequest-authored
+    -   description: "**Classification of service**  \n**NOTE**: This US Core SearchParameter\
+            \ definition extends the usage context of the\n[Conformance expectation\
+            \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+        exampleBoolean: false
+        name: USCoreServicerequestCategory
+        reference:
+            reference: SearchParameter/us-core-servicerequest-category
+    -   description: "**What is being requested/ordered**  \n**NOTE**: This US Core\
+            \ SearchParameter definition extends the usage context of the\n[Conformance\
+            \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+        exampleBoolean: false
+        name: USCoreServicerequestCode
+        reference:
+            reference: SearchParameter/us-core-servicerequest-code
+    -   description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
+            \ definition extends the usage context of the\n[Conformance expectation\
+            \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+        exampleBoolean: false
+        name: USCoreServicerequestId
+        reference:
+            reference: SearchParameter/us-core-servicerequest-id
+    -   description: "**Search by subject - a patient**  \n**NOTE**: This US Core\
+            \ SearchParameter definition extends the usage context of the\n[Conformance\
+            \ expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+        exampleBoolean: false
+        name: USCoreServicerequestPatient
+        reference:
+            reference: SearchParameter/us-core-servicerequest-patient
+    -   description: "**draft | active | on-hold | revoked | completed | entered-in-error\
+            \ | unknown**  \n**NOTE**: This US Core SearchParameter definition extends\
+            \ the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+        exampleBoolean: false
+        name: USCoreServicerequestStatus
+        reference:
+            reference: SearchParameter/us-core-servicerequest-status
     -   description: Defines constraints and extensions on the patient resource for
             the minimal set of data to query and retrieve patient demographic information.
         exampleBoolean: false
