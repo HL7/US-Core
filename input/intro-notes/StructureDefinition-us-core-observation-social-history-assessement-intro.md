@@ -1,12 +1,13 @@
 <div markdown="1" class="new-content">
-﻿This profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve observations that represent the questions and responses to form/survey and assessment tools such as the [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]. This profile encompasses single, multipart, and derived responses.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
+
+﻿This profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve observations that represent simple observations made by an individual about a patient's social history status such as education, food insecurity, etc. Observations derived from a formal assessment tool or survey should use the [US Core Screening Response Observation Profile].  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile
 
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core-Results profile:
 
--   Query for survey screening results for a patient.
--  [Record or update] screening results results belonging to a Patient
+-   Query for social history results for a patient.
+-  [Record or update] social history results results belonging to a Patient
 
 ### Mandatory and Must Support Data Elements
 
@@ -16,32 +17,27 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 **Each Observation must have:**
 
 1. a status
-1. a category code of 'survey'
-1. a [LOINC] code, if available, which tells you the survey question
+1. a category code of 'social-history'
+1. a code
 1. a patient
 
 **Each Observation must support:**
 
-1. additional category codes
-1. a time indicating when survey was taken
+1. a time indicating when observation was made
 1. who answered the questions
-3. the anwer or a reason why the data is absent*
-   - if the result value is a numeric quantity, a standard [UCUM] unit is required
-4. related questionnaire responses or observations that this observation is made from
-5. component results
+3. a value
 
 **Profile specific implementation guidance:**
 
 - See [SDOH Guidance] for how this profile can used to represent SDOH assessments.
-- An Observation without a value, **SHALL** include a reason why the data is absent *unless* there are component observations.
-    - For questions represented in `Observation.code` (e.g., LOINC) that specify “check all that apply”, the question should be used for `Observation.code` and for `Observation.component.code`. For “check all that apply” questions, the answers (regardless of whether one or more are selected) should only be represented using `Observation.component.value` and `Observation.value` should be empty.
-  - \*Systems that never provide an observation without a value are not required to support `Observation.dataAbsentReason`
-
+- The codes can be from LOINC or SNOMED CT.
+- Often the pattern for these types of observations that the `Observation.code` indicates a statement about findings and the `Observation.value` is present and "qualifies" the finding typically confirming or refuting it. For example:
+      code=Transport too expensive
+      value=true
 
 ### Examples
 
- - [Hunger Question Example](Observation-hunger-question-example.html)
- - [Prapare Multiselect Example](Observation-prapare-multiselect-example.html)
+ - [Social History Example](Observation-social-history-example.html)
 
 </div>
 {% include link-list.md %}

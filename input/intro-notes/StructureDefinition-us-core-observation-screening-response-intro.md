@@ -25,7 +25,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 1. additional category codes
 1. a time indicating when survey was taken
 1. who answered the questions
-3. the anwer or a reason why the data is absent*
+3. the answer or a reason why the data is absent*
    - if the result value is a numeric quantity, a standard [UCUM] unit is required
 4. related questionnaire responses or observations that this observation is made from
 5. component results
