@@ -67,7 +67,7 @@
 | Author Organization | [US Core Provenance Profile] | Provenance.agent|
 | **Sexual Orientation**| [US Core Sexual Orientation Observation Profile] | Observation|
 | **SDOH**|  | | 
-| Assessment| [US Core Screening Response Observation Profile],[US Core Observation Assessment Profile] | Observation| 
+| Assessment| [US Core Screening Response Observation Profile],[US Core Social History Assessment Observation Profile] | Observation| 
 | Goals| [US Core Goal Profile] | Goal| 
 | Interventions | [US Core ServiceRequest Profile],[US Core Procedure Profile] | ServiceRequest, Procedure| 
 | Problems/Health Concerns | [US Core Condition Profile] | Condition| 
