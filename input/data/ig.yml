@@ -1695,6 +1695,12 @@ definition:
         name: HL7East Example
         reference:
             reference: Location/hl7east
+    -   description: This is a Hunger Question Example for the *US Core Screening
+            Response Observation Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response
+        name: Hunger Question Example
+        reference:
+            reference: Observation/hunger-question-example
     -   description: This is a imm 1 example for the *US Core Immunization Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization
         name: Imm 1 Example
@@ -1806,6 +1812,12 @@ definition:
         name: Practitioner 2 Example
         reference:
             reference: Practitioner/practitioner-2
+    -   description: This is a Prapare Multiselect Example for the *US Core Screening
+            Response Observation Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response
+        name: Prapare Multiselect Example
+        reference:
+            reference: Observation/prapare-multiselect-example
     -   description: This is a Pulse intensity Palpation Example for the *Clinical
             Test Result Observation Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
@@ -2068,6 +2080,10 @@ dependsOn:
     packageId: us.nlm.vsac
     uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
     version: 0.3.0
+-   id: hl7_fhir_uv_sdc
+    packageId: hl7.fhir.uv.sdc
+    uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc
+    version: 2.7.0
 description: 'The US Core Implementation Guide is based on FHIR Version R4 and defines
     the minimum conformance requirements for accessing patient data. The Argonaut
     pilot implementations, ONC 2015 Edition Common Clinical Data Set (CCDS), and ONC

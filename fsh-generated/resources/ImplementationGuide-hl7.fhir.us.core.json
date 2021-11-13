@@ -292,6 +292,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-observation-screening-response"
+        },
+        "description": "Profile for observations that represent question and answer pairs from from surveys/questionnaires such as Social Determinants of Health (SDOH) screening instruments.",
+        "exampleBoolean": false,
+        "name": "US Core Screening Response Observation Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-observation-sexual-orientation"
         },
         "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve a Patient's Sexual Orientation.",
@@ -1780,6 +1788,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/hunger-question-example"
+        },
+        "description": "This is a Hunger Question Example for the *US Core Screening Response Observation Profile*.",
+        "name": "Hunger Question Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response"
+      },
+      {
+        "reference": {
           "reference": "Immunization/imm-1"
         },
         "description": "This is a imm 1 example for the *US Core Immunization Profile*.",
@@ -1929,6 +1945,14 @@
         "description": "This is a practitioner 2 example for the *US Core Practitioner Profile*.",
         "name": "Practitioner 2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+      },
+      {
+        "reference": {
+          "reference": "Observation/prapare-multiselect-example"
+        },
+        "description": "This is a Prapare Multiselect Example for the *US Core Screening Response Observation Profile*.",
+        "name": "Prapare Multiselect Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response"
       },
       {
         "reference": {
