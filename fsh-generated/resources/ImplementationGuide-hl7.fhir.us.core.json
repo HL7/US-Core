@@ -48,6 +48,12 @@
       "packageId": "us.nlm.vsac",
       "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
       "version": "0.3.0"
+    },
+    {
+      "packageId": "hl7.fhir.uv.sdc",
+      "version": "2.7.0",
+      "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc",
+      "id": "hl7_fhir_uv_sdc"
     }
   ],
   "definition": {
@@ -283,14 +289,6 @@
         "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve laboratory test results",
         "exampleBoolean": false,
         "name": "US Core Laboratory Result Observation Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-observation-screening-response"
-        },
-        "description": "Profile for observations that represent question and answer pairs from from surveys/questionnaires such as Social Determinants of Health (SDOH) screening instruments.",
-        "exampleBoolean": false,
-        "name": "US Core Screening Response Observation Profile"
       },
       {
         "reference": {

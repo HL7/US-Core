@@ -12,7 +12,8 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "baseDefinition": "
+  ",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -143,7 +144,7 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-              "http://hl7.org/fhir/StructureDefinition/practitionerrole",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
             ],
@@ -284,36 +285,6 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.value[x]:valueQuantity",
-        "path": "Observation.value[x]",
-        "sliceName": "valueQuantity",
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ],
-        "binding": {
-          "strength": "required",
-          "description": "This is the entire UCUM code set.",
-          "valueSet": "http://terminology.hl7.org/ValueSet/v3-UnitsOfMeasureCaseSensitive"
-        }
-      },
-      {
-        "id": "Observation.valueCodeableConcept:valueCodeableConcept",
-        "path": "Observation.valueCodeableConcept",
-        "sliceName": "valueCodeableConcept",
-        "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.\r\n\r\nAs the Gravity Project continues to refine content for the SDOH categories (e.g., food, housing, transportation, etc.), this value set will be refined to codes that pertain to SDOH categories. For further guidance on external value sets vetted by the Gravity Project see: [SDOH terminology guidance](https://trifolia-fhir.lantanagroup.com/igs/lantana_hapi_r4/sdoh-clinicalcare/support_for_multiple_domains.html#external-value-set-guidance)",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
-        }
-      },
-      {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
         "comment": "\"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values. For a given LOINC question, if the LOINC answer list includes concepts such as 'unknown' or 'not available', they should be used for Observation.value. Where these concepts are not part of the value set for Observation.value, the Observation.dataAbsentReason can be used if necessary and appropriate.",
@@ -334,7 +305,7 @@
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response",
               "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse",
-              "http://hl7.org/fhir/us/core/StructureDefinition/DocumentReference",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
               "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
               "http://hl7.org/fhir/StructureDefinition/Media",
               "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
@@ -396,7 +367,7 @@
       {
         "id": "Observation.component",
         "path": "Observation.component",
-        "requirement": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples: Individuals may be multiracial. Component is used to capture one or more races.",
+        "requirements": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples: Individuals may be multiracial. Component is used to capture one or more races.",
         "comment": "For questions represented in LOINC that specify “check all that apply”, the LOINC question should be used for Observation.code and for Observation.component.code. For “check all that apply” questions, the answers (regardless of whether one or more are selected) should only be represented using Observation.component.value and Observation.value should be empty."
       },
       {
