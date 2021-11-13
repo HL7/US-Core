@@ -366,7 +366,7 @@
       {
         "id": "Observation.component",
         "path": "Observation.component",
-        "requirements": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples: Individuals may be multiracial. Component is used to capture one or more races.",
+        "definition": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples: Individuals may be multiracial. Component is used to capture one or more races.",
         "comment": "For questions represented in LOINC that specify “check all that apply”, the LOINC question should be used for Observation.code and for Observation.component.code. For “check all that apply” questions, the answers (regardless of whether one or more are selected) should only be represented using Observation.component.value and Observation.value should be empty."
       },
       {
