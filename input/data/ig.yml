@@ -320,6 +320,15 @@ definition:
         name: US Core Sexual Orientation Observation Profile
         reference:
             reference: StructureDefinition/us-core-observation-sexual-orientation
+    -   description: Profile for simple observations made by an indivual about a patient's
+            social history status such as education, food insecurity, etc.  These
+            observation are typically not derived from a formal assessment tool or
+            survey which should be represented using the [US Core Screening Response
+            Observation Profile](StructureDefinition-us-core-observation-screening-response.html)
+        exampleBoolean: false
+        name: US Core Social History Assessment Observation Profile
+        reference:
+            reference: StructureDefinition/us-core-observation-social-history-assessment
     -   description: Defines basic constraints and extensions on the Organization
             resource for use with other US Core resources
         exampleBoolean: false
@@ -1911,6 +1920,12 @@ definition:
         name: Sexual Orientation Observation Example
         reference:
             reference: Observation/sexual-orientation-example
+    -   description: This is a Social History Assessment Example for the *US Core
+            Social History Assessment Observation Profile*.
+        exampleBoolean: true
+        name: Social History Assessment Example
+        reference:
+            reference: Observation/socialhistory-assessment-example
     -   description: This is a some day smoker example for the *US Core Smokingstatus
             Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus

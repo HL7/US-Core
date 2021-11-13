@@ -35,6 +35,7 @@ The following Profiles and have been defined for this implementation guide.
 - {:.new-content}[US Core Screening Response Observation Profile]
 - {:.new-content}[US Core ServiceRequest Profile]
 - {:.new-content}[US Core Sexual Orientation Observation Profile]
+- {:.new-content}[US Core Social History Assessment Observation Profile]
 - [US Core Smoking Status Observation Profile]
 - [US Core Vital Signs Profile]
   - [US Core Blood Pressure Profile]

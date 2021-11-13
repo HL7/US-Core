@@ -309,5 +309,5 @@
 [US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
 [Using multiple codes with CodeableConcept Datatype]: conformance-expectations.html#translations
 [US Core Screening Response Observation Profile]: StructureDefinition-us-core-observation-screening-response.html
-[US Core Assessment Observation Profile]: StructureDefinition-us-core-observation-assessment.html
+[US Core Social History Assessment Observation Profile]: StructureDefinition-us-core-observation-social-history-assessment.html
 [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/

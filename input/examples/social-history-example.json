@@ -1,0 +1,45 @@
+{
+  "resourceType": "Observation",
+  "id": "socialhistory-assessment-example",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Social History Assessment Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a Social History Assessment Example for the *US Core Social History Assessment Observation Profile*."
+      }
+    ],
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-social-history-assessment-observation-profile"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "social-history",
+          "display": "Social History"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "160695008",
+        "display": "Transport too expensive"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2021-05-10T21:56:54.671Z",
+  "valueBoolean": true
+}

@@ -2,8 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "us-core-observation-screening-response",
   "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response",
-  "version": "1.0.0",
-  "name": "USCoreScreeningObservationResponse",
+  "name": "USCoreObservationScreeningResponse",
   "title": "US Core Screening Response Observation Profile",
   "status": "active",
   "date": "2021-11-12",
@@ -21,7 +20,16 @@
         "path": "Observation",
         "short": "questionnaire observations",
         "definition": "For Observations derived from surveys/questionnaires.",
-        "comment": "Used for simple observations such as education status, food insecurity observations, etc. This profile allows the representation of SDOH observations based on SDOH screening questionnaire responses (which can also be represented using SDC QuestionnaireResponse)."
+        "comment": "Used for simple observations such as education status, food insecurity observations, etc. This profile allows the representation of SDOH observations based on SDOH screening questionnaire responses (which can also be represented using SDC QuestionnaireResponse).",
+        "constraint": [
+          {
+            "key": "us-core-2",
+            "severity": "error",
+            "human": "If there is no component or hasMember element then either a value[x] or a data absent reason must be present",
+            "expression": "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())",
+            "xpath": "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
+          }
+        ]
       },
       {
         "id": "Observation.status",
@@ -135,7 +143,7 @@
       {
         "id": "Observation.performer",
         "path": "Observation.performer",
-        "requirements": "Some questions on questionnaires are not answered directly (e.g., asserted) by the individual completing the questionnaire, but are derived from answers to one or more other questions. For types of answers, `Observation.performer` should not be specified and `Observation.derivedFrom` should reference the relevant Screening Response Observation(s).",
+        "comment": "Some questions on questionnaires are not answered directly (e.g., asserted) by the individual completing the questionnaire, but are derived from answers to one or more other questions. For types of answers, `Observation.performer` should not be specified and `Observation.derivedFrom` should reference the relevant Screening Response Observation(s).",
         "type": [
           {
             "code": "Reference",
@@ -204,15 +212,6 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.",
         "meaningWhenMissing": "Observation.value may be missing in two cases:\r\n1) For SDOH questions represented in LOINC that allow one answer, If the LOINC Normative Answer List for a LOINC code offers an adequate code for why an Observation.value may not be known, it should be used as the value for Observation.value. However, If the LOINC Normative Answer List for a LOINC code does not offer an adequate code for why an Observation.value may not be known, Observation.dataAbsentReason should be used in lieu of Observation.value.\r\n\r\n2) For SDOH questions represented in LOINC that specify “check all that apply”, the LOINC question should be used for Observation.code and for Observation.component.code. For “check all that apply” questions, the answers (regardless of whether one or more are selected) should only be represented using Observation.component.value and Observation.value should be empty.",
         "type": [

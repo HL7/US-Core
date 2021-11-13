@@ -308,6 +308,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-observation-social-history-assessment"
+        },
+        "description": "Profile for simple observations made by an indivual about a patient's social history status such as education, food insecurity, etc.  These observation are typically not derived from a formal assessment tool or survey which should be represented using the [US Core Screening Response Observation Profile](StructureDefinition-us-core-observation-screening-response.html)",
+        "exampleBoolean": false,
+        "name": "US Core Social History Assessment Observation Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-organization"
         },
         "description": "Defines basic constraints and extensions on the Organization resource for use with other US Core resources",
@@ -2081,6 +2089,14 @@
         "description": "This is an sexual orientation example for the *US Core Sexual Orientation Observation Profile*.",
         "name": "Sexual Orientation Observation Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/socialhistory-assessment-example"
+        },
+        "description": "This is a Social History Assessment Example for the *US Core Social History Assessment Observation Profile*.",
+        "name": "Social History Assessment Example",
+        "exampleBoolean": true
       },
       {
         "reference": {
