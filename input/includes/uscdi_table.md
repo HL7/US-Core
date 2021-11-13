@@ -68,9 +68,9 @@
 | **Sexual Orientation**| [US Core Sexual Orientation Observation Profile] | Observation|
 | **SDOH**|  | | 
 | Assessment| [US Core Observation Screening Response],[US Core Observation Assessment] | Observation| 
-| Goals| [US Core SDOH Observation Profile] | Observation| 
-| Interventions | [US Core SDOH Observation Profile] | Observation| 
-| Problems/Health Concerns | [US Core SDOH Observation Profile] | Observation| 
+| Goals| [US Core Goal Profile] | Goal| 
+| Interventions | [US Core ServiceRequest Profile],[US Core Procedure Profile] | ServiceRequest, Procedure| 
+| Problems/Health Concerns | [US Core SDOH Condition Profile] | Condition| 
 | **Smoking Status**| [US Core Smoking Status Observation Profile]| Observation|
 | **Unique Device Identifier(s) for a Patient's Implantable Device(s)** | [US Core Implantable Device Profile]| Device |
 | **Vital Signs:**| ||
