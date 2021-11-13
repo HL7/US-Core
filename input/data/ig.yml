@@ -307,6 +307,13 @@ definition:
         name: US Core Laboratory Result Observation Profile
         reference:
             reference: StructureDefinition/us-core-observation-lab
+    -   description: Profile for observations that represent question and answer pairs
+            from from surveys/questionnaires such as Social Determinants of Health
+            (SDOH) screening instruments.
+        exampleBoolean: false
+        name: US Core Screening Response Observation Profile
+        reference:
+            reference: StructureDefinition/us-core-observation-screening-response
     -   description: Defines constraints and extensions on the Observation resource
             for the minimal set of data to query and retrieve a Patient's Sexual Orientation.
         exampleBoolean: false
@@ -1309,7 +1316,7 @@ definition:
     -   description: The US Core Diagnostic Report Category Value Set is a 'starter
             set' of categories supported for fetching and Diagnostic Reports and notes.
         exampleBoolean: false
-        name: US Core DiagnosticReport Category
+        name: US Core Diagnostic Report Category Codes
         reference:
             reference: ValueSet/us-core-diagnosticreport-category
     -   description: The Document Type value set includes all LOINC  values whose
@@ -1373,6 +1380,11 @@ definition:
         name: US Core Narrative Status
         reference:
             reference: ValueSet/us-core-narrative-status
+    -   description: HL7 FHIR concepts to classify an observation
+        exampleBoolean: false
+        name: US Core Observation Category Codes
+        reference:
+            reference: ValueSet/us-core-observation-category
     -   description: "Representing a patient\u2019s smoking behavior using concepts\
             \ from SNOMED CT."
         exampleBoolean: false
@@ -1414,7 +1426,7 @@ definition:
     -   description: A set of SNOMED CT and LOINC concepts to classify a requested
             service
         exampleBoolean: false
-        name: US Core ServiceRequest Category
+        name: US Core ServiceRequest Category Codes
         reference:
             reference: ValueSet/us-core-servicerequest-category
     -   description: "The US Core Sexual Orientation Value Set includes concepts to\

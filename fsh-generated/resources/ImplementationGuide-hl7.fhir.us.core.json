@@ -286,6 +286,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-observation-screening-response"
+        },
+        "description": "Profile for observations that represent question and answer pairs from from surveys/questionnaires such as Social Determinants of Health (SDOH) screening instruments.",
+        "exampleBoolean": false,
+        "name": "US Core Screening Response Observation Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-observation-sexual-orientation"
         },
         "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve a Patient's Sexual Orientation.",
@@ -1282,7 +1290,7 @@
         },
         "description": "The US Core Diagnostic Report Category Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and notes.",
         "exampleBoolean": false,
-        "name": "US Core DiagnosticReport Category"
+        "name": "US Core Diagnostic Report Category Codes"
       },
       {
         "reference": {
@@ -1331,6 +1339,14 @@
         "description": "The US Core Narrative Status Value Set limits the text status for the resource narrative.",
         "exampleBoolean": false,
         "name": "US Core Narrative Status"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-observation-category"
+        },
+        "description": "HL7 FHIR concepts to classify an observation",
+        "exampleBoolean": false,
+        "name": "US Core Observation Category Codes"
       },
       {
         "reference": {
@@ -1386,7 +1402,7 @@
         },
         "description": "A set of SNOMED CT and LOINC concepts to classify a requested service",
         "exampleBoolean": false,
-        "name": "US Core ServiceRequest Category"
+        "name": "US Core ServiceRequest Category Codes"
       },
       {
         "reference": {

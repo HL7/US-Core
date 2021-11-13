@@ -308,3 +308,6 @@
 [US Core RelatedPerson Profile]: StructureDefinition-us-core-relatedperson.html
 [US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
 [Using multiple codes with CodeableConcept Datatype]: conformance-expectations.html#translations
+[US Core Observation Screening Response]: StructureDefinition-us-core-observation-screening-response.html
+[US Core Observation Assessment]: StructureDefinition-us-core-observation-assessment.html
+[Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/

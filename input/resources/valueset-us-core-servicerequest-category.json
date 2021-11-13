@@ -1,29 +1,29 @@
 {
-   "resourceType":"ValueSet",
-   "id":"us-core-servicerequest-category",
-   "url":"http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category",
-   "name":"USCoreServicerequestCategory",
-   "title":"US Core ServiceRequest Category",
-   "status":"active",
-   "date":"2021-11-11",
-   "description":"A set of SNOMED CT and LOINC concepts to classify a requested service",
-   "copyright":"This value set includes content from:\n- SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.\n- LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc\"/>",
-   "compose":{
-      "include":[
-         {
-            "system":"http://loinc.org",
-            "concept":[
-               {
-                  "code":"LG41762-2",
-                  "display":"SocialDeterminantsOfHealth"
-               }
-            ]
-         },
-         {
-            "valueSet":[
-               "http://hl7.org/fhir/ValueSet/servicerequest-category"
-            ]
-         }
-      ]
-   }
+  "resourceType": "ValueSet",
+  "id": "us-core-servicerequest-category",
+  "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category",
+  "name": "USCoreServiceRequestCategory",
+  "title": "US Core ServiceRequest Category Codes",
+  "status": "active",
+  "date": "2021-11-11",
+  "description": "A set of SNOMED CT and LOINC concepts to classify a requested service",
+  "copyright": "This value set includes content from:\n- SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.\n- LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc\"/>",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LG41762-2",
+            "display": "SocialDeterminantsOfHealth"
+          }
+        ]
+      },
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/ValueSet/servicerequest-category"
+        ]
+      }
+    ]
+  }
 }
