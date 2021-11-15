@@ -29,8 +29,14 @@
 					<valueString value="Death diagnosis, or cause of death is a contextual qualifier indicating the problem represented caused the patient's death."/>
 				</extension>
 				<code value="16100001"/>
-				<display value="Death diagnosis"/>
-				
+				<display value="Death diagnosis"/>				
+			</concept>
+		</include>
+		<include>
+			<system value="http://loinc.org"/>
+			<concept>
+				<code value="LG41762-2"/>
+				<display value="Social Determinants Of Health"/>
 			</concept>
 		</include>
 	</compose>
