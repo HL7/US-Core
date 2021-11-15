@@ -84,7 +84,8 @@
         "path": "Observation.code",
         "mustSupport": true,
         "binding": {
-          "strength": "extensible"
+          "strength": "preferred",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments"
         }
       },
       {
