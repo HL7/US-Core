@@ -84,6 +84,10 @@
           }
         ],
         "mustSupport": true,
+           "binding": {
+          "strength": "preferred",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.71"
+        },
         "mapping": [
           {
             "identity": "argonaut-dq-dstu2",

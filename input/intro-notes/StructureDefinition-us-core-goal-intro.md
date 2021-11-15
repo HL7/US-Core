@@ -26,7 +26,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Profile specific implementation guidance:**
 
-* none
+-  {:.new-content}When exchanging Social Determinants of Health (SDOH) Goals, servers **SHALL** use the SDOH Goal concepts provided by Gravity in the Goal.description value set. Free text goals are allowed in Goal.description.text when a concept isn't available, or a legacy goal is not mapped to a LOINC or SNOMED concept. 
 
 ### Examples
 
