@@ -18,6 +18,7 @@ These value sets have been defined for this implementation guide.
 *   [US Core Condition Code](ValueSet-us-core-condition-code.html)
 *   [US Core Diagnostic Report Laboratory Codes](ValueSet-us-core-diagnosticreport-lab-codes.html)
 *   [US Core DiagnosticReport Category](ValueSet-us-core-diagnosticreport-category.html)
+* {:.new-content}[US Core Common SDOH Assessments ValueSet](ValueSet-us-core-common-sdoh-assessments.html)
 *   {:.new-content}[US Core DiagnosticReport Report And Note Codes](ValueSet-us-core-diagnosticreport-report-and-note-codes.html)
 *   {:.new-content}[US Core Discharge Disposition](ValueSet-us-core-discharge-disposition.html)
 *   [US Core DocumentReference Category](ValueSet-us-core-documentreference-category.html)

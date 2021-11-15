@@ -37,7 +37,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 ### Examples
 
- - [Social History Example](Observation-social-history-example.html)
+ - [Social History Example](Observation-socialhistory-assessment-example.html)
 
 </div>
 {% include link-list.md %}

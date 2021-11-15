@@ -1,0 +1,79 @@
+{
+  "resourceType": "ValueSet",
+  "id": "us-core-common-sdoh-assessments",
+  "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments",
+  "name": "USCoreCommonSDOHAssessments",
+  "title": "US Core Common SDOH Assessments ValueSet",
+  "desc": "Common SDOH assessment concepts covering the following categories:\n - Food\n - Housing\n - Health\n - Employment\n - Care\n - Transit\n - Money\n - Goods\n - Education\n - Legal",
+  "status": "active",
+  "experimental": false,
+  "date": "2021-11-15",
+  "description": "A starter set of commonly used SDOH Questions which ",
+  "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "88123-5"
+          },
+          {
+            "code": "88122-7"
+          },
+          {
+            "code": "96779-4"
+          },
+          {
+            "code": "71802-3"
+          },
+          {
+            "code": "93029-7"
+          },
+          {
+            "code": "76437-3"
+          },
+          {
+            "code": "81375-8"
+          },
+          {
+            "code": "93038-8"
+          },
+          {
+            "code": "96780-2"
+          },
+          {
+            "code": "67875-5"
+          },
+          {
+            "code": "95618-5"
+          },
+          {
+            "code": "93031-3"
+          },
+          {
+            "code": "93030-5"
+          },
+          {
+            "code": "63586-2"
+          },
+          {
+            "code": "93031-3"
+          },
+          {
+            "code": "93031-3"
+          },
+          {
+            "code": "93031-3"
+          },
+          {
+            "code": "96782-8"
+          },
+          {
+            "code": "93677-3"
+          }
+        ]
+      }
+    ]
+  }
+}
