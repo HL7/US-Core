@@ -33,10 +33,8 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 **Profile specific implementation guidance:**
 
 - See [SDOH Guidance] for how this profile can used to represent SDOH assessments.
-- An Observation without a value, **SHALL** include a reason why the data is absent *unless* there are component observations.
-    - For questions represented in `Observation.code` (e.g., LOINC) that specify “check all that apply”, the question should be used for `Observation.code` and for `Observation.component.code`. For “check all that apply” questions, the answers (regardless of whether one or more are selected) should only be represented using `Observation.component.value` and `Observation.value` should be empty.
-  - \*Systems that never provide an observation without a value are not required to support `Observation.dataAbsentReason`
-
+- For questions represented in `Observation.code` (e.g., LOINC) that specify “check all that apply”, the question should be used for `Observation.code` and for `Observation.component.code`. For “check all that apply” questions, the answers (regardless of whether one or more are selected) should only be represented using `Observation.component.value` and `Observation.value` should be empty.
+{% include DAR-exception.md %}
 
 ### Examples
 

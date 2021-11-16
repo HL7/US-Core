@@ -28,6 +28,9 @@ healt
 
 - See the implementation guidance section for the [US Core Vital Signs Profile]
 - An Observation without a systolic or diastolic result value, **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
+   - {:.new-content} Because all the components are *mandatory* (in other words the minimum cardinality is =>1), all server systems - including those that never provide a component observation without a value - must to support `Observation.component.dataAbsentReason` for the components.
+
+Even a server that always values diastolic and systolic  needs to support DAR
 
 ### Examples
 
