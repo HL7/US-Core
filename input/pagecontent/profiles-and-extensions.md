@@ -19,7 +19,7 @@ The following Profiles and have been defined for this implementation guide.
 - [US Core DocumentReference Profile]
 - [US Core Encounter Profile]
 - {:.new-content}[US Core Goal Profile]
-- [US Core Immunization Profile]
+- {:.new-content}[US Core Immunization Profile]
 - [US Core Implantable Device Profile]
 - [US Core Laboratory Result Observation Profile]
 - [US Core Location Profile]
