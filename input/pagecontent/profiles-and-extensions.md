@@ -29,7 +29,7 @@ The following Profiles and have been defined for this implementation guide.
 - {:.new-content}[US Core Patient Profile]
 - {:.new-content}[US Core Practitioner Profile]
 - [US Core PractitionerRole Profile]
-- [US Core Procedure Profile]
+- {:.new-content}[US Core Procedure Profile]
 - [US Core Provenance Profile]
 - {:.new-content}[US Core RelatedPerson Profile]
 - {:.new-content}[US Core Screening Response Observation Profile]

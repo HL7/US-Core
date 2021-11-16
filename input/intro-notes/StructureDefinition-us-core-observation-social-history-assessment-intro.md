@@ -32,8 +32,9 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 - See [SDOH Guidance] for how this profile can used to represent SDOH assessments.
 - The codes can be from LOINC or SNOMED CT.
 - Often the pattern for these types of observations that the `Observation.code` indicates a statement about findings and the `Observation.value` is present and "qualifies" the finding typically confirming or refuting it. For example:
-      code=Transport too expensive
-      value=true
+
+  code= "Transport too expensive"
+  value="true"
 
 ### Examples
 

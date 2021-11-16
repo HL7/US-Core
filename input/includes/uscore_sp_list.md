@@ -115,6 +115,10 @@
 - [`date`](SearchParameter-us-core-procedure-date.html)
 - [`code`](SearchParameter-us-core-procedure-code.html)
 
+**RelatedPerson**
+- {:.new-content}[`_id`](SearchParameter-us-core-relatedperson-id.html)
+- {:.new-content}[`patient`](SearchParameter-us-core-relatedperson-patient.html)
+
 **ServiceRequest**
 - {:.new-content}[`status`](SearchParameter-us-core-servicerequest-status.html)
 - {:.new-content}[`patient`](SearchParameter-us-core-servicerequest-patient.html)
