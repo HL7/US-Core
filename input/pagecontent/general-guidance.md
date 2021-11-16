@@ -58,7 +58,7 @@ There are situations when information on a particular data element is missing an
     ~~~
 
 1. For *coded* data elements:
-   - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept ,<span markdown='1', class='bg-success'>or Coding datatypes)</span>:
+   - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept , or Coding datatypes{:.bg-success}):
       - if the source systems has text but no coded data, only the text element is used.
           - {:.new-content}for Coding datatypes, the text only data is represented as a `display` element.
       - if there is neither text or coded data:
