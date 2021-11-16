@@ -28,7 +28,9 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 **Profile specific implementation guidance:**
 
 - Use the status code: `not-done` to represent that an immunization was *not* given.
-- Based upon the ONC U.S. Core Data for Interoperability (USCDI) v1 requirements, [CVX vaccine codes] are required and the [NDC vaccine codes] **SHOULD** be supported as a translation. CDC provides the [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] to assist implementers. The example [Immunization-imm-1](Immunization-imm-1.html) illustrates using both the CVX and NDC codes based upon this table.
+- Based upon the ONC U.S. Core Data for Interoperability (USCDI) v1 requirements, [CVX vaccine codes] are required and the [NDC vaccine codes] **SHOULD** be supported as a translation.
+    - CDC provides the [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] to assist implementers. The example [Immunization-imm-1](Immunization-imm-1.html) illustrates using both the CVX and NDC codes based upon this table.
+    - Be aware that there is *10-digit (with dashes)* NDC format typically displayed on drug packaging and an *11-digit(no dashes)* NDC format typically for billing and prescribing (for example 49281012165)
   - Note that the CVX code system contains some concepts that are  procedures, medications, or substances rather than immunizations. Implementers should not use these non-vaccine-related CVX codes.
 
 ### Examples
