@@ -330,6 +330,7 @@ For this guide, all the search interactions use the `GET` command with the follo
        - When searching using the `reference` type searchparameter [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply:
          * The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
          * The server **SHALL** support both.
+       - {:.new-content}When searching using the `date` type searchparameter [(how to search by date)], the syntax `data={gt|lt|ge|le}[date]` means the date comparators "gt", "lt", "ge", and "le" are optional.   Date type searches without a comparator prefix are equivalent to searches with the "eq" comparator *even if* a server does not support the comparator.
     - \{:m1|m2|...}: The list of supported search parameter modifiers
     - {c1|c2|...}: The list of supported search parameter comparators
     - {,value2,...}: Optional multiple 'OR' Values
