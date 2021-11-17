@@ -320,11 +320,11 @@ definition:
         name: US Core Sexual Orientation Observation Profile
         reference:
             reference: StructureDefinition/us-core-observation-sexual-orientation
-    -   description: Profile for simple observations made by an individual about a patient's
-            social history status such as education, food insecurity, etc.  These
-            observation are typically not derived from a formal assessment tool or
-            survey which should be represented using the [US Core Screening Response
-            Observation Profile](StructureDefinition-us-core-observation-screening-response.html)
+    -   description: Profile for simple observations made by an individual about a
+            patient's social history status such as education, food insecurity, etc.  These
+            observation involve assessment by a provider, payer, etc. as opposed to
+            being derived only from screening surveys which should be represented
+            using the [US Core Screening Response Observation Profile](StructureDefinition-us-core-observation-screening-response.html)
         exampleBoolean: false
         name: US Core Social History Assessment Observation Profile
         reference:
@@ -441,7 +441,8 @@ definition:
             are defined. Systems implementing this capability statement should meet
             the ONC 2015 Common Clinical Data Set (CCDS) access requirement for Patient
             Selection 170.315(g)(7) and Application Access - Data Category Request
-            170.315(g)(8) and and the ONC [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isa/sites/isa/files/2020-03/USCDI-Version1-2020-Final-Standard.pdf).  US
+            170.315(g)(8) and the ONC [U.S. Core Data for Interoperability (USCDI)
+            Version 2 July 2021](https://www.healthit.gov/isa/sites/isa/files/2021-07/USCDI-Version-2-July-2021-Final.pdf).  US
             Core Clients have the option of choosing from this list to access necessary
             data based on their local use cases and other contextual requirements.
         exampleBoolean: false
@@ -1184,6 +1185,22 @@ definition:
         name: USCoreRace
         reference:
             reference: SearchParameter/us-core-race
+    -   description: "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter\
+            \ definition extends the usage context of the\n[Conformance expectation\
+            \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+        exampleBoolean: false
+        name: USCoreRelatedpersonId
+        reference:
+            reference: SearchParameter/us-core-relatedperson-id
+    -   description: "**The patient this related person is related to**  \n**NOTE**:\
+            \ This US Core SearchParameter definition extends the usage context of\
+            \ the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+            \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+        exampleBoolean: false
+        name: USCoreRelatedpersonPatient
+        reference:
+            reference: SearchParameter/us-core-relatedperson-patient
     -   description: "**Date request signed**  \n**NOTE**: This US Core SearchParameter\
             \ definition extends the usage context of the\n[Conformance expectation\
             \ extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
@@ -1304,6 +1321,17 @@ definition:
         name: US Core Clinical Note Type
         reference:
             reference: ValueSet/us-core-clinical-note-type
+    -   description: "Common SDOH assessment concepts covering the following categories\
+            \ (Gravity Project SDOH Domains):\n - Food (Food Insecurity)\n - Housing\
+            \ (Housing Instability)\n - Health (Social Connection, Stress)\n - Employment\
+            \ (Employment Status)\n - Care (SDOH Category Unspecified)\n - Transit\
+            \ (Transportation Insecurity)\n - Money (Financial Insecurity)\n - Goods\
+            \ (Material Hardship)\n - Education (SDOH Category Unspecified)\n - Legal\
+            \ (SDOH Category Unspecified)"
+        exampleBoolean: false
+        name: US Core Common SDOH Assessments ValueSet
+        reference:
+            reference: ValueSet/us-core-common-sdoh-assessments
     -   description: "The\_US Core Condition Category Codes\_support the separate\
             \ concepts of problems and health concerns in\_Condition.category\_in\
             \ order for API consumers to be able to separate health concerns and problems.\
@@ -1922,7 +1950,7 @@ definition:
             reference: Observation/sexual-orientation-example
     -   description: This is a Social History Assessment Example for the *US Core
             Social History Assessment Observation Profile*.
-        exampleBoolean: true
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history-assessment
         name: Social History Assessment Example
         reference:
             reference: Observation/socialhistory-assessment-example

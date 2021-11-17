@@ -310,7 +310,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-social-history-assessment"
         },
-        "description": "Profile for simple observations made by an indivual about a patient's social history status such as education, food insecurity, etc.  These observation are typically not derived from a formal assessment tool or survey which should be represented using the [US Core Screening Response Observation Profile](StructureDefinition-us-core-observation-screening-response.html)",
+        "description": "Profile for simple observations made by an individual about a patient's social history status such as education, food insecurity, etc.  These observation involve assessment by a provider, payer, etc. as opposed to being derived only from screening surveys which should be represented using the [US Core Screening Response Observation Profile](StructureDefinition-us-core-observation-screening-response.html)",
         "exampleBoolean": false,
         "name": "US Core Social History Assessment Observation Profile"
       },
@@ -430,7 +430,7 @@
         "reference": {
           "reference": "CapabilityStatement/us-core-server"
         },
-        "description": "This Section describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ONC 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and and the ONC [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isa/sites/isa/files/2020-03/USCDI-Version1-2020-Final-Standard.pdf).  US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
+        "description": "This Section describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ONC 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ONC [U.S. Core Data for Interoperability (USCDI) Version 2 July 2021](https://www.healthit.gov/isa/sites/isa/files/2021-07/USCDI-Version-2-July-2021-Final.pdf).  US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
         "exampleBoolean": false,
         "name": "US Core Server CapabilityStatement"
       },
@@ -1156,6 +1156,22 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-relatedperson-id"
+        },
+        "description": "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreRelatedpersonId"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-relatedperson-patient"
+        },
+        "description": "**The patient this related person is related to**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreRelatedpersonPatient"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-servicerequest-authored"
         },
         "description": "**Date request signed**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
@@ -1281,6 +1297,14 @@
         "description": "The US Core Clinical Note Type Value Set is a 'starter set' of types supported for fetching and storing clinical notes.",
         "exampleBoolean": false,
         "name": "US Core Clinical Note Type"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-common-sdoh-assessments"
+        },
+        "description": "Common SDOH assessment concepts covering the following categories (Gravity Project SDOH Domains):\n - Food (Food Insecurity)\n - Housing (Housing Instability)\n - Health (Social Connection, Stress)\n - Employment (Employment Status)\n - Care (SDOH Category Unspecified)\n - Transit (Transportation Insecurity)\n - Money (Financial Insecurity)\n - Goods (Material Hardship)\n - Education (SDOH Category Unspecified)\n - Legal (SDOH Category Unspecified)",
+        "exampleBoolean": false,
+        "name": "US Core Common SDOH Assessments ValueSet"
       },
       {
         "reference": {
@@ -2096,7 +2120,7 @@
         },
         "description": "This is a Social History Assessment Example for the *US Core Social History Assessment Observation Profile*.",
         "name": "Social History Assessment Example",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history-assessment"
       },
       {
         "reference": {
