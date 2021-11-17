@@ -44,7 +44,7 @@ For ONC's USCDI requirements, each Patient must support the following additional
 
 
 **Profile specific implementation guidance:**
-- Note that *Previous Name*, *Suffix*, <span markdown='1' class='new-content'>and *Previous address*</span> are listed in the U.S. Core Data for Interoperability.
+- Note that *Previous Name*, *Suffix*, <span markdown='1' class='bg-success'>and *Previous address*</span> are listed in the U.S. Core Data for Interoperability.
   - Suffix is represented using the `Patient.name.suffix` element.
   - {:.new-content}Previous name is represented by setting ` Patient.name.use` to "old" and providing an end date in Patient.name.period element if known
   - {:.new-content}Previous address is represented by setting `Patient.address.use` to "old" and providing an end date in Patient.address.period element if known.
