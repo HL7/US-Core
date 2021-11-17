@@ -17,7 +17,7 @@ The following Profiles and have been defined for this implementation guide.
 - [US Core DiagnosticReport Profile for Laboratory Results Reporting]
 - {:.new-content}[US Core DiagnosticReport Profile for Report and Note exchange]
 - [US Core DocumentReference Profile]
-- [US Core Encounter Profile]
+- {:.new-content}[US Core Encounter Profile]
 - {:.new-content}[US Core Goal Profile]
 - {:.new-content}[US Core Immunization Profile]
 - [US Core Implantable Device Profile]
