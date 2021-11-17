@@ -41,9 +41,11 @@ The following data-elements must always be present ([Mandatory] definition]) or 
     * If an external reference to Medication is used, the server SHALL support the [`_include`] parameter for searching this element.
     *  The client application SHALL support all methods.
 * The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or other resource.
-   *   Although both are marked as must support, the server system is not required to support both a boolean and a reference, but **SHALL** support at least one of these elements.
-   * The client application **SHALL** support both elements.
-*  Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
+   *  Although both are marked as must support, the server system is not required to support both a boolean and a reference, but **SHALL** support at least one of these elements.
+   *  The client application **SHALL** support both elements.
+* Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
+* {:.new-content}Servers **SHALL** follow the [Medication List Guidance] and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver. 
+
 
 ### Examples
 

@@ -24,7 +24,7 @@ The following Profiles and have been defined for this implementation guide.
 - {:.new-content}[US Core Laboratory Result Observation Profile]
 - [US Core Location Profile]
 - [US Core Medication Profile]
-- [US Core MedicationRequest Profile]
+- {:.new-content}[US Core MedicationRequest Profile]
 - [US Core Organization Profile]
 - {:.new-content}[US Core Patient Profile]
 - {:.new-content}[US Core Practitioner Profile]
