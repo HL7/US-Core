@@ -1598,6 +1598,11 @@ definition:
             reference: CarePlan/colonoscopy
     -   description: This is a condition example for the *US Core Condition Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
+        name: Condition SDOH Example
+        reference:
+            reference: Condition/condition-SDOH-example
+    -   description: This is a condition example for the *US Core Condition Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
         name: Condition Example
         reference:
             reference: Condition/example
@@ -1685,7 +1690,7 @@ definition:
             reference: Organization/example-organization-2
     -   description: This is a service request example for the *US Core Service Request
             Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-servicerequest
+        exampleBoolean: true
         name: ServiceRequest Example
         reference:
             reference: ServiceRequest/foodpantry-referral
@@ -1694,6 +1699,11 @@ definition:
         name: Goal 1 Example
         reference:
             reference: Goal/goal-1
+    -   description: This is a goal 2 example for the *US Core Goal Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal
+        name: Goal 2 Example
+        reference:
+            reference: Goal/goal-2
     -   description: This is a hc1 example for the *US Core Condition Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
         name: HC1 Example

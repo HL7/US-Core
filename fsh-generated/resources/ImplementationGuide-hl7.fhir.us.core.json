@@ -1628,6 +1628,14 @@
       },
       {
         "reference": {
+          "reference": "Condition/condition-SDOH-example"
+        },
+        "description": "This is a condition example for the *US Core Condition Profile*.",
+        "name": "Condition SDOH Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+      },
+      {
+        "reference": {
           "reference": "Condition/example"
         },
         "description": "This is a condition example for the *US Core Condition Profile*.",
@@ -1752,7 +1760,7 @@
         },
         "description": "This is a service request example for the *US Core Service Request Profile*.",
         "name": "ServiceRequest Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-servicerequest"
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -1760,6 +1768,14 @@
         },
         "description": "This is a goal 1 example for the *US Core Goal Profile*.",
         "name": "Goal 1 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
+      },
+      {
+        "reference": {
+          "reference": "Goal/goal-2"
+        },
+        "description": "This is a goal 2 example for the *US Core Goal Profile*.",
+        "name": "Goal 2 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
       },
       {
