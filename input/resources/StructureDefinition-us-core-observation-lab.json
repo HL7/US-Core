@@ -63,13 +63,6 @@
       {
         "id": "Observation.status",
         "path": "Observation.status",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -95,12 +88,6 @@
           "rules": "open"
         },
         "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -115,11 +102,6 @@
         "sliceName": "Laboratory",
         "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "patternCodeableConcept": {
           "coding": [
             {
@@ -146,13 +128,6 @@
           "Test Name",
           "Observation Identifer"
         ],
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -170,7 +145,6 @@
         "id": "Observation.subject",
         "path": "Observation.subject",
         "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -191,8 +165,6 @@
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
         "definition": "For lab tests this is the specimen collection date.  For Ask at Order Entry Questions (AOE)'s this is the date the question was asked.",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "extension": [
@@ -238,8 +210,6 @@
         "path": "Observation.value[x]",
         "short": "Result Value",
         "definition": "The Laboratory result value.  If a coded value,  the valueCodeableConcept.code **SHOULD** be selected from [SNOMED CT](http://hl7.org/fhir/ValueSet/uslab-obs-codedresults) if the concept exists. If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification.",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Quantity",
@@ -331,13 +301,6 @@
       {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "condition": [
           "us-core-2"
         ],
