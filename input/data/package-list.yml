@@ -30,7 +30,7 @@ list:
           - **Applied**: [Clinical Tests](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-clinical-test.html) and [Diagnostic Imaging](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-imaging.html) [also see Changes Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-note.html)
           - **Applied**: [Patient Gender Identity](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html) and [Sexual Identity](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-sexual-orientation.html#)
           - **Applied**: **Care Team Member:** Name, Identifier, Location, Telecom and Role [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careteam.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-practitioner.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-relatedperson.html)
-          - ***Applied**: **Encounter:** Diagnosis, Disposition, Location, Time, Type [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-encounter.html)
+          - **Applied**: **Encounter:** Diagnosis, Disposition, Location, Time, Type [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-encounter.html)
           - **Applied**: **Problems:** Date of Diagnosis and Date of Resolution [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition.html)
 
         - Addressed and applied over 30 trackers submitted by implementers since the previous STU2 ballot for US Core ver 4.0.0:
@@ -49,7 +49,7 @@ list:
            1. **Resolved - change required**: patient search parameter definitions should only target Patient  [FHIR-32305](https://jira.hl7.org/browse/FHIR-32305) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Applied**: Provide a caution to the user that a query of MedicationRequest does not provide complete information. [FHIR-32720](https://jira.hl7.org/browse/FHIR-32720) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
            1. **Applied**: Make Condition.encounter 0..1 MS [FHIR-32844](https://jira.hl7.org/browse/FHIR-32844) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition.html)
-           1. ***Applied**: Correction on USCoreCarePlanProfile Binding [FHIR-32846](https://jira.hl7.org/browse/FHIR-32846) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careplan.html)
+           1. **Applied**: Correction on USCoreCarePlanProfile Binding [FHIR-32846](https://jira.hl7.org/browse/FHIR-32846) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careplan.html)
            1. **Applied**: Fix title for BMI Profile [FHIR-32847](https://jira.hl7.org/browse/FHIR-32847) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-bmi.html)
            1. **Applied**: Remove unchanged elements from Differentials [FHIR-32848](https://jira.hl7.org/browse/FHIR-32848) [For example change see](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-lab.profile.json.html)
            1. **Applied**: Create US Core slices for category elements [FHIR-32857](https://jira.hl7.org/browse/FHIR-32857) See Change:
@@ -66,7 +66,7 @@ list:
            1. **Resolved - change required**: Utilize ""use"" field for patient previous name and previous address [FHIR-33080](https://jira.hl7.org/browse/FHIR-33080) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Resolved - change required**: fix search parameter list [FHIR-33123](https://jira.hl7.org/browse/FHIR-33123) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Resolved - change required**: Wrong link to IG homepage from package manifest [FHIR-33132](https://jira.hl7.org/browse/FHIR-33132) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. ** Applied**: Clarify requirement on date searches without prefix [FHIR-33156](https://jira.hl7.org/browse/FHIR-33156) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#search-syntax.html)
+           1. **Applied**: Clarify requirement on date searches without prefix [FHIR-33156](https://jira.hl7.org/browse/FHIR-33156) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#search-syntax.html)
            1. **Resolved - change required**: Clarify distinct between repeated search params and ""composite"" params [FHIR-33159](https://jira.hl7.org/browse/FHIR-33159) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Applied**: docref missing actual content as mandatory element in narrative [FHIR-33160](https://jira.hl7.org/browse/FHIR-33160) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-documentreference.html)
            1. **Applied**: Fix invalid elements in extensions [FHIR-33233](https://jira.hl7.org/browse/FHIR-33233) See Change:
