@@ -43,7 +43,7 @@
         "id": "Procedure",
         "path": "Procedure",
         "definition": "The US Core Condition Profile is based upon the core FHIR Procedure Resource and created to meet the 2015 Edition Common Clinical Data Set 'Procedures' requirements.",
-             "mustSupport": false,
+        "mustSupport": false,
         "mapping": [
           {
             "identity": "argonaut-dq-dstu2",
@@ -54,13 +54,6 @@
       {
         "id": "Procedure.status",
         "path": "Procedure.status",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -77,12 +70,6 @@
         "id": "Procedure.code",
         "path": "Procedure.code",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -99,8 +86,6 @@
       {
         "id": "Procedure.subject",
         "path": "Procedure.subject",
-        "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -120,8 +105,6 @@
       {
         "id": "Procedure.performed[x]",
         "path": "Procedure.performed[x]",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "extension": [
@@ -144,11 +127,11 @@
           {
             "code": "Range"
           }
-         ],
-         "condition": [
+        ],
+        "condition": [
           "us-core-1"
         ],
-                "constraint": [
+        "constraint": [
           {
             "key": "us-core-1",
             "severity": "error",

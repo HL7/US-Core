@@ -54,13 +54,6 @@
       {
         "id": "MedicationRequest.status",
         "path": "MedicationRequest.status",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -77,8 +70,6 @@
       {
         "id": "MedicationRequest.intent",
         "path": "MedicationRequest.intent",
-        "min": 1,
-        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -120,8 +111,6 @@
       {
         "id": "MedicationRequest.reported[x]",
         "path": "MedicationRequest.reported[x]",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "extension": [
@@ -202,8 +191,6 @@
       {
         "id": "MedicationRequest.medication[x]",
         "path": "MedicationRequest.medication[x]",
-        "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
@@ -230,8 +217,6 @@
       {
         "id": "MedicationRequest.subject",
         "path": "MedicationRequest.subject",
-        "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -251,8 +236,6 @@
       {
         "id": "MedicationRequest.encounter",
         "path": "MedicationRequest.encounter",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -272,8 +255,6 @@
       {
         "id": "MedicationRequest.authoredOn",
         "path": "MedicationRequest.authoredOn",
-        "min": 0,
-        "max": "1",
         "mustSupport": true,
         "mapping": [
           {
@@ -286,7 +267,6 @@
         "id": "MedicationRequest.requester",
         "path": "MedicationRequest.requester",
         "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",

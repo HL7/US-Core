@@ -43,7 +43,7 @@
       {
         "id": "Device",
         "path": "Device",
-        "definition": "The US Core Implantable Device Profile is based upon the core FHIR Device Resource and created to meet the 2015 Edition Common Clinical Data Set 'Unique device identifier(s) for a patient’s implantable device(s)' requirements.",
+        "definition": "The US Core Implantable Device Profile is based upon the core FHIR Device Resource and created to meet the 2015 Edition Common Clinical Data Set 'Unique device identifier(s) for a patient\u2019s implantable device(s)' requirements.",
         "mustSupport": false,
         "mapping": [
           {
@@ -56,7 +56,6 @@
         "id": "Device.udiCarrier",
         "path": "Device.udiCarrier",
         "comment": "Some devices may not have UDI information (for example. historical data or patient reported data).",
-        "min": 0,
         "max": "1",
         "mustSupport": true,
         "mapping": [
@@ -69,11 +68,7 @@
       {
         "id": "Device.udiCarrier.deviceIdentifier",
         "path": "Device.udiCarrier.deviceIdentifier",
-        "alias": [
-          "DI"
-        ],
         "min": 1,
-        "max": "1",
         "mustSupport": true,
         "mapping": [
           {
@@ -89,8 +84,6 @@
           "UDI",
           "Barcode String"
         ],
-        "min": 0,
-        "max": "1",
         "mustSupport": true,
         "mapping": [
           {
@@ -102,8 +95,6 @@
       {
         "id": "Device.distinctIdentifier",
         "path": "Device.distinctIdentifier",
-        "min": 0,
-        "max": "1",
         "mustSupport": false,
         "mapping": [
           {
@@ -115,8 +106,6 @@
       {
         "id": "Device.manufactureDate",
         "path": "Device.manufactureDate",
-        "min": 0,
-        "max": "1",
         "mustSupport": true,
         "mapping": [
           {
@@ -128,8 +117,6 @@
       {
         "id": "Device.expirationDate",
         "path": "Device.expirationDate",
-        "min": 0,
-        "max": "1",
         "mustSupport": true,
         "mapping": [
           {
@@ -141,8 +128,6 @@
       {
         "id": "Device.lotNumber",
         "path": "Device.lotNumber",
-        "min": 0,
-        "max": "1",
         "mustSupport": true,
         "mapping": [
           {
@@ -154,8 +139,6 @@
       {
         "id": "Device.serialNumber",
         "path": "Device.serialNumber",
-        "min": 0,
-        "max": "1",
         "mustSupport": true,
         "mapping": [
           {
@@ -168,12 +151,6 @@
         "id": "Device.type",
         "path": "Device.type",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -191,7 +168,6 @@
         "id": "Device.patient",
         "path": "Device.patient",
         "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",

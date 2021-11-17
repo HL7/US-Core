@@ -54,8 +54,6 @@
       {
         "id": "AllergyIntolerance.clinicalStatus",
         "path": "AllergyIntolerance.clinicalStatus",
-        "min": 0,
-        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -71,8 +69,6 @@
       {
         "id": "AllergyIntolerance.verificationStatus",
         "path": "AllergyIntolerance.verificationStatus",
-        "min": 0,
-        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -89,7 +85,6 @@
         "id": "AllergyIntolerance.code",
         "path": "AllergyIntolerance.code",
         "min": 1,
-        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -105,8 +100,6 @@
       {
         "id": "AllergyIntolerance.patient",
         "path": "AllergyIntolerance.patient",
-        "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -126,15 +119,11 @@
       {
         "id": "AllergyIntolerance.reaction",
         "path": "AllergyIntolerance.reaction",
-        "min": 0,
-        "max": "*",
         "mustSupport": true
       },
       {
         "id": "AllergyIntolerance.reaction.manifestation",
         "path": "AllergyIntolerance.reaction.manifestation",
-        "min": 1,
-        "max": "*",
         "mustSupport": true,
         "binding": {
           "strength": "extensible",

@@ -54,13 +54,6 @@
       {
         "id": "CareTeam.status",
         "path": "CareTeam.status",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -78,7 +71,6 @@
         "id": "CareTeam.subject",
         "path": "CareTeam.subject",
         "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -99,7 +91,6 @@
         "id": "CareTeam.participant",
         "path": "CareTeam.participant",
         "min": 1,
-        "max": "*",
         "mustSupport": true,
         "mapping": [
           {
@@ -113,11 +104,6 @@
         "path": "CareTeam.participant.role",
         "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -135,7 +121,6 @@
         "id": "CareTeam.participant.member",
         "path": "CareTeam.participant.member",
         "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",

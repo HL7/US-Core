@@ -54,13 +54,6 @@
       {
         "id": "Goal.lifecycleStatus",
         "path": "Goal.lifecycleStatus",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -76,15 +69,8 @@
       {
         "id": "Goal.description",
         "path": "Goal.description",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
-           "binding": {
+        "binding": {
           "strength": "preferred",
           "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.71"
         },
@@ -98,8 +84,6 @@
       {
         "id": "Goal.subject",
         "path": "Goal.subject",
-        "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -119,15 +103,11 @@
       {
         "id": "Goal.target",
         "path": "Goal.target",
-        "min": 0,
-        "max": "*",
         "mustSupport": true
       },
       {
         "id": "Goal.target.due[x]",
         "path": "Goal.target.due[x]",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "extension": [

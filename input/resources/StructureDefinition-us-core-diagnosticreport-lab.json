@@ -47,19 +47,11 @@
           "Lab Result",
           "Lab Report"
         ],
-        "mustSupport": false,
-        "isModifier": false
+        "mustSupport": false
       },
       {
         "id": "DiagnosticReport.status",
         "path": "DiagnosticReport.status",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
         "mustSupport": true,
         "isModifier": false,
         "binding": {
@@ -80,14 +72,7 @@
           "rules": "open"
         },
         "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.category:LaboratorySlice",
@@ -95,11 +80,6 @@
         "sliceName": "LaboratorySlice",
         "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "patternCodeableConcept": {
           "coding": [
             {
@@ -108,8 +88,7 @@
             }
           ]
         },
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.code",
@@ -117,15 +96,7 @@
         "short": "US Core Laboratory Report Order Code",
         "definition": "The test, panel or battery that was ordered.",
         "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
-        "isModifier": false,
         "binding": {
           "strength": "extensible",
           "description": "LOINC codes",
@@ -136,7 +107,6 @@
         "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
         "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -145,14 +115,12 @@
             ]
           }
         ],
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.effective[x]",
         "path": "DiagnosticReport.effective[x]",
         "min": 1,
-        "max": "1",
         "type": [
           {
             "extension": [
@@ -167,27 +135,17 @@
             "code": "Period"
           }
         ],
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.issued",
         "path": "DiagnosticReport.issued",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "instant"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
-        "min": 0,
-        "max": "*",
         "type": [
           {
             "code": "Reference",
@@ -233,14 +191,11 @@
             ]
           }
         ],
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
-        "min": 0,
-        "max": "*",
         "type": [
           {
             "code": "Reference",
@@ -249,8 +204,7 @@
             ]
           }
         ],
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       }
     ]
   }

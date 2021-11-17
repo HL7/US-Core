@@ -63,13 +63,6 @@
           "rules": "open"
         },
         "comment": "NPI preferred.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -81,7 +74,6 @@
       {
         "id": "Organization.identifier.system",
         "path": "Organization.identifier.system",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -93,7 +85,6 @@
       {
         "id": "Organization.identifier.value",
         "path": "Organization.identifier.value",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -107,13 +98,7 @@
         "path": "Organization.identifier",
         "sliceName": "NPI",
         "short": "National Provider Identifier (NPI)",
-        "min": 0,
         "max": "1",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
         "patternIdentifier": {
           "system": "http://hl7.org/fhir/sid/us-npi"
         },
@@ -130,13 +115,7 @@
         "path": "Organization.identifier",
         "sliceName": "CLIA",
         "short": "Clinical Laboratory Improvement Amendments (CLIA) Number for laboratories",
-        "min": 0,
         "max": "1",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
         "patternIdentifier": {
           "system": "urn:oid:2.16.840.1.113883.4.7"
         },
@@ -152,24 +131,12 @@
         "id": "Organization.active",
         "path": "Organization.active",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Organization.name",
         "path": "Organization.name",
         "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -181,13 +148,6 @@
       {
         "id": "Organization.telecom",
         "path": "Organization.telecom",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "ContactPoint"
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -203,13 +163,6 @@
       {
         "id": "Organization.address",
         "path": "Organization.address",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Address"
-          }
-        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -221,7 +174,6 @@
       {
         "id": "Organization.address.line",
         "path": "Organization.address.line",
-        "min": 0,
         "max": "4",
         "type": [
           {
@@ -233,7 +185,6 @@
       {
         "id": "Organization.address.city",
         "path": "Organization.address.city",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -245,7 +196,6 @@
       {
         "id": "Organization.address.state",
         "path": "Organization.address.state",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -269,7 +219,6 @@
         "id": "Organization.address.postalCode",
         "path": "Organization.address.postalCode",
         "short": "US Zip Codes",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -281,7 +230,6 @@
       {
         "id": "Organization.address.country",
         "path": "Organization.address.country",
-        "min": 0,
         "max": "1",
         "type": [
           {

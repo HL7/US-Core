@@ -62,12 +62,6 @@
         },
         "comment": "NPI must be supported as the identifier system in the US, Tax id is allowed, Local id is allowed in addition to another identifier supplied by a jurisdictional authority such as a practitioner's *Drug Enforcement Administration (DEA)* number.",
         "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -98,13 +92,7 @@
         "id": "Practitioner.identifier:NPI",
         "path": "Practitioner.identifier",
         "sliceName": "NPI",
-        "min": 0,
         "max": "1",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
         "patternIdentifier": {
           "system": "http://hl7.org/fhir/sid/us-npi"
         },
@@ -114,12 +102,6 @@
         "id": "Practitioner.name",
         "path": "Practitioner.name",
         "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "HumanName"
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -137,13 +119,6 @@
       {
         "id": "Practitioner.telecom",
         "path": "Practitioner.telecom",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "ContactPoint"
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -159,13 +134,6 @@
       {
         "id": "Practitioner.address",
         "path": "Practitioner.address",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Address"
-          }
-        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -177,7 +145,6 @@
       {
         "id": "Practitioner.address.line",
         "path": "Practitioner.address.line",
-        "min": 0,
         "max": "4",
         "type": [
           {
@@ -189,7 +156,6 @@
       {
         "id": "Practitioner.address.city",
         "path": "Practitioner.address.city",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -201,7 +167,6 @@
       {
         "id": "Practitioner.address.state",
         "path": "Practitioner.address.state",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -225,7 +190,6 @@
         "id": "Practitioner.address.postalCode",
         "path": "Practitioner.address.postalCode",
         "short": "US Zip Codes",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -237,7 +201,6 @@
       {
         "id": "Practitioner.address.country",
         "path": "Practitioner.address.country",
-        "min": 0,
         "max": "1",
         "type": [
           {

@@ -69,7 +69,10 @@ list:
            1. ** Applied**: Clarify requirement on date searches without prefix [FHIR-33156](https://jira.hl7.org/browse/FHIR-33156) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#search-syntax.html)
            1. **Resolved - change required**: Clarify distinct between repeated search params and ""composite"" params [FHIR-33159](https://jira.hl7.org/browse/FHIR-33159) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Applied**: docref missing actual content as mandatory element in narrative [FHIR-33160](https://jira.hl7.org/browse/FHIR-33160) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-documentreference.html)
-           1. **Resolved - change required**: Invalid element ids for type choice elements [FHIR-33233](https://jira.hl7.org/browse/FHIR-33233) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Applied**: Invalid element ids for type choice elements [FHIR-33233](https://jira.hl7.org/browse/FHIR-33233) See Change:
+              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-race.html)
+              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-birthsex.html)
+              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-direct.html)
            1. **Resolved - change required**: US Core Procedure.performed[x] is 1..1 but not conducive with the various procedure.statuses [FHIR-33243](https://jira.hl7.org/browse/FHIR-33243) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Resolved - change required**: US Core search page is not working [FHIR-34028](https://jira.hl7.org/browse/FHIR-34028) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Resolved - change required**: Patient Ethnicity does not have the same Null options as Race [FHIR-34036](https://jira.hl7.org/browse/FHIR-34036) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)

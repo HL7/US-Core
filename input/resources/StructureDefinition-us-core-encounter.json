@@ -43,21 +43,11 @@
         "id": "Encounter",
         "path": "Encounter",
         "definition": "This is basic constraint on Encounter for use in US Core resources.",
-        "alias": [
-          "Visit"
-        ],
         "mustSupport": false
       },
       {
         "id": "Encounter.identifier",
         "path": "Encounter.identifier",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -87,37 +77,17 @@
       {
         "id": "Encounter.status",
         "path": "Encounter.status",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Encounter.class",
         "path": "Encounter.class",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Encounter.type",
         "path": "Encounter.type",
         "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -128,11 +98,7 @@
       {
         "id": "Encounter.subject",
         "path": "Encounter.subject",
-        "alias": [
-          "patient"
-        ],
         "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -146,39 +112,21 @@
       {
         "id": "Encounter.participant",
         "path": "Encounter.participant",
-        "min": 0,
-        "max": "*",
         "mustSupport": true
       },
       {
         "id": "Encounter.participant.type",
         "path": "Encounter.participant.type",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Encounter.participant.period",
         "path": "Encounter.participant.period",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Period"
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Encounter.participant.individual",
         "path": "Encounter.participant.individual",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -220,35 +168,16 @@
       {
         "id": "Encounter.period",
         "path": "Encounter.period",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Period"
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Encounter.reasonCode",
         "path": "Encounter.reasonCode",
-        "alias": [
-          "Indication",
-          "Admission diagnosis"
-        ],
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Encounter.reasonReference",
         "path": "Encounter.reasonReference",
-        "min": 0,
         "max": "1",
         "type": [
           {
@@ -300,20 +229,11 @@
       {
         "id": "Encounter.hospitalization",
         "path": "Encounter.hospitalization",
-        "min": 0,
-        "max": "1",
         "mustSupport": true
       },
       {
         "id": "Encounter.hospitalization.dischargeDisposition",
         "path": "Encounter.hospitalization.dischargeDisposition",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "binding": {
           "strength": "preferred",
           "description": "[National Uniform Billing Committee](http://www.nubc.org/), manual UB-04, UB form locator 17",
@@ -324,30 +244,16 @@
       {
         "id": "Encounter.location",
         "path": "Encounter.location",
-        "min": 0,
-        "max": "*",
         "mustSupport": true
       },
       {
         "id": "Encounter.location.location",
         "path": "Encounter.location.location",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Location"
-            ]
-          }
-        ],
         "mustSupport": true
       },
       {
         "id": "Encounter.serviceProvider",
         "path": "Encounter.serviceProvider",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Reference",

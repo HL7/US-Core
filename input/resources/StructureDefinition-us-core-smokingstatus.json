@@ -57,8 +57,6 @@
       {
         "id": "Observation.status",
         "path": "Observation.status",
-        "min": 1,
-        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -84,12 +82,6 @@
           "rules": "open"
         },
         "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true
       },
       {
@@ -98,11 +90,6 @@
         "sliceName": "SocialHistory",
         "min": 1,
         "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "patternCodeableConcept": {
           "coding": [
             {
@@ -117,13 +104,6 @@
         "id": "Observation.code",
         "path": "Observation.code",
         "short": "Smoking Status",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -140,7 +120,6 @@
         "id": "Observation.subject",
         "path": "Observation.subject",
         "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -161,7 +140,6 @@
         "id": "Observation.effectiveDateTime",
         "path": "Observation.effectiveDateTime",
         "min": 1,
-        "max": "1",
         "mustSupport": true,
         "mapping": [
           {
@@ -175,7 +153,6 @@
         "path": "Observation.valueCodeableConcept",
         "short": "Coded Responses from Smoking Status Value Set",
         "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "CodeableConcept"

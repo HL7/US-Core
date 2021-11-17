@@ -64,8 +64,6 @@
       {
         "id": "PractitionerRole.practitioner",
         "path": "PractitionerRole.practitioner",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -82,8 +80,6 @@
       {
         "id": "PractitionerRole.organization",
         "path": "PractitionerRole.organization",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -100,13 +96,6 @@
       {
         "id": "PractitionerRole.code",
         "path": "PractitionerRole.code",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -117,13 +106,6 @@
       {
         "id": "PractitionerRole.specialty",
         "path": "PractitionerRole.specialty",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -133,16 +115,6 @@
       {
         "id": "PractitionerRole.location",
         "path": "PractitionerRole.location",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Location"
-            ]
-          }
-        ],
         "condition": [
           "us-core-13"
         ],
@@ -158,13 +130,6 @@
       {
         "id": "PractitionerRole.telecom",
         "path": "PractitionerRole.telecom",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "ContactPoint"
-          }
-        ],
         "condition": [
           "pd-1"
         ],
@@ -197,8 +162,6 @@
       {
         "id": "PractitionerRole.endpoint",
         "path": "PractitionerRole.endpoint",
-        "min": 0,
-        "max": "*",
         "condition": [
           "pd-1"
         ],

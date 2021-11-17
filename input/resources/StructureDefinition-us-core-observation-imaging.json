@@ -70,11 +70,6 @@
         "short": "Imaging Name",
         "definition": "The name of the imaging test performed on a patient.  A LOINC **SHALL** be used if the concept is present in LOINC.",
         "comment": "The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.  When using LOINC , Use either the SHORTNAME or LONG_COMMON_NAME field for the display.",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
         "binding": {
           "strength": "extensible",

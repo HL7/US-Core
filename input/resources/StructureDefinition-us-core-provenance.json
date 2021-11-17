@@ -46,46 +46,24 @@
         "alias": [
           "Basic Provenance"
         ],
-        "mustSupport": false,
-        "isModifier": false
+        "mustSupport": false
       },
       {
         "id": "Provenance.target",
         "path": "Provenance.target",
         "short": "The Resource this Provenance record supports",
-        "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Resource"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "Provenance.target.reference",
         "path": "Provenance.target.reference",
-        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Provenance.recorded",
         "path": "Provenance.recorded",
         "short": "Timestamp when the activity was recorded / updated",
-        "definition": "The instant of time at which the activity was recorded.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "instant"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "Provenance.agent",
@@ -99,23 +77,12 @@
           ],
           "rules": "open"
         },
-        "min": 1,
-        "max": "*",
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "Provenance.agent.type",
         "path": "Provenance.agent.type",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
         "mustSupport": true,
-        "isModifier": false,
         "binding": {
           "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-provenance-participant-type"
@@ -124,8 +91,6 @@
       {
         "id": "Provenance.agent.who",
         "path": "Provenance.agent.who",
-        "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -169,14 +134,11 @@
             ]
           }
         ],
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "Provenance.agent.onBehalfOf",
         "path": "Provenance.agent.onBehalfOf",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -193,23 +155,19 @@
             "expression": "((%resource.agent.who.resolve() is Practitioner) or (%resource.agent.who.resolve() is Device)) implies exists()"
           }
         ],
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "Provenance.agent:ProvenanceAuthor",
         "path": "Provenance.agent",
         "sliceName": "ProvenanceAuthor",
-        "min": 0,
         "max": "*",
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "Provenance.agent:ProvenanceAuthor.type",
         "path": "Provenance.agent.type",
         "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
@@ -223,24 +181,19 @@
             }
           ]
         },
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "Provenance.agent:ProvenanceTransmitter",
         "path": "Provenance.agent",
         "sliceName": "ProvenanceTransmitter",
         "definition": "The entity that provided the copy to your system.",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       },
       {
         "id": "Provenance.agent:ProvenanceTransmitter.type",
         "path": "Provenance.agent.type",
         "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
@@ -254,8 +207,7 @@
             }
           ]
         },
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
       }
     ]
   }
