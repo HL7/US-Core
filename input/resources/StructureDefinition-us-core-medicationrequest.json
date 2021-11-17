@@ -92,18 +92,31 @@
           }
         ]
       },
-	  {
+      {
         "id": "MedicationRequest.category",
         "path": "MedicationRequest.category",
-        "min": 0,
-        "max": "*",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.category:us-core",
+        "path": "MedicationRequest.category",
+        "sliceName": "us-core",
         "mustSupport": true,
-		   "binding": {
-			"strength": "preferred",
+        "binding": {
+          "strength": "preferred",
           "description": "The type of medication order.",
           "valueSet": "http://hl7.org/fhir/ValueSet/medicationrequest-category"
         }
-		},
+      },
       {
         "id": "MedicationRequest.reported[x]",
         "path": "MedicationRequest.reported[x]",
