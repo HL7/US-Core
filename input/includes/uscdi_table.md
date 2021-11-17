@@ -57,6 +57,7 @@
 | Gender Identity | [US Core Patient Profile] | Gender Identity Extension|
 | Preferred Language| [US Core Patient Profile] | Patient.communication|
 | Address | [US Core Patient Profile] | Patient.address|
+| Previous Address | [US Core Patient Profile] | Patient.address|
 | Phone Number| [US Core Patient Profile] | Patient.telecom|
 | **Problems:**| [US Core Condition Profile] | Condition|
 | Date of Resolution| [US Core Condition Profile] | Condition.abatement[x]|
