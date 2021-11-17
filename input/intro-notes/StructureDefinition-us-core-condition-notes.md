@@ -67,7 +67,7 @@ The following search parameter combinations SHOULD be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`onset-date`](SearchParameter-us-core-condition-onset-date.html)** search parameters:
     - including support for these `onset-date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `onset-date` (e.g.`onset-date=[date]&onset-date=[date]]&...`)
+    - including optional support for *AND* search on `onset-date` (e.g.`onset-date=[date]&onset-date=[date]]&...`)
 
     `GET [base]/Condition?patient={Type/}[id]&onset-date={gt|lt|ge|le}[date]{&onset-date={gt|lt|ge|le}[date]&...}`
 
@@ -79,7 +79,7 @@ The following search parameter combinations SHOULD be supported:
 
 1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`asserted-date`](SearchParameter-us-core-condition-asserted-date.html)** search parameters:
     - including support for these `asserted-date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `asserted-date` (e.g.`asserted-date=[date]&asserted-date=[date]]&...`)
+    - including optional support for *AND* search on `asserted-date` (e.g.`asserted-date=[date]&asserted-date=[date]]&...`)
 
     `GET [base]/Condition?patient={Type/}[id]&asserted-date={gt|lt|ge|le}[date]{&asserted-date={gt|lt|ge|le}[date]&...}`
 
@@ -91,7 +91,7 @@ The following search parameter combinations SHOULD be supported:
 
 1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`recorded-date`](SearchParameter-us-core-condition-recorded-date.html)** search parameters:
     - including support for these `recorded-date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `recorded-date` (e.g.`recorded-date=[date]&recorded-date=[date]]&...`)
+    - including optional support for *AND* search on `recorded-date` (e.g.`recorded-date=[date]&recorded-date=[date]]&...`)
 
     `GET [base]/Condition?patient={Type/}[id]&recorded-date={gt|lt|ge|le}[date]{&recorded-date={gt|lt|ge|le}[date]&...}`
 
@@ -103,7 +103,7 @@ The following search parameter combinations SHOULD be supported:
 
 1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`abatement-date`](SearchParameter-us-core-condition-abatement-date.html)** search parameters:
     - including support for these `abatement-date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `abatement-date` (e.g.`abatement-date=[date]&abatement-date=[date]]&...`)
+    - including optional support for *AND* search on `abatement-date` (e.g.`abatement-date=[date]&abatement-date=[date]]&...`)
 
     `GET [base]/Condition?patient={Type/}[id]&abatement-date={gt|lt|ge|le}[date]{&abatement-date={gt|lt|ge|le}[date]&...}`
 

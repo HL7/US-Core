@@ -39,7 +39,7 @@ The following search parameters, search parameter combinations and search parame
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-medicationstatement-patient.html)** and **[`effective`](SearchParameter-us-core-medicationstatement-effective.html)** search parameters:
     - including optional support for these `_include` parameters: `MedicationStatement:medication`
     - including support for these `effective` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `effective` (e.g.`effective=[date]&effective=[date]]&...`)
+    - including optional support for *AND* search on `effective` (e.g.`effective=[date]&effective=[date]]&...`)
 
     `GET [base]/MedicationStatement?patient=[reference]&effective={gt|lt|ge|le}[date]{&effective={gt|lt|ge|le}[date]&...}`
 

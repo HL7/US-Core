@@ -41,7 +41,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`category`](SearchParameter-us-core-documentreference-category.html)** and **[`date`](SearchParameter-us-core-documentreference-date.html)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
+    - including optional support for *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
     `GET [base]/DocumentReference?patient={Type/}[id]&category=http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category|clinical-note&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
@@ -67,7 +67,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 The following search parameter combinations SHOULD be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`status`](SearchParameter-us-core-documentreference-status.html)** search parameters:
-    - including support for composite *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
+    - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
     `GET [base]/DocumentReference?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
 
@@ -79,7 +79,7 @@ The following search parameter combinations SHOULD be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** and **[`type`](SearchParameter-us-core-documentreference-type.html)** and **[`period`](SearchParameter-us-core-documentreference-period.html)** search parameters:
     - including support for these `period` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `period` (e.g.`period=[date]&period=[date]]&...`)
+    - including optional support for *AND* search on `period` (e.g.`period=[date]&period=[date]]&...`)
 
     `GET [base]/DocumentReference?patient={Type/}[id]&type={system|}[code]&period={gt|lt|ge|le}[date]{&period={gt|lt|ge|le}[date]&...}`
 
