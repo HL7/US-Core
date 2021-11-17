@@ -20,6 +20,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 1.  a code describing the type of document
 1.  a document category
 1.  a patient
+1.  document referenced (content)
 1.  the MIME type (i.e. contentType) of the document
 
 **Each DocumentReference must support:**
