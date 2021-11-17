@@ -84,8 +84,22 @@
       {
         "id": "DocumentReference.category",
         "path": "DocumentReference.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
         "min": 1,
-        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.category:us-core",
+        "path": "DocumentReference.category",
+        "sliceName": "us-core",
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
