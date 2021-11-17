@@ -43,6 +43,14 @@
         "id": "Procedure",
         "path": "Procedure",
         "definition": "The US Core Condition Profile is based upon the core FHIR Procedure Resource and created to meet the 2015 Edition Common Clinical Data Set 'Procedures' requirements.",
+        "constraint": [
+          {
+            "key": "us-core-7",
+            "severity": "error",
+            "human": "Performed SHALL be present if the status is 'completed' or 'in-progress'",
+            "expression": "(status='completed' or status='in-progress') implies performed.exists()"
+          }
+        ],
         "mustSupport": false,
         "mapping": [
           {
@@ -54,6 +62,9 @@
       {
         "id": "Procedure.status",
         "path": "Procedure.status",
+        "condition": [
+          "us-core-7"
+        ],
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -129,16 +140,7 @@
           }
         ],
         "condition": [
-          "us-core-1"
-        ],
-        "constraint": [
-          {
-            "key": "us-core-1",
-            "severity": "error",
-            "human": "Performed SHALL be present if the status is 'completed' or 'in-progress'",
-            "expression": "(performed.exists() or status.coding.where(system='http://hl7.org/fhir/event-status' and code='preparation' or code='not-done' or code='on-hold' or  code='stopped' or  code='entered-in-error' or  code='unknown').exists())",
-            "xpath": ""
-          }
+          "us-core-7"
         ],
         "mustSupport": true,
         "mapping": [
