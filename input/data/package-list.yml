@@ -50,7 +50,7 @@ list:
            1. **Applied**: Provide a caution to the user that a query of MedicationRequest does not provide complete information. [FHIR-32720](https://jira.hl7.org/browse/FHIR-32720) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
            1. **Applied**: Make Condition.encounter 0..1 MS [FHIR-32844](https://jira.hl7.org/browse/FHIR-32844) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition.html)
            1. **Resolved - change required**: Illegal Binding in USCoreCarePlanProfile [FHIR-32846](https://jira.hl7.org/browse/FHIR-32846) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. **Resolved - change required**: Wrong name on BMI Profile [FHIR-32847](https://jira.hl7.org/browse/FHIR-32847) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Applied**: Fix title for BMI Profile [FHIR-32847](https://jira.hl7.org/browse/FHIR-32847) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-bmi.html)
            1. **Applied**: Remove unchanged elements from Differentials [FHIR-32848](https://jira.hl7.org/browse/FHIR-32848) [For example change see](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-lab.profile.json.html)
            1. **Applied**: Create US Core slices for category elements [FHIR-32857](https://jira.hl7.org/browse/FHIR-32857) See Change:
               -  [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-documentreference.html)
