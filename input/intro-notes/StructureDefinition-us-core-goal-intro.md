@@ -31,5 +31,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 ### Examples
 
 - [Goal-1](Goal-goal-1.html)
+- [Goal-2](Goal-goal-2.html)
 
 {% include link-list.md %}
+
