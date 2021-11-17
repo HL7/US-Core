@@ -99,8 +99,8 @@
         "fixedUri": "ombCategory"
       },
       {
-        "id": "Extension.extension:ombCategory.valueCoding",
-        "path": "Extension.extension.valueCoding",
+        "id": "Extension.extension:ombCategory.value[x]",
+        "path": "Extension.extension.value[x]",
         "min": 1,
         "max": "1",
         "type": [
@@ -147,8 +147,8 @@
         "fixedUri": "detailed"
       },
       {
-        "id": "Extension.extension:detailed.valueCoding",
-        "path": "Extension.extension.valueCoding",
+        "id": "Extension.extension:detailed.value[x]",
+        "path": "Extension.extension.[x]",
         "min": 1,
         "max": "1",
         "type": [
@@ -189,8 +189,8 @@
         "fixedUri": "text"
       },
       {
-        "id": "Extension.extension:text.valueString",
-        "path": "Extension.extension.valueString",
+        "id": "Extension.extension:text.value[x]",
+        "path": "Extension.extension.value[x]",
         "min": 1,
         "max": "1",
         "type": [
