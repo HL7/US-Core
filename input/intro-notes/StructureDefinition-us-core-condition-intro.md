@@ -52,5 +52,6 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
  - {:.new-content}[Condition-hc1](Condition-hc1.html) is an example of a condition categorized as a "health-concern"
  - {:.new-content}[Condition-example](Condition-example.html) is an example of a condition categorized as a "problem"
+ - {:.new-content}[Condition-SDOH-example](Condition-condition-SDOH-example.html) is an example of a condition categorized as a "Social Determinants Of Health"
 
 {% include link-list.md %}
