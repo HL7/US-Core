@@ -38,14 +38,16 @@ For ONC's USCDI requirements, each Patient must support the following additional
 1. an ethnicity
 1. a birth sex*
 1. {:.new-content}gender identity*
+1. {:.new-content}previous address
 1. previous name
 1. suffix
 
 
 **Profile specific implementation guidance:**
-- Note that *Previous Name* and *Suffix* are listed in the U.S. Core Data for Interoperability.
+- Note that *Previous Name*, *Suffix*, <span markdown='1' class='new-content'>and *Previous address*</span> are listed in the U.S. Core Data for Interoperability.
   - Suffix is represented using the `Patient.name.suffix` element.
-  - Previous name is represented by providing an end date in the `Patient.name.period` element for a previous name.
+  - {:.new-content}Previous name is represented by setting ` Patient.name.use` to "old" and providing an end date in Patient.name.period element if known
+  - {:.new-content}Previous address is represented by setting `Patient.address.use` to "old" and providing an end date in Patient.address.period element if known.
   - The patient example below demonstrates the usage of both of these elements.
 - {:.new-content}/*The [HL7 Gender Harmony Project] is modeling gender and sex information which includes data elements, value sets, code systems. US Core reviwed and updated value sets based on input from the Gender Harmony project. When the final recommendations of the Gender Harmony project are complete, US Core will update these concepts to align with the base FHIR resource located [here]({{site.data.fhir.path}}patient.html#gender).  
 - The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`. There is increasing concern over the use of Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have actively purged them from their systems and filter them out of incoming data.
