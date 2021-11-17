@@ -73,7 +73,7 @@ list:
               - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-race.html)
               - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-birthsex.html)
               - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-direct.html)
-           1. **Resolved - change required**: US Core Procedure.performed[x] is 1..1 but not conducive with the various procedure.statuses [FHIR-33243](https://jira.hl7.org/browse/FHIR-33243) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Applied**: US Core Procedure.performed[x] is 1..1 but not conducive with the various procedure.statuses [FHIR-33243](https://jira.hl7.org/browse/FHIR-33243) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-procedure.html)
            1. **Resolved - change required**: US Core search page is not working [FHIR-34028](https://jira.hl7.org/browse/FHIR-34028) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Resolved - change required**: Patient Ethnicity does not have the same Null options as Race [FHIR-34036](https://jira.hl7.org/browse/FHIR-34036) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Resolved - change required**: Wrong URL resolution of http://hl7.org/fhir/us/core/OperationDefinition/docref [FHIR-34044](https://jira.hl7.org/browse/FHIR-34044) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
@@ -84,6 +84,9 @@ list:
            1. **Resolved - change required**: USCDI v2 update [FHIR-34231](https://jira.hl7.org/browse/FHIR-34231) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Applied**: Example has ""applies to"" with wrong coding [FHIR-34286](https://jira.hl7.org/browse/FHIR-34286) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/Observation-serum-calcium.html)
            1. **Applied**: Correct CapabilityStatement SMART IG reference [FHIR-34281](https://jira.hl7.org/browse/FHIR-34281) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/CapabilityStatement-us-core-server.html#should_igs)
+           1. **Applied**: Make DiagnosticReport.effective and DiagnosticReport.issued conditionally mandatory [FHIR-34330](https://jira.hl7.org/browse/FHIR-34330) See Change:
+               - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-lab.html)
+               - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-note.html)
 
     path: 'http://build.fhir.org/ig/HL7/US-Core'
     status: ci-build

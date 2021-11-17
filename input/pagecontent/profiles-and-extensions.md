@@ -14,7 +14,7 @@ The following Profiles and have been defined for this implementation guide.
 - {:.new-content}[US Core Clinical Test Result Observation Profile]
 - {:.new-content}[US Core Condition Profile]
 - {:.new-content}[US Core Diagnostic Imaging Result Observation Profile]
-- [US Core DiagnosticReport Profile for Laboratory Results Reporting]
+- {:.new-content}[US Core DiagnosticReport Profile for Laboratory Results Reporting]
 - {:.new-content}[US Core DiagnosticReport Profile for Report and Note exchange]
 - {:.new-content}[US Core DocumentReference Profile]
 - {:.new-content}[US Core Encounter Profile]
