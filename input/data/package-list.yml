@@ -32,10 +32,10 @@ list:
           - **Applied**: **Care Team Member:** Name, Identifier, Location, Telecom and Role [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careteam.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-practitioner.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-relatedperson.html)
           - **Applied**: **Encounter:** Diagnosis, Disposition, Location, Time, Type [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-encounter.html)
           - **Applied**: **Problems:** Date of Diagnosis and Date of Resolution [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition.html)
-
+          </br>
         - Addressed and applied over 30 trackers submitted by implementers since the previous STU2 ballot for US Core ver 4.0.0:
 
-           **Status**: **Summary**:(**Jira Issue**) **Link to Updated Content**
+           **Status**: **Summary**:[**Jira Issue**](*) **Link to Updated Content**
 
           1. **Applied**: Make values in direct and birth sex extensions min=1 [FHIR-26459](https://jira.hl7.org/browse/FHIR-26459) See Change:
              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-birthsex.html)
@@ -90,7 +90,7 @@ list:
 
           Due external dependencies and publication described below the application of these resolutions have been deferred.
 
-          **Status**: **Summary**:(**Jira Issue**) **Issue with applying**
+          **Status**: **Summary**: [**Jira Issue**](#) **Issue with applying**
 
           1. **Resolved - change required**: US Core Pulse Oximetry Profile noncomformant UCUM Unit for Oxygen Concentration [FHIR-27845](https://jira.hl7.org/browse/FHIR-27845) -  Awaiting FHIR-4b updates to update base FHIR Vitals Profile, STU Note Present
           1. **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#) - Coordination with VSAC and IG publishing team to Correct and align Code System OIDS between FHIR, CCDA, and VSAC, Note To Balloters Present
@@ -109,6 +109,13 @@ list:
     current: true
     fhirversion: 4.0.1
 
+  - version: 4.1.0
+    date: '2021-11-18'
+    descmd: STU 5 Ballot Version for US Core
+    path: 'http://hl7.org/fhir/us/core/2022Jan'
+    status: ballot
+    sequence: STU5
+    fhirversion: 4.0.1
 
   - version: 4.0.0
     date: '2021-06-28'

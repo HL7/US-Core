@@ -18,10 +18,9 @@
   - [ ] update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources  *NOTE do this at end and remember to update Client spreadsheet from Server spreadsheet*
 
   for narrative updates
-  - [ ] update Narrative
-  - [ ] update change log
-
-  - [ ] list open issues in package-list
+  - [ ] update Narratives
+  - [X] update change log
+  - [X] list open issues in package-list
 - [ ] QA
      - [ ] review applied trackers
      - [ ] errors and warnings  (see above)
@@ -30,13 +29,8 @@
      - [ ] final read through
 - [ ] remove all new content and green highlighted formatting
 - [ ] update title and version to 5.0.0
-- [ ] update package-list.json
-
-     - in pl.yml
-        - update current to ver .0.0
-        - change base path of changes from build to version 4.0.0
-        - update package-list.json from pl.yml
-- [ ] remove this blue info box/change log from home page
+- [ ] update package-list.yml (convert to json !)
+- [ ] remove this blue info box from home page
 - [ ] update Jira tracker file
 </div>
 
