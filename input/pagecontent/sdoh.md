@@ -1,4 +1,4 @@
-
+<div markdown="1" class="new-content">
 This US Core Social Determinant of Health Guidance Page has been added in response to  United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published by the Office of the National Coordinator (ONC) in July of 2021. The new data classes include:
 - SDOH Assessments
 - SDOH Goals
@@ -6,7 +6,7 @@ This US Core Social Determinant of Health Guidance Page has been added in respon
 - SDOH Problems/Health Concerns
 
 This page documents how the US Core Profile can be use to represent these classes.
-{:.new-content}
+</div>
 
 ### SDOH Terminology
 
