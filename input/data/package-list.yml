@@ -62,9 +62,9 @@ list:
            1. **Applied**: Clarify Guidance for missing data for Coding data type element [FHIR-33048](https://jira.hl7.org/browse/FHIR-33048) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#missing-data)
            1. **Resolved - change required**: us-core-1 Invariant cannot fail [FHIR-33052](https://jira.hl7.org/browse/FHIR-33052) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Applied**: remove requirement to use only 401 from capabiltystatement [FHIR-33069](https://jira.hl7.org/browse/FHIR-33069) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/CapabilityStatement-us-core-server.html#behavior)
-           1. **Resolved - change required**: US Core to USCDI guidance page -- add patient email [FHIR-33079](https://jira.hl7.org/browse/FHIR-33079) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. **Applied**: Utilize ""use"" field for patient previous name and previous address [FHIR-33080](https://jira.hl7.org/browse/FHIR-33080) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
-           1. **Resolved - change required**: fix search parameter list [FHIR-33123](https://jira.hl7.org/browse/FHIR-33123) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Applied**: US Core to USCDI guidance page -- add patient email [FHIR-33079](https://jira.hl7.org/browse/FHIR-33079) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
+           1. **Applied**: Utilize "use" field for patient previous name and previous address [FHIR-33080](https://jira.hl7.org/browse/FHIR-33080) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
+           1. **Applied**: fix search parameter list [FHIR-33123](https://jira.hl7.org/browse/FHIR-33123) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/search-parameters-and-operations.html)
            1. **Resolved - change required**: Wrong link to IG homepage from package manifest [FHIR-33132](https://jira.hl7.org/browse/FHIR-33132) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Applied**: Clarify requirement on date searches without prefix [FHIR-33156](https://jira.hl7.org/browse/FHIR-33156) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#search-syntax.html)
            1. **Applied**: Clarify distinction between repeated search params and ""composite"" params [FHIR-33159](https://jira.hl7.org/browse/FHIR-33159) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab.html#notes)
@@ -81,7 +81,7 @@ list:
               - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)
               - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html#mandatory-and-must-support-data-elements)
            1. **Applied**: US Core Birth Sex Extension [FHIR-34133](https://jira.hl7.org/browse/FHIR-34133) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-birthsex.html)
-           1. **Resolved - change required**: USCDI v2 update [FHIR-34231](https://jira.hl7.org/browse/FHIR-34231) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Applied**: USCDI v2 update [FHIR-34231](https://jira.hl7.org/browse/FHIR-34231) SEE SECTION ABOVE
            1. **Applied**: Example has ""applies to"" with wrong coding [FHIR-34286](https://jira.hl7.org/browse/FHIR-34286) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/Observation-serum-calcium.html)
            1. **Applied**: Correct CapabilityStatement SMART IG reference [FHIR-34281](https://jira.hl7.org/browse/FHIR-34281) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/CapabilityStatement-us-core-server.html#should_igs)
            1. **Applied**: Make DiagnosticReport.effective and DiagnosticReport.issued conditionally mandatory [FHIR-34330](https://jira.hl7.org/browse/FHIR-34330) See Change:
