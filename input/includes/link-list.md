@@ -312,3 +312,4 @@
 [US Core Social History Assessment Observation Profile]: StructureDefinition-us-core-observation-social-history-assessment.html
 [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
 [Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
+[SDOH Guidance]: sdoh.html
