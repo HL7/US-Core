@@ -1,13 +1,20 @@
 
+This US Core Social Determinant of Health Guidance Page has been added in response to  United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published by the Office of the National Coordinator (ONC) in July of 2021. The new data classes include:
+- SDOH Assessments
+- SDOH Goals
+- SDOH Interventions
+- SDOH Problems/Health Concerns
 
-### US Core Social Determinant of Health Vocabulary Design Notes (Problem, Goal, Procedure, and Service Request)
+This page documents how the US Core Profile can be use to represent these classes.
+{:.new-content}
 
+### SDOH Terminology
+
+US Core Social Determinant of Health Vocabulary Design Notes (Problem, Goal, Procedure, and Service Request)
 
 The ONC US Core Data for Interoperability (USCDI) v2 update in July 2021 includes several social determinants of health concepts, including problems, goals, procedures, and service requests. The pre-existing[ HL7 Accelerator Gravity Project](https://www.hl7.org/gravity/) was developed to identify and harmonize social risk factor data.
 
 The Gravity Implementation Guides use very fine grained value sets across specific social risk factor domains. Within problems, goals, procedures, and service requests, US Core uses grouping value sets that contain the same concept codes that are in the Gravity value sets.
-
-
 
 * [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion)
 * [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion)
@@ -16,9 +23,7 @@ The Gravity Implementation Guides use very fine grained value sets across specif
 
 {% include img.html img="sdoh_condition.svg" caption="Graphic of Example of SDOH Grouping Value set in VSAC (Conditions)" %}
 
-
-
-### Social Determinants of Health Assessment (US Core)
+### SDOH Assessments
 
 Assessment Screenings can represent a structured evaluation of risk (e.g., PRAPARE, Hunger Vital Sign, AHC-HRSN screening tool) for any Social Determinants of Health domain such as food, housing, or transportation security. The assessment scale responses are represented in US Core with [US Core Screening Response Observation Profile](http://hl7.org/fhir/us/core/StructureDefinition/us-chttp://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-screening-response.html). The [US Core Simple Social History Assessment Observation Profile](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-social-history-assessment.html) is for simple observations made by an individual during the course of care about a patient's social history status. Both can contribute to the identification of SDOH Problems (Conditions) or Observations or can be the reason for Service Requests or Procedures.
 
