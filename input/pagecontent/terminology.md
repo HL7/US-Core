@@ -7,7 +7,7 @@ These value sets have been defined for this implementation guide.
 
 <!-- {% raw %}{% include list-simple-valuesets.xhtml %}{% endraw %} -->
 
-*   [{:.new-content}Birth Sex](ValueSet-birthsex.html)
+*   {:.new-content}Birth Sex](ValueSet-birthsex.html)
 *   [Language codes with language and optionally a region modifier](ValueSet-simple-language.html)
 *   {:.new-content}[OMB Ethnicity Categories](ValueSet-omb-ethnicity-category.html)*
 *   {:.new-content}[Detailed ethnicity](ValueSet-detailed-ethnicity.html)*
