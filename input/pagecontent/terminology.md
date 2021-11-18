@@ -9,10 +9,10 @@ These value sets have been defined for this implementation guide.
 
 *   {:.new-content}Birth Sex](ValueSet-birthsex.html)
 *   [Language codes with language and optionally a region modifier](ValueSet-simple-language.html)
-*   {:.new-content}[OMB Ethnicity Categories](ValueSet-omb-ethnicity-category.html)*
-*   {:.new-content}[Detailed ethnicity](ValueSet-detailed-ethnicity.html)*
-*   {:.new-content}[OMB Race Categories](ValueSet-omb-race-category.html)*
-*   {:.new-content}[Detailed Race](ValueSet-detailed-race.html)*
+*   {:.new-content}[OMB Ethnicity Categories](ValueSet-omb-ethnicity-category.html)
+*   {:.new-content}[Detailed ethnicity](ValueSet-detailed-ethnicity.html)
+*   {:.new-content}[OMB Race Categories](ValueSet-omb-race-category.html)
+*   {:.new-content}[Detailed Race](ValueSet-detailed-race.html)
 *   [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
 *   [US Core Condition Category Codes](ValueSet-us-core-condition-category.html)
 *   [US Core Condition Code](ValueSet-us-core-condition-code.html)
@@ -47,15 +47,10 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 <!-- {% raw %}{% include list-simple-codesystems.xhtml %}{% endraw %} -->
 
-*   [Race & Ethnicity - CDC](CodeSystem-cdcrec.html)*
 *   [US Core CarePlan Category Extension Codes](CodeSystem-careplan-category.html)
 *   [US Core Condition Category Extension Codes](CodeSystem-condition-category.html)
 *   [US Core DocumentReferences Category Codes](CodeSystem-us-core-documentreference-category.html)
 *   [US Core Provenance Participant Type Extension Codes](CodeSystem-us-core-provenance-participant-type.html)
-
-<div markdown="1" class="stu-note">
-\* In the future, the Race & Ethnicity - CDC code system and value sets will migrate from US Core to [HL7 Terminology](https://terminology.hl7.org/).
-</div>
 
 <br />
 
