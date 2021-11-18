@@ -2,26 +2,24 @@
 
 **punch list**:
 
-- [ ] [Resolve Trackers](https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=12001)
+- [X] [Resolve Trackers](https://jira.hl7.org/secure/Dashboard.jspa?selectPageId=12001)
 - [ ] Apply Trackers
 
-for profile/element updates:
-- [ ] update profile/create artifact
-- [ ] optionally create ValueSet/Search parameter artifact (update and highlight new content in terminology page)
-- [ ] update uscdi table here: input/includes/uscdi_table.md
-- [ ] update intro here: input/intro-notes (highlight new content with new-content class)
-- [ ] update notes/search - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/intro-notes) (mark as new content in spreadsheet to highlight new content)
-- [ ] optionally update SPs and SP page
-- [ ] update/create Examples - (highlight new content with new-content class)
-- [ ] update change log
-<!--- [ ] updated Provenance to include all the new resources created a liquid script as include file to update this dynamically. -->
-- [ ] update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources  *NOTE do this at end and remember to update Client spreadsheet from Server spreadsheet*
+  for profile/element updates:
+  - [ ] update profile/create artifact
+  - [ ] optionally create ValueSet/Search parameter artifact (update and highlight new content in terminology page)
+  - [ ] update uscdi table here: input/includes/uscdi_table.md
+  - [ ] update intro here: input/intro-notes (highlight new content with new-content class)
+  - [ ] update notes/search - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/intro-notes) (mark as new content in spreadsheet to highlight new content)
+  - [ ] optionally update SPs and SP page
+  - [ ] update/create Examples - (highlight new content with new-content class)
+  - [ ] update change log
+  <!--- [ ] updated Provenance to include all the new resources created a liquid script as include file to update this dynamically. -->
+  - [ ] update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources  *NOTE do this at end and remember to update Client spreadsheet from Server spreadsheet*
 
-for narrative updates
-
-- [ ] update Narrative
-- [ ] optionally Update Narrative
-- [ ] update change log
+  for narrative updates
+  - [ ] update Narrative
+  - [ ] update change log
 
   - [ ] list open issues in package-list
 - [ ] QA

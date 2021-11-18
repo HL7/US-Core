@@ -25,11 +25,22 @@
           "Radiology Report",
           "Clinical Test Report"
         ],
+        "constraint": [
+          {
+            "key": "us-core-10",
+            "severity": "error",
+            "human": "effective[x] SHALL be present if the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'",
+            "expression": "(status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies effective.exists()"
+          }
+        ],
         "mustSupport": false
       },
       {
         "id": "DiagnosticReport.status",
         "path": "DiagnosticReport.status",
+        "condition": [
+          "us-core-10"
+        ],
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -119,6 +130,9 @@
           {
             "code": "Period"
           }
+        ],
+        "condition": [
+          "us-core-10"
         ],
         "mustSupport": true
       },

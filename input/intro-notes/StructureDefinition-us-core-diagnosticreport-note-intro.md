@@ -21,7 +21,10 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 1.  a category
 1.  a code describing the type of report
 1.  a patient
-1.  date and time the report was created
+1.  {:.new-content}date and time the report was created*
+
+*This element has the following constraint: SHALL be present if status is
+'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'.{:.new-content}
 
 **Each Diagnostic Report must support:**
 

@@ -21,7 +21,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`code`](SearchParameter-us-core-observation-code.html)** and **[`date`](SearchParameter-us-core-observation-date.html)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`
-    - including optional support for composite *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
+    - including optional support for *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
     `GET [base]/Observation?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
@@ -37,7 +37,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 The following search parameter combinations SHOULD be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`code`](SearchParameter-us-core-observation-code.html)** and **[`status`](SearchParameter-us-core-observation-status.html)** search parameters:
-    - including support for composite *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
+    - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
     `GET [base]/Observation?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}&status={system|}[code]{,{system|}[code],...}`
 

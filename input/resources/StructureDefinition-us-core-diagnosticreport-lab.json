@@ -47,13 +47,30 @@
           "Lab Result",
           "Lab Report"
         ],
+        "constraint": [
+          {
+            "key": "us-core-8",
+            "severity": "error",
+            "human": "effective[x] SHALL be present if the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'",
+            "expression": "(status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies effective.exists()"
+          },
+          {
+            "key": "us-core-9",
+            "severity": "error",
+            "human": "issued SHALL be present if the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'",
+            "expression": "(status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies issued.exists()"
+          }
+        ],
         "mustSupport": false
       },
       {
         "id": "DiagnosticReport.status",
         "path": "DiagnosticReport.status",
+        "condition": [
+          "us-core-8",
+          "us-core-9"
+        ],
         "mustSupport": true,
-        "isModifier": false,
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
@@ -135,12 +152,18 @@
             "code": "Period"
           }
         ],
+        "condition": [
+          "us-core-8"
+        ],
         "mustSupport": true
       },
       {
         "id": "DiagnosticReport.issued",
         "path": "DiagnosticReport.issued",
         "min": 1,
+        "condition": [
+          "us-core-9"
+        ],
         "mustSupport": true
       },
       {
