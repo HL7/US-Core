@@ -1238,7 +1238,7 @@
         "reference": {
           "reference": "ValueSet/detailed-ethnicity"
         },
-        "description": "The 41 [CDC ethnicity codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 2 OMB ethnicity category codes.",
+        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 41 [CDC ethnicity codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 2 OMB ethnicity category codes.",
         "exampleBoolean": false,
         "name": "Detailed ethnicity"
       },
@@ -1246,7 +1246,7 @@
         "reference": {
           "reference": "ValueSet/detailed-race"
         },
-        "description": "The 900+ [CDC Race codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 5 OMB race category codes.",
+        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 900+ [CDC Race codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 5 OMB race category codes.",
         "exampleBoolean": false,
         "name": "Detailed Race"
       },
@@ -1262,7 +1262,7 @@
         "reference": {
           "reference": "ValueSet/omb-ethnicity-category"
         },
-        "description": "The codes for the ethnicity categories - 'Hispanic or Latino' and 'Non Hispanic or Latino' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
+        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', and the ethnicity categories - 'Hispanic or Latino' and 'Non Hispanic or Latino' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
         "exampleBoolean": false,
         "name": "OMB Ethnicity Categories"
       },
@@ -1270,7 +1270,7 @@
         "reference": {
           "reference": "ValueSet/omb-race-category"
         },
-        "description": "The codes for the concepts 'Unknown' and  'Asked but no answer' and the the codes for the five race categories - 'American Indian' or 'Alaska Native', 'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific Islander', and 'White' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf) .",
+        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the codes for the five race categories - 'American Indian' or 'Alaska Native', 'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific Islander', and 'White' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf) .",
         "exampleBoolean": false,
         "name": "OMB Race Categories"
       },
@@ -2401,6 +2401,11 @@
             {
               "nameUrl": "basic-provenance.html",
               "title": "Basic Provenance",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "sdoh.html",
+              "title": "Sdoh",
               "generation": "markdown"
             },
             {
