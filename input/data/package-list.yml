@@ -37,62 +37,72 @@ list:
 
            **Status**: **Summary**:(**Jira Issue**) **Link to Updated Content**
 
-           1. **Applied**: make values in direct and birth sex extensions min=1 [FHIR-26459](https://jira.hl7.org/browse/FHIR-26459) See Change:
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-birthsex.html)
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-direct.html)
-           1. **Resolved - change required**: US Core Pulse Oximetry Profile Text Summary has incorrect UCUM Unit for Oxygen Concentration [FHIR-27845](https://jira.hl7.org/browse/FHIR-27845) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. **Applied**: imm-1.json NDC/CVX codes QA Error [FHIR-30104](https://jira.hl7.org/browse/FHIR-30104) See Changes:
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/Immunization-imm-1.html)
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html)
-           1. **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. **Resolved - change required**: valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. **Resolved - change required**: In most of the data elements – “Binding is from base FHIR and US Core Vital Signs”  Need this to be one single combined listing [FHIR-30780](https://jira.hl7.org/browse/FHIR-30780) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. **Resolved - change required**: Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. **Applied**: Fix patient search parameter definitions to only target Patient  [FHIR-32305](https://jira.hl7.org/browse/FHIR-32305) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/SearchParameter-us-core-allergyintolerance-patient.json.html)
-           1. **Applied**: Provide a caution to the user that a query of MedicationRequest does not provide complete information. [FHIR-32720](https://jira.hl7.org/browse/FHIR-32720) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
-           1. **Applied**: Make Condition.encounter 0..1 MS [FHIR-32844](https://jira.hl7.org/browse/FHIR-32844) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition.html)
-           1. **Applied**: Correction on USCoreCarePlanProfile Binding [FHIR-32846](https://jira.hl7.org/browse/FHIR-32846) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careplan.html)
-           1. **Applied**: Fix title for BMI Profile [FHIR-32847](https://jira.hl7.org/browse/FHIR-32847) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-bmi.html)
-           1. **Applied**: Remove unchanged elements from Differentials [FHIR-32848](https://jira.hl7.org/browse/FHIR-32848) [For example change see](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-lab.profile.json.html)
-           1. **Applied**: Create US Core slices for category elements [FHIR-32857](https://jira.hl7.org/browse/FHIR-32857) See Change:
-              -  [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-documentreference.html)
-              -  [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html)
-              -  [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html)
-              -  [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition.html)
-           1. **Applied**: Change drug class value set for allergens to align with C-CDA [FHIR-32953](https://jira.hl7.org/browse/FHIR-32953) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance.html)
-           1. **Applied**: Referencing incorrect figure [FHIR-32961](https://jira.hl7.org/browse/FHIR-32961) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/basic-provenance.html#clinical-information-reconciliation-and-incorporation)
-           1. **Applied**: Clarify Guidance for missing data for Coding data type element [FHIR-33048](https://jira.hl7.org/browse/FHIR-33048) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#missing-data)
-           1. **Applied**: Fix us-core-1 Invariant for Observation [FHIR-33052](https://jira.hl7.org/browse/FHIR-33052) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab.html#constraints)
-           1. **Applied**: remove requirement to use only 401 from capabiltystatement [FHIR-33069](https://jira.hl7.org/browse/FHIR-33069) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/CapabilityStatement-us-core-server.html#behavior)
-           1. **Applied**: US Core to USCDI guidance page -- add patient email [FHIR-33079](https://jira.hl7.org/browse/FHIR-33079) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
-           1. **Applied**: Utilize "use" field for patient previous name and previous address [FHIR-33080](https://jira.hl7.org/browse/FHIR-33080) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
-           1. **Applied**: fix search parameter list [FHIR-33123](https://jira.hl7.org/browse/FHIR-33123) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/search-parameters-and-operations.html)
-           1. **Resolved - change required**: Wrong link to IG homepage from package manifest [FHIR-33132](https://jira.hl7.org/browse/FHIR-33132) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. **Applied**: Clarify requirement on date searches without prefix [FHIR-33156](https://jira.hl7.org/browse/FHIR-33156) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#search-syntax.html)
-           1. **Applied**: Clarify distinction between repeated search params and ""composite"" params [FHIR-33159](https://jira.hl7.org/browse/FHIR-33159) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab.html#notes)
-           1. **Applied**: docref missing actual content as mandatory element in narrative [FHIR-33160](https://jira.hl7.org/browse/FHIR-33160) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-documentreference.html)
-           1. **Applied**: Fix invalid elements in extensions [FHIR-33233](https://jira.hl7.org/browse/FHIR-33233) See Change:
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-race.html)
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-birthsex.html)
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-direct.html)
-           1. **Applied**: Make Procedure.performed conditionally mandatory [FHIR-33243](https://jira.hl7.org/browse/FHIR-33243) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-procedure.html)
-           1. **Resolved - change required**: US Core search page is not working [FHIR-34028](https://jira.hl7.org/browse/FHIR-34028) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. **Applied**: Patient Ethnicity does not have the same Null options as Race [FHIR-34036](https://jira.hl7.org/browse/FHIR-34036) See Change
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb-ethnicity-category.html)
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb--detailed-ethnicity.html)
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb-race-category.html)
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb-detailed-race.html)
-           1. **Resolved - change required**: Wrong URL resolution of http://hl7.org/fhir/us/core/OperationDefinition/docref [FHIR-34044](https://jira.hl7.org/browse/FHIR-34044) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. **Applied**: Clarify MustSupport for Observaiton.component.value[x] vs dataAbsentReason [FHIR-34061](https://jira.hl7.org/browse/FHIR-34061) See Change:
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)
-              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html#mandatory-and-must-support-data-elements)
-           1. **Applied**: US Core Birth Sex Extension [FHIR-34133](https://jira.hl7.org/browse/FHIR-34133) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-birthsex.html)
-           1. **Applied**: USCDI v2 update [FHIR-34231](https://jira.hl7.org/browse/FHIR-34231) SEE SECTION ABOVE
-           1. **Applied**: Example has ""applies to"" with wrong coding [FHIR-34286](https://jira.hl7.org/browse/FHIR-34286) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/Observation-serum-calcium.html)
-           1. **Applied**: Correct CapabilityStatement SMART IG reference [FHIR-34281](https://jira.hl7.org/browse/FHIR-34281) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/CapabilityStatement-us-core-server.html#should_igs)
-           1. **Applied**: Make DiagnosticReport.effective and DiagnosticReport.issued conditionally mandatory [FHIR-34330](https://jira.hl7.org/browse/FHIR-34330) See Change:
-               - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-lab.html)
-               - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-note.html)
+          1. **Applied**: Make values in direct and birth sex extensions min=1 [FHIR-26459](https://jira.hl7.org/browse/FHIR-26459) See Change:
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-birthsex.html)
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-direct.html)
+          1. **Applied**: FIX imm-1.json NDC/CVX codes QA Error [FHIR-30104](https://jira.hl7.org/browse/FHIR-30104) See Change:
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/Immunization-imm-1.html)
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-immunization.html)
+          1. **Applied**: Fix patient search parameter definitions to only target Patient  [FHIR-32305](https://jira.hl7.org/browse/FHIR-32305) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/SearchParameter-us-core-allergyintolerance-patient.json.html)
+          1. **Applied**: Provide a caution to the user that a query of MedicationRequest does not provide complete information. [FHIR-32720](https://jira.hl7.org/browse/FHIR-32720) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
+          1. **Applied**: Make Condition.encounter 0..1 MS [FHIR-32844](https://jira.hl7.org/browse/FHIR-32844) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition.html)
+          1. **Applied**: Correction on USCoreCarePlanProfile Binding [FHIR-32846](https://jira.hl7.org/browse/FHIR-32846) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-careplan.html)
+          1. **Applied**: Fix title for BMI Profile [FHIR-32847](https://jira.hl7.org/browse/FHIR-32847) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-bmi.html)
+          1. **Applied**: Remove unchanged elements from Differentials [FHIR-32848](https://jira.hl7.org/browse/FHIR-32848) [For example change see](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-lab.profile.json.html)
+          1. **Applied**: Create US Core slices for category elements [FHIR-32857](https://jira.hl7.org/browse/FHIR-32857) See Change:
+             -  [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-documentreference.html)
+             -  [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html)
+             -  [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html)
+             -  [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition.html)
+          1. **Applied**: Change drug class value set for allergens to align with C-CDA [FHIR-32953](https://jira.hl7.org/browse/FHIR-32953) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-allergyintolerance.html)
+          1. **Applied**: Referencing incorrect figure [FHIR-32961](https://jira.hl7.org/browse/FHIR-32961) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/basic-provenance.html#clinical-information-reconciliation-and-incorporation)
+          1. **Applied**: Clarify Guidance for missing data for Coding data type element [FHIR-33048](https://jira.hl7.org/browse/FHIR-33048) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#missing-data)
+          1. **Applied**: Fix us-core-1 Invariant for Observation [FHIR-33052](https://jira.hl7.org/browse/FHIR-33052) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab.html#constraints)
+          1. **Applied**: Remove requirement to use only 401 from capabiltystatement [FHIR-33069](https://jira.hl7.org/browse/FHIR-33069) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/CapabilityStatement-us-core-server.html#behavior)
+          1. **Applied**: US Core to USCDI guidance page -- add patient email [FHIR-33079](https://jira.hl7.org/browse/FHIR-33079) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
+          1. **Applied**: Utilize "use" field for patient previous name and previous address [FHIR-33080](https://jira.hl7.org/browse/FHIR-33080) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
+          1. **Applied**: Fix search parameter list [FHIR-33123](https://jira.hl7.org/browse/FHIR-33123) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/search-parameters-and-operations.html)
+          1. **Applied**: Clarify requirement on date searches without prefix [FHIR-33156](https://jira.hl7.org/browse/FHIR-33156) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/general-guidance.html#search-syntax.html)
+          1. **Applied**: Clarify distinction between repeated search params and ""composite"" params [FHIR-33159](https://jira.hl7.org/browse/FHIR-33159) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab.html#notes)
+          1. **Applied**: Add content as mandatory element in narrative for documentreference [FHIR-33160](https://jira.hl7.org/browse/FHIR-33160) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-documentreference.html)
+          1. **Applied**: Fix invalid elements in extensions [FHIR-33233](https://jira.hl7.org/browse/FHIR-33233) See Change:
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-race.html)
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-birthsex.html)
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-direct.html)
+          1. **Applied**: Make Procedure.performed conditionally mandatory [FHIR-33243](https://jira.hl7.org/browse/FHIR-33243) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-procedure.html)
+          1. **Applied**: add same Null options to Race and Ethnicity [FHIR-34036](https://jira.hl7.org/browse/FHIR-34036) See Change
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb-ethnicity-category.html)
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb--detailed-ethnicity.html)
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb-race-category.html)
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb-detailed-race.html)
+          1. **Applied**: Clarify MustSupport for Observation.component.value[x] vs dataAbsentReason [FHIR-34061](https://jira.hl7.org/browse/FHIR-34061) See Change:
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)
+             - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html#mandatory-and-must-support-data-elements)
+          1. **Applied**: Add  Null options to US Core Birth Sex Extension [FHIR-34133](https://jira.hl7.org/browse/FHIR-34133) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-birthsex.html)
+          1. **Applied**: USCDI v2 update [FHIR-34231](https://jira.hl7.org/browse/FHIR-34231) SEE SECTION ABOVE
+          1. **Applied**: Fix Observation Examples using `appliesTo` [FHIR-34286](https://jira.hl7.org/browse/FHIR-34286) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/Observation-serum-calcium.html)
+          1. **Applied**: Correct CapabilityStatement SMART IG reference [FHIR-34281](https://jira.hl7.org/browse/FHIR-34281) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/CapabilityStatement-us-core-server.html#should_igs)
+          1. **Applied**: Make DiagnosticReport.effective and DiagnosticReport.issued conditionally mandatory [FHIR-34330](https://jira.hl7.org/browse/FHIR-34330) See Change:
+              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-lab.html)
+              - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-note.html)
+
+          **The Following Trackers Will be Applied Following the Ballot**
+
+          Due external dependencies and publication described below the application of these resolutions have been deferred.
+
+          **Status**: **Summary**:(**Jira Issue**) **Issue with applying**
+
+          1. **Resolved - change required**: US Core Pulse Oximetry Profile noncomformant UCUM Unit for Oxygen Concentration [FHIR-27845](https://jira.hl7.org/browse/FHIR-27845) -  Awaiting FHIR-4b updates to update base FHIR Vitals Profile, STU Note Present
+          1. **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#) - Coordination with VSAC and IG publishing team to Correct and align Code System OIDS between FHIR, CCDA, and VSAC, Note To Balloters Present
+          1. **Resolved - change required**: valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#) - Coordination with IG publishing team to Correct - Note To Balloters present
+          1. **Resolved - change required**: Display only differential invariants and terminology tables in Differential View [FHIR-30780](https://jira.hl7.org/browse/FHIR-30780) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#) - Coordination with HL7 IG publishing team to Correct
+          1. **Resolved - change required**: Confusing to reads invariants and terminology tables in Differential View [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#) - Coordination with HL7 IG publishing team to Correct
+          1. **Resolved - change required**: Wrong link to IG homepage from package manifest [FHIR-33132](https://jira.hl7.org/browse/FHIR-33132) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#) - Coordination with HL7 IG publishing team to Correct
+
+          UNSURE IF RESOLVED - CHECK TO SEE
+
+          1. **Resolved - change required**: US Core search page is not working [FHIR-34028](https://jira.hl7.org/browse/FHIR-34028) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#) - Coordination with HL7 IG publishing team to Correct
+          1. **Resolved - change required**: Wrong URL resolution of http://hl7.org/fhir/us/core/OperationDefinition/docref [FHIR-34044](https://jira.hl7.org/browse/FHIR-34044) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#) - Coordination with HL7 IG publishing team to Correct
 
     path: 'http://build.fhir.org/ig/HL7/US-Core'
     status: ci-build
