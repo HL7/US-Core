@@ -77,7 +77,11 @@ list:
               - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-direct.html)
            1. **Applied**: Make Procedure.performed conditionally mandatory [FHIR-33243](https://jira.hl7.org/browse/FHIR-33243) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-procedure.html)
            1. **Resolved - change required**: US Core search page is not working [FHIR-34028](https://jira.hl7.org/browse/FHIR-34028) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
-           1. **Resolved - change required**: Patient Ethnicity does not have the same Null options as Race [FHIR-34036](https://jira.hl7.org/browse/FHIR-34036) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
+           1. **Applied**: Patient Ethnicity does not have the same Null options as Race [FHIR-34036](https://jira.hl7.org/browse/FHIR-34036) See Change
+              - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb-ethnicity-category.html)
+              - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb--detailed-ethnicity.html)
+              - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb-race-category.html)
+              - [Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-omb-detailed-race.html)
            1. **Resolved - change required**: Wrong URL resolution of http://hl7.org/fhir/us/core/OperationDefinition/docref [FHIR-34044](https://jira.hl7.org/browse/FHIR-34044) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#)
            1. **Applied**: Clarify MustSupport for Observaiton.component.value[x] vs dataAbsentReason [FHIR-34061](https://jira.hl7.org/browse/FHIR-34061) See Change:
               - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)

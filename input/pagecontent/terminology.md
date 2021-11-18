@@ -9,10 +9,10 @@ These value sets have been defined for this implementation guide.
 
 *   [{:.new-content}Birth Sex](ValueSet-birthsex.html)
 *   [Language codes with language and optionally a region modifier](ValueSet-simple-language.html)
-*   [OMB Ethnicity Categories](ValueSet-omb-ethnicity-category.html)*
-*   [Detailed ethnicity](ValueSet-detailed-ethnicity.html)*
-*   [OMB Race Categories](ValueSet-omb-race-category.html)*
-*   [Detailed Race](ValueSet-detailed-race.html)*
+*   {:.new-content}[OMB Ethnicity Categories](ValueSet-omb-ethnicity-category.html)*
+*   {:.new-content}[Detailed ethnicity](ValueSet-detailed-ethnicity.html)*
+*   {:.new-content}[OMB Race Categories](ValueSet-omb-race-category.html)*
+*   {:.new-content}[Detailed Race](ValueSet-detailed-race.html)*
 *   [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
 *   [US Core Condition Category Codes](ValueSet-us-core-condition-category.html)
 *   [US Core Condition Code](ValueSet-us-core-condition-code.html)
