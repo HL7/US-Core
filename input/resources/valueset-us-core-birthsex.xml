@@ -2,7 +2,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
 	<id value="birthsex"/>
 	<url value="http://hl7.org/fhir/us/core/ValueSet/birthsex"/>
-	<!-- No longer in sync with VSAC wiht addition of ASKU due to FHIR-34133
+	<!-- No longer in sync with VSAC with addition of ASKU due to FHIR-34133
 	<identifier>
 		<system value="urn:ietf:rfc:3986"/>
 	  <value value="urn:oid:2.16.840.1.113762.1.4.1021.24"/>
@@ -20,29 +20,14 @@
 			<value value="http://hl7.org/fhir"/>
 		</telecom>
 	</contact>
-	<description value="Codes for assigning sex at birth as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc)"/>
+	<description
+		value="Codes for assigning sex at birth as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc)"/>
 	<compose>
 		<include>
-			<system value="http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"/>
-			<concept>
-				<code value="F"/>
-				<display value="Female"/>
-			</concept>
-			<concept>
-				<code value="M"/>
-				<display value="Male"/>
-			</concept>
+			<valueSet value="https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1"/>
 		</include>
 		<include>
-			<system value="http://terminology.hl7.org/CodeSystem/v3-NullFlavor"/>
-			<concept>
-				<code value="UNK"/>
-				<display value="Unknown"/>
-			</concept>
-			<concept>
-				<code value="ASKU"/>
-				<display value="Asked but unknown"/>
-			</concept>
+			<valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103"/>
 		</include>
 	</compose>
 </ValueSet>
