@@ -12,6 +12,11 @@ The table below lists the US Core Profile and FHIR Resources used for the corres
 {% include uscdi_table.md %}
 
 
+{% include img.html img="USCDI_v2_links.svg" caption="Figure 1: USCDI v2 with Links" %}
+
+
+{% include img.html img="USCDI_v2_links_unaltered.svg" caption="Figure 1: USCDI v2 with Links" %}
+
 ### Changes Between Major Versions of FHIR
 
 With each major version in FHIR, the core data models have undergone changes.  The FHIR core specification provides a [base resource differential] to help implementers navigate version changes.
