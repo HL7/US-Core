@@ -11,12 +11,17 @@ The table below lists the US Core Profile and FHIR Resources used for the corres
 
 {% include uscdi_table.md %}
 
-TRY INLINE SVG...
+~~~
+USE INLINE SVG Like this....
+
+{% raw % }
+{% include USCDI_v2_links.svg %}
+{% endraw %}
+
+put the svg files in the 'includes' directory and need to Capitalize "StructureDefinition" in the Relative links
+~~~
 
 {% include USCDI_v2_links.svg %}
-
-
-{% include USCDI_v2_links_unaltered.svg %}
 
 ### Changes Between Major Versions of FHIR
 
