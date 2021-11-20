@@ -84,6 +84,8 @@ list:
         1. **Applied**: Make DiagnosticReport.effective and DiagnosticReport.issued conditionally mandatory [FHIR-34330](https://jira.hl7.org/browse/FHIR-34330) See Change:
             - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-lab.html)
             - [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-diagnosticreport-note.html)
+        1. **Applied**: Resolution of http://hl7.org/fhir/us/core/OperationDefinition/docref [FHIR-34044](https://jira.hl7.org/browse/FHIR-34044) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/search-parameters-and-operations.html#operations)
+
 
         **The Following Trackers Will be Applied Following the Ballot**
 
@@ -101,7 +103,6 @@ list:
         UNSURE IF RESOLVED - CHECK TO SEE
 
         1. **Resolved - change required**: US Core search page is not working [FHIR-34028](https://jira.hl7.org/browse/FHIR-34028) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#) - Coordination with HL7 IG publishing team to Correct
-        1. **Resolved - change required**: Wrong URL resolution of http://hl7.org/fhir/us/core/OperationDefinition/docref [FHIR-34044](https://jira.hl7.org/browse/FHIR-34044) [See Change Here](http://build.fhir.org/ig/HL7/US-Core/#) - Coordination with HL7 IG publishing team to Correct
 
     path: 'http://build.fhir.org/ig/HL7/US-Core'
     status: ci-build
