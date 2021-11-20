@@ -42,13 +42,7 @@
       {
         "id": "Organization",
         "path": "Organization",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "servd",
-            "map": "Organization"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Organization.identifier",
@@ -63,13 +57,7 @@
           "rules": "open"
         },
         "comment": "NPI preferred.",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "servd",
-            "map": "n/a"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Organization.identifier.system",
@@ -102,13 +90,7 @@
         "patternIdentifier": {
           "system": "http://hl7.org/fhir/sid/us-npi"
         },
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "servd",
-            "map": "n/a"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Organization.identifier:CLIA",
@@ -119,13 +101,7 @@
         "patternIdentifier": {
           "system": "urn:oid:2.16.840.1.113883.4.7"
         },
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "servd",
-            "map": "n/a"
-          }
-        ]
+        "mustSupport": false
       },
       {
         "id": "Organization.active",
@@ -137,13 +113,7 @@
         "id": "Organization.name",
         "path": "Organization.name",
         "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "servd",
-            "map": "./PrimaryAddress and ./OtherAddresses"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Organization.telecom",
@@ -163,13 +133,7 @@
       {
         "id": "Organization.address",
         "path": "Organization.address",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "servd",
-            "map": "n/a"
-          }
-        ]
+        "mustSupport": true
       },
       {
         "id": "Organization.address.line",
@@ -207,13 +171,7 @@
           "strength": "extensible",
           "description": "Two letter USPS alphabetic codes.",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state"
-        },
-        "mapping": [
-          {
-            "identity": "servd",
-            "map": "./Sites"
-          }
-        ]
+        }
       },
       {
         "id": "Organization.address.postalCode",
