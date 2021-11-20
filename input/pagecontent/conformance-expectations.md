@@ -110,6 +110,12 @@ The terms *US Core Responder* Actor *US Core Requestor Actor* are used throughou
 
 Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
 
+<div markdown="1" class="new-content">
+All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file.  This may be useful to testers and analysts to review the must support and mandatory elements across profiles in a single table.
+
+- [CSV](uscore-profiles.csv)
+- [Excel](uscore-profiles.xlsx)
+</div>
 
 #### Must Support - Coded Elements
 In addition to the guidance provided by [FHIR Terminology], Coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) which are marked as Must Support follow the rules for their respective bindings.
