@@ -1,4 +1,4 @@
-<!
+<!--
 ---
 title: My SDOH Page Edits
 tags: USCDI v2
@@ -20,11 +20,11 @@ tags: USCDI v2
 1. Assessments common set of concepts
       - [X] starter Set
       - acknowledge Aunt Bertha
-      - [X] see Gravity for ongoing more complete vocablet to extend 
+      - [X] see Gravity for ongoing more complete vocablet to extend
 1. Example searches
     2. [ ] How access with examples
 :::
-
+-->
 <div markdown="1" class="new-content">
 
 This US Core Social Determinant of Health (SDOH) Guidance Page has been added in response to  United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published by the Office of the National Coordinator (ONC) in July of 2021. The new data classes include:
@@ -48,7 +48,7 @@ The figure below shows how the SDOH classes are inter-related:
 - **SDOH Assessment**: SDOH Assessments represent the recording of SDOH assessment screening tools and other questionnaires as well as individual clinical observations.  These assessments are represented by the [US Core Social History Assessment Observation Profile] and [US Core Screening Response Observation Profile]
 - **SDOH Problems/Health Concerns**: Identifying a Social Determinants of Health-related condition (for example, homelessness) is represented by the [US Core Condition Profile].
 - **SDOH Interventions**:  Services offered to a patient to address identified Social Determinants of Health problems/health concerns,(for example, referral to transportation support programs) are represented by the [US Core ServiceRequest Profile].  IN addition, the [US Core Procedure Profile] can be used to record a completed service or intervention.
-- **SDOH Goals**: Identifies a future desired condition or change in condition related to an SDOH risk (for example, Has adequate quality meals and snacks) and is represented by [US Core Goal Profile] 
+- **SDOH Goals**: Identifies a future desired condition or change in condition related to an SDOH risk (for example, Has adequate quality meals and snacks) and is represented by [US Core Goal Profile]
 
 {% include img.html img="sdoh_assessment.svg" caption="SDOH Assessment and Planning Process" %}
 
@@ -90,7 +90,6 @@ Below are examples of FHIR RESTful search transaction to access Patient SDOH Dat
 ...notebook
 
 load data to fhir server
-requests 
+requests
 print response and requests
 save as markdown...
-
