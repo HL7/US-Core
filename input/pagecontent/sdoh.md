@@ -78,11 +78,10 @@ US Core has developed [US Core Common SDOH Assessments ValueSet] - commonly aske
 
 ### Searching for SDOH Patient Data
 
-Below are examples of FHIR RESTful search transaction to access Patient SDOH Data.
+Below is an examples of FHIR RESTful search transaction to access a patient's SDOH assessment data.
 
-...notebook
+Patient's FHIR_id = "example"
+Observation type = Observation
+Observation category = "LG41762-2"
 
-load data to fhir server
-requests
-print response and requests
-save as markdown...
+{% include SDOH_search_transaction.md %}
