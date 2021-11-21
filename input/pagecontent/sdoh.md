@@ -41,7 +41,7 @@ This page documents how the US Core Profile can be use to represent these classe
 
 The intent of adding these SDOH data classes to US Core is to be able to use US Core Profiles along with a defined set of FHIR RESTful interactions to represent and access SDOH patient data.  This is in contrast to the [SDOH Clinical Care](http://hl7.org/fhir/us/sdoh-clinicalcare/) HL7 Implementation Guide. This guide was developed by the [Gravity Project](https://hl7.org/gravity) and documents the orchestration of SDOH data capture and related interventions and how it is represented using FHIR.  US Core Profile span across use cases and thus less constrained, but they form backbone for the SDOH Clinical Care Profiles.  Many of the additions to US Core Profiles to meet the SDOH data class requirements are based on the efforts by the Gravity led project.  In the following sections the interrelation between the SDOH classes is summarized and how each class in represented in US Core documented.
 
-### SDOH Assessments and Planning Process
+### SDOH Activities
 
 The figure below shows how the SDOH classes are inter-related:
 
@@ -50,7 +50,7 @@ The figure below shows how the SDOH classes are inter-related:
 - **SDOH Interventions**:  Services offered to a patient to address identified Social Determinants of Health problems/health concerns,(for example, referral to transportation support programs) are represented by the [US Core ServiceRequest Profile].  IN addition, the [US Core Procedure Profile] can be used to record a completed service or intervention.
 - **SDOH Goals**: Identifies a future desired condition or change in condition related to an SDOH risk (for example, Has adequate quality meals and snacks) and is represented by [US Core Goal Profile]
 
-{% include img.html img="sdoh_assessment.svg" caption="SDOH Assessment and Planning Process" %}
+{% include img.html img="sdoh_assessment.svg" caption="SDOH Activities" %}
 
 ![](https://hackmd.io/_uploads/r1vGhxDdY.png)
 
