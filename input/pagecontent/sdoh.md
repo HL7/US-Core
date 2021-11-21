@@ -52,10 +52,6 @@ The figure below shows how the SDOH classes are inter-related:
 
 {% include img.html img="sdoh_assessment.svg" caption="SDOH Activities" %}
 
-![](https://hackmd.io/_uploads/r1vGhxDdY.png)
-
-
-
 ### SDOH Terminology in US Core
 
 #### Category Codes
@@ -73,9 +69,6 @@ The Gravity Implementation Guides has developed a set of more specific concepts 
 US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the US Core Problem code valueset is compatible with the Gravity valuesets.
 
 {% include img.html img="sdoh_condition.svg" caption="Graphic of Example of SDOH Grouping Value set in VSAC (Conditions)" %}
-
-![](https://hackmd.io/_uploads/Syz0fWw_F.png)
-
 
 #### Assessment Codes
 
