@@ -21,7 +21,7 @@ put the svg files in the 'includes' directory and need to Capitalize "StructureD
 ~~~
 {% endraw %}
 
-{% include USCDI_v2_links.svg %}
+{% include USCDI_v2_links_1.svg %}
 
 ### Changes Between Major Versions of FHIR
 
