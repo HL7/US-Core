@@ -68,7 +68,7 @@ The Gravity Implementation Guides has developed a set of more specific concepts 
 
 US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the US Core Problem code valueset is compatible with the Gravity valuesets.
 
-{% include img.html img="sdoh_condition.svg" caption="Example of SDOH Grouping Value set in US Core Condition Code Value Set" %}
+{% include img-med.html img="sdoh_condition.svg" caption="Example of SDOH Grouping Value set in US Core Condition Code Value Set" %}
 
 #### Assessment Codes
 
