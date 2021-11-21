@@ -85,3 +85,5 @@ Below is an examples of FHIR RESTful search transaction to access a patient's SD
 - Observation category = "LG41762-2"
 
 {% include SDOH_search_transaction.md %}
+
+{% include link-list.md %}
