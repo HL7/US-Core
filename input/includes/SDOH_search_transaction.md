@@ -1,8 +1,9 @@
-**Request url using GET**
+**Request**
+
+Request url using GET
 
 GET `http://wildfhir4.aegis.net/fhir4-0-1/Observation?patient=Patient/example&category=LG41762-2`
 
-**Request**
 
 Request Headers
 ~~~
