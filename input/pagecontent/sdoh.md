@@ -56,7 +56,7 @@ The figure below shows how the SDOH classes are inter-related:
 
 #### Category Codes
 
-The LOINC "grouping" code: [LG41762-2](http://details.loinc.org/LOINC/LG41762-2.html) Social Determinants Of Health is used to categorize SDOH for Assessments, Problem, and Service Requests. This concept enables API consumers to be able to separate out SDOH data when accessing patient information.
+The LOINC "grouping" code: [LG41762-2](http://details.loinc.org/LOINC/LG41762-2.html) "Social Determinants Of Health" is used to categorize SDOH for Assessments, Problem, and Service Requests. This concept enables API consumers to be able to separate out SDOH data when accessing patient information.
 
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
 
