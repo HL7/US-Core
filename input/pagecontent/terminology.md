@@ -14,7 +14,7 @@ These value sets have been defined for this implementation guide.
 *   {:.new-content}[OMB Race Categories](ValueSet-omb-race-category.html)
 *   {:.new-content}[Detailed Race](ValueSet-detailed-race.html)
 *   [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
-*   [US Core Condition Category Codes](ValueSet-us-core-condition-category.html)
+*   {:.new-content}[US Core Condition Category Codes](ValueSet-us-core-condition-category.html)
 *   [US Core Condition Code](ValueSet-us-core-condition-code.html)
 *   [US Core Diagnostic Report Laboratory Codes](ValueSet-us-core-diagnosticreport-lab-codes.html)
 *   [US Core DiagnosticReport Category](ValueSet-us-core-diagnosticreport-category.html)
