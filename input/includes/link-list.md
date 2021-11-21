@@ -313,3 +313,4 @@
 [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
 [Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
 [SDOH Guidance]: sdoh.html
+[US Core Common SDOH Assessments ValueSet]: ValueSet-us-core-common-sdoh-assessments.html
