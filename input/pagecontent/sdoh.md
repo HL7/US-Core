@@ -22,7 +22,7 @@ tags: USCDI v2
       - acknowledge Aunt Bertha
       - [X] see Gravity for ongoing more complete vocablet to extend
 1. Example searches
-    2. [ ] How access with examples
+    2. [X] How access with examples
 :::
 -->
 <div markdown="1" class="new-content">
@@ -80,8 +80,8 @@ US Core has developed [US Core Common SDOH Assessments ValueSet] - commonly aske
 
 Below is an examples of FHIR RESTful search transaction to access a patient's SDOH assessment data.
 
-Patient's FHIR_id = "example"
-Observation type = Observation
-Observation category = "LG41762-2"
+- Observation type = Observation
+- Patient's FHIR_id = "example"
+- Observation category = "LG41762-2"
 
 {% include SDOH_search_transaction.md %}

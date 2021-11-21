@@ -1,6 +1,10 @@
 **Request url using GET**
+
 GET `http://wildfhir4.aegis.net/fhir4-0-1/Observation?patient=Patient/example&category=LG41762-2`
-**Request Headers**
+
+**Request**
+
+Request Headers
 ~~~
 User-Agent: python-requests/2.25.1
 Accept-Encoding: gzip, deflate
@@ -8,9 +12,12 @@ Accept: application/fhir+json
 Connection: keep-alive
 Content-Type: application/fhir+json
 ~~~
+
+**Response**
+
 200 OK
 
-**Response Headers**
+Response Headers
 ~~~
 Connection: keep-alive
 Content-Location: http://wildfhir4.aegis.net/fhir4-0-1/Observation?patient=Patient%2Fexample&category=LG41762-2
@@ -18,7 +25,7 @@ Content-Type: application/fhir+json;charset=utf-8
 Content-Length: 4112
 Date: Sun, 21 Nov 2021 03:15:18 GMT
 ~~~
-**Response Body**
+Response Body
 ~~~
 {
   "resourceType": "Bundle",
