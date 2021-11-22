@@ -30,7 +30,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Profile specific implementation guidance:**
 
-- See [SDOH Guidance] for how this profile can used to representan SDOH intervention request.
+- When exchanging Social Determinants of Health (SDOH) Service Requests, servers **SHOULD** use the [SDOH Service Requests](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion) concepts provided by Gravity. See [SDOH Guidance] for more information. 
 - The `ServiceRequest.category` binding must support at a minimum the [US Core ServiceRequest
 Category Codes].  Within this categorization scheme/axis, other categories codes may be supported and alternate codes may be provided *in addition* to the standard codes. See [Using multiple codes with CodeableConcept Datatype] for examples.  Other categorization schemes to be used as well.
 

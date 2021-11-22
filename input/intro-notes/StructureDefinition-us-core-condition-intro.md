@@ -40,7 +40,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 * The [US Core Condition Code] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and may be used as the primary code for current encounter diagnoses.
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.  An example search is shown in the [Quick Start](#search) section below.
     * {:.new-content}When `Condition.category` is "encounter-diagnosis" the encounter, **SHOULD** be referenced in `Condition.encounter`.
-* {:.new-content} Servers **SHALL** use [Social Determinants of Health Conditions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion/) to record SDOH Conditions and SDOH Health Concerns. 
+* {:.new-content} Servers **SHOULD** use [Social Determinants of Health Conditions](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion/) to record SDOH Conditions and SDOH Health Concerns. See [SDOH Guidance] for more information.
 * {:.new-content} Servers **MAY** set `Condition.category` to [LG41762-2](https://loinc.org/LG41762-2/) Social Determinants of Health (SDOH). Since there is not a definitive source to categorize all SDOH Conditions, clients may find it more efficient to request specific Conditions `Condition.code`, or request all Conditions, and then filter to items of interest.
 * {:.new-content}There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDate`, or `Condition.recordedDate`.
     * Although all three are marked as must support, the server is not required to support all.
