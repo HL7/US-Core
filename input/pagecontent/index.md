@@ -74,6 +74,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   - [Clinical Notes Guidance] gives guidance on the interactions between Consumers and Producers of clinical notes.
   - [Medication List Guidance] gives guidance on how a patient or provider can access a patient's medications.
   - [Basic Provenance] provides implementers with important definitions to create and share the Provenance Resource.
+  - [SDOH Guidance] gives background on the exchange of Social Determinants of Health (SDOH) data classes.
   - [DSTU2 to R4 Conversion] considers the user and developer experience when transitioning from FHIR DSTU2 to FHIR R4.
   - [Future of US Core] outlines the approach to adding new content to US Core.
 - [FHIR Artifacts]\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
