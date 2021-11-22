@@ -11,7 +11,7 @@ The table below lists the US Core Profile and FHIR Resources used for the corres
 
 {% include uscdi_table.md %}
 
-{% include USCDI_v2_links_1.svg %}
+{% include USCDI_v2_table_links.svg %}
 
 
 ### Changes Between Major Versions of FHIR
