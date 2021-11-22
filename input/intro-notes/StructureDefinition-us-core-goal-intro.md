@@ -26,12 +26,12 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Profile specific implementation guidance:**
 
--  {:.new-content}When exchanging Social Determinants of Health (SDOH) Goals, servers **SHALL** use the SDOH Goal concepts provided by Gravity in the Goal.description value set. Free text goals are allowed in Goal.description.text when a concept isn't available, or a legacy goal is not mapped to a LOINC or SNOMED concept. 
+-  {:.new-content}When exchanging Social Determinants of Health (SDOH) Goals, servers **SHALL** use the [SDOH Goal](http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1247.71) concepts provided by Gravity. Free text goals are allowed in Goal.description.text when a concept isn't available, or a legacy goal is not mapped to a LOINC or SNOMED concept. 
 
 ### Examples
 
 - [Goal-1](Goal-goal-1.html)
-- [Goal-2](Goal-goal-2.html)
+- [Goal-sdoh-2](Goal-goal-sdoh-2.html)
 
 {% include link-list.md %}
 
