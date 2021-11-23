@@ -26,7 +26,7 @@
 | Clinical Test Result/Report | [US Core Clinical Test Result Observation Profile], [US Core DiagnosticReport Profile for Report and Note exchange]| Observation, DiagnosticReport|
 | **Diagnostic Imaging:** | ||
 | Diagnostic Imaging Test | [US Core Diagnostic Imaging Result Observation Profile], [US Core DiagnosticReport Profile for Report and Note exchange]| Observation, DiagnosticReport ||
-| Diagnostic Imaging Result/Report | [US Core Diagnostic Imaging Test Result Observation Profile], [US Core DiagnosticReport Profile for Report and Note exchange]| Observation, DiagnosticReport|
+| Diagnostic Imaging Result/Report | [US Core Diagnostic Imaging Result Observation Profile], [US Core DiagnosticReport Profile for Report and Note exchange]| Observation, DiagnosticReport|
 | **Encounter:** | [US Core Encounter Profile] ||
 | Type | [US Core Encounter Profile] |Encounter.type|
 | Diagnosis | [US Core Condition Profile] |Condition.code|
