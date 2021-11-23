@@ -56,17 +56,18 @@ The figure below shows how the SDOH elements are inter-related:
 
 #### Category Codes
 
-The LOINC "grouping" code: [LG41762-2](http://details.loinc.org/LOINC/LG41762-2.html) "Social Determinants Of Health" is used to categorize SDOH for Assessments, Problem, and Service Requests. This concept enables API consumers to be able to separate out SDOH data when accessing patient information.
+The LOINC "grouping" code: [LG41762-2](http://details.loinc.org/LOINC/LG41762-2.html) "Social Determinants Of Health" is used to categorize SDOH for Assessments, Problem, and Service Requests. This concept enables API consumers to be able to separate out SDOH data when accessing patient information. Alternatively, clients may find it more efficient to query based on a specific codeor set of codes (for example, `Condition.code`) or request all of a patient's resources for a particular type and filter by code(s) to access items of interest.
 
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
 
-The Gravity Implementation Guides has developed a set of more specific concepts across specific social risk factor domains:
+For the SDOH Clinical Care HL7 Implementation Guide, the Gravity project has defined the following value sets across specific social risk factor domains for problems/health concerns, goals, procedures, and service requests:
+
 * [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion)
 * [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion)
 * [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion)
 * [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion)
 
-US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the US Core Problem code valueset is compatible with the Gravity valuesets.
+US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the US Core Problem code valueset is compatible with the Gravity value sets.   When recording SDOH data US Core Profiles, servers **SHOULD** use the SDOH value sets listed above.
 
 {% include img-med.html img="sdoh_condition.svg" caption="Example of SDOH Grouping Value set in US Core Condition Code Value Set" %}
 
