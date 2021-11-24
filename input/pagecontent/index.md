@@ -24,17 +24,29 @@
 - [ ] QA
      - [X] review applied trackers
      - [ ] errors and warnings
-     ## Summary of Errors (42)
+       FMG list:
+         - [ ]fix nucc code or suppress with comment that not intending it to come from NUCC - may not be a valid code - reason for suppression does not make sense - fix
+         - [ ] CPT issue - suppress
+         - [ ] LG41752-2. loinc issue - okay
+         - [ ] goal.description - nlm value set - VSAC
+         - [ ] NDC display names - still outstanding issue with Grahame
+         - [ ] procedure.code - ICD10-pc - not ICD10 - server doesn't know codes - confirm URL and suppress
+         - [ ] Fix slicing issues
+         - [ ] observation profiles - suppress with approval from CGP
+         - [ ] US Core Vital signs - illegal attempt to change the binding - from required to extensible - related to vital signs - either a code bug or have a problem that needs to be fixed - should point to Git issue or Zulip if this is a tooling issue - ADD WARNING TO SPECIFICATION TO SAY NOT CONFORMANT TO R4 - NEEDS TO STAY AS REQUIRED.
+         - [ ] CapabilityStatement - smart-app-launch - does not resolve - needs to be fixed.  If can't fix - raise a Zulip issue
+         - [ ] Suppress capabilitystatement info messages with reason
+         - [ ] SearchParameter - Grahame to look into this
+         - [ ] VSAC issues
+         - [ ] ValueSet - simple-language - can not be expanded - okay- can't be suppressed - tooling
+         - [ ] ICD9cm will be fixed next release
+         - [ ] resuppress warnings - syntax has changed
+         - [ ] LOCAL CODE SYTEM - URL NEEDS TO HAVE EXAMPLE IN IT OR USE A REAL ONE
+         - [ ] Should not suppress JIra Spec File warning - Can not be suppressed
 
-     ### Bad links  ( 3 should all be fixed )
+    Summary and Categorization of Errors (42)
 
-     1. ERROR: /scratch/ig-build-temp-YQTOSC/repo/output/index.html#/html/body/div/div/div/div/div/div/ul/li/ul/li/a at Line 261, column 40: The link '' for "A Social Determinants Of Health (SDOH) Guidance page" cannot be resolved
-     1. ERROR: /scratch/ig-build-temp-YQTOSC/repo/output/index.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 271, column 35: The link 'downloads.html#consolidated-csv-and-excel-file-representation-of-profiles' for "CSV and Excel File representations" cannot be resolved (valid targets: [markdown-toc-downloadable-copy-of-entire-specification, markdown-toc-examples, publish-box, markdown-toc-package-file, segment-post-footer, hl7-search, hl7-search-lnk, markdown-toc-consolidated-csv-and-excel-file-representations-of-profiles, family-logo, top, downloads, stripe, segment-footer, schematrons, segment-content, downloadable-copy-of-entire-specification, segment-header, bottom, hl7-logo, family-nav, markdown-toc-schematrons, consolidated-csv-and-excel-file-representations-of-profiles, ig-status, markdown-toc, examples, hl7-nav, segment-navbar, package-file, segment-breadcrumb])
-     1. ERROR: /scratch/ig-build-temp-YQTOSC/repo/output/index.html#/html/body/div/div/div/div/div/div/ul/li/a at Line 273, column 61: The link '*' for "Jira Issue" cannot be resolved
-
-     ### Terminology issues
-
-     #### Unable to find value set in VSAC for race, ethnicity, birthsex, genderIdentity (21)
+      **Unable to find value set in VSAC for race, ethnicity, birthsex, genderIdentity (21)**
 
      1. ERROR: Patient/child-example: Patient.extension[2].value.ofType(code): The value provided ('M') is not in the value set 'Birth Sex' (http://hl7.org/fhir/us/core/ValueSet/birthsex), and a code is required from this value set) (error message = Error from server: Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103)
      1. ERROR: Patient/example: Patient.extension[2].value.ofType(code): The value provided ('F') is not in the value set 'Birth Sex' (http://hl7.org/fhir/us/core/ValueSet/birthsex), and a code is required from this value set) (error message = Error from server: Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103)
@@ -58,7 +70,7 @@
      1. ERROR: Patient/infant-example: Patient.extension[0].extension[0].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2028-9) is not in the value set http://hl7.org/fhir/us/core/ValueSet/omb-race-category, and a code is required from this value set.  (error message = Not in value set http://hl7.org/fhir/us/core/ValueSet/omb-race-category)
      1. ERROR: Patient/infant-example: Patient.extension[1].extension[0].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2186-5) is not in the value set http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category, and a code is required from this value set.  (error message = Not in value set http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category)
 
-     #### LOINC Group code  LG41762-2 “Social Determinants Of Health” not supported by terminology server. (17)
+    **LOINC Group code  LG41762-2 “Social Determinants Of Health” not supported by terminology server. (17)**
 
      1. ERROR: DiagnosticReport/bone-density-report: DiagnosticReport.category[0]: Slicing cannot be evaluated: Could not match discriminator ([$this]) for slice DiagnosticReport.category:us-core in profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note - the discriminator [$this] does not have fixed value, binding or existence assertions
      1. ERROR: DiagnosticReport/cardiology-report: DiagnosticReport.category[0]: Slicing cannot be evaluated: Could not match discriminator ([$this]) for slice DiagnosticReport.category:us-core in profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note - the discriminator [$this] does not have fixed value, binding or existence assertions
@@ -78,24 +90,22 @@
      1. ERROR: Observation/hunger-question-example: Observation.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
      1. ERROR: Observation/prapare-multiselect-example: Observation.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
 
-     #### valueset-simple-language.xml QA Error FHIR-30107 See Change Here - Coordination with IG publishing team to Correct - Note To Balloters present (1)
+     **valueset-simple-language.xml QA Error FHIR-30107 See Change Here - Coordination with IG publishing team to Correct - Note To Balloters present (1)**
 
      1. ERROR: ValueSet.where(id = 'simple-language'): Error from server: Language valuesets cannot be expanded as they are based on a grammar
 
-     ####  US Core Pulse Oximetry Profile noncomformant UCUM Unit for Oxygen Concentration FHIR-27845 - Awaiting FHIR-4b updates to update base FHIR Vitals Profile, STU Note Present (2)
+     **US Core Pulse Oximetry Profile noncomformant UCUM Unit for Oxygen Concentration FHIR-27845 - Awaiting FHIR-4b updates to update base FHIR Vitals Profile, STU Note Present (2)**
 
      1. ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
      1. ERROR: StructureDefinition/us-core-vital-signs: StructureDefinition: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
 
-     #### SMART URL based on yet to be published version 2.0! (1)
+     **SMART URL based on yet to be published version 2.0! (1)**
 
      1. ERROR: CapabilityStatement/us-core-server: CapabilityStatement.implementationGuide[0]: Canonical URL 'http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch' does not resolve
 
-
-
-     - [ ] update ignoreWarnings.txt
-     - [ ] update to latest ig publisher and review address any new validation checks
-     - [ ] final read through
+ - [ ] update ignoreWarnings.txt
+ - [ ] update to latest ig publisher and review address any new validation checks
+ - [ ] final read through
 - [ ] remove all new content and green highlighted formatting
 - [ ] update title and version to 5.0.0
 - [ ] update package-list.yml (convert to json !)

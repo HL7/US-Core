@@ -285,7 +285,8 @@ INFORMATION: ValueSet/us-core-smoking-status-observation-codes: ValueSet: Valida
 INFORMATION: ValueSet/us-core-usps-state: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/us-core-vital-signs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 # Code not from base FHIR preferred valueset since extensibly bound to NUCC for US Core
-INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[0].resource.ofType(PractitionerRole).specialty[0]: None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/c80-practice-codes (http://hl7.org/fhir/ValueSet/c80-practice-codes), and a code is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
+INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[0].resource.ofType(PractitionerRole).specialty[0]: None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
+
 # Examples demonstrate use of additional identifiers
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.ofType(Practitioner).identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.ofType(Practitioner).identifier[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
@@ -304,6 +305,8 @@ INFORMATION: DocumentReference/episode-summary: DocumentReference.content[0].for
 # Code System not recognized due to IP issues
 INFORMATION: Procedure/defib-implant: Procedure.code.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
 INFORMATION: Encounter/example-1: Encounter.type[0].coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+INFORMATION: Encounter/1036: Encounter.hospitalization.dischargeDisposition.coding[0]: Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated
+
 #T he URI urn:iso:std:iso:11073:10101 identifies the MDC code system. as specified here: http://hl7.org/fhir/R4/mdc.html
 INFORMATION: Observation/satO2-fiO2: Observation.code.coding[2]: Code System URI 'urn:iso:std:iso:11073:10101' is unknown so the code cannot be validated
 INFORMATION: Observation/satO2-fiO2: Observation.code.coding[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
@@ -402,5 +405,19 @@ INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].res
 INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[18].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
 INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[18].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
 INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[18].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[2].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[3].extension[5].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[3].extension[6].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[3].extension[7].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[3].extension[8].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[7].extension[5].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[7].extension[6].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[8].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[21].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[21].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[21].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[21].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[21].extension[5].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+
 # local code system used for example qualifications
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.ofType(Practitioner).qualification[0].code.coding[0]: Code System URI 'http://michigan.gov/lara/license-type' is unknown so the code cannot be validated
