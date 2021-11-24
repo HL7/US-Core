@@ -113,8 +113,8 @@ Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful
 <div markdown="1" class="new-content">
 All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file.  This may be useful to testers and analysts to review the must support and mandatory elements across profiles in a single table.
 
-- [CSV](uscore-profiles.csv)
-- [Excel](uscore-profiles.xlsx)
+- [CSV](uscore_profiles.csv)
+- [Excel](uscore_profiles.xlsx)
 </div>
 
 #### Must Support - Coded Elements
