@@ -67,7 +67,7 @@ For the SDOH Clinical Care HL7 Implementation Guide, the Gravity project has def
 * [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion)
 * [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion)
 
-US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the US Core Problem code valueset is compatible with the Gravity value sets.   When recording SDOH data US Core Profiles, servers **SHOULD** use the SDOH value sets listed above.
+US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Profile and how the grouped valueset is compatible with the US Core Problem code valueset.   When recording SDOH data US Core Profiles, servers **SHOULD** use the SDOH value sets listed above.
 
 {% include img-med.html img="sdoh_condition.svg" caption="Example of SDOH Grouping Value set in US Core Condition Code Value Set" %}
 
