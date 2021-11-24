@@ -13,7 +13,7 @@ The table below lists the US Core Profile and FHIR Resources used for the corres
 
 {% include USCDI_v2_table_links.svg %}
 
-(This information is also available as a [csv](uscdi-table.csv) or [excel](uscdi-table.xlsx) file)
+(This information is also available as a [csv](uscdi_table.csv) or [excel](uscdi_table.xlsx) file)
 
 </div>
 
