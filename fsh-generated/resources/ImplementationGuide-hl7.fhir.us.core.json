@@ -358,7 +358,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-procedure"
         },
-        "description": "Defines constraints and extensions on the Procedure resource for the minimal set of data to query and retrieve patient's procedure information.",
+        "description": "Defines constraints and extensions on the Procedure resource for the minimal set of data to query and retrieve patient's procedure information. This profile can be used to record a service or intervention that is or was performed on or for a patient.",
         "exampleBoolean": false,
         "name": "US Core Procedure Profile"
       },
@@ -1361,6 +1361,14 @@
         "description": "The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure)) and codes from the Current Procedure and Terminology (CPT) found in the following CPT sections:\n\n\n- 99201-99499 E/M\n\n- 99500-99600 home health (mainly nonphysician, such as newborn care in home)\n\n- 99605-99607 medication management\n\n- 98966-98968 non physician telephone services\n\n\n\n(subscription to AMA Required)",
         "exampleBoolean": false,
         "name": "US Core Encounter Type"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-goal-description"
+        },
+        "description": "Concepts from CPT and LOINC code systems that can be used to indicate the goal.",
+        "exampleBoolean": false,
+        "name": "US Core Goal Codes"
       },
       {
         "reference": {

@@ -1,6 +1,6 @@
 <div markdown="1" class="new-content">
 
-﻿This profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve observations that represent simple observations made by an individual about a patient's social history status such as education, food insecurity, etc. Observations that are formally derived from an assessment tool or survey should use the [US Core Screening Response Observation Profile].  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile
+﻿This profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve observations that represent simple observations made by an individual about a patient's social history status such as education, food insecurity, etc.   It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  These observations are distinct from observations that are formally derived from an assessment tool or survey and should use the [US Core Screening Response Observation Profile] instead.
 
 **Example Usage Scenarios:**
 

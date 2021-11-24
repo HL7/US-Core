@@ -366,7 +366,8 @@ definition:
             reference: StructureDefinition/us-core-practitionerrole
     -   description: Defines constraints and extensions on the Procedure resource
             for the minimal set of data to query and retrieve patient's procedure
-            information.
+            information. This profile can be used to record a service or intervention
+            that is or was performed on or for a patient.
         exampleBoolean: false
         name: US Core Procedure Profile
         reference:
@@ -1400,6 +1401,12 @@ definition:
         name: US Core Encounter Type
         reference:
             reference: ValueSet/us-core-encounter-type
+    -   description: Concepts from CPT and LOINC code systems that can be used to
+            indicate the goal.
+        exampleBoolean: false
+        name: US Core Goal Codes
+        reference:
+            reference: ValueSet/us-core-goal-description
     -   description: The US Core Narrative Status Value Set limits the text status
             for the resource narrative.
         exampleBoolean: false
@@ -1692,7 +1699,7 @@ definition:
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal
         name: Goal 2 Example
         reference:
-            reference: Goal/goal-2
+            reference: Goal/goal-sdoh-2
     -   description: This is a hc1 example for the *US Core Condition Profile*.
         exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition
         name: HC1 Example
