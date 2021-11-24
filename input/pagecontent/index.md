@@ -8,21 +8,21 @@
   for profile/element updates:
   - [X] update profile/create artifact
   - [X] optionally create ValueSet/Search parameter artifact (update and highlight new content in terminology page)
-  - [ ] update uscdi table here: input/includes/uscdi_table.md
+  - [X] update uscdi table here: input/includes/uscdi_table.md
   - [X] update intro here: input/intro-notes (highlight new content with new-content class)
   - [X] update notes/search - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/intro-notes) (mark as new content in spreadsheet to highlight new content)
   - [X] optionally update SPs and SP page
   - [X] update/create Examples - (highlight new content with new-content class)
   - [X] update change log
   <!--- [ ] updated Provenance to include all the new resources created a liquid script as include file to update this dynamically. -->
-  - [ ] update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources  *NOTE do this at end and remember to update Client spreadsheet from Server spreadsheet*
+  - [ ] !!!!!update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources  *NOTE do this at end and remember to update Client spreadsheet from Server spreadsheet*
 
   for narrative updates
-  - [ ] update Narratives
+  - [X] update Narratives
   - [X] update change log
   - [X] list open issues in package-list
 - [ ] QA
-     - [ ] review applied trackers
+     - [X] review applied trackers
      - [ ] errors and warnings  (see above)
      - [ ] update ignoreWarnings.txt
      - [ ] update to latest ig publisher and review address any new validation checks
