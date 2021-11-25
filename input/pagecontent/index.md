@@ -25,28 +25,30 @@
      - [X] review applied trackers
      - [ ] errors and warnings
        FMG list:
-         - [ ]fix nucc code or suppress with comment that not intending it to come from NUCC - may not be a valid code - reason for suppression does not make sense - fix
-         - [ ] CPT issue - suppress
-         - [ ] LG41752-2. loinc issue - okay
-         - [ ] goal.description - nlm value set - VSAC
-         - [ ] NDC display names - still outstanding issue with Grahame
-         - [ ] procedure.code - ICD10-pc - not ICD10 - server doesn't know codes - confirm URL and suppress
-         - [ ] Fix slicing issues
-         - [ ] observation profiles - suppress with approval from CGP
-         - [ ] US Core Vital signs - illegal attempt to change the binding - from required to extensible - related to vital signs - either a code bug or have a problem that needs to be fixed - should point to Git issue or Zulip if this is a tooling issue - ADD WARNING TO SPECIFICATION TO SAY NOT CONFORMANT TO R4 - NEEDS TO STAY AS REQUIRED.
-         - [ ] CapabilityStatement - smart-app-launch - does not resolve - needs to be fixed.  If can't fix - raise a Zulip issue
-         - [ ] Suppress capabilitystatement info messages with reason
-         - [ ] SearchParameter - Grahame to look into this
-         - [ ] VSAC issues
-         - [ ] ValueSet - simple-language - can not be expanded - okay- can't be suppressed - tooling
-         - [ ] ICD9cm will be fixed next release
-         - [ ] resuppress warnings - syntax has changed
-         - [ ] LOCAL CODE SYTEM - URL NEEDS TO HAVE EXAMPLE IN IT OR USE A REAL ONE
-         - [ ] Should not suppress JIra Spec File warning - Can not be suppressed
+         - [X] "fix nucc code or suppress with comment that not intending it to come from NUCC - may not be a valid code - reason for suppression does not make sense": Updated reason for suppression in ignoreWarnings.txt
+         - [X] "CPT issue - suppress": added these *and NUBC Code warnings* to ignoreWarnings.txt (see below)
+         - [ ] "LG41752-2. loinc issue - okay": This causes 17 Errors, 3 Warnings and 8 Information Messages. Pending addition of LOINC Group Codes to the terminology server. Will add Note to Balloters to Value sets for manual expansions if not ready prior to ballot.  Do we leave as error or suppress?  (see below)
+         - [X] "goal.description - nlm value set - VSAC": Goal.description is no longer a VSAC Value set.  However suppressed one INFORMATION message for text only value (see below)
+         - [ ] NDC display names - still outstanding issue with Grahame:  Do we leave as error or suppress?  (see below)
+         - [X] "procedure.code - ICD10-pc - not ICD10 - server doesn't know codes - confirm URL and suppress": Confirmed and Added to ignoreWarnings.txt (see below)
+         - [ ] "Fix slicing issues": related to LG41752-2? See See this [Zulip Chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/slicing.20question.20for.20patterns.20on.20bindings) for Discriminator error.
+         - [X] "observation profiles - suppress with approval from CGP":Added to ignoreWarnings.txt (see below)
+         - [X] "US Core Vital signs - illegal attempt to change the binding - from required to extensible - related to vital signs - either a code bug or have a problem that needs to be fixed - should point to Git issue or Zulip if this is a tooling issue - ADD WARNING TO SPECIFICATION TO SAY NOT CONFORMANT TO R4 - NEEDS TO STAY AS REQUIRED.":  Tracker to change core in FHIR R4b note to balloters already done
+         - [ ] "CapabilityStatement - smart-app-launch - does not resolve - needs to be fixed.  If can't fix - raise a Zulip issue": should resolve when smart published
+         - [ ] "Suppress capabilitystatement info messages with reason" - done
+         - [ ] "SearchParameter - Grahame to look into this": Added to ignoreWarnings.txt (see below)
+         - [ ] "VSAC issues":  Unable to find value set in VSAC for race, ethnicity, birthsex, genderIdentity 21 Errors and 5 Warnings.  Do we leave as error or suppress? (see below).
+         - [ ] "ValueSet - simple-language - can not be expanded - okay- can't be suppressed - tooling": OK
+         - [ ] "ICD9cm will be fixed next release":  OK check on this
+         - [ ] "resuppress warnings - syntax has changed": What does this mean?
+         - [ ] "LOCAL CODE SYTEM - URL NEEDS TO HAVE EXAMPLE IN IT OR USE A REAL ONE": unable to find this error?
+         - [ ] "Should not suppress JIra Spec File warning - Can not be suppressed": removed - but since markdown used in ig package.yaml a warning will persist
 
-    Summary and Categorization of Errors (42)
+    Summary and Categorization of QA Errors (42), Warnings (24) and Information (8) Messages by Issue
 
-      **Unable to find value set in VSAC for race, ethnicity, birthsex, genderIdentity (21)**
+      **Unable to find value set in VSAC for race, ethnicity, birthsex, genderIdentity**
+
+     *ERROR (21)*
 
      1. ERROR: Patient/child-example: Patient.extension[2].value.ofType(code): The value provided ('M') is not in the value set 'Birth Sex' (http://hl7.org/fhir/us/core/ValueSet/birthsex), and a code is required from this value set) (error message = Error from server: Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103)
      1. ERROR: Patient/example: Patient.extension[2].value.ofType(code): The value provided ('F') is not in the value set 'Birth Sex' (http://hl7.org/fhir/us/core/ValueSet/birthsex), and a code is required from this value set) (error message = Error from server: Unable to find value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103)
@@ -70,7 +72,19 @@
      1. ERROR: Patient/infant-example: Patient.extension[0].extension[0].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2028-9) is not in the value set http://hl7.org/fhir/us/core/ValueSet/omb-race-category, and a code is required from this value set.  (error message = Not in value set http://hl7.org/fhir/us/core/ValueSet/omb-race-category)
      1. ERROR: Patient/infant-example: Patient.extension[1].extension[0].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2186-5) is not in the value set http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category, and a code is required from this value set.  (error message = Not in value set http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category)
 
-    **LOINC Group code  LG41762-2 “Social Determinants Of Health” not supported by terminology server. (17)**
+     *WARNING (5)*
+
+     1. WARNING: ValueSet/detailed-ethnicity: ValueSet.compose[0].include[1].valueSet[0]: The value set import http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103 could not be found so cannot be checked
+     1. WARNING: ValueSet/detailed-race: ValueSet.compose[0].include[1].valueSet[0]: The value set import http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103 could not be found so cannot be checked
+     1. WARNING: ValueSet/omb-ethnicity-category: ValueSet.compose[0].include[1].valueSet[0]: The value set import http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.102 could not be found so cannot be checked
+     1. WARNING: ValueSet/omb-race-category: ValueSet.compose[0].include[1].valueSet[0]: The value set import http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103 could not be found so cannot be checked
+     1. WARNING: ValueSet/birthsex: ValueSet.compose[0].include[1].valueSet[0]: The value set import http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103 could not be found so cannot be checked     
+
+    **LOINC Group code  LG41762-2 “Social Determinants Of Health” not supported by terminology server. **
+
+    Action: This causes 17 Errors, 3 Warnings and 8 Information Messages. Pending addition of LOINC Group Codes to the terminology server. Will add Balloters notes to Value sets for manual expansions if not ready prior to ballot. See this [Zulip Chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/slicing.20question.20for.20patterns.20on.20bindings) for Discriminator error.
+
+     *ERRORs (17)*
 
      1. ERROR: DiagnosticReport/bone-density-report: DiagnosticReport.category[0]: Slicing cannot be evaluated: Could not match discriminator ([$this]) for slice DiagnosticReport.category:us-core in profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note - the discriminator [$this] does not have fixed value, binding or existence assertions
      1. ERROR: DiagnosticReport/cardiology-report: DiagnosticReport.category[0]: Slicing cannot be evaluated: Could not match discriminator ([$this]) for slice DiagnosticReport.category:us-core in profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note - the discriminator [$this] does not have fixed value, binding or existence assertions
@@ -90,6 +104,23 @@
      1. ERROR: Observation/hunger-question-example: Observation.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
      1. ERROR: Observation/prapare-multiselect-example: Observation.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
 
+     *WARNING (3)*
+
+     1. WARNING: ValueSet/us-core-condition-category: ValueSet.compose[0].include[3].concept[0]: The code LG41762-2 is not valid in the system http://loinc.org
+     1. WARNING: ValueSet/us-core-observation-category: ValueSet.compose[0].include[0].concept[0]: The code LG41762-2 is not valid in the system http://loinc.org
+     1. WARNING: ValueSet/us-core-servicerequest-category: ValueSet.compose[0].include[0].concept[0]: The code LG41762-2 is not valid in the system http://loinc.org
+
+     *INFORMATION (8)*
+
+     1. INFORMATION: DiagnosticReport/bone-density-report: DiagnosticReport: DiagnosticReport.category:us-core: Unable to check minimum required (DiagnosticReport.category) due to lack of slicing validation (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note)
+     1. INFORMATION: DiagnosticReport/cardiology-report: DiagnosticReport: DiagnosticReport.category:us-core: Unable to check minimum required (DiagnosticReport.category) due to lack of slicing validation (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note)
+     1. INFORMATION: DiagnosticReport/chest-xray-report: DiagnosticReport: DiagnosticReport.category:us-core: Unable to check minimum required (DiagnosticReport.category) due to lack of slicing validation (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note)
+     1. INFORMATION: Condition/condition-SDOH-example: Condition: Condition.category:us-core: Unable to check minimum required (Condition.category) due to lack of slicing validation (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition)
+     1. INFORMATION: Condition/example: Condition: Condition.category:us-core: Unable to check minimum required (Condition.category) due to lack of slicing validation (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition)
+     1. INFORMATION: DocumentReference/episode-summary: DocumentReference: DocumentReference.category:us-core: Unable to check minimum required (DocumentReference.category) due to lack of slicing validation (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference)
+     1. INFORMATION: ServiceRequest/foodpantry-referral: ServiceRequest: ServiceRequest.category:us-core: Unable to check minimum required (ServiceRequest.category) due to lack of slicing validation (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest)
+     1. INFORMATION: Condition/hc1: Condition: Condition.category:us-core: Unable to check minimum required (Condition.category) due to lack of slicing validation (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition)
+
      **valueset-simple-language.xml QA Error FHIR-30107 See Change Here - Coordination with IG publishing team to Correct - Note To Balloters present (1)**
 
      1. ERROR: ValueSet.where(id = 'simple-language'): Error from server: Language valuesets cannot be expanded as they are based on a grammar
@@ -99,9 +130,60 @@
      1. ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
      1. ERROR: StructureDefinition/us-core-vital-signs: StructureDefinition: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
 
-     **SMART URL based on yet to be published version 2.0! (1)**
+     **SMART URL based on yet to be published version 2.0! (1 Error)**
 
      1. ERROR: CapabilityStatement/us-core-server: CapabilityStatement.implementationGuide[0]: Canonical URL 'http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch' does not resolve
+
+     **Require that all profiles on Observation derive from one of the base US profiles (8 Warnings)**
+
+     Action: Suppressed in ignoreWarnings.txt
+
+     1. WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+     1. WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+     1. WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+     1. WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+     1. WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history-assessment').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+
+     ** CPT Not Supported Due to IP Issues (3 Warnings)
+
+     Action: Suppressed in ignoreWarnings.txt
+
+     1. WARNING: Procedure/defib-implant: Procedure.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+     1. WARNING: Encounter/example-1: Encounter.type[0]: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+     1. WARNING: ValueSet.where(id = 'us-core-encounter-type'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+
+     ** NUBC Non Supported Due to IP Issues (2 Warnings):
+
+     Action: Suppressed in ignoreWarnings.txt
+
+     1. WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated]
+     1. WARNING: ValueSet.where(id = 'us-core-discharge-disposition'): Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
+
+     ** SearchParameter [Type.id] not Compatible with Derived SearchParameter [Resource.id] (3 Warnings):
+
+     Action: Suppressed in ignoreWarnings.txt
+
+     1. WARNING: SearchParameter/us-core-practitioner-id: SearchParameter: The expression 'Practitioner.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
+     1. WARNING: SearchParameter/us-core-relatedperson-id: SearchParameter: The expression 'RelatedPerson.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
+     1. WARNING: SearchParameter/us-core-servicerequest-id: SearchParameter: The expression 'ServiceRequest.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
+
+     **Us Core Goal Description Binding Is Extensible Which Allow For Text Only And Is Explicitly Encouraged In The Us Core Goal Implementation Guidance  (1 Warning)**
+
+     Action: Suppressed in ignoreWarnings.txt
+
+     ** 1. WARNING: Goal/goal-1: Goal.description: No code provided, and a code should be provided from the value set 'US Core Goal Codes' (http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description)
+
+     **Unresolved NDC Code Display Issues (1 Warning)**
+
+     Action: Do we leave as error or suppress?
+
+     1. WARNING: Immunization/imm-1: Immunization.vaccineCode.coding[1]: The display "FLUZONE High-Dose Quadrivalent Northern Hemisphere" is not a valid display for the code {http://hl7.org/fhir/sid/ndc}49281012165 - should be one of ['FLUZONE High-Dose Quadrivalent Northern Hemisphere, 10 SYRINGE, GLASS in 1 PACKAGE (49281-121-65)  > .7 mL in 1 SYRINGE, GLASS (49281-121-88)  (package)'] (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/ndc#49281012165'
+
+     **Unresolved ICD10CPS Code System Issue (1 Warning)**
+
+     Action: Suppressed in ignoreWarnings.txt
+
+     1. WARNING: Procedure/rehab: Procedure.code: The code system "http://www.cms.gov/Medicare/Coding/ICD10" in the include in "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code" is not known; The code system 'http://www.cms.gov/Medicare/Coding/ICD10' is not known (encountered paired with code = 'HZ30ZZZ') (from http://tx.fhir.org/r4)
 
  - [ ] update ignoreWarnings.txt
  - [ ] update to latest ig publisher and review address any new validation checks

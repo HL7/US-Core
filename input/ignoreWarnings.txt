@@ -5,26 +5,25 @@ WARNING: SearchParameter/us-core-encounter-id: SearchParameter: The expression '
 WARNING: SearchParameter/us-core-patient-id: SearchParameter: The expression 'Patient.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
 # imm-1.json NDC/CVX codes QA Error ([FHIR-30104](https://jira.hl7.org/browse/FHIR-30104)) Work with terminology server team to correct. see [Zulip chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/CVX.20and.20NDC.20warnings.20in.20US.20Core)
 ERROR: Immunization/imm-1: Immunization.vaccineCode.coding[1]: The code "49281-0633-15" is not valid in the system http://hl7.org/fhir/sid/ndc; The code provided (http://hl7.org/fhir/sid/ndc#49281-0633-15) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/ndc#49281-0633-15'
-# unknown VSAC Valueset and HTA codesystem issue
-INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[0].resource.ofType(PractitionerRole).specialty[0]: None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/c80-practice-codes (http://hl7.org/fhir/ValueSet/c80-practice-codes), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
+
 # html table embedded in markdown documentation element
 INFORMATION: CapabilityStatement/us-core-client: CapabilityStatement.rest[0].resource[4].documentation: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[4].documentation: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+
 # Proposed Jira ticket to resolve in base made an STU note that is technically not conformant with the base FHIR vital profile and suppress the error in the meantime.
 ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
 ERROR: StructureDefinition/us-core-vital-signs: StructureDefinition: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
+
 # This error is still extant from ballot version of US Core and has yet to be resolved with publishing/terminology server. per 12/2 FMG per GG ok to get variance on this one. see:  https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/language.20valueset.20expansion.20error
 ERROR: ValueSet.where(id = 'simple-language'): Error from server: Language valuesets cannot be expanded as they are based on a grammar
-# This warning and info alert are still extant from ballot version of US Core and has yet to be resolved with publishing/terminology server. see: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/US.20core.20procedure.20example.20error
+
+# This warning and info alert are still extant from ballot version of US Core and has yet to be resolved with publishing/terminology server. see: https://terminology.hl7.org/CodeSystem-icd10PCS.html
 WARNING: Procedure/rehab: Procedure.code: The code "HZ30ZZZ" is not valid in the system http://www.cms.gov/Medicare/Coding/ICD10 (from http://tx.fhir.org/r4)
 INFORMATION: Procedure/rehab: Procedure.code.coding[1]: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
-# update jira file for us core commit 446577a into HL7:master 2021/06/27
-WARNING: The jira specification file appears to be out of date with the versions, artifacts and pages currently defined in the IG.  A proposed revised file to be reviewed and, if appropriate, submitted as a pull request against the XML folder in https://github.com/HL7/JIRA-Spec-Artifacts.  To see the differences, perform a file compare on 'template/jira-current.xml' (a normalized view of what is in Github) and 'template/jira-new.xml' (reflects current IG content)
-# Code System URI 'http:// www.ama-assn.org/go/cpt' is unknown so the code cannot be validated are not recognized by the validator due to IP restrictions
-WARNING: Procedure/defib-implant: Procedure.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code because the value set or code system is not known to the validator]
-WARNING: Encounter/example-1: Encounter.type[0]: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or code system is not known to the validator]
-WARNING: Encounter/1036: Encounter.type[0]: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or code system is not known to the validator]
-WARNING: ValueSet.where(id = 'us-core-procedure-code'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+
+# US Core Goal Description Binding Is Extensible Which Allow For Text Only And Is Explicitly Encouraged In The Us Core Goal Implementation Guidance  (1 Warning
+WARNING: Goal/goal-1: Goal.description: No code provided, and a code should be provided from the value set 'US Core Goal Codes' (http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description)
+
 # Circular US Core Warnings since this is US Core:
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
@@ -37,6 +36,12 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureD
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 # Several examples derived from this profile are provided in this guide.
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'): The Implementation Guide contains no examples for this profile
+1. WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+1. WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+1. WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+1. WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+1. WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history-assessment').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+
 # Info messages confirming validated against the appropriate profiles
 INFORMATION: CodeSystem/cdcrec: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 INFORMATION: ValueSet/detailed-ethnicity: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
@@ -284,9 +289,8 @@ INFORMATION: ValueSet/us-core-provider-role: ValueSet: Validate resource against
 INFORMATION: ValueSet/us-core-smoking-status-observation-codes: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/us-core-usps-state: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 INFORMATION: ValueSet/us-core-vital-signs: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-# Code not from base FHIR preferred valueset since extensibly bound to NUCC for US Core
+# Code from extensibly bound to NUCC for US Core and not from base FHIR preferred c80-practice-codes valueset
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[0].resource.ofType(PractitionerRole).specialty[0]: None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
-
 # Examples demonstrate use of additional identifiers
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.ofType(Practitioner).identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.ofType(Practitioner).identifier[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
@@ -302,12 +306,19 @@ INFORMATION: Organization/saint-luke-w-endpoint: Organization.identifier[1]: Thi
 # Code System OID is taken from the base FHIR valueset http://hl7.org/fhir/ValueSet/endpoint-payload-type, IHE CodeSystem documented in base spec is not recognized by validator possibly due to IP issues.
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[2].resource.ofType(Endpoint).payloadType[0].coding[0]: Code System URI 'urn:oid:1.3.6.1.4.1.19376.1.2.3' is unknown so the code cannot be validated
 INFORMATION: DocumentReference/episode-summary: DocumentReference.content[0].format: Code System URI 'urn:oid:1.3.6.1.4.1.19376.1.2.3' is unknown so the code cannot be validated
+
 # Code System not recognized due to IP issues
+
+WARNING: Procedure/defib-implant: Procedure.code: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: Encounter/example-1: Encounter.type[0]: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
+WARNING: ValueSet.where(id = 'us-core-encounter-type'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+1. WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated]
+1. WARNING: ValueSet.where(id = 'us-core-discharge-disposition'): Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
 INFORMATION: Procedure/defib-implant: Procedure.code.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
 INFORMATION: Encounter/example-1: Encounter.type[0].coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
 INFORMATION: Encounter/1036: Encounter.hospitalization.dischargeDisposition.coding[0]: Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated
 
-#T he URI urn:iso:std:iso:11073:10101 identifies the MDC code system. as specified here: http://hl7.org/fhir/R4/mdc.html
+# The URI urn:iso:std:iso:11073:10101 identifies the MDC code system. as specified here: http://hl7.org/fhir/R4/mdc.html
 INFORMATION: Observation/satO2-fiO2: Observation.code.coding[2]: Code System URI 'urn:iso:std:iso:11073:10101' is unknown so the code cannot be validated
 INFORMATION: Observation/satO2-fiO2: Observation.code.coding[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
 INFORMATION: Organization/saint-luke-w-endpoint: Organization.contained[0].ofType(Endpoint).payloadType[0].coding[0]: Code System URI 'urn:oid:1.3.6.1.4.1.19376.1.2.3' is unknown so the code cannot be validated
