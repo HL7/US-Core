@@ -51,7 +51,12 @@
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "slicing": {
-          "description": "A required or extensible binding with a Value Set that enumerates the list of possible codes in the value set.",
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
           "rules": "open"
         },
         "min": 1,
@@ -64,7 +69,13 @@
         "min": 1,
         "mustSupport": true,
         "binding": {
-          "strength": "extensible",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet",
+              "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-note-type"
+            }
+          ],
+          "strength": "required",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"
         }
       },
