@@ -51,12 +51,8 @@
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
+          "discriminator": null,
+          "description": "A required or extensible binding with a Value Set that enumerates the list of possible codes in the value set.",
           "rules": "open"
         },
         "min": 1,
@@ -78,7 +74,7 @@
         "path": "DiagnosticReport.code",
         "short": "US Core Report Code",
         "definition": "The test, panel, report, or note that was ordered.",
-        "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
+        "comment": "The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
         "mustSupport": true,
         "binding": {
           "strength": "extensible",

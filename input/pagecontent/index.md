@@ -46,7 +46,7 @@
 
     Summary and Categorization of QA Errors (42), Warnings (24) and Information (8) Messages by Issue
 
-      **Unable to find value set in VSAC for race, ethnicity, birthsex, genderIdentity**
+    **Unable to find value set in VSAC for race, ethnicity, birthsex, genderIdentity**
 
      *ERROR (21)*
 
