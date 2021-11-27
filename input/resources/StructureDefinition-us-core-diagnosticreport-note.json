@@ -51,7 +51,12 @@
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "slicing": {
-          "description": "A required or extensible binding with a Value Set that enumerates the list of possible codes in the value set.",
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
           "rules": "open"
         },
         "min": 1,
