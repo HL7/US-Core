@@ -82,9 +82,26 @@
 
     **LOINC Group code  LG41762-2 “Social Determinants Of Health” not supported by terminology server. **
 
-    Action: This causes 17 Errors, 3 Warnings and 8 Information Messages. Pending addition of LOINC Group Codes to the terminology server. Will add Balloters notes to Value sets for manual expansions if not ready prior to ballot. See this [Zulip Chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/slicing.20question.20for.20patterns.20on.20bindings) for Discriminator error.
+    Action: This causes 17 Errors, 3 Warnings and 8 Information Messages. Pending addition of LOINC Group Codes to the terminology server. Will add Balloters notes to Value sets for manual expansions if not ready prior to ballot.
 
-     *ERRORs (17)*
+     *ERRORs (4)*
+
+     1. ERROR: Condition/condition-SDOH-example: Condition.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
+     1. ERROR: ServiceRequest/foodpantry-referral: ServiceRequest.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
+     1. ERROR: Observation/hunger-question-example: Observation.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
+     1. ERROR: Observation/prapare-multiselect-example: Observation.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
+
+     *WARNING (3)*
+
+     1. WARNING: ValueSet/us-core-condition-category: ValueSet.compose[0].include[3].concept[0]: The code LG41762-2 is not valid in the system http://loinc.org
+     1. WARNING: ValueSet/us-core-observation-category: ValueSet.compose[0].include[0].concept[0]: The code LG41762-2 is not valid in the system http://loinc.org
+     1. WARNING: ValueSet/us-core-servicerequest-category: ValueSet.compose[0].include[0].concept[0]: The code LG41762-2 is not valid in the system http://loinc.org
+
+     **Slicing On Extensible Valuesets For Category**
+
+     See this [Zulip Chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/slicing.20question.20for.20patterns.20on.20bindings) for Discriminator error.
+
+     *Errors (13)*
 
      1. ERROR: DiagnosticReport/bone-density-report: DiagnosticReport.category[0]: Slicing cannot be evaluated: Could not match discriminator ([$this]) for slice DiagnosticReport.category:us-core in profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note - the discriminator [$this] does not have fixed value, binding or existence assertions
      1. ERROR: DiagnosticReport/cardiology-report: DiagnosticReport.category[0]: Slicing cannot be evaluated: Could not match discriminator ([$this]) for slice DiagnosticReport.category:us-core in profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note - the discriminator [$this] does not have fixed value, binding or existence assertions
@@ -99,16 +116,6 @@
      1. ERROR: Observation/prapare-multiselect-example: Observation.category[0]: Slicing cannot be evaluated: Could not match discriminator ([$this]) for slice Observation.category:us-core in profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response - the discriminator [$this] does not have fixed value, binding or existence assertions
      1. ERROR: Observation/prapare-multiselect-example: Observation.category[1]: Slicing cannot be evaluated: Could not match discriminator ([$this]) for slice Observation.category:us-core in profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response - the discriminator [$this] does not have fixed value, binding or existence assertions
      1. ERROR: Observation/socialhistory-assessment-example: Observation.category[0]: Slicing cannot be evaluated: Could not match discriminator ([$this]) for slice Observation.category:us-core in profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history-assessment - the discriminator [$this] does not have fixed value, binding or existence assertions
-     1. ERROR: Condition/condition-SDOH-example: Condition.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
-     1. ERROR: ServiceRequest/foodpantry-referral: ServiceRequest.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
-     1. ERROR: Observation/hunger-question-example: Observation.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
-     1. ERROR: Observation/prapare-multiselect-example: Observation.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
-
-     *WARNING (3)*
-
-     1. WARNING: ValueSet/us-core-condition-category: ValueSet.compose[0].include[3].concept[0]: The code LG41762-2 is not valid in the system http://loinc.org
-     1. WARNING: ValueSet/us-core-observation-category: ValueSet.compose[0].include[0].concept[0]: The code LG41762-2 is not valid in the system http://loinc.org
-     1. WARNING: ValueSet/us-core-servicerequest-category: ValueSet.compose[0].include[0].concept[0]: The code LG41762-2 is not valid in the system http://loinc.org
 
      *INFORMATION (8)*
 
