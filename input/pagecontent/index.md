@@ -34,11 +34,11 @@
          - [ ] "Fix slicing issues": related to LG41752-2? See See this [Zulip Chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/slicing.20question.20for.20patterns.20on.20bindings) for Discriminator error.
          - [X] "observation profiles - suppress with approval from CGP":Added to ignoreWarnings.txt (see below)
          - [X] "US Core Vital signs - illegal attempt to change the binding - from required to extensible - related to vital signs - either a code bug or have a problem that needs to be fixed - should point to Git issue or Zulip if this is a tooling issue - ADD WARNING TO SPECIFICATION TO SAY NOT CONFORMANT TO R4 - NEEDS TO STAY AS REQUIRED.":  Tracker to change core in FHIR R4b note to balloters already done
-         - [ ] "CapabilityStatement - smart-app-launch - does not resolve - needs to be fixed.  If can't fix - raise a Zulip issue": should resolve when smart published
-         - [ ] "Suppress capabilitystatement info messages with reason" - done
+         - [ ] "CapabilityStatement - smart-app-launch - does not resolve - needs to be fixed.  If can't fix - raise a Zulip issue": should resolve when smart published - see this [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Canonical.20URL.20of.20SMART.20Applaunch) thread
+         - [X] "Suppress capabilitystatement info messages with reason" - done
          - [ ] "SearchParameter - Grahame to look into this": Added to ignoreWarnings.txt (see below)
          - [ ] "VSAC issues":  Unable to find value set in VSAC for race, ethnicity, birthsex, genderIdentity 21 Errors and 5 Warnings.  Do we leave as error or suppress? (see below).
-         - [ ] "ValueSet - simple-language - can not be expanded - okay- can't be suppressed - tooling": OK
+         - [X] "ValueSet - simple-language - can not be expanded - okay- can't be suppressed - tooling": OK
          - [ ] "ICD9cm will be fixed next release":  OK check on this
          - [ ] "resuppress warnings - syntax has changed": What does this mean?
          - [ ] "LOCAL CODE SYTEM - URL NEEDS TO HAVE EXAMPLE IN IT OR USE A REAL ONE": unable to find this error?
