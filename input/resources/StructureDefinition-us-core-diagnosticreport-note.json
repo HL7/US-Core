@@ -69,13 +69,7 @@
         "min": 1,
         "mustSupport": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet",
-              "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-note-type"
-            }
-          ],
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"
         }
       },
