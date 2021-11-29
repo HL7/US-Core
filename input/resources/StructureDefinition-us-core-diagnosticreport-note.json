@@ -66,10 +66,10 @@
         "id": "DiagnosticReport.category:us-core",
         "path": "DiagnosticReport.category",
         "sliceName": "us-core",
-        "min": 1,
+        "min": 0,
         "mustSupport": true,
         "binding": {
-          "strength": "extensible",
+          "strength": "required",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"
         }
       },
