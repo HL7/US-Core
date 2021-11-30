@@ -15,7 +15,7 @@
   - [X] update/create Examples - (highlight new content with new-content class)
   - [X] update change log
   <!--- [ ] updated Provenance to include all the new resources created a liquid script as include file to update this dynamically. -->
-  - [ ] !!!!!update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources  *NOTE do this at end and remember to update Client spreadsheet from Server spreadsheet*
+  - [X] update Conformance - using python script (excel soure here:input/resources_spreadsheets) and upload here: input/resources  *NOTE do this at end and remember to update Client spreadsheet from Server spreadsheet*
 
   for narrative updates
   - [X] update Narratives
@@ -34,7 +34,7 @@
          - [X] "Fix slicing issues": See this [Zulip Chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/slicing.20question.20for.20patterns.20on.20bindings) add text to explain when required really means extensible in this context.
          - [X] "observation profiles - suppress with approval from CGP": Added to ignoreWarnings.txt (see below)
          - [X] "US Core Vital signs - illegal attempt to change the binding - from required to extensible - related to vital signs - either a code bug or have a problem that needs to be fixed - should point to Git issue or Zulip if this is a tooling issue - ADD WARNING TO SPECIFICATION TO SAY NOT CONFORMANT TO R4 - NEEDS TO STAY AS REQUIRED.":  Tracker to change core in FHIR R4b note to balloters already done
-         - [ ] "CapabilityStatement - smart-app-launch - does not resolve - needs to be fixed.  If can't fix - raise a Zulip issue": should resolve when smart published - see this [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Canonical.20URL.20of.20SMART.20Applaunch) thread
+         - [X] "CapabilityStatement - smart-app-launch - does not resolve - needs to be fixed.  If can't fix - raise a Zulip issue": fixed - see this [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Canonical.20URL.20of.20SMART.20Applaunch) thread
          - [X] "Suppress capabilitystatement info messages with reason" - done
          - [X] "SearchParameter - Grahame to look into this": Added to ignoreWarnings.txt (see below)
          - [ ] "VSAC issues":  Unable to find value set in VSAC for race, ethnicity, birthsex, genderIdentity 21 Errors and 5 Warnings.  Do we leave as error or suppress? Will add Balloters notes to Value sets for manual expansions if not ready prior to ballot. (see below).
@@ -110,10 +110,6 @@
 
      1. ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
      1. ERROR: StructureDefinition/us-core-vital-signs: StructureDefinition: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
-
-     **SMART URL based on yet to be published version 2.0! (1 Error)**
-
-     1. ERROR: CapabilityStatement/us-core-server: CapabilityStatement.implementationGuide[0]: Canonical URL 'http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch' does not resolve
 
      **Require that all profiles on Observation derive from one of the base US profiles (5 Warnings)**
 
