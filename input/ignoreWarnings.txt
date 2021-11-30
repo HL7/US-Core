@@ -21,6 +21,9 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureD
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history-assessment').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 
+# NDC Display Issue
+WARNING: Immunization/imm-1: Immunization.vaccineCode.coding[1]: The display "FLUZONE High-Dose Quadrivalent Northern Hemisphere" is not a valid display for the code {http://hl7.org/fhir/sid/ndc}49281012165 - should be one of ['FLUZONE High-Dose Quadrivalent Northern Hemisphere, 10 SYRINGE, GLASS in 1 PACKAGE (49281-121-65)  > .7 mL in 1 SYRINGE, GLASS (49281-121-88)  (package)'] (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/ndc#49281012165'
+
 # Several examples derived from this profile are provided in this guide
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'): The Implementation Guide contains no examples for this profile.
 
@@ -169,3 +172,6 @@ INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].res
 INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[21].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
 INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[21].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
 INFORMATION: CapabilityStatement/us-core-server: CapabilityStatement.rest[0].resource[21].extension[5].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+
+# Using example.org code system
+INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.ofType(Practitioner).qualification[0].code.coding[0]: Code System URI 'http://example.org/michigan.gov/lara/license-type' is unknown so the code cannot be validated

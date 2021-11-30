@@ -140,7 +140,7 @@
      1. WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: [Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated]
      1. WARNING: ValueSet.where(id = 'us-core-discharge-disposition'): Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
 
-     **SearchParameter [Type.id] not Compatible with Derived SearchParameter [Resource.id] (3 Warnings):**
+     **SearchParameter [Type.id] not Compatible with Derived SearchParameter [Resource.id] (6 Warnings):**
 
      Action: Suppressed in ignoreWarnings.txt
 
@@ -156,7 +156,7 @@
 
      **Unresolved NDC Code Display Issues (1 Warning)**
 
-     Action: Do we leave as error or suppress?
+      Action: Suppressed in ignoreWarnings.txt
 
      1. WARNING: Immunization/imm-1: Immunization.vaccineCode.coding[1]: The display "FLUZONE High-Dose Quadrivalent Northern Hemisphere" is not a valid display for the code {http://hl7.org/fhir/sid/ndc}49281012165 - should be one of ['FLUZONE High-Dose Quadrivalent Northern Hemisphere, 10 SYRINGE, GLASS in 1 PACKAGE (49281-121-65)  > .7 mL in 1 SYRINGE, GLASS (49281-121-88)  (package)'] (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/ndc#49281012165'
 
