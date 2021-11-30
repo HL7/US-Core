@@ -38,6 +38,8 @@ INFORMATION: Practitioner/practitioner-1: Practitioner.identifier[1]: This eleme
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.ofType(Practitioner).identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[1].resource.ofType(Practitioner).identifier[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 INFORMATION: Practitioner/practitioner-2: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+INFORMATION: Organization/example-organization-2: Organization.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+INFORMATION: Organization/saint-luke-w-endpoint: Organization.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 
 # Code System OID is taken from the base FHIR valueset http://hl7.org/fhir/ValueSet/endpoint-payload-type, IHE CodeSystem documented in base spec is not recognized by validator possibly due to IP issues.
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[2].resource.ofType(Endpoint).payloadType[0].coding[0]: Code System URI 'urn:oid:1.3.6.1.4.1.19376.1.2.3' is unknown so the code cannot be validated
