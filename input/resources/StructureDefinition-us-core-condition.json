@@ -140,10 +140,9 @@
         "id": "Condition.category:us-core",
         "path": "Condition.category",
         "sliceName": "us-core",
-        "min": 1,
         "mustSupport": true,
         "binding": {
-          "strength": "extensible",
+          "strength": "required",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category"
         }
       },
