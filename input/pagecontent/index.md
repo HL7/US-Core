@@ -29,9 +29,9 @@
          - [X] "CPT issue - suppress": added these *and NUBC Code warnings* to ignoreWarnings.txt (see below)
          - [ ] "LG41752-2. loinc issue - okay": This causes 4 Errors, 3 Warnings and 3 Information Messages. Pending addition of LOINC Group Codes to the terminology server. Will add Balloters notes to Value sets for manual expansions if not ready prior to ballot.  Do we leave as error or suppress?  (see below)
          - [X] "goal.description - nlm value set - VSAC": Goal.description is no longer a VSAC Value set.  However suppressed one INFORMATION message for text only value (see below)
-         - [ ] NDC display names - still outstanding issue with Grahame:  Added to ignoreWarnings.txt (see below)  (see below)
+         - [X] NDC display names - still outstanding issue with Grahame:  Added to ignoreWarnings.txt (see below)  (see below)
          - [X] "procedure.code - ICD10-pc - not ICD10 - server doesn't know codes - confirm URL and suppress": Confirmed and Added to ignoreWarnings.txt (see below)
-         - [X] "Fix slicing issues": See this [Zulip Chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/slicing.20question.20for.20patterns.20on.20bindings) add text to explain when require really means extensible in this context.
+         - [X] "Fix slicing issues": See this [Zulip Chat](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/slicing.20question.20for.20patterns.20on.20bindings) add text to explain when required really means extensible in this context.
          - [X] "observation profiles - suppress with approval from CGP": Added to ignoreWarnings.txt (see below)
          - [X] "US Core Vital signs - illegal attempt to change the binding - from required to extensible - related to vital signs - either a code bug or have a problem that needs to be fixed - should point to Git issue or Zulip if this is a tooling issue - ADD WARNING TO SPECIFICATION TO SAY NOT CONFORMANT TO R4 - NEEDS TO STAY AS REQUIRED.":  Tracker to change core in FHIR R4b note to balloters already done
          - [ ] "CapabilityStatement - smart-app-launch - does not resolve - needs to be fixed.  If can't fix - raise a Zulip issue": should resolve when smart published - see this [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Canonical.20URL.20of.20SMART.20Applaunch) thread

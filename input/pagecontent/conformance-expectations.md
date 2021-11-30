@@ -120,7 +120,7 @@ All the profile information for the {{site.data.fhir.ig.title}} is represented i
 #### Must Support - Coded Elements
 In addition to the guidance provided by [FHIR Terminology], Coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) which are marked as Must Support follow the rules for their respective bindings.
 
-##### Required bindings Coded Elements
+##### Required Bindings Coded Elements
 
 [Required binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used. For `CodeableConcept` using only text is *not* valid, but multiple codings (translations) are permitted as is discussed below.
 
@@ -131,7 +131,15 @@ For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has
 
   {% include img.html img="Must_Support_AllergyIntolerance_clinicalStatus.png" caption="Figure 4: US Core AllergyIntolerance.clinicalStatus" %}
 
-##### Extensible binding for CodeableConcept Datatype
+<div markdown="1" class="new-content">
+##### Required Bindings When Slicing by Value Sets
+
+When a coded element is a repeating element and the intent is to use a particular value set for at least one of the repeats, a structure known as [slicing] is used to define the profile element. This is a special case where *required* bindings must be used to clearly differentiate the repeat based on a value set.  In this guide, the minimum cardinality for these 'slices' are set to 0 so that other codes can be used in case no suitable code exists in the value set (See Extensible Binding below).  The example in figure 5 below illustrates this structure for the repeating Condition.category element:
+
+  {% include img.html img="Must_Support_Condition_category.png" caption="Figure 5: US Core Condition.category" %}
+</div>
+
+##### Extensible Binding for CodeableConcept Datatype
 
 [Extensible Binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used if an applicable concept is present, but if no suitable code exists in the value set, alternate code(s) may be provided in its place.  For `CodeableConcept` multiple codings are permitted and this rule applies to one of the codings.  Also for `CodeableConcept` if only text is available, then just text may be used.
 
@@ -143,7 +151,7 @@ To illustrate extensible binding for CodeableConcept datatype, the [US Core Alle
   - or text in `AllergyIntolerance.code.text`if only text is available.
 - US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.code.code` or text in `AllergyIntolerance.code.text`
 
-  {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 5: US Core AllergyIntolerance.code" %}
+  {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 6: US Core AllergyIntolerance.code" %}
 
 Although the FHIR guidance for extensible bindings indicates that *all conceptual overlaps* including free text be mapped the coded values in the bindings, US Core guidance provides more flexibility for situations where implementers cannot fully comply with the FHIR base guidance. This flexibility is sometimes necessary and expected for legacy and text only data. For newly recorded, non legacy data, a system **SHOULD** meet the conformance of the value set.
 
@@ -216,7 +224,7 @@ For example the [US Core DiagnosticReport Profile for Laboratory Results Reporti
 - US Core Responders **SHALL** provide these values in a `DiagnosticReport.category`
 - US Core Requestors **SHALL** be capable of processing these values in `DiagnosticReport.category`
 
-  {% include img.html img="Must_Support_DiagnosticReport_category.png" caption="Figure 6: US Core DiagnosticReport.category" %}
+  {% include img.html img="Must_Support_DiagnosticReport_category.png" caption="Figure 7: US Core DiagnosticReport.category" %}
 
 #### Must Support - Primitive Element
 
@@ -227,7 +235,7 @@ For example, the [US Core DiagnosticReport Profile] issued element is a primitiv
 - US Core Responders **SHALL** be capable of providing a value in a `DiagnosticReport.issued`
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.issued`
 
-  {% include img.html img="Must_Support_DiagnosticReport_issued.png" caption="Figure 7: US Core DiagnosticReport.issued" %}
+  {% include img.html img="Must_Support_DiagnosticReport_issued.png" caption="Figure 8: US Core DiagnosticReport.issued" %}
 
 #### Must Support - Complex Elements
 
@@ -244,14 +252,14 @@ For example, the [US Core DiagnosticReport Profile for Report and Note exchange]
 - US Core Responders **SHALL** be capable of providing a value in `DiagnosticReport.presentedForm` sub-element.
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.presentedForm`.
 
-  {% include img.html img="Must_Support_DiagnosticReport_presentedForm.png" caption="Figure 8: US Core DiagnosticReport.presentedForm" %}
+  {% include img.html img="Must_Support_DiagnosticReport_presentedForm.png" caption="Figure 9: US Core DiagnosticReport.presentedForm" %}
 
 For example, the [US Core Patient Profile] name element is labeled must support and has must support sub-elements "family" and "given". When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
 - US Core Requestors **SHALL** be capable of processing the value in value in `Patient.name.family` and `Patient.name.given`.
 
-  {% include img.html img="Must_Support_Patient_name.png" caption="Figure 9: US Core Patient.name" %}
+  {% include img.html img="Must_Support_Patient_name.png" caption="Figure 10: US Core Patient.name" %}
 
 On the other hand, if any sub-element is marked as must support and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure you must support the sub-element(s) marked as must support. There are no examples of US Core profiles that have this structure defined.
 
@@ -268,7 +276,7 @@ For example, the [US Core DocumentReference Profile] author US Core Practitioner
 
 Systems can support other references but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_DocumentReference.jpg" caption="Figure 10: US Core DocumentReference.author" %}
+{% include img.html img="Must_Support_DocumentReference.jpg" caption="Figure 11: US Core DocumentReference.author" %}
 
 In certain profiles only a single resource reference is present on an element labeled *Must Support*.
 
@@ -277,7 +285,7 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 * US Core Responders **SHALL** be capable of providing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 * US Core Requestors **SHALL** be capable of processing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 
-{% include img.html img="Must_Support_AllergyIntolerance.jpg" caption="Figure 11: US Core AllergyIntolerance.patient" %}
+{% include img.html img="Must_Support_AllergyIntolerance.jpg" caption="Figure 12: US Core AllergyIntolerance.patient" %}
 
 #### Must Support - Choice of Data Types
 
@@ -290,7 +298,7 @@ For example, the [US Core Laboratory Result Observation Profile] effectiveDateTi
 
 Systems **MAY** support populating and processing other choice elements (such as, Observation.effectivePeriod) but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_Observation.effective.jpg" caption="Figure 12: US Core Observation.effectiveDateTime" %}
+{% include img.html img="Must_Support_Observation.effective.jpg" caption="Figure 13: US Core Observation.effectiveDateTime" %}
 
 For the [US Core Laboratory Result Observation Profile] value element, multiple elements are labeled *Must Support*.
 
@@ -302,7 +310,7 @@ When claiming conformance to the [US Core Laboratory Result Observation Profile]
 Systems can support the other elements, but this is not a requirement of US Core.
 
 
-{% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 13: US Core Observation.value[x]" %}
+{% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 14: US Core Observation.value[x]" %}
 
 
 #### Must Support - Choice of Profile Elements

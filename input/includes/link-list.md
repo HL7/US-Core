@@ -314,3 +314,4 @@
 [Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
 [SDOH Guidance]: sdoh.html
 [US Core Common SDOH Assessments ValueSet]: ValueSet-us-core-common-sdoh-assessments.html
+[slicing]: {{site.data.fhir.path}}profiling.html#slicing
