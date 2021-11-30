@@ -30,7 +30,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Profile specific implementation guidance:**
 
-- {:.new-content}See [SDOH Guidance] for more information when exchanging Social Determinants of Health (SDOH) Service Requests.
+- See [SDOH Guidance] for more information when exchanging Social Determinants of Health (SDOH) Service Requests.
 - The `ServiceRequest.category` binding must support at a minimum the [US Core ServiceRequest
 Category Codes].  Within this categorization scheme/axis, other categories codes may be supported and alternate codes may be provided *in addition* to the standard codes. See [Using multiple codes with CodeableConcept Datatype] for examples.  Other categorization schemes to be used as well.
 
