@@ -5,4 +5,3 @@ encounter-diagnosis|http://terminology.hl7.org/CodeSystem/condition-category|Enc
 health-concern|http://hl7.org/fhir/us/core/CodeSystem/condition-category|Health Concern|Additional health concerns from other stakeholders which are outside the provider’s problem list.
 16100001|http://snomed.info/sct|Death diagnosis|-
 LG41762-2|http://loinc.org|SocialDeterminantsOfHealth|-
-{.:grid}

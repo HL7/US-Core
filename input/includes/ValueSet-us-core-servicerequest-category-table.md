@@ -6,4 +6,3 @@ Code|System|Display|Definition
 409073007|http://snomed.info/sct|Education|-
 387713003|http://snomed.info/sct|Surgical procedure (procedure)|-
 LG41762-2|http://loinc.org|SocialDeterminantsOfHealth|-
-{.:grid}
