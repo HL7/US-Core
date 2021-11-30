@@ -39,9 +39,15 @@
   "dependsOn": [
     {
       "packageId": "hl7.fhir.uv.bulkdata",
-      "version": "1.0.1",
+      "version": "2.0.0",
       "uri": "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata",
       "id": "hl7_fhir_uv_bulkdata"
+    },
+    {
+      "packageId": "hl7.fhir.uv.smart-app-launch",
+      "version": "2.0.0",
+      "uri": "http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch",
+      "id": "hl7_fhir_uv_smart_app_launch"
     },
     {
       "id": "vsac",
@@ -1302,7 +1308,7 @@
         "reference": {
           "reference": "ValueSet/us-core-condition-category"
         },
-        "description": "The US Core Condition Category Codes support the separate concepts of problems and health concerns in Condition.category in order for API consumers to be able to separate health concerns and problems. However this is not mandatory for 2015 certification",
+        "description": "The US Core Condition Category Codes support the separate concepts of problems, health concerns, and Social Determinants of Health in Condition.category in order for API consumers to be able to separate them.",
         "exampleBoolean": false,
         "name": "US Core Condition Category Codes"
       },

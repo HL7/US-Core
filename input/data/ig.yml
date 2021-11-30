@@ -1323,9 +1323,9 @@ definition:
         reference:
             reference: ValueSet/us-core-common-sdoh-assessments
     -   description: "The\_US Core Condition Category Codes\_support the separate\
-            \ concepts of problems and health concerns in\_Condition.category\_in\
-            \ order for API consumers to be able to separate health concerns and problems.\
-            \ However this is not mandatory for 2015 certification"
+            \ concepts of problems, health concerns, and Social Determinants of Health\
+            \ in\_Condition.category\_in order for API consumers to be able to separate\
+            \ them."
         exampleBoolean: false
         name: US Core Condition Category Codes
         reference:
@@ -2124,7 +2124,11 @@ dependsOn:
 -   id: hl7_fhir_uv_bulkdata
     packageId: hl7.fhir.uv.bulkdata
     uri: http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata
-    version: 1.0.1
+    version: 2.0.0
+-   id: hl7_fhir_uv_smart_app_launch
+    packageId: hl7.fhir.uv.smart-app-launch
+    uri: http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch
+    version: 2.0.0
 -   id: vsac
     packageId: us.nlm.vsac
     uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
