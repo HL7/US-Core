@@ -162,12 +162,11 @@
 
      1. WARNING: Procedure/rehab: Procedure.code: The code system "http://www.cms.gov/Medicare/Coding/ICD10" in the include in "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code" is not known; The code system 'http://www.cms.gov/Medicare/Coding/ICD10' is not known (encountered paired with code = 'HZ30ZZZ') (from http://tx.fhir.org/r4)
 
- - [ ] update ignoreWarnings.txt
- - [ ] update to latest ig publisher and review address any new validation checks
- - [ ] final read through
-- [ ] remove all new content and green highlighted formatting
-- [ ] update title and version to 5.0.0
-- [ ] update package-list.yml (convert to json !)
+- [ ] update ignoreWarnings.txt (see above)
+- [X] update to latest ig publisher and review address any new validation checks
+- [ ] final read through
+- [X] update title and version to 4.1.0 STU5
+- [X] update package-list.yml (convert to json !)
 - [ ] remove this blue info box from home page
 - [ ] update Jira tracker file
 </div>

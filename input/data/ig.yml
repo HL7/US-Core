@@ -1,8 +1,10 @@
 contact:
--   name: HL7 International - US Realm Steering Committee
+-   name: HL7 International - Cross-Group Projects
     telecom:
     -   system: url
-        value: http://www.hl7.org/Special/committees/usrealm/index.cfm
+        value: http://www.hl7.org/Special/committees/cgp
+    -   system: email
+        value: cgp@lists.HL7.org
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons
     License
 date: '2021-06-16'
@@ -13,7 +15,7 @@ definition:
         page:
         -   generation: markdown
             nameUrl: index.html
-            title: Index
+            title: Home
         -   generation: markdown
             nameUrl: guidance.html
             page:
@@ -2165,7 +2167,7 @@ jurisdiction:
 license: CC0-1.0
 name: USCore
 packageId: hl7.fhir.us.core
-publisher: HL7 International - US Realm Steering Committee
+publisher: HL7 International - Cross-Group Projects
 resourceType: ImplementationGuide
 status: active
 title: US Core Implementation Guide

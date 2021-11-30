@@ -8,8 +8,9 @@ name: USCore
 title: US Core Implementation Guide
 status: active
 publisher:
-  name: HL7 International - US Realm Steering Committee
-  url: 'http://www.hl7.org/Special/committees/usrealm/index.cfm'
+  name: HL7 International - Cross-Group Projects
+  url: 'http://www.hl7.org/Special/committees/cgp'
+  email: cgp@lists.HL7.org
 jurisdiction: 'urn:iso:std:iso:3166#US'
 copyright: >-
   Used by permission of HL7 International, all rights reserved Creative Commons License
@@ -32,6 +33,7 @@ dependencies:
   hl7.fhir.uv.sdc: 2.7.0
 pages:
   index.md:
+    title: Home
   guidance.md:
     general-guidance.md:
     conformance-expectations.md:
