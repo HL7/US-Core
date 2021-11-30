@@ -42,7 +42,7 @@
          - [X] "ICD9cm will be fixed next release":  OK
          - [ ] "resuppress warnings - syntax has changed": What does this mean?
          - [X] "LOCAL CODE SYTEM - URL NEEDS TO HAVE EXAMPLE IN IT OR USE A REAL ONE": OK done but still needs to be suppressed
-         - [ ] "Should not suppress JIra Spec File warning - Can not be suppressed": removed - but since markdown used in ig package.yaml a warning will persist
+         - [X] "Should not suppress JIra Spec File warning - Can not be suppressed": OK no errors
 
     Summary and Categorization of QA Errors (29), Warnings (30) and Information (8) Messages by Issue
 
