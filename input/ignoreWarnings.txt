@@ -7,14 +7,12 @@ WARNING: SearchParameter/us-core-practitioner-id: SearchParameter: The expressio
 WARNING: SearchParameter/us-core-relatedperson-id: SearchParameter: The expression 'RelatedPerson.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
 WARNING: SearchParameter/us-core-servicerequest-id: SearchParameter: The expression 'ServiceRequest.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
 
-# html table embedded in markdown documentation element
-
-
 # This warning and info alert are still extant from ballot version of US Core and has yet to be resolved with publishing/terminology server. see: https://terminology.hl7.org/CodeSystem-icd10PCS.html
 WARNING: Procedure/rehab: Procedure.code: The code system "http://www.cms.gov/Medicare/Coding/ICD10" in the include in "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code" is not known; The code system 'http://www.cms.gov/Medicare/Coding/ICD10' is not known (encountered paired with code = 'HZ30ZZZ') (from http://tx.fhir.org/r4)
 INFORMATION: Procedure/rehab: Procedure.code.coding[1]: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
 
 # US Core Goal Description Binding Is Extensible Which Allow For Text Only And Is Explicitly Encouraged In The Us Core Goal Implementation Guidance
+WARNING: Goal/goal-1: Goal.description: No code provided, and a code should be provided from the value set 'US Core Goal Codes' (http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description)
 
 # Circular US Core Warnings since this is US Core:
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
