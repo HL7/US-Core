@@ -44,7 +44,6 @@
       {
         "id": "Observation.category:us-core",
         "path": "Observation.category",
-        "sliceName": "us-core",
         "slicing": {
           "discriminator": [
             {
@@ -54,6 +53,7 @@
           ],
           "rules": "open"
         },
+        "sliceName": "us-core",
         "min": 1,
         "mustSupport": true,
         "binding": {
@@ -62,7 +62,7 @@
         }
       },
       {
-        "id": "Observation.category:us-core:social-history",
+        "id": "Observation.category:us-core/social-history",
         "path": "Observation.category",
         "sliceName": "social-history",
         "requirements": "Used for filtering that this is a social history observation.",
