@@ -1,5 +1,11 @@
 == Suppressed Messages ==
 # This issue is discussed here FHIR-12956. These warnings are due to using the actual base the _id searchparameter expression instead of using "Resource".
+WARNING: SearchParameter/us-core-documentreference-id: SearchParameter: The expression 'DocumentReference.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
+WARNING: SearchParameter/us-core-encounter-id: SearchParameter: The expression 'Encounter.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
+WARNING: SearchParameter/us-core-patient-id: SearchParameter: The expression 'Patient.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
+WARNING: SearchParameter/us-core-practitioner-id: SearchParameter: The expression 'Practitioner.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
+WARNING: SearchParameter/us-core-relatedperson-id: SearchParameter: The expression 'RelatedPerson.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
+WARNING: SearchParameter/us-core-servicerequest-id: SearchParameter: The expression 'ServiceRequest.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
 
 # html table embedded in markdown documentation element
 
@@ -21,6 +27,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureD
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'): The Implementation Guide contains no examples for this profile.
 
 # Code from extensibly bound to NUCC for US Core and not from base FHIR preferred c80-practice-codes valueset
+INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[0].resource.ofType(PractitionerRole).specialty[0]: None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
 
 # Examples demonstrate use of additional Codes
 INFORMATION: Observation/hunger-question-example: Observation.category[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response
