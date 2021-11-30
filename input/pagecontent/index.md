@@ -37,7 +37,7 @@
          - [ ] "CapabilityStatement - smart-app-launch - does not resolve - needs to be fixed.  If can't fix - raise a Zulip issue": should resolve when smart published - see this [Zulip](https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Canonical.20URL.20of.20SMART.20Applaunch) thread
          - [X] "Suppress capabilitystatement info messages with reason" - done
          - [X] "SearchParameter - Grahame to look into this": Added to ignoreWarnings.txt (see below)
-         - [ ] "VSAC issues":  Unable to find value set in VSAC for race, ethnicity, birthsex, genderIdentity 21 Errors and 5 Warnings.  Do we leave as error or suppress? (see below).
+         - [ ] "VSAC issues":  Unable to find value set in VSAC for race, ethnicity, birthsex, genderIdentity 21 Errors and 5 Warnings.  Do we leave as error or suppress? Will add Balloters notes to Value sets for manual expansions if not ready prior to ballot. (see below).
          - [X] "ValueSet - simple-language - can not be expanded - okay- can't be suppressed - tooling": OK
          - [X] "ICD9cm will be fixed next release":  OK
          - [ ] "resuppress warnings - syntax has changed": What does this mean?

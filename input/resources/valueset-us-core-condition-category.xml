@@ -6,11 +6,13 @@
 	<name value="USCoreConditionCategoryCodes"/>
 	<title value="US Core Condition Category Codes"/>
 	<status value="active"/>
-	<date value="2019-05-21"/>
+	<date value="2021-11-30"/>
 	<publisher value="HL7 US Realm Steering Committee"/>
-	<description value="The US Core Condition Category Codes support the separate concepts of problems and health concerns in Condition.category in order for API consumers to be able to separate health concerns and problems. However this is not mandatory for 2015 certification"/>
-	<purpose value="So API consumers can separate health concerns and problems."/>
-	<copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+	<description value="The US Core Condition Category Codes support the separate concepts of problems, health concerns, and Social Determinants of Health in Condition.category in order for API consumers to be able to separate them."/>
+	<copyright value="This value set includes content from:&#xA;
+		1. SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.&#xA;
+
+	  2. LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
 	<compose>
 		<include>
 			<system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
@@ -25,11 +27,11 @@
 		<include>
 			<system value="http://snomed.info/sct"/>
 			<concept>
-				<extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-definition" >				
+				<extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-definition" >
 					<valueString value="Death diagnosis, or cause of death is a contextual qualifier indicating the problem represented caused the patient's death."/>
 				</extension>
 				<code value="16100001"/>
-				<display value="Death diagnosis"/>				
+				<display value="Death diagnosis"/>
 			</concept>
 		</include>
 		<include>
