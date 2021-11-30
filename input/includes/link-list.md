@@ -76,7 +76,7 @@
 [Extensible Binding]: {{site.data.fhir.path}}terminologies.html#extensible
 [FHIR Artifacts]: artifacts.html
 [FHIR Binary Resource]: http://hl7.org/fhir/binary.html
-[FHIR Bulk Data Access (Flat FHIR)]: http://hl7.org/fhir/uv/bulkdata/STU1.0.1
+[FHIR Bulk Data Access (Flat FHIR)]: http://hl7.org/fhir/uv/bulkdata/index.html
 [FHIR Communications]: {{site.data.fhir.path}}security.html#http
 [FHIR Communications Security]: {{site.data.fhir.path}}security.html#http
 [FHIR Conformance Rules]: {{site.data.fhir.path}}conformance-rules.html
