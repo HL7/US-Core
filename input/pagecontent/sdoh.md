@@ -27,8 +27,8 @@ The figure below shows how the SDOH elements are inter-related:
 
 - **SDOH Assessment**: SDOH Assessments represent the recording of SDOH assessment screening tools and other questionnaires as well as individual clinical observations.  These assessments are represented by the [US Core Social History Assessment Observation Profile] and [US Core Screening Response Observation Profile]
 - **SDOH Problems/Health Concerns**: Identifying a Social Determinants of Health-related condition (for example, homelessness) is represented by the [US Core Condition Profile].
-- **SDOH Interventions**:  Services offered to a patient to address identified Social Determinants of Health problems/health concerns,(for example, referral to transportation support programs) are represented by the [US Core ServiceRequest Profile].  IN addition, the [US Core Procedure Profile] can be used to record a completed service or intervention.
-- **SDOH Goals**: Identifies a future desired condition or change in condition related to an SDOH risk (for example, Has adequate quality meals and snacks) and is represented by [US Core Goal Profile]
+- **SDOH Interventions**:  Services offered to a patient to address identified Social Determinants of Health problems/health concerns (for example, referral to transportation support programs) are represented by the [US Core ServiceRequest Profile].  In addition, the [US Core Procedure Profile] can be used to record a completed service or intervention.
+- **SDOH Goals**: Identifying and defining a future desired condition or change in condition related to an SDOH risk (for example, Has adequate quality meals and snacks) is represented by [US Core Goal Profile]
 
 {% include img.html img="sdoh_assessment.svg" caption="SDOH Activities" %}
 
@@ -53,13 +53,13 @@ US Core uses broadly defined value sets that contain concepts that are used acro
 
 #### Assessment Codes
 
-Assessment Screenings can represent a structured evaluation of risk (e.g., PRAPARE, Hunger Vital Sign, AHC-HRSN screening tool) for any Social Determinants of Health domain such as food, housing, or transportation security. The assessment scale responses are represented in US Core with [US Core Screening Response Observation Profile]. The [US Core Social History Assessment Observation Profile] is for simple observations made by an individual during the course of care about a patient's social history status. Both can contribute to the identification of SDOH Problems (Conditions) or Observations or can be the reason for Service Requests or Procedures.
+Assessment Screenings can represent a structured evaluation of risk (e.g., PRAPARE, Hunger Vital Sign, AHC-HRSN screening tool) for any Social Determinants of Health domain such as food, housing, or transportation security. The assessment scale responses are represented in US Core with [US Core Screening Response Observation Profile]. The [US Core Social History Assessment Observation Profile] is for simple observations made by an individual during the course of care about a patient's social history status. These Observation can contribute to the identification of SDOH Problems and can be the reason for SDOH Service Requests or Procedures.
 
-US Core has developed [US Core Common SDOH Assessments ValueSet] - commonly asked social questions as identified by [FindHelp.org](https://company.findhelp.com/), a social service assistance tool. This is not intend to replicate the complexities and robustness of the FHIR Questionnaire and QuestionnaireResponse resources developed for SDOH assessment screening tools and other questionnaires.  The Gravity Project is working on a more comprehensive set of codes to meet these challenges. A future version of this guide may leverage that work to supplement this valueset.
+US Core has developed [US Core Common SDOH Assessments ValueSet] - commonly asked social questions as identified by [FindHelp.org](https://company.findhelp.com/), a social service assistance tool. This is not intend to replicate the complexities and robustness of the FHIR Questionnaire and QuestionnaireResponse resources developed for SDOH assessment screening tools and other questionnaires.  The Gravity Project is working on a more comprehensive set of codes to meet these challenges (this guide may leverage that work in the future).
 
 ### Searching for SDOH Patient Data
 
-Below is an examples of FHIR RESTful search transaction to access a patient's SDOH assessment data.
+Below is a simple example of FHIR RESTful search transaction to access a patient's SDOH assessment data.
 
 - Observation type = Observation
 - Patient's FHIR_id = "example"
