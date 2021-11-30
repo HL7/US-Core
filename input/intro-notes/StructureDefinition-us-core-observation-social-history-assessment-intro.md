@@ -23,6 +23,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Each Observation must support:**
 
+1. additional category codes
 1. a time indicating when observation was made
 1. who answered the questions
 3. a value
@@ -31,13 +32,14 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 - See [SDOH Guidance] for how this profile can used to represent SDOH assessments.
 - Simple assertion may be derived from a screening tool assessments such as [US Core Screening Response Observation Profile]  and can reference them using `Observation.derivedFrom`.
 
-{:.note-to-balloters}Should this profiles include the derivedFrom element as a MustSupport element to reference any form/survey or assessment tool?
+Should this profiles include the derivedFrom element as a MustSupport element to reference any form/survey or assessment tool?
+{:.note-to-balloters}
 
 - The codes can be from LOINC or SNOMED CT.
 - Often the pattern for these types of observations that the `Observation.code` indicates a statement about findings and the `Observation.value` is present and "qualifies" the finding typically confirming or refuting it. For example:
 
-  code= "Transport too expensive"
-  value="true"
+  **code**: Transport too expensive (SNOMED CT: 160695008)  
+  **value**: true
 
 ### Examples
 
