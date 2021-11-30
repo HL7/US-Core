@@ -3,28 +3,8 @@
 title: My SDOH Page Edits
 tags: USCDI v2
 ---
-
-# My SDOH Page Edits
-
-:::info
-1. introduction:  
-    - [X] uscdi introduce SDOH
-    - [X] purpose and intent of US Core in re to SDOH  - data access
-    - [X] contract to SDOH guide - orchestration and population
-    - [X] we map to these existing and new profiles
-    - [X] assist and guidance from gravity
-1. Overview of how they intertwine using Gay;s Image
-    - [X] SDOH guidance on population image
-1. Vocabulary vs gravity using Gays
-     -  [X] common category - group all the Gravity domains
-1. Assessments common set of concepts
-      - [X] starter Set
-      - acknowledge Aunt Bertha
-      - [X] see Gravity for ongoing more complete vocablet to extend
-1. Example searches
-    2. [X] How access with examples
-:::
 -->
+
 <div markdown="1" class="new-content">
 
 This US Core Social Determinant of Health (SDOH) Guidance Page has been added in response to  United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published by the Office of the National Coordinator (ONC) in July of 2021. The new data elements include:
@@ -73,7 +53,7 @@ US Core uses broadly defined value sets that contain concepts that are used acro
 
 #### Assessment Codes
 
-Assessment Screenings can represent a structured evaluation of risk (e.g., PRAPARE, Hunger Vital Sign, AHC-HRSN screening tool) for any Social Determinants of Health domain such as food, housing, or transportation security. The assessment scale responses are represented in US Core with [US Core Screening Response Observation Profile]. The [US Core Simple Social History Assessment Observation Profile] is for simple observations made by an individual during the course of care about a patient's social history status. Both can contribute to the identification of SDOH Problems (Conditions) or Observations or can be the reason for Service Requests or Procedures.
+Assessment Screenings can represent a structured evaluation of risk (e.g., PRAPARE, Hunger Vital Sign, AHC-HRSN screening tool) for any Social Determinants of Health domain such as food, housing, or transportation security. The assessment scale responses are represented in US Core with [US Core Screening Response Observation Profile]. The [US Core Social History Assessment Observation Profile] is for simple observations made by an individual during the course of care about a patient's social history status. Both can contribute to the identification of SDOH Problems (Conditions) or Observations or can be the reason for Service Requests or Procedures.
 
 US Core has developed [US Core Common SDOH Assessments ValueSet] - commonly asked social questions as identified by [FindHelp.org](https://company.findhelp.com/), a social service assistance tool. This is not intend to replicate the complexities and robustness of the FHIR Questionnaire and QuestionnaireResponse resources developed for SDOH assessment screening tools and other questionnaires.  The Gravity Project is working on a more comprehensive set of codes to meet these challenges. A future version of this guide may leverage that work to supplement this valueset.
 

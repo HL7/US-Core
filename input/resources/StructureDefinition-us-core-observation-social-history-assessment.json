@@ -59,21 +59,6 @@
         "mustSupport": true
       },
       {
-        "id": "Observation.category:sdoh",
-        "path": "Observation.category",
-        "sliceName": "sdoh",
-        "max": "1",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "LG41762-2"
-            }
-          ]
-        },
-        "mustSupport": true
-      },
-      {
         "id": "Observation.code",
         "path": "Observation.code",
         "mustSupport": true,

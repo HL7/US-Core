@@ -23,7 +23,6 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Each Observation must support:**
 
-1. additional category codes
 1. a time indicating when observation was made
 1. who answered the questions
 3. a value
