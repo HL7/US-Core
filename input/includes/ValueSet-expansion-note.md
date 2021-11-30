@@ -4,5 +4,6 @@
 
 {% assign table = page.path | replace: '.html' , '-table.md' %}
 {% include {{table}} %}
+{:.grid}
 
 </div>
