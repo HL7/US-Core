@@ -1,11 +1,11 @@
 == Suppressed Messages ==
 # This issue is discussed here FHIR-12956. These warnings are due to using the actual base the _id searchparameter expression instead of using "Resource".
-WARNING: SearchParameter/us-core-documentreference-id: SearchParameter: The expression 'DocumentReference.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
-WARNING: SearchParameter/us-core-encounter-id: SearchParameter: The expression 'Encounter.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
-WARNING: SearchParameter/us-core-patient-id: SearchParameter: The expression 'Patient.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
-WARNING: SearchParameter/us-core-practitioner-id: SearchParameter: The expression 'Practitioner.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
-WARNING: SearchParameter/us-core-relatedperson-id: SearchParameter: The expression 'RelatedPerson.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
-WARNING: SearchParameter/us-core-servicerequest-id: SearchParameter: The expression 'ServiceRequest.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter
+WARNING: SearchParameter/us-core-documentreference-id: SearchParameter: The expression 'DocumentReference.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
+WARNING: SearchParameter/us-core-encounter-id: SearchParameter: The expression 'Encounter.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
+WARNING: SearchParameter/us-core-patient-id: SearchParameter: The expression 'Patient.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
+WARNING: SearchParameter/us-core-practitioner-id: SearchParameter: The expression 'Practitioner.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
+WARNING: SearchParameter/us-core-relatedperson-id: SearchParameter: The expression 'RelatedPerson.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
+WARNING: SearchParameter/us-core-servicerequest-id: SearchParameter: The expression 'ServiceRequest.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
 
 # This warning and info alert are still extant from ballot version of US Core and has yet to be resolved with publishing/terminology server. see: https://terminology.hl7.org/CodeSystem-icd10PCS.html
 WARNING: Procedure/rehab: Procedure.code: The code system "http://www.cms.gov/Medicare/Coding/ICD10" in the include in "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code" is not known; The code system 'http://www.cms.gov/Medicare/Coding/ICD10' is not known (encountered paired with code = 'HZ30ZZZ') (from http://tx.fhir.org/r4)
@@ -25,7 +25,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureD
 WARNING: Immunization/imm-1: Immunization.vaccineCode.coding[1]: The display "FLUZONE High-Dose Quadrivalent Northern Hemisphere" is not a valid display for the code {http://hl7.org/fhir/sid/ndc}49281012165 - should be one of ['FLUZONE High-Dose Quadrivalent Northern Hemisphere, 10 SYRINGE, GLASS in 1 PACKAGE (49281-121-65)  > .7 mL in 1 SYRINGE, GLASS (49281-121-88)  (package)'] (from http://tx.fhir.org/r4) for 'http://hl7.org/fhir/sid/ndc#49281012165'
 
 # Several examples derived from this profile are provided in this guide
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'): The Implementation Guide contains no examples for this profile.
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'): The Implementation Guide contains no examples for this profile
 
 # Code from extensibly bound to NUCC for US Core and not from base FHIR preferred c80-practice-codes valueset
 INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[0].resource.ofType(PractitionerRole).specialty[0]: None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
@@ -56,6 +56,7 @@ WARNING: ValueSet.where(id = 'us-core-discharge-disposition'): Error from server
 INFORMATION: Procedure/defib-implant: Procedure.code.coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
 INFORMATION: Encounter/example-1: Encounter.type[0].coding[0]: Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
 INFORMATION: Encounter/1036: Encounter.hospitalization.dischargeDisposition.coding[0]: Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated
+WARNING: ValueSet.where(id = 'us-core-procedure-code'): Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 
 # The URI urn:iso:std:iso:11073:10101 identifies the MDC code system. as specified here: http://hl7.org/fhir/R4/mdc.html
 INFORMATION: Observation/satO2-fiO2: Observation.code.coding[2]: Code System URI 'urn:iso:std:iso:11073:10101' is unknown so the code cannot be validated
