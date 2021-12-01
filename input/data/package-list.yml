@@ -147,66 +147,15 @@ list:
       Resources ([Value Set Authority Center (VSAC) -
       NIH](https://vsac.nlm.nih.gov/)) where applicable:
 
-        <table class='grid'>
-        <thead>
-        <tr class='header'>
-        <th>US Core Value Set</th>
-        <th>VSAC Value Set</th>
-        <th>VSAC OID</th>
-        <th>extensional?</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class='odd'>
-        <td>Detailed ethnicity</td>
-        <td>Detailed Ethnicity</td>
-        <td>2.16.840.1.114222.4.11.877</td>
-        <td>No</td>
-        </tr>
-        <tr class='odd'>
-        <td>OMB Ethnicity Categories</td>
-        <td>Ethnicity</td>
-        <td>2.16.840.1.114222.4.11.837</td>
-        <td>Yes</td>
-        </tr>
-        <tr class='even'>
-        <td>US Core CareTeam Provider Roles</td>
-        <td>Care Team Member Function</td>
-        <td>2.16.840.1.113762.1.4.1099.30</td>
-        <td>Yes</td>
-        </tr>
-        <tr class='odd'>
-        <td>US Core Medication Codes (RxNorm)</td>
-        <td>Medication Clinical Drug</td>
-        <td>2.16.840.1.113762.1.4.1010.4</td>
-        <td>Yes</td>
-        </tr>
-        <tr class='even'>
-        <td>US Core Provider Specialty (NUCC)</td>
-        <td>Healthcare Provider Taxonomy</td>
-        <td>2.16.840.1.114222.4.11.1066</td>
-        <td>No</td>
-        </tr>
-        <tr class='odd'>
-        <td>US Core Smoking Status</td>
-        <td>Smoking Status</td>
-        <td>2.16.840.1.113883.11.20.9.38</td>
-        <td>Yes</td>
-        </tr>
-        <tr class='even'>
-        <td>US Core Vaccine Administered Value Set (CVX)</td>
-        <td>CVX Vaccines Administered Vaccine Set</td>
-        <td>2.16.840.1.113762.1.4.1010.6</td>
-        <td>Yes</td>
-        </tr>
-        <tr class='odd'>
-        <td>US Core Common substances for allergy and intolerance documentation including refutations</td>
-        <td>Common substances for allergy and intolerance documentation including refutations</td>
-        <td>2.16.840.1.113762.1.4.1186.8</td>
-        <td>No</td>
-        </tr>
-        </tbody>
-        </table>
+      **US Core Value Set, VSAC Value Set, VSAC OID, extensional?**
+      1. Detailed ethnicity, Detailed Ethnicity, 2.16.840.1.114222.4.11.877, No
+      1. OMB Ethnicity Categories, Ethnicity, 2.16.840.1.114222.4.11.837, Yes
+      1. US Core CareTeam Provider Roles, Care Team Member Function, 2.16.840.1.113762.1.4.1099.30, Yes
+      1. US Core Medication Codes (RxNorm), Medication Clinical Drug, 2.16.840.1.113762.1.4.1010.4, Yes
+      1. US Core Provider Specialty (NUCC), Healthcare Provider Taxonomy, 2.16.840.1.114222.4.11.1066, No
+      1. US Core Smoking Status, Smoking Status, 2.16.840.1.113883.11.20.9.38, Yes
+      1. US Core Vaccine Administered Value Set (CVX), CVX Vaccines Administered Vaccine Set, 2.16.840.1.113762.1.4.1010.6, Yes
+      1. US Core Common substances for allergy and intolerance documentation including refutations, Common substances for allergy and intolerance documentation including refutations, 2.16.840.1.113762.1.4.1186.8, No
 
       4. Migrating to the standard set of HL7 FHIR IG templates for publishing.
       Although we strove to minimize the differences between this version and
@@ -554,7 +503,7 @@ list:
       **Known issues:**
 
 
-      We're working to fix these issues that may come up when using US CORE.  We
+      We are working to fix these issues that may come up when using US CORE.  We
       will correct them in a future version of the guide
 
 
@@ -662,76 +611,20 @@ list:
       NIH](https://vsac.nlm.nih.gov/)) where applicable
 
         - We are seeking to resolve several technical and policy glitches when using VSAC directly prior to publishing which include the requirement to log in using your own UMLS API Key requiring a current UMLS account to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html).
-        - To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the '{OID}' with the OID from the table below.
-        - Enumerated (extensional) value sets can also be downloaded as a FHIR ValueSet resource. To do this, use the link `https://cts.nlm.nih.gov/fhir/ValueSet/{OID}` in your browser replacing the '{OID}' with the OID from the table below.
+        - To view the VSAC value set, use the link `https://vsac.nlm.nih.gov/valueset/{OID}/expansion` in your browser replacing the {OID} with the OID from the table below.
+        - Enumerated (extensional) value sets can also be downloaded as a FHIR ValueSet resource. To do this, use the link `https://cts.nlm.nih.gov/fhir/ValueSet/{OID}` in your browser replacing the {OID} with the OID from the table below.
         - **NOTE that the Code System value used in FHIR® Terminology Service for VSAC Resources for Race and Ethnicity (CDCREC) concepts *does not* align with historical and current usage of OIDs in C-CDA and US Core. This issue has not been resolved in time for publication of the ballot version of this guide. As a result validation errors may occur when validating against this version of the US Core Patient Profile. Feedback on which code system value to use is welcome.**
 
-        <table class='grid'>
-        <thead>
-        <tr class='header'>
-        <th>US Core Value Set</th>
-        <th>VSAC Value Set</th>
-        <th>VSAC OID</th>
-        <th>extensional?</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class='odd'>
-        <td>Detailed ethnicity</td>
-        <td>Detailed Ethnicity</td>
-        <td>2.16.840.1.114222.4.11.877</td>
-        <td>No</td>
-        </tr>
-        <tr class='even'>
-        <td>Detailed Race</td>
-        <td>Race</td>
-        <td>2.16.840.1.113883.1.11.14914</td>
-        <td>No</td>
-        </tr>
-        <tr class='odd'>
-        <td>OMB Ethnicity Categories</td>
-        <td>Ethnicity</td>
-        <td>2.16.840.1.114222.4.11.837</td>
-        <td>Yes</td>
-        </tr>
-        <tr class='even'>
-        <td>US Core CareTeam Provider Roles</td>
-        <td>Care Team Member Function</td>
-        <td>2.16.840.1.113762.1.4.1099.30</td>
-        <td>Yes</td>
-        </tr>
-        <tr class='odd'>
-        <td>US Core Medication Codes (RxNorm)</td>
-        <td>Medication Clinical Drug</td>
-        <td>2.16.840.1.113762.1.4.1010.4</td>
-        <td>Yes</td>
-        </tr>
-        <tr class='even'>
-        <td>US Core Provider Specialty (NUCC)</td>
-        <td>Healthcare Provider Taxonomy</td>
-        <td>2.16.840.1.114222.4.11.1066</td>
-        <td>No</td>
-        </tr>
-        <tr class='odd'>
-        <td>US Core Smoking Status</td>
-        <td>Smoking Status</td>
-        <td>2.16.840.1.113883.11.20.9.38</td>
-        <td>Yes</td>
-        </tr>
-        <tr class='even'>
-        <td>US Core Vaccine Administered Value Set (CVX)</td>
-        <td>CVX Vaccines Administered Vaccine Set</td>
-        <td>2.16.840.1.113762.1.4.1010.6</td>
-        <td>Yes</td>
-        </tr>
-        <tr class='odd'>
-        <td>US Core Common substances for allergy and intolerance documentation including refutations</td>
-        <td>Common substances for allergy and intolerance documentation including refutations</td>
-        <td>2.16.840.1.113762.1.4.1186.8</td>
-        <td>No</td>
-        </tr>
-        </tbody>
-        </table>
+          1. **US Core Value Set, VSAC Value Set, VSAC OID, extensional?**
+          1. Detailed ethnicity, Detailed Ethnicity, 2.16.840.1.114222.4.11.877, No
+          1. Detailed Race, Race, 2.16.840.1.113883.1.11.14914, No
+          1. OMB Ethnicity Categories, Ethnicity, 2.16.840.1.114222.4.11.837, Yes
+          1. US Core CareTeam Provider Roles, Care Team Member Function, 2.16.840.1.113762.1.4.1099.30, Yes
+          1. US Core Medication Codes (RxNorm), Medication Clinical Drug, 2.16.840.1.113762.1.4.1010.4, Yes
+          1. US Core Provider Specialty (NUCC), Healthcare Provider Taxonomy, 2.16.840.1.114222.4.11.1066, No
+          1. US Core Smoking Status, Smoking Status, 2.16.840.1.113883.11.20.9.38, Yes
+          1. US Core Vaccine Administered Value Set (CVX), CVX Vaccines Administered Vaccine Set, 2.16.840.1.113762.1.4.1010.6, Yes
+          1. US Core Common substances for allergy and intolerance documentation including refutations, Common substances for allergy and intolerance documentation including refutations, 2.16.840.1.113762.1.4.1186.8, No
 
       4. Migrating to the standard set of HL7 FHIR IG templates for publishing.
       Although we strove to minimize the differences between this version and
@@ -840,7 +733,7 @@ list:
           - [2 SearchParameter-us-core-organization-name](SearchParameter-us-core-organization-name.html)
           - [3 SearchParameter-us-core-location-name](SearchParameter-us-core-location-name.html)
 
-      1. Provenance without activity isn't very useful
+      1. Provenance without activity is not very useful
       ([FHIR-28179](https://jira.hl7.org/browse/FHIR-28179)) [See Change
       Here](StructureDefinition-us-core-provenance.html#FHIR-28179)
 
