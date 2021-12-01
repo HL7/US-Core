@@ -134,9 +134,15 @@ For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has
 <div markdown="1" class="new-content">
 ##### Required Bindings When Slicing by Value Sets
 
-When a coded element is a repeating element and the intent is to use a particular value set for at least one of the repeats, a structure known as [slicing] is used to define the profile element. This is a special case where *required* bindings must be used to clearly differentiate the repeat based on a value set.  In this guide, the minimum cardinality for these 'slices' are set to 0 so that other codes can be used in case no suitable code exists in the value set (See Extensible Binding below).  The example in figure 5 below illustrates this structure for the repeating Condition.category element:
+FHIR profiles use [slicing] when a coded element is a repeating element and a particular value set is desired for at least one of the repeats. This is a special case where a *required* value set binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the value set (equivalent to  Extensible Binding below). The example in figure 5 below illustrates this structure for the repeating Condition.category element:
+
+- This structure allows 0..\* concept(s) from the *required* value set. 
+- This structure, by being 0..\*, allows servers to send concepts not in the required value set.
+  
 
   {% include img.html img="Must_Support_Condition_category.png" caption="Figure 5: US Core Condition.category" %}
+  
+
 </div>
 
 ##### Extensible Binding for CodeableConcept Datatype
