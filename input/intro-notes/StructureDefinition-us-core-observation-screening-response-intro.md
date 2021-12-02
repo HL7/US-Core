@@ -29,6 +29,9 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 4. related questionnaire responses or observations that this observation is made from
 5. component results
 
+<div markdown="1" class="note-to-balloters">
+ We are seeking feedback on the inclusion of Observation.component as a Must Support element for systems to record multiple answers for a screening question in a single Observation.  Based on how broadly this is supported in current implementations, we may remove the constraint on Observation.component and recommend multiple Observations.</div>
+
 **Profile specific implementation guidance:**
 
 - See [SDOH Guidance] for how this profile can used to represent SDOH assessments.
