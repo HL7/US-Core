@@ -1,0 +1,33 @@
+---
+---
+{% include fragment-pagebegin.html %}
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='CodeSystem' id='us-core-provenance-participant-type' active='content' %}
+  <a name="root"> </a>
+  <h2 id="root">CodeSystem: {{site.data.pages[page.path].title | escape_once}}</h2>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='CodeSystem' id='us-core-provenance-participant-type' %}
+
+  <p>
+    <b>Summary</b>
+  </p>
+
+  {% include CodeSystem-us-core-provenance-participant-type-summary.xhtml %}
+
+  <p>
+  This Code system is referenced in the content logical definition of the following value sets:
+  </p>
+
+  {% include CodeSystem-us-core-provenance-participant-type-xref.xhtml %}
+
+  {% include CodeSystem-us-core-provenance-participant-type-content.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='CodeSystem' id='us-core-provenance-participant-type' %}
+
+  {%include CodeSystem-us-core-provenance-participant-type-history.xhtml%}
+
+</div>
+{% include fragment-pageend.html %}

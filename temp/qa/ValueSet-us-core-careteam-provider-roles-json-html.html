@@ -1,0 +1,75 @@
+﻿<html>
+<head>
+  <title>ValueSet-us-core-careteam-provider-roles-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">id</a>" : "us-core-careteam-provider-roles",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;This value set includes codes based on the following rules:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include all codes defined in &lt;code&gt;http://nucc.org/provider-taxonomy&lt;/code&gt;&lt;/li&gt;&lt;li&gt;Include codes from &lt;a href=\&quot;http://www.snomed.org/\&quot;&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/a&gt; where concept  is-a  223366009 (Healthcare professional)&lt;/li&gt;&lt;li&gt;Include codes from &lt;a href=\&quot;http://www.snomed.org/\&quot;&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/a&gt; where concept  is-a  224930009 (Services)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://hl7.org/fhir/us/core/ValueSet/us-core-careteam-provider-roles",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "3.2.0",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "USCoreCareTeamProviderRoles",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "US Core CareTeam Provider Roles",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2019-05-21",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "HL7 International - US Realm Steering Committee",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "HL7 International - US Realm Steering Committee",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://www.hl7.org/Special/committees/usrealm/index.cfm"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>" : "Provider roles codes consist of NUCC Health Care Provider Taxonomy Code Set for providers and SNOMED-CT for - non clinical and organization roles including codes from the SCTID 223366009 Healthcare professional (occupation) heirarchy and the SCTID 224930009 Services (qualifier value) heirarchy.",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "US"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.purpose">purpose</a>" : "Codes that may be used for implementation of the Argonaut Procedures IG and MU2015 certification.",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.copyright">copyright</a>" : "This value set includes content from:\n 1. SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.\n 2. NUCC Health Care Provider Taxonomy Code Set for providers which is copyright © 2016+ American Medical Association.  For commercial use, including sales or licensing, a license must be obtained.",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://nucc.org/provider-taxonomy"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter">filter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.property">property</a>" : "concept",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.op">op</a>" : "is-a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.value">value</a>" : "223366009"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter">filter</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.property">property</a>" : "concept",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.op">op</a>" : "is-a",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.filter.value">value</a>" : "224930009"
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+</body>
+</html>

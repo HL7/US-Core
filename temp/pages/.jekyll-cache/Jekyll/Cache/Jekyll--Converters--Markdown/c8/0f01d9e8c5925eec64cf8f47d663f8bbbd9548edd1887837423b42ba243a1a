@@ -1,0 +1,148 @@
+I"
+<p><strong>Storyboard for this example</strong></p>
+
+<p>This example is based upon the following scenario:</p>
+
+<p>Patient Brian Z uses an App to request all his medications from a single provider, Dr Cayr. This test scenario exercises a mix of routine meds, unusual schedule meds and as-needed meds. All meds are in the outpatient setting only.</p>
+
+<p>Provider A’s (Dr Cayr) medication records for Patient Brian Z</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Date</th>
+      <th>Script</th>
+      <th>Source</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>9/12/2016</td>
+      <td>testosterone cypionate 100mg/ml inj  1ml intramuscularly every 3 weeks</td>
+      <td>Reported by Patient</td>
+      <td>Get at doctor’s office every third Friday. Taking for energy level and drive.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>9/1/2016</td>
+      <td>testosterone cypionate 100mg/ml inj  1ml intramuscularly</td>
+      <td>Reported by Dr Cryn</td>
+      <td>completed</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1/15/2016</td>
+      <td>Zocor (simvastatin) 40mg by mouth once daily</td>
+      <td>Dr. Cayr Order: BMC</td>
+      <td>patient med status: taking</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>7/1/2015</td>
+      <td>Humulin R (insulin regular, human) U100 10U every AM, 5U every PM, 5U at bedtime.</td>
+      <td>Dr.Cayr Order:BMC</td>
+      <td>patient med status: taking</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>6/12/2015</td>
+      <td>simvastatin 30mg by mouth once daily</td>
+      <td>Dr. Cayr Order: BMC</td>
+      <td>patient med status: completed</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Request:</strong></p>
+
+<p>Get “all active medications” for a patient by querying MedicationRequest using the patient and status= “active” search parameters.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/MedicationRequest?patient=test2&amp;intent=order,plan&amp;status=active
+</code></pre></div></div>
+
+<p><strong>Response:</strong></p>
+
+<p>A Server returns a search Bundle resource containing all the MedicationRequests with a status of “active” for the patient Brian Z</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+{
+"resourceType" : "Bundle",
+"id" : "get-all-meds",
+"meta" : {
+  "lastUpdated" : "2017-03-28T14:29:23Z"
+},
+"type" : "searchset",
+"total" : 3,
+"entry" : [
+  {
+    "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-test2-1",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "mr-example-1",
+...snip...
+      "status" : "active",
+      "intent" : "order",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "104491",
+            "display" : "Simvastatin 20 MG Oral Tablet [Zocor]",
+            "userSelected" : false
+          }
+        ],
+        "text" : "Zocor (simvastatin) 20mg Tablet"
+      },
+...snip...
+  },
+  {
+    "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-test2-2",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "mr-example-2",
+...snip...
+      "status" : "active",
+      "intent" : "order",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "311036",
+            "display" : "Humulin R (insulin regular, human) U100  100units/ml inj solution",
+            "userSelected" : false
+          }
+        ],
+        "text" : "Humulin R (insulin regular, human) U100  100units/ml inj solution"
+      },
+...snip...
+  },
+  {
+    "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/test2-2",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "mr-example-5",
+...snip...
+      "status" : "active",
+      "intent" : "plan",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "835829",
+            "display" : "testosterone cypionate 100 MG/ML Injectable Solution",
+            "userSelected" : false
+          }
+        ],
+        "text" : "testosterone cypionate 100mg/ml inj"
+      },
+...snip...
+    }
+  }
+ ]
+}
+</code></pre></div></div>
+:ET

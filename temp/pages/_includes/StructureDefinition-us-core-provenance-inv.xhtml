@@ -1,0 +1,6 @@
+{% raw %}<h4>Constraints</h4>
+<table class="list">
+<tr><td width="60"><b>Id</b></td><td><b>Path</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
+<tr><td>provenance-1</td><td>Provenance.agent.onBehalfOf</td><td>onBehalfOf SHALL be present when Provenance.agent.who is a Practitioner or Device<br/>: ((%resource.agent.who.resolve() is Practitioner) or (%resource.agent.who.resolve() is Device)) implies exists()</td><td></td></tr>
+</table>
+{% endraw %}

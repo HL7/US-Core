@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="2.16.840.1.114222.4.11.836"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2012-10-25T12:28:31.000-04:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h3>Value Set Contents</h3>
+      <p>This value set contains 6 concepts</p>
+      <p>All codes from system 
+        <code>urn:oid:2.16.840.1.113883.6.238</code>
+      </p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a name="urn-oid-2.16.840.1.113883.6.238-1002-5"> </a>1002-5
+          </td>
+          <td>American Indian or Alaska Native</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="urn-oid-2.16.840.1.113883.6.238-2028-9"> </a>2028-9
+          </td>
+          <td>Asian</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="urn-oid-2.16.840.1.113883.6.238-2054-5"> </a>2054-5
+          </td>
+          <td>Black or African American</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="urn-oid-2.16.840.1.113883.6.238-2076-8"> </a>2076-8
+          </td>
+          <td>Native Hawaiian or Other Pacific Islander</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="urn-oid-2.16.840.1.113883.6.238-2106-3"> </a>2106-3
+          </td>
+          <td>White</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="urn-oid-2.16.840.1.113883.6.238-2131-1"> </a>2131-1
+          </td>
+          <td>Other Race</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.836"/>
+  <version value="20121025"/>
+  <name value="Race"/>
+  <status value="active"/>
+  <date value="2012-10-25T12:28:31-04:00"/>
+  <publisher value="CDC NCHS"/>
+  <expansion>
+    <identifier value="urn:uuid:25542317-92cb-4c93-89e6-35c381d6f8c0"/>
+    <timestamp value="2021-06-08T22:06:34-04:00"/>
+    <total value="6"/>
+    <offset value="0"/>
+    <parameter>
+      <name value="count"/>
+      <valueInteger value="1000"/>
+    </parameter>
+    <parameter>
+      <name value="offset"/>
+      <valueInteger value="0"/>
+    </parameter>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.238"/>
+      <version value="1.2"/>
+      <code value="1002-5"/>
+      <display value="American Indian or Alaska Native"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.238"/>
+      <version value="1.2"/>
+      <code value="2028-9"/>
+      <display value="Asian"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.238"/>
+      <version value="1.2"/>
+      <code value="2054-5"/>
+      <display value="Black or African American"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.238"/>
+      <version value="1.2"/>
+      <code value="2076-8"/>
+      <display value="Native Hawaiian or Other Pacific Islander"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.238"/>
+      <version value="1.2"/>
+      <code value="2106-3"/>
+      <display value="White"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.238"/>
+      <version value="1.2"/>
+      <code value="2131-1"/>
+      <display value="Other Race"/>
+    </contains>
+  </expansion>
+</ValueSet>

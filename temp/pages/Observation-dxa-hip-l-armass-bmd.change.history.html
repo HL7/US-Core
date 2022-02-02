@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='Observation' id='dxa-hip-l-armass-bmd' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: Observation/dxa-hip-l-armass-bmd - Change History</h2>
+  <p>History of changes for dxa-hip-l-armass-bmd {{type | downcase}}.</p>
+
+  {%include Observation-dxa-hip-l-armass-bmd-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

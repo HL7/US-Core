@@ -1,0 +1,78 @@
+I"
+<p>This profile is based on the base FHIR <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html">Vital Signs Profile</a> and identifies the must support elements and value sets which <strong>SHALL</strong> be present in the Observation resource when using this profile.  This profile is used as the base for the following vital signs profiles in this guide:</p>
+
+<ul>
+  <li><a href="StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile</a></li>
+  <li><a href="StructureDefinition-us-core-bmi.html">US Core BMI Profile</a></li>
+  <li><a href="StructureDefinition-us-core-head-circumference.html">US Core Head Circumference Profile</a></li>
+  <li><a href="StructureDefinition-us-core-body-height.html">US Core Body Height Profile</a></li>
+  <li><a href="StructureDefinition-us-core-body-weight.html">US Core Body Weight Profile</a></li>
+  <li><a href="StructureDefinition-us-core-body-temperature.html">US Core Body Temperature Profile</a></li>
+  <li><a href="StructureDefinition-us-core-heart-rate.html">US Core Heart Rate Profile</a></li>
+  <li><a href="StructureDefinition-pediatric-bmi-for-age.html">US Core Pediatric BMI for Age Observation Profile</a></li>
+  <li><a href="StructureDefinition-head-occipital-frontal-circumference-percentile.html">US Core Pediatric Head Occipital-frontal Circumference Percentile
+Profile</a></li>
+  <li><a href="StructureDefinition-pediatric-weight-for-height.html">US Core Pediatric Weight for Height Observation Profile</a></li>
+  <li><a href="StructureDefinition-us-core-pulse-oximetry.html">US Core Pulse Oximetry Profile</a></li>
+  <li><a href="StructureDefinition-us-core-respiratory-rate.html">US Core Respiratory Rate Profile</a></li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and terminology requirements.  The “Snapshot Table (Must Support)” tab below displays all the mandatory and must support data elements for this profile and the those inherited from the US Core Vital Signs Profile.</p>
+
+<p><strong>Each Observation must have:</strong></p>
+
+<ol>
+  <li>a status</li>
+  <li>a category code of “vital-signs”</li>
+  <li>a <a href="http://loinc.org">LOINC</a> code, if available, which tells you what is being measured</li>
+  <li>a patient</li>
+  <li>a clinically relevant time</li>
+</ol>
+
+<p><strong>Each Observation must support:</strong></p>
+
+<ol>
+  <li>a result value
+    <ul>
+      <li>if the result value is a numeric quantity, a standard <a href="http://unitsofmeasure.org">UCUM</a> unit</li>
+    </ul>
+  </li>
+  <li>a reason if the value is absent*</li>
+  <li>component results</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>The observations <strong>MAY</strong> have additional codes that translate or map to the Observation code or category codes. For example:
+    <ul>
+      <li>providing a local system specific code</li>
+      <li>providing a more specific codes such as 8306-3 - <em>Body height - lying</em> in addition to 8302-2 - <em>Body height</em>.  Several additional observation codes are provided in the FHIR core specification <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html#vitals-table">vital signs table</a>.</li>
+    </ul>
+
+    <p>Note that the code system value <strong>SHOULD</strong> be supplied for each additional code.</p>
+  </li>
+  <li>The observations <strong>MAY</strong> have <a href="http://hl7.org/fhir/R4/observation.html#gr-comp">component</a> observations. For example, to qualify the vital sign observation 8310-5 - <em>Body temperature</em>, 8327-9 - *Body temperature measurement site** (oral, forehead, rectal, etc) may be used as a component observation. Several of these are provided in the FHIR core specification <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html#vitals-table">vital signs table</a>.</li>
+  <li>An Observation without a value, <strong>SHALL</strong> include a reason why the data is absent <em>unless</em> there are 1) component observations, or 2) reporting vital signs panel components using  <code class="highlighter-rouge">Observation.hasMember</code>.
+    <ul>
+      <li>For Further guidance see the <a href="http://hl7.org/fhir/R4/observation.html#obsgrouping">Observation Grouping</a> section in FHIR Specification.</li>
+      <li>*Systems that never provide an observation without a value are not required to support <code class="highlighter-rouge">Observation.dataAbsentReason</code>.</li>
+    </ul>
+  </li>
+  <li class="new-content">An <code class="highlighter-rouge">Observation.component</code> without a value, <strong>SHALL</strong> include a reason why the data is absent.
+    <ul>
+      <li>*Systems that never provide an component observation without a component value are not required to support <code class="highlighter-rouge">Observation.component.dataAbsentReason</code>.</li>
+    </ul>
+  </li>
+  <li>Implementers may use this profile as a base for other vital signs in addition to those in this guide.</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li>for example see the profiles listed above</li>
+</ul>
+
+:ET

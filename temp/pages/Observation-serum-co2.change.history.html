@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='Observation' id='serum-co2' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: Observation/serum-co2 - Change History</h2>
+  <p>History of changes for serum-co2 {{type | downcase}}.</p>
+
+  {%include Observation-serum-co2-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

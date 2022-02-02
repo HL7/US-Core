@@ -1,0 +1,103 @@
+{% raw %}<pre class="rdf"><code class="language-turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix loinc: &lt;http://loinc.org/rdf#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:DiagnosticReport;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;metabolic-panel&quot;];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/instance-name&quot; ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Metabolic Panel Example&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/instance-description&quot; ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueMarkdown</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;This is a metabolic panel example for the *US Core DiagnosticReport Lab Profile*.&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;&lt;span title=\&quot;Codes: {http://loinc.org 24323-8}\&quot;&gt;Comprehensive metabolic 2000 panel - Serum or Plasma&lt;/span&gt; (&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/v2-0074 LAB}\&quot;&gt;Laboratory&lt;/span&gt;) &lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;&lt;b&gt;Amy V. Baxter &lt;/b&gt; ?? 1987-02-20 ( Medical Record Number: 1032702 (USUAL))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;When For&lt;/td&gt;&lt;td&gt;2005-07-04&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Reported&lt;/td&gt;&lt;td&gt;2005-07-05T17:45:33-07:00&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Report Details&lt;/b&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Reference Range&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;When For&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-serum-total-bilirubin.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 1975-2}\&quot;&gt;Bilirub SerPl-mCnc&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;8.6 mg/dL&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 2.0 mg/dL - 7.0 mg/dL&lt;/td&gt;&lt;td&gt;2005-07-07&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-serum-sodium.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 2951-2}\&quot;&gt;Sodium SerPl-sCnc&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;137.0 mmol/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 135.0 mmol/L - 145.0 mmol/L&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-serum-potassium.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 2823-3}\&quot;&gt;Potassium SerPl-sCnc&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;5.4 mmol/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 3.5 mmol/L - 5.5 mmol/L&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-serum-creatinine.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 2160-0}\&quot;&gt;Creat SerPl-mCnc&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;1.0 mg/dL&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 0.2 mg/dL - 0.6 mg/dL&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-serum-co2.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 2028-9}\&quot;&gt;CO2 SerPl-sCnc&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;24.0 mmol/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 22.0 mmol/L - 29.0 mmol/L&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-serum-chloride.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 2075-0}\&quot;&gt;Chloride SerPl-sCnc&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;105.0 mmol/L&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 95.0 mmol/L - 105.0 mmol/L&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-serum-calcium.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 17861-6}\&quot;&gt;Calcium SerPl-mCnc&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;7.7 mg/dL&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 8.5 mg/dL - 10.5 mg/dL&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-bun.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 3094-0}\&quot;&gt;BUN SerPl-mCnc&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;10.0 mg/dL&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 5.0 mg/dL - 20.0 mg/dL&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-blood-glucose.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 2339-0}\&quot;&gt;Glucose Bld-mCnc&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;76.0 mg/dL&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 40.0 mg/dL - 109.0 mg/dL&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.status">fhir:DiagnosticReport.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;final&quot;];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.category">fhir:DiagnosticReport.category</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/v2-0074&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;LAB&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Laboratory&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.code">fhir:DiagnosticReport.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       a loinc:24323-8;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;24323-8&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Comprehensive metabolic 2000 panel - Serum or Plasma&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.subject">fhir:DiagnosticReport.subject</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/example&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Amy Shaw&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.effective[x]">fhir:DiagnosticReport.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2005-07-04&quot;^^xsd:date];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.issued">fhir:DiagnosticReport.issued</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2005-07-06T11:45:33+11:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.performer">fhir:DiagnosticReport.performer</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Organization/acme-lab&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Acme Laboratory, Inc&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">fhir:DiagnosticReport.result</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/serum-total-bilirubin&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;TOTAL BILIRUBIN&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/serum-sodium&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;SODIUM&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/serum-potassium&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Potassium&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/serum-creatinine&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;CREATININE&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/serum-co2&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;TOTAL CO2&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/serum-chloride&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;CHLORIDE&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 6;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/serum-calcium&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;CALCIUM&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 7;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/bun&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;BUN&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 8;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/blood-glucose&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;GLUCOSE&quot; ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</code></pre>
+
+{% endraw %}

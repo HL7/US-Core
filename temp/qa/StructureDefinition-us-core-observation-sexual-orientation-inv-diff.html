@@ -1,0 +1,14 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-us-core-observation-sexual-orientation-inv-diff</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<h4>Constraints</h4>
+<table class="list">
+<tr><td width="60"><b>Id</b></td><td><b>Path</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
+<tr><td>us-core-2</td><td>Observation</td><td>If there is no component or hasMember element then either a value[x] or a data absent reason must be present<br/>: (component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())</td><td></td></tr>
+<tr><td>us-core-1</td><td>Observation.effective[x]</td><td>Datetime must be at least to day.<br/>: $this is DateTime implies $this.toString().length() &gt;= 10</td><td></td></tr>
+</table>
+</body>
+</html>

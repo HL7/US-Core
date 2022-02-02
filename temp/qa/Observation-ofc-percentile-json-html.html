@@ -1,0 +1,71 @@
+﻿<html>
+<head>
+  <title>Observation-ofc-percentile-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resourceType</a>" : "Observation",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "ofc-percentile",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "OFC Percentile Example"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is a OFC percentile example for the *Head Occipital Frontal Circumference Percentile Profile*."
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;ofc-percentile\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-head-occipital-frontal-circumference-percentile.html\&quot;&gt;US Core Pediatric Head Occipital-frontal Circumference Percentile Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Vital Signs &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html\&quot;&gt;Observation Category Codes&lt;/a&gt;#vital-signs)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Head Occipital-frontal circumference Percentile &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#8289-1)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-infant-example.html\&quot;&gt;Patient/infant-example: Infant Example&lt;/a&gt; \&quot; EXAMPLE\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2020-07-01&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 82 %&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM code % = '%')&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;note&lt;/b&gt;: WHO Males, 0-2 years Chart&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "vital-signs",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Vital Signs"
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Vital Signs"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "8289-1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Head Occipital-frontal circumference Percentile"
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Head Occipital-frontal circumference Percentile"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/infant-example",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Infant Example"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective[x]">effectiveDateTime</a>" : "2020-07-01",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.value[x]">valueQuantity</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 82,
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "%",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "%"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.note">note</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Annotation#Annotation.text">text</a>" : "WHO Males, 0-2 years Chart"
+    }
+  ]
+}</code></pre>
+</body>
+</html>

@@ -1,0 +1,45 @@
+I"º	
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a> resource to record, search, and fetch procedures associated with a patient. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core-Procedure profile:</p>
+
+<ul>
+  <li>Query for procedures performed on a Patient</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a>  a procedure performed on a Patient</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Procedure must have:</strong></p>
+
+<ol>
+  <li>a status</li>
+  <li>a code that identifies the type of procedure performed on the patient</li>
+  <li>a patient</li>
+  <li>when the procedure was performed</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>Procedure codes can be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT. LOINC.
+    <ul>
+      <li>Only LOINC concepts that reflect actual procedures <strong>SHOULD</strong> be used</li>
+    </ul>
+  </li>
+  <li>A procedure including an implantable device <strong>SHOULD</strong> use <code class="highlighter-rouge">Procedure.focalDevice</code> with a reference to the <a href="StructureDefinition-us-core-implantable-device.html">US Core Implantable Device Profile</a>.</li>
+  <li class="new-content">See <a href="sdoh.html">SDOH Guidance</a> for more information when exchanging Social Determinants of Health (SDOH) Procedures</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="Procedure-rehab.html">procedure-rehab</a></li>
+  <li><a href="Procedure-defib-implant.html">procedure-implant</a></li>
+</ul>
+
+:ET

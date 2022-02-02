@@ -1,0 +1,174 @@
+﻿<html>
+<head>
+  <title>OperationDefinition-docref-xml-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="xml"><code class="language-xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition">OperationDefinition</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;docref&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;extensions&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;USCoreFetchDocumentReference&lt;/h2&gt;&lt;p&gt;OPERATION: USCoreFetchDocumentReference&lt;/p&gt;&lt;p&gt;The official URL for this operation definition is: &lt;/p&gt;&lt;pre&gt;http://hl7.org/fhir/us/core/OperationDefinition/docref&lt;/pre&gt;&lt;div&gt;&lt;p&gt;This operation is used to return all the references to documents related to a patient.&lt;/p&gt;
+&lt;p&gt;The operation requires a patient id and takes the optional input parameters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;start date&lt;/li&gt;
+&lt;li&gt;end date&lt;/li&gt;
+&lt;li&gt;document type&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and returns a &lt;a href=&quot;http://hl7.org/fhir/bundle.html&quot;&gt;Bundle&lt;/a&gt; of type &amp;quot;searchset&amp;quot; containing &lt;a href=&quot;http://hl7.org/fhir/documentreference.html&quot;&gt;DocumentReference&lt;/a&gt; resources for the patient. The DocumentReference resources &lt;strong&gt;SHOULD&lt;/strong&gt; conform to the &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference&quot;&gt;US Core DocumentReference
+Profiles&lt;/a&gt;. If the server has or can create documents that are related to the patient, and that are available for the given user, the server returns the DocumentReference resources needed to support the records.  The principle intended use for this operation is to provide a provider or patient with access to their available document information.&lt;/p&gt;
+&lt;p&gt;This operation is &lt;em&gt;different&lt;/em&gt; from a search by patient and type and date range because:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;It is used to request a server &lt;em&gt;generate&lt;/em&gt; a document based on the specified parameters.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If no parameters are specified, the server SHALL return a DocumentReference to the patient's most current CCD&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If the server cannot &lt;em&gt;generate&lt;/em&gt; a document based on the specified parameters, the operation will return an empty search bundle.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This operation is the &lt;em&gt;same&lt;/em&gt; as a FHIR RESTful search by patient,type and date range because:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;References for &lt;em&gt;existing&lt;/em&gt; documents that meet the requirements of the request SHOULD also be returned unless the client indicates they are only interested in 'on-demand' documents using the &lt;em&gt;on-demand&lt;/em&gt; parameter.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;p&gt;Parameters&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Use&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Cardinality&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Binding&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Documentation&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IN&lt;/td&gt;&lt;td&gt;patient&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#id&quot;&gt;id&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;The id of the patient resource located on the server on which this operation is executed.  If there is no match, an empty Bundle is returned&lt;/p&gt;
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IN&lt;/td&gt;&lt;td&gt;start&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#dateTime&quot;&gt;dateTime&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;The date range relates to care dates, not record currency dates - e.g. all records relating to care provided in a certain date range. If no start date is provided, all documents prior to the end date are in scope.  If neither a start date nor an end date is provided, the most recent or current document is in scope.  The client &lt;strong&gt;SHOULD&lt;/strong&gt; provide values precise to the second + time offset.&lt;/p&gt;
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IN&lt;/td&gt;&lt;td&gt;end&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#dateTime&quot;&gt;dateTime&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;The date range relates to care dates, not record currency dates - e.g. all records relating to care provided in a certain date range. If no end date is provided, all documents subsequent to the start date are in scope. If neither a start date nor an end date is provided, the most recent or current document is in scope.  The client &lt;strong&gt;SHOULD&lt;/strong&gt; provide values precise to the second + time offset.&lt;/p&gt;
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IN&lt;/td&gt;&lt;td&gt;type&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#CodeableConcept&quot;&gt;CodeableConcept&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/valueset-c80-doc-typecodes.html&quot;&gt;http://hl7.org/fhir/ValueSet/c80-doc-typecodes&lt;/a&gt; (Required)&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;The type relates to document type e.g. for the LOINC code for a C-CDA Clinical Summary of Care (CCD) is 34133-9 (Summary of episode note). If no type is provided, the CCD document, if available, SHALL be in scope and all other document types MAY be in scope&lt;/p&gt;
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IN&lt;/td&gt;&lt;td&gt;on-demand&lt;/td&gt;&lt;td&gt;0..1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/datatypes.html#boolean&quot;&gt;boolean&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;This on-demand parameter allows client to dictate whether they are requesting only ‘on-demand’ or both ‘on-demand’ and 'stable' documents (or delayed/deferred assembly) that meet the query parameters&lt;/p&gt;
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OUT&lt;/td&gt;&lt;td&gt;return&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/R4/bundle.html&quot;&gt;Bundle&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;The bundle type is &amp;quot;searchset&amp;quot;containing &lt;a href=&quot;http://hl7.org/fhir/documentreference.html&quot;&gt;DocumentReference&lt;/a&gt; resources which &lt;strong&gt;SHOULD&lt;/strong&gt; conform to the &lt;a href=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference&quot;&gt;US Core DocumentReference Profiles&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The server is responsible for determining what resources, if any, to return as &lt;a href=&quot;http://hl7.org/fhir/R4/search.html#revinclude&quot;&gt;included&lt;/a&gt; resources rather than the client specifying which ones. This frees the client from needing to determine what it could or should ask for. For example, the server may return the referenced document as an included FHIR Binary resource within the return bundle. The server's CapabilityStatement should document this behavior.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The document itself can be subsequently retrieved using the link provided  in the &lt;code&gt;DocumentReference.content.attachment.url element&lt;/code&gt;. The link could be a FHIR endpoint to a &lt;a href=&quot;http://hl7.org/fhir/R4/binary.html&quot;&gt;Binary&lt;/a&gt; Resource or some other document repository.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It is assumed that the server has identified and secured the context appropriately, and can either associate the authorization context with a single patient, or determine whether the context has the rights to the nominated patient, if there is one. If there is no nominated patient (e.g. the operation is invoked at the system level) and the context is not associated with a single patient record, then the server should return an error. Specifying the relationship between the context, a user and patient records is outside the scope of this specification&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.url">url</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/core/OperationDefinition/docref&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;4.2.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;USCoreFetchDocumentReference&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;US Core Fetch DocumentReference&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.kind">kind</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;operation&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2019-05-21&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 International - Cross-Group Projects&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 International - Cross-Group Projects&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://www.hl7.org/Special/committees/cgp&quot;/&gt;
+    &lt;/telecom&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cgp@lists.HL7.org&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.description">description</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;This operation is used to return all the references to documents related to a patient. 
+
+ The operation requires a patient id and takes the optional input parameters: 
+  - start date
+  - end date
+  - document type 
+
+ and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type &amp;quot;searchset&amp;quot; containing [DocumentReference](http://hl7.org/fhir/documentreference.html) resources for the patient. The DocumentReference resources **SHOULD** conform to the [US Core DocumentReference
+ Profiles](http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference). If the server has or can create documents that are related to the patient, and that are available for the given user, the server returns the DocumentReference resources needed to support the records.  The principle intended use for this operation is to provide a provider or patient with access to their available document information. 
+
+ This operation is *different* from a search by patient and type and date range because: 
+
+ 1. It is used to request a server *generate* a document based on the specified parameters. 
+
+ 1. If no parameters are specified, the server SHALL return a DocumentReference to the patient&amp;#39;s most current CCD 
+
+ 1. If the server cannot *generate* a document based on the specified parameters, the operation will return an empty search bundle. 
+
+ This operation is the *same* as a FHIR RESTful search by patient,type and date range because: 
+
+ 1. References for *existing* documents that meet the requirements of the request SHOULD also be returned unless the client indicates they are only interested in &amp;#39;on-demand&amp;#39; documents using the *on-demand* parameter.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.jurisdiction">jurisdiction</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:iso:std:iso:3166&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;US&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/jurisdiction&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;docref&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.comment">comment</a>
+           <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot; - The server is responsible for determining what resources, if any, to return as [included](http://hl7.org/fhir/R4/search.html#revinclude) resources rather than the client specifying which ones. This frees the client from needing to determine what it could or should ask for. For example, the server may return the referenced document as an included FHIR Binary resource within the return bundle. The server&amp;#39;s CapabilityStatement should document this behavior. 
+
+ - The document itself can be subsequently retrieved using the link provided  in the `DocumentReference.content.attachment.url element`. The link could be a FHIR endpoint to a [Binary](http://hl7.org/fhir/R4/binary.html) Resource or some other document repository. 
+
+ - It is assumed that the server has identified and secured the context appropriately, and can either associate the authorization context with a single patient, or determine whether the context has the rights to the nominated patient, if there is one. If there is no nominated patient (e.g. the operation is invoked at the system level) and the context is not associated with a single patient record, then the server should return an error. Specifying the relationship between the context, a user and patient records is outside the scope of this specification&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.instance">instance</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter">parameter</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;patient&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;in&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.documentation">documentation</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;The id of the patient resource located on the server on which this operation is executed.  If there is no match, an empty Bundle is returned&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;id&quot;/&gt;
+  &lt;/parameter&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter">parameter</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;start&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;in&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;0&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.documentation">documentation</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;The date range relates to care dates, not record currency dates - e.g. all records relating to care provided in a certain date range. If no start date is provided, all documents prior to the end date are in scope.  If neither a start date nor an end date is provided, the most recent or current document is in scope.  The client **SHOULD** provide values precise to the second + time offset.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;dateTime&quot;/&gt;
+  &lt;/parameter&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter">parameter</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;end&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;in&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;0&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.documentation">documentation</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;The date range relates to care dates, not record currency dates - e.g. all records relating to care provided in a certain date range. If no end date is provided, all documents subsequent to the start date are in scope. If neither a start date nor an end date is provided, the most recent or current document is in scope.  The client **SHOULD** provide values precise to the second + time offset.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;dateTime&quot;/&gt;
+  &lt;/parameter&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter">parameter</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;type&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;in&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;0&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.documentation">documentation</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;The type relates to document type e.g. for the LOINC code for a C-CDA Clinical Summary of Care (CCD) is 34133-9 (Summary of episode note). If no type is provided, the CCD document, if available, SHALL be in scope and all other document types MAY be in scope&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;CodeableConcept&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.binding">binding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.binding.strength">strength</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;required&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.binding.valueSet">valueSet</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/ValueSet/c80-doc-typecodes&quot;/&gt;
+    &lt;/binding&gt;
+  &lt;/parameter&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter">parameter</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;on-demand&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;in&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;0&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.documentation">documentation</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;This on-demand parameter allows client to dictate whether they are requesting only ‘on-demand’ or both ‘on-demand’ and &amp;#39;stable&amp;#39; documents (or delayed/deferred assembly) that meet the query parameters&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;boolean&quot;/&gt;
+  &lt;/parameter&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter">parameter</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;return&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;out&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#integer">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.documentation">documentation</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;The bundle type is &amp;quot;searchset&amp;quot;containing [DocumentReference](http://hl7.org/fhir/documentreference.html) resources which **SHOULD** conform to the [US Core DocumentReference Profiles](http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference)&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/operationdefinition.html#OperationDefinition.parameter.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Bundle&quot;/&gt;
+  &lt;/parameter&gt;
+&lt;/OperationDefinition&gt;</code></pre>
+</body>
+</html>

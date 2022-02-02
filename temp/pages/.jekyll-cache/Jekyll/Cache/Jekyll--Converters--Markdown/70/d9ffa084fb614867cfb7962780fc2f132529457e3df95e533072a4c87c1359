@@ -1,0 +1,98 @@
+I" 
+<hr />
+
+<p><strong id="search" style="font-size: 20px;">Quick Start</strong>
+<a name="quick-start"> </a></p>
+
+<hr />
+
+<p>Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profile’s information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions.  See the <a href="CapabilityStatement-us-core-server.html">US Core Server CapabilityStatement</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+<ul>
+  <li>The syntax used to describe the interactions is described <a href="general-guidance.html#search-syntax">here</a>.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional rules and expectations when a server requires status parameters.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional guidance on searching for multiple patients.</li>
+</ul>
+
+<h4 id="mandatory-search-parameters">Mandatory Search Parameters:</h4>
+
+<p>The following search parameters and search parameter combinations SHALL be supported:</p>
+
+<ol>
+  <li><strong>SHALL</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-medicationrequest-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-medicationrequest-intent.html"><code class="highlighter-rouge">intent</code></a></strong> search parameters:
+    <ul>
+      <li>including support for <em>OR</em> search on <code class="highlighter-rouge">intent</code> (e.g.<code class="highlighter-rouge">intent={system|}[code],{system|}[code],...</code>)</li>
+    </ul>
+
+    <p><code class="highlighter-rouge">GET [base]/MedicationRequest?patient={Type/}[id]&amp;intent=order,plan</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/MedicationRequest?patient=14676&amp;intent=order,plan</li>
+      <li>GET [base]/MedicationRequest?patient=14676&amp;intent=order,plan&amp;_include=MedicationRequest:medication</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all MedicationRequest resources for the specified patient and intent code = <code class="highlighter-rouge">order,plan</code> (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+  <li><strong>SHALL</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-medicationrequest-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-medicationrequest-intent.html"><code class="highlighter-rouge">intent</code></a></strong> and <strong><a href="SearchParameter-us-core-medicationrequest-status.html"><code class="highlighter-rouge">status</code></a></strong> search parameters:
+    <ul>
+      <li>including support for <em>OR</em> search on <code class="highlighter-rouge">intent</code> (e.g.<code class="highlighter-rouge">intent={system|}[code],{system|}[code],...</code>)</li>
+      <li>including support for <em>OR</em> search on <code class="highlighter-rouge">status</code> (e.g.<code class="highlighter-rouge">status={system|}[code],{system|}[code],...</code>)</li>
+    </ul>
+
+    <p><code class="highlighter-rouge">GET [base]/MedicationRequest?patient={Type/}[id]&amp;intent=order,plan&amp;status={system|}[code]{,{system|}[code],...}</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active</li>
+      <li>GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active&amp;_include=MedicationRequest:medication</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all MedicationRequest resources for the specified patient and intent  code = <code class="highlighter-rouge">order,plan</code> and status (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+</ol>
+
+<h4 id="optional-search-parameters">Optional Search Parameters:</h4>
+
+<p>The following search parameter combinations SHOULD be supported:</p>
+
+<ol>
+  <li><strong>SHOULD</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-medicationrequest-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-medicationrequest-intent.html"><code class="highlighter-rouge">intent</code></a></strong> and <strong><a href="SearchParameter-us-core-medicationrequest-encounter.html"><code class="highlighter-rouge">encounter</code></a></strong> search parameters:
+    <ul>
+      <li>including support for <em>OR</em> search on <code class="highlighter-rouge">intent</code> (e.g.<code class="highlighter-rouge">intent={system|}[code],{system|}[code],...</code>)</li>
+    </ul>
+
+    <p><code class="highlighter-rouge">GET [base]/MedicationRequest?patient={Type/}[id]&amp;intent=order,plan&amp;encounter={Type/}[id]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active&amp;encounter=Encounter/123</li>
+      <li>GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;status=active&amp;&amp;encounter=Encounter/123&amp;_include=MedicationRequest:medication</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all MedicationRequest resources for the specified patient and intent  code = <code class="highlighter-rouge">order,plan</code> and encounter (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+  <li><strong>SHOULD</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-medicationrequest-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-medicationrequest-intent.html"><code class="highlighter-rouge">intent</code></a></strong> and <strong><a href="SearchParameter-us-core-medicationrequest-authoredon.html"><code class="highlighter-rouge">authoredon</code></a></strong> search parameters:
+    <ul>
+      <li>including support for <em>OR</em> search on <code class="highlighter-rouge">intent</code> (e.g.<code class="highlighter-rouge">intent={system|}[code],{system|}[code],...</code>)</li>
+      <li>including support for these <code class="highlighter-rouge">authoredon</code> comparators: <code class="highlighter-rouge">gt,lt,ge,le</code></li>
+      <li>including optional support for <em>AND</em> search on <code class="highlighter-rouge">authoredon</code> (e.g.<code class="highlighter-rouge">authoredon=[date]&amp;authoredon=[date]]&amp;...</code>)</li>
+    </ul>
+
+    <p><code class="highlighter-rouge">GET [base]/MedicationRequest?patient={Type/}[id]&amp;intent=order,plan&amp;authoredon={gt|lt|ge|le}[date]{&amp;authoredon={gt|lt|ge|le}[date]&amp;...}</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;authoredon=ge2019-01-01T00:00:00Z</li>
+      <li>GET [base]/MedicationRequest?patient=1137192&amp;intent=order,plan&amp;authoredon=ge2019-01-01T00:00:00Z&amp;_include=MedicationRequest:medication</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all MedicationRequest resources for the specified patient and intent  code = <code class="highlighter-rouge">order,plan</code> and authoredon date (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a> and <a href="http://hl7.org/fhir/R4/search.html#date">how to search by date</a>)</p>
+  </li>
+</ol>
+
+:ET

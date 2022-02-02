@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Immunization/imm-1> a fhir:Immunization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "imm-1"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Imm 1 Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a imm 1 example for the *US Core Immunization Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"imm-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-immunization.html\">US Core Immunization Profile</a></p></div><p><b>status</b>: completed</p><p><b>vaccineCode</b>: influenza, high-dose, quadrivalent <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-CVX.html\">PH_VaccinesAdministeredCVX_CDC_NIP</a>#197; <a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-v3-ndc.html\">National drug codes</a>#49281012165 \"FLUZONE High-Dose Quadrivalent Northern Hemisphere\")</span></p><p><b>patient</b>: <a href=\"Patient-example.html\">Patient/example: Amy Shaw</a> \" SHAW\"</p><p><b>occurrence</b>: 2020-11-19T12:46:57-08:00</p><p><b>primarySource</b>: false</p></div>"
+  ];
+  fhir:Immunization.status [ fhir:value "completed"];
+  fhir:Immunization.vaccineCode [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/cvx" ];
+       fhir:Coding.code [ fhir:value "197" ];
+       fhir:Coding.display [ fhir:value "influenza, high-dose, quadrivalent" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/ndc" ];
+       fhir:Coding.code [ fhir:value "49281012165" ];
+       fhir:Coding.display [ fhir:value "FLUZONE High-Dose Quadrivalent Northern Hemisphere" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "influenza, high-dose, quadrivalent" ]
+  ];
+  fhir:Immunization.patient [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy Shaw" ]
+  ];
+  fhir:Immunization.occurrenceDateTime [ fhir:value "2020-11-19T12:46:57-08:00"^^xsd:dateTime];
+  fhir:Immunization.primarySource [ fhir:value "false"^^xsd:boolean] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Immunization/imm-1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Immunization/imm-1.ttl> .
+
+# -------------------------------------------------------------------------------------
+

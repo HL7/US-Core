@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Observation/oxygen-saturation> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "oxygen-saturation"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Oxygen Saturation Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a typical oxygen saturation example for the *US Core Pulse Oximetry Profile* on room air where no oxygen concentration is recorded." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"oxygen-saturation\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-pulse-oximetry.html\">US Core Pulse Oximetry Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: oxygen_saturation <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#2708-6 \"Oxygen saturation in Arterial blood\"; <a href=\"https://loinc.org/\">LOINC</a>#59408-5 \"Oxygen saturation in Arterial blood by Pulse oximetry\")</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Patient/example: Amy Shaw</a> \" SHAW\"</p><p><b>encounter</b>: <span>: GP Visit</span></p><p><b>effective</b>: 1999-07-02</p><p><b>value</b>: 99.0 %O2<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code % = '%')</span></p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "vital-signs" ];
+       fhir:Coding.display [ fhir:value "Vital Signs" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Vital Signs" ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:2708-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "2708-6" ];
+       fhir:Coding.display [ fhir:value "Oxygen saturation in Arterial blood" ]
+     ], [
+       fhir:index 1;
+       a loinc:59408-5;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "59408-5" ];
+       fhir:Coding.display [ fhir:value "Oxygen saturation in Arterial blood by Pulse oximetry" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "oxygen_saturation" ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy Shaw" ]
+  ];
+  fhir:Observation.encounter [
+     fhir:Reference.display [ fhir:value "GP Visit" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "1999-07-02"^^xsd:date];
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "99.0"^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value "%O2" ];
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+     fhir:Quantity.code [ fhir:value "%" ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Observation/oxygen-saturation.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Observation/oxygen-saturation.ttl> .
+
+# -------------------------------------------------------------------------------------
+

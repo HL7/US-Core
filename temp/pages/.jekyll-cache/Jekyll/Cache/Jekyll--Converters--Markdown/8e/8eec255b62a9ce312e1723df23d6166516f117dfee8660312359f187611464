@@ -1,0 +1,87 @@
+I"×
+<hr />
+
+<p><strong id="search" style="font-size: 20px;">Quick Start</strong>
+<a name="quick-start"> </a></p>
+
+<hr />
+
+<p>Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profileâ€™s information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions.  See the <a href="CapabilityStatement-us-core-server.html">US Core Server CapabilityStatement</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+<ul>
+  <li>The syntax used to describe the interactions is described <a href="general-guidance.html#search-syntax">here</a>.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional rules and expectations when a server requires status parameters.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional guidance on searching for multiple patients.</li>
+</ul>
+
+<h4 id="mandatory-search-parameters">Mandatory Search Parameters:</h4>
+
+<p>The following search parameters and search parameter combinations SHALL be supported:</p>
+
+<ol>
+  <li>
+    <p><strong>SHALL</strong> support searching for all goals for a patient using the <strong><a href="SearchParameter-us-core-goal-patient.html"><code class="highlighter-rouge">patient</code></a></strong> search parameter:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Goal?patient={Type/}[id]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Goal?patient=1137192</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Goal resources for the specified patient (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a>)</p>
+  </li>
+  <li class="new-content">
+    <p><strong>SHALL</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-goal-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-goal-description.html"><code class="highlighter-rouge">description</code></a></strong> search parameters:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Goal?patient={Type/}[id]&amp;description={system|}[code]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Goal?patient=1137192&amp;description=http://snomed.info/sct|1078229009</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Goal resources for the specified patient and description (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+</ol>
+
+<h4 id="optional-search-parameters">Optional Search Parameters:</h4>
+
+<p>The following search parameter combinations SHOULD be supported:</p>
+
+<ol>
+  <li>
+    <p><strong>SHOULD</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-goal-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-goal-lifecycle-status.html"><code class="highlighter-rouge">lifecycle-status</code></a></strong> search parameters:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Goal?patient={Type/}[id]&amp;lifecycle-status={system|}[code]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Goal?patient=1137192&amp;lifecycle-status=active</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Goal resources for the specified patient and lifecycle-status (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+  <li>
+    <p><strong>SHOULD</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-goal-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-goal-target-date.html"><code class="highlighter-rouge">target-date</code></a></strong> search parameters:</p>
+    <ul>
+      <li>including support for these <code class="highlighter-rouge">target-date</code> comparators: <code class="highlighter-rouge">gt,lt,ge,le</code></li>
+      <li>including optional support for <em>AND</em> search on <code class="highlighter-rouge">target-date</code> (e.g.<code class="highlighter-rouge">target-date=[date]&amp;target-date=[date]]&amp;...</code>)</li>
+    </ul>
+
+    <p><code class="highlighter-rouge">GET [base]/Goal?patient={Type/}[id]&amp;target-date={gt|lt|ge|le}[date]{&amp;target-date={gt|lt|ge|le}[date]&amp;...}</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Goal?patient=1137192&amp;target-date=ge2015-01-14&amp;target-date=le2019-01-14</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Goal resources for the specified patient and target-date (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#date">how to search by date</a>)</p>
+  </li>
+</ol>
+
+:ET

@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "us-core-documentreference-category"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">clinical-note<a name=\"us-core-documentreference-category-clinical-note\"> </a></td><td>Clinical Note</td><td>Part of health record where healthcare professionals record details to document a patient's clinical status or achievements during the course of a hospitalization or over the course of outpatient care ([Wikipedia](https://en.wikipedia.org/wiki/Progress_note))</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category"];
+  fhir:CodeSystem.version [ fhir:value "4.2.0"];
+  fhir:CodeSystem.name [ fhir:value "USCoreDocumentReferencesCategoryCodes"];
+  fhir:CodeSystem.title [ fhir:value "US Core DocumentReferences Category Codes"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2019-05-21"^^xsd:date];
+  fhir:CodeSystem.publisher [ fhir:value "HL7 International - Cross-Group Projects"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International - Cross-Group Projects" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/cgp" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "cgp@lists.HL7.org" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "The US Core DocumentReferences Type Code System is a 'starter set' of categories supported for fetching and storing DocumentReference Resources."];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:CodeSystem.copyright [ fhir:value "Used by permission of HL7 International, all rights reserved Creative Commons License"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.valueSet [
+     fhir:value "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category";
+     fhir:link <http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category>
+  ];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "2"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "clinical-note" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Clinical Note" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Part of health record where healthcare professionals record details to document a patient's clinical status or achievements during the course of a hospitalization or over the course of outpatient care ([Wikipedia](https://en.wikipedia.org/wiki/Progress_note))" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/CodeSystem/us-core-documentreference-category.ttl> .
+
+# -------------------------------------------------------------------------------------
+

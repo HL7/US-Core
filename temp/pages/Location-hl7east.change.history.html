@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='Location' id='hl7east' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: Health Level Seven International - Amherst - Change History</h2>
+  <p>History of changes for hl7east {{type | downcase}}.</p>
+
+  {%include Location-hl7east-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

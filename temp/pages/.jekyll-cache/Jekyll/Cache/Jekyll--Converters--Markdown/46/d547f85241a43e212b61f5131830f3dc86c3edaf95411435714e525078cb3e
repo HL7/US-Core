@@ -1,0 +1,48 @@
+I"î
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/organization.html">Organization</a> resource to searching for and fetching a Organization associated with a patient or provider. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core-Organization profile:</p>
+
+<ul>
+  <li>Query by organization name or NPI</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Organization must have:</strong></p>
+
+<ol>
+  <li>A status of the organization</li>
+  <li>A name</li>
+</ol>
+
+<p><strong>Each Organization must support:</strong></p>
+
+<ol>
+  <li>An identifier
+    <ul>
+      <li><strong>SHALL</strong> support National Provider Identifier (NPI) for organizations</li>
+      <li><strong>SHOULD</strong> support Clinical Laboratory Improvement Amendments (CLIA) for laboratories.</li>
+    </ul>
+  </li>
+  <li>A list of contact information</li>
+  <li>An address</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>none</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<p><a href="Organization-acme-lab.html">Organization-acme-lab</a></p>
+
+<p><a href="Organization-saint-luke-w-endpoint.html">Organization-with-EndPoint</a></p>
+
+:ET

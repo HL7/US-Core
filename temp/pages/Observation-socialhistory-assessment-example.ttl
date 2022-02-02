@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Observation/socialhistory-assessment-example> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "socialhistory-assessment-example"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Social History Assessment Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a Social History Assessment Example for the *US Core Social History Assessment Observation Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history-assessment";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history-assessment>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"socialhistory-assessment-example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-observation-social-history-assessment.html\">US Core Social History Assessment Observation Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: SocialDeterminantsOfHealth <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LG41762-2)</span>, Social History <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Transport too expensive <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#160695008)</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Patient/example</a> \" SHAW\"</p><p><b>effective</b>: 2021-05-10T21:56:54.671Z</p><p><b>value</b>: true</p></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LG41762-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LG41762-2" ];
+       fhir:Coding.display [ fhir:value "SocialDeterminantsOfHealth" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "social-history" ];
+       fhir:Coding.display [ fhir:value "Social History" ]
+     ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:160695008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "160695008" ];
+       fhir:Coding.display [ fhir:value "Transport too expensive" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2021-05-10T21:56:54.671Z"^^xsd:dateTime];
+  fhir:Observation.valueBoolean [ fhir:value "true"^^xsd:boolean] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Observation/socialhistory-assessment-example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Observation/socialhistory-assessment-example.ttl> .
+
+# -------------------------------------------------------------------------------------
+

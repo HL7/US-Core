@@ -1,0 +1,140 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/DiagnosticReport/metabolic-panel> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "metabolic-panel"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Metabolic Panel Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a metabolic panel example for the *US Core DiagnosticReport Lab Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 24323-8}\">Comprehensive metabolic 2000 panel - Serum or Plasma</span> (<span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0074 LAB}\">Laboratory</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Amy V. Baxter </b> ?? 1987-02-20 ( Medical Record Number: 1032702 (USUAL))</td></tr><tr><td>When For</td><td>2005-07-04</td></tr><tr><td>Reported</td><td>2005-07-05T17:45:33-07:00</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Reference Range</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-serum-total-bilirubin.html\"><span title=\"Codes: {http://loinc.org 1975-2}\">Bilirub SerPl-mCnc</span></a></td><td>8.6 mg/dL</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 2.0 mg/dL - 7.0 mg/dL</td><td>2005-07-07</td></tr><tr><td><a href=\"Observation-serum-sodium.html\"><span title=\"Codes: {http://loinc.org 2951-2}\">Sodium SerPl-sCnc</span></a></td><td>137.0 mmol/L</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 135.0 mmol/L - 145.0 mmol/L</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-serum-potassium.html\"><span title=\"Codes: {http://loinc.org 2823-3}\">Potassium SerPl-sCnc</span></a></td><td>5.4 mmol/L</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 3.5 mmol/L - 5.5 mmol/L</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-serum-creatinine.html\"><span title=\"Codes: {http://loinc.org 2160-0}\">Creat SerPl-mCnc</span></a></td><td>1.0 mg/dL</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 0.2 mg/dL - 0.6 mg/dL</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-serum-co2.html\"><span title=\"Codes: {http://loinc.org 2028-9}\">CO2 SerPl-sCnc</span></a></td><td>24.0 mmol/L</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 22.0 mmol/L - 29.0 mmol/L</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-serum-chloride.html\"><span title=\"Codes: {http://loinc.org 2075-0}\">Chloride SerPl-sCnc</span></a></td><td>105.0 mmol/L</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 95.0 mmol/L - 105.0 mmol/L</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-serum-calcium.html\"><span title=\"Codes: {http://loinc.org 17861-6}\">Calcium SerPl-mCnc</span></a></td><td>7.7 mg/dL</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 8.5 mg/dL - 10.5 mg/dL</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-bun.html\"><span title=\"Codes: {http://loinc.org 3094-0}\">BUN SerPl-mCnc</span></a></td><td>10.0 mg/dL</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 5.0 mg/dL - 20.0 mg/dL</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-blood-glucose.html\"><span title=\"Codes: {http://loinc.org 2339-0}\">Glucose Bld-mCnc</span></a></td><td>76.0 mg/dL</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 40.0 mg/dL - 109.0 mg/dL</td><td>2005-07-05</td></tr></table></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "LAB" ];
+       fhir:Coding.display [ fhir:value "Laboratory" ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:24323-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "24323-8" ];
+       fhir:Coding.display [ fhir:value "Comprehensive metabolic 2000 panel - Serum or Plasma" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy Shaw" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2005-07-04"^^xsd:date];
+  fhir:DiagnosticReport.issued [ fhir:value "2005-07-06T11:45:33+11:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/core/Organization/acme-lab>;
+     fhir:Reference.reference [ fhir:value "Organization/acme-lab" ];
+     fhir:Reference.display [ fhir:value "Acme Laboratory, Inc" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/serum-total-bilirubin>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-total-bilirubin" ];
+     fhir:Reference.display [ fhir:value "TOTAL BILIRUBIN" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/serum-sodium>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-sodium" ];
+     fhir:Reference.display [ fhir:value "SODIUM" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/serum-potassium>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-potassium" ];
+     fhir:Reference.display [ fhir:value "Potassium" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/serum-creatinine>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-creatinine" ];
+     fhir:Reference.display [ fhir:value "CREATININE" ]
+  ], [
+     fhir:index 4;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/serum-co2>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-co2" ];
+     fhir:Reference.display [ fhir:value "TOTAL CO2" ]
+  ], [
+     fhir:index 5;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/serum-chloride>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-chloride" ];
+     fhir:Reference.display [ fhir:value "CHLORIDE" ]
+  ], [
+     fhir:index 6;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/serum-calcium>;
+     fhir:Reference.reference [ fhir:value "Observation/serum-calcium" ];
+     fhir:Reference.display [ fhir:value "CALCIUM" ]
+  ], [
+     fhir:index 7;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/bun>;
+     fhir:Reference.reference [ fhir:value "Observation/bun" ];
+     fhir:Reference.display [ fhir:value "BUN" ]
+  ], [
+     fhir:index 8;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/blood-glucose>;
+     fhir:Reference.reference [ fhir:value "Observation/blood-glucose" ];
+     fhir:Reference.display [ fhir:value "GLUCOSE" ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Organization/acme-lab> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/serum-total-bilirubin> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/serum-sodium> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/serum-potassium> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/serum-creatinine> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/serum-co2> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/serum-chloride> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/serum-calcium> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/bun> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/blood-glucose> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/DiagnosticReport/metabolic-panel.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/DiagnosticReport/metabolic-panel.ttl> .
+
+# -------------------------------------------------------------------------------------
+

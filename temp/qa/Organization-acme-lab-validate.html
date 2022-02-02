@@ -1,0 +1,13 @@
+﻿<html>
+<head>
+  <title>Organization-acme-lab-validate</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<p><b>Validation Links:</b></p><ul><li><a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator">Validate using FHIR Validator</a> (Java): <code id="vl-Organization-acme-lab">$cmd$</code></li></ul>
+<script type="text/javascript">
+  var x = window.location.href;
+  document.getElementById("vl-Organization-acme-lab").innerHTML = "java -jar [path]/org.hl7.fhir.validator.jar -ig hl7.fhir.us.core#dev "+x.substr(0, x.lastIndexOf(".")).replace("file:///", "") + ".json";
+</script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "66c8856b-ba11-4876-8aa8-467aad8c11a2"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "PractitionerRole_Practitioner_Endpoint_Bundle_Example Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example example for the *Bundle Profile*." ]
+     ]
+  ];
+  fhir:Bundle.type [ fhir:value "searchset"];
+  fhir:Bundle.total [ fhir:value "1"^^xsd:nonNegativeInteger];
+  fhir:Bundle.link [
+     fhir:index 0;
+     fhir:Bundle.link.relation [ fhir:value "self" ];
+     fhir:Bundle.link.url [ fhir:value "http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole?_id=PractitionerRole-1&_include=PractitionerRole%3Apractitioner&_include=PractitionerRole%3Aendpoint" ]
+  ];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole/PractitionerRole-1" ];
+     fhir:Bundle.entry.resource <http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole/PractitionerRole-1>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://52.90.126.238:8080/fhir/baseDstu3/Practitioner/Practitioner-1011" ];
+     fhir:Bundle.entry.resource <http://52.90.126.238:8080/fhir/baseDstu3/Practitioner/Practitioner-1011>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71" ];
+     fhir:Bundle.entry.resource <http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71>;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "include" ]
+     ]
+  ] .
+
+<http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole/PractitionerRole-1> a fhir:PractitionerRole;
+  fhir:Resource.id [ fhir:value "PractitionerRole-1"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"PractitionerRole-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-practitionerrole.html\">US Core PractitionerRole Profile</a></p></div><p><b>practitioner</b>: <a href=\"#Practitioner_Practitioner-1011\">See above (Practitioner/Practitioner-1011: Brenda Jennings Richard MD)</a></p><p><b>organization</b>: <a href=\"Organization-acme-lab.html\">Organization/acme-lab: Acme Lab</a> \"Acme Labs\"</p><p><b>code</b>: Primary Care Clinic/Center <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (provider-taxonomy#261QP2300X)</span></p><p><b>specialty</b>: General Practice Physician <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (provider-taxonomy#208D00000X)</span></p><p><b>location</b>: <a href=\"Location-hl7east.html\">Location/hl7east: Health Level Seven International</a> \"Health Level Seven International - Amherst\"</p><p><b>endpoint</b>: </p><ul><li><a href=\"#Endpoint_71\">See above (http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71: Westwood Physicians Organization ADT)</a></li><li><a href=\"#Endpoint_71\">See above (http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71: Brenda.Jennings.Richard.MD@direct.example.org)</a></li></ul></div>"
+  ];
+  fhir:PractitionerRole.practitioner [
+     fhir:link <http://hl7.org/fhir/us/core/Practitioner/Practitioner-1011>;
+     fhir:Reference.reference [ fhir:value "Practitioner/Practitioner-1011" ];
+     fhir:Reference.display [ fhir:value "Brenda Jennings Richard MD" ]
+  ];
+  fhir:PractitionerRole.organization [
+     fhir:link <http://hl7.org/fhir/us/core/Organization/acme-lab>;
+     fhir:Reference.reference [ fhir:value "Organization/acme-lab" ];
+     fhir:Reference.display [ fhir:value "Acme Lab" ]
+  ];
+  fhir:PractitionerRole.code [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://nucc.org/provider-taxonomy" ];
+       fhir:Coding.code [ fhir:value "261QP2300X" ];
+       fhir:Coding.display [ fhir:value "Primary Care Clinic/Center" ]
+     ]
+  ];
+  fhir:PractitionerRole.specialty [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://nucc.org/provider-taxonomy" ];
+       fhir:Coding.code [ fhir:value "208D00000X" ];
+       fhir:Coding.display [ fhir:value "General Practice Physician" ]
+     ]
+  ];
+  fhir:PractitionerRole.location [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/core/Location/hl7east>;
+     fhir:Reference.reference [ fhir:value "Location/hl7east" ];
+     fhir:Reference.display [ fhir:value "Health Level Seven International" ]
+  ];
+  fhir:PractitionerRole.endpoint [
+     fhir:index 0;
+     fhir:link <http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71>;
+     fhir:Reference.reference [ fhir:value "http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71" ];
+     fhir:Reference.display [ fhir:value "Westwood Physicians Organization ADT" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71>;
+     fhir:Reference.reference [ fhir:value "http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71" ];
+     fhir:Reference.display [ fhir:value "Brenda.Jennings.Richard.MD@direct.example.org" ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Practitioner/Practitioner-1011> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Organization/acme-lab> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Location/hl7east> a fhir:us .
+
+<http://52.90.126.238:8080/fhir/baseDstu3/Practitioner/Practitioner-1011> a fhir:Practitioner;
+  fhir:Resource.id [ fhir:value "Practitioner-1011"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Practitioner-1011\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-practitioner.html\">US Core Practitioner Profile</a></p></div><p><b>identifier</b>: id: 000001011 (OFFICIAL), id: 9999991011 (OFFICIAL), id: d46f70565a1042f6a6ece48dd81b408f (OFFICIAL)</p><p><b>name</b>: Brenda Jennings Richard </p><p><b>telecom</b>: ph: 313-555-6868(HOME), ph: 313-555-6443(WORK)</p><p><b>address</b>: 346 W Plum Avenu Dearborn MI 48123</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1976-11-15</p><h3>Qualifications</h3><table class=\"grid\"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td><td><b>Issuer</b></td></tr><tr><td>*</td><td>Michigan Medical License: LARA-1011 (OFFICIAL)</td><td>Medical Doctor <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (license-type#4305)</span></td><td><span>: Michigan Department of Licensing and Regulatory Affairs</span></td></tr></table></div>"
+  ];
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-ssn" ];
+     fhir:Identifier.value [ fhir:value "000001011" ]
+  ], [
+     fhir:index 1;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
+     fhir:Identifier.value [ fhir:value "9999991011" ]
+  ], [
+     fhir:index 2;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://mihin.org/fhir/cks" ];
+     fhir:Identifier.value [ fhir:value "d46f70565a1042f6a6ece48dd81b408f" ]
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Richard" ];
+     fhir:HumanName.given [
+       fhir:value "Brenda";
+       fhir:index 0
+     ], [
+       fhir:value "Jennings";
+       fhir:index 1
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "MD";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "313-555-6868" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "313-555-6443" ];
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ];
+  fhir:Practitioner.address [
+     fhir:index 0;
+     fhir:Address.text [ fhir:value "346 W Plum Avenu Dearborn MI 48123" ];
+     fhir:Address.line [
+       fhir:value "346 W Plum Avenue";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Dearborn" ];
+     fhir:Address.state [ fhir:value "MI" ];
+     fhir:Address.postalCode [ fhir:value "48126" ]
+  ];
+  fhir:Practitioner.gender [ fhir:value "female"];
+  fhir:Practitioner.birthDate [ fhir:value "1976-11-15"^^xsd:date];
+  fhir:Practitioner.qualification [
+     fhir:index 0;
+     fhir:Practitioner.qualification.identifier [
+       fhir:index 0;
+       fhir:Identifier.use [ fhir:value "official" ];
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+           fhir:Coding.code [ fhir:value "MD" ];
+           fhir:Coding.display [ fhir:value "Medical License number" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Michigan Medical License" ]
+       ];
+       fhir:Identifier.system [ fhir:value "http://example.org/michigan.gov/fhir/medical-license" ];
+       fhir:Identifier.value [ fhir:value "LARA-1011" ];
+       fhir:Identifier.assigner [
+         fhir:Reference.display [ fhir:value "State of Michigan" ]
+       ]
+     ];
+     fhir:Practitioner.qualification.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/michigan.gov/lara/license-type" ];
+         fhir:Coding.code [ fhir:value "4305" ];
+         fhir:Coding.display [ fhir:value "Medical Doctor" ]
+       ]
+     ];
+     fhir:Practitioner.qualification.issuer [
+       fhir:Reference.display [ fhir:value "Michigan Department of Licensing and Regulatory Affairs" ]
+     ]
+  ] .
+
+<http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71> a fhir:Endpoint;
+  fhir:Resource.id [ fhir:value "71"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"71\" </p></div><p><b>status</b>: active</p><p><b>connectionType</b>: Direct Project (Details: http://terminology.hl7.org/CodeSystem/endpoint-connection-type code direct-project = 'Direct Project', stated as 'null')</p><p><b>name</b>: Brenda.Jennings.Richard.MD@direct.example.org</p><p><b>managingOrganization</b>: <a href=\"Organization-acme-lab.html\">Organization/acme-lab</a> \"Acme Labs\"</p><p><b>payloadType</b>: urn:hl7-org:sdwg:ccda-structuredBody:1.1 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#urn:hl7-org:sdwg:ccda-structuredBody:1.1)</span></p><p><b>payloadMimeType</b>: text/xml</p><p><b>address</b>: <a href=\"mailto:Brenda.Jennings.Richard.MD@direct.example.org\">Brenda.Jennings.Richard.MD@direct.example.org</a></p></div>"
+  ];
+  fhir:Endpoint.status [ fhir:value "active"];
+  fhir:Endpoint.connectionType [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/endpoint-connection-type" ];
+     fhir:Coding.code [ fhir:value "direct-project" ]
+  ];
+  fhir:Endpoint.name [ fhir:value "Brenda.Jennings.Richard.MD@direct.example.org"];
+  fhir:Endpoint.managingOrganization [
+     fhir:link <http://hl7.org/fhir/us/core/Organization/acme-lab>;
+     fhir:Reference.reference [ fhir:value "Organization/acme-lab" ]
+  ];
+  fhir:Endpoint.payloadType [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:oid:1.3.6.1.4.1.19376.1.2.3" ];
+       fhir:Coding.code [ fhir:value "urn:hl7-org:sdwg:ccda-structuredBody:1.1" ]
+     ]
+  ];
+  fhir:Endpoint.payloadMimeType [
+     fhir:value "text/xml";
+     fhir:index 0
+  ];
+  fhir:Endpoint.address [ fhir:value "mailto:Brenda.Jennings.Richard.MD@direct.example.org"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2.ttl> .
+
+# -------------------------------------------------------------------------------------
+

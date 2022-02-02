@@ -1,0 +1,7 @@
+<li>
+  <strong>SHOULD</strong> support the <a href="http://hl7.org/fhir/OperationDefinition/ValueSet-expand">$expand</a> operation<p>
+    <p>A  client can determine the note and report types support by a server by invoking the standard FHIR Value Set Expansion ($expand) operation defined in the FHIR R4 specification. Because servers may support different read and write formats, it also is used to determine the formats (for example, text, pdf) the server supports read and write transactions.</p>
+  </p>
+</li>
+
+p inside p error ...

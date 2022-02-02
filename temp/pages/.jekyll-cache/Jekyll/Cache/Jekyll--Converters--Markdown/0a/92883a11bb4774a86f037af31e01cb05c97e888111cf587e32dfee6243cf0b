@@ -1,0 +1,42 @@
+I"�	
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/observation.html">Observation</a> resource to record, search, and fetch body weight observations associated with a patient. It is based on the <a href="StructureDefinition-us-core-vital-signs.html">US Core Vital Signs Profile</a> and identifies the <em>additional</em> mandatory core elements, extensions, vocabularies and value sets which <strong>SHALL</strong> be present in the Observation resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core Body Weight Profile:</p>
+
+<ul>
+  <li>Query for body weight observations</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a> body weight observations</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p><em>In addition</em> to the mandatory and must support data elements in the US Core Vital Signs Profile, the following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and terminology requirements.  The “Snapshot Table (Must Support)” tab below displays all the mandatory and must support data elements for this profile and the those inherited from the US Core Vital Signs Profile.  Note that this profile also conforms to the base FHIR <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html">Vital Signs Profile</a>.</p>
+
+<p><strong>Each Observation must have:</strong></p>
+
+<ol>
+  <li>a patient</li>
+  <li>a fixed code for body weight</li>
+</ol>
+
+<p><strong>Each Observation must support:</strong></p>
+
+<ol>
+  <li>a result value</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>See the implementation guidance section for the <a href="StructureDefinition-us-core-vital-signs.html">US Core Vital Signs Profile</a></li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="Observation-weight.html">Weight Example</a></li>
+</ul>
+
+:ET

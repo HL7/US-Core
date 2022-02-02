@@ -1,0 +1,33 @@
+---
+---
+{% include fragment-pagebegin.html %}
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+
+  {% include fragment-base-navtabs.html type='Practitioner' id='practitioner-1' active='content' %}
+
+  <a name="root"> </a>
+{% if site.data.artifacts[page.path].example %}
+  {% assign example = 'Example ' %}
+{% endif %}
+{% assign prefix = site.data.artifacts[page.path].type %}
+  <h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title | escape_once}}</h2>
+
+{% unless example %}
+  {% if 'Practitioner' == 'CapabilityStatement' %}
+      <p>
+      <a href="practitioner-1.openapi.json" no-download="true">Raw OpenAPI-Swagger Definition file</a> | <a href="practitioner-1.openapi.json" download>Download</a>
+      </p>
+  {% endif %}
+{% endunless %}
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='Practitioner' id='practitioner-1' %}
+
+  {% include Practitioner-practitioner-1-html.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='Practitioner' id='practitioner-1' %}
+
+</div>
+{% include fragment-pageend.html %}

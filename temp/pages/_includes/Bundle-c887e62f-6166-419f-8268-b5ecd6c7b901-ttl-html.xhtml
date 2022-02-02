@@ -1,0 +1,143 @@
+{% raw %}<pre class="rdf"><code class="language-turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix sct: &lt;http://snomed.info/id/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:Bundle;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;c887e62f-6166-419f-8268-b5ecd6c7b901&quot;];
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/instance-name&quot; ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;AllergyIntolerance Provenance Example&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/instance-description&quot; ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueMarkdown</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;This is a allergyintolerance provenance example for the *Bundle Profile*.&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">fhir:Meta.lastUpdated</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2019-07-09T18:49:01.235+00:00&quot;^^xsd:dateTime ]
+  ];
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">fhir:Bundle.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;searchset&quot;];
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.total">fhir:Bundle.total</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">fhir:value</a> &quot;1&quot;^^xsd:nonNegativeInteger];
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link">fhir:Bundle.link</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.relation">fhir:Bundle.link.relation</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;self&quot; ];
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.url">fhir:Bundle.link.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/fhir/AllergyIntolerance?_revinclude=Provenance%3Atarget&amp;patient=Examples&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">fhir:Bundle.entry</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/fhir/AllergyIntolerance/79613&quot; ];
+     <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance">fhir:Bundle.entry.resource</a> &lt;http://example.org/fhir/AllergyIntolerance/79613&gt;;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:Bundle.entry.search</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:Bundle.entry.search.mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;match&quot; ]     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fhir:Bundle.entry.fullUrl</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://example.org/fhir/Provenance/79614&quot; ];
+     <a href="http://hl7.org/fhir/R4/provenance.html#Provenance">fhir:Bundle.entry.resource</a> &lt;http://example.org/fhir/Provenance/79614&gt;;
+     <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">fhir:Bundle.entry.search</a> [
+       <a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">fhir:Bundle.entry.search.mode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;include&quot; ]     ]
+  ].
+
+&lt;http://example.org/fhir/AllergyIntolerance/79613&gt; <a href="http://hl7.org/fhir/R4/allergyintolerance.html">a</a> fhir:AllergyIntolerance;
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;79613&quot;];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">fhir:Meta.versionId</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;1&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">fhir:Meta.lastUpdated</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2019-07-09T15:26:23.217+00:00&quot;^^xsd:dateTime ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;79613\&quot; Version \&quot;1\&quot; Updated \&quot;2019-07-09T08:26:23.217-07:00\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-allergyintolerance.html\&quot;&gt;US Core AllergyIntolerance Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;clinicalStatus&lt;/b&gt;: Active &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-allergyintolerance-clinical.html\&quot;&gt;AllergyIntolerance Clinical Status Codes&lt;/a&gt;#active)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;verificationStatus&lt;/b&gt;: Confirmed &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-allergyintolerance-verification.html\&quot;&gt;AllergyIntolerance Verification Status&lt;/a&gt;#confirmed)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: medication&lt;/p&gt;&lt;p&gt;&lt;b&gt;criticality&lt;/b&gt;: high&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Peanuts &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#762952008)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Patient/example&lt;/a&gt; \&quot; SHAW\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;onset&lt;/b&gt;: 2017-06-09&lt;/p&gt;&lt;h3&gt;Reactions&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Manifestation&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Onset&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Hives &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#247472004)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2017-06-09&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.clinicalStatus">fhir:AllergyIntolerance.clinicalStatus</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Active&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.verificationStatus">fhir:AllergyIntolerance.verificationStatus</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/allergyintolerance-verification&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;confirmed&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Confirmed&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.category">fhir:AllergyIntolerance.category</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;medication&quot;;
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.criticality">fhir:AllergyIntolerance.criticality</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;high&quot;];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.code">fhir:AllergyIntolerance.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       a sct:762952008;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;762952008&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Peanuts&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Peanuts&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.patient">fhir:AllergyIntolerance.patient</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/example&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.onset[x]">fhir:AllergyIntolerance.onsetDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2017-06-09&quot;^^xsd:date];
+  <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.reaction">fhir:AllergyIntolerance.reaction</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.reaction.manifestation">fhir:AllergyIntolerance.reaction.manifestation</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         a sct:247472004;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;247472004&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Hives&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/R4/allergyintolerance.html#AllergyIntolerance.reaction.onset">fhir:AllergyIntolerance.reaction.onset</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2017-06-09&quot;^^xsd:date ]
+  ].
+
+&lt;http://example.org/fhir/Provenance/79614&gt; <a href="http://hl7.org/fhir/R4/provenance.html">a</a> fhir:Provenance;
+  <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;79614&quot;];
+  <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">fhir:Meta.versionId</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;1&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">fhir:Meta.lastUpdated</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2019-07-09T15:26:23.217+00:00&quot;^^xsd:dateTime ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;79614\&quot; Version \&quot;1\&quot; Updated \&quot;2019-07-09T08:26:23.217-07:00\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-provenance.html\&quot;&gt;US Core Provenance Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;target&lt;/b&gt;: &lt;a href=\&quot;#AllergyIntolerance_79613\&quot;&gt;See above (AllergyIntolerance/79613)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;recorded&lt;/b&gt;: Jul 9, 2019, 8:26:23 AM&lt;/p&gt;&lt;h3&gt;Agents&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Who&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;OnBehalfOf&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Author &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-provenance-participant-type.html\&quot;&gt;Provenance participant type&lt;/a&gt;#author)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Practitioner-practitioner-1.html\&quot;&gt;Practitioner/practitioner-1&lt;/a&gt; \&quot; BONE\&quot;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Organization-saint-luke-w-endpoint.html\&quot;&gt;Organization/saint-luke-w-endpoint&lt;/a&gt; \&quot;Saint Luke's Hospital of Kansas City\&quot;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.target">fhir:Provenance.target</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;AllergyIntolerance/79613&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.recorded">fhir:Provenance.recorded</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#instant">fhir:value</a> &quot;2019-07-09T15:26:23.217+00:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent">fhir:Provenance.agent</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent.type">fhir:Provenance.agent.type</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+         <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/provenance-participant-type&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;author&quot; ];
+         <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Author&quot; ]       ]     ];
+     <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent.who">fhir:Provenance.agent.who</a> [
+       <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Practitioner/practitioner-1&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/provenance.html#Provenance.agent.onBehalfOf">fhir:Provenance.agent.onBehalfOf</a> [
+       <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Organization/saint-luke-w-endpoint&quot; ]     ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</code></pre>
+
+{% endraw %}

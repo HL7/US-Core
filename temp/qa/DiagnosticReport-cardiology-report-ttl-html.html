@@ -1,0 +1,109 @@
+﻿<html>
+<head>
+  <title>DiagnosticReport-cardiology-report-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf"><code class="language-turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix loinc: &lt;http://loinc.org/rdf#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:DiagnosticReport;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;cardiology-report&quot;];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/instance-name&quot; ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;DiagnosticReport Cardiology Report Example&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/instance-description&quot; ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueMarkdown</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;This is a DiagnosticReport cardiology report example for the *US Core DiagnosticReport Note Profile*.&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;&lt;span title=\&quot;Codes: {http://loinc.org 45033-8}\&quot;&gt;Cardiovascular physiologic and EKG assessment panel&lt;/span&gt; (&lt;span title=\&quot;Codes: {http://loinc.org LP29708-2}\&quot;&gt;Cardiology&lt;/span&gt;) &lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;&lt;b&gt;Amy V. Baxter &lt;/b&gt; ?? 1987-02-20 ( Medical Record Number: 1032702 (USUAL))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;When For&lt;/td&gt;&lt;td&gt;2021-11-10T21:39:30Z&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Report Details&lt;/b&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;When For&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-qrs-dur-ekg-lead.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 44973-6}\&quot;&gt;QRS dur {EKG lead}&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;60 ms&lt;/td&gt;&lt;td&gt;2021-11-10T16:48:57.246958-08:00&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-pulse-intensity-palpation.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 44974-4}\&quot;&gt;Pulse intensity Palpation&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://loinc.org LA11841-6}\&quot;&gt;1+&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2021-11-10T16:48:57.246958-08:00&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-p-r-interval-ekg-lead.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 44976-9}\&quot;&gt;P-R interval {EKG lead}&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0.2 s&lt;/td&gt;&lt;td&gt;2021-11-10T16:48:57.246958-08:00&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-q-t-interval-ekg-lead.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 44975-1}\&quot;&gt;Q-T interval {EKG lead}&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0.4 s&lt;/td&gt;&lt;td&gt;2021-11-10T16:48:57.246958-08:00&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-jugular-vein-distension.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 69428-1}\&quot;&gt;Jugular vein distension&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://loinc.org LA9634-2}\&quot;&gt;Absent&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2021-11-10T16:48:57.246958-08:00&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-heart-rate-rhythm.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 8884-9}\&quot;&gt;Heart rate rhythm&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Regular (R)&lt;/td&gt;&lt;td&gt;2021-11-10T16:48:57.246958-08:00&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-ekg-lead.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 44967-8}\&quot;&gt;EKG lead&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;II&lt;/td&gt;&lt;td&gt;2021-11-10T16:48:57.246958-08:00&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-ekg-impression.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 8601-7}\&quot;&gt;EKG impression&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Normal Sinus Rhythm (NSR)&lt;/td&gt;&lt;td&gt;2021-11-10T16:48:57.246958-08:00&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-capillary-refill-time-nail-bed.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 44963-7}\&quot;&gt;Capillary refill Time Nail Bed&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;1 s&lt;/td&gt;&lt;td&gt;2021-11-10T16:48:57.246958-08:00&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.status">fhir:DiagnosticReport.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;final&quot;];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.category">fhir:DiagnosticReport.category</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       a loinc:LP29708-2;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;LP29708-2&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cardiology&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cardiology&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.code">fhir:DiagnosticReport.code</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       a loinc:45033-8;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;45033-8&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cardiovascular physiologic and EKG assessment panel&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Cardiovascular physiologic and EKG assessment panel&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.subject">fhir:DiagnosticReport.subject</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/example&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.effective[x]">fhir:DiagnosticReport.effectiveDateTime</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2021-11-10T21:39:30.000Z&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">fhir:DiagnosticReport.result</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/qrs-dur-ekg-lead&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/pulse-intensity-palpation&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/p-r-interval-ekg-lead&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/q-t-interval-ekg-lead&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/jugular-vein-distension&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 5;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/heart-rate-rhythm&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 6;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/ekg-lead&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 7;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/ekg-impression&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 8;
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Observation/capillary-refill-time-nail-bed&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.media">fhir:DiagnosticReport.media</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.media.link">fhir:DiagnosticReport.media.link</a> [
+       <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Media/ekg-strip&quot; ];
+       <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;EKG Strip&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.presentedForm">fhir:DiagnosticReport.presentedForm</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">fhir:Attachment.contentType</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;application/pdf&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.url">fhir:Attachment.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#url">fhir:value</a> &quot;http://example.org/pdfdownloads/cardiopanel-report-123.pdf&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.hash">fhir:Attachment.hash</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">fhir:value</a> &quot;RVFILy4uQWdNRQo=&quot;^^xsd:base64Binary ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</code></pre>
+
+</body>
+</html>

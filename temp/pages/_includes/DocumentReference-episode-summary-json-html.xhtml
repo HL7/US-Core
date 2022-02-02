@@ -1,0 +1,86 @@
+{% raw %}<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference">resourceType</a>" : "DocumentReference",
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.id">id</a>" : "episode-summary",
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Episode Summary Example"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is a episode summary example for the *US Core DocumentReference Profile*."
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;episode-summary\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-documentreference.html\&quot;&gt;US Core DocumentReference Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: urn:oid:2.16.840.1.113883.19.5.99999.1&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: current&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: CCD Document &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#34133-9 \&quot;Summary of episode note\&quot;)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Clinical Note &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;CodeSystem-us-core-documentreference-category.html\&quot;&gt;US Core DocumentReferences Category Codes&lt;/a&gt;#clinical-note)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Patient/example: Amy Shaw&lt;/a&gt; \&quot; SHAW\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Mar 9, 2016, 7:29:46 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;Practitioner-practitioner-1.html\&quot;&gt;Practitioner/practitioner-1: Ronald Bone, MD&lt;/a&gt; \&quot; BONE\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: Pulmonology clinic acute visit&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;format&lt;/b&gt;: Documents following C-CDA constraints using a structured body (Details: urn:oid:1.3.6.1.4.1.19376.1.2.3 code urn:hl7-org:sdwg:ccda-structuredBody:2.1 = 'urn:hl7-org:sdwg:ccda-structuredBody:2.1', stated as 'Documents following C-CDA constraints using a structured body')&lt;/p&gt;&lt;/blockquote&gt;&lt;h3&gt;Contexts&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Period&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;2004-12-23T08:00:00+11:00 --&amp;gt; 2004-12-23T08:01:00+11:00&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:oid:2.16.840.1.113883.19.5.99999.1"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.status">status</a>" : "current",
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "34133-9",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Summary of episode note"
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "CCD Document"
+  },
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "clinical-note",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Clinical Note"
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Clinical Note"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Amy Shaw"
+  },
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.date">date</a>" : "2016-03-09T15:29:46Z",
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.author">author</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/practitioner-1",
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Ronald Bone, MD"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.description">description</a>" : "Pulmonology clinic acute visit",
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content">content</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content.attachment">attachment</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">contentType</a>" : "text/plain",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.url">url</a>" : "/Binary/1-note",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.title">title</a>" : "Uri where the data can be found: [base]/Binary/1-note"
+      },
+      "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.content.format">format</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:1.3.6.1.4.1.19376.1.2.3",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Documents following C-CDA constraints using a structured body"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context">context</a>" : {
+    "<a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.context.period">period</a>" : {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2004-12-23T08:00:00+11:00",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2004-12-23T08:01:00+11:00"
+    }
+  }
+}</code></pre>
+{% endraw %}

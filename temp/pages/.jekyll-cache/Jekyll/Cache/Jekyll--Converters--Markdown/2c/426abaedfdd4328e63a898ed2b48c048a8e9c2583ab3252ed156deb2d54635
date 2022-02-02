@@ -1,0 +1,30 @@
+I"Ç
+<p>When referencing a medication, the  <a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a> resource can either use a code or refer to a <a href="http://hl7.org/fhir/R4/medication.html">Medication</a> resource.  This profile sets minimum expectations for the Medication resource to record, search, and fetch medications associated with a patient. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>Queries on Medication resource are expected to be within the context of a MedicationRequest resource query. The following are
+example usage scenarios for the US Core Medication profile:</p>
+
+<ul>
+  <li>Read Medication resources referenced in MedicationRequest resources.</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Medication must have:</strong></p>
+
+<ol>
+  <li>A medication code</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>Since the binding is <a href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a>, when a code is unavailable just text is allowed.</li>
+  <li>When the medication is compounded and is a list of ingredients, the code is still present and may contain only the text.</li>
+</ul>
+
+:ET

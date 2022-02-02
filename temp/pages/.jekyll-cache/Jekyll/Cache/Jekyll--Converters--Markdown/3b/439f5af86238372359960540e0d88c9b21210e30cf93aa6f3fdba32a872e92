@@ -1,0 +1,44 @@
+I">
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/goal.html">Goal</a> resource to record, search, and fetch Goal information associated with a patient. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core-Goal profile:</p>
+
+<ul>
+  <li>Query for a Patient’s Goals</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a> a Patient’s Goals</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Goal must have:</strong></p>
+
+<ol>
+  <li>a status</li>
+  <li>text description of the goal</li>
+  <li>a patient</li>
+</ol>
+
+<p><strong>Each Goal must support:</strong></p>
+
+<ol>
+  <li>target date(s):</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+<ul>
+  <li class="new-content">Free text goals can be used in Goal.description.text when a concept isn’t available or a legacy goal is not mapped to a LOINC or SNOMED concept.</li>
+  <li class="new-content">See <a href="sdoh.html">SDOH Guidance</a> for more information when exchanging Social Determinants of Health (SDOH) Goals</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="Goal-goal-1.html">Goal-1</a></li>
+  <li><a href="Goal-goal-sdoh-2.html">Goal-sdoh-2</a></li>
+</ul>
+
+:ET

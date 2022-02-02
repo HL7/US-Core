@@ -1,0 +1,94 @@
+I"¾ 
+<hr />
+
+<p><strong id="search" style="font-size: 20px;">Quick Start</strong>
+<a name="quick-start"> </a></p>
+
+<hr />
+
+<p>Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profileâ€™s information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions.  See the <a href="CapabilityStatement-us-core-server.html">US Core Server CapabilityStatement</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+<ul>
+  <li>The syntax used to describe the interactions is described <a href="general-guidance.html#search-syntax">here</a>.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional rules and expectations when a server requires status parameters.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional guidance on searching for multiple patients.</li>
+</ul>
+
+<h4 id="mandatory-search-parameters">Mandatory Search Parameters:</h4>
+
+<p>The following search parameters and search parameter combinations SHALL be supported:</p>
+
+<ol>
+  <li>
+    <p><strong>SHALL</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-careplan-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-careplan-category.html"><code class="highlighter-rouge">category</code></a></strong> search parameters:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/CarePlan?patient={Type/}[id]&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all CarePlan resources for the specified patient and category=<code class="highlighter-rouge">assess-plan</code> (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+</ol>
+
+<h4 id="optional-search-parameters">Optional Search Parameters:</h4>
+
+<p>The following search parameter combinations SHOULD be supported:</p>
+
+<ol>
+  <li><strong>SHOULD</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-careplan-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-careplan-category.html"><code class="highlighter-rouge">category</code></a></strong> and <strong><a href="SearchParameter-us-core-careplan-date.html"><code class="highlighter-rouge">date</code></a></strong> search parameters:
+    <ul>
+      <li>including support for these <code class="highlighter-rouge">date</code> comparators: <code class="highlighter-rouge">gt,lt,ge,le</code></li>
+      <li>including optional support for <em>AND</em> search on <code class="highlighter-rouge">date</code> (e.g.<code class="highlighter-rouge">date=[date]&amp;date=[date]]&amp;...</code>)</li>
+    </ul>
+
+    <p><code class="highlighter-rouge">GET [base]/CarePlan?patient={Type/}[id]&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&amp;date={gt|lt|ge|le}[date]{&amp;date={gt|lt|ge|le}[date]&amp;...}</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&amp;date=ge2019-01-01T00:00:00Z</li>
+      <li>GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&amp;date=ge2018-01-01T00:00:00Z&amp;date=le2019-01-01T00:00:00Z</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all CarePlan resources for the specified patient and category=<code class="highlighter-rouge">assess-plan</code> and date (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a> and <a href="http://hl7.org/fhir/R4/search.html#date">how to search by date</a>)</p>
+  </li>
+  <li><strong>SHOULD</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-careplan-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-careplan-category.html"><code class="highlighter-rouge">category</code></a></strong> and <strong><a href="SearchParameter-us-core-careplan-status.html"><code class="highlighter-rouge">status</code></a></strong> search parameters:
+    <ul>
+      <li>including support for <em>OR</em> search on <code class="highlighter-rouge">status</code> (e.g.<code class="highlighter-rouge">status={system|}[code],{system|}[code],...</code>)</li>
+    </ul>
+
+    <p><code class="highlighter-rouge">GET [base]/CarePlan?patient={Type/}[id]&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&amp;status={system|}[code]{,{system|}[code],...}</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&amp;status=active</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all CarePlan resources for the specified patient and category=<code class="highlighter-rouge">assess-plan</code> and status=<code class="highlighter-rouge">active</code> (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+  <li><strong>SHOULD</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-careplan-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-careplan-category.html"><code class="highlighter-rouge">category</code></a></strong> and <strong><a href="SearchParameter-us-core-careplan-status.html"><code class="highlighter-rouge">status</code></a></strong> and <strong><a href="SearchParameter-us-core-careplan-date.html"><code class="highlighter-rouge">date</code></a></strong> search parameters:
+    <ul>
+      <li>including support for <em>OR</em> search on <code class="highlighter-rouge">status</code> (e.g.<code class="highlighter-rouge">status={system|}[code],{system|}[code],...</code>)</li>
+      <li>including support for these <code class="highlighter-rouge">date</code> comparators: <code class="highlighter-rouge">gt,lt,ge,le</code></li>
+      <li>including optional support for <em>AND</em> search on <code class="highlighter-rouge">date</code> (e.g.<code class="highlighter-rouge">date=[date]&amp;date=[date]]&amp;...</code>)</li>
+    </ul>
+
+    <p><code class="highlighter-rouge">GET [base]/CarePlan?patient={Type/}[id]&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&amp;status={system|}[code]{,{system|}[code],...}&amp;date={gt|lt|ge|le}[date]{&amp;date={gt|lt|ge|le}[date]&amp;...}</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&amp;status=active&amp;date=ge2019-01-01T00:00:00Z</li>
+      <li>GET [base]/CarePlan?patient=1137192&amp;category=http://hl7.org/fhir/us/core/CodeSystem/careplan-category|assess-plan&amp;status=active&amp;date=ge2018-01-01T00:00:00Z&amp;date=le2019-01-01T00:00:00Z</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all CarePlan resources for the specified patient and category=<code class="highlighter-rouge">assess-plan</code> and status=<code class="highlighter-rouge">active</code> and date (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a> and <a href="http://hl7.org/fhir/R4/search.html#date">how to search by date</a>)</p>
+  </li>
+</ol>
+
+:ET

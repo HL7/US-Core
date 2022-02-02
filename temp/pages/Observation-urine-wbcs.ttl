@@ -1,0 +1,89 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Observation/urine-wbcs> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "urine-wbcs"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Urine WBCsExample" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a urine WBCsexample for the *US Core Observation Lab Profile*." ]
+     ];
+     fhir:Meta.versionId [ fhir:value "206635" ];
+     fhir:Meta.lastUpdated [ fhir:value "2016-04-18T04:25:02.064+00:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"urine-wbcs\" Version \"206635\" Updated \"2016-04-17T21:25:02.064-07:00\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-observation-lab.html\">US Core Laboratory Result Observation Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: WBC <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#5821-4 \"Leukocytes [#/area] in Urine sediment by Microscopy high power field\")</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Patient/example: Amy Shaw</a> \" SHAW\"</p><p><b>effective</b>: 2005-07-05</p><p><b>value</b>: 20-30 cells/HPF</p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td>-</td><td><b>Text</b></td></tr><tr><td>*</td><td>None Seen/HPF</td></tr></table></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "laboratory" ];
+       fhir:Coding.display [ fhir:value "Laboratory" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Laboratory" ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:5821-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "5821-4" ];
+       fhir:Coding.display [ fhir:value "Leukocytes [#/area] in Urine sediment by Microscopy high power field" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "WBC" ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy Shaw" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2005-07-05"^^xsd:date];
+  fhir:Observation.valueRange [
+     fhir:Range.low [
+       fhir:Quantity.value [ fhir:value "20"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "cells/HPF" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "/[HPF]" ]
+     ];
+     fhir:Range.high [
+       fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "cells/HPF" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "/[HPF]" ]
+     ]
+  ];
+  fhir:Observation.referenceRange [
+     fhir:index 0;
+     fhir:Observation.referenceRange.text [ fhir:value "None Seen/HPF" ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Observation/urine-wbcs.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Observation/urine-wbcs.ttl> .
+
+# -------------------------------------------------------------------------------------
+

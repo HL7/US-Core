@@ -1,0 +1,64 @@
+﻿<html>
+<head>
+  <title>CarePlan-colonoscopy-xml-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="xml"><code class="language-xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan">CarePlan</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;colonoscopy&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/instance-name&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Colonoscopy Example&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/instance-description&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;This is a colonoscopy example for the *US Core CarePlan Profile*.&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;additional&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&amp;#9;&amp;#9;&amp;#9;&lt;strong&gt;Assessment&lt;/strong&gt;
+&amp;#9;&amp;#9;&amp;#9;&lt;ol&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;li&gt;Recurrent GI bleed of unknown etiology; hypotension perhaps secondary to this but as likely secondary to polypharmacy.&lt;/li&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;li&gt;Acute on chronic anemia secondary to #1.&lt;/li&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;li&gt;Azotemia, acute renal failure with volume loss secondary to #1.&lt;/li&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;li&gt;Hyperkalemia secondary to #3 and on ACE and K+ supplement.&lt;/li&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;li&gt;Other chronic diagnoses as noted above, currently stable.&lt;/li&gt;
+&amp;#9;&amp;#9;&amp;#9;&lt;/ol&gt;
+&amp;#9;&amp;#9;&amp;#9;&lt;table&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;thead&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;tr&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;th&gt;Planned Activity&lt;/th&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;th&gt;Planned Date&lt;/th&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;/tr&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;/thead&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;tbody&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;tr&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;td&gt;Colonoscopy&lt;/td&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;td&gt;April 21, 2000&lt;/td&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;/tr&gt;
+&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;/tbody&gt;
+&amp;#9;&amp;#9;&amp;#9;&lt;/table&gt;
+&amp;#9;&amp;#9;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.intent">intent</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;order&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.category">category</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/core/CodeSystem/careplan-category&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;assess-plan&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/category&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.subject">subject</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/example&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Amy Shaw&quot;/&gt;
+  &lt;/subject&gt;
+&lt;/CarePlan&gt;</code></pre>
+</body>
+</html>

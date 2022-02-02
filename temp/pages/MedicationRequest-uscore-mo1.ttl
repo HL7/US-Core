@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/MedicationRequest/uscore-mo1> a fhir:MedicationRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "uscore-mo1"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Uscore MO1 Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a uscore mo1 example for the *US Core MedicationRequest Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"uscore-mo1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-medicationrequest.html\">US Core MedicationRequest Profile</a></p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: Nizatidine 15 MG/ML Oral Solution [Axid] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-v3-rxNorm.html\">RxNorm</a>#582620)</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Patient/example: Amy Shaw</a> \" SHAW\"</p><p><b>authoredOn</b>: 2008-04-05</p><p><b>requester</b>: <a href=\"Practitioner-practitioner-1.html\">Practitioner/practitioner-1: Ronald Bone, MD</a> \" BONE\"</p><blockquote><p><b>dispenseRequest</b></p><p><b>numberOfRepeatsAllowed</b>: 1</p><p><b>quantity</b>: 480 mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mL = 'mL')</span></p></blockquote></div>"
+  ];
+  fhir:MedicationRequest.status [ fhir:value "active"];
+  fhir:MedicationRequest.intent [ fhir:value "order"];
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+       fhir:Coding.code [ fhir:value "582620" ];
+       fhir:Coding.display [ fhir:value "Nizatidine 15 MG/ML Oral Solution [Axid]" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Nizatidine 15 MG/ML Oral Solution [Axid]" ]
+  ];
+  fhir:MedicationRequest.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy Shaw" ]
+  ];
+  fhir:MedicationRequest.authoredOn [ fhir:value "2008-04-05"^^xsd:date];
+  fhir:MedicationRequest.requester [
+     fhir:link <http://hl7.org/fhir/us/core/Practitioner/practitioner-1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-1" ];
+     fhir:Reference.display [ fhir:value "Ronald Bone, MD" ]
+  ];
+  fhir:MedicationRequest.dosageInstruction [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "10 mL bid" ];
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.boundsPeriod [
+           fhir:Period.start [ fhir:value "2008-04-05"^^xsd:date ]
+         ]
+       ]
+     ]
+  ];
+  fhir:MedicationRequest.dispenseRequest [
+     fhir:MedicationRequest.dispenseRequest.numberOfRepeatsAllowed [ fhir:value "1"^^xsd:nonNegativeInteger ];
+     fhir:MedicationRequest.dispenseRequest.quantity [
+       fhir:Quantity.value [ fhir:value "480"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mL" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "mL" ]
+     ];
+     fhir:MedicationRequest.dispenseRequest.expectedSupplyDuration [
+       fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "days" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "d" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Practitioner/practitioner-1> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/MedicationRequest/uscore-mo1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/MedicationRequest/uscore-mo1.ttl> .
+
+# -------------------------------------------------------------------------------------
+

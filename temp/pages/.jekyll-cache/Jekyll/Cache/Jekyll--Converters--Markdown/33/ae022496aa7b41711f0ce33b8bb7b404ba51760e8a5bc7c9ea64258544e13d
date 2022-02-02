@@ -1,0 +1,51 @@
+I"(
+
+<hr />
+
+<p><strong id="search" style="font-size: 20px;">Quick Start</strong>
+<a name="quick-start"> </a></p>
+
+<hr />
+
+<p>Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profile’s information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions.  See the <a href="CapabilityStatement-us-core-server.html">US Core Server CapabilityStatement</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+<ul>
+  <li>The syntax used to describe the interactions is described <a href="general-guidance.html#search-syntax">here</a>.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional rules and expectations when a server requires status parameters.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional guidance on searching for multiple patients.</li>
+</ul>
+
+<h4 id="mandatory-search-parameters">Mandatory Search Parameters:</h4>
+
+<p>The following search parameters and search parameter combinations SHALL be supported:</p>
+
+<ol>
+  <li>
+    <p><strong>SHALL</strong> support searching by organization name using the <strong><a href="SearchParameter-us-core-organization-name.html"><code class="highlighter-rouge">name</code></a></strong> search parameter:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Organization?name=[string]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Organization?name=Health</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Organization resources that match the name (<a href="http://hl7.org/fhir/R4/search.html#string">how to search by string</a>)</p>
+  </li>
+  <li>
+    <p><strong>SHALL</strong> support searching organization based on text address using the <strong><a href="SearchParameter-us-core-organization-address.html"><code class="highlighter-rouge">address</code></a></strong> search parameter:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Organization?address=[string]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Organization?address=Arbor</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Organization resources that match the address string (<a href="http://hl7.org/fhir/R4/search.html#string">how to search by string</a>)</p>
+  </li>
+</ol>
+
+:ET

@@ -1,0 +1,70 @@
+I"�
+<p>This profile sets minimum expectations for searching and fetching Diagnostic Reports and Notes using the <a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a> resource. This profile identifies the mandatory core elements, extensions, vocabularies and value sets which <strong>SHALL</strong> be present in the DiagnosticReport when using this profile. Prior to reviewing this profile, implementers are encouraged to read the <a href="clinical-notes-guidance.html">Clinical Notes Guidance</a> to understand the overlap of <a href="StructureDefinition-us-core-diagnosticreport-note.html">US Core DiagnosticReport Profile for Report and Note exchange</a> and <a href="StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a>.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the Diagnostic Report profile:</p>
+
+<ul>
+  <li class="new-content">Query for a specific clinical test result such as electrocardiogram (ECG)</li>
+  <li class="new-content">Query for a specific imaging test result</li>
+  <li>Query for a specific Radiology note (e.g., 84178-3 Interventional Radiology Note)</li>
+  <li>Query for category of reports (e.g. all Cardiology reports)</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Diagnostic Report must have:</strong></p>
+
+<ol>
+  <li>a status</li>
+  <li>a category</li>
+  <li>a code describing the type of report</li>
+  <li>a patient</li>
+  <li class="new-content">date and time the report was created*</li>
+</ol>
+
+<p>*This element has the following constraint: SHALL be present if status is
+‘partial’, ‘preliminary’, ‘final’, ‘amended’, ‘corrected’ or ‘appended’.{:.new-content}</p>
+
+<p><strong>Each Diagnostic Report must support:</strong></p>
+
+<ol>
+  <li>the encounter the report occurred within</li>
+  <li>instant the report was released</li>
+  <li>an author (actor) producing the report</li>
+  <li class="new-content">a reference one or more test results</li>
+  <li class="new-content">a reference one or more images*</li>
+  <li class="new-content">a reference to one or more DICOM imaging studies*</li>
+  <li>a reference to the full report (presentedForm)</li>
+</ol>
+
+<p>*See the next section</p>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>See <a href="clinical-notes-guidance.html">Clinical Notes Guidance</a></li>
+  <li>The <code class="highlighter-rouge">DiagnosticReport.category</code> binding must support at a minimum the <a href="ValueSet-us-core-diagnosticreport-category.html">US Core DiagnosticReport Category Codes</a> of Cardiology, Radiology, and Pathology. Other categories may be supported.</li>
+  <li>A server will return how a customer has categorized their reports at a particular site. Categorization of reports is not consistent across sites. (e.g. a system may categorize an orthopedic note as cardiology.)</li>
+  <li class="new-content">Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. DiagnosticReport resource can link to both DICOM imaging studies and binary images directly by referencing <a href="http://hl7.org/fhir/R4/imagingstudy.html">ImagingStudy</a> in <code class="highlighter-rouge">DocumentReference.imagingStudy</code>, or <a href="http://hl7.org/fhir/R4/media.html">Media</a>  in<code class="highlighter-rouge">DocumentReference.media</code>.
+    <ul>
+      <li>Although both are marked as must support, the server system is not required to support both, but <strong>SHALL</strong> support at least one of these elements.</li>
+      <li>The client application <strong>SHALL</strong> support both elements and target resources.</li>
+    </ul>
+  </li>
+</ul>
+
+<p class="note-to-balloters">Media which is referenced in R4 is only <a href="http://hl7.org/fhir/R4/versions.html#maturity">Maturity Level</a> FMM 1 and in the FHIR R5 release Media is replaced by DocumentReference (Maturity Level FMM 3+).  Should this profile use an extension to reference DocumentReference instead of Media?</p>
+
+<h4 id="examples">Examples</h4>
+
+<ul>
+  <li class="new-content"><a href="DiagnosticReport-cardiology-report.html">Cardiology Report</a></li>
+  <li><a href="DiagnosticReport-chest-xray-report.html">Radiology Report</a></li>
+  <li class="new-content"><a href="DiagnosticReport-bone-density-report.html">DXA Bone Density</a></li>
+</ul>
+
+:ET

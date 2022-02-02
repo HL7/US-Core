@@ -1,0 +1,77 @@
+﻿<html>
+<head>
+  <title>Observation-vitals-panel-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resourceType</a>" : "Observation",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "vitals-panel",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Vitals Panel Example"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is a vitals panel example for the *Vitalsigns Profile*."
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\&quot;&gt;Vital Signs&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://loinc.org 85353-1}\&quot;&gt;Vital signs panel&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Amy Shaw. Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw , Amy V. Baxter ; Phone: 555-555-5555, amy.shaw@example.com; gender: female; birthDate: 1987-02-20&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;encounter&lt;/b&gt;: &lt;span&gt;GP Visit&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 1999-07-02&lt;/p&gt;&lt;p&gt;&lt;b&gt;hasMember&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\&quot;Observation-respiratory-rate.html\&quot;&gt;Respiratory rate. Generated Summary: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\&quot;&gt;Vital Signs&lt;/span&gt;; &lt;span title=\&quot;Codes: {http://loinc.org 9279-1}\&quot;&gt;respiratory_rate&lt;/span&gt;; effective: 1999-07-02; 26.0 breaths per minute&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;Observation-heart-rate.html\&quot;&gt;Heart rate. Generated Summary: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\&quot;&gt;Vital Signs&lt;/span&gt;; &lt;span title=\&quot;Codes: {http://loinc.org 8867-4}\&quot;&gt;heart_rate&lt;/span&gt;; effective: 1999-07-02; 44.0 beats/min&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;Observation-blood-pressure.html\&quot;&gt;Blood Pressure. Generated Summary: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\&quot;&gt;Vital Signs&lt;/span&gt;; &lt;span title=\&quot;Codes: {http://loinc.org 85354-9}\&quot;&gt;Blood pressure systolic and diastolic&lt;/span&gt;; effective: 1999-07-02&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "vital-signs",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Vital Signs"
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Vital Signs"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "85353-1",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Vital signs, weight, height, head circumference, oxygen saturation and BMI panel"
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Vital signs panel"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Amy Shaw"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.encounter">encounter</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "GP Visit"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective[x]">effectiveDateTime</a>" : "1999-07-02",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.hasMember">hasMember</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/respiratory-rate",
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Respiratory rate"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/heart-rate",
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Heart rate"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/blood-pressure",
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Blood Pressure"
+    }
+  ]
+}</code></pre>
+</body>
+</html>

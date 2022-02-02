@@ -1,0 +1,12 @@
+1.  *Unless otherwise specified* the MS applies to the element on which it is tagged as follows:
+    1. Primitive elements (for code datatypes see below):  A MS applies only to the primitive element- for example, patient.birthDate.  It is met by populating the element.
+    give example:
+
+    1. Complex elements (for CodableConcept, and Coding datatypes see below): A MS applies only to the complex element - for example, DocumentReference.Identifer.  It is met by populating *any* of the required or optional subelements,  Note a complex element may also have MS subelement - for example Patient.identifier- and thus the MS for the element is often when the MS on the subelement is met.  
+    give example:
+
+    1. References: For a reference element - for example, DocumentReference.subject - the MS applies to support a reference (Reference.reference or identifier? or display?) to all the US Core profiles listed in the differential view of the profile.  It may also support other resources allowed by the base specification. If no US Core references are specified it may be met by populating *any* of the required or optional subelements.
+    give example:
+
+    1. Choice Elements: For a choice element - for example, Observation.value - the MS is met by populating *any* of the required or optional subelements for *any* of the choices.
+    give example:

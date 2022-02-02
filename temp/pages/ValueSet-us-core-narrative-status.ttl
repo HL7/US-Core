@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "us-core-narrative-status"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://hl7.org/fhir/R4/codesystem-narrative-status.html\"><code>http://hl7.org/fhir/narrative-status</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-narrative-status.html#narrative-status-additional\">additional</a></td><td>additional</td><td>The contents of the narrative may contain additional information not found in the structured data. Note that there is no computable way to determine what the extra information is, other than by human inspection.</td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-narrative-status.html#narrative-status-generated\">generated</a></td><td>generated</td><td>The contents of the narrative are entirely generated from the core elements in the content.</td></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status"];
+  fhir:ValueSet.version [ fhir:value "4.2.0"];
+  fhir:ValueSet.name [ fhir:value "NarrativeStatus"];
+  fhir:ValueSet.title [ fhir:value "US Core Narrative Status"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2022-01-18T15:50:02-08:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International - Cross-Group Projects"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International - Cross-Group Projects" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/cgp" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "cgp@lists.HL7.org" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "The US Core Narrative Status Value Set limits the text status for the resource narrative."];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:ValueSet.copyright [ fhir:value "HL7"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/narrative-status" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "additional" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "additional" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "generated" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "generated" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/ValueSet/us-core-narrative-status.ttl> .
+
+# -------------------------------------------------------------------------------------
+

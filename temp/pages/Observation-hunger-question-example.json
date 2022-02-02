@@ -1,0 +1,76 @@
+{
+  "resourceType": "Observation",
+  "id": "hunger-question-example",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Hunger Question Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a Hunger Question Example for the *US Core Screening Response Observation Profile*."
+      }
+    ],
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"hunger-question-example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-observation-screening-response.html\">US Core Screening Response Observation Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: SocialDeterminantsOfHealth <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LG41762-2)</span>, Survey <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#survey)</span></p><p><b>code</b>: Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS] <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#88122-7)</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Patient/example</a> \" SHAW\"</p><p><b>effective</b>: 2021-11-12T17:59:15-08:00</p><p><b>performer</b>: <a href=\"Patient-example.html\">Patient/example</a> \" SHAW\"</p><p><b>value</b>: Often true <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA28397-0)</span></p><p><b>derivedFrom</b>: <span>: Hunger Vital Signs Questionnaire</span></p></div>"
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "LG41762-2",
+          "display": "SocialDeterminantsOfHealth"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey",
+          "display": "Survey"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "88122-7",
+        "display": "Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2021-11-12T17:59:15-08:00",
+  "performer": [
+    {
+      "reference": "Patient/example"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "LA28397-0",
+        "display": "Often true"
+      }
+    ]
+  },
+  "derivedFrom": [
+    {
+      "display": "Hunger Vital Signs Questionnaire"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{% raw %}<div xmlns="http://www.w3.org/1999/xhtml">  <!-- <h2>SearchParameter: USCoreRace</h2> --><b> description</b> : <p>Returns patients with a race extension matching the specified code.</p>
+
+			<br/>
+			<p><b> id</b> us-core-race</p>
+			<p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-race</b>
+			</p>
+			<p><b> version</b> : 4.1.0</p>
+			<p><b> name</b> : USCoreRace</p>
+			
+			<p><b> status</b> : active</p>
+			
+			<p><b> date</b> : 2019-05-21</p>
+			<p><b> publisher</b> : HL7 International - US Realm Steering Committee</p>
+			<p><b> contact</b> : http://www.hl7.org/Special/committees/usrealm/index.cfm</p>
+              <!-- <p>
+				<b> useContext</b> : </p> -->
+			<p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
+           States of America (the)'})</span>
+			</p>
+			  <!-- <p>
+		<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,
+         and matching as part of a chain</p> -->
+			<p><b> code</b> : <code>race</code>
+			</p>
+			<p><b> base</b> :Patient</p>
+			<p><b> type</b> : token</p>
+			<p><b> expression</b> : <code>Patient.extension.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-race').extension.value.code</code>
+			</p>
+			<p><b> xpath</b> : <code>f:Patient/f:extension[@url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-race']/f:extension/f:valueCoding/f:code/@value</code>
+			</p>
+			<p><b> xpathUsage</b> : normal</p>
+			<p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p>
+			<p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>
+    
+    
+    
+		</div>{% endraw %}

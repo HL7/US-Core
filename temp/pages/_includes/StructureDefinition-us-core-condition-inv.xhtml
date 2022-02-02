@@ -1,0 +1,8 @@
+{% raw %}<h4>Constraints</h4>
+<table class="list">
+<tr><td width="60"><b>Id</b></td><td><b>Path</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
+<tr><td>us-core-1</td><td>Condition</td><td>A code in Condition.category SHOULD be from US Core Condition Category Codes value set.<br/>: where(category.memberOf('http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category')).exists()</td><td></td></tr>
+<tr><td>con-1</td><td>Condition.stage</td><td>Stage SHALL have summary or assessment<br/>: summary.exists() or assessment.exists()</td><td></td></tr>
+<tr><td>con-2</td><td>Condition.evidence</td><td>evidence SHALL have code or details<br/>: code.exists() or detail.exists()</td><td></td></tr>
+</table>
+{% endraw %}

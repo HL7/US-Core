@@ -1,0 +1,17 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-us-core-observation-imaging-tx-must-support</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<h4>Terminology Bindings</h4>
+<table class="list">
+<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet / Code</b></td></tr>
+<tr><td>Observation.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Codes providing the status of an observation."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-observation-status.html">ObservationStatus</a></td></tr>
+<tr><td>Observation.category</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="Codes for high level observation categories."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-observation-category.html">ObservationCategoryCodes</a></td></tr>
+<tr><td>Observation.category:imaging</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="Codes for high level observation categories.">Pattern: <a title="Observation Category Codes" href="http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html#observation-category-imaging">imaging</a></td></tr>
+<tr><td>Observation.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="ValueSet-us-core-diagnosticreport-report-and-note-codes.html">USCoreClinicalTestCodes</a></td></tr>
+<tr><td>Observation.dataAbsentReason</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td title="Codes specifying why the result (`Observation.value[x]`) is missing."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-data-absent-reason.html">DataAbsentReason</a></td></tr>
+</table>
+</body>
+</html>

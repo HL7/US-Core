@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="shaw-niece"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Patient Niece Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a patient niece example for the *US Core RelatedPerson Profile*."/>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "shaw-niece" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-relatedperson.html">US Core Related Person</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href="Patient-example.html">Patient/example: Amy V. Shaw</a> " SHAW"</p><p><b>relationship</b>: niece <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-RoleCode.html">RoleCode</a>#NIECE)</span></p><p><b>name</b>: Sarah van Putten (OFFICIAL)</p><p><b>telecom</b>: ph: 555-555-5555(HOME), <a href="mailto:sarah.vanputten@example.com">sarah.vanputten@example.com</a></p><p><b>birthDate</b>: 1996-01-28</p><p><b>address</b>: 80A Village Street New Holland PA 17557 (HOME)</p></div>
+  </text>
+  <active value="true"/>
+  <patient>
+    <reference value="Patient/example"/>
+    <display value="Amy V. Shaw"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="NIECE"/>
+      <display value="niece"/>
+    </coding>
+  </relationship>
+  <name>
+    <use value="official"/>
+    <family value="van Putten"/>
+    <given value="Sarah"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="555-555-5555"/>
+    <use value="home"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="sarah.vanputten@example.com"/>
+    <use value="home"/>
+  </telecom>
+  <birthDate value="1996-01-28"/>
+  <address>
+    <use value="home"/>
+    <line value="80A Village Street"/>
+    <city value="New Holland"/>
+    <state value="PA"/>
+    <postalCode value="17557"/>
+  </address>
+</RelatedPerson>

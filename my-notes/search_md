@@ -1,0 +1,16 @@
+When searching using the `date` type searchparameter:
+
+* A client **SHALL** provide a value precise to the *day*.
+* A server **SHALL** support a value precise to the *day*.
+
+When searching using the `date` type searchparameter:
+* A client **SHALL** provide a value precise to the *second + time offset*.
+* A server **SHALL** support a value precise to the *second + time offset*.
+
+When searching using the `token` type searchparameter:
+* The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+* The server **SHALL** support both.
+
+When searching using the `reference` type searchparameter:
+* The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+* The server **SHALL** support both.

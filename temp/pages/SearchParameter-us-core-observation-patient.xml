@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="us-core-observation-patient"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">  <!-- <h2>SearchParameter: USCoreObservationPatient</h2> --><b> description</b> : <p><strong>The subject that the observation is about (if patient)</strong><br/><strong>NOTE</strong>: This US Core SearchParameter definition extends the usage context of the
+<a href="http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html">Conformance expectation extension</a></p>
+<ul><li>multipleAnd</li><li>multipleOr</li><li>comparator</li><li>modifier</li><li>chain</li></ul>
+
+			<br/>
+			<p><b> id</b> us-core-observation-patient</p>
+			<p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-patient</b>
+			</p>
+			<p><b> version</b> : 4.0.1</p>
+			<p><b> name</b> : USCoreObservationPatient</p>
+			<p><b> derivedFrom</b> : http://hl7.org/fhir/SearchParameter/clinical-patient
+			</p>
+			<p><b> status</b> : active</p>
+			<p><b> experimental</b>  False</p>
+			<p><b> date</b> : 2020-11-20</p>
+			<p><b> publisher</b> : HL7 International - US Realm Steering Committee</p>
+			<p><b> contact</b> : http://www.hl7.org/Special/committees/usrealm/index.cfm</p>
+			<p><b> useContext</b> : </p>
+			<p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
+           States of America (the)'})</span>
+			</p>
+			  <!-- <p>
+		<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,
+         and matching as part of a chain</p> -->
+			<p><b> code</b> : <code>patient</code>
+			</p>
+			<p><b> base</b> :Observation</p>
+			<p><b> type</b> : reference</p>
+			<p><b> expression</b> : <code>Observation.subject.where(resolve() is Patient)</code>
+			</p>
+			<p><b> xpath</b> : <code>f:Observation/f:subject</code>
+			</p>
+			<p><b> xpathUsage</b> : normal</p>
+			<p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p>
+			<p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>
+    
+    
+    
+		</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-patient"/>
+  <version value="4.2.0"/>
+  <name value="USCoreObservationPatient"/>
+  <derivedFrom value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2020-11-20T05:19:29.729464Z"/>
+  <publisher value="HL7 International - Cross-Group Projects"/>
+  <contact>
+    <name value="HL7 International - Cross-Group Projects"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cgp"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgp@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="**The subject that the observation is about (if patient)**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <code value="patient"/>
+  <base value="Observation"/>
+  <type value="reference"/>
+  <expression value="Observation.subject.where(resolve() is Patient)"/>
+  <xpath value="f:Observation/f:subject"/>
+  <xpathUsage value="normal"/>
+  <target value="Patient"/>
+  <multipleOr value="true">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="MAY"/>
+    </extension>
+  </multipleOr>
+  <multipleAnd value="true">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="MAY"/>
+    </extension>
+  </multipleAnd>
+</SearchParameter>

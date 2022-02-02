@@ -1,0 +1,47 @@
+{% raw %}<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization">resourceType</a>" : "Immunization",
+  "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.id">id</a>" : "imm-1",
+  "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Imm 1 Example"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is a imm 1 example for the *US Core Immunization Profile*."
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;imm-1\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-immunization.html\&quot;&gt;US Core Immunization Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;vaccineCode&lt;/b&gt;: influenza, high-dose, quadrivalent &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-CVX.html\&quot;&gt;PH_VaccinesAdministeredCVX_CDC_NIP&lt;/a&gt;#197; &lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-v3-ndc.html\&quot;&gt;National drug codes&lt;/a&gt;#49281012165 \&quot;FLUZONE High-Dose Quadrivalent Northern Hemisphere\&quot;)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Patient/example: Amy Shaw&lt;/a&gt; \&quot; SHAW\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;occurrence&lt;/b&gt;: 2020-11-19T12:46:57-08:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;primarySource&lt;/b&gt;: false&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.status">status</a>" : "completed",
+  "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.vaccineCode">vaccineCode</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/sid/cvx",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "197",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "influenza, high-dose, quadrivalent"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/sid/ndc",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "49281012165",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "FLUZONE High-Dose Quadrivalent Northern Hemisphere"
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "influenza, high-dose, quadrivalent"
+  },
+  "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.patient">patient</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Amy Shaw"
+  },
+  "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.occurrence[x]">occurrenceDateTime</a>" : "2020-11-19T12:46:57-08:00",
+  "<a href="http://hl7.org/fhir/R4/immunization.html#Immunization.primarySource">primarySource</a>" : false
+}</code></pre>
+{% endraw %}

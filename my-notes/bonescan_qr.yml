@@ -1,0 +1,42 @@
+resourceType: QuestionnaireResponse
+id: '5770426'
+meta:
+  versionId: '1'
+  lastUpdated: '2021-11-10T22:02:19.000-05:00'
+  source: '#UgU1K2o2WfbL2QDl'
+  profile:
+    - >-
+      http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7
+  tag:
+    - code: 'lformsVersion: 29.1.0'
+questionnaire: Questionnaire/5770424
+status: completed
+subject:
+  reference: Patient/pat-12346
+  display: LEIGH AMIN
+authored: '2021-11-11T03:02:15.888Z'
+item:
+  - linkId: /80954-1
+    text: DXA Femur-L ArMass BMD
+    answer:
+      - valueDecimal: 0.631
+  - linkId: /80948-3
+    text: DXA Femur-L T-score BMD
+    answer:
+      - valueDecimal: -1.48
+  - linkId: /80940-0
+    text: DXA Femur-L Z-score BMD
+    answer:
+      - valueDecimal: 0.05
+  - linkId: /46278-8
+    text: DXA Hip-L ArMass BMD
+    answer:
+      - valueDecimal: 0.734
+  - linkId: /80946-7
+    text: DXA Hip-L T-score BMD
+    answer:
+      - valueDecimal: -1.62
+  - linkId: /80938-4
+    text: DXA Hip-L Z-score BMD
+    answer:
+      - valueDecimal: -0.19

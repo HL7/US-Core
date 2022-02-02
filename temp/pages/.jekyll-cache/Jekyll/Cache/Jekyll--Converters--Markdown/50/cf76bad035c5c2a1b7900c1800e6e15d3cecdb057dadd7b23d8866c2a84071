@@ -1,0 +1,229 @@
+I"�_<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<!--
+---
+title: My SDOH Page Edits
+tags: USCDI v2
+---
+-->
+
+<div class="new-content">
+
+  <p>This US Core Social Determinant of Health (SDOH) Guidance Page has been added in response to  United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published by the Office of the National Coordinator (ONC) in July of 2021. The new data elements include:</p>
+  <ul>
+    <li>SDOH Assessments</li>
+    <li>SDOH Goals</li>
+    <li>SDOH Interventions</li>
+    <li>SDOH Problems/Health Concerns</li>
+  </ul>
+
+  <p>This page documents how the US Core Profile can be use to represent these elements.</p>
+
+</div>
+
+<h3 id="purpose-and-intent">Purpose and Intent</h3>
+
+<p>The intent of adding these SDOH data elements to US Core is to be able to use US Core Profiles along with a defined set of FHIR RESTful interactions to represent and access SDOH patient data.  This is in contrast to the <a href="http://hl7.org/fhir/us/sdoh-clinicalcare/">SDOH Clinical Care</a> HL7 Implementation Guide. This guide was developed by the <a href="https://hl7.org/gravity">Gravity Project</a> and documents the orchestration of SDOH data capture and related interventions and how it is represented using FHIR.  US Core Profile span across use cases and thus less constrained, but they form backbone for the SDOH Clinical Care Profiles.  Many of the additions to US Core Profiles to meet the SDOH data element requirements are based on the efforts by the Gravity led project.  In the following sections the interrelation between the SDOH elements is summarized and how each element is represented in US Core documented.</p>
+
+<h3 id="sdoh-activities">SDOH Activities</h3>
+
+<p>The figure below shows how the SDOH elements are inter-related:</p>
+
+<ul>
+  <li><strong>SDOH Assessment</strong>: SDOH Assessments represent the recording of SDOH assessment screening tools and other questionnaires as well as individual clinical observations.  These assessments are represented by the <a href="StructureDefinition-us-core-observation-social-history-assessment.html">US Core Social History Assessment Observation Profile</a> and <a href="StructureDefinition-us-core-observation-screening-response.html">US Core Screening Response Observation Profile</a></li>
+  <li><strong>SDOH Problems/Health Concerns</strong>: Identifying a Social Determinants of Health-related condition (for example, homelessness) is represented by the <a href="StructureDefinition-us-core-condition.html">US Core Condition Profile</a>.</li>
+  <li><strong>SDOH Interventions</strong>:  Services offered to a patient to address identified Social Determinants of Health problems/health concerns (for example, referral to transportation support programs) are represented by the <a href="StructureDefinition-us-core-servicerequest.html">US Core ServiceRequest Profile</a>.  In addition, the <a href="StructureDefinition-us-core-procedure.html">US Core Procedure Profile</a> can be used to record a completed service or intervention.</li>
+  <li><strong>SDOH Goals</strong>: Identifying and defining a future desired condition or change in condition related to an SDOH risk (for example, Has adequate quality meals and snacks) is represented by <a href="StructureDefinition-us-core-goal.html">US Core Goal Profile</a></li>
+</ul>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>SDOH Activities</strong></figcaption>
+  <img src="sdoh_assessment.svg" class="figure-img img-responsive img-rounded center-block" alt="sdoh_assessment.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<h3 id="sdoh-terminology-in-us-core">SDOH Terminology in US Core</h3>
+
+<h4 id="category-codes">Category Codes</h4>
+
+<p>The LOINC “grouping” code: <a href="http://details.loinc.org/LOINC/LG41762-2.html">LG41762-2</a> “Social Determinants Of Health” is used to categorize SDOH for Assessments, Problem, and Service Requests. This concept enables API consumers to be able to separate out SDOH data when accessing patient information. Alternatively, clients may find it more efficient to query based on a specific codeor set of codes (for example, <code class="highlighter-rouge">Condition.code</code>) or request all of a patient’s resources for a particular type and filter by code(s) to access items of interest.</p>
+
+<h4 id="codes-for-problemshealthconcerns-goals-service-requests-and-procedures">Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures</h4>
+
+<p>For the SDOH Clinical Care HL7 Implementation Guide, the Gravity project has defined the following value sets across specific social risk factor domains for problems/health concerns, goals, procedures, and service requests:</p>
+
+<ul>
+  <li><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion">Social Determinants of Health Conditions Value Set</a></li>
+  <li><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion">Social Determinants of Health Procedures Value Set</a></li>
+  <li><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion">Social Determinants of Health Goals Value Set</a></li>
+  <li><a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion">Social Determinants of Health Service Requests Value Set</a></li>
+</ul>
+
+<p>US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Profile and how the grouped valueset is compatible with the US Core Problem code valueset.   When recording SDOH data US Core Profiles, servers <strong>SHOULD</strong> use the SDOH value sets listed above.</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Example of SDOH Grouping Value set in US Core Condition Code Value Set</strong></figcaption>
+  <img src="sdoh_condition.svg" class="img-responsive img-rounded center-block" alt="sdoh_condition.svg" width="75%" />
+</figure>
+
+<p></p>
+</div>
+
+<h4 id="assessment-codes">Assessment Codes</h4>
+
+<p>Assessment Screenings can represent a structured evaluation of risk (e.g., PRAPARE, Hunger Vital Sign, AHC-HRSN screening tool) for any Social Determinants of Health domain such as food, housing, or transportation security. The assessment scale responses are represented in US Core with <a href="StructureDefinition-us-core-observation-screening-response.html">US Core Screening Response Observation Profile</a>. The <a href="StructureDefinition-us-core-observation-social-history-assessment.html">US Core Social History Assessment Observation Profile</a> is for simple observations made by an individual during the course of care about a patient’s social history status. These Observation can contribute to the identification of SDOH Problems and can be the reason for SDOH Service Requests or Procedures.</p>
+
+<p>US Core has developed <a href="ValueSet-us-core-common-sdoh-assessments.html">US Core Common SDOH Assessments ValueSet</a> - commonly asked social questions as identified by <a href="https://company.findhelp.com/">FindHelp.org</a>, a social service assistance tool. This is not intend to replicate the complexities and robustness of the FHIR Questionnaire and QuestionnaireResponse resources developed for SDOH assessment screening tools and other questionnaires.  The Gravity Project is working on a more comprehensive set of codes to meet these challenges (this guide may leverage that work in the future).</p>
+
+<h3 id="searching-for-sdoh-patient-data">Searching for SDOH Patient Data</h3>
+
+<p>Below is a simple example of FHIR RESTful search transaction to access a patient’s SDOH assessment data.</p>
+
+<ul>
+  <li>Observation type = Observation</li>
+  <li>Patient’s FHIR_id = “example”</li>
+  <li>Observation category = “LG41762-2”</li>
+</ul>
+
+<p><strong>Request</strong></p>
+
+<p>Request url using GET</p>
+
+<p>GET <code class="highlighter-rouge">http://wildfhir4.aegis.net/fhir4-0-1/Observation?patient=Patient/example&amp;category=LG41762-2</code></p>
+
+<p>Request Headers</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: application/fhir+json
+Connection: keep-alive
+Content-Type: application/fhir+json
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<p>200 OK</p>
+
+<p>Response Headers</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Connection: keep-alive
+Content-Location: http://wildfhir4.aegis.net/fhir4-0-1/Observation?patient=Patient%2Fexample&amp;category=LG41762-2
+Content-Type: application/fhir+json;charset=utf-8
+Content-Length: 4112
+Date: Sun, 21 Nov 2021 03:15:18 GMT
+</code></pre></div></div>
+<p>Response Body</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"158f4b97-5b3a-4363-81da-19d454a6df30"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"versionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-11-20T22:15:18.726-05:00"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"searchset"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"link"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"relation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"self"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://wildfhir4.aegis.net/fhir4-0-1/Observation?patient=Patient%2Fexample&amp;category=LG41762-2"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://wildfhir4.aegis.net/fhir4-0-1/Observation/hunger-question-example"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Observation"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hunger-question-example"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/StructureDefinition/instance-name"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"valueString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hunger Question Example"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/StructureDefinition/instance-description"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"valueMarkdown"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This is a Hunger Question Example for the *US Core Screening Response Observation Profile*."</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nl">"versionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"lastUpdated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-11-20T22:13:54.070-05:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"generated"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"div"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;div xmlns=</span><span class="se">\"</span><span class="s2">http://www.w3.org/1999/xhtml</span><span class="se">\"</span><span class="s2">&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;:       </span><span class="se">\n</span><span class="s2">      &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: FINAL      </span><span class="se">\n</span><span class="s2">      &lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: SocialDeterminantsOfHealth         </span><span class="se">\n</span><span class="s2">        &lt;span style=</span><span class="se">\"</span><span class="s2">background: LightGoldenRodYellow</span><span class="se">\"</span><span class="s2">&gt;(Details : {LOINC code 'LG41762-2' = 'LG41762-2', given as 'SocialDeterminantsOfHealth'})&lt;/span&gt;, Survey         </span><span class="se">\n</span><span class="s2">        &lt;span style=</span><span class="se">\"</span><span class="s2">background: LightGoldenRodYellow</span><span class="se">\"</span><span class="s2">&gt;(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'survey' = 'Survey', given as 'Survey'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]         </span><span class="se">\n</span><span class="s2">        &lt;span style=</span><span class="se">\"</span><span class="s2">background: LightGoldenRodYellow</span><span class="se">\"</span><span class="s2">&gt;(Details : {LOINC code '88122-7' = 'Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]', given as 'Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;:         </span><span class="se">\n</span><span class="s2">        &lt;a href=</span><span class="se">\"</span><span class="s2">Patient/example</span><span class="se">\"</span><span class="s2">&gt;Patient/example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: Nov 12, 2021 8:59:15 PM      </span><span class="se">\n</span><span class="s2">      &lt;/p&gt;&lt;p&gt;&lt;b&gt;performer&lt;/b&gt;:         </span><span class="se">\n</span><span class="s2">        &lt;a href=</span><span class="se">\"</span><span class="s2">Patient/example</span><span class="se">\"</span><span class="s2">&gt;Patient/example&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: Often true         </span><span class="se">\n</span><span class="s2">        &lt;span style=</span><span class="se">\"</span><span class="s2">background: LightGoldenRodYellow</span><span class="se">\"</span><span class="s2">&gt;(Details : {LOINC code 'LA28397-0' = 'Often true', given as 'Often true'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;derivedFrom&lt;/b&gt;: Hunger Vital Signs Questionnaire      </span><span class="se">\n</span><span class="s2">      &lt;/p&gt;&lt;/div&gt;"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"final"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://loinc.org"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LG41762-2"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SocialDeterminantsOfHealth"</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/observation-category"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"survey"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Survey"</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://loinc.org"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"88122-7"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"subject"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/example"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"effectiveDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-11-12T17:59:15-08:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"performer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/example"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://loinc.org"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LA28397-0"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Often true"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nl">"derivedFrom"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hunger Vital Signs Questionnaire"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"search"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"match"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+:ET

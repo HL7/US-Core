@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="rehab"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Rehab Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a rehab example for the *US Core Procedure Profile*."/>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "rehab" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-procedure.html">US Core Procedure Profile</a></p></div><p><b>status</b>: completed</p><p><b>code</b>: Alcohol rehabilitation <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#24165007 "Alcoholism counseling"; <a href="http://terminology.hl7.org/3.0.0/CodeSystem-icd10PCS.html">ICD-10 Procedure Codes</a>#HZ30ZZZ "Individual Counseling for Substance Abuse Treatment, Cognitive")</span></p><p><b>subject</b>: <a href="Patient-example.html">Patient/example: Amy Shaw</a> " SHAW"</p><p><b>performed</b>: 2002-05-23</p></div>
+  </text>
+  <status value="completed"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="24165007"/>
+      <display value="Alcoholism counseling"/>
+    </coding>
+    <coding>
+      <system value="http://www.cms.gov/Medicare/Coding/ICD10"/>
+      <code value="HZ30ZZZ"/>
+      <display value="Individual Counseling for Substance Abuse Treatment, Cognitive"/>
+    </coding>
+    <text value="Alcohol rehabilitation"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Amy Shaw"/>
+  </subject>
+  <performedDateTime value="2002-05-23"/>
+</Procedure>

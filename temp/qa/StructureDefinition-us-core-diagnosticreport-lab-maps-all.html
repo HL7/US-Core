@@ -1,0 +1,152 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-us-core-diagnosticreport-lab-maps-all</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<a name="workflow"> </a><h3>Mappings for Workflow Pattern (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreDiagnosticReportProfileLaboratoryReporting</b></td></tr>
+ <tr><td>DiagnosticReport</td><td>Event</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>Event.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>Event.basedOn</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>Event.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category (LaboratorySlice)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>Event.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>Event.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>Event.encounter</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>Event.occurrence[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>Event.performer.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;resultsInterpreter</td><td>Event.performer.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;specimen</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;result</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;imagingStudy</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;media</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comment</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;conclusion</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;conclusionCode</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;presentedForm</td><td></td> </tr>
+</table>
+<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreDiagnosticReportProfileLaboratoryReporting</b></td></tr>
+ <tr><td>DiagnosticReport</td><td>ORU -&gt; OBR</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>OBR-51/ for globally unique filler ID  - OBR-3 , For non-globally unique filler-id the flller/placer number must be combined with the universal service Id -  OBR-2(if present)+OBR-3+OBR-4</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>ORC? OBR-2/3?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>OBR-25 (not 1:1 mapping)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>OBR-24</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category (LaboratorySlice)</td><td>OBR-24</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>OBR-4 (HL7 v2 doesn't provide an easy way to indicate both the ordered test and the performed panel)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PID-3 (no HL7 v2 mapping for Group or Device)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>PV1-19</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>OBR-7</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td>OBR-22</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>PRT-8 (where this PRT-4-Participation = &quot;PO&quot;)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;resultsInterpreter</td><td>OBR-32, PRT-8 (where this PRT-4-Participation = &quot;PI&quot;)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;specimen</td><td>SPM</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;result</td><td>OBXs</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;imagingStudy</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;media</td><td>OBX?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comment</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;conclusion</td><td>OBX</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;conclusionCode</td><td>OBX</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;presentedForm</td><td>OBX</td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreDiagnosticReportProfileLaboratoryReporting</b></td></tr>
+ <tr><td>DiagnosticReport</td><td>Entity. Role, or Act, Observation[classCode=OBS, moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>outboundRelationship[typeCode=FLFS].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>statusCode  Note: final and amended are distinguished by whether observation is the subject of a ControlAct event of type &quot;revise&quot;</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>inboundRelationship[typeCode=COMP].source[classCode=LIST, moodCode=EVN, code &lt; LabService].code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category (LaboratorySlice)</td><td>inboundRelationship[typeCode=COMP].source[classCode=LIST, moodCode=EVN, code &lt; LabService].code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td>participation[typeCode=VRF or AUT].time</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>.participation[typeCode=PRF]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;resultsInterpreter</td><td>.participation[typeCode=PRF]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;specimen</td><td>participation[typeCode=SBJ]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;result</td><td>outboundRelationship[typeCode=COMP].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;imagingStudy</td><td>outboundRelationship[typeCode=COMP].target[classsCode=DGIMG, moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;media</td><td>outboundRelationship[typeCode=COMP].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comment</td><td>.inboundRelationship[typeCode=COMP].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link</td><td>.value.reference</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;conclusion</td><td>inboundRelationship[typeCode=&quot;SPRT&quot;].source[classCode=OBS, moodCode=EVN, code=LOINC:48767-8].value (type=ST)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;conclusionCode</td><td>inboundRelationship[typeCode=SPRT].source[classCode=OBS, moodCode=EVN, code=LOINC:54531-9].value (type=CD)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;presentedForm</td><td>text (type=ED)</td> </tr>
+</table>
+<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreDiagnosticReportProfileLaboratoryReporting</b></td></tr>
+ <tr><td>DiagnosticReport</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>FiveWs.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>FiveWs.class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category (LaboratorySlice)</td><td>FiveWs.class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>FiveWs.what[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>FiveWs.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effective[x]</td><td>FiveWs.done[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;issued</td><td>FiveWs.recorded</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>FiveWs.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;resultsInterpreter</td><td>FiveWs.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;specimen</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;result</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;imagingStudy</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;media</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comment</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;conclusion</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;conclusionCode</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;presentedForm</td><td></td> </tr>
+</table>
+</body>
+</html>

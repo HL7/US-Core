@@ -1,0 +1,46 @@
+I"7
+<div class="new-content">
+
+  <p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/observation.html">Observation</a> resource to record, search, and fetch sexual orientation observations associated with a patient.  It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+  <p><strong>Example Usage Scenarios:</strong></p>
+
+  <p>The following are example usage scenarios for the US Core Sexual Orientation Observation Profile:</p>
+
+  <ul>
+    <li>Query for sexual orientation</li>
+    <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a> sexual orientation</li>
+  </ul>
+
+  <h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+  <p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+  <p><strong>Each Observation must have:</strong></p>
+
+  <ol>
+    <li>a status</li>
+    <li>a fixed code for sexual orientation</li>
+    <li>a patient</li>
+  </ol>
+
+  <p><strong>Each Observation must support:</strong></p>
+
+  <ol>
+    <li>a time indicating when the observation was made</li>
+    <li>a sexual orientation value</li>
+  </ol>
+
+  <p><strong>Profile specific implementation guidance:</strong></p>
+
+  <ul>
+    <li>Additional codes that translate or map to the Observation code (e.g., local codes) are allowed.</li>
+  </ul>
+
+  <h3 id="examples">Examples</h3>
+
+  <p><a href="Observation-sexual-orientation-example.html">Sexual Orientation Observation Example</a></p>
+
+</div>
+
+:ET

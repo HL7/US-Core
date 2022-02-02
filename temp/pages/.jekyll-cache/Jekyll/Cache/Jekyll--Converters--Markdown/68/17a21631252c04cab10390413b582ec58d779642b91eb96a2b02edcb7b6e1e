@@ -1,0 +1,53 @@
+I"n
+<div class="new-content">
+  <p>This profile sets minimum expectations for searching and fetching  using the <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a> resource. This profile identifies the mandatory core elements, extensions, vocabularies and value sets which <strong>SHALL</strong> be present in the ServiceRequest when using this profile.</p>
+
+  <p><strong>Example Usage Scenarios:</strong></p>
+
+  <p>The following are example usage scenarios for the Service Request profile:</p>
+
+  <ul>
+    <li>Query for a specific procedure or test request such as an electrocardiogram (ECG) order or a referral to a support program.</li>
+    <li>Query for a specific service offered to a patient such as a referral to a support program.</li>
+    <li>Query for category of service request (e.g. all cardiology requests)</li>
+  </ul>
+
+  <h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+  <p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+  <p><strong>Each Service Request must have:</strong></p>
+
+  <ol>
+    <li>a status</li>
+    <li>a intent code indicated whether the request is a proposal, plan, or order.</li>
+    <li>a code defining what is being requested</li>
+    <li>a patient</li>
+  </ol>
+
+  <p><strong>Each Service Request must support:</strong></p>
+
+  <ol>
+    <li>a category</li>
+    <li>when requested service should happen</li>
+    <li>when request was made</li>
+    <li>the requester</li>
+  </ol>
+
+  <p><strong>Profile specific implementation guidance:</strong></p>
+
+  <ul>
+    <li>See <a href="sdoh.html">SDOH Guidance</a> for more information when exchanging Social Determinants of Health (SDOH) Service Requests.</li>
+    <li>The <code class="highlighter-rouge">ServiceRequest.category</code> binding must support at a minimum the <a href="ValueSet-us-core-servicerequest-category.html">US Core ServiceRequest
+Category Codes</a>.  Within this categorization scheme/axis, other categories codes may be supported and alternate codes may be provided <em>in addition</em> to the standard codes. See <a href="conformance-expectations.html#translations">Using multiple codes with CodeableConcept Datatype</a> for examples.  Other categorization schemes to be used as well.</li>
+  </ul>
+
+  <h4 id="examples">Examples</h4>
+
+  <ul>
+    <li><a href="ServiceRequest-foodpantry-referral.html">Foodpantry Referral</a></li>
+  </ul>
+
+</div>
+
+:ET

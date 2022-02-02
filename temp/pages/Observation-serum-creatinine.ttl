@@ -1,0 +1,100 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Observation/serum-creatinine> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "serum-creatinine"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Serum Creatinine Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a serum creatinine example for the *US Core Observation Lab Profile*." ]
+     ];
+     fhir:Meta.versionId [ fhir:value "926" ];
+     fhir:Meta.lastUpdated [ fhir:value "2016-03-09T15:29:57.327+00:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"serum-creatinine\" Version \"926\" Updated \"2016-03-09T07:29:57.327-08:00\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-observation-lab.html\">US Core Laboratory Result Observation Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: Creat SerPl-mCnc <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#2160-0)</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Patient/example: Amy Shaw</a> \" SHAW\"</p><p><b>effective</b>: 2005-07-05</p><p><b>value</b>: 1.0 mg/dL</p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>0.2 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mg/dL = 'mg/dL')</span></td><td>0.6 mg/dL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mg/dL = 'mg/dL')</span></td><td>Normal Range <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-referencerange-meaning.html\">Observation Reference Range Meaning Codes</a>#normal)</span></td></tr></table></div>"
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "laboratory" ];
+       fhir:Coding.display [ fhir:value "Laboratory" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Laboratory" ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:2160-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "2160-0" ];
+       fhir:Coding.display [ fhir:value "Creat SerPl-mCnc" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Creat SerPl-mCnc" ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy Shaw" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2005-07-05"^^xsd:date];
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "1.0"^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value "mg/dL" ];
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ]
+  ];
+  fhir:Observation.referenceRange [
+     fhir:index 0;
+     fhir:Observation.referenceRange.low [
+       fhir:Quantity.value [ fhir:value "0.2"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mg/dL" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "mg/dL" ]
+     ];
+     fhir:Observation.referenceRange.high [
+       fhir:Quantity.value [ fhir:value "0.6"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mg/dL" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "mg/dL" ]
+     ];
+     fhir:Observation.referenceRange.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/referencerange-meaning" ];
+         fhir:Coding.code [ fhir:value "normal" ];
+         fhir:Coding.display [ fhir:value "Normal Range" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Normal Range" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Observation/serum-creatinine.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Observation/serum-creatinine.ttl> .
+
+# -------------------------------------------------------------------------------------
+

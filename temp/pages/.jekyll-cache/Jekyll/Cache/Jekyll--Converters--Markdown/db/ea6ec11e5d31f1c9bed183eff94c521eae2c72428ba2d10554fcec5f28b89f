@@ -1,0 +1,73 @@
+I"�
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/patient.html">Patient</a> resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core Patient profile:</p>
+
+<ul>
+  <li>Query for a Patient demographic information using Medical Record
+Number (MRN), which is a type of identifier. The MRN is identifiable
+by identifier.system and may be location specific.</li>
+  <li>Query for a Patient demographic information using first name, last
+name, birthdate, and gender.</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Patient must have:</strong></p>
+
+<ol>
+  <li>a patient identifier (e.g. MRN)</li>
+  <li>a patient name</li>
+  <li>a gender*</li>
+</ol>
+
+<p><strong>Each Patient must support:</strong></p>
+
+<ol>
+  <li>a birth date</li>
+  <li>an address</li>
+</ol>
+
+<p><strong>Additional USCDI Requirements</strong></p>
+
+<p>For ONC’s USCDI requirements, each Patient must support the following additional elements. These elements are included in the formal definition of the profile. The patient examples include all of these elements.</p>
+
+<ol>
+  <li>contact detail (e.g. a telephone number or an email address)</li>
+  <li>a communication language</li>
+  <li>a race</li>
+  <li>an ethnicity</li>
+  <li>a birth sex*</li>
+  <li class="new-content">gender identity*</li>
+  <li class="new-content">previous address</li>
+  <li>previous name</li>
+  <li>suffix</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+<ul>
+  <li>Note that <em>Previous Name</em>, <em>Suffix</em>, <span class="bg-success">and <em>Previous address</em></span> are listed in the U.S. Core Data for Interoperability.
+    <ul>
+      <li>Suffix is represented using the <code class="highlighter-rouge">Patient.name.suffix</code> element.</li>
+      <li class="new-content">Previous name is represented by setting <code class="highlighter-rouge">Patient.name.use</code> to “old” and providing an end date in Patient.name.period element if known</li>
+      <li class="new-content">Previous address is represented by setting <code class="highlighter-rouge">Patient.address.use</code> to “old” and providing an end date in Patient.address.period element if known.</li>
+      <li>The patient example below demonstrates the usage of both of these elements.</li>
+    </ul>
+  </li>
+  <li class="new-content">/*The <a href="https://confluence.hl7.org/display/VOC/The+Gender+Harmony+Project">HL7 Gender Harmony Project</a> is modeling gender and sex information which includes data elements, value sets, code systems. US Core reviwed and updated value sets based on input from the Gender Harmony project. When the final recommendations of the Gender Harmony project are complete, US Core will update these concepts to align with the base FHIR resource located <a href="http://hl7.org/fhir/R4/patient.html#gender">here</a>.</li>
+  <li>The Patient’s Social Security Numbers <strong>SHOULD NOT</strong> be used as a patient identifier in <code class="highlighter-rouge">Patient.identifier.value</code>. There is increasing concern over the use of Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have actively purged them from their systems and filter them out of incoming data.</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="Patient-example.html">Patient-example</a></li>
+  <li><a href="Patient-infant-example.html">Patient Infant Example</a></li>
+  <li><a href="Patient-child-example.html">Patient Child Example</a></li>
+</ul>
+
+:ET

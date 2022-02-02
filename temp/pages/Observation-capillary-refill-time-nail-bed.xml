@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="capillary-refill-time-nail-bed"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Capillary refill Time Nail Bed Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a Capillary refill Time Nail Bed Example for the *Clinical Test Result Observation Profile*."/>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "capillary-refill-time-nail-bed" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-observation-clinical-test.html">US Core Clinical Test Result Observation Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Exam <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#exam)</span></p><p><b>code</b>: Capillary refill Time Nail Bed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#44963-7)</span></p><p><b>subject</b>: <a href="Patient-example.html">Patient/example: Amy Shaw</a> " SHAW"</p><p><b>encounter</b>: <span>: Cardiology Consult</span></p><p><b>effective</b>: 2021-11-10T16:48:57.246958-08:00</p><p><b>value</b>: 1 s<span style="background: LightGoldenRodYellow"> (Details: UCUM code s = 's')</span></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="exam"/>
+      <display value="Exam"/>
+    </coding>
+    <text value="Exam"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="44963-7"/>
+      <display value="Capillary refill Time Nail Bed"/>
+    </coding>
+    <text value="Capillary refill Time Nail Bed"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Amy Shaw"/>
+  </subject>
+  <encounter>
+    <display value="Cardiology Consult"/>
+  </encounter>
+  <effectiveDateTime value="2021-11-10T16:48:57.246958-08:00"/>
+  <valueQuantity>
+    <value value="1"/>
+    <unit value="s"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="s"/>
+  </valueQuantity>
+</Observation>

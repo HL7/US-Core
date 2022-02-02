@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='Observation' id='length' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: Observation/length - Change History</h2>
+  <p>History of changes for length {{type | downcase}}.</p>
+
+  {%include Observation-length-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

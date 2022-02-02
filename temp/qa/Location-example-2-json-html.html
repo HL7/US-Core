@@ -1,0 +1,53 @@
+﻿<html>
+<head>
+  <title>Location-example-2-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/location.html#Location">resourceType</a>" : "Location",
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.id">id</a>" : "example-2",
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Example 2"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is an example hospital location for the *US Core Location Profile*."
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Holy Family Hospital&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: ph: 9786870156&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 70 EAST STREET METHUEN MA 01844 US &lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Organization/holy-healthcare/expansion\&quot;&gt;Holy Healthcare&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.name">name</a>" : "Holy Family Hospital",
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.telecom">telecom</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "9786870156"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.address">address</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+      "70 EAST STREET"
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "METHUEN",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a>" : "MA",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a>" : "01844",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.country">country</a>" : "US"
+  },
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.managingOrganization">managingOrganization</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "http://example.org/fhir/Organization/holy-healthcare",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Holy Healthcare"
+  }
+}</code></pre>
+</body>
+</html>

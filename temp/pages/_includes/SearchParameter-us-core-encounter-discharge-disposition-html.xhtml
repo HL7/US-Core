@@ -1,0 +1,37 @@
+{% raw %}<div xmlns="http://www.w3.org/1999/xhtml">  <!-- <h2>SearchParameter: USCoreEncounterDischargeDisposition</h2> --><b> description</b> : <p>Returns encounters with an discharge-disposition matching the specified code.</p>
+
+			<br/>
+			<p><b> id</b> us-core-encounter-discharge-disposition</p>
+			<p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-encounter-discharge-disposition</b>
+			</p>
+			<p><b> version</b> : 4.1.0</p>
+			<p><b> name</b> : USCoreEncounterDischargeDisposition</p>
+			
+			<p><b> status</b> : active</p>
+			
+			<p><b> date</b> : 2021-11-04</p>
+			<p><b> publisher</b> : HL7 International - US Realm Steering Committee</p>
+			<p><b> contact</b> : http://www.hl7.org/Special/committees/usrealm/index.cfm</p>
+              <!-- <p>
+				<b> useContext</b> : </p> -->
+			<p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
+           States of America (the)'})</span>
+			</p>
+			  <!-- <p>
+		<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,
+         and matching as part of a chain</p> -->
+			<p><b> code</b> : <code>discharge-disposition</code>
+			</p>
+			<p><b> base</b> :Encounter</p>
+			<p><b> type</b> : token</p>
+			<p><b> expression</b> : <code>Encounter.hospitalization.dischargeDisposition</code>
+			</p>
+			<p><b> xpath</b> : <code>f:Encounter/f:hospitalization/f:dischargeDisposition/@value</code>
+			</p>
+			<p><b> xpathUsage</b> : normal</p>
+			<p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p>
+			<p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>
+    
+    
+    
+		</div>{% endraw %}

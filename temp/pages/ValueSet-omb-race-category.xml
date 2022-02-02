@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="omb-race-category"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.2074.1.1.3/expansion">http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.2074.1.1.3</a></li><li>Import all the codes that are contained in http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103</li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/core/ValueSet/omb-race-category"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.2.575"/>
+  </identifier>
+  <version value="4.2.0"/>
+  <name value="OmbRaceCategories"/>
+  <title value="OMB Race Categories"/>
+  <status value="active"/>
+  <date value="2021-12-08"/>
+  <publisher value="HL7 International - Cross-Group Projects"/>
+  <contact>
+    <name value="HL7 International - Cross-Group Projects"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cgp"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgp@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="The codes for the concepts &#39;Unknown&#39;, &#39;Asked but no answer&#39;, &#39;other, and the codes for the five race categories - &#39;American Indian&#39; or &#39;Alaska Native&#39;, &#39;Asian&#39;, &#39;Black or African American&#39;, &#39;Native Hawaiian or Other Pacific Islander&#39;, and &#39;White&#39; - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf) ."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 International, all rights reserved Creative Commons License"/>
+  <compose>
+    <include>
+      <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.2074.1.1.3"/>
+    </include>
+    <include>
+      <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103"/>
+    </include>
+  </compose>
+</ValueSet>

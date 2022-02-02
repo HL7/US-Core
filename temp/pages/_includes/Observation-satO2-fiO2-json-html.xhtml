@@ -1,0 +1,124 @@
+{% raw %}<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resourceType</a>" : "Observation",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "satO2-fiO2",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Observation SatO2 FiO2 Example"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is a observation satO2 fiO2 example for the *US Core Pulse Oximetry Profile* representing a spO2 value with a for a patient on 6 l/min of O2 suppplemental oxygen."
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;satO2-fiO2\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-pulse-oximetry.html\&quot;&gt;US Core Pulse Oximetry Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: o1223435-10&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Vital Signs &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html\&quot;&gt;Observation Category Codes&lt;/a&gt;#vital-signs)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Oxygen saturation in Arterial blood &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#2708-6; &lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#59408-5 \&quot;Oxygen saturation in Arterial blood by Pulse oximetry\&quot;; &lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-v3-mdc.html\&quot;&gt;ISO 11073-10101 Health informatics - Point-of-care&lt;/a&gt;#150456 \&quot;MDC_PULS_OXIM_SAT_O2\&quot;)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Patient/example&lt;/a&gt; \&quot; SHAW\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2014-12-05T09:30:10+01:00&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 95 %&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM code % = '%')&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;interpretation&lt;/b&gt;: Normal (applies to non-numeric results) &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-v3-ObservationInterpretation.html\&quot;&gt;ObservationInterpretation&lt;/a&gt;#N \&quot;Normal\&quot;)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;device&lt;/b&gt;: &lt;span&gt;: Acme Pulse Oximeter 2000&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;ReferenceRanges&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Low&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;High&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;90 %&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM code % = '%')&lt;/span&gt;&lt;/td&gt;&lt;td&gt;99 %&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM code % = '%')&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Components&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Inhaled oxygen flow rate &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#3151-8)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;6 liters/min&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM code L/min = 'L/min')&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://goodcare.org/observation/id",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "o1223435-10"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "vital-signs",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Vital Signs"
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Vital Signs"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "2708-6",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Oxygen saturation in Arterial blood"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "59408-5",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Oxygen saturation in Arterial blood by Pulse oximetry"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:11073:10101",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "150456",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "MDC_PULS_OXIM_SAT_O2"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective[x]">effectiveDateTime</a>" : "2014-12-05T09:30:10+01:00",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.value[x]">valueQuantity</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 95,
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "%",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "%"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.interpretation">interpretation</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "N",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Normal"
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Normal (applies to non-numeric results)"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.device">device</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Acme Pulse Oximeter 2000"
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange">referenceRange</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange.low">low</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.value">value</a>" : 90,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.unit">unit</a>" : "%",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.code">code</a>" : "%"
+      },
+      "<a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange.high">high</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.value">value</a>" : 99,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.unit">unit</a>" : "%",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.code">code</a>" : "%"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.component">component</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/observation.html#Observation.component.code">code</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "3151-8",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Inhaled oxygen flow rate"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Inhaled oxygen flow rate"
+      },
+      "<a href="http://hl7.org/fhir/R4/observation.html#Observation.component.value[x]">valueQuantity</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 6,
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "liters/min",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "L/min"
+      }
+    }
+  ]
+}</code></pre>
+{% endraw %}

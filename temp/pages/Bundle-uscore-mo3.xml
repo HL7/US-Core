@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="uscore-mo3"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Uscore MO3 Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a uscore mo3 example for the *Bundle Profile*."/>
+    </extension>
+  </meta>
+  <type value="searchset"/>
+  <total value="1"/>
+  <link>
+    <relation value="self"/>
+    <url value="http://test.fhir.org/r4/MedicationRequest?search-id=4085956e-63b8-402d-b181-325040fdb9&amp;&amp;_id=uscore%2Dmo3&amp;_include=MedicationRequest%3Amedication&amp;_sort=_id"/>
+  </link>
+  <entry>
+    <fullUrl value="http://test.fhir.org/r4/MedicationRequest/uscore-mo3"/>
+    <resource>
+      <MedicationRequest>
+        <id value="uscore-mo3"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "uscore-mo3" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></p></div><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: <a href="#Medication_uscore-med2">See above (Medication/uscore-med2: Nizatidine 15 MG/ML Oral Solution [Axid])</a></p><p><b>subject</b>: <a href="Patient-example.html">Patient/example: Amy Shaw</a> " SHAW"</p><p><b>authoredOn</b>: 2008-04-05</p><p><b>requester</b>: <a href="Practitioner-practitioner-1.html">Practitioner/practitioner-1: Ronald Bone, MD</a> " BONE"</p></div>
+        </text>
+        <status value="active"/>
+        <intent value="order"/>
+        <medicationReference>
+          <reference value="Medication/uscore-med2"/>
+          <display value="Nizatidine 15 MG/ML Oral Solution [Axid]"/>
+        </medicationReference>
+        <subject>
+          <reference value="Patient/example"/>
+          <display value="Amy Shaw"/>
+        </subject>
+        <authoredOn value="2008-04-05"/>
+        <requester>
+          <reference value="Practitioner/practitioner-1"/>
+          <display value="Ronald Bone, MD"/>
+        </requester>
+      </MedicationRequest>
+    </resource>
+    <search>
+      <mode value="match"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="/Medication/uscore-med2"/>
+    <resource>
+      <Medication>
+        <id value="uscore-med2"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2016-11-29T19:45:46Z"/>
+          <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"/>
+        </meta>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "uscore-med2" Version "1" Updated "2016-11-29T11:45:46-08:00" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-medication.html">US Core Medication Profile</a></p></div><p><b>code</b>: Nizatidine 15 MG/ML Oral Solution [Axid] <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#582620)</span></p></div>
+        </text>
+        <code>
+          <coding>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <code value="582620"/>
+            <display value="Nizatidine 15 MG/ML Oral Solution [Axid]"/>
+          </coding>
+          <text value="Nizatidine 15 MG/ML Oral Solution [Axid]"/>
+        </code>
+      </Medication>
+    </resource>
+    <search>
+      <mode value="include"/>
+    </search>
+  </entry>
+</Bundle>

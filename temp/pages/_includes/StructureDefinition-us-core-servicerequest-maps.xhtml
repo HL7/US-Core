@@ -1,0 +1,143 @@
+{% raw %}<a name="workflow"> </a><h3>Mappings for Workflow Pattern (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreServiceRequest</b></td></tr>
+ <tr><td>ServiceRequest</td><td>Request</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>Request.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiatesCanonical</td><td>Request.instantiatesCanonical</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiatesUri</td><td>Request.instantiatesUri</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>Request.basedOn</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;replaces</td><td>Request.replaces</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;requisition</td><td>Request.groupIdentifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>Request.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;intent</td><td>Request.intent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td>Request.priority</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;doNotPerform</td><td>Request.doNotPerform</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>Request.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>Request.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>Request.encounter</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>Request.occurrence[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>Request.authoredOn</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td>Request.requester</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performerType</td><td>Request.performerType</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>Request.performer</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>Request.reasonCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>Request.reasonReference</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;insurance</td><td>Request.insurance</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;supportingInfo</td><td>Request.supportingInfo</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>Request.note</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;relevantHistory</td><td>Request.relevantHistory</td> </tr>
+</table>
+<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreServiceRequest</b></td></tr>
+ <tr><td>ServiceRequest</td><td>ORC</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>ORC.2, ORC.3, RF1-6 / RF1-11,</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiatesCanonical</td><td>Varies by domain</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiatesUri</td><td>Varies by domain</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>ORC.8 (plus others)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;replaces</td><td>Handled by message location of ORC (ORC.1=RO or RU)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;requisition</td><td>ORC.4</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>ORC.5,RF1-1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;intent</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>RF1-5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category (us-core)</td><td>RF1-5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td>TQ1.9, RF1-2</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>PR1-3 / OBR-4  (varies by domain)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;orderDetail</td><td>NTE</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;quantity[x]</td><td>NTE</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PID</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>PV1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>TQ1/TQ2, OBR-7/OBR-8</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>ORC.9,  RF1-7 / RF1-9</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td>ORC.12, PRT</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performerType</td><td>PRT, RF!-3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>PRT, Practitioner: PRD-2/PRD-7 where PRD-3 = RT; Organization: PRD-10 where PRD-3 = RT</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>ORC.16, RF1-10</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>ORC.16</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;insurance</td><td>IN1/IN2</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;supportingInfo</td><td>Accompanying segments</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;specimen</td><td>SPM</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>SPM</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>NTE</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;patientInstruction</td><td>NTE</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;relevantHistory</td><td>N/A</td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreServiceRequest</b></td></tr>
+ <tr><td>ServiceRequest</td><td>Entity. Role, or Act, Act[moodCode&lt;=INT]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiatesCanonical</td><td>.outboundRelationship[typeCode=DEFN].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiatesUri</td><td>.outboundRelationship[typeCode=DEFN].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>.outboundRelationship[typeCode=FLFS].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;replaces</td><td>.outboundRelationship[typeCode=RPLC].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;requisition</td><td>.inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;intent</td><td>.moodCode (nuances beyond PRP/PLAN/RQO would need to be elsewhere)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>.outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;INT&quot;].code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category (us-core)</td><td>.outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;INT&quot;].code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td>.priorityCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;doNotPerform</td><td>.actionNegationInd</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;orderDetail</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;quantity[x]</td><td>.quantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>.participation[typeCode=SBJ].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>.inboundRelationship(typeCode=COMP].source[classCode&lt;=PCPR, moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;asNeeded[x]</td><td>boolean: precondition.negationInd (inversed - so negationInd = true means asNeeded=false CodeableConcept: precondition.observationEventCriterion[code=&quot;Assertion&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>.participation[typeCode=AUT].time</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td>.participation[typeCode=AUT].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performerType</td><td>.participation[typeCode=PRF].role[scoper.determinerCode=KIND].code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>.participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;locationCode</td><td>.participation[typeCode=LOC].role[scoper.determinerCode=KIND].code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;locationReference</td><td>.participation[typeCode=LOC].role[scoper.determinerCode=INSTANCE]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>.reasonCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>.outboundRelationship[typeCode=RSON].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;insurance</td><td>.outboundRelationship[typeCode=COVBY].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;supportingInfo</td><td>.outboundRelationship[typeCode=PERT].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;specimen</td><td>.participation[typeCode=SPC].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>targetSiteCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>.inboundRelationship(typeCode=SUBJ].source[classCode=ANNGEN, moodCode=EVN].value[xsi:type=ST]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;patientInstruction</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;relevantHistory</td><td>.inboundRelationship(typeCode=SUBJ].source[classCode=CACT, moodCode=EVN]</td> </tr>
+</table>
+<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreServiceRequest</b></td></tr>
+ <tr><td>ServiceRequest</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>FiveWs.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;intent</td><td>FiveWs.class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>FiveWs.class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category (us-core)</td><td>FiveWs.class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td>FiveWs.grade</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>FiveWs.what[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>FiveWs.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>FiveWs.planned</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>FiveWs.recorded</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td>FiveWs.author</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performerType</td><td>FiveWs.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>FiveWs.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;locationCode</td><td>FiveWs.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;locationReference</td><td>FiveWs.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>FiveWs.why[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>FiveWs.why[x]</td> </tr>
+</table>
+<a name="quick"> </a><h3>Mappings for Quality Improvement and Clinical Knowledge (QUICK) (http://siframework.org/cqf)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreServiceRequest</b></td></tr>
+ <tr><td>ServiceRequest</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>ClinicalStatement.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>Action.currentStatus</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>Procedure.procedureCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;orderDetail</td><td>Procedure.procedureCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>ClinicalStatement.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>ClinicalStatement.encounter</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>Procedure.procedureSchedule</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;asNeeded[x]</td><td>Proposal.prnReason.reason</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;authoredOn</td><td>Proposal.proposedAtTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;requester</td><td>ClinicalStatement.statementAuthor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>Procedure.targetBodySite</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>ClinicalStatement.additionalText</td> </tr>
+</table>
+{% endraw %}

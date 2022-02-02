@@ -1,0 +1,71 @@
+I"R
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/allergyintolerance.html">AllergyIntolerance</a> resource to record, search, and fetch allergies/adverse reactions associated with a patient.  It identifies the mandatory core elements, extensions, vocabularies and value sets which <strong>SHALL</strong> be present in the AllergyIntolerance resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core AllergyIntolerance
+ profile:</p>
+
+<ul>
+  <li>Query for Allergies belonging to a Patient</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a>  a Patient Allergy</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each AllergyIntolerance must have:</strong></p>
+
+<ol>
+  <li>a status of the allergy*</li>
+  <li>a code which tells you what the patient is allergic to</li>
+  <li>a patient</li>
+</ol>
+
+<p>*The clinicalStatus element has the following constraints: SHALL be present if verification status is not entered-in-error and SHALL NOT be present if verification Status is entered-in-error.</p>
+
+<p><strong>Each AllergyIntolerance must support:</strong></p>
+
+<ol>
+  <li>a verification status</li>
+  <li>a reaction manifestation</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>
+    <p><em>No Known Allergies</em> may be represented using the US Core-AllergyIntolerance profile with appropriate negation code in <code class="highlighter-rouge">AllergyIntolerence.code</code> and the appropriate verification status in <code class="highlighter-rouge">AllergyIntolerance.verificationStatus</code>.</p>
+
+    <p>If a patient has not been asked about their allergies, this would be represented as:</p>
+
+    <ul>
+      <li>
+        <p><code class="highlighter-rouge">AllergyIntolerance.code</code> = “1631000175102” (Patient not asked (contextual qualifier) (qualifier value))</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">AllergyIntolerance.verificationStatus</code> = “unconfirmed” or empty (in other words, then element omitted)</p>
+      </li>
+    </ul>
+
+    <p>If a patient has been asked, but has indicated they have no known allergies, this would be represented as:</p>
+
+    <ul>
+      <li>
+        <p><code class="highlighter-rouge">AllergyIntolerance.code</code> = “716186003” (No known allergy (situation))</p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">AllergyIntolerance.verificationStatus</code> = “confirmed”</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="AllergyIntolerance-example.html">AllergyIntolerance-example</a></li>
+</ul>
+
+:ET

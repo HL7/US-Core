@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="2.16.840.1.114222.4.11.837"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2012-10-25T12:28:31.000-04:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h3>Value Set Contents</h3>
+      <p>This value set contains 2 concepts</p>
+      <p>All codes from system 
+        <code>urn:oid:2.16.840.1.113883.6.238</code>
+      </p>
+      <table class="codes">
+        <tr>
+          <td>
+            <b>Code</b>
+          </td>
+          <td>
+            <b>Display</b>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a name="urn-oid-2.16.840.1.113883.6.238-2135-2"> </a>2135-2
+          </td>
+          <td>Hispanic or Latino</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="urn-oid-2.16.840.1.113883.6.238-2186-5"> </a>2186-5
+          </td>
+          <td>Not Hispanic or Latino</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837"/>
+  <version value="20121025"/>
+  <name value="Ethnicity"/>
+  <status value="active"/>
+  <date value="2012-10-25T12:28:31-04:00"/>
+  <publisher value="CDC NCHS"/>
+  <expansion>
+    <identifier value="urn:uuid:addf92d9-8920-43e0-ba7c-4b06beb183d2"/>
+    <timestamp value="2021-06-08T21:56:37-04:00"/>
+    <total value="2"/>
+    <offset value="0"/>
+    <parameter>
+      <name value="count"/>
+      <valueInteger value="1000"/>
+    </parameter>
+    <parameter>
+      <name value="offset"/>
+      <valueInteger value="0"/>
+    </parameter>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.238"/>
+      <version value="1.2"/>
+      <code value="2135-2"/>
+      <display value="Hispanic or Latino"/>
+    </contains>
+    <contains>
+      <system value="urn:oid:2.16.840.1.113883.6.238"/>
+      <version value="1.2"/>
+      <code value="2186-5"/>
+      <display value="Not Hispanic or Latino"/>
+    </contains>
+  </expansion>
+</ValueSet>

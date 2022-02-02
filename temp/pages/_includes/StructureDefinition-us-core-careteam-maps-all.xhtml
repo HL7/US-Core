@@ -1,0 +1,97 @@
+{% raw %}<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreCareTeam</b></td></tr>
+ <tr><td>CareTeam</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>FiveWs.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>FiveWs.class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;name</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>FiveWs.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;period</td><td>FiveWs.init</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;participant</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;member</td><td>FiveWs.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onBehalfOf</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>FiveWs.why[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>FiveWs.why[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;managingOrganization</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td></td> </tr>
+</table>
+<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreCareTeam</b></td></tr>
+ <tr><td>CareTeam</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;name</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;period</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;participant</td><td>REL (REL.4 is always the Patient) ( or PRT?)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td>REL.2 (or PRT-4?)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;member</td><td>REL.5 (or PRT-5 : ( PRV-4 {provider participations} ) / PRT-5 : ( PRV-4  {non-provider person participations} ) / PRT-5 : ( PRV-4 = (patient non-subject of care) ) / PRT-8?)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onBehalfOf</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;managingOrganization</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td></td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreCareTeam</b></td></tr>
+ <tr><td>CareTeam</td><td>Entity. Role, or Act</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;name</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;period</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;participant</td><td>.participation[typeCode=PRF]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td>.functionCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;member</td><td>.role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onBehalfOf</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;period</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;managingOrganization</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td></td> </tr>
+</table>
+{% endraw %}

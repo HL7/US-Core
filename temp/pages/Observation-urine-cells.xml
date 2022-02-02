@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="urine-cells"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Urine Cells Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a urine cells example for the *US Core Observation Lab Profile*."/>
+    </extension>
+    <versionId value="206624"/>
+    <lastUpdated value="2016-04-18T04:23:12.123+00:00"/>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "urine-cells" Version "206624" Updated "2016-04-17T21:23:12.123-07:00" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: EPITHELIAL CELLS <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#5787-7 "Epithelial cells [#/area] in Urine sediment by Microscopy high power field")</span></p><p><b>subject</b>: <a href="Patient-example.html">Patient/example: Amy Shaw</a> " SHAW"</p><p><b>effective</b>: 2005-07-05</p><p><b>value</b>: 1-5 cells/HPF</p><h3>ReferenceRanges</h3><table class="grid"><tr><td>-</td><td><b>Text</b></td></tr><tr><td>*</td><td>None Seen/HPF</td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+    <text value="Laboratory"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="5787-7"/>
+      <display value="Epithelial cells [#/area] in Urine sediment by Microscopy high power field"/>
+    </coding>
+    <text value="EPITHELIAL CELLS"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Amy Shaw"/>
+  </subject>
+  <effectiveDateTime value="2005-07-05"/>
+  <valueRange>
+    <low>
+      <value value="1"/>
+      <unit value="cells/HPF"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="/[HPF]"/>
+    </low>
+    <high>
+      <value value="5"/>
+      <unit value="cells/HPF"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="/[HPF]"/>
+    </high>
+  </valueRange>
+  <referenceRange>
+    <text value="None Seen/HPF"/>
+  </referenceRange>
+</Observation>

@@ -1,0 +1,35 @@
+---
+---
+
+{% if 'xml' == 'xml' %}
+{% assign section = '7' %}
+{% elsif 'xml' == 'json' %}
+{% assign section = '8' %}
+{% else %}
+{% assign section = '9' %}
+{% endif %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section {{section}}" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+{% include fragment-base-navtabs.html type='Patient' id='example' active='xml' %}
+
+<a name="root"> </a>
+{% if site.data.artifacts[page.path].example %}
+  {% assign example = 'Example ' %}
+{% endif %}
+{% assign prefix = site.data.artifacts[page.path].type %}
+<h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title | escape_once}}</h2>
+
+<p><a href="Patient-example.xml" no-download="true">Raw xml</a> | <a href="Patient-example.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='Patient' id='example' %}
+
+  {% include Patient-example-xml-html.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='Patient' id='example' %}
+
+</div>
+{% include fragment-pageend.html %}

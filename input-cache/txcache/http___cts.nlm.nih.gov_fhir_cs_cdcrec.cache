@@ -1,0 +1,53 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://cts.nlm.nih.gov/fhir/cs/cdcrec",
+      "concept" : [{
+        "code" : "2135-2",
+        "display" : "Hispanic or Latino"
+      },
+      {
+        "code" : "2186-5",
+        "display" : "Not Hispanic or Latino"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://cts.nlm.nih.gov/fhir/cs/cdcrec"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://cts.nlm.nih.gov/fhir/cs/cdcrec",
+      "concept" : [{
+        "code" : "1002-5",
+        "display" : "American Indian or Alaska Native"
+      },
+      {
+        "code" : "2028-9",
+        "display" : "Asian"
+      },
+      {
+        "code" : "2054-5",
+        "display" : "Black or African American"
+      },
+      {
+        "code" : "2076-8",
+        "display" : "Native Hawaiian or Other Pacific Islander"
+      },
+      {
+        "code" : "2106-3",
+        "display" : "White"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://cts.nlm.nih.gov/fhir/cs/cdcrec"
+}
+-------------------------------------------------------------------------------------

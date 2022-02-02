@@ -1,0 +1,71 @@
+I"™
+<hr />
+
+<p><strong id="search" style="font-size: 20px;">Quick Start</strong>
+<a name="quick-start"> </a></p>
+
+<hr />
+
+<p>Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profileâ€™s information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions.  See the <a href="CapabilityStatement-us-core-server.html">US Core Server CapabilityStatement</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+<ul>
+  <li>The syntax used to describe the interactions is described <a href="general-guidance.html#search-syntax">here</a>.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional rules and expectations when a server requires status parameters.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional guidance on searching for multiple patients.</li>
+</ul>
+
+<h4 id="mandatory-search-parameters">Mandatory Search Parameters:</h4>
+
+<p>The following search parameters and search parameter combinations SHALL be supported:</p>
+
+<ol>
+  <li>
+    <p><strong>SHALL</strong> support searching for a practitioner by a string match of any part of name using the <strong><a href="SearchParameter-us-core-practitioner-name.html"><code class="highlighter-rouge">name</code></a></strong> search parameter:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Practitioner?name=[string]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Practitioner?name=Smith</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Practitioner resources matching the name (<a href="http://hl7.org/fhir/R4/search.html#string">how to search by string</a>)</p>
+  </li>
+  <li>
+    <p><strong>SHALL</strong> support searching a practitioner by an identifier such as an NPI using the <strong><a href="SearchParameter-us-core-practitioner-identifier.html"><code class="highlighter-rouge">identifier</code></a></strong> search parameter:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Practitioner?identifier={system|}[code]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Practitioner?dentifier=http://hl7.org/fhir/sid/us-npi|97860456</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle containing any Practitioner resources matching the identifier (<a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+</ol>
+
+<h4 id="optional-search-parameters">Optional Search Parameters:</h4>
+
+<p>The following search parameter combinations SHOULD be supported:</p>
+
+<ol>
+  <li class="new-content">
+    <p><strong>SHOULD</strong> support searching using the <strong><a href="SearchParameter-us-core-practitioner-id.html"><code class="highlighter-rouge">_id</code></a></strong> search parameter:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Practitioner?_id={system|}[code]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Practitioner/practitioner-1</li>
+      <li>GET [base]/Practitioner?_id=practitioner-1</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> DOES THIS DO ANYTHING? (<a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+</ol>
+
+:ET

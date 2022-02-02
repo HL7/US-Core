@@ -1,0 +1,754 @@
+I"��<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+
+<p>​This section provides implementers with important definitions, requirements, and guidance to create, use, and share Clinical Notes.</p>
+
+<h3 id="clinical-notes">Clinical Notes</h3>
+
+<p>Clinical notes are a key component to communicate the current status of a patient. In the context of this implementation guide, the term “clinical notes” refers to the wide variety of documents generated on behalf of a patient in many care activities. They include notes to support transitions of care, care planning, quality reporting, billing and even handwritten notes by providers. This implementation guide does not define new note types or set content requirements per note type. Instead, this implementation guide focuses on exposing clinical notes stored in existing systems.</p>
+
+<p>This implementation guide defines how systems exchange eight “Common Clinical Notes” and three DiagnosticReport categories.</p>
+
+<p>Systems <strong>SHALL</strong> support, at <em>minimum</em>, these eight “Common Clinical Notes”:</p>
+
+<ol>
+  <li><a href="https://loinc.org/11488-4.html">Consultation Note (11488-4)</a></li>
+  <li><a href="https://loinc.org/18842-5.html">Discharge Summary (18842-5)</a></li>
+  <li><a href="https://loinc.org/34117-2.html">History &amp; Physical Note (34117-2)</a></li>
+  <li><a href="https://loinc.org/28570-0.html">Procedures Note (28570-0)</a></li>
+  <li><a href="https://loinc.org/11506-3.html">Progress Note (11506-3)</a></li>
+  <li><a href="https://loinc.org/18748-4.html">Imaging Narrative (18748-4)</a></li>
+  <li><a href="https://loinc.org/11502-2.html">Laboratory Report Narrative (11502-2)</a></li>
+  <li><a href="https://loinc.org/11526-1.html">Pathology Report Narrative (11526-1)</a></li>
+</ol>
+
+<p>Systems <strong>SHALL</strong> support, at <em>minimum</em>, these three DiagnosticReport categories:</p>
+
+<ol>
+  <li><a href="https://loinc.org/LP29708-2">Cardiology (LP29708-2)</a></li>
+  <li><a href="https://loinc.org/LP7839-6">Pathology (LP7839-6)</a></li>
+  <li><a href="https://loinc.org/LP29684-5">Radiology (LP29684-5)</a></li>
+</ol>
+
+<p>A DiagnostisReport category query allows a Client to retrieve multiple documents in a single query (see <a href="#support-requirements">Support Requirements</a>).</p>
+
+<p>The Argonaut project team provided this initial list to HL7 after surveying the participants in Argonaut and the US Veterans Administration (VA). They represent the <em>minimum</em> set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types such as:</p>
+
+<ul>
+  <li><a href="https://loinc.org/57133-1.html">Referral Note (57133-1)</a></li>
+  <li><a href="https://loinc.org/11504-8.html">Surgical Operation Note (11504-8)</a></li>
+  <li><a href="https://loinc.org/34746-8.html">Nurse Note (34746-8)</a></li>
+</ul>
+
+<p>The full list of note (document) types is available in the <a href="ValueSet-us-core-documentreference-type.html">US Core DocumentReference Type Value Set</a>.</p>
+
+<h3 id="fhir-resources-to-exchange-clinical-notes">FHIR Resources to Exchange Clinical Notes</h3>
+
+<p>The <a href="StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a> and <a href="StructureDefinition-us-core-diagnosticreport-note.html">US Core DiagnosticReport Profile for Report and Note exchange</a> support the exchange of clinical notes. (See  <a href="#resource-selection">Resource Selection</a> for a full discussion on the decision to use these resources.)</p>
+
+<p>DocumentReference is the best choice when the narrative is broader then a specific order or report, such as a Progress Note or Discharge Summary Note. The DocumentReference Resource can point to a short 2-3 sentence status of the patient, or reference a complex CDA or Composition document which can include <em>both</em> a narrative and a discrete information.</p>
+
+<p>DiagnosticReport is the best choice when a system needs to share discrete information or coded interpretations. The <code class="highlighter-rouge">DiagnosticReport.result</code> element supports the discrete information and the entire narrative report can be represented by the <code class="highlighter-rouge">DiagnosticReport.presentedForm</code> element.</p>
+
+<p>There is no single best practice for representing a scanned, or narrative-only report due to the overlapping scope of the underlying resources and variability in system implementation. Reports may be represented by either a DocumentReference or a DiagnosticReport as demonstrated by the green area in Figure 1. For example, some systems consider any scanned report, or note, a DocumentReference. Other systems allow users to categorize the scanned report as Lab and store to DiagnosticReport.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 1: DiagnosticReport and DocumentReference Report Overlap</strong></figcaption>
+  <img src="DiagnosticReport_DocumentReference_Resource_Overlap.png" class="figure-img-portrait img-responsive img-rounded center-block" alt="DiagnosticReport_DocumentReference_Resource_Overlap.png" />
+</figure>
+
+<p></p>
+</div>
+
+<p>In order to enable consistent access to scanned narrative-only clinical reports the Clinical Note Server <strong>SHALL</strong> expose these reports through <em>both</em> DiagnosticReport and DocumentReference by representing the same attachment url using the corresponding elements listed below.<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify the duplicate data.</p>
+
+<ul>
+  <li>DocumentReference.content.attachment.url</li>
+  <li>DiagnosticReport.presentedForm.url</li>
+</ul>
+
+<p>For example, when <code class="highlighter-rouge">DiagnosticReport.presentedForm.url</code> references a Scan (PDF), that Attachment <strong>SHALL</strong> also be accessible through <code class="highlighter-rouge">DocumentReference.content.attachment.url</code>.(See Figure 2) This guide requires servers implement the duplicate reference to allow a client to find a Pathology report, or other Diagnostic Reports, in either Resource. If servers properly categorized scanned reports and used the correct resource per report type (e.g. Pathology scan in DiagnosticReport) this wouldn’t be required, however at the time of this IG’s development, this duplication requirement is necessary due to a lack of consistency in proper use of these resources.</p>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 2: Expose a PDF Report Through Both DiagnosticReport and DocumentReference</strong></figcaption>
+  <img src="both-url.jpg" class="figure-img img-responsive img-rounded center-block" alt="both-url.jpg" />
+</figure>
+
+<p></p>
+</div>
+
+<p><strong>Example JSON Snippets Referencing Common Binary in DocumentReference and DiagnosticReport</strong></p>
+
+<p>DocumentReference:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  ...snip...
+    "content": [
+        {
+            "attachment": {
+                "contentType": "application/xhtml",
+                "url": "http://example.org/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32",
+                "creation": "2005-12-24"
+            }
+        }
+    ]
+}
+</code></pre></div></div>
+<p>DiagnosticReport:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  ...snip...
+   "presentedForm": [
+        {
+            "contentType": "application/xhtml",
+            "url": "http://example.org/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32",
+            "creation": "2005-12-24"
+        }
+    ]
+}
+</code></pre></div></div>
+
+<p>Note that not all scanned information stored through DocumentReference will be exposed through DiagnosticReport since DocumentReference stores other non-clinical information. For example, DocumentReference can point to an insurance card.</p>
+
+<h4 id="support-requirements">Support Requirements</h4>
+
+<p>This guide requires systems implement the <a href="StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a> and to support a <em>minimum</em> of all eight Common Clinical Notes listed above. Systems and may extend there capabilities to the full <a href="ValueSet-us-core-documentreference-type.html">US Core DocumentReference Type Value Set</a>. This requirement is necessary because some systems scan lab reports and don’t store them in the DiagnosticReport resource. See <a href="#fhir-resources-to-exchange-clinical-notes">FHIR Resources to Exchange Clinical Notes</a> for more detail.</p>
+
+<p>This guide requires systems implement the <a href="StructureDefinition-us-core-diagnosticreport-note.html">US Core DiagnosticReport Profile for Report and Note exchange</a> and to support a <em>minimum</em> of the three report categories:</p>
+
+<ul>
+  <li><a href="https://loinc.org/LP29708-2">Cardiology (LP29708-2)</a></li>
+  <li><a href="https://loinc.org/LP7839-6">Pathology (LP7839-6)</a></li>
+  <li><a href="https://loinc.org/LP29684-5">Radiology (LP29684-5)</a></li>
+</ul>
+
+<p>Other categories may be supported as well.</p>
+
+<p>The vendors that participated in the development of this guide didn’t differentiate between the Diagnostic Report categories of Imaging and Radiology in their servers. Client applications that query with category code of <a href="https://loinc.org/LP29684-5">Radiology (LP29684-5)</a> will receive Radiology and other imaging reports.</p>
+
+<p>The following <strong>SHOULD</strong> be exposed via DiagnosticReport</p>
+<ul>
+  <li>Imaging Narrative</li>
+  <li>Laboratory Report Narrative</li>
+  <li>Pathology Report Narrative</li>
+  <li>Procedure Note</li>
+</ul>
+
+<p>Servers that support DiagnosticReport will include the clinical note narrative content in DiagnosticReport.presentedForm.</p>
+
+<p>A method for discovery of the types of notes and reports that a server supports is described in the <a href="#using-expand">Determining Server Note Type</a> section below.</p>
+
+<p>Note that this guide focuses on exposing existing information, and not how systems allow their users to capture information. The contents of the notes or reports, even using standard LOINC concepts, may vary widely by health system or even location. For example, CT Spleen WO contrast (LOINC 30621-7) may include individual sections for history, impressions, conclusions, or just an impressions section. Discharge Summaries may have different facility or regulatory content requirements.</p>
+
+<h4 id="search">Search</h4>
+
+<p>To retrieve clinical notes and reports, the standard FHIR <a href="http://hl7.org/fhir/search.html">search</a> API is used. In this guide, the US Core <a href="http://hl7.org/fhir/R4/capabilitystatement.html">CapabilityStatement</a> and the <em>Quick Start</em> sections for the US Core Clinical Notes and Diagnostic Report profiles define the required search parameters and describe how they are used.</p>
+
+<p>Common client search scenarios include:</p>
+
+<ol>
+  <li>
+    <p>A client interested in all Radiology reports can use the following query:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/DiagnosticReport?patient=[id]&amp;category=http://loinc.org|LP29684-5</code></p>
+  </li>
+  <li>
+    <p>A client interested in all Clinical Notes can use the following query:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/DocumentReference?patient=[id]&amp;category=clinical-note</code></p>
+  </li>
+  <li>
+    <p>A client interested in all Discharge Summary Notes can use the following query:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/DocumentReference?patient=[id]&amp;type=http://loinc.org|18842-5</code></p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="using-expand">Determining Server Note Type</h3>
+
+<p>In addition to inspecting a server CapabilityStatement, a client can determine the note and report types support by a server by invoking the standard FHIR Value Set Expansion (<a href="http://hl7.org/fhir/R4/valueset-operation-expand.html" title="An operation used to create a simple collection of codes suitable for use for data entry or validation">$expand</a>) operation defined in the <strong>FHIR R4 specification</strong>. Because servers may support different read and write formats, it also is used to determine the formats (for example, text, pdf) the server supports read and write transactions. A FHIR server claiming support to this guide <strong>SHOULD</strong> support the $expand operation.</p>
+
+<h4 id="discovering-note-and-report-types">Discovering Note and Report Types</h4>
+
+<p>The note and report types for a particular server are discovered by invoking the #expand operation as follows:</p>
+
+<p><code class="highlighter-rouge">GET [base]/ValueSet/$expand?context=[context]&amp;contextDirection=[contextDirection]</code></p>
+
+<p>where:</p>
+<ul>
+  <li>[contextDirection] = <code class="highlighter-rouge">incoming</code> for write operations and <code class="highlighter-rouge">outgoing</code> for read operations.</li>
+  <li>[context] = <code class="highlighter-rouge">DiagnosticReport.category</code> for DiagnosticReport report category discovery, <code class="highlighter-rouge">DiagnosticReport.code</code> for DiagnosticReport report type discovery, <code class="highlighter-rouge">DocumentReference.category</code> for DocumentReference note category discovery, <code class="highlighter-rouge">DocumentReference.type</code> for DocumentReference note type discovery.</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+
+<p>
+  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#note-and-report-types-scenario1" aria-expanded="false" aria-controls="collapseExample">
+    Click on Here To See Scenario 1 Example
+  </button>
+</p>
+
+<div class="collapse" id="note-and-report-types-scenario1">
+  <div class="card card-body">
+      
+<p>A client determines the types of reports they can access through DiagnosticReport. The server responds with ‘foo’,’bar’ ,and ‘baz’ report types:</p>
+
+<p><strong>Request for DiagnosticReport report type</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/ValueSet/$expand?context=DiagnosticReport.codes&amp;contextDirection=incoming
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+ "resourceType": "ValueSet",
+ "id": "scenario1-server-diagnosticreport-codes",
+ "url": "http://acme.org/ValueSet/diagnosticreport-codes",
+ "version": "3.0.1",
+ "name": "acme-diagnosticreport-codes",
+ "title": "Acme DiagnosticReport Codes",
+ "status": "draft",
+ "date": "2018-11-08T20:29:00+00:00",
+ "expansion": {
+   "identifier": "urn:uuid:5fc51f5a-4dbc-44f8-8fe5-203d261222f0",
+   "timestamp": "2018-11-13T02:55:48.405Z",
+   "parameter": [
+     {
+       "name": "context",
+       "valueString": "DiagnosticReport.codes"
+     },
+     {
+       "name": "contextDirection",
+       "valueString": "outgoing"
+     }
+   ],
+   "contains": [
+     {
+       "system": "http://acme.org",
+       "code": "foo",
+       "display": "Foo"
+     },
+     {
+       "system": "http://acme.org",
+       "code": "bar",
+       "display": "Bar"
+     },
+     {
+       "system": "http://acme.org",
+       "code": "baz",
+       "display": "baz"
+     }
+   ]
+ }
+}
+</code></pre></div></div>
+
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>
+  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#note-and-report-types-scenario2" aria-expanded="false" aria-controls="collapseExample">
+    Click on Here To See Scenario 2 Example
+  </button>
+</p>
+
+<div class="collapse" id="note-and-report-types-scenario2">
+  <div class="card card-body">
+      
+<p>A client determines the types of note or reports they can access through DocumentReference.  The server responds with the five “Common Clinical Notes” types:</p>
+
+<p><strong>Request for DocumentReference note or report type</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/ValueSet/$expand?context=DocumentReference.type&amp;contextDirection=outgoing
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "ValueSet",
+  "id": "scenario2-server-clinical-note-type",
+  "url": "http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/argonaut-clinical-note-type",
+  "version": "3.0.1",
+  "name": "ArgonautClinicalNotes",
+  "title": "Argonaut DocumentReferences Type Value Set",
+  "status": "draft",
+  "date": "2018-11-08T20:29:00+00:00",
+  "expansion": {
+    "identifier": "urn:uuid:5fc51f5a-4dbc-44f8-8fe5-203d261222f0",
+    "timestamp": "2018-11-13T02:55:48.405Z",
+    "parameter": [
+      {
+        "name": "context",
+        "valueString": "DocumentReference.type"
+      },
+      {
+        "name": "contextDirection",
+        "valueString": "outgoing"
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "18842-5",
+        "display": "Discharge Summary"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "11488-4",
+        "display": "Consultation Note"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "34117-2",
+        "display": "History &amp; Physical Note"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "11506-3",
+        "display": "Progress Note"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "28570-0",
+        "display": "Procedures Note"
+      }
+    ]
+  }
+}
+</code></pre></div></div>
+
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>
+  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#note-and-report-types-scenario3" aria-expanded="false" aria-controls="collapseExample">
+    Click on Here To See Scenario 3 Example
+  </button>
+</p>
+
+<div class="collapse" id="note-and-report-types-scenario3">
+  <div class="card card-body">
+      
+<p>A client is only interested in retrieving notes by class (Note, DocumentReference.class is updated to DocumentReference.category in FHIR R4).  The server responds with the single category of ‘Clinical Notes’:</p>
+
+<p><strong>Request for DocumentReference note categories</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/ValueSet/$expand?context=DocumentReference.category&amp;contextDirection=outgoing
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "ValueSet",
+  "id": "scenario3-server-documentreference-category",
+  "url": "http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/documentreference-category",
+  "version": "3.0.1",
+  "name": "ArgonautDocumentReferenceCategoryCodes",
+  "title": "Argonaut DocumentReference Category Codes",
+  "status": "draft",
+  "date": "2018-11-08T20:29:00+00:00",
+  "expansion": {
+    "identifier": "urn:uuid:5fc51f5a-4dbc-44f8-8fe5-203d261222f0",
+    "timestamp": "2018-11-13T02:55:48.405Z",
+    "parameter": [{
+        "name": "context",
+        "valueString": "DocumentReference.class"
+      },
+      {
+        "name": "contextDirection",
+        "valueString": "outgoing"
+      }
+    ],
+    "contains": [{
+        "system": "http://fhir.org/guides/argonaut-clinicalnotes/CodeSystem/documentreference-category",
+        "code": "clinical-note",
+        "display": "Clinical Note"
+      }
+    ]
+  }
+}
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>
+  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#note-and-report-types-scenario4" aria-expanded="false" aria-controls="collapseExample">
+    Click on Here To See Scenario 4 Example
+  </button>
+</p>
+
+<div class="collapse" id="note-and-report-types-scenario4">
+  <div class="card card-body">
+      
+<p>A client determines the category of reports they can access through DiagnosticReport. The server responds with Radiology, Pathology, and Cardiology report categories:</p>
+
+<p><strong>Request for DiagnosticReport report type</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/ValueSet/$expand?context=DiagnosticReport.category&amp;contextDirection=incoming
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "ValueSet",
+  "id": "scenario4-server-diagnosticreport-category",
+  "url": "http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/diagnosticreport-category",
+  "version": "3.0.1",
+  "name": "ArgonautDiagnosticReportCategoryCodes",
+  "title": "Argonaut DiagnosticReport Category Value Set",
+  "status": "draft",
+  "date": "2018-11-08T20:29:00+00:00",
+  "expansion": {
+    "identifier": "urn:uuid:5fc51f5a-4dbc-44f8-8fe5-203d261222f0",
+    "timestamp": "2018-11-13T02:55:48.405Z",
+    "parameter": [
+      {
+        "name": "context",
+        "valueString": "DiagnosticReport.category"
+      },
+      {
+        "name": "contextDirection",
+        "valueString": "outgoing"
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "LP29684-5",
+        "display": "Radiology"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "LP29708-2",
+        "display": "Cardiology"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "LP7839-6",
+        "display": "Pathology"
+      }
+    ]
+  }
+}
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<h4 id="discovering-server-read-and-write-formats">Discovering Server Read and Write Formats</h4>
+
+<p>The read and write formats for a particular server are discovered by invoking the #expand operation as follows:</p>
+
+<p><code class="highlighter-rouge">GET [base]/ValueSet/$expand?context=[context]&amp;contextDirection=[contextDirection]</code></p>
+
+<p>where:</p>
+<ul>
+  <li>[contextDirection] = <code class="highlighter-rouge">incoming</code> for write operations and <code class="highlighter-rouge">outgoing</code> for read operations.</li>
+  <li>[context] = <code class="highlighter-rouge">DocumentReference.content.attachment.contentType</code> for DocumentReference note content type discovery and <code class="highlighter-rouge">DiagnosticReport.presentedForm.contentType</code> for DiagnosticReport report content type discovery.</li>
+</ul>
+
+<p><strong>Examples</strong></p>
+
+<p>
+  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#read-and-write-format-scenario1" aria-expanded="false" aria-controls="collapseExample">
+    Click on Here To See Scenario 1 Example
+  </button>
+</p>
+
+<div class="collapse" id="read-and-write-format-scenario1">
+  <div class="card card-body">
+      
+<p>System A accepts contentType <code class="highlighter-rouge">text/plain</code> in a create transaction and returns <code class="highlighter-rouge">text/html</code> in a read transaction.</p>
+
+<p><strong>Request for Write contentType</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/ValueSet/$expand?context=DocumentReference.content.attachment.contentType&amp;contextDirection=incoming
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "ValueSet",
+  "id": "scenario1-server-write-contenttype",
+  "url": "http://acme.org/fhir/ValueSet/in-mimetypes-1",
+  "version": "3.0.1",
+  "name": "ArgonautServerWriteMimeTypes",
+  "title": "Argonaut Server Write Mime Types Value Set",
+  "status": "draft",
+  "date": "2018-11-08T20:29:00+00:00",
+  "expansion": {
+    "identifier": "urn:uuid:5fc51f5a-4dbc-44f8-8fe5-203d261222f0",
+    "timestamp": "2018-11-13T02:55:48.405Z",
+    "parameter": [
+      {
+        "name": "context",
+        "valueString": "DocumentReference.content.attachment.contentType"
+      },
+      {
+        "name": "contextDirection",
+        "valueString": "incoming"
+      }
+    ],
+    "contains": [
+      {
+        "system": "urn:ietf:bcp:13",
+        "code": "text/plain"
+      }
+    ]
+  }
+}
+</code></pre></div></div>
+
+<p><strong>Request for Read contentType</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/ValueSet/$expand?context=DocumentReference.content.attachment.contentType&amp;contextDirection=outgoing
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "ValueSet",
+  "id": "scenario1-server-read-contenttype",
+  "url": "http://acme.org/fhir/ValueSet/out-mimetypes-1",
+  "version": "3.0.1",
+  "name": "ArgonautServerReadMimeTypes",
+  "title": "Argonaut Server Read Mime Types Value Set",
+  "status": "draft",
+  "date": "2018-11-08T20:29:00+00:00",
+  "expansion": {
+    "identifier": "urn:uuid:5fc51f5a-4dbc-44f8-8fe5-203d261222f0",
+    "timestamp": "2018-11-13T02:55:48.405Z",
+    "parameter": [
+      {
+        "name": "context",
+        "valueString": "DocumentReference.content.attachment.contentType"
+      },
+      {
+        "name": "contextDirection",
+        "valueString": "outgoing"
+      }
+    ],
+    "contains": [
+      {
+        "system": "urn:ietf:bcp:13",
+        "code": "text/html"
+      }
+    ]
+  }
+}
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>
+  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#read-and-write-format-scenario2" aria-expanded="false" aria-controls="collapseExample">
+    Click on Here To See Scenario 2 Example
+  </button>
+</p>
+
+<div class="collapse" id="read-and-write-format-scenario2">
+  <div class="card card-body">
+      
+<p>System A accepts contentType <code class="highlighter-rouge">text/xhtml</code> in a create transaction and returns <code class="highlighter-rouge">application/pdf</code> in a read transaction.</p>
+
+<p><strong>Request for Write contentType</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/ValueSet/$expand?context=DocumentReference.content.attachment.contentType&amp;amp;contextDirection=incoming
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "ValueSet",
+  "id": "scenario2-server-write-contenttype",
+  "url": "http://acme.org/fhir/ValueSet/in-mimetypes-2",
+  "version": "3.0.1",
+  "name": "ArgonautServerWriteMimeTypes",
+  "title": "Argonaut Server Write Mime Types Value Set",
+  "status": "draft",
+  "date": "2018-11-08T20:29:00+00:00",
+  "expansion": {
+    "identifier": "urn:uuid:5fc51f5a-4dbc-44f8-8fe5-203d261222f0",
+    "timestamp": "2018-11-13T02:55:48.405Z",
+    "parameter": [
+      {
+        "name": "context",
+        "valueString": "DocumentReference.content.attachment.contentType"
+      },
+      {
+        "name": "contextDirection",
+        "valueString": "incoming"
+      }
+    ],
+    "contains": [
+      {
+        "system": "urn:ietf:bcp:13",
+        "code": "text/xhtml"
+      }
+    ]
+  }
+}
+</code></pre></div></div>
+
+<p><strong>Request for Read contentType</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/ValueSet/$expand?context=DocumentReference.content.attachment.contentType&amp;amp;contextDirection=outgoing
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "ValueSet",
+  "id": "scenario2-server-read-contenttype",
+  "url": "http://acme.org/fhir/ValueSet/out-mimetypes-2",
+  "version": "3.0.1",
+  "name": "ArgonautServerReadMimeTypes",
+  "title": "Argonaut Server Read Mime Types Value Set",
+  "status": "draft",
+  "date": "2018-11-08T20:29:00+00:00",
+  "expansion": {
+    "identifier": "urn:uuid:5fc51f5a-4dbc-44f8-8fe5-203d261222f0",
+    "timestamp": "2018-11-13T02:55:48.405Z",
+    "parameter": [
+      {
+        "name": "context",
+        "valueString": "DocumentReference.content.attachment.contentType"
+      },
+      {
+        "name": "contextDirection",
+        "valueString": "outgoing"
+      }
+    ],
+    "contains": [
+      {
+        "system": "urn:ietf:bcp:13",
+        "code": "application/pdf"
+      }
+    ]
+  }
+}
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<h3 id="resource-selection">Resource Selection</h3>
+
+<p>When reviewing the minimal number of elements required for each Resource, the <a href="http://hl7.org/fhir/R4/index.html">FHIR Version 4.0.1</a> specification includes several appropriate places to include clinical notes such as Composition, ClinicalImpression, DocumentReference, DiagnosticReport, etc.  The developers of this guide also considered creating a new ClinicalNotes resource. To differentiate which resource was most appropriate these characteristics were considered:</p>
+
+<ul>
+  <li>Discrete result information</li>
+  <li>Note types</li>
+  <li>Consistent Client access to scanned, or narrative-only, reports</li>
+</ul>
+
+<p>While several resources work well for a specific use case, they don’t solve the question “find all Clinical Notes for a patient?” especially when considering the variability of Note formats. For example systems use text, XHTML, PDF, CDA to capture clinical notes. This variability led the designers to select the DocumentReference and DiagnosticReport resources as an index mechanisms to the underlying content. In other words, a client can query one of these resources and it will return a pointer to specific resource or the underlying binary content.</p>
+
+<p>For example, consider the following situation for a Discharge Summary Note:</p>
+
+<ul>
+  <li>System A supports the Discharge Summary as a Composition resource</li>
+  <li>System B supports the Discharge Summary as a CDA Document</li>
+  <li>System C supports the Discharge Summary as a PDF Document</li>
+</ul>
+
+<p>The following single query into DocumentReference supports all 3 scenarios:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/DocumentReference?patient=[id]&amp;type=http://loinc.org|18842-5
+</code></pre></div></div>
+
+<p>The server returns either a pointer to the Composition or the Binary resource. If other more specific resources are developed for Clinical Notes systems can update their pointers to the new resource.</p>
+
+<h4 id="clinical-notes-vs-clinicalimpression">Clinical Notes vs ClinicalImpression</h4>
+
+<p><a href="http://hl7.org/fhir/R4/clinicalimpression.html">ClinicalImpression</a> resource supports the record of a clinical assessment.</p>
+
+<blockquote>
+
+  <p>A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient’s condition. Assessments are often 1:1 with a clinical consultation / encounter, but this varies greatly depending on the clinical workflow. This resource is called “ClinicalImpression” rather than “ClinicalAssessment” to avoid confusion with the recording of assessment tools such as Apgar score</p>
+
+</blockquote>
+
+<p>However, in existing EHRs, the clinical impression is often contained with in a broader note construct and the Argonauts didn’t find the boundary between a clinical note and ClinicalImpression clear enough to leverage the resources to share clinical notes.</p>
+
+<hr />
+
+<p>Footnotes</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Storing scanned reports as a DiagnosticReport, with appropriate categorization, enables clients to access the scanned reports along with DiagnosticReports containing discrete information. For example, a client can request all DiagnosticReport.category=”LAB” and receive reports with discrete information and any scanned reports. However, not all systems store and categorize Lab reports with DiagnosticReport. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>The developers of this guide considered requiring Clients query <em>both</em> DocumentReference and DiagnosticReport to get all the information for a patient. However, the requirement to query two places is potentially dangerous if a client doesn’t understand or follow this requirement and queries only one resource type thereby potentially missing important information from the other type. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

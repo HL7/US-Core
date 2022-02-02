@@ -1,0 +1,151 @@
+I"� 
+<p>﻿This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/device.html">Device</a> resource to record, search, and fetch UDI information associated with a patient’s implantable device(s). It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.  The profile is intended to <em>only</em> be used for implantable devices.  For non-implantable devices (for example, software or crutches) use the base FHIR Device resource or other use case specific Device profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core Implantable Device profile:</p>
+
+<ul>
+  <li>Query for a Patient’s Implantable Devices</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a>  a Patient Implantable Device</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Implantable Device must have:</strong></p>
+
+<ol>
+  <li>a code identifying the type of device</li>
+  <li>a patient</li>
+</ol>
+
+<p>In addition, the following data-elements must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition):</p>
+
+<p><strong>Each Implantable Device must support:</strong></p>
+
+<ol>
+  <li>A Unique Device Identifier (UDI) numeric or alphanumeric code as the Human Readable Form (HRF) string representation of the barcode</li>
+  <li>The Device Identifier (UDI-DI)</li>
+  <li>the manufacture date</li>
+  <li>the expiration date</li>
+  <li>the lot number</li>
+  <li>the serial number</li>
+  <li>the distinct identifier (i.e., the distinct identification code)</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>This profile supports the requirement to retrieve an 170.315(a)(14) <a href="https://www.healthit.gov/test-method/implantable-device-list">Implantable device list</a> and follows the <a href="http://www.hl7.org/documentcenter/private/standards/HL7_IG_UDI_R2_2020JUN.pdf">HL7 Cross Paradigm Implementation Guide: UDI Pattern</a> guidelines for exchanging information about the use of and/or implantation of medical devices in patients.
+    <ul>
+      <li>
+        <p>A unique device identifier (UDI) is a unique numeric or alphanumeric code. There is a machine-readable version (AIDC - the Automatic Identification and Data Capture) as well as a human-readable version of the UDI (HRF - Human Readable Form string). This profile specifies that only the HRF must be supported. Considering the complexity of parsing AIDCs there is <em>no expectation</em> at this time that one converts an AIDC to HRF upon receipt from a FHIR source that is not conformant to this profile or is using another interchange standard (e.g., C-CDA, HL7 v2, etc). The UDI generally consists of a mandatory Device identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements.  The UDI and its components are mapped to the US Core Implantable Device Profile elements in the table below:</p>
+
+        <table class="grid">
+          <thead>
+            <tr>
+              <th>UDI component</th>
+              <th>US Core Implantable Device Profile element</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UDI HRF string</td>
+              <td>Device.udiCarrier.carrierHRF</td>
+            </tr>
+            <tr>
+              <td>DI</td>
+              <td>Device.udiCarrier.deviceIdentifier</td>
+            </tr>
+            <tr>
+              <td>manufacture date (UDI-PI element)</td>
+              <td>Device.manufactureDate</td>
+            </tr>
+            <tr>
+              <td>expiration dat (UDI-PI elemente</td>
+              <td>Device.expirationDate</td>
+            </tr>
+            <tr>
+              <td>lot number (UDI-PI element)</td>
+              <td>Device.lotNumber</td>
+            </tr>
+            <tr>
+              <td>serial number (UDI-PI element)</td>
+              <td>Device.serialNumber</td>
+            </tr>
+            <tr>
+              <td>distinct identifier (UDI-PI element)</td>
+              <td>Device.distinctIdentifier</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <p>Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:</p>
+        <ul>
+          <li>The <a href="https://www.fda.gov/medical-devices/global-unique-device-identification-database-gudid/accessgudid-public">AccessGUDID API</a> provides access to device records in GUDID including safety information and UDI. It includes APIs to query and download a complete list of implantable devices registered in GUDID.</li>
+          <li>The <a href="https://accessgudid.nlm.nih.gov/resources/developers/parse_udi_api">Parse UDI API</a> allows users to pass a UDI and return each part of the UDI in a structured format (specifically the serialNumber, lotNumber, expirationDate, distinctIdentifier (returned as donation_id) or manufactureDate).</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Implantable medical devices that have UDI information <strong>SHALL</strong> represent the UDI code in <code class="highlighter-rouge">Device.udiCarrier.carrierHRF</code>.
+    <ul>
+      <li>All of the five UDI-PI elements that are present in the UDI code <strong>SHALL</strong> be represented in the corresponding US Core Implantable Device Profile element.</li>
+    </ul>
+
+    <p>UDI may not be present in all scenarios such as historical implantable devices, patient reported implant information, payer reported devices, or improperly documented implants. If UDI is not present and the manufacturer and/or model number information is available, they <strong>SHOULD</strong> be included to support historical reports of implantable medical devices as follows:</p>
+
+    <table class="grid">
+      <thead>
+        <tr>
+          <th>data element</th>
+          <th>US Core Implantable Device Profile element</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>manufacturer</td>
+          <td>Device.manufacturer</td>
+        </tr>
+        <tr>
+          <td>model</td>
+          <td>Device.model</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Servers <strong>SHOULD</strong> support query by Device.type to allow clients to request the patient’s devices by a specific type. Note: The Device.type is too granular to differentiate implantable vs. non-implantable devices.</li>
+  <li>
+    <p>In the <a href="#search">Quick Start</a> section below, searching for all devices is described. Records of implanted devices <strong>MAY</strong> be queried against UDI data including:</p>
+
+    <ul>
+      <li>UDI HRF string (<code class="highlighter-rouge">udi-carrier</code>)</li>
+      <li>UDI Device Identifier (<code class="highlighter-rouge">udi-di</code>)</li>
+      <li>Manufacturer (<code class="highlighter-rouge">manufacturer</code>)</li>
+      <li>Model number (<code class="highlighter-rouge">model</code>)</li>
+    </ul>
+
+    <p>Implementers <strong>MAY</strong> also adopt custom SearchParameters for searching by:</p>
+
+    <ul>
+      <li>lot numbers</li>
+      <li>serial number</li>
+      <li>expiration date</li>
+      <li>manufacture date</li>
+      <li>distinct identifier</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="Device-udi-1.html">Device-UDI-1</a></li>
+  <li><a href="Device-udi-2.html">Device-UDI-2</a></li>
+  <li><a href="Device-udi-3.html">Device-UDI-3</a></li>
+</ul>
+
+:ET

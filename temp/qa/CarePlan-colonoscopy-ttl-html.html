@@ -1,0 +1,57 @@
+﻿<html>
+<head>
+  <title>CarePlan-colonoscopy-ttl-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="rdf"><code class="language-turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:CarePlan;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;colonoscopy&quot;];
+  <a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/instance-name&quot; ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Colonoscopy Example&quot; ]     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/instance-description&quot; ];
+       <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueMarkdown</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;This is a colonoscopy example for the *US Core CarePlan Profile*.&quot; ]     ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;additional&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n&amp;#9;&amp;#9;&amp;#9;&lt;strong&gt;Assessment&lt;/strong&gt;\n&amp;#9;&amp;#9;&amp;#9;&lt;ol&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;li&gt;Recurrent GI bleed of unknown etiology; hypotension perhaps secondary to this but as likely secondary to polypharmacy.&lt;/li&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;li&gt;Acute on chronic anemia secondary to #1.&lt;/li&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;li&gt;Azotemia, acute renal failure with volume loss secondary to #1.&lt;/li&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;li&gt;Hyperkalemia secondary to #3 and on ACE and K+ supplement.&lt;/li&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;li&gt;Other chronic diagnoses as noted above, currently stable.&lt;/li&gt;\n&amp;#9;&amp;#9;&amp;#9;&lt;/ol&gt;\n&amp;#9;&amp;#9;&amp;#9;&lt;table&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;thead&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;tr&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;th&gt;Planned Activity&lt;/th&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;th&gt;Planned Date&lt;/th&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;/tr&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;/thead&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;tbody&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;tr&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;td&gt;Colonoscopy&lt;/td&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;td&gt;April 21, 2000&lt;/td&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;/tr&gt;\n&amp;#9;&amp;#9;&amp;#9;&amp;#9;&lt;/tbody&gt;\n&amp;#9;&amp;#9;&amp;#9;&lt;/table&gt;\n&amp;#9;&amp;#9;&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.status">fhir:CarePlan.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.intent">fhir:CarePlan.intent</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;order&quot;];
+  <a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.category">fhir:CarePlan.category</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/core/CodeSystem/careplan-category&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;assess-plan&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/careplan.html#CarePlan.subject">fhir:CarePlan.subject</a> [
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Patient/example&quot; ];
+     <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Amy Shaw&quot; ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</code></pre>
+
+</body>
+</html>

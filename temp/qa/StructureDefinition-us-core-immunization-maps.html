@@ -1,0 +1,144 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-us-core-immunization-maps</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<a name="workflow"> </a><h3>Mappings for Workflow Pattern (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreImmunizationProfile</b></td></tr>
+ <tr><td>Immunization</td><td>Event</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>Event.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>Event.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td>Event.statusReason</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>Event.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>Event.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>Event.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>Event.occurrence[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>Event.location</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>Event.performer</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</td><td>Event.performer.function</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td>Event.performer.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>Event.note</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>Event.reasonCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>Event.reasonReference</td> </tr>
+</table>
+<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreImmunizationProfile</b></td></tr>
+ <tr><td>Immunization</td><td>VXU_V04</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>RXA-5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>PID-3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>PV1-19</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>RXA-3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;primarySource</td><td>RXA-9</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reportOrigin</td><td>RXA-9</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>RXA-27  (or RXA-11, deprecated as of v2.7)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;manufacturer</td><td>RXA-17</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;lotNumber</td><td>RXA-15</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;expirationDate</td><td>RXA-16</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;site</td><td>RXR-2</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;route</td><td>RXR-1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;doseQuantity</td><td>RXA-6 / RXA-7</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>ORC-12 / RXA-10</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>OBX-5 : OBX-3 = 48767-8</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;isSubpotent</td><td>RXA-20 = PA (partial administration)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;education</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;documentType</td><td>OBX-5 : OBX-3 = 69764-9</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;publicationDate</td><td>OBX-5 : OBX-3 = 29768-9</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;presentationDate</td><td>OBX-5 : OBX-3 = 29769-7</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;programEligibility</td><td>OBX-5 : OBX-3 = 64994-7</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reaction</td><td>OBX-3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date</td><td>OBX-14 (ideally this would be reported in an IAM segment, but IAM is not part of the HL7 v2 VXU message - most likely would appear in OBX segments if at all)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail</td><td>OBX-5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reported</td><td>(HL7 v2 doesn't seem to provide for this)</td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreImmunizationProfile</b></td></tr>
+ <tr><td>Immunization</td><td>Entity. Role, or Act, SubstanceAdministration</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>statusCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td>.inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>.partipication[ttypeCode=].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>component-&gt;EncounterEvent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td>.participation[typeCode=AUT].time</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;primarySource</td><td>immunization.uncertaintycode (if primary source=false, uncertainty=U)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reportOrigin</td><td>.participation[typeCode=INF].role[classCode=PAT] (this syntax for self-reported) .participation[typeCode=INF].role[classCode=LIC] (this syntax for health care professional) .participation[typeCode=INF].role[classCode=PRS] (this syntax for family member)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>.participation[typeCode=LOC].COCT_MT240000UV</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;manufacturer</td><td>.participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=ORG]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;lotNumber</td><td>.participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;expirationDate</td><td>.participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].expirationTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;site</td><td>observation.targetSiteCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;route</td><td>.routeCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;doseQuantity</td><td>.doseQuantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>.participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function</td><td>.participation.functionCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td>.player</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>note</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>[actionNegationInd=false].reasonCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;isSubpotent</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subpotentReason</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;education</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;documentType</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;publicationDate</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;presentationDate</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;programEligibility</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;fundingSource</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reaction</td><td>Observation[classCode=obs].code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date</td><td>.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail</td><td>.value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reported</td><td>.participation[typeCode=INF].role[classCode=PAT] (this syntax for self-reported=true)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;protocolApplied</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authority</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDisease</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doseNumber[x]</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seriesDoses[x]</td><td>N/A</td> </tr>
+</table>
+<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreImmunizationProfile</b></td></tr>
+ <tr><td>Immunization</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>FiveWs.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>FiveWs.what[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>FiveWs.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>FiveWs.done[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td>FiveWs.recorded</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;primarySource</td><td>FiveWs.source</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reportOrigin</td><td>FiveWs.source</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>FiveWs.where[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;actor</td><td>FiveWs.actor</td> </tr>
+</table>
+<a name="cda"> </a><h3>Mappings for CDA (R2) (<a href="http://hl7.org/comparison-cda.html">http://hl7.org/v3/cda</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreImmunizationProfile</b></td></tr>
+ <tr><td>Immunization</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacturedMaterial/realmCode/code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/effectiveTime/value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;manufacturer</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacuturerOrganization/name</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;lotNumber</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacturedMaterial/lotNumberText</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;site</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/approachSiteCode/code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;route</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/routeCode/code</td> </tr>
+</table>
+</body>
+</html>

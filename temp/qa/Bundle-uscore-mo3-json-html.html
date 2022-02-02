@@ -1,0 +1,100 @@
+﻿<html>
+<head>
+  <title>Bundle-uscore-mo3-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a>" : "uscore-mo3",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Uscore MO3 Example"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is a uscore mo3 example for the *Bundle Profile*."
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a>" : "searchset",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.total">total</a>" : 1,
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link">link</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.relation">relation</a>" : "self",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.url">url</a>" : "http://test.fhir.org/r4/MedicationRequest?search-id=4085956e-63b8-402d-b181-325040fdb9&amp;&amp;_id=uscore%2Dmo3&amp;_include=MedicationRequest%3Amedication&amp;_sort=_id"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://test.fhir.org/r4/MedicationRequest/uscore-mo3",
+      "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html">resourceType</a>" : "MedicationRequest",
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.id">id</a>" : "uscore-mo3",
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;uscore-mo3\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-medicationrequest.html\&quot;&gt;US Core MedicationRequest Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: &lt;a href=\&quot;#Medication_uscore-med2\&quot;&gt;See above (Medication/uscore-med2: Nizatidine 15 MG/ML Oral Solution [Axid])&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Patient/example: Amy Shaw&lt;/a&gt; \&quot; SHAW\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;authoredOn&lt;/b&gt;: 2008-04-05&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;Practitioner-practitioner-1.html\&quot;&gt;Practitioner/practitioner-1: Ronald Bone, MD&lt;/a&gt; \&quot; BONE\&quot;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.status">status</a>" : "active",
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.intent">intent</a>" : "order",
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication[x]">medicationReference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Medication/uscore-med2",
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Nizatidine 15 MG/ML Oral Solution [Axid]"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example",
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Amy Shaw"
+        },
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.authoredOn">authoredOn</a>" : "2008-04-05",
+        "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.requester">requester</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/practitioner-1",
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Ronald Bone, MD"
+        }
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a>" : "match"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "/Medication/uscore-med2",
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/medication.html">resourceType</a>" : "Medication",
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.id">id</a>" : "uscore-med2",
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "1",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2016-11-29T19:45:46Z",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;uscore-med2\&quot; Version \&quot;1\&quot; Updated \&quot;2016-11-29T11:45:46-08:00\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-medication.html\&quot;&gt;US Core Medication Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Nizatidine 15 MG/ML Oral Solution [Axid] &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-v3-rxNorm.html\&quot;&gt;RxNorm&lt;/a&gt;#582620)&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/medication.html#Medication.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "582620",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Nizatidine 15 MG/ML Oral Solution [Axid]"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Nizatidine 15 MG/ML Oral Solution [Axid]"
+        }
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a>" : "include"
+      }
+    }
+  ]
+}</code></pre>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="us-core-encounter-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a  308335008 (Patient encounter procedure)</li><li>Include all codes defined in <a href="http://terminology.hl7.org/3.0.0/CodeSystem-CPT.html"><code>http://www.ama-assn.org/go/cpt</code></a></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type"/>
+  <version value="4.2.0"/>
+  <name value="USCoreEncounterType"/>
+  <title value="US Core Encounter Type"/>
+  <status value="active"/>
+  <date value="2019-05-21"/>
+  <publisher value="HL7 International - Cross-Group Projects"/>
+  <contact>
+    <name value="HL7 International - Cross-Group Projects"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cgp"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgp@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure)) and codes from the Current Procedure and Terminology (CPT) found in the following CPT sections:&#xA;  - 99201-99499 E/M&#xA; - 99500-99600 home health (mainly nonphysician, such as newborn care in home)&#xA; - 99605-99607 medication management&#xA; - 98966-98968 non physician telephone services&#xA; &#xA; (subscription to AMA Required)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from:&#xA; 1. SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.&#xA;  2. CPT © Copyright 2020 American Medical Association. All rights reserved. AMA and CPT are registered trademarks of the American Medical Association."/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="308335008"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://www.ama-assn.org/go/cpt"/>
+    </include>
+  </compose>
+</ValueSet>

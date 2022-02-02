@@ -1,0 +1,131 @@
+I"�7<p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#background" id="markdown-toc-background">Background</a></li>
+  <li><a href="#how-to-read-this-guide" id="markdown-toc-how-to-read-this-guide">How to read this Guide</a></li>
+  <li><a href="#us-core-actors" id="markdown-toc-us-core-actors">US Core Actors</a></li>
+  <li><a href="#us-core-profiles" id="markdown-toc-us-core-profiles">US Core Profiles</a></li>
+</ul>
+
+</div>
+
+<p class="new-content">Where possible, new and updated content will be highlighted with green text and background</p>
+
+<p>Continuous Integration Build (latest in version control) - <strong>Content subject to frequent changes</strong></p>
+
+<p class="stu-note">Key updates and detailed changes between this and prior versions are available in the <a href="http://hl7.org/fhir/us/core/history.html">US Core change notes</a></p>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>The US Core Implementation Guide is based on <a href="http://hl7.org/fhir/R4/index.html" title="FHIR Version R4 Specification Home Page">FHIR Version R4</a> and defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. There are two different ways to implement US Core:</p>
+<ol>
+  <li>Profile Only Support: Systems may support <em>only</em> the US Core Profiles to represent clinical information.</li>
+  <li>Profile Support + Interaction Support: Systems may support <em>both</em> the US Core Profile content structure <em>and</em> the RESTful interactions defined for a resource.</li>
+</ol>
+
+<p>For a detailed description between these different usages of US Core, see the <a href="conformance-expectations.html" title="Conformance Expectations Page">Conformance Expectations</a> page.</p>
+
+<p>US Core has benefitted from testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing.  This guide and the US Core profiles have become the foundation for US Realm FHIR implementation guides.  This release is the first of yearly US Core updates to reflect changes to <a href="https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf">U.S. Core Data for Interoperability (USCDI) v1</a> and requests from the US Realm FHIR community.  This Approach is outlined in the <a href="future-of-US-core.html">Future of US Core</a> page.  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.</p>
+
+<h3 id="background">Background</h3>
+
+<p>The US Core requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the <a href="http://www.healthit.gov/newsroom/about-onc">Office of the National Coordinator for Health Information Technology (ONC)</a> sponsored <a href="https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Home">Data Access Framework</a> (DAF) project. The Argonaut Data Query Implementation Guide superseded DAF and documented security and authorization and the querying of the <a href="https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf">2015 Edition Common Clinical Data Set (CCDS)</a> and static documents.  US Core descended directly from the Argonaut guide to support FHIR Version STU3 and eventually FHIR R4 and The ONC <a href="https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf">U.S. Core Data for Interoperability (USCDI) v1</a>.</p>
+
+<h3 id="how-to-read-this-guide">How to read this Guide</h3>
+
+<p>This Guide is divided into several pages which are listed at the top of each page in the menu bar.</p>
+
+<ul>
+  <li><a href="index.html" title="Home Page">Home</a>: The home page provides the introduction and background for US Core.</li>
+  <li><a href="guidance.html">Guidance</a>: These pages provides overall guidance in using the profiles and transactions defined in this guide.
+    <ul>
+      <li><a href="general-guidance.html" title="General Guidance Page">General Guidance</a> provides guidance, definitions and requirements common to all actors used in this guide.</li>
+      <li><a href="conformance-expectations.html" title="Conformance Expectations Page">Conformance Expectations</a> defines how CapabilityStatements are used and the expectations for mandatory and must support elements in the US Core Profiles. It provides guidance on how a system may support <em>only</em> the resources as profiled by US Core to represent clinical information (Profile Support) versus a system claiming conformance to <em>both</em> the US Core Profile content structure <em>and</em> the RESTful interactions defined for it (Profile Support + Interaction Support).</li>
+      <li><a href="clinical-notes-guidance.html">Clinical Notes Guidance</a> gives guidance on the interactions between Consumers and Producers of clinical notes.</li>
+      <li><a href="medication-list-guidance.html">Medication List Guidance</a> gives guidance on how a patient or provider can access a patient’s medications.</li>
+      <li><a href="basic-provenance.html">Basic Provenance</a> provides implementers with important definitions to create and share the Provenance Resource.</li>
+      <li><a href="sdoh.html">SDOH Guidance</a> gives background on the exchange of Social Determinants of Health (SDOH) data elements.</li>
+      <li><a href="DSTU2-to-R4-conversion.html">DSTU2 to R4 Conversion</a> considers the user and developer experience when transitioning from FHIR DSTU2 to FHIR R4.</li>
+      <li><a href="future-of-US-core.html">Future of US Core</a> outlines the approach to adding new content to US Core.</li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">FHIR Artifacts</a>: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
+    <ul>
+      <li><a href="profiles-and-extensions.html">Profiles and Extensions</a>: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative introduction, formal definition and a “Quick Start” guide to the supported search transaction for each  Profile.</li>
+      <li><a href="search-parameters-and-operations.html">Search Parameters and Operations</a>: This page lists the  defined Operations and Search Parameters that are used in US Core transactions.</li>
+      <li><a href="terminology.html" title="Terminology Page">Terminology</a>: This page lists the value sets and code system defined for  profiles.</li>
+      <li><a href="capability-statements.html">Capability Statements</a>: This set of pages describes the expected FHIR capabilities of the various  actors.</li>
+    </ul>
+  </li>
+  <li><a href="security.html">Security</a>: General security requirements and recommendations for  actors.</li>
+  <li><a href="examples.html">Examples</a>: List of links to all the examples used in this guide.</li>
+  <li><a href="downloads.html" title="Downloads Page">Downloads</a>: This page provides links to downloadable artifacts.</li>
+</ul>
+
+<h3 id="us-core-actors">US Core Actors</h3>
+
+<p>The following actors are part of the US Core IG:</p>
+
+<h4 id="us-core-requestor">US Core Requestor</h4>
+<p>An application that initiates a data access request to retrieve patient data. This can be thought of as the client in a client-server interaction. The terms “US Core Requestor” and “Client” are used interchangeably throughout this guide and are not meant to limit this actor to only patient and provider apps, the same technology can be used by payers and other users. Consider these terms as a short-hand notation for something like “user application”</p>
+
+<h4 id="us-core-responder">US Core Responder</h4>
+<p>A product that responds to the data access request providing patient data. This can be thought of as the server in a client-server interaction. The terms “US Core Responder” and “Server” and “EHR” are used interchangeably throughout this guide and are not meant to limit this actor to electronic health record systems.  The same technology can be used in HIEs, care coordination platforms, population health systems, etc. Consider these terms as a short-hand notation for something like “interoperable healthcare platform”.</p>
+
+<h3 id="us-core-profiles">US Core Profiles</h3>
+
+<p>The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that <strong>MUST</strong> be present. For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a <a href="http://hl7.org/fhir/R4/formats.html#table">logical view</a> of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the <em>Quick Start</em> Section of the profile page when conforming to the US Core <a href="capability-statements.html">Capability Statements</a> for this profile.</p>
+
+<li><a href="StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></li>
+<li><a href="StructureDefinition-us-core-bmi.html">US Core BMI Profile</a></li>
+<li><a href="StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile</a></li>
+<li><a href="StructureDefinition-us-core-body-height.html">US Core Body Height Profile</a></li>
+<li><a href="StructureDefinition-us-core-body-temperature.html">US Core Body Temperature Profile</a></li>
+<li><a href="StructureDefinition-us-core-body-weight.html">US Core Body Weight Profile</a></li>
+<li><a href="StructureDefinition-us-core-careplan.html">US Core CarePlan Profile</a></li>
+<li><a href="StructureDefinition-us-core-careteam.html">US Core CareTeam Profile</a></li>
+<li><a href="StructureDefinition-us-core-observation-clinical-test.html">US Core Clinical Test Result Observation Profile</a></li>
+<li><a href="StructureDefinition-us-core-condition.html">US Core Condition Profile</a></li>
+<li><a href="StructureDefinition-us-core-diagnosticreport-lab.html">US Core DiagnosticReport Profile for Laboratory Results Reporting</a></li>
+<li><a href="StructureDefinition-us-core-diagnosticreport-note.html">US Core DiagnosticReport Profile for Report and Note exchange</a></li>
+<li><a href="StructureDefinition-us-core-documentreference.html">US Core DocumentReference Profile</a></li>
+<li><a href="StructureDefinition-us-core-encounter.html">US Core Encounter Profile</a></li>
+<li><a href="StructureDefinition-us-core-goal.html">US Core Goal Profile</a></li>
+<li><a href="StructureDefinition-us-core-head-circumference.html">US Core Head Circumference Profile</a></li>
+<li><a href="StructureDefinition-us-core-heart-rate.html">US Core Heart Rate Profile</a></li>
+<li><a href="StructureDefinition-us-core-observation-imaging.html">US Core Imaging Result Observation Profile</a></li>
+<li><a href="StructureDefinition-us-core-immunization.html">US Core Immunization Profile</a></li>
+<li><a href="StructureDefinition-us-core-implantable-device.html">US Core Implantable Device Profile</a></li>
+<li><a href="StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a></li>
+<li><a href="StructureDefinition-us-core-location.html">US Core Location Profile</a></li>
+<li><a href="StructureDefinition-us-core-medication.html">US Core Medication Profile</a></li>
+<li><a href="StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></li>
+<li><a href="StructureDefinition-us-core-organization.html">US Core Organization Profile</a></li>
+<li><a href="StructureDefinition-us-core-patient.html">US Core Patient Profile</a></li>
+<li><a href="StructureDefinition-pediatric-bmi-for-age.html">US Core Pediatric BMI for Age Observation Profile</a></li>
+<li><a href="StructureDefinition-head-occipital-frontal-circumference-percentile.html">US Core Pediatric Head Occipital-frontal Circumference Percentile Profile</a></li>
+<li><a href="StructureDefinition-pediatric-weight-for-height.html">US Core Pediatric Weight for Height Observation Profile</a></li>
+<li><a href="StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></li>
+<li><a href="StructureDefinition-us-core-practitionerrole.html">US Core PractitionerRole Profile</a></li>
+<li><a href="StructureDefinition-us-core-procedure.html">US Core Procedure Profile</a></li>
+<li><a href="StructureDefinition-us-core-provenance.html">US Core Provenance Profile</a></li>
+<li><a href="StructureDefinition-us-core-pulse-oximetry.html">US Core Pulse Oximetry Profile</a></li>
+<li><a href="StructureDefinition-us-core-relatedperson.html">US Core Related Person</a></li>
+<li><a href="StructureDefinition-us-core-respiratory-rate.html">US Core Respiratory Rate Profile</a></li>
+<li><a href="StructureDefinition-us-core-observation-screening-response.html">US Core Screening Response Observation Profile</a></li>
+<li><a href="StructureDefinition-us-core-servicerequest.html">US Core Service Request</a></li>
+<li><a href="StructureDefinition-us-core-observation-sexual-orientation.html">US Core Sexual Orientation Observation Profile</a></li>
+<li><a href="StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a></li>
+<li><a href="StructureDefinition-us-core-observation-social-history-assessment.html">US Core Social History Assessment Observation Profile</a></li>
+<li><a href="StructureDefinition-us-core-vital-signs.html">US Core Vital Signs Profile</a></li>
+
+<p>See the General Guidance page for a <a href="general-guidance.html">mapping</a> to the U.S. Core Data for Interoperability (USCDI).</p>
+
+<hr />
+
+<p>Primary Authors: Brett Marquard, Eric Haas, Gay Dolin</p>
+
+<p>Secondary Authors: Grahame Grieve, Nagesh Bashyam</p>
+
+:ET

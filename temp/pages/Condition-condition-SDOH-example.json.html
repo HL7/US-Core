@@ -1,0 +1,35 @@
+---
+---
+
+{% if 'json' == 'xml' %}
+{% assign section = '7' %}
+{% elsif 'json' == 'json' %}
+{% assign section = '8' %}
+{% else %}
+{% assign section = '9' %}
+{% endif %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section {{section}}" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+{% include fragment-base-navtabs.html type='Condition' id='condition-SDOH-example' active='json' %}
+
+<a name="root"> </a>
+{% if site.data.artifacts[page.path].example %}
+  {% assign example = 'Example ' %}
+{% endif %}
+{% assign prefix = site.data.artifacts[page.path].type %}
+<h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title | escape_once}}</h2>
+
+<p><a href="Condition-condition-SDOH-example.json" no-download="true">Raw json</a> | <a href="Condition-condition-SDOH-example.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='Condition' id='condition-SDOH-example' %}
+
+  {% include Condition-condition-SDOH-example-json-html.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='Condition' id='condition-SDOH-example' %}
+
+</div>
+{% include fragment-pageend.html %}

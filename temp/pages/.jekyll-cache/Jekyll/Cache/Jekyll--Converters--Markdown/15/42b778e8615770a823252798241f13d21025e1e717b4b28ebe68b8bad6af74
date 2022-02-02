@@ -1,0 +1,46 @@
+I"l
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a> resource to record, search, and fetch basic demographics and other administrative information about an individual practitioner. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core-Practitioner profile:</p>
+
+<ul>
+  <li>Query for an practitioner by name or NPI</li>
+  <li>Reference from other Resources</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Practitioner must have:</strong></p>
+
+<ol>
+  <li>An identifier which must support an NPI if available.</li>
+  <li>A name</li>
+</ol>
+
+<div class="new-content">
+  <p><strong>Each PractitionerRole must support:</strong></p>
+
+  <ol>
+    <li>Contact information</li>
+    <li>An address</li>
+  </ol>
+</div>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>This profile may be referenced by different capability statements, such as the <a href="CapabilityStatement-us-core-server.html">Conformance requirements for the US Core Server</a>, or a provider directory capability statement.</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="Practitioner-practitioner-1.html">Practitioner-1</a></li>
+  <li class="new-content"><a href="Practitioner-practitioner-2.html">Practitioner-2</a></li>
+</ul>
+
+:ET

@@ -1,0 +1,33 @@
+---
+---
+{% include fragment-pagebegin.html %}
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='{{[type]}}' id='{{[id]}}' active='content' %}
+  <a name="root"> </a>
+  <h2 id="root">CodeSystem: {{site.data.pages[page.path].title | escape_once}}</h2>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' %}
+
+  <p>
+    <b>Summary</b>
+  </p>
+
+  {% include {{[type]}}-{{[id]}}-summary.xhtml %}
+
+  <p>
+  This Code system is referenced in the content logical definition of the following value sets:
+  </p>
+
+  {% include {{[type]}}-{{[id]}}-xref.xhtml %}
+
+  {% include {{[type]}}-{{[id]}}-content.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='{{[type]}}' id='{{[id]}}' %}
+
+  {%include {{[type]}}-{{[id]}}-history.xhtml%}
+
+</div>
+{% include fragment-pageend.html %}

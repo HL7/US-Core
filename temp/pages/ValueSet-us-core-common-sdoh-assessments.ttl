@@ -1,0 +1,118 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "us-core-common-sdoh-assessments"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/88123-5.html\">88123-5</a></td><td>Within the past 12 months the food we bought just didn't last and we didn't have money to get more [U.S. FSS]</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/88122-7.html\">88122-7</a></td><td>Within the past 12 months we worried whether our food would run out before we got money to buy more [U.S. FSS]</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/96779-4.html\">96779-4</a></td><td>Has the electric, gas, oil, or water company threatened to shut off services in your home in past 12 months</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/71802-3.html\">71802-3</a></td><td>Housing status</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/93029-7.html\">93029-7</a></td><td>How often do you see or talk to people that you care about and feel close to [PRAPARE]</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/76437-3.html\">76437-3</a></td><td>Primary insurance</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/81375-8.html\">81375-8</a></td><td>Self assessment of health status [Reported]</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/93038-8.html\">93038-8</a></td><td>Stress level</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/96780-2.html\">96780-2</a></td><td>Wants help finding or keeping work or a job</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/67875-5.html\">67875-5</a></td><td>Employment status - current</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/95618-5.html\">95618-5</a></td><td>Physically hurt you [HITS]</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/93031-3.html\">93031-3</a></td><td>Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/93030-5.html\">93030-5</a></td><td>Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/63586-2.html\">63586-2</a></td><td>What was your best estimate of the total income of all family members from all sources, before taxes, in last year [PhenX]</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/93031-3.html\">93031-3</a></td><td>Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/93031-3.html\">93031-3</a></td><td>Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/93031-3.html\">93031-3</a></td><td>Have you or any family members you live with been unable to get any of the following when it was really needed in past 1 year [PRAPARE]</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/96782-8.html\">96782-8</a></td><td>Wants help with school or training</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/93677-3.html\">93677-3</a></td><td>Do you need help with legal issues [WellRx]</td></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments"];
+  fhir:ValueSet.version [ fhir:value "4.2.0"];
+  fhir:ValueSet.name [ fhir:value "USCoreCommonSDOHAssessments"];
+  fhir:ValueSet.title [ fhir:value "US Core Common SDOH Assessments ValueSet"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.date [ fhir:value "2021-11-15"^^xsd:date];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International - Cross-Group Projects"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International - Cross-Group Projects" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/cgp" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "cgp@lists.HL7.org" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "Common SDOH assessment concepts covering the following categories (Gravity Project SDOH Domains):\n - Food (Food Insecurity)\n - Housing (Housing Instability)\n - Health (Social Connection, Stress)\n - Employment (Employment Status)\n - Care (SDOH Category Unspecified)\n - Transit (Transportation Insecurity)\n - Money (Financial Insecurity)\n - Goods (Material Hardship)\n - Education (SDOH Category Unspecified)\n - Legal (SDOH Category Unspecified)"];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:ValueSet.copyright [ fhir:value "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "88123-5" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "88122-7" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "96779-4" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "71802-3" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "93029-7" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "76437-3" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "81375-8" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "93038-8" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "96780-2" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "67875-5" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "95618-5" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "93031-3" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "93030-5" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "63586-2" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "93031-3" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "93031-3" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "93031-3" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "96782-8" ]
+       ], [
+         fhir:index 18;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "93677-3" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/ValueSet/us-core-common-sdoh-assessments.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,105 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/DiagnosticReport/cbc> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cbc"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "CBC Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a CBC example for the *US Core DiagnosticReport Lab Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 58410-2}\">CBC panel - Blood by Automated count</span> (<span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0074 LAB}\">Laboratory</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Amy V. Baxter </b> ?? 1987-02-20 ( Medical Record Number: 1032702 (USUAL))</td></tr><tr><td>When For</td><td>2005-07-05</td></tr><tr><td>Reported</td><td>2005-07-05T17:45:33-07:00</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Reference Range</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-neutrophils.html\"><span title=\"Codes: {http://loinc.org 770-8}\">Neutrophils %</span></a></td><td>40.0 %</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 37.0 % - 67.0 %</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-mchc.html\"><span title=\"Codes: {http://loinc.org 786-4}\">MCHC RBC Auto-mCnc</span></a></td><td>34.7 g/dL</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 30.0 g/dL - 34.0 g/dL</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-hemoglobin.html\"><span title=\"Codes: {http://loinc.org 718-7}\">Hgb Bld-mCnc</span></a></td><td>17.0 g/dL</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 16.5 g/dL - 21.5 g/dL</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-erythrocytes.html\"><span title=\"Codes: {http://loinc.org 789-8}\">RBC # Bld Auto</span></a></td><td>4.58 10*6/uL</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span>: 4.1 10*6/uL - 6.1 10*6/uL</td><td>2005-07-05</td></tr></table></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "LAB" ];
+       fhir:Coding.display [ fhir:value "Laboratory" ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:58410-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "58410-2" ];
+       fhir:Coding.display [ fhir:value "CBC panel - Blood by Automated count" ]
+     ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy Shaw" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2005-07-05"^^xsd:date];
+  fhir:DiagnosticReport.issued [ fhir:value "2005-07-06T11:45:33+11:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/core/Organization/acme-lab>;
+     fhir:Reference.reference [ fhir:value "Organization/acme-lab" ];
+     fhir:Reference.display [ fhir:value "Acme Laboratory, Inc" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/neutrophils>;
+     fhir:Reference.reference [ fhir:value "Observation/neutrophils" ];
+     fhir:Reference.display [ fhir:value "NEUTROPHILS" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/mchc>;
+     fhir:Reference.reference [ fhir:value "Observation/mchc" ];
+     fhir:Reference.display [ fhir:value "MCHC" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/hemoglobin>;
+     fhir:Reference.reference [ fhir:value "Observation/hemoglobin" ];
+     fhir:Reference.display [ fhir:value "HEMOGLOBIN" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/erythrocytes>;
+     fhir:Reference.reference [ fhir:value "Observation/erythrocytes" ];
+     fhir:Reference.display [ fhir:value "ERYTHROCYTES" ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Organization/acme-lab> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/neutrophils> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/mchc> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/hemoglobin> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/erythrocytes> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/DiagnosticReport/cbc.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/DiagnosticReport/cbc.ttl> .
+
+# -------------------------------------------------------------------------------------
+

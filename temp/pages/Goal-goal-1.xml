@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Goal xmlns="http://hl7.org/fhir">
+  <id value="goal-1"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Goal 1 Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a goal 1 example for the *US Core Goal Profile*."/>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "goal-1" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-goal.html">US Core Goal Profile</a></p></div><p><b>lifecycleStatus</b>: active</p><p><b>description</b>: Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p><p><b>subject</b>: <a href="Patient-example.html">Patient/example: Amy Shaw</a> " SHAW"</p><h3>Targets</h3><table class="grid"><tr><td>-</td><td><b>Due[x]</b></td></tr><tr><td>*</td><td>2016-04-05</td></tr></table></div>
+  </text>
+  <lifecycleStatus value="active"/>
+  <description>
+    <text value="Patient is targeting a pulse oximetry of 92% and a weight of 195 lbs"/>
+  </description>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Amy Shaw"/>
+  </subject>
+  <target>
+    <dueDate value="2016-04-05"/>
+  </target>
+</Goal>

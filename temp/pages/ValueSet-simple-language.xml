@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="simple-language"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include codes from <a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ietf3066.html"><code>urn:ietf:bcp:47</code></a> where ext-lang doesn't exist, script doesn't exist, variant doesn't exist, extension doesn't exist and private-use doesn't exist</li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/core/ValueSet/simple-language"/>
+  <version value="4.2.0"/>
+  <name value="LanguageCodesWithLanguageAndOptionallyARegionModifier"/>
+  <title value="Language codes with language and optionally a region modifier"/>
+  <status value="active"/>
+  <date value="2019-05-21"/>
+  <publisher value="HL7 International - Cross-Group Projects"/>
+  <contact>
+    <name value="HL7 International - Cross-Group Projects"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cgp"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgp@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47). This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,   and a 3 character code if a 2 character code does not exist. It points back to [RFC 5646](https://tools.ietf.org/html/rfc5646), however only the language codes are required, all other elements are optional."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="ISO Maintains the copyright on the country codes and controls it&#39;s use carefully. For further details, see the [ISO 3166 Home Page](http://www.iso.org/iso/country_codes.htm)"/>
+  <compose>
+    <include>
+      <system value="urn:ietf:bcp:47"/>
+      <filter>
+        <property value="ext-lang"/>
+        <op value="exists"/>
+        <value value="false"/>
+      </filter>
+      <filter>
+        <property value="script"/>
+        <op value="exists"/>
+        <value value="false"/>
+      </filter>
+      <filter>
+        <property value="variant"/>
+        <op value="exists"/>
+        <value value="false"/>
+      </filter>
+      <filter>
+        <property value="extension"/>
+        <op value="exists"/>
+        <value value="false"/>
+      </filter>
+      <filter>
+        <property value="private-use"/>
+        <op value="exists"/>
+        <value value="false"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

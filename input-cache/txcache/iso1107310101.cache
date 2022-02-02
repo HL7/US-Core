@@ -1,0 +1,50 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:iso:std:iso:11073:10101",
+  "code" : "150456",
+  "display" : "MDC_PULS_OXIM_SAT_O2"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "59576-9"
+      },
+      {
+        "code" : "8289-1"
+      },
+      {
+        "code" : "77606-2"
+      },
+      {
+        "code" : "59408-5"
+      },
+      {
+        "code" : "3150-0"
+      },
+      {
+        "code" : "3151-8"
+      }]
+    },
+    {
+      "valueSet" : ["http://hl7.org/fhir/ValueSet/observation-vitalsignresult"]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "MDC_PULS_OXIM_SAT_O2",
+  "code" : "150456",
+  "system" : "urn:iso:std:iso:11073:10101"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:iso:std:iso:11073:10101",
+  "code" : "150456"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "MDC_PULS_OXIM_SAT_O2",
+  "code" : "150456",
+  "system" : "urn:iso:std:iso:11073:10101"
+}
+-------------------------------------------------------------------------------------

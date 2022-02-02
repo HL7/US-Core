@@ -1,0 +1,75 @@
+﻿<html>
+<head>
+  <title>SearchParameter-us-core-careteam-role-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter">resourceType</a>" : "SearchParameter",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.id">id</a>" : "us-core-careteam-role",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;  &lt;!-- &lt;h2&gt;SearchParameter: USCoreCareTeamRole&lt;/h2&gt; --&gt;&lt;b&gt; description&lt;/b&gt; : &lt;p&gt;Returns CareTeam resources with an participant role matching the specified code.&lt;/p&gt;\n\n\t\t\t&lt;br/&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; id&lt;/b&gt; us-core-careteam-role&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; url&lt;/b&gt; : &lt;b&gt; http://hl7.org/fhir/us/core/SearchParameter/us-core-careteam-role&lt;/b&gt;\n\t\t\t&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; version&lt;/b&gt; : 4.1.0&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; name&lt;/b&gt; : USCoreCareTeamRole&lt;/p&gt;\n\t\t\t\n\t\t\t&lt;p&gt;&lt;b&gt; status&lt;/b&gt; : active&lt;/p&gt;\n\t\t\t\n\t\t\t&lt;p&gt;&lt;b&gt; date&lt;/b&gt; : 2021-11-08&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; publisher&lt;/b&gt; : HL7 International - US Realm Steering Committee&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; contact&lt;/b&gt; : http://www.hl7.org/Special/committees/usrealm/index.cfm&lt;/p&gt;\n              &lt;!-- &lt;p&gt;\n\t\t\t\t&lt;b&gt; useContext&lt;/b&gt; : &lt;/p&gt; --&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; jurisdiction&lt;/b&gt; : United States of America (the) &lt;span&gt; (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})&lt;/span&gt;\n\t\t\t&lt;/p&gt;\n\t\t\t  &lt;!-- &lt;p&gt;\n\t\t&lt;b&gt; purpose&lt;/b&gt; : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain&lt;/p&gt; --&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; code&lt;/b&gt; : &lt;code&gt;role&lt;/code&gt;\n\t\t\t&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; base&lt;/b&gt; :CareTeam&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; type&lt;/b&gt; : token&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; expression&lt;/b&gt; : &lt;code&gt;CareTeam.participant.role&lt;/code&gt;\n\t\t\t&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; xpath&lt;/b&gt; : &lt;code&gt;f:CareTeam/f:participant/f:role/@value&lt;/code&gt;\n\t\t\t&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; xpathUsage&lt;/b&gt; : normal&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; mulitpleOr&lt;/b&gt; : True   (Conformance Expectation = MAY)&lt;/p&gt;\n\t\t\t&lt;p&gt;&lt;b&gt; mulitpleAnd&lt;/b&gt; : True  ( Conformance Expectation = MAY)&lt;/p&gt;\n    \n    \n    \n\t\t&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.url">url</a>" : "http://hl7.org/fhir/us/core/SearchParameter/us-core-careteam-role",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.version">version</a>" : "4.2.0",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.name">name</a>" : "USCoreCareTeamRole",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.date">date</a>" : "2021-11-08",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.publisher">publisher</a>" : "HL7 International - Cross-Group Projects",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "HL7 International - Cross-Group Projects",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://www.hl7.org/Special/committees/cgp"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "cgp@lists.HL7.org"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.description">description</a>" : "Returns CareTeam resources with a participant role matching the specified code.",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "US"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.code">code</a>" : "role",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.base">base</a>" : [
+    "CareTeam"
+  ],
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.type">type</a>" : "token",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.expression">expression</a>" : "CareTeam.participant.role",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.xpath">xpath</a>" : "f:CareTeam/f:participant/f:role/@value",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.xpathUsage">xpathUsage</a>" : "normal",
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.multipleOr">multipleOr</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.multipleOr">_multipleOr</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#boolean#boolean.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "MAY"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.multipleAnd">multipleAnd</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.multipleAnd">_multipleAnd</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#boolean#boolean.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a>" : "MAY"
+      }
+    ]
+  }
+}</code></pre>
+</body>
+</html>

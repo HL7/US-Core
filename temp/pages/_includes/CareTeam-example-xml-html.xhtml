@@ -1,0 +1,80 @@
+{% raw %}<pre class="xml"><code class="language-xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam">CareTeam</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;example&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/instance-name&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CareTeam Example&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/instance-description&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;This is a careteam example for the *US Core CareTeam Profile*.&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Resource &quot;example&quot; &lt;/p&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profile: &lt;a href=&quot;StructureDefinition-us-core-careteam.html&quot;&gt;US Core CareTeam Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: US-Core example CareTeam&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=&quot;Patient-example.html&quot;&gt;Patient/example: Amy V. Shaw&lt;/a&gt; &quot; SHAW&quot;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;role&lt;/b&gt;: Cardiologist &lt;span style=&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki&quot;&gt; (&lt;a href=&quot;https://browser.ihtsdotools.org/&quot;&gt;SNOMED CT&lt;/a&gt;#17561000)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;member&lt;/b&gt;: &lt;a href=&quot;Practitioner-practitioner-1.html&quot;&gt;Practitioner/practitioner-1: Ronald Bone, MD&lt;/a&gt; &quot; BONE&quot;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;role&lt;/b&gt;: Primary care provider &lt;span style=&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki&quot;&gt; (&lt;a href=&quot;https://browser.ihtsdotools.org/&quot;&gt;SNOMED CT&lt;/a&gt;#453231000124104)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;member&lt;/b&gt;: &lt;a href=&quot;Practitioner-practitioner-2.html&quot;&gt;Practitioner/practitioner-2: Kathy Fielding, MD&lt;/a&gt; &quot; KATHY&quot;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;role&lt;/b&gt;: Patient (person) &lt;span style=&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki&quot;&gt; (&lt;a href=&quot;https://browser.ihtsdotools.org/&quot;&gt;SNOMED CT&lt;/a&gt;#116154003)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;member&lt;/b&gt;: &lt;a href=&quot;Patient-example.html&quot;&gt;Patient/example: Amy V. Shaw&lt;/a&gt; &quot; SHAW&quot;&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;participant&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;role&lt;/b&gt;: Niece (person) &lt;span style=&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki&quot;&gt; (&lt;a href=&quot;https://browser.ihtsdotools.org/&quot;&gt;SNOMED CT&lt;/a&gt;#34581001)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;member&lt;/b&gt;: &lt;a href=&quot;RelatedPerson-shaw-niece.html&quot;&gt;RelatedPerson/shaw-niece: Sarah van Putten&lt;/a&gt; &quot; VAN PUTTEN&quot;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;US-Core example CareTeam&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.subject">subject</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/example&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Amy V. Shaw&quot;/&gt;
+  &lt;/subject&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant">participant</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.role">role</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;17561000&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Cardiologist&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/role&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.member">member</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/practitioner-1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Ronald Bone, MD&quot;/&gt;
+    &lt;/member&gt;
+  &lt;/participant&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant">participant</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.role">role</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;453231000124104&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Primary care provider&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/role&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.member">member</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/practitioner-2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Kathy Fielding, MD&quot;/&gt;
+    &lt;/member&gt;
+  &lt;/participant&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant">participant</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.role">role</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;116154003&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient (person)&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/role&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.member">member</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/example&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Amy V. Shaw&quot;/&gt;
+    &lt;/member&gt;
+  &lt;/participant&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant">participant</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.role">role</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://snomed.info/sct&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;34581001&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Niece (person)&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/role&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/careteam.html#CareTeam.participant.member">member</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;RelatedPerson/shaw-niece&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Sarah van Putten&quot;/&gt;
+    &lt;/member&gt;
+  &lt;/participant&gt;
+&lt;/CareTeam&gt;</code></pre>
+{% endraw %}

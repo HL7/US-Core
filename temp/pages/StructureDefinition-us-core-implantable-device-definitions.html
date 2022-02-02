@@ -1,0 +1,26 @@
+---
+---
+<!-- get modelType -->
+{% include fragment-modelType.html id='us-core-implantable-device' %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section 4" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='us-core-implantable-device' active='definition' %}
+
+<a name="root"> </a>
+<h2 id="root">{{modelType}}: USCoreImplantableDeviceProfile - Detailed Descriptions</h2>
+
+<p>Definitions for the us-core-implantable-device {{modelType | downcase}}.</p>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='StructureDefinition' id='us-core-implantable-device' %}
+
+  {%include StructureDefinition-us-core-implantable-device-dict.xhtml%}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='StructureDefinition' id='us-core-implantable-device' %}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

@@ -1,0 +1,66 @@
+I"K
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a> resource to record, search, and fetch basic encounter information for an individual patient. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core Encounter profile:</p>
+
+<ul>
+  <li>Query for a specific patient encounter</li>
+  <li>Query for recent patient encounters</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a> an encounter</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Encounter must have:</strong></p>
+
+<ol>
+  <li>A status</li>
+  <li>An classification such as inpatient, outpatient or emergency</li>
+  <li>An encounter type</li>
+  <li>A patient</li>
+</ol>
+
+<p><strong>Each Encounter must support:</strong></p>
+
+<ol>
+  <li>An encounter identifier</li>
+  <li>Providers involved in the encounter</li>
+  <li>When the encounter occurred</li>
+  <li>Reason for the visit</li>
+  <li>The discharge disposition</li>
+  <li>Where the encounter occurred</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>To search for an encounter diagnosis, query for Condition resources that reference the Encounter of interest and have a category of <code class="highlighter-rouge">encounter-diagnosis</code>.   An example search is shown in the <a href="StructureDefinition-us-core-condition.html#search">Condition Quick Start</a> section.</li>
+  <li>The Encounter resource can represent a reason using either a code with <code class="highlighter-rouge">Encounter.reasonCode</code>, or a reference with <code class="highlighter-rouge">Encounter.reasonReference</code> to  Condition or other resource.
+    <ul>
+      <li>Although both are marked as must support, servers are not required to support both a code and a reference, but they <strong>SHALL</strong> support <em>at least one</em> of these elements.</li>
+      <li>The client application <strong>SHALL</strong> support both elements.</li>
+      <li>If <code class="highlighter-rouge">Encounter.reasonReference</code> references an Observation, it <strong>SHOULD</strong> conform to a US Core Observation if applicable. For example, a laboratory result <strong>SHOULD</strong> conform to the <a href="StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a>.</li>
+    </ul>
+  </li>
+  <li>This profile supports <em>where the encounter occurred</em>.  The location address can be represented by the Location referenced by <code class="highlighter-rouge">Encounter.location.location</code> or indirectly through the Organization referenced by <code class="highlighter-rouge">Encounter.serviceProvider</code>.
+    <ul>
+      <li>Although both are marked as must support, servers are not required to support both <code class="highlighter-rouge">Encounter.location.location</code> and <code class="highlighter-rouge">Encounter.serviceProvider</code>, but they <strong>SHALL</strong> support <em>at least one</em> of these elements.</li>
+      <li>The client application <strong>SHALL</strong> support both elements.</li>
+      <li>If using <code class="highlighter-rouge">Encounter.location.location</code> it <strong>SHOULD</strong> conform to US Core Location.  However, as a result of implementation feedback, it <strong>MAY</strong>  reference the base FHIR Location resource.  See this guidance on <a href="general-guidance.html#referencing-us-core-profiles">Referencing US Core Profiles</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li class="new-content"><a href="Encounter-1036.html">Inpatient Example</a></li>
+  <li class="new-content"><a href="Encounter-example-1.html">Outpatient Example</a></li>
+  <li class="new-content"><a href="Encounter-delivery.html">Delivery Example</a></li>
+</ul>
+
+:ET

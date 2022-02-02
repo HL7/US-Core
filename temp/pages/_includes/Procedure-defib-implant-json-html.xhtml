@@ -1,0 +1,62 @@
+{% raw %}<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure">resourceType</a>" : "Procedure",
+  "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.id">id</a>" : "defib-implant",
+  "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Procedure R4 Defib Implant Example"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is a Procedure R4 defib implant example for the *US Core Procedure Profile*."
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;defib-implant\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-procedure.html\&quot;&gt;US Core Procedure Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Insertion or replacement of permanent implantable defibrillator system with transvenous lead(s), single or dual chamber &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-CPT.html\&quot;&gt;Current Procedural Terminology (CPT&amp;reg;)&lt;/a&gt;#33249)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Patient/example&lt;/a&gt; \&quot; SHAW\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;performed&lt;/b&gt;: 2019-03-26T12:55:26-07:00 --&amp;gt; 2019-03-26T13:25:26-07:00&lt;/p&gt;&lt;h3&gt;Performers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Actor&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Practitioner-practitioner-1.html\&quot;&gt;Practitioner/practitioner-1&lt;/a&gt; \&quot; BONE\&quot;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;FocalDevices&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Manipulated&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Device-udi-2.html\&quot;&gt;Device/udi-2&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.identifier">identifier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.status">status</a>" : "completed",
+  "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://www.ama-assn.org/go/cpt",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "33249"
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Insertion or replacement of permanent implantable defibrillator system with transvenous lead(s), single or dual chamber"
+  },
+  "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example"
+  },
+  "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performed[x]">performedPeriod</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2019-03-26T12:55:26-07:00",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.end">end</a>" : "2019-03-26T13:25:26-07:00"
+  },
+  "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performer">performer</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.performer.actor">actor</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/practitioner-1"
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.focalDevice">focalDevice</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/procedure.html#Procedure.focalDevice.manipulated">manipulated</a>" : {
+        "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Device/udi-2"
+      }
+    }
+  ]
+}</code></pre>
+{% endraw %}

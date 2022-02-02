@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Procedure/defib-implant> a fhir:Procedure;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "defib-implant"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Procedure R4 Defib Implant Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a Procedure R4 defib implant example for the *US Core Procedure Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"defib-implant\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-procedure.html\">US Core Procedure Profile</a></p></div><p><b>identifier</b>: id: urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff</p><p><b>status</b>: completed</p><p><b>code</b>: Insertion or replacement of permanent implantable defibrillator system with transvenous lead(s), single or dual chamber <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-CPT.html\">Current Procedural Terminology (CPT&reg;)</a>#33249)</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Patient/example</a> \" SHAW\"</p><p><b>performed</b>: 2019-03-26T12:55:26-07:00 --&gt; 2019-03-26T13:25:26-07:00</p><h3>Performers</h3><table class=\"grid\"><tr><td>-</td><td><b>Actor</b></td></tr><tr><td>*</td><td><a href=\"Practitioner-practitioner-1.html\">Practitioner/practitioner-1</a> \" BONE\"</td></tr></table><h3>FocalDevices</h3><table class=\"grid\"><tr><td>-</td><td><b>Manipulated</b></td></tr><tr><td>*</td><td><a href=\"Device-udi-2.html\">Device/udi-2</a></td></tr></table></div>"
+  ];
+  fhir:Procedure.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff" ]
+  ];
+  fhir:Procedure.status [ fhir:value "completed"];
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.ama-assn.org/go/cpt" ];
+       fhir:Coding.code [ fhir:value "33249" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Insertion or replacement of permanent implantable defibrillator system with transvenous lead(s), single or dual chamber" ]
+  ];
+  fhir:Procedure.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:Procedure.performedPeriod [
+     fhir:Period.start [ fhir:value "2019-03-26T12:55:26-07:00"^^xsd:dateTime ];
+     fhir:Period.end [ fhir:value "2019-03-26T13:25:26-07:00"^^xsd:dateTime ]
+  ];
+  fhir:Procedure.performer [
+     fhir:index 0;
+     fhir:Procedure.performer.actor [
+       fhir:link <http://hl7.org/fhir/us/core/Practitioner/practitioner-1>;
+       fhir:Reference.reference [ fhir:value "Practitioner/practitioner-1" ]
+     ]
+  ];
+  fhir:Procedure.focalDevice [
+     fhir:index 0;
+     fhir:Procedure.focalDevice.manipulated [
+       fhir:link <http://hl7.org/fhir/us/core/Device/udi-2>;
+       fhir:Reference.reference [ fhir:value "Device/udi-2" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Practitioner/practitioner-1> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Device/udi-2> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Procedure/defib-implant.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Procedure/defib-implant.ttl> .
+
+# -------------------------------------------------------------------------------------
+

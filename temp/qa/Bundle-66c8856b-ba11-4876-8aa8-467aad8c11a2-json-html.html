@@ -1,0 +1,246 @@
+﻿<html>
+<head>
+  <title>Bundle-66c8856b-ba11-4876-8aa8-467aad8c11a2-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a>" : "66c8856b-ba11-4876-8aa8-467aad8c11a2",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "PractitionerRole_Practitioner_Endpoint_Bundle_Example Example"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example example for the *Bundle Profile*."
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a>" : "searchset",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.total">total</a>" : 1,
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link">link</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.relation">relation</a>" : "self",
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.url">url</a>" : "http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole?_id=PractitionerRole-1&amp;_include=PractitionerRole%3Apractitioner&amp;_include=PractitionerRole%3Aendpoint"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole/PractitionerRole-1",
+      "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html">resourceType</a>" : "PractitionerRole",
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.id">id</a>" : "PractitionerRole-1",
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;PractitionerRole-1\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-practitionerrole.html\&quot;&gt;US Core PractitionerRole Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=\&quot;#Practitioner_Practitioner-1011\&quot;&gt;See above (Practitioner/Practitioner-1011: Brenda Jennings Richard MD)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;Organization-acme-lab.html\&quot;&gt;Organization/acme-lab: Acme Lab&lt;/a&gt; \&quot;Acme Labs\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Primary Care Clinic/Center &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (provider-taxonomy#261QP2300X)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: General Practice Physician &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (provider-taxonomy#208D00000X)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=\&quot;Location-hl7east.html\&quot;&gt;Location/hl7east: Health Level Seven International&lt;/a&gt; \&quot;Health Level Seven International - Amherst\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;endpoint&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=\&quot;#Endpoint_71\&quot;&gt;See above (http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71: Westwood Physicians Organization ADT)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=\&quot;#Endpoint_71\&quot;&gt;See above (http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71: Brenda.Jennings.Richard.MD@direct.example.org)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/Practitioner-1011",
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Brenda Jennings Richard MD"
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">organization</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/acme-lab",
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Acme Lab"
+        },
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.code">code</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://nucc.org/provider-taxonomy",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "261QP2300X",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Primary Care Clinic/Center"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.specialty">specialty</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://nucc.org/provider-taxonomy",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "208D00000X",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "General Practice Physician"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.location">location</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Location/hl7east",
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Health Level Seven International"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.endpoint">endpoint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71",
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Westwood Physicians Organization ADT"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71",
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Brenda.Jennings.Richard.MD@direct.example.org"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a>" : "match"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://52.90.126.238:8080/fhir/baseDstu3/Practitioner/Practitioner-1011",
+      "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitioner.html">resourceType</a>" : "Practitioner",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a>" : "Practitioner-1011",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;Practitioner-1011\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-practitioner.html\&quot;&gt;US Core Practitioner Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: 000001011 (OFFICIAL), id: 9999991011 (OFFICIAL), id: d46f70565a1042f6a6ece48dd81b408f (OFFICIAL)&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Brenda Jennings Richard &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: ph: 313-555-6868(HOME), ph: 313-555-6443(WORK)&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 346 W Plum Avenu Dearborn MI 48123&lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: female&lt;/p&gt;&lt;p&gt;&lt;b&gt;birthDate&lt;/b&gt;: 1976-11-15&lt;/p&gt;&lt;h3&gt;Qualifications&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Identifier&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Issuer&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Michigan Medical License: LARA-1011 (OFFICIAL)&lt;/td&gt;&lt;td&gt;Medical Doctor &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (license-type#4305)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span&gt;: Michigan Department of Licensing and Regulatory Affairs&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hl7.org/fhir/sid/us-ssn",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "000001011"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hl7.org/fhir/sid/us-npi",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "9999991011"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://mihin.org/fhir/cks",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "d46f70565a1042f6a6ece48dd81b408f"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "Richard",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Brenda",
+              "Jennings"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.suffix">suffix</a>" : [
+              "MD"
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.telecom">telecom</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "313-555-6868",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "home"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "313-555-6443",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "work"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.address">address</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.text">text</a>" : "346 W Plum Avenu Dearborn MI 48123",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+              "346 W Plum Avenue"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "Dearborn",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a>" : "MI",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a>" : "48126"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.gender">gender</a>" : "female",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.birthDate">birthDate</a>" : "1976-11-15",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.qualification">qualification</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.qualification.identifier">identifier</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "official",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                    {
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "MD",
+                      "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Medical License number"
+                    }
+                  ],
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Michigan Medical License"
+                },
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://example.org/michigan.gov/fhir/medical-license",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "LARA-1011",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>" : {
+                  "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "State of Michigan"
+                }
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.qualification.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/michigan.gov/lara/license-type",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "4305",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Medical Doctor"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.qualification.issuer">issuer</a>" : {
+              "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Michigan Department of Licensing and Regulatory Affairs"
+            }
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a>" : "include"
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71",
+      "<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/endpoint.html">resourceType</a>" : "Endpoint",
+        "<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.id">id</a>" : "71",
+        "<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;71\&quot; &lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;connectionType&lt;/b&gt;: Direct Project (Details: http://terminology.hl7.org/CodeSystem/endpoint-connection-type code direct-project = 'Direct Project', stated as 'null')&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Brenda.Jennings.Richard.MD@direct.example.org&lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;Organization-acme-lab.html\&quot;&gt;Organization/acme-lab&lt;/a&gt; \&quot;Acme Labs\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;payloadType&lt;/b&gt;: urn:hl7-org:sdwg:ccda-structuredBody:1.1 &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (unknown#urn:hl7-org:sdwg:ccda-structuredBody:1.1)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;payloadMimeType&lt;/b&gt;: text/xml&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: &lt;a href=\&quot;mailto:Brenda.Jennings.Richard.MD@direct.example.org\&quot;&gt;Brenda.Jennings.Richard.MD@direct.example.org&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.status">status</a>" : "active",
+        "<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.connectionType">connectionType</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/endpoint-connection-type",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "direct-project"
+        },
+        "<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.name">name</a>" : "Brenda.Jennings.Richard.MD@direct.example.org",
+        "<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.managingOrganization">managingOrganization</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/acme-lab"
+        },
+        "<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.payloadType">payloadType</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:oid:1.3.6.1.4.1.19376.1.2.3",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "urn:hl7-org:sdwg:ccda-structuredBody:1.1"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.payloadMimeType">payloadMimeType</a>" : [
+          "text/xml"
+        ],
+        "<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.address">address</a>" : "mailto:Brenda.Jennings.Richard.MD@direct.example.org"
+      },
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>" : {
+        "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a>" : "include"
+      }
+    }
+  ]
+}</code></pre>
+</body>
+</html>

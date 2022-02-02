@@ -1,0 +1,86 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/ValueSet/us-core-vital-signs> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "us-core-vital-signs"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/59576-9.html\">59576-9</a></td><td>Body mass index (BMI) [Percentile] Per age and sex</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/8289-1.html\">8289-1</a></td><td>Head Occipital-frontal circumference Percentile</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/77606-2.html\">77606-2</a></td><td>Weight-for-length Per age and sex</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/59408-5.html\">59408-5</a></td><td>Oxygen saturation in Arterial blood by Pulse oximetry</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/3150-0.html\">3150-0</a></td><td>Inhaled oxygen concentration</td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/3151-8.html\">3151-8</a></td><td>Inhaled oxygen flow rate</td></tr></table></li><li>Import all the codes that are contained in <a href=\"http://hl7.org/fhir/R4/valueset-observation-vitalsignresult.html\">http://hl7.org/fhir/ValueSet/observation-vitalsignresult</a></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/core/ValueSet/us-core-vital-signs"];
+  fhir:ValueSet.version [ fhir:value "4.2.0"];
+  fhir:ValueSet.name [ fhir:value "UsCoreVitalSigns"];
+  fhir:ValueSet.title [ fhir:value "US Core Vital Signs ValueSet"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.date [ fhir:value "2020-11-17"^^xsd:date];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International - Cross-Group Projects"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International - Cross-Group Projects" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/cgp" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "cgp@lists.HL7.org" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "The vital sign codes from the base FHIR and US Core Vital Signs."];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:ValueSet.copyright [ fhir:value "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "59576-9" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "8289-1" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "77606-2" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "59408-5" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3150-0" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3151-8" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.compose.include.valueSet [
+         fhir:value "http://hl7.org/fhir/ValueSet/observation-vitalsignresult";
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/ValueSet/observation-vitalsignresult>
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/ValueSet/us-core-vital-signs.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/ValueSet/us-core-vital-signs.ttl> .
+
+# -------------------------------------------------------------------------------------
+

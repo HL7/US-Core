@@ -1,0 +1,110 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-us-core-goal-maps-all</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreGoalProfile</b></td></tr>
+ <tr><td>Goal</td><td>GOL.1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;lifecycleStatus</td><td>GOL-18-goal life cycle status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;achievementStatus</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;description</td><td>GOL-3.2-goal ID.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PID-3-patient ID list</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;start[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;target</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;measure</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;due[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusDate</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;expressedBy</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;addresses</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>GOL-16-goal evaluation + NTE?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;outcomeCode</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;outcomeReference</td><td></td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreGoalProfile</b></td></tr>
+ <tr><td>Goal</td><td>Entity. Role, or Act, .outboundRelationship[typeCode&lt;=OBJ].</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;lifecycleStatus</td><td>.statusCode in-progress = active (classCode = OBJ) cancelled = aborted</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;achievementStatus</td><td>.statusCode achieved = complete sustaining = active</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td>.priorityCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;description</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>.participation[typeCode=PAT].role[classCode=PAT]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;start[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;target</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;measure</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;due[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusDate</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;expressedBy</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;addresses</td><td>.outboundRelationship[typeCode=SUBJ].target[classCode=CONC]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>.inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;outcomeCode</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;outcomeReference</td><td></td> </tr>
+</table>
+<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreGoalProfile</b></td></tr>
+ <tr><td>Goal</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;implicitRules</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;language</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;lifecycleStatus</td><td>FiveWs.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;achievementStatus</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>FiveWs.class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;priority</td><td>FiveWs.grade</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;description</td><td>FiveWs.what[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;start[x]</td><td>FiveWs.planned</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;target</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;measure</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail[x]</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;due[x]</td><td>FiveWs.done[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusDate</td><td>FiveWs.recorded</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;expressedBy</td><td>FiveWs.source</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;addresses</td><td>FiveWs.why[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;outcomeCode</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;outcomeReference</td><td></td> </tr>
+</table>
+</body>
+</html>

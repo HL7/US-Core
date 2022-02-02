@@ -1,0 +1,82 @@
+{% raw %} <li><a href="ValueSet-birthsex.json.html">Birth Sex</a> <p>Codes for assigning sex at birth as specified by the <a href="https://www.healthit.gov/newsroom/about-onc">Office of the National Coordinator for Health IT (ONC)</a></p>
+</li>
+ <li><a href="ValueSet-detailed-ethnicity.json.html">Detailed ethnicity</a> <p>The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 41 <a href="http://www.cdc.gov/phin/resources/vocabulary/index.html">CDC ethnicity codes</a> that are grouped under one of the 2 OMB ethnicity category codes.</p>
+</li>
+ <li><a href="ValueSet-detailed-race.json.html">Detailed Race</a> <p>The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 900+ <a href="http://www.cdc.gov/phin/resources/vocabulary/index.html">CDC Race codes</a> that are grouped under one of the 5 OMB race category codes.</p>
+</li>
+ <li><a href="ValueSet-simple-language.json.html">Language codes with language and optionally a region modifier</a> <p>This value set includes codes from <a href="http://tools.ietf.org/html/bcp47">BCP-47</a>. This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,   and a 3 character code if a 2 character code does not exist. It points back to <a href="https://tools.ietf.org/html/rfc5646">RFC 5646</a>, however only the language codes are required, all other elements are optional.</p>
+</li>
+ <li><a href="ValueSet-us-core-narrative-status.json.html">US Core Narrative Status</a> <p>The US Core Narrative Status Value Set limits the text status for the resource narrative.</p>
+</li>
+ <li><a href="ValueSet-omb-ethnicity-category.json.html">OMB Ethnicity Categories</a> <p>The codes for the concepts 'Unknown', 'Asked but no answer', and the ethnicity categories - 'Hispanic or Latino' and 'Non Hispanic or Latino' - as defined by the <a href="https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf">OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997</a>.</p>
+</li>
+ <li><a href="ValueSet-omb-race-category.json.html">OMB Race Categories</a> <p>The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the codes for the five race categories - 'American Indian' or 'Alaska Native', 'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific Islander', and 'White' - as defined by the <a href="https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf">OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997</a> .</p>
+</li>
+ <li><a href="ValueSet-us-core-clinical-note-type.json.html">US Core Clinical Note Type</a> <p>The US Core Clinical Note Type Value Set is a 'starter set' of types supported for fetching and storing clinical notes.</p>
+</li>
+ <li><a href="ValueSet-us-core-diagnosticreport-report-and-note-codes.json.html">US Core Clinical Test Codes</a> <p>Non laboratory LOINC concepts such as codes for observations like vital signs, hemodynamics, intake/output, EKG, obstetric ultrasound, cardiac echo and other clinical observations. The codes selected should represent discrete and narrative diagnostic observations and reports</p>
+</li>
+ <li><a href="ValueSet-us-core-common-sdoh-assessments.json.html">US Core Common SDOH Assessments ValueSet</a> <p>Common SDOH assessment concepts covering the following categories (Gravity Project SDOH Domains):</p>
+<ul>
+<li>Food (Food Insecurity)</li>
+<li>Housing (Housing Instability)</li>
+<li>Health (Social Connection, Stress)</li>
+<li>Employment (Employment Status)</li>
+<li>Care (SDOH Category Unspecified)</li>
+<li>Transit (Transportation Insecurity)</li>
+<li>Money (Financial Insecurity)</li>
+<li>Goods (Material Hardship)</li>
+<li>Education (SDOH Category Unspecified)</li>
+<li>Legal (SDOH Category Unspecified)</li>
+</ul>
+</li>
+ <li><a href="ValueSet-us-core-condition-category.json.html">US Core Condition Category Codes</a> <p>The US Core Condition Category Codes support the separate concepts of problems, health concerns, and Social Determinants of Health in Condition.category in order for API consumers to be able to separate them.</p>
+</li>
+ <li><a href="ValueSet-us-core-condition-code.json.html">US Core Condition Code</a> <p>This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions).   ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical information.</p>
+</li>
+ <li><a href="ValueSet-us-core-diagnosticreport-category.json.html">US Core Diagnostic Report Category Codes</a> <p>The US Core Diagnostic Report Category Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and notes.</p>
+</li>
+ <li><a href="ValueSet-us-core-diagnosticreport-lab-codes.json.html">US Core Diagnostic Report Laboratory Codes</a> <p>The Document Type value set includes all LOINC  values whose CLASSTYPE is LABORATORY in the LOINC database</p>
+</li>
+ <li><a href="ValueSet-us-core-discharge-disposition.json.html">US Core Discharge Disposition</a> <p><a href="http://www.nubc.org/">National Uniform Billing Committee</a>, manual UB-04, UB form locator 17.</p>
+</li>
+ <li><a href="ValueSet-us-core-documentreference-category.json.html">US Core DocumentReference Category</a> <p>The US Core DocumentReferences Category Value Set is a 'starter set' of categories supported for fetching and storing clinical notes.</p>
+</li>
+ <li><a href="ValueSet-us-core-documentreference-type.json.html">US Core DocumentReference Type</a> <p>The US Core DocumentReference Type Value Set includes all LOINC  values whose SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor concept 'unknown'</p>
+</li>
+ <li><a href="ValueSet-us-core-encounter-type.json.html">US Core Encounter Type</a> <p>The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure)) and codes from the Current Procedure and Terminology (CPT) found in the following CPT sections:</p>
+<ul>
+<li>99201-99499 E/M</li>
+<li>99500-99600 home health (mainly nonphysician, such as newborn care in home)</li>
+<li>99605-99607 medication management</li>
+<li>98966-98968 non physician telephone services</li>
+</ul>
+<p>(subscription to AMA Required)</p>
+</li>
+ <li><a href="ValueSet-us-core-goal-description.json.html">US Core Goal Codes</a> <p>Concepts from CPT and LOINC code systems that can be used to indicate the goal.</p>
+</li>
+ <li><a href="ValueSet-us-core-observation-category.json.html">US Core Observation Category Codes</a> <p>HL7 FHIR concepts to classify an observation</p>
+</li>
+ <li><a href="ValueSet-us-core-observation-smoking-status-status.json.html">US Core Status for Smoking Status Observation</a> <p>Codes providing the status of an observation for smoking status. Constrained to <code>final</code>and <code>entered-in-error</code>.</p>
+</li>
+ <li><a href="ValueSet-us-core-observation-value-codes.json.html">US Core Observation Value Codes (SNOMED-CT)</a> <p><a href="http://www.ihtsdo.org/">Snomed-CT</a> concept codes for coded results</p>
+</li>
+ <li><a href="ValueSet-us-core-procedure-code.json.html">US Core Procedure Codes</a> <p>Concepts from CPT, SNOMED CT, HCPCS Level II Alphanumeric Codes, ICD-10-PCS,CDT and LOINC code systems that can be used to indicate the type of procedure performed.</p>
+</li>
+ <li><a href="ValueSet-us-core-provenance-participant-type.json.html">US Core Provenance Participant Type Codes</a> <p>The type of participation a provenance agent played for a given target.</p>
+</li>
+ <li><a href="ValueSet-us-core-provider-role.json.html">US Core Provider Role (NUCC)</a> <p>Provider roles codes which are composed of the NUCC Health Care Provider Taxonomy Code Set classification codes for providers. Only concepts with a classification and no specialization are included.</p>
+</li>
+ <li><a href="ValueSet-us-core-servicerequest-category.json.html">US Core ServiceRequest Category Codes</a> <p>A set of SNOMED CT and LOINC concepts to classify a requested service</p>
+</li>
+ <li><a href="ValueSet-us-core-sexual-orientation.json.html">US Core Sexual Orientation</a> <p>The US Core Sexual Orientation Value Set includes concepts to describe a person’s sexual orientation (who they are attracted to).</p>
+</li>
+ <li><a href="ValueSet-us-core-smoking-status-observation-codes.json.html">US Core Smoking Status Observation Codes</a> <p>The US Core Smoking Status Observation Codes Value Set is a 'starter set' of concepts to capture smoking status.</p>
+</li>
+ <li><a href="ValueSet-us-core-observation-smokingstatus-max.json.html">US Core Smoking Status Max-Binding</a> <p>Representing a patient’s smoking behavior using concepts from SNOMED CT.</p>
+</li>
+ <li><a href="ValueSet-us-core-vital-signs.json.html">US Core Vital Signs ValueSet</a> <p>The vital sign codes from the base FHIR and US Core Vital Signs.</p>
+</li>
+ <li><a href="ValueSet-us-core-usps-state.json.html">USPS Two Letter Alphabetic Codes</a> <p>This value set defines two letter USPS alphabetic codes.</p>
+</li>
+{% endraw %}

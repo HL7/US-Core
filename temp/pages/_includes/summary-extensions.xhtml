@@ -1,0 +1,21 @@
+{% raw %}<table class="grid">
+ <tr><td><b>Code</b></td><td><b>Value Types</b></td><td><b>Definition</b></td></tr>
+ <tr><td><a href="StructureDefinition-us-core-birthsex.html">us-core-birthsex</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td>A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc). This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9).</td></tr>
+ <tr><td><a href="StructureDefinition-us-core-direct.html">us-core-direct</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td>This email address is associated with a [direct](http://wiki.directproject.org/Addressing+Specification) service.  This extension can only be used on contact points where the system = 'email'</td></tr>
+ <tr><td><a href="StructureDefinition-us-core-ethnicity.html">us-core-ethnicity</a></td><td></td><td>Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.</td></tr>
+ <tr><td>&nbsp;&nbsp;ombCategory</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td><td>The 2 ethnicity category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).</td></tr>
+ <tr><td>&nbsp;&nbsp;detailed</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td><td>The 41 CDC ethnicity codes that are grouped under one of the 2 OMB ethnicity category codes.</td></tr>
+ <tr><td>&nbsp;&nbsp;text</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td>Plain text representation of the ethnicity concept(s).</td></tr>
+ <tr><td><a href="StructureDefinition-us-core-genderIdentity.html">us-core-genderIdentity</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td><td>This extension provides concepts to describe the gender a person identifies as.</td></tr>
+ <tr><td><a href="StructureDefinition-us-core-race.html">us-core-race</a></td><td></td><td>Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:
+
+ - American Indian or Alaska Native
+ - Asian
+ - Black or African American
+ - Native Hawaiian or Other Pacific Islander
+ - White.</td></tr>
+ <tr><td>&nbsp;&nbsp;ombCategory</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td><td>The 5 race category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).</td></tr>
+ <tr><td>&nbsp;&nbsp;detailed</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td><td>The 900+ CDC race codes that are grouped under one of the 5 OMB race category codes:.</td></tr>
+ <tr><td>&nbsp;&nbsp;text</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td>Plain text representation of the race concept(s).</td></tr>
+</table>
+{% endraw %}

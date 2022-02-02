@@ -1,0 +1,88 @@
+I"Â
+<div class="new-content">
+  <p>This profile sets minimum expectations for the RelatedPerson resource to record, search, and fetch related persons associated with a patient. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+  <p><strong>Example Usage Scenarios:</strong></p>
+
+  <p>The following are example usage scenarios for the US Core RelatedPerson profile:</p>
+
+  <ul>
+    <li>Return RelatedPerson resources referenced in CareTeam resources.</li>
+  </ul>
+
+  <h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+  <p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+  <p><strong>Each RelatedPerson must have:</strong></p>
+
+  <ol>
+    <li>a flag indicating whether is in active use</li>
+    <li>a reference to patient</li>
+  </ol>
+
+  <p><strong>Each Location must support:</strong></p>
+
+  <ol>
+    <li>relationship to a patient</li>
+    <li>a name</li>
+    <li>contact details</li>
+    <li>an address</li>
+  </ol>
+
+  <p><strong>Profile specific implementation guidance:</strong></p>
+
+  <ul>
+    <li>Supports caretakers as part of CareTeam USCDI requirements</li>
+  </ul>
+
+  <h3 id="examples">Examples</h3>
+
+  <ul>
+    <li><a href="RelatedPerson-shaw-niece.html">Related Person Niece</a> is an example of a niece who is related to a patient.</li>
+  </ul>
+
+  <p>This profile sets minimum expectations for the RelatedPerson resource to record, search, and fetch related persons associated with a patient. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+  <p><strong>Example Usage Scenarios:</strong></p>
+
+  <p>The following are example usage scenarios for the US Core RelatedPerson profile:</p>
+
+  <ul>
+    <li>Return RelatedPerson resources referenced in CareTeam resources.</li>
+  </ul>
+
+  <h3 id="mandatory-and-must-support-data-elements-1">Mandatory and Must Support Data Elements</h3>
+
+  <p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+  <p><strong>Each RelatedPerson must have:</strong></p>
+
+  <ol>
+    <li>a flag indicating whether is in active use</li>
+    <li>a reference to patient</li>
+  </ol>
+
+  <p><strong>Each Location must support:</strong></p>
+
+  <ol>
+    <li>relationship to a patient</li>
+    <li>a name</li>
+    <li>contact details</li>
+    <li>an address</li>
+  </ol>
+
+  <p><strong>Profile specific implementation guidance:</strong></p>
+
+  <ul>
+    <li>Supports caretakers as part of CareTeam USCDI requirements</li>
+  </ul>
+
+  <h3 id="examples-1">Examples</h3>
+
+  <ul>
+    <li><a href="RelatedPerson-shaw-niece.html">RelatedPerson Patient Niece</a></li>
+  </ul>
+</div>
+
+:ET

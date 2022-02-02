@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="omb-ethnicity-category"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.837/expansion">http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837</a></li><li>Import all the codes that are contained in http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.102</li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category"/>
+  <version value="4.2.0"/>
+  <name value="OmbEthnicityCategories"/>
+  <title value="OMB Ethnicity Categories"/>
+  <status value="active"/>
+  <date value="2019-05-21"/>
+  <publisher value="HL7 International - Cross-Group Projects"/>
+  <contact>
+    <name value="HL7 International - Cross-Group Projects"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cgp"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgp@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="The codes for the concepts &#39;Unknown&#39;, &#39;Asked but no answer&#39;, and the ethnicity categories - &#39;Hispanic or Latino&#39; and &#39;Non Hispanic or Latino&#39; - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 International, all rights reserved Creative Commons License"/>
+  <compose>
+    <include>
+      <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837"/>
+    </include>
+    <include>
+      <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.102"/>
+    </include>
+  </compose>
+</ValueSet>

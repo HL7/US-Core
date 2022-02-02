@@ -1,0 +1,50 @@
+I"�
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/observation.html">Observation</a> resource to record, search, and fetch pulse oximetry and inspired oxygen observations associated with a patient. It is based on the <a href="StructureDefinition-us-core-vital-signs.html">US Core Vital Signs Profile</a> and identifies the <em>additional</em> mandatory core elements, extensions, vocabularies and value sets which <strong>SHALL</strong> be present in the Observation resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core Pulse Oximetry Profile:</p>
+
+<ul>
+  <li>Query for pulse oximety observations for a patient</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a>  pulse oximety observations belonging to a patient</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>In addition to the mandatory and must support data elements in the FHIR Oxygen Saturation Profile, the following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Observation must have:</strong></p>
+
+<ol>
+  <li>a fixed code for oxygen saturation in arterial blood as defined in the FHIR oxygen saturation profile</li>
+  <li>a additional coding for oxygen saturation in arterial blood by pulse oximetry</li>
+</ol>
+
+<p><strong>Each Observation must support:</strong></p>
+
+<ol>
+  <li>a code for inspired oxygen concentration</li>
+  <li>a value for inspired oxygen concentration</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>See the implementation guidance section for the <a href="StructureDefinition-us-core-vital-signs.html">US Core Vital Signs Profile</a></li>
+  <li>Inspired oxygen therapy may be represented with <a href="http://hl7.org/fhir/R4/observation.html#gr-comp">component</a> observations when measured at the same time as the pulse oximetry measurements. They are expressed as inhaled oxygen flow rate (e.g., 6 liters/min) and as inhaled oxygen concentration (e.g., 40% oxygen).
+    <ul>
+      <li class="stu-note">This profile is technically non-conformant with the base FHIR vitals profile which defines a <em>required</em> binding that excludes the concept for <code class="highlighter-rouge">L/min</code> for <code class="highlighter-rouge">Observation.component.value(x)</code>. This is a known issue and a <a href="https://jira.hl7.org/browse/FHIR-27911">change request</a> has been logged to correct it.  Validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile until the next version of the base specification is published.</li>
+    </ul>
+  </li>
+  <li>Many pulse oximetry readings are taken while the patient is breathing room air.  The concept of “room air” (unmodified, ambient air) should be represented as an inhaled oxygen flow rate of 0 liters/min.</li>
+  <li>A pulse oximetry reading without component inspired oxygen observations may imply that the measurement was performed while the patient was breathing room air or that the inspired oxygen reading was omitted. To remove this uncertainty, the inspired oxygen <a href="http://hl7.org/fhir/R4/observation.html#gr-comp">component</a> observations should be used.</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="Observation-satO2-fiO2.html">Pulse Oximetry Example</a></li>
+</ul>
+
+:ET

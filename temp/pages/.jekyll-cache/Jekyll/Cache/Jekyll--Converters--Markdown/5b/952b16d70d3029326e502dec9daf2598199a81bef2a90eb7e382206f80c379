@@ -1,0 +1,773 @@
+I"��<p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#background-on-the-fhir-medications-resources" id="markdown-toc-background-on-the-fhir-medications-resources">Background on the FHIR Medications resources</a></li>
+  <li><a href="#fetching-all-medications-active-medications-and-all-medications-for-an-encounter" id="markdown-toc-fetching-all-medications-active-medications-and-all-medications-for-an-encounter">Fetching All Medications, Active Medications, and All Medications for an Encounter</a></li>
+</ul>
+
+</div>
+
+<p>The guidance below addresses how a patient or a provider can access a patient’s active, historical and future (planned) medications list.  This use case adopts the use cases defined as part of the Argonaut Project and US Core, specifically within the scope of accessing medication information as prescribed in the ONC U.S. Core Data for Interoperability (USCDI) v1.
+This section provide specific guidance on how to to access “all medications” and “all active medications” for a patient using a query on <em>MedicationRequest</em>.  Note that in prior versions of this guide, a query on <em>MedicationStatement</em> was required. Because of underlying changes in the FHIR Release 4 pharmacy resources, this guide doesn’t require use of <em>MedicationStatement</em> since an “active” medication list can be obtained using only MedicationRequest.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+
+<h3 id="background-on-the-fhir-medications-resources">Background on the FHIR Medications resources</h3>
+
+<h4 class="no_toc" id="pharmacy-fhir-resources">Pharmacy FHIR Resources</h4>
+
+<p>The FHIR specification defines 5 FHIR pharmacy resources concerned with the ordering, dispensing, administration and recording of medications.  This guide provides guidance for accessing a patient’s medications using the following 2 resources:</p>
+
+<ul>
+  <li><a href="http://hl7.org/fhir/R4/medication.html">Medication</a>:  Represents the medication itself</li>
+  <li><a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a>: An order or request for both supply of the medication and the instructions for administration of the medication to a patient, and patient reported medications.</li>
+</ul>
+
+<p>The following 3 resources are introduced here to provide background and  define the relationships between the pharmacy resources. <strong>This guide does not use them for accessing a patient’s medications</strong>:</p>
+
+<ul>
+  <li><a href="http://hl7.org/fhir/R4/medicationdispense.html">MedicationDispense</a></li>
+  <li><a href="http://hl7.org/fhir/R4/medicationadministration.html">MedicationAdministration</a></li>
+  <li><a href="http://hl7.org/fhir/R4/medicationstatement.html">MedicationStatement</a></li>
+</ul>
+
+<p>Details about each resource can be found in the FHIR specification.  A general discussion regarding the interaction between these resources is described in the FHIR <a href="http://hl7.org/fhir/R4/medications-module.html">Medications Module</a> and the <a href="http://hl7.org/fhir/R4/resourceguide.html">Guide to Resources</a> Sections.</p>
+
+<h4 class="no_toc" id="relationships-between-the-pharmacy-fhir-resources">Relationships Between the Pharmacy FHIR Resources</h4>
+
+<p>This IG focuses on access to a patient’s medications.  It is therefore important to understand the relationships between these resources.  Figure 1 illustrates the workflow relationship between the medication order and the fulfillment as represented by the FHIR medication resources.  Note that in the outpatient setting the patient does the administration.</p>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 1: FHIR Medication Order and Fulfillment</strong></figcaption>
+  <img src="ArgoR4Meds_1.svg" class="figure-img img-responsive img-rounded center-block" alt="ArgoR4Meds_1.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<h4 id="sources-of-a-medicationrequest">Sources of a MedicationRequest</h4>
+
+<p>Several sources may be used to create a MedicationRequest as is shown in Figure 2 below. The information may be captured directly a system’s medication orders or reported by a provider.  A patient or related person may also report the information (or provide some type of record) including “self-prescribed” orders.  For example, oftentimes the patient is the <em>only</em> source of information when the patient reports Cannabis or OTC medication use.</p>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 2: MedicationRequest Information Sources</strong></figcaption>
+  <img src="ArgoR4Meds_3.svg" class="figure-img img-responsive img-rounded center-block" alt="ArgoR4Meds_3.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<h4 id="options-for-representing-medication">Options for Representing Medication</h4>
+
+<p>This guide supports representing a medication using either a code or a reference to a Medication resource. Typically, a code will be used to represent either a branded (for example, Crestor 10mg tablet) or a generic (for example, Rosuvastatin 10mg tablet) medication.  When using a code, the code  <strong>SHALL</strong> follow the <a href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a> binding rules to <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion">Medication Clinical Drug (RxNorm)</a> - i.e. unless the concept is not covered by RxNorm, the RxNorm code <strong>SHALL</strong> be used.  More information about using codes can be found in the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> Section and the <a href="http://hl7.org/fhir/R4/terminologies.html">FHIR Terminology</a> section.  A medication resource is typically used when information that is not included as part of the RxNorm code is required.  For example, the Medication resource is the only way to correctly represent compounded or extemporaneously prepared medication.  When referencing the Medication resource, the resource may be included in the bundle returned, an external resource, or a <a href="http://hl7.org/fhir/R4/references.html#contained">contained</a> if the resource can’t stand alone. These options are shown in figure 3 below.  The server application <strong>MAY</strong> choose any combination of these methods, but if an external reference to Medication is used, the server <strong>SHALL</strong> support the include parameter for searching this element. The client application <strong>MUST</strong> support all methods. The <a href="StructureDefinition-us-core-medicationrequest.html#examples">MedicationRequest examples</a> show these different methods. Additional guidance is provided below and in the <a href="CapabilityStatement-us-core-server.html">US Core Server Capability Statement</a> section.</p>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 3: Ways to Represent the Medication</strong></figcaption>
+  <img src="ArgoR4Meds_4.svg" class="figure-img img-responsive img-rounded center-block" alt="ArgoR4Meds_4.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<h3 id="fetching-all-medications-active-medications-and-all-medications-for-an-encounter">Fetching All Medications, Active Medications, and All Medications for an Encounter</h3>
+
+<p><strong>Definitions</strong></p>
+
+<ul>
+  <li>“Medication” is defined in this IG to include all prescribed and “self-prescribed” medications directly ordered by a provider or reported by the provider, patient or related person including ethical drugs, over the counter (OTC) medication, and other substances taken for medical and/or recreational use.</li>
+  <li>“All medications” is defined in this IG to include all historical, active, future prescribed medications and medications that are entered in error and whose status is unknown.</li>
+  <li>“Active medications” is defined in this IG to include all medications with an active status. Active medications do not include past, future, unknown status, and entered in error medications.</li>
+</ul>
+
+<p><em>Note that these definition do not convey compliance  -  i.e. the list is a statement of what is prescribed (or self-prescribed) and not what is consumed by patient.</em></p>
+
+<p><strong>Requirements to access “all medications” and “all <em>active</em> medications” for a patient:</strong></p>
+
+<p>A MedicationRequest resource query:</p>
+
+<ol>
+  <li><strong>SHALL</strong> be all that is required.
+    <ol>
+      <li>See the General Guidance section for additional rules and expectations for <a href="general-guidance.html#search-for-servers-requiring-status">Servers Requiring Status</a>.</li>
+    </ol>
+  </li>
+  <li><strong>SHALL</strong> include all MedicationRequest resources with an <code class="highlighter-rouge">intent</code> = “order” representing authorized medication orders directly derived from the system’s orders.</li>
+  <li><strong>SHALL</strong> include all prescribed and “self-prescribed” MedicationRequest resources with an <code class="highlighter-rouge">intent</code> = “plan” representing <em>reported</em> medications
+    <ol>
+      <li><strong>SHALL</strong> use the <code class="highlighter-rouge">reported[x]</code> element to indicate the MedicationRequest record was captured as a secondary “reported” record rather than an original primary source-of-truth record. It may also indicate the source of the report.</li>
+      <li>When recording “self-prescribed” medication, <strong>SHOULD</strong> use the <code class="highlighter-rouge">requester</code> element to indicate the Patient or RelatedPerson as the prescriber.</li>
+    </ol>
+  </li>
+  <li>The <code class="highlighter-rouge">encounter</code> element <strong>SHOULD</strong> be supported.  Searching by context (i.e., for a given inpatient encounter) will return all medications ordered during that encounter, which can include both medications administered in hospital as well as prescribed or discharge medications, which are intended to be taken at home.</li>
+  <li>The <code class="highlighter-rouge">category</code> and <code class="highlighter-rouge">encounter</code>  elements <strong>MAY</strong> be used together to get the intersection of medications for a given encounter (i.e., the context) that were administered during as an inpatient (i.e., the category).</li>
+</ol>
+
+<h4 id="get-all-medications">Get All Medications</h4>
+
+<ol>
+  <li>
+    <p>Get all medications for a patient by querying MedicationRequest using the <code class="highlighter-rouge">patient</code> search parameter and <code class="highlighter-rouge">intent</code> search parameter = “order,plan”.  See <a href="StructureDefinition-us-core-medicationrequest.html#search">MedicationRequest Quick Start</a> for further details.</p>
+
+    <p><code class="highlighter-rouge">GET /MedicationRequest?patient=[id]&amp;intent=order,plan{&amp;_include=MedicationRequest:medication}</code></p>
+  </li>
+</ol>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#get-all-meds" aria-expanded="false" aria-controls="collapseExample">
+    Click Here to See 'Get All Medications' Example
+  </button>
+</p>
+
+<div class="collapse" id="get-all-meds">
+  <div class="card card-body">
+      
+<p><strong>Storyboard for this example</strong></p>
+
+<p>This example is based upon the following scenario:</p>
+
+<p>Patient Brian Z uses an App to request all his medications from a single provider, Dr Cayr. This test scenario exercises a mix of routine meds, unusual schedule meds and as-needed meds. All meds are in the outpatient setting only.</p>
+
+<p>Provider A’s (Dr Cayr) medication records for Patient Brian Z</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Date</th>
+      <th>Script</th>
+      <th>Source</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>9/12/2016</td>
+      <td>testosterone cypionate 100mg/ml inj  1ml intramuscularly every 3 weeks</td>
+      <td>Reported by Patient</td>
+      <td>Get at doctor’s office every third Friday. Taking for energy level and drive.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>9/1/2016</td>
+      <td>testosterone cypionate 100mg/ml inj  1ml intramuscularly</td>
+      <td>Reported by Dr Cryn</td>
+      <td>completed</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1/15/2016</td>
+      <td>Zocor (simvastatin) 40mg by mouth once daily</td>
+      <td>Dr. Cayr Order: BMC</td>
+      <td>patient med status: taking</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>7/1/2015</td>
+      <td>Humulin R (insulin regular, human) U100 10U every AM, 5U every PM, 5U at bedtime.</td>
+      <td>Dr.Cayr Order:BMC</td>
+      <td>patient med status: taking</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>6/12/2015</td>
+      <td>simvastatin 30mg by mouth once daily</td>
+      <td>Dr. Cayr Order: BMC</td>
+      <td>patient med status: completed</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Request:</strong></p>
+
+<p>Get “all medications” for a patient by querying MedicationRequest using the patient search parameter.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/MedicationRequest?patient=test2&amp;intent=order,plan
+</code></pre></div></div>
+
+<p><strong>Response:</strong></p>
+
+<p>A Server returns a search Bundle resource containing all the MedicationRequests for the patient Brian Z</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+{
+"resourceType" : "Bundle",
+"id" : "get-all-meds",
+"meta" : {
+  "lastUpdated" : "2017-03-28T14:29:23Z"
+},
+"type" : "searchset",
+"total" : 5,
+"entry" : [
+  {
+    "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-test2-1",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "mr-example-1",
+ ...snip...
+      "status" : "active",
+      "intent" : "order",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "104491",
+            "display" : "Simvastatin 20 MG Oral Tablet [Zocor]",
+            "userSelected" : false
+          }
+        ],
+        "text" : "Zocor (simvastatin) 20mg Tablet"
+      },
+...snip...
+  },
+  {
+    "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-test2-2",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "mr-example-2",
+      ...snip...
+      "status" : "active",
+      "intent" : "order",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "311036",
+            "display" : "Humulin R (insulin regular, human) U100  100units/ml inj solution",
+            "userSelected" : false
+          }
+        ],
+        "text" : "Humulin R (insulin regular, human) U100  100units/ml inj solution"
+      },
+...snip...
+  },
+  {
+    "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-test2-3",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "mr-example-3",
+...snip...
+    "status" : "completed",
+    "intent" : "order",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "314231",
+            "display" : "Simvastatin 10 MG Oral Tablet",
+            "userSelected" : false
+          }
+        ],
+        "text" : "simvastatin 10mg Tablet"
+      },
+...snip...
+  },
+  {
+    "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/test2-1",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "mr-example-4",
+...snip...
+      "status" : "completed",
+      "intent" : "plan",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "835829",
+            "display" : "testosterone cypionate 100 MG/ML Injectable Solution",
+            "userSelected" : false
+          }
+        ],
+        "text" : "testosterone cypionate 100mg/ml inj"
+      },
+...snip...
+  },
+  {
+    "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/test2-2",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "mr-example-5",
+...snip...
+      "status" : "active",
+      "intent" : "plan",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "835829",
+            "display" : "testosterone cypionate 100 MG/ML Injectable Solution",
+            "userSelected" : false
+          }
+        ],
+        "text" : "testosterone cypionate 100mg/ml inj"
+      },
+...snip...
+    }
+  }
+ ]
+}
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<h4 id="get-all-active-medications">Get All <em>Active</em> Medications</h4>
+
+<ol>
+  <li>
+    <p>Get all <em>active</em> medications for a patient by querying MedicationRequest using the <code class="highlighter-rouge">patient</code>,  and <code class="highlighter-rouge">intent</code> = “order,plan” <code class="highlighter-rouge">status</code> = “active” search parameters.  See <a href="StructureDefinition-us-core-medicationrequest.html#search">MedicationRequest Quick Start</a> for further details.  Note that the client should also consider MedicationRequests with a status of “unknown” and whether to query those as well.</p>
+
+    <p><code class="highlighter-rouge">GET /MedicationRequest?patient=[id]&amp;intent=order,plan&amp;status=active{&amp;_include=MedicationRequest:medication}</code></p>
+  </li>
+</ol>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#get-all-active-meds" aria-expanded="false" aria-controls="collapseExample">
+    Click Here to See 'Get All *Active* Medications' Example
+  </button>
+</p>
+
+<div class="collapse" id="get-all-active-meds">
+  <div class="card card-body">
+      
+<p><strong>Storyboard for this example</strong></p>
+
+<p>This example is based upon the following scenario:</p>
+
+<p>Patient Brian Z uses an App to request all his medications from a single provider, Dr Cayr. This test scenario exercises a mix of routine meds, unusual schedule meds and as-needed meds. All meds are in the outpatient setting only.</p>
+
+<p>Provider A’s (Dr Cayr) medication records for Patient Brian Z</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Date</th>
+      <th>Script</th>
+      <th>Source</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>9/12/2016</td>
+      <td>testosterone cypionate 100mg/ml inj  1ml intramuscularly every 3 weeks</td>
+      <td>Reported by Patient</td>
+      <td>Get at doctor’s office every third Friday. Taking for energy level and drive.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>9/1/2016</td>
+      <td>testosterone cypionate 100mg/ml inj  1ml intramuscularly</td>
+      <td>Reported by Dr Cryn</td>
+      <td>completed</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1/15/2016</td>
+      <td>Zocor (simvastatin) 40mg by mouth once daily</td>
+      <td>Dr. Cayr Order: BMC</td>
+      <td>patient med status: taking</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>7/1/2015</td>
+      <td>Humulin R (insulin regular, human) U100 10U every AM, 5U every PM, 5U at bedtime.</td>
+      <td>Dr.Cayr Order:BMC</td>
+      <td>patient med status: taking</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>6/12/2015</td>
+      <td>simvastatin 30mg by mouth once daily</td>
+      <td>Dr. Cayr Order: BMC</td>
+      <td>patient med status: completed</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Request:</strong></p>
+
+<p>Get “all active medications” for a patient by querying MedicationRequest using the patient and status= “active” search parameters.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/MedicationRequest?patient=test2&amp;intent=order,plan&amp;status=active
+</code></pre></div></div>
+
+<p><strong>Response:</strong></p>
+
+<p>A Server returns a search Bundle resource containing all the MedicationRequests with a status of “active” for the patient Brian Z</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+{
+"resourceType" : "Bundle",
+"id" : "get-all-meds",
+"meta" : {
+  "lastUpdated" : "2017-03-28T14:29:23Z"
+},
+"type" : "searchset",
+"total" : 3,
+"entry" : [
+  {
+    "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-test2-1",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "mr-example-1",
+...snip...
+      "status" : "active",
+      "intent" : "order",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "104491",
+            "display" : "Simvastatin 20 MG Oral Tablet [Zocor]",
+            "userSelected" : false
+          }
+        ],
+        "text" : "Zocor (simvastatin) 20mg Tablet"
+      },
+...snip...
+  },
+  {
+    "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-test2-2",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "mr-example-2",
+...snip...
+      "status" : "active",
+      "intent" : "order",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "311036",
+            "display" : "Humulin R (insulin regular, human) U100  100units/ml inj solution",
+            "userSelected" : false
+          }
+        ],
+        "text" : "Humulin R (insulin regular, human) U100  100units/ml inj solution"
+      },
+...snip...
+  },
+  {
+    "fullUrl" : "http://test.fhir.org/r4/MedicationRequest/test2-2",
+    "resource" : {
+      "resourceType" : "MedicationRequest",
+      "id" : "mr-example-5",
+...snip...
+      "status" : "active",
+      "intent" : "plan",
+      "medicationCodeableConcept" : {
+        "coding" : [
+          {
+            "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code" : "835829",
+            "display" : "testosterone cypionate 100 MG/ML Injectable Solution",
+            "userSelected" : false
+          }
+        ],
+        "text" : "testosterone cypionate 100mg/ml inj"
+      },
+...snip...
+    }
+  }
+ ]
+}
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<h4 id="get-all-medications-for-an-encounter">Get All Medications for an Encounter</h4>
+
+<ol>
+  <li>
+    <p>Get “all medications” for an encounter by querying MedicationRequest using the <code class="highlighter-rouge">patient</code> and <code class="highlighter-rouge">encounter</code> and <code class="highlighter-rouge">intent</code> =”order,plan” search parameters.  See <a href="StructureDefinition-us-core-medicationrequest.html#search">MedicationRequest Quick Start</a> for further details.</p>
+
+    <p><code class="highlighter-rouge">GET /MedicationRequest?patient=[id]&amp;intent=order,plan&amp;encounter=[id]{&amp;_include=MedicationRequest:medication}</code></p>
+  </li>
+</ol>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#get-all-enc-meds" aria-expanded="false" aria-controls="collapseExample">
+    Click Here to See 'Get All Medications for an Encounter' Example
+  </button>
+</p>
+
+<div class="collapse" id="get-all-enc-meds">
+  <div class="card card-body">
+      
+<p><strong>Storyboard for this example</strong></p>
+
+<p>This example is based upon the following scenario.</p>
+
+<p>Patient Brain Z has presented with the same condition (pneumonia) as in a previous inpatient encounter. Provider A (Dr Cayr) uses a desktop or mobile application to request all the medications from this previous inpatient encounter (Encounter A).</p>
+
+<p>Medication records for Patient Brian Z during Encounter A</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Date</th>
+      <th>Script</th>
+      <th>Source</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>9/10/2016 - 9/12-2016</td>
+      <td>Cefatoxime 1gm intravenously every 6 hours</td>
+      <td>Provider B’s Order</td>
+      <td>Administered in hospital</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>9/10/2016 - 9/12-2016</td>
+      <td>Zithromax  (azithromycin) 500 MG in 250 ml Normal Saline intravenous infusion over 1hr daily</td>
+      <td>Provider B’s Order</td>
+      <td>Administered in hospital</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>9/10/2016 - 9/12-2016</td>
+      <td>Ketorolac 15 mg intravenously every 6 hours</td>
+      <td>Provider B’s Order</td>
+      <td>Administered in hospital</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>9/10/2016 - 9/12-2016</td>
+      <td>LRS Solution 200 ml/hr intravenously CRI</td>
+      <td>Provider B’s Order</td>
+      <td>Administered in hospital</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>9/12/2016</td>
+      <td>Amoxicillin 500mg by mouth every 6 hours for 10 days</td>
+      <td>Provider B’s Order</td>
+      <td>discharge prescription, patient reported did not comply (fill prescription)</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>9/12/2016</td>
+      <td>Zithromax (azithromycin) 250mg by mouth every 12 hours for 10 days</td>
+      <td>Provider B’s Order</td>
+      <td>discharge prescription, patient reported did not comply (fill prescription)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Request:</strong></p>
+
+<p>Get “all medications” for a patient inpatient encounter by querying MedicationRequest using the patient and encounter search parameters.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/MedicationRequest?patient=test2&amp;intent=order,plan&amp;encounter=A
+</code></pre></div></div>
+
+<p><strong>Response:</strong></p>
+
+<p>A Server returns a search Bundle resource containing all the MedicationRequests for the patient Brian Z during inpatient Encounter A:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+"id": "get-encounter-meds",
+"meta": {
+  "versionId": "1",
+  "lastUpdated": "2017-04-10T12:49:37.665-04:00"
+},
+"type": "searchset",
+"total": 6,
+ ...snip...
+ "entry": [
+   {
+     "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-1",
+     "resource": {
+       "resourceType": "MedicationRequest",
+       "id": "mr-example-6",
+  ...snip...
+  },
+  "encounter": {
+    "reference": "Encounter/A",
+    "display": "Inpatient Encounter A"
+  },
+  "status": "completed",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "1656313",
+        "display": "Cefotaxime 1000 MG Injection"
+      }
+    ],
+    "text": "Cefotaxime 1000Mg Powder For Solution For Injection"
+  },
+  ...snip...
+  "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-2",
+  "resource": {
+    "resourceType": "MedicationRequest",
+    "id": "mr-example-7",
+    ...snip...
+    },
+    "encounter": {
+      "reference": "Encounter/A",
+      "display": "Inpatient Encounter A"
+    },
+    "status": "completed",
+      "intent": "order",
+    "medicationCodeableConcept": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "860092",
+          "display": "1 ML Ketorolac Tromethamine 15 MG/ML Injection"
+        }
+      ],
+      "text": "Ketorolac Tromethamine 15 MG/ML For Injection"
+    },
+    ...snip...
+    "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-3",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "mr-example-8",
+      ...snip...
+      "contained": [
+        {
+          "resourceType": "Medication",
+          "id": "med-1",
+          "meta": {
+            "profile": [
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
+            ]
+          },
+          "code": {
+            "text": "Azithromycin 500mg in 250 ml Normal Saline"
+          },
+          ...snip...
+          },
+        "encounter": {
+          "reference": "Encounter/A",
+          "display": "Inpatient Encounter A"
+        },
+        "status": "completed",
+        "intent": "order",
+        "medicationReference": {
+            "reference": "#med-1"
+          },
+          ...snip...
+      "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-4",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "mr-example-9",
+      ...snip...
+      "encounter": {
+        "reference": "Encounter/A",
+        "display": "Inpatient Encounter A"
+      },
+      "status": "completed",
+      "intent": "order",
+      "medicationCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "847626",
+            "display": "Calcium Chloride 0.0014 MEQ/ML / Potassium Chloride 0.024 MEQ/ML / Sodium Chloride 0.103 MEQ/ML / Sodium Lactate 0.028 MEQ/ML Injectable Solution"
+          }
+        ],
+        "text": "LRS"
+        ...snip...
+      "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-5",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "mr-example-10",
+      ...snip...
+      "encounter": {
+        "reference": "Encounter/A",
+        "display": "Inpatient Encounter A"
+      },
+      "status": "active",
+      "intent": "order",
+      "medicationCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "212446",
+            "display": "Zithromax 250 MG Oral Tablet"
+          }
+        ],
+        "text": "Zithromax 500 MG Oral Tablet"
+        ...snip...
+      "fullUrl": "http://test.fhir.org/r4/MedicationRequest/derivedfrom-mr-enca-6",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "mr-example-11",
+      ...snip...
+      },
+      "encounter": {
+        "reference": "Encounter/A",
+        "display": "Inpatient Encounter A"
+      },
+      "status": "active",
+      "intent": "order",
+      "medicationCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "code": "308191",
+            "display": "Amoxicillin 500 MG Oral Capsule"
+          }
+        ],
+        "text": "Amoxicillin 500 MG"
+
+ ]
+}
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>See the <a href="CapabilityStatement-us-core-server.html">US Core Server Capability Statement</a> for a complete list of supported RESTful operations and search parameters for this IG.</p>
+
+<h4 id="de-duplication-of-data">De-duplication of Data</h4>
+
+<p>Medications may be duplicated in a medication list when multiple sources of data are used to generate the list.  To provide a list of a patient’s medications, it may be necessary to “de-duplicate” the medications on the list. The deduplication activity <strong>MAY</strong> be provided by the server but <strong>SHOULD</strong> be provided by the client.</p>
+
+<p>This specification does not specify deduplication best practices, however systems can consider the following approaches:</p>
+
+<ul>
+  <li>Compare the MedicationRequest.identifier. The identifier element is an external business identifier systems include to help indicate that the resources are related.</li>
+  <li>Compare the generic, or brand name, included in the medication resource. The system will require access to terminology capabilities to identify equivalence.</li>
+  <li>Finally, in the deduplication process, systems must be cautious in only marking things as equivalent if they are certain.</li>
+</ul>
+
+<hr />
+<p>Footnotes</p>
+
+<p><br /></p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>It is anticipated that there will be further changes to the medication resources in future versions of FHIR which may lead to changes in our guidance for fetching patient medications in future versions of this guide. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

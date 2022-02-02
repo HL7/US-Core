@@ -1,0 +1,228 @@
+I"3=<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+
+<p>The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the <a href="http://hl7.org/fhir/R4/operations.html">FHIR RESTful operations</a>, <a href="http://hl7.org/fhir/R4/http.html#search">FHIR RESTful search api</a> and the standard [Search Param Registry] see the FHIR specification.</p>
+
+<h3 id="operations">Operations</h3>
+
+<li><a href="OperationDefinition-docref.html">US Core Fetch DocumentReference</a></li>
+
+<p><br /></p>
+
+<h3 id="search-parameters">Search Parameters</h3>
+
+<p class="bg-warning">NOTE: The following search parameters <strong>SHALL NOT</strong> be interpreted on their own as requirements for server.  The CapabilityStatement defines the search capabilities expectations for the US Core Server. This section lists the search parameters definitions that are used within the CapabilityStatement.  This is not a list of search requirements for the client or server.</p>
+
+<h4 id="new-search-parameters-defined-by-this-implementation-guide">New Search Parameters defined by this Implementation Guide</h4>
+
+<p><strong>CareTeam</strong></p>
+<ul>
+  <li class="new-content"><a href="SearchParameter-us-core-careteam-role.html"><code class="highlighter-rouge">role</code></a></li>
+</ul>
+
+<p><strong>Condition</strong></p>
+<ul>
+  <li class="new-content"><a href="SearchParameter-us-core-condition-asserted-date.html"><code class="highlighter-rouge">asserted-date</code></a></li>
+</ul>
+
+<p><strong>Encounter</strong></p>
+<ul>
+  <li class="new-content"><a href="SearchParameter-us-core-encounter-discharge-disposition.html"><code class="highlighter-rouge">discharge-disposition</code></a></li>
+</ul>
+
+<p><strong>Goal</strong></p>
+<ul>
+  <li class="new-content"><a href="SearchParameter-us-core-goal-description.html"><code class="highlighter-rouge">description</code></a></li>
+</ul>
+
+<p><strong>Patient</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-race.html"><code class="highlighter-rouge">race</code></a></li>
+  <li><a href="SearchParameter-us-core-ethnicity.html"><code class="highlighter-rouge">ethnicity</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-patient-gender-identity.html"><code class="highlighter-rouge">gender-identity</code></a></li>
+</ul>
+
+<h4 id="search-parameters-derived-from-the-base-fhir-specification">Search Parameters derived from the Base FHIR Specification</h4>
+
+<p>These US Core SearchParameters are derived from the Base FHIR Specification to define the expectations for the following SearchParameter elements:</p>
+
+<ul>
+  <li><a href="http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleAnd"><code class="highlighter-rouge">multipleAnd</code></a></li>
+  <li><a href="http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.multipleOr"><code class="highlighter-rouge">multipleOr</code></a></li>
+  <li><a href="http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.comparator"><code class="highlighter-rouge">comparator</code></a></li>
+  <li><a href="http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.modifier"><code class="highlighter-rouge">modifier</code></a></li>
+  <li><a href="http://hl7.org/fhir/R4/searchparameter-definitions.html#SearchParameter.chain"><code class="highlighter-rouge">chain</code></a></li>
+</ul>
+
+<p><strong>AllergyIntolerance</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-allergyintolerance-clinical-status.html"><code class="highlighter-rouge">clinical-status</code></a></li>
+  <li><a href="SearchParameter-us-core-allergyintolerance-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+</ul>
+
+<p><strong>CarePlan</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-careplan-category.html"><code class="highlighter-rouge">category</code></a></li>
+  <li><a href="SearchParameter-us-core-careplan-date.html"><code class="highlighter-rouge">date</code></a></li>
+  <li><a href="SearchParameter-us-core-careplan-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li><a href="SearchParameter-us-core-careplan-status.html"><code class="highlighter-rouge">status</code></a></li>
+</ul>
+
+<p><strong>CareTeam</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-careteam-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li><a href="SearchParameter-us-core-careteam-status.html"><code class="highlighter-rouge">status</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-careteam-role.html"><code class="highlighter-rouge">role</code></a></li>
+</ul>
+
+<p><strong>Condition</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-condition-category.html"><code class="highlighter-rouge">category</code></a></li>
+  <li><a href="SearchParameter-us-core-condition-clinical-status.html"><code class="highlighter-rouge">clinical-status</code></a></li>
+  <li><a href="SearchParameter-us-core-condition-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li><a href="SearchParameter-us-core-condition-onset-date.html"><code class="highlighter-rouge">onset-date</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-condition-asserted-date.html"><code class="highlighter-rouge">asserted-date</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-condition-recorded-date.html"><code class="highlighter-rouge">recorded-date</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-condition-abatement-date.html"><code class="highlighter-rouge">abatement-date</code></a></li>
+  <li><a href="SearchParameter-us-core-condition-code.html"><code class="highlighter-rouge">code</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-condition-encounter.html"><code class="highlighter-rouge">encounter</code></a></li>
+</ul>
+
+<p><strong>Device</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-device-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li><a href="SearchParameter-us-core-device-type.html"><code class="highlighter-rouge">type</code></a></li>
+</ul>
+
+<p><strong>DiagnosticReport</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-diagnosticreport-status.html"><code class="highlighter-rouge">status</code></a></li>
+  <li><a href="SearchParameter-us-core-diagnosticreport-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li><a href="SearchParameter-us-core-diagnosticreport-category.html"><code class="highlighter-rouge">category</code></a></li>
+  <li><a href="SearchParameter-us-core-diagnosticreport-code.html"><code class="highlighter-rouge">code</code></a></li>
+  <li><a href="SearchParameter-us-core-diagnosticreport-date.html"><code class="highlighter-rouge">date</code></a></li>
+</ul>
+
+<p><strong>DocumentReference</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-documentreference-id.html"><code class="highlighter-rouge">_id</code></a></li>
+  <li><a href="SearchParameter-us-core-documentreference-status.html"><code class="highlighter-rouge">status</code></a></li>
+  <li><a href="SearchParameter-us-core-documentreference-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li><a href="SearchParameter-us-core-documentreference-category.html"><code class="highlighter-rouge">category</code></a></li>
+  <li><a href="SearchParameter-us-core-documentreference-type.html"><code class="highlighter-rouge">type</code></a></li>
+  <li><a href="SearchParameter-us-core-documentreference-date.html"><code class="highlighter-rouge">date</code></a></li>
+  <li><a href="SearchParameter-us-core-documentreference-period.html"><code class="highlighter-rouge">period</code></a></li>
+</ul>
+
+<p><strong>Encounter</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-encounter-id.html"><code class="highlighter-rouge">_id</code></a></li>
+  <li><a href="SearchParameter-us-core-encounter-class.html"><code class="highlighter-rouge">class</code></a></li>
+  <li><a href="SearchParameter-us-core-encounter-date.html"><code class="highlighter-rouge">date</code></a></li>
+  <li><a href="SearchParameter-us-core-encounter-identifier.html"><code class="highlighter-rouge">identifier</code></a></li>
+  <li><a href="SearchParameter-us-core-encounter-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-encounter-location.html"><code class="highlighter-rouge">location</code></a></li>
+  <li><a href="SearchParameter-us-core-encounter-status.html"><code class="highlighter-rouge">status</code></a></li>
+  <li><a href="SearchParameter-us-core-encounter-type.html"><code class="highlighter-rouge">type</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-encounter-discharge-disposition.html"><code class="highlighter-rouge">discharge-disposition</code></a></li>
+</ul>
+
+<p><strong>Goal</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-goal-lifecycle-status.html"><code class="highlighter-rouge">lifecycle-status</code></a></li>
+  <li><a href="SearchParameter-us-core-goal-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li><a href="SearchParameter-us-core-goal-target-date.html"><code class="highlighter-rouge">target-date</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-goal-description.html"><code class="highlighter-rouge">description</code></a></li>
+</ul>
+
+<p><strong>Immunization</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-immunization-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li><a href="SearchParameter-us-core-immunization-status.html"><code class="highlighter-rouge">status</code></a></li>
+  <li><a href="SearchParameter-us-core-immunization-date.html"><code class="highlighter-rouge">date</code></a></li>
+</ul>
+
+<p><strong>Location</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-location-name.html"><code class="highlighter-rouge">name</code></a></li>
+  <li><a href="SearchParameter-us-core-location-address.html"><code class="highlighter-rouge">address</code></a></li>
+  <li><a href="SearchParameter-us-core-location-address-city.html"><code class="highlighter-rouge">address-city</code></a></li>
+  <li><a href="SearchParameter-us-core-location-address-state.html"><code class="highlighter-rouge">address-state</code></a></li>
+  <li><a href="SearchParameter-us-core-location-address-postalcode.html"><code class="highlighter-rouge">address-postalcode</code></a></li>
+</ul>
+
+<p><strong>MedicationRequest</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-medicationrequest-status.html"><code class="highlighter-rouge">status</code></a></li>
+  <li><a href="SearchParameter-us-core-medicationrequest-intent.html"><code class="highlighter-rouge">intent</code></a></li>
+  <li><a href="SearchParameter-us-core-medicationrequest-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li><a href="SearchParameter-us-core-medicationrequest-encounter.html"><code class="highlighter-rouge">encounter</code></a></li>
+  <li><a href="SearchParameter-us-core-medicationrequest-authoredon.html"><code class="highlighter-rouge">authoredon</code></a></li>
+</ul>
+
+<p><strong>Observation</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-observation-status.html"><code class="highlighter-rouge">status</code></a></li>
+  <li><a href="SearchParameter-us-core-observation-category.html"><code class="highlighter-rouge">category</code></a></li>
+  <li><a href="SearchParameter-us-core-observation-code.html"><code class="highlighter-rouge">code</code></a></li>
+  <li><a href="SearchParameter-us-core-observation-date.html"><code class="highlighter-rouge">date</code></a></li>
+  <li><a href="SearchParameter-us-core-observation-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+</ul>
+
+<p><strong>Organization</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-organization-name.html"><code class="highlighter-rouge">name</code></a></li>
+  <li><a href="SearchParameter-us-core-organization-address.html"><code class="highlighter-rouge">address</code></a></li>
+</ul>
+
+<p><strong>Patient</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-patient-id.html"><code class="highlighter-rouge">_id</code></a></li>
+  <li><a href="SearchParameter-us-core-patient-birthdate.html"><code class="highlighter-rouge">birthdate</code></a></li>
+  <li><a href="SearchParameter-us-core-patient-family.html"><code class="highlighter-rouge">family</code></a></li>
+  <li><a href="SearchParameter-us-core-patient-gender.html"><code class="highlighter-rouge">gender</code></a></li>
+  <li><a href="SearchParameter-us-core-patient-given.html"><code class="highlighter-rouge">given</code></a></li>
+  <li><a href="SearchParameter-us-core-patient-identifier.html"><code class="highlighter-rouge">identifier</code></a></li>
+  <li><a href="SearchParameter-us-core-patient-name.html"><code class="highlighter-rouge">name</code></a></li>
+</ul>
+
+<p><strong>Practitioner</strong></p>
+<ul>
+  <li class="new-content"><a href="SearchParameter-us-core-practitioner-id.html"><code class="highlighter-rouge">_id</code></a></li>
+  <li><a href="SearchParameter-us-core-practitioner-name.html"><code class="highlighter-rouge">name</code></a></li>
+  <li><a href="SearchParameter-us-core-practitioner-identifier.html"><code class="highlighter-rouge">identifier</code></a></li>
+</ul>
+
+<p><strong>PractitionerRole</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-practitionerrole-specialty.html"><code class="highlighter-rouge">specialty</code></a></li>
+  <li><a href="SearchParameter-us-core-practitionerrole-practitioner.html"><code class="highlighter-rouge">practitioner</code></a></li>
+</ul>
+
+<p><strong>Procedure</strong></p>
+<ul>
+  <li><a href="SearchParameter-us-core-procedure-status.html"><code class="highlighter-rouge">status</code></a></li>
+  <li><a href="SearchParameter-us-core-procedure-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li><a href="SearchParameter-us-core-procedure-date.html"><code class="highlighter-rouge">date</code></a></li>
+  <li><a href="SearchParameter-us-core-procedure-code.html"><code class="highlighter-rouge">code</code></a></li>
+</ul>
+
+<p><strong>RelatedPerson</strong></p>
+<ul>
+  <li class="new-content"><a href="SearchParameter-us-core-relatedperson-id.html"><code class="highlighter-rouge">_id</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-relatedperson-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+</ul>
+
+<p><strong>ServiceRequest</strong></p>
+<ul>
+  <li class="new-content"><a href="SearchParameter-us-core-servicerequest-status.html"><code class="highlighter-rouge">status</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-servicerequest-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-servicerequest-category.html"><code class="highlighter-rouge">category</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-servicerequest-code.html"><code class="highlighter-rouge">code</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-servicerequest-authored.html"><code class="highlighter-rouge">authored</code></a></li>
+  <li class="new-content"><a href="SearchParameter-us-core-servicerequest-id.html"><code class="highlighter-rouge">_id</code></a></li>
+</ul>
+
+:ET

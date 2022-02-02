@@ -1,0 +1,660 @@
+I"�i<p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#basic-provenance" id="markdown-toc-basic-provenance">Basic Provenance</a></li>
+  <li><a href="#use-cases" id="markdown-toc-use-cases">Use Cases</a></li>
+</ul>
+
+</div>
+
+<p>​This section provides implementers with important definitions to create and share the Provenance Resource<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+
+<h3 id="basic-provenance">Basic Provenance</h3>
+
+<p>The FHIR <a href="http://hl7.org/fhir/R4/provenance.html">Provenance</a> Resource provides a foundation for assessing authenticity, enabling trust, and allowing reproducibility. It isn’t scoped to a specific use case, nor does it limit the number of Provenance records associated with a Resource. The basic guidance here, and in the <a href="StructureDefinition-us-core-provenance.html">US Core Provenance Profile</a> focuses on a key subset of elements, the ‘last hop’, and specific use cases. The guidance here does not preclude more advanced use cases or additional elements.</p>
+
+<p>Full Provenance of a Resource requires details from the original creator of a Resource and all intermediary actors that updated the Resource. Members of the Argonaut community and the HL7 security working group discussed the current sharing approaches, and display to end user, and agreed the most important information is the last organization making a meaningful clinical update to the data, and the prior system providing the data, the ‘last hop’.  Participants didn’t dispute the potential need to recreate the full chain, but didn’t see this as relevant to the immediate end-user.</p>
+
+<h4 id="key-provenance-elements">Key Provenance Elements</h4>
+
+<p>The guidance for Provenance in US Core focuses on 6 key elements: Timestamp, the Target Resource, Author, Author Organization, Transmitter, and Transmitter Organization. The timestamp is the date and time the author created, updated, or deleted the data. The target is the Resource the Provenance record supports. The Author represents the person(s) responsible for the information. The Author Organization represents the organization the author is associated when they created, updated, or deleted the data. The Transmitter represents the system responsible for transmitting the information. The Transmitter Organization represents the organization responsible for the transmission.</p>
+
+<p><strong>Key Provenance elements:</strong></p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Required</th>
+      <th>Must Support</th>
+      <th>Optional</th>
+      <th>FHIR Element</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Target</td>
+      <td>Resource Provenance <br />record supports</td>
+      <td> </td>
+      <td> </td>
+      <td>Provenance.target</td>
+    </tr>
+    <tr>
+      <td>Timestamp</td>
+      <td>Date</td>
+      <td> </td>
+      <td>Time with timezone offset</td>
+      <td>Provenance.recorded</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td> </td>
+      <td>Name<br />Identifier</td>
+      <td>NPI recommended, additional identifiers allowed</td>
+      <td>Provenance.agent.who</td>
+    </tr>
+    <tr>
+      <td>Author Organization</td>
+      <td> </td>
+      <td>Name<br />Identifier</td>
+      <td>NPI recommended, additional identifiers allowed</td>
+      <td>Provenance.agent.onBehalfOf</td>
+    </tr>
+    <tr>
+      <td>Transmitter</td>
+      <td> </td>
+      <td>Name<br />Identifier</td>
+      <td>NPI recommended, additional identifiers allowed</td>
+      <td>Provenance.agent.who</td>
+    </tr>
+    <tr>
+      <td>Transmitter Organization</td>
+      <td> </td>
+      <td>Name<br />Identifier</td>
+      <td>NPI recommended, additional identifiers allowed</td>
+      <td>Provenance.agent.onBehalfOf</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="use-cases">Use Cases</h3>
+
+<p>The HL7 Basic Provenance Informative implementation guide outlines four use cases: Fax, Health Information Exchange (HIE) redistribution, HIE transformation, and Clinical Information Reconciliation and Incorporation (CIRI). While these use cases may have FHIR implications in the future, CIRI and HIE are the key use cases and are covered in detail here.</p>
+
+<h4 id="clinical-information-reconciliation-and-incorporation">Clinical Information Reconciliation and Incorporation</h4>
+
+<p>Clinical Information Reconciliation and Incorporation (CIRI) is a process where a user reviews and updates, or accepts, information into their system. The information could come from a Health Information Exchange (HIE), a 3rd-party FHIR server, or a patient providing information. Figure 1 represents information being provided from two different sources, Good Health organization and Sunshine Health Organization. Dr. Reconciled reviews the information in Figure 1, updates the reaction to hives, and stores into the Future Health Organization system. When a mobile app requests the information they receive Dr. Reconciled as the Author and Future Health as the organization. This type of authorship change is only relevant for data fit for reconciliation, such as medications, allergies, problems. If Dr. Accepted had saved other clinical content into his EHR that aren’t reconciled but simply stored, such as clinical notes, that content must retain its original author.</p>
+
+<p>The Figure below represents information from two different organizations to a clinician for reconciliation:</p>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 1: Clinical Information Reconciliation and Incorporation (CIRI) from two Organizations</strong></figcaption>
+  <img src="Provenance_Recon_Workflow_Step2.svg" class="figure-img img-responsive img-rounded center-block" alt="Provenance_Recon_Workflow_Step2.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<p>Dr. Reconciled is the latest author after updating the reaction on 5/15/2019 and accepting to the local data store. The acceptance of the information is them taking over the responsibility.</p>
+
+<p><code class="highlighter-rouge">GET /AllergyIntolerance?patient=[ID]&amp;_revinclude=Provenance:target</code></p>
+
+<p>Good Health Organization Provenance</p>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#get-all-allergy-provenance-good-health" aria-expanded="false" aria-controls="collapseExample">
+    Click Here to See 'Get Allergy Information for a Patient at Good Health' Example
+  </button>
+</p>
+
+<div class="collapse" id="get-all-allergy-provenance-good-health">
+  <div class="card card-body">
+      
+<p><strong>Request:</strong></p>
+
+<p>Get “all allergies” for a patient and all corresponding Provenance records.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/AllergyIntolerance?patient=12345&amp;_revinclude=Provenance:target
+</code></pre></div></div>
+
+<p><strong>Response:</strong></p>
+
+<p>A Server returns a search Bundle resource containing all the Allergies for the patient and corresponding Provenance records.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+
+{
+"resourceType": "Bundle",
+"id": "c887e62f-6166-419f-8268-b5ecd6c7b901",
+"meta": {
+    "lastUpdated": "2019-07-09T18:49:01.235+00:00"
+},
+"type": "searchset",
+"total": 1,
+"link": [
+    {
+        "relation": "self",
+        "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?patient=Examples&amp;_revinclude=Provenance:target"
+    }
+],
+"entry": [
+    {
+        "fullUrl": "http://hapi.fhir.org/baseR4/AllergyIntolerance/79613",
+        "resource": {
+            "resourceType": "AllergyIntolerance",
+            "id": "79613",
+            "meta": {
+                "versionId": "1",
+                "lastUpdated": "2019-07-09T15:26:23.217+00:00",
+                "profile": [
+                   "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+                ]
+            },
+            "clinicalStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                        "code": "active",
+                        "display": "Active"
+                    }
+                ]
+            },
+            "verificationStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                        "code": "confirmed",
+                        "display": "Confirmed"
+                    }
+                ]
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "762952008",
+                        "display": "Peanuts"
+                    }
+                ],
+                "text": "Peanuts"
+            },
+            "category": [
+                "medication"
+            ],
+            "criticality": "high",
+            "patient": {
+                "reference": "Patient/example"
+            },
+            "onsetDateTime": "2018-01",
+            "reaction": [
+                {
+                    "manifestation": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "247472004",
+                                    "display": "Hives"
+                                }
+                            ]
+                        }
+                    ],
+                    "onset": "2018-01"
+                }
+            ]
+        },
+        "search": {
+            "mode": "match"
+        }
+    },
+    {
+        "fullUrl": "http://hapi.fhir.org/baseR4/Provenance/79614",
+        "resource": {
+            "resourceType": "Provenance",
+            "id": "79614",
+            "meta": {
+                "versionId": "1",
+                "lastUpdated": "2019-07-09T15:26:23.217+00:00",
+                "profile": [
+                   "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                ]
+            },
+            "target": [
+                 {
+                    "reference": "AllergyIntolerance/79613"
+                }
+            ],
+         "recorded": "2018-02T15:26:23.217+00:00",
+         "agent": [
+                {
+                    "type": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                    "code": "author",
+                                    "display": "Author"
+                                }
+                            ]
+                        }
+                    ],
+                    "who": {
+                            "reference": "Practitioner/Dr-Jones-12345"
+                    },
+                    "onBehalfOf": {
+                            "reference": "Organization/good-health-54321"
+                    }
+                }
+            ]},
+        "search": {
+            "mode": "include"
+        }
+    }
+] }
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>Sunshine Health Organization Provenance</p>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#get-all-allergy-provenance-sunshine-health" aria-expanded="false" aria-controls="collapseExample">
+    Click Here to See 'Get Allergy Information for a Patient at Sunshine Health' Example
+  </button>
+</p>
+
+<div class="collapse" id="get-all-allergy-provenance-sunshine-health">
+  <div class="card card-body">
+      
+<p><strong>Request:</strong></p>
+
+<p>Get “all allergies” for a patient and all corresponding Provenance records.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/AllergyIntolerance?patient=1234599&amp;_revinclude=Provenance:target
+</code></pre></div></div>
+
+<p><strong>Response:</strong></p>
+
+<p>A Server returns a search Bundle resource containing all the Allergies for the patient and corresponding Provenance records.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+
+{
+"resourceType": "Bundle",
+"id": "c887e62f-6166-419f-8268-b5ecd6c7b901",
+"meta": {
+    "lastUpdated": "2019-07-09T18:49:01.235+00:00"
+},
+"type": "searchset",
+"total": 1,
+"link": [
+    {
+        "relation": "self",
+        "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?patient=Examples99&amp;_revinclude=Provenance:target"
+    }
+],
+"entry": [
+    {
+        "fullUrl": "http://hapi.fhir.org/baseR4/AllergyIntolerance/7961399",
+        "resource": {
+            "resourceType": "AllergyIntolerance",
+            "id": "7961399",
+            "meta": {
+                "versionId": "1",
+                "lastUpdated": "2019-07-09T15:26:23.217+00:00",
+                "profile": [
+                   "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+                ]
+            },
+            "clinicalStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                        "code": "active",
+                        "display": "Active"
+                    }
+                ]
+            },
+            "verificationStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                        "code": "confirmed",
+                        "display": "Confirmed"
+                    }
+                ]
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "762952008",
+                        "display": "Peanuts"
+                    }
+                ],
+                "text": "Peanuts"
+            },
+            "category": [
+                "medication"
+            ],
+            "criticality": "high",
+            "patient": {
+                "reference": "Patient/example"
+            },
+            "onsetDateTime": "2017-09",
+            "reaction": [
+                {
+                    "manifestation": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                                    "code": "UNK",
+                                    "display": "Unknown"
+                                }
+                            ]
+                        }
+                    ],
+                    "onset": "2017-09"
+                }
+            ]
+        },
+        "search": {
+            "mode": "match"
+        }
+    },
+    {
+        "fullUrl": "http://hapi.fhir.org/baseR4/Provenance/7961499",
+        "resource": {
+            "resourceType": "Provenance",
+            "id": "7961499",
+            "meta": {
+                "versionId": "1",
+                "lastUpdated": "2019-07-09T15:26:23.217+00:00",
+                "profile": [
+                   "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                ]
+            },
+            "target": [
+                 {
+                    "reference": "AllergyIntolerance/7961399"
+                }
+            ],
+         "recorded": "2017-09T15:26:23.217+00:00",
+         "agent": [
+                {
+                    "type": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                    "code": "author",
+                                    "display": "Author"
+                                }
+                            ]
+                        }
+                    ],
+                    "who": {
+                            "reference": "Practitioner/Dr-Smith-1234599"
+                    },
+                    "onBehalfOf": {
+                            "reference": "Organization/sunshine-health-5432199"
+                    }
+                }
+            ]},
+        "search": {
+            "mode": "include"
+        }
+    }
+] }
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>After reconciliation, the Future Health Organization Provenance contains the latest information.</p>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#get-all-allergy-provenance-future-health" aria-expanded="false" aria-controls="collapseExample">
+    Click Here to See 'Get Allergy Information for a Patient at Future Health' Example
+  </button>
+</p>
+
+<div class="collapse" id="get-all-allergy-provenance-future-health">
+  <div class="card card-body">
+      
+<p><strong>Request:</strong></p>
+
+<p>Get “all allergies” for a patient and all corresponding Provenance records.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/AllergyIntolerance?patient=123459988&amp;_revinclude=Provenance:target
+</code></pre></div></div>
+
+<p><strong>Response:</strong></p>
+
+<p>A Server returns a search Bundle resource containing all the Allergies for the patient and corresponding Provenance records.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+
+{
+"resourceType": "Bundle",
+"id": "94d5d5ac-6645-41dc-8282-1870b71e840a",
+"meta": {
+    "lastUpdated": "2019-07-20T18:49:01.235+00:00"
+},
+"type": "searchset",
+"total": 1,
+"link": [
+    {
+        "relation": "self",
+        "url": "http://hapi.fhir.org/baseR4/AllergyIntolerance?patient=Examples9988&amp;_revinclude=Provenance:target"
+    }
+],
+"entry": [
+    {
+        "fullUrl": "http://hapi.fhir.org/baseR4/AllergyIntolerance/796139988",
+        "resource": {
+            "resourceType": "AllergyIntolerance",
+            "id": "796139988",
+            "meta": {
+                "versionId": "1",
+                "lastUpdated": "2019-07-09T15:26:23.217+00:00",
+                "profile": [
+                   "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+                ]
+            },
+            "clinicalStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                        "code": "active",
+                        "display": "Active"
+                    }
+                ]
+            },
+            "verificationStatus": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                        "code": "confirmed",
+                        "display": "Confirmed"
+                    }
+                ]
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "762952008",
+                        "display": "Peanuts"
+                    }
+                ],
+                "text": "Peanuts"
+            },
+            "category": [
+                "medication"
+            ],
+            "criticality": "high",
+            "patient": {
+                "reference": "Patient/example"
+            },
+            "onsetDateTime": "2017-09",
+            "reaction": [
+                {
+                    "manifestation": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "247472004",
+                                    "display": "Hives"
+                                }
+                            ]
+                        }
+                    ],
+                    "onset": "2017-09"
+                }
+            ]
+        },
+        "search": {
+            "mode": "match"
+        }
+    },
+    {
+        "fullUrl": "http://hapi.fhir.org/baseR4/Provenance/796149988",
+        "resource": {
+            "resourceType": "Provenance",
+            "id": "796149988",
+            "meta": {
+                "versionId": "1",
+                "lastUpdated": "2019-07-09T15:26:23.217+00:00",
+                "profile": [
+                   "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+                ]
+            },
+            "target": [
+                 {
+                    "reference": "AllergyIntolerance/796139988"
+                }
+            ],
+         "recorded": "2019-05-15T15:26:23.217+00:00",
+         "agent": [
+                {
+                    "type": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+                                    "code": "author",
+                                    "display": "Author"
+                                }
+                            ]
+                        }
+                    ],
+                    "who": {
+                            "reference": "Practitioner/dr-reconciled-123459988"
+                    },
+                    "onBehalfOf": {
+                            "reference": "Organization/future-health-543219988"
+                    }
+                }
+            ]},
+        "search": {
+            "mode": "include"
+        }
+    }
+] }
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<h4 id="accepting-information-from-a-single-site">Accepting information from a single site</h4>
+
+<p>The Figure below represents information after a provider accepted information from a single site:</p>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 2: CIRI After Accepting Reconciliation, No Changes</strong></figcaption>
+  <img src="Provenance_Recon_Single_Organization.svg" class="figure-img img-responsive img-rounded center-block" alt="Provenance_Recon_Single_Organization.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<p>Dr. Accepted is the latest author after verifying the problem on 5/2018 and accepting the problem data into their local data store, since it went through an interactive reconciliation process.</p>
+
+<h4 id="hie-redistribution">HIE Redistribution</h4>
+
+<p>A Health Information Exchange (HIE) is an organization and a technology to facilitate exchange from one to many partners. In certain HIE scenarios they only redistribute information, while in others they store, transform, and redistribute information. The HIE must keep fidelity of the clinical content, (original author, author organization, and timestamp). The HIE must keep track of who sent them the information for auditing, however, they are not required to include the original transmitter when redistributing content.</p>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 3: HIE Redistribution - No clinical content transformation</strong></figcaption>
+  <img src="Provenance_HIE_Single_Org_Device.svg" class="figure-img img-responsive img-rounded center-block" alt="Provenance_HIE_Single_Org_Device.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<p>Since no clinical content is changed in the HIE redistribution the best scenario is a Provenance Record with:</p>
+<ul>
+  <li>Provenance.agent.type = author
+    <ul>
+      <li>Provenance.agent.who set to the practitioner who authored the content (i.e. not the HIE)</li>
+      <li>Provenance.agent.onBehalfOf set to the organization that author acted on behalf of before sharing with the HIE</li>
+    </ul>
+  </li>
+  <li>Provenance.agent.type = transmitter
+    <ul>
+      <li>Provenance.agent.who set to the HIE organization</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The timestamp and pointer (i.e. target) to the appropriate Resource is required in all cases and must be included. This IG would note these as <strong>SHALL</strong> constraints if systems always had the Author and Author Organizations available. Participants in the development of this guide reported Author information provided to HIEs is inconsistent and unreliable.</p>
+
+<h4 id="hie-transformation">HIE Transformation</h4>
+
+<p>Different from Use Case 3 - HIE Redistribution, Use Case 4 includes transformation of data. Information is received (e.g. v2 lab, other CDs) and transformed by a HIE, stored, and then passed in a new format (e.g. CCD or FHIR).</p>
+
+<!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 4: HIE Transformation - Clinical content is transformed</strong></figcaption>
+  <img src="Provenance_HIE_Multi_Org_Device.svg" class="figure-img img-responsive img-rounded center-block" alt="Provenance_HIE_Multi_Org_Device.svg" />
+</figure>
+
+<p></p>
+</div>
+
+<p>Transformation of data from one format to another <strong>MAY</strong> change the authorship of the information, where the HIE is the author/author organization. The original data source must be maintained by the HIE. An <code class="highlighter-rouge">agent.type=assembler</code>, <code class="highlighter-rouge">agent.type=transmitter</code>, or other agents from <a href="ValueSet-us-core-provenance-participant-type.html">Provenance Agent Type</a> value set <strong>MAY</strong> also be included. Due to insufficient implementer guidance the Basic Provenance guidance here does not specify how to assign authorship for this use case. HL7 plans to gather additional input and include in the HL7 Basic Provenance Informative guide for C-CDA and FHIR.</p>
+
+<p><br /></p>
+
+<hr />
+<p>Footnotes</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>This Basic Provenance guidance and <a href="StructureDefinition-us-core-provenance.html">US Core Provenance Profile</a> is provisional and may change in future releases. Although, it is based on feedback from the HL7 and Argonaut communities, there was incomplete testing of this approach prior to publication. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

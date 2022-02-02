@@ -1,0 +1,3313 @@
+{
+  "ImplementationGuide/hl7.fhir.us.core": {
+    "history": false,
+    "index": 0,
+    "source": "/Users/ehaas/Documents/FHIR/US-Core-R4/fsh-generated/resources/ImplementationGuide-hl7.fhir.us.core.json",
+    "url": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+    "name": "USCore",
+    "title": "US Core Implementation Guide",
+    "version": "4.2.0",
+    "date": "2021-11-30",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-observation-lab": {
+    "history": false,
+    "index": 1,
+    "source": "input/resources/StructureDefinition-us-core-observation-lab.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
+    "name": "USCoreLaboratoryResultObservationProfile",
+    "title": "US Core Laboratory Result Observation Profile",
+    "version": "4.2.0",
+    "date": "2020-06-27",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/detailed-race": {
+    "history": false,
+    "index": 2,
+    "source": "input/resources/valueset-detailed-race.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/detailed-race",
+    "name": "DetailedRace",
+    "title": "Detailed Race",
+    "version": "4.2.0",
+    "date": "2021-12-08",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-immunization-status": {
+    "history": false,
+    "index": 3,
+    "source": "input/resources/searchparameter-us-core-immunization-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-immunization-status",
+    "name": "USCoreImmunizationStatus",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.944236Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-provenance-participant-type": {
+    "history": false,
+    "index": 4,
+    "source": "input/resources/valueset-us-core-provenance-participant-type.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-provenance-participant-type",
+    "name": "USCoreProvenancePaticipantTypeCodes",
+    "title": "US Core Provenance Participant Type Codes",
+    "version": "4.2.0",
+    "date": "2019-08-28",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-condition-category": {
+    "history": false,
+    "index": 5,
+    "source": "input/resources/searchparameter-us-core-condition-category.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-category",
+    "name": "USCoreConditionCategory",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:26.997340Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-patient-identifier": {
+    "history": false,
+    "index": 6,
+    "source": "input/resources/searchparameter-us-core-patient-identifier.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-identifier",
+    "name": "USCorePatientIdentifier",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.736817Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-careteam-role": {
+    "history": false,
+    "index": 7,
+    "source": "input/resources/searchparameter-us-core-careteam-role.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-careteam-role",
+    "name": "USCoreCareTeamRole",
+    "version": "4.2.0",
+    "date": "2021-11-08",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-practitioner-identifier": {
+    "history": false,
+    "index": 8,
+    "source": "input/resources/searchparameter-us-core-practitioner-identifier.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-practitioner-identifier",
+    "name": "USCorePractitionerIdentifier",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.531808Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "CapabilityStatement/us-core-client": {
+    "history": false,
+    "index": 9,
+    "source": "input/resources/capabilitystatement-us-core-client.json",
+    "url": "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client",
+    "name": "UsCoreClientCapabilityStatement",
+    "title": "US Core Client CapabilityStatement",
+    "version": "4.2.0",
+    "date": "2021-12-16T11:59:55.854051-08:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-careteam": {
+    "history": false,
+    "index": 10,
+    "source": "input/resources/StructureDefinition-us-core-careteam.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam",
+    "name": "USCoreCareTeam",
+    "title": "US Core CareTeam Profile",
+    "version": "4.2.0",
+    "date": "2020-06-26",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-discharge-disposition": {
+    "history": false,
+    "index": 11,
+    "source": "input/resources/valueset-discharge-disposition.json",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition",
+    "name": "USCoreDischargeDisposition",
+    "title": "US Core Discharge Disposition",
+    "version": "4.2.0",
+    "date": "2021-11-08",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-direct": {
+    "history": false,
+    "index": 12,
+    "source": "input/resources/StructureDefinition-us-core-direct.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
+    "name": "USCoreDirectEmailExtension",
+    "title": "US Core Direct email Extension",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-documentreference-category": {
+    "history": false,
+    "index": 13,
+    "source": "input/resources/searchparameter-us-core-documentreference-category.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-documentreference-category",
+    "name": "USCoreDocumentReferenceCategory",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.148458Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "CodeSystem/careplan-category": {
+    "history": false,
+    "index": 14,
+    "source": "input/resources/codesystem-careplan-category.xml",
+    "url": "http://hl7.org/fhir/us/core/CodeSystem/careplan-category",
+    "name": "USCoreCarePlanCategoryExtensionCodes",
+    "title": "US Core CarePlan Category Extension Codes",
+    "version": "4.2.0",
+    "date": "2022-01-18T15:50:02-08:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-diagnosticreport-lab-codes": {
+    "history": false,
+    "index": 15,
+    "source": "input/resources/valueset-us-core-diagnosticreport-lab-codes.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-lab-codes",
+    "name": "USCoreDiagnosticReportLabCodes",
+    "title": "US Core Diagnostic Report Laboratory Codes",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "CodeSystem/us-core-documentreference-category": {
+    "history": false,
+    "index": 16,
+    "source": "input/resources/codesystem-us-core-documentreference-category.xml",
+    "url": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+    "name": "USCoreDocumentReferencesCategoryCodes",
+    "title": "US Core DocumentReferences Category Codes",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-goal-description": {
+    "history": false,
+    "index": 17,
+    "source": "input/resources/searchparameter-us-core-goal-description.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-goal-description",
+    "name": "USCoreGoalDescription",
+    "version": "4.2.0",
+    "date": "2021-11-12",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-careteam-status": {
+    "history": false,
+    "index": 18,
+    "source": "input/resources/searchparameter-us-core-careteam-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-careteam-status",
+    "name": "USCoreCareTeamStatus",
+    "version": "4.2.0",
+    "date": "2021-06-08T02:15:48.112297Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-location-address-city": {
+    "history": false,
+    "index": 19,
+    "source": "input/resources/searchparameter-us-core-location-address-city.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-location-address-city",
+    "name": "USCoreLocationAddressCity",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.202495Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-patient-id": {
+    "history": false,
+    "index": 20,
+    "source": "input/resources/searchparameter-us-core-patient-id.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-id",
+    "name": "USCorePatientId",
+    "version": "4.2.0",
+    "date": "2021-06-24T23:54:41.938698Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-servicerequest-id": {
+    "history": false,
+    "index": 21,
+    "source": "input/resources/searchparameter-us-core-servicerequest-id.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-servicerequest-id",
+    "name": "USCoreServicerequestId",
+    "version": "4.2.0",
+    "date": "2021-11-12T10:23:53.140589Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-observation-value-codes": {
+    "history": false,
+    "index": 22,
+    "source": "input/resources/valueset-us-core-observation-value-codes.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-value-codes",
+    "name": "USCoreObservationValueCodes",
+    "title": "US Core Observation Value Codes (SNOMED-CT)",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-respiratory-rate": {
+    "history": false,
+    "index": 23,
+    "source": "input/resources/StructureDefinition-us-core-respiratory-rate.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate",
+    "name": "USCoreRespiratoryRateProfile",
+    "title": "US Core Respiratory Rate Profile",
+    "version": "4.2.0",
+    "date": "2020-11-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-practitioner-id": {
+    "history": false,
+    "index": 24,
+    "source": "input/resources/searchparameter-us-core-practitioner-id.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-practitioner-id",
+    "name": "USCorePractitionerId",
+    "version": "4.2.0",
+    "date": "2021-11-09T17:46:37.260015Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-condition-encounter": {
+    "history": false,
+    "index": 25,
+    "source": "input/resources/searchparameter-us-core-condition-encounter.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-encounter",
+    "name": "USCoreConditionEncounter",
+    "version": "4.2.0",
+    "date": "2021-11-06T04:17:38.370139Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-heart-rate": {
+    "history": false,
+    "index": 26,
+    "source": "input/resources/StructureDefinition-us-core-heart-rate.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate",
+    "name": "USCoreHeartRateProfile",
+    "title": "US Core Heart Rate Profile",
+    "version": "4.2.0",
+    "date": "2020-11-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-servicerequest-status": {
+    "history": false,
+    "index": 27,
+    "source": "input/resources/searchparameter-us-core-servicerequest-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-servicerequest-status",
+    "name": "USCoreServicerequestStatus",
+    "version": "4.2.0",
+    "date": "2021-11-12T10:23:52.519909Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-immunization-patient": {
+    "history": false,
+    "index": 28,
+    "source": "input/resources/searchparameter-us-core-immunization-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-immunization-patient",
+    "name": "USCoreImmunizationPatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.906368Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/simple-language": {
+    "history": false,
+    "index": 29,
+    "source": "input/resources/valueset-simple-language.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/simple-language",
+    "name": "LanguageCodesWithLanguageAndOptionallyARegionModifier",
+    "title": "Language codes with language and optionally a region modifier",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-common-sdoh-assessments": {
+    "history": false,
+    "index": 30,
+    "source": "input/resources/valueset-us-core-common-sdoh-assessments.json",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments",
+    "name": "USCoreCommonSDOHAssessments",
+    "title": "US Core Common SDOH Assessments ValueSet",
+    "version": "4.2.0",
+    "date": "2021-11-15",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-goal-patient": {
+    "history": false,
+    "index": 31,
+    "source": "input/resources/searchparameter-us-core-goal-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-goal-patient",
+    "name": "USCoreGoalPatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.790820Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-body-temperature": {
+    "history": false,
+    "index": 32,
+    "source": "input/resources/StructureDefinition-us-core-body-temperature.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature",
+    "name": "USCoreBodyTemperatureProfile",
+    "title": "US Core Body Temperature Profile",
+    "version": "4.2.0",
+    "date": "2020-11-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-practitioner": {
+    "history": false,
+    "index": 33,
+    "source": "input/resources/StructureDefinition-us-core-practitioner.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+    "name": "USCorePractitionerProfile",
+    "title": "US Core Practitioner Profile",
+    "version": "4.2.0",
+    "date": "2019-09-02",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/pediatric-weight-for-height": {
+    "history": false,
+    "index": 34,
+    "source": "input/resources/StructureDefinition-us-core-pediatric-weight-for-height.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height",
+    "name": "USCorePediatricWeightForHeightObservationProfile",
+    "title": "US Core Pediatric Weight for Height Observation Profile",
+    "version": "4.2.0",
+    "date": "2020-11-18",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-procedure-code": {
+    "history": false,
+    "index": 35,
+    "source": "input/resources/valueset-us-core-procedure-code.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code",
+    "name": "USCoreProcedureCodes",
+    "title": "US Core Procedure Codes",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-device-type": {
+    "history": false,
+    "index": 36,
+    "source": "input/resources/searchparameter-us-core-device-type.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-device-type",
+    "name": "USCoreDeviceType",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.080848Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-observation-smokingstatus-max": {
+    "history": false,
+    "index": 37,
+    "source": "input/resources/valueset-us-core-observation-smokingstatus-max.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus-max",
+    "name": "USCoreSmokingStatusmaxValueSet",
+    "title": "US Core Smoking Status Max-Binding",
+    "version": "4.2.0",
+    "date": "2020-06-29",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-patient-name": {
+    "history": false,
+    "index": 38,
+    "source": "input/resources/searchparameter-us-core-patient-name.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-name",
+    "name": "USCorePatientName",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.775687Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-patient": {
+    "history": false,
+    "index": 39,
+    "source": "input/resources/structuredefinition-us-core-patient.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+    "name": "USCorePatientProfile",
+    "title": "US Core Patient Profile",
+    "version": "4.2.0",
+    "date": "2020-06-27",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-pulse-oximetry": {
+    "history": false,
+    "index": 40,
+    "source": "input/resources/StructureDefinition-us-core-pulse-oximetry.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry",
+    "name": "USCorePulseOximetryProfile",
+    "title": "US Core Pulse Oximetry Profile",
+    "version": "4.2.0",
+    "date": "2020-11-18",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-practitionerrole-specialty": {
+    "history": false,
+    "index": 41,
+    "source": "input/resources/searchparameter-us-core-practitionerrole-specialty.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-practitionerrole-specialty",
+    "name": "USCorePractitionerRoleSpecialty",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.613929Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-encounter-identifier": {
+    "history": false,
+    "index": 42,
+    "source": "input/resources/searchparameter-us-core-encounter-identifier.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-encounter-identifier",
+    "name": "USCoreEncounterIdentifier",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.379776Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-immunization-date": {
+    "history": false,
+    "index": 43,
+    "source": "input/resources/searchparameter-us-core-immunization-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-immunization-date",
+    "name": "USCoreImmunizationDate",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.999173Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-careteam-patient": {
+    "history": false,
+    "index": 44,
+    "source": "input/resources/searchparameter-us-core-careteam-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-careteam-patient",
+    "name": "USCoreCareTeamPatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.906985Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-careplan-date": {
+    "history": false,
+    "index": 45,
+    "source": "input/resources/searchparameter-us-core-careplan-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-careplan-date",
+    "name": "USCoreCarePlanDate",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.793290Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-diagnosticreport-patient": {
+    "history": false,
+    "index": 46,
+    "source": "input/resources/searchparameter-us-core-diagnosticreport-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-diagnosticreport-patient",
+    "name": "USCoreDiagnosticReportPatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.323989Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-goal-target-date": {
+    "history": false,
+    "index": 47,
+    "source": "input/resources/searchparameter-us-core-goal-target-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-goal-target-date",
+    "name": "USCoreGoalTargetDate",
+    "version": "4.2.0",
+    "date": "2021-06-25T00:22:14.972255Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-procedure-patient": {
+    "history": false,
+    "index": 48,
+    "source": "input/resources/searchparameter-us-core-procedure-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-procedure-patient",
+    "name": "USCoreProcedurePatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.297983Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-documentreference-category": {
+    "history": false,
+    "index": 49,
+    "source": "input/resources/valueset-us-core-documentreference-categories.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category",
+    "name": "USCoreDocumentReferenceCategory",
+    "title": "US Core DocumentReference Category",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-immunization": {
+    "history": false,
+    "index": 50,
+    "source": "input/resources/StructureDefinition-us-core-immunization.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization",
+    "name": "USCoreImmunizationProfile",
+    "title": "US Core Immunization Profile",
+    "version": "4.2.0",
+    "date": "2019-08-26",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-documentreference-status": {
+    "history": false,
+    "index": 51,
+    "source": "input/resources/searchparameter-us-core-documentreference-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-documentreference-status",
+    "name": "USCoreDocumentReferenceStatus",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.061699Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-provenance": {
+    "history": false,
+    "index": 52,
+    "source": "input/resources/StructureDefinition-us-core-provenance.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance",
+    "name": "USCoreProvenance",
+    "title": "US Core Provenance Profile",
+    "version": "4.2.0",
+    "date": "2019-08-05",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-medicationrequest-authoredon": {
+    "history": false,
+    "index": 53,
+    "source": "input/resources/searchparameter-us-core-medicationrequest-authoredon.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-medicationrequest-authoredon",
+    "name": "USCoreMedicationRequestAuthoredon",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.162396Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-condition-code": {
+    "history": false,
+    "index": 54,
+    "source": "input/resources/valueset-us-core-condition-code.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code",
+    "name": "USCoreConditionCode",
+    "title": "US Core Condition Code",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-encounter-id": {
+    "history": false,
+    "index": 55,
+    "source": "input/resources/searchparameter-us-core-encounter-id.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-encounter-id",
+    "name": "USCoreEncounterId",
+    "version": "4.2.0",
+    "date": "2021-06-24T23:57:15.866673Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-smokingstatus": {
+    "history": false,
+    "index": 56,
+    "source": "input/resources/StructureDefinition-us-core-smokingstatus.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus",
+    "name": "USCoreSmokingStatusProfile",
+    "title": "US Core Smoking Status Observation Profile",
+    "version": "4.2.0",
+    "date": "2019-05-21T00:00:00+00:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "CodeSystem/us-core-provenance-participant-type": {
+    "history": false,
+    "index": 57,
+    "source": "input/resources/codesystem-us-core-provenance-participant-type.xml",
+    "url": "http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type",
+    "name": "USCoreProvenancePaticipantTypeExtensionCodes",
+    "title": "US Core Provenance Participant Type Extension Codes",
+    "version": "4.2.0",
+    "date": "2022-01-18T15:50:02-08:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-relatedperson-id": {
+    "history": false,
+    "index": 58,
+    "source": "input/resources/searchparameter-us-core-relatedperson-id.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-relatedperson-id",
+    "name": "USCoreRelatedpersonId",
+    "version": "4.2.0",
+    "date": "2021-11-16T20:28:38.298454Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-location-address-postalcode": {
+    "history": false,
+    "index": 59,
+    "source": "input/resources/searchparameter-us-core-location-address-postalcode.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-location-address-postalcode",
+    "name": "USCoreLocationAddressPostalcode",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.269318Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-relatedperson": {
+    "history": false,
+    "index": 60,
+    "source": "input/resources/StructureDefinition-us-core-relatedperson.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
+    "name": "USCoreRelatedPerson",
+    "title": "US Core Related Person",
+    "version": "4.2.0",
+    "date": "2018-08-22T00:00:00+00:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-relatedperson-patient": {
+    "history": false,
+    "index": 61,
+    "source": "input/resources/searchparameter-us-core-relatedperson-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-relatedperson-patient",
+    "name": "USCoreRelatedpersonPatient",
+    "version": "4.2.0",
+    "date": "2021-11-16T20:28:38.330122Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-medicationrequest-status": {
+    "history": false,
+    "index": 62,
+    "source": "input/resources/searchparameter-us-core-medicationrequest-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-medicationrequest-status",
+    "name": "USCoreMedicationRequestStatus",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.858896Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-condition-recorded-date": {
+    "history": false,
+    "index": 63,
+    "source": "input/resources/searchparameter-us-core-condition-recorded-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-recorded-date",
+    "name": "USCoreConditionRecordedDate",
+    "version": "4.2.0",
+    "date": "2021-11-06T04:17:38.313118Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-race": {
+    "history": false,
+    "index": 64,
+    "source": "input/resources/searchparameter-us-core-race.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-race",
+    "name": "USCoreRace",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-patient-family": {
+    "history": false,
+    "index": 65,
+    "source": "input/resources/searchparameter-us-core-patient-family.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-family",
+    "name": "USCorePatientFamily",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.620105Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-observation-sexual-orientation": {
+    "history": false,
+    "index": 66,
+    "source": "input/resources/StructureDefinition-us-core-observation-sexual-orientation.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation",
+    "name": "USCoreSexualOrientationObservationProfile",
+    "title": "US Core Sexual Orientation Observation Profile",
+    "version": "4.2.0",
+    "date": "2022-01-15",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-documentreference": {
+    "history": false,
+    "index": 67,
+    "source": "input/resources/StructureDefinition-us-core-documentreference.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
+    "name": "USCoreDocumentReferenceProfile",
+    "title": "US Core DocumentReference Profile",
+    "version": "4.2.0",
+    "date": "2020-07-02",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-careplan-patient": {
+    "history": false,
+    "index": 68,
+    "source": "input/resources/searchparameter-us-core-careplan-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-careplan-patient",
+    "name": "USCoreCarePlanPatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.827200Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-head-circumference": {
+    "history": false,
+    "index": 69,
+    "source": "input/resources/StructureDefinition-us-core-head-circumference.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference",
+    "name": "USCoreHeadCircumferenceProfile",
+    "title": "US Core Head Circumference Profile",
+    "version": "4.2.0",
+    "date": "2020-11-18",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-encounter-discharge-disposition": {
+    "history": false,
+    "index": 70,
+    "source": "input/resources/searchparameter-us-core-encounter-discharge-disposition.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-encounter-discharge-disposition",
+    "name": "USCoreEncounterDischargeDisposition",
+    "version": "4.2.0",
+    "date": "2021-11-04",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-observation-patient": {
+    "history": false,
+    "index": 71,
+    "source": "input/resources/searchparameter-us-core-observation-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-patient",
+    "name": "USCoreObservationPatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.729464Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-condition-code": {
+    "history": false,
+    "index": 72,
+    "source": "input/resources/searchparameter-us-core-condition-code.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-code",
+    "name": "USCoreConditionCode",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.846524Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-device-patient": {
+    "history": false,
+    "index": 73,
+    "source": "input/resources/searchparameter-us-core-device-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-device-patient",
+    "name": "USCoreDevicePatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.027004Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-race": {
+    "history": false,
+    "index": 74,
+    "source": "input/resources/StructureDefinition-us-core-race.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+    "name": "USCoreRaceExtension",
+    "title": "US Core Race Extension",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-allergyintolerance-patient": {
+    "history": false,
+    "index": 75,
+    "source": "input/resources/searchparameter-us-core-allergyintolerance-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-allergyintolerance-patient",
+    "name": "USCoreAllergyIntolerancePatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:26.966454Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-condition-patient": {
+    "history": false,
+    "index": 76,
+    "source": "input/resources/searchparameter-us-core-condition-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-patient",
+    "name": "USCoreConditionPatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.197003Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-careplan-status": {
+    "history": false,
+    "index": 77,
+    "source": "input/resources/searchparameter-us-core-careplan-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-careplan-status",
+    "name": "USCoreCarePlanStatus",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.875071Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-encounter-status": {
+    "history": false,
+    "index": 78,
+    "source": "input/resources/searchparameter-us-core-encounter-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-encounter-status",
+    "name": "USCoreEncounterStatus",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.462552Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-clinical-note-type": {
+    "history": false,
+    "index": 79,
+    "source": "input/resources/valueset-us-core-clinical-note-type.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-note-type",
+    "name": "USCoreClinicalNoteType",
+    "title": "US Core Clinical Note Type",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-medicationrequest": {
+    "history": false,
+    "index": 80,
+    "source": "input/resources/StructureDefinition-us-core-medicationrequest.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
+    "name": "USCoreMedicationRequestProfile",
+    "title": "US Core MedicationRequest Profile",
+    "version": "4.2.0",
+    "date": "2020-06-26",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-procedure-status": {
+    "history": false,
+    "index": 81,
+    "source": "input/resources/searchparameter-us-core-procedure-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-procedure-status",
+    "name": "USCoreProcedureStatus",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.196316Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-patient-birthdate": {
+    "history": false,
+    "index": 82,
+    "source": "input/resources/searchparameter-us-core-patient-birthdate.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-birthdate",
+    "name": "USCorePatientBirthdate",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.587218Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-diagnosticreport-category": {
+    "history": false,
+    "index": 83,
+    "source": "input/resources/valueset-us-core-diagnosticreport-category.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category",
+    "name": "USCoreDiagnosticReportCategory",
+    "title": "US Core Diagnostic Report Category Codes",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-condition": {
+    "history": false,
+    "index": 84,
+    "source": "input/resources/StructureDefinition-us-core-condition.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
+    "name": "USCoreCondition",
+    "title": "US Core Condition Profile",
+    "version": "4.2.0",
+    "date": "2020-06-27",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-encounter-date": {
+    "history": false,
+    "index": 85,
+    "source": "input/resources/searchparameter-us-core-encounter-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-encounter-date",
+    "name": "USCoreEncounterDate",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.336865Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-documentreference-type": {
+    "history": false,
+    "index": 86,
+    "source": "input/resources/searchparameter-us-core-documentreference-type.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-documentreference-type",
+    "name": "USCoreDocumentReferenceType",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.186357Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-birthsex": {
+    "history": false,
+    "index": 87,
+    "source": "input/resources/StructureDefinition-us-core-birthsex.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+    "name": "USCoreBirthSexExtension",
+    "title": "US Core Birth Sex Extension",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-encounter": {
+    "history": false,
+    "index": 88,
+    "source": "input/resources/StructureDefinition-us-core-encounter.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter",
+    "name": "USCoreEncounterProfile",
+    "title": "US Core Encounter Profile",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-observation-social-history-assessment": {
+    "history": false,
+    "index": 89,
+    "source": "input/resources/StructureDefinition-us-core-observation-social-history-assessment.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history-assessment",
+    "name": "USCoreObservationSocialHistoryAssessment",
+    "title": "US Core Social History Assessment Observation Profile",
+    "version": "4.2.0",
+    "date": "2021-11-12",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-smoking-status-observation-codes": {
+    "history": false,
+    "index": 90,
+    "source": "input/resources/valueset-us-core-smoking-status-observation-codes.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-smoking-status-observation-codes",
+    "name": "USCoreSmokingStatusObservationCodes",
+    "title": "US Core Smoking Status Observation Codes",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-body-height": {
+    "history": false,
+    "index": 91,
+    "source": "input/resources/StructureDefinition-us-core-body-height.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height",
+    "name": "USCoreBodyHeightProfile",
+    "title": "US Core Body Height Profile",
+    "version": "4.2.0",
+    "date": "2020-11-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-servicerequest-authored": {
+    "history": false,
+    "index": 92,
+    "source": "input/resources/searchparameter-us-core-servicerequest-authored.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-servicerequest-authored",
+    "name": "USCoreServicerequestAuthored",
+    "version": "4.2.0",
+    "date": "2021-11-12T10:23:53.126603Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-servicerequest-patient": {
+    "history": false,
+    "index": 93,
+    "source": "input/resources/searchparameter-us-core-servicerequest-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-servicerequest-patient",
+    "name": "USCoreServicerequestPatient",
+    "version": "4.2.0",
+    "date": "2021-11-12T10:23:52.711757Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "OperationDefinition/docref": {
+    "history": false,
+    "index": 94,
+    "source": "input/resources/operationdefinition-docref.json",
+    "url": "http://hl7.org/fhir/us/core/OperationDefinition/docref",
+    "name": "USCoreFetchDocumentReference",
+    "title": "US Core Fetch DocumentReference",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-condition-abatement-date": {
+    "history": false,
+    "index": 95,
+    "source": "input/resources/searchparameter-us-core-condition-abatement-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-abatement-date",
+    "name": "USCoreConditionAbatementDate",
+    "version": "4.2.0",
+    "date": "2021-11-06T04:17:38.329449Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-bmi": {
+    "history": false,
+    "index": 96,
+    "source": "input/resources/StructureDefinition-us-core-bmi.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi",
+    "name": "USCoreBMIProfile",
+    "title": "US Core BMI Profile",
+    "version": "4.2.0",
+    "date": "2020-11-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-provider-role": {
+    "history": false,
+    "index": 97,
+    "source": "input/resources/valueset-us-core-provider-role.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role",
+    "name": "USCoreProviderRoleNucc",
+    "title": "US Core Provider Role (NUCC)",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-diagnosticreport-report-and-note-codes": {
+    "history": false,
+    "index": 98,
+    "source": "input/resources/valueset-us-core-diagnosticreport-report-and-note-codes.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes",
+    "name": "USCoreClinicalTestCodes",
+    "title": "US Core Clinical Test Codes",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-sexual-orientation": {
+    "history": false,
+    "index": 99,
+    "source": "input/resources/valueset-us-core-sexual-orientation.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-sexual-orientation",
+    "name": "USCoreSexualOrientation",
+    "title": "US Core Sexual Orientation",
+    "version": "4.2.0",
+    "date": "2022-06-01",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-observation-status": {
+    "history": false,
+    "index": 100,
+    "source": "input/resources/searchparameter-us-core-observation-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-status",
+    "name": "USCoreObservationStatus",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.496490Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-diagnosticreport-category": {
+    "history": false,
+    "index": 101,
+    "source": "input/resources/searchparameter-us-core-diagnosticreport-category.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-diagnosticreport-category",
+    "name": "USCoreDiagnosticReportCategory",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.362884Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/birthsex": {
+    "history": false,
+    "index": 102,
+    "source": "input/resources/valueset-us-core-birthsex.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/birthsex",
+    "name": "BirthSex",
+    "title": "Birth Sex",
+    "version": "4.2.0",
+    "date": "2021-12-08",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-observation-date": {
+    "history": false,
+    "index": 103,
+    "source": "input/resources/searchparameter-us-core-observation-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-date",
+    "name": "USCoreObservationDate",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.697843Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-diagnosticreport-status": {
+    "history": false,
+    "index": 104,
+    "source": "input/resources/searchparameter-us-core-diagnosticreport-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-diagnosticreport-status",
+    "name": "USCoreDiagnosticReportStatus",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.293077Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-organization": {
+    "history": false,
+    "index": 105,
+    "source": "input/resources/StructureDefinition-us-core-organization.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+    "name": "USCoreOrganizationProfile",
+    "title": "US Core Organization Profile",
+    "version": "4.2.0",
+    "date": "2020-06-29",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-condition-asserted-date": {
+    "history": false,
+    "index": 106,
+    "source": "input/resources/searchparameter-us-core-condition-asserted-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-asserted-date",
+    "name": "USCoreConditionAssertedDate",
+    "version": "4.2.0",
+    "date": "2021-11-04",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-observation-category": {
+    "history": false,
+    "index": 107,
+    "source": "input/resources/searchparameter-us-core-observation-category.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-category",
+    "name": "USCoreObservationCategory",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.573477Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-organization-address": {
+    "history": false,
+    "index": 108,
+    "source": "input/resources/searchparameter-us-core-organization-address.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-organization-address",
+    "name": "USCoreOrganizationAddress",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.411091Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-genderIdentity": {
+    "history": false,
+    "index": 109,
+    "source": "input/resources/StructureDefinition-us-core-genderIdentity.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity",
+    "name": "USCoreGenderIdentityExtension",
+    "title": "US Core Gender Identity Extension",
+    "version": "4.2.0",
+    "date": "2022-01-22",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-encounter-patient": {
+    "history": false,
+    "index": 110,
+    "source": "input/resources/searchparameter-us-core-encounter-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-encounter-patient",
+    "name": "USCoreEncounterPatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.413685Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-observation-category": {
+    "history": false,
+    "index": 111,
+    "source": "input/resources/valueset-us-core-observation-category.json",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-category",
+    "name": "USCoreObservationCategory",
+    "title": "US Core Observation Category Codes",
+    "version": "4.2.0",
+    "date": "2021-11-11",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-medicationrequest-encounter": {
+    "history": false,
+    "index": 112,
+    "source": "input/resources/searchparameter-us-core-medicationrequest-encounter.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-medicationrequest-encounter",
+    "name": "USCoreMedicationRequestEncounter",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.068351Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-procedure": {
+    "history": false,
+    "index": 113,
+    "source": "input/resources/StructureDefinition-us-core-procedure.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure",
+    "name": "USCoreProcedureProfile",
+    "title": "US Core Procedure Profile",
+    "version": "4.2.0",
+    "date": "2020-06-29",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "CodeSystem/condition-category": {
+    "history": false,
+    "index": 114,
+    "source": "input/resources/codesystem-condition-category.xml",
+    "url": "http://hl7.org/fhir/us/core/CodeSystem/condition-category",
+    "name": "USCoreConditionCategoryExtensionCodes",
+    "title": "US Core Condition Category Extension Codes",
+    "version": "4.2.0",
+    "date": "2022-01-18T15:50:02-08:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-medication": {
+    "history": false,
+    "index": 115,
+    "source": "input/resources/StructureDefinition-us-core-medication.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
+    "name": "USCoreMedicationProfile",
+    "title": "US Core Medication Profile",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-encounter-type": {
+    "history": false,
+    "index": 116,
+    "source": "input/resources/searchparameter-us-core-encounter-type.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-encounter-type",
+    "name": "USCoreEncounterType",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.495436Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-blood-pressure": {
+    "history": false,
+    "index": 117,
+    "source": "input/resources/StructureDefinition-us-core-blood-pressure.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure",
+    "name": "USCoreBloodPressureProfile",
+    "title": "US Core Blood Pressure Profile",
+    "version": "4.2.0",
+    "date": "2020-11-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-patient-given": {
+    "history": false,
+    "index": 118,
+    "source": "input/resources/searchparameter-us-core-patient-given.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-given",
+    "name": "USCorePatientGiven",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.703906Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-condition-onset-date": {
+    "history": false,
+    "index": 119,
+    "source": "input/resources/searchparameter-us-core-condition-onset-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-onset-date",
+    "name": "USCoreConditionOnsetDate",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.816607Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-location-name": {
+    "history": false,
+    "index": 120,
+    "source": "input/resources/searchparameter-us-core-location-name.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-location-name",
+    "name": "USCoreLocationName",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.120741Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-servicerequest-code": {
+    "history": false,
+    "index": 121,
+    "source": "input/resources/searchparameter-us-core-servicerequest-code.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-servicerequest-code",
+    "name": "USCoreServicerequestCode",
+    "version": "4.2.0",
+    "date": "2021-11-12T10:23:52.776309Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-observation-code": {
+    "history": false,
+    "index": 122,
+    "source": "input/resources/searchparameter-us-core-observation-code.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-observation-code",
+    "name": "USCoreObservationCode",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.609416Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-documentreference-period": {
+    "history": false,
+    "index": 123,
+    "source": "input/resources/searchparameter-us-core-documentreference-period.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-documentreference-period",
+    "name": "USCoreDocumentReferencePeriod",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.258166Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-encounter-type": {
+    "history": false,
+    "index": 124,
+    "source": "input/resources/valueset-us-core-encounter-type.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type",
+    "name": "USCoreEncounterType",
+    "title": "US Core Encounter Type",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-practitioner-name": {
+    "history": false,
+    "index": 125,
+    "source": "input/resources/searchparameter-us-core-practitioner-name.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-practitioner-name",
+    "name": "USCorePractitionerName",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.450985Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-diagnosticreport-note": {
+    "history": false,
+    "index": 126,
+    "source": "input/resources/StructureDefinition-us-core-diagnosticreport-note.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
+    "name": "USCoreDiagnosticReportProfileNoteExchange",
+    "title": "US Core DiagnosticReport Profile for Report and Note exchange",
+    "version": "4.2.0",
+    "date": "2021-11-09",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-practitionerrole": {
+    "history": false,
+    "index": 127,
+    "source": "input/resources/StructureDefinition-us-core-practitionerrole.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+    "name": "USCorePractitionerRoleProfile",
+    "title": "US Core PractitionerRole Profile",
+    "version": "4.2.0",
+    "date": "2019-08-11",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-usps-state": {
+    "history": false,
+    "index": 128,
+    "source": "input/resources/valueset-us-core-usps-state.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state",
+    "name": "UspsTwoLetterAlphabeticCodes",
+    "title": "USPS Two Letter Alphabetic Codes",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-observation-smoking-status-status": {
+    "history": false,
+    "index": 129,
+    "source": "input/resources/valueset-us-core-observation-status-smoking-status.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status",
+    "name": "USCoreObservationSmokingStatusStatus",
+    "title": "US Core Status for Smoking Status Observation",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-location-address": {
+    "history": false,
+    "index": 130,
+    "source": "input/resources/searchparameter-us-core-location-address.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-location-address",
+    "name": "USCoreLocationAddress",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.151632Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-medicationrequest-intent": {
+    "history": false,
+    "index": 131,
+    "source": "input/resources/searchparameter-us-core-medicationrequest-intent.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-medicationrequest-intent",
+    "name": "USCoreMedicationRequestIntent",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.926435Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-documentreference-date": {
+    "history": false,
+    "index": 132,
+    "source": "input/resources/searchparameter-us-core-documentreference-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-documentreference-date",
+    "name": "USCoreDocumentReferenceDate",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.229242Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-allergyintolerance-clinical-status": {
+    "history": false,
+    "index": 133,
+    "source": "input/resources/searchparameter-us-core-allergyintolerance-clinical-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-allergyintolerance-clinical-status",
+    "name": "USCoreAllergyIntoleranceClinicalStatus",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:26.898912Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-careplan": {
+    "history": false,
+    "index": 134,
+    "source": "input/resources/StructureDefinition-us-core-careplan.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan",
+    "name": "USCoreCarePlanProfile",
+    "title": "US Core CarePlan Profile",
+    "version": "4.2.0",
+    "date": "2019-08-29",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-ethnicity": {
+    "history": false,
+    "index": 135,
+    "source": "input/resources/searchparameter-us-core-ethnicity.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-ethnicity",
+    "name": "USCoreEthnicity",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-procedure-date": {
+    "history": false,
+    "index": 136,
+    "source": "input/resources/searchparameter-us-core-procedure-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-procedure-date",
+    "name": "USCoreProcedureDate",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.345870Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-servicerequest": {
+    "history": false,
+    "index": 137,
+    "source": "input/resources/structuredefinition-us-core-servicerequest.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest",
+    "name": "USCoreServiceRequest",
+    "title": "US Core Service Request",
+    "version": "4.2.0",
+    "date": "2018-08-22T00:00:00+00:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-goal": {
+    "history": false,
+    "index": 138,
+    "source": "input/resources/StructureDefinition-us-core-goal.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal",
+    "name": "USCoreGoalProfile",
+    "title": "US Core Goal Profile",
+    "version": "4.2.0",
+    "date": "2020-07-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-ethnicity": {
+    "history": false,
+    "index": 139,
+    "source": "input/resources/StructureDefinition-us-core-ethnicity.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+    "name": "USCoreEthnicityExtension",
+    "title": "US Core Ethnicity Extension",
+    "version": "4.2.0",
+    "date": "2019-05-21T00:00:00-04:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-location": {
+    "history": false,
+    "index": 140,
+    "source": "input/resources/StructureDefinition-us-core-location.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location",
+    "name": "USCoreLocation",
+    "title": "US Core Location Profile",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-servicerequest-category": {
+    "history": false,
+    "index": 141,
+    "source": "input/resources/valueset-us-core-servicerequest-category.json",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category",
+    "name": "USCoreServiceRequestCategory",
+    "title": "US Core ServiceRequest Category Codes",
+    "version": "4.2.0",
+    "date": "2021-11-11",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-diagnosticreport-date": {
+    "history": false,
+    "index": 142,
+    "source": "input/resources/searchparameter-us-core-diagnosticreport-date.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-diagnosticreport-date",
+    "name": "USCoreDiagnosticReportDate",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.611972Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-documentreference-patient": {
+    "history": false,
+    "index": 143,
+    "source": "input/resources/searchparameter-us-core-documentreference-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-documentreference-patient",
+    "name": "USCoreDocumentReferencePatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.111558Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-diagnosticreport-lab": {
+    "history": false,
+    "index": 144,
+    "source": "input/resources/StructureDefinition-us-core-diagnosticreport-lab.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab",
+    "name": "USCoreDiagnosticReportProfileLaboratoryReporting",
+    "title": "US Core DiagnosticReport Profile for Laboratory Results Reporting",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/detailed-ethnicity": {
+    "history": false,
+    "index": 145,
+    "source": "input/resources/valueset-detailed-ethnicity.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity",
+    "name": "DetailedEthnicity",
+    "title": "Detailed ethnicity",
+    "version": "4.2.0",
+    "date": "2021-12-08",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-implantable-device": {
+    "history": false,
+    "index": 146,
+    "source": "input/resources/StructureDefinition-us-core-implantable-device.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device",
+    "name": "USCoreImplantableDeviceProfile",
+    "title": "US Core Implantable Device Profile",
+    "version": "4.2.0",
+    "date": "2019-09-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-observation-imaging": {
+    "history": false,
+    "index": 147,
+    "source": "input/resources/StructureDefinition-us-core-observation-imaging.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging",
+    "name": "USCoreImagingResultObservationProfile",
+    "title": "US Core Imaging Result Observation Profile",
+    "version": "4.2.0",
+    "date": "2021-11-09",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-condition-category": {
+    "history": false,
+    "index": 148,
+    "source": "input/resources/valueset-us-core-condition-category.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category",
+    "name": "USCoreConditionCategoryCodes",
+    "title": "US Core Condition Category Codes",
+    "version": "4.2.0",
+    "date": "2021-11-30",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-observation-clinical-test": {
+    "history": false,
+    "index": 149,
+    "source": "input/resources/StructureDefinition-us-core-observation-clinical-test.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test",
+    "name": "USCoreClinicalTestResultObservationProfile",
+    "title": "US Core Clinical Test Result Observation Profile",
+    "version": "4.2.0",
+    "date": "2021-11-09",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "CapabilityStatement/us-core-server": {
+    "history": false,
+    "index": 150,
+    "source": "input/resources/capabilitystatement-us-core-server.json",
+    "url": "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server",
+    "name": "UsCoreServerCapabilityStatement",
+    "title": "US Core Server CapabilityStatement",
+    "version": "4.2.0",
+    "date": "2021-12-16T12:00:36.068620-08:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-medicationrequest-patient": {
+    "history": false,
+    "index": 151,
+    "source": "input/resources/searchparameter-us-core-medicationrequest-patient.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-medicationrequest-patient",
+    "name": "USCoreMedicationRequestPatient",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.028336Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-encounter-class": {
+    "history": false,
+    "index": 152,
+    "source": "input/resources/searchparameter-us-core-encounter-class.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-encounter-class",
+    "name": "USCoreEncounterClass",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.305225Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-careplan-category": {
+    "history": false,
+    "index": 153,
+    "source": "input/resources/searchparameter-us-core-careplan-category.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-careplan-category",
+    "name": "USCoreCarePlanCategory",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.764367Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-documentreference-id": {
+    "history": false,
+    "index": 154,
+    "source": "input/resources/searchparameter-us-core-documentreference-id.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-documentreference-id",
+    "name": "USCoreDocumentReferenceId",
+    "version": "4.2.0",
+    "date": "2021-06-24T23:59:31.981452Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-allergyintolerance": {
+    "history": false,
+    "index": 155,
+    "source": "input/resources/StructureDefinition-us-core-allergyintolerance.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance",
+    "name": "USCoreAllergyIntolerance",
+    "title": "US Core AllergyIntolerance Profile",
+    "version": "4.2.0",
+    "date": "2020-06-29",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-observation-screening-response": {
+    "history": false,
+    "index": 156,
+    "source": "input/resources/StructureDefinition-us-core-observation-screening-response.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response",
+    "name": "USCoreObservationScreeningResponse",
+    "title": "US Core Screening Response Observation Profile",
+    "version": "4.2.0",
+    "date": "2021-11-12",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-condition-clinical-status": {
+    "history": false,
+    "index": 157,
+    "source": "input/resources/searchparameter-us-core-condition-clinical-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-condition-clinical-status",
+    "name": "USCoreConditionClinicalStatus",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.109428Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/omb-ethnicity-category": {
+    "history": false,
+    "index": 158,
+    "source": "input/resources/valueset-omb-ethnicity.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity-category",
+    "name": "OmbEthnicityCategories",
+    "title": "OMB Ethnicity Categories",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-patient-gender": {
+    "history": false,
+    "index": 159,
+    "source": "input/resources/searchparameter-us-core-patient-gender.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-gender",
+    "name": "USCorePatientGender",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:27.671986Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-documentreference-type": {
+    "history": false,
+    "index": 160,
+    "source": "input/resources/valueset-us-core-documentreference-type.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type",
+    "name": "USCoreDocumentReferenceType",
+    "title": "US Core DocumentReference Type",
+    "version": "4.2.0",
+    "date": "2019-05-21",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-procedure-code": {
+    "history": false,
+    "index": 161,
+    "source": "input/resources/searchparameter-us-core-procedure-code.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-procedure-code",
+    "name": "USCoreProcedureCode",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:29.419516Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-vital-signs": {
+    "history": false,
+    "index": 162,
+    "source": "input/resources/valueset-us-core-vital-signs.json",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-vital-signs",
+    "name": "UsCoreVitalSigns",
+    "title": "US Core Vital Signs ValueSet",
+    "version": "4.2.0",
+    "date": "2020-11-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-goal-lifecycle-status": {
+    "history": false,
+    "index": 163,
+    "source": "input/resources/searchparameter-us-core-goal-lifecycle-status.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-goal-lifecycle-status",
+    "name": "USCoreGoalLifecycleStatus",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.712988Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-diagnosticreport-code": {
+    "history": false,
+    "index": 164,
+    "source": "input/resources/searchparameter-us-core-diagnosticreport-code.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-diagnosticreport-code",
+    "name": "USCoreDiagnosticReportCode",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:28.538956Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-encounter-location": {
+    "history": false,
+    "index": 165,
+    "source": "input/resources/searchparameter-us-core-encounter-location.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-encounter-location",
+    "name": "USCoreEncounterLocation",
+    "version": "4.2.0",
+    "date": "2021-11-08T21:44:20.095257Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-goal-description": {
+    "history": false,
+    "index": 166,
+    "source": "input/resources/valueset-us-core-goal-description.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description",
+    "name": "USCoreGoalCodes",
+    "title": "US Core Goal Codes",
+    "version": "4.2.0",
+    "date": "2021-11-22",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/pediatric-bmi-for-age": {
+    "history": false,
+    "index": 167,
+    "source": "input/resources/StructureDefinition-us-core-pediatric-bmi-for-age.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age",
+    "name": "USCorePediatricBMIforAgeObservationProfile",
+    "title": "US Core Pediatric BMI for Age Observation Profile",
+    "version": "4.2.0",
+    "date": "2020-11-18",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/head-occipital-frontal-circumference-percentile": {
+    "history": false,
+    "index": 168,
+    "source": "input/resources/StructureDefinition-head-occipital-frontal-circumference-percentile.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile",
+    "name": "USCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile",
+    "title": "US Core Pediatric Head Occipital-frontal Circumference Percentile Profile",
+    "version": "4.2.0",
+    "date": "2020-11-18",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-servicerequest-category": {
+    "history": false,
+    "index": 169,
+    "source": "input/resources/searchparameter-us-core-servicerequest-category.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-servicerequest-category",
+    "name": "USCoreServicerequestCategory",
+    "version": "4.2.0",
+    "date": "2021-11-12T10:23:52.741109Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-organization-name": {
+    "history": false,
+    "index": 170,
+    "source": "input/resources/searchparameter-us-core-organization-name.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-organization-name",
+    "name": "USCoreOrganizationName",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.301231Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/us-core-narrative-status": {
+    "history": false,
+    "index": 171,
+    "source": "input/resources/valueset-us-core-narrative-status.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status",
+    "name": "NarrativeStatus",
+    "title": "US Core Narrative Status",
+    "version": "4.2.0",
+    "date": "2022-01-18T15:50:02-08:00",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-body-weight": {
+    "history": false,
+    "index": 172,
+    "source": "input/resources/StructureDefinition-us-core-body-weight.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight",
+    "name": "USCoreBodyWeightProfile",
+    "title": "US Core Body Weight Profile",
+    "version": "4.2.0",
+    "date": "2020-11-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-patient-gender-identity": {
+    "history": false,
+    "index": 173,
+    "source": "input/resources/searchparameter-us-core-patient-gender-identity.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-patient-gender-identity",
+    "name": "USCorePatientGenderIdentity",
+    "version": "4.2.0",
+    "date": "2021-11-04",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "ValueSet/omb-race-category": {
+    "history": false,
+    "index": 174,
+    "source": "input/resources/valueset-omb-race.xml",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/omb-race-category",
+    "name": "OmbRaceCategories",
+    "title": "OMB Race Categories",
+    "version": "4.2.0",
+    "date": "2021-12-08",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-practitionerrole-practitioner": {
+    "history": false,
+    "index": 175,
+    "source": "input/resources/searchparameter-us-core-practitionerrole-practitioner.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-practitionerrole-practitioner",
+    "name": "USCorePractitionerRolePractitioner",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.639824Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "SearchParameter/us-core-location-address-state": {
+    "history": false,
+    "index": 176,
+    "source": "input/resources/searchparameter-us-core-location-address-state.json",
+    "url": "http://hl7.org/fhir/us/core/SearchParameter/us-core-location-address-state",
+    "name": "USCoreLocationAddressState",
+    "version": "4.2.0",
+    "date": "2020-11-20T05:19:30.236431Z",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/us-core-vital-signs": {
+    "history": false,
+    "index": 177,
+    "source": "input/resources/StructureDefinition-us-core-vital-signs.json",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs",
+    "name": "USCoreVitalSignsProfile",
+    "title": "US Core Vital Signs Profile",
+    "version": "4.2.0",
+    "date": "2020-11-17",
+    "status": {
+      "class": "colstu",
+      "owner": "HL7 International - Cross-Group Projects",
+      "link": "http://www.hl7.org/Special/committees/cgp",
+      "status": "Active"
+    }
+  },
+  "Observation/ekg-impression": {
+    "history": false,
+    "index": 178,
+    "source": "input/examples/ekg-impression.json"
+  },
+  "Practitioner/practitioner-1": {
+    "history": false,
+    "index": 179,
+    "source": "input/examples/practitioner-1.json"
+  },
+  "Observation/capillary-refill-time-nail-bed": {
+    "history": false,
+    "index": 180,
+    "source": "input/examples/capillary-refill-time-nail-bed.json"
+  },
+  "RelatedPerson/shaw-niece": {
+    "history": false,
+    "index": 181,
+    "source": "input/examples/relatedperson-shaw-niece.json"
+  },
+  "Observation/p-r-interval-ekg-lead": {
+    "history": false,
+    "index": 182,
+    "source": "input/examples/p-r-interval-ekg-lead.json"
+  },
+  "Encounter/delivery": {
+    "history": false,
+    "index": 183,
+    "source": "input/examples/encounter-delivery.json"
+  },
+  "Observation/q-t-interval-ekg-lead": {
+    "history": false,
+    "index": 184,
+    "source": "input/examples/q-t-interval-ekg-lead.json"
+  },
+  "Observation/respiratory-rate": {
+    "history": false,
+    "index": 185,
+    "source": "input/examples/respiratory-rate.json"
+  },
+  "Observation/urine-ketone": {
+    "history": false,
+    "index": 186,
+    "source": "input/examples/urine-ketone.json"
+  },
+  "Observation/erythrocytes": {
+    "history": false,
+    "index": 187,
+    "source": "input/examples/erythrocytes.json"
+  },
+  "Device/udi-1": {
+    "history": false,
+    "index": 188,
+    "source": "input/examples/udi-1.json"
+  },
+  "Observation/dxa-hip-l-t-score-bmd": {
+    "history": false,
+    "index": 189,
+    "source": "input/examples/dxa-hip-l-t-score-bmd.json"
+  },
+  "Observation/urine-clarity": {
+    "history": false,
+    "index": 190,
+    "source": "input/examples/urine-clarity.json"
+  },
+  "Observation/mchc": {
+    "history": false,
+    "index": 191,
+    "source": "input/examples/mchc.json"
+  },
+  "Observation/weight": {
+    "history": false,
+    "index": 192,
+    "source": "input/examples/weight.json"
+  },
+  "Observation/qrs-dur-ekg-lead": {
+    "history": false,
+    "index": 193,
+    "source": "input/examples/qrs-dur-ekg-lead.json"
+  },
+  "Goal/goal-1": {
+    "history": false,
+    "index": 194,
+    "source": "input/examples/goal-1.json"
+  },
+  "Observation/ofc-percentile": {
+    "history": false,
+    "index": 195,
+    "source": "input/examples/ofc-percentile.json"
+  },
+  "Observation/pediatric-bmi-example": {
+    "history": false,
+    "index": 196,
+    "source": "input/examples/pediatric-bmi-example.json"
+  },
+  "Observation/serum-total-bilirubin": {
+    "history": false,
+    "index": 197,
+    "source": "input/examples/serum-total-bilirubin.json"
+  },
+  "Observation/satO2-fiO2": {
+    "history": false,
+    "index": 198,
+    "source": "input/examples/observation-satO2-fiO2.json"
+  },
+  "AllergyIntolerance/example": {
+    "history": false,
+    "index": 199,
+    "source": "input/examples/allergyintolerance-example.json"
+  },
+  "Observation/dxa-hip-l-z-score-bmd": {
+    "history": false,
+    "index": 200,
+    "source": "input/examples/dxa-hip-l-z-score-bmd.json"
+  },
+  "CareTeam/example": {
+    "history": false,
+    "index": 201,
+    "source": "input/examples/careteam-example.json"
+  },
+  "Media/ekg-strip": {
+    "history": false,
+    "index": 202,
+    "source": "input/examples/media-ekg-strip.json"
+  },
+  "Observation/serum-creatinine": {
+    "history": false,
+    "index": 203,
+    "source": "input/examples/serum-creatinine.json"
+  },
+  "DiagnosticReport/bone-density-report": {
+    "history": false,
+    "index": 204,
+    "source": "input/examples/DiagnosticReport-bone-density-report.json"
+  },
+  "Procedure/defib-implant": {
+    "history": false,
+    "index": 205,
+    "source": "input/examples/Procedure-R4-defib-implant.json"
+  },
+  "DiagnosticReport/urinalysis": {
+    "history": false,
+    "index": 206,
+    "source": "input/examples/urinalysis.json"
+  },
+  "Bundle/uscore-mo3": {
+    "history": false,
+    "index": 207,
+    "source": "input/examples/uscore-mo3.json"
+  },
+  "Observation/dxa-femur-l-t-score-bmd": {
+    "history": false,
+    "index": 208,
+    "source": "input/examples/dxa-femur-l-t-score-bmd.json"
+  },
+  "Observation/blood-glucose": {
+    "history": false,
+    "index": 209,
+    "source": "input/examples/blood-glucose.json"
+  },
+  "Location/hospital": {
+    "history": false,
+    "index": 210,
+    "source": "input/examples/location-hospital.json"
+  },
+  "Observation/ekg-lead": {
+    "history": false,
+    "index": 211,
+    "source": "input/examples/ekg-lead.json"
+  },
+  "Observation/urine-epi-cells": {
+    "history": false,
+    "index": 212,
+    "source": "input/examples/urine-epi-cells.json"
+  },
+  "Observation/heart-rate": {
+    "history": false,
+    "index": 213,
+    "source": "input/examples/heart-rate.json"
+  },
+  "Observation/urine-hemoglobin": {
+    "history": false,
+    "index": 214,
+    "source": "input/examples/urine-hemoglobin.json"
+  },
+  "Observation/hemoglobin": {
+    "history": false,
+    "index": 215,
+    "source": "input/examples/hemoglobin.json"
+  },
+  "Medication/uscore-med2": {
+    "history": false,
+    "index": 216,
+    "source": "input/examples/uscore-med2.json"
+  },
+  "Observation/dxa-femur-l-z-score-bmd": {
+    "history": false,
+    "index": 217,
+    "source": "input/examples/dxa-femur-l-z-score-bmd.json"
+  },
+  "Observation/height": {
+    "history": false,
+    "index": 218,
+    "source": "input/examples/height.json"
+  },
+  "Observation/urine-wbcs": {
+    "history": false,
+    "index": 219,
+    "source": "input/examples/urine-wbcs.json"
+  },
+  "Observation/blood-pressure": {
+    "history": false,
+    "index": 220,
+    "source": "input/examples/blood-pressure.json"
+  },
+  "Encounter/1036": {
+    "history": false,
+    "index": 221,
+    "source": "input/examples/encounter-1036.json"
+  },
+  "DiagnosticReport/cardiology-report": {
+    "history": false,
+    "index": 222,
+    "source": "input/examples/DiagnosticReport-cardiology-report.json"
+  },
+  "Observation/oxygen-saturation": {
+    "history": false,
+    "index": 223,
+    "source": "input/examples/oxygen-saturation.json"
+  },
+  "Organization/acme-lab": {
+    "history": false,
+    "index": 224,
+    "source": "input/examples/acme-lab.json"
+  },
+  "Observation/urine-nitrite": {
+    "history": false,
+    "index": 225,
+    "source": "input/examples/urine-nitrite.json"
+  },
+  "MedicationRequest/uscore-mo2": {
+    "history": false,
+    "index": 226,
+    "source": "input/examples/uscore-mo2.json"
+  },
+  "Observation/neutrophils": {
+    "history": false,
+    "index": 227,
+    "source": "input/examples/neutrophils.json"
+  },
+  "Observation/bun": {
+    "history": false,
+    "index": 228,
+    "source": "input/examples/bun.json"
+  },
+  "Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901": {
+    "history": false,
+    "index": 229,
+    "source": "input/examples/allergyintolerance-provenance-example.json"
+  },
+  "Device/udi-3": {
+    "history": false,
+    "index": 230,
+    "source": "input/examples/Device-knee.json"
+  },
+  "DiagnosticReport/metabolic-panel": {
+    "history": false,
+    "index": 231,
+    "source": "input/examples/metabolic-panel.json"
+  },
+  "Observation/socialhistory-assessment-example": {
+    "history": false,
+    "index": 232,
+    "source": "input/examples/social-history-example.json"
+  },
+  "Observation/head-circumference": {
+    "history": false,
+    "index": 233,
+    "source": "input/examples/head-circumference.json"
+  },
+  "Observation/urine-bacteria": {
+    "history": false,
+    "index": 234,
+    "source": "input/examples/urine-bacteria.json"
+  },
+  "MedicationRequest/uscore-mo1": {
+    "history": false,
+    "index": 235,
+    "source": "input/examples/uscore-mo1.json"
+  },
+  "Observation/urobilinogen": {
+    "history": false,
+    "index": 236,
+    "source": "input/examples/urobilinogen.json"
+  },
+  "Patient/example": {
+    "history": false,
+    "index": 237,
+    "source": "input/examples/patient-example.json"
+  },
+  "Observation/urine-rbcs": {
+    "history": false,
+    "index": 238,
+    "source": "input/examples/urine-rbcs.json"
+  },
+  "Medication/uscore-med1": {
+    "history": false,
+    "index": 239,
+    "source": "input/examples/uscore-med1.json"
+  },
+  "DocumentReference/episode-summary": {
+    "history": false,
+    "index": 240,
+    "source": "input/examples/episode-summary.json"
+  },
+  "Procedure/rehab": {
+    "history": false,
+    "index": 241,
+    "source": "input/examples/rehab.json"
+  },
+  "Organization/saint-luke-w-endpoint": {
+    "history": false,
+    "index": 242,
+    "source": "input/examples/saint-luke-w-endpoint.json"
+  },
+  "Device/udi-2": {
+    "history": false,
+    "index": 243,
+    "source": "input/examples/Device-defib.json"
+  },
+  "Patient/infant-example": {
+    "history": false,
+    "index": 244,
+    "source": "input/examples/patient-infant-example.json"
+  },
+  "Observation/length": {
+    "history": false,
+    "index": 245,
+    "source": "input/examples/length.json"
+  },
+  "Observation/urine-cells": {
+    "history": false,
+    "index": 246,
+    "source": "input/examples/urine-cells.json"
+  },
+  "Observation/sexual-orientation-example": {
+    "history": false,
+    "index": 247,
+    "source": "input/examples/sexual-orientation-example.json"
+  },
+  "Observation/bmi": {
+    "history": false,
+    "index": 248,
+    "source": "input/examples/bmi.json"
+  },
+  "Observation/temperature": {
+    "history": false,
+    "index": 249,
+    "source": "input/examples/temperature.json"
+  },
+  "Encounter/example-1": {
+    "history": false,
+    "index": 250,
+    "source": "input/examples/encounter-example-1.json"
+  },
+  "Patient/child-example": {
+    "history": false,
+    "index": 251,
+    "source": "input/examples/patient-child-example.json"
+  },
+  "Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2": {
+    "history": false,
+    "index": 252,
+    "source": "input/examples/PractitionerRole_Practitioner_Endpoint_Bundle_Example.json"
+  },
+  "Observation/bp-data-absent": {
+    "history": false,
+    "index": 253,
+    "source": "input/examples/bp-data-absent.json"
+  },
+  "Organization/example-organization-2": {
+    "history": false,
+    "index": 254,
+    "source": "input/examples/example-organization-2.json"
+  },
+  "Condition/condition-SDOH-example": {
+    "history": false,
+    "index": 255,
+    "source": "input/examples/condition-SDOH-example.json"
+  },
+  "Observation/pulse-intensity-palpation": {
+    "history": false,
+    "index": 256,
+    "source": "input/examples/pulse-intensity-palpation.json"
+  },
+  "Observation/urine-color": {
+    "history": false,
+    "index": 257,
+    "source": "input/examples/urine-color.json"
+  },
+  "Observation/serum-calcium": {
+    "history": false,
+    "index": 258,
+    "source": "input/examples/serum-calcium.json"
+  },
+  "Observation/serum-chloride": {
+    "history": false,
+    "index": 259,
+    "source": "input/examples/serum-chloride.json"
+  },
+  "Observation/usg": {
+    "history": false,
+    "index": 260,
+    "source": "input/examples/usg.json"
+  },
+  "Observation/urine-protein": {
+    "history": false,
+    "index": 261,
+    "source": "input/examples/urine-protein.json"
+  },
+  "Observation/serum-co2": {
+    "history": false,
+    "index": 262,
+    "source": "input/examples/serum-co2.json"
+  },
+  "Goal/goal-sdoh-2": {
+    "history": false,
+    "index": 263,
+    "source": "input/examples/goal-sdoh-2.json"
+  },
+  "Observation/some-day-smoker": {
+    "history": false,
+    "index": 264,
+    "source": "input/examples/some-day-smoker.json"
+  },
+  "Condition/example": {
+    "history": false,
+    "index": 265,
+    "source": "input/examples/condition-example.json"
+  },
+  "CarePlan/colonoscopy": {
+    "history": false,
+    "index": 266,
+    "source": "input/examples/colonoscopy.json"
+  },
+  "MedicationRequest/self-tylenol": {
+    "history": false,
+    "index": 267,
+    "source": "input/examples/self-tylenol.json"
+  },
+  "Observation/serum-potassium": {
+    "history": false,
+    "index": 268,
+    "source": "input/examples/serum-potassium.json"
+  },
+  "Observation/jugular-vein-distension": {
+    "history": false,
+    "index": 269,
+    "source": "input/examples/jugular-vein-distension.json"
+  },
+  "DiagnosticReport/cbc": {
+    "history": false,
+    "index": 270,
+    "source": "input/examples/cbc.json"
+  },
+  "Observation/serum-sodium": {
+    "history": false,
+    "index": 271,
+    "source": "input/examples/serum-sodium.json"
+  },
+  "DiagnosticReport/chest-xray-report": {
+    "history": false,
+    "index": 272,
+    "source": "input/examples/DiagnosticReport-chest-xray-report.json"
+  },
+  "Observation/dxa-femur-l-armass-bmd": {
+    "history": false,
+    "index": 273,
+    "source": "input/examples/dxa-femur-l-armass-bmd.json"
+  },
+  "Observation/hunger-question-example": {
+    "history": false,
+    "index": 274,
+    "source": "input/examples/hunger-question-example.json"
+  },
+  "Observation/urine-ph": {
+    "history": false,
+    "index": 275,
+    "source": "input/examples/urine-ph.json"
+  },
+  "Observation/dxa-hip-l-armass-bmd": {
+    "history": false,
+    "index": 276,
+    "source": "input/examples/dxa-hip-l-armass-bmd.json"
+  },
+  "Observation/pediatric-wt-example": {
+    "history": false,
+    "index": 277,
+    "source": "input/examples/pediatric-wt-example.json"
+  },
+  "Immunization/imm-1": {
+    "history": false,
+    "index": 278,
+    "source": "input/examples/imm-1.json"
+  },
+  "ServiceRequest/foodpantry-referral": {
+    "history": false,
+    "index": 279,
+    "source": "input/examples/foodpantry-referral.json"
+  },
+  "Observation/heart-rate-rhythm": {
+    "history": false,
+    "index": 280,
+    "source": "input/examples/heart-rate-rhythm.json"
+  },
+  "Observation/urine-sediment": {
+    "history": false,
+    "index": 281,
+    "source": "input/examples/urine-sediment.json"
+  },
+  "Observation/prapare-multiselect-example": {
+    "history": false,
+    "index": 282,
+    "source": "input/examples/prapare-multiselect-example.json"
+  },
+  "Condition/hc1": {
+    "history": false,
+    "index": 283,
+    "source": "input/examples/hc1.json"
+  },
+  "Observation/urine-bilirubin": {
+    "history": false,
+    "index": 284,
+    "source": "input/examples/urine-bilirubin.json"
+  },
+  "Practitioner/practitioner-2": {
+    "history": false,
+    "index": 285,
+    "source": "input/examples/practitioner-2.json"
+  },
+  "Observation/urine-leukocyte-esterase": {
+    "history": false,
+    "index": 286,
+    "source": "input/examples/urine-leukocyte-esterase.json"
+  },
+  "Observation/urine-glucose": {
+    "history": false,
+    "index": 287,
+    "source": "input/examples/urine-glucose.json"
+  },
+  "Location/hl7east": {
+    "history": false,
+    "index": 288,
+    "source": "input/examples/hl7east.json"
+  }
+}

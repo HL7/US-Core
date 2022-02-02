@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="self-tylenol"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Self Tylenol Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a self tylenol example for the *MedicationRequest Profile*."/>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "self-tylenol" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a></p></div><p><b>identifier</b>: id: 12345689 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>intent</b>: plan</p><p><b>reported</b>: true</p><p><b>medication</b>: Tylenol PM Pill <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#1187314)</span></p><p><b>subject</b>: <a href="Patient-example.html">Patient/example: Amy V. Shaw</a> " SHAW"</p><p><b>encounter</b>: <a href="Encounter-example-1.html">Encounter/example-1: Office Visit</a></p><p><b>authoredOn</b>: 2019-06-24</p><p><b>requester</b>: <a href="Patient-example.html">Patient/example: **self-prescribed**</a> " SHAW"</p></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <system value="http://acme.org/prescriptions"/>
+    <value value="12345689"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="plan"/>
+  <reportedBoolean value="true"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <code value="1187314"/>
+      <display value="Tylenol PM Pill"/>
+    </coding>
+    <text value="Tylenol PM Pill"/>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Amy V. Shaw"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/example-1"/>
+    <display value="Office Visit"/>
+  </encounter>
+  <authoredOn value="2019-06-24"/>
+  <requester>
+    <reference value="Patient/example"/>
+    <display value="**self-prescribed**"/>
+  </requester>
+  <dosageInstruction>
+    <text value="Takes 1-2 tablets once daily at bedtime as needed for restless legs"/>
+  </dosageInstruction>
+</MedicationRequest>

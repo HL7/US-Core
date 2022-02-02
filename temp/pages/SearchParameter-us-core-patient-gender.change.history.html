@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='SearchParameter' id='us-core-patient-gender' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: USCorePatientGender - Change History</h2>
+  <p>History of changes for us-core-patient-gender {{type | downcase}}.</p>
+
+  {%include SearchParameter-us-core-patient-gender-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

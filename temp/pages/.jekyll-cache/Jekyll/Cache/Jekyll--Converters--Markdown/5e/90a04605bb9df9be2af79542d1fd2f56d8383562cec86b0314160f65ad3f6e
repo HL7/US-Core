@@ -1,0 +1,58 @@
+I"�
+<p>﻿Laboratory results are grouped and summarized using the <a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a> resource which typically reference <a href="http://hl7.org/fhir/R4/observation.html">Observation</a> resource(s).  Each Observation resource represents an individual laboratory test and result value or component result values, or a “nested” panel (such as a microbial susceptibility panel) which references other observations.  They can also be presented in report form or as free text.  This profile sets minimum expectations for the DiagnosticReport resource to record, search, and fetch laboratory results associated with a patient. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core DiagnosticReport Profile for Laboratory Results Reporting:</p>
+
+<ul>
+  <li>Query for lab reports belonging to a Patient</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a>  a lab report for a specific Patient</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each DiagnosticReport must have:</strong></p>
+
+<ol>
+  <li>a status</li>
+  <li>a category code of ‘LAB’</li>
+  <li>a code (preferably a LOINC code) which tells you what is being measured</li>
+  <li>a patient</li>
+  <li class="new-content">a time indicating when the measurement was taken*</li>
+  <li class="new-content">a time indicating when the measurement was reported*</li>
+</ol>
+
+<p>*These elements have the following constraints: SHALL be present if status is
+‘partial’, ‘preliminary’, ‘final’, ‘amended’, ‘corrected’ or ‘appended’.{:.new-content}</p>
+
+<p><strong>Each DiagnosticReport must support:</strong></p>
+
+<ol>
+  <li>who issues the report</li>
+  <li>a result</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>Additional codes that translate or map to the DiagnosticReport codes or category codes are allowed.  For example:
+    <ul>
+      <li>providing both a local system codes and a LOINC code that it map to</li>
+      <li>providing a more specific category codes to the “LAB” category code, such as “CH” (chemistry), in an additional coding element.</li>
+    </ul>
+  </li>
+  <li>Results that are free text or report form are represented using the ‘presentedForm’ element in DiagnosticReport.</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="DiagnosticReport-urinalysis.html">Diagnosticreport-urinalysis</a></li>
+  <li><a href="DiagnosticReport-metabolic-panel.html">Diagnosticreport-metabolic-panel</a></li>
+  <li><a href="DiagnosticReport-cbc.html">Diagnosticreport-cbc</a></li>
+</ul>
+
+:ET

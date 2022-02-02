@@ -1,0 +1,49 @@
+I"W
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/provenance.html">Provenance</a> resource to record, search, and fetch Provenance information associated with a record. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile. This FHIR Provenance profile here covers the minimal (basic) information to support lineage of information. Prior to reviewing this profile, implementers are encouraged to read the <a href="basic-provenance.html">Basic Provenance</a> guidance page which documents several key use cases, specifically, what organization was responsible for the most recent action on the resource.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core Provenance profile:</p>
+
+<ul>
+  <li>Query for the Provenance records associated with an Allergy</li>
+  <li>Query for the Provenance records associated with a Problem</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements are mandatory (i.e. data MUST be present) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Provenance must have:</strong></p>
+
+<ol>
+  <li>a reference to the resource(s) the Provenance record is supporting (target)</li>
+  <li>a date and time for the activity</li>
+</ol>
+
+<p><strong>Each Provenance must support:</strong></p>
+
+<ol>
+  <li>the author organization responsible for the information</li>
+  <li>the transmitter that provided the information</li>
+  <li>the transmitter organization responsible for the transmission (if the transmitter is a device the transmitter organization must also be valued).</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<li> The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core </li>
+<p>resources:</p>
+<ul id="prov-white-list"><li>US Core Laboratory Result Observation Profile</li><li>US Core CareTeam Profile</li><li>US Core Respiratory Rate Profile</li><li>US Core Heart Rate Profile</li><li>US Core Body Temperature Profile</li><li>US Core Pediatric Weight for Height Observation Profile</li><li>US Core Patient Profile</li><li>US Core Pulse Oximetry Profile</li><li>US Core Immunization Profile</li><li>US Core Smoking Status Observation Profile</li><li>US Core Related Person</li><li>US Core Sexual Orientation Observation Profile</li><li>US Core DocumentReference Profile</li><li>US Core Head Circumference Profile</li><li>US Core MedicationRequest Profile</li><li>US Core Condition Profile</li><li>US Core Encounter Profile</li><li>US Core Social History Assessment Observation Profile</li><li>US Core Body Height Profile</li><li>US Core BMI Profile</li><li>US Core Procedure Profile</li><li>US Core Blood Pressure Profile</li><li>US Core DiagnosticReport Profile for Report and Note exchange</li><li>US Core CarePlan Profile</li><li>US Core Service Request</li><li>US Core Goal Profile</li><li>US Core DiagnosticReport Profile for Laboratory Results Reporting</li><li>US Core Implantable Device Profile</li><li>US Core Imaging Result Observation Profile</li><li>US Core Clinical Test Result Observation Profile</li><li>US Core AllergyIntolerance Profile</li><li>US Core Screening Response Observation Profile</li><li>US Core Pediatric BMI for Age Observation Profile</li><li>US Core Pediatric Head Occipital-frontal Circumference Percentile Profile</li><li>US Core Body Weight Profile</li><li>US Core Vital Signs Profile</li></ul>
+
+<ul>
+  <li>If a system receives a provider in <code class="highlighter-rouge">Provenance.agent.who</code> as free text they must capture who sent them the information as the organization. On request they  <strong>SHALL</strong> provide this organization as the source and <strong>MAY</strong> include the free text provider.</li>
+  <li>Systems that need to know the activity has occurred <strong>SHOULD</strong> populate the activity.</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901.html">Allergyintolerance Provenance Example</a>:  A <code class="highlighter-rouge">searchset</code> Bundle including both AllergyIntolerance and Provenance</li>
+</ul>
+
+:ET

@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='ValueSet' id='us-core-provenance-participant-type' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: USCoreProvenancePaticipantTypeCodes - Change History</h2>
+  <p>History of changes for us-core-provenance-participant-type {{type | downcase}}.</p>
+
+  {%include ValueSet-us-core-provenance-participant-type-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

@@ -1,0 +1,197 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/DiagnosticReport/urinalysis> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "urinalysis"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Urinalysis Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a urinalysis example for the *US Core DiagnosticReport Lab Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 24356-8}\">Complete Urinalysis</span> (<span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0074 LAB}\">Laboratory</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Amy V. Baxter </b> ?? 1987-02-20 ( Medical Record Number: 1032702 (USUAL))</td></tr><tr><td>When For</td><td>2005-07-05</td></tr><tr><td>Reported</td><td>2005-07-05T17:45:33-07:00</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Reference Range</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-urine-color.html\"><span title=\"Codes: {http://loinc.org 5778-6}\">COLOR</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 371244009}\">Yellow</span></td><td>Yellow</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-clarity.html\"><span title=\"Codes: {http://loinc.org 32167-9}\">APPEARANCE</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 81858005}\">Hazy</span></td><td>Clear</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-glucose.html\"><span title=\"Codes: {http://loinc.org 25428-4}\">GLUCOSE</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 260385009}\">Negative</span></td><td>Negative</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-bilirubin.html\"><span title=\"Codes: {http://loinc.org 5770-3}\">BILIRUBIN</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 260385009}\">Negative</span></td><td>Negative</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-ketone.html\"><span title=\"Codes: {http://loinc.org 2514-8}\">KETONE</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 260385009}\">Negative</span></td><td>Negative</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-usg.html\"><span title=\"Codes: {http://loinc.org 5811-5}\">SPEC GRAV</span></a></td><td>1.017 {urine specific gravity}</td><td>1.003 {urine specific gravity} - 1.035 {urine specific gravity}</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-ph.html\"><span title=\"Codes: {http://loinc.org 5803-2}\">PH</span></a></td><td>6.0 (pH)</td><td>5.0 (pH) - 8.0 (pH)</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-protein.html\"><span title=\"Codes: {http://loinc.org 20454-5}\">PROTEIN</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 260385009}\">Negative</span></td><td>Negative</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urobilinogen.html\"><span title=\"Codes: {http://loinc.org 20405-7}\">UROBILINOGEN</span></a></td><td>0.3 mg/dL</td><td>0.1 mg/dL - 1.0 mg/dL</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-nitrite.html\"><span title=\"Codes: {http://loinc.org 5802-4}\">NITRITE</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 10828004}\">Positive</span></td><td>Negative</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-hemoglobin.html\"><span title=\"Codes: {http://loinc.org 5794-3}\">BLOOD</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 260405006}\">Trace</span></td><td>Negative</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-leukocyte-esterase.html\"><span title=\"Codes: {http://loinc.org 5799-2}\">LEUK ESTERASE</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 260348001}\">2+</span></td><td>Negative</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-sediment.html\"><span title=\"Codes: {http://loinc.org 11279-7}\">COMMENT</span></a></td><td>Recommend Urine Culture</td><td></td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-bacteria.html\"><span title=\"Codes: {http://loinc.org 25145-4}\">BACTERIA</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 260350009}\">4+</span></td><td>0-1+</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-epi-cells.html\"><span title=\"Codes: {http://loinc.org 5787-7}\">EPITHELIAL CELLS</span></a></td><td>1-5 cells/HPF</td><td>None Seen/HPF</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-wbcs.html\"><span title=\"Codes: {http://loinc.org 5821-4}\">WBC</span></a></td><td>20-30 cells/HPF</td><td>None Seen/HPF</td><td>2005-07-05</td></tr><tr><td><a href=\"Observation-urine-rbcs.html\"><span title=\"Codes: {http://loinc.org 13945-1}\">RBC</span></a></td><td><span title=\"Codes: {http://snomed.info/sct 84638005}\">Occasional</span></td><td>None Seen/HPF</td><td>2005-07-05</td></tr></table></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "LAB" ];
+       fhir:Coding.display [ fhir:value "Laboratory" ]
+     ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:24356-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "24356-8" ];
+       fhir:Coding.display [ fhir:value "Urinalysis complete panel - Urine" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Complete Urinalysis" ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy Shaw" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2005-07-05"^^xsd:date];
+  fhir:DiagnosticReport.issued [ fhir:value "2005-07-06T11:45:33+11:00"^^xsd:dateTime];
+  fhir:DiagnosticReport.performer [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/core/Organization/acme-lab>;
+     fhir:Reference.reference [ fhir:value "Organization/acme-lab" ];
+     fhir:Reference.display [ fhir:value "Acme Laboratory, Inc" ]
+  ];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-color>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-color" ];
+     fhir:Reference.display [ fhir:value "COLOR=Yellow" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-clarity>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-clarity" ];
+     fhir:Reference.display [ fhir:value "APPEARANCE=Hazy" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-glucose>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-glucose" ];
+     fhir:Reference.display [ fhir:value "GLUCOSE=Negative" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-bilirubin>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-bilirubin" ];
+     fhir:Reference.display [ fhir:value "BILIRUBIN=Negative" ]
+  ], [
+     fhir:index 4;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-ketone>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-ketone" ];
+     fhir:Reference.display [ fhir:value "KETONE=Negative" ]
+  ], [
+     fhir:index 5;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/usg>;
+     fhir:Reference.reference [ fhir:value "Observation/usg" ];
+     fhir:Reference.display [ fhir:value "SPEC GRAV=1.017" ]
+  ], [
+     fhir:index 6;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-ph>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-ph" ];
+     fhir:Reference.display [ fhir:value "PH=6 (pH)" ]
+  ], [
+     fhir:index 7;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-protein>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-protein" ];
+     fhir:Reference.display [ fhir:value "PROTEIN=Negative" ]
+  ], [
+     fhir:index 8;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urobilinogen>;
+     fhir:Reference.reference [ fhir:value "Observation/urobilinogen" ];
+     fhir:Reference.display [ fhir:value "UROBILINOGEN=0.3 mg/dL" ]
+  ], [
+     fhir:index 9;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-nitrite>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-nitrite" ];
+     fhir:Reference.display [ fhir:value "NITRITE=Positive" ]
+  ], [
+     fhir:index 10;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-hemoglobin>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-hemoglobin" ];
+     fhir:Reference.display [ fhir:value "BLOOD=Trace" ]
+  ], [
+     fhir:index 11;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-leukocyte-esterase>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-leukocyte-esterase" ];
+     fhir:Reference.display [ fhir:value "LEUK ESTERASE=2+e" ]
+  ], [
+     fhir:index 12;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-sediment>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-sediment" ];
+     fhir:Reference.display [ fhir:value "COMMENT=Recommend Urine Culture" ]
+  ], [
+     fhir:index 13;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-bacteria>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-bacteria" ];
+     fhir:Reference.display [ fhir:value "BACTERIA=4+" ]
+  ], [
+     fhir:index 14;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-epi-cells>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-epi-cells" ];
+     fhir:Reference.display [ fhir:value "EPITHELIAL CELLS=1-5 cells/HPF" ]
+  ], [
+     fhir:index 15;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-wbcs>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-wbcs" ];
+     fhir:Reference.display [ fhir:value "WBC=20-30 cells/HPF" ]
+  ], [
+     fhir:index 16;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/urine-rbcs>;
+     fhir:Reference.reference [ fhir:value "Observation/urine-rbcs" ];
+     fhir:Reference.display [ fhir:value "RBC=Occasional cells/HPF" ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Organization/acme-lab> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-color> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-clarity> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-glucose> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-bilirubin> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-ketone> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/usg> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-ph> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-protein> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urobilinogen> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-nitrite> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-hemoglobin> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-leukocyte-esterase> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-sediment> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-bacteria> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-epi-cells> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-wbcs> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/urine-rbcs> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/DiagnosticReport/urinalysis.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/DiagnosticReport/urinalysis.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="birthsex"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1/expansion">http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1</a></li><li>Import all the codes that are contained in http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103</li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/core/ValueSet/birthsex"/>
+  <version value="4.2.0"/>
+  <name value="BirthSex"/>
+  <title value="Birth Sex"/>
+  <status value="active"/>
+  <date value="2021-12-08"/>
+  <publisher value="HL7 International - Cross-Group Projects"/>
+  <contact>
+    <name value="HL7 International - Cross-Group Projects"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cgp"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgp@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="Codes for assigning sex at birth as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 International, all rights reserved Creative Commons License"/>
+  <compose>
+    <include>
+      <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1"/>
+    </include>
+    <include>
+      <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103"/>
+    </include>
+  </compose>
+</ValueSet>

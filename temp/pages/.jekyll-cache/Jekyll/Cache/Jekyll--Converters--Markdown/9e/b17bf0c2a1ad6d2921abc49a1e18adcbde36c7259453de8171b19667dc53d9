@@ -1,0 +1,44 @@
+I"­
+<h6 id="scope-and-usage">Scope and Usage</h6>
+
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a> resource to record, search, and fetch the practitioner role for a practitioner.  It identifies the mandatory core elements, extensions, vocabularies and value sets which <strong>SHALL</strong> be present in the PractitionerRole resource when using this profile.  The requirements for the US Core Practitioner were drawn from the <a href="http://www.fhir.org/guides/argonaut/pd//release1/index.html">Argonaut Provider Directory</a>, <a href="http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf">IHE Healthcare Provider Directory</a> and the <a href="https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents">ONC Provider Directory Workshop</a>.</p>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each PractitionerRole must support:</strong></p>
+
+<ol>
+  <li>An associated organization</li>
+  <li>An associated practitioner</li>
+  <li>A role</li>
+  <li>A specialty</li>
+  <li>An associated location</li>
+  <li>Contact information</li>
+  <li>A communication endpoint</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>At least one of the following elements must be present:
+    <ul>
+      <li><code class="highlighter-rouge">PractitionerRole.practitioner</code></li>
+      <li><code class="highlighter-rouge">PractitionerRole.organization</code></li>
+      <li><code class="highlighter-rouge">PractitionerRole.healthcareService</code></li>
+      <li><code class="highlighter-rouge">PractitionerRole.location</code></li>
+    </ul>
+  </li>
+  <li>The PractitionerRole.endpoint is where a <a href="https://www.healthit.gov/sites/default/files/directbasicsforprovidersqa_05092014.pdf">Direct address</a> may be represented.</li>
+  <li>Clients can request servers return the Practitioner resource and Endpoint resources by using <code class="highlighter-rouge">_include</code>. See <a href="#search">Quick Start</a>.</li>
+  <li>As a result of implementation feedback, the US Core Location  and PractitionerRole Profiles are not explicitly referenced in any US Core Profile. However they <strong>SHOULD</strong> be used as the default profile if referenced by another US Core profile. See this guidance on <a href="general-guidance.html#referencing-us-core-profiles">Referencing US Core Profiles</a>.</li>
+</ul>
+
+<h4 id="examples">Examples</h4>
+
+<ul>
+  <li><a href="Bundle-66c8856b-ba11-4876-8aa8-467aad8c11a2.xml.html">Bundle-PractitionerRole-with-Practitioner-Endpoint</a></li>
+</ul>
+
+:ET

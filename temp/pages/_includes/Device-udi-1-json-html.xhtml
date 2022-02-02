@@ -1,0 +1,48 @@
+{% raw %}<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/device.html#Device">resourceType</a>" : "Device",
+  "<a href="http://hl7.org/fhir/R4/device.html#Device.id">id</a>" : "udi-1",
+  "<a href="http://hl7.org/fhir/R4/device.html#Device.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "UDI 1 Example"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is a UDI 1 example for the *US Core Implantable Device Profile*."
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/device.html#Device.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;udi-1\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-implantable-device.html\&quot;&gt;US Core Implantable Device Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;h3&gt;UdiCarriers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;DeviceIdentifier&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;CarrierHRF&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;09504000059118&lt;/td&gt;&lt;td&gt;(01)09504000059118(17)141120(10)7654321D(21)10987654d321&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;expirationDate&lt;/b&gt;: 2014-11-20&lt;/p&gt;&lt;p&gt;&lt;b&gt;lotNumber&lt;/b&gt;: 7654321D&lt;/p&gt;&lt;p&gt;&lt;b&gt;serialNumber&lt;/b&gt;: 10987654d321&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Coated femoral stem prosthesis, modular &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#468063009)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Patient/example: Amy Shaw&lt;/a&gt; \&quot; SHAW\&quot;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/device.html#Device.udiCarrier">udiCarrier</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/device.html#Device.udiCarrier.deviceIdentifier">deviceIdentifier</a>" : "09504000059118",
+      "<a href="http://hl7.org/fhir/R4/device.html#Device.udiCarrier.carrierHRF">carrierHRF</a>" : "(01)09504000059118(17)141120(10)7654321D(21)10987654d321"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/device.html#Device.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/device.html#Device.expirationDate">expirationDate</a>" : "2014-11-20",
+  "<a href="http://hl7.org/fhir/R4/device.html#Device.lotNumber">lotNumber</a>" : "7654321D",
+  "<a href="http://hl7.org/fhir/R4/device.html#Device.serialNumber">serialNumber</a>" : "10987654d321",
+  "<a href="http://hl7.org/fhir/R4/device.html#Device.type">type</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "468063009",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Coated femoral stem prosthesis, modular"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/device.html#Device.patient">patient</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Amy Shaw"
+  }
+}</code></pre>
+{% endraw %}

@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Location/hospital> a fhir:Location;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "hospital"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Hospital Location" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is an example hospital location for the *US Core Location Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-location>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"hospital\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-location.html\">US Core Location Profile</a></p></div><p><b>status</b>: active</p><p><b>name</b>: Holy Family Hospital</p><p><b>telecom</b>: ph: 9786870156</p><p><b>address</b>: 70 EAST STREET METHUEN MA 01844 US </p><p><b>managingOrganization</b>: <a href=\"http://example.org/fhir/Organization/holy-healthcare\">http://example.org/fhir/Organization/holy-healthcare: Holy Healthcare</a></p></div>"
+  ];
+  fhir:Location.status [ fhir:value "active"];
+  fhir:Location.name [ fhir:value "Holy Family Hospital"];
+  fhir:Location.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "9786870156" ]
+  ];
+  fhir:Location.address [
+     fhir:Address.line [
+       fhir:value "70 EAST STREET";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "METHUEN" ];
+     fhir:Address.state [ fhir:value "MA" ];
+     fhir:Address.postalCode [ fhir:value "01844" ];
+     fhir:Address.country [ fhir:value "US" ]
+  ];
+  fhir:Location.managingOrganization [
+     fhir:link <http://example.org/fhir/Organization/holy-healthcare>;
+     fhir:Reference.reference [ fhir:value "http://example.org/fhir/Organization/holy-healthcare" ];
+     fhir:Reference.display [ fhir:value "Holy Healthcare" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Location/hospital.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Location/hospital.ttl> .
+
+# -------------------------------------------------------------------------------------
+

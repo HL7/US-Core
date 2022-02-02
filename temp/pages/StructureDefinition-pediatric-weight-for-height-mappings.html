@@ -1,0 +1,26 @@
+---
+---
+<!-- get modelType -->
+{% include fragment-modelType.html id='pediatric-weight-for-height' %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section 5" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='pediatric-weight-for-height' active='mapping' %}
+
+<a name="root"> </a>
+<h2 id="root">{{modelType}}: USCorePediatricWeightForHeightObservationProfile - Mappings</h2>
+
+<p>Mappings for the pediatric-weight-for-height {{modelType | downcase }}.</p>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='StructureDefinition' id='pediatric-weight-for-height' %}
+
+  {%include StructureDefinition-pediatric-weight-for-height-maps.xhtml%}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='StructureDefinition' id='pediatric-weight-for-height' %}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="us-core-documentreference-category"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-us-core-documentreference-category.html"><code>http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category</code></a></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category"/>
+  <version value="4.2.0"/>
+  <name value="USCoreDocumentReferenceCategory"/>
+  <title value="US Core DocumentReference Category"/>
+  <status value="active"/>
+  <date value="2019-05-21"/>
+  <publisher value="HL7 International - Cross-Group Projects"/>
+  <contact>
+    <name value="HL7 International - Cross-Group Projects"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cgp"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgp@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="The US Core DocumentReferences Category Value Set is a &#39;starter set&#39; of categories supported for fetching and storing clinical notes."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 International, all rights reserved Creative Commons License"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category"/>
+    </include>
+  </compose>
+</ValueSet>

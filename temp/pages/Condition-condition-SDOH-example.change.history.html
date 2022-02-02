@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='Condition' id='condition-SDOH-example' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: Condition/condition-SDOH-example - Change History</h2>
+  <p>History of changes for condition-SDOH-example {{type | downcase}}.</p>
+
+  {%include Condition-condition-SDOH-example-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

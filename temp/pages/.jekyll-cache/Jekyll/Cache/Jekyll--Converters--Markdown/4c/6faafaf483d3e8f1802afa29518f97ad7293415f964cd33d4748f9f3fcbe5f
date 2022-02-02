@@ -1,0 +1,62 @@
+I"�
+<div class="new-content">
+
+  <p>﻿This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/observation.html">Observation</a> resource to record, search, and fetch retrieve observations that represent simple observations made by an individual about a patient’s social history status such as education, food insecurity, etc.   It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.  These observations are distinct from observations that are formally derived from an assessment tool or survey and should use the <a href="StructureDefinition-us-core-observation-screening-response.html">US Core Screening Response Observation Profile</a> instead.</p>
+
+  <p><strong>Example Usage Scenarios:</strong></p>
+
+  <p>The following are example usage scenarios for the US Core-Results profile:</p>
+
+  <ul>
+    <li>Query for social history results for a patient.</li>
+    <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a> social history results results belonging to a Patient</li>
+  </ul>
+
+  <h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+  <p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+  <p><strong>Each Observation must have:</strong></p>
+
+  <ol>
+    <li>a status</li>
+    <li>a category code of ‘social-history’</li>
+    <li>a code</li>
+    <li>a patient</li>
+  </ol>
+
+  <p><strong>Each Observation must support:</strong></p>
+
+  <ol>
+    <li>a time indicating when observation was made</li>
+    <li>who answered the questions</li>
+    <li>a value</li>
+  </ol>
+
+  <p><strong>Profile specific implementation guidance:</strong></p>
+  <ul>
+    <li>See <a href="sdoh.html">SDOH Guidance</a> for how this profile can used to represent SDOH assessments.</li>
+    <li>Simple assertion may be derived from a screening tool assessments such as <a href="StructureDefinition-us-core-observation-screening-response.html">US Core Screening Response Observation Profile</a>  and can reference them using <code class="highlighter-rouge">Observation.derivedFrom</code>.</li>
+  </ul>
+
+  <p class="note-to-balloters">Should this profiles include the derivedFrom element as a MustSupport element to reference any form/survey or assessment tool?</p>
+
+  <ul>
+    <li>The codes can be from LOINC or SNOMED CT.</li>
+    <li>
+      <p>Often the pattern for these types of observations that the <code class="highlighter-rouge">Observation.code</code> indicates a statement about findings and the <code class="highlighter-rouge">Observation.value</code> is present and “qualifies” the finding typically confirming or refuting it. For example:</p>
+
+      <p><strong>code</strong>: Transport too expensive (SNOMED CT: 160695008)<br />
+<strong>value</strong>: true</p>
+    </li>
+  </ul>
+
+  <h3 id="examples">Examples</h3>
+
+  <ul>
+    <li><a href="Observation-socialhistory-assessment-example.html">Social History Example</a></li>
+  </ul>
+
+</div>
+
+:ET

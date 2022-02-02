@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="acme-lab"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Acme Lab Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a acme lab example for the *US Core Organization Profile*."/>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "acme-lab" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-organization.html">US Core Organization Profile</a></p></div><p><b>identifier</b>: id: 1144221847, id: 12D4567890</p><p><b>active</b>: true</p><p><b>type</b>: Healthcare Provider <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-organization-type.html">Organization type</a>#prov)</span></p><p><b>name</b>: Acme Labs</p><p><b>telecom</b>: ph: (+1) 734-677-7777, <a href="mailto:hq@acme.org">hq@acme.org</a></p><p><b>address</b>: 3300 Washtenaw Avenue, Suite 227 Amherst MA 01002 USA </p></div>
+  </text>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi"/>
+    <value value="1144221847"/>
+  </identifier>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.4.7"/>
+    <value value="12D4567890"/>
+  </identifier>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+      <display value="Healthcare Provider"/>
+    </coding>
+  </type>
+  <name value="Acme Labs"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="(+1) 734-677-7777"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="hq@acme.org"/>
+  </telecom>
+  <address>
+    <line value="3300 Washtenaw Avenue, Suite 227"/>
+    <city value="Amherst"/>
+    <state value="MA"/>
+    <postalCode value="01002"/>
+    <country value="USA"/>
+  </address>
+</Organization>

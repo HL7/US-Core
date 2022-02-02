@@ -1,0 +1,92 @@
+﻿<html>
+<head>
+  <title>Organization-saint-luke-w-endpoint-xml-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="xml"><code class="language-xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization">Organization</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;saint-luke-w-endpoint&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/instance-name&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Saint Luke W Endpoint Example&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/instance-description&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;This is a saint luke w endpoint example for the *US Core Organization Profile*.&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+            &lt;h1&gt;Organization&lt;/h1&gt;
+            &lt;div&gt;
+                &lt;p&gt;ID: 393872&lt;/p&gt;
+                &lt;p&gt;Name: Saint Luke's Hospital of Kansas City &lt;/p&gt;
+                &lt;p&gt;NPI: 1063494177&lt;/p&gt;
+                &lt;p&gt;Phone:(816)932-2000&lt;/p&gt;
+                &lt;p&gt;Address:4401 Wornall Rd,, MO, 64111&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint">contained</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint">Endpoint</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;75&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.connectionType">connectionType</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/endpoint-connection-type&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;direct-project&quot;/&gt;
+      &lt;/connectionType&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dr. Ronald Bone Direct Address&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.managingOrganization">managingOrganization</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/example-organization-2&quot;/&gt;
+      &lt;/managingOrganization&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.payloadType">payloadType</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.3.6.1.4.1.19376.1.2.3&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;urn:hl7-org:sdwg:ccda-structuredBody:1.1&quot;/&gt;
+        &lt;/coding&gt;
+      &lt;/payloadType&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.payloadMimeType">payloadMimeType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;text/xml&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.address">address</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;mailto:Interoperability@DirectAddress.com&quot;/&gt;
+    &lt;/Endpoint&gt;
+  &lt;/contained&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/sid/us-npi&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1063494177&quot;/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://example.org/fhir/us/argo/sid/us-ein&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;00-0000000&quot;/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.active">active</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Saint Luke&amp;#39;s Hospital of Kansas City&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.telecom">telecom</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;(816)932-2000&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;work&quot;/&gt;
+  &lt;/telecom&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.telecom">telecom</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;other&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>
+           <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://www.saintlukeshealthsystem.org/locations/saint-lukes-hospital-kansas-city&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;work&quot;/&gt;
+  &lt;/telecom&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.address">address</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;3300 Washtenaw Avenue, Suite 227 Amherst MA 01002&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;4401 Wornall Rd,&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Amherst&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MA&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;64111&quot;/&gt;
+  &lt;/address&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/organization.html#Organization.endpoint">endpoint</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;#75&quot;/&gt;
+  &lt;/endpoint&gt;
+&lt;/Organization&gt;</code></pre>
+</body>
+</html>

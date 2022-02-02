@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/ValueSet/simple-language> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "simple-language"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include codes from <a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-v3-ietf3066.html\"><code>urn:ietf:bcp:47</code></a> where ext-lang doesn't exist, script doesn't exist, variant doesn't exist, extension doesn't exist and private-use doesn't exist</li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/core/ValueSet/simple-language"];
+  fhir:ValueSet.version [ fhir:value "4.2.0"];
+  fhir:ValueSet.name [ fhir:value "LanguageCodesWithLanguageAndOptionallyARegionModifier"];
+  fhir:ValueSet.title [ fhir:value "Language codes with language and optionally a region modifier"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2019-05-21"^^xsd:date];
+  fhir:ValueSet.publisher [ fhir:value "HL7 International - Cross-Group Projects"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International - Cross-Group Projects" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/cgp" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "cgp@lists.HL7.org" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47). This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,   and a 3 character code if a 2 character code does not exist. It points back to [RFC 5646](https://tools.ietf.org/html/rfc5646), however only the language codes are required, all other elements are optional."];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:ValueSet.copyright [ fhir:value "ISO Maintains the copyright on the country codes and controls it's use carefully. For further details, see the [ISO 3166 Home Page](http://www.iso.org/iso/country_codes.htm)"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "urn:ietf:bcp:47" ];
+       fhir:ValueSet.compose.include.filter [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.filter.property [ fhir:value "ext-lang" ];
+         fhir:ValueSet.compose.include.filter.op [ fhir:value "exists" ];
+         fhir:ValueSet.compose.include.filter.value [ fhir:value "false" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.filter.property [ fhir:value "script" ];
+         fhir:ValueSet.compose.include.filter.op [ fhir:value "exists" ];
+         fhir:ValueSet.compose.include.filter.value [ fhir:value "false" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.filter.property [ fhir:value "variant" ];
+         fhir:ValueSet.compose.include.filter.op [ fhir:value "exists" ];
+         fhir:ValueSet.compose.include.filter.value [ fhir:value "false" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.filter.property [ fhir:value "extension" ];
+         fhir:ValueSet.compose.include.filter.op [ fhir:value "exists" ];
+         fhir:ValueSet.compose.include.filter.value [ fhir:value "false" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.filter.property [ fhir:value "private-use" ];
+         fhir:ValueSet.compose.include.filter.op [ fhir:value "exists" ];
+         fhir:ValueSet.compose.include.filter.value [ fhir:value "false" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/ValueSet/simple-language.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/ValueSet/simple-language.ttl> .
+
+# -------------------------------------------------------------------------------------
+

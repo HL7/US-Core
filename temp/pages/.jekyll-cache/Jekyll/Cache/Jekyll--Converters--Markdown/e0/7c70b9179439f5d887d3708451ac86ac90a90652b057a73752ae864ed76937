@@ -1,0 +1,72 @@
+I"Ì
+<p>The <a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a> resource can be used to record a patientâ€™s medication prescription or order.  This profile sets minimum expectations for the MedicationRequest resource to record, search, and fetch medications associated with a patient. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core-MedicationRequest
+profile. See the <a href="medication-list-guidance.html">Medication List Guidance</a> section for guidance on accessing a patient medications:</p>
+
+<ul>
+  <li>Fetching all medications that have been prescribed to a particular patient</li>
+  <li>Fetching all <em>active</em> medications that have been prescribed to  particular patient</li>
+  <li>Fetching all medications that have been prescribed to particular patient during a particular encounter</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a>  medications that have been prescribed for a particular
+ patient</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each MedicationRequest must have:</strong></p>
+
+<ol>
+  <li>a status</li>
+  <li>an intent code</li>
+  <li>a medication (see guidance below)</li>
+  <li>a patient</li>
+  <li>a prescriber</li>
+</ol>
+
+<p><strong>Each MedicationRequest must support:</strong></p>
+
+<ol>
+  <li>the category  (e.g. Discharge Medication)</li>
+  <li>the <code class="highlighter-rouge">reported</code> flag  or reference signaling that information is from a secondary source such as a patient</li>
+  <li>the encounters</li>
+  <li>a date for when written</li>
+  <li>the prescription <em>Sig</em></li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>See the <a href="medication-list-guidance.html">Medication List Guidance</a> section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.</li>
+  <li>The MedicationRequest resources can represent a medication using either a code, or reference a <a href="http://hl7.org/fhir/R4/medication.html">Medication</a> resource.
+    <ul>
+      <li>When referencing a Medication resource, the resource may be <a href="http://hl7.org/fhir/R4/references.html#contained">contained</a> or an external resource.</li>
+      <li>The server systems are not required to support both a code and a reference, but <strong>SHALL</strong> support <em>at least one</em> of these methods.</li>
+      <li>If an external reference to Medication is used, the server SHALL support the <a href="http://hl7.org/fhir/R4/search.html#include"><code class="highlighter-rouge">_include</code></a> parameter for searching this element.</li>
+      <li>The client application SHALL support all methods.</li>
+    </ul>
+  </li>
+  <li>The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in <code class="highlighter-rouge">MedicationRequest.reportedBoolean</code>, or a reference using <code class="highlighter-rouge">MedicationRequest.reportedReference</code> to Practitioner or other resource.
+    <ul>
+      <li>Although both are marked as must support, the server system is not required to support both a boolean and a reference, but <strong>SHALL</strong> support at least one of these elements.</li>
+      <li>The client application <strong>SHALL</strong> support both elements.</li>
+    </ul>
+  </li>
+  <li>Source EHR identifiers <strong>SHOULD</strong> be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.</li>
+  <li class="new-content">Servers <strong>SHALL</strong> follow the <a href="medication-list-guidance.html">Medication List Guidance</a> and return all <code class="highlighter-rouge">active</code> Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="MedicationRequest-uscore-mo1.html">MedicationRequest-uscore-mo1</a> Inline medication code to represent the medication.</li>
+  <li><a href="MedicationRequest-uscore-mo2.html">MedicationRequest-uscore-mo2</a> Reference to a <a href="http://hl7.org/fhir/R4/references.html#contained">contained</a> Medication resource.</li>
+  <li><a href="Bundle-uscore-mo3.html">MedicationRequest-uscore-mo3</a> A search <a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a> with a MedicationRequest and an included Medication resource in the Bundle.</li>
+  <li><a href="MedicationRequest-self-tylenol.html">Self-prescribed Tylenol</a> Representation of a reported self-prescribed OTC medication.</li>
+</ul>
+
+:ET

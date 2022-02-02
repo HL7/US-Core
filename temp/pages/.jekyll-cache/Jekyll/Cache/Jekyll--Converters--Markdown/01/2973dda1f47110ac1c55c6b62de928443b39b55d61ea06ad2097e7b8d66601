@@ -1,0 +1,20 @@
+I"}
+<h3 id="profile-specific-implementation-guidance">Profile specific implementation guidance</h3>
+
+<ul>
+  <li>This extension provides concepts to describe the gender a person identifies as. This extension is not used to describe a person’s sexual orientation (who they are attracted to).</li>
+  <li>The concepts included here are from the <a href="https://confluence.hl7.org/display/VOC/The+Gender+Harmony+Project">HL7 Gender Harmony Project</a>  which is modeling gender and sex information data elements, value sets, code systems.</li>
+</ul>
+<div class="stu-note">
+  <p>Under the guidance of the <a href="https://confluence.hl7.org/display/VOC/The+Gender+Harmony+Project">HL7 Gender Harmony Project</a> the specified value set in this extension omits these two concepts specified in ONC’s USCDI v2 Applicable Vocabulary Standards for Gender Identity:</p>
+
+  <ul>
+    <li>Female-to-Male (FTM)/Transgender Male/Trans Man (SNOMED CT 407377005)</li>
+    <li>Male-to-Female (MTF)/Transgender Female/Trans Woman (SNOMED CT 407376001)</li>
+  </ul>
+</div>
+<ul>
+  <li>A<!-- [`race`]--><!--n [`ethnicity`]--> <a href="SearchParameter-us-core-patient-gender-identity.html"><code class="highlighter-rouge">gender-identity</code></a> search parameter has been defined for this extension.  However, there are no  <!--race--><!--ethnicity-->gender-identity search requirements for the client or server.</li>
+</ul>
+
+:ET

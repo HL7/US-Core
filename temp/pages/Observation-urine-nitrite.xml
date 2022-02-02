@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="urine-nitrite"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Urine Nitrite Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a urine nitrite example for the *US Core Observation Lab Profile*."/>
+    </extension>
+    <versionId value="206492"/>
+    <lastUpdated value="2016-04-18T03:42:34.440+00:00"/>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "urine-nitrite" Version "206492" Updated "2016-04-17T20:42:34.44-07:00" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: NITRITE <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#5802-4 "Nitrite [Presence] in Urine by Test strip")</span></p><p><b>subject</b>: <a href="Patient-example.html">Patient/example: Amy Shaw</a> " SHAW"</p><p><b>effective</b>: 2005-07-05</p><p><b>value</b>: Positive <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#10828004)</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td>-</td><td><b>Text</b></td></tr><tr><td>*</td><td>Negative</td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+    <text value="Laboratory"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="5802-4"/>
+      <display value="Nitrite [Presence] in Urine by Test strip"/>
+    </coding>
+    <text value="NITRITE"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Amy Shaw"/>
+  </subject>
+  <effectiveDateTime value="2005-07-05"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="10828004"/>
+      <display value="Positive"/>
+    </coding>
+    <text value="Positive"/>
+  </valueCodeableConcept>
+  <referenceRange>
+    <text value="Negative"/>
+  </referenceRange>
+</Observation>

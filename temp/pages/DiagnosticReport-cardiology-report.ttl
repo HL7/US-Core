@@ -1,0 +1,140 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/DiagnosticReport/cardiology-report> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cardiology-report"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "DiagnosticReport Cardiology Report Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a DiagnosticReport cardiology report example for the *US Core DiagnosticReport Note Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc.org 45033-8}\">Cardiovascular physiologic and EKG assessment panel</span> (<span title=\"Codes: {http://loinc.org LP29708-2}\">Cardiology</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td><b>Amy V. Baxter </b> ?? 1987-02-20 ( Medical Record Number: 1032702 (USUAL))</td></tr><tr><td>When For</td><td>2021-11-10T21:39:30Z</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-qrs-dur-ekg-lead.html\"><span title=\"Codes: {http://loinc.org 44973-6}\">QRS dur {EKG lead}</span></a></td><td>60 ms</td><td>2021-11-10T16:48:57.246958-08:00</td></tr><tr><td><a href=\"Observation-pulse-intensity-palpation.html\"><span title=\"Codes: {http://loinc.org 44974-4}\">Pulse intensity Palpation</span></a></td><td><span title=\"Codes: {http://loinc.org LA11841-6}\">1+</span></td><td>2021-11-10T16:48:57.246958-08:00</td></tr><tr><td><a href=\"Observation-p-r-interval-ekg-lead.html\"><span title=\"Codes: {http://loinc.org 44976-9}\">P-R interval {EKG lead}</span></a></td><td>0.2 s</td><td>2021-11-10T16:48:57.246958-08:00</td></tr><tr><td><a href=\"Observation-q-t-interval-ekg-lead.html\"><span title=\"Codes: {http://loinc.org 44975-1}\">Q-T interval {EKG lead}</span></a></td><td>0.4 s</td><td>2021-11-10T16:48:57.246958-08:00</td></tr><tr><td><a href=\"Observation-jugular-vein-distension.html\"><span title=\"Codes: {http://loinc.org 69428-1}\">Jugular vein distension</span></a></td><td><span title=\"Codes: {http://loinc.org LA9634-2}\">Absent</span></td><td>2021-11-10T16:48:57.246958-08:00</td></tr><tr><td><a href=\"Observation-heart-rate-rhythm.html\"><span title=\"Codes: {http://loinc.org 8884-9}\">Heart rate rhythm</span></a></td><td>Regular (R)</td><td>2021-11-10T16:48:57.246958-08:00</td></tr><tr><td><a href=\"Observation-ekg-lead.html\"><span title=\"Codes: {http://loinc.org 44967-8}\">EKG lead</span></a></td><td>II</td><td>2021-11-10T16:48:57.246958-08:00</td></tr><tr><td><a href=\"Observation-ekg-impression.html\"><span title=\"Codes: {http://loinc.org 8601-7}\">EKG impression</span></a></td><td>Normal Sinus Rhythm (NSR)</td><td>2021-11-10T16:48:57.246958-08:00</td></tr><tr><td><a href=\"Observation-capillary-refill-time-nail-bed.html\"><span title=\"Codes: {http://loinc.org 44963-7}\">Capillary refill Time Nail Bed</span></a></td><td>1 s</td><td>2021-11-10T16:48:57.246958-08:00</td></tr></table></div>"
+  ];
+  fhir:DiagnosticReport.status [ fhir:value "final"];
+  fhir:DiagnosticReport.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LP29708-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LP29708-2" ];
+       fhir:Coding.display [ fhir:value "Cardiology" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Cardiology" ]
+  ];
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:45033-8;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "45033-8" ];
+       fhir:Coding.display [ fhir:value "Cardiovascular physiologic and EKG assessment panel" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Cardiovascular physiologic and EKG assessment panel" ]
+  ];
+  fhir:DiagnosticReport.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:DiagnosticReport.effectiveDateTime [ fhir:value "2021-11-10T21:39:30.000Z"^^xsd:dateTime];
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/qrs-dur-ekg-lead>;
+     fhir:Reference.reference [ fhir:value "Observation/qrs-dur-ekg-lead" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/pulse-intensity-palpation>;
+     fhir:Reference.reference [ fhir:value "Observation/pulse-intensity-palpation" ]
+  ], [
+     fhir:index 2;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/p-r-interval-ekg-lead>;
+     fhir:Reference.reference [ fhir:value "Observation/p-r-interval-ekg-lead" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/q-t-interval-ekg-lead>;
+     fhir:Reference.reference [ fhir:value "Observation/q-t-interval-ekg-lead" ]
+  ], [
+     fhir:index 4;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/jugular-vein-distension>;
+     fhir:Reference.reference [ fhir:value "Observation/jugular-vein-distension" ]
+  ], [
+     fhir:index 5;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/heart-rate-rhythm>;
+     fhir:Reference.reference [ fhir:value "Observation/heart-rate-rhythm" ]
+  ], [
+     fhir:index 6;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/ekg-lead>;
+     fhir:Reference.reference [ fhir:value "Observation/ekg-lead" ]
+  ], [
+     fhir:index 7;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/ekg-impression>;
+     fhir:Reference.reference [ fhir:value "Observation/ekg-impression" ]
+  ], [
+     fhir:index 8;
+     fhir:link <http://hl7.org/fhir/us/core/Observation/capillary-refill-time-nail-bed>;
+     fhir:Reference.reference [ fhir:value "Observation/capillary-refill-time-nail-bed" ]
+  ];
+  fhir:DiagnosticReport.media [
+     fhir:index 0;
+     fhir:DiagnosticReport.media.link [
+       fhir:link <http://hl7.org/fhir/us/core/Media/ekg-strip>;
+       fhir:Reference.reference [ fhir:value "Media/ekg-strip" ];
+       fhir:Reference.display [ fhir:value "EKG Strip" ]
+     ]
+  ];
+  fhir:DiagnosticReport.presentedForm [
+     fhir:index 0;
+     fhir:Attachment.contentType [ fhir:value "application/pdf" ];
+     fhir:Attachment.url [ fhir:value "http://example.org/pdfdownloads/cardiopanel-report-123.pdf" ];
+     fhir:Attachment.hash [ fhir:value "RVFILy4uQWdNRQo="^^xsd:base64Binary ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/qrs-dur-ekg-lead> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/pulse-intensity-palpation> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/p-r-interval-ekg-lead> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/q-t-interval-ekg-lead> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/jugular-vein-distension> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/heart-rate-rhythm> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/ekg-lead> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/ekg-impression> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Observation/capillary-refill-time-nail-bed> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Media/ekg-strip> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/DiagnosticReport/cardiology-report.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/DiagnosticReport/cardiology-report.ttl> .
+
+# -------------------------------------------------------------------------------------
+

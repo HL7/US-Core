@@ -1,0 +1,67 @@
+I"ÿ
+<hr />
+
+<p><strong id="search" style="font-size: 20px;">Quick Start</strong>
+<a name="quick-start"> </a></p>
+
+<hr />
+
+<p>Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profileâ€™s information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions.  See the <a href="CapabilityStatement-us-core-server.html">US Core Server CapabilityStatement</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+<ul>
+  <li>The syntax used to describe the interactions is described <a href="general-guidance.html#search-syntax">here</a>.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional rules and expectations when a server requires status parameters.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional guidance on searching for multiple patients.</li>
+</ul>
+
+<h4 id="mandatory-search-parameters">Mandatory Search Parameters:</h4>
+
+<p>The following search parameters and search parameter combinations SHALL be supported:</p>
+
+<ol>
+  <li class="new-content"><strong>SHALL</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-careteam-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-careteam-status.html"><code class="highlighter-rouge">status</code></a></strong> search parameters:
+    <ul>
+      <li>including optional support for these <code class="highlighter-rouge">_include</code> parameters: <code class="highlighter-rouge">CareTeam:participant:PractitionerRole,CareTeam:participant:Practitioner,CareTeam:participant:Patient,CareTeam:participant:RelatedPerson</code></li>
+      <li>including optional support for <em>OR</em> search on <code class="highlighter-rouge">status</code> (e.g.<code class="highlighter-rouge">status={system|}[code],{system|}[code],...</code>)</li>
+    </ul>
+
+    <p><code class="highlighter-rouge">GET [base]/CareTeam?patient={Type/}[id]&amp;status=active</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/CareTeam?patient=1137192&amp;status=active</li>
+      <li>GET [base]/CareTeam?patient=1137192&amp;status=active&amp;_include=CareTeam:participant:RelatedPerson&amp;_include=CareTeam:participant:Patient&amp;_include=CareTeam:participant:Practitioner&amp;_include=CareTeam:participant:PractitionerRole</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all CareTeam resources for the specified patient and status =<code class="highlighter-rouge">active</code> and may include CareTeam Patient, RelatedPerson and Practitioner and PractitionerRole participants.<br />
+To get Practitioner name and identifier using PractitionerRole:<br />
+1) Search for the careteam PractitionerRole: GET [base]/CareTeam?patient=[id]&amp;status=active&amp;_include=CareTeam:participant:PractitionerRole
+2) using the FHIR _id from the PractitionerRole.practitioner element resource,  fetch the Practitioner resources using  GET [base]/Practitioner?_id=[id] (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+</ol>
+
+<h4 id="optional-search-parameters">Optional Search Parameters:</h4>
+
+<p>The following search parameter combinations SHOULD be supported:</p>
+
+<ol>
+  <li class="new-content"><strong>SHOULD</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-careteam-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-careteam-role.html"><code class="highlighter-rouge">role</code></a></strong> search parameters:
+    <ul>
+      <li>including optional support for these <code class="highlighter-rouge">_include</code> parameters: <code class="highlighter-rouge">CareTeam:participant:PractitionerRole,CareTeam:participant:Practitioner,CareTeam:participant:Patient,CareTeam:participant:RelatedPerson</code></li>
+      <li>including optional support for <em>OR</em> search on <code class="highlighter-rouge">role</code> (e.g.<code class="highlighter-rouge">role={system|}[code],{system|}[code],...</code>)</li>
+    </ul>
+
+    <p><code class="highlighter-rouge">GET [base]/CareTeam?patient={Type/}[id]&amp;role={system|}[code]{,{system|}[code],...}</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/CareTeam?patient=1137192&amp;role=http://snomed.info/sct|17561000</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all CareTeam resources for the specified patient and participant role (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+</ol>
+
+:ET

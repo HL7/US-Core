@@ -1,0 +1,23 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-us-core-allergyintolerance-tx</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<h4>Terminology Bindings</h4>
+<table class="list">
+<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
+<tr><td>AllergyIntolerance.language</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="A human language."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a><br/><a style="font-weight:bold" title="Max Value Set Extension" href="http://hl7.org/fhir/R4/extension-elementdefinition-maxvalueset.html">Max Binding</a>: <a href="http://hl7.org/fhir/R4/valueset-all-languages.html">AllLanguages</a></td></tr>
+<tr><td>AllergyIntolerance.clinicalStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-allergyintolerance-clinical.html">AllergyIntoleranceClinicalStatusCodes</a></td></tr>
+<tr><td>AllergyIntolerance.verificationStatus</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html">AllergyIntoleranceVerificationStatusCodes</a></td></tr>
+<tr><td>AllergyIntolerance.type</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Identification of the underlying physiological mechanism for a Reaction Risk."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-allergy-intolerance-type.html">AllergyIntoleranceType</a></td></tr>
+<tr><td>AllergyIntolerance.category</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Category of an identified substance associated with allergies or intolerances."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-allergy-intolerance-category.html">AllergyIntoleranceCategory</a></td></tr>
+<tr><td>AllergyIntolerance.criticality</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-allergy-intolerance-criticality.html">AllergyIntoleranceCriticality</a></td></tr>
+<tr><td>AllergyIntolerance.code</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion">Common substances for allergy and intolerance documentation including refutations</a></td></tr>
+<tr><td>AllergyIntolerance.reaction.substance</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="Codes defining the type of the substance (including pharmaceutical products)."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-substance-code.html">SubstanceCode</a></td></tr>
+<tr><td>AllergyIntolerance.reaction.manifestation</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#extensible">extensible</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-clinical-findings.html">SNOMEDCTClinicalFindings</a></td></tr>
+<tr><td>AllergyIntolerance.reaction.severity</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-reaction-event-severity.html">AllergyIntoleranceSeverity</a></td></tr>
+<tr><td>AllergyIntolerance.reaction.exposureRoute</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#example">example</a></td><td title="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-route-codes.html">SNOMEDCTRouteCodes</a></td></tr>
+</table>
+</body>
+</html>

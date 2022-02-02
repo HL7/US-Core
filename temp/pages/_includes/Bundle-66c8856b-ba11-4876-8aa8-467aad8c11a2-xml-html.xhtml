@@ -1,0 +1,203 @@
+{% raw %}<pre class="xml"><code class="language-xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">Bundle</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;66c8856b-ba11-4876-8aa8-467aad8c11a2&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/instance-name&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PractitionerRole_Practitioner_Endpoint_Bundle_Example Example&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/instance-description&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example example for the *Bundle Profile*.&quot;/&gt;
+    &lt;/extension&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;searchset&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.total">total</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link">link</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.relation">relation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;self&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.link.url">url</a>
+         <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole?_id=PractitionerRole-1&amp;amp;_include=PractitionerRole%3Apractitioner&amp;amp;_include=PractitionerRole%3Aendpoint&quot;/&gt;
+  &lt;/link&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://52.90.126.238:8080/fhir/baseDstu3/PractitionerRole/PractitionerRole-1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole">PractitionerRole</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PractitionerRole-1&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Resource &quot;PractitionerRole-1&quot; &lt;/p&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profile: &lt;a href=&quot;StructureDefinition-us-core-practitionerrole.html&quot;&gt;US Core PractitionerRole Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;practitioner&lt;/b&gt;: &lt;a href=&quot;#Practitioner_Practitioner-1011&quot;&gt;See above (Practitioner/Practitioner-1011: Brenda Jennings Richard MD)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=&quot;Organization-acme-lab.html&quot;&gt;Organization/acme-lab: Acme Lab&lt;/a&gt; &quot;Acme Labs&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Primary Care Clinic/Center &lt;span style=&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki&quot;&gt; (provider-taxonomy#261QP2300X)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specialty&lt;/b&gt;: General Practice Physician &lt;span style=&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki&quot;&gt; (provider-taxonomy#208D00000X)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;location&lt;/b&gt;: &lt;a href=&quot;Location-hl7east.html&quot;&gt;Location/hl7east: Health Level Seven International&lt;/a&gt; &quot;Health Level Seven International - Amherst&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;endpoint&lt;/b&gt;: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#Endpoint_71&quot;&gt;See above (http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71: Westwood Physicians Organization ADT)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#Endpoint_71&quot;&gt;See above (http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71: Brenda.Jennings.Richard.MD@direct.example.org)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.practitioner">practitioner</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/Practitioner-1011&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Brenda Jennings Richard MD&quot;/&gt;
+        &lt;/practitioner&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.organization">organization</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/acme-lab&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Acme Lab&quot;/&gt;
+        &lt;/organization&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.code">code</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://nucc.org/provider-taxonomy&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;261QP2300X&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Primary Care Clinic/Center&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/code&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.specialty">specialty</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://nucc.org/provider-taxonomy&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;208D00000X&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;General Practice Physician&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/specialty&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.location">location</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Location/hl7east&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Health Level Seven International&quot;/&gt;
+        &lt;/location&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.endpoint">endpoint</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Westwood Physicians Organization ADT&quot;/&gt;
+        &lt;/endpoint&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitionerrole.html#PractitionerRole.endpoint">endpoint</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Brenda.Jennings.Richard.MD@direct.example.org&quot;/&gt;
+        &lt;/endpoint&gt;
+      &lt;/PractitionerRole&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;match&quot;/&gt;
+    &lt;/search&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://52.90.126.238:8080/fhir/baseDstu3/Practitioner/Practitioner-1011&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">Practitioner</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner-1011&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.meta">meta</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+                   <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner&quot;/&gt;
+        &lt;/meta&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Resource &quot;Practitioner-1011&quot; &lt;/p&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profile: &lt;a href=&quot;StructureDefinition-us-core-practitioner.html&quot;&gt;US Core Practitioner Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: 000001011 (OFFICIAL), id: 9999991011 (OFFICIAL), id: d46f70565a1042f6a6ece48dd81b408f (OFFICIAL)&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Brenda Jennings Richard &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: ph: 313-555-6868(HOME), ph: 313-555-6443(WORK)&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 346 W Plum Avenu Dearborn MI 48123&lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: female&lt;/p&gt;&lt;p&gt;&lt;b&gt;birthDate&lt;/b&gt;: 1976-11-15&lt;/p&gt;&lt;h3&gt;Qualifications&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Identifier&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Issuer&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Michigan Medical License: LARA-1011 (OFFICIAL)&lt;/td&gt;&lt;td&gt;Medical Doctor &lt;span style=&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki&quot;&gt; (license-type#4305)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;span&gt;: Michigan Department of Licensing and Regulatory Affairs&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;official&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/sid/us-ssn&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;000001011&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;official&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/sid/us-npi&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;9999991011&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;official&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://mihin.org/fhir/cks&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;d46f70565a1042f6a6ece48dd81b408f&quot;/&gt;
+        &lt;/identifier&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Richard&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Brenda&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Jennings&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.suffix">suffix</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MD&quot;/&gt;
+        &lt;/name&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.telecom">telecom</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;313-555-6868&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;home&quot;/&gt;
+        &lt;/telecom&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.telecom">telecom</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;313-555-6443&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;work&quot;/&gt;
+        &lt;/telecom&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.address">address</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;346 W Plum Avenu Dearborn MI 48123&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;346 W Plum Avenue&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Dearborn&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MI&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;48126&quot;/&gt;
+        &lt;/address&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.gender">gender</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;female&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.birthDate">birthDate</a> <a href="http://hl7.org/fhir/R4/datatypes.html#date">value</a>=&quot;1976-11-15&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.qualification">qualification</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.qualification.identifier">identifier</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;official&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+                &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v2-0203&quot;/&gt;
+                &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MD&quot;/&gt;
+                &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Medical License number&quot;/&gt;
+              &lt;/coding&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Michigan Medical License&quot;/&gt;
+            &lt;/type&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://example.org/michigan.gov/fhir/medical-license&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;LARA-1011&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.assigner">assigner</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;State of Michigan&quot;/&gt;
+            &lt;/assigner&gt;
+          &lt;/identifier&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.qualification.code">code</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://example.org/michigan.gov/lara/license-type&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;4305&quot;/&gt;
+              &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Medical Doctor&quot;/&gt;
+            &lt;/coding&gt;
+          &lt;/code&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.qualification.issuer">issuer</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Michigan Department of Licensing and Regulatory Affairs&quot;/&gt;
+          &lt;/issuer&gt;
+        &lt;/qualification&gt;
+      &lt;/Practitioner&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;include&quot;/&gt;
+    &lt;/search&gt;
+  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint">Endpoint</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;71&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.text">text</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Resource &quot;71&quot; &lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;connectionType&lt;/b&gt;: Direct Project (Details: http://terminology.hl7.org/CodeSystem/endpoint-connection-type code direct-project = 'Direct Project', stated as 'null')&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Brenda.Jennings.Richard.MD@direct.example.org&lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=&quot;Organization-acme-lab.html&quot;&gt;Organization/acme-lab&lt;/a&gt; &quot;Acme Labs&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;payloadType&lt;/b&gt;: urn:hl7-org:sdwg:ccda-structuredBody:1.1 &lt;span style=&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki&quot;&gt; (unknown#urn:hl7-org:sdwg:ccda-structuredBody:1.1)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;payloadMimeType&lt;/b&gt;: text/xml&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: &lt;a href=&quot;mailto:Brenda.Jennings.Richard.MD@direct.example.org&quot;&gt;Brenda.Jennings.Richard.MD@direct.example.org&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+        &lt;/text&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.connectionType">connectionType</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>
+                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/endpoint-connection-type&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;direct-project&quot;/&gt;
+        &lt;/connectionType&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Brenda.Jennings.Richard.MD@direct.example.org&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.managingOrganization">managingOrganization</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/acme-lab&quot;/&gt;
+        &lt;/managingOrganization&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.payloadType">payloadType</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:oid:1.3.6.1.4.1.19376.1.2.3&quot;/&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;urn:hl7-org:sdwg:ccda-structuredBody:1.1&quot;/&gt;
+          &lt;/coding&gt;
+        &lt;/payloadType&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.payloadMimeType">payloadMimeType</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;text/xml&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/endpoint.html#Endpoint.address">address</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;mailto:Brenda.Jennings.Richard.MD@direct.example.org&quot;/&gt;
+      &lt;/Endpoint&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search">search</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.search.mode">mode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;include&quot;/&gt;
+    &lt;/search&gt;
+  &lt;/entry&gt;
+&lt;/Bundle&gt;</code></pre>
+{% endraw %}

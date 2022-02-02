@@ -1,0 +1,235 @@
+I""<p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#endpoint-discoverability" id="markdown-toc-endpoint-discoverability">Endpoint Discoverability</a></li>
+  <li><a href="#no-guarantee-that-resource-ids-are-preserved" id="markdown-toc-no-guarantee-that-resource-ids-are-preserved">No Guarantee that Resource IDs are Preserved</a></li>
+  <li><a href="#expectation-that-dstu2-data-is-preserved-in-r4" id="markdown-toc-expectation-that-dstu2-data-is-preserved-in-r4">Expectation that DSTU2 Data is Preserved in R4</a></li>
+  <li><a href="#authorization-across-versions" id="markdown-toc-authorization-across-versions">Authorization Across Versions</a></li>
+</ul>
+
+</div>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>There are several consideration for the user and developer experience when transitioning from FHIR DSTU2 to FHIR R4.  To ensure a smoother upgrade path the following the guidance is provided.</p>
+
+<h3 id="endpoint-discoverability">Endpoint Discoverability</h3>
+
+<p>A server may make explicit which version of Argo/US Core on their FHIR endpoint (e.g., “DSTU2” or “R4” path component or separate files based on version). However best practice is to inspect the <a href="http://hl7.org/fhir/R4/http.html">endpoint metadata</a> on each endpoint to discover the information about a server’s capabilities including the FHIR version and the US Core Profile version that is supported:</p>
+
+<p><code class="highlighter-rouge">GET [base]/metadata{?mode=[mode]} {&amp;_format=[mime-type]}</code></p>
+
+<h3 id="no-guarantee-that-resource-ids-are-preserved">No Guarantee that Resource IDs are Preserved</h3>
+
+<p>In some FHIR servers the identifier of the underlying clinical data is not maintained across FHIR versions. Client applications must plan on deduplication methods that don’t rely on a common identifier across FHIR versions.</p>
+
+<ul>
+  <li>Servers <strong>SHOULD</strong> maintain a stable common identifier for a resource across versions.</li>
+</ul>
+
+<h3 id="expectation-that-dstu2-data-is-preserved-in-r4">Expectation that DSTU2 Data is Preserved in R4</h3>
+
+<p>In an upgraded R4 endpoint any data in DSTU2 should be in R4. However, not all data in R4 may be available in DSTU2 because some profiles and data classes like Clinical Notes and pediatric observations are not part of DSTU2.</p>
+
+<ul>
+  <li>The FHIR RESTful resource types supported in a DSTU2 implementation <strong>SHALL</strong> be supported in a R4 implementation
+    <ul>
+      <li>Exceptions
+        <ul>
+          <li>MedicationStatement <em>MAY</em> be deprecated and the data <strong>SHALL</strong> be mapped to MedicationRequest.
+            <ul>
+              <li>See the <a href="medication-list-guidance.html">Medication List Guidance</a> section for guidance on accessing a patient’s medications</li>
+            </ul>
+          </li>
+          <li>Care teams as represented by CarePlan in DSTU2 SHALL be replaced by and the data mapped to CareTeam in R4</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Servers <strong>SHALL</strong> make available the same information in DSTU2 and R4 where the more recent standard allows.  (e.g., patient Rhonda Jones is available on both)
+    <ul>
+      <li>Exceptions
+        <ul>
+          <li>MedicationStatement data mapped to MedicationRequest</li>
+          <li>care teams as represented by CarePlan SHALL be mapped to CareTeam in R4</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Data <strong>SHALL</strong> not be degraded between versions.</li>
+  <li>When updating between versions, clients should consider the impact of any changes to data visualization on the usability for the end user and the maintenance of data integrity.</li>
+</ul>
+
+<h3 id="authorization-across-versions">Authorization Across Versions</h3>
+
+<ul>
+  <li>Separate authorization is required
+    <ul>
+      <li>There is no expectation that DSTU2 authorizations will work on R4 endpoints and reauthorization is required when migrating between versions.
+        <ul>
+          <li>Maintaining the same auth server for both endpoints so that the refresh token is valid for both DSTU2 the R4 endpoint as well may be possible but not in scope.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>The new endpoint will bring additional/changed resource types and added scopes</p>
+
+    <p>The table below summarizes the different profiles and resource types between DSTU2 and R4:</p>
+  </li>
+</ul>
+
+<table class="grid" id="grid">
+  <thead>
+    <tr>
+      <th>DSTU2 Profile</th>
+      <th>Equivalent R4 Profile</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Argonaut AllergyIntolerance Profile</td>
+      <td>US Core AllergyIntolerance Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut CarePlan Profile</td>
+      <td>US Core CarePlan Profile</td>
+      <td>Resource type changed from CarePlan in DSTU2 to CareTeam in R4</td>
+    </tr>
+    <tr>
+      <td>Argonaut CareTeam Profile</td>
+      <td>US Core CareTeam Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut Condition Profile</td>
+      <td>US Core Condition Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut Device Profile</td>
+      <td>US Core Implantable Device Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut DiagnosticReport Profile</td>
+      <td>US Core DiagnosticReport Profile for Laboratory Results Reporting</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut DocumentReference Profile</td>
+      <td>US Core DocumentReference Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut Goal Profile</td>
+      <td>US Core Goal Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut Immunization Profile</td>
+      <td>US Core Immunization Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut Medication Profile</td>
+      <td>US Core Medication Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut MedicationOrder Profile</td>
+      <td>US Core MedicationRequest Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut MedicationStatement Profile</td>
+      <td> </td>
+      <td>US Core MedicationStatement Profile not defined in R4, Map DSTU2 data to MedicationRequest</td>
+    </tr>
+    <tr>
+      <td>Argonaut Observation Results Profile</td>
+      <td>US Core Laboratory Result Observation Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut Patient Profile</td>
+      <td>US Core Patient Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut Procedure Profile</td>
+      <td>US Core Procedure Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut Smoking Status Observation Profile</td>
+      <td>US Core Smoking Status Observation Profile</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Argonaut Vital Signs Observation Profile</td>
+      <td>FHIR Vital Signs Profile</td>
+      <td>The FHIR Vital Signs Profile is published in the FHIR specification</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>US Core DiagnosticReport Profile for Report and Note exchange</td>
+      <td>New Profile in R4</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>US Core Encounter Profile</td>
+      <td>New Profile in R4</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>US Core Location Profile</td>
+      <td>New Profile in R4</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>US Core Organization Profile</td>
+      <td>New Profile in R4</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>US Core Pediatric BMI for Age Observation Profile</td>
+      <td>New Profile in R4 based on the FHIR Vital Signs Profile</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>US Core Pediatric Head Occipital-frontal Circumference Percentile Profile</td>
+      <td>New Profile in R4 based on the FHIR Vital Signs Profile</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>US Core Pediatric Weight for Height Observation Profile</td>
+      <td>New Profile in R4 based on the FHIR Vital Signs Profile</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>US Core Practitioner Profile</td>
+      <td>New Profile in R4</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>US Core PractitionerRole Profile</td>
+      <td>New Profile in R4</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>US Core Provenance Profile</td>
+      <td>New Profile in R4</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>US Core Pulse Oximetry Profile</td>
+      <td>New Profile in R4 based on the FHIR Vital Signs Profile</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

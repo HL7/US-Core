@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Device xmlns="http://hl7.org/fhir">
+  <id value="udi-3"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Device Knee Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a Device knee example for the *US Core Implantable Device Profile*."/>
+    </extension>
+    <versionId value="2"/>
+    <lastUpdated value="2019-04-11T16:21:48.921+00:00"/>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "udi-3" Version "2" Updated "2019-04-11T09:21:48.921-07:00" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-implantable-device.html">US Core Implantable Device Profile</a></p></div><h3>UdiCarriers</h3><table class="grid"><tr><td>-</td><td><b>DeviceIdentifier</b></td><td><b>CarrierHRF</b></td><td><b>EntryType</b></td></tr><tr><td>*</td><td>987979879879</td><td>(01)987979879879(11)191015(17)220101(10)M320(21)AC221</td><td>rfid</td></tr></table><p><b>status</b>: active</p><p><b>manufacturer</b>: ACME Biomedical</p><p><b>manufactureDate</b>: 2015-10-15</p><p><b>expirationDate</b>: 2022-01-01</p><p><b>lotNumber</b>: M320</p><p><b>serialNumber</b>: AC221</p><h3>DeviceNames</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>ACME Knee Replacement Device</td><td>udi-label-name</td></tr></table><p><b>modelNumber</b>: 1.0</p><p><b>type</b>: Knee joint prosthesis <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#109228008)</span></p><p><b>patient</b>: <a href="Patient-example.html">Patient/example: Amy V. Shaw</a> " SHAW"</p></div>
+  </text>
+  <udiCarrier>
+    <deviceIdentifier value="987979879879"/>
+    <carrierHRF value="(01)987979879879(11)191015(17)220101(10)M320(21)AC221"/>
+    <entryType value="rfid"/>
+  </udiCarrier>
+  <status value="active"/>
+  <manufacturer value="ACME Biomedical"/>
+  <manufactureDate value="2015-10-15"/>
+  <expirationDate value="2022-01-01"/>
+  <lotNumber value="M320"/>
+  <serialNumber value="AC221"/>
+  <deviceName>
+    <name value="ACME Knee Replacement Device"/>
+    <type value="udi-label-name"/>
+  </deviceName>
+  <modelNumber value="1.0"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="109228008"/>
+      <display value="Knee joint prosthesis"/>
+    </coding>
+    <text value="Knee joint prosthesis"/>
+  </type>
+  <patient>
+    <reference value="Patient/example"/>
+    <display value="Amy V. Shaw"/>
+  </patient>
+</Device>

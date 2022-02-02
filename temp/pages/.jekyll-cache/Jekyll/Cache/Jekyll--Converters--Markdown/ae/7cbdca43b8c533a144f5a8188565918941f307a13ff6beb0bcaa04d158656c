@@ -1,0 +1,176 @@
+I"X(<p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#value-sets" id="markdown-toc-value-sets">Value Sets</a></li>
+  <li><a href="#code-systems" id="markdown-toc-code-systems">Code Systems</a></li>
+  <li><a href="#using-value-set-authority-center-vsac" id="markdown-toc-using-value-set-authority-center-vsac">Using Value Set Authority Center (VSAC)</a></li>
+</ul>
+
+</div>
+
+<p>This page lists all the ValueSets, CodeSystems, and ConceptMaps defined as part of the US Core implementation Guide. For more information on using codes in Us Core, see the <a href="http://hl7.org/fhir/R4/terminologies.html">FHIR Terminology</a> section in the FHIR specification and <a href="conformance-expectations.html#must-support---coded-elements">Must Support - Coded Elements</a> in this guide.</p>
+
+<h3 id="value-sets">Value Sets</h3>
+
+<p>These value sets have been defined for this implementation guide.</p>
+
+<!-- {% include list-simple-valuesets.xhtml %} -->
+
+<ul>
+  <li class="new-content"><a href="ValueSet-birthsex.html">Birth Sex</a></li>
+  <li><a href="ValueSet-simple-language.html">Language codes with language and optionally a region modifier</a></li>
+  <li class="new-content"><a href="ValueSet-omb-ethnicity-category.html">OMB Ethnicity Categories</a></li>
+  <li class="new-content"><a href="ValueSet-detailed-ethnicity.html">Detailed ethnicity</a></li>
+  <li class="new-content"><a href="ValueSet-omb-race-category.html">OMB Race Categories</a></li>
+  <li class="new-content"><a href="ValueSet-detailed-race.html">Detailed Race</a></li>
+  <li><a href="ValueSet-us-core-clinical-note-type.html">US Core Clinical Note Type</a></li>
+  <li class="new-content"><a href="ValueSet-us-core-condition-category.html">US Core Condition Category Codes</a></li>
+  <li><a href="ValueSet-us-core-condition-code.html">US Core Condition Code</a></li>
+  <li><a href="ValueSet-us-core-diagnosticreport-lab-codes.html">US Core Diagnostic Report Laboratory Codes</a></li>
+  <li><a href="ValueSet-us-core-diagnosticreport-category.html">US Core DiagnosticReport Category</a></li>
+  <li class="new-content"><a href="ValueSet-us-core-common-sdoh-assessments.html">US Core Common SDOH Assessments ValueSet</a></li>
+  <li class="new-content"><a href="ValueSet-us-core-diagnosticreport-report-and-note-codes.html">US Core DiagnosticReport Report And Note Codes</a></li>
+  <li class="new-content"><a href="ValueSet-us-core-discharge-disposition.html">US Core Discharge Disposition</a></li>
+  <li><a href="ValueSet-us-core-documentreference-category.html">US Core DocumentReference Category</a></li>
+  <li><a href="ValueSet-us-core-documentreference-type.html">US Core DocumentReference Type</a></li>
+  <li><a href="ValueSet-us-core-encounter-type.html">US Core Encounter Type</a></li>
+  <li><a href="ValueSet-us-core-narrative-status.html">US Core Narrative Status</a></li>
+  <li class="new-content"><a href="ValueSet-us-core-observation-category.html">US Core Observation Category Codes</a></li>
+  <li><a href="ValueSet-us-core-observation-value-codes.html">US Core Observation Value Codes (SNOMED-CT)</a></li>
+  <li><a href="ValueSet-us-core-procedure-code.html">US Core Procedure Codes</a></li>
+  <li><a href="ValueSet-us-core-provenance-participant-type.html">US Core Provenance Participant Type Codes</a></li>
+  <li><a href="ValueSet-us-core-provider-role.html">US Core Provider Role (NUCC)</a></li>
+  <li class="new-content"><a href="ValueSet-us-core-sexual-orientation.html">US Core Sexual Orientation</a></li>
+  <li class="new-content"><a href="ValueSet-us-core-servicerequest-category.html">US Core Service Request Category Codes</a></li>
+  <li><a href="ValueSet-us-core-observation-smoking-status-status.html">US Core Status for Smoking Status Observation</a></li>
+  <li><a href="ValueSet-us-core-smoking-status-observation-codes.html">US Core Smoking Status Observation Codes</a></li>
+  <li><a href="ValueSet-us-core-observation-smokingstatus-max.html">US Core Observation Smokingstatus Max-Binding</a></li>
+  <li><a href="ValueSet-us-core-usps-state.html">USPS Two Letter Alphabetic Codes</a></li>
+  <li><a href="ValueSet-us-core-vital-signs.html">US Core Vital Signs ValueSet</a></li>
+</ul>
+
+<h3 id="code-systems">Code Systems</h3>
+
+<p>See the <a href="http://hl7.org/fhir/R4/terminologies-systems.html">FHIR terminology section</a> for a complete discussion on code systems and a list of codes system names used in FHIR.  Most code systems used in this guide are defined in the base FHIR specification. The following code systems are unique to this guide and not listed in the base FHIR specification.  If a URI is listed here, it <strong>SHALL</strong> be used in the US Core profiles to identify the code system in preference to any other code system URI.</p>
+
+<p><strong>Code systems published in this IG</strong> - Includes US Core defined code systems and externally defined code systems</p>
+
+<!-- {% include list-simple-codesystems.xhtml %} -->
+
+<ul>
+  <li><a href="CodeSystem-careplan-category.html">US Core CarePlan Category Extension Codes</a></li>
+  <li><a href="CodeSystem-condition-category.html">US Core Condition Category Extension Codes</a></li>
+  <li><a href="CodeSystem-us-core-documentreference-category.html">US Core DocumentReferences Category Codes</a></li>
+  <li><a href="CodeSystem-us-core-provenance-participant-type.html">US Core Provenance Participant Type Extension Codes</a></li>
+</ul>
+
+<p><br /></p>
+
+<p><strong>Externally Published code systems</strong></p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>URI</th>
+      <th>Source</th>
+      <th>Comment</th>
+      <th>OID (for non-FHIR systems)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets</code></td>
+      <td><a href="https://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets">CMS</a></td>
+      <td><em>Healthcare Common Procedure Coding System (HCPCS) level II alphanumeric codes</em></td>
+      <td>2.16.840.1.113883.6.285</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">http://www.cms.gov/Medicare/Coding/ICD10</code></td>
+      <td><a href="http://www.cms.gov/Medicare/Coding/ICD10/">CMS</a></td>
+      <td><em>International Classification of Diseases, 10th Revision, Procedure Coding System (ICD-10-PCS)</em> -  See <a href="http://www.icd10data.com/icd10pcs">ICD-10 PCS Codes</a> for online access to codes for general information purposes.</td>
+      <td>2.16.840.1.113883.6.4</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">http://ada.org/cdt</code></td>
+      <td><a href="http://www.ada.org/en/publications/cdt">ADA</a></td>
+      <td><em>Code on Dental Procedures and Nomenclature</em></td>
+      <td>2.16.840.1.113883.6.13</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">https://www.usps.com</code></td>
+      <td><a href="http://pe.usps.com/text/pub28/28apb.htm">USPS</a></td>
+      <td><em>United States Postal Service Two–Letter State and Possession Abbreviations</em></td>
+      <td>2.16.840.1.113883.6.92</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--
+|[urn:oid:2.16.840.1.113883.6.238](CodeSystem-cdcrec.html)|[CDC](https://www.cdc.gov/phin/resources/vocabulary/index.html)|*Race & Ethnicity - CDC* - See [CDC Race and Ethnicity Code Set Version 1.0](https://www.cdc.gov/phin/resources/vocabulary/documents/cdc-race--ethnicity-background-and-purpose.pdf).|2.16.840.1.113883.6.238
+
+
+<p>
+</p>
+
+### ConceptMaps
+
+The following concept mappings have been defined as part of the this guide.
+
+  {% include list-simple-conceptmaps.xhtml %}
+<p>
+</p>
+
+-->
+
+<h3 id="using-value-set-authority-center-vsac">Using Value Set Authority Center (VSAC)</h3>
+
+<p>This guide links terminology directly to the FHIR® Terminology Service for VSAC Resources (<a href="https://vsac.nlm.nih.gov/">Value Set Authority Center (VSAC) - NIH</a>) where applicable using a RESTful API service for accessing the VSAC value sets and supported code systems.</p>
+
+<ul>
+  <li>It is a requirement of VSAC to log in using your own <em>UMLS API Key</em> to view the value sets. <a href="https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html">VSAC UMLS Licensing information</a>.  (See the screen shots below)</li>
+  <li>The value sets in VSAC are specified using a VSAC value set OID.</li>
+  <li>The retrieval of a value set using the FHIR API structure using just the OID provided will only retrieve the value set definition, when available, and to obtain the expansion, the expansion operation is used.</li>
+</ul>
+
+<p>For example, the <a href="StructureDefinition-us-core-smokingstatus.html">US Core Smoking Status Observation Profile</a> valueCodeableConcept element has a preferred binding to the Smoking Status value set in VSAC using this link <code class="highlighter-rouge">https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.38/expansion</code>. The screenshot below illustrates that by clicking on the link:</p>
+
+<p><!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide --></p>
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 1: VSAC link</strong></figcaption>
+  <img src="vsac-1.png" class="figure-img img-responsive img-rounded center-block" alt="vsac-1.png" />
+</figure>
+
+<p></p>
+</div>
+
+<p>The reader is redirected to the VSAC login page to enter an API Key:</p>
+
+<p><!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide --></p>
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 2: VSAC API-Key Login</strong></figcaption>
+  <img src="vsac-2.png" class="figure-img img-responsive img-rounded center-block" alt="vsac-2.png" />
+</figure>
+
+<p></p>
+</div>
+
+<p>After successfully entered the API Key the value set can be inspected, downloaded, etc:</p>
+
+<p><!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide --></p>
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Figure 3: VSAC Smoking Status ValueSet</strong></figcaption>
+  <img src="vsac-3.png" class="figure-img img-responsive img-rounded center-block" alt="vsac-3.png" />
+</figure>
+
+<p></p>
+</div>
+
+<p>Note that only one login is required per session.</p>
+
+:ET

@@ -1,0 +1,123 @@
+﻿<html>
+<head>
+  <title>DiagnosticReport-urinalysis-xml-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="xml"><code class="language-xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport">DiagnosticReport</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;urinalysis&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/instance-name&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Urinalysis Example&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/instance-description&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;This is a urinalysis example for the *US Core DiagnosticReport Lab Profile*.&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;&lt;span title=&quot;Codes: {http://loinc.org 24356-8}&quot;&gt;Complete Urinalysis&lt;/span&gt; (&lt;span title=&quot;Codes: {http://terminology.hl7.org/CodeSystem/v2-0074 LAB}&quot;&gt;Laboratory&lt;/span&gt;) &lt;/h2&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;&lt;b&gt;Amy V. Baxter &lt;/b&gt; ?? 1987-02-20 ( Medical Record Number: 1032702 (USUAL))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;When For&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Reported&lt;/td&gt;&lt;td&gt;2005-07-05T17:45:33-07:00&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Report Details&lt;/b&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Reference Range&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;When For&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-color.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 5778-6}&quot;&gt;COLOR&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes: {http://snomed.info/sct 371244009}&quot;&gt;Yellow&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Yellow&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-clarity.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 32167-9}&quot;&gt;APPEARANCE&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes: {http://snomed.info/sct 81858005}&quot;&gt;Hazy&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Clear&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-glucose.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 25428-4}&quot;&gt;GLUCOSE&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes: {http://snomed.info/sct 260385009}&quot;&gt;Negative&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Negative&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-bilirubin.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 5770-3}&quot;&gt;BILIRUBIN&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes: {http://snomed.info/sct 260385009}&quot;&gt;Negative&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Negative&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-ketone.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 2514-8}&quot;&gt;KETONE&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes: {http://snomed.info/sct 260385009}&quot;&gt;Negative&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Negative&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-usg.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 5811-5}&quot;&gt;SPEC GRAV&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;1.017 {urine specific gravity}&lt;/td&gt;&lt;td&gt;1.003 {urine specific gravity} - 1.035 {urine specific gravity}&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-ph.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 5803-2}&quot;&gt;PH&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;6.0 (pH)&lt;/td&gt;&lt;td&gt;5.0 (pH) - 8.0 (pH)&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-protein.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 20454-5}&quot;&gt;PROTEIN&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes: {http://snomed.info/sct 260385009}&quot;&gt;Negative&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Negative&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urobilinogen.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 20405-7}&quot;&gt;UROBILINOGEN&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;0.3 mg/dL&lt;/td&gt;&lt;td&gt;0.1 mg/dL - 1.0 mg/dL&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-nitrite.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 5802-4}&quot;&gt;NITRITE&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes: {http://snomed.info/sct 10828004}&quot;&gt;Positive&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Negative&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-hemoglobin.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 5794-3}&quot;&gt;BLOOD&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes: {http://snomed.info/sct 260405006}&quot;&gt;Trace&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Negative&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-leukocyte-esterase.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 5799-2}&quot;&gt;LEUK ESTERASE&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes: {http://snomed.info/sct 260348001}&quot;&gt;2+&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Negative&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-sediment.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 11279-7}&quot;&gt;COMMENT&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Recommend Urine Culture&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-bacteria.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 25145-4}&quot;&gt;BACTERIA&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes: {http://snomed.info/sct 260350009}&quot;&gt;4+&lt;/span&gt;&lt;/td&gt;&lt;td&gt;0-1+&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-epi-cells.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 5787-7}&quot;&gt;EPITHELIAL CELLS&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;1-5 cells/HPF&lt;/td&gt;&lt;td&gt;None Seen/HPF&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-wbcs.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 5821-4}&quot;&gt;WBC&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;20-30 cells/HPF&lt;/td&gt;&lt;td&gt;None Seen/HPF&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;Observation-urine-rbcs.html&quot;&gt;&lt;span title=&quot;Codes: {http://loinc.org 13945-1}&quot;&gt;RBC&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes: {http://snomed.info/sct 84638005}&quot;&gt;Occasional&lt;/span&gt;&lt;/td&gt;&lt;td&gt;None Seen/HPF&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;final&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.category">category</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v2-0074&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;LAB&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Laboratory&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/category&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.code">code</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;24356-8&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Urinalysis complete panel - Urine&quot;/&gt;
+    &lt;/coding&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Complete Urinalysis&quot;/&gt;
+  &lt;/code&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.subject">subject</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/example&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Amy Shaw&quot;/&gt;
+  &lt;/subject&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.effective[x]">effectiveDateTime</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2005-07-05&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.issued">issued</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2005-07-06T11:45:33+11:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.performer">performer</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/acme-lab&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Acme Laboratory, Inc&quot;/&gt;
+  &lt;/performer&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-color&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;COLOR=Yellow&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-clarity&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;APPEARANCE=Hazy&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-glucose&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;GLUCOSE=Negative&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-bilirubin&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;BILIRUBIN=Negative&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-ketone&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;KETONE=Negative&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/usg&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;SPEC GRAV=1.017&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-ph&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PH=6 (pH)&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-protein&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;PROTEIN=Negative&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urobilinogen&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;UROBILINOGEN=0.3 mg/dL&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-nitrite&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;NITRITE=Positive&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-hemoglobin&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;BLOOD=Trace&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-leukocyte-esterase&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;LEUK ESTERASE=2+e&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-sediment&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;COMMENT=Recommend Urine Culture&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-bacteria&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;BACTERIA=4+&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-epi-cells&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EPITHELIAL CELLS=1-5 cells/HPF&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-wbcs&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;WBC=20-30 cells/HPF&quot;/&gt;
+  &lt;/result&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Observation/urine-rbcs&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;RBC=Occasional cells/HPF&quot;/&gt;
+  &lt;/result&gt;
+&lt;/DiagnosticReport&gt;</code></pre>
+</body>
+</html>

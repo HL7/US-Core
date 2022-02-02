@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="condition-SDOH-example"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Condition SDOH Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a condition example for the *US Core Condition Profile*."/>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "condition-SDOH-example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-condition.html">US Core Condition Profile</a></p></div><p><b>assertedDate</b>: 2016-08-10</p><p><b>clinicalStatus</b>: Active <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Social Determinants Of Health <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#LG41762-2)</span></p><p><b>code</b>: Nutrition impaired due to limited access to healthful foods (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#445281000124101)</span></p><p><b>subject</b>: <a href="Patient-example.html">Patient/example: Amy V. Shaw</a> " SHAW"</p><p><b>recordedDate</b>: 2016-08-10T07:15:07-08:00</p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+    <valueDateTime value="2016-08-10"/>
+  </extension>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+    <text value="Active"/>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+    <text value="Confirmed"/>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LG41762-2"/>
+      <display value="Social Determinants Of Health"/>
+    </coding>
+    <text value="Social Determinants Of Health"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="445281000124101"/>
+      <display value="Nutrition impaired due to limited access to healthful foods (finding)"/>
+    </coding>
+    <text value="Nutrition impaired due to limited access to healthful foods (finding)"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Amy V. Shaw"/>
+  </subject>
+  <recordedDate value="2016-08-10T07:15:07-08:00"/>
+</Condition>

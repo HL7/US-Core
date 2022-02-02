@@ -1,0 +1,35 @@
+---
+---
+
+{% if 'ttl' == 'xml' %}
+{% assign section = '7' %}
+{% elsif 'ttl' == 'json' %}
+{% assign section = '8' %}
+{% else %}
+{% assign section = '9' %}
+{% endif %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section {{section}}" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+{% include fragment-base-navtabs.html type='Observation' id='pediatric-wt-example' active='ttl' %}
+
+<a name="root"> </a>
+{% if site.data.artifacts[page.path].example %}
+  {% assign example = 'Example ' %}
+{% endif %}
+{% assign prefix = site.data.artifacts[page.path].type %}
+<h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title | escape_once}}</h2>
+
+<p><a href="Observation-pediatric-wt-example.ttl" no-download="true">Raw ttl</a> | <a href="Observation-pediatric-wt-example.ttl" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='Observation' id='pediatric-wt-example' %}
+
+  {% include Observation-pediatric-wt-example-ttl-html.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='Observation' id='pediatric-wt-example' %}
+
+</div>
+{% include fragment-pageend.html %}

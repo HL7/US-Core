@@ -1,0 +1,131 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-us-core-careplan-maps</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<a name="workflow"> </a><h3>Mappings for Workflow Pattern (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreCarePlanProfile</b></td></tr>
+ <tr><td>CarePlan</td><td>Request</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>Request.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiatesCanonical</td><td>Request.instantiatesCanonical</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiatesUri</td><td>Request.instantiatesUri</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>Request.basedOn</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;replaces</td><td>Request.replaces</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>Request.status {uses different ValueSet}</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;intent</td><td>Request.intent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>Request.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>Request.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;period</td><td>Request.occurrence[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;created</td><td>Request.authoredOn</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;author</td><td>Request.requester</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;careTeam</td><td>Request.performer {similar but does not entail CareTeam}</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;addresses</td><td>Request.reasonReference</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;supportingInfo</td><td>Request.supportingInfo</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;activity</td><td>{no mapping
+NOTE: This is a list of contained Request-Event tuples!}</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outcomeReference</td><td>{Event that is outcome of Request in activity.reference}</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td>{Request that resulted in Event in activity.actionResulting}</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instantiatesCanonical</td><td>Request.instantiatesCanonical</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instantiatesUri</td><td>Request.instantiatesUri</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>Request.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reasonCode</td><td>Request.reasonCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reasonReference</td><td>Request.reasonReference</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;status</td><td>Request.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statusReason</td><td>Request.statusReason</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doNotPerform</td><td>Request.doNotPerform</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scheduled[x]</td><td>Request.occurrence[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;performer</td><td>Request.performer</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>Request.note</td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreCarePlanProfile</b></td></tr>
+ <tr><td>CarePlan</td><td>Entity. Role, or Act, Act[classCode=PCPR, moodCode=INT]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;status</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;div</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiatesCanonical</td><td>.outboundRelationship[typeCode=DEFN].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;instantiatesUri</td><td>.outboundRelationship[typeCode=DEFN].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>.statusCode planned = new active = active completed = completed</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>.participation[typeCode=PAT].role[classCode=PAT]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>.</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;period</td><td>.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;created</td><td>.participation[typeCode=AUT].time</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;addresses</td><td>.actRelationship[typeCode=SUBJ].target[classCode=CONC, moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;goal</td><td>.outboundRelationship[typeCode&lt;=OBJ].</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;activity</td><td>.outboundRelationship[typeCode=COMP].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outcomeReference</td><td>.inboundRelationship[typeCode=FLFS].source</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;progress</td><td>.inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td>.outboundRelationship[typeCode=COMP].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail</td><td>.outboundRelationship[typeCode=COMP, subsetCode=SUMM].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kind</td><td>.inboundRelationship[typeCode=COMP].source[classCode=LIST].code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instantiatesCanonical</td><td>.outboundRelationship[typeCode=DEFN].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instantiatesUri</td><td>.outboundRelationship[typeCode=DEFN].target</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goal</td><td>.outboundRelationship[typeCode&lt;=OBJ].</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;status</td><td>.statusCode not-started = new scheduled = not-started (and fulfillment relationship to appointent) in-progress = active on-hold = suspended completed = completed cancelled = aborted</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doNotPerform</td><td>actionNegationInd</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scheduled[x]</td><td>.effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;location</td><td>.participation[typeCode=LOC].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;performer</td><td>.participation[typeCode=PFM]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;product[x]</td><td>.participation[typeCode=PRD].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dailyAmount</td><td>.outboundRelationship[typeCode=COMP][classCode=SBADM].doseQuantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quantity</td><td>.outboundRelationship[typeCode=COMP][classCode=SPLY].quantity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>.inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value</td> </tr>
+</table>
+<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreCarePlanProfile</b></td></tr>
+ <tr><td>CarePlan</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>FiveWs.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>FiveWs.class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;category (AssessPlan)</td><td>FiveWs.class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;description</td><td>FiveWs.what[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>FiveWs.context</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;period</td><td>FiveWs.planned</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;created</td><td>FiveWs.recorded</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;author</td><td>FiveWs.author</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;careTeam</td><td>FiveWs.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;addresses</td><td>FiveWs.why[x]</td> </tr>
+</table>
+<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreCarePlanProfile</b></td></tr>
+ <tr><td>CarePlan</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>PTH-3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>PTH-5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PID-3</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>Associated PV1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;period</td><td>GOL-7 / GOL-8</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;addresses</td><td>PRB-4</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;goal</td><td>GOL.1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;activity</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;progress</td><td>NTE?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;detail</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>OBR-4 / RXE-2 / RXO-1 / RXD-2</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;status</td><td>ORC-5?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scheduled[x]</td><td>TQ1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;location</td><td>OBR-24(???!!)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;performer</td><td>PRT-5 : ( PRV-4 = (provider participations)); PRT-5 : ( PRV-4 = (non-provider person participations )) ; PRT-5 : ( PRV-4 = (patient non-subject of care) ) ; PRT-8</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;product[x]</td><td>RXE-2 / RXO-1 / RXD-2</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dailyAmount</td><td>RXO-23 / RXE-19 / RXD-12</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quantity</td><td>RXO-11 / RXE-10 / RXD-4 / RXG-5 / RXA-6 /  TQ1-2.1  *and*  RXO-12 /  RXE-11 / RXD-5 / RXG-7 / RXA-7 / TQ1-2.2</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description</td><td>NTE?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>NTE?</td> </tr>
+</table>
+</body>
+</html>

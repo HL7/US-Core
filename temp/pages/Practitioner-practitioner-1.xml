@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="practitioner-1"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Practitioner 1 Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a practitioner 1 example for the *US Core Practitioner Profile*."/>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "practitioner-1" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a></p></div><p><b>identifier</b>: id: 9941339108, id: 25456</p><p><b>name</b>: Ronald Bone </p><p><b>address</b>: 1003 Healthcare Drive Amherst MA 01002 (HOME)</p></div>
+  </text>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi"/>
+    <value value="9941339108"/>
+  </identifier>
+  <identifier>
+    <system value="http://www.acme.org/practitioners"/>
+    <value value="25456"/>
+  </identifier>
+  <name>
+    <family value="Bone"/>
+    <given value="Ronald"/>
+    <prefix value="Dr"/>
+  </name>
+  <address>
+    <use value="home"/>
+    <line value="1003 Healthcare Drive"/>
+    <city value="Amherst"/>
+    <state value="MA"/>
+    <postalCode value="01002"/>
+  </address>
+</Practitioner>

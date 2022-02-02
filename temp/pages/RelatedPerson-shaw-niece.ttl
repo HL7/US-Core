@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/RelatedPerson/shaw-niece> a fhir:RelatedPerson;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "shaw-niece"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Patient Niece Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a patient niece example for the *US Core RelatedPerson Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"shaw-niece\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-relatedperson.html\">US Core Related Person</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-example.html\">Patient/example: Amy V. Shaw</a> \" SHAW\"</p><p><b>relationship</b>: niece <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-v3-RoleCode.html\">RoleCode</a>#NIECE)</span></p><p><b>name</b>: Sarah van Putten (OFFICIAL)</p><p><b>telecom</b>: ph: 555-555-5555(HOME), <a href=\"mailto:sarah.vanputten@example.com\">sarah.vanputten@example.com</a></p><p><b>birthDate</b>: 1996-01-28</p><p><b>address</b>: 80A Village Street New Holland PA 17557 (HOME)</p></div>"
+  ];
+  fhir:RelatedPerson.active [ fhir:value "true"^^xsd:boolean];
+  fhir:RelatedPerson.patient [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy V. Shaw" ]
+  ];
+  fhir:RelatedPerson.relationship [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ];
+       fhir:Coding.code [ fhir:value "NIECE" ];
+       fhir:Coding.display [ fhir:value "niece" ]
+     ]
+  ];
+  fhir:RelatedPerson.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "official" ];
+     fhir:HumanName.family [ fhir:value "van Putten" ];
+     fhir:HumanName.given [
+       fhir:value "Sarah";
+       fhir:index 0
+     ]
+  ];
+  fhir:RelatedPerson.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "555-555-5555" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "sarah.vanputten@example.com" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ];
+  fhir:RelatedPerson.birthDate [ fhir:value "1996-01-28"^^xsd:date];
+  fhir:RelatedPerson.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value "home" ];
+     fhir:Address.line [
+       fhir:value "80A Village Street";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "New Holland" ];
+     fhir:Address.state [ fhir:value "PA" ];
+     fhir:Address.postalCode [ fhir:value "17557" ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/RelatedPerson/shaw-niece.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/RelatedPerson/shaw-niece.ttl> .
+
+# -------------------------------------------------------------------------------------
+

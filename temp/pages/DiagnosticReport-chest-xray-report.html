@@ -1,0 +1,33 @@
+---
+---
+{% include fragment-pagebegin.html %}
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+
+  {% include fragment-base-navtabs.html type='DiagnosticReport' id='chest-xray-report' active='content' %}
+
+  <a name="root"> </a>
+{% if site.data.artifacts[page.path].example %}
+  {% assign example = 'Example ' %}
+{% endif %}
+{% assign prefix = site.data.artifacts[page.path].type %}
+  <h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title | escape_once}}</h2>
+
+{% unless example %}
+  {% if 'DiagnosticReport' == 'CapabilityStatement' %}
+      <p>
+      <a href="chest-xray-report.openapi.json" no-download="true">Raw OpenAPI-Swagger Definition file</a> | <a href="chest-xray-report.openapi.json" download>Download</a>
+      </p>
+  {% endif %}
+{% endunless %}
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='DiagnosticReport' id='chest-xray-report' %}
+
+  {% include DiagnosticReport-chest-xray-report-html.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='DiagnosticReport' id='chest-xray-report' %}
+
+</div>
+{% include fragment-pageend.html %}

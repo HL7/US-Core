@@ -1,0 +1,136 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Observation/satO2-fiO2> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "satO2-fiO2"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Observation SatO2 FiO2 Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a observation satO2 fiO2 example for the *US Core Pulse Oximetry Profile* representing a spO2 value with a for a patient on 6 l/min of O2 suppplemental oxygen." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"satO2-fiO2\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-pulse-oximetry.html\">US Core Pulse Oximetry Profile</a></p></div><p><b>identifier</b>: id: o1223435-10</p><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Oxygen saturation in Arterial blood <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#2708-6; <a href=\"https://loinc.org/\">LOINC</a>#59408-5 \"Oxygen saturation in Arterial blood by Pulse oximetry\"; <a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-v3-mdc.html\">ISO 11073-10101 Health informatics - Point-of-care</a>#150456 \"MDC_PULS_OXIM_SAT_O2\")</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Patient/example</a> \" SHAW\"</p><p><b>effective</b>: 2014-12-05T09:30:10+01:00</p><p><b>value</b>: 95 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code % = '%')</span></p><p><b>interpretation</b>: Normal (applies to non-numeric results) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-v3-ObservationInterpretation.html\">ObservationInterpretation</a>#N \"Normal\")</span></p><p><b>device</b>: <span>: Acme Pulse Oximeter 2000</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td>*</td><td>90 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code % = '%')</span></td><td>99 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code % = '%')</span></td></tr></table><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Inhaled oxygen flow rate <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#3151-8)</span></td><td>6 liters/min<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code L/min = 'L/min')</span></td></tr></table></div>"
+  ];
+  fhir:Observation.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://goodcare.org/observation/id" ];
+     fhir:Identifier.value [ fhir:value "o1223435-10" ]
+  ];
+  fhir:Observation.status [ fhir:value "final"];
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "vital-signs" ];
+       fhir:Coding.display [ fhir:value "Vital Signs" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Vital Signs" ]
+  ];
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:2708-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "2708-6" ];
+       fhir:Coding.display [ fhir:value "Oxygen saturation in Arterial blood" ]
+     ], [
+       fhir:index 1;
+       a loinc:59408-5;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "59408-5" ];
+       fhir:Coding.display [ fhir:value "Oxygen saturation in Arterial blood by Pulse oximetry" ]
+     ], [
+       fhir:index 2;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:11073:10101" ];
+       fhir:Coding.code [ fhir:value "150456" ];
+       fhir:Coding.display [ fhir:value "MDC_PULS_OXIM_SAT_O2" ]
+     ]
+  ];
+  fhir:Observation.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ]
+  ];
+  fhir:Observation.effectiveDateTime [ fhir:value "2014-12-05T09:30:10+01:00"^^xsd:dateTime];
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "95"^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value "%" ];
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+     fhir:Quantity.code [ fhir:value "%" ]
+  ];
+  fhir:Observation.interpretation [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" ];
+       fhir:Coding.code [ fhir:value "N" ];
+       fhir:Coding.display [ fhir:value "Normal" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Normal (applies to non-numeric results)" ]
+  ];
+  fhir:Observation.device [
+     fhir:Reference.display [ fhir:value "Acme Pulse Oximeter 2000" ]
+  ];
+  fhir:Observation.referenceRange [
+     fhir:index 0;
+     fhir:Observation.referenceRange.low [
+       fhir:Quantity.value [ fhir:value "90"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "%" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "%" ]
+     ];
+     fhir:Observation.referenceRange.high [
+       fhir:Quantity.value [ fhir:value "99"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "%" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "%" ]
+     ]
+  ];
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a loinc:3151-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "3151-8" ];
+         fhir:Coding.display [ fhir:value "Inhaled oxygen flow rate" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Inhaled oxygen flow rate" ]
+     ];
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "6"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "liters/min" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "L/min" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Observation/satO2-fiO2.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Observation/satO2-fiO2.ttl> .
+
+# -------------------------------------------------------------------------------------
+

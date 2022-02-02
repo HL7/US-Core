@@ -1,0 +1,42 @@
+I"�<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+
+<h3 id="patient-privacy-and-security">Patient Privacy and Security</h3>
+
+<p>US Core transactions often make use of patient-specific information which could be exploited by malicious actors resulting in exposure of patient data. For this reason, all US Core transactions must be secured appropriately with access to limited authorized individuals, data protected in transit, and appropriate audit measures taken.</p>
+
+<p>Implementers <strong>SHOULD</strong> be aware of these <a href="http://hl7.org/fhir/R4/security.html">security considerations</a> associated with FHIR transactions, particularly those related to:</p>
+
+<ul>
+  <li><a href="http://hl7.org/fhir/R4/security.html#http">Communications</a></li>
+  <li><a href="http://hl7.org/fhir/R4/security.html#authentication">Authentication</a></li>
+  <li><a href="http://hl7.org/fhir/R4/security.html#authorization/access%20control">Authorization/Access Control</a></li>
+  <li><a href="http://hl7.org/fhir/R4/security.html#audit%20logging">Audit Logging</a></li>
+  <li><a href="http://hl7.org/fhir/R4/security.html#digital%20signatures">Digital Signatures</a></li>
+  <li><a href="http://hl7.org/fhir/R4/security-labels.html">Security Labels</a></li>
+  <li><a href="http://hl7.org/fhir/R4/security.html#narrative">Narrative</a></li>
+</ul>
+
+<p>For the purposes of US Core, security conformance requirements are as follows:</p>
+
+<ul>
+  <li>Systems <strong>SHALL</strong> establish a risk analysis and management regime that conforms with HIPAA security regulatory requirements. In addition US Federal systems <strong>SHOULD</strong> conform with the risk management and mitigation requirements defined in NIST 800 series documents. This <strong>SHOULD</strong> include security category assignment in accordance with NIST 800-60 vol. 2 Appendix D.14. The coordination of risk management and the related security and privacy controls – policies, administrative practices, and technical controls – <strong>SHOULD</strong> be defined in the Business Associate Agreement  when available.</li>
+  <li>Systems <strong>SHALL</strong> reference a single time source to establish a common time base for security auditing, as well as clinical data records, among computing systems. The selected time service <strong>SHOULD</strong> be documented in the Business Associate Agreement when available.</li>
+  <li>Systems <strong>SHALL</strong> keep audit logs of the various transactions.</li>
+  <li>Systems <strong>SHALL</strong> use TLS version 1.2 or higher for all transmissions not taking place over a secure network connection.
+ (Using TLS even within a secured network environment is still encouraged to provide defense in depth.) US Federal systems <strong>SHOULD</strong> conform with FIPS PUB 140-2.</li>
+  <li>Systems <strong>SHALL</strong> conform to <a href="http://hl7.org/fhir/R4/security.html#http">FHIR Communications Security</a> requirements.</li>
+  <li>For Authentication and Authorization, Systems <strong>SHALL</strong> support the <a href="http://www.hl7.org/fhir/smart-app-launch/history.cfml">SMART App Launch Framework</a> for client &lt;-&gt; server interactions. NOTE: The SMART on FHIR specifications include the required OAuth 2.0 scopes for enabling security decisions.</li>
+  <li>Systems <strong>SHALL</strong> implement consent requirements per their state, local, and institutional policies. The Business Associate Agreements <strong>SHOULD</strong> document systems mutual consent requirements.</li>
+  <li>Systems <strong>SHOULD</strong> provide Provenance statements using the <a href="StructureDefinition-us-core-provenance.html">US Core Provenance Profile</a> resource and associated requirements.</li>
+  <li>Systems <strong>MAY</strong> implement the <a href="http://hl7.org/fhir/R4/security.html#digital%20signatures">FHIR Digital Signatures</a> and provide feedback on its appropriateness for US Core transactions.</li>
+  <li>Systems <strong>MAY</strong> protect the confidentiality of data at rest via encryption and associated access controls. The policies and methods used are outside the scope of this specification.</li>
+</ul>
+
+<h3 id="clinical-safety">Clinical Safety</h3>
+
+<p>When implementing FHIR and US Core, implementers need to be aware of the risks and tradeoffs and are encouraged to review the <a href="http://hl7.org/fhir/R4/safety.html">clinical safety</a> section in the core specification.</p>
+
+:ET

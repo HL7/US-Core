@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='Organization' id='saint-luke-w-endpoint' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: Saint Luke's Hospital of Kansas City - Change History</h2>
+  <p>History of changes for saint-luke-w-endpoint {{type | downcase}}.</p>
+
+  {%include Organization-saint-luke-w-endpoint-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

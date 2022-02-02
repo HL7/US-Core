@@ -1,0 +1,59 @@
+I"9
+<p>A client determines the category of reports they can access through DiagnosticReport. The server responds with Radiology, Pathology, and Cardiology report categories:</p>
+
+<p><strong>Request for DiagnosticReport report type</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/ValueSet/$expand?context=DiagnosticReport.category&amp;contextDirection=incoming
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "ValueSet",
+  "id": "scenario4-server-diagnosticreport-category",
+  "url": "http://fhir.org/guides/argonaut-clinicalnotes/ValueSet/diagnosticreport-category",
+  "version": "3.0.1",
+  "name": "ArgonautDiagnosticReportCategoryCodes",
+  "title": "Argonaut DiagnosticReport Category Value Set",
+  "status": "draft",
+  "date": "2018-11-08T20:29:00+00:00",
+  "expansion": {
+    "identifier": "urn:uuid:5fc51f5a-4dbc-44f8-8fe5-203d261222f0",
+    "timestamp": "2018-11-13T02:55:48.405Z",
+    "parameter": [
+      {
+        "name": "context",
+        "valueString": "DiagnosticReport.category"
+      },
+      {
+        "name": "contextDirection",
+        "valueString": "outgoing"
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "LP29684-5",
+        "display": "Radiology"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "LP29708-2",
+        "display": "Cardiology"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "LP7839-6",
+        "display": "Pathology"
+      }
+    ]
+  }
+}
+</code></pre></div></div>
+:ET

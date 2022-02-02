@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="example"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Condition Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a condition example for the *US Core Condition Profile*."/>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "example" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-condition.html">US Core Condition Profile</a></p></div><p><b>assertedDate</b>: 2016-08-10</p><p><b>clinicalStatus</b>: Resolved <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>#resolved)</span></p><p><b>verificationStatus</b>: Confirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Encounter Diagnosis <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.0.0/CodeSystem-condition-category.html">Condition Category Codes</a>#encounter-diagnosis)</span></p><p><b>code</b>: Single liveborn, born in hospital <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#442311008 "Liveborn born in hospital")</span></p><p><b>subject</b>: <a href="Patient-example.html">Patient/example: Amy V. Shaw</a> " SHAW"</p><p><b>encounter</b>: <a href="Encounter-delivery.html">Encounter/delivery</a></p><p><b>onset</b>: 2016-08-10</p><p><b>abatement</b>: 2016-08-10</p><p><b>recordedDate</b>: 2016-08-10T07:15:07-08:00</p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/condition-assertedDate">
+    <valueDateTime value="2016-08-10"/>
+  </extension>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="resolved"/>
+      <display value="Resolved"/>
+    </coding>
+    <text value="Resolved"/>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+      <display value="Confirmed"/>
+    </coding>
+    <text value="Confirmed"/>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="encounter-diagnosis"/>
+      <display value="Encounter Diagnosis"/>
+    </coding>
+    <text value="Encounter Diagnosis"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="442311008"/>
+      <display value="Liveborn born in hospital"/>
+    </coding>
+    <text value="Single liveborn, born in hospital"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Amy V. Shaw"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/delivery"/>
+  </encounter>
+  <onsetDateTime value="2016-08-10"/>
+  <abatementDateTime value="2016-08-10"/>
+  <recordedDate value="2016-08-10T07:15:07-08:00"/>
+</Condition>

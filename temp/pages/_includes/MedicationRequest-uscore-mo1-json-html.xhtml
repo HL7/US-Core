@@ -1,0 +1,73 @@
+{% raw %}<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest">resourceType</a>" : "MedicationRequest",
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.id">id</a>" : "uscore-mo1",
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Uscore MO1 Example"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is a uscore mo1 example for the *US Core MedicationRequest Profile*."
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource \&quot;uscore-mo1\&quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-us-core-medicationrequest.html\&quot;&gt;US Core MedicationRequest Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: order&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: Nizatidine 15 MG/ML Oral Solution [Axid] &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/3.0.0/CodeSystem-v3-rxNorm.html\&quot;&gt;RxNorm&lt;/a&gt;#582620)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-example.html\&quot;&gt;Patient/example: Amy Shaw&lt;/a&gt; \&quot; SHAW\&quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;authoredOn&lt;/b&gt;: 2008-04-05&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;Practitioner-practitioner-1.html\&quot;&gt;Practitioner/practitioner-1: Ronald Bone, MD&lt;/a&gt; \&quot; BONE\&quot;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;dispenseRequest&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;numberOfRepeatsAllowed&lt;/b&gt;: 1&lt;/p&gt;&lt;p&gt;&lt;b&gt;quantity&lt;/b&gt;: 480 mL&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM code mL = 'mL')&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.intent">intent</a>" : "order",
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication[x]">medicationCodeableConcept</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "582620",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Nizatidine 15 MG/ML Oral Solution [Axid]"
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Nizatidine 15 MG/ML Oral Solution [Axid]"
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Amy Shaw"
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.authoredOn">authoredOn</a>" : "2008-04-05",
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.requester">requester</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/practitioner-1",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Ronald Bone, MD"
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dosageInstruction">dosageInstruction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.text">text</a>" : "10 mL bid",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Dosage#Dosage.timing">timing</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Timing#Timing.repeat">repeat</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Timing#Timing.repeat.bounds[x]">boundsPeriod</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2008-04-05"
+          }
+        }
+      }
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dispenseRequest">dispenseRequest</a>" : {
+    "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dispenseRequest.numberOfRepeatsAllowed">numberOfRepeatsAllowed</a>" : 1,
+    "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dispenseRequest.quantity">quantity</a>" : {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.value">value</a>" : 480,
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.unit">unit</a>" : "mL",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.code">code</a>" : "mL"
+    },
+    "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dispenseRequest.expectedSupplyDuration">expectedSupplyDuration</a>" : {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Duration#Duration.value">value</a>" : 30,
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Duration#Duration.unit">unit</a>" : "days",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Duration#Duration.system">system</a>" : "http://unitsofmeasure.org",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Duration#Duration.code">code</a>" : "d"
+    }
+  }
+}</code></pre>
+{% endraw %}

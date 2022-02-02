@@ -1,0 +1,13 @@
+﻿<html>
+<head>
+  <title>Observation-urine-cells-validate</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<p><b>Validation Links:</b></p><ul><li><a href="https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator">Validate using FHIR Validator</a> (Java): <code id="vl-Observation-urine-cells">$cmd$</code></li></ul>
+<script type="text/javascript">
+  var x = window.location.href;
+  document.getElementById("vl-Observation-urine-cells").innerHTML = "java -jar [path]/org.hl7.fhir.validator.jar -ig hl7.fhir.us.core#dev "+x.substr(0, x.lastIndexOf(".")).replace("file:///", "") + ".json";
+</script>
+</body>
+</html>

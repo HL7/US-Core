@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="condition-category"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Properties</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>URL</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>status</td><td>http://hl7.org/fhir/concept-properties#status</td><td>code</td><td>A property that indicates the status of the concept. One of active, experimental, deprecated,        retired</td></tr></table><p>This code system http://hl7.org/fhir/us/core/CodeSystem/condition-category defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td><td><b>status</b></td></tr><tr><td style="white-space:nowrap">problem<a name="condition-category-problem"> </a></td><td>Problem</td><td>The patients problems as identified by the provider(s). Items on the provider’s problem list</td><td>deprecated</td></tr><tr><td style="white-space:nowrap">health-concern<a name="condition-category-health-concern"> </a></td><td>Health Concern</td><td>Additional health concerns from other stakeholders which are outside the provider’s problem list.</td><td/></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/core/CodeSystem/condition-category"/>
+  <version value="4.2.0"/>
+  <name value="USCoreConditionCategoryExtensionCodes"/>
+  <title value="US Core Condition Category Extension Codes"/>
+  <status value="active"/>
+  <date value="2022-01-18T15:50:02-08:00"/>
+  <publisher value="HL7 International - Cross-Group Projects"/>
+  <contact>
+    <name value="HL7 International - Cross-Group Projects"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cgp"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgp@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="Set of codes that are needed for implementation of the US-Core Condition Profile. These codes are used as extensions to the FHIR and US Core value sets."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 International, all rights reserved Creative Commons License"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <property>
+    <code value="status"/>
+    <uri value="http://hl7.org/fhir/concept-properties#status"/>
+    <description value="A property that indicates the status of the concept. One of active, experimental, deprecated,        retired"/>
+    <type value="code"/>
+  </property>
+  <concept>
+    <extension url="http://hl7.org/fhir/StructureDefinition/codesystem-replacedby">
+      <valueCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+        <code value="problem-list-item"/>
+        <display value="Problem List Item"/>
+      </valueCoding>
+    </extension>
+    <code value="problem"/>
+    <display value="Problem"/>
+    <definition value="The patients problems as identified by the provider(s). Items on the provider’s problem list"/>
+    <property>
+      <code value="status"/>
+      <valueCode value="deprecated"/>
+    </property>
+  </concept>
+  <concept>
+    <code value="health-concern"/>
+    <display value="Health Concern"/>
+    <definition value="Additional health concerns from other stakeholders which are outside the provider’s problem list."/>
+  </concept>
+</CodeSystem>

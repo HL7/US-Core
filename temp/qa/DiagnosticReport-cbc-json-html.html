@@ -1,0 +1,83 @@
+﻿<html>
+<head>
+  <title>DiagnosticReport-cbc-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport">resourceType</a>" : "DiagnosticReport",
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.id">id</a>" : "cbc",
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "CBC Example"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is a CBC example for the *US Core DiagnosticReport Lab Profile*."
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;&lt;span title=\&quot;Codes: {http://loinc.org 58410-2}\&quot;&gt;CBC panel - Blood by Automated count&lt;/span&gt; (&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/v2-0074 LAB}\&quot;&gt;Laboratory&lt;/span&gt;) &lt;/h2&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;Subject&lt;/td&gt;&lt;td&gt;&lt;b&gt;Amy V. Baxter &lt;/b&gt; ?? 1987-02-20 ( Medical Record Number: 1032702 (USUAL))&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;When For&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Reported&lt;/td&gt;&lt;td&gt;2005-07-05T17:45:33-07:00&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;Report Details&lt;/b&gt;&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Reference Range&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;When For&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-neutrophils.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 770-8}\&quot;&gt;Neutrophils %&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;40.0 %&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 37.0 % - 67.0 %&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-mchc.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 786-4}\&quot;&gt;MCHC RBC Auto-mCnc&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;34.7 g/dL&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 30.0 g/dL - 34.0 g/dL&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-hemoglobin.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 718-7}\&quot;&gt;Hgb Bld-mCnc&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;17.0 g/dL&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 16.5 g/dL - 21.5 g/dL&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;Observation-erythrocytes.html\&quot;&gt;&lt;span title=\&quot;Codes: {http://loinc.org 789-8}\&quot;&gt;RBC # Bld Auto&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;td&gt;4.58 10*6/uL&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\&quot;&gt;Normal Range&lt;/span&gt;: 4.1 10*6/uL - 6.1 10*6/uL&lt;/td&gt;&lt;td&gt;2005-07-05&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.status">status</a>" : "final",
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "LAB",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Laboratory"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "58410-2",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "CBC panel - Blood by Automated count"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Amy Shaw"
+  },
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.effective[x]">effectiveDateTime</a>" : "2005-07-05",
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.issued">issued</a>" : "2005-07-06T11:45:33+11:00",
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.performer">performer</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/acme-lab",
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Acme Laboratory, Inc"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/neutrophils",
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "NEUTROPHILS"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/mchc",
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "MCHC"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/hemoglobin",
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "HEMOGLOBIN"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/erythrocytes",
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "ERYTHROCYTES"
+    }
+  ]
+}</code></pre>
+</body>
+</html>

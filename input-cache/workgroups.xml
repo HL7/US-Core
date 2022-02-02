@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  - A list of all work groups (and other HL7 groups/individuals) that can have responsibility for change requests
+  -
+  - WARNING: Don't *ever* change the key as you'll break old tracker workgroups.  Leave the key the same and change the name only.  
+  -          No one sees the key except when maintaining these files or working with exports
+  -->
+  
+<workgroups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/workgroupList.xsd">
+  <workgroup key="gas" webcode="gas" name="Anesthesia"/>
+  <workgroup key="arb" name="Architecture Review Board" deprecated="true"/>
+  <workgroup key="as" webcode="as" name="Arden Syntax"/>
+  <workgroup key="att" webcode="att" name="Attachments" deprecated="true"/>
+  <workgroup key="brr" webcode="rcrim" name="Biomedical Research &amp;amp; Regulation"/>
+  <workgroup key="cbcc" webcode="homehealth" name="Community-Based Care and Privacy"/>
+  <workgroup key="cdamg" webcode="cdamanagement" name="CDA Management Group"/>
+  <workgroup key="cgit" webcode="ictc" name="Conformance"/>
+  <workgroup key="cimi" webcode="cimi" name="CIMI"/>
+  <workgroup key="cds" webcode="dss" name="Clinical Decision Support"/>
+  <workgroup key="cic" webcode="cic" name="Clinical Interoperability Council"/>
+  <workgroup key="cg" webcode="clingenomics" name="Clinical Genomics"/>
+  <workgroup key="cgp" webcode="cgp" name="Cross-Group Projects"/>
+  <workgroup key="cqi" webcode="cqi" name="Clinical Quality Information"/>
+  <workgroup key="dev" webcode="healthcaredevices" name="Devices"/>
+  <workgroup key="ec" webcode="ec" name="Emergency Care"/>
+  <workgroup key="ehr" webcode="ehr" name="Electronic Health Record"/>
+  <workgroup key="director" name="FHIR Director"/>
+  <workgroup key="fgb" name="FHIR Governance Board" deprecated="true"/>
+  <workgroup key="fhir-i" webcode="fiwg" name="FHIR Infrastructure"/>
+  <workgroup key="fmg" webcode="fhirmg" name="FHIR Mgmt Group"/>
+  <workgroup key="fm" webcode="fm" name="Financial Mgmt"/>
+  <workgroup key="hcd" webcode="hcd" name="Health Care Devices"/>
+  <workgroup key="hsi" name="Health Standards Integration" deprecated="true"/>
+  <workgroup key="hss" webcode="hss" name="Human and Social Services"/>
+  <workgroup key="hta" webcode="termauth" name="HL7 Terminology Authority"/>
+  <workgroup key="ic" webcode="ic" name="International Council"/>
+  <workgroup key="project" name="IG Project" deprecated="true"/>
+  <workgroup key="ii" webcode="imagemgt" name="Imaging Integration"/>
+  <workgroup key="its" webcode="xml" name="Implementable Technology Specifications"/>
+  <workgroup key="inm" webcode="inm" name="Infrastructure &amp;amp; Messaging"/>
+  <workgroup key="lhs" webcode="lhs" name="Learning Health Systems"/>
+  <workgroup key="mh" webcode="mh" name="Mobile Health"/>
+  <workgroup key="mnm" webcode="mnm" name="Modeling &amp;amp; Methodology"/>
+  <workgroup key="oo" webcode="orders" name="Orders &amp;amp; Observations"/>
+  <workgroup key="pa" webcode="pafm" name="Patient Administration"/>
+  <workgroup key="pc" webcode="patientcare" name="Patient Care"/>
+  <workgroup key="pe" webcode="patientempowerment" name="Patient Empowerment"/>
+  <workgroup key="pie" webcode="claims" name="Payer/Provider Information Exchange"/>
+  <workgroup key="pharm" webcode="medication" name="Pharmacy"/>
+  <workgroup key="pic" webcode="pic" name="Process Improvement Committee"/>
+  <workgroup key="ps" webcode="ps" name="Project Services"/>
+  <workgroup key="pher" webcode="pher" name="Public Health"/>
+  <workgroup key="pubs" webcode="publishing" name="Publishing"/>
+  <workgroup key="security" webcode="secure" name="Security"/>
+  <workgroup key="soa" webcode="soa" name="Service Oriented Architecture"/>
+  <workgroup key="sd" webcode="structure" name="Structured Documents"/>
+  <workgroup key="sgb" name="Standards Governance Board" deprecated="true"/>
+  <workgroup key="templates" name="Templates" deprecated="true"/>
+  <workgroup key="tsc" webcode="tsc" name="Technical Steering Committee"/>
+  <workgroup key="tsmg" webcode="tsmanagement" name="Terminology Services Management Group"/>
+  <workgroup key="us-realm" webcode="usrealm" name="US Realm Task Force"/>
+  <workgroup key="vocab" webcode="vocab" name="Vocabulary"/>
+  <workgroup key="v2mg" webcode="v2management" name="V2 Mgmt Group"/>
+</workgroups>

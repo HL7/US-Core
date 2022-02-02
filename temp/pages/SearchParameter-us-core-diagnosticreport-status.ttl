@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/SearchParameter/us-core-diagnosticreport-status> a fhir:SearchParameter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "us-core-diagnosticreport-status"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">  <!-- <h2>SearchParameter: USCoreDiagnosticReportStatus</h2> --><b> description</b> : <p><strong>The status of the report</strong><br/><strong>NOTE</strong>: This US Core SearchParameter definition extends the usage context of the\n<a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">Conformance expectation extension</a></p>\n<ul><li>multipleAnd</li><li>multipleOr</li><li>comparator</li><li>modifier</li><li>chain</li></ul>\n\n			<br/>\n			<p><b> id</b> us-core-diagnosticreport-status</p>\n			<p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-diagnosticreport-status</b>\n			</p>\n			<p><b> version</b> : 4.0.1</p>\n			<p><b> name</b> : USCoreDiagnosticReportStatus</p>\n			<p><b> derivedFrom</b> : http://hl7.org/fhir/SearchParameter/DiagnosticReport-status\n			</p>\n			<p><b> status</b> : active</p>\n			<p><b> experimental</b>  False</p>\n			<p><b> date</b> : 2020-11-20</p>\n			<p><b> publisher</b> : HL7 International - US Realm Steering Committee</p>\n			<p><b> contact</b> : http://www.hl7.org/Special/committees/usrealm/index.cfm</p>\n			<p><b> useContext</b> : </p>\n			<p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n           States of America (the)'})</span>\n			</p>\n			  <!-- <p>\n		<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n         and matching as part of a chain</p> -->\n			<p><b> code</b> : <code>status</code>\n			</p>\n			<p><b> base</b> :DiagnosticReport</p>\n			<p><b> type</b> : token</p>\n			<p><b> expression</b> : <code>DiagnosticReport.status</code>\n			</p>\n			<p><b> xpath</b> : <code>f:DiagnosticReport/f:status</code>\n			</p>\n			<p><b> xpathUsage</b> : normal</p>\n			<p><b> mulitpleOr</b> : True   (Conformance Expectation = SHALL)</p>\n			<p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>\n    \n    \n    \n		</div>"
+  ];
+  fhir:SearchParameter.url [ fhir:value "http://hl7.org/fhir/us/core/SearchParameter/us-core-diagnosticreport-status"];
+  fhir:SearchParameter.version [ fhir:value "4.2.0"];
+  fhir:SearchParameter.name [ fhir:value "USCoreDiagnosticReportStatus"];
+  fhir:SearchParameter.derivedFrom [
+     fhir:value "http://hl7.org/fhir/SearchParameter/DiagnosticReport-status";
+     fhir:link <http://hl7.org/fhir/SearchParameter/DiagnosticReport-status>
+  ];
+  fhir:SearchParameter.status [ fhir:value "active"];
+  fhir:SearchParameter.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:SearchParameter.date [ fhir:value "2020-11-20T05:19:28.293077Z"^^xsd:dateTime];
+  fhir:SearchParameter.publisher [ fhir:value "HL7 International - Cross-Group Projects"];
+  fhir:SearchParameter.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "HL7 International - Cross-Group Projects" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.hl7.org/Special/committees/cgp" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "cgp@lists.HL7.org" ]
+     ]
+  ];
+  fhir:SearchParameter.description [ fhir:value "**The status of the report**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"];
+  fhir:SearchParameter.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:SearchParameter.code [ fhir:value "status"];
+  fhir:SearchParameter.base [
+     fhir:value "DiagnosticReport";
+     fhir:index 0
+  ];
+  fhir:SearchParameter.type [ fhir:value "token"];
+  fhir:SearchParameter.expression [ fhir:value "DiagnosticReport.status"];
+  fhir:SearchParameter.xpath [ fhir:value "f:DiagnosticReport/f:status"];
+  fhir:SearchParameter.xpathUsage [ fhir:value "normal"];
+  fhir:SearchParameter.multipleOr [
+     fhir:value "true"^^xsd:boolean;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+       fhir:Extension.valueCode [ fhir:value "SHALL" ]
+     ]
+  ];
+  fhir:SearchParameter.multipleAnd [
+     fhir:value "true"^^xsd:boolean;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+       fhir:Extension.valueCode [ fhir:value "MAY" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/SearchParameter/us-core-diagnosticreport-status.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/SearchParameter/us-core-diagnosticreport-status.ttl> .
+
+# -------------------------------------------------------------------------------------
+

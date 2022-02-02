@@ -1,0 +1,119 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Patient/child-example> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "child-example"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Patient Child Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a patient child example for the *US Core Patient Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"child-example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-patient.html\">US Core Patient Profile</a></p></div><blockquote><p><b>US Core Race Extension</b></p><p><b>value</b>: Asian (Details: urn:oid:2.16.840.1.113883.6.238 code 2028-9 = '2028-9', stated as 'Asian')</p><p><b>value</b>: Asian</p></blockquote><blockquote><p><b>US Core Ethnicity Extension</b></p><p><b>value</b>: Not Hispanic or Latino (Details: urn:oid:2.16.840.1.113883.6.238 code 2186-5 = '2186-5', stated as 'Not Hispanic or Latino')</p><p><b>value</b>: Not Hispanic or Latino</p></blockquote><p><b>US Core Birth Sex Extension</b>: M</p><p><b>identifier</b>: Medical Record Number: 1032704 (USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: Child Example </p><p><b>telecom</b>: ph: 555-555-5555(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2016-01-15</p><p><b>address</b>: 49 Meadow St Mounds OK 74047 US </p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2028-9" ];
+         fhir:Coding.display [ fhir:value "Asian" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "Asian" ]
+     ];
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2186-5" ];
+         fhir:Coding.display [ fhir:value "Not Hispanic or Latino" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "Not Hispanic or Latino" ]
+     ];
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity" ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex" ];
+     fhir:Extension.valueCode [ fhir:value "M" ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "MR" ];
+         fhir:Coding.display [ fhir:value "Medical Record Number" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Medical Record Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hospital.smarthealthit.org" ];
+     fhir:Identifier.value [ fhir:value "1032704" ]
+  ];
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Example" ];
+     fhir:HumanName.given [
+       fhir:value "Child";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "555-555-5555" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ];
+  fhir:Patient.gender [ fhir:value "male"];
+  fhir:Patient.birthDate [ fhir:value "2016-01-15"^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "49 Meadow St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Mounds" ];
+     fhir:Address.state [ fhir:value "OK" ];
+     fhir:Address.postalCode [ fhir:value "74047" ];
+     fhir:Address.country [ fhir:value "US" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Patient/child-example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Patient/child-example.ttl> .
+
+# -------------------------------------------------------------------------------------
+

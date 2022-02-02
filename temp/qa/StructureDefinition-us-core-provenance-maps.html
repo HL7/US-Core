@@ -1,0 +1,134 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-us-core-provenance-maps</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<a name="workflow"> </a><h3>Mappings for Workflow Pattern (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreProvenance</b></td></tr>
+ <tr><td>Provenance</td><td>Event</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurred[x]</td><td>Event.occurred[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>Event.location</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reason</td><td>Event.reasonCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;activity</td><td>Event.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent</td><td>Event.performer</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>Event.performer.function</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who</td><td>Event.performer.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent (ProvenanceAuthor)</td><td>Event.performer</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>Event.performer.function</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who</td><td>Event.performer.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent (ProvenanceTransmitter)</td><td>Event.performer</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>Event.performer.function</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who</td><td>Event.performer.actor</td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreProvenance</b></td></tr>
+ <tr><td>Provenance</td><td>Entity. Role, or Act, ControlAct[isNormalAct() and subsumes(CACT, classCode) and moodCode=EVN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;target</td><td>./outboundRelationship[isNormalActRelationship() and typeCode=SUBJ]/target  OR  ./participation[isNormalParticipation() and typeCode=SBJ]/role  OR  ./participation[isNormalParticipation() and typeCode=SBJ]/role[isNormalRole()]/player</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td>.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurred[x]</td><td>./effectiveTime[type=IVL_TS]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td>unique(./participation[isNormalParticipation() and typeCode=AUT]/time[type=TS])</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;policy</td><td>./inboundRelationship[isNormalActRelationship() and typeCode=&quot;SUBJ&quot;]/source[isNormalAct and subsumes(POLICY, classCode) and moodCode=EVN]/text[typeCode='ED'/tel</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>unique(./participation[isNormalParticipation() and typeCode=LOC]/role[isNormalRole() and subsumes(SDLOC, classCode)]/player[isNormalEntity and classCode=&quot;LOC&quot; and determinerCode=&quot;INST&quot;]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reason</td><td>unique(./reasonCode)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;activity</td><td>Act.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent</td><td>./participation[isNormalParticipation()]  OR  ./outboundRelationship[isNormalActRelationship() and typeCode='DRIV']</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>.role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td>.typecode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who</td><td>.id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onBehalfOf</td><td>Person, Practitioner, Organization, Device :* .role [classCode = RoleClassMutualRelationship; role.code and * .scopes[Role](classCode=IDENT) and *.plays [Role.Code]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent (ProvenanceAuthor)</td><td>./participation[isNormalParticipation()]  OR  ./outboundRelationship[isNormalActRelationship() and typeCode='DRIV']</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>.role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td>.typecode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who</td><td>.id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onBehalfOf</td><td>Person, Practitioner, Organization, Device :* .role [classCode = RoleClassMutualRelationship; role.code and * .scopes[Role](classCode=IDENT) and *.plays [Role.Code]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent (ProvenanceTransmitter)</td><td>./participation[isNormalParticipation()]  OR  ./outboundRelationship[isNormalActRelationship() and typeCode='DRIV']</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>.role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td>.typecode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who</td><td>.id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onBehalfOf</td><td>Person, Practitioner, Organization, Device :* .role [classCode = RoleClassMutualRelationship; role.code and * .scopes[Role](classCode=IDENT) and *.plays [Role.Code]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;entity</td><td>./subjectOf</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td>./typeCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;what</td><td>./text/reference</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;agent</td><td>./author/role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;signature</td><td>./signatureText</td> </tr>
+</table>
+<a name="w3c.prov"> </a><h3>Mappings for W3C PROV (<a href="http://www.w3.org/ns/prov">http://www.w3.org/ns/prov</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreProvenance</b></td></tr>
+ <tr><td>Provenance</td><td>Activity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;target</td><td>Entity Created/Updated</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurred[x]</td><td>Activity.startTime &amp; Activity.endTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td>Activity.when</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>Activity.location</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reason</td><td>Activity.Activity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;activity</td><td>Activity.Activity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent</td><td>Agent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>Agent.Attribution</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent (ProvenanceAuthor)</td><td>Agent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>Agent.Attribution</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent (ProvenanceTransmitter)</td><td>Agent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>Agent.Attribution</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;entity</td><td>Entity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td>Entity.role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;what</td><td>Entity.Identity</td> </tr>
+</table>
+<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreProvenance</b></td></tr>
+ <tr><td>Provenance</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;target</td><td>FiveWs.what[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;occurred[x]</td><td>FiveWs.done[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td>FiveWs.recorded</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>FiveWs.where[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reason</td><td>FiveWs.why[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;activity</td><td>FiveWs.why[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent</td><td>FiveWs.who</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who</td><td>FiveWs.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent (ProvenanceAuthor)</td><td>FiveWs.who</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who</td><td>FiveWs.actor</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent (ProvenanceTransmitter)</td><td>FiveWs.who</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who</td><td>FiveWs.actor</td> </tr>
+</table>
+<a name="fhirauditevent"> </a><h3>Mappings for FHIR AuditEvent Mapping (<a href="http://hl7.org/fhir/auditevent.html">http://hl7.org/fhir/auditevent</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>USCoreProvenance</b></td></tr>
+ <tr><td>Provenance</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;target</td><td>AuditEvent.entity.reference</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td>AuditEvent.recorded</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;policy</td><td>AuditEvent.agent.policy</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;location</td><td>AuditEvent.agent.location</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;reason</td><td>AuditEvent.purposeOfEvent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent</td><td>AuditEvent.agent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>AuditEvent.agent.type</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td>AuditEvent.agent.role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent (ProvenanceAuthor)</td><td>AuditEvent.agent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>AuditEvent.agent.type</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td>AuditEvent.agent.role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;agent (ProvenanceTransmitter)</td><td>AuditEvent.agent</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>AuditEvent.agent.type</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td>AuditEvent.agent.role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;entity</td><td>AuditEvent.entity</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;role</td><td>AuditEvent.entity.lifecycle</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;what</td><td>AuditEvent.entity.reference</td> </tr>
+</table>
+</body>
+</html>

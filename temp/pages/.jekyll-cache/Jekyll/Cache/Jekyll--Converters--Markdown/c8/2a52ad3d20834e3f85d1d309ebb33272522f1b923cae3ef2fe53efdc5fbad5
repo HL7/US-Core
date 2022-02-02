@@ -1,0 +1,65 @@
+I"m
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/careteam.html">CareTeam</a> resource for identifying the Care Team members associated with a patient. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core-CareTeam profile:</p>
+
+<ul>
+  <li>Query for a Patient’s CareTeam</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a> a Patient’s CareTeam</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each CareTeam must have:</strong></p>
+
+<ol>
+  <li>a patient</li>
+  <li>a participant role for each careteam members</li>
+  <li class="new-content">names of careteam members which can be:
+    <ul>
+      <li>a practitioner or practitioner type (doctor, nurse, therapist)*</li>
+      <li>the patient</li>
+      <li>a relative or friend or guardian</li>
+      <li>an organization</li>
+    </ul>
+  </li>
+</ol>
+
+<p class="new-content">*See the next section for how practitioner members are represented in this Profile.</p>
+
+<p><strong>Each Condition must support:</strong></p>
+
+<ol>
+  <li>a status code</li>
+</ol>
+
+<div class="new-content">
+  <p><strong>Profile specific implementation guidance:</strong></p>
+
+  <p>In order to access care team member’s names, identifiers, locations, and contact information, the CareTeam profile supports several types of care team participants. They are represented as references to other profiles and include the following four profiles which are marked as must support:</p>
+  <ol>
+    <li>US Core Practitioner Profile</li>
+    <li>US Core PractitionerRole Profile</li>
+    <li>US Core Patient Profile</li>
+    <li>US Core RelatedPerson Profile</li>
+  </ol>
+
+  <ul>
+    <li>Although <em>both</em> US Core Practitioner Profile and US Core PractitionerRole are must support, the server system is not required to support both types of references (and <code class="highlighter-rouge">_include</code> search parameters), but <strong>SHALL</strong> support <em>at least</em> one of them.</li>
+    <li>The client application <strong>SHALL</strong> support all four profile references.</li>
+    <li>Because the US Core PractitionerRole Profile supplies the provider’s location and contact information and a reference to the Practitioner, server systems <strong>SHOULD</strong> reference it instead of the US Core Practitioner Profile. An example of how to access the practitioner name and identifier is shown in the quick start section below.</li>
+    <li>Servers that support only US Core Practitioner Profile <strong>SHALL</strong> provide implementation specific guidance how to access a provider’s location and contact information using only the Practitioner resource.</li>
+  </ul>
+</div>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li class="new-content"><a href="CareTeam-example.html">CareTeam-example</a></li>
+</ul>
+
+:ET

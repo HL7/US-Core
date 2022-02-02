@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Device/udi-1> a fhir:Device;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "udi-1"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "UDI 1 Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a UDI 1 example for the *US Core Implantable Device Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"udi-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-implantable-device.html\">US Core Implantable Device Profile</a></p></div><h3>UdiCarriers</h3><table class=\"grid\"><tr><td>-</td><td><b>DeviceIdentifier</b></td><td><b>CarrierHRF</b></td></tr><tr><td>*</td><td>09504000059118</td><td>(01)09504000059118(17)141120(10)7654321D(21)10987654d321</td></tr></table><p><b>status</b>: active</p><p><b>expirationDate</b>: 2014-11-20</p><p><b>lotNumber</b>: 7654321D</p><p><b>serialNumber</b>: 10987654d321</p><p><b>type</b>: Coated femoral stem prosthesis, modular <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#468063009)</span></p><p><b>patient</b>: <a href=\"Patient-example.html\">Patient/example: Amy Shaw</a> \" SHAW\"</p></div>"
+  ];
+  fhir:Device.udiCarrier [
+     fhir:index 0;
+     fhir:Device.udiCarrier.deviceIdentifier [ fhir:value "09504000059118" ];
+     fhir:Device.udiCarrier.carrierHRF [ fhir:value "(01)09504000059118(17)141120(10)7654321D(21)10987654d321" ]
+  ];
+  fhir:Device.status [ fhir:value "active"];
+  fhir:Device.expirationDate [ fhir:value "2014-11-20"^^xsd:date];
+  fhir:Device.lotNumber [ fhir:value "7654321D"];
+  fhir:Device.serialNumber [ fhir:value "10987654d321"];
+  fhir:Device.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:468063009;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "468063009" ];
+       fhir:Coding.display [ fhir:value "Coated femoral stem prosthesis, modular" ]
+     ]
+  ];
+  fhir:Device.patient [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy Shaw" ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Device/udi-1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Device/udi-1.ttl> .
+
+# -------------------------------------------------------------------------------------
+

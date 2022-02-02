@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+  <title>SearchParameter-us-core-relatedperson-patient-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<div xmlns="http://www.w3.org/1999/xhtml">  <!-- <h2>SearchParameter: USCoreRelatedpersonPatient</h2> --><b> description</b> : <p><strong>The patient this related person is related to</strong><br/><strong>NOTE</strong>: This US Core SearchParameter definition extends the usage context of the
+<a href="http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html">Conformance expectation extension</a></p>
+<ul><li>multipleAnd</li><li>multipleOr</li><li>comparator</li><li>modifier</li><li>chain</li></ul>
+
+			<br/>
+			<p><b> id</b> us-core-relatedperson-patient</p>
+			<p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-relatedperson-patient</b>
+			</p>
+			<p><b> version</b> : 4.0.1</p>
+			<p><b> name</b> : USCoreRelatedpersonPatient</p>
+			<p><b> derivedFrom</b> : http://hl7.org/fhir/SearchParameter/RelatedPerson-patient</p>
+			<p><b> status</b> : active</p>
+			
+			<p><b> date</b> : 2021-11-16</p>
+			<p><b> publisher</b> : HL7 International - US Realm Steering Committee</p>
+			<p><b> contact</b> : http://www.hl7.org/Special/committees/usrealm/index.cfm</p>
+              <!-- <p>
+				<b> useContext</b> : </p> -->
+			<p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
+           States of America (the)'})</span>
+			</p>
+			  <!-- <p>
+		<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,
+         and matching as part of a chain</p> -->
+			<p><b> code</b> : <code>patient</code>
+			</p>
+			<p><b> base</b> :RelatedPerson</p>
+			<p><b> type</b> : reference</p>
+			<p><b> expression</b> : <code>RelatedPerson.patient</code>
+			</p>
+			<p><b> xpath</b> : <code>f:RelatedPerson/f:patient</code>
+			</p>
+			<p><b> xpathUsage</b> : normal</p>
+			<p><b> mulitpleOr</b> : True   (Conformance Expectation = MAY)</p>
+			<p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>
+    
+    
+    
+		</div></body>
+</html>

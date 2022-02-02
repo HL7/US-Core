@@ -1,0 +1,102 @@
+{% raw %}<pre class="xml"><code class="language-xml">
+
+&lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter">SearchParameter</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;us-core-documentreference-patient&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;  &lt;!-- &lt;h2&gt;SearchParameter: USCoreDocumentReferencePatient&lt;/h2&gt; --&gt;&lt;b&gt; description&lt;/b&gt; : &lt;p&gt;&lt;strong&gt;Who/what is the subject of the document&lt;/strong&gt;&lt;br/&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: This US Core SearchParameter definition extends the usage context of the
+&lt;a href=&quot;http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html&quot;&gt;Conformance expectation extension&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;multipleAnd&lt;/li&gt;&lt;li&gt;multipleOr&lt;/li&gt;&lt;li&gt;comparator&lt;/li&gt;&lt;li&gt;modifier&lt;/li&gt;&lt;li&gt;chain&lt;/li&gt;&lt;/ul&gt;
+
+			&lt;br/&gt;
+			&lt;p&gt;&lt;b&gt; id&lt;/b&gt; us-core-documentreference-patient&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; url&lt;/b&gt; : &lt;b&gt; http://hl7.org/fhir/us/core/SearchParameter/us-core-documentreference-patient&lt;/b&gt;
+			&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; version&lt;/b&gt; : 4.0.1&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; name&lt;/b&gt; : USCoreDocumentReferencePatient&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; derivedFrom&lt;/b&gt; : http://hl7.org/fhir/SearchParameter/clinical-patient
+			&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; status&lt;/b&gt; : active&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; experimental&lt;/b&gt;  False&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; date&lt;/b&gt; : 2020-11-20&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; publisher&lt;/b&gt; : HL7 International - US Realm Steering Committee&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; contact&lt;/b&gt; : http://www.hl7.org/Special/committees/usrealm/index.cfm&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; useContext&lt;/b&gt; : &lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; jurisdiction&lt;/b&gt; : United States of America (the) &lt;span&gt; (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
+           States of America (the)'})&lt;/span&gt;
+			&lt;/p&gt;
+			  &lt;!-- &lt;p&gt;
+		&lt;b&gt; purpose&lt;/b&gt; : Need to search by identifier for various infrastructural cases - mainly retrieving packages,
+         and matching as part of a chain&lt;/p&gt; --&gt;
+			&lt;p&gt;&lt;b&gt; code&lt;/b&gt; : &lt;code&gt;patient&lt;/code&gt;
+			&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; base&lt;/b&gt; :DocumentReference&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; type&lt;/b&gt; : reference&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; expression&lt;/b&gt; : &lt;code&gt;DocumentReference.subject.where(resolve() is Patient)&lt;/code&gt;
+			&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; xpath&lt;/b&gt; : &lt;code&gt;f:DocumentReference/f:subject&lt;/code&gt;
+			&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; xpathUsage&lt;/b&gt; : normal&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; mulitpleOr&lt;/b&gt; : True   (Conformance Expectation = MAY)&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt; mulitpleAnd&lt;/b&gt; : True  ( Conformance Expectation = MAY)&lt;/p&gt;
+    
+    
+    
+		&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.url">url</a>
+       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/core/SearchParameter/us-core-documentreference-patient&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;4.2.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;USCoreDocumentReferencePatient&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.derivedFrom">derivedFrom</a> <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/SearchParameter/clinical-patient&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.experimental">experimental</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2020-11-20T05:19:28.111558Z&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 International - Cross-Group Projects&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;HL7 International - Cross-Group Projects&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;http://www.hl7.org/Special/committees/cgp&quot;/&gt;
+    &lt;/telecom&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;cgp@lists.HL7.org&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.description">description</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;**Who/what is the subject of the document**  
+**NOTE**: This US Core SearchParameter definition extends the usage context of the
+[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)
+ - multipleAnd
+ - multipleOr
+ - comparator
+ - modifier
+ - chain&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.jurisdiction">jurisdiction</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;urn:iso:std:iso:3166&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;US&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/jurisdiction&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;patient&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.base">base</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;DocumentReference&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;reference&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.expression">expression</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;DocumentReference.subject.where(resolve() is Patient)&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.xpath">xpath</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;f:DocumentReference/f:subject&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.xpathUsage">xpathUsage</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;normal&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.target">target</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;Patient&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.multipleOr">multipleOr</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#boolean#boolean.extension">extension</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+    &lt;/extension&gt;
+  &lt;/multipleOr&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.multipleAnd">multipleAnd</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#boolean#boolean.extension">extension</a>
+               <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+    &lt;/extension&gt;
+  &lt;/multipleAnd&gt;
+&lt;/SearchParameter&gt;</code></pre>
+{% endraw %}

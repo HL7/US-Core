@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Device/udi-2> a fhir:Device;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "udi-2"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Device Defib Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a Device defib example for the *US Core Implantable Device Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"udi-2\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-implantable-device.html\">US Core Implantable Device Profile</a></p></div><h3>UdiCarriers</h3><table class=\"grid\"><tr><td>-</td><td><b>DeviceIdentifier</b></td><td><b>CarrierHRF</b></td><td><b>EntryType</b></td></tr><tr><td>*</td><td>99863313444316</td><td>(01)99863313444316(17)220101(10)M320(21)AC221</td><td>rfid</td></tr></table><p><b>status</b>: active</p><p><b>manufacturer</b>: ACME Biomedical</p><p><b>expirationDate</b>: 2022-01-01</p><p><b>lotNumber</b>: M320</p><p><b>serialNumber</b>: AC221</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td>-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>ACME Defibrillator Analyzer, with Transcutaneous Pacemaker Input</td><td>udi-label-name</td></tr></table><p><b>modelNumber</b>: 1.0</p><p><b>type</b>: Implant <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#19257004 \"Defibrillator, device\")</span></p><p><b>patient</b>: <a href=\"Patient-example.html\">Patient/example: Amy Shaw</a> \" SHAW\"</p></div>"
+  ];
+  fhir:Device.udiCarrier [
+     fhir:index 0;
+     fhir:Device.udiCarrier.deviceIdentifier [ fhir:value "99863313444316" ];
+     fhir:Device.udiCarrier.carrierHRF [ fhir:value "(01)99863313444316(17)220101(10)M320(21)AC221" ];
+     fhir:Device.udiCarrier.entryType [ fhir:value "rfid" ]
+  ];
+  fhir:Device.status [ fhir:value "active"];
+  fhir:Device.manufacturer [ fhir:value "ACME Biomedical"];
+  fhir:Device.expirationDate [ fhir:value "2022-01-01"^^xsd:date];
+  fhir:Device.lotNumber [ fhir:value "M320"];
+  fhir:Device.serialNumber [ fhir:value "AC221"];
+  fhir:Device.deviceName [
+     fhir:index 0;
+     fhir:Device.deviceName.name [ fhir:value "ACME Defibrillator Analyzer, with Transcutaneous Pacemaker Input" ];
+     fhir:Device.deviceName.type [ fhir:value "udi-label-name" ]
+  ];
+  fhir:Device.modelNumber [ fhir:value "1.0"];
+  fhir:Device.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:19257004;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "19257004" ];
+       fhir:Coding.display [ fhir:value "Defibrillator, device" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Implant" ]
+  ];
+  fhir:Device.patient [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy Shaw" ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Device/udi-2.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Device/udi-2.ttl> .
+
+# -------------------------------------------------------------------------------------
+

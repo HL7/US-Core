@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+  <title>table-name-operationdefinitions-xml</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+ <tr><td><a href="OperationDefinition-docref.xml.html">US Core Fetch DocumentReference</a> </td><td><p>This operation is used to return all the references to documents related to a patient.</p>
+<p>The operation requires a patient id and takes the optional input parameters:</p>
+<ul>
+<li>start date</li>
+<li>end date</li>
+<li>document type</li>
+</ul>
+<p>and returns a <a href="http://hl7.org/fhir/bundle.html">Bundle</a> of type &quot;searchset&quot; containing <a href="http://hl7.org/fhir/documentreference.html">DocumentReference</a> resources for the patient. The DocumentReference resources <strong>SHOULD</strong> conform to the <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference">US Core DocumentReference
+Profiles</a>. If the server has or can create documents that are related to the patient, and that are available for the given user, the server returns the DocumentReference resources needed to support the records.  The principle intended use for this operation is to provide a provider or patient with access to their available document information.</p>
+<p>This operation is <em>different</em> from a search by patient and type and date range because:</p>
+<ol>
+<li>
+<p>It is used to request a server <em>generate</em> a document based on the specified parameters.</p>
+</li>
+<li>
+<p>If no parameters are specified, the server SHALL return a DocumentReference to the patient's most current CCD</p>
+</li>
+<li>
+<p>If the server cannot <em>generate</em> a document based on the specified parameters, the operation will return an empty search bundle.</p>
+</li>
+</ol>
+<p>This operation is the <em>same</em> as a FHIR RESTful search by patient,type and date range because:</p>
+<ol>
+<li>References for <em>existing</em> documents that meet the requirements of the request SHOULD also be returned unless the client indicates they are only interested in 'on-demand' documents using the <em>on-demand</em> parameter.</li>
+</ol>
+</td></tr>
+</body>
+</html>

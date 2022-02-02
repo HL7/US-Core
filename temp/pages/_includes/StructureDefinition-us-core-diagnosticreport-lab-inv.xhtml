@@ -1,0 +1,7 @@
+{% raw %}<h4>Constraints</h4>
+<table class="list">
+<tr><td width="60"><b>Id</b></td><td><b>Path</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
+<tr><td>us-core-8</td><td>DiagnosticReport</td><td>effective[x] SHALL be present if the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'<br/>: (status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies effective.exists()</td><td></td></tr>
+<tr><td>us-core-9</td><td>DiagnosticReport</td><td>issued SHALL be present if the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'<br/>: (status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies issued.exists()</td><td></td></tr>
+</table>
+{% endraw %}

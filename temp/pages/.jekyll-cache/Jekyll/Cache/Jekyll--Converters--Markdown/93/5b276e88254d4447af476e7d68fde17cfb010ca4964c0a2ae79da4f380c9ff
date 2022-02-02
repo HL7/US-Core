@@ -1,0 +1,123 @@
+I".
+<hr />
+
+<p><strong id="search" style="font-size: 20px;">Quick Start</strong>
+<a name="quick-start"> </a></p>
+
+<hr />
+
+<p>Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profile’s information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions.  See the <a href="CapabilityStatement-us-core-server.html">US Core Server CapabilityStatement</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+<ul>
+  <li>The syntax used to describe the interactions is described <a href="general-guidance.html#search-syntax">here</a>.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional rules and expectations when a server requires status parameters.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional guidance on searching for multiple patients.</li>
+</ul>
+
+<h4 id="mandatory-search-parameters">Mandatory Search Parameters:</h4>
+
+<p>The following search parameters and search parameter combinations SHALL be supported:</p>
+
+<ol>
+  <li>
+    <p><strong>SHALL</strong> support fetching a Patient using the <strong><a href="SearchParameter-us-core-patient-id.html"><code class="highlighter-rouge">_id</code></a></strong> search parameter:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Patient[id]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Patient/1032702</li>
+      <li>GET [base]/Patient?_id=1032702</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em>  (<a href="http://hl7.org/fhir/R4/references.html#logical">how to search by the logical id</a> of the resource)</p>
+  </li>
+  <li>
+    <p><strong>SHALL</strong> support searching a patient by an identifier such as a MPI using the <strong><a href="SearchParameter-us-core-patient-identifier.html"><code class="highlighter-rouge">identifier</code></a></strong> search parameter:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Patient?identifier={system|}[code]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Patient?identifier=http://hospital.smarthealthit.org|1032702</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle containing any Patient resources matching the identifier (<a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+  <li>
+    <p><strong>SHALL</strong> support searching for a patient by a server defined search that matches any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text using the <strong><a href="SearchParameter-us-core-patient-name.html"><code class="highlighter-rouge">name</code></a></strong> search parameter:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Patient?name=[string]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Patient?name=Shaw</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Patient resources matching the name (<a href="http://hl7.org/fhir/R4/search.html#string">how to search by string</a>)</p>
+  </li>
+  <li>
+    <p><strong>SHALL</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-patient-birthdate.html"><code class="highlighter-rouge">birthdate</code></a></strong> and <strong><a href="SearchParameter-us-core-patient-name.html"><code class="highlighter-rouge">name</code></a></strong> search parameters:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Patient?birthdate=[date]&amp;name=[string]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Patient?name=Shaw&amp;birthdate=2007-03-20</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Patient resources matching the specified birthdate and name (<a href="http://hl7.org/fhir/R4/search.html#date">how to search by date</a> and <a href="http://hl7.org/fhir/R4/search.html#string">how to search by string</a>)</p>
+  </li>
+  <li>
+    <p><strong>SHALL</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-patient-gender.html"><code class="highlighter-rouge">gender</code></a></strong> and <strong><a href="SearchParameter-us-core-patient-name.html"><code class="highlighter-rouge">name</code></a></strong> search parameters:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Patient?gender={system|}[code]&amp;name=[string]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Patient?name=Shaw&amp;gender=female</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Patient resources matching the specified gender and name (<a href="http://hl7.org/fhir/R4/search.html#string">how to search by string</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+</ol>
+
+<h4 id="optional-search-parameters">Optional Search Parameters:</h4>
+
+<p>The following search parameter combinations SHOULD be supported:</p>
+
+<ol>
+  <li>
+    <p><strong>SHOULD</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-patient-birthdate.html"><code class="highlighter-rouge">birthdate</code></a></strong> and <strong><a href="SearchParameter-us-core-patient-family.html"><code class="highlighter-rouge">family</code></a></strong> search parameters:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Patient?birthdate=[date]&amp;family=[string]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Patient?family=Shaw&amp;birthdate=2007-03-20</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Patient resources matching the specified birthdate and family (<a href="http://hl7.org/fhir/R4/search.html#date">how to search by date</a> and <a href="http://hl7.org/fhir/R4/search.html#string">how to search by string</a>)</p>
+  </li>
+  <li>
+    <p><strong>SHOULD</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-patient-family.html"><code class="highlighter-rouge">family</code></a></strong> and <strong><a href="SearchParameter-us-core-patient-gender.html"><code class="highlighter-rouge">gender</code></a></strong> search parameters:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Patient?family=[string]&amp;gender={system|}[code]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/Patient?family=Shaw&amp;gender=female</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all Patient resources matching the specified family and gender (<a href="http://hl7.org/fhir/R4/search.html#string">how to search by string</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+</ol>
+
+:ET

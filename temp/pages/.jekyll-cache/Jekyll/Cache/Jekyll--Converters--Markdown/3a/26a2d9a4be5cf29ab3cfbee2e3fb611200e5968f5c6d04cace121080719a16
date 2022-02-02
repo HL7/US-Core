@@ -1,0 +1,57 @@
+I"
+<hr />
+
+<p><strong id="search" style="font-size: 20px;">Quick Start</strong>
+<a name="quick-start"> </a></p>
+
+<hr />
+
+<p>Below is an overview of the required Server RESTful FHIR interactions for this profile - for example, search and read operations - when supporting the US Core interactions to access this profile’s information (Profile Support + Interaction Support). Note that systems that support only US Core Profiles (Profile Only Support) are not required to support these interactions.  See the <a href="CapabilityStatement-us-core-server.html">US Core Server CapabilityStatement</a> for a complete list of supported RESTful interactions for this IG.</p>
+
+<ul>
+  <li>The syntax used to describe the interactions is described <a href="general-guidance.html#search-syntax">here</a>.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional rules and expectations when a server requires status parameters.</li>
+  <li>See the <a href="general-guidance.html" title="General Guidance Page">General Guidance</a> section for additional guidance on searching for multiple patients.</li>
+</ul>
+
+<h4 id="mandatory-search-parameters">Mandatory Search Parameters:</h4>
+
+<p>The following search parameters and search parameter combinations SHALL be supported:</p>
+
+<ol>
+  <li>
+    <p><strong>SHALL</strong> support searching for all allergies for a patient using the <strong><a href="SearchParameter-us-core-allergyintolerance-patient.html"><code class="highlighter-rouge">patient</code></a></strong> search parameter:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/AllergyIntolerance?patient={Type/}[id]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/AllergyIntolerance?patient=1137192</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all AllergyIntolerance resources for the specified patient (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a>)</p>
+  </li>
+</ol>
+
+<h4 id="optional-search-parameters">Optional Search Parameters:</h4>
+
+<p>The following search parameter combinations SHOULD be supported:</p>
+
+<ol>
+  <li>
+    <p><strong>SHOULD</strong> support searching using the combination of the <strong><a href="SearchParameter-us-core-allergyintolerance-patient.html"><code class="highlighter-rouge">patient</code></a></strong> and <strong><a href="SearchParameter-us-core-allergyintolerance-clinical-status.html"><code class="highlighter-rouge">clinical-status</code></a></strong> search parameters:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/AllergyIntolerance?patient={Type/}[id]&amp;clinical-status={system|}[code]</code></p>
+
+    <p>Example:</p>
+
+    <ol>
+      <li>GET [base]/AllergyIntolerance?patient=[id]&amp;clinical-status=http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|active</li>
+    </ol>
+
+    <p><em>Implementation Notes:</em> Fetches a bundle of all AllergyIntolerance resources for the specified patient and status code.  This will not return any "entered in error" resources because of the conditional presence of the clinicalStatus element. (<a href="http://hl7.org/fhir/R4/search.html#reference">how to search by reference</a> and <a href="http://hl7.org/fhir/R4/search.html#token">how to search by token</a>)</p>
+  </li>
+</ol>
+
+:ET

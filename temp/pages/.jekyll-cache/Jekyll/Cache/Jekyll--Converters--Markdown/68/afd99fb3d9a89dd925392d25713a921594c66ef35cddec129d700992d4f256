@@ -1,0 +1,53 @@
+I"�
+<p>This profile sets minimum expectations for the <a href="http://hl7.org/fhir/R4/immunization.html">Immunization</a> resource to record, fetch and search immunization history associated with a patient. It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core-Core Immunization
+profile:</p>
+
+<ul>
+  <li>Query for immunizations belonging to a Patient</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a>  immunizations belonging to a Patient</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Immunization must have:</strong></p>
+
+<ol>
+  <li>a status*</li>
+  <li>a vaccine code that identifies the kind of vaccine administered</li>
+  <li>a date the vaccine was administered</li>
+  <li>a patient</li>
+</ol>
+
+<p><strong>Each Immunization must support:</strong></p>
+
+<ol>
+  <li>a statusReason if the vaccine wasn’t given</li>
+  <li>a flag to indicate whether the vaccine was reported by someone other than the person who administered the vaccine.</li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>Use the status code: <code class="highlighter-rouge">not-done</code> to represent that an immunization was <em>not</em> given.</li>
+  <li>Based upon the ONC U.S. Core Data for Interoperability (USCDI) v1 requirements, <a href="https://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp">CVX vaccine codes</a> are required and the <a href="http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp">NDC vaccine codes</a> <strong>SHOULD</strong> be supported as a translation.
+    <ul>
+      <li class="new-content">Be aware that there is <em>10-digit (with dashes)</em> NDC format displayed on drug packaging and an <em>11-digit (no dashes)</em> NDC format for billing and prescribing (for example  “49281-121-65” and “49281012165”). Normalization may be required to avoid validation errors and warnings.</li>
+      <li>CDC provides the <a href="http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp">CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table</a> to assist implementers. The example <a href="Immunization-imm-1.html">Immunization-imm-1</a> illustrates using both the CVX and 11 digit NDC codes based upon this table.</li>
+      <li>Note that the CVX code system contains some concepts that are  procedures, medications, or substances rather than immunizations. Implementers should not use these non-vaccine-related CVX codes.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="Immunization-imm-1.html">Immunization-imm-1</a></li>
+</ul>
+
+:ET

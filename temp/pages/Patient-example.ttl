@@ -1,0 +1,226 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Patient Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a patient example for the *US Core Patient Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"example\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-patient.html\">US Core Patient Profile</a></p></div><blockquote><p><b>US Core Race Extension</b></p><p><b>value</b>: White (Details: urn:oid:2.16.840.1.113883.6.238 code 2106-3 = '2106-3', stated as 'White')</p><p><b>value</b>: American Indian or Alaska Native (Details: urn:oid:2.16.840.1.113883.6.238 code 1002-5 = '1002-5', stated as 'American Indian or Alaska Native')</p><p><b>value</b>: Asian (Details: urn:oid:2.16.840.1.113883.6.238 code 2028-9 = '2028-9', stated as 'Asian')</p><p><b>value</b>: Shoshone (Details: urn:oid:2.16.840.1.113883.6.238 code 1586-7 = '1586-7', stated as 'Shoshone')</p><p><b>value</b>: Filipino (Details: urn:oid:2.16.840.1.113883.6.238 code 2036-2 = '2036-2', stated as 'Filipino')</p><p><b>value</b>: Mixed</p></blockquote><blockquote><p><b>US Core Ethnicity Extension</b></p><p><b>value</b>: Hispanic or Latino (Details: urn:oid:2.16.840.1.113883.6.238 code 2135-2 = '2135-2', stated as 'Hispanic or Latino')</p><p><b>value</b>: Dominican (Details: urn:oid:2.16.840.1.113883.6.238 code 2184-0 = '2184-0', stated as 'Dominican')</p><p><b>value</b>: Mexican (Details: urn:oid:2.16.840.1.113883.6.238 code 2148-5 = '2148-5', stated as 'Mexican')</p><p><b>value</b>: Hispanic or Latino</p></blockquote><p><b>US Core Birth Sex Extension</b>: F</p><p><b>US Core Gender Identity Extension</b>: asked but unknown <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-v3-NullFlavor.html\">NullFlavor</a>#ASKU)</span></p><p><b>identifier</b>: Medical Record Number: 1032702 (USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: Amy V. Shaw (OLD), Amy V. Baxter </p><p><b>telecom</b>: ph: 555-555-5555(HOME), <a href=\"mailto:amy.shaw@example.com\">amy.shaw@example.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1987-02-20</p><p><b>address</b>: </p><ul><li>49 Meadow St Mounds OK 74047 US (OLD)</li><li>183 Mountain View St Mounds OK 74048 US </li></ul></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2106-3" ];
+         fhir:Coding.display [ fhir:value "White" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "1002-5" ];
+         fhir:Coding.display [ fhir:value "American Indian or Alaska Native" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2028-9" ];
+         fhir:Coding.display [ fhir:value "Asian" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "1586-7" ];
+         fhir:Coding.display [ fhir:value "Shoshone" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2036-2" ];
+         fhir:Coding.display [ fhir:value "Filipino" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "Mixed" ]
+     ];
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2135-2" ];
+         fhir:Coding.display [ fhir:value "Hispanic or Latino" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2184-0" ];
+         fhir:Coding.display [ fhir:value "Dominican" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2148-5" ];
+         fhir:Coding.display [ fhir:value "Mexican" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Extension.url [ fhir:value "text" ];
+       fhir:Extension.valueString [ fhir:value "Hispanic or Latino" ]
+     ];
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity" ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex" ];
+     fhir:Extension.valueCode [ fhir:value "F" ]
+  ], [
+     fhir:index 3;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-NullFlavor" ];
+         fhir:Coding.code [ fhir:value "ASKU" ];
+         fhir:Coding.display [ fhir:value "asked but unknown" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "asked but unknown" ]
+     ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "MR" ];
+         fhir:Coding.display [ fhir:value "Medical Record Number" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Medical Record Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hospital.smarthealthit.org" ];
+     fhir:Identifier.value [ fhir:value "1032702" ]
+  ];
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.use [ fhir:value "old" ];
+     fhir:HumanName.family [ fhir:value "Shaw" ];
+     fhir:HumanName.given [
+       fhir:value "Amy";
+       fhir:index 0
+     ], [
+       fhir:value "V.";
+       fhir:index 1
+     ];
+     fhir:HumanName.period [
+       fhir:Period.start [ fhir:value "2016-12-06"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2020-07-22"^^xsd:date ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:HumanName.family [ fhir:value "Baxter" ];
+     fhir:HumanName.given [
+       fhir:value "Amy";
+       fhir:index 0
+     ], [
+       fhir:value "V.";
+       fhir:index 1
+     ];
+     fhir:HumanName.suffix [
+       fhir:value "PharmD";
+       fhir:index 0
+     ];
+     fhir:HumanName.period [
+       fhir:Period.start [ fhir:value "2020-07-22"^^xsd:date ]
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "555-555-5555" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "amy.shaw@example.com" ]
+  ];
+  fhir:Patient.gender [ fhir:value "female"];
+  fhir:Patient.birthDate [ fhir:value "1987-02-20"^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.use [ fhir:value "old" ];
+     fhir:Address.line [
+       fhir:value "49 Meadow St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Mounds" ];
+     fhir:Address.state [ fhir:value "OK" ];
+     fhir:Address.postalCode [ fhir:value "74047" ];
+     fhir:Address.country [ fhir:value "US" ];
+     fhir:Address.period [
+       fhir:Period.start [ fhir:value "2016-12-06"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2020-07-22"^^xsd:date ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Address.line [
+       fhir:value "183 Mountain View St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Mounds" ];
+     fhir:Address.state [ fhir:value "OK" ];
+     fhir:Address.postalCode [ fhir:value "74048" ];
+     fhir:Address.country [ fhir:value "US" ];
+     fhir:Address.period [
+       fhir:Period.start [ fhir:value "2020-07-22"^^xsd:date ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/Patient/example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/Patient/example.ttl> .
+
+# -------------------------------------------------------------------------------------
+

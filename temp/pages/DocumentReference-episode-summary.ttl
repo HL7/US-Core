@@ -1,0 +1,102 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/DocumentReference/episode-summary> a fhir:DocumentReference;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "episode-summary"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Episode Summary Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a episode summary example for the *US Core DocumentReference Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"episode-summary\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-documentreference.html\">US Core DocumentReference Profile</a></p></div><p><b>identifier</b>: id: urn:oid:2.16.840.1.113883.19.5.99999.1</p><p><b>status</b>: current</p><p><b>type</b>: CCD Document <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#34133-9 \"Summary of episode note\")</span></p><p><b>category</b>: Clinical Note <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-us-core-documentreference-category.html\">US Core DocumentReferences Category Codes</a>#clinical-note)</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Patient/example: Amy Shaw</a> \" SHAW\"</p><p><b>date</b>: Mar 9, 2016, 7:29:46 AM</p><p><b>author</b>: <a href=\"Practitioner-practitioner-1.html\">Practitioner/practitioner-1: Ronald Bone, MD</a> \" BONE\"</p><p><b>description</b>: Pulmonology clinic acute visit</p><blockquote><p><b>content</b></p><p><b>format</b>: Documents following C-CDA constraints using a structured body (Details: urn:oid:1.3.6.1.4.1.19376.1.2.3 code urn:hl7-org:sdwg:ccda-structuredBody:2.1 = 'urn:hl7-org:sdwg:ccda-structuredBody:2.1', stated as 'Documents following C-CDA constraints using a structured body')</p></blockquote><h3>Contexts</h3><table class=\"grid\"><tr><td>-</td><td><b>Period</b></td></tr><tr><td>*</td><td>2004-12-23T08:00:00+11:00 --&gt; 2004-12-23T08:01:00+11:00</td></tr></table></div>"
+  ];
+  fhir:DocumentReference.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:oid:2.16.840.1.113883.19.5.99999.1" ]
+  ];
+  fhir:DocumentReference.status [ fhir:value "current"];
+  fhir:DocumentReference.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:34133-9;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "34133-9" ];
+       fhir:Coding.display [ fhir:value "Summary of episode note" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "CCD Document" ]
+  ];
+  fhir:DocumentReference.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category" ];
+       fhir:Coding.code [ fhir:value "clinical-note" ];
+       fhir:Coding.display [ fhir:value "Clinical Note" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Clinical Note" ]
+  ];
+  fhir:DocumentReference.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy Shaw" ]
+  ];
+  fhir:DocumentReference.date [ fhir:value "2016-03-09T15:29:46Z"^^xsd:dateTime];
+  fhir:DocumentReference.author [
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/core/Practitioner/practitioner-1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-1" ];
+     fhir:Reference.display [ fhir:value "Ronald Bone, MD" ]
+  ];
+  fhir:DocumentReference.description [ fhir:value "Pulmonology clinic acute visit"];
+  fhir:DocumentReference.content [
+     fhir:index 0;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.contentType [ fhir:value "text/plain" ];
+       fhir:Attachment.url [ fhir:value "/Binary/1-note" ];
+       fhir:Attachment.title [ fhir:value "Uri where the data can be found: [base]/Binary/1-note" ]
+     ];
+     fhir:DocumentReference.content.format [
+       fhir:Coding.system [ fhir:value "urn:oid:1.3.6.1.4.1.19376.1.2.3" ];
+       fhir:Coding.code [ fhir:value "urn:hl7-org:sdwg:ccda-structuredBody:2.1" ];
+       fhir:Coding.display [ fhir:value "Documents following C-CDA constraints using a structured body" ]
+     ]
+  ];
+  fhir:DocumentReference.context [
+     fhir:DocumentReference.context.period [
+       fhir:Period.start [ fhir:value "2004-12-23T08:00:00+11:00"^^xsd:dateTime ];
+       fhir:Period.end [ fhir:value "2004-12-23T08:01:00+11:00"^^xsd:dateTime ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Practitioner/practitioner-1> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/DocumentReference/episode-summary.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/DocumentReference/episode-summary.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/MedicationRequest/self-tylenol> a fhir:MedicationRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "self-tylenol"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Self Tylenol Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "This is a self tylenol example for the *MedicationRequest Profile*." ]
+     ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"self-tylenol\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-medicationrequest.html\">US Core MedicationRequest Profile</a></p></div><p><b>identifier</b>: id: 12345689 (OFFICIAL)</p><p><b>status</b>: active</p><p><b>intent</b>: plan</p><p><b>reported</b>: true</p><p><b>medication</b>: Tylenol PM Pill <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.0.0/CodeSystem-v3-rxNorm.html\">RxNorm</a>#1187314)</span></p><p><b>subject</b>: <a href=\"Patient-example.html\">Patient/example: Amy V. Shaw</a> \" SHAW\"</p><p><b>encounter</b>: <a href=\"Encounter-example-1.html\">Encounter/example-1: Office Visit</a></p><p><b>authoredOn</b>: 2019-06-24</p><p><b>requester</b>: <a href=\"Patient-example.html\">Patient/example: **self-prescribed**</a> \" SHAW\"</p></div>"
+  ];
+  fhir:MedicationRequest.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "official" ];
+     fhir:Identifier.system [ fhir:value "http://acme.org/prescriptions" ];
+     fhir:Identifier.value [ fhir:value "12345689" ]
+  ];
+  fhir:MedicationRequest.status [ fhir:value "active"];
+  fhir:MedicationRequest.intent [ fhir:value "plan"];
+  fhir:MedicationRequest.reportedBoolean [ fhir:value "true"^^xsd:boolean];
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+       fhir:Coding.code [ fhir:value "1187314" ];
+       fhir:Coding.display [ fhir:value "Tylenol PM Pill" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Tylenol PM Pill" ]
+  ];
+  fhir:MedicationRequest.subject [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "Amy V. Shaw" ]
+  ];
+  fhir:MedicationRequest.encounter [
+     fhir:link <http://hl7.org/fhir/us/core/Encounter/example-1>;
+     fhir:Reference.reference [ fhir:value "Encounter/example-1" ];
+     fhir:Reference.display [ fhir:value "Office Visit" ]
+  ];
+  fhir:MedicationRequest.authoredOn [ fhir:value "2019-06-24"^^xsd:date];
+  fhir:MedicationRequest.requester [
+     fhir:link <http://hl7.org/fhir/us/core/Patient/example>;
+     fhir:Reference.reference [ fhir:value "Patient/example" ];
+     fhir:Reference.display [ fhir:value "**self-prescribed**" ]
+  ];
+  fhir:MedicationRequest.dosageInstruction [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "Takes 1-2 tablets once daily at bedtime as needed for restless legs" ]
+  ] .
+
+<http://hl7.org/fhir/us/core/Patient/example> a fhir:us .
+
+<http://hl7.org/fhir/us/core/Encounter/example-1> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/core/MedicationRequest/self-tylenol.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/core/MedicationRequest/self-tylenol.ttl> .
+
+# -------------------------------------------------------------------------------------
+

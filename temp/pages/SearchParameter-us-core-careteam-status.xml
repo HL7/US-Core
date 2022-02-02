@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="us-core-careteam-status"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">  <!-- <h2>SearchParameter: USCoreCareTeamStatus</h2> --><b> description</b> : <p><strong>proposed | active | suspended | inactive | entered-in-error</strong><br/><strong>NOTE</strong>: This US Core SearchParameter definition extends the usage context of the
+<a href="http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html">Conformance expectation extension</a></p>
+<ul><li>multipleAnd</li><li>multipleOr</li><li>comparator</li><li>modifier</li><li>chain</li></ul>
+
+			<br/>
+			<p><b> id</b> us-core-careteam-status</p>
+			<p><b> url</b> : <b> http://hl7.org/fhir/us/core/SearchParameter/us-core-careteam-status</b>
+			</p>
+			<p><b> version</b> : 4.0.1</p>
+			<p><b> name</b> : USCoreCareTeamStatus</p>
+			<p><b> derivedFrom</b> : http://hl7.org/fhir/SearchParameter/CareTeam-status
+			</p>
+			<p><b> status</b> : active</p>
+			<p><b> experimental</b>  False</p>
+			<p><b> date</b> : 2021-06-08</p>
+			<p><b> publisher</b> : HL7 International - US Realm Steering Committee</p>
+			<p><b> contact</b> : http://www.hl7.org/Special/committees/usrealm/index.cfm</p>
+			<p><b> useContext</b> : </p>
+			<p><b> jurisdiction</b> : United States of America (the) <span> (Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
+           States of America (the)'})</span>
+			</p>
+			  <!-- <p>
+		<b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,
+         and matching as part of a chain</p> -->
+			<p><b> code</b> : <code>status</code>
+			</p>
+			<p><b> base</b> :CareTeam</p>
+			<p><b> type</b> : token</p>
+			<p><b> expression</b> : <code>CareTeam.status</code>
+			</p>
+			<p><b> xpath</b> : <code>f:CareTeam/f:status</code>
+			</p>
+			<p><b> xpathUsage</b> : normal</p>
+			<p><b> mulitpleOr</b> : True   (Conformance Expectation = SHOULD)</p>
+			<p><b> mulitpleAnd</b> : True  ( Conformance Expectation = MAY)</p>
+    
+    
+    
+		</div>
+  </text>
+  <url value="http://hl7.org/fhir/us/core/SearchParameter/us-core-careteam-status"/>
+  <version value="4.2.0"/>
+  <name value="USCoreCareTeamStatus"/>
+  <derivedFrom value="http://hl7.org/fhir/SearchParameter/CareTeam-status"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2021-06-08T02:15:48.112297Z"/>
+  <publisher value="HL7 International - Cross-Group Projects"/>
+  <contact>
+    <name value="HL7 International - Cross-Group Projects"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/cgp"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="cgp@lists.HL7.org"/>
+    </telecom>
+  </contact>
+  <description value="**proposed | active | suspended | inactive | entered-in-error**  &#xA;**NOTE**: This US Core SearchParameter definition extends the usage context of the&#xA;[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)&#xA; - multipleAnd&#xA; - multipleOr&#xA; - comparator&#xA; - modifier&#xA; - chain"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <code value="status"/>
+  <base value="CareTeam"/>
+  <type value="token"/>
+  <expression value="CareTeam.status"/>
+  <xpath value="f:CareTeam/f:status"/>
+  <xpathUsage value="normal"/>
+  <multipleOr value="true">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="SHOULD"/>
+    </extension>
+  </multipleOr>
+  <multipleAnd value="true">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="MAY"/>
+    </extension>
+  </multipleAnd>
+</SearchParameter>

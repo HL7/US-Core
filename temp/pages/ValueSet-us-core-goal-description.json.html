@@ -1,0 +1,35 @@
+---
+---
+
+{% if 'json' == 'xml' %}
+{% assign section = '7' %}
+{% elsif 'json' == 'json' %}
+{% assign section = '8' %}
+{% else %}
+{% assign section = '9' %}
+{% endif %}
+
+{% include fragment-pagebegin.html %}
+<div style="counter-reset: section {{section}}" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+{% include fragment-base-navtabs.html type='ValueSet' id='us-core-goal-description' active='json' %}
+
+<a name="root"> </a>
+{% if site.data.artifacts[page.path].example %}
+  {% assign example = 'Example ' %}
+{% endif %}
+{% assign prefix = site.data.artifacts[page.path].type %}
+<h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title | escape_once}}</h2>
+
+<p><a href="ValueSet-us-core-goal-description.json" no-download="true">Raw json</a> | <a href="ValueSet-us-core-goal-description.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='ValueSet' id='us-core-goal-description' %}
+
+  {% include ValueSet-us-core-goal-description-json-html.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='ValueSet' id='us-core-goal-description' %}
+
+</div>
+{% include fragment-pageend.html %}

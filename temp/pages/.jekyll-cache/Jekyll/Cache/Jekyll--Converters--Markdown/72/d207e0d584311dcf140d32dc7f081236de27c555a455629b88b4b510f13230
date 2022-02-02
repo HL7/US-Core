@@ -1,0 +1,71 @@
+I"+
+<p>﻿Laboratory results are grouped and summarized using the <a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a> resource which reference <a href="http://hl7.org/fhir/R4/observation.html">Observation</a> resources.  Each Observation resource represents an individual laboratory test and result value, a “nested” panel (such as a microbial susceptibility panel) which references other observations, or rarely a laboratory test with component result values. This profile sets minimum expectations for the Observation resource resource to record, search, and fetch laboratory test results associated with a patient.  It identifies which core elements, extensions, vocabularies and value sets <strong>SHALL</strong> be present in the resource when using this profile.</p>
+
+<p><strong>Example Usage Scenarios:</strong></p>
+
+<p>The following are example usage scenarios for the US Core-Results profile:</p>
+
+<ul>
+  <li>Query for lab results belonging to a Patient</li>
+  <li><a href="future-of-US-core.html#future-candidate-requirements-under-consideration">Record or update</a>  lab results belonging to a Patient</li>
+</ul>
+
+<h3 id="mandatory-and-must-support-data-elements">Mandatory and Must Support Data Elements</h3>
+
+<p>The following data-elements must always be present (<a href="conformance-expectations.html#mandatory-elements">Mandatory</a> definition]) or must be supported if the data is present in the sending system (<a href="conformance-expectations.html#must-support-elements">Must Support</a> definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The <a href="#profile">Formal Profile Definition</a> below provides the  formal summary, definitions, and  terminology requirements.</p>
+
+<p><strong>Each Observation must have:</strong></p>
+
+<ol>
+  <li>a status</li>
+  <li>a category code of ‘laboratory’</li>
+  <li>a <a href="http://loinc.org">LOINC</a> code, if available, which tells you what is being measured</li>
+  <li>a patient</li>
+</ol>
+
+<p><strong>Each Observation must support:</strong></p>
+
+<ol>
+  <li>a time indicating when the measurement was taken</li>
+  <li>a result value or a reason why the data is absent*
+    <ul>
+      <li>if the result value is a numeric quantity, a standard <a href="http://unitsofmeasure.org">UCUM</a> unit</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Profile specific implementation guidance:</strong></p>
+
+<ul>
+  <li>Additional codes that translate or map to the Observation code or category codes are allowed.  For example:
+    <ul>
+      <li>providing both a local code and LOINC code</li>
+      <li>providing a more specific code such as ‘chemistry’, a <a href="http://hl7.org/fhir/R4/valueset-procedure-code.html">SNOMED CT</a> concept, or system specific codes in addition to the ‘laboratory’ category code.</li>
+    </ul>
+  </li>
+  <li>Systems <strong>SHOULD</strong> support <code class="highlighter-rouge">Observation.effectivePeriod</code> to accurately represent procedure tests that are collected over a period of time (for example, a 24-Hour Urine Collection test).</li>
+  <li>
+    <ul>
+      <li>An Observation without a value, <strong>SHALL</strong> include a reason why the data is absent <em>unless</em> there are 1) component observations, or 2) reporting vital signs panel components using  <code class="highlighter-rouge">Observation.hasMember</code>.</li>
+      <li>For Further guidance see the <a href="http://hl7.org/fhir/R4/observation.html#obsgrouping">Observation Grouping</a> section in FHIR Specification.</li>
+      <li>*Systems that never provide an observation without a value are not required to support <code class="highlighter-rouge">Observation.dataAbsentReason</code>.</li>
+    </ul>
+  </li>
+  <li class="new-content">An <code class="highlighter-rouge">Observation.component</code> without a value, <strong>SHALL</strong> include a reason why the data is absent.
+    <ul>
+      <li>*Systems that never provide an component observation without a component value are not required to support <code class="highlighter-rouge">Observation.component.dataAbsentReason</code>.</li>
+    </ul>
+  </li>
+  <li>See the <a href="general-guidance.html#using-ucum-codes-in-the-quantity-datatype">General Guidance Section</a> for further guidance on using UCUM</li>
+  <li>See the <a href="http://hl7.org/fhir/R4/loinc.html#dataelements">LOINC scale type to FHIR data type mapping</a> for guidance on which <code class="highlighter-rouge">Observation.value[x]</code> data type to use based on the LOINC Type of Scale.</li>
+</ul>
+
+<h3 id="examples">Examples</h3>
+
+<ul>
+  <li><a href="Observation-usg.html">observation-usg</a></li>
+  <li><a href="Observation-serum-total-bilirubin.html">observation-serum-total-bilirubin</a></li>
+  <li><a href="Observation-erythrocytes.html">observation-erythrocytes</a></li>
+</ul>
+
+:ET

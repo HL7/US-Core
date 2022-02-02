@@ -1,0 +1,20 @@
+---
+---
+<!-- get modelType -->
+{% include fragment-modelType.html id='us-core-implantable-device' %}
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='us-core-implantable-device' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{modelType}}: USCoreImplantableDeviceProfile - Change History</h2>
+  <p>Changes in the us-core-implantable-device {{modelType | downcase}}.</p>
+
+  {%include StructureDefinition-us-core-implantable-device-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}
