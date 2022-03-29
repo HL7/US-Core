@@ -92,7 +92,7 @@ Note that not all scanned information stored through DocumentReference will be e
 
 #### Support Requirements
 
-This guide requires systems implement the [US Core DocumentReference Profile] and to support a *minimum* of all eight Common Clinical Notes listed above. Systems and may extend there capabilities to the full [US Core DocumentReference Type Value Set]. This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
+This guide requires systems implement the [US Core DocumentReference Profile] and to support a *minimum* of all eight Common Clinical Notes listed above. Systems may extend their capabilities to the full [US Core DocumentReference Type Value Set]. This requirement is necessary because some systems scan lab reports and don't store them in the DiagnosticReport resource. See [FHIR Resources to Exchange Clinical Notes](#fhir-resources-to-exchange-clinical-notes) for more detail.
 
 This guide requires systems implement the [US Core DiagnosticReport Profile for Report and Note exchange] and to support a *minimum* of the three report categories:
 
