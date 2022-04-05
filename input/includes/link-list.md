@@ -315,3 +315,4 @@
 [SDOH Guidance]: sdoh.html
 [US Core Common SDOH Assessments ValueSet]: ValueSet-us-core-common-sdoh-assessments.html
 [slicing]: {{site.data.fhir.path}}profiling.html#slicing
+[Change Log]: changes.html
