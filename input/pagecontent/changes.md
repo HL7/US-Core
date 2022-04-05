@@ -1,4 +1,4 @@
-### Version = Continuous Integration (CI) Build
+### Version = Continuous Integration (CI) Build (5.0.0-preview)
 - url: <http://build.fhir.org/ig/HL7/US-Core>
 - Based on FHIR version : 4.0.1
 
