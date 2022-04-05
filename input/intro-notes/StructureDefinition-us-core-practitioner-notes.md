@@ -33,7 +33,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 The following search parameter combinations SHOULD be supported:
 
-1. {:.new-content}**SHOULD** support searching using the **[`_id`](SearchParameter-us-core-practitioner-id.html)** search parameter:
+1. **SHOULD** support searching using the **[`_id`](SearchParameter-us-core-practitioner-id.html)** search parameter:
 
      `GET [base]/Practitioner?_id={system|}[code]`
 

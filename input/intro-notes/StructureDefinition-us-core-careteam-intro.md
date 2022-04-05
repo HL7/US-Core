@@ -18,20 +18,20 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 1.  a patient
 1.  a participant role for each careteam members
-1.  {:.new-content}names of careteam members which can be:
+1.  names of careteam members which can be:
     -   a practitioner or practitioner type (doctor, nurse, therapist)*
     -   the patient
     -   a relative or friend or guardian
     -   an organization
 
 *See the next section for how practitioner members are represented in this Profile.
-{:.new-content}
+
 
 **Each Condition must support:**
 
 1.  a status code
 
-<div markdown="1" class="new-content">
+
 **Profile specific implementation guidance:**
 
 In order to access care team member's names, identifiers, locations, and contact information, the CareTeam profile supports several types of care team participants. They are represented as references to other profiles and include the following four profiles which are marked as must support:
@@ -44,11 +44,10 @@ In order to access care team member's names, identifiers, locations, and contact
   * The client application **SHALL** support all four profile references.
   * Because the US Core PractitionerRole Profile supplies the provider's location and contact information and a reference to the Practitioner, server systems **SHOULD** reference it instead of the US Core Practitioner Profile. An example of how to access the practitioner name and identifier is shown in the quick start section below.
   * Servers that support only US Core Practitioner Profile **SHALL** provide implementation specific guidance how to access a provider's location and contact information using only the Practitioner resource.
-</div>
 
 ### Examples
 
-- {:.new-content}[CareTeam-example](CareTeam-example.html)
+- [CareTeam-example](CareTeam-example.html)
 
 
 [CareTeam]:  {{site.data.fhir.path}}careteam.html

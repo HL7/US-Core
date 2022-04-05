@@ -12,14 +12,12 @@ All the examples that are used in this Implementation Guide available for downlo
 - [XML](examples.xml.zip)
 - [JSON](examples.json.zip)
 
-<div markdown="1" class="new-content">
 ### Consolidated CSV and Excel File Representations of Profiles
 
 All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file.  This may be useful to testers and analysts to review elements properties across profiles in a single table:
 
 - [CSV](uscore_profiles.csv)
 - [Excel](uscore_profiles.xlsx)
-</div>
 
 ### Package File
 

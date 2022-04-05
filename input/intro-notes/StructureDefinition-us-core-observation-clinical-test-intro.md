@@ -1,4 +1,4 @@
-<div markdown="1" class="new-content">
+
 ﻿This profile sets minimum expectations for the [Observation] resource  to record, search, and fetch non-imaging and non-laboratory clinical tests results for a patient.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
 
 **Example Usage Scenarios:**
@@ -30,7 +30,6 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 {% include observation_guidance_1.md category="procedure" %}
 
-</div>
 ### Examples
 
 - [Observation Rhythm](Observation-heart-rate-rhythm.html)

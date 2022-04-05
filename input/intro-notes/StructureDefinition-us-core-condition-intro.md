@@ -25,13 +25,13 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 **Each Condition must support:**
 
 1.  a verification status
-2.  {:.new-content}an encounter
-3.  {:.new-content}a date of diagnosis*
-5.  {:.new-content}a date of resolution
-6.  {:.new-content}a date when recorded*
+2.  an encounter
+3.  a date of diagnosis*
+5.  a date of resolution
+6.  a date when recorded*
 
 *See the next section for how the date of diagnosis is represented in this Profile.
-{:.new-content}
+
 
 **Profile specific implementation guidance:**
 
@@ -39,9 +39,9 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 * The 2015 Certification rule requires the use of SNOMED CT for problem list entries. Following the rules for [required] binding to coded data types, ICD or other local codes can be used as translations to SNOMED CT.
 * The [US Core Condition Code] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and may be used as the primary code for current encounter diagnoses.
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.  An example search is shown in the [Quick Start](#search) section below.
-    * {:.new-content}When `Condition.category` is "encounter-diagnosis" the encounter, **SHOULD** be referenced in `Condition.encounter`.
-* {:.new-content}See [SDOH Guidance] for more information when exchanging Social Determinants of Health (SDOH) Conditions/Health Concerns.
-* {:.new-content}There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDate`, or `Condition.recordedDate`.
+    * When `Condition.category` is "encounter-diagnosis" the encounter, **SHOULD** be referenced in `Condition.encounter`.
+* See [SDOH Guidance] for more information when exchanging Social Determinants of Health (SDOH) Conditions/Health Concerns.
+* There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDate`, or `Condition.recordedDate`.
     * Although all three are marked as must support, the server is not required to support all.
 	* A server **SHALL** support `Condition.recordedDate`.
     * A server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDate`. A server may support both, which means they support all 3 locations.
@@ -49,8 +49,8 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 ### Examples
 
- - {:.new-content}[Condition-hc1](Condition-hc1.html) is an example of a condition categorized as a "health-concern"
- - {:.new-content}[Condition-example](Condition-example.html) is an example of a condition categorized as a "problem"
- - {:.new-content}[Condition-SDOH-example](Condition-condition-SDOH-example.html) is an example of a condition categorized as a "Social Determinants Of Health"
+ - [Condition-hc1](Condition-hc1.html) is an example of a condition categorized as a "health-concern"
+ - [Condition-example](Condition-example.html) is an example of a condition categorized as a "problem"
+ - [Condition-SDOH-example](Condition-condition-SDOH-example.html) is an example of a condition categorized as a "Social Determinants Of Health"
 
 {% include link-list.md %}

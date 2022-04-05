@@ -18,11 +18,11 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 1.   a category code of 'LAB'
 1.   a code (preferably a LOINC code) which tells you what is being measured
 1.   a patient
-1.  {:.new-content}a time indicating when the measurement was taken*
-1.  {:.new-content}a time indicating when the measurement was reported*
+1.  a time indicating when the measurement was taken*
+1.  a time indicating when the measurement was reported*
 
 *These elements have the following constraints: SHALL be present if status is
-'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'.{:.new-content}
+'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'.
 
 **Each DiagnosticReport must support:**
 

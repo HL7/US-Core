@@ -11,18 +11,18 @@
 **CareTeam**
 - [`patient`](SearchParameter-us-core-careteam-patient.html)
 - [`status`](SearchParameter-us-core-careteam-status.html)
-- {:.new-content}[`role`](SearchParameter-us-core-careteam-role.html)
+- [`role`](SearchParameter-us-core-careteam-role.html)
 
 **Condition**
 - [`category`](SearchParameter-us-core-condition-category.html)
 - [`clinical-status`](SearchParameter-us-core-condition-clinical-status.html)
 - [`patient`](SearchParameter-us-core-condition-patient.html)
 - [`onset-date`](SearchParameter-us-core-condition-onset-date.html)
-- {:.new-content}[`asserted-date`](SearchParameter-us-core-condition-asserted-date.html)
-- {:.new-content}[`recorded-date`](SearchParameter-us-core-condition-recorded-date.html)
-- {:.new-content}[`abatement-date`](SearchParameter-us-core-condition-abatement-date.html)
+- [`asserted-date`](SearchParameter-us-core-condition-asserted-date.html)
+- [`recorded-date`](SearchParameter-us-core-condition-recorded-date.html)
+- [`abatement-date`](SearchParameter-us-core-condition-abatement-date.html)
 - [`code`](SearchParameter-us-core-condition-code.html)
-- {:.new-content}[`encounter`](SearchParameter-us-core-condition-encounter.html)
+- [`encounter`](SearchParameter-us-core-condition-encounter.html)
 
 **Device**
 - [`patient`](SearchParameter-us-core-device-patient.html)
@@ -50,16 +50,16 @@
 - [`date`](SearchParameter-us-core-encounter-date.html)
 - [`identifier`](SearchParameter-us-core-encounter-identifier.html)
 - [`patient`](SearchParameter-us-core-encounter-patient.html)
-- {:.new-content}[`location`](SearchParameter-us-core-encounter-location.html)
+- [`location`](SearchParameter-us-core-encounter-location.html)
 - [`status`](SearchParameter-us-core-encounter-status.html)
 - [`type`](SearchParameter-us-core-encounter-type.html)
-- {:.new-content}[`discharge-disposition`](SearchParameter-us-core-encounter-discharge-disposition.html)
+- [`discharge-disposition`](SearchParameter-us-core-encounter-discharge-disposition.html)
 
 **Goal**
 - [`lifecycle-status`](SearchParameter-us-core-goal-lifecycle-status.html)
 - [`patient`](SearchParameter-us-core-goal-patient.html)
 - [`target-date`](SearchParameter-us-core-goal-target-date.html)
-- {:.new-content}[`description`](SearchParameter-us-core-goal-description.html)
+- [`description`](SearchParameter-us-core-goal-description.html)
 
 **Immunization**
 - [`patient`](SearchParameter-us-core-immunization-patient.html)
@@ -101,7 +101,7 @@
 - [`name`](SearchParameter-us-core-patient-name.html)
 
 **Practitioner**
-- {:.new-content}[`_id`](SearchParameter-us-core-practitioner-id.html)
+- [`_id`](SearchParameter-us-core-practitioner-id.html)
 - [`name`](SearchParameter-us-core-practitioner-name.html)
 - [`identifier`](SearchParameter-us-core-practitioner-identifier.html)
 
@@ -116,14 +116,14 @@
 - [`code`](SearchParameter-us-core-procedure-code.html)
 
 **RelatedPerson**
-- {:.new-content}[`_id`](SearchParameter-us-core-relatedperson-id.html)
-- {:.new-content}[`patient`](SearchParameter-us-core-relatedperson-patient.html)
+- [`_id`](SearchParameter-us-core-relatedperson-id.html)
+- [`patient`](SearchParameter-us-core-relatedperson-patient.html)
 
 **ServiceRequest**
-- {:.new-content}[`status`](SearchParameter-us-core-servicerequest-status.html)
-- {:.new-content}[`patient`](SearchParameter-us-core-servicerequest-patient.html)
-- {:.new-content}[`category`](SearchParameter-us-core-servicerequest-category.html)
-- {:.new-content}[`code`](SearchParameter-us-core-servicerequest-code.html)
-- {:.new-content}[`authored`](SearchParameter-us-core-servicerequest-authored.html)
-- {:.new-content}[`_id`](SearchParameter-us-core-servicerequest-id.html)
+- [`status`](SearchParameter-us-core-servicerequest-status.html)
+- [`patient`](SearchParameter-us-core-servicerequest-patient.html)
+- [`category`](SearchParameter-us-core-servicerequest-category.html)
+- [`code`](SearchParameter-us-core-servicerequest-code.html)
+- [`authored`](SearchParameter-us-core-servicerequest-authored.html)
+- [`_id`](SearchParameter-us-core-servicerequest-id.html)
 

@@ -1,4 +1,4 @@
-<div markdown="1" class="new-content">
+
 This profile sets minimum expectations for searching and fetching  using the [ServiceRequest] resource. This profile identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the ServiceRequest when using this profile.
 
 **Example Usage Scenarios:**
@@ -37,7 +37,5 @@ Category Codes].  Within this categorization scheme/axis, other categories codes
 #### Examples
 
 - [Foodpantry Referral](ServiceRequest-foodpantry-referral.html)
-
-</div>
 
 {% include link-list.md %}

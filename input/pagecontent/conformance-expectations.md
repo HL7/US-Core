@@ -103,19 +103,17 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 * US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words US Core Requestors **SHOULD** be capable of displaying the data elements for human use or storing it for other purposes.
 * In situations where information on a particular data element is not present and the reason for absence is unknown, US Core Responders **SHALL NOT** include the data elements in the resource instance returned as part of the query results.
 * When querying US Core Responders, US Core Requestors **SHALL** interpret missing data elements within resource instances as data not present in the US Core Responder's system.
-* In situations where information on a particular data element is missing or suppressed refer to the the guidance for [Missing Data] and [Suppressed Data].  In situations where information on a particular data element is missing *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information.  This is done by following the same methodology outlined in the [Missing Data] section, but using the appropriate reason code instead of `unknown`.
+* In situations where information on a particular data element is missing or suppressed refer to the the guidance for [Missing Data] and [Suppressed Data].  In situations where information on a particular data element is missing *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information.  This is done by following the same methodology outlined in the [Missing Data] section, but using the appropriate reason code instead ofs `unknown`.
 * US Core Requestors **SHALL** be able to process resource instances containing data elements asserting missing information.
 
 The terms *US Core Responder* Actor *US Core Requestor Actor* are used throughout the guide and typically refer to a server or a client.
 
 Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
 
-<div markdown="1" class="new-content">
 All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file.  This may be useful to testers and analysts to review the must support and mandatory elements across profiles in a single table.
 
 - [CSV](uscore_profiles.csv)
 - [Excel](uscore_profiles.xlsx)
-</div>
 
 #### Must Support - Coded Elements
 In addition to the guidance provided by [FHIR Terminology], Coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) which are marked as Must Support follow the rules for their respective bindings.
@@ -131,19 +129,15 @@ For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has
 
   {% include img.html img="Must_Support_AllergyIntolerance_clinicalStatus.png" caption="Figure 4: US Core AllergyIntolerance.clinicalStatus" %}
 
-<div markdown="1" class="new-content">
 ##### Required Bindings When Slicing by Value Sets
 
 FHIR profiles use [slicing] when a coded element is a repeating element and a particular value set is desired for at least one of the repeats. This is a special case where a *required* value set binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the value set (equivalent to  Extensible Binding below). The example in figure 5 below illustrates this structure for the repeating Condition.category element:
 
-- This structure allows 0..\* concept(s) from the *required* value set. 
+- This structure allows 0..\* concept(s) from the *required* value set.
 - This structure, by being 0..\*, allows servers to send concepts not in the required value set.
-  
+
 
   {% include img.html img="Must_Support_Condition_category.png" caption="Figure 5: US Core Condition.category" %}
-  
-
-</div>
 
 ##### Extensible Binding for CodeableConcept Datatype
 

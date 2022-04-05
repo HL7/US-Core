@@ -26,6 +26,6 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 ### Examples
 
 - [HL7East Example](Location-hl7east.html)
-- {:.new-content}[Hospital Location](Location-hospital.html)
+- [Hospital Location](Location-hospital.html)
 
 {% include link-list.md %}

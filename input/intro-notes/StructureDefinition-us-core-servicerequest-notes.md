@@ -8,7 +8,7 @@
 
 The following search parameters and search parameter combinations SHALL be supported:
 
-1. {:.new-content}**SHALL** support searching for all servicerequests for a patient using the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** search parameter:
+1. **SHALL** support searching for all servicerequests for a patient using the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** search parameter:
 
     `GET [base]/ServiceRequest?patient={Type/}[id]`
 
@@ -18,7 +18,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient ([how to search by reference])
 
-1. {:.new-content}**SHALL** support fetching a ServiceRequest using the **[`_id`](SearchParameter-us-core-servicerequest-id.html)** search parameter:
+1. **SHALL** support fetching a ServiceRequest using the **[`_id`](SearchParameter-us-core-servicerequest-id.html)** search parameter:
 
     `GET [base]/ServiceRequest[id]`
 
@@ -29,7 +29,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     *Implementation Notes:*  ([how to search by the logical id] of the resource)
 
-1. {:.new-content}**SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`category`](SearchParameter-us-core-servicerequest-category.html)** search parameters:
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`category`](SearchParameter-us-core-servicerequest-category.html)** search parameters:
 
     `GET [base]/ServiceRequest?patient={Type/}[id]&category={system|}[code]`
 
@@ -39,7 +39,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and  a category code ([how to search by reference] and [how to search by token])
 
-1. {:.new-content}**SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`code`](SearchParameter-us-core-servicerequest-code.html)** search parameters:
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`code`](SearchParameter-us-core-servicerequest-code.html)** search parameters:
     - including optional support for *OR* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
 
     `GET [base]/ServiceRequest?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}`
@@ -50,7 +50,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and  report code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token])
 
-1. {:.new-content}**SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`category`](SearchParameter-us-core-servicerequest-category.html)** and **[`authored`](SearchParameter-us-core-servicerequest-authored.html)** search parameters:
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`category`](SearchParameter-us-core-servicerequest-category.html)** and **[`authored`](SearchParameter-us-core-servicerequest-authored.html)** search parameters:
     - including support for these `authored` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `authored` (e.g.`authored=[date]&authored=[date]]&...`)
 
@@ -67,7 +67,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 The following search parameter combinations SHOULD be supported:
 
-1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`status`](SearchParameter-us-core-servicerequest-status.html)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`status`](SearchParameter-us-core-servicerequest-status.html)** search parameters:
     - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
 
     `GET [base]/ServiceRequest?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}`
@@ -78,7 +78,7 @@ The following search parameter combinations SHOULD be supported:
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and status ([how to search by reference] and [how to search by token])
 
-1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`code`](SearchParameter-us-core-servicerequest-code.html)** and **[`authored`](SearchParameter-us-core-servicerequest-authored.html)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`code`](SearchParameter-us-core-servicerequest-code.html)** and **[`authored`](SearchParameter-us-core-servicerequest-authored.html)** search parameters:
     - including optional support for *OR* search on `code` (e.g.`code={system|}[code],{system|}[code],...`)
     - including support for these `authored` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `authored` (e.g.`authored=[date]&authored=[date]]&...`)

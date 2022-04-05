@@ -15,21 +15,21 @@ NOTE: The following search parameters **SHALL NOT** be interpreted on their own 
 #### New Search Parameters defined by this Implementation Guide
 
 **CareTeam**
-- {:.new-content}[`role`]
+- [`role`]
 
 **Condition**
-- {:.new-content}[`asserted-date`]
+- [`asserted-date`]
 
 **Encounter**
-- {:.new-content}[`discharge-disposition`]
+- [`discharge-disposition`]
 
 **Goal**
-- {:.new-content}[`description`]
+- [`description`]
 
 **Patient**
 - [`race`]
 - [`ethnicity`]
-- {:.new-content}[`gender-identity`]
+- [`gender-identity`]
 
 
 #### Search Parameters derived from the Base FHIR Specification

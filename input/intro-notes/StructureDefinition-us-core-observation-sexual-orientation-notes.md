@@ -1,5 +1,5 @@
 {% include quickstart-intro.md %}
-<div markdown="1" class="new-content">
+
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
 - See the [General Guidance] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
@@ -10,11 +10,11 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`code`](SearchParameter-us-core-observation-code.html)** search parameters:
-  
+
     `GET [base]/Observation?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}`
 
     Example:
-    
+
       1. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|76690-7
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code(s).  SHOULD support search by multiple report codes. The Observation `code` parameter searches `Observation.code only. ([how to search by reference] and [how to search by token])
@@ -26,7 +26,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     `GET [base]/Observation?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}`
 
     Example:
-    
+
       1. GET [base]/Observation?patient=555580&amp;code=http://loinc.org\|76690-7&amp;date=ge2018-03-14T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient observation = `76690-7`(sexual orientation) ([how to search by reference] and [how to search by token] and [how to search by date])
@@ -42,12 +42,9 @@ The following search parameter combinations SHOULD be supported:
     `GET [base]/Observation?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}&status={system|}[code]{,{system|}[code],...}`
 
     Example:
-    
+
 		1. GET [base]/Observation?patient=555580&amp;code=http://loinc.org\|76690-7&amp;status=final
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient observation = `76690-7`(sexual orientation) and status ([how to search by reference] and [how to search by token])
-
-
-</div>
 
 {% include link-list.md %}

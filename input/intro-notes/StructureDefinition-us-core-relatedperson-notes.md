@@ -8,7 +8,7 @@
 
 The following search parameters and search parameter combinations SHALL be supported:
 
-1. {:.new-content}**SHALL** support fetching a RelatedPerson using the **[`_id`](SearchParameter-us-core-relatedperson-id.html)** search parameter:
+1. **SHALL** support fetching a RelatedPerson using the **[`_id`](SearchParameter-us-core-relatedperson-id.html)** search parameter:
 
     `GET [base]/RelatedPerson[id]`
 
@@ -24,7 +24,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 The following search parameter combinations SHOULD be supported:
 
-1. {:.new-content}**SHOULD** support searching using the **[`patient`](SearchParameter-us-core-relatedperson-patient.html)** search parameter:
+1. **SHOULD** support searching using the **[`patient`](SearchParameter-us-core-relatedperson-patient.html)** search parameter:
 
      `GET [base]/RelatedPerson?patient={Type/}[id]`
 

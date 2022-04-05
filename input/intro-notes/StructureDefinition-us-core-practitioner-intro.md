@@ -19,12 +19,11 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 1.  An identifier which must support an NPI if available.
 1.  A name
 
-<div markdown="1" class="new-content">
+
 **Each PractitionerRole must support:**
 
 1.  Contact information
 1.  An address
-</div>
 
 **Profile specific implementation guidance:**
 
@@ -34,6 +33,6 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 ### Examples
 
 - [Practitioner-1](Practitioner-practitioner-1.html)
-- {:.new-content}[Practitioner-2](Practitioner-practitioner-2.html)
+- [Practitioner-2](Practitioner-practitioner-2.html)
 
 {% include link-list.md %}

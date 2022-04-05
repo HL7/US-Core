@@ -1,5 +1,4 @@
 
-<div markdown="1" class="new-content">
 This profile sets minimum expectations for the RelatedPerson resource to record, search, and fetch related persons associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
 
 **Example Usage Scenarios:**
@@ -67,6 +66,5 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 ### Examples
 
 - [RelatedPerson Patient Niece](RelatedPerson-shaw-niece.html)
-</div>
 
 {% include link-list.md %}

@@ -25,8 +25,8 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 1. target date(s):
 
 **Profile specific implementation guidance:**
-- {:.new-content}Free text goals can be used in Goal.description.text when a concept isn't available or a legacy goal is not mapped to a LOINC or SNOMED concept.
--  {:.new-content}See [SDOH Guidance] for more information when exchanging Social Determinants of Health (SDOH) Goals
+- Free text goals can be used in Goal.description.text when a concept isn't available or a legacy goal is not mapped to a LOINC or SNOMED concept.
+-  See [SDOH Guidance] for more information when exchanging Social Determinants of Health (SDOH) Goals
 
 ### Examples
 

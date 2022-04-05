@@ -9,13 +9,9 @@ The US Core Profiles were originally designed to meet the 2015 Edition certifica
 
 The table below lists the US Core Profile and FHIR Resources used for the corresponding USCDI Data elements:
 
-<div markdown="1" class="new-content">
-
 {% include USCDI_v2_table_links.svg %}
 
 (This information is also available as a [csv](uscdi_table.csv) or [excel](uscdi_table.xlsx) file)
-
-</div>
 
 ### Changes Between Major Versions of FHIR
 
@@ -63,9 +59,9 @@ There are situations when information on a particular data element is missing an
     ~~~
 
 1. For *coded* data elements:
-   - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept , <span markdown='1' class='bg-success'>or Coding datatypes</span>):
+   - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept , or Coding datatypes):
       - if the source systems has text but no coded data, only the text element is used.
-          - {:.new-content}for Coding datatypes, the text only data is represented as a `display` element.
+          - for Coding datatypes, the text only data is represented as a `display` element.
       - if there is neither text or coded data:
         - use the appropriate "unknown" concept code from the value set if available
         - if the value set does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
@@ -336,7 +332,7 @@ For this guide, all the search interactions use the `GET` command with the follo
        - When searching using the `reference` type searchparameter [(how to search by reference)], the syntax `{Type/}[id]` means that the Type value is optional *for the client* to supply:
          * The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
          * The server **SHALL** support both.
-       - {:.new-content}When searching using the `date` type searchparameter [(how to search by date)], the syntax `data={gt|lt|ge|le}[date]` means the date comparators "gt", "lt", "ge", and "le" are optional.   Date type searches without a comparator prefix are equivalent to searches with the "eq" comparator *even if* a server does not support the comparator.
+       - When searching using the `date` type searchparameter [(how to search by date)], the syntax `data={gt|lt|ge|le}[date]` means the date comparators "gt", "lt", "ge", and "le" are optional.   Date type searches without a comparator prefix are equivalent to searches with the "eq" comparator *even if* a server does not support the comparator.
     - \{:m1|m2|...}: The list of supported search parameter modifiers
     - {c1|c2|...}: The list of supported search parameter comparators
     - {,value2,...}: Optional multiple 'OR' Values

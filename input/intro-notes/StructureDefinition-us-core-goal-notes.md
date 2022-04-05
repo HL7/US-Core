@@ -18,7 +18,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     *Implementation Notes:* Fetches a bundle of all Goal resources for the specified patient ([how to search by reference])
 
-1. {:.new-content}**SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-goal-patient.html)** and **[`description`](SearchParameter-us-core-goal-description.html)** search parameters:
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-goal-patient.html)** and **[`description`](SearchParameter-us-core-goal-description.html)** search parameters:
 
     `GET [base]/Goal?patient={Type/}[id]&description={system|}[code]`
 

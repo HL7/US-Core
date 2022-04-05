@@ -1,4 +1,4 @@
-<div markdown="1" class="new-content">
+
 ﻿This profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve observations that represent the questions and responses to form/survey and assessment tools such as the [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]. This profile encompasses single, multipart, and derived responses.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  These observations are distinct from observations representing individual clinical assessments made by an individual about a patient's social history and not derived from an assessment tool or survey. These types of observations should use the [US Core Social History Assessment Observation Profile] instead.
 
 **Example Usage Scenarios:**
@@ -31,7 +31,6 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 <div markdown="1" class="note-to-balloters">
  We are seeking feedback on the inclusion of Observation.component as a Must Support element for systems to record multiple answers for a screening question in a single Observation.  Based on how broadly this is supported in current implementations, we may remove the constraint on Observation.component and recommend multiple Observations.
- </div>
 
 **Profile specific implementation guidance:**
 

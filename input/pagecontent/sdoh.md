@@ -5,8 +5,6 @@ tags: USCDI v2
 ---
 -->
 
-<div markdown="1" class="new-content">
-
 This US Core Social Determinant of Health (SDOH) Guidance Page has been added in response to  United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published by the Office of the National Coordinator (ONC) in July of 2021. The new data elements include:
 - SDOH Assessments
 - SDOH Goals
@@ -14,8 +12,6 @@ This US Core Social Determinant of Health (SDOH) Guidance Page has been added in
 - SDOH Problems/Health Concerns
 
 This page documents how the US Core Profile can be use to represent these elements.
-
-</div>
 
 ### Purpose and Intent
 

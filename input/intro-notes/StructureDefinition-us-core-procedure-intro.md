@@ -26,7 +26,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 - Procedure codes can be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT. LOINC.
     - Only LOINC concepts that reflect actual procedures **SHOULD** be used
 - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` with a reference to the [US Core Implantable Device Profile].
-- {:.new-content}See [SDOH Guidance] for more information when exchanging Social Determinants of Health (SDOH) Procedures
+- See [SDOH Guidance] for more information when exchanging Social Determinants of Health (SDOH) Procedures
 
 ### Examples
 
