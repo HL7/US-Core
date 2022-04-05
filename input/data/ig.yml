@@ -7,7 +7,7 @@ contact:
         value: cgp@lists.HL7.org
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons
     License
-date: '2021-11-30'
+date: '2022-04-04'
 definition:
     page:
         generation: html
@@ -65,10 +65,13 @@ definition:
         -   generation: markdown
             nameUrl: downloads.html
             title: Downloads
+        -   generation: markdown
+            nameUrl: changes.html
+            title: Change Log
         title: Table of Contents
     parameter:
     -   code: copyrightyear
-        value: 2021+
+        value: 2022+
     -   code: releaselabel
         value: CI Build
     -   code: path-resource
@@ -114,14 +117,6 @@ definition:
     -   code: path-history
         value: http://hl7.org/fhir/us/core/history.html
     resource:
-    -   description: Defines constraints on the Observation resource to represent
-            head occipital-frontal circumference percentile for patients from birth
-            to 36 months of age in FHIR using a standard LOINC code and UCUM units
-            of measure. This profile is derived from the US Core Vital Signs Profile.
-        exampleBoolean: false
-        name: US Core Pediatric Head Occipital-frontal Circumference Percentile Profile
-        reference:
-            reference: StructureDefinition/head-occipital-frontal-circumference-percentile
     -   description: Defines constraints and extensions on the AllergyIntolerance
             resource for the minimal set of data to query and retrieve allergy information.
         exampleBoolean: false
@@ -1238,6 +1233,14 @@ definition:
         name: USCoreServicerequestStatus
         reference:
             reference: SearchParameter/us-core-servicerequest-status
+    -   description: Defines constraints on the Observation resource to represent
+            head occipital-frontal circumference percentile for patients from birth
+            to 36 months of age in FHIR using a standard LOINC code and UCUM units
+            of measure. This profile is derived from the US Core Vital Signs Profile.
+        exampleBoolean: false
+        name: US Core Pediatric Head Occipital-frontal Circumference Percentile Profile
+        reference:
+            reference: StructureDefinition/head-occipital-frontal-circumference-percentile
     -   description: Defines constraints and extensions on the patient resource for
             the minimal set of data to query and retrieve patient demographic information.
         exampleBoolean: false
@@ -2137,8 +2140,8 @@ dependsOn:
     version: 0.3.0
 -   id: hl7_fhir_uv_sdc
     packageId: hl7.fhir.uv.sdc
-    uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc
-    version: 2.7.0
+    uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
+    version: 3.0.0
 description: 'The US Core Implementation Guide is based on FHIR Version R4 and defines
     the minimum conformance requirements for accessing patient data. The Argonaut
     pilot implementations, ONC 2015 Edition Common Clinical Data Set (CCDS), and ONC
@@ -2172,4 +2175,4 @@ resourceType: ImplementationGuide
 status: active
 title: US Core Implementation Guide
 url: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-version: 4.2.0
+version: 5.0.0-preview

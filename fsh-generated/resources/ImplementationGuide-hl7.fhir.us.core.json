@@ -2,11 +2,11 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.core",
   "url": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
-  "version": "4.2.0",
+  "version": "5.0.0-preview",
   "name": "USCore",
   "title": "US Core Implementation Guide",
   "status": "active",
-  "date": "2021-11-30",
+  "date": "2022-04-04",
   "publisher": "HL7 International - Cross-Group Projects",
   "contact": [
     {
@@ -61,21 +61,13 @@
     },
     {
       "packageId": "hl7.fhir.uv.sdc",
-      "version": "2.7.0",
-      "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc",
+      "version": "3.0.0",
+      "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",
       "id": "hl7_fhir_uv_sdc"
     }
   ],
   "definition": {
     "resource": [
-      {
-        "reference": {
-          "reference": "StructureDefinition/head-occipital-frontal-circumference-percentile"
-        },
-        "description": "Defines constraints on the Observation resource to represent head occipital-frontal circumference percentile for patients from birth to 36 months of age in FHIR using a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
-        "exampleBoolean": false,
-        "name": "US Core Pediatric Head Occipital-frontal Circumference Percentile Profile"
-      },
       {
         "reference": {
           "reference": "StructureDefinition/us-core-allergyintolerance"
@@ -1219,6 +1211,14 @@
         "description": "**draft | active | on-hold | revoked | completed | entered-in-error | unknown**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
         "name": "USCoreServicerequestStatus"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/head-occipital-frontal-circumference-percentile"
+        },
+        "description": "Defines constraints on the Observation resource to represent head occipital-frontal circumference percentile for patients from birth to 36 months of age in FHIR using a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
+        "exampleBoolean": false,
+        "name": "US Core Pediatric Head Occipital-frontal Circumference Percentile Profile"
       },
       {
         "reference": {
@@ -2464,13 +2464,18 @@
           "nameUrl": "downloads.html",
           "title": "Downloads",
           "generation": "markdown"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "Change Log",
+          "generation": "markdown"
         }
       ]
     },
     "parameter": [
       {
         "code": "copyrightyear",
-        "value": "2021+"
+        "value": "2022+"
       },
       {
         "code": "releaselabel",
