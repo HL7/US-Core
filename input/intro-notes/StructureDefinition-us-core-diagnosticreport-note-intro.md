@@ -47,9 +47,6 @@ The following data-elements must always be present ([Mandatory] definition]) or 
    *   Although both are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements.
    * The client application **SHALL** support both elements and target resources.
 
-Media which is referenced in R4 is only [Maturity Level] FMM 1 and in the FHIR R5 release Media is replaced by DocumentReference (Maturity Level FMM 3+).  Should this profile use an extension to reference DocumentReference instead of Media?
-{:.note-to-balloters}
-
 #### Examples
 
 - [Cardiology Report](DiagnosticReport-cardiology-report.html)
