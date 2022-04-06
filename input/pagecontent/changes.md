@@ -31,7 +31,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: Narrative and structure mis-match on abatement date [FHIR-34554](https://jira.hl7.org/browse/FHIR-34554) [See Change Here](#.html)
 1. **Resolved - change required**: Do we need slices on category for Clinical Test Results? [FHIR-34555](https://jira.hl7.org/browse/FHIR-34555) [See Change Here](#.html)
 1. **Resolved - change required**: Update text all occurances of U.S. Core Data for Interoperability (USCDI) v1 to v2 [FHIR-34613](https://jira.hl7.org/browse/FHIR-34613) [See Change Here](#.html)
-1. **Resolved - change required**: Referencing US Core Profiles [FHIR-34623](https://jira.hl7.org/browse/FHIR-34623) [See Change Here](#.html)
+1. **Applied**: Referencing US Core Profiles [FHIR-34623](https://jira.hl7.org/browse/FHIR-34623) [See Change Here](general-guidance.html#referencing-us-core-profiles)
 1. **Resolved - change required**: Example in Missing Data for coded element has wrong code system [FHIR-34624](https://jira.hl7.org/browse/FHIR-34624) [See Change Here](#.html)
 1. **Resolved - change required**: Condition.category does not list all values from value set [FHIR-34625](https://jira.hl7.org/browse/FHIR-34625) [See Change Here](#.html)
 1. **Resolved - change required**: Add further clarification between slicing a binding (4.1.0) vs using extensible binding (4.0.0) [FHIR-34626](https://jira.hl7.org/browse/FHIR-34626) [See Change Here](#.html)
