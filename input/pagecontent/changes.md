@@ -71,7 +71,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: DSTU2 and R4 requirements hard to support [FHIR-35066](https://jira.hl7.org/browse/FHIR-35066) [See Change Here](#.html)
 1. **Resolved - change required**: DSTU2 support not specified [FHIR-35067](https://jira.hl7.org/browse/FHIR-35067) [See Change Here](#.html)
 1. **Resolved - change required**: DSTU2 and R4 support status [FHIR-35068](https://jira.hl7.org/browse/FHIR-35068) [See Change Here](#.html)
-1. **Resolved - change required**: Typo in Category Codes section [FHIR-35072](https://jira.hl7.org/browse/FHIR-35072) [See Change Here](#.html)
+1. **Applied**: Typo in Category Codes section [FHIR-35072](https://jira.hl7.org/browse/FHIR-35072) [See Change Here](sdoh.html)
 1. **Resolved - change required**: Typos [FHIR-35115](https://jira.hl7.org/browse/FHIR-35115) [See Change Here](#.html)
 1. **Resolved - change required**: Need to provide some guidance when specific code systems are to be used in ServiceRequest [FHIR-35122](https://jira.hl7.org/browse/FHIR-35122) [See Change Here](#.html)
 1. **Resolved - change required**: Bad description in mandatory element for DiagnsticReport.effective [FHIR-35125](https://jira.hl7.org/browse/FHIR-35125) [See Change Here](#.html)
