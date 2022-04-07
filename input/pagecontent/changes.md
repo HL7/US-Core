@@ -1,3 +1,7 @@
+<!-- new content comment remove prior to publishing-->
+This page has been added for this version.
+{:.new-content}
+
 ### Version = CI Build (5.0.0-preview)
 - url: <http://build.fhir.org/ig/HL7/US-Core>
 - Based on FHIR version : 4.0.1
@@ -12,7 +16,6 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 
 
 ﻿ **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
-1. **Triaged**: Create standard extension for ""US State"" for use in all versions of FHIR [FHIR-26943](https://jira.hl7.org/browse/FHIR-26943) [See Change Here](#.html)
 1. **Resolved - change required**: US Core Pulse Oximetry Profile Text Summary has incorrect UCUM Unit for Oxygen Concentration [FHIR-27845](https://jira.hl7.org/browse/FHIR-27845) [See Change Here](#.html)
 1. **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) [See Change Here](#.html)
 1. **Resolved - change required**: valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107) [See Change Here](#.html)
@@ -21,10 +24,8 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
   - [Here](index.html#us-core-profiles)
   - [Here](index.html#us-core-profiles)
 1. **Resolved - change required**: Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783) [See Change Here](#.html)
-1. **Resolved - change required**: Wrong link to IG homepage from package manifest [FHIR-33132](https://jira.hl7.org/browse/FHIR-33132) [See Change Here](#.html)
 1. **Resolved - change required**: Why is SDOH Assessment's Observation.component.code MS? Why is Observation.component? [FHIR-34384](https://jira.hl7.org/browse/FHIR-34384) [See Change Here](#.html)
-1. **Resolved - change required**: Condition.clinicalStatus clarification (of invariant con-3) [FHIR-34468](https://jira.hl7.org/browse/FHIR-34468) [See Change Here](#.html)
-1. **Triaged**: Several Vital Signs missing from CapabilityStatement US Core Server page [FHIR-34478](https://jira.hl7.org/browse/FHIR-34478) [See Change Here](#.html)
+1. **Applied**: Clarify clinicalstatus invariant [FHIR-34468](https://jira.hl7.org/browse/FHIR-34468) [See Change Here](general-guidance.html#missing-data)
 1. **Resolved - change required**: Ethnicity ValueSet code display needlessly differs from CodeSystem display [FHIR-34488](https://jira.hl7.org/browse/FHIR-34488) [See Change Here](#.html)
 1. **Resolved - change required**: occurrenceDate doesn't make sense for SDOH serviceRequest [FHIR-34493](https://jira.hl7.org/browse/FHIR-34493) [See Change Here](#.html)
 1. **Triaged**: Remove text search requirement for Goal.description [FHIR-34546](https://jira.hl7.org/browse/FHIR-34546) [See Change Here](#.html)
@@ -52,7 +53,6 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: Clarify that SDOH data elements does not include work information (see ODH) [FHIR-34701](https://jira.hl7.org/browse/FHIR-34701) [See Change Here](#.html)
 1. **Triaged**: Harmonize / Combine value set references for SDOH ServiceRequest and SDOH Procedure [FHIR-34747](https://jira.hl7.org/browse/FHIR-34747) [See Change Here](#.html)
 1. **Resolved - change required**: Feedback on the inclusion of Observation.component as a Must Support element for systems to record multiple answers for a screening question in a single Observation [FHIR-34748](https://jira.hl7.org/browse/FHIR-34748) [See Change Here](#.html)
-1. **Triaged**: CLONE - Differentiate performer (individual) from performer (role) [FHIR-34750](https://jira.hl7.org/browse/FHIR-34750) [See Change Here](#.html)
 1. **Resolved - change required**: Assessment codes for individual components of existing assessments too limited and superfluous [FHIR-34752](https://jira.hl7.org/browse/FHIR-34752) [See Change Here](#.html)
 1. **Triaged**: Clinical Test Result Observation Profile Must Have needs to address the 3 slices for procedure, exam, and activity in the explanatory text [FHIR-34753](https://jira.hl7.org/browse/FHIR-34753) [See Change Here](#.html)
 1. **Resolved - change required**: Enhance guidance for use of Patient.genderIdentity, Patient.birthsex, and pre-existing Patient.gender [FHIR-34754](https://jira.hl7.org/browse/FHIR-34754) [See Change Here](#.html)
@@ -66,8 +66,6 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: Fix Asterisk notation in profiles [FHIR-34972](https://jira.hl7.org/browse/FHIR-34972) [See Change Here](#.html)
 1. **Resolved - change required**: Clarify ""time"" elements used in these report profiles [FHIR-34973](https://jira.hl7.org/browse/FHIR-34973) [See Change Here](#.html)
 1. **Triaged**: Imaging Study or Media is still unclear  [FHIR-34975](https://jira.hl7.org/browse/FHIR-34975) [See Change Here](#.html)
-1. **Triaged**: SDOH Guidance Purpose and Intent needs clarification [FHIR-34987](https://jira.hl7.org/browse/FHIR-34987) [See Change Here](#.html)
-1. **Triaged**: Please add clarifying text for MedicationRequest [FHIR-34988](https://jira.hl7.org/browse/FHIR-34988) [See Change Here](#.html)
 1. **Resolved - change required**: Change the query parameter value to be consistent with previous statement [FHIR-35047](https://jira.hl7.org/browse/FHIR-35047) [See Change Here](#.html)
 1. **Resolved - change required**: Make npm package more prominent [FHIR-35064](https://jira.hl7.org/browse/FHIR-35064) [See Change Here](#.html)
 1. **Resolved - change required**: Is the Guidance chapter informative? [FHIR-35065](https://jira.hl7.org/browse/FHIR-35065) [See Change Here](#.html)
@@ -82,7 +80,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: US Core Condition profile ""status"" is ambiguous; clarify to be clinicalStatus [FHIR-35280](https://jira.hl7.org/browse/FHIR-35280) [See Change Here](#.html)
 1. **Resolved - change required**: Conflicting guidance for Observation category for SDOH assessments [FHIR-35282](https://jira.hl7.org/browse/FHIR-35282) [See Change Here](#.html)
 1. **Resolved - change required**: Conflicting documentation for MS within US Core Social History Assessment Observation Profile [FHIR-35283](https://jira.hl7.org/browse/FHIR-35283) [See Change Here](#.html)
-1. **Resolved - change required**: US Core Condition - add optional verificationStatus search parameter [FHIR-35318](https://jira.hl7.org/browse/FHIR-35318) [See Change Here](#.html)
+1. **Applied**: US Core Condition - add optional verificationStatus search parameter [FHIR-35318](https://jira.hl7.org/browse/FHIR-35318) [See Change Here](StructureDefinition-us-core-condition.html)
 1. **Resolved - change required**: Broken link to LOINC grouping code [FHIR-35362](https://jira.hl7.org/browse/FHIR-35362) [See Change Here](#.html)
 1. **Resolved - change required**: Confused about “Results” vs “Screening Response” [FHIR-35363](https://jira.hl7.org/browse/FHIR-35363) [See Change Here](#.html)
 1. **Resolved - change required**: Streamline representation of SDOH screening instruments [FHIR-35364](https://jira.hl7.org/browse/FHIR-35364) [See Change Here](#.html)

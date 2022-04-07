@@ -15,15 +15,14 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Each Condition must have:**
 
-1.  a status of the condition*
+<!-- 1.  a status of the condition* -->
 1.  a category
 1.  a code that identifies the condition
 1.  a patient
 
-*The status element has the following constraints: SHALL be present if verification status is not entered-in-error and SHALL NOT be present if verification Status is entered-in-error.
-
 **Each Condition must support:**
 
+1.  {:.new-content}a clinical status of the condition (e.g., active or resolved)
 1.  a verification status
 2.  an encounter
 3.  a date of diagnosis*
@@ -32,9 +31,9 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 *See the next section for how the date of diagnosis is represented in this Profile.
 
-
 **Profile specific implementation guidance:**
 
+* {:.new-content}If category is "problems-list-item", the clinicalStatus **SHOULD** be known.
 * The [US Core Condition Category Codes] support the separate types of conditions so API consumers can separate health concerns, problems, and encounter diagnoses.
 * The 2015 Certification rule requires the use of SNOMED CT for problem list entries. Following the rules for [required] binding to coded data types, ICD or other local codes can be used as translations to SNOMED CT.
 * The [US Core Condition Code] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and may be used as the primary code for current encounter diagnoses.

@@ -1,5 +1,8 @@
-
 ### Profiles
+
+<!-- new content comment remove prior to publishing-->
+The following section has been reformatted
+{:.new-content}
 
 The following Profiles and have been defined for this implementation guide.
 
