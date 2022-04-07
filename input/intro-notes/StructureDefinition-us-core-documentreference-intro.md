@@ -47,9 +47,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 - The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
    - Some system may also expose the same organization in referenced Encounter in 'Encounter.serviceProvider'.
 
-
-#### Examples
-
--  [DocumentReference-episode-summary] Retrieve a URL for an episode summary note (CCD).
-
 {% include link-list.md %}

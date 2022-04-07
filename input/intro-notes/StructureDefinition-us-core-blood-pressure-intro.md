@@ -32,9 +32,5 @@ healt
 
 Even a server that always values diastolic and systolic  needs to support DAR
 
-### Examples
-
-- [Blood Pressure Example](Observation-blood-pressure.html)
-- [Bp Data Absent Example](Observation-bp-data-absent.html)
 
 {% include link-list.md %}

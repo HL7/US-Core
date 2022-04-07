@@ -29,8 +29,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 * Clients can request servers return the Practitioner resource and Endpoint resources by using `_include`. See [Quick Start].
 * As a result of implementation feedback, the US Core Location  and PractitionerRole Profiles are not explicitly referenced in any US Core Profile. However they **SHOULD** be used as the default profile if referenced by another US Core profile. See this guidance on [Referencing US Core Profiles].
 
-#### Examples
-
-- [Bundle-PractitionerRole-with-Practitioner-Endpoint](Bundle-66c8856b-ba11-4876-8aa8-467aad8c11a2.xml.html)
-
 {% include link-list.md %}

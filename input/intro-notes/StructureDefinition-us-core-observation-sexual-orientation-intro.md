@@ -29,8 +29,4 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 * Additional codes that translate or map to the Observation code (e.g., local codes) are allowed.
 
-### Examples
-
-[Sexual Orientation Observation Example](Observation-sexual-orientation-example.html)
-
 {% include link-list.md %}

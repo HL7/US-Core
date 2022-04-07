@@ -26,8 +26,4 @@ The following are example usage scenarios for the US Core BMI Profile:
 - See the implementation guidance section for the [US Core Vital Signs Profile]
 - See the [US Core Pediatric BMI for Age Observation Profile] for representing pediatric BMI measurements as a percentile based upon growth chart tables.
 
-### Examples
-
-- [BMI Example](Observation-bmi.html)
-
 {% include link-list.md %}

@@ -36,10 +36,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
    -  providing a more specific category codes to the “LAB” category code, such as “CH” (chemistry), in an additional coding element.
 * Results that are free text or report form are represented using the 'presentedForm' element in DiagnosticReport.
 
-### Examples
-
-- [Diagnosticreport-urinalysis](DiagnosticReport-urinalysis.html)
-- [Diagnosticreport-metabolic-panel](DiagnosticReport-metabolic-panel.html)
-- [Diagnosticreport-cbc](DiagnosticReport-cbc.html)
-
 {% include link-list.md %}

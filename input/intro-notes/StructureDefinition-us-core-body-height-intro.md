@@ -25,8 +25,4 @@ The following are example usage scenarios for the US Core Body Height Profile:
 
 - See the implementation guidance section for the [US Core Vital Signs Profile]
 
-### Examples
-
-- [Height Example](Observation-height.html)
-
 {% include link-list.md %}

@@ -45,8 +45,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 {% include DAR-exception.md %}
 - Implementers may use this profile as a base for other vital signs in addition to those in this guide.
 
-### Examples
-
-- for example see the profiles listed above
-
 {% include link-list.md %}

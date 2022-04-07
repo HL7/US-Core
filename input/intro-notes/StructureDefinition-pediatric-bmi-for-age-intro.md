@@ -26,8 +26,4 @@ The following are example usage scenarios for the US Core Pediatric BMI for Age 
 - See the implementation guidance section for the [US Core Vital Signs Profile]
 - Information about the growth chart tables used to determine percentiles should be supplied in `Observation.note.text` (for example, 'CDC Males, 2-20 years Chart').
 
-### Examples
-
-- [Pediatric BMI for Age Example](Observation-pediatric-bmi-example.html)
-
 {% include link-list.md %}

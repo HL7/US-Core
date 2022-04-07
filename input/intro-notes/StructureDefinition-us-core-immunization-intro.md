@@ -33,8 +33,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
     - CDC provides the [CDC National Drug Code (NDC) Directory – Vaccine NDC Linker Table] to assist implementers. The example [Immunization-imm-1](Immunization-imm-1.html) illustrates using both the CVX and 11 digit NDC codes based upon this table.
   - Note that the CVX code system contains some concepts that are  procedures, medications, or substances rather than immunizations. Implementers should not use these non-vaccine-related CVX codes.
 
-### Examples
-
-- [Immunization-imm-1](Immunization-imm-1.html)
-
 {% include link-list.md %}

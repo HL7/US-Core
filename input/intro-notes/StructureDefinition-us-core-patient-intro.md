@@ -52,13 +52,4 @@ For ONC's USCDI requirements, each Patient must support the following additional
 - /*The [HL7 Gender Harmony Project] is modeling gender and sex information which includes data elements, value sets, code systems. US Core reviwed and updated value sets based on input from the Gender Harmony project. When the final recommendations of the Gender Harmony project are complete, US Core will update these concepts to align with the base FHIR resource located [here]({{site.data.fhir.path}}patient.html#gender).  
 - The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`. There is increasing concern over the use of Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have actively purged them from their systems and filter them out of incoming data.
 
-### Examples
-
-- [Patient-example](Patient-example.html)
-- [Patient Infant Example](Patient-infant-example.html)
-- [Patient Child Example](Patient-child-example.html)
-
-
-
-
 {% include link-list.md %}

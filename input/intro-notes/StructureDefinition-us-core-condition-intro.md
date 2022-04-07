@@ -47,10 +47,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
     * A server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDate`. A server may support both, which means they support all 3 locations.
     * The client application **SHALL** support all three elements.
 
-### Examples
-
- - [Condition-hc1](Condition-hc1.html) is an example of a condition categorized as a "health-concern"
- - [Condition-example](Condition-example.html) is an example of a condition categorized as a "problem"
- - [Condition-SDOH-example](Condition-condition-SDOH-example.html) is an example of a condition categorized as a "Social Determinants Of Health"
-
 {% include link-list.md %}

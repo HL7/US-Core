@@ -25,8 +25,4 @@ The following are example usage scenarios for the US Core Respiratory Rate Profi
 
 - See the implementation guidance section for the [US Core Vital Signs Profile]
 
-### Examples
-
-- [Respiratory Rate Example](Observation-respiratory-rate.html)
-
 {% include link-list.md %}

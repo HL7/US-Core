@@ -31,10 +31,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 - none
 
-### Examples
-
-[Organization-acme-lab](Organization-acme-lab.html)
-
-[Organization-with-EndPoint](Organization-saint-luke-w-endpoint.html)
-
 {% include link-list.md %}

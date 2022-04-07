@@ -45,11 +45,4 @@ In order to access care team member's names, identifiers, locations, and contact
   * Because the US Core PractitionerRole Profile supplies the provider's location and contact information and a reference to the Practitioner, server systems **SHOULD** reference it instead of the US Core Practitioner Profile. An example of how to access the practitioner name and identifier is shown in the quick start section below.
   * Servers that support only US Core Practitioner Profile **SHALL** provide implementation specific guidance how to access a provider's location and contact information using only the Practitioner resource.
 
-### Examples
-
-- [CareTeam-example](CareTeam-example.html)
-
-
-[CareTeam]:  {{site.data.fhir.path}}careteam.html
-
 {% include link-list.md %}

@@ -29,10 +29,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 - This profile may be referenced by different capability statements, such as the [Conformance requirements for the US Core Server], or a provider directory capability statement.
 
-
-### Examples
-
-- [Practitioner-1](Practitioner-practitioner-1.html)
-- [Practitioner-2](Practitioner-practitioner-2.html)
-
 {% include link-list.md %}

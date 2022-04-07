@@ -47,10 +47,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
    *   Although both are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements.
    * The client application **SHALL** support both elements and target resources.
 
-#### Examples
-
-- [Cardiology Report](DiagnosticReport-cardiology-report.html)
-- [Radiology Report](DiagnosticReport-chest-xray-report.html)
-- [DXA Bone Density](DiagnosticReport-bone-density-report.html)
-
 {% include link-list.md %}

@@ -25,8 +25,4 @@ The following are example usage scenarios for the US Core Body Weight Profile:
 
 - See the implementation guidance section for the [US Core Vital Signs Profile]
 
-### Examples
-
-- [Weight Example](Observation-weight.html)
-
 {% include link-list.md %}

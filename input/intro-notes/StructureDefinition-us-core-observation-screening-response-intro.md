@@ -35,10 +35,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 - For questions represented in `Observation.code` (e.g., LOINC) that specify “check all that apply”, the question should be used for `Observation.code` and for `Observation.component.code`. For “check all that apply” questions, the answers (regardless of whether one or more are selected) should only be represented using `Observation.component.value` and `Observation.value` should be empty.
 {% include DAR-exception.md %}
 
-### Examples
-
- - [Hunger Question Example](Observation-hunger-question-example.html)
- - [Prapare Multiselect Example](Observation-prapare-multiselect-example.html)
-
-</div>
 {% include link-list.md %}

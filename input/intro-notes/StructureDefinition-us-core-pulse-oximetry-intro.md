@@ -30,8 +30,4 @@ In addition to the mandatory and must support data elements in the FHIR Oxygen S
 - Many pulse oximetry readings are taken while the patient is breathing room air.  The concept of "room air" (unmodified, ambient air) should be represented as an inhaled oxygen flow rate of 0 liters/min.
 - A pulse oximetry reading without component inspired oxygen observations may imply that the measurement was performed while the patient was breathing room air or that the inspired oxygen reading was omitted. To remove this uncertainty, the inspired oxygen [component] observations should be used.
 
-### Examples
-
-- [Pulse Oximetry Example](Observation-satO2-fiO2.html)
-
 {% include link-list.md %}

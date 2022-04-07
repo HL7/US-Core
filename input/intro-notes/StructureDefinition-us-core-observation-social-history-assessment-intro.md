@@ -36,8 +36,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
   **code**: Transport too expensive (SNOMED CT: 160695008)  
   **value**: true
 
-### Examples
-
- - [Social History Example](Observation-socialhistory-assessment-example.html)
-
 {% include link-list.md %}

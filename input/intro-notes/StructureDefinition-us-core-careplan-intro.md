@@ -29,10 +29,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
     - US Core Condition **SHOULD** be present in CarePlan.addresses
     - Assement and Plan **MAY** be included as narrative text
 
-
-### Examples
-
-- [CarePlan-colonoscopy](CarePlan-colonoscopy.html)
-
-
 {% include link-list.md %}

@@ -25,8 +25,4 @@ The following are example usage scenarios for the US Core Head Circumference Pro
 
 - See the implementation guidance section for the [US Core Vital Signs Profile]
 
-### Examples
-
-- [Head Circumference Example](Observation-head-circumference.html)
-
 {% include link-list.md %}

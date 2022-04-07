@@ -44,14 +44,6 @@ The following data-elements must always be present ([Mandatory] definition]) or 
    *  Although both are marked as must support, the server system is not required to support both a boolean and a reference, but **SHALL** support at least one of these elements.
    *  The client application **SHALL** support both elements.
 * Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
-* Servers **SHALL** follow the [Medication List Guidance] and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver. 
-
-
-### Examples
-
-- [MedicationRequest-uscore-mo1](MedicationRequest-uscore-mo1.html) Inline medication code to represent the medication.
-- [MedicationRequest-uscore-mo2](MedicationRequest-uscore-mo2.html) Reference to a [contained]({{site.data.fhir.path}}references.html#contained) Medication resource.
-- [MedicationRequest-uscore-mo3](Bundle-uscore-mo3.html) A search [Bundle]({{site.data.fhir.path}}bundle.html) with a MedicationRequest and an included Medication resource in the Bundle.
-- [Self-prescribed Tylenol](MedicationRequest-self-tylenol.html) Representation of a reported self-prescribed OTC medication.
+* Servers **SHALL** follow the [Medication List Guidance] and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.
 
 {% include link-list.md %}

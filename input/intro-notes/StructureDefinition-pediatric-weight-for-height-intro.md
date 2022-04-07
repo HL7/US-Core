@@ -26,8 +26,4 @@ The following are example usage scenarios for the US Core Pediatric Weight for H
 - See the implementation guidance section for the [US Core Vital Signs Profile]
 - Information about the growth chart tables used to determine percentiles should be supplied in `Observation.note.text` (for example, 'WHO Males, 0-2 years Chart').
 
-### Examples
-
-- [Pediatric Weight for Height Example](Observation-pediatric-wt-example.html)
-
 {% include link-list.md %}

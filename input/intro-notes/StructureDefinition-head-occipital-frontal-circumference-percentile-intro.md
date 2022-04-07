@@ -28,8 +28,4 @@ The following are example usage scenarios for the US Core Pediatric Head Occipit
 - Information about the growth chart tables used to determine percentiles should be supplied in `Observation.note.text` (for example, 'WHO Males, 0-2 years Chart').
 - For representing the raw OFC measurements use the [US Core Head Circumference Profile].
 
-### Examples
-
-- [OFC Percentile Example](Observation-ofc-percentile.html)
-
 {% include link-list.md %}

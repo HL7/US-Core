@@ -26,8 +26,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
  - Smoking observation LOINC = 72166-2 *Tobacco smoking status NHIS*
 
-### Examples
-
- - [observation-some-day-smoker](Observation-some-day-smoker.html)
-
 {% include link-list.md %}

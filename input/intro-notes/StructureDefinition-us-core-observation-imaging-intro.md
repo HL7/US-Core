@@ -30,10 +30,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 {% include observation_guidance_1.md category="imaging" %}
 
-
-### Examples
-
- - [DXA Femur-L ArMass BMD](Observation-dxa-femur-l-armass-bmd.html)
- - [DXA Hip-L Z-score BMD](Observation-dxa-hip-l-z-score-bmd.html)
-
 {% include link-list.md %}

@@ -42,8 +42,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
   * `AllergyIntolerance.verificationStatus` = "confirmed"
 
-### Examples
-
-- [AllergyIntolerance-example](AllergyIntolerance-example.html)
-
 {% include link-list.md %}

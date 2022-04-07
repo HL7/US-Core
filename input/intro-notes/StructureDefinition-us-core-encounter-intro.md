@@ -43,10 +43,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
   * The client application **SHALL** support both elements.
   * If using `Encounter.location.location` it **SHOULD** conform to US Core Location.  However, as a result of implementation feedback, it **MAY**  reference the base FHIR Location resource.  See this guidance on [Referencing US Core Profiles].
 
-### Examples
-
-- [Inpatient Example](Encounter-1036.html)
-- [Outpatient Example](Encounter-example-1.html)
-- [Delivery Example](Encounter-delivery.html)
-
 {% include link-list.md %}

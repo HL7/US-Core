@@ -25,8 +25,4 @@ The following are example usage scenarios for the US Core Body Temperature Profi
 
 - See the implementation guidance section for the [US Core Vital Signs Profile]
 
-### Examples
-
-- [Temperature Example](Observation-temperature.html)
-
 {% include link-list.md %}

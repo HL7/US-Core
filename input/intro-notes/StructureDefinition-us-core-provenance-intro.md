@@ -34,8 +34,4 @@ The following data-elements are mandatory (i.e. data MUST be present) or must be
 *  If a system receives a provider in `Provenance.agent.who` as free text they must capture who sent them the information as the organization. On request they  **SHALL** provide this organization as the source and **MAY** include the free text provider.
 * Systems that need to know the activity has occurred **SHOULD** populate the activity.
 
-### Examples
-
-- [Allergyintolerance Provenance Example](Bundle-c887e62f-6166-419f-8268-b5ecd6c7b901.html):  A `searchset` Bundle including both AllergyIntolerance and Provenance
-
 {% include link-list.md %}

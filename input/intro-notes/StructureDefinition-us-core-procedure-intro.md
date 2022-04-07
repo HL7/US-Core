@@ -28,9 +28,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` with a reference to the [US Core Implantable Device Profile].
 - See [SDOH Guidance] for more information when exchanging Social Determinants of Health (SDOH) Procedures
 
-### Examples
-
-- [procedure-rehab](Procedure-rehab.html)
-- [procedure-implant](Procedure-defib-implant.html)
-
 {% include link-list.md %}

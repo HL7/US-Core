@@ -30,10 +30,4 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 {% include observation_guidance_1.md category="laboratory" example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" %}
 
-### Examples
-
- - [observation-usg](Observation-usg.html)
- - [observation-serum-total-bilirubin](Observation-serum-total-bilirubin.html)
- - [observation-erythrocytes](Observation-erythrocytes.html)
-
 {% include link-list.md %}

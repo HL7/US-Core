@@ -25,8 +25,4 @@ The following are example usage scenarios for the US Core Heart Rate Profile:
 
 - See the implementation guidance section for the [US Core Vital Signs Profile]
 
-### Examples
-
-- [Heart Rate Example](Observation-heart-rate.html)
-
 {% include link-list.md %}

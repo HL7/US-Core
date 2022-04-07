@@ -77,10 +77,4 @@ In addition, the following data-elements must be supported if the data is presen
     - manufacture date
     - distinct identifier
 
-### Examples
-
-- [Device-UDI-1](Device-udi-1.html)
-- [Device-UDI-2](Device-udi-2.html)
-- [Device-UDI-3](Device-udi-3.html)
-
 {% include link-list.md %}

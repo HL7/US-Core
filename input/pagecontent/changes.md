@@ -126,7 +126,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Submitted**: Clarify organization responsible for the DocumentReference [FHIR-36654](https://jira.hl7.org/browse/FHIR-36654) [See Change Here](#.html)
 1. **Submitted**: Clarify Device UDI-PI requirement [FHIR-36657](https://jira.hl7.org/browse/FHIR-36657) [See Change Here](#.html)
 1. **Applied**: Move change log from version history to new change log  page in IG [FHIR-36703](https://jira.hl7.org/browse/FHIR-36703) [See Change Here](changes.html)
-
+1. **Applied**: Remove redundant example sections [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728)
 
 
 ---
