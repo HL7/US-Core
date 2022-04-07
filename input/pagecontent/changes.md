@@ -28,7 +28,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Clarify clinicalStatus invariant [FHIR-34468](https://jira.hl7.org/browse/FHIR-34468) [See Change Here](general-guidance.html#missing-data)
 1. **Applied**: Fix Ethnicity ValueSet description [FHIR-34488](https://jira.hl7.org/browse/FHIR-34488) [See Change Here](ValueSet-omb-ethnicity-category.html)
 1. **Applied**: Remove MS from ServiceRequest.occurrenceDateTime add MS to ServiceRequest.occurrencePeriod [FHIR-34493](https://jira.hl7.org/browse/FHIR-34493) [See Change Here](StructureDefinition-us-core-servicerequest.html)
-1. **Triaged**: Remove text search requirement for Goal.description [FHIR-34546](https://jira.hl7.org/browse/FHIR-34546) [See Change Here](#.html)
+1. **applied**: Change Goal.description search requirement from SHALL to SHOULD [FHIR-34546](https://jira.hl7.org/browse/FHIR-34546) [See Change Here](StructureDefinition-us-core-goal.html#notes)
 1. **Resolved - change required**: SDOH Category Codes section could call out that categorization is fuzzy for SDOH [FHIR-34550](https://jira.hl7.org/browse/FHIR-34550) [See Change Here](#.html)
 1. **Triaged**: MustSupport feedback for SDOH Assessment Obs profile [FHIR-34551](https://jira.hl7.org/browse/FHIR-34551) [See Change Here](#.html)
 1. **Triaged**: Condition.encounter should be an invariant instead of MS [FHIR-34553](https://jira.hl7.org/browse/FHIR-34553) [See Change Here](#.html)
