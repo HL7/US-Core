@@ -22,18 +22,18 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Each Condition must support:**
 
-1.  {:.new-content}a clinical status of the condition (e.g., active or resolved)
+1.  <span class="bg-success" markdown="1">a clinical status of the condition (e.g., active or resolved)</span><!-- new-content -->
 1.  a verification status
-2.  an encounter
-3.  a date of diagnosis*
-5.  a date of resolution
-6.  a date when recorded*
+1.  an encounter
+1.  a date of diagnosis*
+1.  <span class="bg-success" markdown="1">abatement date (in other words, date of resolution or remission)</span><!-- new-content -->
+1.  a date when recorded*
 
 *See the next section for how the date of diagnosis is represented in this Profile.
 
 **Profile specific implementation guidance:**
 
-* {:.new-content}If category is "problems-list-item", the clinicalStatus **SHOULD** be known.
+* <span class="bg-success" markdown="1">If category is "problems-list-item", the clinicalStatus **SHOULD** be known.</span><!-- new-content --> 
 * The [US Core Condition Category Codes] support the separate types of conditions so API consumers can separate health concerns, problems, and encounter diagnoses.
 * The 2015 Certification rule requires the use of SNOMED CT for problem list entries. Following the rules for [required] binding to coded data types, ICD or other local codes can be used as translations to SNOMED CT.
 * The [US Core Condition Code] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and may be used as the primary code for current encounter diagnoses.
