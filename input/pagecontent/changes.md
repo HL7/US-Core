@@ -1,4 +1,4 @@
-### Version = Continuous Integration (CI) Build (5.0.0-preview)
+### Version = CI Build (5.0.0-preview)
 - url: <http://build.fhir.org/ig/HL7/US-Core>
 - Based on FHIR version : 4.0.1
 
@@ -16,7 +16,10 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: US Core Pulse Oximetry Profile Text Summary has incorrect UCUM Unit for Oxygen Concentration [FHIR-27845](https://jira.hl7.org/browse/FHIR-27845) [See Change Here](#.html)
 1. **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) [See Change Here](#.html)
 1. **Resolved - change required**: valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107) [See Change Here](#.html)
-1. **Resolved - change required**: In most of the data elements – “Binding is from base FHIR and US Core Vital Signs”  Need this to be one single combined listing [FHIR-30780](https://jira.hl7.org/browse/FHIR-30780) [See Change Here](#.html)
+1. **Resolved - change required**: List profiles by type and create table comparing Observation Profiles [FHIR-30780](https://jira.hl7.org/browse/FHIR-30780) See Changes:
+  - [Here](profiles-and-extensions.html)
+  - [Here](index.html#us-core-profiles)
+  - [Here](index.html#us-core-profiles)
 1. **Resolved - change required**: Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783) [See Change Here](#.html)
 1. **Resolved - change required**: Wrong link to IG homepage from package manifest [FHIR-33132](https://jira.hl7.org/browse/FHIR-33132) [See Change Here](#.html)
 1. **Resolved - change required**: Why is SDOH Assessment's Observation.component.code MS? Why is Observation.component? [FHIR-34384](https://jira.hl7.org/browse/FHIR-34384) [See Change Here](#.html)
@@ -122,7 +125,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: incorrect guidance on accessing VSAC Valueset VSD [FHIR-36639](https://jira.hl7.org/browse/FHIR-36639) [See Change Here](#.html)
 1. **Submitted**: Clarify organization responsible for the DocumentReference [FHIR-36654](https://jira.hl7.org/browse/FHIR-36654) [See Change Here](#.html)
 1. **Submitted**: Clarify Device UDI-PI requirement [FHIR-36657](https://jira.hl7.org/browse/FHIR-36657) [See Change Here](#.html)
-1. **Triaged**: Move change log from version history to  new change log  page in IG [FHIR-36703](https://jira.hl7.org/browse/FHIR-36703) [See Change Here](#.html)
+1. **Applied**: Move change log from version history to new change log  page in IG [FHIR-36703](https://jira.hl7.org/browse/FHIR-36703) [See Change Here](changes.html)
 
 
 
