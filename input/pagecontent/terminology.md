@@ -14,6 +14,7 @@ These value sets have been defined for this implementation guide.
 *   [OMB Race Categories](ValueSet-omb-race-category.html)
 *   [Detailed Race](ValueSet-detailed-race.html)
 *   [US Core Clinical Note Type](ValueSet-us-core-clinical-note-type.html)
+*   <span class="bg-success" markdown="1">[US Core Clinical Test Codes ValueSet](ValueSet-us-core-clinical-test-codes.html)</span><!-- new-content --> 
 *   [US Core Condition Category Codes](ValueSet-us-core-condition-category.html)
 *   [US Core Condition Code](ValueSet-us-core-condition-code.html)
 *   [US Core Diagnostic Report Laboratory Codes](ValueSet-us-core-diagnosticreport-lab-codes.html)
@@ -25,7 +26,7 @@ These value sets have been defined for this implementation guide.
 *   [US Core DocumentReference Type](ValueSet-us-core-documentreference-type.html)
 *   [US Core Encounter Type](ValueSet-us-core-encounter-type.html)
 *   [US Core Narrative Status](ValueSet-us-core-narrative-status.html)
-*   [US Core Observation Category Codes](ValueSet-us-core-observation-category.html)
+*   <span class="bg-success" markdown="1">[US Core Observation Category Codes](ValueSet-us-core-observation-category.html)</span><!-- new-content -->
 *   [US Core Observation Value Codes (SNOMED-CT)](ValueSet-us-core-observation-value-codes.html)
 *   [US Core Procedure Codes](ValueSet-us-core-procedure-code.html)
 *   [US Core Provenance Participant Type Codes](ValueSet-us-core-provenance-participant-type.html)
@@ -50,6 +51,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 *   [US Core CarePlan Category Extension Codes](CodeSystem-careplan-category.html)
 *   [US Core Condition Category Extension Codes](CodeSystem-condition-category.html)
 *   [US Core DocumentReferences Category Codes](CodeSystem-us-core-documentreference-category.html)
+*   <span class="bg-success" markdown="1">[US Core Observation Category Codes](CodeSystem-us-core-observation-category.html)</span><!-- new-content -->
 *   [US Core Provenance Participant Type Extension Codes](CodeSystem-us-core-provenance-participant-type.html)
 
 <br />

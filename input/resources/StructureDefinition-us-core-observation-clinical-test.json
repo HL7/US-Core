@@ -1,239 +1,211 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "us-core-observation-clinical-test",
-  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test",
-  "name": "USCoreClinicalTestResultObservationProfile",
-  "title": "US Core Clinical Test Result Observation Profile",
-  "status": "active",
-  "date": "2021-11-09",
-  "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve clinical test results",
-  "fhirVersion": "4.0.1",
-  "kind": "resource",
-  "abstract": false,
-  "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Observation",
-        "path": "Observation",
-        "constraint": [
-          {
-            "key": "us-core-2",
-            "severity": "error",
-            "human": "If there is no component or hasMember element then either a value[x] or a data absent reason must be present",
-            "expression": "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())",
-            "xpath": "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
-          }
-        ],
-        "mustSupport": false
-      },
-      {
-        "id": "Observation.status",
-        "path": "Observation.status",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category",
-        "path": "Observation.category",
-        "slicing": {
-          "discriminator": [
+    "resourceType": "StructureDefinition",
+    "id": "us-core-observation-clinical-test",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test",
+    "name": "USCoreClinicalTestResultObservationProfile",
+    "title": "US Core Clinical Test Result Observation Profile",
+    "status": "active",
+    "date": "2021-11-09",
+    "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve clinical test results",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
             {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category:procedure",
-        "path": "Observation.category",
-        "sliceName": "procedure",
-        "patternCodeableConcept": {
-          "coding": [
+                "id": "Observation",
+                "path": "Observation",
+                "constraint": [
+                    {
+                        "key": "us-core-2",
+                        "severity": "error",
+                        "human": "If there is no component or hasMember element then either a value[x] or a data absent reason must be present",
+                        "expression": "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())",
+                        "xpath": "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
+                    }
+                ],
+                "mustSupport": false
+            },
             {
-              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-              "code": "procedure"
-            }
-          ]
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category:exam",
-        "path": "Observation.category",
-        "sliceName": "exam",
-        "patternCodeableConcept": {
-          "coding": [
+                "id": "Observation.status",
+                "path": "Observation.status",
+                "mustSupport": true
+            },
             {
-              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-              "code": "exam"
-            }
-          ]
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category:activity",
-        "path": "Observation.category",
-        "sliceName": "activity",
-        "patternCodeableConcept": {
-          "coding": [
+                "id": "Observation.category",
+                "path": "Observation.category",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 1,
+                "mustSupport": true
+            },
             {
-              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-              "code": "activity"
+                "id": "Observation.category:clinical-test",
+                "path": "Observation.category",
+                "sliceName": "clinical-test",
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-observation-category",
+                            "code": "clinical-test"
+                        }
+                    ]
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code",
+                "path": "Observation.code",
+                "short": "Clinical Test Name",
+                "definition": "The name of the non-imaging or non-laboratory test performed on a patient.  A LOINC **SHALL** be used if the concept is present in LOINC.",
+                "comment": "The typical patterns for codes are:  1)  a LOINC code either as a translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.  When using LOINC , Use either the SHORTNAME or LONG_COMMON_NAME field for the display.",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-test-codes"
+                }
+            },
+            {
+                "id": "Observation.subject",
+                "path": "Observation.subject",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.effective[x]",
+                "path": "Observation.effective[x]",
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Period"
+                    },
+                    {
+                        "code": "Timing"
+                    },
+                    {
+                        "code": "instant"
+                    }
+                ],
+                "condition": [
+                    "us-core-1"
+                ],
+                "constraint": [
+                    {
+                        "key": "us-core-1",
+                        "severity": "error",
+                        "human": "Datetime must be at least to day.",
+                        "expression": "$this is DateTime implies $this.toString().length() >= 10",
+                        "xpath": "f:matches(effectiveDateTime,/\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z)/)"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.value[x]",
+                "path": "Observation.value[x]",
+                "short": "Result Value",
+                "type": [
+                    {
+                        "code": "Quantity",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ]
+                    },
+                    {
+                        "code": "CodeableConcept",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ]
+                    },
+                    {
+                        "code": "string",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ]
+                    },
+                    {
+                        "code": "boolean"
+                    },
+                    {
+                        "code": "integer"
+                    },
+                    {
+                        "code": "Range"
+                    },
+                    {
+                        "code": "Ratio"
+                    },
+                    {
+                        "code": "SampledData"
+                    },
+                    {
+                        "code": "time"
+                    },
+                    {
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Period"
+                    }
+                ],
+                "condition": [
+                    "us-core-2",
+                    "us-core-3"
+                ],
+                "constraint": [
+                    {
+                        "key": "us-core-3",
+                        "severity": "error",
+                        "human": "SHALL use UCUM for coded quantity units.",
+                        "expression": "valueQuantity.system.empty() or valueQuantity.system = 'http://unitsofmeasure.org'",
+                        "xpath": "not(exists(f:valueQuantity/f:system) ) or f:valueQuantity/f:system[@value='http://unitsofmeasure.org']"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.dataAbsentReason",
+                "path": "Observation.dataAbsentReason",
+                "condition": [
+                    "us-core-2"
+                ],
+                "mustSupport": true
             }
-          ]
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.code",
-        "path": "Observation.code",
-        "short": "Clinical Test Name",
-        "definition": "The name of the non-imaging or non-laboratory test performed on a patient.  A LOINC **SHALL** be used if the concept is present in LOINC.",
-        "comment": "The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.  When using LOINC , Use either the SHORTNAME or LONG_COMMON_NAME field for the display.",
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes"
-        }
-      },
-      {
-        "id": "Observation.subject",
-        "path": "Observation.subject",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.effective[x]",
-        "path": "Observation.effective[x]",
-        "type": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ],
-            "code": "dateTime"
-          },
-          {
-            "code": "Period"
-          },
-          {
-            "code": "Timing"
-          },
-          {
-            "code": "instant"
-          }
-        ],
-        "condition": [
-          "us-core-1"
-        ],
-        "constraint": [
-          {
-            "key": "us-core-1",
-            "severity": "error",
-            "human": "Datetime must be at least to day.",
-            "expression": "$this is DateTime implies $this.toString().length() >= 10",
-            "xpath": "f:matches(effectiveDateTime,/\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z)/)"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
-        "short": "Result Value",
-        "type": [
-          {
-            "code": "Quantity",
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ]
-          },
-          {
-            "code": "CodeableConcept",
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ]
-          },
-          {
-            "code": "string",
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ]
-          },
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "integer"
-          },
-          {
-            "code": "Range"
-          },
-          {
-            "code": "Ratio"
-          },
-          {
-            "code": "SampledData"
-          },
-          {
-            "code": "time"
-          },
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "Period"
-          }
-        ],
-        "condition": [
-          "us-core-2",
-          "us-core-3"
-        ],
-        "constraint": [
-          {
-            "key": "us-core-3",
-            "severity": "error",
-            "human": "SHALL use UCUM for coded quantity units.",
-            "expression": "valueQuantity.system.empty() or valueQuantity.system = 'http://unitsofmeasure.org'",
-            "xpath": "not(exists(f:valueQuantity/f:system) ) or  f:valueQuantity/f:system[@value='http://unitsofmeasure.org']"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.dataAbsentReason",
-        "path": "Observation.dataAbsentReason",
-        "condition": [
-          "us-core-2"
-        ],
-        "mustSupport": true
-      }
-    ]
-  }
+        ]
+    }
 }

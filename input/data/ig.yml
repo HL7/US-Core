@@ -117,6 +117,14 @@ definition:
     -   code: path-history
         value: http://hl7.org/fhir/us/core/history.html
     resource:
+    -   description: 'Set of codes for implementation of the US-Core profiles. These
+            codes are  extensions to the [FHIR Observation Category Codes](http://terminology.hl7.org/CodeSystem/observation-category).
+
+            '
+        exampleBoolean: false
+        name: US Core Observation Category Codes
+        reference:
+            reference: CodeSystem/us-core-observation-category
     -   description: Defines constraints and extensions on the AllergyIntolerance
             resource for the minimal set of data to query and retrieve allergy information.
         exampleBoolean: false
@@ -1316,6 +1324,13 @@ definition:
         name: US Core Clinical Note Type
         reference:
             reference: ValueSet/us-core-clinical-note-type
+    -   description: Starter set of clinical test LOINC codes identified in Appendix
+            B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC
+            Phase 3 Recommendations Report Letter
+        exampleBoolean: false
+        name: US Core Clinical Test Codes ValueSet
+        reference:
+            reference: ValueSet/us-core-clinical-test-codes
     -   description: "Common SDOH assessment concepts covering the following categories\
             \ (Gravity Project SDOH Domains):\n - Food (Food Insecurity)\n - Housing\
             \ (Housing Instability)\n - Health (Social Connection, Stress)\n - Employment\
@@ -1420,7 +1435,7 @@ definition:
             reference: ValueSet/us-core-narrative-status
     -   description: HL7 FHIR concepts to classify an observation
         exampleBoolean: false
-        name: US Core Observation Category Codes
+        name: US Core Observation Category ValueSet
         reference:
             reference: ValueSet/us-core-observation-category
     -   description: "Representing a patient\u2019s smoking behavior using concepts\
@@ -1609,37 +1624,37 @@ definition:
             reference: Condition/example
     -   description: This is a DXA Femur-L ArMass BMD Example for the *Clinical Test
             Result Observation Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
         name: DXA Femur-L ArMass BMD Example
         reference:
             reference: Observation/dxa-femur-l-armass-bmd
     -   description: This is a DXA Femur-L T-score BMD Example for the *Clinical Test
             Result Observation Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
         name: DXA Femur-L T-score BMD Example
         reference:
             reference: Observation/dxa-femur-l-t-score-bmd
     -   description: This is a DXA Femur-L Z-score BMD Example for the *Clinical Test
             Result Observation Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
         name: DXA Femur-L Z-score BMD Example
         reference:
             reference: Observation/dxa-femur-l-z-score-bmd
     -   description: This is a DXA Hip-L ArMass BMD Example for the *Clinical Test
             Result Observation Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
         name: DXA Hip-L ArMass BMD Example
         reference:
             reference: Observation/dxa-hip-l-armass-bmd
     -   description: This is a DXA Hip-L T-score BMD Example for the *Clinical Test
             Result Observation Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
         name: DXA Hip-L T-score BMD Example
         reference:
             reference: Observation/dxa-hip-l-t-score-bmd
     -   description: This is a DXA Hip-L Z-score BMD Example for the *Clinical Test
             Result Observation Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
         name: DXA Hip-L Z-score BMD Example
         reference:
             reference: Observation/dxa-hip-l-z-score-bmd

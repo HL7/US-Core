@@ -316,3 +316,4 @@
 [US Core Common SDOH Assessments ValueSet]: ValueSet-us-core-common-sdoh-assessments.html
 [slicing]: {{site.data.fhir.path}}profiling.html#slicing
 [Change Log]: changes.html
+[Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]: https://www.healthit.gov/sites/default/files/page/2021-10/2021-09-09_USCDI_TF_2021_HITAC_Phase%203_%20Recommendations%20Report_Signed_508.pdf

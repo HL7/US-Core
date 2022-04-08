@@ -32,7 +32,11 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: SDOH Category Codes section could call out that categorization is fuzzy for SDOH [FHIR-34550](https://jira.hl7.org/browse/FHIR-34550) [See Change Here](#.html)
 1. **Triaged**: Condition.encounter should be an invariant instead of MS [FHIR-34553](https://jira.hl7.org/browse/FHIR-34553) [See Change Here](#.html)
 1. **Applied**: Update narrative on abatement date [FHIR-34554](https://jira.hl7.org/browse/FHIR-34554) [See Change Here](StructureDefinition-us-core-condition.html)
-1. **Resolved - change required**: Do we need slices on category for Clinical Test Results? [FHIR-34555](https://jira.hl7.org/browse/FHIR-34555) [See Change Here](#.html)
+1. **Applied**: Change Clinical Tests Observations category to "clinical-test" and add guidance [FHIR-34555](https://jira.hl7.org/browse/FHIR-34555) See Changes:
+   - [Here](StructureDefinition-us-core-observation-clinical-test.html)
+   - [Here](ValueSet-us-core-observation-category.html)
+   - [Here](CodeSystem-us-core-observation-category.html)
+   - [Here](ValueSet-us-core-observation-clinical-test.html)
 1. **Resolved - change required**: Update text all occurances of U.S. Core Data for Interoperability (USCDI) v1 to v2 [FHIR-34613](https://jira.hl7.org/browse/FHIR-34613) [See Change Here](#.html)
 1. **Applied**: Referencing US Core Profiles [FHIR-34623](https://jira.hl7.org/browse/FHIR-34623) [See Change Here](general-guidance.html#referencing-us-core-profiles)
 1. **Resolved - change required**: Example in Missing Data for coded element has wrong code system [FHIR-34624](https://jira.hl7.org/browse/FHIR-34624) [See Change Here](#.html)

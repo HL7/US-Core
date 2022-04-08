@@ -1,5 +1,5 @@
 
-﻿This profile sets minimum expectations for the [Observation] resource  to record, search, and fetch non-imaging and non-laboratory clinical tests results for a patient.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
+﻿This profile sets minimum expectations for the [Observation] resource  to record, search, and fetch clinical tests for a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  <span class="bg-success" markdown="1">Clinical tests includes non-imaging and non-laboratory tests performed on a patient that results in structured or unstructured (narrative) findings specific to the patient, such as electrocardiogram (ECG), visual acuity exam, macular exam, or graded exercise testing (GXT), to facilitate the diagnosis and management of conditions.  For imaging and laboratory tests the corresponding [US Core Diagnostic Imaging Result Observation Profile] and [US Core Laboratory Result Observation Profile] should be used instead.</span><!-- new-content -->
 
 **Example Usage Scenarios:**
 
@@ -16,8 +16,8 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 **Each Observation must have:**
 
 1.   a status
-1.   a category code of 'procedure'
-1.   a [LOINC] code, if available, which tells you what is being measured
+1.   <span class="bg-success" markdown="1">a category code of 'clinical-test'</span><!-- new-content -->
+1.   a [LOINC] code, if available, which tells you what is being measured**
 1.   a patient
 
 **Each Observation must support:**
@@ -28,6 +28,7 @@ The following data-elements must always be present ([Mandatory] definition]) or 
 
 **Profile specific implementation guidance:**
 
-{% include observation_guidance_1.md category="procedure" %}
+- {:.new-content}\*\*This profile defines a Valueset based on a *starter set* of example clinical test LOINC codes identified in the [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]. It is not intended to be complete and implementers are expected include other LOINC or other codes to meet their business needs.
+{% include observation_guidance_1.md category="clinical-test" %}
 
 {% include link-list.md %}
