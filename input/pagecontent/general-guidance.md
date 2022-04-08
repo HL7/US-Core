@@ -47,7 +47,7 @@ There are situations when information on a particular data element is missing an
              {
                "extension": [
                  {
-                   "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                   "url": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
                    "valueCode": "unknown"
                  }
                ]
@@ -75,7 +75,7 @@ There are situations when information on a particular data element is missing an
               {
                 "coding" : [
                   {
-                    "system" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                    "system" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
                     "code" : "unknown",
                     "display" : "unknown"
                   }
