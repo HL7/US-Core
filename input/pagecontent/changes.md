@@ -42,7 +42,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Correct code system in example snippet[FHIR-34624](https://jira.hl7.org/browse/FHIR-34624) [See Change Here](general-guidance.html#missing-data)
 1. **Resolved - change required**: Condition.category does not list all values from value set [FHIR-34625](https://jira.hl7.org/browse/FHIR-34625) [See Change Here](#.html)
 1. **Applied**: Add further clarification between slicing a binding (4.1.0) vs using extensible binding (4.0.0) [FHIR-34626](https://jira.hl7.org/browse/FHIR-34626) [See Change Here](conformance-expectations.html#required-bindings-when-slicing-by-value-setsl)
-1. **Resolved - change required**: Cod highlight missed the last character [FHIR-34627](https://jira.hl7.org/browse/FHIR-34627) [See Change Here](#.html)
+1. **Applied**: fix Typo [FHIR-34627](https://jira.hl7.org/browse/FHIR-34627)
 1. **Resolved - change required**: reportedReference to other resources are not must supported [FHIR-34628](https://jira.hl7.org/browse/FHIR-34628) [See Change Here](#.html)
 1. **Resolved - change required**: contextDirection in Example 1 is wrong [FHIR-34629](https://jira.hl7.org/browse/FHIR-34629) [See Change Here](#.html)
 1. **Resolved - change required**: Get Medication's narrative examples don't match the JSON examples [FHIR-34630](https://jira.hl7.org/browse/FHIR-34630) [See Change Here](#.html)

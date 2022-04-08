@@ -308,7 +308,7 @@ For the [US Core Laboratory Result Observation Profile] value element, multiple 
 
 When claiming conformance to the [US Core Laboratory Result Observation Profile]:
 
-* US Core Responders **SHALL** be capable of populating `Observation.valueQuantity`, `Observation.valueCodeableConcep`t, and `Observation.valueStrin`g.
+* US Core Responders **SHALL** be capable of populating `Observation.valueQuantity`, `Observation.valueCodeableConcept`, and `Observation.valueString`.
 * US Core Requestors **SHALL** be capable of processing `Observation.valueQuantity`, `Observation.valueCodeableConcept`, and `Observation.valueString`.
 
 Systems can support the other elements, but this is not a requirement of US Core.
