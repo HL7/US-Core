@@ -37,7 +37,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
    - [Here](ValueSet-us-core-observation-category.html)
    - [Here](CodeSystem-us-core-observation-category.html)
    - [Here](ValueSet-us-core-observation-clinical-test.html)
-1. **Resolved - change required**: Update text all occurances of U.S. Core Data for Interoperability (USCDI) v1 to v2 [FHIR-34613](https://jira.hl7.org/browse/FHIR-34613) [See Change Here](#.html)
+1. **Applied**: Update text all occurances of U.S. Core Data for Interoperability (USCDI) v1 to v2 or removed specific references to version. [FHIR-34613](https://jira.hl7.org/browse/FHIR-34613) [For Example, See Change Here](index.html)
 1. **Applied**: Referencing US Core Profiles [FHIR-34623](https://jira.hl7.org/browse/FHIR-34623) [See Change Here](general-guidance.html#referencing-us-core-profiles)
 1. **Resolved - change required**: Example in Missing Data for coded element has wrong code system [FHIR-34624](https://jira.hl7.org/browse/FHIR-34624) [See Change Here](#.html)
 1. **Resolved - change required**: Condition.category does not list all values from value set [FHIR-34625](https://jira.hl7.org/browse/FHIR-34625) [See Change Here](#.html)

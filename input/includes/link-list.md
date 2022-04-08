@@ -183,6 +183,8 @@
 [Surgical Operation Note (11504-8)]: https://loinc.org/11504-8.html
 [Terminology]: terminology.html "Terminology Page"
 [U.S. Core Data for Interoperability (USCDI) v1]: https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf
+[U.S. Core Data for Interoperability (USCDI) v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2
+[U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi
 [UCUM Codes value set]: {{site.data.fhir.path}}valueset-ucum-units.html
 [UCUM]: http://unitsofmeasure.org
 [US Core Allergies Profile]: StructureDefinition-us-core-allergyintolerance.html

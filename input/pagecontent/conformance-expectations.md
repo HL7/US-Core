@@ -263,7 +263,7 @@ For example, the [US Core Patient Profile] name element is labeled must support 
 
 On the other hand, if any sub-element is marked as must support and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure you must support the sub-element(s) marked as must support. There are no examples of US Core profiles that have this structure defined.
 
-Systems can support the other elements, but this is not a requirement of US Core. The [U.S. Core Data for Interoperability (USCDI) v1] may require other elements, for example `suffix`.
+Systems can support the other elements, but this is not a requirement of US Core. The [U.S. Core Data for Interoperability (USCDI)] may require other elements, for example `suffix`.
 
 #### Must Support - Resource References
 
