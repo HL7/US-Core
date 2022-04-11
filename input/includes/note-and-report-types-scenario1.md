@@ -1,10 +1,10 @@
-
+outgoing
 A client determines the types of reports they can access through DiagnosticReport. The server responds with 'foo','bar' ,and 'baz' report types:
 
 **Request for DiagnosticReport report type**
 
 ~~~
-GET [base]/ValueSet/$expand?context=DiagnosticReport.codes&contextDirection=incoming
+GET [base]/ValueSet/$expand?context=DiagnosticReport.codes&contextDirection=outgoing
 ~~~
 
 **Response**
@@ -59,4 +59,3 @@ HTTP/1.1 200 OK
  }
 }
 ~~~
-

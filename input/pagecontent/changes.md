@@ -44,7 +44,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Add further clarification between slicing a binding (4.1.0) vs using extensible binding (4.0.0) [FHIR-34626](https://jira.hl7.org/browse/FHIR-34626) [See Change Here](conformance-expectations.html#required-bindings-when-slicing-by-value-setsl)
 1. **Applied**: fix Typo [FHIR-34627](https://jira.hl7.org/browse/FHIR-34627)
 1. **Applied**: Clarify reported guidance on how secondary sourced MedicationRequest information can be represented. [FHIR-34628](https://jira.hl7.org/browse/FHIR-34628) [See Change Here](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
-1. **Resolved - change required**: contextDirection in Example 1 is wrong [FHIR-34629](https://jira.hl7.org/browse/FHIR-34629) [See Change Here](#.html)
+1. **Applied**: contextDirection in Example 1 is wrong [FHIR-34629](https://jira.hl7.org/browse/FHIR-34629) [See Change Here](clinical-notes-guidance.html#discovering-note-and-report-types)
 1. **Resolved - change required**: Get Medication's narrative examples don't match the JSON examples [FHIR-34630](https://jira.hl7.org/browse/FHIR-34630) [See Change Here](#.html)
 1. **Resolved - change required**: AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636) [See Change Here](#.html)
 1. **Resolved - change required**: Is Reference(Organization) MustSupport? [FHIR-34637](https://jira.hl7.org/browse/FHIR-34637) [See Change Here](#.html)
