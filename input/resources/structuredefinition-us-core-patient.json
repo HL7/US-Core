@@ -43,6 +43,16 @@
         "id": "Patient",
         "path": "Patient",
         "definition": "The US Core Patient Profile is based upon the core FHIR Patient Resource and designed to meet the applicable patient demographic data elements from the 2015 Edition Common Clinical Data Set.",
+        "constraint": [
+          {
+            "key": "us-core-6",
+            "severity": "error",
+            "human": "Either Patient.name.given and/or Patient.name.family SHALL be present or a Data Absent Reason Extension SHALL be present.",
+            "expression": "(name.family.exists() or name.given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
+            "xpath": "(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:name/f:family or /f:name/f:given)) or (not(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:name/f:family or /f:name/f:given))"
+          }
+        ],
+
         "mustSupport": false,
         "mapping": [
           {
@@ -180,15 +190,6 @@
         "id": "Patient.name",
         "path": "Patient.name",
         "min": 1,
-        "constraint": [
-          {
-            "key": "us-core-8",
-            "severity": "error",
-            "human": "Either Patient.name.given and/or Patient.name.family SHALL be present or a Data Absent Reason Extension SHALL be present.",
-            "expression": "(family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
-            "xpath": "(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:family or /f:given)) or (not(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:family or /f:given))"
-          }
-        ],
         "mustSupport": true,
         "mapping": [
           {
@@ -205,7 +206,7 @@
         "id": "Patient.name.family",
         "path": "Patient.name.family",
         "condition": [
-          "us-core-8"
+          "us-core-6"
         ],
         "mustSupport": true,
         "mapping": [
@@ -219,7 +220,7 @@
         "id": "Patient.name.given",
         "path": "Patient.name.given",
         "condition": [
-          "us-core-8"
+          "us-core-6"
         ],
         "mustSupport": true,
         "mapping": [

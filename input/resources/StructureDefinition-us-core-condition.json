@@ -51,7 +51,7 @@
                 "valueBoolean": true
               }
             ],
-            "key": "us-core-1",
+            "key": "us-core-11",
             "severity": "warning",
             "human": "A code in Condition.category SHOULD be from US Core Condition Category Codes value set.",
             "expression": "where(category.memberOf('http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category')).exists()",
@@ -126,7 +126,7 @@
         },
         "min": 1,
         "condition": [
-          "us-core-1"
+          "us-core-11"
         ],
         "mustSupport": true,
         "mapping": [

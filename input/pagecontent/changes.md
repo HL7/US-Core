@@ -53,8 +53,10 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Inconsistent on conditional required element [FHIR-34643](https://jira.hl7.org/browse/FHIR-34643) See Change:
   - [Here](StructureDefinition-us-core-diagnosticreport-lab.html)
   - [Here](StructureDefinition-us-core-diagnosticreport-note.html)
-1. **Resolved - change required**: ServiceRequest.category:us-core should be required? [FHIR-34645](https://jira.hl7.org/browse/FHIR-34645) [See Change Here](#.html)
-1. **Resolved - change required**: Multiple us-core-1 invariants in IG [FHIR-34646](https://jira.hl7.org/browse/FHIR-34646) [See Change Here](#.html)
+1. **Applied**: ServiceRequest.category:us-core should be required? [FHIR-34645](https://jira.hl7.org/browse/FHIR-34645) [See Change Here](StructureDefinition-us-core-servicerequest.html#mandatory-and-must-support-data-elements)
+1. **Applied**: Change Condition.category "us-core-1" to "us-core-11", Immunization.vaccineCode "us-core-1" to "us-core-5", Patient.name.family "us-core-8" to "us-core-6 " to remove duplicate invariant id, is now ['us-core-1', 'us-core-2', 'us-core-3', 'us-core-4', 'us-core-5', 'us-core-6', 'us-core-7', 'us-core-8', 'us-core-9','us-core-10', 'us-core-11','us-core-13', 'us-core-14',] [FHIR-34646](https://jira.hl7.org/browse/FHIR-34646) [See Change:
+   - [Here](StructureDefinition-us-core-immunization.html)
+   - [Here](StructureDefinition-us-core-patient.html)
 1. **Resolved - change required**: Clarify that SDOH data elements does not include work information (see ODH) [FHIR-34701](https://jira.hl7.org/browse/FHIR-34701) [See Change Here](#.html)
 1. **Triaged**: Harmonize / Combine value set references for SDOH ServiceRequest and SDOH Procedure [FHIR-34747](https://jira.hl7.org/browse/FHIR-34747) [See Change Here](#.html)
 1. **Resolved - change required**: Feedback on the inclusion of Observation.component as a Must Support element for systems to record multiple answers for a screening question in a single Observation [FHIR-34748](https://jira.hl7.org/browse/FHIR-34748) [See Change Here](#.html)
