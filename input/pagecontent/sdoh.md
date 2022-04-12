@@ -5,7 +5,7 @@ tags: USCDI v2
 ---
 -->
 
-This US Core Social Determinant of Health (SDOH) Guidance Page has been added in response to  United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published by the Office of the National Coordinator (ONC) in July of 2021. The new data elements include:
+This US Core Social Determinant of Health (SDOH) Guidance Page has been added in response to  United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published by the Office of the National Coordinator (ONC) in July of 2021. <span class="bg-success" markdown="1">SDOH data relate to conditions in which people live, learn, work, and play and their effects on health risks and outcomes[^1].</span><!-- new-content -->  The new data elements include:
 - SDOH Assessments
 - SDOH Goals
 - SDOH Interventions
@@ -62,5 +62,8 @@ Below is a simple example of FHIR RESTful search transaction to access a patient
 - Observation category = "LG41762-2"
 
 {% include SDOH_search_transaction.md %}
+
+
+[^1]: As documented in [Future of US Core], US Core may add more detailed work information such as Occupational Data for Health (ODH) in future versions.
 
 {% include link-list.md %}
