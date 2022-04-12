@@ -1,4 +1,4 @@
-
+{% assign types = "" %}
 {% for p in site.data.ig.definition.resource %}
   {%- if p.exampleBoolean or p.exampleCanonical -%}
       {% if types %}
@@ -12,7 +12,7 @@
 {% assign my_array = types | split: "," %}
 {% assign my_array = my_array | sort | uniq %}
 
-{% for i in my_array %}
+{% for i in my_array offset:1 %}
 ### {{ i }}
   {%- for p in site.data.ig.definition.resource -%}
       {%- if p.exampleBoolean or p.exampleCanonical -%}

@@ -12,6 +12,7 @@
     {%- for sd_hash in site.data.structuredefinitions -%}
       {%- assign sd1 = sd_hash[1] -%}
       {%- if sd1.type == i %}
+        {%- assign new = false -%}
         {%- assign parent = false -%}
         {%- assign child = false -%}
         {%- for sd_hash2 in site.data.structuredefinitions -%}
@@ -24,16 +25,48 @@
              {% break %}
           {% endif %}
         {% endfor %}
+
+
+        {%- for new_stuff in site.data.new_stuff -%}
+           {%- if new_stuff == sd1.name -%}
+             {%- assign new = true -%}
+             {%- break -%}
+           {%- endif -%}
+        {%- endfor -%}
+
           {%- unless parent or child -%}
-            <li><a href="{{sd1.path}}">{{sd1.title}}</a></li>
+            {%- if new -%}
+              <li><a href="{{sd1.path}}"><span class="bg-success" markdown="1">{{sd1.title}}</span><!-- new-content --></a></li>
+            {% else %}
+              <li><a href="{{sd1.path}}">{{sd1.title}}</a></li>
+            {% endif %}
           {%- endunless -%}
+
           {%- if parent -%}
-            <li><a href="{{sd1.path}}">{{sd1.title}}</a>
+            {%- if new -%}
+              <li><a href="{{sd1.path}}"><span class="bg-success" markdown="1">{{sd1.title}}</span><!-- new-content --></a>
+            {% else %}
+              <li><a href="{{sd1.path}}">{{sd1.title}}</a>
+            {% endif %}
                 <ul>
                 {%- for sd_hash3 in site.data.structuredefinitions -%}
                   {%- assign sd3 = sd_hash3[1] -%}
                   {% if sd1.name == sd3.basename %}
-                    <li><a href="{{sd3.path}}">{{sd3.title}}</a></li>
+                    {%- assign new = false -%}
+                    {% for new_stuff in site.data.new_stuff %}
+                         {%- if stuff == sd3.name -%}
+                           {%- assign new_stuff = true -%}
+                           {%- break -%}
+                         {%- endif -%}
+                    {%- endfor -%}
+
+
+                      {%- if new -%}
+                        <li><a href="{{sd3.path}}"><span class="bg-success" markdown="1">{{sd3.title}}</span><!-- new-content --></a></li>
+                      {% else %}
+                        <li><a href="{{sd3.path}}">{{sd3.title}}</a></li>
+                      {% endif %}
+
                   {% endif %}
                 {% endfor %}
                 </ul>
