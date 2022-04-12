@@ -26,7 +26,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     Example:
 
       1. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|{{include.code1 | default: '[code]'}}
-      1. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|2339-0,http://loinc.org\|{{include.code2 | default: '[code]'}},{{include.code3 | default: '[code]'}}
+      1. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|{{include.code1 | default: '[code]'}},http://loinc.org\|{{include.code2 | default: '[code]'}},http://loinc.org\|{{include.code3 | default: '[code]'}}
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code(s).  SHOULD support search by multiple report codes. The Observation `code` parameter searches `Observation.code only. ([how to search by reference] and [how to search by token])
 

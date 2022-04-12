@@ -49,8 +49,10 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636) [See Change Here](#.html)
 1. **Applied**: Correct Careteam Narrative errors (remove reference to Organization) [FHIR-34637](https://jira.hl7.org/browse/FHIR-34637) [See Change Here](StructureDefinition-us-core-careteam.html#mandatory-and-must-support-data-elements)
 1. **Applied**: Fix typo [FHIR-34638](https://jira.hl7.org/browse/FHIR-34638)
-1. **Resolved - change required**: Missing search query parameter value [FHIR-34642](https://jira.hl7.org/browse/FHIR-34642) [See Change Here](#.html)
-1. **Resolved - change required**: Inconsistent on conditional required element [FHIR-34643](https://jira.hl7.org/browse/FHIR-34643) [See Change Here](#.html)
+1. **Applied**: Added missing search query parameter values [FHIR-34642](https://jira.hl7.org/browse/FHIR-34642) [See Change Here](StructureDefinition-us-core-observation-imaging.html#notes)
+1. **Applied**: Inconsistent on conditional required element [FHIR-34643](https://jira.hl7.org/browse/FHIR-34643) See Change:
+  - [Here](StructureDefinition-us-core-diagnosticreport-lab.html)
+  - [Here](StructureDefinition-us-core-diagnosticreport-note.html)
 1. **Resolved - change required**: ServiceRequest.category:us-core should be required? [FHIR-34645](https://jira.hl7.org/browse/FHIR-34645) [See Change Here](#.html)
 1. **Resolved - change required**: Multiple us-core-1 invariants in IG [FHIR-34646](https://jira.hl7.org/browse/FHIR-34646) [See Change Here](#.html)
 1. **Resolved - change required**: Clarify that SDOH data elements does not include work information (see ODH) [FHIR-34701](https://jira.hl7.org/browse/FHIR-34701) [See Change Here](#.html)
