@@ -10,7 +10,7 @@ The following are example usage scenarios for the US Core Pulse Oximetry Profile
 
 ### Mandatory and Must Support Data Elements
 
-In addition to the mandatory and must support data elements in the FHIR Oxygen Saturation Profile, the following data-elements must always be present ([Mandatory] definition]) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.
+In addition to the mandatory and must support data elements in the FHIR Oxygen Saturation Profile, the following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.
 
 **Each Observation must have:**
 

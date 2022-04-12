@@ -12,20 +12,20 @@ The following are example usage scenarios for the US Core-CareTeam profile:
 ### Mandatory and Must Support Data Elements
 
 
-The following data-elements must always be present ([Mandatory] definition]) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.  
+The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.  
 
 **Each CareTeam must have:**
 
 1.  a patient
 1.  a participant role for each careteam members
-1.  a reference to each careteam member which can be:
+1.  <span class="bg-success" markdown="1">a reference to each careteam member which can be:</span><!-- new-content -->
     -   a practitioner or practitioner type (doctor, nurse, therapist)*
     -   the patient
     -   a relative or friend or guardian
 
 *See below for how practitioner members are represented in this Profile.
 
-**Each CareTeam must support:**
+**Each <span class="bg-success" markdown="1">CareTeam</span><!-- new-content -->  must support:**
 
 1.  a status code
 
