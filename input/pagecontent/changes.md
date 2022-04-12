@@ -47,7 +47,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Fix contextDirection in Example 1[FHIR-34629](https://jira.hl7.org/browse/FHIR-34629) [See Change Here](clinical-notes-guidance.html#discovering-note-and-report-types)
 1. **Applied**: Fix Medication List Examples [FHIR-34630](https://jira.hl7.org/browse/FHIR-34630) [See Change Here](medication-list-guidance.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter)
 1. **Resolved - change required**: AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636) [See Change Here](#.html)
-1. **Resolved - change required**: Is Reference(Organization) MustSupport? [FHIR-34637](https://jira.hl7.org/browse/FHIR-34637) [See Change Here](#.html)
+1. **Resolved - change required**: Correct Careteam Narrative errors (remove reference to Organization) [FHIR-34637](https://jira.hl7.org/browse/FHIR-34637) [See Change Here](#.html)
 1. **Resolved - change required**: Extra ] [FHIR-34638](https://jira.hl7.org/browse/FHIR-34638) [See Change Here](#.html)
 1. **Resolved - change required**: Missing search query parameter value [FHIR-34642](https://jira.hl7.org/browse/FHIR-34642) [See Change Here](#.html)
 1. **Resolved - change required**: Inconsistent on conditional required element [FHIR-34643](https://jira.hl7.org/browse/FHIR-34643) [See Change Here](#.html)
