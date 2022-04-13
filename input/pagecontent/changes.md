@@ -91,7 +91,11 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**:  Clarify Condition.clinicalStatus requirements and searching using clinical-status [FHIR-35318](https://jira.hl7.org/browse/FHIR-35318) [See Change Here](StructureDefinition-us-core-problems-and-health-concerns.html)
 1. **Resolved - change required**: Broken link to LOINC grouping code [FHIR-35362](https://jira.hl7.org/browse/FHIR-35362) [See Change Here](#.html)
 1. **Resolved - change required**: Confused about “Results” vs “Screening Response” [FHIR-35363](https://jira.hl7.org/browse/FHIR-35363) [See Change Here](#.html)
-1. **Resolved - change required**: Streamline representation of SDOH screening instruments [FHIR-35364](https://jira.hl7.org/browse/FHIR-35364) [See Change Here](#.html)
+1. **Resolved - change required**: Clarify modeling of SDOH screening using Observations, Add QuestionnaireResponse profile as alternative screening instrument [FHIR-35364](https://jira.hl7.org/browse/FHIR-35364) See Change:
+  -[Here](sdoh.html)
+  -[Here](StructureDefinition-us-core-observation-survey.html)
+  -[Here](StructureDefinition-us-core-SDOH-assessment.html)
+  -[Here](StructureDefinition-us-core-questionnaireresponse.html)
 1. **Resolved - change required**: provide clearer guidance for $docref operation when no date range is specified [FHIR-35380](https://jira.hl7.org/browse/FHIR-35380) [See Change Here](#.html)
 1. **Applied**: Typo [FHIR-35388](https://jira.hl7.org/browse/FHIR-35388)
 1. **Applied**: Duplicate sections in US Core RelatedPerson profile [FHIR-35452](https://jira.hl7.org/browse/FHIR-35452)

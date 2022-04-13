@@ -1,3 +1,6 @@
+<div class="new-content" markdown="1">
+This profile has been added to to represent surveys/assessments using Observations and *optionally* QuestionnaireResponse. 
+</div><!-- new-content -->
 
 ﻿This profile sets minimum expectations for the [QuestionnaireResponse] resource to record, search, and fetch retrieve observations that represent the questions and responses to form/survey and assessment tools such as the [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]. This profile encompasses single, multipart, and derived responses.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  These observations are distinct from observations representing individual clinical assessments made by an individual about a patient's social history and not derived from an assessment tool or survey. These types of observations should use the [US Core Social History Assessment QuestionnaireResponse Profile] instead.
 
