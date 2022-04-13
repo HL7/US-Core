@@ -5,7 +5,7 @@
 - [Medication List Guidance]
 - [Basic Provenance]
 - [SDOH Guidance]
-- [DSTU2 to R4 Conversion]
+- [[Changes Between US Core Versions]
 - [Future of US Core]
 
 {% include link-list.md %}

@@ -33,10 +33,9 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  an author (actor) producing the report
 2.  a reference one or more test results
 2.  a reference one or more images*
-3.  a reference to one or more DICOM imaging studies*
 4.  a reference to the full report (presentedForm)
 
-*See the next section
+*See the implementation guidance section below
 
 **Profile specific implementation guidance:**
 
@@ -44,8 +43,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - The `DiagnosticReport.category` binding must support at a minimum the [US Core DiagnosticReport Category Codes] of Cardiology, Radiology, and Pathology. Other categories may be supported.
 - A server will return how a customer has categorized their reports at a particular site. Categorization of reports is not consistent across sites. (e.g. a system may categorize an orthopedic note as cardiology.)
 - For Diagnostic Imaging Reports systems SHOULD support using the subset of  LOINC codes defined in CONF-DIR-19 in *HL7 Implementation Guide for CDA Release 2: Imaging Integration, Levels 1, 2, and 3, Basic Imaging Reports in CDA and DICOM Diagnostic Imaging Reports (DIR) – Universal Realm, Release 1.0.*
--  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. The DiagnosticReport resource links to both [Media] which represents a specific kind of Observation whose value is image data and [ImagingStudy] which represents the content in a DICOM imaging study.
-   * Only Media is marked as must support in this profile
-   * The imagingStudy element **MAY** be used by systems to reference ImagingStudy.  However, it is not supported by the majority of systems and its inclusion would be an unnecessary barrier to adoption.
+-  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. <span class="bg-success" markdown="1">The DiagnosticReport resource links to both [Media] which represents a specific kind of Observation whose value is image data and [ImagingStudy] which represents the content in a DICOM imaging study.</span><!-- new-content -->
+   * <span class="bg-success" markdown="1">Only Media is marked as must support in this profile</span><!-- new-content -->
+   * <span class="bg-success" markdown="1">The imagingStudy element **MAY** be used by systems to reference ImagingStudy.  However, it is not supported by the majority of systems and its inclusion would be an unnecessary barrier to adoption.</span><!-- new-content --> 
 
 {% include link-list.md %}

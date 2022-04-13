@@ -35,7 +35,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   - [Medication List Guidance] gives guidance on how a patient or provider can access a patient's medications.
   - [Basic Provenance] provides implementers with important definitions to create and share the Provenance Resource.
   - [SDOH Guidance] gives background on the exchange of Social Determinants of Health (SDOH) data elements.
-  - [DSTU2 to R4 Conversion] considers the user and developer experience when transitioning from FHIR DSTU2 to FHIR R4.
+  - <span class="bg-success" markdown="1">[Changes Between US Core Versions] considers the user and developer experience when transitioning between versions of US Core</span><!-- new-content -->.
   - [Future of US Core] outlines the approach to adding new content to US Core.
 - [FHIR Artifacts]\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative introduction, formal definition and a "Quick Start" guide to the supported search transaction for each  Profile.

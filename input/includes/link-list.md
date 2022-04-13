@@ -52,7 +52,7 @@
 [Consultation Note (11488-4)]: https://loinc.org/11488-4.html
 [Coverage]: {{site.data.fhir.path}}coverage.html
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
-[DSTU2 to R4 Conversion]: DSTU2-to-R4-conversion.html
+[Changes Between US Core Versions]: changes-between-versions.html
 [Data Access Framework]: https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Home
 [DataAbsentReason Code System]: {{site.data.fhir.path}}codesystem-data-absent-reason.html
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
