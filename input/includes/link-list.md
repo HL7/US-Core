@@ -320,3 +320,4 @@
 [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]: https://www.healthit.gov/sites/default/files/page/2021-10/2021-09-09_USCDI_TF_2021_HITAC_Phase%203_%20Recommendations%20Report_Signed_508.pdf
 [US Core Encounter Diagnosis Profile]: StructureDefinition-us-core-encounter-diagnosis.html
 [US Core Problems and Health Concerns Profile]: StructureDefinition-us-core-problems-and-health-concerns.html
+[Deletion Safety Checks]: http://hl7.org/fhir/R4/safety.html#conformance
