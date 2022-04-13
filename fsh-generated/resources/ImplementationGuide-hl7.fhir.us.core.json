@@ -74,7 +74,7 @@
         },
         "description": "Set of codes for implementation of the US-Core profiles. These codes are  extensions to the [FHIR Observation Category Codes](http://terminology.hl7.org/CodeSystem/observation-category).\n",
         "exampleBoolean": false,
-        "name": "US Core Observation Category Codes"
+        "name": "US Core Observation Category Extension Codes"
       },
       {
         "reference": {
@@ -150,14 +150,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-condition"
-        },
-        "description": "Defines constraints and extensions on the Condition resource for the minimal set of data to query and retrieve problems and health concerns information.",
-        "exampleBoolean": false,
-        "name": "US Core Condition Profile"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/us-core-diagnosticreport-lab"
         },
         "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with laboratory results for a patient",
@@ -187,6 +179,14 @@
         "description": "The document reference profile used in US Core.",
         "exampleBoolean": false,
         "name": "US Core DocumentReference Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-encounter-diagnosis"
+        },
+        "description": "The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.",
+        "exampleBoolean": false,
+        "name": "US Core Encounter Diagnosis Profile"
       },
       {
         "reference": {
@@ -363,6 +363,14 @@
         "description": "The practitioner roles referenced in the US Core profiles.",
         "exampleBoolean": false,
         "name": "US Core PractitionerRole Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-problems-and-health-concerns"
+        },
+        "description": "The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1",
+        "exampleBoolean": false,
+        "name": "US Core Problems and Health Concerns Profile"
       },
       {
         "reference": {
@@ -1326,14 +1334,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/us-core-condition-category"
-        },
-        "description": "The US Core Condition Category Codes support the separate concepts of problems, health concerns, and Social Determinants of Health in Condition.category in order for API consumers to be able to separate them.",
-        "exampleBoolean": false,
-        "name": "US Core Condition Category Codes"
-      },
-      {
-        "reference": {
           "reference": "ValueSet/us-core-condition-code"
         },
         "description": "This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions).   ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical information.",
@@ -1435,6 +1435,14 @@
         "description": "[Snomed-CT](http://www.ihtsdo.org/) concept codes for coded results",
         "exampleBoolean": false,
         "name": "US Core Observation Value Codes (SNOMED-CT)"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-problem-or-health-concern"
+        },
+        "description": "Code set for category codes for [US Core Problems and Health Concerns Profile] consisting of the concepts \"problem\" and \"health-concern\".",
+        "exampleBoolean": false,
+        "name": "US Core Problem Or Health Concern ValueSet"
       },
       {
         "reference": {
@@ -1656,17 +1664,25 @@
         "reference": {
           "reference": "Condition/condition-SDOH-example"
         },
-        "description": "This is a condition example for the *US Core Condition Profile*.",
-        "name": "Condition SDOH Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+        "description": "This example of a US Core Problems and Health Concerns Profile illustrates its use to capture information about a patient's SDOH Problem/Health Concern.",
+        "name": "SDOH Problem/Health Concern Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-problems-and-health-concerns"
       },
       {
         "reference": {
-          "reference": "Condition/example"
+          "reference": "Condition/encounter-diagnosis-example1"
         },
-        "description": "This is a condition example for the *US Core Condition Profile*.",
-        "name": "Condition Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+        "description": "This example of a US Core Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
+        "name": "Encounter Diagnosis Example 1",
+        "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-encounter-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/encounter-diagnosis-example2"
+        },
+        "description": "This example of a US Core Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
+        "name": "Encounter Diagnosis Example 2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-encounter-diagnosis"
       },
       {
         "reference": {
@@ -1806,19 +1822,19 @@
       },
       {
         "reference": {
-          "reference": "Condition/hc1"
-        },
-        "description": "This is a hc1 example for the *US Core Condition Profile*.",
-        "name": "HC1 Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
-      },
-      {
-        "reference": {
           "reference": "Observation/head-circumference"
         },
         "description": "This is a head circumference example for the *US Core Head Circumference Profile*.",
         "name": "Head Circumference Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference"
+      },
+      {
+        "reference": {
+          "reference": "Condition/health-concern-example"
+        },
+        "description": "This example of a US Core Problems and Health Concerns Profile illustrates its use to capture information about a patient's health concern.",
+        "name": "Health Concern Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-problems-and-health-concerns"
       },
       {
         "reference": {

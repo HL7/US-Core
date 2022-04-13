@@ -3,16 +3,16 @@
   "id": "condition-SDOH-example",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
+      "http://hl7.org/fhir/us/core//StructureDefinition/us-core-problems-and-health-concerns"
     ],
     "extension": [
       {
         "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "Condition SDOH Example"
+        "valueString": "SDOH Problem/Health Concern Example"
       },
       {
         "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is a condition example for the *US Core Condition Profile*."
+        "valueMarkdown": "This example of a US Core Problems and Health Concerns Profile illustrates its use to capture information about a patient's SDOH Problem/Health Concern."
       }
     ]
   },
@@ -45,6 +45,18 @@
   "category": [
     {
       "coding": [
+
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item",
+          "display": "Problem List Item"
+        }
+      ],
+      "text": "Problem List Item"
+    },
+    {
+      "coding": [
+
         {
           "system": "http://loinc.org",
           "code": "LG41762-2",

@@ -22,7 +22,7 @@ The intent of adding these SDOH data elements to US Core is to be able to use US
 The figure below shows how the SDOH elements are inter-related:
 
 - **SDOH Assessment**: SDOH Assessments represent the recording of SDOH assessment screening tools and other questionnaires as well as individual clinical observations.  These assessments are represented by the [US Core Social History Assessment Observation Profile] and [US Core Screening Response Observation Profile]
-- **SDOH Problems/Health Concerns**: Identifying a Social Determinants of Health-related condition (for example, homelessness) is represented by the [US Core Condition Profile].
+- **SDOH Problems/Health Concerns**: Identifying a Social Determinants of Health-related condition (for example, homelessness) is represented by the [US Core Problems and Health Concerns Profile].
 - **SDOH Interventions**:  Services offered to a patient to address identified Social Determinants of Health problems/health concerns (for example, referral to transportation support programs) are represented by the [US Core ServiceRequest Profile].  In addition, the [US Core Procedure Profile] can be used to record a completed service or intervention.
 - **SDOH Goals**: Identifying and defining a future desired condition or change in condition related to an SDOH risk (for example, Has adequate quality meals and snacks) is represented by [US Core Goal Profile]
 
@@ -43,7 +43,7 @@ For the SDOH Clinical Care HL7 Implementation Guide, the Gravity project has def
 * [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion)
 * [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion)
 
-US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Profile and how the grouped valueset is compatible with the US Core Problem code valueset.   When recording SDOH data US Core Profiles, servers **SHOULD** use the SDOH value sets listed above.
+US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the Gravity value sets are grouped for use in the US Core Problems and Health Concerns Profile and how the grouped valueset is compatible with the US Core Problem code valueset.   When recording SDOH data US Core Profiles, servers **SHOULD** use the SDOH value sets listed above.
 
 {% include img-med.html img="sdoh_condition.svg" caption="Example of SDOH Grouping Value set in US Core Condition Code Value Set" %}
 

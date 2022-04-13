@@ -27,13 +27,13 @@ Diagnostic Imaging Test,"US Core Diagnostic Imaging Result Observation Profile, 
 Diagnostic Imaging Result/Report,"US Core Diagnostic Imaging Test Result Observation Profile, US Core DiagnosticReport Profile for Report and Note exchange","Observation, DiagnosticReport"
 Encounter:,US Core Encounter Profile,
 Type,US Core Encounter Profile,Encounter.type
-Diagnosis,US Core Condition Profile,Condition.code
+Diagnosis,US Core Encounter Diagnosis Profile,Condition.code
 Time,US Core Encounter Profile,Encounter.period
 Location,US Core Encounter Profile,Encounter.location.location
 Disposition,US Core Encounter Profile,Encounter.hospitalization.dischargeDisposition
 Goals:,,
 Patient Goals,US Core Goal Profile,Goal
-Health Concerns,US Core Condition Profile,Condition
+Health Concerns,US Core Problems and Health Concerns Profile,Condition
 Immunizations,US Core Immunization Profile,Immunization
 Laboratory:,,
 Tests,"US Core Laboratory Result Observation Profile, US Core DiagnosticReport Profile for Laboratory Results Reporting","Observation, DiagnosticReport"
@@ -57,9 +57,9 @@ Address,US Core Patient Profile,Patient.address
 Previous Address,US Core Patient Profile,Patient.address
 Email,US Core Patient Profile,Patient.telecom
 Phone Number,US Core Patient Profile,Patient.telecom
-Problems:,US Core Condition Profile,Condition
-Date of Resolution,US Core Condition Profile,Condition.abatement[x]
-Date of Diagnosis,US Core Condition Profile,"Choice of assertedDate Extension, Condition.onset[x], or Condition.onsetDate"
+Problems:,US Core Problems and Health Concerns Profile,Condition
+Date of Resolution,US Core Problems and Health Concerns Profile,Condition.abatement[x]
+Date of Diagnosis,US Core Problems and Health Concerns Profile,"Choice of assertedDate Extension, Condition.onset[x], or Condition.onsetDate"
 Procedures US Core Procedure Profile,Procedure,
 Provenance:,US Core Provenance Profile,Provenance
 Author Time Stamp,US Core Provenance Profile,Provenance.recorded
@@ -69,7 +69,7 @@ SDOH,,
 Assessment,"US Core Screening Response Observation Profile,US Core Social History Assessment Observation Profile",Observation
 Goals,US Core Goal Profile,Goal
 Interventions,"US Core ServiceRequest Profile,US Core Procedure Profile","ServiceRequest, Procedure"
-Problems/Health Concerns,US Core Condition Profile,Condition
+Problems/Health Concerns,US Core Problems and Health Concerns Profile,Condition
 Smoking Status,US Core Smoking Status Observation Profile,Observation
 Unique Device Identifier(s) for a Patient’s Implantable Device(s),US Core Implantable Device Profile,Device
 Vital Signs:,,

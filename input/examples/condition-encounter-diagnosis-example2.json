@@ -1,20 +1,20 @@
 {
   "resourceType": "Condition",
-  "id": "example",
+  "id": "encounter-diagnosis-example2",
   "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition"
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "Condition Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is a condition example for the *US Core Condition Profile*."
-      }
-    ]
+      "extension": [
+          {
+              "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+              "valueString": "Encounter Diagnosis Example 2"
+          },
+          {
+              "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+              "valueMarkdown": "This example of a US Core Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis."
+          }
+      ],
+      "profile": [
+          "http://hl7.org/fhir/us/core//StructureDefinition/us-core-encounter-diagnosis"
+      ]
   },
   "extension": [
     {
