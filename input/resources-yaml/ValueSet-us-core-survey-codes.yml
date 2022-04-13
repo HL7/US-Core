@@ -1,0 +1,23 @@
+resourceType: ValueSet
+id: us-core-survey-codes
+url: 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes'
+
+name: USCoreSurveyCodes
+title: US Core Survey Codes
+status: active
+date: '2022-03-21'
+description: >-
+  This value set includes all LOINC values whose CLASSTYPE is SURVEY in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)
+copyright: >-
+  This material contains content from LOINC (http://loinc.org). LOINC is
+  copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation
+  Identifiers Names and Codes (LOINC) Committee and is available at no cost
+  under the license at http://loinc.org/license. LOINC® is a registered United
+  States trademark of Regenstrief Institute, Inc
+compose:
+  include:
+    - system: 'http://loinc.org'
+      filter:
+        - property: CLASSTYPE
+          op: '='
+          value: '4'

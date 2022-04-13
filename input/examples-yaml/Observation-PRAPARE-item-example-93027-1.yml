@@ -1,0 +1,41 @@
+resourceType: Observation
+id: PRAPARE-item-example-93027-1
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Prapare Item Example 93027-1
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Prapare Item Example 93027-1 (Are you a refugee?) for
+      the *US Core Screening Response Observation Profile*
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+status: final
+category:
+- coding:
+  - system: http://loinc.org
+    code: LG41762-2
+    display: SocialDeterminantsOfHealth
+- coding:
+  - system: http://terminology.hl7.org/CodeSystem/observation-category
+    code: survey
+    display: Survey
+code:
+  coding:
+  - system: http://loinc.org
+    code: 93027-1
+    display: Are you a refugee?
+  text: Are you a refugee?
+subject:
+  reference: Patient/example
+effectiveDateTime: '2022-03-28T18:30:40-07:00'
+performer:
+- reference: Patient/example
+valueCodeableConcept:
+  coding:
+  - system: http://loinc.org
+    code: LA32-8
+    display: 'No'
+  text: 'No'
+derivedFrom:
+- reference: QuestionnaireResponse/PRAPARE-example
+  display: US Core QuestionnaireResponse PRAPARE Example

@@ -38,7 +38,7 @@
 [Communications]: {{site.data.fhir.path}}security.html#http
 [Composition]: {{site.data.fhir.path}}composition.html
 [ConceptMap]: {{site.data.fhir.path}}conceptmap.html
-[Condition Quick Start]: StructureDefinition-us-core-condition.html#search
+[Condition Quick Start]: StructureDefinition-us-core-encounter-diagnosis.html#search
 [Condition]: {{site.data.fhir.path}}condition.html
 [Conformance Expectations]: conformance-expectations.html  "Conformance Expectations Page"
 [Conformance Requirements for Client]: CapabilityStatement-us-core-client.html "Conformance Requirements for Client Page"
@@ -309,7 +309,8 @@
 [US Core RelatedPerson Profile]: StructureDefinition-us-core-relatedperson.html
 [US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
 [Using multiple codes with CodeableConcept Datatype]: conformance-expectations.html#translations
-[US Core Screening Response Observation Profile]: StructureDefinition-us-core-observation-screening-response.html
+[US Core Survey Observation Profile]: StructureDefinition-us-core-observation-survey.html
+[US Core Questionnaire Response Profile]: StructureDefinition-us-core-questionnaireresponse.html
 [US Core Social History Assessment Observation Profile]: StructureDefinition-us-core-observation-social-history-assessment.html
 [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
 [Maturity Level]: {{site.data.fhir.path}}versions.html#maturity

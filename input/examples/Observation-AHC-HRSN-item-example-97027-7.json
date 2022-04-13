@@ -1,0 +1,75 @@
+{
+    "resourceType": "Observation",
+    "id": "AHC-HRSN-item-example-97027-7",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Ahc-Hrsn Item Example 97027-7"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a Ahc-Hrsn Item Example 97027-7 (Do you speak a language other than English at home?) for the *US Core Screening Response Observation Profile*"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "LG41762-2",
+                    "display": "SocialDeterminantsOfHealth"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "survey",
+                    "display": "Survey"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "97027-7",
+                "display": "Speaks a language other than English at home"
+            }
+        ],
+        "text": "Do you speak a language other than English at home?"
+    },
+    "subject": {
+        "reference": "Patient/example"
+    },
+    "effectiveDateTime": "2022-03-29T22:38:59.084000+00:00",
+    "performer": [
+        {
+            "reference": "Patient/example"
+        }
+    ],
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "code": "LA32-8",
+                "system": "http://loinc.org",
+                "display": "No"
+            }
+        ],
+        "text": "No"
+    },
+    "derivedFrom": [
+        {
+            "reference": "QuestionnaireResponse/AHC-HRSN-screening-example",
+            "display": "US Core QuestionnaireResponse AHC HRSN Screening-Example Example"
+        }
+    ]
+}

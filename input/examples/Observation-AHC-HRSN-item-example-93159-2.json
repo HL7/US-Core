@@ -1,0 +1,75 @@
+{
+    "resourceType": "Observation",
+    "id": "AHC-HRSN-item-example-93159-2",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Ahc-Hrsn Item Example 93159-2"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a Ahc-Hrsn Item Example 93159-2 (How often do you feel lonely or isolated from those around you?) for the *US Core Screening Response Observation Profile*"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "LG41762-2",
+                    "display": "SocialDeterminantsOfHealth"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "survey",
+                    "display": "Survey"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "93159-2",
+                "display": "How often do you feel lonely or isolated from those around you [CMS Assessment]"
+            }
+        ],
+        "text": "How often do you feel lonely or isolated from those around you?"
+    },
+    "subject": {
+        "reference": "Patient/example"
+    },
+    "effectiveDateTime": "2022-03-29T22:38:59.084000+00:00",
+    "performer": [
+        {
+            "reference": "Patient/example"
+        }
+    ],
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "code": "LA6270-8",
+                "system": "http://loinc.org",
+                "display": "Never"
+            }
+        ],
+        "text": "Never"
+    },
+    "derivedFrom": [
+        {
+            "reference": "QuestionnaireResponse/AHC-HRSN-screening-example",
+            "display": "US Core QuestionnaireResponse AHC HRSN Screening-Example Example"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+resourceType: Observation
+id: AHC-HRSN-item-example-93038-8
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Ahc-Hrsn Item Example 93038-8
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Ahc-Hrsn Item Example 93038-8 (Stress means a situation
+      in which a person feels tense, restless, nervous, or anxious, or is unable to
+      sleep at night because his or her mind is troubled all the time.  Do you feel
+      this kind of stress these days?) for the *US Core Screening Response Observation
+      Profile*
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+status: final
+category:
+- coding:
+  - system: http://loinc.org
+    code: LG41762-2
+    display: SocialDeterminantsOfHealth
+- coding:
+  - system: http://terminology.hl7.org/CodeSystem/observation-category
+    code: survey
+    display: Survey
+code:
+  coding:
+  - system: http://loinc.org
+    code: 93038-8
+    display: Stress level
+  text: Stress means a situation in which a person feels tense, restless, nervous,
+    or anxious, or is unable to sleep at night because his or her mind is troubled
+    all the time.  Do you feel this kind of stress these days?
+subject:
+  reference: Patient/example
+effectiveDateTime: '2022-03-29T22:38:59.084000+00:00'
+performer:
+- reference: Patient/example
+valueCodeableConcept:
+  coding:
+  - code: LA13863-8
+    system: http://loinc.org
+    display: A little bit
+  text: A little bit
+derivedFrom:
+- reference: QuestionnaireResponse/AHC-HRSN-screening-example
+  display: US Core QuestionnaireResponse AHC HRSN Screening-Example Example

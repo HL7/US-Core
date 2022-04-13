@@ -1,0 +1,55 @@
+resourceType: StructureDefinition
+id: us-core-observation-sdoh-assessment
+url: >-
+  http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+name: USCoreObservationSDOHAssessment
+title: US Core Observation SDOH Assessment Profile
+status: active
+date: '2022-03-18'
+description: >-
+  Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select “check all that apply” questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Observation
+baseDefinition: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey'
+derivation: constraint
+differential:
+  element:
+    - id: Observation
+      path: Observation
+      short: SDOH Assessment Panel Observation
+      definition: Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions.
+      comment: his profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.
+    - id: 'Observation.category:sdoh'
+      path: Observation.category
+      sliceName: sdoh
+      requirements: >-
+        Used for filtering what that this is an observation derived from an SDOH
+        assessment.
+      min: 0
+      max: '1'
+      patternCodeableConcept:
+        coding:
+          - system: 'http://loinc.org'
+            code: LG41762-2  #The LOINC “grouping” code: LG41762-2 Social Determinants Of Health
+      mustSupport: true
+    - id: Observation.code
+      path: Observation.code
+      binding:
+        strength: preferred
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments'
+    - id: Observation.hasMember
+      path: Observation.hasMember
+      short: >-
+        Individual Observations that belong to an SDOH multi-question sruvey or multi-select question.
+      type:
+        - code: Reference
+          targetProfile:
+            - >-
+              http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+          _targetProfile:
+            - extension:
+                - url: >-
+                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true

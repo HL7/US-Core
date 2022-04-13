@@ -1,0 +1,75 @@
+{
+    "resourceType": "Observation",
+    "id": "AHC-HRSN-item-example-95530-2",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Ahc-Hrsn Item Example 95530-2"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a Ahc-Hrsn Item Example 95530-2 (How many times in the past year have you used prescription drugs for non-medical reasons?) for the *US Core Screening Response Observation Profile*"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "LG41762-2",
+                    "display": "SocialDeterminantsOfHealth"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "survey",
+                    "display": "Survey"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "95530-2",
+                "display": "Prescription drug use 1Y"
+            }
+        ],
+        "text": "How many times in the past year have you used prescription drugs for non-medical reasons?"
+    },
+    "subject": {
+        "reference": "Patient/example"
+    },
+    "effectiveDateTime": "2022-03-29T22:38:59.084000+00:00",
+    "performer": [
+        {
+            "reference": "Patient/example"
+        }
+    ],
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "code": "LA6270-8",
+                "system": "http://loinc.org",
+                "display": "Never"
+            }
+        ],
+        "text": "Never"
+    },
+    "derivedFrom": [
+        {
+            "reference": "QuestionnaireResponse/AHC-HRSN-screening-example",
+            "display": "US Core QuestionnaireResponse AHC HRSN Screening-Example Example"
+        }
+    ]
+}

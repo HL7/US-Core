@@ -1,0 +1,68 @@
+{
+    "resourceType": "Observation",
+    "id": "PRAPARE-item-example-63512-8",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Prapare Item Example 63512-8"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a Prapare Item Example 63512-8 (How many people are living or staying at this address?) for the *US Core Screening Response Observation Profile*"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "LG41762-2",
+                    "display": "SocialDeterminantsOfHealth"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "survey",
+                    "display": "Survey"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "63512-8",
+                "display": "How many people are living or staying at this address?"
+            }
+        ],
+        "text": "How many people are living or staying at this address?"
+    },
+    "valueQuantity": {
+        "value": 6
+    },
+    "subject": {
+        "reference": "Patient/example"
+    },
+    "effectiveDateTime": "2022-03-28T18:30:40-07:00",
+    "performer": [
+        {
+            "reference": "Patient/example"
+        }
+    ],
+    "derivedFrom": [
+        {
+            "reference": "QuestionnaireResponse/PRAPARE-example",
+            "display": "US Core QuestionnaireResponse PRAPARE Example"
+        }
+    ]
+}

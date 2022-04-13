@@ -1,0 +1,66 @@
+{
+    "resourceType": "Observation",
+    "id": "PRAPARE-item-example-63586-2",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Prapare Item Example 63586-2"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a Prapare Item Example 63586-2 (What was your best estimate of the total income of all family members from all sources, before taxes, in last year?) for the *US Core Screening Response Observation Profile*"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "LG41762-2",
+                    "display": "SocialDeterminantsOfHealth"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "survey",
+                    "display": "Survey"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "63586-2",
+                "display": "What was your best estimate of the total income of all family members from all sources, before taxes, in last year?"
+            }
+        ],
+        "text": "What was your best estimate of the total income of all family members from all sources, before taxes, in last year?"
+    },
+    "subject": {
+        "reference": "Patient/example"
+    },
+    "effectiveDateTime": "2022-03-28T18:30:40-07:00",
+    "performer": [
+        {
+            "reference": "Patient/example"
+        }
+    ],
+    "valueString": "25000",
+    "derivedFrom": [
+        {
+            "reference": "QuestionnaireResponse/PRAPARE-example",
+            "display": "US Core QuestionnaireResponse PRAPARE Example"
+        }
+    ]
+}

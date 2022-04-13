@@ -1,0 +1,43 @@
+resourceType: Observation
+id: AHC-HRSN-item-example-68516-4
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Ahc-Hrsn Item Example 68516-4
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Ahc-Hrsn Item Example 68516-4 (On average, how many minutes
+      did you usually spend exercising at this level on one of those days?) for the
+      *US Core Screening Response Observation Profile*
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+status: final
+category:
+- coding:
+  - system: http://loinc.org
+    code: LG41762-2
+    display: SocialDeterminantsOfHealth
+- coding:
+  - system: http://terminology.hl7.org/CodeSystem/observation-category
+    code: survey
+    display: Survey
+code:
+  coding:
+  - system: http://loinc.org
+    code: 68516-4
+    display: On those days that you engage in moderate to strenuous exercise, how many minutes, on average, do you exercise
+  text: On average, how many minutes did you usually spend exercising at this level
+    on one of those days?
+subject:
+  reference: Patient/example
+effectiveDateTime: '2022-03-29T22:38:59.084000+00:00'
+performer:
+- reference: Patient/example
+valueCodeableConcept:
+  coding:
+  - code: LA28853-2
+    system: http://loinc.org
+    display: '60'
+  text: '60'
+derivedFrom:
+- reference: QuestionnaireResponse/AHC-HRSN-screening-example
+  display: US Core QuestionnaireResponse AHC HRSN Screening-Example Example

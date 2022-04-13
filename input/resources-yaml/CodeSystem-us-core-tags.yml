@@ -1,0 +1,21 @@
+resourceType: CodeSystem
+id: us-core-tags
+status: active
+content: complete
+name: USCoreTags
+title: US Core Tags
+description: >-
+  Tags code used in US Core `meta.tag` profiles. The are typically used when there is a need for categorization or workflow hints.
+caseSensitive: true
+url: >-
+  http://hl7.org/fhir/us/core/CodeSystem/us-core-tags
+concept:
+  # - code: uploaded-data
+  #   display: Uploaded Data
+  #   definition: >-
+  #     Data is supplied by a client facing app. For example, patient generated or mediated data that is supplied by patient or other patient designee (such as a parent or spouse) rather than by a healthcare provide
+  - code: sdoh
+    display: SDOH
+    definition: >-
+      Structured Determinants of Health Category
+count: 1

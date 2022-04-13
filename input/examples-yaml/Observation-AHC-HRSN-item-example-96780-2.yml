@@ -1,0 +1,41 @@
+resourceType: Observation
+id: AHC-HRSN-item-example-96780-2
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Ahc-Hrsn Item Example 96780-2
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Ahc-Hrsn Item Example 96780-2 (Do you want help finding
+      or keeping work or a job?) for the *US Core Screening Response Observation Profile*
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+status: final
+category:
+- coding:
+  - system: http://loinc.org
+    code: LG41762-2
+    display: SocialDeterminantsOfHealth
+- coding:
+  - system: http://terminology.hl7.org/CodeSystem/observation-category
+    code: survey
+    display: Survey
+code:
+  coding:
+  - system: http://loinc.org
+    code: 96780-2
+    display: Wants help finding or keeping work or a job
+  text: Do you want help finding or keeping work or a job?
+subject:
+  reference: Patient/example
+effectiveDateTime: '2022-03-29T22:38:59.084000+00:00'
+performer:
+- reference: Patient/example
+valueCodeableConcept:
+  coding:
+  - code: LA31983-2
+    system: http://loinc.org
+    display: I do not need or want help
+  text: I do not need or want help
+derivedFrom:
+- reference: QuestionnaireResponse/AHC-HRSN-screening-example
+  display: US Core QuestionnaireResponse AHC HRSN Screening-Example Example

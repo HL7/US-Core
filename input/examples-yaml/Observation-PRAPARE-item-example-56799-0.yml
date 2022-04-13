@@ -1,0 +1,36 @@
+resourceType: Observation
+id: PRAPARE-item-example-56799-0
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Prapare Item Example 56799-0
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a Prapare Item Example 56799-0 (Address) for the *US Core
+      Screening Response Observation Profile*
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+status: final
+category:
+- coding:
+  - system: http://loinc.org
+    code: LG41762-2
+    display: SocialDeterminantsOfHealth
+- coding:
+  - system: http://terminology.hl7.org/CodeSystem/observation-category
+    code: survey
+    display: Survey
+code:
+  coding:
+  - system: http://loinc.org
+    code: 56799-0
+    display: Address
+  text: Address
+subject:
+  reference: Patient/example
+effectiveDateTime: '2022-03-28T18:30:40-07:00'
+performer:
+- reference: Patient/example
+valueString: Broadway
+derivedFrom:
+- reference: QuestionnaireResponse/PRAPARE-example
+  display: US Core QuestionnaireResponse PRAPARE Example

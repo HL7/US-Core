@@ -54,8 +54,8 @@
                   {% if sd1.name == sd3.basename %}
                     {%- assign new = false -%}
                     {% for new_stuff in site.data.new_stuff %}
-                         {%- if stuff == sd3.name -%}
-                           {%- assign new_stuff = true -%}
+                         {%- if new_stuff == sd3.name -%}
+                           {%- assign new = true -%}
                            {%- break -%}
                          {%- endif -%}
                     {%- endfor -%}

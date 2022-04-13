@@ -1,0 +1,79 @@
+{
+    "resourceType": "Observation",
+    "id": "PRAPARE-panel-example-93039-6",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Prapare Panel Example 93039-6"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a Prapare Panel Example 93039-6 (Optional additional questions) for the *US Core Screening Response Observation Profile*"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "LG41762-2",
+                    "display": "SocialDeterminantsOfHealth"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "survey",
+                    "display": "Survey"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "93039-6",
+                "display": "Optional additional questions [PRAPARE]"
+            }
+        ],
+        "text": "Optional additional questions"
+    },
+    "subject": {
+        "reference": "Patient/example"
+    },
+    "effectiveDateTime": "2022-03-28T18:30:40-07:00",
+    "performer": [
+        {
+            "reference": "Patient/example"
+        }
+    ],
+    "hasMember": [
+        {
+            "reference": "Observation/PRAPARE-item-example-93028-9"
+        },
+        {
+            "reference": "Observation/PRAPARE-item-example-93027-1"
+        },
+        {
+            "reference": "Observation/PRAPARE-item-example-93026-3"
+        },
+        {
+            "reference": "Observation/PRAPARE-item-example-76501-6"
+        }
+    ],
+    "derivedFrom": [
+        {
+            "reference": "QuestionnaireResponse/PRAPARE-example",
+            "display": "US Core QuestionnaireResponse PRAPARE Example"
+        }
+    ]
+}
