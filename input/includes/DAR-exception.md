@@ -2,4 +2,4 @@
   - For Further guidance see the [Observation Grouping] section in FHIR Specification.
   - \*Systems that never provide an observation without a value are not required to support `Observation.dataAbsentReason`.
 - An `Observation.component` without a value, **SHALL** include a reason why the data is absent.
-  - \*Systems that never provide an component observation without a component value are not required to support `Observation.component.dataAbsentReason`.
+  - \*Systems that never provide a component observation without a component value are not required to support `Observation.component.dataAbsentReason`.
