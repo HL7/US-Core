@@ -44,8 +44,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - The `DiagnosticReport.category` binding must support at a minimum the [US Core DiagnosticReport Category Codes] of Cardiology, Radiology, and Pathology. Other categories may be supported.
 - A server will return how a customer has categorized their reports at a particular site. Categorization of reports is not consistent across sites. (e.g. a system may categorize an orthopedic note as cardiology.)
 - For Diagnostic Imaging Reports systems SHOULD support using the subset of  LOINC codes defined in CONF-DIR-19 in *HL7 Implementation Guide for CDA Release 2: Imaging Integration, Levels 1, 2, and 3, Basic Imaging Reports in CDA and DICOM Diagnostic Imaging Reports (DIR) – Universal Realm, Release 1.0.*
--  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. DiagnosticReport resource can link to both DICOM imaging studies and binary images directly by referencing [ImagingStudy] in `DocumentReference.imagingStudy`, or [Media]  in`DocumentReference.media`.
-   *   Although both are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements.
-   * The client application **SHALL** support both elements and target resources.
+-  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. The DiagnosticReport resource links to both [Media] which represents a specific kind of Observation whose value is image data and [ImagingStudy] which represents the content in a DICOM imaging study.
+   * Only Media is marked as must support in this profile
+   * The imagingStudy element **MAY** be used by systems to reference ImagingStudy.  However, it is not supported by the majority of systems and its inclusion would be an unnecessary barrier to adoption.
 
 {% include link-list.md %}

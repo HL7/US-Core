@@ -101,7 +101,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: Gender Identity Value set  [FHIR-35677](https://jira.hl7.org/browse/FHIR-35677) [See Change Here](#.html)
 1. **Resolved - change required**: Remove ""OTH"" from OMB Race Category valueSet [FHIR-35694](https://jira.hl7.org/browse/FHIR-35694) [See Change Here](#.html)
 1. **Resolved - change required**: Change Home Page to an explanation to exec summary of the problem and solution [FHIR-35755](https://jira.hl7.org/browse/FHIR-35755) [See Change Here](#.html)
-1. **Triaged**: Remove MS from DiagnosticReport.imagingStudy [FHIR-35759](https://jira.hl7.org/browse/FHIR-35759) [See Change Here](#.html)
+1. **Applied**: Remove MS from DiagnosticReport.imagingStudy [FHIR-35759](https://jira.hl7.org/browse/FHIR-35759) [See Change Here](StructureDefinition-us-core-StructureDefinition-us-core-diagnosticreport-note.html)
 1. **Triaged**: Enable the use of US Core for non-provider specified data [FHIR-35762](https://jira.hl7.org/browse/FHIR-35762) [See Change Here](#.html)
 1. **Resolved - change required**: Non-breaking spaces in description [FHIR-35772](https://jira.hl7.org/browse/FHIR-35772) [See Change Here](#.html)
 1. **Resolved - change required**: Extensions used that are not defined in the scope [FHIR-35775](https://jira.hl7.org/browse/FHIR-35775) [See Change Here](#.html)

@@ -1926,6 +1926,14 @@
             },
             {
                 "reference": {
+                    "reference": "Media/chest-xray"
+                },
+                "description": "This is an example Media xray image that is reference by the *US Core DiagnosticReport Note Profile*.",
+                "name": "Chest Xray Example",
+                "exampleBoolean": true
+            },
+            {
+                "reference": {
                     "reference": "Media/ekg-strip"
                 },
                 "description": "This is an example Media image that is reference by the *US Core DiagnosticReport Note Profile*.",
@@ -1955,6 +1963,22 @@
                 "description": "This is a observation satO2 fiO2 example for the *US Core Pulse Oximetry Profile* representing a spO2 value with a for a patient on 6 l/min of O2 suppplemental oxygen.",
                 "name": "Observation SatO2 FiO2 Example",
                 "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
+            },
+            {
+                "reference": {
+                    "reference": "Observation/xray-chest-findings"
+                },
+                "description": "This example of a US Core Imaging Result Observation Profile illustrates its use to capture information about a patient's radiology study findings.",
+                "name": "Xray Chest Findings Example",
+                "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging"
+            },
+            {
+                "reference": {
+                    "reference": "Observation/xray-chest-impression"
+                },
+                "description": "This example of a US Core Imaging Result Observation Profile illustrates its use to capture information about a patient's radiology study impression.",
+                "name": "Xray Chest Impression Example",
+                "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging"
             },
             {
                 "reference": {
