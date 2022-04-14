@@ -6,10 +6,10 @@ meta:
       valueString: Encounter Diagnosis Example 1
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
       valueMarkdown: >-
-        This example of a US Core Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.
+        This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.
   profile:
     - >-
-      http://hl7.org/fhir/us/core//StructureDefinition/us-core-encounter-diagnosis
+      http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-encounter-diagnosis
 extension:
   - url: 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate'
     valueDateTime: 2015-10-31

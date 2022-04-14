@@ -1,8 +1,8 @@
 resourceType: StructureDefinition
 id: us-core-questionnaireresponse
 url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse'
-name: USCoreQuestionnaireResponse
-title: US Core Questionnaire Response Profile
+name: USCoreQuestionnaireResponseProfile
+title: US Core QuestionnaireResponse Profile
 status: active
 date: '2022-02-28'
 description: >-
@@ -48,7 +48,7 @@ differential:
         to indicate/categorize that the context of this Questionnaire Response relates to Social Determinants of Health.
       max: "1"
       patternCoding:
-          #system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-tags'
+          system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-tags'
           code: sdoh
       binding:
         strength: required
@@ -67,7 +67,7 @@ differential:
       type:
         - code: Extension
           profile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url'
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri'
       mustSupport: true
 
 

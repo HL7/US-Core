@@ -1,13 +1,13 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "us-core-encounter-diagnosis",
-    "url": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-encounter-diagnosis",
-    "name": "UsCoreEncounterDiagnosis",
-    "title": "US Core Encounter Diagnosis Profile",
+    "id": "us-core-condition-encounter-diagnosis",
+    "url": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-encounter-diagnosis",
+    "name": "USCoreConditionEncounterDiagnosisProfile",
+    "title": "US Core Condition Encounter Diagnosis Profile",
     "status": "active",
     "experimental": false,
     "date": "2022-03-17",
-    "description": "The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.",
+    "description": "The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.",
     "kind": "resource",
     "abstract": false,
     "type": "Condition",
@@ -18,7 +18,7 @@
             {
                 "id": "Condition",
                 "path": "Condition",
-                "definition": "The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.",
+                "definition": "The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.",
                 "mustSupport": false,
                 "mapping": [
                     {

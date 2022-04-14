@@ -1,11 +1,11 @@
-<div class="new-content" markdown="1">The US Core Condition Profile has been split into the US Core Encounter Diagnosis Profile below and US Core Problems and Health Concerns Profile
+<div class="new-content" markdown="1">The US Core Condition Profile has been split into the US Core Condition Encounter Diagnosis Profile below and US Core Condition Problems and Health Concerns Profile
 </div><!-- new-content -->
 
-﻿This profile sets minimum expectations for the [Condition] resource to record, search, and fetch a list of encounter diagnosis associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  For Problems and Health Concerns use the [US Core Problems and Health Concerns Profile].
+﻿This profile sets minimum expectations for the [Condition] resource to record, search, and fetch a list of encounter diagnosis associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  For Problems and Health Concerns use the [US Core Condition Problems and Health Concerns Profile].
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core Encounter Diagnosis profile:
+The following are example usage scenarios for the US Core Condition Encounter Diagnosis profile:
 
 -   Query for a Patient’s current or historical encounter diagnosis
 -   [Record or update] a Patient’s encounter diagnosis

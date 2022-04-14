@@ -31,9 +31,9 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Change Goal.description search requirement from SHALL to SHOULD [FHIR-34546](https://jira.hl7.org/browse/FHIR-34546) [See Change Here](StructureDefinition-us-core-goal.html#notes)
 1. **Resolved - change required**: SDOH Category Codes section could call out that categorization is fuzzy for SDOH [FHIR-34550](https://jira.hl7.org/browse/FHIR-34550) [See Change Here](#.html)
 1. **Applied**: Split US Core Condition into two profile: Encounter Diagnosis and Problems/Health Concerns [FHIR-34553](https://jira.hl7.org/browse/FHIR-34553) See Change:
-    - [Here](StructureDefinition-us-core-problems-and-health-concerns.html)
-    - [Here](StructureDefinition-us-core-encounter-diagnosis.html)
-1. **Applied**: Update narrative on abatement date [FHIR-34554](https://jira.hl7.org/browse/FHIR-34554) [See Change Here](StructureDefinition-us-core-problems-and-health-concerns.html)
+    - [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
+    - [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
+1. **Applied**: Update narrative on abatement date [FHIR-34554](https://jira.hl7.org/browse/FHIR-34554) [See Change Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 1. **Applied**: Change Clinical Tests Observations category to "clinical-test" and add guidance [FHIR-34555](https://jira.hl7.org/browse/FHIR-34555) See Changes:
    - [Here](StructureDefinition-us-core-observation-clinical-test.html)
    - [Here](ValueSet-us-core-observation-category.html)
@@ -85,10 +85,10 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: Need to provide some guidance when specific code systems are to be used in ServiceRequest [FHIR-35122](https://jira.hl7.org/browse/FHIR-35122) [See Change Here](#.html)
 1. **Resolved - change required**: Bad description in mandatory element for DiagnsticReport.effective [FHIR-35125](https://jira.hl7.org/browse/FHIR-35125) [See Change Here](#.html)
 1. **Resolved - change required**: CareTeam example has misleading CareTeam.participant.role value [FHIR-35152](https://jira.hl7.org/browse/FHIR-35152) [See Change Here](#.html)
-1. **Applied**: US Core Condition profile ""status"" is ambiguous; clarify to be clinicalStatus [FHIR-35280](https://jira.hl7.org/browse/FHIR-35280) [See Change Here](StructureDefinition-us-core-problems-and-health-concerns.html)
+1. **Applied**: US Core Condition profile ""status"" is ambiguous; clarify to be clinicalStatus [FHIR-35280](https://jira.hl7.org/browse/FHIR-35280) [See Change Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 1. **Resolved - change required**: Conflicting guidance for Observation category for SDOH assessments [FHIR-35282](https://jira.hl7.org/browse/FHIR-35282) [See Change Here](#.html)
-1. **Resolved - change required**: Conflicting documentation for MS within US Core Social History Assessment Observation Profile [FHIR-35283](https://jira.hl7.org/browse/FHIR-35283) [See Change Here](#.html)
-1. **Applied**:  Clarify Condition.clinicalStatus requirements and searching using clinical-status [FHIR-35318](https://jira.hl7.org/browse/FHIR-35318) [See Change Here](StructureDefinition-us-core-problems-and-health-concerns.html)
+1. **Resolved - change required**: Conflicting documentation for MS within US Core Observation Social History Profile [FHIR-35283](https://jira.hl7.org/browse/FHIR-35283) [See Change Here](#.html)
+1. **Applied**:  Clarify Condition.clinicalStatus requirements and searching using clinical-status [FHIR-35318](https://jira.hl7.org/browse/FHIR-35318) [See Change Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 1. **Resolved - change required**: Broken link to LOINC grouping code [FHIR-35362](https://jira.hl7.org/browse/FHIR-35362) [See Change Here](#.html)
 1. **Resolved - change required**: Confused about “Results” vs “Screening Response” [FHIR-35363](https://jira.hl7.org/browse/FHIR-35363) [See Change Here](#.html)
 1. **Resolved - change required**: Clarify modeling of SDOH screening using Observations, Add QuestionnaireResponse profile as alternative screening instrument [FHIR-35364](https://jira.hl7.org/browse/FHIR-35364) See Change:
@@ -98,7 +98,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
   -[Here](StructureDefinition-us-core-questionnaireresponse.html)
 1. **Resolved - change required**: provide clearer guidance for $docref operation when no date range is specified [FHIR-35380](https://jira.hl7.org/browse/FHIR-35380) [See Change Here](#.html)
 1. **Applied**: Typo [FHIR-35388](https://jira.hl7.org/browse/FHIR-35388)
-1. **Applied**: Duplicate sections in US Core RelatedPerson profile [FHIR-35452](https://jira.hl7.org/browse/FHIR-35452)
+1. **Applied**: Duplicate sections in US Core RelatedPerson Profile profile [FHIR-35452](https://jira.hl7.org/browse/FHIR-35452)
 1. **Resolved - change required**: Update guidance on changes between versions [FHIR-35576](https://jira.hl7.org/browse/FHIR-35576) [See Change Here](changes-between-versions.html)
 1. **Applied**: Split section on deleted separately from enterer in error [FHIR-35622](https://jira.hl7.org/browse/FHIR-35622) [See Change Here](general-guidance.html#representing-entered-in-error-information)
 1. **Resolved - change required**: Condition Category Code - LOINC Code for  [FHIR-35644](https://jira.hl7.org/browse/FHIR-35644) [See Change Here](#.html)
@@ -133,6 +133,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Submitted**: Clarify Device UDI-PI requirement [FHIR-36657](https://jira.hl7.org/browse/FHIR-36657) [See Change Here](#.html)
 1. **Applied**: Move change log from version history to new change log  page in IG [FHIR-36703](https://jira.hl7.org/browse/FHIR-36703) [See Change Here](changes.html)
 1. **Applied**: Remove redundant example sections [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728)
+1. **Applied**: Realign ids names and titles for all new profiles for consistency [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728) [See Change Here](profiles-and-extensions.html)
 
 
 ---

@@ -1,3 +1,4 @@
+{% include punch.md %}
 
 Where possible, new and updated content are highlighted with green text and background
 {:.new-content}

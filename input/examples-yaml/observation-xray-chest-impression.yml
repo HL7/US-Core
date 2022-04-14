@@ -6,7 +6,7 @@ meta:
       valueString: Xray Chest Impression Example
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
       valueMarkdown: >-
-        This example of a US Core Imaging Result Observation Profile illustrates its use to capture information about a patient's radiology study impression.
+        This example of a US Core Observation Imaging Result Profile illustrates its use to capture information about a patient's radiology study impression.
   profile:
     - >-
       http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging
@@ -20,7 +20,7 @@ category:
 code:
   coding:
     - system: 'http://loinc.org'
-      code: 19005-8
+      code: '19005-8'
       display: Radiology - Impression
   text: Impression
 subject:

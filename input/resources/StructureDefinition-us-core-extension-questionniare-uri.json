@@ -1,10 +1,10 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "questionnaire-url",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url",
+    "id": "us-core-extension-questionnaire-uri",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri",
     "version": "0.0.0",
-    "name": "QuestionnaireUrl",
-    "title": "Questionnaire URL Extension",
+    "name": "USCoreExtensionQuestionnaireUri",
+    "title": "US Core Extension Questionnaire URI",
     "status": "active",
     "experimental": false,
     "date": "2022-03-28",
@@ -39,7 +39,7 @@
                         "code": "uri"
                     }
                 ],
-                "fixedUri": "http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url"
+                "fixedUri": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri"
             },
             {
                 "id": "Extension.value[x]",

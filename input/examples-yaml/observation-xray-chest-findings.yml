@@ -6,7 +6,7 @@ meta:
       valueString: Xray Chest Findings Example
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
       valueMarkdown: >-
-        This example of a US Core Imaging Result Observation Profile illustrates its use to capture information about a patient's radiology study findings.
+        This example of a US Core Observation Imaging Result Profile illustrates its use to capture information about a patient's radiology study findings.
   profile:
     - >-
       http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging
@@ -20,7 +20,7 @@ category:
 code:
   coding:
     - system: 'http://loinc.org'
-      code: 18782-3
+      code: '18782-3'
       display: Radiology Study observation (findings)
   text: Findings
 subject:

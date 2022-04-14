@@ -3,7 +3,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core Sexual Orientation Observation Profile:
+The following are example usage scenarios for the US Core Observation Sexual Orientation Profile:
 
 - Query for sexual orientation
 - [Record or update] sexual orientation

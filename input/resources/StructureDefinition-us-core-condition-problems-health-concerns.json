@@ -1,13 +1,13 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "us-core-problems-and-health-concerns",
-    "url": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-problems-and-health-concerns",
-    "name": "USCoreProblemsHealthConcerns",
-    "title": "US Core Problems and Health Concerns Profile",
+    "id": "us-core-condition-problems-health-concerns",
+    "url": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-problems-health-concerns",
+    "name": "USCoreConditionProblemsHealthConcernsProfile",
+    "title": "US Core Condition Problems and Health Concerns Profile",
     "status": "active",
     "experimental": false,
     "date": "2022-03-17",
-    "description": "The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1",
+    "description": "The US Core Condition Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1",
     "kind": "resource",
     "abstract": false,
     "type": "Condition",
@@ -18,7 +18,7 @@
             {
                 "id": "Condition",
                 "path": "Condition",
-                "definition": "The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.",
+                "definition": "The US Core Condition Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.",
                 "mustSupport": false,
                 "mapping": [
                     {

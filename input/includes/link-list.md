@@ -38,7 +38,7 @@
 [Communications]: {{site.data.fhir.path}}security.html#http
 [Composition]: {{site.data.fhir.path}}composition.html
 [ConceptMap]: {{site.data.fhir.path}}conceptmap.html
-[Condition Quick Start]: StructureDefinition-us-core-encounter-diagnosis.html#search
+[Condition Quick Start]: StructureDefinition-us-core-condition-encounter-diagnosis.html#search
 [Condition]: {{site.data.fhir.path}}condition.html
 [Conformance Expectations]: conformance-expectations.html  "Conformance Expectations Page"
 [Conformance Requirements for Client]: CapabilityStatement-us-core-client.html "Conformance Requirements for Client Page"
@@ -204,7 +204,7 @@
 [US Core Immunization Profile]: StructureDefinition-us-core-immunization.html
 [US Core Implantable Device Profile]: StructureDefinition-us-core-implantable-device.html
 [US Core Laboratory Result Observation Profile]: StructureDefinition-us-core-observation-lab.html
-[US Core Clinical Test Result Observation Profile]: StructureDefinition-us-core-observation-clinical-test.html
+[US Core Observation Clinical Test Result Profile]: StructureDefinition-us-core-observation-clinical-test.html
 [US Core Diagnostic Imaging Result Observation Profile]: StructureDefinition-us-core-observation-imaging.html
 [US Core Medication Profile]: StructureDefinition-us-core-medication.html
 [US Core Medication Request Profile]: StructureDefinition-us-core-medicationrequest.html
@@ -218,7 +218,7 @@
 [US Core Pulse Oximetry Profile]: StructureDefinition-us-core-pulse-oximetry.html
 [US Core Security]: security.html
 [US Core Server Capability Statement]: CapabilityStatement-us-core-server.html
-[US Core Sexual Orientation Observation Profile]: StructureDefinition-us-core-observation-sexual-orientation.html
+[US Core Observation Sexual Orientation Profile]: StructureDefinition-us-core-observation-sexual-orientation.html
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
 [Value sets]: terminology.html
 [Vital Signs Profile]: {{site.data.fhir.path}}observation-vitalsigns.html
@@ -306,12 +306,12 @@
 [US Core Procedure Codes]: ValueSet-us-core-procedure-code.html
 [21st Century Cures Act for accessing patient data]: https://www.federalregister.gov/d/2020-07419/p-1177
 [Mandatory]: conformance-expectations.html#mandatory-elements
-[US Core RelatedPerson Profile]: StructureDefinition-us-core-relatedperson.html
+[US Core RelatedPerson Profile Profile]: StructureDefinition-us-core-relatedperson.html
 [US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
 [Using multiple codes with CodeableConcept Datatype]: conformance-expectations.html#translations
 [US Core Survey Observation Profile]: StructureDefinition-us-core-observation-survey.html
-[US Core Questionnaire Response Profile]: StructureDefinition-us-core-questionnaireresponse.html
-[US Core Social History Assessment Observation Profile]: StructureDefinition-us-core-observation-social-history-assessment.html
+[US Core QuestionnaireResponse Profile]: StructureDefinition-us-core-questionnaireresponse.html
+[US Core Observation Social History Profile]: StructureDefinition-us-core-observation-social-history-assessment.html
 [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
 [Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
 [SDOH Guidance]: sdoh.html
@@ -319,6 +319,6 @@
 [slicing]: {{site.data.fhir.path}}profiling.html#slicing
 [Change Log]: changes.html
 [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]: https://www.healthit.gov/sites/default/files/page/2021-10/2021-09-09_USCDI_TF_2021_HITAC_Phase%203_%20Recommendations%20Report_Signed_508.pdf
-[US Core Encounter Diagnosis Profile]: StructureDefinition-us-core-encounter-diagnosis.html
-[US Core Problems and Health Concerns Profile]: StructureDefinition-us-core-problems-and-health-concerns.html
+[US Core Condition Encounter Diagnosis Profile]: StructureDefinition-us-core-condition-encounter-diagnosis.html
+[US Core Condition Problems and Health Concerns Profile]: StructureDefinition-us-core-condition-problems-health-concerns.html
 [Deletion Safety Checks]: http://hl7.org/fhir/R4/safety.html#conformance

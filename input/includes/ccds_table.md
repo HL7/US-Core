@@ -8,7 +8,7 @@ USCDI Data Element | US Core Profile | FHIR Resource
 (5) |  Ethnicity | [US Core Patient Profile] | Patient
 (6) |  Preferred language | [US Core Patient Profile] | Patient
 (7) |  Smoking status | [US Core Smoking Status Observation Profile] | Observation
-(8) |  Problems | [US Core Problems and Health Concerns Profile] | Condition
+(8) |  Problems | [US Core Condition Problems and Health Concerns Profile] | Condition
 (9) |  Medications | [US Core Medication Profile], [US Core Medication Statement Profile], [US Core Medication Request Profile] | Medication, MedicationStatement, MedicationRequest
 (10) |  Medication allergies | [US Core Allergies Profile] | AllergyIntolerance
 (11) |  Laboratory test(s) | [US Core Laboratory Result Observation Profile], [US Core DiagnosticReport Profile for Laboratory Results Reporting]| Observation, DiagnosticReport
@@ -21,7 +21,7 @@ USCDI Data Element | US Core Profile | FHIR Resource
 (18) |  Unique device identifier(s) for a patient’s implantable device(s) | [US Core Implantable Device Profile] | Device
 (19) |  Assessment and plan of treatment | [US Core CarePlan Profile] | CarePlan
 (20) |  Goals | [US Core Goal Profile] | Goal
-(21) |  Health concerns | [US Core Problems and Health Concerns Profile] | Condition
-(21) |  Health concerns | [US Core Problems and Health Concerns Profile] | Condition
-(21) |  Health concerns | [US Core Problems and Health Concerns Profile] | Condition
+(21) |  Health concerns | [US Core Condition Problems and Health Concerns Profile] | Condition
+(21) |  Health concerns | [US Core Condition Problems and Health Concerns Profile] | Condition
+(21) |  Health concerns | [US Core Condition Problems and Health Concerns Profile] | Condition
 {: .grid #grid}

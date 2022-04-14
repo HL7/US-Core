@@ -1,0 +1,135 @@
+resourceType: StructureDefinition
+id: us-core-observation-social-history
+url: >-
+  http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history
+name: USCoreObservationSocialHistoryProfile
+title: US Core Observation Social History Profile
+status: active
+date: '2021-11-12'
+description: >-
+  Profile for simple observations made by an individual about a patient's social
+  history status such as education, food insecurity, etc.  These observation
+  involve assessment by a provider, payer, etc. as opposed to being derived only
+  from screening surveys which should be represented using the [US Core Survey
+  Observation Profile](StructureDefinition-us-core-observation-survey.html)
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Observation
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Observation'
+derivation: constraint
+differential:
+  element:
+    - id: Observation
+      path: Observation
+      short: assessment observation
+      definition: >-
+        Simple observations made by an individual about a patient's social
+        history.
+    - id: Observation.status
+      path: Observation.status
+      mustSupport: true
+    - id: Observation.category
+      path: Observation.category
+      slicing:
+        discriminator:
+          - type: pattern
+            path: $this
+        rules: open
+      min: 1
+      mustSupport: true
+    - id: 'Observation.category:social-history'
+      path: Observation.category
+      sliceName: us-core/social-history
+      requirements: Used for filtering that this is a social history observation.
+      min: 1
+      max: '1'
+      patternCodeableConcept:
+        coding:
+          - system: 'http://terminology.hl7.org/CodeSystem/observation-category'
+            code: social-history
+      mustSupport: true
+    - id: Observation.code
+      path: Observation.code
+      mustSupport: true
+      binding:
+        strength: preferred
+    - id: Observation.subject
+      path: Observation.subject
+      min: 1
+      type:
+        - code: Reference
+          targetProfile:
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+      mustSupport: true
+    - id: Observation.performer
+      path: Observation.performer
+      type:
+        - code: Reference
+          targetProfile:
+            - >-
+              http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+            - >-
+              http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+            - 'http://hl7.org/fhir/StructureDefinition/PractitionerRole'
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam'
+            - >-
+              http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+          _targetProfile:
+            - extension:
+                - url: >-
+                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: true
+            - extension:
+                - url: >-
+                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: >-
+                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: >-
+                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: >-
+                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+            - extension:
+                - url: >-
+                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+                  valueBoolean: false
+      mustSupport: true
+    - id: 'Observation.value[x]'
+      path: 'Observation.value[x]'
+      type:
+        - code: Quantity
+          extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+        - code: CodeableConcept
+          extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+        - code: string
+          extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+        - code: boolean
+          extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+        - code: integer
+        - code: Range
+        - code: Ratio
+        - code: SampledData
+        - code: time
+        - code: dateTime
+        - code: Period
+      mustSupport: true

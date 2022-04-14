@@ -3,7 +3,7 @@ This profile sets minimum expectations for the RelatedPerson resource to record,
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core RelatedPerson profile:
+The following are example usage scenarios for the US Core RelatedPerson Profile profile:
 
 -   Return RelatedPerson resources referenced in CareTeam resources.
 

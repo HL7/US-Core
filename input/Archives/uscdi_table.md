@@ -7,10 +7,10 @@
 | Reaction | [US Core Allergies Profile]| AllergyIntolerance |
 | **Assessment and Plan of Treatment**| [US Core CarePlan Profile]| CarePlan |
 | **Care Team Members:** | [US Core CareTeam Profile] |CareTeam.participant |
-| Name| [US Core Practitioner Profile], [US Core Patient Profile], [US Core RelatedPerson Profile]| Practitioner.name, Patient.name, RelatedPerson.name|
+| Name| [US Core Practitioner Profile], [US Core Patient Profile], [US Core RelatedPerson Profile Profile]| Practitioner.name, Patient.name, RelatedPerson.name|
 | Identifier | [US Core Practitioner Profile], [US Core Patient Profile]| Practitioner.identifier, Patient.identifier |
-| Location | [US Core PractitionerRole Profile], [US Core Practitioner Profile], [US Core Patient Profile], [US Core RelatedPerson Profile]| PractitionerRole.address, Practitioner.address, Patient.address, RelatedPerson.address |
-| Telecom | [US Core PractitionerRole Profile], [US Core Practitioner Profile], [US Core Patient Profile], [US Core RelatedPerson Profile]| PractitionerRole.telecom, Practitioner.telecom, Patient.telecom, RelatedPerson.telecom |
+| Location | [US Core PractitionerRole Profile], [US Core Practitioner Profile], [US Core Patient Profile], [US Core RelatedPerson Profile Profile]| PractitionerRole.address, Practitioner.address, Patient.address, RelatedPerson.address |
+| Telecom | [US Core PractitionerRole Profile], [US Core Practitioner Profile], [US Core Patient Profile], [US Core RelatedPerson Profile Profile]| PractitionerRole.telecom, Practitioner.telecom, Patient.telecom, RelatedPerson.telecom |
 | Role | [US Core CareTeam Profile]| CareTeam.participant.role|
 | **Clinical Notes:** | ||
 | Consultation Note | [US Core DocumentReference Profile] | DocumentReference|
@@ -22,8 +22,8 @@
 | Procedure Note| [US Core DocumentReference Profile],[US Core DiagnosticReport Profile for Report and Note exchange] | DocumentReference,DiagnosticReport |
 | Progress Note | [US Core DocumentReference Profile] | DocumentReference|
 | **Clinical Tests:** | ||
-| Clinical Test | [US Core Clinical Test Result Observation Profile], [US Core DiagnosticReport Profile for Report and Note exchange]| Observation, DiagnosticReport ||
-| Clinical Test Result/Report | [US Core Clinical Test Result Observation Profile], [US Core DiagnosticReport Profile for Report and Note exchange]| Observation, DiagnosticReport|
+| Clinical Test | [US Core Observation Clinical Test Result Profile], [US Core DiagnosticReport Profile for Report and Note exchange]| Observation, DiagnosticReport ||
+| Clinical Test Result/Report | [US Core Observation Clinical Test Result Profile], [US Core DiagnosticReport Profile for Report and Note exchange]| Observation, DiagnosticReport|
 | **Diagnostic Imaging:** | ||
 | Diagnostic Imaging Test | [US Core Diagnostic Imaging Result Observation Profile], [US Core DiagnosticReport Profile for Report and Note exchange]| Observation, DiagnosticReport ||
 | Diagnostic Imaging Result/Report | [US Core Diagnostic Imaging Result Observation Profile], [US Core DiagnosticReport Profile for Report and Note exchange]| Observation, DiagnosticReport|
@@ -67,9 +67,9 @@
 | **Provenance:** | [US Core Provenance Profile] |Provenance|
 | Author Time Stamp | [US Core Provenance Profile] | Provenance.recorded|
 | Author Organization | [US Core Provenance Profile] | Provenance.agent|
-| **Sexual Orientation**| [US Core Sexual Orientation Observation Profile] | Observation|
+| **Sexual Orientation**| [US Core Observation Sexual Orientation Profile] | Observation|
 | **SDOH**|  | | 
-| Assessment| [US Core Screening Response Observation Profile],[US Core Social History Assessment Observation Profile] | Observation| 
+| Assessment| [US Core Screening Response Observation Profile],[US Core Observation Social History Profile] | Observation| 
 | Goals| [US Core Goal Profile] | Goal| 
 | Interventions | [US Core ServiceRequest Profile],[US Core Procedure Profile] | ServiceRequest, Procedure| 
 | Problems/Health Concerns | [US Core Condition Profile] | Condition| 

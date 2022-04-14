@@ -1,13 +1,13 @@
 resourceType: StructureDefinition
-id: us-core-problems-and-health-concerns
-url: 'http://hl7.org/fhir/us/core//StructureDefinition/us-core-problems-and-health-concerns'
-name: USCoreProblemsHealthConcerns
-title: US Core Problems and Health Concerns Profile
+id: us-core-condition-encounter-diagnosis
+url: 'http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-encounter-diagnosis'
+name: USCoreConditionEncounterDiagnosisProfile
+title: US Core Condition Encounter Diagnosis Profile
 status: active
 experimental: false
 date: '2022-03-17'
 description: >-
-  The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1
+  The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.
 kind: resource
 abstract: false
 type: Condition
@@ -18,7 +18,7 @@ differential:
     - id: Condition
       path: Condition
       definition: >-
-        The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.
+          The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.
       mustSupport: false
       mapping:
         - identity: argonaut-dq-dstu2
@@ -65,23 +65,17 @@ differential:
           map: Condition.category
     - id: 'Condition.category:us-core'
       path: Condition.category
-      short: problem-list-item | health-concern
+      short: encounter-diagnosis
       sliceName: us-core
       min: 1
-      binding:
-        strength: required
-        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-problem-or-health-concern'
-      mustSupport: true
-    - id: 'Condition.category:sdoh'
-      path: Condition.category
-      sliceName: sdoh
-      min: 0
-      max: '1'
+
+      max: "1"
       patternCodeableConcept:
         coding:
-          - system: 'http://loinc.org'
-            code: LG41762-2  #The LOINC “grouping” code: LG41762-2 Social Determinants Of Health
+          - system: 'http://terminology.hl7.org/CodeSystem/condition-category'
+            code: encounter-diagnosis  #A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter.
       mustSupport: true
+
     - id: Condition.code
       path: Condition.code
       min: 1
@@ -103,6 +97,14 @@ differential:
       mapping:
         - identity: argonaut-dq-dstu2
           map: Condition.patient
+
+    - id: Condition.encounter
+      path: Condition.encounter
+      type:
+        - code: Reference
+          targetProfile:
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter'
+      mustSupport: true
 
     - id: 'Condition.onset[x]'
       path: 'Condition.onset[x]'

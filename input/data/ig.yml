@@ -92,14 +92,6 @@
             },
             {
                 "reference": {
-                    "reference": "StructureDefinition/questionnaire-url"
-                },
-                "description": "The location where a non-FHIR questionnaire/survey form can be found. This extension is used when the survey,form, or questionnaire which is being anwered is not a FHIR [Questionnaire](https://www.hl7.org/fhir/questionnaire.html), otherwise the [canonical url](https://www.hl7.org/fhir/references.html#canonical) for the FHIR Questionnaire is used.",
-                "exampleBoolean": false,
-                "name": "Questionnaire URL Extension"
-            },
-            {
-                "reference": {
                     "reference": "StructureDefinition/us-core-allergyintolerance"
                 },
                 "description": "Defines constraints and extensions on the AllergyIntolerance resource for the minimal set of data to query and retrieve allergy information.",
@@ -172,6 +164,22 @@
             },
             {
                 "reference": {
+                    "reference": "StructureDefinition/us-core-condition-encounter-diagnosis"
+                },
+                "description": "The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.",
+                "exampleBoolean": false,
+                "name": "US Core Condition Encounter Diagnosis Profile"
+            },
+            {
+                "reference": {
+                    "reference": "StructureDefinition/us-core-condition-problems-health-concerns"
+                },
+                "description": "The US Core Condition Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1",
+                "exampleBoolean": false,
+                "name": "US Core Condition Problems and Health Concerns Profile"
+            },
+            {
+                "reference": {
                     "reference": "StructureDefinition/us-core-diagnosticreport-lab"
                 },
                 "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with laboratory results for a patient",
@@ -204,14 +212,6 @@
             },
             {
                 "reference": {
-                    "reference": "StructureDefinition/us-core-encounter-diagnosis"
-                },
-                "description": "The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.",
-                "exampleBoolean": false,
-                "name": "US Core Encounter Diagnosis Profile"
-            },
-            {
-                "reference": {
                     "reference": "StructureDefinition/us-core-encounter"
                 },
                 "description": "The Encounter referenced in the US Core profiles.",
@@ -225,6 +225,14 @@
                 "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.",
                 "exampleBoolean": false,
                 "name": "US Core Ethnicity Extension"
+            },
+            {
+                "reference": {
+                    "reference": "StructureDefinition/us-core-extension-questionnaire-uri"
+                },
+                "description": "The location where a non-FHIR questionnaire/survey form can be found. This extension is used when the survey,form, or questionnaire which is being anwered is not a FHIR [Questionnaire](https://www.hl7.org/fhir/questionnaire.html), otherwise the [canonical url](https://www.hl7.org/fhir/references.html#canonical) for the FHIR Questionnaire is used.",
+                "exampleBoolean": false,
+                "name": "US Core Extension Questionnaire URI"
             },
             {
                 "reference": {
@@ -304,7 +312,7 @@
                 },
                 "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve clinical test results",
                 "exampleBoolean": false,
-                "name": "US Core Clinical Test Result Observation Profile"
+                "name": "US Core Observation Clinical Test Result Profile"
             },
             {
                 "reference": {
@@ -312,7 +320,7 @@
                 },
                 "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve structured and unstructured (narrative) components of imaging test results. These observations include reasons, findings, and impressions.",
                 "exampleBoolean": false,
-                "name": "US Core Imaging Result Observation Profile"
+                "name": "US Core Observation Imaging Result Profile"
             },
             {
                 "reference": {
@@ -324,19 +332,27 @@
             },
             {
                 "reference": {
+                    "reference": "StructureDefinition/us-core-observation-sdoh-assessment"
+                },
+                "description": "Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select \u201ccheck all that apply\u201d questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.",
+                "exampleBoolean": false,
+                "name": "US Core Observation SDOH Assessment Profile"
+            },
+            {
+                "reference": {
                     "reference": "StructureDefinition/us-core-observation-sexual-orientation"
                 },
                 "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve a Patient's Sexual Orientation.",
                 "exampleBoolean": false,
-                "name": "US Core Sexual Orientation Observation Profile"
+                "name": "US Core Observation Sexual Orientation Profile"
             },
             {
                 "reference": {
-                    "reference": "StructureDefinition/us-core-observation-social-history-assessment"
+                    "reference": "StructureDefinition/us-core-observation-social-history"
                 },
                 "description": "Profile for simple observations made by an individual about a patient's social history status such as education, food insecurity, etc.  These observation involve assessment by a provider, payer, etc. as opposed to being derived only from screening surveys which should be represented using the [US Core Survey Observation Profile](StructureDefinition-us-core-observation-survey.html)",
                 "exampleBoolean": false,
-                "name": "US Core Social History Assessment Observation Profile"
+                "name": "US Core Observation Social History Profile"
             },
             {
                 "reference": {
@@ -388,14 +404,6 @@
             },
             {
                 "reference": {
-                    "reference": "StructureDefinition/us-core-problems-and-health-concerns"
-                },
-                "description": "The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1",
-                "exampleBoolean": false,
-                "name": "US Core Problems and Health Concerns Profile"
-            },
-            {
-                "reference": {
                     "reference": "StructureDefinition/us-core-procedure"
                 },
                 "description": "Defines constraints and extensions on the Procedure resource for the minimal set of data to query and retrieve patient's procedure information. This profile can be used to record a service or intervention that is or was performed on or for a patient.",
@@ -424,7 +432,7 @@
                 },
                 "description": "Defines how to represent answers from surveys/questionnaires.  This profile is based on the [SDC Questionnaire Response]",
                 "exampleBoolean": false,
-                "name": "US Core Questionnaire Response Profile"
+                "name": "US Core QuestionnaireResponse Profile"
             },
             {
                 "reference": {
@@ -440,7 +448,7 @@
                 },
                 "description": "Defines constraints and extensions on the RelatedPerson resource on the patient resource for the minimal set of data to query and retrieve demographic information.",
                 "exampleBoolean": false,
-                "name": "US Core Related Person"
+                "name": "US Core RelatedPerson Profile"
             },
             {
                 "reference": {
@@ -449,14 +457,6 @@
                 "description": "Defines constraints on Observation to represent respiratory rate observations with a standard LOINC code and UCUM units of measure. This profile is derived from the US Core Vital Signs Profile.",
                 "exampleBoolean": false,
                 "name": "US Core Respiratory Rate Profile"
-            },
-            {
-                "reference": {
-                    "reference": "StructureDefinition/us-core-observation-sdoh-assessment"
-                },
-                "description": "Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select \u201ccheck all that apply\u201d questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.",
-                "exampleBoolean": false,
-                "name": "US Core Observation SDOH Assessment Profile"
             },
             {
                 "reference": {
@@ -480,7 +480,7 @@
                 },
                 "description": "This value set includes all LOINC values whose CLASSTYPE is SURVEY in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)",
                 "exampleBoolean": false,
-                "name": "US Core Survey Codes"
+                "name": "US Core Survey Codes Value Set"
             },
             {
                 "reference": {
@@ -1304,7 +1304,7 @@
                 },
                 "description": "Defines constraints and extensions on the ServiceRequest resource for the minimal set of data to query and retrieve orders associated with diagnostic and clinical tests and clinical interventions for a patient",
                 "exampleBoolean": false,
-                "name": "US Core Service Request"
+                "name": "US Core ServiceRequest Profile"
             },
             {
                 "reference": {
@@ -1494,7 +1494,7 @@
                 "reference": {
                     "reference": "ValueSet/us-core-problem-or-health-concern"
                 },
-                "description": "Code set for category codes for [US Core Problems and Health Concerns Profile] consisting of the concepts \"problem\" and \"health-concern\".",
+                "description": "Code set for category codes for [US Core Condition Problems and Health Concerns Profile] consisting of the concepts \"problem\" and \"health-concern\".",
                 "exampleBoolean": false,
                 "name": "US Core Problem Or Health Concern ValueSet"
             },
@@ -1528,7 +1528,7 @@
                 },
                 "description": "A set of SNOMED CT and LOINC concepts to classify a requested service",
                 "exampleBoolean": false,
-                "name": "US Core ServiceRequest Category Codes"
+                "name": "US Core ServiceRequest Category Codes Value Set"
             },
             {
                 "reference": {
@@ -2214,25 +2214,25 @@
                 "reference": {
                     "reference": "Condition/condition-SDOH-example"
                 },
-                "description": "This example of a US Core Problems and Health Concerns Profile illustrates its use to capture information about a patient's SDOH Problem/Health Concern.",
+                "description": "This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's SDOH Problem/Health Concern.",
                 "name": "SDOH Problem/Health Concern Example",
-                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-problems-and-health-concerns"
+                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-problems-health-concerns"
             },
             {
                 "reference": {
                     "reference": "Condition/encounter-diagnosis-example1"
                 },
-                "description": "This example of a US Core Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
+                "description": "This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
                 "name": "Encounter Diagnosis Example 1",
-                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-encounter-diagnosis"
+                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-encounter-diagnosis"
             },
             {
                 "reference": {
                     "reference": "Condition/encounter-diagnosis-example2"
                 },
-                "description": "This example of a US Core Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
+                "description": "This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
                 "name": "Encounter Diagnosis Example 2",
-                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-encounter-diagnosis"
+                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-encounter-diagnosis"
             },
             {
                 "reference": {
@@ -2350,7 +2350,7 @@
                 "reference": {
                     "reference": "ServiceRequest/foodpantry-referral"
                 },
-                "description": "This is a service request example for the *US Core Service Request Profile*.",
+                "description": "This is a service request example for the *US Core ServiceRequest Profile Profile*.",
                 "name": "ServiceRequest Example",
                 "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
             },
@@ -2382,9 +2382,9 @@
                 "reference": {
                     "reference": "Condition/health-concern-example"
                 },
-                "description": "This example of a US Core Problems and Health Concerns Profile illustrates its use to capture information about a patient's health concern.",
+                "description": "This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's health concern.",
                 "name": "Health Concern Example",
-                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-problems-and-health-concerns"
+                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-problems-health-concerns"
             },
             {
                 "reference": {
@@ -2510,7 +2510,7 @@
                 "reference": {
                     "reference": "Observation/xray-chest-findings"
                 },
-                "description": "This example of a US Core Imaging Result Observation Profile illustrates its use to capture information about a patient's radiology study findings.",
+                "description": "This example of a US Core Observation Imaging Result Profile illustrates its use to capture information about a patient's radiology study findings.",
                 "name": "Xray Chest Findings Example",
                 "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging"
             },
@@ -2518,7 +2518,7 @@
                 "reference": {
                     "reference": "Observation/xray-chest-impression"
                 },
-                "description": "This example of a US Core Imaging Result Observation Profile illustrates its use to capture information about a patient's radiology study impression.",
+                "description": "This example of a US Core Observation Imaging Result Profile illustrates its use to capture information about a patient's radiology study impression.",
                 "name": "Xray Chest Impression Example",
                 "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging"
             },
@@ -2638,7 +2638,7 @@
                 "reference": {
                     "reference": "RelatedPerson/shaw-niece"
                 },
-                "description": "This is a patient niece example for the *US Core RelatedPerson Profile*.",
+                "description": "This is a patient niece example for the *US Core RelatedPerson Profile Profile*.",
                 "name": "Patient Niece Example",
                 "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
             },
@@ -2726,7 +2726,7 @@
                 "reference": {
                     "reference": "Observation/sexual-orientation-example"
                 },
-                "description": "This is an sexual orientation example for the *US Core Sexual Orientation Observation Profile*.",
+                "description": "This is an sexual orientation example for the *US Core Observation Sexual Orientation Profile*.",
                 "name": "Sexual Orientation Observation Example",
                 "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation"
             },
@@ -2734,9 +2734,9 @@
                 "reference": {
                     "reference": "Observation/socialhistory-assessment-example"
                 },
-                "description": "This is a Social History Assessment Example for the *US Core Social History Assessment Observation Profile*.",
+                "description": "This is a Social History Assessment Example for the *US Core Observation Social History Profile*.",
                 "name": "Social History Assessment Example",
-                "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history-assessment"
+                "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history"
             },
             {
                 "reference": {

@@ -17,7 +17,7 @@ questionnaire: >-
   http://hl7.org/fhir/us/sdoh-clinicalcare/Questionnaire/SDOHCC-QuestionnaireHungerVitalSign
 _questionnaire:
   extension:
-    - url: 'http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url'
+    - url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri'
       valueUri: https://example.org/forms/hsv
 status: completed
 subject:

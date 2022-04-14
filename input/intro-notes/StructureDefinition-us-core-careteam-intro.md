@@ -36,7 +36,7 @@ In order to access care team member's names, identifiers, locations, and contact
   1. US Core Practitioner Profile
   1. US Core PractitionerRole Profile
   1. US Core Patient Profile
-  1. US Core RelatedPerson Profile
+  1. US Core RelatedPerson Profile Profile
 
   * Although *both* US Core Practitioner Profile and US Core PractitionerRole are must support, the server system is not required to support both types of references (and `_include` search parameters), but **SHALL** support *at least* one of them.
   * The client application **SHALL** support all four profile references.
