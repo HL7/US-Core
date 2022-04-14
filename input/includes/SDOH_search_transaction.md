@@ -1,3 +1,7 @@
+
+- Patient's FHIR_id = "example"
+- Observation category = "LG41762-2"
+
 **Request**
 
 Request url using GET
@@ -27,7 +31,7 @@ Content-Length: 4112
 Date: Sun, 21 Nov 2021 03:15:18 GMT
 ~~~
 Response Body
-~~~json
+~~~
 {
   "resourceType": "Bundle",
   "id": "158f4b97-5b3a-4363-81da-19d454a6df30",

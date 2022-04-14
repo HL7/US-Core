@@ -205,7 +205,7 @@
 [US Core Implantable Device Profile]: StructureDefinition-us-core-implantable-device.html
 [US Core Laboratory Result Observation Profile]: StructureDefinition-us-core-observation-lab.html
 [US Core Observation Clinical Test Result Profile]: StructureDefinition-us-core-observation-clinical-test.html
-[US Core Diagnostic Imaging Result Observation Profile]: StructureDefinition-us-core-observation-imaging.html
+[US Core Observation Imaging Result Profile]: StructureDefinition-us-core-observation-imaging.html
 [US Core Medication Profile]: StructureDefinition-us-core-medication.html
 [US Core Medication Request Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
@@ -309,7 +309,8 @@
 [US Core RelatedPerson Profile Profile]: StructureDefinition-us-core-relatedperson.html
 [US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
 [Using multiple codes with CodeableConcept Datatype]: conformance-expectations.html#translations
-[US Core Survey Observation Profile]: StructureDefinition-us-core-observation-survey.html
+[US Core Observation Survey Profile]: StructureDefinition-us-core-observation-survey.html
+[US Core Observation SDOH Assessment Profile]: StructureDefinition-us-core-observation-sdoh-assessment.html
 [US Core QuestionnaireResponse Profile]: StructureDefinition-us-core-questionnaireresponse.html
 [US Core Observation Social History Profile]: StructureDefinition-us-core-observation-social-history-assessment.html
 [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
