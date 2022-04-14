@@ -242,28 +242,28 @@
 [how to search by string]: {{site.data.fhir.path}}search.html#string
 [how to search by the logical id]: {{site.data.fhir.path}}references.html#logical
 [how to search by token]: {{site.data.fhir.path}}search.html#token
-[`_include`]: {{site.data.fhir.path}}search.html#include
-[`_revinclude`]: {{site.data.fhir.path}}search.html#include
+[_include]: {{site.data.fhir.path}}search.html#include
+[_revinclude]: {{site.data.fhir.path}}search.html#include
 [logical view]: {{site.data.fhir.path}}formats.html#table
 [managing returned resources]: {{site.data.fhir.path}}search.html#return
 [mapping]: general-guidance.html
 [modifiers]: {{site.data.fhir.path}}search.html#modifiers
-[`multipleAnd`]: {{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleAnd
-[`multipleOr`]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleOr
-[`comparator`]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.comparator
-[`modifier`]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.modifier
-[`chain`]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.chain
+[multipleAnd]: {{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleAnd
+[multipleOr]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleOr
+[comparator]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.comparator
+[modifier]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.modifier
+[chain]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.chain
 [profiles]: {{site.data.fhir.path}}profiling.html
 [quantity]: {{site.data.fhir.path}}search.html#quantity
 [search]: http://hl7.org/fhir/search.html
 [security considerations]: {{site.data.fhir.path}}security.html
-[`ethnicity`]: SearchParameter-us-core-ethnicity.html
-[`race`]: SearchParameter-us-core-race.html
-[`gender-identity`]: SearchParameter-us-core-patient-gender-identity.html
-[`asserted-date`]: SearchParameter-us-core-condition-asserted-date.html
-[`role`]: SearchParameter-us-core-careteam-role.html
-[`discharge-disposition`]: SearchParameter-us-core-encounter-discharge-disposition.html
-[`description`]: SearchParameter-us-core-goal-description.html
+[ethnicity]: SearchParameter-us-core-ethnicity.html
+[race]: SearchParameter-us-core-race.html
+[gender-identity]: SearchParameter-us-core-patient-gender-identity.html
+[asserted-date]: SearchParameter-us-core-condition-asserted-date.html
+[role]: SearchParameter-us-core-careteam-role.html
+[discharge-disposition]: SearchParameter-us-core-encounter-discharge-disposition.html
+[description]: SearchParameter-us-core-goal-description.html
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
 [reference]: {{site.data.fhir.path}}references.html
 [timezone extension]: {{site.data.fhir.path}}extension-tz-code.html

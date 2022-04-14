@@ -1212,6 +1212,54 @@
             },
             {
                 "reference": {
+                    "reference": "SearchParameter/us-core-questionnaireresponse-authored"
+                },
+                "description": "**When the questionnaire response was last changed**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+                "exampleBoolean": false,
+                "name": "USCoreQuestionnaireresponseAuthored"
+            },
+            {
+                "reference": {
+                    "reference": "SearchParameter/us-core-questionnaireresponse-id"
+                },
+                "description": "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+                "exampleBoolean": false,
+                "name": "USCoreQuestionnaireresponseId"
+            },
+            {
+                "reference": {
+                    "reference": "SearchParameter/us-core-questionnaireresponse-patient"
+                },
+                "description": "**The patient that is the subject of the questionnaire response**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+                "exampleBoolean": false,
+                "name": "USCoreQuestionnaireresponsePatient"
+            },
+            {
+                "reference": {
+                    "reference": "SearchParameter/us-core-questionnaireresponse-questionnaire"
+                },
+                "description": "**The questionnaire the answers are provided for**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+                "exampleBoolean": false,
+                "name": "USCoreQuestionnaireresponseQuestionnaire"
+            },
+            {
+                "reference": {
+                    "reference": "SearchParameter/us-core-questionnaireresponse-status"
+                },
+                "description": "**The status of the questionnaire response**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+                "exampleBoolean": false,
+                "name": "USCoreQuestionnaireresponseStatus"
+            },
+            {
+                "reference": {
+                    "reference": "SearchParameter/us-core-questionnaireresponse-tag"
+                },
+                "description": "**Tags applied to this resource**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+                "exampleBoolean": false,
+                "name": "USCoreQuestionnaireresponseTag"
+            },
+            {
+                "reference": {
                     "reference": "SearchParameter/us-core-race"
                 },
                 "description": "Returns patients with a race extension matching the specified code.",

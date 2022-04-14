@@ -12,35 +12,35 @@ The following operations and search parameters have been defined for the US Core
 NOTE: The following search parameters **SHALL NOT** be interpreted on their own as requirements for server.  The CapabilityStatement defines the search capabilities expectations for the US Core Server. This section lists the search parameters definitions that are used within the CapabilityStatement.  This is not a list of search requirements for the client or server.
 {:.bg-warning}
 
-#### New Search Parameters defined by this Implementation Guide
+#### Search Parameters defined by this Implementation Guide
 
-**CareTeam**
-- [`role`]
+##### CareTeam
+- [role]
 
-**Condition**
-- [`asserted-date`]
+##### Condition
+- [asserted-date]
 
-**Encounter**
-- [`discharge-disposition`]
+##### Encounter
+- [discharge-disposition]
 
-**Goal**
-- [`description`]
+##### Goal
+- [description]
 
-**Patient**
-- [`race`]
-- [`ethnicity`]
-- [`gender-identity`]
+##### Patient
+- [race]
+- [ethnicity]
+- [gender-identity]
 
 
 #### Search Parameters derived from the Base FHIR Specification
 
 These US Core SearchParameters are derived from the Base FHIR Specification to define the expectations for the following SearchParameter elements:
 
-- [`multipleAnd`]
-- [`multipleOr`]
-- [`comparator`]
-- [`modifier`]
-- [`chain`]
+- [multipleAnd]
+- [multipleOr]
+- [comparator]
+- [modifier]
+- [chain]
 
 {% include uscore_sp_list.md %}
 
