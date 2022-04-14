@@ -61,7 +61,10 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Clarify that SDOH data elements does not include work information (see ODH) [FHIR-34701](https://jira.hl7.org/browse/FHIR-34701) [See Change Here](sdoh.html)
 1. **Triaged**: Harmonize / Combine value set references for SDOH ServiceRequest and SDOH Procedure [FHIR-34747](https://jira.hl7.org/browse/FHIR-34747) [See Change Here](#.html)
 1. **Resolved - change required**: Feedback on the inclusion of Observation.component as a Must Support element for systems to record multiple answers for a screening question in a single Observation [FHIR-34748](https://jira.hl7.org/browse/FHIR-34748) [See Change Here](#.html)
-1. **Resolved - change required**: Assessment codes for individual components of existing assessments too limited and superfluous [FHIR-34752](https://jira.hl7.org/browse/FHIR-34752) [See Change Here](#.html)
+1. **Applied**: Broaden Common SDOH assessment concepts and clarify is a starter set [FHIR-34752](https://jira.hl7.org/browse/FHIR-34752) See Change:
+   - [Here](sdoh.html#assessment-codes)
+   - [Here](ValueSet-us-core-common-sdoh-assessments.html)
+   - [Here](StructureDefinition-us-core-observation-sdoh-assessment.html)
 1. **Applied**: Clinical Test Result Observation Profile Must Have needs to address the 3 slices for procedure, exam, and activity in the explanatory text [FHIR-34753](https://jira.hl7.org/browse/FHIR-34753) [See Change Here](StructureDefinition-us-core-observation-clinical-test.html)
 1. **Applied**: Clarify guidance for use of Patient.genderIdentity, Patient.birthsex, and pre-existing Patient.gender [FHIR-34754](https://jira.hl7.org/browse/FHIR-34754) [See Change Here](StructureDefinition-us-core-patient.html)
 1. **Resolved - change required**: RelatedPerson relationshiptype should have binding to FHIR value set RelatedPerson-relationshiptype [FHIR-34755](https://jira.hl7.org/browse/FHIR-34755) [See Change Here](#.html)

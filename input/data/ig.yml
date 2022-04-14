@@ -2148,6 +2148,14 @@
             },
             {
                 "reference": {
+                    "reference": "QuestionnaireResponse/glasgow-coma-score"
+                },
+                "description": "'This example of a US Core QuestionnaireResponse illustrate using Questionnaire as a *stand alone* resource. It does not point to the definition of the questions in  a FHIR Questionnaire, but represents the answers from a non FHIR survey instrument (in this case a pdf).'",
+                "name": "Glasgow Coma Score Example",
+                "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+            },
+            {
+                "reference": {
                     "reference": "QuestionnaireResponse/glascow-coma-score"
                 },
                 "description": "'This example of a US Core QuestionnaireResponse illustrate using Questionnaire as a *stand alone* resource. It does not point to the definition of the questions in  a FHIR Questionnaire, but represents the answers from a non FHIR survey instrument (in this case a pdf).'",

@@ -28,7 +28,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
-- {:.new-content}\*\*This profile defines a Valueset based on a *starter set* of example clinical test LOINC codes identified in the [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]. It is not intended to be complete and implementers are expected include other LOINC or other codes to meet their business needs.
+- <span class="bg-success" markdown="1">\*\*This profile defines a Valueset based on a *starter set* of example clinical test LOINC codes identified in the [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]. It is not intended to be complete and implementers are expected include other LOINC or other codes to meet their business needs.</span><!-- new-content -->
 {% include observation_guidance_1.md category="clinical-test" %}
 
 {% include link-list.md %}

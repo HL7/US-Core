@@ -323,3 +323,4 @@
 [US Core Condition Encounter Diagnosis Profile]: StructureDefinition-us-core-condition-encounter-diagnosis.html
 [US Core Condition Problems and Health Concerns Profile]: StructureDefinition-us-core-condition-problems-health-concerns.html
 [Deletion Safety Checks]: http://hl7.org/fhir/R4/safety.html#conformance
+[FindHelp.org]: https://company.findhelp.com/

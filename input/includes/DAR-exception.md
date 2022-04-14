@@ -1,4 +1,4 @@
-- An Observation without a value, **SHALL** include a reason why the data is absent *unless* there are 1) component observations, or 2) reporting vital signs panel components using  `Observation.hasMember`.
+- An Observation without a value, **SHALL** include a reason why the data is absent *unless* there are 1) component observations, or 2) reporting panel observations using `Observation.hasMember`.
   - For Further guidance see the [Observation Grouping] section in FHIR Specification.
   - \*Systems that never provide an observation without a value are not required to support `Observation.dataAbsentReason`.
 - An `Observation.component` without a value, **SHALL** include a reason why the data is absent.

@@ -11,7 +11,7 @@ This page documents how the US Core Profile can be use to represent these elemen
 
 The intent of adding these SDOH data elements to US Core is to be able to use US Core Profiles along with a defined set of FHIR RESTful interactions to represent and access SDOH patient data.  This is in contrast to the [SDOH Clinical Care](http://hl7.org/fhir/us/sdoh-clinicalcare/) HL7 Implementation Guide. This guide was developed by the [Gravity Project](https://hl7.org/gravity) and documents the orchestration of SDOH data capture and related interventions and how it is represented using FHIR.  US Core Profile span across use cases and thus less constrained, but they form backbone for the SDOH Clinical Care Profiles.  Many of the additions to US Core Profiles to meet the SDOH data element requirements are based on the efforts by the Gravity led project.  In the following sections the interrelation between the SDOH elements is summarized and how each element is represented in US Core documented.
 
-### SDOH Activities
+### Activities
 
 The figure below shows how the SDOH elements are inter-related:
 
@@ -71,16 +71,17 @@ Survey instruments may be represented by a Questionnaire including a FHIR Questi
 The basic workflow for the creation, discovery and retrieval and data-extraction of FHIR Questionnaire and QuestionnaireResponse is thoroughly documented in the [SDC specification](#).
 {:.bg-info}
 
-See the [US Core QuestionnaireResponse] profile page for detailed documentation, examples and search requirements.
+See the [US Core QuestionnaireResponse Profile] profile page for detailed documentation, examples and search requirements.
 
 </div><!-- new-content -->
+
 #### Searching for SDOH Patient Data
 
 Below is a simple example of FHIR RESTful search transaction on Observation to access a patient's SDOH assessment data
 
 {% include examplebutton.html example="SDOH_search_transaction" b_title = "Click on Here To See Search Example" %}
 
-### SDOH Terminology in US Core
+### Terminology
 
 #### Category Codes
 
@@ -100,7 +101,7 @@ US Core uses broadly defined value sets that contain concepts that are used acro
 {% include img-med.html img="sdoh_condition.svg" caption="Example of SDOH Grouping Value set in US Core Condition Code Value Set" %}
 
 #### Assessment Codes
-US Core has created the [US Core Common SDOH Assessments ValueSet] - commonly asked social questions as identified by [FindHelp.org](https://company.findhelp.com/), a social service assistance tool. <span class="bg-success" markdown="1">It also include several common SDOH panel concepts referenced in USCDI v2.</span><!-- new-content -->  This is not intend to replicate the complexities and robustness of the FHIR Questionnaire and QuestionnaireResponse resources developed for SDOH assessment screening tools and other questionnaires.  The Gravity Project is working on a more comprehensive set of codes to meet these challenges (this guide may leverage that work in the future).
+US Core has created the [US Core Common SDOH Assessments ValueSet] - commonly asked social questions as identified by [FindHelp.org], a social service assistance tool, and <span class="bg-success" markdown="1"> the PRAPARE, Hunger Vital Sign, AHC-HRSN screening tools referenced in USCDI v2.</span><!-- new-content -->  This is not intended to replicate the complexities and robustness of the FHIR Questionnaire and QuestionnaireResponse resources developed for SDOH assessment screening tools and other questionnaires.  The Gravity Project is working on a more comprehensive set of codes to meet these challenges (this guide may leverage that work in the future).
 
 ---
 

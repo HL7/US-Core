@@ -36,7 +36,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 - See [SDOH Guidance] for how this profile can used to represent SDOH assessments.
 - For questions represented in `Observation.code` (e.g., LOINC) that specify “check all that apply”, the question should be used for `Observation.code` and for `Observation.component.code`. For “check all that apply” questions, the answers (regardless of whether one or more are selected) should only be represented using `Observation.component.value` and `Observation.value` should be empty.
-{% include obs_cat_guidance.md %}
+{% include obs_cat_guidance.md -%}
 {% include DAR-exception.md %}
 
 {% include link-list.md %}
