@@ -6,14 +6,14 @@ This profile is based on the [US Core Observation Survey Profile] and sets minim
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core-Results profile:
+The following are example usage scenarios for this profile:
 
 -   Query for survey SDOH screening results for a patient.
 -  [Record or update] SDOH screening results results belonging to a Patient
 
 ### Mandatory and Must Support Data Elements
 
-*In addition to* the mandatory and must support data elements in the US Core Observation Survey Profile, The following data-elements must always be present ([Mandatory] definition]) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and terminology requirements. Note that the *Must Support* view aggregates all the must support elements between this profile and its parent profiles.
+*In addition to* the mandatory and must support data elements in the US Core Observation Survey Profile, the following data-elements must always be present ([Mandatory] definition]) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and terminology requirements. Note that the *Must Support* view aggregates all the must support elements between this profile and its parent profiles.
 
 **Each Observation must support:**
 

@@ -324,3 +324,8 @@
 [US Core Condition Problems and Health Concerns Profile]: StructureDefinition-us-core-condition-problems-health-concerns.html
 [Deletion Safety Checks]: http://hl7.org/fhir/R4/safety.html#conformance
 [FindHelp.org]: https://company.findhelp.com/
+[QuestionnaireResponse]: {{site.data.fhir.path}}questionnaireresponse.html
+[Questionnaire]: {{site.data.fhir.path}}questionnaire.html
+[Structured Data Capture (SDC) Questionnaire Response Profile]: http://hl7.org/fhir/uv/sdc/3.0.0-preview/StructureDefinition-sdc-questionnaireresponse.html
+[Structured Data Capture (SDC)]: http://hl7.org/fhir/uv/sdc/STU3/
+[US Core Extension Questionnaire URI]: us-core-extension-questionnaire-uri.html
