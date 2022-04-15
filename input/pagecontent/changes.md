@@ -77,9 +77,8 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Clarify "time" elements used in the DiagnosticReport profiles [FHIR-34973](https://jira.hl7.org/browse/FHIR-34973) See Change:
    - [Here](StructureDefinition-us-core-diagnosticreport-lab.html)
    - [Here](StructureDefinition-us-core-diagnosticreport-note.html)
-1. **Triaged**: Imaging Study or Media is still unclear  [FHIR-34975](https://jira.hl7.org/browse/FHIR-34975) [See Change Here](#.html)
-1. **Resolved - change required**: Change the query parameter value to be consistent with previous statement [FHIR-35047](https://jira.hl7.org/browse/FHIR-35047) [See Change Here](#.html)
-1. **Resolved - change required**: Make npm package more prominent [FHIR-35064](https://jira.hl7.org/browse/FHIR-35064) [See Change Here](#.html)
+1. **Applied**: Change the query parameter value to be consistent with previous statement [FHIR-35047](https://jira.hl7.org/browse/FHIR-35047) [See Change Here](StructureDefinition-us-core-observation-clinical-test.html#note)
+1. **Applied**: Reordered sections in *Downloads* page [FHIR-35064](https://jira.hl7.org/browse/FHIR-35064) [See Change Here](downloads.html)
 1. **Resolved - change required**: Is the Guidance chapter informative? [FHIR-35065](https://jira.hl7.org/browse/FHIR-35065) [See Change Here](#.html)
 1. **Resolved - change required**: DSTU2 and R4 requirements hard to support [FHIR-35066](https://jira.hl7.org/browse/FHIR-35066) [See Change Here](#.html)
 1. **Resolved - change required**: DSTU2 support not specified [FHIR-35067](https://jira.hl7.org/browse/FHIR-35067) [See Change Here](#.html)
