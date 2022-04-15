@@ -3,7 +3,7 @@ This profile sets minimum expectations for the [CareTeam] resource for identifyi
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core-CareTeam profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for a Patient's CareTeam
 -   [Record or update] a Patient's CareTeam

@@ -3,7 +3,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core-CarePlan profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for a care plan belonging to a Patient
 -   [Record or update] an existing care plan

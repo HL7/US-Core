@@ -3,7 +3,7 @@ This profile sets minimum expectations for the [Organization] resource to search
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core-Organization profile:
+The following are example usage scenarios for the this profile:
 
 -   Query by organization name or NPI
 

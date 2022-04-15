@@ -4,7 +4,7 @@ This profile sets minimum expectations for the [Observation] resource to record,
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core Pediatric Head Occipital Frontal Circumference Percentile Profile:
+The following are example usage scenarios for the this profile:
 
 - Query for OFC percentile observation belonging to a pediatric patient
 - [Record or update] OFC percentile observations belonging to a pediatric patient

@@ -3,7 +3,7 @@ This profile sets minimum expectations for searching and fetching Diagnostic Rep
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the Diagnostic Report profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for a specific clinical test result such as electrocardiogram (ECG)
 -   Query for a specific imaging test result

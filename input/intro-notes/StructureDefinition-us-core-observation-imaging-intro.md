@@ -3,7 +3,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core-Results profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for diagnostic imaging related tests results for a patient.
 -  [Record or update] diagnostic imaging results belonging to a Patient

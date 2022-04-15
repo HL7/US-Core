@@ -3,7 +3,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core-Results profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for lab results belonging to a Patient
 -  [Record or update]  lab results belonging to a Patient

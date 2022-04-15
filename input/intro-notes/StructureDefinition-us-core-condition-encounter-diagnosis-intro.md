@@ -5,7 +5,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core Condition Encounter Diagnosis profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for a Patient’s current or historical encounter diagnosis
 -   [Record or update] a Patient’s encounter diagnosis

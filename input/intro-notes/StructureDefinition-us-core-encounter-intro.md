@@ -4,7 +4,7 @@ This profile sets minimum expectations for the [Encounter] resource to record, s
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core Encounter profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for a specific patient encounter
 -   Query for recent patient encounters

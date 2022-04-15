@@ -3,7 +3,7 @@ This profile sets minimum expectations for recording, searching, and fetching  u
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the Service Request profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for a specific procedure or test request such as an electrocardiogram (ECG) order or a referral to a support program.
 -   Query for a specific service offered to a patient such as a referral to a support program.

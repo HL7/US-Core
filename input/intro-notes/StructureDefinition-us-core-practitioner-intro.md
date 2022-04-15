@@ -3,7 +3,7 @@ This profile sets minimum expectations for the [Practitioner] resource to record
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core-Practitioner profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for an practitioner by name or NPI
 -   Reference from other Resources

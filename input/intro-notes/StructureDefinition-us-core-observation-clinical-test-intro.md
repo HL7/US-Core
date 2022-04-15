@@ -3,7 +3,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core-Results profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for non-imaging and non-laboratory tests results for a patient.
 -  [Record or update] clinical tests results belonging to a Patient

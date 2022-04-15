@@ -3,7 +3,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core-Results profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for social history results for a patient.
 -  [Record or update] social history results results belonging to a Patient

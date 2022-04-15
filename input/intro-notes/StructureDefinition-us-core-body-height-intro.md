@@ -3,7 +3,7 @@ This profile sets minimum expectations for the [Observation] resource to record,
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core Body Height Profile:
+The following are example usage scenarios for the this profile:
 
 - Query for body height observations
 - [Record or update] body height observations

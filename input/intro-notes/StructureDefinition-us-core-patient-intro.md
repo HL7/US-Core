@@ -4,7 +4,7 @@ This profile sets minimum expectations for the [Patient] resource to record, sea
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core Patient profile:
+The following are example usage scenarios for the this profile:
 
 -   Query for a Patient demographic information using Medical Record
     Number (MRN), which is a type of identifier. The MRN is identifiable

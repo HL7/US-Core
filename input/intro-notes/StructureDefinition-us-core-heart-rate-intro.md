@@ -3,7 +3,7 @@ This profile sets minimum expectations for the [Observation] resource to record,
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core Heart Rate Profile:
+The following are example usage scenarios for the this profile:
 
 - Query for heart rate observations
 - [Record or update] heart rate observations
