@@ -17,7 +17,7 @@ The following are example usage scenarios for this profile:
 
 **Each Observation must support:**
 
-1. a category code of 'sdoh'
+1. a category code of "LG41762-2"(Social Determinants Of Health)
 2. an SDOH [LOINC] code, if available
 4. references to other US Core SDOH assessments
 

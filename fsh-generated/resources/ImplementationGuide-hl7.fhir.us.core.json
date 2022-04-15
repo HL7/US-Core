@@ -84,14 +84,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/us-core-tags"
-        },
-        "description": "Tags code used in US Core `meta.tag` profiles. The are typically used when there is a need for categorization or workflow hints.",
-        "exampleBoolean": false,
-        "name": "US Core Tags"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/us-core-allergyintolerance"
         },
         "description": "Defines constraints and extensions on the AllergyIntolerance resource for the minimal set of data to query and retrieve allergy information.",
@@ -430,7 +422,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-questionnaireresponse"
         },
-        "description": "Defines how to represent answers from surveys/questionnaires.  This profile is based on the [Structured Data Capture (SDC) Questionnaire Response Profile](http://hl7.org/fhir/uv/sdc/3.0.0-preview/StructureDefinition-sdc-questionnaireresponse.html)",
+        "description": "Defines how to represent answers from surveys/questionnaires.  This profile is based on the [Structured Data Capture (SDC) Questionnaire Response Profile](http://hl7.org/fhir/uv/sdc/3.0.0/StructureDefinition-sdc-questionnaireresponse.html)",
         "exampleBoolean": false,
         "name": "US Core QuestionnaireResponse Profile"
       },

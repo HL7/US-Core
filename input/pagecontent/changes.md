@@ -89,7 +89,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied: Typo [FHIR-35115](https://jira.hl7.org/browse/FHIR-35115)
 1. **Applied**: Provide guidance when specific code systems are to be used in ServiceRequest [FHIR-35122](https://jira.hl7.org/browse/FHIR-35122) [See Change Here](StructureDefinition-us-core-servicerequest.html)
 1. **Applied**: Clarify description for effective time. [FHIR-35125](https://jira.hl7.org/browse/FHIR-35125) [See Change Here](StructureDefinition-us-core-diagnosticreport-lab.html)
-1. **Resolved - change required**: CareTeam example has misleading CareTeam.participant.role value [FHIR-35152](https://jira.hl7.org/browse/FHIR-35152) [See Change Here](#.html)
+1. **Applied**: Fix CareTeam example's participant.role value [FHIR-35152](https://jira.hl7.org/browse/FHIR-35152) [See Change Here](CareTeam-example.html)
 1. **Applied**: US Core Condition profile ""status"" is ambiguous; clarify to be clinicalStatus [FHIR-35280](https://jira.hl7.org/browse/FHIR-35280) [See Change Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 1. **Resolved - change required**: Conflicting guidance for Observation category for SDOH assessments [FHIR-35282](https://jira.hl7.org/browse/FHIR-35282) [See Change Here](#.html)
 1. **Resolved - change required**: Conflicting documentation for MS within US Core Observation Social History Profile [FHIR-35283](https://jira.hl7.org/browse/FHIR-35283) [See Change Here](#.html)

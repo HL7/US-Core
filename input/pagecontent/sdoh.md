@@ -85,7 +85,7 @@ Below is a simple example of FHIR RESTful search transaction on Observation to a
 
 #### Category Codes
 
-The LOINC "grouping" code: [LG41762-2](http://details.loinc.org/LOINC/LG41762-2.html) "Social Determinants Of Health" is used to categorize SDOH for Assessments, Problem, and Service Requests. This concept enables API consumers to be able to separate out SDOH data when accessing patient information. Alternatively, clients may find it more efficient to query based on a specific code or set of codes (for example, `Condition.code`) or request all of a patient's resources for a particular type and filter by code(s) to access items of interest.
+The LOINC "grouping" code: [LG41762-2](http://details.loinc.org/LOINC/LG41762-2.html) "Social Determinants Of Health" is used to categorize SDOH for Assessments, Problems, and Service Requests. This concept enables API consumers to be able to separate out SDOH data when accessing patient information. <span class="bg-success" markdown="1">Alternatively, clients may find it more efficient to query based on a specific code or set of codes (for example, `Condition.code`) or request all of a patient's resources for a particular type and filter by code(s) to access items of interest.</span><!-- new-content --> 
 
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
 
