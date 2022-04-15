@@ -62,6 +62,34 @@ differential:
           targetProfile:
             - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
       mustSupport: true
+    - id: 'Observation.effective[x]'
+      path: 'Observation.effective[x]'
+      definition: >-
+        The time or time-period the observed value is asserted as being true.
+        For biological subjects - e.g. human patients - this is usually called
+        the "physiologically relevant time".
+      comment: >-
+        At least a date should be present unless this observation is a
+        historical report.
+      type:
+        - extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: dateTime
+        - code: Period
+        - code: Timing
+        - code: instant
+      condition:
+        - us-core-1
+      constraint:
+        - key: us-core-1
+          severity: error
+          human: Datetime must be at least to day.
+          expression: $this is DateTime implies $this.toString().length() >= 10
+          xpath: >-
+            f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)
+      mustSupport: true
     - id: Observation.performer
       path: Observation.performer
       type:
