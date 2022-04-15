@@ -73,8 +73,10 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Added guidance on Observation.category limitations [FHIR-34949](https://jira.hl7.org/browse/FHIR-34949) [See Change Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
 1. **Applied**: Add guidance on Imaging DiagnosticReport ontology [FHIR-34958](https://jira.hl7.org/browse/FHIR-34958) [See Change Here](#.html)
 1. **Applied**: Clarify that the profile guidance is not limited to profiled elements [FHIR-34971](https://jira.hl7.org/browse/FHIR-34971) [See Change Here](index.html#how-to-read-this-guide)
-1. **Resolved - change required**: Fix Asterisk notation in profiles [FHIR-34972](https://jira.hl7.org/browse/FHIR-34972) [See Change Here](#.html)
-1. **Resolved - change required**: Clarify ""time"" elements used in these report profiles [FHIR-34973](https://jira.hl7.org/browse/FHIR-34973) [See Change Here](#.html)
+1. **Applied**: Fix asterisk notation in profiles [FHIR-34972](https://jira.hl7.org/browse/FHIR-34972) [See Change Here](StructureDefinition-us-core-observation-imaging.html)
+1. **Applied**: Clarify "time" elements used in the DiagnosticReport profiles [FHIR-34973](https://jira.hl7.org/browse/FHIR-34973) See Change:
+   - [Here](StructureDefinition-us-core-diagnosticreport-lab.html)
+   - [Here](StructureDefinition-us-core-diagnosticreport-note.html)
 1. **Triaged**: Imaging Study or Media is still unclear  [FHIR-34975](https://jira.hl7.org/browse/FHIR-34975) [See Change Here](#.html)
 1. **Resolved - change required**: Change the query parameter value to be consistent with previous statement [FHIR-35047](https://jira.hl7.org/browse/FHIR-35047) [See Change Here](#.html)
 1. **Resolved - change required**: Make npm package more prominent [FHIR-35064](https://jira.hl7.org/browse/FHIR-35064) [See Change Here](#.html)

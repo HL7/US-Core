@@ -1,250 +1,250 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "us-core-diagnosticreport-note",
-  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
-  "name": "USCoreDiagnosticReportProfileNoteExchange",
-  "title": "US Core DiagnosticReport Profile for Report and Note exchange",
-  "status": "active",
-  "date": "2021-11-09",
-  "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with clinical notes for a patient",
-  "fhirVersion": "4.0.1",
-  "kind": "resource",
-  "abstract": false,
-  "type": "DiagnosticReport",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "DiagnosticReport",
-        "path": "DiagnosticReport",
-        "short": "US Core Diagnostic Report Profile for Report and Note exchange",
-        "definition": "Clinical Testing and Imaging tests performed on a patient that results in structured or unstructured (narrative) findings specific to the patient.",
-        "alias": [
-          "Imaging Report",
-          "Radiology Report",
-          "Clinical Test Report"
-        ],
-        "constraint": [
-          {
-            "key": "us-core-10",
-            "severity": "error",
-            "human": "effective[x] SHALL be present if the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'",
-            "expression": "(status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies effective.exists()"
-          }
-        ],
-        "mustSupport": false
-      },
-      {
-        "id": "DiagnosticReport.status",
-        "path": "DiagnosticReport.status",
-        "condition": [
-          "us-core-10"
-        ],
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
-        }
-      },
-      {
-        "id": "DiagnosticReport.category",
-        "path": "DiagnosticReport.category",
-        "slicing": {
-          "discriminator": [
+    "resourceType": "StructureDefinition",
+    "id": "us-core-diagnosticreport-note",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
+    "name": "USCoreDiagnosticReportProfileNoteExchange",
+    "title": "US Core DiagnosticReport Profile for Report and Note exchange",
+    "status": "active",
+    "date": "2021-11-09",
+    "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with clinical notes for a patient",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "DiagnosticReport",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
             {
-              "type": "pattern",
-              "path": "$this"
+                "id": "DiagnosticReport",
+                "path": "DiagnosticReport",
+                "definition": "Clinical Testing and Imaging tests performed on a patient that results in structured or unstructured (narrative) findings specific to the patient.",
+                "alias": [
+                    "Imaging Report",
+                    "Radiology Report",
+                    "Clinical Test Report"
+                ],
+                "constraint": [
+                    {
+                        "key": "us-core-10",
+                        "severity": "error",
+                        "human": "effective[x] SHALL be present if the status is 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'",
+                        "expression": "(status='partial' or status='preliminary' or status='final' or status='amended' or status='corrected' or status='appended' ) implies effective.exists()"
+                    }
+                ],
+                "mustSupport": false
+            },
+            {
+                "id": "DiagnosticReport.status",
+                "path": "DiagnosticReport.status",
+                "condition": [
+                    "us-core-10"
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+                }
+            },
+            {
+                "id": "DiagnosticReport.category",
+                "path": "DiagnosticReport.category",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.category:us-core",
+                "path": "DiagnosticReport.category",
+                "sliceName": "us-core",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"
+                }
+            },
+            {
+                "id": "DiagnosticReport.code",
+                "path": "DiagnosticReport.code",
+                "short": "US Core Report Code",
+                "definition": "The test, panel, report, or note that was ordered.",
+                "comment": "The typical patterns for codes are:  1)  a LOINC code either as a translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "description": "LOINC codes",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes"
+                }
+            },
+            {
+                "id": "DiagnosticReport.subject",
+                "path": "DiagnosticReport.subject",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.encounter",
+                "path": "DiagnosticReport.encounter",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.effective[x]",
+                "path": "DiagnosticReport.effective[x]",
+                "short": "Diagnostically relevant time (typically the time of the procedure)",
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Period"
+                    }
+                ],
+                "condition": [
+                    "us-core-10"
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.issued",
+                "path": "DiagnosticReport.issued",
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.performer",
+                "path": "DiagnosticReport.performer",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.result",
+                "path": "DiagnosticReport.result",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.media",
+                "path": "DiagnosticReport.media",
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.media.link",
+                "path": "DiagnosticReport.media.link",
+                "mustSupport": true
+            },
+            {
+                "id": "DiagnosticReport.presentedForm",
+                "path": "DiagnosticReport.presentedForm",
+                "mustSupport": true
             }
-          ],
-          "rules": "open"
-        },
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.category:us-core",
-        "path": "DiagnosticReport.category",
-        "sliceName": "us-core",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"
-        }
-      },
-      {
-        "id": "DiagnosticReport.code",
-        "path": "DiagnosticReport.code",
-        "short": "US Core Report Code",
-        "definition": "The test, panel, report, or note that was ordered.",
-        "comment": "The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible",
-          "description": "LOINC codes",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes"
-        }
-      },
-      {
-        "id": "DiagnosticReport.subject",
-        "path": "DiagnosticReport.subject",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.encounter",
-        "path": "DiagnosticReport.encounter",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.effective[x]",
-        "path": "DiagnosticReport.effective[x]",
-        "type": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ],
-            "code": "dateTime"
-          },
-          {
-            "code": "Period"
-          }
-        ],
-        "condition": [
-          "us-core-10"
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.issued",
-        "path": "DiagnosticReport.issued",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.performer",
-        "path": "DiagnosticReport.performer",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
-            ],
-            "_targetProfile": [
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": true
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": true
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.result",
-        "path": "DiagnosticReport.result",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging"
-            ],
-            "_targetProfile": [
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": true
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": true
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": true
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.media",
-        "path": "DiagnosticReport.media",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.media.link",
-        "path": "DiagnosticReport.media.link",
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.presentedForm",
-        "path": "DiagnosticReport.presentedForm",
-        "mustSupport": true
-      }
-    ]
-  }
+        ]
+    }
 }

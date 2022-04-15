@@ -21,7 +21,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  a category
 1.  a code describing the type of report
 1.  a patient
-1.  date and time the report was created*
+1.  the diagnostically relevant time (known as the "effective time" and typically the time of the procedure)*
 
 \*This element has the following constraint: **SHALL** be present if status is
 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'.
