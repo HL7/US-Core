@@ -86,7 +86,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Clarify expectations for supporting multiple versions of US Core.[FHIR-35067](https://jira.hl7.org/browse/FHIR-35067) [See Change Here](changes-between-versions.html)
 1. **Applied**: Clarify that Changes Between Versions (né DSTU2 to R4 Conversion) page documents a set of best practices [FHIR-35068](https://jira.hl7.org/browse/FHIR-35068) [See Change Here](changes-between-versions.html)
 1. **Applied**: Typo in Category Codes section [FHIR-35072](https://jira.hl7.org/browse/FHIR-35072) [See Change Here](sdoh.html)
-1. **applied: Typo [FHIR-35115](https://jira.hl7.org/browse/FHIR-35115)
+1. **Applied: Typo [FHIR-35115](https://jira.hl7.org/browse/FHIR-35115)
 1. **Resolved - change required**: Need to provide some guidance when specific code systems are to be used in ServiceRequest [FHIR-35122](https://jira.hl7.org/browse/FHIR-35122) [See Change Here](#.html)
 1. **Resolved - change required**: Bad description in mandatory element for DiagnsticReport.effective [FHIR-35125](https://jira.hl7.org/browse/FHIR-35125) [See Change Here](#.html)
 1. **Resolved - change required**: CareTeam example has misleading CareTeam.participant.role value [FHIR-35152](https://jira.hl7.org/browse/FHIR-35152) [See Change Here](#.html)
