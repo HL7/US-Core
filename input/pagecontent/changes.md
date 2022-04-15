@@ -72,8 +72,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: Lab Result and Specimen Information for RBC Observation is Missing [FHIR-34910](https://jira.hl7.org/browse/FHIR-34910) [See Change Here](#.html)
 1. **Applied**: Added guidance on Observation.category limitations [FHIR-34949](https://jira.hl7.org/browse/FHIR-34949) [See Change Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
 1. **Applied**: Add guidance on Imaging DiagnosticReport ontology [FHIR-34958](https://jira.hl7.org/browse/FHIR-34958) [See Change Here](#.html)
-1. **Triaged**: Clarify profile specific implementation guidance for US Core DiagnosticReport Profile for Report and Note exchange [FHIR-34966](https://jira.hl7.org/browse/FHIR-34966) [See Change Here](StructureDefinition-us-core-us-core-diagnosticreport-note.html#mandatory-and-must-support-data-elements)
-1. **Resolved - change required**: Observation.component without a value - should it exist in the diff table? [FHIR-34971](https://jira.hl7.org/browse/FHIR-34971) [See Change Here](#.html)
+1. **Applied**: Clarify that the profile guidance is not limited to profiled elements [FHIR-34971](https://jira.hl7.org/browse/FHIR-34971) [See Change Here](index.html#how-to-read-this-guide)
 1. **Resolved - change required**: Fix Asterisk notation in profiles [FHIR-34972](https://jira.hl7.org/browse/FHIR-34972) [See Change Here](#.html)
 1. **Resolved - change required**: Clarify ""time"" elements used in these report profiles [FHIR-34973](https://jira.hl7.org/browse/FHIR-34973) [See Change Here](#.html)
 1. **Triaged**: Imaging Study or Media is still unclear  [FHIR-34975](https://jira.hl7.org/browse/FHIR-34975) [See Change Here](#.html)
@@ -94,7 +93,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**:  Clarify Condition.clinicalStatus requirements and searching using clinical-status [FHIR-35318](https://jira.hl7.org/browse/FHIR-35318) [See Change Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 1. **Resolved - change required**: Broken link to LOINC grouping code [FHIR-35362](https://jira.hl7.org/browse/FHIR-35362) [See Change Here](#.html)
 1. **Resolved - change required**: Confused about “Results” vs “Screening Response” [FHIR-35363](https://jira.hl7.org/browse/FHIR-35363) [See Change Here](#.html)
-1. **Resolved - change required**: Clarify modeling of SDOH screening using Observations, Add QuestionnaireResponse profile as alternative screening instrument [FHIR-35364](https://jira.hl7.org/browse/FHIR-35364) See Change:
+1. **Applied**: Clarify modeling of SDOH screening using Observations, Add QuestionnaireResponse profile as alternative screening instrument [FHIR-35364](https://jira.hl7.org/browse/FHIR-35364) See Change:
   -[Here](sdoh.html)
   -[Here](StructureDefinition-us-core-observation-survey.html)
   -[Here](StructureDefinition-us-core-SDOH-assessment.html)
