@@ -15,7 +15,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each Immunization must have:**
 
-1.  a status*
+1.  a status
 1.  a vaccine code that identifies the kind of vaccine administered
 1.  a date the vaccine was administered
 1.  a patient

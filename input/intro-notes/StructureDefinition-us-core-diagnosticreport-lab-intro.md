@@ -21,7 +21,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  a time indicating when the measurement was taken*
 1.  a time indicating when the measurement was reported*
 
-*These elements have the following constraints: SHALL be present if status is
+\*These elements have the following constraints: **SHALL** be present if status is
 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'.
 
 **Each DiagnosticReport must support:**

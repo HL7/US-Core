@@ -23,7 +23,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  a patient
 1.  date and time the report was created*
 
-*This element has the following constraint: SHALL be present if status is
+\*This element has the following constraint: **SHALL** be present if status is
 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'.
 
 **Each Diagnostic Report must support:**
@@ -31,11 +31,9 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  the encounter the report occurred within
 1.  instant the report was released
 1.  an author (actor) producing the report
-2.  a reference one or more test results
-2.  a reference one or more images*
+2.  a reference to one or more test results
+2.  a reference to one or more images
 4.  a reference to the full report (presentedForm)
-
-*See the implementation guidance section below
 
 **Profile specific implementation guidance:**
 
@@ -45,6 +43,6 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - For Diagnostic Imaging Reports systems SHOULD support using the subset of  LOINC codes defined in CONF-DIR-19 in *HL7 Implementation Guide for CDA Release 2: Imaging Integration, Levels 1, 2, and 3, Basic Imaging Reports in CDA and DICOM Diagnostic Imaging Reports (DIR) – Universal Realm, Release 1.0.*
 -  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. <span class="bg-success" markdown="1">The DiagnosticReport resource links to both [Media] which represents a specific kind of Observation whose value is image data and [ImagingStudy] which represents the content in a DICOM imaging study.</span><!-- new-content -->
    * <span class="bg-success" markdown="1">Only Media is marked as must support in this profile</span><!-- new-content -->
-   * <span class="bg-success" markdown="1">The imagingStudy element **MAY** be used by systems to reference ImagingStudy.  However, it is not supported by the majority of systems and its inclusion would be an unnecessary barrier to adoption.</span><!-- new-content --> 
+   * <span class="bg-success" markdown="1">The imagingStudy element **MAY** be used by systems to reference ImagingStudy.  However, it is not supported by the majority of systems and its inclusion would be an unnecessary barrier to adoption.</span><!-- new-content -->
 
 {% include link-list.md %}

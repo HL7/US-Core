@@ -42,6 +42,7 @@ For ONC's USCDI requirements, each Patient must support the following additional
 1. previous name
 1. suffix
 
+*see guidance below
 
 **Profile specific implementation guidance:**
 - Note that *Previous Name*, *Suffix*,and *Previous address* are listed in the U.S. Core Data for Interoperability.
@@ -49,7 +50,7 @@ For ONC's USCDI requirements, each Patient must support the following additional
   - Previous name is represented by setting `Patient.name.use` to "old" and providing an end date in Patient.name.period element if known
   - Previous address is represented by setting `Patient.address.use` to "old" and providing an end date in Patient.address.period element if known.
   - The patient example below demonstrates the usage of both of these elements.
-- \*US Core has reviewed and updated value sets based on input from the [HL7 Gender Harmony Project] which is modeling gender and sex information which includes data elements, value sets, code systems.  When their work is complete, US Core will align with their recommendations. In the interim, the [FHIR specification]({{site.data.fhir.path}}patient.html#gender) provides guidance and background for representing Administrative Gender, Sex assigned at Birth, and Gender Identity. 
+- \*US Core has reviewed and updated value sets based on input from the [HL7 Gender Harmony Project] which is modeling gender and sex information which includes data elements, value sets, code systems.  When their work is complete, US Core will align with their recommendations. In the interim, the [FHIR specification]({{site.data.fhir.path}}patient.html#gender) provides guidance and background for representing Administrative Gender, Sex assigned at Birth, and Gender Identity.
 - The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`. There is increasing concern over the use of Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have actively purged them from their systems and filter them out of incoming data.
 
 {% include link-list.md %}

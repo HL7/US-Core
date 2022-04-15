@@ -15,11 +15,11 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each AllergyIntolerance must have:**
 
-1.  a status of the allergy*
+1.  a clinical status of the allergy (e.g., active or resolved)*
 1.  a code which tells you what the patient is allergic to
 1.  a patient
 
-*The clinicalStatus element has the following constraints: SHALL be present if verification status is not entered-in-error and SHALL NOT be present if verification Status is entered-in-error.
+\*This element has the following constraints: **SHALL** be present if verification status is not "entered-in-error" and **SHALL NOT** be present if verification Status is "entered-in-error".
 
 **Each AllergyIntolerance must support:**
 

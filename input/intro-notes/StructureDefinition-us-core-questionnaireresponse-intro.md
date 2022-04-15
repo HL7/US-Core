@@ -17,7 +17,7 @@ The following are example usage scenarios for this profile:
 
 **Each QuestionnaireResponse must have:**
 
-1. a reference back to the assessment upon which it is based*
+1. a reference back to the assessment upon which it is based
 1. a status
 1. a patient
 1. the date the answers were gathered

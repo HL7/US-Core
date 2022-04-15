@@ -34,6 +34,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  a reason if the value is absent*
 1.  component results
 
+*see guidance below
+
 **Profile specific implementation guidance:**
 
 - The observations **MAY** have additional codes that translate or map to the Observation code or category codes. For example:

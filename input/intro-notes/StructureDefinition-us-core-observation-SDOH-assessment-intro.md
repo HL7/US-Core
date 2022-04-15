@@ -18,7 +18,7 @@ The following are example usage scenarios for this profile:
 **Each Observation must support:**
 
 1. a category code of 'sdoh'
-2. an SDOH [LOINC] code, if available*
+2. an SDOH [LOINC] code, if available
 4. references to other US Core SDOH assessments
 
 **Profile specific implementation guidance:**

@@ -26,6 +26,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. a result value or a reason why the data is absent*
    - if the result value is a numeric quantity, a standard [UCUM] unit
 
+*see guidance below
+
 **Profile specific implementation guidance:**
 
 {% include observation_guidance_1.md category="laboratory" example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" %}

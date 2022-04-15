@@ -26,6 +26,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. a result value or a reason why the data is absent*
    - if the result value is a numeric quantity, a standard [UCUM] unit
 
+*see guidance below
+
 **Profile specific implementation guidance:**
 
 - <span class="bg-success" markdown="1">\*\*This profile defines a Valueset based on a *starter set* of example clinical test LOINC codes identified in the [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]. It is not intended to be complete and implementers are expected include other LOINC or other codes to meet their business needs.</span><!-- new-content -->
