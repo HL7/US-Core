@@ -94,7 +94,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: Conflicting guidance for Observation category for SDOH assessments [FHIR-35282](https://jira.hl7.org/browse/FHIR-35282) [See Change Here](#.html)
 1. **Applied**: Add effective[x] 0..1 MS to US Core Observation Social History Profile [FHIR-35283](https://jira.hl7.org/browse/FHIR-35283) [See Change Here](#.html)
 1. **Applied**:  Clarify Condition.clinicalStatus requirements and searching using clinical-status [FHIR-35318](https://jira.hl7.org/browse/FHIR-35318) [See Change Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
-1. **Resolved - change required**: Broken link to LOINC grouping code [FHIR-35362](https://jira.hl7.org/browse/FHIR-35362) [See Change Here](#.html)
+1. **Applied**: Broken link to LOINC grouping code [FHIR-35362](https://jira.hl7.org/browse/FHIR-35362) [See Change Here](#.html)
 1. **Resolved - change required**: Confused about “Results” vs “Screening Response” [FHIR-35363](https://jira.hl7.org/browse/FHIR-35363) [See Change Here](#.html)
 1. **Applied**: Clarify modeling of SDOH screening using Observations, Add QuestionnaireResponse profile as alternative screening instrument [FHIR-35364](https://jira.hl7.org/browse/FHIR-35364) See Change:
   -[Here](sdoh.html)

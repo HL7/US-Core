@@ -331,3 +331,4 @@
 [US Core Extension Questionnaire URI]: StructureDefinition-us-core-extension-questionnaire-uri.html
 [USCDI]: uscdi.html
 [General Requirements]: general-requirements.html
+[LG41762-2]: https://loinc.org/LG41762-2/
