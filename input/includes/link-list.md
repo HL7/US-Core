@@ -31,7 +31,7 @@
 [CapabilityStatement]: {{site.data.fhir.path}}capabilitystatement.html
 [Cardiology (LP29708-2)]: https://loinc.org/LP29708-2
 [CarePlan]: {{site.data.fhir.path}}careplan.html
-[Clinical Notes Guidance]: clinical-notes-guidance.html
+[Clinical Notes]: clinical-notes.html
 [ClinicalImpression]: {{site.data.fhir.path}}clinicalimpression.html
 [Code on Dental Procedures and Nomenclature (CDT Code)]: http://www.ada.org/en/publications/cdt/
 [CodeSystem]: {{site.data.fhir.path}}codesystem.html
@@ -123,8 +123,8 @@
 [Media]:  {{site.data.fhir.path}}media.html
 [Location]:  {{site.data.fhir.path}}location.html
 [Medication Clinical Drug (RxNorm)]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1010.4/expansion
-[Medication List Guidance]: medication-list-guidance.html
-[MedicationRequest examples]: StructureDefinition-us-core-medicationrequest.html#examples
+[Medication List]: medication-list.html
+[MedicationRequest examples]: StructureDefinition-us-core-medicationrequest-examples.html
 [MedicationRequest Quick Start]: StructureDefinition-us-core-medicationrequest.html#search
 [MedicationRequestStatus]: {{site.data.fhir.path}}valueset-medicationrequest-status.html
 [MedicationRequest]: {{site.data.fhir.path}}medicationrequest.html
@@ -192,7 +192,7 @@
 [US Core CareTeam Profile]: StructureDefinition-us-core-careteam.html
 [US Core Condition Category Codes]: ValueSet-us-core-condition-category.html
 [US Core ServiceRequest Category Codes]: ValueSet-us-core-servicerequest-category.html
-[US Core Condition Code]: ValueSet-us-core-condition-code.html
+[US Core Condition Codes]: ValueSet-us-core-condition-code.html
 [US Core DiagnosticReport Category Codes]: ValueSet-us-core-diagnosticreport-category.html
 [US Core DiagnosticReport Profile for Laboratory Results Reporting]: StructureDefinition-us-core-diagnosticreport-lab.html
 [US Core DiagnosticReport Profile for Report and Note exchange]: StructureDefinition-us-core-diagnosticreport-note.html
@@ -312,11 +312,11 @@
 [US Core Observation Survey Profile]: StructureDefinition-us-core-observation-survey.html
 [US Core Observation SDOH Assessment Profile]: StructureDefinition-us-core-observation-sdoh-assessment.html
 [US Core QuestionnaireResponse Profile]: StructureDefinition-us-core-questionnaireresponse.html
-[US Core Observation Social History Profile]: StructureDefinition-us-core-observation-social-history-assessment.html
+[US Core Observation Social History Profile]: StructureDefinition-us-core-observation-social-history.html
 [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
 [Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
-[SDOH Guidance]: sdoh.html
-[US Core Common SDOH Assessments ValueSet]: ValueSet-us-core-common-sdoh-assessments.html
+[SDOH]: sdoh.html
+[US Core Common SDOH Assessments]: ValueSet-us-core-common-sdoh-assessments.html
 [slicing]: {{site.data.fhir.path}}profiling.html#slicing
 [Change Log]: changes.html
 [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]: https://www.healthit.gov/sites/default/files/page/2021-10/2021-09-09_USCDI_TF_2021_HITAC_Phase%203_%20Recommendations%20Report_Signed_508.pdf
@@ -326,6 +326,8 @@
 [FindHelp.org]: https://company.findhelp.com/
 [QuestionnaireResponse]: {{site.data.fhir.path}}questionnaireresponse.html
 [Questionnaire]: {{site.data.fhir.path}}questionnaire.html
-[Structured Data Capture (SDC) Questionnaire Response Profile]: http://hl7.org/fhir/uv/sdc/3.0.0-preview/StructureDefinition-sdc-questionnaireresponse.html
+[Structured Data Capture (SDC) Questionnaire Response Profile]: http://hl7.org/fhir/uv/sdc/3.0.0/StructureDefinition-sdc-questionnaireresponse.html
 [Structured Data Capture (SDC)]: http://hl7.org/fhir/uv/sdc/STU3/
-[US Core Extension Questionnaire URI]: us-core-extension-questionnaire-uri.html
+[US Core Extension Questionnaire URI]: StructureDefinition-us-core-extension-questionnaire-uri.html
+[USCDI]: uscdi.html
+[General Requirements]: general-requirements.html

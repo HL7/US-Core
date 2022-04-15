@@ -36,13 +36,17 @@ pages:
   index.md:
     title: Home
   guidance.md:
-    general-guidance.md:
+    title: Rules and Guidance
+    uscdi.md:
+      title: USCDI
     conformance-expectations.md:
-    clinical-notes-guidance.md:
-    medication-list-guidance.md:
+    general-requirements.md:
+    general-guidance.md:
+    clinical-notes.md:
+    medication-list.md:
     basic-provenance.md:
     sdoh.md:
-      title: SDOH Guidance
+      title: SDOH
     changes-between-versions.md:
       title: Changes Between US Core Versions
     future-of-US-core.md:
@@ -100,13 +104,15 @@ releaselabel: CI Build
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Guidance: #guidance.html
-      General Guidance: general-guidance.html
+  Rules and Guidance: #guidance.html
+      USCDI: uscdi.html
       Conformance Expectations: conformance-expectations.html
-      Clinical Notes Guidance: clinical-notes-guidance.html
-      Medication List Guidance: medication-list-guidance.html
+      General Requirements: general-requirements.html
+      General Guidance: general-guidance.html
+      Clinical Notes: clinical-notes.html
+      Medication List: medication-list.html
       Basic Provenance: basic-provenance.html
-      SDOH Guidance: sdoh.html
+      SDOH: sdoh.html
       Changes Between US Core Versions: changes-between-versions.html
       Future of US Core: future-of-US-core.html
   FHIR Artifacts: #artifact.html

@@ -159,7 +159,7 @@ To illustrate extensible binding for CodeableConcept datatype, the [US Core Alle
 
 Although the FHIR guidance for extensible bindings indicates that *all conceptual overlaps* including free text be mapped the coded values in the bindings, US Core guidance provides more flexibility for situations where implementers cannot fully comply with the FHIR base guidance. This flexibility is sometimes necessary and expected for legacy and text only data. For newly recorded, non legacy data, a system **SHOULD** meet the conformance of the value set.
 
-For example, the [US Core Procedure Codes] and  [US Core Condition Code] value sets contain a number of high-level abstract codes. For data not captured by the system transmitting the information, the coded data should be automatically converted to a fine-grained code from the specified value set. If this is not possible, the system can provide the existing code or the free text, *and a high-level abstract code*, such as SNOMED CT 'Procedure', to remain conformant with the extensible binding.
+For example, the [US Core Procedure Codes] and  [US Core Condition Codes] value sets contain a number of high-level abstract codes. For data not captured by the system transmitting the information, the coded data should be automatically converted to a fine-grained code from the specified value set. If this is not possible, the system can provide the existing code or the free text, *and a high-level abstract code*, such as SNOMED CT 'Procedure', to remain conformant with the extensible binding.
 
 ##### Using multiple codes with CodeableConcept Datatype
 {:.no_toc #translations}

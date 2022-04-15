@@ -430,7 +430,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-questionnaireresponse"
         },
-        "description": "Defines how to represent answers from surveys/questionnaires.  This profile is based on the [SDC Questionnaire Response]",
+        "description": "Defines how to represent answers from surveys/questionnaires.  This profile is based on the [Structured Data Capture (SDC) Questionnaire Response Profile](http://hl7.org/fhir/uv/sdc/3.0.0-preview/StructureDefinition-sdc-questionnaireresponse.html)",
         "exampleBoolean": false,
         "name": "US Core QuestionnaireResponse Profile"
       },
@@ -480,7 +480,7 @@
         },
         "description": "This value set includes all LOINC values whose CLASSTYPE is SURVEY in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)",
         "exampleBoolean": false,
-        "name": "US Core Survey Codes Value Set"
+        "name": "US Core Survey Codes"
       },
       {
         "reference": {
@@ -488,7 +488,7 @@
         },
         "description": "Used to tag patient submitted resources for writing and searching from EHRs",
         "exampleBoolean": false,
-        "name": "US Core Tags Value Set"
+        "name": "US Core Tags"
       },
       {
         "reference": {
@@ -1424,7 +1424,7 @@
         },
         "description": "Starter set of clinical test LOINC codes identified in Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter",
         "exampleBoolean": false,
-        "name": "US Core Clinical Test Codes ValueSet"
+        "name": "US Core Clinical Test Codes"
       },
       {
         "reference": {
@@ -1432,7 +1432,7 @@
         },
         "description": "Common SDOH assessment concepts covering the following categories (Gravity Project SDOH Domains):\n - Food (Food Insecurity)\n - Housing (Housing Instability)\n - Health (Social Connection, Stress)\n - Employment (Employment Status)\n - Care (SDOH Category Unspecified)\n - Transit (Transportation Insecurity)\n - Money (Financial Insecurity)\n - Goods (Material Hardship)\n - Education (SDOH Category Unspecified)\n - Legal (SDOH Category Unspecified)",
         "exampleBoolean": false,
-        "name": "US Core Common SDOH Assessments ValueSet"
+        "name": "US Core Common SDOH Assessments"
       },
       {
         "reference": {
@@ -1440,7 +1440,7 @@
         },
         "description": "This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions).   ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical information.",
         "exampleBoolean": false,
-        "name": "US Core Condition Code"
+        "name": "US Core Condition Codes"
       },
       {
         "reference": {
@@ -1464,7 +1464,7 @@
         },
         "description": "Non laboratory LOINC concepts such as codes for observations like vital signs, hemodynamics, intake/output, EKG, obstetric ultrasound, cardiac echo and other clinical observations. The codes selected should represent discrete and narrative diagnostic observations and reports",
         "exampleBoolean": false,
-        "name": "US Core Clinical Test Codes"
+        "name": "US Core Non Laboratory Codes"
       },
       {
         "reference": {
@@ -1512,7 +1512,7 @@
         },
         "description": "HL7 FHIR concepts to classify an observation",
         "exampleBoolean": false,
-        "name": "US Core Observation Category ValueSet"
+        "name": "US Core Observation Category"
       },
       {
         "reference": {
@@ -1544,7 +1544,7 @@
         },
         "description": "Code set for category codes for [US Core Condition Problems and Health Concerns Profile] consisting of the concepts \"problem\" and \"health-concern\".",
         "exampleBoolean": false,
-        "name": "US Core Problem Or Health Concern ValueSet"
+        "name": "US Core Problem or Health Concern"
       },
       {
         "reference": {
@@ -1576,7 +1576,7 @@
         },
         "description": "A set of SNOMED CT and LOINC concepts to classify a requested service",
         "exampleBoolean": false,
-        "name": "US Core ServiceRequest Category Codes Value Set"
+        "name": "US Core ServiceRequest Category Codes"
       },
       {
         "reference": {
@@ -3031,12 +3031,12 @@
         },
         {
           "nameUrl": "guidance.html",
-          "title": "Guidance",
+          "title": "Rules and Guidance",
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "general-guidance.html",
-              "title": "General Guidance",
+              "nameUrl": "uscdi.html",
+              "title": "USCDI",
               "generation": "markdown"
             },
             {
@@ -3045,13 +3045,23 @@
               "generation": "markdown"
             },
             {
-              "nameUrl": "clinical-notes-guidance.html",
-              "title": "Clinical Notes Guidance",
+              "nameUrl": "general-requirements.html",
+              "title": "General Requirements",
               "generation": "markdown"
             },
             {
-              "nameUrl": "medication-list-guidance.html",
-              "title": "Medication List Guidance",
+              "nameUrl": "general-guidance.html",
+              "title": "General Guidance",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "clinical-notes.html",
+              "title": "Clinical Notes",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "medication-list.html",
+              "title": "Medication List",
               "generation": "markdown"
             },
             {
@@ -3061,7 +3071,7 @@
             },
             {
               "nameUrl": "sdoh.html",
-              "title": "SDOH Guidance",
+              "title": "SDOH",
               "generation": "markdown"
             },
             {

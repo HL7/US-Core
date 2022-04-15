@@ -78,7 +78,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
    - [Here](StructureDefinition-us-core-diagnosticreport-lab.html)
    - [Here](StructureDefinition-us-core-diagnosticreport-note.html)
 1. **Applied**: Change the query parameter value to be consistent with previous statement [FHIR-35047](https://jira.hl7.org/browse/FHIR-35047) [See Change Here](StructureDefinition-us-core-observation-clinical-test.html#note)
-1. **Applied**: Reordered sections in *Downloads* page [FHIR-35064](https://jira.hl7.org/browse/FHIR-35064) [See Change Here](downloads.html)
+1. **Applied**: Re-ordered sections in *Downloads* page and provide a zip file of schematrons [FHIR-35064](https://jira.hl7.org/browse/FHIR-35064) [See Change Here](downloads.html)
 1. **Resolved - change required**: Is the Guidance chapter informative? [FHIR-35065](https://jira.hl7.org/browse/FHIR-35065) [See Change Here](#.html)
 1. **Resolved - change required**: DSTU2 and R4 requirements hard to support [FHIR-35066](https://jira.hl7.org/browse/FHIR-35066) [See Change Here](#.html)
 1. **Resolved - change required**: DSTU2 support not specified [FHIR-35067](https://jira.hl7.org/browse/FHIR-35067) [See Change Here](#.html)
@@ -573,7 +573,7 @@ listed below are the resolved trackers for this version:
 
 1. Remove US Core Server Capability Statement *requires* support for HTTP status 410-deleted ([FHIR-26597](https://jira.hl7.org/browse/FHIR-26597)) [See Change Here](http://hl7.org/fhir/us/core/2021Jan/CapabilityStatement-us-core-server.html#behavior)
 
-1. Change US Core Condition Code Value Set Logical Definition ([FHIR-26060](https://jira.hl7.org/browse/FHIR-26060)) [See Change Here](http://hl7.org/fhir/us/core/2021Jan/ValueSet-us-core-condition-code.html)
+1. Change US Core Condition Codes Value Set Logical Definition ([FHIR-26060](https://jira.hl7.org/browse/FHIR-26060)) [See Change Here](http://hl7.org/fhir/us/core/2021Jan/ValueSet-us-core-condition-code.html)
 
 1. Recommend against using SSN for Patient.identifier ([FHIR-24903](https://jira.hl7.org/browse/FHIR-24903)) [See Change Here](http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-patient.html#FHIR-24903)
 

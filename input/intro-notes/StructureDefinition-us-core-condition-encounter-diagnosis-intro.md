@@ -35,7 +35,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Profile specific implementation guidance:**
 
 * USCDI v2 applicable vocabulary standards for Encounter Diagnosis are SNOMED CT and ICD-10-CM.  For general guidance on extensible binding to coded data, review [this section](conformance-expectations.html#extensible-binding-for-codeableconcept-datatype) in the Conformance Expectations page.
-  - The [US Core Condition Code] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and should be used as the primary code for current encounter diagnoses.
+  - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and should be used as the primary code for current encounter diagnoses.
 * The encounter **SHOULD** always be referenced in `Condition.encounter`.
 * To search for an encounter diagnosis, query for Conditions that reference the Encounter of interest and have a category of `encounter-diagnosis`.  An example search is shown in the [Quick Start](#search) section below.
 * \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDate`, or `Condition.recordedDate`.

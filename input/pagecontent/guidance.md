@@ -1,11 +1,13 @@
 
-- [General Guidance]
+- [USCDI]
 - [Conformance Expectations]
-- [Clinical Notes Guidance]
-- [Medication List Guidance]
+- [General Requirements]
+- [General Guidance]
+- [Clinical Notes]
+- [Medication List]
 - [Basic Provenance]
-- [SDOH Guidance]
-- [[Changes Between US Core Versions]
+- [SDOH]
+- [Changes Between US Core Versions]
 - [Future of US Core]
 
 {% include link-list.md %}
