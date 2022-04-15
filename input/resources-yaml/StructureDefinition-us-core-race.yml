@@ -1,0 +1,175 @@
+resourceType: StructureDefinition
+id: us-core-race
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-race'
+version: 3.1.1
+name: USCoreRaceExtension
+title: US Core Race Extension
+status: active
+date: '2019-05-21'
+publisher: HL7 US Realm Steering Committee
+contact:
+  - telecom:
+      - system: url
+        value: 'http://www.healthit.gov'
+description: >-
+  Concepts classifying the person into a named category of humans sharing common
+  history, traits, geographical origin or nationality.  The race codes used to
+  represent these concepts are based upon the [CDC Race and Ethnicity Code Set
+  Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which
+  includes over 900 concepts for representing race and ethnicity of which 921
+  reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB
+  race categories:
+
+   - American Indian or Alaska Native
+   - Asian
+   - Black or African American
+   - Native Hawaiian or Other Pacific Islander
+   - White.
+jurisdiction:
+  - coding:
+      - system: 'urn:iso:std:iso:3166'
+        code: US
+        display: United States of America
+purpose: Complies with 2015 Edition Common Clinical Data Set for patient race.
+fhirVersion: 4.0.1
+kind: complex-type
+abstract: false
+context:
+  - type: element
+    expression: Patient
+  - type: element
+    expression: RelatedPerson
+  - type: element
+    expression: Person
+  - type: element
+    expression: Practitioner
+  - type: element
+    expression: FamilyMemberHistory
+type: Extension
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
+derivation: constraint
+differential:
+  element:
+    - id: Extension
+      path: Extension
+      short: US Core Race Extension
+      definition: >-
+        Concepts classifying the person into a named category of humans sharing
+        common history, traits, geographical origin or nationality.  The race
+        codes used to represent these concepts are based upon the [CDC Race and
+        Ethnicity Code Set Version
+        1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which
+        includes over 900 concepts for representing race and ethnicity of which
+        921 reference race.  The race concepts are grouped by and pre-mapped to
+        the 5 OMB race categories:
+
+           - American Indian or Alaska Native
+           - Asian
+           - Black or African American
+           - Native Hawaiian or Other Pacific Islander
+           - White.
+      min: 0
+      max: '1'
+    - id: 'Extension.extension:ombCategory'
+      path: Extension.extension
+      sliceName: ombCategory
+      short: >-
+        American Indian or Alaska Native|Asian|Black or African American|Native
+        Hawaiian or Other Pacific Islander|White
+      definition: >-
+        The 5 race category codes according to the [OMB Standards for
+        Maintaining, Collecting, and Presenting Federal Data on Race and
+        Ethnicity, Statistical Policy Directive No. 15, as revised, October 30,
+        1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).
+      min: 0
+      max: '5'
+      type:
+        - code: Extension
+      mustSupport: true
+      mapping:
+        - identity: iso11179
+          map: /ClinicalDocument/recordTarget/patientRole/patient/raceCode
+    - id: 'Extension.extension:ombCategory.url'
+      path: Extension.extension.url
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: ombCategory
+    - id: 'Extension.extension:ombCategory.value[x]'
+      path: 'Extension.extension.value[x]'
+      min: 1
+      max: '1'
+      type:
+        - code: Coding
+      binding:
+        strength: required
+        description: >-
+          The 5 race category codes according to the [OMB Standards for
+          Maintaining, Collecting, and Presenting Federal Data on Race and
+          Ethnicity, Statistical Policy Directive No. 15, as revised, October
+          30,
+          1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/omb-race-category'
+    - id: 'Extension.extension:detailed'
+      path: Extension.extension
+      sliceName: detailed
+      short: Extended race codes
+      definition: >-
+        The 900+ CDC race codes that are grouped under one of the 5 OMB race
+        category codes:.
+      min: 0
+      max: '*'
+      type:
+        - code: Extension
+      mapping:
+        - identity: iso11179
+          map: '/ClinicalDocument/recordTarget/patientRole/patient/sdtc:raceCode'
+    - id: 'Extension.extension:detailed.url'
+      path: Extension.extension.url
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: detailed
+    - id: 'Extension.extension:detailed.value[x]'
+      path: 'Extension.extension.value[x]'
+      min: 1
+      max: '1'
+      type:
+        - code: Coding
+      binding:
+        strength: required
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/detailed-race'
+    - id: 'Extension.extension:text'
+      path: Extension.extension
+      sliceName: text
+      short: Race Text
+      definition: Plain text representation of the race concept(s).
+      min: 1
+      max: '1'
+      type:
+        - code: Extension
+      mustSupport: true
+    - id: 'Extension.extension:text.url'
+      path: Extension.extension.url
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: text
+    - id: 'Extension.extension:text.value[x]'
+      path: 'Extension.extension.value[x]'
+      min: 1
+      max: '1'
+      type:
+        - code: string
+    - id: Extension.url
+      path: Extension.url
+      min: 1
+      max: '1'
+      fixedUri: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-race'
+    - id: 'Extension.value[x]'
+      path: 'Extension.value[x]'
+      min: 0
+      max: '0'
