@@ -101,7 +101,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
   -[Here](StructureDefinition-us-core-observation-survey.html)
   -[Here](StructureDefinition-us-core-SDOH-assessment.html)
   -[Here](StructureDefinition-us-core-questionnaireresponse.html)
-1. **Resolved - change required**: provide clearer guidance for $docref operation when no date range is specified [FHIR-35380](https://jira.hl7.org/browse/FHIR-35380) [See Change Here](#.html)
+1. **Applied**: Clarify $docref operation expectations [FHIR-35380](https://jira.hl7.org/browse/FHIR-35380) [See Change Here](CapabilityStatement-us-core-server.html#documentreference)
 1. **Applied**: Typo [FHIR-35388](https://jira.hl7.org/browse/FHIR-35388)
 1. **Applied**: Duplicate sections in US Core RelatedPerson Profile profile [FHIR-35452](https://jira.hl7.org/browse/FHIR-35452)
 1. **Resolved - change required**: Update guidance on changes between versions [FHIR-35576](https://jira.hl7.org/browse/FHIR-35576) [See Change Here](changes-between-versions.html)
