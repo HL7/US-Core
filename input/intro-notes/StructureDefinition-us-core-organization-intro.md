@@ -15,20 +15,21 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each Organization must have:**
 
-1.  A status of the organization
+1.  A status of the organization (i.e., whether is still active )
 1.  A name
 
 
 **Each Organization must support:**
 
-1.  An identifier
-   - **SHALL** support National Provider Identifier (NPI) for organizations
-   - **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) for laboratories.
+1.  An identifier*
 1.  A list of contact information
 1.  An address
 
+*see guidance below
+
 **Profile specific implementation guidance:**
 
-- none
+- \*Systems **SHALL** support National Provider Identifier (NPI) for organizations
+  and **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) for laboratories.
 
 {% include link-list.md %}
