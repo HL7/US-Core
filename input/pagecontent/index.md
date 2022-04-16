@@ -11,7 +11,7 @@ Key updates and detailed changes between this and prior versions are available i
 ### Introduction
 
 
-The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. There are two different ways to implement US Core:
+The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. <span class="bg-success" markdown="1">By establishing the “floor” of standards to promote interoperability and adoption through common implementation, it allows for further standards development evolution for specific uses cases.</span><!-- new-content -->  There are two different ways to implement US Core:
 1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information.
 1. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
 
@@ -39,7 +39,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   - <span class="bg-success" markdown="1">[Changes Between US Core Versions] considers the user and developer experience when transitioning between versions of US Core</span><!-- new-content -->.
   - [Future of US Core] outlines the approach to adding new content to US Core.
 - [FHIR Artifacts]\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
-  - [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarizes the supported search transactions for each Profile. <span class="bg-success" markdown="1">Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation and certification.</span><!-- new-content --> 
+  - [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarizes the supported search transactions for each Profile. <span class="bg-success" markdown="1">Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation and certification.</span><!-- new-content -->
   - [Search Parameters and Operations]\: This page lists the  defined Operations and Search Parameters that are used in US Core transactions.
   - [Terminology]\: This page lists the value sets and code system defined for  profiles.
   - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various  actors.
