@@ -21,8 +21,8 @@ All the examples that are used in this Implementation Guide available for downlo
 
 All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file.  This may be useful to testers and analysts to review elements properties across profiles in a single table:
 
-- [CSV](uscore_profiles.csv)
-- [Excel](uscore_profiles.xlsx)
+- [CSV](all_profiles.csv)
+- [Excel](all_profiles.xlsx)
 
 ### Schematrons
 

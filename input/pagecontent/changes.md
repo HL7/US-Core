@@ -132,7 +132,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: provenance-1 blows up when there are multiple agents [FHIR-36328](https://jira.hl7.org/browse/FHIR-36328) [See Change Here](#.html)
 1. **Resolved - change required**: Problematic fhirpath in  [FHIR-36336](https://jira.hl7.org/browse/FHIR-36336) [See Change Here](#.html)
 1. **Applied**: Correct _targetProfile element in Provenance StructureDefinition [FHIR-36344](https://jira.hl7.org/browse/FHIR-36344) [See Change Here](StructureDefinition-us-core-provenance.html)
-1. **Resolved - change required**: incorrect guidance on accessing VSAC Valueset VSD [FHIR-36639](https://jira.hl7.org/browse/FHIR-36639) [See Change Here](#.html)
+1. **Applied**: Correct guidance on accessing VSAC Valuesets [FHIR-36639](https://jira.hl7.org/browse/FHIR-36639) [See Change Here](terminology.html#using-value-set-authority-center-vsac)
 1. **Applied**: Move change log from version history to new change log  page in IG [FHIR-36703](https://jira.hl7.org/browse/FHIR-36703) [See Change Here](changes.html)
 1. **Applied**: Remove redundant example sections [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728)
 1. **Applied**: Realign ids names and titles for all new profiles for consistency [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728) [See Change Here](profiles-and-extensions.html)

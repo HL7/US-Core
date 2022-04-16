@@ -61,20 +61,34 @@ This guide links terminology directly to the FHIR® Terminology Service for VSAC
 
   - It is a requirement of VSAC to log in using your own *UMLS API Key* to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html).  (See the screen shots below)
   - The value sets in VSAC are specified using a VSAC value set OID.  
-  - The retrieval of a value set using the FHIR API structure using just the OID provided will only retrieve the value set definition, when available, and to obtain the expansion, the expansion operation is used.
+  - To view the value set expansion in the VSAC user interface, use:
 
- For example, the [US Core Smoking Status Observation Profile] valueCodeableConcept element has a preferred binding to the Smoking Status value set in VSAC using this link `https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.38/expansion`. The screenshot below illustrates that by clicking on the link:
+      `GET https://vsac.nlm.nih.gov/ValueSet/[VSAC OID]/expansion`
+
+    An example of this is shown in the screenshots below.  
+
+  - To fetch the FHIR ValueSet resource (in other words, the value set definition) use:
+
+       `GET https://cts.nlm.nih.gov/fhir/ValueSet/[VSAC OID]`
+
+  - To fetch the FHIR ValueSet resource expansion use the FHIR `$expand` operation:
+
+       `GET https://cts.nlm.nih.gov/fhir/ValueSet/[VSAC OID]/$expand`
+
+For more information refer to the [FHIR Terminology Service for VSAC Resources](https://www.nlm.nih.gov/vsac/support/usingvsac/vsacfhirapi.html)
+
+
+For example, the [US Core Smoking Status Observation Profile] valueCodeableConcept element has a preferred binding to the Smoking Status value set. To access it in VSAC, click on the link to `https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.38/expansion`:
 
  {% include img.html img="vsac-1.png" caption="Figure 1: VSAC link" %}
 
-The reader is redirected to the VSAC login page to enter an API Key:
+The reader is redirected to the VSAC login page to enter an API Key (only one login is required per session):
 
  {% include img.html img="vsac-2.png" caption="Figure 2: VSAC API-Key Login" %}
 
-After successfully entered the API Key the value set can be inspected, downloaded, etc:
+After successfully entered the API Key the value set can be inspected, downloaded, etc. using the VSAC User interface as shown in the figure below.  This FHIR ValueSet resource can also be fetched using the url `https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.38`, and the FHIR ValueSet expansion using the url `https://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.38/$expand`.
 
  {% include img.html img="vsac-3.png" caption="Figure 3: VSAC Smoking Status ValueSet" %}
 
-Note that only one login is required per session.
 
 {% include link-list.md %}

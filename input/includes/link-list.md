@@ -332,3 +332,4 @@
 [USCDI]: uscdi.html
 [General Requirements]: general-requirements.html
 [LG41762-2]: https://loinc.org/LG41762-2/
+[FHIR Terminology Service for VSAC Resources]: https://www.nlm.nih.gov/vsac/support/usingvsac/vsacfhirapi.html
