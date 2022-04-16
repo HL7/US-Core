@@ -2,7 +2,7 @@
 This page has been substantially rewritten to represent surveys/assessments using Observations.
 </div><!-- new-content -->
 
-This profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve observations that represent the questions and responses to form/survey and assessment tools.  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  These observations are distinct from observations representing individual clinical assessments made by an individual about a patient's social history and not derived from an assessment tool or survey. These types of observations should use the [US Core Social History Assessment Observation Profile] instead.
+<span class="bg-success" markdown="1">To promote interoperability and adoption through common implementation,</span><!-- new-content --> the US Core Observation Survey Profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve observations that represent the questions and responses to form/survey and assessment tools.  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions.  {% include profile-intro.md %}
 
 **Example Usage Scenarios:**
 
@@ -35,6 +35,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - \*\*For responses to multi-select or “check all that apply” questions, each response is represented as individual US Core Survey Observations. For each response, the question is represented in`Observation.code`, and the answer in  `Observation.value`.
 - \*\*For multi-question surveys and assessments represented in `Observation.code`, the  `Observation.value` element should be empty, and the individual survey questions represented as distinct US Core Survey Observations and referenced using `Observation.hasMember`.
 - See [SDOH Guidance] for how this profile *along with other Observation Profiles or alternatively QuestionnaireResponse* to is used represent SDOH assessments.
+- Individual clinical assessments made by an individual about a patient's social history which array_to_sentence_string not derived from an assessment tool or survey should use the [US Core Observation Social History Profile] instead.
 {% include obs_cat_guidance.md -%}
 {% include DAR-exception.md %}
 

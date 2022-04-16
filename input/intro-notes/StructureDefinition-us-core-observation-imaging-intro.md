@@ -1,5 +1,4 @@
-
-﻿This profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve structured and unstructured (narrative) components of diagnostic imaging test results for a patient. These observations include reasons, findings, and impressions.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
+<span class="bg-success" markdown="1">To promote interoperability and adoption through common implementation,</span><!-- new-content --> the US Core Observation Imaging Result Profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve structured and unstructured (narrative) components of diagnostic imaging test results for a patient. These observations include reasons, findings, and impressions. {% include profile-intro.md %}
 
 **Example Usage Scenarios:**
 

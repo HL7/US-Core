@@ -59,7 +59,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
    - [Here](StructureDefinition-us-core-immunization.html)
    - [Here](StructureDefinition-us-core-patient.html)
 1. **Applied**: Clarify that SDOH data elements does not include work information (see ODH) [FHIR-34701](https://jira.hl7.org/browse/FHIR-34701) [See Change Here](sdoh.html)
-1. **Applied**: Add t386053000 "Evaluation procedure" ,410606002 "Social service procedure" to the ServiceRequest Category Code [FHIR-34747](https://jira.hl7.org/browse/FHIR-34747) [See Change Here](#.html)
+1. **Applied**: Add 386053000 "Evaluation procedure" ,410606002 "Social service procedure" to the ServiceRequest Category Code [FHIR-34747](https://jira.hl7.org/browse/FHIR-34747) [See Change Here](#.html)
 1. **Applied**: Broaden Common SDOH assessment concepts and clarify is a starter set [FHIR-34752](https://jira.hl7.org/browse/FHIR-34752) See Change:
    - [Here](sdoh.html#assessment-codes)
    - [Here](ValueSet-us-core-common-sdoh-assessments.html)

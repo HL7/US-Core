@@ -1,5 +1,6 @@
 
-﻿This profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve observations that represent simple observations made by an individual about a patient's social history status such as education, food insecurity, etc.   It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  These observations are distinct from observations that are formally derived from an assessment tool or survey and should use the [US Core Survey Observation Profile] instead.
+﻿<span class="bg-success" markdown="1">To promote interoperability and adoption through common implementation,</span><!-- new-content --> the US Core Observation Social History Profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve observations that represent simple observations made by an individual about a patient's social history status such as education, food insecurity, etc.  {% include profile-intro.md %}
+
 
 **Example Usage Scenarios:**
 
@@ -28,8 +29,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 - See [SDOH Guidance] for how this profile can used to represent SDOH assessments.
-- Simple assertion may be derived from a screening tool assessments such as [US Core Survey Observation Profile]  and can reference them using `Observation.derivedFrom`.
-
+- Observations that are formally derived from an assessment tool or survey should use the [US Core Observation Survey Profile]. However, simple assertion may be derived from a screening tool assessments and can reference them using `Observation.derivedFrom`.
 - The codes can be from LOINC or SNOMED CT.
 - Often the pattern for these types of observations that the `Observation.code` indicates a statement about findings and the `Observation.value` is present and "qualifies" the finding typically confirming or refuting it. For example:
 
