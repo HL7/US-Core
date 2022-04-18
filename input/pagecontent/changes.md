@@ -22,14 +22,14 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: List profiles by type and create table comparing Observation Profiles [FHIR-30780](https://jira.hl7.org/browse/FHIR-30780) See Changes:
   - [Here](profiles-and-extensions.html)
   - [Here](index.html#us-core-profiles)
-  - [Here](index.html#us-core-profiles)
+  - [Here](#.html)
 1. **Resolved - change required**: Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783) [See Change Here](#.html)
-1. **Resolved - change required**: Why is SDOH Assessment's Observation.component.code MS? Why is Observation.component? [FHIR-34384](https://jira.hl7.org/browse/FHIR-34384) [See Change Here](#.html)
+1. **Applied**: Why is SDOH Assessment's Observation.component.code MS? Why is Observation.component? [FHIR-34384](https://jira.hl7.org/browse/FHIR-34384) [See Change Here](StructureDefinition-us-core-observation-survey.html)
 1. **Applied**: Clarify clinicalStatus invariant [FHIR-34468](https://jira.hl7.org/browse/FHIR-34468) [See Change Here](general-guidance.html#missing-data)
 1. **Applied**: Fix Ethnicity ValueSet description [FHIR-34488](https://jira.hl7.org/browse/FHIR-34488) [See Change Here](ValueSet-omb-ethnicity-category.html)
 1. **Applied**: Remove MS from ServiceRequest.occurrenceDateTime add MS to ServiceRequest.occurrencePeriod [FHIR-34493](https://jira.hl7.org/browse/FHIR-34493) [See Change Here](StructureDefinition-us-core-servicerequest.html)
 1. **Applied**: Change Goal.description search requirement from SHALL to SHOULD [FHIR-34546](https://jira.hl7.org/browse/FHIR-34546) [See Change Here](StructureDefinition-us-core-goal.html#notes)
-1. **Resolved - change required**: SDOH Category Codes section could call out that categorization is fuzzy for SDOH [FHIR-34550](https://jira.hl7.org/browse/FHIR-34550) [See Change Here](#.html)
+1. **Applied**: Warn client that categorization is fuzzy for SDOH [FHIR-34550](https://jira.hl7.org/browse/FHIR-34550) [See Change Here](sdoh.html#category-codes)
 1. **Applied**: Split US Core Condition into two profile: Encounter Diagnosis and Problems/Health Concerns [FHIR-34553](https://jira.hl7.org/browse/FHIR-34553) See Change:
     - [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
     - [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
