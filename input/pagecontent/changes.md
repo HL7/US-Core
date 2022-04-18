@@ -67,8 +67,13 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Clinical Test Result Observation Profile Must Have needs to address the 3 slices for procedure, exam, and activity in the explanatory text [FHIR-34753](https://jira.hl7.org/browse/FHIR-34753) [See Change Here](StructureDefinition-us-core-observation-clinical-test.html)
 1. **Applied**: Clarify guidance for use of Patient.genderIdentity, Patient.birthsex, and pre-existing Patient.gender [FHIR-34754](https://jira.hl7.org/browse/FHIR-34754) [See Change Here](StructureDefinition-us-core-patient.html)
 1. **Resolved - change required**: RelatedPerson relationshiptype should have binding to FHIR value set RelatedPerson-relationshiptype [FHIR-34755](https://jira.hl7.org/browse/FHIR-34755) [See Change Here](#.html)
-1. **Triaged**: There are now about 19 profiles based on Observation, consider consolidating to all purpose Observation with code specific rule pages [FHIR-34890](https://jira.hl7.org/browse/FHIR-34890) [See Change Here](#.html)
-1. **Resolved - change required**: Lab Result and Specimen Information for RBC Observation is Missing [FHIR-34910](https://jira.hl7.org/browse/FHIR-34910) [See Change Here](#.html)
+1. **Triaged**: There are now about 19 profiles based on Observation, consider consolidating to all purpose Observation with code specific rule pages [FHIR-34890](https://jira.hl7.org/browse/FHIR-34890) See Change
+  - [Here](index.html#us-core-profiles)
+  - [Here](profiles-and-extensions.html)
+1. **Applied**: Lab Result and Specimen Information for RBC Observation is Missing [FHIR-34910](https://jira.hl7.org/browse/FHIR-34910) See Change
+   - [Here](index.html#how-to-read-this-guide)
+   - [Here](examples.html)
+   - [Here](Observation-blood-glucose.html)
 1. **Applied**: Added guidance on Observation.category limitations [FHIR-34949](https://jira.hl7.org/browse/FHIR-34949) [See Change Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
 1. **Applied**: Add guidance on Imaging DiagnosticReport ontology [FHIR-34958](https://jira.hl7.org/browse/FHIR-34958) [See Change Here](#.html)
 1. **Applied**: Clarify that the profile guidance is not limited to profiled elements [FHIR-34971](https://jira.hl7.org/browse/FHIR-34971) [See Change Here](index.html#how-to-read-this-guide)
@@ -78,7 +83,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
    - [Here](StructureDefinition-us-core-diagnosticreport-note.html)
 1. **Applied**: Change the query parameter value to be consistent with previous statement [FHIR-35047](https://jira.hl7.org/browse/FHIR-35047) [See Change Here](StructureDefinition-us-core-observation-clinical-test.html#note)
 1. **Applied**: Re-ordered sections in *Downloads* page and provide a zip file of schematrons [FHIR-35064](https://jira.hl7.org/browse/FHIR-35064) [See Change Here](downloads.html)
-1. **Resolved - change required**:  Update menu title to "Guidance and Rules". Remove "Guidance" from names Clinical Notes Guidance, Medication List Guidance and SDOH Guidance. Split General Guidance page into 1) USCDI 2)General Requirements adn  3)General Guidance. [FHIR-35065](https://jira.hl7.org/browse/FHIR-35065) See Change:
+1. **Resolved - change required**:   Split General Guidance page into 1) USCDI 2)General Requirements 3)General Guidance. Move General Requirements under  Conformance Expectations. [FHIR-35065](https://jira.hl7.org/browse/FHIR-35065) See Change:
   -[Here](uscdi.html)
   -[Here](general-requirements.html)
   -[Here](general-guidance.html)
