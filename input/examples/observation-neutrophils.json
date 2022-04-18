@@ -1,0 +1,80 @@
+{
+    "category": [
+        {
+            "coding": [
+                {
+                    "code": "laboratory",
+                    "display": "Laboratory",
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+                }
+            ],
+            "text": "Laboratory"
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "code": "770-8",
+                "display": "Neutrophils/100 leukocytes in Blood by Automated count",
+                "system": "http://loinc.org"
+            }
+        ],
+        "text": "Neutrophils %"
+    },
+    "effectiveDateTime": "2005-07-05",
+    "id": "neutrophils",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Neutrophils Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a neutrophils example for the *US Core Observation Lab Profile*."
+            }
+        ],
+        "lastUpdated": "2016-03-09T15:29:58.052+00:00",
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+        ],
+        "versionId": "1106"
+    },
+    "referenceRange": [
+        {
+            "high": {
+                "code": "%",
+                "system": "http://unitsofmeasure.org",
+                "unit": "%",
+                "value": 67.0
+            },
+            "low": {
+                "code": "%",
+                "system": "http://unitsofmeasure.org",
+                "unit": "%",
+                "value": 37.0
+            },
+            "type": {
+                "coding": [
+                    {
+                        "code": "normal",
+                        "display": "Normal Range",
+                        "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+                    }
+                ],
+                "text": "Normal Range"
+            }
+        }
+    ],
+    "resourceType": "Observation",
+    "status": "final",
+    "subject": {
+        "display": "Amy Shaw",
+        "reference": "Patient/example"
+    },
+    "valueQuantity": {
+        "system": "http://unitsofmeasure.org",
+        "unit": "%",
+        "value": 40.0
+    }
+}

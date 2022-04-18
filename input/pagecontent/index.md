@@ -44,7 +44,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   - [Terminology]\: This page lists the value sets and code system defined for  profiles.
   - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various  actors.
 - [Security]\: General security requirements and recommendations for  actors.
-- [Examples]\: List of links to all the examples used in this guide.
+- [Examples]\: List of links to all the examples used in this guide. {% include nonnormative-example-boilerplate.md %}
 - [Downloads]\: This page provides links to downloadable artifacts.
 
 ### US Core Actors
