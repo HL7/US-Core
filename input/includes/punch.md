@@ -21,3 +21,14 @@ Publication Punch List:
 - [ ] TCS Vote
 - [ ] Publication Checklist
 </div><!-- new-content -->
+
+
+<!--
+trackers list:
+
+finish 36052
+index page
+versions pages
+requirements vs guidance pages
+dstu2 - r4 comparson table.
+-->

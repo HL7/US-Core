@@ -46,6 +46,14 @@
                 "alias": [
                     "Basic Provenance"
                 ],
+                "constraint": [
+                    {
+                        "key": "provenance-1",
+                        "severity": "error",
+                        "human": "onBehalfOf SHALL be present when Provenance.agent.who is a Practitioner or Device",
+                        "expression": "((Provenance.agent.who.resolve() is Practitioner) or (Provenance.agent.who.resolve() is Device)) implies onBehalfOf.exists()"
+                    }
+                ],
                 "mustSupport": false
             },
             {
@@ -77,6 +85,9 @@
                     ],
                     "rules": "open"
                 },
+                "condition": [
+                    "provenance-1"
+                ],
                 "mustSupport": true
             },
             {
@@ -165,14 +176,6 @@
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
                         ]
-                    }
-                ],
-                "constraint": [
-                    {
-                        "key": "provenance-1",
-                        "severity": "error",
-                        "human": "onBehalfOf SHALL be present when Provenance.agent.who is a Practitioner or Device",
-                        "expression": "((%resource.agent.who.resolve() is Practitioner) or (%resource.agent.who.resolve() is Device)) implies exists()"
                     }
                 ],
                 "mustSupport": true
