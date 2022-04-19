@@ -33,14 +33,6 @@ differential:
         requirements.
       alias:
         - Basic Provenance
-      constraint:
-        - key: provenance-1
-          severity: error
-          human: >-
-            onBehalfOf SHALL be present when Provenance.agent.who is a
-            Practitioner or Device
-          expression: >-
-            ((Provenance.agent.who.resolve() is Practitioner) or (Provenance.agent.who.resolve() is Device)) implies onBehalfOf.exists()
       mustSupport: false
     - id: Provenance.target
       path: Provenance.target
@@ -60,8 +52,14 @@ differential:
           - type: pattern
             path: type
         rules: open
-      condition:
-        - provenance-1
+      constraint:
+        - key: provenance-1
+          severity: error
+          human: >-
+            onBehalfOf SHALL be present when Provenance.agent.who is a
+            Practitioner or Device
+          expression: >-
+            ((who.resolve() is Practitioner) or (who.resolve() is Device)) implies onBehalfOf.exists()
       mustSupport: true
     - id: Provenance.agent.type
       path: Provenance.agent.type
