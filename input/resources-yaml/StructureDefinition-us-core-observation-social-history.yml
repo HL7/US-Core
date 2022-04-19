@@ -49,6 +49,18 @@ differential:
           - system: 'http://terminology.hl7.org/CodeSystem/observation-category'
             code: social-history
       mustSupport: true
+
+    - id: 'Condition.category:sdoh'
+      path: Condition.category
+      sliceName: sdoh
+      min: 0
+      max: '1'
+      patternCodeableConcept:
+        coding:
+          - system: 'http://loinc.org'
+            code: LG41762-2  #The LOINC “grouping” code: LG41762-2 Social Determinants Of Health
+      mustSupport: true
+
     - id: Observation.code
       path: Observation.code
       mustSupport: true

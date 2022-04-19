@@ -69,7 +69,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Clinical Test Result Observation Profile Must Have needs to address the 3 slices for procedure, exam, and activity in the explanatory text [FHIR-34753](https://jira.hl7.org/browse/FHIR-34753) [See Change Here](StructureDefinition-us-core-observation-clinical-test.html)
 1. **Applied**: Clarify guidance for use of Patient.genderIdentity, Patient.birthsex, and pre-existing Patient.gender [FHIR-34754](https://jira.hl7.org/browse/FHIR-34754) [See Change Here](StructureDefinition-us-core-patient.html)
 1. **Resolved - change required**: RelatedPerson relationshiptype should have binding to FHIR value set RelatedPerson-relationshiptype [FHIR-34755](https://jira.hl7.org/browse/FHIR-34755) [See Change Here](#.html)
-1. **Triaged**: There are now about 19 profiles based on Observation, consider consolidating to all purpose Observation with code specific rule pages [FHIR-34890](https://jira.hl7.org/browse/FHIR-34890) See Change
+1. **Resolved - change required**: There are now about 19 profiles based on Observation, consider consolidating to all purpose Observation with code specific rule pages [FHIR-34890](https://jira.hl7.org/browse/FHIR-34890) See Change
   - [Here](index.html#us-core-profiles)
   - [Here](profiles-and-extensions.html)
 1. **Applied**: Lab Result and Specimen Information for RBC Observation is Missing [FHIR-34910](https://jira.hl7.org/browse/FHIR-34910) See Change
@@ -97,7 +97,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Clarify description for effective time. [FHIR-35125](https://jira.hl7.org/browse/FHIR-35125) [See Change Here](StructureDefinition-us-core-diagnosticreport-lab.html)
 1. **Applied**: Fix CareTeam example's participant.role value [FHIR-35152](https://jira.hl7.org/browse/FHIR-35152) [See Change Here](CareTeam-example.html)
 1. **Applied**: US Core Condition profile ""status"" is ambiguous; clarify to be clinicalStatus [FHIR-35280](https://jira.hl7.org/browse/FHIR-35280) [See Change Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
-1. **Resolved - change required**: Conflicting guidance for Observation category for SDOH assessments [FHIR-35282](https://jira.hl7.org/browse/FHIR-35282) [See Change Here](#.html)
+1. **Applied**: Align Observation category for SDOH assessments [FHIR-35282](https://jira.hl7.org/browse/FHIR-35282) [See Change Here](StructureDefinition-us-core-observation-social-history.html)
 1. **Applied**: Add effective[x] 0..1 MS to US Core Observation Social History Profile [FHIR-35283](https://jira.hl7.org/browse/FHIR-35283) [See Change Here](StructureDefinition-us-core-social-history.html)
 1. **Applied**:  Clarify Condition.clinicalStatus requirements and searching using clinical-status [FHIR-35318](https://jira.hl7.org/browse/FHIR-35318) [See Change Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 1. **Applied**: Fix link [FHIR-35362](https://jira.hl7.org/browse/FHIR-35362)
@@ -136,7 +136,6 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: Modify Race Value Set [FHIR-36247](https://jira.hl7.org/browse/FHIR-36247) [See Change Here](#.html)
 1. **Applied**: Add MS to Device.distinctIdentifier to correct editorial error [FHIR-36303](https://jira.hl7.org/browse/FHIR-36303) [See Change Here](StructureDefinition-us-core-implantable-device.html)
 1. **Resolved - change required**: provenance-1 blows up when there are multiple agents [FHIR-36328](https://jira.hl7.org/browse/FHIR-36328) [See Change Here](#.html)
-1. **Resolved - change required**: Problematic fhirpath in  [FHIR-36336](https://jira.hl7.org/browse/FHIR-36336) [See Change Here](#.html)
 1. **Applied**: Correct _targetProfile element in Provenance StructureDefinition [FHIR-36344](https://jira.hl7.org/browse/FHIR-36344) [See Change Here](StructureDefinition-us-core-provenance.html)
 1. **Applied**: Correct guidance on accessing VSAC Valuesets [FHIR-36639](https://jira.hl7.org/browse/FHIR-36639) [See Change Here](terminology.html#using-value-set-authority-center-vsac)
 1. **Applied**: Move change log from version history to new change log  page in IG [FHIR-36703](https://jira.hl7.org/browse/FHIR-36703) [See Change Here](changes.html)

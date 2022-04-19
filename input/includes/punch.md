@@ -5,15 +5,11 @@
 Publication Punch List:
 
 - [ ] apply trackers - ...in progress...
+- [ ] review CabilityStatements
 - [ ] review application of trackers
 - [ ] update uscdi v2 tables ( todo for Brett to update )
-- [X] update merged profile csv/excel files
-- [X] update provenance black list if needed
-- [X] udpate profile list (or autogenerate with new tagging!)  - done
-- [X] update terminology list (or autogenerate with new tagging!)  - done
-- [X] update extension list (or autogenerate with new tagging!) -  done
-- [X] update example list (or autogenerate with new tagging!) -  done
-- [X] manage new_stuff list
+- [ ] follow up on publishing issues
+- [ ] follow up on terminology issues
 - [ ] Technical QA
 - [ ] Editorial QA
 - [ ] CGP Reviw

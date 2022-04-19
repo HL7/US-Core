@@ -18,7 +18,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Each Condition must have:**
 
 <!-- 1.  a status of the condition* -->
-1.  a category code of ‘problem-list-item’ or ‘health-concern’
+1.  a category code of "problem-list-item" or "health-concern"
 1.  a code that identifies the condition
 1.  a patient
 
@@ -26,7 +26,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 1.  <span class="bg-success" markdown="1">a clinical status of the condition (e.g., active or resolved)</span><!-- new-content -->
 1.  a verification status
-1.  a category code of ‘sdoh’
+1.  a category code of 'LG41762-2'(Social Determinants Of Health)
 1.  a date of diagnosis*
 1.  <span class="bg-success" markdown="1">abatement date (in other words, date of resolution or remission)</span><!-- new-content -->
 1.  a date when recorded*

@@ -17,12 +17,13 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Each Observation must have:**
 
 1. a status
-1. a category code of 'social-history'
+1. a category code of "social-history"
 1. a code
 1. a patient
 
 **Each Observation must support:**
 
+1. <span class="bg-success" markdown="1">a category code of 'LG41762-2'(Social Determinants Of Health)</span><!-- new-content -->
 1. a time indicating when observation was made
 1. who answered the questions
 3. a value
