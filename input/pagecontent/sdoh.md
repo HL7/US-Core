@@ -107,6 +107,6 @@ US Core has created the [US Core Common SDOH Assessments] ValueSet - commonly as
 
 ---
 
-[^1]: As documented in [Future of US Core], US Core may add more detailed work information such as Occupational Data for Health (ODH) in future versions.
+<span class="bg-success" markdown="1">[^1]: As documented in [Future of US Core], US Core may add more detailed work information such as Occupational Data for Health (ODH) in future versions.</span><!-- new-content -->
 
 {% include link-list.md %}
