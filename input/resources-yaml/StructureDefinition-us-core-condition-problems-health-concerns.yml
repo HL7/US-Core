@@ -79,7 +79,7 @@ differential:
       max: '1'
       patternCodeableConcept:
         coding:
-          - system: 'http://loinc.org'
+          - system: 'http://loinc.org' # get validator warning if omit system /-(
             code: LG41762-2  #The LOINC “grouping” code: LG41762-2 Social Determinants Of Health
       mustSupport: true
     - id: Condition.code
