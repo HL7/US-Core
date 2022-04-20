@@ -116,7 +116,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: Condition Category Code - LOINC Code for  [FHIR-35644](https://jira.hl7.org/browse/FHIR-35644) [See Change Here](#.html)
 1. **Resolved - change required**: Gender Identity Value set  [FHIR-35677](https://jira.hl7.org/browse/FHIR-35677) [See Change Here](#.html)
 1. **Resolved - change required**: Remove ""OTH"" from OMB Race Category valueSet [FHIR-35694](https://jira.hl7.org/browse/FHIR-35694) [See Change Here](#.html)
-1. **Resolved - change required**: Change Home Page to an explanation to exec summary of the problem and solution [FHIR-35755](https://jira.hl7.org/browse/FHIR-35755) [See Change Here](#.html)
+1. **Applied**: Change Home Page to an explanation to exec summary of the problem and solution [FHIR-35755](https://jira.hl7.org/browse/FHIR-35755) [See Change Here](index.html#us-core-fhir-restful-interactions)
 1. **Applied**: Remove MS from DiagnosticReport.imagingStudy [FHIR-35759](https://jira.hl7.org/browse/FHIR-35759) [See Change Here](StructureDefinition-us-core-diagnosticreport-note.html)
 1. **Resolved - change required**: Extensions used that are not defined in the scope [FHIR-35775](https://jira.hl7.org/browse/FHIR-35775) [See Change Here](#.html)
 1. **Applied**: Media example data value fails regex [FHIR-35790](https://jira.hl7.org/browse/FHIR-35790) [See Change Here](Media-ekg-strip.json.html)

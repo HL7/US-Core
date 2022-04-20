@@ -65,7 +65,7 @@ A product that responds to the data access request providing patient data. This 
 
 The list of US Core Profiles is shown below.  <span class="bg-success" markdown="1">To promote interoperability and adoption through common implementation,</span><!-- new-content --> each profile identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. <span class="bg-success" markdown="1"> Together they provide the floor for standards development for specific uses cases.</span><!-- new-content --> See the [USCDI] page, for a mapping to the U.S. Core Data for Interoperability (USCDI).
 
-For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the *Quick Start* Section of the profile page when conforming to the US Core [Capability Statements] for this profile.
+For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.
 
 <!-- new content comment remove prior to publishing-->
 The following section has been reformatted
@@ -78,6 +78,15 @@ The following section has been reformatted
 {% include sd-list-generator.md %}
 
 <!-- ================================================ -->
+
+### US Core FHIR RESTful interactions
+
+For systems that support both the US Core Profile content structure and the RESTful interactions defined for a resource, the requirements are formally defined in the US Core CapabilityStatements. Additionally, each profile page has a *Quick Start* Section that provides an overview of the required set of FHIR RESTful search and read operations. These sections document how to access a patient's clinical and administrative data using the FHIR RESTful syntax:
+
+{% include img-med.html img="basic_fhir_restful_interaction.svg" caption="Example of a simple FHIR RESTful Search Transaction" %}
+
+See the FHIR specification for details on [FHIR RESTful Search API] and the [SMART App Launch Protocol] for how an application gets access to a patient record.
+
 
 
 
