@@ -1,182 +1,160 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "us-core-smokingstatus",
-  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus",
-  "version": "3.1.1",
-  "name": "USCoreSmokingStatusProfile",
-  "title": "US Core Smoking Status Observation Profile",
-  "status": "active",
-  "experimental": false,
-  "date": "2019-05-21T00:00:00+00:00",
-  "publisher": "HL7 US Realm Steering Committee",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "http://www.healthit.gov"
-        }
-      ]
+    "resourceType": "StructureDefinition",
+    "id": "us-core-smokingstatus",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus",
+    "name": "USCoreSmokingStatusProfile",
+    "title": "US Core Smoking Status Observation Profile",
+    "status": "active",
+    "experimental": false,
+    "date": "2022-04-20",
+    "description": "The US Core Smoking Status Observation Profile is based upon the core FHIR Observation Resource and implementers the U.S. Core Data for Interoperability (USCDI) v2 Smoking status' requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases.",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Observation",
+                "path": "Observation",
+                "definition": "\\-",
+                "comment": "\\-",
+                "alias": [
+                    "Obs"
+                ],
+                "mustSupport": false,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.status",
+                "path": "Observation.status",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status"
+                },
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.status"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.category",
+                "path": "Observation.category",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.category:SocialHistory",
+                "path": "Observation.category",
+                "sliceName": "SocialHistory",
+                "min": 1,
+                "max": "1",
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                            "code": "social-history"
+                        }
+                    ]
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code",
+                "path": "Observation.code",
+                "short": "Smoking Status",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-smoking-status-observation-codes"
+                },
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.code"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.subject",
+                "path": "Observation.subject",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.subject"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.effectiveDateTime",
+                "path": "Observation.effectiveDateTime",
+                "min": 1,
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.issued"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.valueCodeableConcept",
+                "path": "Observation.valueCodeableConcept",
+                "short": "Coded Responses from Smoking Status Value Set",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+                            "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus-max"
+                        }
+                    ],
+                    "strength": "preferred",
+                    "description": "This value set enumerates codes SNOMED CT codes historically used for the current smoking status of a patient with a maximum required binding to Snomed CT codes.",
+                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.38"
+                },
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.valueCodeableConcept"
+                    }
+                ]
+            }
+        ]
     }
-  ],
-  "description": "Defines constraints and extensions on the Observation  resource for the minimal set of data to query and retrieve patient's Smoking Status information.",
-  "jurisdiction": [
-    {
-      "coding": [
-        {
-          "system": "urn:iso:std:iso:3166",
-          "code": "US",
-          "display": "United States of America"
-        }
-      ]
-    }
-  ],
-  "fhirVersion": "4.0.1",
-  "kind": "resource",
-  "abstract": false,
-  "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Observation",
-        "path": "Observation",
-        "definition": "The US Core Smoking Status Observation Profile is based upon the core FHIR Observation Resource and created to meet the USCDI Data Set 'Smoking status' requirements.",
-        "alias": [
-          "Obs"
-        ],
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation"
-          }
-        ]
-      },
-      {
-        "id": "Observation.status",
-        "path": "Observation.status",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.status"
-          }
-        ]
-      },
-      {
-        "id": "Observation.category",
-        "path": "Observation.category",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category:SocialHistory",
-        "path": "Observation.category",
-        "sliceName": "SocialHistory",
-        "min": 1,
-        "max": "1",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-              "code": "social-history"
-            }
-          ]
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.code",
-        "path": "Observation.code",
-        "short": "Smoking Status",
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-smoking-status-observation-codes"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.code"
-          }
-        ]
-      },
-      {
-        "id": "Observation.subject",
-        "path": "Observation.subject",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.subject"
-          }
-        ]
-      },
-      {
-        "id": "Observation.effectiveDateTime",
-        "path": "Observation.effectiveDateTime",
-        "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.issued"
-          }
-        ]
-      },
-      {
-        "id": "Observation.valueCodeableConcept",
-        "path": "Observation.valueCodeableConcept",
-        "short": "Coded Responses from Smoking Status Value Set",
-        "min": 1,
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mustSupport": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
-              "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus-max"
-            }
-          ],
-          "strength": "preferred",
-          "description": "This value set enumerates codes SNOMED CT codes historically used for the current smoking status of a patient with a maximum required binding to Snomed CT codes.",
-          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.11.20.9.38"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.valueCodeableConcept"
-          }
-        ]
-      }
-    ]
-  }
 }

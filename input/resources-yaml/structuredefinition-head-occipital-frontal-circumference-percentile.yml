@@ -1,0 +1,80 @@
+resourceType: StructureDefinition
+id: head-occipital-frontal-circumference-percentile
+url: >-
+  http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile
+version: 3.1.1
+name: USCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile
+title: US Core Pediatric Head Occipital-frontal Circumference Percentile Profile
+status: active
+experimental: false
+date: '2020-11-18'
+description: >-
+  To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patients from birth to 37 Months of age using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific uses cases.
+
+
+copyright: >-
+  Used by permission of HL7 International, all rights reserved Creative Commons
+  License
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Observation
+baseDefinition: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'
+derivation: constraint
+differential:
+  element:
+    - id: Observation
+      path: Observation
+      short: >-
+        US Core Pediatric Head Occipital-frontal Circumference Percentile
+        Profile
+      definition: '\-'
+      comment: '\-'
+
+      mustSupport: false
+    - id: Observation.code
+      path: Observation.code
+      short: Head Occipital-frontal circumference Percentile
+      type:
+        - code: CodeableConcept
+      patternCodeableConcept:
+        coding:
+          - system: 'http://loinc.org'
+            code: 8289-1
+      mustSupport: true
+    - id: Observation.valueQuantity
+      path: Observation.valueQuantity
+      min: 0
+      max: '1'
+      mustSupport: true
+    - id: Observation.valueQuantity.value
+      path: Observation.valueQuantity.value
+      min: 1
+      max: '1'
+      type:
+        - code: decimal
+      mustSupport: true
+    - id: Observation.valueQuantity.unit
+      path: Observation.valueQuantity.unit
+      min: 1
+      max: '1'
+      type:
+        - code: string
+      mustSupport: true
+    - id: Observation.valueQuantity.system
+      path: Observation.valueQuantity.system
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: 'http://unitsofmeasure.org'
+      mustSupport: true
+    - id: Observation.valueQuantity.code
+      path: Observation.valueQuantity.code
+      short: Coded responses from the common UCUM units for vital signs value set.
+      min: 1
+      max: '1'
+      type:
+        - code: code
+      fixedCode: '%'
+      mustSupport: true

@@ -2,9 +2,6 @@
 This profile has been added to represent SDOH surveys/assessments using Observations.
 </div><!-- new-content -->
 
-The US Core Observation SDOH Assessment Profile profile is based on the [US Core Observation Survey Profile] and sets minimum expectations for representing responses to assessment tools such as the [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey].  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions. It identifies the *additional* core elements, extensions, vocabularies and value sets which SHALL be present in the Observation resource when using this profile. <span class="bg-success" markdown="1">It provides the floor for standards development for specific uses cases.</span><!-- new-content -->
-
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:

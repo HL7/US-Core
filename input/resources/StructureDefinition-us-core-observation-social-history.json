@@ -5,8 +5,8 @@
     "name": "USCoreObservationSocialHistoryProfile",
     "title": "US Core Observation Social History Profile",
     "status": "active",
-    "date": "2021-11-12",
-    "description": "Profile for simple observations made by an individual about a patient's social history status such as education, food insecurity, etc.  These observation involve assessment by a provider, payer, etc. as opposed to being derived only from screening surveys which should be represented using the [US Core Survey Observation Profile](StructureDefinition-us-core-observation-survey.html)",
+    "date": "2022-04-20",
+    "description": "The US Core Observation Social History Profile meets the U.S. Core Data for Interoperability (USCDI) v2 \u2018SDOH Assessments\u2019 requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch retrieve observations that represent simple observations made by an individual about a patient's social history status such as education, food insecurity, etc.<sup>1</sup> It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific uses cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
@@ -19,7 +19,8 @@
                 "id": "Observation",
                 "path": "Observation",
                 "short": "assessment observation",
-                "definition": "Simple observations made by an individual about a patient's social history."
+                "definition": "\\-",
+                "comment": "\\-"
             },
             {
                 "id": "Observation.status",

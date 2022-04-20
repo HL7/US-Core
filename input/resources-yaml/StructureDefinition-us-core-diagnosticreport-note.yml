@@ -4,11 +4,9 @@ url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-n
 name: USCoreDiagnosticReportProfileNoteExchange
 title: US Core DiagnosticReport Profile for Report and Note exchange
 status: active
-date: '2021-11-09'
+date: '2022-04-20'
 description: >-
-  Defines constraints and extensions on the DiagnosticReport resource  for the
-  minimal set of data to query and retrieve diagnostic reports associated with
-  clinical notes for a patient
+  To promote interoperability and adoption through common implementation, this profile sets minimum expectations for searching and fetching Diagnostic Reports and Notes using the DiagnosticReport resource. This profile identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the DiagnosticReport when using this profile. It provides the floor for standards development for specific uses cases. Prior to reviewing this profile, implementers are encouraged to read the Clinical Notes Guidance to understand the overlap of US Core DiagnosticReport Profile for Report and Note exchange and US Core DocumentReference Profile.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -19,10 +17,8 @@ differential:
   element:
     - id: DiagnosticReport
       path: DiagnosticReport
-      definition: >-
-        Clinical Testing and Imaging tests performed on a patient that results
-        in structured or unstructured (narrative) findings specific to the
-        patient.
+      definition: '\-'
+      comment: '\-'
       alias:
         - Imaging Report
         - Radiology Report

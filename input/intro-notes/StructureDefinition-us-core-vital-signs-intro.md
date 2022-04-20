@@ -1,20 +1,4 @@
 
-This profile is based on the base FHIR [Vital Signs Profile] and identifies the must support elements and value sets which **SHALL** be present in the Observation resource when using this profile.  This profile is used as the base for the following vital signs profiles in this guide:
-
-- [US Core Blood Pressure Profile]
-- [US Core BMI Profile]
-- [US Core Head Circumference Profile]
-- [US Core Body Height Profile]
-- [US Core Body Weight Profile]
-- [US Core Body Temperature Profile]
-- [US Core Heart Rate Profile]
-- [US Core Pediatric BMI for Age Observation Profile]
-- [US Core Pediatric Head Occipital-frontal Circumference Percentile
-Profile]
-- [US Core Pediatric Weight for Height Observation Profile]
-- [US Core Pulse Oximetry Profile]
-- [US Core Respiratory Rate Profile]
-
 ### Mandatory and Must Support Data Elements
 
 The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and terminology requirements.  The "Snapshot Table (Must Support)" tab below displays all the mandatory and must support data elements for this profile and the those inherited from the US Core Vital Signs Profile.

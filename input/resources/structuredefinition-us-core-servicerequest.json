@@ -1,178 +1,180 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "us-core-servicerequest",
-  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest",
-  "name": "USCoreServiceRequestProfile",
-  "title": "US Core ServiceRequest Profile",
-  "status": "active",
-  "date": "2018-08-22T00:00:00+00:00",
-  "description": "Defines constraints and extensions on the ServiceRequest resource for the minimal set of data to query and retrieve orders associated with diagnostic and clinical tests and clinical interventions for a patient",
-  "fhirVersion": "4.0.1",
-  "kind": "resource",
-  "abstract": false,
-  "type": "ServiceRequest",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "ServiceRequest",
-        "path": "ServiceRequest",
-        "mustSupport": false
-      },
-      {
-        "id": "ServiceRequest.status",
-        "path": "ServiceRequest.status",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.intent",
-        "path": "ServiceRequest.intent",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.category",
-        "path": "ServiceRequest.category",
-        "slicing": {
-          "discriminator": [
+    "resourceType": "StructureDefinition",
+    "id": "us-core-servicerequest",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest",
+    "name": "USCoreServiceRequestProfile",
+    "title": "US Core ServiceRequest Profile",
+    "status": "active",
+    "date": "2022-04-20",
+    "description": "This profile sets minimum expectations for recording, searching, and fetching  using the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases.",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "ServiceRequest",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
             {
-              "type": "pattern",
-              "path": "$this"
+                "id": "ServiceRequest",
+                "path": "ServiceRequest",
+                "definition": "\\-",
+                "comment": "\\-",
+                "mustSupport": false
+            },
+            {
+                "id": "ServiceRequest.status",
+                "path": "ServiceRequest.status",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.intent",
+                "path": "ServiceRequest.intent",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.category",
+                "path": "ServiceRequest.category",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.category:us-core",
+                "path": "ServiceRequest.category",
+                "sliceName": "us-core",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category"
+                }
+            },
+            {
+                "id": "ServiceRequest.code",
+                "path": "ServiceRequest.code",
+                "min": 1,
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code"
+                }
+            },
+            {
+                "id": "ServiceRequest.subject",
+                "path": "ServiceRequest.subject",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.occurrence[x]",
+                "path": "ServiceRequest.occurrence[x]",
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "Period"
+                    },
+                    {
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Timing"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.authoredOn",
+                "path": "ServiceRequest.authoredOn",
+                "mustSupport": true
+            },
+            {
+                "id": "ServiceRequest.requester",
+                "path": "ServiceRequest.requester",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
+                            "http://hl7.org/fhir/StructureDefinition/Device"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "mustSupport": true
             }
-          ],
-          "rules": "open"
-        },
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.category:us-core",
-        "path": "ServiceRequest.category",
-        "sliceName": "us-core",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category"
-        }
-      },
-      {
-        "id": "ServiceRequest.code",
-        "path": "ServiceRequest.code",
-        "min": 1,
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code"
-        }
-      },
-      {
-        "id": "ServiceRequest.subject",
-        "path": "ServiceRequest.subject",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.occurrence[x]",
-        "path": "ServiceRequest.occurrence[x]",
-        "type": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ],
-            "code": "Period"
-          },
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "Timing"
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.authoredOn",
-        "path": "ServiceRequest.authoredOn",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.requester",
-        "path": "ServiceRequest.requester",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
-              "http://hl7.org/fhir/StructureDefinition/Device"
-            ],
-            "_targetProfile": [
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": true
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "mustSupport": true
-      }
-    ]
-  }
+        ]
+    }
 }

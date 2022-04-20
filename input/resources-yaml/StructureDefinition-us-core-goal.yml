@@ -1,0 +1,69 @@
+resourceType: StructureDefinition
+id: us-core-goal
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal'
+name: USCoreGoalProfile
+title: US Core Goal Profile
+status: active
+experimental: false
+date: '2022-04-20'
+
+description: >-
+    This profile sets minimum expectations for the Goal resource to record, search, and fetch Goal information associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Goal
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Goal'
+derivation: constraint
+differential:
+  element:
+    - id: Goal
+      path: Goal
+      definition: '\-'
+      comment: '\-'
+      mustSupport: false
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Goal
+    - id: Goal.lifecycleStatus
+      path: Goal.lifecycleStatus
+      mustSupport: true
+      binding:
+        strength: required
+        valueSet: 'http://hl7.org/fhir/ValueSet/goal-status'
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Goal.status
+    - id: Goal.description
+      path: Goal.description
+      mustSupport: true
+      binding:
+        strength: extensible
+        description: Value set to describe the Goal
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description'
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Goal.description
+    - id: Goal.subject
+      path: Goal.subject
+      type:
+        - code: Reference
+          targetProfile:
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+      mustSupport: true
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Goal.subject
+    - id: Goal.target
+      path: Goal.target
+      mustSupport: true
+    - id: 'Goal.target.due[x]'
+      path: 'Goal.target.due[x]'
+      type:
+        - extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: date
+        - code: Duration
+      mustSupport: true

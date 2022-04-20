@@ -1,321 +1,299 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "us-core-observation-lab",
-  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
-  "version": "3.1.1",
-  "name": "USCoreLaboratoryResultObservationProfile",
-  "title": "US Core Laboratory Result Observation Profile",
-  "status": "active",
-  "experimental": false,
-  "date": "2020-06-27",
-  "publisher": "HL7 US Realm Steering Committee",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "http://www.healthit.gov"
-        }
-      ]
-    }
-  ],
-  "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve laboratory test results",
-  "jurisdiction": [
-    {
-      "coding": [
-        {
-          "system": "urn:iso:std:iso:3166",
-          "code": "US",
-          "display": "United States of America"
-        }
-      ]
-    }
-  ],
-  "fhirVersion": "4.0.1",
-  "kind": "resource",
-  "abstract": false,
-  "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Observation",
-        "path": "Observation",
-        "definition": "This profile is  created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
-        "constraint": [
-          {
-            "key": "us-core-2",
-            "severity": "error",
-            "human": "If there is no component or hasMember element then either a value[x] or a data absent reason must be present",
-            "expression": "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())",
-            "xpath": "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
-          }
-        ],
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation"
-          }
-        ]
-      },
-      {
-        "id": "Observation.status",
-        "path": "Observation.status",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/observation-status"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.status"
-          }
-        ]
-      },
-      {
-        "id": "Observation.category",
-        "path": "Observation.category",
-        "slicing": {
-          "discriminator": [
+    "resourceType": "StructureDefinition",
+    "id": "us-core-observation-lab",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
+    "name": "USCoreLaboratoryResultObservationProfile",
+    "title": "US Core Laboratory Result Observation Profile",
+    "status": "active",
+    "experimental": false,
+    "date": "2022-04-20",
+    "description": "\ufeffThe US Core Laboratory Result Observation Profile is based upon the core FHIR Observation Resource, and, along with the US Core DiagnosticReport Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability (USCDI) v2 \u2018Laboratory\u2019 requirements.  Laboratory results are grouped and summarized using the DiagnosticReport resource which reference Observation resources.  Each Observation resource represents an individual laboratory test and result value, a \u201cnested\u201d panel (such as a microbial susceptibility panel) which references other observations, or rarely a laboratory test with component result values. The US Core Laboratory Result Observation Profile sets minimum expectations for the Observation resource resource to record, search, and fetch laboratory test results associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases.",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
             {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 1,
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.category"
-          }
-        ]
-      },
-      {
-        "id": "Observation.category:Laboratory",
-        "path": "Observation.category",
-        "sliceName": "Laboratory",
-        "min": 1,
-        "max": "1",
-        "patternCodeableConcept": {
-          "coding": [
+                "id": "Observation",
+                "path": "Observation",
+                "definition": "\\-",
+                "comment": "\\-",
+                "constraint": [
+                    {
+                        "key": "us-core-2",
+                        "severity": "error",
+                        "human": "If there is no component or hasMember element then either a value[x] or a data absent reason must be present",
+                        "expression": "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())",
+                        "xpath": "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
+                    }
+                ],
+                "mustSupport": false,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation"
+                    }
+                ]
+            },
             {
-              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-              "code": "laboratory"
+                "id": "Observation.status",
+                "path": "Observation.status",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/observation-status"
+                },
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.status"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.category",
+                "path": "Observation.category",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 1,
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.category"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.category:Laboratory",
+                "path": "Observation.category",
+                "sliceName": "Laboratory",
+                "min": 1,
+                "max": "1",
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                            "code": "laboratory"
+                        }
+                    ]
+                },
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.category"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.code",
+                "path": "Observation.code",
+                "short": "Laboratory Test Name",
+                "definition": "The test that was performed.  A LOINC **SHALL** be used if the concept is present in LOINC.",
+                "comment": "The typical patterns for codes are:  1)  a LOINC code either as a translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.  When using LOINC , Use either the SHORTNAME or LONG_COMMON_NAME field for the display.",
+                "alias": [
+                    "Test Name",
+                    "Observation Identifer"
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "description": "LOINC codes",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
+                },
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.code"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.subject",
+                "path": "Observation.subject",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.subject"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.effective[x]",
+                "path": "Observation.effective[x]",
+                "definition": "For lab tests this is the specimen collection date.  For Ask at Order Entry Questions (AOE)'s this is the date the question was asked.",
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Period"
+                    },
+                    {
+                        "code": "Timing"
+                    },
+                    {
+                        "code": "instant"
+                    }
+                ],
+                "condition": [
+                    "us-core-1"
+                ],
+                "constraint": [
+                    {
+                        "key": "us-core-1",
+                        "severity": "error",
+                        "human": "Datetime must be at least to day.",
+                        "expression": "$this is DateTime implies $this.toString().length() >= 10",
+                        "xpath": "f:matches(effectiveDateTime,/\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z)/)"
+                    }
+                ],
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.effective[x]"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.value[x]",
+                "path": "Observation.value[x]",
+                "short": "Result Value",
+                "definition": "The Laboratory result value.  If a coded value,  the valueCodeableConcept.code **SHOULD** be selected from [SNOMED CT](http://hl7.org/fhir/ValueSet/uslab-obs-codedresults) if the concept exists. If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification.",
+                "type": [
+                    {
+                        "code": "Quantity",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ]
+                    },
+                    {
+                        "code": "CodeableConcept",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ]
+                    },
+                    {
+                        "code": "string",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ]
+                    },
+                    {
+                        "code": "boolean"
+                    },
+                    {
+                        "code": "integer"
+                    },
+                    {
+                        "code": "Range"
+                    },
+                    {
+                        "code": "Ratio"
+                    },
+                    {
+                        "code": "SampledData"
+                    },
+                    {
+                        "code": "time"
+                    },
+                    {
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Period"
+                    }
+                ],
+                "condition": [
+                    "us-core-2",
+                    "us-core-3",
+                    "us-core-4"
+                ],
+                "constraint": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "key": "us-core-4",
+                        "severity": "warning",
+                        "human": "SHOULD use Snomed CT for coded Results",
+                        "expression": "valueCodeableConcept.coding.system.empty() or valueCodeableConcept.coding.system = 'http://snomed.info/sct'",
+                        "xpath": "not(exists(f:valueCodeableConcept/f:coding/f:system) ) or f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']"
+                    },
+                    {
+                        "key": "us-core-3",
+                        "severity": "error",
+                        "human": "SHALL use UCUM for coded quantity units.",
+                        "expression": "valueQuantity.system.empty() or valueQuantity.system = 'http://unitsofmeasure.org'",
+                        "xpath": "not(exists(f:valueQuantity/f:system) ) or f:valueQuantity/f:system[@value='http://unitsofmeasure.org']"
+                    }
+                ],
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.value[x]"
+                    }
+                ]
+            },
+            {
+                "id": "Observation.dataAbsentReason",
+                "path": "Observation.dataAbsentReason",
+                "condition": [
+                    "us-core-2"
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+                },
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Observation.dataAbsentReason"
+                    }
+                ]
             }
-          ]
-        },
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.category"
-          }
         ]
-      },
-      {
-        "id": "Observation.code",
-        "path": "Observation.code",
-        "short": "Laboratory Test Name",
-        "definition": "The test that was performed.  A LOINC **SHALL** be used if the concept is present in LOINC.",
-        "comment": "The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.  When using LOINC , Use either the SHORTNAME or LONG_COMMON_NAME field for the display.",
-        "alias": [
-          "Test Name",
-          "Observation Identifer"
-        ],
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible",
-          "description": "LOINC codes",
-          "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.code"
-          }
-        ]
-      },
-      {
-        "id": "Observation.subject",
-        "path": "Observation.subject",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.subject"
-          }
-        ]
-      },
-      {
-        "id": "Observation.effective[x]",
-        "path": "Observation.effective[x]",
-        "definition": "For lab tests this is the specimen collection date.  For Ask at Order Entry Questions (AOE)'s this is the date the question was asked.",
-        "type": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ],
-            "code": "dateTime"
-          },
-          {
-            "code": "Period"
-          },
-          {
-            "code": "Timing"
-          },
-          {
-            "code": "instant"
-          }
-        ],
-        "condition": [
-          "us-core-1"
-        ],
-        "constraint": [
-          {
-            "key": "us-core-1",
-            "severity": "error",
-            "human": "Datetime must be at least to day.",
-            "expression": "$this is DateTime implies $this.toString().length() >= 10",
-            "xpath": "f:matches(effectiveDateTime,/\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z)/)"
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.effective[x]"
-          }
-        ]
-      },
-      {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
-        "short": "Result Value",
-        "definition": "The Laboratory result value.  If a coded value,  the valueCodeableConcept.code **SHOULD** be selected from [SNOMED CT](http://hl7.org/fhir/ValueSet/uslab-obs-codedresults) if the concept exists. If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification.",
-        "type": [
-          {
-            "code": "Quantity",
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ]
-          },
-          {
-            "code": "CodeableConcept",
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ]
-          },
-          {
-            "code": "string",
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ]
-          },
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "integer"
-          },
-          {
-            "code": "Range"
-          },
-          {
-            "code": "Ratio"
-          },
-          {
-            "code": "SampledData"
-          },
-          {
-            "code": "time"
-          },
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "Period"
-          }
-        ],
-        "condition": [
-          "us-core-2",
-          "us-core-3",
-          "us-core-4"
-        ],
-        "constraint": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
-                "valueBoolean": true
-              }
-            ],
-            "key": "us-core-4",
-            "severity": "warning",
-            "human": "SHOULD use Snomed CT for coded Results",
-            "expression": "valueCodeableConcept.coding.system.empty() or valueCodeableConcept.coding.system = 'http://snomed.info/sct'",
-            "xpath": "not(exists(f:valueCodeableConcept/f:coding/f:system) ) or  f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']"
-          },
-          {
-            "key": "us-core-3",
-            "severity": "error",
-            "human": "SHALL use UCUM for coded quantity units.",
-            "expression": "valueQuantity.system.empty() or valueQuantity.system = 'http://unitsofmeasure.org'",
-            "xpath": "not(exists(f:valueQuantity/f:system) ) or  f:valueQuantity/f:system[@value='http://unitsofmeasure.org']"
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.value[x]"
-          }
-        ]
-      },
-      {
-        "id": "Observation.dataAbsentReason",
-        "path": "Observation.dataAbsentReason",
-        "condition": [
-          "us-core-2"
-        ],
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/ValueSet/data-absent-reason"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Observation.dataAbsentReason"
-          }
-        ]
-      }
-    ]
-  }
+    }
 }

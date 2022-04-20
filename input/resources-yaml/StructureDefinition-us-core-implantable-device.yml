@@ -6,20 +6,9 @@ name: USCoreImplantableDeviceProfile
 title: US Core Implantable Device Profile
 status: active
 experimental: false
-date: '2019-09-17'
-publisher: HL7 International - US Realm Steering Committee
-contact:
-  - name: HL7 International - US Realm Steering Committee
-    telecom:
-      - system: url
-        value: 'http://www.hl7.org/Special/committees/usrealm/index.cfm'
+date: '2022-04-20'
 description: >-
-  Defines constraints and extensions on the Device resource for the minimal set
-  of data to query and retrieve a patient's implantable device(s).
-jurisdiction:
-  - coding:
-      - system: 'urn:iso:std:iso:3166'
-        code: US
+  The US Core Implantable Device Profile is based upon the core FHIR Device Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 ‘Unique Device Identifier(s) for a Patient’s Implantable Device(s)’ requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Device resource to record, search, and fetch UDI information associated with a patient's implantable device(s). It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific uses cases.
 copyright: >-
   Used by permission of HL7 International, all rights reserved Creative Commons
   License
@@ -33,11 +22,8 @@ differential:
   element:
     - id: Device
       path: Device
-      definition: >-
-        The US Core Implantable Device Profile is based upon the core FHIR
-        Device Resource and created to meet the 2015 Edition Common Clinical
-        Data Set 'Unique device identifier(s) for a patient’s implantable
-        device(s)' requirements.
+      definition: '\-'
+      comment: '\-'
       mustSupport: false
       mapping:
         - identity: argonaut-dq-dstu2

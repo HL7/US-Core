@@ -1,8 +1,6 @@
 <div class="new-content" markdown="1">The US Core Condition Profile has been split into the US Core Condition Encounter Diagnosis Profile below and US Core Condition Problems and Health Concerns Profile
 </div><!-- new-content -->
 
-﻿This profile sets minimum expectations for the [Condition] resource to record, search, and fetch a list of problems and health concerns associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  For Encounter Diagnosis use the [US Core Condition Encounter Diagnosis Profile].
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the this profile:
@@ -35,6 +33,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
+* For Encounter Diagnosis use the [US Core Condition Encounter Diagnosis Profile].
 * USCDI v2 applicable vocabulary standards for Problems/Health Concerns are SNOMED CT and ICD-10-CM.  For general guidance on extensible binding to coded data, review [this section](conformance-expectations.html#extensible-binding-for-codeableconcept-datatype) in the Conformance Expectations page.
   - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and should be used as the primary code for current encounter diagnoses.
 * See [SDOH Guidance] for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.

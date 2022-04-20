@@ -1,0 +1,174 @@
+resourceType: StructureDefinition
+id: us-core-vital-signs
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'
+version: 3.2.0
+name: USCoreVitalSignsProfile
+title: US Core Vital Signs Profile
+status: active
+experimental: false
+date: '2020-11-17'
+description: >-
+  To promote interoperability and adoption through common implementation, this profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html) and defines *additional* constraints on the Observation resource to represent vital signs observations. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific uses cases.  This US Core profiles that are derived from this profile are listed below.
+copyright: >-
+  Used by permission of HL7 International, all rights reserved Creative Commons
+  License
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Observation
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/vitalsigns'
+derivation: constraint
+differential:
+  element:
+    - id: Observation
+      path: Observation
+      short: US Core Vital Signs Profile
+      definition: >-
+      definition: '\-'
+      comment: '\-'
+    - id: Observation.status
+      path: Observation.status
+      mustSupport: true
+    - id: Observation.category
+      path: Observation.category
+      slicing:
+        discriminator:
+          - type: value
+            path: coding.code
+          - type: value
+            path: coding.system
+        ordered: false
+        rules: open
+      min: 1
+      max: '*'
+      type:
+        - code: CodeableConcept
+      mustSupport: true
+    - id: 'Observation.category:VSCat'
+      path: Observation.category
+      sliceName: VSCat
+      min: 1
+      max: '1'
+      type:
+        - code: CodeableConcept
+      mustSupport: true
+    - id: 'Observation.category:VSCat.coding'
+      path: Observation.category.coding
+      min: 1
+      max: '*'
+      type:
+        - code: Coding
+      mustSupport: true
+    - id: 'Observation.category:VSCat.coding.system'
+      path: Observation.category.coding.system
+      min: 1
+      max: '1'
+      type:
+        - code: uri
+      fixedUri: 'http://terminology.hl7.org/CodeSystem/observation-category'
+      mustSupport: true
+    - id: 'Observation.category:VSCat.coding.code'
+      path: Observation.category.coding.code
+      min: 1
+      max: '1'
+      type:
+        - code: code
+      fixedCode: vital-signs
+      mustSupport: true
+    - id: Observation.code
+      path: Observation.code
+      mustSupport: true
+      binding:
+        strength: extensible
+        description: The vital sign codes from the base FHIR and US Core Vital Signs.
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-vital-signs'
+    - id: Observation.subject
+      path: Observation.subject
+      type:
+        - code: Reference
+          targetProfile:
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+      mustSupport: true
+    - id: 'Observation.effective[x]'
+      path: 'Observation.effective[x]'
+      type:
+        - code: dateTime
+          extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+        - code: Period
+      mustSupport: true
+    - id: 'Observation.value[x]'
+      path: 'Observation.value[x]'
+      short: Vital Signs Value
+      definition: Vital Signs value are typically recorded using the Quantity data type.
+      type:
+        - code: Quantity
+          extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+        - code: CodeableConcept
+        - code: string
+        - code: boolean
+        - code: integer
+        - code: Range
+        - code: Ratio
+        - code: SampledData
+        - code: time
+        - code: dateTime
+        - code: Period
+      mustSupport: true
+      binding:
+        strength: extensible
+        description: Common UCUM units for recording Vital Signs.
+        valueSet: 'http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1'
+    - id: Observation.dataAbsentReason
+      path: Observation.dataAbsentReason
+      mustSupport: true
+    - id: Observation.component
+      path: Observation.component
+      short: Component observations
+      definition: >-
+        Used when reporting component observation such as systolic and diastolic
+        blood pressure.
+      mustSupport: true
+    - id: Observation.component.code
+      path: Observation.component.code
+      mustSupport: true
+      binding:
+        strength: extensible
+        description: The vital sign codes from the base FHIR and US Core Vital Signs.
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-vital-signs'
+    - id: 'Observation.component.value[x]'
+      path: 'Observation.component.value[x]'
+      short: Vital Sign Component Value
+      definition: >-
+        Vital Signs value are typically recorded using the Quantity data type.
+        For supporting observations such as cuff size could use other datatypes
+        such as CodeableConcept.
+      type:
+        - code: Quantity
+          extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+        - code: CodeableConcept
+        - code: string
+        - code: boolean
+        - code: integer
+        - code: Range
+        - code: Ratio
+        - code: SampledData
+        - code: time
+        - code: dateTime
+        - code: Period
+      mustSupport: true
+      binding:
+        strength: extensible
+        description: Common UCUM units for recording Vital Signs.
+        valueSet: 'http://hl7.org/fhir/ValueSet/ucum-vitals-common|4.0.1'
+    - id: Observation.component.dataAbsentReason
+      path: Observation.component.dataAbsentReason
+      mustSupport: true

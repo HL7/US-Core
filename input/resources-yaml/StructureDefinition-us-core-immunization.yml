@@ -1,0 +1,118 @@
+resourceType: StructureDefinition
+id: us-core-immunization
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization'
+name: USCoreImmunizationProfile
+title: US Core Immunization Profile
+status: active
+experimental: false
+date: '2022-04-20'
+
+description: >-
+    ﻿This profile sets minimum expectations for the Immunization resource to record, search, and fetch immunization history associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases.
+
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Immunization
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Immunization'
+derivation: constraint
+differential:
+  element:
+    - id: Immunization
+      path: Immunization
+      definition: '\-'
+      comment: '\-'
+      constraint:
+        - extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice
+              valueBoolean: true
+          key: us-core-5
+          severity: warning
+          human: SHOULD have a translation to the NDC value set
+          expression: >-
+            vaccineCode.coding.where(system='http://hl7.org/fhir/sid/ndc').empty()
+          xpath: >-
+            not(exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/ndc']))
+      mustSupport: false
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Immunization
+    - id: Immunization.status
+      path: Immunization.status
+      mustSupport: true
+      binding:
+        strength: required
+        valueSet: 'http://hl7.org/fhir/ValueSet/immunization-status'
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Immunization.status
+    - id: Immunization.statusReason
+      path: Immunization.statusReason
+      mustSupport: true
+      binding:
+        strength: example
+        valueSet: 'http://hl7.org/fhir/ValueSet/immunization-status-reason'
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: Immunization.wasNotGiven
+    - id: Immunization.vaccineCode
+      path: Immunization.vaccineCode
+      short: Vaccine Product Type (bind to CVX)
+      condition:
+        - us-core-5
+      mustSupport: true
+      binding:
+        strength: extensible
+        valueSet: 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.6'
+      mapping:
+        - identity: quick
+          map: vaccine
+        - identity: quick
+          map: vaccine
+        - identity: argonaut-dq-dstu2
+          map: Immunization.vaccineCode
+    - id: Immunization.patient
+      path: Immunization.patient
+      alias:
+        - Patient
+      type:
+        - code: Reference
+          targetProfile:
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+      mustSupport: true
+      mapping:
+        - identity: quick
+          map: subject
+        - identity: quick
+          map: subject
+        - identity: argonaut-dq-dstu2
+          map: Immunization.patient
+    - id: 'Immunization.occurrence[x]'
+      path: 'Immunization.occurrence[x]'
+      type:
+        - extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: dateTime
+        - code: string
+      mustSupport: true
+      mapping:
+        - identity: quick
+          map: performanceTime
+        - identity: quick
+          map: performanceTime
+        - identity: argonaut-dq-dstu2
+          map: Immunization.date
+    - id: Immunization.primarySource
+      path: Immunization.primarySource
+      min: 1
+      mustSupport: true
+      mapping:
+        - identity: quick
+          map: reported
+        - identity: quick
+          map: reported
+        - identity: argonaut-dq-dstu2
+          map: Immunization.reported

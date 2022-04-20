@@ -1,0 +1,82 @@
+resourceType: StructureDefinition
+id: us-core-location
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-location'
+name: USCoreLocation
+title: US Core Location Profile
+status: active
+experimental: false
+date: '2022-04-20'
+description: >-
+  This profile sets minimum expectations for the Location resource for recording, searching for and fetching a Location associated with a patient, provider or organization to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases.
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Location
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Location'
+derivation: constraint
+differential:
+  element:
+    - id: Location
+      path: Location
+      definition: '\-'
+      comment: '\-'
+      mustSupport: false
+      mapping:
+        - identity: servd
+          map: Organization
+    - id: Location.status
+      path: Location.status
+      mustSupport: true
+    - id: Location.name
+      path: Location.name
+      min: 1
+      mustSupport: true
+      mapping:
+        - identity: servd
+          map: ./PrimaryAddress and ./OtherAddresses
+    - id: Location.telecom
+      path: Location.telecom
+      mustSupport: true
+    - id: Location.address
+      path: Location.address
+      mustSupport: true
+      mapping:
+        - identity: servd
+          map: n/a
+    - id: Location.address.line
+      path: Location.address.line
+      max: '*'
+      type:
+        - code: string
+      mustSupport: true
+    - id: Location.address.city
+      path: Location.address.city
+      type:
+        - code: string
+      mustSupport: true
+    - id: Location.address.state
+      path: Location.address.state
+      type:
+        - code: string
+      mustSupport: true
+      binding:
+        strength: extensible
+        description: Two letter USPS alphabetic codes.
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state'
+      mapping:
+        - identity: servd
+          map: ./Sites
+    - id: Location.address.postalCode
+      path: Location.address.postalCode
+      short: US Zip Codes
+      type:
+        - code: string
+      mustSupport: true
+    - id: Location.managingOrganization
+      path: Location.managingOrganization
+      type:
+        - code: Reference
+          targetProfile:
+            - >-
+              http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+      mustSupport: true

@@ -2,35 +2,12 @@
     "resourceType": "StructureDefinition",
     "id": "us-core-diagnosticreport-lab",
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab",
-    "version": "3.1.1",
     "name": "USCoreDiagnosticReportProfileLaboratoryReporting",
     "title": "US Core DiagnosticReport Profile for Laboratory Results Reporting",
     "status": "active",
     "experimental": false,
-    "date": "2019-05-21",
-    "publisher": "HL7 US Realm Steering Committee",
-    "contact": [
-        {
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "http://www.healthit.gov"
-                }
-            ]
-        }
-    ],
-    "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with laboratory results for a patient",
-    "jurisdiction": [
-        {
-            "coding": [
-                {
-                    "system": "urn:iso:std:iso:3166",
-                    "code": "US",
-                    "display": "United States of America"
-                }
-            ]
-        }
-    ],
+    "date": "2022-04-20",
+    "description": "Laboratory results are grouped and summarized using the DiagnosticReport resource which typically reference Observation resource(s).  Each Observation resource represents an individual laboratory test and result value or component result values, or a \u201cnested\u201d panel (such as a microbial susceptibility panel) which references other observations.  They can also be presented in report form or as free text.  This profile sets minimum expectations for the DiagnosticReport resource to record, search, and fetch laboratory results associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific uses cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
@@ -42,7 +19,8 @@
             {
                 "id": "DiagnosticReport",
                 "path": "DiagnosticReport",
-                "definition": "The US Core Diagnostic Report Profile is based upon the core FHIR DiagnosticReport Resource and created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
+                "definition": "\\-",
+                "comment": "\\-",
                 "alias": [
                     "Lab Result",
                     "Lab Report"

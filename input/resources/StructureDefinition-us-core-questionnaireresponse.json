@@ -5,8 +5,8 @@
     "name": "USCoreQuestionnaireResponseProfile",
     "title": "US Core QuestionnaireResponse Profile",
     "status": "active",
-    "date": "2022-02-28",
-    "description": "Defines how to represent answers from surveys/questionnaires.  This profile is based on the [Structured Data Capture (SDC) Questionnaire Response Profile](http://hl7.org/fhir/uv/sdc/3.0.0/StructureDefinition-sdc-questionnaireresponse.html)",
+    "date": "2022-04-20",
+    "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the QuestionnaireResponse resource to record, search, and fetch retrieve captures the responses to form/survey and assessment tools such as the *Protocol for Responding to and Assessing Patients\u2019 Assets, Risks, and Experiences (PRAPARE) Survey*.   This profile is based on the [Structured Data Capture (SDC) Questionnaire Response Profile](http://hl7.org/fhir/uv/sdc/3.0.0/StructureDefinition-sdc-questionnaireresponse.html) and identifies the *additional* core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific uses cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
@@ -19,7 +19,8 @@
                 "id": "QuestionnaireResponse",
                 "path": "QuestionnaireResponse",
                 "short": "US Core Profile based on SDC QuestionnaireResponse",
-                "definition": "Sets expectations for supported capabilities for questionnaire responses derived from surveys/questionnaires."
+                "definition": "\\-",
+                "comment": "\\-"
             },
             {
                 "id": "QuestionnaireResponse.meta",

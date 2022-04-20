@@ -1,353 +1,354 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "us-core-medicationrequest",
-  "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
-  "version": "3.1.1",
-  "name": "USCoreMedicationRequestProfile",
-  "title": "US Core MedicationRequest Profile",
-  "status": "active",
-  "experimental": false,
-  "date": "2020-06-26",
-  "publisher": "HL7 US Realm Steering Committee",
-  "contact": [
-    {
-      "telecom": [
+    "resourceType": "StructureDefinition",
+    "id": "us-core-medicationrequest",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
+    "version": "3.1.1",
+    "name": "USCoreMedicationRequestProfile",
+    "title": "US Core MedicationRequest Profile",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-06-26",
+    "publisher": "HL7 US Realm Steering Committee",
+    "contact": [
         {
-          "system": "url",
-          "value": "http://www.healthit.gov"
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.healthit.gov"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "description": "Defines constraints and extensions on the MedicationRequest resource for the minimal set of data to query and retrieve prescription information.",
-  "jurisdiction": [
-    {
-      "coding": [
+    ],
+    "description": "The US Core Medication Request Profile is based upon the core FHIR MedicationRequest Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 'Medications' requirements. The MedicationRequest resource can be used to record a patient\u2019s medication prescription or order.  This profile sets minimum expectations for the MedicationRequest resource to record, search, and fetch a patient's medication to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases.",
+    "jurisdiction": [
         {
-          "system": "urn:iso:std:iso:3166",
-          "code": "US",
-          "display": "United States of America"
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "US",
+                    "display": "United States of America"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "fhirVersion": "4.0.1",
-  "kind": "resource",
-  "abstract": false,
-  "type": "MedicationRequest",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "MedicationRequest",
-        "path": "MedicationRequest",
-        "definition": "The US Core Medication Request (Order) Profile is based upon the core FHIR MedicationRequest Resource and created to meet the 2015 Edition Common Clinical Data Set 'Medications' requirements.",
-        "mustSupport": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "MedicationOrder"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.status",
-        "path": "MedicationRequest.status",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "description": "A code specifying the state of the prescribing event. Describes the lifecycle of the prescription.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/medicationrequest-status"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "MedicationOrder.status"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.intent",
-        "path": "MedicationRequest.intent",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "description": "The kind of medication order.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/medicationrequest-intent"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "MedicationOrder.status"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.category",
-        "path": "MedicationRequest.category",
-        "slicing": {
-          "discriminator": [
+    ],
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "MedicationRequest",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
             {
-              "type": "pattern",
-              "path": "$this"
+                "id": "MedicationRequest",
+                "path": "MedicationRequest",
+                "definition": "\\-",
+                "comment": "\\-",
+                "mustSupport": false,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "MedicationOrder"
+                    }
+                ]
+            },
+            {
+                "id": "MedicationRequest.status",
+                "path": "MedicationRequest.status",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "description": "A code specifying the state of the prescribing event. Describes the lifecycle of the prescription.",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/medicationrequest-status"
+                },
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "MedicationOrder.status"
+                    }
+                ]
+            },
+            {
+                "id": "MedicationRequest.intent",
+                "path": "MedicationRequest.intent",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "description": "The kind of medication order.",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/medicationrequest-intent"
+                },
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "MedicationOrder.status"
+                    }
+                ]
+            },
+            {
+                "id": "MedicationRequest.category",
+                "path": "MedicationRequest.category",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.category:us-core",
+                "path": "MedicationRequest.category",
+                "sliceName": "us-core",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "required",
+                    "description": "The type of medication order.",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/medicationrequest-category"
+                }
+            },
+            {
+                "id": "MedicationRequest.reported[x]",
+                "path": "MedicationRequest.reported[x]",
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "boolean"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "MedicationOrder.status"
+                    }
+                ]
+            },
+            {
+                "id": "MedicationRequest.medication[x]",
+                "path": "MedicationRequest.medication[x]",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    },
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4"
+                },
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "MedicationOrder.medication[x]"
+                    }
+                ]
+            },
+            {
+                "id": "MedicationRequest.subject",
+                "path": "MedicationRequest.subject",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "MedicationOrder.patient"
+                    }
+                ]
+            },
+            {
+                "id": "MedicationRequest.encounter",
+                "path": "MedicationRequest.encounter",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "NA"
+                    }
+                ]
+            },
+            {
+                "id": "MedicationRequest.authoredOn",
+                "path": "MedicationRequest.authoredOn",
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "MedicationOrder.dateWritten"
+                    }
+                ]
+            },
+            {
+                "id": "MedicationRequest.requester",
+                "path": "MedicationRequest.requester",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
+                            "http://hl7.org/fhir/StructureDefinition/Device"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "MedicationOrder.prescriber"
+                    }
+                ]
+            },
+            {
+                "id": "MedicationRequest.dosageInstruction",
+                "path": "MedicationRequest.dosageInstruction",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dosageInstruction.text",
+                "path": "MedicationRequest.dosageInstruction.text",
+                "mustSupport": true
             }
-          ],
-          "rules": "open"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.category:us-core",
-        "path": "MedicationRequest.category",
-        "sliceName": "us-core",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "description": "The type of medication order.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/medicationrequest-category"
-        }
-      },
-      {
-        "id": "MedicationRequest.reported[x]",
-        "path": "MedicationRequest.reported[x]",
-        "type": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ],
-            "code": "boolean"
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                "valueBoolean": true
-              }
-            ],
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
-            ],
-            "_targetProfile": [
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": true
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "MedicationOrder.status"
-          }
         ]
-      },
-      {
-        "id": "MedicationRequest.medication[x]",
-        "path": "MedicationRequest.medication[x]",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "MedicationOrder.medication[x]"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.subject",
-        "path": "MedicationRequest.subject",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "MedicationOrder.patient"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.encounter",
-        "path": "MedicationRequest.encounter",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "NA"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.authoredOn",
-        "path": "MedicationRequest.authoredOn",
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "MedicationOrder.dateWritten"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.requester",
-        "path": "MedicationRequest.requester",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
-              "http://hl7.org/fhir/StructureDefinition/Device"
-            ],
-            "_targetProfile": [
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": true
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              },
-              {
-                "extension": [
-                  {
-                    "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                    "valueBoolean": false
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "MedicationOrder.prescriber"
-          }
-        ]
-      },
-      {
-        "id": "MedicationRequest.dosageInstruction",
-        "path": "MedicationRequest.dosageInstruction",
-        "mustSupport": true
-      },
-      {
-        "id": "MedicationRequest.dosageInstruction.text",
-        "path": "MedicationRequest.dosageInstruction.text",
-        "mustSupport": true
-      }
-    ]
-  }
+    }
 }

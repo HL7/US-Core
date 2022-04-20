@@ -2,8 +2,6 @@
 This profile has been added to to represent surveys/assessments using Observations and *optionally* QuestionnaireResponse.
 </div><!-- new-content -->
 
-﻿This profile sets minimum expectations for the [QuestionnaireResponse] resource to record, search, and fetch retrieve captures the responses to form/survey and assessment tools such as the [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey].  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  This profile is based on the [Structured Data Capture (SDC) Questionnaire Response Profile].
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:

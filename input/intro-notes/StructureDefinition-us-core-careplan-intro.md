@@ -1,6 +1,4 @@
 
-﻿This profile sets minimum expectations for the [CarePlan] resource to record, search, and fetch assessment and plan of treatment data associated with a patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the this profile:

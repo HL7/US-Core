@@ -1,6 +1,4 @@
 
-﻿Clinical tests includes non-imaging and non-laboratory tests performed on a patient that results in structured or unstructured (narrative) findings specific to the patient, such as electrocardiogram (ECG), visual acuity exam, macular exam, or graded exercise testing (GXT), to facilitate the diagnosis and management of conditions. The US Core Observation Clinical Test Result Profile profile sets minimum expectations for the [Observation] resource to record, search, and fetch clinical tests for a patient <span class="bg-success" markdown="1">to promote interoperability and adoption through common implementation.</span><!-- new-content --> {% include profile-intro.md %}  
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the this profile:

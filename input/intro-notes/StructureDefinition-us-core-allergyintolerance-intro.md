@@ -1,6 +1,4 @@
 
-This profile sets minimum expectations for the [AllergyIntolerance] resource to record, search, and fetch allergies/adverse reactions associated with a patient.  It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the AllergyIntolerance resource when using this profile.
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core AllergyIntolerance

@@ -5,9 +5,9 @@ url: >-
 name: USCoreObservationSurveyProfile
 title: US Core Observation Survey Profile
 status: active
-date: '2022-03-17'
+date: '2022-04-20'
 description: >-
-  Profile for Observations to record responses from  a survey or questionnaire.  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions.
+   To promote interoperability and adoption through common implementation, the US Core Observation Survey Profile sets minimum expectations for the Observation Resource to record, search, and fetch retrieve observations that represent the questions and responses to form/survey and assessment tools.  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific uses cases.
 
 fhirVersion: 4.0.1
 kind: resource
@@ -20,10 +20,8 @@ differential:
     - id: Observation
       path: Observation
       short: Survey Observation
-      definition: >-
-          Profile for Observations to record responses from  a survey or questionnaire.
-      comment: >-
-        This profile can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions.
+      definition: '\-'
+      comment: '\-'
       constraint:
         - key: us-core-2
           severity: error

@@ -64,7 +64,7 @@ A server that certifies to the [21st Century Cures Act for accessing patient dat
 To claim conformance to a US Core Profile a server:
 
 - **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition.
-- **SHALL** declare conformance with the the [US Core Server Capability Statement] by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`
+- **SHALL** declare conformance with the [US Core Server Capability Statement] by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`
 
 - **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.
     - Declare support for the US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
@@ -103,7 +103,7 @@ For querying and reading US Core Profiles, *Must Support* on any profile data el
 * US Core Requestors **SHALL** be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words US Core Requestors **SHOULD** be capable of displaying the data elements for human use or storing it for other purposes.
 * In situations where information on a particular data element is not present and the reason for absence is unknown, US Core Responders **SHALL NOT** include the data elements in the resource instance returned as part of the query results.
 * When querying US Core Responders, US Core Requestors **SHALL** interpret missing data elements within resource instances as data not present in the US Core Responder's system.
-* In situations where information on a particular data element is missing or suppressed refer to the the guidance for [Missing Data] and [Suppressed Data].  In situations where information on a particular data element is missing *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information.  This is done by following the same methodology outlined in the [Missing Data] section, but using the appropriate reason code instead ofs `unknown`.
+* In situations where information on a particular data element is missing or suppressed refer to the guidance for [Missing Data] and [Suppressed Data].  In situations where information on a particular data element is missing *and* the US Core Responder knows the precise reason for the absence of data (other than suppressed data), US Core Responders **SHOULD** send the reason for the missing information.  This is done by following the same methodology outlined in the [Missing Data] section, but using the appropriate reason code instead ofs `unknown`.
 * US Core Requestors **SHALL** be able to process resource instances containing data elements asserting missing information.
 
 The terms *US Core Responder* Actor *US Core Requestor Actor* are used throughout the guide and typically refer to a server or a client.

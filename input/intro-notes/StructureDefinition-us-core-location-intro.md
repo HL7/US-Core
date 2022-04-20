@@ -1,7 +1,4 @@
 
-This profile sets minimum expectations for the [Location] resource for recording, searching for and fetching a Location associated with a patient, provider or organization. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.
-
-
 ### Mandatory and Must Support Data Elements
 
 

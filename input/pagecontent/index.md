@@ -85,10 +85,7 @@ For systems that support both the US Core Profile content structure and the REST
 
 {% include img-med.html img="basic_fhir_restful_interaction.svg" caption="Example of a simple FHIR RESTful Search Transaction" %}
 
-See the FHIR specification for details on [FHIR RESTful Search API] and the [SMART App Launch Protocol] for how an application gets access to a patient record.
-
-
-
+See the FHIR specification for details on [FHIR RESTful Search API] and the [SMART App Launch Framework] for how an application gets access to a patient record.
 
 ----
 

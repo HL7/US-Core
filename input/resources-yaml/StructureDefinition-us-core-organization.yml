@@ -1,0 +1,117 @@
+resourceType: StructureDefinition
+id: us-core-organization
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization'
+name: USCoreOrganizationProfile
+title: US Core Organization Profile
+status: active
+experimental: false
+date: '2022-04-20'
+description: >-
+  This profile sets minimum expectations for the Organization resource to searching for and fetching an Organization associated with a patient or provider to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases.
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Organization
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Organization'
+derivation: constraint
+differential:
+  element:
+    - id: Organization
+      path: Organization
+      definition: '\-'
+      comment: '\-'
+      mustSupport: false
+    - id: Organization.identifier
+      path: Organization.identifier
+      slicing:
+        discriminator:
+          - type: pattern
+            path: $this
+        rules: open
+      comment: NPI preferred.
+      mustSupport: true
+    - id: Organization.identifier.system
+      path: Organization.identifier.system
+      max: '1'
+      type:
+        - code: uri
+      mustSupport: true
+    - id: Organization.identifier.value
+      path: Organization.identifier.value
+      max: '1'
+      type:
+        - code: string
+      mustSupport: true
+    - id: 'Organization.identifier:NPI'
+      path: Organization.identifier
+      sliceName: NPI
+      short: National Provider Identifier (NPI)
+      max: '1'
+      patternIdentifier:
+        system: 'http://hl7.org/fhir/sid/us-npi'
+      mustSupport: true
+    - id: 'Organization.identifier:CLIA'
+      path: Organization.identifier
+      sliceName: CLIA
+      short: >-
+        Clinical Laboratory Improvement Amendments (CLIA) Number for
+        laboratories
+      max: '1'
+      patternIdentifier:
+        system: 'urn:oid:2.16.840.1.113883.4.7'
+      mustSupport: false
+    - id: Organization.active
+      path: Organization.active
+      min: 1
+      mustSupport: true
+    - id: Organization.name
+      path: Organization.name
+      min: 1
+      mustSupport: true
+    - id: Organization.telecom
+      path: Organization.telecom
+      mustSupport: true
+    - id: Organization.telecom.system
+      path: Organization.telecom.system
+      mustSupport: true
+    - id: Organization.telecom.value
+      path: Organization.telecom.value
+      mustSupport: true
+    - id: Organization.address
+      path: Organization.address
+      mustSupport: true
+    - id: Organization.address.line
+      path: Organization.address.line
+      max: '4'
+      type:
+        - code: string
+      mustSupport: true
+    - id: Organization.address.city
+      path: Organization.address.city
+      max: '1'
+      type:
+        - code: string
+      mustSupport: true
+    - id: Organization.address.state
+      path: Organization.address.state
+      max: '1'
+      type:
+        - code: string
+      mustSupport: true
+      binding:
+        strength: extensible
+        description: Two letter USPS alphabetic codes.
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state'
+    - id: Organization.address.postalCode
+      path: Organization.address.postalCode
+      short: US Zip Codes
+      max: '1'
+      type:
+        - code: string
+      mustSupport: true
+    - id: Organization.address.country
+      path: Organization.address.country
+      max: '1'
+      type:
+        - code: string
+      mustSupport: true

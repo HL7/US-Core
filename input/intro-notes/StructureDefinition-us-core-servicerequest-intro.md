@@ -1,6 +1,4 @@
 
-This profile sets minimum expectations for recording, searching, and fetching  using the [ServiceRequest] resource. This profile identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the ServiceRequest when using this profile.
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the this profile:

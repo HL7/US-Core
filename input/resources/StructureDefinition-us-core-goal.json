@@ -2,35 +2,12 @@
     "resourceType": "StructureDefinition",
     "id": "us-core-goal",
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal",
-    "version": "3.1.1",
     "name": "USCoreGoalProfile",
     "title": "US Core Goal Profile",
     "status": "active",
     "experimental": false,
-    "date": "2020-07-21",
-    "publisher": "HL7 US Realm Steering Committee",
-    "contact": [
-        {
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "http://www.healthit.gov"
-                }
-            ]
-        }
-    ],
-    "description": "Defines constraints and extensions on the Goal resource for the minimal set of data to query and retrieve a patient's goal(s).",
-    "jurisdiction": [
-        {
-            "coding": [
-                {
-                    "system": "urn:iso:std:iso:3166",
-                    "code": "US",
-                    "display": "United States of America"
-                }
-            ]
-        }
-    ],
+    "date": "2022-04-20",
+    "description": "This profile sets minimum expectations for the Goal resource to record, search, and fetch Goal information associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases",
     "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
@@ -42,7 +19,8 @@
             {
                 "id": "Goal",
                 "path": "Goal",
-                "definition": "The US Core Goal Profile is based upon the core FHIR Goal Resource and created to meet the 2015 Edition Common Clinical Data Set 'Goals' requirements.",
+                "definition": "\\-",
+                "comment": "\\-",
                 "mustSupport": false,
                 "mapping": [
                     {
@@ -88,7 +66,9 @@
                 "type": [
                     {
                         "code": "Reference",
-                        "targetProfile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
                     }
                 ],
                 "mustSupport": true,
@@ -117,7 +97,9 @@
                         ],
                         "code": "date"
                     },
-                    {"code": "Duration"}
+                    {
+                        "code": "Duration"
+                    }
                 ],
                 "mustSupport": true
             }

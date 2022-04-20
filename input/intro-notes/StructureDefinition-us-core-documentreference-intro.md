@@ -1,9 +1,7 @@
 
-This profile sets minimum expectations for searching and fetching fetching patient documents including Clinical Notes using the [DocumentReference] resource. It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the DocumentReference resource when using this profile. Prior to reviewing this profile, implementers are encouraged to read the [Clinical Notes Guidance] to understand the overlap of [US Core DocumentReference Profile] and [US Core DiagnosticReport Profile for Report and Note exchange].
-
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the US Core DocumentReference profile.  See the [Clinical Notes Guidance] section for additional detail on using this profile for Clinical Notes:
+The following are example usage scenarios for the US Core DocumentReference profile.  See the [Clinical Notes] section for additional detail on using this profile for Clinical Notes:
 
 -   Query for all documents belonging to a Patient
 -   Query for a specific Clinical Note type (e.g. Discharge Summary or Continuity of Care Document (CCD))
@@ -34,7 +32,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
-- See [Clinical Notes Guidance]
+- See [Clinical Notes]
 - The `DocumentReference.type` binding must support at a minimum the [5 Common Clinical Notes] and may extend to the full  [US Core DocumentReference Type Value Set]
 - For a C-CDA Clinical Summary of Care (CCD):
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.

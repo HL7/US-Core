@@ -1,6 +1,4 @@
 
- The US Core Observation Sexual Orientation Profile sets minimum expectations for the [Observation] resource to record, search, and fetch sexual orientation observations associated with a patient span class="bg-success" markdown="1">To promote interoperability and adoption through common implementation.</span><!-- new-content -->.  {% include profile-intro.md %}
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the this profile:

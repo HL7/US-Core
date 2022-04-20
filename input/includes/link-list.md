@@ -305,7 +305,7 @@
 [HL7 Cross Paradigm Implementation Guide: UDI Pattern]: http://www.hl7.org/documentcenter/private/standards/HL7_IG_UDI_R2_2020JUN.pdf
 [US Core Procedure Codes]: ValueSet-us-core-procedure-code.html
 [21st Century Cures Act for accessing patient data]: https://www.federalregister.gov/d/2020-07419/p-1177
-[Mandatory]: must-support.html#mandatory-elements
+[Mandatory]: must-support.html
 [US Core RelatedPerson Profile Profile]: StructureDefinition-us-core-relatedperson.html
 [US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
 [Using multiple codes with CodeableConcept Datatype]: general-requirements.html#translations

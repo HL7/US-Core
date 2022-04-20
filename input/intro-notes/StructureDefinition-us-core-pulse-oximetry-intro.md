@@ -1,6 +1,4 @@
 
-This profile sets minimum expectations for the [Observation] resource to record, search, and fetch pulse oximetry and inspired oxygen observations associated with a patient. It is based on the [US Core Vital Signs Profile] and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile.
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the this profile:

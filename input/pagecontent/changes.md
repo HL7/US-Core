@@ -116,7 +116,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Resolved - change required**: Condition Category Code - LOINC Code for  [FHIR-35644](https://jira.hl7.org/browse/FHIR-35644) [See Change Here](#.html)
 1. **Resolved - change required**: Gender Identity Value set  [FHIR-35677](https://jira.hl7.org/browse/FHIR-35677) [See Change Here](#.html)
 1. **Resolved - change required**: Remove ""OTH"" from OMB Race Category valueSet [FHIR-35694](https://jira.hl7.org/browse/FHIR-35694) [See Change Here](#.html)
-1. **Applied**: Change Home Page to an explanation to exec summary of the problem and solution [FHIR-35755](https://jira.hl7.org/browse/FHIR-35755) [See Change Here](index.html#us-core-fhir-restful-interactions)
+1. **Applied**:Add basic introduction to the FHIR RESTful Search interaction in the home page [FHIR-35755](https://jira.hl7.org/browse/FHIR-35755) [See Change Here](index.html#us-core-fhir-restful-interactions)
 1. **Applied**: Remove MS from DiagnosticReport.imagingStudy [FHIR-35759](https://jira.hl7.org/browse/FHIR-35759) [See Change Here](StructureDefinition-us-core-diagnosticreport-note.html)
 1. **Resolved - change required**: Extensions used that are not defined in the scope [FHIR-35775](https://jira.hl7.org/browse/FHIR-35775) [See Change Here](#.html)
 1. **Applied**: Media example data value fails regex [FHIR-35790](https://jira.hl7.org/browse/FHIR-35790) [See Change Here](Media-ekg-strip.json.html)
@@ -129,7 +129,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: allow race extension in FamilyMemberHistory [FHIR-35998](https://jira.hl7.org/browse/FHIR-35998) [See Change Here](StructureDefinition-us-core-race.html)
 1. **Applied**: Update Condition Implementation Guidance to reflect current USCDI terminology standars [FHIR-36056](https://jira.hl7.org/browse/FHIR-36056) [See Change Here](#.html)
 1. **Applied**: Clarify expectations for reader [FHIR-36057](https://jira.hl7.org/browse/FHIR-36057) [See Change Here](#.html)
-1. **Resolved - change required**: Update US Core Yearly Updates [FHIR-36058](https://jira.hl7.org/browse/FHIR-36058) [See Change Here](#.html)
+1. **Applied**: Update US Core Yearly Updates [FHIR-36058](https://jira.hl7.org/browse/FHIR-36058) [See Change Here](future-of-US-core.html)
 1. **Triaged**: Simultaneous usage of Observation.value[x] & Observation.component.value[x] is not clear from the spec [FHIR-36083](https://jira.hl7.org/browse/FHIR-36083) [See Change Here](#.html)
 1. **Applied**: Remove "Cause of death" from Condition.category and remove US Core Condition Category Codes ValueSet [FHIR-36104](https://jira.hl7.org/browse/FHIR-36104)
 1. **Resolved - change required**: Add OTH to sexual orientation ValueSet [FHIR-36166](https://jira.hl7.org/browse/FHIR-36166) [See Change Here](#.html)
@@ -648,7 +648,7 @@ listed below are the resolved trackers for this version:
 1. Fix invariant [us-core-1](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-condition-definitions.html#Condition) ([FHIR-26605](https://jira.hl7.org/browse/FHIR-26605)).
 1. Change valueCode min from 0 to 1 for [US Core Birth Sex Extension](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-birthsex-definitions.html#Extension.valueCode) and valueBoolean min from 0 to 1 for[US Core Direct email Extension](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-direct-definitions.html#Extension.valueBoolean) ([FHIR-26459](https://jira.hl7.org/browse/FHIR-26459)).
 1. Change valueQuantity min from 1 to 0 for [US Core Pediatric BMI for Age Observation Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-pediatric-bmi-for-age-definitions.html#Observation.valueQuantity) and [US Core Pediatric Weight for Height Observation Profile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-pediatric-weight-for-height-definitions.html#Observation.valueQuantity) ([FHIR-26363](https://jira.hl7.org/browse/FHIR-26363)).
-1. Add page contents to [Clinical Notes](http://hl7.org/fhir/us/core/STU3.1.1/clinical-notes-guidance.html) and [Basic Provenance](basic-provenance.html) pages ([FHIR-25785](https://jira.hl7.org/browse/FHIR-25785)).
+1. Add page contents to [Clinical Notes Guidance](http://hl7.org/fhir/us/core/STU3.1.1/clinical-notes-guidance.html) and [Basic Provenance](basic-provenance.html) pages ([FHIR-25785](https://jira.hl7.org/browse/FHIR-25785)).
 1. Fix duplicate URL causing validation failure. ([FHIR-25536](https://jira.hl7.org/browse/FHIR-25536)).
 1. Fix Invariant [us-core-8](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-patient-definitions.html#Patient.name) ([FHIR-25459](https://jira.hl7.org/browse/FHIR-25459)).
 1. Corrected the wording "should support" to "shall support" in [Clinical Notes Guidance](http://hl7.org/fhir/us/core/STU3.1.1/clinical-notes-guidance.html#clinical-notes) ([FHIR-25455](https://jira.hl7.org/browse/FHIR-25455)).

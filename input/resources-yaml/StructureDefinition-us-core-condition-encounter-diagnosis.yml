@@ -5,9 +5,9 @@ name: USCoreConditionEncounterDiagnosisProfile
 title: US Core Condition Encounter Diagnosis Profile
 status: active
 experimental: false
-date: '2022-03-17'
+date: '2022-04-20'
 description: >-
-  The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.
+  The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 ‘Encounter Diagnosis’ requirements. To promote interoperability and adoption through common implementation, it defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases.
 kind: resource
 abstract: false
 type: Condition
@@ -17,8 +17,8 @@ differential:
   element:
     - id: Condition
       path: Condition
-      definition: >-
-          The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.
+      definition: '\-'
+      comment: '\-'
       mustSupport: false
       mapping:
         - identity: argonaut-dq-dstu2

@@ -1,6 +1,3 @@
-update file names
-﻿<span class="bg-success" markdown="1">To promote interoperability and adoption through common implementation,</span><!-- new-content --> the US Core Observation Social History Profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve observations that represent simple observations made by an individual about a patient's social history status such as education, food insecurity, etc.<sup>1</sup>  {% include profile-intro.md %}
-
 
 **Example Usage Scenarios:**
 

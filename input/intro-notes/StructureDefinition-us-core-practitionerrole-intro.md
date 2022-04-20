@@ -1,9 +1,4 @@
 
-###### Scope and Usage
-
-This profile sets minimum expectations for the [PractitionerRole] resource to record, search, and fetch the practitioner role for a practitioner.  It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the PractitionerRole resource when using this profile.  The requirements for the US Core Practitioner were drawn from the [Argonaut Provider Directory], [IHE Healthcare Provider Directory] and the [ONC Provider Directory Workshop].
-
-
 ### Mandatory and Must Support Data Elements
 
 The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.

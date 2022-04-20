@@ -2,8 +2,6 @@
 This page has been substantially rewritten to represent surveys/assessments using Observations.
 </div><!-- new-content -->
 
-<span class="bg-success" markdown="1">To promote interoperability and adoption through common implementation,</span><!-- new-content --> the US Core Observation Survey Profile sets minimum expectations for the [Observation] resource to record, search, and fetch retrieve observations that represent the questions and responses to form/survey and assessment tools.  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions.  {% include profile-intro.md %}
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this Profile:
