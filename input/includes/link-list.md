@@ -40,7 +40,7 @@
 [ConceptMap]: {{site.data.fhir.path}}conceptmap.html
 [Condition Quick Start]: StructureDefinition-us-core-condition-encounter-diagnosis.html#search
 [Condition]: {{site.data.fhir.path}}condition.html
-[Conformance Expectations]: conformance-expectations.html  "Conformance Expectations Page"
+[Conformance]: conformance.html  "Conformance Expectations Page"
 [Conformance Requirements for Client]: CapabilityStatement-us-core-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-us-core-server.html "Conformance Requirements for Server Page"
 [US Core Server CapabilityStatement]: CapabilityStatement-us-core-server.html
@@ -136,7 +136,7 @@
 [Medications Module]: {{site.data.fhir.path}}medications-module.html
 [MimeType]: http://www.rfc-editor.org/bcp/bcp13.txt#
 [Multi-language support for Narratives]: {{site.data.fhir.path}}narrative.html#lang
-[Must Support]: conformance-expectations.html#must-support-elements
+[Must Support]: must-support.html
 [NDC vaccine codes]: http://www2a.cdc.gov/vaccines/iis/iisstandards/ndc_crosswalk.asp
 [NamingSystem]: {{site.data.fhir.path}}namingsystem.html
 [Narrative]: {{site.data.fhir.path}}security.html#narrative
@@ -299,16 +299,16 @@
 [Missing Data]: general-guidance.html#missing-data
 [Suppressed Data]: general-guidance.html#missing-data
 [`CarePlan.status`]: {{site.data.fhir.path}}careplan.html
-[Must Support - Coded Elements]: conformance-expectations.html#must-support---coded-elements
+[Must Support - Coded Elements]: must-support.html#coded-elements
 [clinical safety]:  {{site.data.fhir.path}}safety.html
 [LOINC scale type to FHIR data type mapping]: {{site.data.fhir.path}}loinc.html#dataelements
 [HL7 Cross Paradigm Implementation Guide: UDI Pattern]: http://www.hl7.org/documentcenter/private/standards/HL7_IG_UDI_R2_2020JUN.pdf
 [US Core Procedure Codes]: ValueSet-us-core-procedure-code.html
 [21st Century Cures Act for accessing patient data]: https://www.federalregister.gov/d/2020-07419/p-1177
-[Mandatory]: conformance-expectations.html#mandatory-elements
+[Mandatory]: must-support.html#mandatory-elements
 [US Core RelatedPerson Profile Profile]: StructureDefinition-us-core-relatedperson.html
 [US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
-[Using multiple codes with CodeableConcept Datatype]: conformance-expectations.html#translations
+[Using multiple codes with CodeableConcept Datatype]: general-requirements.html#translations
 [US Core Observation Survey Profile]: StructureDefinition-us-core-observation-survey.html
 [US Core Observation SDOH Assessment Profile]: StructureDefinition-us-core-observation-sdoh-assessment.html
 [US Core QuestionnaireResponse Profile]: StructureDefinition-us-core-questionnaireresponse.html

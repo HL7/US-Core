@@ -35,12 +35,16 @@ dependencies:
 pages:
   index.md:
     title: Home
+
+  conformance.md:
+    general-requirements.md:
+    must-support.md:
+
   guidance.md:
     title: Rules and Guidance
     uscdi.md:
       title: USCDI
-    conformance-expectations.md:
-    general-requirements.md:
+
     general-guidance.md:
     clinical-notes.md:
     medication-list.md:
@@ -82,9 +86,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   excludettl: 'true'
   excludemap: 'true'
   excludeexample: 'true'
-  generate: #what does this do - todo: remove and see
-    - xml
-    - json
+  # generate: #what does this do - todo: remove and see
+  #   - xml
+  #   - json
   # no-narrative:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
@@ -104,10 +108,11 @@ releaselabel: CI Build
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Rules and Guidance: #guidance.html
-      USCDI: uscdi.html
-      Conformance Expectations: conformance-expectations.html
+  Conformance: #conformance.html
       General Requirements: general-requirements.html
+      Must Support: must-support.html
+  Guidance: #guidance.html
+      USCDI: uscdi.html
       General Guidance: general-guidance.html
       Clinical Notes: clinical-notes.html
       Medication List: medication-list.html

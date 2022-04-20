@@ -29,23 +29,27 @@ The US Core requirements were originally developed, balloted, and published in F
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home]\: The home page provides the introduction and background for US Core.
-- [Guidance]\: These pages provides overall guidance in using the profiles and transactions defined in this guide.
-  - [General Guidance] provides guidance, definitions and requirements common to all actors used in this guide.
-  - [Conformance Expectations] defines how CapabilityStatements are used and the expectations for mandatory and must support elements in the US Core Profiles. It provides guidance on how a system may support *only* the resources as profiled by US Core to represent clinical information (Profile Support) versus a system claiming conformance to *both* the US Core Profile content structure *and* the RESTful interactions defined for it (Profile Support + Interaction Support).
-  - [Clinical Notes Guidance] gives guidance on the interactions between Consumers and Producers of clinical notes.
-  - [Medication List Guidance] gives guidance on how a patient or provider can access a patient's medications.
-  - [Basic Provenance] provides implementers with important definitions to create and share the Provenance Resource.
-  - [SDOH Guidance] gives background on the exchange of Social Determinants of Health (SDOH) data elements.
-  - <span class="bg-success" markdown="1">[Changes Between US Core Versions] considers the user and developer experience when transitioning between versions of US Core</span><!-- new-content -->.
-  - [Future of US Core] outlines the approach to adding new content to US Core.
-- [FHIR Artifacts]\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
-  - [Profiles and Extensions]\: This page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarizes the supported search transactions for each Profile. <span class="bg-success" markdown="1">Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation and certification.</span><!-- new-content -->
-  - [Search Parameters and Operations]\: This page lists the  defined Operations and Search Parameters that are used in US Core transactions.
-  - [Terminology]\: This page lists the value sets and code system defined for  profiles.
+- <span class="bg-success" markdown="1">[Conformance]\: These pages describe the set of rules to claim conformance to this guide</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">[General Requirements]\: This page defines requirements common to all actors and profiles used in this guide including  how CapabilityStatements are used to claim conformance.</span><!-- new-content -->
+  - <span class="bg-success" markdown="1">[Must Support]\: This pagedefines the expectations for mandatory and must support elements in the US Core Profiles. </span><!-- new-content -->
+- [Guidance]\: The Guidance pages provides guidance in using the profiles and transactions defined in this guide.
+  - <span class="bg-success" markdown="1">[USCDI]\: This page maps the US Core profiles to the (USCDI) data classes and data elements.</span><!-- new-content -->
+  - [General Guidance]\: This page provides guidance and definitions and requirements common to all actors adn profiles used in this guide.
+  - [Clinical Notes]\: This page gives guidance on the interactions between Consumers and Producers of clinical notes.
+  - [Medication List]\: This page gives guidance on how a patient or provider can access a patient's medications.
+  - [Basic Provenance]\: This page provides implementers with important definitions to create and share the Provenance Resource.
+  - [SDOH]\: This page gives background on the exchange of Social Determinants of Health (SDOH) data elements.
+  - <span class="bg-success" markdown="1">[Changes Between US Core Versions]\: This page considers the user and developer experience when transitioning between versions of US Core</span><!-- new-content -->.
+  - [Future of US Core]\: This page outlines the approach to adding new content to US Core.
+- [FHIR Artifacts]\: Thes pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
+  - [Profiles and Extensions]\: This page page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarizes the supported search transactions for each Profile. <span class="bg-success" markdown="1">Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation and certification.</span><!-- new-content -->
+  - [Search Parameters and Operations]\: This page page lists the  defined Operations and Search Parameters that are used in US Core transactions.
+  - [Terminology]\: This page page lists the value sets and code system defined for  profiles.
   - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various  actors.
-- [Security]\: General security requirements and recommendations for  actors.
-- [Examples]\: List of links to all the examples used in this guide. {% include nonnormative-example-boilerplate.md %}
+- [Security]\: This page enumerates the general security requirements and recommendations for  actors.
+- [Examples]\: This page lists all the examples used in this guide. {% include nonnormative-example-boilerplate.md -%}
 - [Downloads]\: This page provides links to downloadable artifacts.
+- [Change Log]\: This page documents the changes across the versions of US Core
 
 ### US Core Actors
 
@@ -59,7 +63,9 @@ A product that responds to the data access request providing patient data. This 
 
 ### US Core Profiles
 
-The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the *Quick Start* Section of the profile page when conforming to the US Core [Capability Statements] for this profile.
+The list of US Core Profiles is shown below.  <span class="bg-success" markdown="1">To promote interoperability and adoption through common implementation,</span><!-- new-content --> each profile identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. <span class="bg-success" markdown="1"> Together they provide the floor for standards development for specific uses cases.</span><!-- new-content --> See the [USCDI] page, for a mapping to the U.S. Core Data for Interoperability (USCDI).
+
+For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  For each US Core Profile, an overview of the required set of RESTful FHIR interactions - for example, search and read operations - is provided in the *Quick Start* Section of the profile page when conforming to the US Core [Capability Statements] for this profile.
 
 <!-- new content comment remove prior to publishing-->
 The following section has been reformatted
@@ -73,7 +79,7 @@ The following section has been reformatted
 
 <!-- ================================================ -->
 
-See the General Guidance page for a [mapping] to the U.S. Core Data for Interoperability (USCDI).
+
 
 ----
 
