@@ -123,11 +123,10 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Update Condition Implementation Guidance to reflect current USCDI terminology standars [FHIR-36056](https://jira.hl7.org/browse/FHIR-36056) [See Change Here](#.html)
 1. **Applied**: Clarify expectations for reader [FHIR-36057](https://jira.hl7.org/browse/FHIR-36057) [See Change Here](#.html)
 1. **Applied**: Update US Core Yearly Updates [FHIR-36058](https://jira.hl7.org/browse/FHIR-36058) [See Change Here](future-of-US-core.html)
-1. **Triaged**: Simultaneous usage of Observation.value[x] & Observation.component.value[x] is not clear from the spec [FHIR-36083](https://jira.hl7.org/browse/FHIR-36083) [See Change Here](#.html)
 1. **Applied**: Remove "Cause of death" from Condition.category and remove US Core Condition Category Codes ValueSet [FHIR-36104](https://jira.hl7.org/browse/FHIR-36104)
 1. **Applied**: Add OTH to sexual orientation ValueSet [FHIR-36166](https://jira.hl7.org/browse/FHIR-36166) [See Change Here](ValueSet-us-core-sexual-orientation.html)
 1. **Applied**: Updated coding `system` in Missing Data documentation [FHIR-36177](https://jira.hl7.org/browse/FHIR-36177) [See Change Here](general-guidance.html#missing-data)
-1. **Resolved - change required**: Modify Race Value Set [FHIR-36247](https://jira.hl7.org/browse/FHIR-36247) [See Change Here](#.html)
+1. **Applied**: Add "Other Race" to OMB Race Categories [FHIR-36247](https://jira.hl7.org/browse/FHIR-36247) [See Change Here](ValueSet-omb-race-category.html)
 1. **Applied**: Add MS to Device.distinctIdentifier to correct editorial error [FHIR-36303](https://jira.hl7.org/browse/FHIR-36303) [See Change Here](StructureDefinition-us-core-implantable-device.html)
 1. **Applied**:fix provenance-1 invariant [FHIR-36328](https://jira.hl7.org/browse/FHIR-36328) [See Change Here](StructureDefinition-us-core-provenance.html)
 1. **Applied**: Correct _targetProfile element in Provenance StructureDefinition [FHIR-36344](https://jira.hl7.org/browse/FHIR-36344) [See Change Here](StructureDefinition-us-core-provenance.html)
@@ -136,6 +135,33 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Remove redundant example sections [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728)
 1. **Applied**: Realign ids names and titles for all new profiles for consistency [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728) [See Change Here](profiles-and-extensions.html)
 1. **Applied**: Move profile page introduction into structuredefinition description [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728) [See Change Here](profiles-and-extensions.html)
+
+
+#### The Following Trackers Will be Applied in Future Version
+
+Due external dependencies and publication tooling limitations, the application of these resolutions have been deferred.
+
+##### Working with HL7 WG to address FHIR Specification Updates
+
+**Tracker Status**: **Summary** **Jira Issue** Application Status
+1. **Resolved - change required**: US Core Pulse Oximetry Profile Text Summary has incorrect UCUM Unit for Oxygen Concentration [FHIR-27845](https://jira.hl7.org/browse/FHIR-27845)  STU Note Present, Updated FHIR Core Vitals Profile binding in FHIR R4B.
+
+##### Working with HL7 publishing to resolve these publishing issues:
+
+**Tracker Status**: **Summary** **Jira Issue** Application Status
+
+1. **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) [See Change Here](#.html)  Manual code expansion and STU Note Present.  Working with HL7 publishing to fix integration with VSAC.
+1. **Resolved - change required**: valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107) Working with HL7 publishing to fix.
+1. **Resolved - change required**: Extensions used that are not defined in the scope [FHIR-35775](https://jira.hl7.org/browse/FHIR-35775)
+
+
+##### Working with HL7 IG Authoring project to address these issues on IG readability:
+
+**Tracker Status**: **Summary** **Jira Issue** Application Status
+
+1. **Resolved - change required**: In most of the data elements – “Binding is from base FHIR and US Core Vital Signs” Need this to be one single combined listing [FHIR-30780](https://jira.hl7.org/browse/FHIR-30780)
+1. **Resolved - change required**: AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636) [See Change Here](#.html)
+1. **Resolved - change required**: RelatedPerson relationshiptype should have binding to FHIR value set RelatedPerson-relationshiptype [FHIR-34755](https://jira.hl7.org/browse/FHIR-34755) [See Change Here](#.html)
 
 
 ---

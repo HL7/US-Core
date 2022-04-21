@@ -5,5 +5,6 @@ Code|System|Display|Definition
 2054-5|urn:oid:2.16.840.1.113883.6.238|Black or African American|-
 2076-8|urn:oid:2.16.840.1.113883.6.238|Native Hawaiian or Other Pacific Islander|-
 2106-3|urn:oid:2.16.840.1.113883.6.238|White|-
+2131-1|urn:oid:2.16.840.1.113883.6.238|Other Race|-
 ASKU|http://terminology.hl7.org/CodeSystem/v3-NullFlavor|asked but unknown|-
 UNK|http://terminology.hl7.org/CodeSystem/v3-NullFlavor|unknown|-
