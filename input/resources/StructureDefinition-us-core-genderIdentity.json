@@ -1,52 +1,52 @@
 {
-   "resourceType":"StructureDefinition",
-   "id":"us-core-genderIdentity",
-   "url":"http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity",
-   "name":"USCoreGenderIdentityExtension",
-   "title":"US Core Gender Identity Extension",
-   "status":"active",
-   "date":"2022-01-22",
-   "description":"This extension provides concepts to describe the gender a person identifies as.",
-   "purpose":"Complies with USCDI v2",
-   "fhirVersion":"4.0.1",
-   "kind":"complex-type",
-   "abstract":false,
-   "context":[
-      {
-         "type":"element",
-         "expression":"Patient"
-      },
-      {
-         "type":"element",
-         "expression":"RelatedPerson"
-      },
-      {
-         "type":"element",
-         "expression":"Person"
-      },
-      {
-         "type":"element",
-         "expression":"Practitioner"
-      }
-   ],
-   "type":"Extension",
-   "baseDefinition":"http://hl7.org/fhir/StructureDefinition/patient-genderIdentity",
-   "derivation":"constraint",
-   "differential":{
-      "element":[
-         {
-            "id":"Extension.url",
-            "path":"Extension.url",
-            "fixedUri":"http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity"
-         },
-         {
-            "id":"Extension.value[x]",
-            "path":"Extension.value[x]",
-            "binding":{
-               "strength":"required",
-               "valueSet":"http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.32"
+    "resourceType": "StructureDefinition",
+    "id": "us-core-genderIdentity",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity",
+    "name": "USCoreGenderIdentityExtension",
+    "title": "US Core Gender Identity Extension",
+    "status": "active",
+    "date": "2022-01-22",
+    "description": "This extension provides concepts to describe the gender a person identifies as.",
+    "purpose": "Complies with USCDI v2",
+    "fhirVersion": "4.0.1",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Patient"
+        },
+        {
+            "type": "element",
+            "expression": "RelatedPerson"
+        },
+        {
+            "type": "element",
+            "expression": "Person"
+        },
+        {
+            "type": "element",
+            "expression": "Practitioner"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/patient-genderIdentity",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.32"
+                }
             }
-         }
-      ]
-   }
+        ]
+    }
 }

@@ -109,7 +109,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
    - [Here](CodeSystem-us-core-tags.html)
    - [Here](ValueSet-us-core-tags.html)
    - [Here](StructureDefinition-us-core-observation-sdoh-assessment.html)
-1. **Resolved - change required**: Gender Identity Value set  [FHIR-35677](https://jira.hl7.org/browse/FHIR-35677) [See Change Here](#.html)
+1. **Applied**: Update Gender Identity Value set[FHIR-35677](https://jira.hl7.org/browse/FHIR-35677) [See Change Here](StructureDefinition-us-core-genderIdentity.html)
 1. **Resolved - change required**: Remove ""OTH"" from OMB Race Category valueSet [FHIR-35694](https://jira.hl7.org/browse/FHIR-35694) [See Change Here](#.html)
 1. **Applied**:Add basic introduction to the FHIR RESTful Search interaction in the home page [FHIR-35755](https://jira.hl7.org/browse/FHIR-35755) [See Change Here](index.html#us-core-fhir-restful-interactions)
 1. **Applied**: Remove MS from DiagnosticReport.imagingStudy [FHIR-35759](https://jira.hl7.org/browse/FHIR-35759) [See Change Here](StructureDefinition-us-core-diagnosticreport-note.html)
