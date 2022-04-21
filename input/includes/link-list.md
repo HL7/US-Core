@@ -334,3 +334,4 @@
 [FHIR Terminology Service for VSAC Resources]: https://www.nlm.nih.gov/vsac/support/usingvsac/vsacfhirapi.html
 [CLIA]: http://www.cdc.gov/clia/
 [Interpretative Guidelines for Laboratories]: http://www.cms.gov/Regulations-andGuidance/Legislation/CLIA/Interpretive_Guidelines_for_Laboratories.html
+[Directory of published versions]: history.html

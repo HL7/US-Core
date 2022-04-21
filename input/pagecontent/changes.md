@@ -103,7 +103,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Clarify $docref operation expectations [FHIR-35380](https://jira.hl7.org/browse/FHIR-35380) [See Change Here](CapabilityStatement-us-core-server.html#documentreference)
 1. **Applied**: Typo [FHIR-35388](https://jira.hl7.org/browse/FHIR-35388)
 1. **Applied**: Duplicate sections in US Core RelatedPerson Profile profile [FHIR-35452](https://jira.hl7.org/browse/FHIR-35452)
-1. **Resolved - change required**: Update guidance on changes between versions [FHIR-35576](https://jira.hl7.org/browse/FHIR-35576) [See Change Here](changes-between-versions.html)
+1. **Applied**: Updated guidance on changes between versions [FHIR-35576](https://jira.hl7.org/browse/FHIR-35576) [See Change Here](changes-between-versions.html)
 1. **Applied**: Split section on "deleted" from "entered in error" [FHIR-35622](https://jira.hl7.org/browse/FHIR-35622) [See Change Here](general-guidance.html#representing-entered-in-error-information)
 1. **Applied**: Use "sdoh" instead of "LG41762-2" for SDOH Categories and Tags [FHIR-35644](https://jira.hl7.org/browse/FHIR-35644) See Changes:
    - [Here](CodeSystem-us-core-tags.html)
