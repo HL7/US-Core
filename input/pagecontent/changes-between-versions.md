@@ -6,9 +6,32 @@ This page has been updated to reflect all the versions
 
 There are several consideration for the user and developer experience when transitioning from [FHIR Version DSTU2] to FHIR R4 <span class="bg-success" markdown="1">and when updating to new versions of US Core.</span><!-- new-content -->  To ensure a smoother upgrade path the following the guidance is provided. <span class="bg-success" markdown="1">This page reflects non-normative best practices established at the time of publication</span><!-- new-content -->.
 
+### Versioning of US Core
+
+US Core undergoes annual updates which is discussed in the [Future of US Core] page. The [Directory of published versions] lists the publication history with links to each version of US Core.  The [Change Log] documents the changes across the versions of US Core. The [Argonaut Data Query] guide was published separately and is not included in the directory or change log.
+
+Work is underway to identify corrections in subsequent versions as "patches" to prior version for the purpose of ONC Certification.
+
+### Cross Version Comparisons
+
+The table below summarizes the different profiles and resource types between Argonaut Data Query and major releases of US Core :
+
+{% include dstu2-r4-table.md %}
+
+Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir.igVer}} version of US Core and each previous major release are provided in the links below:
+
+- [{{site.data.fhir.igVer}}-4.0.0 comparison](comparison-v4.0.0/index.html)
+- [{{site.data.fhir.igVer}}-3.1.1 comparison](comparison-v3.1.1/index.html)
+
+
+A detailed comparisons between this version of US Core and Argonaut Data Query is available as a downloadable CSV Excel file:
+
+- [{{site.data.fhir.igVer}}-argo data query CSV](comparison-argo.csv)
+- [{{site.data.fhir.igVer}}-argo data query Excel](comparison-argo.xlsx)
+
 ### Endpoint Discoverability
 
-<span class="bg-success" markdown="1">A server may support Version DSTU2 and [Argonaut Data Query] or FHIR R4 and US Core ver 3.1.1+ or both.</span><!-- new-content -->  A server may make explicit which version of Argo/US Core on their FHIR endpoint (e.g., "DSTU2" or “R4" path component or separate files based on version). However best practice is to inspect the [endpoint metadata](http://hl7.org/fhir/R4/http.html) on each endpoint to discover the information about a server's capabilities including the FHIR version and the US Core Profile version that is supported:
+<span class="bg-success" markdown="1">A server may support Version DSTU2 and Argonaut Data Query or FHIR R4 and US Core ver 3.1.1+ or both.</span><!-- new-content -->  A server may make explicit which version of Argo/US Core on their FHIR endpoint (e.g., "DSTU2" or “R4" path component or separate files based on version). However best practice is to inspect the [endpoint metadata](http://hl7.org/fhir/R4/http.html) on each endpoint to discover the information about a server's capabilities including the FHIR version and the US Core Profile version that is supported:
 
 `GET [base]/metadata{?mode=[mode]} {&_format=[mime-type]}`
 
@@ -43,7 +66,6 @@ In an upgraded R4 endpoint any data in DSTU2 should be in R4. However, not all d
       - Maintaining the same auth server for both endpoints so that the refresh token is valid for both DSTU2 the R4 endpoint as well may be possible but not in scope.
 - The new endpoint will bring additional/changed resource types and added scopes
 
-    The table below summarizes the different profiles and resource types between DSTU2 and R4:
 
 {% include dstu2-r4-table.md %}
 
