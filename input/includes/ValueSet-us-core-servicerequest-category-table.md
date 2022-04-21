@@ -7,4 +7,4 @@ Code|System|Display|Definition
 387713003|http://snomed.info/sct|Surgical procedure (procedure)|-
 386053000|http://snomed.info/sct|Evaluation procedure (procedure)|-
 410606002|http://snomed.info/sct| Social service procedure (procedure)|-
-LG41762-2|http://loinc.org|SocialDeterminantsOfHealth|-
+LG41762-2|http://loinc.org|SDOH|-

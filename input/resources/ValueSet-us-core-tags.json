@@ -2,6 +2,7 @@
     "resourceType": "ValueSet",
     "id": "us-core-tags",
     "status": "active",
+    "date": "2022-04-20",
     "name": "USCoreTags",
     "title": "US Core Tags",
     "description": "Used to tag patient submitted resources for writing and searching from EHRs",
@@ -10,13 +11,7 @@
     "compose": {
         "include": [
             {
-                "system": "http://loinc.org",
-                "concept": [
-                    {
-                        "code": "LG41762-2",
-                        "display": "Social Determinants Of Health"
-                    }
-                ]
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-tags"
             }
         ]
     }

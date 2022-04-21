@@ -35,7 +35,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     Example:
 
-      1. GET [base]/ServiceRequest?patient=f201&amp;category=http://loinc.org\|LG41762-2
+      1. GET [base]/ServiceRequest?patient=f201&amp;category=http://loinc.org\|sdoh
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and  a category code ([how to search by reference] and [how to search by token])
 
@@ -58,7 +58,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     Example:
 
-      1. GET [base]/ServiceRequest?patient=f201&amp;category=http://loinc.org\|LG41762-2&amp;date=ge2010-01-14T00:00:00Z
+      1. GET [base]/ServiceRequest?patient=f201&amp;category=http://loinc.org\|sdoh&amp;date=ge2010-01-14T00:00:00Z
 
     *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and date and a category code ([how to search by reference] and [how to search by token] and [how to search by date])
 

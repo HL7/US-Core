@@ -21,10 +21,10 @@ copyright: >-
   Regenstrief Institute, Inc"/>
 compose:
   include:
-    - system: 'http://loinc.org'
+    - system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-tags'
       concept:
-        - code: LG41762-2
-          display: SocialDeterminantsOfHealth
+        - code: sdoh
+          display: SDOH
     - system: 'http://snomed.info/sct'
       concept:
         - code: '386053000'

@@ -1,11 +1,12 @@
 resourceType: CodeSystem
 id: us-core-tags
 status: active
+date: '2022-04-20'
 content: complete
 name: USCoreTags
 title: US Core Tags
 description: >-
-  code used in US Core `meta.tag` and 'category' profiles. The are typically used when there is a need for categorization or workflow hints.
+  Codes used in US Core `meta.tag` and 'category' profiles. The are typically used when there is a need for categorization or workflow hints.
 caseSensitive: true
 url: >-
   http://hl7.org/fhir/us/core/CodeSystem/us-core-tags
@@ -17,5 +18,4 @@ concept:
   - code: sdoh
     display: SDOH
     definition: >-
-      Structured Determinants of Health Category
-count: 1
+      Social Determinants of Health Category

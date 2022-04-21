@@ -16,14 +16,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 
 
 ﻿ **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
-1. **Resolved - change required**: US Core Pulse Oximetry Profile Text Summary has incorrect UCUM Unit for Oxygen Concentration [FHIR-27845](https://jira.hl7.org/browse/FHIR-27845) [See Change Here](#.html)
-1. **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) [See Change Here](#.html)
-1. **Resolved - change required**: valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107) [See Change Here](#.html)
-1. **Resolved - change required**: List profiles by type and create table comparing Observation Profiles [FHIR-30780](https://jira.hl7.org/browse/FHIR-30780) See Changes:
-  - [Here](profiles-and-extensions.html)
-  - [Here](index.html#us-core-profiles)
-  - [Here](#.html)
-1. **Resolved - change required**: Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783) [See Change Here](#.html)
+
 1. **Applied**: Why is SDOH Assessment's Observation.component.code MS? Why is Observation.component? [FHIR-34384](https://jira.hl7.org/browse/FHIR-34384) [See Change Here](StructureDefinition-us-core-observation-survey.html)
 1. **Applied**: Clarify clinicalStatus invariant [FHIR-34468](https://jira.hl7.org/browse/FHIR-34468) [See Change Here](general-guidance.html#missing-data)
 1. **Applied**: Fix Ethnicity ValueSet description [FHIR-34488](https://jira.hl7.org/browse/FHIR-34488) [See Change Here](ValueSet-omb-ethnicity-category.html)
@@ -47,7 +40,6 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Clarify reported guidance on how secondary sourced MedicationRequest information can be represented. [FHIR-34628](https://jira.hl7.org/browse/FHIR-34628) [See Change Here](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
 1. **Applied**: Fix contextDirection in Example 1[FHIR-34629](https://jira.hl7.org/browse/FHIR-34629) [See Change Here](clinical-notes.html#discovering-note-and-report-types)
 1. **Applied**: Fix Medication List Examples [FHIR-34630](https://jira.hl7.org/browse/FHIR-34630) [See Change Here](medication-list.html#fetching-all-medications-active-medications-and-all-medications-for-an-encounter)
-1. **Resolved - change required**: AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636) [See Change Here](#.html)
 1. **Applied**: Correct Careteam Narrative errors (remove reference to Organization) [FHIR-34637](https://jira.hl7.org/browse/FHIR-34637) [See Change Here](StructureDefinition-us-core-careteam.html#mandatory-and-must-support-data-elements)
 1. **Applied**: Fix typo [FHIR-34638](https://jira.hl7.org/browse/FHIR-34638)
 1. **Applied**: Added missing search query parameter values [FHIR-34642](https://jira.hl7.org/browse/FHIR-34642) [See Change Here](StructureDefinition-us-core-observation-imaging.html#notes)
@@ -68,10 +60,10 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
    - [Here](StructureDefinition-us-core-observation-sdoh-assessment.html)
 1. **Applied**: Clinical Test Result Observation Profile Must Have needs to address the 3 slices for procedure, exam, and activity in the explanatory text [FHIR-34753](https://jira.hl7.org/browse/FHIR-34753) [See Change Here](StructureDefinition-us-core-observation-clinical-test.html)
 1. **Applied**: Clarify guidance for use of Patient.genderIdentity, Patient.birthsex, and pre-existing Patient.gender [FHIR-34754](https://jira.hl7.org/browse/FHIR-34754) [See Change Here](StructureDefinition-us-core-patient.html)
-1. **Resolved - change required**: RelatedPerson relationshiptype should have binding to FHIR value set RelatedPerson-relationshiptype [FHIR-34755](https://jira.hl7.org/browse/FHIR-34755) [See Change Here](#.html)
-1. **Resolved - change required**: There are now about 19 profiles based on Observation, consider consolidating to all purpose Observation with code specific rule pages [FHIR-34890](https://jira.hl7.org/browse/FHIR-34890) See Change
-  - [Here](index.html#us-core-profiles)
-  - [Here](profiles-and-extensions.html)
+1. **Resolved - change required**: List profiles by type and create table comparing Observation Profiles [FHIR-34890](https://jira.hl7.org/browse/FHIR-34890) See Changes:
+ - [Here](profiles-and-extensions.html)
+ - [Here](index.html#us-core-profiles)
+ - [Here](#.html)
 1. **Applied**: Lab Result and Specimen Information for RBC Observation is Missing [FHIR-34910](https://jira.hl7.org/browse/FHIR-34910) See Change
    - [Here](index.html#how-to-read-this-guide)
    - [Here](examples.html)
@@ -113,7 +105,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Duplicate sections in US Core RelatedPerson Profile profile [FHIR-35452](https://jira.hl7.org/browse/FHIR-35452)
 1. **Resolved - change required**: Update guidance on changes between versions [FHIR-35576](https://jira.hl7.org/browse/FHIR-35576) [See Change Here](changes-between-versions.html)
 1. **Applied**: Split section on "deleted" from "entered in error" [FHIR-35622](https://jira.hl7.org/browse/FHIR-35622) [See Change Here](general-guidance.html#representing-entered-in-error-information)
-1. **Resolved - change required**: Condition Category Code - LOINC Code for  [FHIR-35644](https://jira.hl7.org/browse/FHIR-35644) [See Change Here](#.html)
+1. **Resolved - change required**: Use "sdoh" instead of "LG41762-2" for SDOH Categories and Tags [FHIR-35644](https://jira.hl7.org/browse/FHIR-35644) [See Change Here](#.html)
 1. **Resolved - change required**: Gender Identity Value set  [FHIR-35677](https://jira.hl7.org/browse/FHIR-35677) [See Change Here](#.html)
 1. **Resolved - change required**: Remove ""OTH"" from OMB Race Category valueSet [FHIR-35694](https://jira.hl7.org/browse/FHIR-35694) [See Change Here](#.html)
 1. **Applied**:Add basic introduction to the FHIR RESTful Search interaction in the home page [FHIR-35755](https://jira.hl7.org/browse/FHIR-35755) [See Change Here](index.html#us-core-fhir-restful-interactions)
@@ -142,6 +134,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Move change log from version history to new change log  page in IG [FHIR-36703](https://jira.hl7.org/browse/FHIR-36703) [See Change Here](changes.html)
 1. **Applied**: Remove redundant example sections [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728)
 1. **Applied**: Realign ids names and titles for all new profiles for consistency [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728) [See Change Here](profiles-and-extensions.html)
+1. **Applied**: Move profile page introduction into structuredefinition description [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728) [See Change Here](profiles-and-extensions.html)
 
 
 ---

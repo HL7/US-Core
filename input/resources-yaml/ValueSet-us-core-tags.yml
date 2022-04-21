@@ -1,6 +1,7 @@
 resourceType: ValueSet
 id: us-core-tags
 status: active
+date: '2022-04-20'
 name: USCoreTags
 title: US Core Tags
 description: >-
@@ -10,10 +11,7 @@ url: >-
   http://hl7.org/fhir/us/core/ValueSet/us-core-tags
 compose:
   include:
-    - system: http://loinc.org
-      concept:
-        - code: LG41762-2
-          display: Social Determinants Of Health
+    - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-tags
 # expansion:
 #   identifier: my_temporary_expansion
 #   timestamp: '2015-06-22T13:56:07Z' # <--- needs to be a timestamp
