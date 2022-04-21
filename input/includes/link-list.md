@@ -40,19 +40,18 @@
 [ConceptMap]: {{site.data.fhir.path}}conceptmap.html
 [Condition Quick Start]: StructureDefinition-us-core-condition-encounter-diagnosis.html#search
 [Condition]: {{site.data.fhir.path}}condition.html
-[Conformance]: conformance.html  "Conformance Expectations Page"
+[Conformance]: conformance.html
 [Conformance Requirements for Client]: CapabilityStatement-us-core-client.html "Conformance Requirements for Client Page"
 [Conformance Requirements for Server]: CapabilityStatement-us-core-server.html "Conformance Requirements for Server Page"
 [US Core Server CapabilityStatement]: CapabilityStatement-us-core-server.html
 [US Core Client CapabilityStatement]: CapabilityStatement-us-core-client.html
 [Conformance Requirements]: capability-statements.html "CapabilityStatements defined for this Guide"
 [Conformance requirements for the US Core Server]: CapabilityStatement-us-core-server.html
-[Conformance]: daf-core-DocumentReference-conformance.html
 [Consent]: {{site.data.fhir.path}}consent.html
 [Consultation Note (11488-4)]: https://loinc.org/11488-4.html
 [Coverage]: {{site.data.fhir.path}}coverage.html
 [DAF-Research]: http://hl7.org/fhir/us/daf-research/index.html
-[Changes Between US Core Versions]: changes-between-versions.html
+[Changes Between Versions]: changes-between-versions.html
 [Data Access Framework]: https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Home
 [DataAbsentReason Code System]: {{site.data.fhir.path}}codesystem-data-absent-reason.html
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
@@ -294,7 +293,6 @@
 [US Core Blood Pressure Profile]: StructureDefinition-us-core-blood-pressure.html
 [US Core Head Circumference Profile]: StructureDefinition-us-core-head-circumference.html
 [vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
-[US Core change notes]: http://hl7.org/fhir/us/core/history.html
 [Goal]: {{site.data.fhir.path}}goal.html
 [Missing Data]: general-guidance.html#missing-data
 [Suppressed Data]: general-guidance.html#missing-data
@@ -334,4 +332,5 @@
 [FHIR Terminology Service for VSAC Resources]: https://www.nlm.nih.gov/vsac/support/usingvsac/vsacfhirapi.html
 [CLIA]: http://www.cdc.gov/clia/
 [Interpretative Guidelines for Laboratories]: http://www.cms.gov/Regulations-andGuidance/Legislation/CLIA/Interpretive_Guidelines_for_Laboratories.html
-[Directory of published versions]: history.html
+[Directory of published versions]: {{site.data.fhir.canonical}}/history.html
+[General Requirements]: general-requirements.html

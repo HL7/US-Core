@@ -15,13 +15,13 @@ The US Core Implementation Guide is based on [FHIR Version R4] and defines the m
 1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information.
 1. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
 
-For a detailed description between these different usages of US Core, see the [Conformance Expectations] page.
+For a detailed description between these different usages of US Core, see the [Conformance Requirements] page.
 
 US Core has benefitted from testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing.  This guide and the US Core profiles have become the foundation for US Realm FHIR implementation guides.  This release is the first of yearly US Core updates to reflect changes to <span class="bg-success" markdown="1">[U.S. Core Data for Interoperability (USCDI) v2]</span><!-- new-content -->  and requests from the US Realm FHIR community.  This Approach is outlined in the [Future of US Core] page.  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
 
 ### Background
 
-The US Core requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the [Office of the National Coordinator for Health Information Technology (ONC)] sponsored [Data Access Framework] (DAF) project. The Argonaut Data Query Implementation Guide superseded DAF and documented security and authorization and the querying of the [2015 Edition Common Clinical Data Set (CCDS)] and static documents.  US Core descended directly from the Argonaut guide to support FHIR Version STU3 and eventually FHIR R4 and The ONC <span class="bg-success" markdown="1">[U.S. Core Data for Interoperability (USCDI)]</span><!-- new-content --> .
+The US Core requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the [Office of the National Coordinator for Health Information Technology (ONC)] sponsored Data Access Framework (DAF) project. The Argonaut Data Query Implementation Guide superseded DAF and documented security and authorization and the querying of the [2015 Edition Common Clinical Data Set (CCDS)] and static documents.  US Core descended directly from the Argonaut guide to support FHIR Version STU3 and eventually FHIR R4 and The ONC <span class="bg-success" markdown="1">[U.S. Core Data for Interoperability (USCDI)]</span><!-- new-content --> .
 
 
 ### How to read this Guide
@@ -39,7 +39,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   - [Medication List]\: This page gives guidance on how a patient or provider can access a patient's medications.
   - [Basic Provenance]\: This page provides implementers with important definitions to create and share the Provenance Resource.
   - [SDOH]\: This page gives background on the exchange of Social Determinants of Health (SDOH) data elements.
-  - <span class="bg-success" markdown="1">[Changes Between US Core Versions]\: This page considers the user and developer experience when transitioning between versions of US Core</span><!-- new-content -->.
+  - <span class="bg-success" markdown="1">[Changes Between Versions]\: This page considers the user and developer experience when transitioning between versions of US Core</span><!-- new-content -->.
   - [Future of US Core]\: This page outlines the approach to adding new content to US Core.
 - [FHIR Artifacts]\: Thes pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles and Extensions]\: This page page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarizes the supported search transactions for each Profile. <span class="bg-success" markdown="1">Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation and certification.</span><!-- new-content -->

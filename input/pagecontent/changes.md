@@ -53,7 +53,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Clarify that SDOH data elements does not include work information (see ODH) [FHIR-34701](https://jira.hl7.org/browse/FHIR-34701) See Change:
   -  [Here](sdoh.html)
   -  [Here](StructureDefinition-us-core-observation-sdoh-assessment.html)
-1. **Applied**: Add 386053000 "Evaluation procedure" ,410606002 "Social service procedure" to the ServiceRequest Category Code [FHIR-34747](https://jira.hl7.org/browse/FHIR-34747) [See Change Here](#.html)
+1. **Applied**: Add 386053000 "Evaluation procedure" ,410606002 "Social service procedure" to the ServiceRequest Category Code [FHIR-34747](https://jira.hl7.org/browse/FHIR-34747) [See Change Here](ValueSet-us-core-servicerequest-category.html)
 1. **Applied**: Broaden Common SDOH assessment concepts and clarify is a starter set [FHIR-34752](https://jira.hl7.org/browse/FHIR-34752) See Change:
    - [Here](sdoh.html#assessment-codes)
    - [Here](ValueSet-us-core-common-sdoh-assessments.html)
@@ -69,7 +69,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
    - [Here](examples.html)
    - [Here](Observation-blood-glucose.html)
 1. **Applied**: Added guidance on Observation.category limitations [FHIR-34949](https://jira.hl7.org/browse/FHIR-34949) [See Change Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
-1. **Applied**: Add guidance on Imaging DiagnosticReport ontology [FHIR-34958](https://jira.hl7.org/browse/FHIR-34958) [See Change Here](#.html)
+1. **Applied**: Add guidance on Imaging DiagnosticReport ontology [FHIR-34958](https://jira.hl7.org/browse/FHIR-34958) [See Change Here](StructureDefinition-us-core-observation-imaging.html)
 1. **Applied**: Clarify that the profile guidance is not limited to profiled elements [FHIR-34971](https://jira.hl7.org/browse/FHIR-34971) [See Change Here](index.html#how-to-read-this-guide)
 1. **Applied**: Fix asterisk notation in profiles [FHIR-34972](https://jira.hl7.org/browse/FHIR-34972) [See Change Here](StructureDefinition-us-core-observation-imaging.html)
 1. **Applied**: Clarify "time" elements used in the DiagnosticReport profiles [FHIR-34973](https://jira.hl7.org/browse/FHIR-34973) See Change:
@@ -115,13 +115,15 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Remove MS from DiagnosticReport.imagingStudy [FHIR-35759](https://jira.hl7.org/browse/FHIR-35759) [See Change Here](StructureDefinition-us-core-diagnosticreport-note.html)
 1. **Applied**: Media example data value fails regex [FHIR-35790](https://jira.hl7.org/browse/FHIR-35790) [See Change Here](Media-ekg-strip.json.html)
 1. **Applied**: Typo [FHIR-35844](https://jira.hl7.org/browse/FHIR-35844)
-1. **Applied**: Typo [FHIR-35851](https://jira.hl7.org/browse/FHIR-35851) [See Change Here](#.html)
-1. **Applied**: Change fixed category slice to max=1 [FHIR-35854](https://jira.hl7.org/browse/FHIR-35854) [See Change Here](#.html)
+1. **Applied**: Typo [FHIR-35851](https://jira.hl7.org/browse/FHIR-35851)
+1. **Applied**: Change fixed category slice to max=1 [FHIR-35854](https://jira.hl7.org/browse/FHIR-35854) [See Change Here](StructureDefinition-us-core-observation-imaging.html)
 1. **Applied**: Clarify narrative of status "active" element.  [FHIR-35870](https://jira.hl7.org/browse/FHIR-35870) [See Change Here](StructureDefinition-us-core-organization.html)
 1. **Applied**: allow ethnicity extension in FamilyMemberHistory [FHIR-35997](https://jira.hl7.org/browse/FHIR-35997) [See Change Here](StructureDefinition-us-core-ethnicity.html)
 1. **Applied**: allow race extension in FamilyMemberHistory [FHIR-35998](https://jira.hl7.org/browse/FHIR-35998) [See Change Here](StructureDefinition-us-core-race.html)
-1. **Applied**: Update Condition Implementation Guidance to reflect current USCDI terminology standars [FHIR-36056](https://jira.hl7.org/browse/FHIR-36056) [See Change Here](#.html)
-1. **Applied**: Clarify expectations for reader [FHIR-36057](https://jira.hl7.org/browse/FHIR-36057) [See Change Here](#.html)
+1. **Applied**: Update Condition Implementation Guidance to reflect current USCDI terminology standards [FHIR-36056](https://jira.hl7.org/browse/FHIR-36056) [See Change Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
+1. **Applied**: Clarify expectations for reader [FHIR-36057](https://jira.hl7.org/browse/FHIR-36057) See Changes:
+   - [Here](index.html)
+   - [Here](StructureDefinition-us-core-observation-lab.html)
 1. **Applied**: Update US Core Yearly Updates [FHIR-36058](https://jira.hl7.org/browse/FHIR-36058) [See Change Here](future-of-US-core.html)
 1. **Applied**: Remove "Cause of death" from Condition.category and remove US Core Condition Category Codes ValueSet [FHIR-36104](https://jira.hl7.org/browse/FHIR-36104)
 1. **Applied**: Add OTH to sexual orientation ValueSet [FHIR-36166](https://jira.hl7.org/browse/FHIR-36166) [See Change Here](ValueSet-us-core-sexual-orientation.html)
@@ -150,7 +152,7 @@ Due external dependencies and publication tooling limitations, the application o
 
 **Tracker Status**: **Summary** **Jira Issue** Application Status
 
-1. **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) [See Change Here](#.html)  Manual code expansion and STU Note Present.  Working with HL7 publishing to fix integration with VSAC.
+1. **Resolved - change required**: Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) Manual code expansion and STU Note Present.  Working with HL7 publishing to fix integration with VSAC.
 1. **Resolved - change required**: valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107) Working with HL7 publishing to fix.
 1. **Resolved - change required**: Extensions used that are not defined in the scope [FHIR-35775](https://jira.hl7.org/browse/FHIR-35775)
 
@@ -160,8 +162,8 @@ Due external dependencies and publication tooling limitations, the application o
 **Tracker Status**: **Summary** **Jira Issue** Application Status
 
 1. **Resolved - change required**: In most of the data elements – “Binding is from base FHIR and US Core Vital Signs” Need this to be one single combined listing [FHIR-30780](https://jira.hl7.org/browse/FHIR-30780)
-1. **Resolved - change required**: AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636) [See Change Here](#.html)
-1. **Resolved - change required**: RelatedPerson relationshiptype should have binding to FHIR value set RelatedPerson-relationshiptype [FHIR-34755](https://jira.hl7.org/browse/FHIR-34755) [See Change Here](#.html)
+1. **Resolved - change required**: AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636)
+1. **Resolved - change required**: RelatedPerson relationshiptype should have binding to FHIR value set RelatedPerson-relationshiptype [FHIR-34755](https://jira.hl7.org/browse/FHIR-34755)
 
 
 ---
