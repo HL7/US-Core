@@ -6,25 +6,17 @@
 		<system value="urn:ietf:rfc:3986"/>
 		<value value="urn:oid:2.16.840.1.113883.4.642.2.575"/>
 	</identifier>
-	<version value="1.0.1"/>
 	<name value="OmbRaceCategories"/>
 	<title value="OMB Race Categories"/>
 	<status value="active"/>
-	<date value="2021-12-08"/>
-	<publisher value="HL7 US Realm Steering Committee"/>
-	<contact>
-		<telecom>
-			<system value="other"/>
-			<value value="http://hl7.org/fhir"/>
-		</telecom>
-	</contact>
-	<description value="The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the codes for the five race categories - 'American Indian' or 'Alaska Native', 'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific Islander', and 'White' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf) ."/>
+	<date value="2022-04-21"/>
+	<description value="The codes for the concepts 'Unknown', 'Asked but Unknown', and the codes for the five race categories - 'American Indian' or 'Alaska Native', 'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific Islander', and 'White' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf) ."/>
 	<compose>
 		<include>
 			<valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.2074.1.1.3"/>
 		</include>
 		<include>
-			<valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.103"/>	
+			<valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.102"/>
 		</include>
 	</compose>
 </ValueSet>
