@@ -78,7 +78,7 @@
         "reference": {
           "reference": "CodeSystem/us-core-observation-category"
         },
-        "description": "Set of codes for implementation of the US-Core profiles. These codes are  extensions to the [FHIR Observation Category Codes](http://terminology.hl7.org/CodeSystem/observation-category).\n",
+        "description": "Set of codes for implementation of the US-Core profiles. These codes are  extensions to the [FHIR Observation Category Codes](http://terminology.hl7.org/CodeSystem/observation-category).",
         "exampleBoolean": false,
         "name": "US Core Observation Category Extension Codes"
       },
@@ -118,7 +118,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-bmi"
         },
-        "description": "\nTo promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch Body Mass Index (BMI) observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific uses cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch Body Mass Index (BMI) observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific uses cases.",
         "exampleBoolean": false,
         "name": "US Core BMI Profile"
       },
