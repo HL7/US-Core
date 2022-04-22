@@ -25,7 +25,6 @@ Publication Punch List:
 - [ ] Publication checklist
   - [ ] remove new content tags
   - [ ] update Jira file
-- [ ]
 </div><!-- new-content -->
 
 

@@ -79,6 +79,10 @@ The following section has been reformatted
 
 <!-- ================================================ -->
 
+<!-- new content comment remove prior to publishing-->
+This section has been added for this version.
+{:.new-content}
+
 ### US Core FHIR RESTful interactions
 
 For systems that support both the US Core Profile content structure and the RESTful interactions defined for a resource, the requirements are formally defined in the US Core CapabilityStatements. Additionally, each profile page has a *Quick Start* Section that provides an overview of the required set of FHIR RESTful search and read operations. These sections document how to access a patient's clinical and administrative data using the FHIR RESTful syntax:
