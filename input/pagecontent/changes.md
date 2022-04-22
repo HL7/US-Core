@@ -17,7 +17,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 
 ﻿ **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
-1. **Applied**: Why is SDOH Assessment's Observation.component.code MS? Why is Observation.component? [FHIR-34384](https://jira.hl7.org/browse/FHIR-34384) [See Change Here](StructureDefinition-us-core-observation-survey.html)
+1. **Applied**: Remove requirement for component SDOH Assessment's Observations [FHIR-34384](https://jira.hl7.org/browse/FHIR-34384) [See Change Here](StructureDefinition-us-core-observation-survey.html)
 1. **Applied**: Clarify clinicalStatus invariant [FHIR-34468](https://jira.hl7.org/browse/FHIR-34468) [See Change Here](general-guidance.html#missing-data)
 1. **Applied**: Fix Ethnicity ValueSet description [FHIR-34488](https://jira.hl7.org/browse/FHIR-34488) [See Change Here](ValueSet-omb-ethnicity-category.html)
 1. **Applied**: Remove MS from ServiceRequest.occurrenceDateTime add MS to ServiceRequest.occurrencePeriod [FHIR-34493](https://jira.hl7.org/browse/FHIR-34493) [See Change Here](StructureDefinition-us-core-servicerequest.html)
