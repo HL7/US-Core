@@ -5,10 +5,10 @@
 Publication Punch List:
 
 - [X] apply trackers
-      these technical tracker tasks still open:
-       - [ ] Observation profile comparison table`
-       - [ ] Version comparison tables`
-       - [ ] update uscdi v2 table
+  - these technical tracker tasks still open:
+     - [ ] Observation profile comparison table`
+     - [ ] Version comparison tables`
+     - [ ] update uscdi v2 table
 - [ ] Technical QA
   - [ ] follow up on publishing issues (see https://confluence.hl7.org/display/CGP/Publication+Punch+List)
   - [ ] follow up on terminology issues  (see https://confluence.hl7.org/display/CGP/Publication+Punch+List)
