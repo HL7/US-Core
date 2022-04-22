@@ -294,7 +294,7 @@
 [US Core Head Circumference Profile]: StructureDefinition-us-core-head-circumference.html
 [vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
 [Goal]: {{site.data.fhir.path}}goal.html
-[Missing Data]: general-guidance.html#missing-data
+[Missing Data]: general-requirements.html#missing-data
 [Suppressed Data]: general-guidance.html#missing-data
 [`CarePlan.status`]: {{site.data.fhir.path}}careplan.html
 [Must Support - Coded Elements]: must-support.html#coded-elements

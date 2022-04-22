@@ -4,22 +4,28 @@
 
 Publication Punch List:
 
-- [ ] apply trackers - ...in progress...
-- [ ] review CabilityStatements
-- [ ] review application of trackers
-- [ ] update uscdi v2 tables ( todo for Brett to update )
-- [ ] follow up on publishing issues
-- [ ] follow up on terminology issues
+- [X] apply trackers
+      these technical tracker tasks still open:
+       - [ ] Observation profile comparison table`
+       - [ ] Version comparison tables`
+       - [ ] update uscdi v2 table
 - [ ] Technical QA
+  - [ ] follow up on publishing issues (see https://confluence.hl7.org/display/CGP/Publication+Punch+List)
+  - [ ] follow up on terminology issues  (see https://confluence.hl7.org/display/CGP/Publication+Punch+List)
+  - [ ] update IgnoreWarnings.txt file
+  - [ ] Variance request for QA Issues:
 - [ ] Editorial QA
-- [ ] CGP Reviw
-- [ ] remove new content tags
-- [ ] update IgnoreWarnings.txt file
+  - [ ] review CababilityStatements
+  - [ ] review application of trackers
+- [ ] CGP Review
 - [ ] Publication Request
 - [ ] CGP Vote
 - [ ] FMG Vote
 - [ ] TCS Vote
-- [ ] Publication Checklist
+- [ ] Publication checklist
+  - [ ] remove new content tags
+  - [ ] update Jira file
+- [ ]
 </div><!-- new-content -->
 
 

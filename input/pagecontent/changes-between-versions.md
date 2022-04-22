@@ -4,11 +4,11 @@ This page has been updated to reflect all the versions
 
 ### Introduction
 
-There are several consideration for the user and developer experience when transitioning from [FHIR Version DSTU2] to FHIR R4 <span class="bg-success" markdown="1">and when updating to new versions of US Core.</span><!-- new-content -->  To ensure a smoother upgrade path the following the guidance is provided. <span class="bg-success" markdown="1">This page reflects non-normative best practices established at the time of publication</span><!-- new-content -->.
+<span class="bg-success" markdown="1">With each major version in FHIR the core data models have undergone changes.  The FHIR core specification provides a [base resource differential] to help implementers navigate version changes.</span><!-- new-content -->   However, there are additional considerations for the user and developer experience when transitioning from [FHIR Version DSTU2] to FHIR R4.  <span class="bg-success" markdown="1"> Similarly US Core undergoes annual updates which is discussed in the [Future of US Core] page. With each update to a new versions of US Core, the US Core Profiles and conformance expectation change.</span><!-- new-content -->  The following the guidance in this page is provided to ensure a smoother upgrade path <span class="bg-success" markdown="1">It reflects non-normative best practices established at the time of publication</span><!-- new-content -->.
 
 ### Versioning of US Core
 
-US Core undergoes annual updates which is discussed in the [Future of US Core] page. The [Directory of published versions] lists the publication history with links to each version of US Core.  The [Change Log] documents the changes across the versions of US Core. The [Argonaut Data Query] guide was published separately and is not included in the directory or change log.
+US Core undergoes annual updates with new guidance, requirements, and profiles and changes to existing content. The [Directory of published versions] lists the publication history with links to each version of US Core.  The [Change Log] documents the changes across the versions of US Core. The [Argonaut Data Query] guide was published separately and is not included in the directory or change log.
 
 Work is underway to identify corrections in subsequent versions as "patches" to prior version for the purpose of ONC Certification.
 

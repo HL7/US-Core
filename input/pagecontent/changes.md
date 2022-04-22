@@ -77,7 +77,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
    - [Here](StructureDefinition-us-core-diagnosticreport-note.html)
 1. **Applied**: Change the query parameter value to be consistent with previous statement [FHIR-35047](https://jira.hl7.org/browse/FHIR-35047) [See Change Here](StructureDefinition-us-core-observation-clinical-test.html#notes)
 1. **Applied**: Re-ordered sections in *Downloads* page and provide a zip file of schematrons [FHIR-35064](https://jira.hl7.org/browse/FHIR-35064) [See Change Here](downloads.html)
-1. **Resolved - change required**:   Split General Guidance page into 1) USCDI 2)General Requirements 3)General Guidance. Move General Requirements under  Conformance. [FHIR-35065](https://jira.hl7.org/browse/FHIR-35065) See Change:
+1. **Applied**:  Split General Guidance page into 1) USCDI  3)General Guidance. Split Conformance Expectations into General Requirements and Must Support. Move General Guidance to General Requirements [FHIR-35065](https://jira.hl7.org/browse/FHIR-35065) See Change:
   - [Here](uscdi.html)
   - [Here](general-requirements.html)
   - [Here](general-guidance.html)
