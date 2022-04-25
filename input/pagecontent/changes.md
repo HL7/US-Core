@@ -138,6 +138,7 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Realign ids names and titles for all new profiles for consistency [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728) [See Change Here](profiles-and-extensions.html)
 1. **Applied**: Move profile page introduction into structuredefinition description [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728) [See Change Here](profiles-and-extensions.html)
 1. **Applied**: Fixed profile, Added STU Note, Updated FHIR Core Vitals Profile binding in FHIR R4B. [FHIR-27845](https://jira.hl7.org/browse/FHIR-27845) [See Change Here](StructureDefinition-us-core-pulse-oximetry.html)
+1. **Applied**: Change Encounter.reasonReference from 0..1 to 0..* [FHIR-36862](https://jira.hl7.org/browse/FHIR-36862) [See Change Here](StructureDefinition-us-core-encounter.html)
 
 #### The Following Trackers Will be Applied in Future Version
 

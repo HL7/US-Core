@@ -107,7 +107,7 @@ differential:
       mustSupport: true
     - id: Encounter.reasonReference
       path: Encounter.reasonReference
-      max: '1'
+      max: '*'
       type:
         - code: Reference
           targetProfile:
