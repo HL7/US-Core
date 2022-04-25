@@ -137,16 +137,11 @@ In addition to the key changes listed in version 4.1.0, this version addresses o
 1. **Applied**: Remove redundant example sections [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728)
 1. **Applied**: Realign ids names and titles for all new profiles for consistency [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728) [See Change Here](profiles-and-extensions.html)
 1. **Applied**: Move profile page introduction into structuredefinition description [FHIR-36728](https://jira.hl7.org/browse/FHIR-36728) [See Change Here](profiles-and-extensions.html)
-
+1. **Applied**: Fixed profile, Added STU Note, Updated FHIR Core Vitals Profile binding in FHIR R4B. [FHIR-27845](https://jira.hl7.org/browse/FHIR-27845) [See Change Here](StructureDefinition-us-core-pulse-oximetry.html)
 
 #### The Following Trackers Will be Applied in Future Version
 
 Due external dependencies and publication tooling limitations, the application of these resolutions have been deferred.
-
-##### Working with HL7 WG to address FHIR Specification Updates
-
-**Tracker Status**: **Summary** **Jira Issue** Application Status
-1. **Resolved - change required**: US Core Pulse Oximetry Profile Text Summary has incorrect UCUM Unit for Oxygen Concentration [FHIR-27845](https://jira.hl7.org/browse/FHIR-27845)  STU Note Present, Updated FHIR Core Vitals Profile binding in FHIR R4B.
 
 ##### Working with HL7 publishing to resolve these publishing issues:
 
