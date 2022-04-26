@@ -254,7 +254,7 @@ There are situations when information on a particular data element is missing an
           - `Immunization.status`
           - `Goal.lifecycleStatus`
 
-        *The clinicalStatus element is <span class="bg-success" markdown="1">conditionally mandatory based on resource specific constraints</span><!-- new-content -->.
+        *The clinicalStatus element is <span class="bg-success" markdown="1">conditionally mandatory based on resource specific constraints.</span><!-- new-content -->
 
         If one of these status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set and a *warning* OperationOutcome **SHOULD** be included indicating that additional search results were found but could not be compliantly expressed and have been suppressed.
 
