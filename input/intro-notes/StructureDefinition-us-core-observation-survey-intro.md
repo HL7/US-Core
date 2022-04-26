@@ -28,7 +28,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 4. related questionnaire responses or observations that this observation is made from
 5. reference to observations that make up this observation**
 
-\*, \*\* see guidance below
+\* \*\* see guidance below
 
 **Profile specific implementation guidance:**
 - \*\*For responses to individual survey questions, the question is represented in `Observation.code`, and the answer in  `Observation.value`.
