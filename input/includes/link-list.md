@@ -181,6 +181,7 @@
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
 [Surgical Operation Note (11504-8)]: https://loinc.org/11504-8.html
 [Terminology]: terminology.html "Terminology Page"
+[Terminology Binding Extensible]: http://hl7.org/fhir/R4/terminologies.html#extensible
 [U.S. Core Data for Interoperability (USCDI) v1]: https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf
 [U.S. Core Data for Interoperability (USCDI) v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2
 [U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi
