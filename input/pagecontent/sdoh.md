@@ -87,7 +87,7 @@ Below is a simple example of FHIR RESTful search transaction on Observation to a
 
 The US Core code "sdoh" is used to categorize SDOH for Assessments, Problems, Service Requests and QuestionnaireReponse. This concept enables API consumers to be able to separate out SDOH data when accessing patient information. <span class="bg-success" markdown="1">Example searches are shown in each of the profile *Quick Start* sections.</span><!-- new-content -->
 
- <span class="bg-warning" markdown="1">Clients need to be understand that data categorization is somewhat subjective. The categorization applied by the source may not align with the client's expectations. Clients may find it more useful to use queries based on a specific code or set of codes or to perform additional client side filtering of query results.</span><!-- new-content --></span><!-- be-warning -->
+ <span class="bg-warning" markdown="1">Clients need to be understand that data categorization is somewhat subjective. The categorization applied by the source may not align with the client's expectations. Clients may find it more useful to use queries based on a specific code or set of codes or to perform additional client side filtering of query results.</span><!-- bg-warning -->
 
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
 
