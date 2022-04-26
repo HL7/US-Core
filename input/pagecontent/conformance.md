@@ -2,7 +2,7 @@
 This page has been added for this version.
 {:.new-content}
 
-- [General Requirments]
+- [General Requirements]
 - [Must Support]
 
 {% include link-list.md %}
