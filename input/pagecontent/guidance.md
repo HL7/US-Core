@@ -5,7 +5,7 @@
 - [Medication List]
 - [Basic Provenance]
 - [SDOH]
-- [Changes Versions]
+- [Changes Between Versions]
 - [Future of US Core]
 
 {% include link-list.md %}
