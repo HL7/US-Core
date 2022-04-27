@@ -9,14 +9,15 @@ Publication Punch List:
      - [ ] Observation profile comparison table`
      - [ ] Version comparison tables`
      - [ ] update uscdi v2 table
-- [ ] Technical QA
-  - [ ] follow up on publishing issues (see https://confluence.hl7.org/display/CGP/Publication+Punch+List)
-  - [ ] follow up on terminology issues  (see https://confluence.hl7.org/display/CGP/Publication+Punch+List)
-  - [ ] update IgnoreWarnings.txt file
-  - [ ] Variance request for QA Issues:
-- [ ] Editorial QA
-  - [ ] review CababilityStatements
+- [X] Technical QA
+  - [X] follow up on publishing issues (see https://confluence.hl7.org/display/CGP/Publication+Punch+List)
+  - [X] follow up on terminology issues  (see https://confluence.hl7.org/display/CGP/Publication+Punch+List)
+  - [X] Variance request for QA Issues:
+  - [ ] update IgnoreWarnings.txt file (pending FMG review)
+- [ ] Editorial QA (in progress)
+  - [ ] review CababilityStatements (in progress)
   - [ ] review application of trackers
+  - [ ] typos, grammar etc
 - [ ] CGP Review
 - [ ] Publication Request
 - [ ] CGP Vote
