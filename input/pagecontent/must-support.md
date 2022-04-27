@@ -68,11 +68,7 @@ For example, the [US Core DiagnosticReport Profile] issued element is a primitiv
 
 #### Must Support - Complex Elements
 
-Complex element are composed of primitive and/or other complex elements.  In addition to the general guidance for complex elements in this section, there is additional must support guidance in other sections for the following complex datatypes:
-
-- [`CodeableConcept`](#must-support---coded-elements)
-- [`Coding`](#must-support---coded-elements)
-- [`Reference`](#must-support---resource-references)
+Complex element are composed of primitive and/or other complex elements.   Note also that coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) must follow [these rules](general-requirements.html#coded-elements) for their respective bindings.
 
 For any complex element marked as must support, the server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as must support it must meet the must support requirements as well and satisfy the must support requirement for the parent element.
 
@@ -94,11 +90,9 @@ On the other hand, if any sub-element is marked as must support and the parent e
 
 Systems can support the other elements, but this is not a requirement of US Core. The [U.S. Core Data for Interoperability (USCDI)] may require other elements, for example `suffix`.
 
-### Coded Elements
-
-In addition to the must support requirements documented here, Coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) must follow [these rules](general-requirements.html#coded-elements) for their respective bindings.
-
 #### Must Support - Resource References
+
+This section documents additional must support requirements for the `Reference` element.
 
 In certain profiles only specific resource references are labeled as *Must Support*.
 
