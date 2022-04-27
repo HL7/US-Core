@@ -68,7 +68,7 @@ For example, the [US Core DiagnosticReport Profile] issued element is a primitiv
 
 #### Must Support - Complex Elements
 
-Complex element are composed of primitive and/or other complex elements.   Note also that coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) must follow [these rules](general-requirements.html#coded-elements) for their respective bindings.
+Complex element are composed of primitive and/or other complex elements.   Note that coded elements (`CodeableConcept`, `Coding`, and `code` datatypes) also have additional binding rules which are documented in the [Coded Elements] section.
 
 For any complex element marked as must support, the server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as must support it must meet the must support requirements as well and satisfy the must support requirement for the parent element.
 

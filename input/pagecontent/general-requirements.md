@@ -298,7 +298,7 @@ For searches where the client does not supply a status parameter, an implementat
      {% include examplebutton_default.html example="missing-status" b_title = "Click Here to See a Rejected Search Due to Missing Status Example" %}
 
 - **SHALL** document this behavior in its CapabilityStatement for the "search-type" interaction in `CapabilityStatement.rest.resource.interaction.documentation`.
-- For "entered-in-error" status, see the [guidance](#representing-entered-in-error-information) above.
+- For "entered-in-error" status, see the [representing entered in error information](general-guidance.html#representing-entered-in-error-information) section.
 
 <br />
 

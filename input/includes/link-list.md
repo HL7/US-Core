@@ -270,7 +270,7 @@
 [`Accept-Language`]: https://www.ietf.org/rfc/rfc2616.txt
 [Record or update]: future-of-US-core.html#future-candidate-requirements-under-consideration
 [writing and updating]: future-of-US-core.html#future-candidate-requirements-under-consideration
-[Servers Requiring Status]: general-guidance.html#search-for-servers-requiring-status
+[Servers Requiring Status]: general-requirements.html#search-for-servers-requiring-status
 [converted from a new element]: {{site.data.fhir.path}}versions.html#extensions
 [Referencing US Core Profiles]: general-guidance.html#referencing-us-core-profiles
 [differential view]: {{site.data.fhir.path}}profiling.html#snapshot
@@ -296,9 +296,9 @@
 [vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
 [Goal]: {{site.data.fhir.path}}goal.html
 [Missing Data]: general-requirements.html#missing-data
-[Suppressed Data]: general-guidance.html#missing-data
+[Suppressed Data]: general-guidance.html#suppressed-data
 [`CarePlan.status`]: {{site.data.fhir.path}}careplan.html
-[Must Support - Coded Elements]: must-support.html#coded-elements
+[Coded Elements]: general-requirements.html#using-codes-in-us-core-profiles
 [clinical safety]:  {{site.data.fhir.path}}safety.html
 [LOINC scale type to FHIR data type mapping]: {{site.data.fhir.path}}loinc.html#dataelements
 [HL7 Cross Paradigm Implementation Guide: UDI Pattern]: http://www.hl7.org/documentcenter/private/standards/HL7_IG_UDI_R2_2020JUN.pdf
@@ -315,7 +315,7 @@
 [Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
 [Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
 [SDOH]: sdoh.html
-[SDOH Guidance]: sdoh.html 
+[SDOH Guidance]: sdoh.html
 [US Core Common SDOH Assessments]: ValueSet-us-core-common-sdoh-assessments.html
 [slicing]: {{site.data.fhir.path}}profiling.html#slicing
 [Change Log]: changes.html
