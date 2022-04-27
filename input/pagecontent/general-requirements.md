@@ -99,7 +99,7 @@ For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has
 
 <span class="bg-success" markdown="1">Because of the  FHIR conformance rule:</span><!-- new-content -->
 
-<span class="bg-success" markdown="1">> If an extensible binding is applied to an element with maximum cardinality > 1, the binding applies to all the elements.([Terminology Binding Extensible])</span><!-- new-content -->
+<span class="bg-success" markdown="1">If an extensible binding is applied to an element with maximum cardinality > 1, the binding applies to all the elements.([Terminology Binding Extensible])</span><!-- new-content -->
 
 FHIR profiles use [slicing] when a coded element is a repeating element and a particular value set is desired for at least one of the repeats. This is a special case where a *required* value set binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the value set (equivalent to  Extensible Binding below). <span class="bg-success" markdown="1">*Note that the introduction of slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*</span><!-- new-content -->   The example in figure 5 below illustrates this structure for the repeating Condition.category element:
 
