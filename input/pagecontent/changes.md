@@ -2,10 +2,9 @@
 This page has been added for this version.
 {:.new-content}
 
-### Version = CI Build (5.0.0-preview)
-- url: <http://build.fhir.org/ig/HL7/US-Core>
+### Version = 5.0.0-preview
+- url: <http://build.fhir.org/ig/HL7/US-Core/STU5>
 - Based on FHIR version : 4.0.1
-
 
 #### Changes:
  Continuous Integration Build (latest in version control) - **Content subject to frequent changes**

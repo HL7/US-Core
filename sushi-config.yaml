@@ -21,7 +21,7 @@ description: >-
 
 license: CC0-1.0
 date: 2022-04-04
-version: '5.0.0-preview'
+version: '5.0.0'
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.uv.bulkdata: 2.0.0
@@ -96,7 +96,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   #    - 2.0.0  # does not seems to work
   #    - 1.0.0  # does not seems to work
 copyrightyear: '2022+'
-releaselabel: CI Build
+releaselabel: STU5 Release
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │

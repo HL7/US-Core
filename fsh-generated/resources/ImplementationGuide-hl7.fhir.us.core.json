@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.core",
   "url": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
-  "version": "5.0.0-preview",
+  "version": "5.0.0",
   "name": "USCore",
   "title": "US Core Implementation Guide",
   "status": "active",
@@ -2990,7 +2990,7 @@
       },
       {
         "code": "releaselabel",
-        "value": "CI Build"
+        "value": "STU5 Release"
       },
       {
         "code": "path-resource",
@@ -3063,6 +3063,22 @@
       {
         "code": "excludeexample",
         "value": "true"
+      },
+      {
+        "code": "version-comparison",
+        "value": "4.0.0"
+      },
+      {
+        "code": "version-comparison",
+        "value": "3.1.1"
+      },
+      {
+        "code": "version-comparison",
+        "value": "2.0.0"
+      },
+      {
+        "code": "version-comparison",
+        "value": "1.0.0"
       },
       {
         "code": "path-history",
