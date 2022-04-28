@@ -15,7 +15,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Each Service Request must have:**
 
 1.  a status
-1.  a intent code indicating whether the request is a proposal, plan, or order.
+1.  an intent code indicating whether the request is a proposal, plan, or order.
 3.  a code defining what is being requested
 4.  a patient
 
