@@ -82,7 +82,7 @@
                 },
                 "description": "Codes used in US Core `meta.tag` and 'category' profiles. The are typically used when there is a need for categorization or workflow hints.",
                 "exampleBoolean": false,
-                "name": "US Core Tags"
+                "name": "US Core Tags CodeSystem"
             },
             {
                 "reference": {
@@ -482,7 +482,7 @@
                 },
                 "description": "Used to tag patient submitted resources for writing and searching from EHRs",
                 "exampleBoolean": false,
-                "name": "US Core Tags"
+                "name": "US Core Tags ValueSet"
             },
             {
                 "reference": {
@@ -1432,7 +1432,7 @@
                 "reference": {
                     "reference": "ValueSet/us-core-condition-code"
                 },
-                "description": "This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions).   ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical information.",
+                "description": "This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions). ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical information.",
                 "exampleBoolean": false,
                 "name": "US Core Condition Codes"
             },
@@ -1480,7 +1480,7 @@
                 "reference": {
                     "reference": "ValueSet/us-core-encounter-type"
                 },
-                "description": "The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure)) and codes from the Current Procedure and Terminology (CPT) found in the following CPT sections:\n\n\n- 99201-99499 E/M\n\n- 99500-99600 home health (mainly nonphysician, such as newborn care in home)\n\n- 99605-99607 medication management\n\n- 98966-98968 non physician telephone services\n\n\n\n(subscription to AMA Required)",
+                "description": "The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure)) and codes from the Current Procedure and Terminology (CPT) found in the following CPT sections:\n- 99201-99499 E/M - 99500-99600 home health (mainly nonphysician, such as newborn care in home) - 99605-99607 medication management - 98966-98968 non physician telephone services\n(subscription to AMA Required)",
                 "exampleBoolean": false,
                 "name": "US Core Encounter Type"
             },
