@@ -306,7 +306,7 @@
 [US Core Procedure Codes]: ValueSet-us-core-procedure-code.html
 [21st Century Cures Act for accessing patient data]: https://www.federalregister.gov/d/2020-07419/p-1177
 [Mandatory]: must-support.html
-[US Core RelatedPerson Profile Profile]: StructureDefinition-us-core-relatedperson.html
+[US Core RelatedPerson Profile]: StructureDefinition-us-core-relatedperson.html
 [US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
 [Using multiple codes with CodeableConcept Datatype]: general-requirements.html#translations
 [US Core Observation Survey Profile]: StructureDefinition-us-core-observation-survey.html
@@ -337,3 +337,5 @@
 [Interpretative Guidelines for Laboratories]: http://www.cms.gov/Regulations-andGuidance/Legislation/CLIA/Interpretive_Guidelines_for_Laboratories.html
 [Directory of published versions]: {{site.data.fhir.canonical}}/history.html
 [General Requirements]: general-requirements.html
+[US Core Gender Identity Extension]: StructureDefinition-us-core-genderIdentity.html
+[HL7 C-CDA]: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492

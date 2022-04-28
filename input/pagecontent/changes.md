@@ -6,13 +6,36 @@ This page has been added for this version.
 - url: <http://build.fhir.org/ig/HL7/US-Core/STU5>
 - Based on FHIR version : 4.0.1
 
+The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2022 HL7 balloting process.  The resolution of the community comments has been agreed to and voted on by the members of the sponsoring  HL7 Internattion w Cross-Group Projects work group.
+
+#### What's new in Version 5.0.0 of US Core:
+
+- New and updated resources to meet the [U.S. Core Data for Interoperability (USCDI) v2] new Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2021:
+  -  A Social Determinants Of Health ([SDOH]) guidance page on using US Core to represent and access SDOH Assessments, Goals, Interventions, and Problems/Health Concerns.
+  - [US Core Observation Survey Profile], [US Core Observation SDOH Assessment Profile], and [US Core QuestionnaireResponse Profile] to represent SDOH Assessments
+  - [US Core ServiceRequest Profile] to represent SDOH Interventions
+  - [US Core Observation Clinical Test Result Profile] to represent Clinical Test Results
+  - [US Core Observation Imaging Result Profile] to represent Imaging Results
+  - [US Core Gender Identity Extension] for patient demographics
+  - [US Core Observation Sexual Orientation Profile] for patient demographics
+  - [US Core RelatedPerson Profile] to represent care member such as a caretaker.
+  - Updates to [US Core CareTeam Profile]
+  - Updates to [US Core Encounter Profile]
+  - US Core Condition has been split into:
+      - [US Core Condition Encounter Diagnosis Profile] to represent encounter diagnosis
+      - [US Core Condition Problems and Health Concerns Profile] to represent problems and health concerns included SDOH health concerns.
+- New pages and headers:
+   - [Change Log] new header and page. content migrated from the [Directory of published versions] page to create this page
+   - [Conformance] new Header that contains these pages:
+       - [General Requirements] content migrated from version 4.0.0 *General Requirements* and *Conformance Expectation* pages
+       - [Must Support] renamed and edited from version 4.0.0 *Conformance Expectation* pages
+   - [USCDI] content migrated from version 4.0.0 *General Requirements* Page
+   - [Changes Between Versions] rewritten and renamed from version 4.0.0 *DSTU2 to R4 Conversion* page
+- Link more terminology directly to the [FHIR Terminology Service for VSAC Resources] and align terminology between US Core and [HL7 C-CDA].
+
 #### Changes:
- Continuous Integration Build (latest in version control) - **Content subject to frequent changes**
 
- The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2022 HL7 balloting process.  The resolution of the community comments has been agreed to and voted on by the members of the sponsoring work group [HL7 International Cross-Group Projects](http://www.hl7.org/Special/committees/cgp/index.cfm).
-
-In addition to the key changes listed in version 4.1.0, this version addresses over 100 January 2022 Ballot related trackers resulting in the followed detailed changes:
-
+These changes are a result of over 100 January 2022 Ballot related trackers which are listed below:
 
 ﻿ **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
@@ -805,3 +828,5 @@ These sections as well as several other clarifications, corrections and technica
  STU1 Ballot
 
 ---
+
+{% include link-list.md %}
