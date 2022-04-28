@@ -1,4 +1,4 @@
-outgoing
+
 A client determines the types of reports they can access through DiagnosticReport. The server responds with 'foo','bar' ,and 'baz' report types:
 
 **Request for DiagnosticReport report type**
