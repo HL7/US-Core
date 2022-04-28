@@ -194,6 +194,7 @@
 [US Core ServiceRequest Category Codes]: ValueSet-us-core-servicerequest-category.html
 [US Core Condition Codes]: ValueSet-us-core-condition-code.html
 [US Core DiagnosticReport Category Codes]: ValueSet-us-core-diagnosticreport-category.html
+[US Core Diagnostic Imaging Result Observation Profile]: StructureDefinition-us-core-observation-imaging.html
 [US Core DiagnosticReport Profile for Laboratory Results Reporting]: StructureDefinition-us-core-diagnosticreport-lab.html
 [US Core DiagnosticReport Profile for Report and Note exchange]: StructureDefinition-us-core-diagnosticreport-note.html
 [US Core DocumentReference Profile]: StructureDefinition-us-core-documentreference.html
