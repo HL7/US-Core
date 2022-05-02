@@ -2,7 +2,7 @@
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for the US Core-MedicationRequest
-profile. See the [Medication List Guidance] section for guidance on accessing a patient medications:
+profile. See the [Medication List] section for guidance on accessing a patient medications:
 
 -   Fetching all medications that have been prescribed to a particular patient
 -   Fetching all *active* medications that have been prescribed to  particular patient
@@ -19,9 +19,11 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 1.  a status
 1.  an intent code
-1.  a medication (see guidance below)
+1.  a medication*
 1.  a patient
 1.  a prescriber
+
+\* see guidance below
 
 **Each MedicationRequest must support:**
 
@@ -33,8 +35,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
-* See the [Medication List Guidance] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
-*  The MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
+* See the [Medication List] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
+*  \*The MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
     *  When referencing a Medication resource, the resource may be [contained] or an external resource.
     *  The server systems are not required to support both a code and a reference, but **SHALL** support *at least one* of these methods.
     * If an external reference to Medication is used, the server SHALL support the [`_include`] parameter for searching this element.

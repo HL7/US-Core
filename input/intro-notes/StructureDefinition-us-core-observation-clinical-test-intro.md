@@ -15,7 +15,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 1.   a status
 1.   <span class="bg-success" markdown="1">a category code of 'clinical-test'</span><!-- new-content -->
-1.   a [LOINC] code, if available, which tells you what is being measured**
+1.   a [LOINC] code, if available, which tells you what is being measured
 1.   a patient
 
 **Each Observation must support:**
@@ -24,7 +24,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. a result value or a reason why the data is absent*
    - if the result value is a numeric quantity, a standard [UCUM] unit
 
-*see guidance below
+\* see guidance below
 
 **Profile specific implementation guidance:**
 
