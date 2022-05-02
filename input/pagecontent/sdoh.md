@@ -35,7 +35,7 @@ US Core Servers **SHALL** support [US Core Observation SDOH Assessment Profile] 
 \*Not all questions and answers in an assessment tool may or should be represented as FHIR Observations. For example, patient demographic information is best represented in the FHIR patient resource.
 {:.bg-info}
 
-Additionally, the [US Core Social History Assessment Observation Profile] is for simple observations made by an individual during the course of care about a patient's social history status. These Observation can contribute to the identification of SDOH Problems and can be the reason for SDOH Service Requests or Procedures.
+Additionally, the [US Core Observation Social History Profile] is for simple observations made by an individual during the course of care about a patient's social history status. These Observation can contribute to the identification of SDOH Problems and can be the reason for SDOH Service Requests or Procedures.
 
 #### Assessment Screenings Using Observations
 
