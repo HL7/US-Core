@@ -23,6 +23,6 @@ The following are example usage scenarios for this profile:
 
 - This profile defines a Valueset based on a *starter set* of example survey LOINC codes made up of commonly asked social questions as identified by [FindHelp.org] and the PRAPARE, Hunger Vital Sign, AHC-HRSN screening tools referenced in USCDI v2. It is not intended to be complete and implementers are expected include other LOINC or other codes to meet their business needs.
 - See the [US Core Observation Survey Profile] page for how to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions, and other implementation guidance.
-- See [SDOH Guidance] for how this profile *along with other Observation Profiles or alternatively QuestionnaireResponse* to is used represent SDOH assessments.
+- See the [SDOH] guidance page for how this profile *along with other Observation Profiles or alternatively QuestionnaireResponse* to is used represent SDOH assessments.
 
 {% include link-list.md %}

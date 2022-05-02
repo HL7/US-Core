@@ -38,7 +38,7 @@ This Guide is divided into several pages which are listed at the top of each pag
   - [Clinical Notes]\: This page gives guidance on the interactions between Consumers and Producers of clinical notes.
   - [Medication List]\: This page gives guidance on how a patient or provider can access a patient's medications.
   - [Basic Provenance]\: This page provides implementers with important definitions to create and share the Provenance Resource.
-  - [SDOH]\: This page gives background on the exchange of Social Determinants of Health (SDOH) data elements.
+  - [Social Determinants of Health (SDOH)]\: This page gives background on the exchange of Social Determinants of Health (SDOH) data elements.
   - <span class="bg-success" markdown="1">[Changes Between Versions]\: This page considers the user and developer experience when transitioning between versions of US Core</span><!-- new-content -->.
   - [Future of US Core]\: This page outlines the approach to adding new content to US Core.
 - [FHIR Artifacts]\: Thes pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.

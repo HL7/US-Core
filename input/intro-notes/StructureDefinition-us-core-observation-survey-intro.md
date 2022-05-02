@@ -34,7 +34,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - \*\*For responses to individual survey questions, the question is represented in `Observation.code`, and the answer in  `Observation.value`.
 - \*\*For responses to multi-select or “check all that apply” questions, each response is represented as individual US Core Survey Observations. For each response, the question is represented in `Observation.code`, and the answer in  `Observation.value`.
 - \*\*For multi-question surveys and assessments represented in `Observation.code`, the  `Observation.value` element should be empty, and the individual survey questions represented as distinct US Core Survey Observations and referenced using `Observation.hasMember`.
-- See [SDOH Guidance] for how this profile *along with other Observation Profiles or alternatively QuestionnaireResponse* to is used represent SDOH assessments.
+- See the [SDOH] guidance page for how this profile *along with other Observation Profiles or alternatively QuestionnaireResponse* to is used represent SDOH assessments.
 - Individual clinical assessments made by an individual about a patient's social history which array_to_sentence_string not derived from an assessment tool or survey should use the [US Core Observation Social History Profile] instead.
 {% include obs_cat_guidance.md category='survey'-%}
 {% include DAR-exception.md %}
