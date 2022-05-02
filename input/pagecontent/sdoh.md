@@ -66,7 +66,7 @@ The Observations may be extracted from QuestionnaireResponse. [SDOH Clinical Car
 
 #### Assessment Screenings Using QuestionnaireResponse
 
-Survey instruments may be represented by a Questionnaire including a FHIR Questionnaire. A FHIR QuestionnaireResponse captures the responses to the survey and may be stand-alone or may point to the definition of the questions in a questionnaire (typically a FHIR Questionnaire). The US Core QuestionnaireResponse Profile profile which is based on the [Structured Data Capture (SDC) Questionnaire Response Profile] is  used to capture, exchange and persist the response data. It represents the response data to the individual questions on the form and is ordered and grouped corresponding to the structure and grouping of the Questionnaire being responded to.  Although QuestionnaireResponse can be searched using the standard FHIR RESTful API search parameters, individual responses are not directly searchable in QuestionnaireResponse. In order to search directly for and individual responses, they must be “parsed” into a searchable form - i.e. to a local FHIR or non-FHIR data store such as a database or FHIR Observations.
+Survey instruments may be represented by a Questionnaire including a FHIR Questionnaire. A FHIR QuestionnaireResponse captures the responses to the survey and may be stand-alone or may point to the definition of the questions in a questionnaire (typically a FHIR Questionnaire). The US Core QuestionnaireResponse Profile which is based on the [Structured Data Capture (SDC) Questionnaire Response Profile] is  used to capture, exchange and persist the response data. It represents the response data to the individual questions on the form and is ordered and grouped corresponding to the structure and grouping of the Questionnaire being responded to.  Although QuestionnaireResponse can be searched using the standard FHIR RESTful API search parameters, individual responses are not directly searchable in QuestionnaireResponse. In order to search directly for and individual responses, they must be “parsed” into a searchable form - i.e. to a local FHIR or non-FHIR data store such as a database or FHIR Observations.
 
 The basic workflow for the creation, discovery and retrieval and data-extraction of FHIR Questionnaire and QuestionnaireResponse is thoroughly documented in the [Structured Data Capture (SDC)] specification.
 {:.bg-info}
@@ -87,7 +87,7 @@ Below is a simple example of FHIR RESTful search transaction on Observation to a
 
 The US Core code "sdoh" is used to categorize SDOH for Assessments, Problems, Service Requests and QuestionnaireResponse. This concept enables API consumers to be able to separate out SDOH data when accessing patient information. <span class="bg-success" markdown="1">Example searches are shown in each of the profile *Quick Start* sections.</span><!-- new-content -->
 
- <span class="bg-warning" markdown="1">Clients need to be understand that data categorization is somewhat subjective. The categorization applied by the source may not align with the client's expectations. Clients may find it more useful to use queries based on a specific code or set of codes or to perform additional client side filtering of query results.</span><!-- bg-warning -->
+ <span class="bg-warning" markdown="1">Clients need to understand that data categorization is somewhat subjective. The categorization applied by the source may not align with the client's expectations. Clients may find it more useful to use queries based on a specific code or set of codes or to perform additional client side filtering of query results.</span><!-- bg-warning -->
 
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
 
@@ -98,7 +98,7 @@ For the SDOH Clinical Care HL7 Implementation Guide, the Gravity project has def
 * [Social Determinants of Health Goals Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.71/expansion)
 * [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion)
 
-US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Problems and Health Concerns Profile and how the grouped valueset is computable with the US Core Problem code valueset.   When recording SDOH data US Core Profiles, servers **SHOULD** use the SDOH value sets listed above.
+US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Problems and Health Concerns Profile and how the grouped valueset is compatible with the US Core Problem code valueset.   When recording SDOH data US Core Profiles, servers **SHOULD** use the SDOH value sets listed above.
 
 {% include img-med.html img="sdoh_condition.svg" caption="Example of SDOH Grouping Value set in US Core Condition Codes Value Set" %}
 

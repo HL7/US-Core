@@ -313,7 +313,7 @@
 [US Core Observation SDOH Assessment Profile]: StructureDefinition-us-core-observation-sdoh-assessment.html
 [US Core QuestionnaireResponse Profile]: StructureDefinition-us-core-questionnaireresponse.html
 [US Core Observation Social History Profile]: StructureDefinition-us-core-observation-social-history.html
-[Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
+[Protocol for Responding to and Assessing PUS Core Social History Assessment Observation Profileatients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
 [Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
 [SDOH]: sdoh.html
 [Social Determinants of Health (SDOH)]: sdoh.html
