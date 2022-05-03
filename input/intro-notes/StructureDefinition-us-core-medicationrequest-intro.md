@@ -45,6 +45,6 @@ The following data-elements must always be present ([Mandatory] definition) or m
    *  Although both are marked as must support, the server system is not required to support both a boolean and a reference, but **SHALL** support at least one of these elements.
    *  The client application **SHALL** support both elements.
 * Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
-* Servers **SHALL** follow the [Medication List Guidance] and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.
+* Servers **SHALL** follow the guidance in the [Medication List] page  and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.
 
 {% include link-list.md %}

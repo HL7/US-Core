@@ -56,7 +56,7 @@ In an upgraded R4 endpoint any data in DSTU2 should be in R4. However, not all d
 * The FHIR RESTful resource types supported in a DSTU2 implementation should be supported in a R4 implementation
   - Exceptions
     - MedicationStatement may be deprecated and the data should be mapped to MedicationRequest.  
-       - See the [Medication List Guidance] section for guidance on accessing a patient's medications
+       - See the guidance in the [Medication List] page for how to access a patient's medications
     - Care teams as represented by CarePlan in DSTU2 should be replaced by and the data mapped to CareTeam in R4
 
 * Servers should make available the same information in DSTU2 and R4 where the more recent standard allows.  (e.g., patient Rhonda Jones is available on both)

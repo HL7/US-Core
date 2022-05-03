@@ -8,7 +8,7 @@ Many of the profiles in this guide [reference] other FHIR resources that are als
 
 ### Contained Resources
 
-When responding to a query, servers should not use inline [contained] resources to represent the returned data. The only time contained resource can be used is when the source data exists only within the context of the FHIR transaction. For example, the [Medication List Guidance] page describes how a contained Medication in MedicationRequest is used for representing the medication.  If referencing a contained resource in a US Core Profile, the contained resource should be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.  
+When responding to a query, servers should not use inline [contained] resources to represent the returned data. The only time contained resource can be used is when the source data exists only within the context of the FHIR transaction. For example, the guidance in the [Medication List] page describes how a contained Medication in MedicationRequest is used for representing the medication.  If referencing a contained resource in a US Core Profile, the contained resource should be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.  
 
 
 ###  Suppressed Data

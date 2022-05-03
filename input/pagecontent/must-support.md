@@ -59,7 +59,7 @@ For example the [US Core DiagnosticReport Profile for Laboratory Results Reporti
 
 Primitive elements are are single elements with a primitive value. If they are marked as must support, then the server **SHALL** be capable of providing the element value to meet the must support requirement.
 
-For example, the [US Core DiagnosticReport Profile] issued element is a primitive `instant` datatype. When claiming conformance to this profile:
+For example, the [US Core DiagnosticReport Profile for Laboratory Results Reporting] issued element is a primitive `instant` datatype. When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in a `DiagnosticReport.issued`
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.issued`
