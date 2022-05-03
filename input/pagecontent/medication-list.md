@@ -69,7 +69,7 @@ A MedicationRequest resource query:
 
    `GET /MedicationRequest?patient=[id]&intent=order,plan{&_include=MedicationRequest:medication}`
 
-<div class="new-content" markdown="1">      {% include examplebutton_default.html example="get-all-meds" b_title = "Click Here to See 'Get All Medications' Example" %}</div><!-- new-content -->
+      {% include examplebutton_default.html example="get-all-meds" b_title = "Click Here to See 'Get All Medications' Example" %}
 
 #### Get All *Active* Medications
 
@@ -77,7 +77,7 @@ A MedicationRequest resource query:
 
    `GET /MedicationRequest?patient=[id]&intent=order,plan&status=active{&_include=MedicationRequest:medication}`
 
-<div class="new-content" markdown="1">        {% include examplebutton_default.html example="get-all-active-meds" b_title = "Click Here to See 'Get All *Active* Medications' Example" %}</div><!-- new-content -->
+     {% include examplebutton_default.html example="get-all-active-meds" b_title = "Click Here to See 'Get All *Active* Medications' Example" %}
 
 #### Get All Medications for an Encounter
 
@@ -85,7 +85,7 @@ A MedicationRequest resource query:
 
    `GET /MedicationRequest?patient=[id]&intent=order,plan&encounter=[id]{&_include=MedicationRequest:medication}`
 
-<div class="new-content" markdown="1">      {% include examplebutton_default.html example="get-all-enc-meds" b_title = "Click Here to See 'Get All Medications for an Encounter' Example" %}</div><!-- new-content --> 
+      {% include examplebutton_default.html example="get-all-enc-meds" b_title = "Click Here to See 'Get All Medications for an Encounter' Example" %}
 
 See the [US Core Server Capability Statement] for a complete list of supported RESTful operations and search parameters for this IG.
 

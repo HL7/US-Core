@@ -1,6 +1,3 @@
-<!-- new content comment remove prior to publishing-->
-This page has been added for this version.
-{:.new-content}
 
 This page documents important requirements common to all US Core actors used in this guide. The conformance verbs - **SHALL**, **SHOULD**, **MAY** - used in this guide are defined in [FHIR Conformance Rules].
 
@@ -97,11 +94,11 @@ For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has
 
 #### Required Bindings When Slicing by Value Sets
 
-<span class="bg-success" markdown="1">Because of the  FHIR conformance rule:</span><!-- new-content -->
+Because of the  FHIR conformance rule:
 
-<span class="bg-success" markdown="1">If an extensible binding is applied to an element with maximum cardinality > 1, the binding applies to all the elements.([Terminology Binding Extensible])</span><!-- new-content -->
+> If an extensible binding is applied to an element with maximum cardinality > 1, the binding applies to all the elements.([Terminology Binding Extensible])
 
-FHIR profiles use [slicing] when a coded element is a repeating element and a particular value set is desired for at least one of the repeats. This is a special case where a *required* value set binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the value set (equivalent to  Extensible Binding below). <span class="bg-success" markdown="1">*Note that the introduction of slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*</span><!-- new-content -->   The example in figure 5 below illustrates this structure for the repeating Condition.category element:
+FHIR profiles use [slicing] when a coded element is a repeating element and a particular value set is desired for at least one of the repeats. This is a special case where a *required* value set binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the value set (equivalent to  Extensible Binding below). *Note that the introduction of slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*  The example in figure 5 below illustrates this structure for the repeating Condition.category element:
 
 - This structure allows 0..\* concept(s) from the *required* value set.
 - This structure, by being 0..\*, allows servers to send concepts not in the required value set.
@@ -188,7 +185,7 @@ Example of translation of CVX vaccine code to NDC code.
 
 ### Missing Data
 
-There are situations when information on a particular data element is missing and the source system does not know reason for the absence of data. If the source system does not have data for an element with a minimum cardinality = 0 (including elements labeled *Must Support*), <span class="bg-success" markdown="1">the data element **SHALL** be omitted from the resource.  If the data element is a a *Mandatory* element (in other words, where the minimum cardinality is > 0), it **SHALL** be present for *even if* the source system does not have data. The core specification provides guidance for what to do in this situation, which is summarized below:</span><!-- new-content -->
+There are situations when information on a particular data element is missing and the source system does not know reason for the absence of data. If the source system does not have data for an element with a minimum cardinality = 0 (including elements labeled *Must Support*), the data element **SHALL** be omitted from the resource.  If the data element is a a *Mandatory* element (in other words, where the minimum cardinality is > 0), it **SHALL** be present for *even if* the source system does not have data. The core specification provides guidance for what to do in this situation, which is summarized below:
 
 1.  For *non-coded* data elements, use the [DataAbsentReason Extension] in the data type
   - Use the code `unknown` - The value is expected to exist but is not known.
@@ -247,14 +244,14 @@ There are situations when information on a particular data element is missing an
       - use the appropriate "unknown" concept code from the value set if available
       - if the value set does not have the appropriate “unknown” concept code you must use a concept from the value set otherwise the instance will not be conformant
 
-        - For the US Core profiles, the following mandatory <span class="bg-success" markdown="1">or conditionally mandatory*</span><!-- new-content --> status elements with required binding have no appropriate "unknown" concept code:
+        - For the US Core profiles, the following mandatory or conditionally mandatory* status elements with required binding have no appropriate "unknown" concept code:
           - `AllergyIntolerance.clinicalStatus`*
           - `Condition.clinicalStatus`*
           - `DocumentReference.status`
           - `Immunization.status`
           - `Goal.lifecycleStatus`
 
-        *The clinicalStatus element is <span class="bg-success" markdown="1">conditionally mandatory based on resource specific constraints.</span><!-- new-content -->
+        *The clinicalStatus element is conditionally mandatory based on resource specific constraints.
 
         If one of these status code is missing, a `404` http error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set and a *warning* OperationOutcome **SHOULD** be included indicating that additional search results were found but could not be compliantly expressed and have been suppressed.
 

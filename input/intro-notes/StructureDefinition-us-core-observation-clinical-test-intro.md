@@ -14,7 +14,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Each Observation must have:**
 
 1.   a status
-1.   <span class="bg-success" markdown="1">a category code of 'clinical-test'</span><!-- new-content -->
+1.   a category code of 'clinical-test'
 1.   a [LOINC] code, if available, which tells you what is being measured
 1.   a patient
 
@@ -28,7 +28,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
-- <span class="bg-success" markdown="1">\*\*This profile defines a Valueset based on a *starter set* of example clinical test LOINC codes identified in the [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]. It is not intended to be complete and implementers are expected include other LOINC or other codes to meet their business needs.</span><!-- new-content -->
+- \*\*This profile defines a Valueset based on a *starter set* of example clinical test LOINC codes identified in the [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter]. It is not intended to be complete and implementers are expected include other LOINC or other codes to meet their business needs.
 {% include observation_guidance_1.md category="clinical-test" %}
-- <span class="bg-success" markdown="1">For imaging and laboratory tests the corresponding [US Core Diagnostic Imaging Result Observation Profile] and [US Core Laboratory Result Observation Profile] should be used instead.</span><!-- new-content -->
+- For imaging and laboratory tests the corresponding [US Core Diagnostic Imaging Result Observation Profile] and [US Core Laboratory Result Observation Profile] should be used instead.
 {% include link-list.md %}

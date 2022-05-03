@@ -1,9 +1,5 @@
 ### Profiles
 
-<!-- new content comment remove prior to publishing-->
-The following section has been reformatted. Due to changes in the IG Publisher, all profile descriptions have been updated to avoid duplicate content. 
-{:.new-content}
-
 The following Profiles and have been defined for this implementation guide.
 
 <!-- ================================================ -->

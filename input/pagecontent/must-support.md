@@ -1,6 +1,3 @@
-<!-- new content comment remove prior to publishing-->
-This page has been added for this version.
-{:.new-content}
 
 The Profile elements consist of both *Mandatory* and *Must Support* elements.  *Mandatory* elements are elements with an minimum cardinality of 1 (min=1). The base [FHIR Must Support] guidance requires specifications to define exactly the support expected for profile elements labeled *Must Support*.  The sections below illustrate how these elements are displayed and define the rules for interpreting profile elements and subelements labeled *Mandatory* and *Must Support* for requesters and responders.
 

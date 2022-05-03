@@ -1,9 +1,6 @@
-{% include punch.md %}
 
-Where possible, new and updated content are highlighted with green text and background
-{:.new-content}
-
-{{ site.data.package-list.list[0].descmd }}
+<!--{%raw%} Where possible, new and updated content are highlighted with green text and background
+{:.new-content} {%endraw%}-->
 
 Key updates and detailed changes between this and prior versions are available in the US Core [Change Log]
 {:.stu-note}
@@ -11,17 +8,17 @@ Key updates and detailed changes between this and prior versions are available i
 ### Introduction
 
 
-The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. <span class="bg-success" markdown="1">By establishing the “floor” of standards to promote interoperability and adoption through common implementation, it allows for further standards development evolution for specific uses cases.</span><!-- new-content -->  There are two different ways to implement US Core:
+The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. By establishing the “floor” of standards to promote interoperability and adoption through common implementation, it allows for further standards development evolution for specific uses cases. There are two different ways to implement US Core:
 1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information.
 1. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
 
 For a detailed description between these different usages of US Core, see the [Conformance Requirements] page.
 
-US Core has benefitted from testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing.  This guide and the US Core profiles have become the foundation for US Realm FHIR implementation guides.  This release is the first of yearly US Core updates to reflect changes to <span class="bg-success" markdown="1">[U.S. Core Data for Interoperability (USCDI) v2]</span><!-- new-content -->  and requests from the US Realm FHIR community.  This Approach is outlined in the [Future of US Core] page.  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
+US Core has benefitted from testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing.  This guide and the US Core profiles have become the foundation for US Realm FHIR implementation guides.  This release is the first of yearly US Core updates to reflect changes to [U.S. Core Data for Interoperability (USCDI) v2] and requests from the US Realm FHIR community.  This Approach is outlined in the [Future of US Core] page.  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
 
 ### Background
 
-The US Core requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the [Office of the National Coordinator for Health Information Technology (ONC)] sponsored Data Access Framework (DAF) project. The Argonaut Data Query Implementation Guide superseded DAF and documented security and authorization and the querying of the [2015 Edition Common Clinical Data Set (CCDS)] and static documents.  US Core descended directly from the Argonaut guide to support FHIR Version STU3 and eventually FHIR R4 and The ONC <span class="bg-success" markdown="1">[U.S. Core Data for Interoperability (USCDI)]</span><!-- new-content --> .
+The US Core requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the [Office of the National Coordinator for Health Information Technology (ONC)] sponsored Data Access Framework (DAF) project. The Argonaut Data Query Implementation Guide superseded DAF and documented security and authorization and the querying of the [2015 Edition Common Clinical Data Set (CCDS)] and static documents.  US Core descended directly from the Argonaut guide to support FHIR Version STU3 and eventually FHIR R4 and The ONC [U.S. Core Data for Interoperability (USCDI)].
 
 
 ### How to read this Guide
@@ -29,20 +26,20 @@ The US Core requirements were originally developed, balloted, and published in F
 This Guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home]\: The home page provides the introduction and background for US Core.
-- <span class="bg-success" markdown="1">[Conformance]\: These pages describe the set of rules to claim conformance to this guide</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">[General Requirements]\: This page defines requirements common to all actors and profiles used in this guide including  how CapabilityStatements are used to claim conformance.</span><!-- new-content -->
-  - <span class="bg-success" markdown="1">[Must Support]\: This pagedefines the expectations for mandatory and must support elements in the US Core Profiles. </span><!-- new-content -->
+- [Conformance]\: These pages describe the set of rules to claim conformance to this guide
+  - [General Requirements]\: This page defines requirements common to all actors and profiles used in this guide including  how CapabilityStatements are used to claim conformance.
+  - [Must Support]\: This page defines the expectations for mandatory and must support elements in the US Core Profiles.
 - [Guidance]\: The Guidance pages provides guidance in using the profiles and transactions defined in this guide.
-  - <span class="bg-success" markdown="1">[USCDI]\: This page maps the US Core profiles to the (USCDI) data classes and data elements.</span><!-- new-content -->
+  - [USCDI]\: This page maps the US Core profiles to the (USCDI) data classes and data elements.
   - [General Guidance]\: This page provides guidance and definitions and requirements common to all actors adn profiles used in this guide.
   - [Clinical Notes]\: This page gives guidance on the interactions between Consumers and Producers of clinical notes.
   - [Medication List]\: This page gives guidance on how a patient or provider can access a patient's medications.
   - [Basic Provenance]\: This page provides implementers with important definitions to create and share the Provenance Resource.
   - [Social Determinants of Health (SDOH)]\: This page gives background on the exchange of Social Determinants of Health (SDOH) data elements.
-  - <span class="bg-success" markdown="1">[Changes Between Versions]\: This page considers the user and developer experience when transitioning between versions of US Core</span><!-- new-content -->.
+  - [Changes Between Versions]\: This page considers the user and developer experience when transitioning between versions of US Core.
   - [Future of US Core]\: This page outlines the approach to adding new content to US Core.
 - [FHIR Artifacts]\: Thes pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
-  - [Profiles and Extensions]\: This page page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarizes the supported search transactions for each Profile. <span class="bg-success" markdown="1">Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation and certification.</span><!-- new-content -->
+  - [Profiles and Extensions]\: This page page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarizes the supported search transactions for each Profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation and certification.
   - [Search Parameters and Operations]\: This page page lists the  defined Operations and Search Parameters that are used in US Core transactions.
   - [Terminology]\: This page page lists the value sets and code system defined for  profiles.
   - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various  actors.
@@ -63,13 +60,9 @@ A product that responds to the data access request providing patient data. This 
 
 ### US Core Profiles
 
-The list of US Core Profiles is shown below.  <span class="bg-success" markdown="1">To promote interoperability and adoption through common implementation,</span><!-- new-content --> each profile identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. <span class="bg-success" markdown="1"> Together they provide the floor for standards development for specific uses cases.</span><!-- new-content --> See the [USCDI] page, for a mapping to the U.S. Core Data for Interoperability (USCDI).
+The list of US Core Profiles is shown below.  To promote interoperability and adoption through common implementation, each profile identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  Together they provide the floor for standards development for specific uses cases. See the [USCDI] page, for a mapping to the U.S. Core Data for Interoperability (USCDI).
 
 For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.
-
-<!-- new content comment remove prior to publishing-->
-The following section has been reformatted
-{:.new-content}
 
 <!-- ================================================ -->
 <!--  use this line to include an autogenerated list of all profiles
@@ -78,10 +71,6 @@ The following section has been reformatted
 {% include sd-list-generator.md %}
 
 <!-- ================================================ -->
-
-<!-- new content comment remove prior to publishing-->
-This section has been added for this version.
-{:.new-content}
 
 ### US Core FHIR RESTful interactions
 

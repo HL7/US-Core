@@ -31,7 +31,7 @@ The following search parameter combinations SHOULD be supported:
 
       1. GET [base/Condition?patient=1032702&amp;clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical\|active,http://terminology.hl7.org/CodeSystem/condition-clinical\|recurrance,http://terminology.hl7.org/CodeSystem/condition-clinical\|remission
 
-    *Implementation Notes:* Implementation Notes: Fetches a bundle of all Condition resources for the specified patient and all &#34;active&#34; statuses (active,relapse,remission). <span class="bg-success" markdown="1">This will *exclude* diagnoses and health concerns without a clinicalStatus specified.</span><!-- new-content -->  ([how to search by reference] and [how to search by token])
+    * Implementation Notes: Fetches a bundle of all Condition resources for the specified patient and all "active" statuses (active,relapse,remission). This will *exclude* diagnoses and health concerns without a clinicalStatus specified.  ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`category`](SearchParameter-us-core-condition-category.html)** search parameters:
 

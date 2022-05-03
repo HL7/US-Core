@@ -1,6 +1,3 @@
-<div class="new-content" markdown="1">
-This profile has been added to to represent surveys/assessments using Observations and *optionally* QuestionnaireResponse.
-</div><!-- new-content -->
 
 **Example Usage Scenarios:**
 

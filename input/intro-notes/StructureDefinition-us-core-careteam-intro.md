@@ -16,14 +16,14 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 1.  a patient
 1.  a participant role for each careteam members
-1.  <span class="bg-success" markdown="1">a reference to each careteam member which can be:</span><!-- new-content -->
+1.  a reference to each careteam member which can be:
     -   a practitioner or practitioner type (doctor, nurse, therapist)*
     -   the patient
     -   a relative or friend or guardian
 
 *See below for how practitioner members are represented in this Profile.
 
-**Each <span class="bg-success" markdown="1">CareTeam</span><!-- new-content -->  must support:**
+**Each CareTeam must support:**
 
 1.  a status code
 

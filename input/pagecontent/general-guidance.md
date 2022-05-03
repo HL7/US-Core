@@ -60,12 +60,10 @@ Clinical information that has been entered-in-error in the patient's record need
     -  For *patient facing* applications, A FHIR Server  should remove the contents of resource  leaving only an id and status.   Note this typically will not be conformant with the US Core or FHIR StructureDefinitions.
     - For *provider facing* applications,  the content may be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.
 
-<div class="new-content" markdown="1">
 ### Representing Deleted Information
 
 A FHIR Server should not delete records. If a system supports deletion of records, they should refer to the [Deletion Safety Checks] in the
 FHIR specification.
-</div><!-- new-content -->
 
 ### Narrative
 

@@ -1,6 +1,3 @@
-<div class="new-content" markdown="1">
-This page has been substantially rewritten to represent surveys/assessments using Observations.
-</div><!-- new-content -->
 
 **Example Usage Scenarios:**
 

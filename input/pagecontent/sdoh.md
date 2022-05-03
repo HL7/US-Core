@@ -1,5 +1,5 @@
 
-This US Core Social Determinant of Health (SDOH) Guidance Page has been added in response to  United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published by the Office of the National Coordinator (ONC) in July of 2021. <span class="bg-success" markdown="1">SDOH data relate to conditions in which people live, learn, work, and play and their effects on health risks and outcomes.[^1] </span><!-- new-content -->  The new data elements include:
+This US Core Social Determinant of Health (SDOH) Guidance Page has been added in response to  United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published by the Office of the National Coordinator (ONC) in July of 2021. SDOH data relate to conditions in which people live, learn, work, and play and their effects on health risks and outcomes.[^1]  The new data elements include:
 - SDOH Assessments
 - SDOH Goals
 - SDOH Interventions
@@ -22,7 +22,7 @@ The figure below shows how the SDOH elements are inter-related:
 
 {% include img.html img="sdoh_assessment.svg" caption="SDOH Activities" %}
 
-<div class="new-content" markdown="1">
+
 ### Assessment Screenings
 
 Assessment Screenings can represent a structured evaluation of risk (e.g., PRAPARE, Hunger Vital Sign, AHC-HRSN screening tool) for any Social Determinants of Health domain such as food, housing, or transportation security. They are often captured using a screening tool such as a survey or questionnaire. US Core provides two ways to represent SDOH assessment screening results using:
@@ -41,22 +41,6 @@ Additionally, the [US Core Observation Social History Profile] is for simple obs
 
 To meets the USCDI v2 requirements for SDOH Assessments, US Core defines the [US Core Observation Survey Profile] and the [US Core Observation SDOH Assessment Profile].  The [US Core Observation Survey Profile] is defined to record responses from a survey or a questionnaire for *any* context including SDOH.  The [US Core Observation SDOH Assessment Profile] is derived from the [US Core Observation Survey Profile] and constrains the category and terminology to SDOH. To keep related data together and preserve the survey structure, these profiles can be used to represent multi-question "panels" of responses, individual responses (including multi-select or "check all that apply" responses).  The figure below illustrates the relationship between the Observation survey "panel" and the individual Observations survey responses. Each box represents an Observation using either profile:
 
-<!---
-```graphviz
-digraph hierarchy {
-
-                nodesep=1.0 // increases the separation between nodes
-
-                node [color=Red,fontname=Courier,shape=box] //All nodes will this shape and colour
-                edge [color=Blue, style=dashed] //All the lines look like this
-
-                "Multi-Question Survey\nreferences individual survey responses"->{"Question 1 Response" "Question 2  Response" "Question 3 Multi-select Response 1" "Question 3 Multi-select Response 2"}
-                  // Put them on the same level
-
-}
-```
--->
-
 {% include img-med.html img="uscore-survey-structure.svg" caption="Relationship Between Survey Response Observations" %}
 
 Note that the panels can be nested to create additional groupings of responses.  See the [US Core Observation Survey Profile] profile page for detailed documentation on how the observations are linked, examples, and search requirements.
@@ -73,8 +57,6 @@ The basic workflow for the creation, discovery and retrieval and data-extraction
 
 See the [US Core QuestionnaireResponse Profile] profile page for detailed documentation, examples and search requirements.
 
-</div><!-- new-content -->
-
 #### Searching for SDOH Patient Data
 
 Below is a simple example of FHIR RESTful search transaction on Observation to access a patient's SDOH assessment data
@@ -85,7 +67,7 @@ Below is a simple example of FHIR RESTful search transaction on Observation to a
 
 #### Category Codes
 
-The US Core code "sdoh" is used to categorize SDOH for Assessments, Problems, Service Requests and QuestionnaireResponse. This concept enables API consumers to be able to separate out SDOH data when accessing patient information. <span class="bg-success" markdown="1">Example searches are shown in each of the profile *Quick Start* sections.</span><!-- new-content -->
+The US Core code "sdoh" is used to categorize SDOH for Assessments, Problems, Service Requests and QuestionnaireResponse. This concept enables API consumers to be able to separate out SDOH data when accessing patient information. Example searches are shown in each of the profile *Quick Start* sections.
 
  <span class="bg-warning" markdown="1">Clients need to understand that data categorization is somewhat subjective. The categorization applied by the source may not align with the client's expectations. Clients may find it more useful to use queries based on a specific code or set of codes or to perform additional client side filtering of query results.</span><!-- bg-warning -->
 
@@ -103,7 +85,7 @@ US Core uses broadly defined value sets that contain concepts that are used acro
 {% include img-med.html img="sdoh_condition.svg" caption="Example of SDOH Grouping Value set in US Core Condition Codes Value Set" %}
 
 #### Assessment Codes
-US Core has created the [US Core Common SDOH Assessments] ValueSet - commonly asked social questions as identified by [FindHelp.org], a social service assistance tool, and <span class="bg-success" markdown="1"> the PRAPARE, Hunger Vital Sign, AHC-HRSN screening tools referenced in USCDI v2.</span><!-- new-content -->  This is not intended to replicate the complexities and robustness of the FHIR Questionnaire and QuestionnaireResponse resources developed for SDOH assessment screening tools and other questionnaires.  The Gravity Project is working on a more comprehensive set of codes to meet these challenges and this guide may leverage that work in the future.
+US Core has created the [US Core Common SDOH Assessments] ValueSet - commonly asked social questions as identified by [FindHelp.org], a social service assistance tool, and  the PRAPARE, Hunger Vital Sign, AHC-HRSN screening tools referenced in USCDI v2. This is not intended to replicate the complexities and robustness of the FHIR Questionnaire and QuestionnaireResponse resources developed for SDOH assessment screening tools and other questionnaires.  The Gravity Project is working on a more comprehensive set of codes to meet these challenges and this guide may leverage that work in the future.
 
 ---
 

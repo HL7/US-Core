@@ -1,6 +1,3 @@
-<!-- new content comment remove prior to publishing-->
-This page has been added for this version.
-{:.new-content}
 
 ### Version = 5.0.0
 - url: <http://build.fhir.org/ig/HL7/US-Core/STU5>

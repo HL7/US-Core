@@ -1,6 +1,3 @@
-<div class="new-content" markdown="1">
-This profile has been added to represent SDOH surveys/assessments using Observations.
-</div><!-- new-content -->
 
 **Example Usage Scenarios:**
 
