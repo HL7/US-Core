@@ -15,7 +15,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. a flag indicating whether is in active use
 1. a reference to patient
 
-**Each Location must support:**
+**Each RelatedPerson must support:**
 
 1.  relationship to a patient
 2.  a name
