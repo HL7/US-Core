@@ -17,9 +17,8 @@ The table below summarizes the different profiles and resource types between Arg
 
 Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir.igVer}} version of US Core and each previous major release are provided in the links below:
 
-- [{{site.data.fhir.igVer}}-4.0.0 comparison](comparison-v4.0.0/index.html)
-- [{{site.data.fhir.igVer}}-3.1.1 comparison](comparison-v3.1.1/index.html)
-
+- [Comparison with version 4.0.0](comparison-v4.0.0/index.html)
+- [Comparison with version 3.1.1](comparison-v3.1.1/index.html)
 
 A detailed comparisons between this version of US Core and Argonaut Data Query is available as a downloadable CSV Excel file:
 

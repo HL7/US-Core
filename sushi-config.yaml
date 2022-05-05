@@ -90,11 +90,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
-  # version-comparison:
-  #    - 4.0.0  # does not seems to work
-  #    - 3.1.1  # does not seems to work
-  #    - 2.0.0  # does not seems to work
-  #    - 1.0.0  # does not seems to work
+  version-comparison:
+     - 4.0.0  # does not seems to work
+     - 3.1.1  # does not seems to work
 copyrightyear: '2022+'
 releaselabel: STU5 Release
 
