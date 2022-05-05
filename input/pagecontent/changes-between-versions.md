@@ -20,10 +20,21 @@ Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir
 - [Comparison with version 4.0.0](comparison-v4.0.0/index.html)
 - [Comparison with version 3.1.1](comparison-v3.1.1/index.html)
 
-A detailed comparisons between this version of US Core and Argonaut Data Query is available as a downloadable CSV Excel file:
+A comparison between Argonaut Data Query Profiles and this version of US Core is available as CSV or Excel files and links are provided below: 
 
-- [{{site.data.fhir.igVer}}-argo data query CSV](comparison-argo.csv)
-- [{{site.data.fhir.igVer}}-argo data query Excel](comparison-argo.xlsx)
+<div class="bg-info" markdown="1">
+
+>These tables show the differences stacked side by side. The resulting columns will have multilevel labels with the ElementDefinition fields at the outer level and with "self" = Argonaut Data Query and "other" = US Core 5.0.0 stacked alternately at the inner level. The rows represent the profile's elements.
+- Only the rows and columns with different values are kept.
+- Equal values are shown as empty cells.
+- The last column = "_merge" indicates if the profile exists only in Argonaut Data Query (other = "left_only") or US Core 5.0.0 (self = "right_only").
+- The *Argonaut MedicationStatement Profile* and *Argonaut CarePlan Profile* have no equivalent US Core 5.0.0 Profile Type and are not mapped:
+</div><!-- bg-info -->
+
+
+- [Comparison with Argonaut Data Query-CSV](argo-compare-csv.zip)
+- [Comparison with Argonaut Data Query-Excel](argo-compare-excel.zip)
+
 
 ### Endpoint Discoverability
 
