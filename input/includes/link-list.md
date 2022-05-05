@@ -265,6 +265,13 @@
 [role]: SearchParameter-us-core-careteam-role.html
 [discharge-disposition]: SearchParameter-us-core-encounter-discharge-disposition.html
 [description]: SearchParameter-us-core-goal-description.html
+[`ethnicity`]: SearchParameter-us-core-ethnicity.html
+[`race`]: SearchParameter-us-core-race.html
+[`gender-identity`]: SearchParameter-us-core-patient-gender-identity.html
+[`asserted-date`]: SearchParameter-us-core-condition-asserted-date.html
+[`role`]: SearchParameter-us-core-careteam-role.html
+[`discharge-disposition`]: SearchParameter-us-core-encounter-discharge-disposition.html
+[`description`]: SearchParameter-us-core-goal-description.html
 [{{site.data.fhir.path}}StructureDefinition/data-absent-reason]: {{site.data.fhir.path}}StructureDefinition/data-absent-reason
 [reference]: {{site.data.fhir.path}}references.html
 [timezone extension]: {{site.data.fhir.path}}extension-tz-code.html
