@@ -39,8 +39,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 *  \*The MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
     *  When referencing a Medication resource, the resource may be [contained] or an external resource.
     *  The server systems are not required to support both a code and a reference, but **SHALL** support *at least one* of these methods.
-    * If an external reference to Medication is used, the server SHALL support the [`_include`] parameter for searching this element.
-    *  The client application SHALL support all methods.
+    * If an external reference to Medication is used, the server **SHALL** support the [`_include`] parameter for searching this element.
+    *  The client application **SHALL** support all methods.
 * The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or a reference using `MedicationRequest.reportedReference`.
    *  Although both are marked as must support, the server system is not required to support both a boolean and a reference, but **SHALL** support at least one of these elements.
    *  The client application **SHALL** support both elements.

@@ -257,7 +257,7 @@ There are situations when information on a particular data element is missing an
 
 ### FHIR RESTful Search API Requirements
 
-The [FHIR RESTful Search API] requires that servers that support search **SHALL** support the http `POST` based search. However, for all the supported search interactions in this guide, servers SHALL also support the `GET` based search.
+The [FHIR RESTful Search API] requires that servers that support search **SHALL** support the http `POST` based search. For all the supported search interactions in this guide, servers **SHALL** also support the `GET` based search.
 
 - When searching using the `token` type searchparameter  [(how to search by token)]
     - The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
