@@ -41,6 +41,11 @@ All the profile information for the {{site.data.fhir.ig.title}} is represented i
 - [CSV](uscore_profiles.csv)
 - [Excel](all_profiles.xlsx)
 
+A table to compare all the observation profiles in US Core is also provided:
+
+- [CSV(compressed folder)](argo-obs-compare-csv.zip)
+- [Excel(compressed folder)](argo-obs-compare-excel.zip)
+
 ##### Defined Pattern Elements
 
 The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern] which is used almost exclusively for the CodeableConcept and Coding  datatypes. If the element is marked as must support and defined by a pattern then the pattern defines the elements *and* element values that the server **SHALL** be capable of providing.

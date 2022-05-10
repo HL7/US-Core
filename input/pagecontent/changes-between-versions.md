@@ -22,8 +22,8 @@ Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir
 
 A comparison between Argonaut Data Query Profiles and this version of US Core is available as CSV or Excel files and links are provided below:
 
-- [Comparison with Argonaut Data Query-CSV](argo-compare-csv.zip)
-- [Comparison with Argonaut Data Query-Excel](argo-compare-excel.zip)
+- [Comparison with Argonaut Data Query-CSV(compressed file)](argo-compare-csv.zip)
+- [Comparison with Argonaut Data Query-Excel(compressed file)](argo-compare-excel.zip)
 
 
 ### Endpoint Discoverability
