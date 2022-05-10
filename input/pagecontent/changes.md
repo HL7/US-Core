@@ -82,7 +82,7 @@ These changes are a result of over 100 January 2022 Ballot related trackers whic
 1. **Resolved - change required**: List profiles by type and create table comparing Observation Profiles [FHIR-34890](https://jira.hl7.org/browse/FHIR-34890) See Changes:
  - [Here](profiles-and-extensions.html)
  - [Here](index.html#us-core-profiles)
- - [Here](#.html)
+ - [Here](downloads.html)
 1. **Applied**: Lab Result and Specimen Information for RBC Observation is Missing [FHIR-34910](https://jira.hl7.org/browse/FHIR-34910) See Change
    - [Here](index.html#how-to-read-this-guide)
    - [Here](examples.html)
