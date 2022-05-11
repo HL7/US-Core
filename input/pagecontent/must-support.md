@@ -41,10 +41,7 @@ All the profile information for the {{site.data.fhir.ig.title}} is represented i
 - [CSV](uscore_profiles.csv)
 - [Excel](all_profiles.xlsx)
 
-A table to compare all the observation profiles in US Core is also provided:
-
-- [CSV(compressed folder)](argo-obs-compare-csv.zip)
-- [Excel(compressed folder)](argo-obs-compare-excel.zip)
+This [Observation Summary Table] compares *Must Support* Elements across all the US Core Observation Profiles.
 
 ##### Defined Pattern Elements
 
