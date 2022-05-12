@@ -346,3 +346,4 @@
 [General Requirements]: general-requirements.html
 [US Core Gender Identity Extension]: StructureDefinition-us-core-genderIdentity.html
 [HL7 C-CDA]: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492
+[Observation Summary Table]: observation-summary.html
