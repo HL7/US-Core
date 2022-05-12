@@ -3,8 +3,7 @@
 - url: <http://build.fhir.org/ig/HL7/US-Core/STU5>
 - Based on FHIR version : 4.0.1
 
-The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2022 HL7 balloting process.  The resolution of the community comments has been agreed to and voted on by the members of the sponsoring  HL7 Internattion w Cross-Group Projects work group.
-
+The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2022 HL7 balloting process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
 #### What's new in Version 5.0.0 of US Core:
 
 - New and updated resources to meet the [U.S. Core Data for Interoperability (USCDI) v2] new Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2021:
