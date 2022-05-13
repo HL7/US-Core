@@ -1,18 +1,18 @@
 resourceType: StructureDefinition
 id: us-core-diagnosticreport-lab
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab'
+url: "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
 name: USCoreDiagnosticReportProfileLaboratoryReporting
 title: US Core DiagnosticReport Profile for Laboratory Results Reporting
 status: active
 experimental: false
-date: '2022-04-20'
+date: "2022-04-20"
 description: >-
-  Laboratory results are grouped and summarized using the DiagnosticReport resource which typically reference Observation resource(s).  Each Observation resource represents an individual laboratory test and result value or component result values, or a “nested” panel (such as a microbial susceptibility panel) which references other observations.  They can also be presented in report form or as free text.  This profile sets minimum expectations for the DiagnosticReport resource to record, search, and fetch laboratory results associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific uses cases.
+  Laboratory results are grouped and summarized using the DiagnosticReport resource which typically reference Observation resource(s).  Each Observation resource represents an individual laboratory test and result value or component result values, or a nested panel (such as a microbial susceptibility panel) which references other observations.  They can also be presented in report form or as free text.  This profile sets minimum expectations for the DiagnosticReport resource to record, search, and fetch laboratory results associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific uses cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
 type: DiagnosticReport
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/DiagnosticReport'
+baseDefinition: "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"
 derivation: constraint
 differential:
   element:
@@ -51,7 +51,7 @@ differential:
       mustSupport: true
       binding:
         strength: required
-        valueSet: 'http://hl7.org/fhir/ValueSet/diagnostic-report-status'
+        valueSet: "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
     - id: DiagnosticReport.category
       path: DiagnosticReport.category
       slicing:
@@ -61,20 +61,20 @@ differential:
         rules: open
       min: 1
       mustSupport: true
-    - id: 'DiagnosticReport.category:LaboratorySlice'
+    - id: "DiagnosticReport.category:LaboratorySlice"
       path: DiagnosticReport.category
       sliceName: LaboratorySlice
       min: 1
-      max: '1'
+      max: "1"
       patternCodeableConcept:
         coding:
-          - system: 'http://terminology.hl7.org/CodeSystem/v2-0074'
+          - system: "http://terminology.hl7.org/CodeSystem/v2-0074"
             code: LAB
       mustSupport: true
     - id: DiagnosticReport.code
       path: DiagnosticReport.code
       short: US Core Laboratory Report Order Code
-      definition: 'The test, panel or battery that was ordered.'
+      definition: "The test, panel or battery that was ordered."
       comment: >-
         UsageNote= The typical patterns for codes are:  1)  a LOINC code either
         as a  translation from a "local" code or as a primary code, or 2)  a
@@ -93,10 +93,10 @@ differential:
       type:
         - code: Reference
           targetProfile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+            - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
       mustSupport: true
-    - id: 'DiagnosticReport.effective[x]'
-      path: 'DiagnosticReport.effective[x]'
+    - id: "DiagnosticReport.effective[x]"
+      path: "DiagnosticReport.effective[x]"
       short: Diagnostically relevant time (typically the time of specimen collection)
       type:
         - extension:
@@ -123,7 +123,7 @@ differential:
               http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
             - >-
               http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam'
+            - "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
             - >-
               http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
           _targetProfile:

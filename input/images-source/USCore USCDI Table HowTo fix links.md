@@ -1,4 +1,6 @@
-when loading the ppt file to google sheeets:
+when loading the ppt file to google sheeets: 
+
+https://docs.google.com/presentation/d/1dABTWwUuHP2vkg9Lxxx37AI1T3wsy7CELMP7ekD45aQ/edit?usp=sharing
 
 1. resize to 10" x 28"  ( file/page setup)
 1. ressize all icons to max size as close to .34 " as possible
