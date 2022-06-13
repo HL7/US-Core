@@ -7,7 +7,7 @@ The changes in this errata to US Core 5.0 have been reviewed by the public throu
 
 **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
-1. **Applied**: Typos in Condition Profile URls  [FHIR-37585](https://jira.hl7.org/browse/FHIR-FHIR-37585) See Changes:
+1. **Applied**: Typos in Condition Profile URls  [FHIR-37585](https://jira.hl7.org/browse/FHIR-37585) See Changes:
    - [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
    - [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 2. **Applied**: Update VSAC dependency package version and remove STU Notes where expansion now supported by publisher  [FHIR-37586](https://jira.hl7.org/browse/FHIR-37586)
