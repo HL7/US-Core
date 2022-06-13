@@ -46,8 +46,8 @@ WARNING: Goal/goal-1: Goal.description: No code provided, and a code should be p
 # === Circular US Core Warnings since this is US Core (5): ===
 
 
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-encounter-diagnosis').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from the core US profile
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-problems-health-concerns').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from the core US profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from the core US profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from the core US profile
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles

@@ -2,11 +2,11 @@
     "resourceType": "ImplementationGuide",
     "id": "hl7.fhir.us.core",
     "url": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
-    "version": "5.0.0",
+    "version": "5.0.1",
     "name": "USCore",
     "title": "US Core Implementation Guide",
     "status": "active",
-    "date": "2022-04-04",
+    "date": "2022-06-13",
     "publisher": "HL7 International - Cross-Group Projects",
     "contact": [
         {
@@ -57,7 +57,7 @@
             "id": "vsac",
             "packageId": "us.nlm.vsac",
             "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
-            "version": "0.3.0"
+            "version": "0.7.0"
         },
         {
             "packageId": "hl7.fhir.uv.sdc",
@@ -2234,7 +2234,7 @@
                 },
                 "description": "This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's SDOH Problem/Health Concern.",
                 "name": "SDOH Problem/Health Concern Example",
-                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-problems-health-concerns"
+                "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
             },
             {
                 "reference": {
@@ -2242,7 +2242,7 @@
                 },
                 "description": "This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
                 "name": "Encounter Diagnosis Example 1",
-                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-encounter-diagnosis"
+                "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
             },
             {
                 "reference": {
@@ -2250,7 +2250,7 @@
                 },
                 "description": "This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
                 "name": "Encounter Diagnosis Example 2",
-                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-encounter-diagnosis"
+                "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
             },
             {
                 "reference": {
@@ -2410,7 +2410,7 @@
                 },
                 "description": "This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's health concern.",
                 "name": "Health Concern Example",
-                "exampleCanonical": "http://hl7.org/fhir/us/core//StructureDefinition/us-core-condition-problems-health-concerns"
+                "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
             },
             {
                 "reference": {

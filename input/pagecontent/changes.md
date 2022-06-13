@@ -1,3 +1,18 @@
+### Version = 5.0.1
+- url: <http://build.fhir.org/ig/HL7/US-Core/STU5.0.1>
+- Based on FHIR version : 4.0.1
+
+The changes in this errata to US Core 5.0 have been reviewed by the public through the HL7 errata process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
+#### Correct Errata in Version 5.0.1 of US Core:
+
+**Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
+
+1. **Applied**: Typos in Condition Profile URls  [FHIR-37585](https://jira.hl7.org/browse/FHIR-FHIR-37585) See Changes:
+   - [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
+   - [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
+2. **Applied**: Update VSAC dependency package version and remove STU Notes where expansion now supported by publisher[FHIR-NNNNN](https://jira.hl7.org/browse/FHIR-NNNNN)
+3. **Applied**: Correct misapplied tracker - for `agent.who` remove MS from reference Practitioner and add to Organization [FHIR-28517](https://jira.hl7.org/browse/FHIR-28517) [See Change Here](StructureDefinition-us-core-provenance.html)
+
 
 ### Version = 5.0.0
 - url: <http://build.fhir.org/ig/HL7/US-Core/STU5>
@@ -33,7 +48,7 @@ The changes in this annual update to US Core have been reviewed and commented up
 
 These changes are a result of over 100 January 2022 Ballot related trackers which are listed below:
 
-﻿ **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
+**Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
 1. **Applied**: Remove requirement for component SDOH Assessment's Observations [FHIR-34384](https://jira.hl7.org/browse/FHIR-34384) [See Change Here](StructureDefinition-us-core-observation-survey.html)
 1. **Applied**: Clarify clinicalStatus invariant [FHIR-34468](https://jira.hl7.org/browse/FHIR-34468) [See Change Here](general-requirements.html#missing-data)
