@@ -10,7 +10,7 @@ The changes in this errata to US Core 5.0 have been reviewed by the public throu
 1. **Applied**: Typos in Condition Profile URls  [FHIR-37585](https://jira.hl7.org/browse/FHIR-FHIR-37585) See Changes:
    - [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
    - [Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
-2. **Applied**: Update VSAC dependency package version and remove STU Notes where expansion now supported by publisher[FHIR-NNNNN](https://jira.hl7.org/browse/FHIR-NNNNN)
+2. **Applied**: Update VSAC dependency package version and remove STU Notes where expansion now supported by publisher[FHIR-37586](https://jira.hl7.org/browse/FHIR-37586)
 3. **Applied**: Correct misapplied tracker - for `agent.who` remove MS from reference Practitioner and add to Organization [FHIR-28517](https://jira.hl7.org/browse/FHIR-28517) [See Change Here](StructureDefinition-us-core-provenance.html)
 
 
