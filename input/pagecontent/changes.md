@@ -2,7 +2,7 @@
 - url: <http://build.fhir.org/ig/HL7/US-Core/STU5.0.1>
 - Based on FHIR version : 4.0.1
 
-The changes in this errata to US Core 5.0 have been reviewed by the public through the HL7 errata process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
+The changes in this errata to version 5.0.0 of US Core have been reviewed by the public through the HL7 errata process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
 #### Correct Errata in Version 5.0.1 of US Core:
 
 **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
