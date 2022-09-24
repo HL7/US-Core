@@ -1,0 +1,137 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-pregnancystatus",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus",
+    "name": "USCorePregnancyStatusProfile",
+    "title": "US Core Pregnancy Status Observation Profile",
+    "status": "active",
+    "experimental": false,
+    "date": "2022-08-24",
+    "description": "The US Core Pregnancy Status Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch the \"state or condition of being pregnant\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Observation",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Observation",
+                "path": "Observation",
+                "definition": "\\-",
+                "comment": "\\-",
+                "mustSupport": false
+            },
+            {
+                "id": "Observation.status",
+                "path": "Observation.status",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.category",
+                "path": "Observation.category",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.category:SocialHistory",
+                "path": "Observation.category",
+                "sliceName": "SocialHistory",
+                "min": 0,
+                "max": "1",
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                            "code": "social-history"
+                        }
+                    ]
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code",
+                "path": "Observation.code",
+                "short": "Pregnancy Status",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code.coding",
+                "path": "Observation.code.coding",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.code.coding:82810-3",
+                "path": "Observation.code.coding",
+                "sliceName": "82810-3",
+                "min": 1,
+                "max": "1",
+                "patternCoding": {
+                    "system": "http://loinc.org",
+                    "code": "82810-3"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.subject",
+                "path": "Observation.subject",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.effectiveDateTime",
+                "path": "Observation.effectiveDateTime",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.valueCodeableConcept",
+                "path": "Observation.valueCodeableConcept",
+                "short": "Coded Responses from Pregnancy Status Value Set",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+                            "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus-max"
+                        }
+                    ],
+                    "strength": "preferred",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status"
+                }
+            }
+        ]
+    }
+}
