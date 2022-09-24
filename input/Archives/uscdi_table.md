@@ -1,5 +1,5 @@
 
-| USCDI v2 Summary of Data Classes and Data Elements| US Core Profile | FHIR Resource|
+| USCDI v3 Summary of Data Classes and Data Elements| US Core Profile | FHIR Resource|
 |---|---|---|
 | **Allergies and Intolerances:** | ||
 | Substance (Medication) | [US Core Allergies Profile]| AllergyIntolerance |

@@ -2,11 +2,11 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.core",
   "url": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
-  "version": "5.0.1",
+  "version": "6.0.0-preview",
   "name": "USCore",
   "title": "US Core Implementation Guide",
   "status": "active",
-  "date": "2022-06-13",
+  "date": "2022-09-23",
   "publisher": "HL7 International - Cross-Group Projects",
   "contact": [
     {
@@ -64,6 +64,12 @@
       "version": "3.0.0",
       "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",
       "id": "hl7_fhir_uv_sdc"
+    },
+    {
+      "id": "uscdcphinvads",
+      "packageId": "us.cdc.phinvads",
+      "uri": "http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads",
+      "version": "0.12.0"
     }
   ],
   "definition": {
@@ -355,6 +361,14 @@
         "description": "To promote interoperability and adoption through common implementation, the US Core Observation Survey Profile sets minimum expectations for the Observation Resource to record, search, and fetch retrieve observations that represent the questions and responses to form/survey and assessment tools.  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific uses cases.",
         "exampleBoolean": false,
         "name": "US Core Observation Survey Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-occupation"
+        },
+        "description": "The US Core Occupation Status Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) v3 Occupation status requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch the \"Type of work of a person\" and \"Type of business that compensates for work or assigns work to an unpaid worker or volunteer\"  associated with a patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false,
+        "name": "US Core Occupation Observation Profile"
       },
       {
         "reference": {
@@ -2542,6 +2556,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/observation-occupation"
+        },
+        "description": "This example of the *US Core Occupation Observation Profile*  documents a nursing assistant's work type.",
+        "name": "Occupation Observation Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-occupation"
+      },
+      {
+        "reference": {
           "reference": "Observation/satO2-fiO2"
         },
         "description": "This is a observation satO2 fiO2 example for the *US Core Pulse Oximetry Profile* representing a spO2 value with a for a patient on 6 l/min of O2 suppplemental oxygen.",
@@ -2991,7 +3013,7 @@
       },
       {
         "code": "releaselabel",
-        "value": "STU5 Release"
+        "value": "CI Build"
       },
       {
         "code": "path-resource",
@@ -3064,6 +3086,10 @@
       {
         "code": "excludeexample",
         "value": "true"
+      },
+      {
+        "code": "version-comparison",
+        "value": "5.0.1"
       },
       {
         "code": "version-comparison",

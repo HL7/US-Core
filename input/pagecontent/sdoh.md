@@ -45,7 +45,7 @@ To meets the USCDI v2 requirements for SDOH Assessments, US Core defines the [US
 
 Note that the panels can be nested to create additional groupings of responses.  See the [US Core Observation Survey Profile] profile page for detailed documentation on how the observations are linked, examples, and search requirements.
 
-The Observations may be extracted from QuestionnaireResponse. [SDOH Clinical Care](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/survey_instrument_support.html) guides define how SDOH data captured in a QuestionnaireResponse can be extracted and used to create or update Observations or other FHIR resources.
+The Observations may be extracted from QuestionnaireResponse. The [SDOH Clinical Care] guide define how SDOH data captured in a QuestionnaireResponse can be extracted and used to create or update Observations or other FHIR resources.
 {:.bg-info}
 
 #### Assessment Screenings Using QuestionnaireResponse
