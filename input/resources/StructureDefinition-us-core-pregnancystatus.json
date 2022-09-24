@@ -62,31 +62,13 @@
                 "id": "Observation.code",
                 "path": "Observation.code",
                 "short": "Pregnancy Status",
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.code.coding",
-                "path": "Observation.code.coding",
-                "slicing": {
-                    "discriminator": [
+                "patternCodeableConcept": {
+                    "coding": [
                         {
-                            "type": "pattern",
-                            "path": "$this"
+                            "system": "http://loinc.org",
+                            "code": "82810-3"
                         }
-                    ],
-                    "rules": "open"
-                },
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.code.coding:82810-3",
-                "path": "Observation.code.coding",
-                "sliceName": "82810-3",
-                "min": 1,
-                "max": "1",
-                "patternCoding": {
-                    "system": "http://loinc.org",
-                    "code": "82810-3"
+                    ]
                 },
                 "mustSupport": true
             },

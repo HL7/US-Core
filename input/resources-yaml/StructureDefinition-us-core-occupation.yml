@@ -56,31 +56,12 @@ differential:
             id: Observation.code
             path: Observation.code
             short: Occupation history
+            patternCodeableConcept:
+                coding:
+                    - 
+                      system: 'http://loinc.org'
+                      code: 11341-5
             mustSupport: true
-
-
-        - 
-            id: Observation.code.coding
-            path: Observation.code.coding
-            slicing:
-              discriminator:
-                - type: pattern
-                  path: $this
-              rules: open
-            mustSupport: true
-        - 
-            id: 'Observation.code.coding:11341-5'
-            path: Observation.code.coding
-            sliceName: 11341-5
-            min: 1
-            max: '1'
-            # type:
-            #   - code: Coding
-            patternCoding:
-              system: 'http://loinc.org'
-              code: 11341-5
-            mustSupport: true
-
 
         - 
             id: Observation.subject
