@@ -2,14 +2,14 @@ resourceType: Observation
 id: observation-occupation
 meta:
     profile:
-        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-occupation'
+        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation'
     extension:
         - 
             url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
             valueString: Occupation Observation Example
         - 
             url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
-            valueMarkdown: "This example of the *US Core Occupation Observation Profile*  documents a nursing assistant's work type."
+            valueMarkdown: "This example of the *US Core Observation Occupation Profile*  documents a nursing assistant's work type."
 status: final
 category:
     - 
