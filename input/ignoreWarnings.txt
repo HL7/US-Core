@@ -43,9 +43,12 @@ WARNING: SearchParameter/us-core-servicerequest-id: SearchParameter: The express
 WARNING: Goal/goal-1: Goal.description: No code provided, and a code should be provided from the value set 'US Core Goal Codes' (http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description)
 
 
-# === Circular US Core Warnings since this is US Core (5): ===
+# === Circular US Core Warnings since this is US Core (4): ===
 
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-occupation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
 
 
 # WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from the core US profile

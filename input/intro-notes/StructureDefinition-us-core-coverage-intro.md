@@ -28,6 +28,6 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
-<!-- - For representing the patient's *pregnancy status* use the [US Core Pregnancy Status Coverage Profile]. -->
+- `Coverage.status` alone may not indicate whether an individual is covered or not. The Coverage.period needs to be considered as well. For example, the the coverage may be expired with a status of "active", or conversely, it may be "cancelled, the still have covered claims.
 
 {% include link-list.md %}
