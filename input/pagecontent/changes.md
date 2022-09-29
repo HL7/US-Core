@@ -3,13 +3,24 @@
 - url: <http://build.fhir.org/ig/HL7/US-Core/>
 - Based on FHIR version : 4.0.1
 
-#### Changes:
- **The January 2023 Ballot**
+#### The January 2023 Ballot
 
-This Ballot addresses the following issues:
+This ballot addresses the following issues:
 - Adds [United States Core Data for Interoperability (USCDI) V3](https://www.healthit.gov/isa/sites/isa/files/2022-07/USCDI-Version-3-July-2022-Final.pdf) updates that the Office of the National Coordinator (ONC) published in July of 2021 with these new Data Elements and Classes:
 
+  - **Applied**: [Health Insurance Information](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual’s insurance coverage for health care.
+  - **Pending**: [Health Status/Assessments Data Elements Guidance page](http://hl7.org/fhir/us/core/2022Jan/assessments.html] to document how to use US Core to represent and access health status and assessments]including: [Functional Status](#.html), [Disability Status](#.html), [Mental/Cognitive Status](#.html), and [Pregnancy Status](#.html).
+  - **Pending**: **Laboratory:** Specimen Type, Result Status, and new terminology requirements for coded and numeric results. [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-specimen.html).
+  - **Pending**: **Medications:** Dose, Dose Unit of Measure, Indication, and Fill Status [See Changes Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationdispense.html)
+  - **Pending**: **Patient Demographics/Information**
+      - Date of Death, Tribal Affiliation, and Change Birth Sex to Sex [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
+      - Related Person’s Name and Related Person’s Relationship [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-relatedperson.html)
+      - Occupation and Occupation Industry [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-occupation.html)
+  - **Pending**: **Procedures:** Reason for Referral [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html)
+- Continued efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
+- Addressed and applied over 30 trackers submitted by implementers since the previous STU2 ballot for US Core ver 4.0.0:
 
+ **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
 ### Version = 5.0.1
 - url: <http://hl7.org/fhir/us/core/STU5.0.1/>

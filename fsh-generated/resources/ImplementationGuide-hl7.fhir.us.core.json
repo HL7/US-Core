@@ -1052,6 +1052,30 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-medicationdispense-patient"
+        },
+        "description": "**The identity of a patient to list dispenses  for**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreMedicationdispensePatient"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-medicationdispense-status"
+        },
+        "description": "**Returns dispenses with a specified dispense status**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreMedicationdispenseStatus"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-medicationdispense-type"
+        },
+        "description": "**Returns dispenses of a specific type**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreMedicationdispenseType"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-medicationrequest-authoredon"
         },
         "description": "**Return prescriptions written on this date**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",

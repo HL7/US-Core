@@ -74,6 +74,11 @@
 - [address-state](SearchParameter-us-core-location-address-state.html)
 - [address-postalcode](SearchParameter-us-core-location-address-postalcode.html)
 
+##### MedicationDispense
+- {:.new-content}[status](SearchParameter-us-core-medicationdispense-status.html)
+- {:.new-content}[type](SearchParameter-us-core-medicationdispense-type.html)
+- {:.new-content}[patient](SearchParameter-us-core-medicationdispense-patient.html)
+
 ##### MedicationRequest
 - [status](SearchParameter-us-core-medicationrequest-status.html)
 - [intent](SearchParameter-us-core-medicationrequest-intent.html)
