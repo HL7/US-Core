@@ -1,0 +1,56 @@
+{
+    "resourceType": "MedicationDispense",
+    "id": "medicationdispense-example",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Medication Dispense Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a insulin dispense example for the *US Core Medication Dispense Profile*."
+            }
+        ]
+    },
+    "status": "completed",
+    "medicationCodeableConcept": {
+        "coding": [
+            {
+                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                "code": "285018",
+                "display": "Lantus 100 UNT/ML Injectable Solution"
+            }
+        ],
+        "text": "Lantus 100 UNT/ML Injectable Solution"
+    },
+    "subject": {
+        "display": "Amy V. Shaw"
+    },
+    "performer": [
+        {
+            "actor": {
+                "display": "Ronald Bone, MD"
+            }
+        }
+    ],
+    "type": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "FFCS",
+                "display": "first fill complete, partial strength"
+            }
+        ]
+    },
+    "whenHandedOver": "2016-12-08T06:38:52Z",
+    "dosageInstruction": [
+        {
+            "sequence": 1,
+            "text": "20 Units SC three times daily"
+        }
+    ]
+}

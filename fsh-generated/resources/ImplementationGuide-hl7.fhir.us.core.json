@@ -308,6 +308,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-medicationdispense"
+        },
+        "description": "This profile sets minimum expectations for the MedicationDispense resource to record, search, and fetch the \"state of a medication with regards to dispensing or other activity. (e.g., dispensed, partially dispensed, not dispensed)\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false,
+        "name": "US Core Medication Dispense Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-medicationrequest"
         },
         "description": "The US Core Medication Request Profile is based upon the core FHIR MedicationRequest Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 'Medications' requirements. The MedicationRequest resource can be used to record a patient’s medication prescription or order.  This profile sets minimum expectations for the MedicationRequest resource to record, search, and fetch a patient's medication to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
@@ -2569,6 +2577,14 @@
         "description": "This is an example Media image that is reference by the *US Core DiagnosticReport Note Profile*.",
         "name": "EKG Strip Image",
         "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/medicationdispense-example"
+        },
+        "description": "This is a insulin dispense example for the *US Core Medication Dispense Profile*.",
+        "name": "Medication Dispense Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense"
       },
       {
         "reference": {

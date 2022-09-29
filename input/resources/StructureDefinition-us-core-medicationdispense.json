@@ -1,0 +1,160 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-medicationdispense",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense",
+    "name": "USCoreMedicationDispenseProfile",
+    "title": "US Core Medication Dispense Profile",
+    "status": "active",
+    "date": "2022-09-28",
+    "description": "This profile sets minimum expectations for the MedicationDispense resource to record, search, and fetch the \"state of a medication with regards to dispensing or other activity. (e.g., dispensed, partially dispensed, not dispensed)\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+    "kind": "resource",
+    "abstract": false,
+    "type": "MedicationDispense",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "MedicationDispense",
+                "path": "MedicationDispense"
+            },
+            {
+                "id": "MedicationDispense.status",
+                "path": "MedicationDispense.status",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.medication[x]",
+                "path": "MedicationDispense.medication[x]",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    },
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
+                        ]
+                    }
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.4"
+                }
+            },
+            {
+                "id": "MedicationDispense.subject",
+                "path": "MedicationDispense.subject",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.performer",
+                "path": "MedicationDispense.performer",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.performer.actor",
+                "path": "MedicationDispense.performer.actor",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
+                            "http://hl7.org/fhir/StructureDefinition/Device"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.type",
+                "path": "MedicationDispense.type",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType"
+                }
+            },
+            {
+                "id": "MedicationDispense.whenHandedOver",
+                "path": "MedicationDispense.whenHandedOver",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.dosageInstruction",
+                "path": "MedicationDispense.dosageInstruction",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.dosageInstruction.text",
+                "path": "MedicationDispense.dosageInstruction.text",
+                "mustSupport": true
+            }
+        ]
+    }
+}
