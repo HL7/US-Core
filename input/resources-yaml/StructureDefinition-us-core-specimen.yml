@@ -1,0 +1,32 @@
+resourceType: StructureDefinition
+id: us-core-specimen
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen'
+name: USCoreSpecimenProfile
+title: US Core Specimen Profile
+status: active
+experimental: false
+date: '2022-09-27'
+description: >-
+   This profile sets minimum expectations for the Specimen resource to record, search, and fetch "substances being sampled or tested. (e.g., nasopharyngeal swab, whole blood, serum, urine, wound swab)" associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Specimen
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Specimen'
+derivation: constraint
+differential:
+  element:
+    - id: Specimen
+      path: Specimen
+      definition: '\-'
+      comment: '\-'
+      mustSupport: false
+
+    - id: Specimen.type
+      path: Specimen.type
+      min: 1
+      mustSupport: true
+      binding:
+        strength: extensible
+        valueSet: 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.2074.1.1.38'
+        # description: Steward Federal Health Interoperability Modeling and Standards (FHIM).  Inclusion Criteria: Kinds of biological substances from the SNOMED CT Specimen axis (Pending additions by LabCoP team)

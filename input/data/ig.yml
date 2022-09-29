@@ -691,6 +691,17 @@ definition:
     exampleBoolean: false
     name: US Core Smoking Status Observation Profile
   - reference:
+      reference: StructureDefinition/us-core-specimen
+    description: This profile sets minimum expectations for the Specimen resource
+      to record, search, and fetch "substances being sampled or tested. (e.g., nasopharyngeal
+      swab, whole blood, serum, urine, wound swab)" associated with a patient to promote
+      interoperability and adoption through common implementation.  It identifies
+      which core elements, extensions, vocabularies, and value sets **SHALL** be present
+      in the resource when using this profile.  It provides the floor for standards
+      development for specific use cases.
+    exampleBoolean: false
+    name: US Core Specimen Profile
+  - reference:
       reference: StructureDefinition/us-core-vital-signs
     description: To promote interoperability and adoption through common implementation,
       this profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html)
@@ -2746,6 +2757,11 @@ definition:
       Profile*.
     name: Some Day Smoker Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus
+  - reference:
+      reference: Specimen/specimen-example
+    description: This is a serum specimen example for the *US Core Specimen Profile*.
+    name: Specimen Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen
   - reference:
       reference: Observation/temperature
     description: This is a temperature example for the *Vitalsigns Profile*.
