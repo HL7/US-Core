@@ -1,0 +1,24 @@
+resourceType: ValueSet
+id: us-core-diagnosticreport-report-and-note-codes
+url: http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes
+name: USCoreNonLaboratoryCodes
+title: US Core Non Laboratory Codes
+status: active
+experimental: false
+date: 2022-09-29
+description: Non laboratory LOINC concepts such as codes for observations like vital
+  signs, hemodynamics, intake/output, EKG, obstetric ultrasound, cardiac echo and
+  other clinical observations. The codes selected should represent discrete and narrative
+  diagnostic observations and reports
+copyright: "This material contains content from LOINC (http://loinc.org). LOINC is
+  copyright \xA9 1995-2020, Regenstrief Institute, Inc. and the Logical Observation
+  Identifiers Names and Codes (LOINC) Committee and is available at no cost under
+  the license at http://loinc.org/license. LOINC\xAE is a registered United States
+  trademark of Regenstrief Institute, Inc"
+compose:
+  include:
+  - system: http://loinc.org
+    filter:
+    - property: CLASSTYPE
+      op: '='
+      value: '2'

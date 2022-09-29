@@ -1,21 +1,18 @@
 resourceType: CodeSystem
 id: us-core-tags
-status: active
-date: '2022-04-20'
-content: complete
+url: http://hl7.org/fhir/us/core/CodeSystem/us-core-tags
 name: USCoreTagsCodeSystem
 title: US Core Tags CodeSystem
-description: >-
-  Codes used in US Core `meta.tag` and 'category' profiles. The are typically used when there is a need for categorization or workflow hints.
+status: active
+experimental: false
+date: 2022-04-20
+description: Codes used in US Core `meta.tag` and 'category' profiles. The are typically
+  used when there is a need for categorization or workflow hints.
+copyright: Used by permission of HL7 International, all rights reserved Creative Commons
+  License
 caseSensitive: true
-url: >-
-  http://hl7.org/fhir/us/core/CodeSystem/us-core-tags
+content: complete
 concept:
-  # - code: uploaded-data
-  #   display: Uploaded Data
-  #   definition: >-
-  #     Data is supplied by a client facing app. For example, patient generated or mediated data that is supplied by patient or other patient designee (such as a parent or spouse) rather than by a healthcare provide
-  - code: sdoh
-    display: SDOH
-    definition: >-
-      Social Determinants of Health Category
+- code: sdoh
+  display: SDOH
+  definition: Social Determinants of Health Category

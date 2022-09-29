@@ -1,0 +1,29 @@
+resourceType: ValueSet
+id: us-core-sexual-orientation
+url: http://hl7.org/fhir/us/core/ValueSet/us-core-sexual-orientation
+name: USCoreSexualOrientation
+title: US Core Sexual Orientation
+status: active
+experimental: false
+date: 2022-09-29
+description: "The US Core Sexual Orientation Value Set includes concepts to describe
+  a person\u2019s sexual orientation (who they are attracted to)."
+copyright: "This value set includes content from SNOMED CT, which is copyright \xA9
+  2002+ International Health Terminology Standards Development Organisation (IHTSDO),
+  and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT
+  is not covered by this agreement"
+compose:
+  include:
+  - system: http://snomed.info/sct
+    concept:
+    - code: '38628009'
+    - code: '20430005'
+    - code: '42035005'
+  - system: http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+    concept:
+    - code: OTH
+      display: Other
+    - code: UNK
+      display: Unknown
+    - code: ASKU
+      display: Asked but no answer

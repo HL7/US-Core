@@ -5,16 +5,18 @@
     "name": "USCoreObservationCategoryExtensionCodes",
     "title": "US Core Observation Category Extension Codes",
     "status": "active",
+    "experimental": false,
     "date": "2022-04-07",
     "description": "Set of codes for implementation of the US-Core profiles. These codes are  extensions to the [FHIR Observation Category Codes](http://terminology.hl7.org/CodeSystem/observation-category).",
+    "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "caseSensitive": true,
     "content": "complete",
+    "count": 1,
     "concept": [
         {
             "code": "clinical-test",
             "display": "Clinical Test",
             "definition": "Includes non-imaging and non-laboratory tests performed on a patient that results in structured or unstructured (narrative) findings specific to the patient, such as electrocardiogram (ECG), visual acuity exam, macular exam, or graded exercise testing (GXT), to facilitate the diagnosis and management of conditions."
         }
-    ],
-    "count": 1
+    ]
 }
