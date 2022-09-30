@@ -100,6 +100,7 @@
 ##### Patient
 - [_id](SearchParameter-us-core-patient-id.html)
 - [birthdate](SearchParameter-us-core-patient-birthdate.html)
+- {:.new-content}[deceased](SearchParameter-us-core-patient-deceased.html)
 - [family](SearchParameter-us-core-patient-family.html)
 - [gender](SearchParameter-us-core-patient-gender.html)
 - [given](SearchParameter-us-core-patient-given.html)

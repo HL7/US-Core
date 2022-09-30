@@ -548,6 +548,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-tribal-affiliation"
+        },
+        "description": "This Extension profile represents a tribe or band with which a person associates whether or not they are an enrolled member.",
+        "exampleBoolean": false,
+        "name": "US Core Tribal Affiliation Extension"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-vital-signs"
         },
         "description": "To promote interoperability and adoption through common implementation, this profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html) and defines *additional* constraints on the Observation resource to represent vital signs observations. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.  This US Core profiles that are derived from this profile are listed below.",
@@ -1436,6 +1444,14 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-patient-deceased"
+        },
+        "description": "**This patient has been marked as deceased, or as a death date entered**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCorePatientDeceased"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-patient-family"
         },
         "description": "**A portion of the family name of the patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
@@ -1694,7 +1710,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-patient"
         },
-        "description": "The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v2 'Patient Demographics' requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v3 'Patient Demographics' requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Patient Profile"
       },
@@ -2840,6 +2856,14 @@
         },
         "description": "This is a patient child example for the *US Core Patient Profile*.",
         "name": "Patient Child Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+      },
+      {
+        "reference": {
+          "reference": "Patient/deceased-example"
+        },
+        "description": "This is a deceased patient example for the *US Core Patient Profile*.",
+        "name": "Deceased Patient Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
       },
       {

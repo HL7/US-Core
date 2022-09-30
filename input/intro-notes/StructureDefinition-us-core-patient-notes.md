@@ -1,8 +1,6 @@
 {% include quickstart-intro.md %}
 
-#### Mandatory Search Parameters:
 
-The following search parameters and search parameter combinations SHALL be supported:
 
 1. **SHALL** support fetching a Patient using the **[`_id`](SearchParameter-us-core-patient-id.html)** search parameter:
 
@@ -69,6 +67,16 @@ The following search parameter combinations SHOULD be supported:
       1. GET [base]/Patient?family=Shaw&amp;birthdate=2007-03-20
 
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified birthdate and family ([how to search by date] and [how to search by string])
+
+1. **SHOULD** support searching using the combination of the **[`deceased`](SearchParameter-us-core-patient-deceased.html)** and **[`family`](SearchParameter-us-core-patient-family.html)** search parameters:
+
+    `GET [base]/Patient?deceased=[date]&family=[string]`
+
+    Example:
+    
+      1. GET [base]/Patient?family=Shaw&amp;deceased=2022-07-22
+
+    *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified deceased and family ([how to search by date] and [how to search by string])
 
 1. **SHOULD** support searching using the combination of the **[`family`](SearchParameter-us-core-patient-family.html)** and **[`gender`](SearchParameter-us-core-patient-gender.html)** search parameters:
 

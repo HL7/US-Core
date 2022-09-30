@@ -33,16 +33,19 @@ For ONC's USCDI requirements, each Patient must support the following additional
 1. a communication language
 1. a race
 1. an ethnicity
-1. a birth sex*
-1. gender identity*
-1. previous address
-1. previous name
-1. suffix
+2. <span class="bg-success" markdown="1">a tribal affiliation</span><!-- new-content -->
+3. a birth sex*
+4. gender identity*
+5. <span class="bg-success" markdown="1">date of death</span><!-- new-content -->
+6. previous address
+7. previous name
+8. suffix
 
 *see guidance below
 
 **Profile specific implementation guidance:**
-- Note that *Previous Name*, *Suffix*,and *Previous address* are listed in the U.S. Core Data for Interoperability.
+- Note that <span class="bg-success" markdown="1">*Date of Death*</span><!-- new-content -->  *Previous Name*, *Suffix*,and *Previous address* are listed in the U.S. Core Data for Interoperability.
+  - <span class="bg-success" markdown="1">Date of Death is communicated using the `Patient.deceasedDateTime` element.</span><!-- new-content -->
   - Suffix is represented using the `Patient.name.suffix` element.
   - Previous name is represented by setting `Patient.name.use` to "old" and providing an end date in Patient.name.period element if known
   - Previous address is represented by setting `Patient.address.use` to "old" and providing an end date in Patient.address.period element if known.
