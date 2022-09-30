@@ -2382,6 +2382,13 @@ definition:
     name: SDOH Problem/Health Concern Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
   - reference:
+      reference: Condition/condition-duodenal-ulcer
+    description: This example of a US Core Condition Problems and Health Concerns
+      Profile illustrates its use to capture information about a patient's active
+      duodenal ulcer.
+    name: Condition Duodenal Ulcer Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
+  - reference:
       reference: Condition/encounter-diagnosis-example1
     description: This example of a US Core Condition Encounter Diagnosis Profile illustrates
       its use to capture information about a patient's encounter diagnosis.
@@ -2579,6 +2586,31 @@ definition:
       Profile*.
     name: Medication Dispense Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense
+  - reference:
+      reference: MedicationRequest/medicationrequest-coded-oral-axid
+    description: This is an prescribed oral solution example for the *US Core MedicationRequest
+      Profile*.  It represents the medication and reason using codes.
+    name: MedicationRequest Coded Oral Axid Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+  - reference:
+      reference: MedicationRequest/medicationrequest-contained-oral-axid
+    description: This is an prescribed oral solution example for the *US Core MedicationRequest
+      Profile*. It represents the medication as a contained Medication resource.
+    name: MedicationRequest Contained Oral Axid Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+  - reference:
+      reference: MedicationRequest/medicationrequest-referenced-oral-axid
+    description: This is an prescribed oral solution example for the *US Core MedicationRequest
+      Profile*. It represents the medication and reason as reference Medication and
+      Condition resources.
+    name: MedicationRequest Referenced Oral Axid Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+  - reference:
+      reference: MedicationRequest/self-tylenol
+    description: "This is a \u201Cself-prescribed\u201D tylenol example for the *MedicationRequest\
+      \ Profile*."
+    name: MedicationRequest Self Tylenol Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
   - reference:
       reference: Observation/blood-glucose
     description: This is a blood glucose example for the *US Core Observation Lab
@@ -2782,11 +2814,6 @@ definition:
     name: Saint Luke W Endpoint Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
   - reference:
-      reference: MedicationRequest/self-tylenol
-    description: This is a self tylenol example for the *MedicationRequest Profile*.
-    name: Self Tylenol Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
-  - reference:
       reference: Observation/sexual-orientation-example
     description: This is an sexual orientation example for the *US Core Observation
       Sexual Orientation Profile*.
@@ -2834,21 +2861,6 @@ definition:
     description: This is a uscore med2 example for the *US Core Medication Profile*.
     name: Uscore Med2 Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
-  - reference:
-      reference: MedicationRequest/uscore-mo1
-    description: This is a uscore mo1 example for the *US Core MedicationRequest Profile*.
-    name: Uscore MO1 Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
-  - reference:
-      reference: MedicationRequest/uscore-mo2
-    description: This is a uscore MO2 example for the *US Core MedicationRequest Profile*.
-    name: Uscore MO2 Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
-  - reference:
-      reference: Bundle/uscore-mo3
-    description: This is a uscore mo3 example for the *Bundle Profile*.
-    name: Uscore MO3 Example
-    exampleBoolean: true
   - reference:
       reference: Observation/weight
     description: This is a weight example for the *Vitalsigns Profile*.

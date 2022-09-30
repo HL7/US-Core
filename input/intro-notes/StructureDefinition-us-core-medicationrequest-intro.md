@@ -31,7 +31,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. the `reported` flag  or reference signaling that information is from a secondary source such as a patient
 1. the encounters
 1. a date for when written
-2. the reason for the prescription
+2. <span class="bg-success" markdown="1">the reason or indication for the prescription</span><!-- new-content -->
 3. the prescription *Sig*
 4. <span class="bg-success" markdown="1">the dose and rate</span><!-- new-content -->
 

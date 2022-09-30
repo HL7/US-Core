@@ -1,0 +1,102 @@
+{
+    "resourceType": "MedicationRequest",
+    "id": "medicationrequest-contained-oral-axid",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "MedicationRequest Contained Oral Axid Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is an prescribed oral solution example for the *US Core MedicationRequest Profile*. It represents the medication as a contained Medication resource."
+            }
+        ]
+    },
+    "contained": [
+        {
+            "resourceType": "Medication",
+            "id": "med2",
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                        "code": "582620",
+                        "display": "Nizatidine 15 MG/ML Oral Solution [Axid]"
+                    }
+                ],
+                "text": "Nizatidine 15 MG/ML Oral Solution [Axid]"
+            }
+        }
+    ],
+    "status": "active",
+    "intent": "order",
+    "medicationReference": {
+        "reference": "#med2",
+        "display": "Nizatidine 15 MG/ML Oral Solution [Axid]"
+    },
+    "subject": {
+        "reference": "Patient/example",
+        "display": "Amy Shaw"
+    },
+    "authoredOn": "2008-04-05",
+    "requester": {
+        "reference": "Practitioner/practitioner-1",
+        "display": "Ronald Bone, MD"
+    },
+    "dosageInstruction": [
+        {
+            "text": "10 mL bid",
+            "timing": {
+                "repeat": {
+                    "frequency": 2,
+                    "period": 1,
+                    "periodUnit": "d",
+                    "boundsPeriod": {
+                        "start": "2008-04-05"
+                    }
+                }
+            },
+            "doseAndRate": [
+                {
+                    "doseQuantity": {
+                        "value": 10,
+                        "unit": "ml",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "mL"
+                    }
+                }
+            ]
+        }
+    ],
+    "dispenseRequest": {
+        "numberOfRepeatsAllowed": 1,
+        "quantity": {
+            "value": 480,
+            "unit": "mL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mL"
+        },
+        "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+        }
+    },
+    "reasonCode": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "51868009",
+                    "display": "Ulcer of duodenum (disorder)"
+                }
+            ],
+            "text": "Active Duodenal Ulcer"
+        }
+    ]
+}
