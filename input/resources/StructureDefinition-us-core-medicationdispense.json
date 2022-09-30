@@ -3,7 +3,7 @@
     "id": "us-core-medicationdispense",
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense",
     "name": "USCoreMedicationDispenseProfile",
-    "title": "US Core Medication Dispense Profile",
+    "title": "US Core MedicationDispense Profile",
     "status": "active",
     "date": "2022-09-28",
     "description": "This profile sets minimum expectations for the MedicationDispense resource to record, search, and fetch the \"state of a medication with regards to dispensing or other activity. (e.g., dispensed, partially dispensed, not dispensed)\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
@@ -154,6 +154,45 @@
                 "id": "MedicationDispense.dosageInstruction.text",
                 "path": "MedicationDispense.dosageInstruction.text",
                 "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.dosageInstruction.timing",
+                "path": "MedicationDispense.dosageInstruction.timing",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.dosageInstruction.doseAndRate",
+                "path": "MedicationDispense.dosageInstruction.doseAndRate",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationDispense.dosageInstruction.doseAndRate.dose[x]",
+                "path": "MedicationDispense.dosageInstruction.doseAndRate.dose[x]",
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "Quantity"
+                    },
+                    {
+                        "code": "Range"
+                    }
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+                            "valueCanonical": "http://hl7.org/fhir/ValueSet/ucum-units"
+                        }
+                    ],
+                    "strength": "preferred",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/ucum-common"
+                }
             }
         ]
     }

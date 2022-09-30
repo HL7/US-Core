@@ -340,6 +340,30 @@
                 ]
             },
             {
+                "id": "MedicationRequest.reasonCode",
+                "path": "MedicationRequest.reasonCode",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
+                }
+            },
+            {
+                "id": "MedicationRequest.reasonReference",
+                "path": "MedicationRequest.reasonReference",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns",
+                            "http://hl7.org/fhir/StructureDefinition/Observation"
+                        ]
+                    }
+                ]
+            },
+            {
                 "id": "MedicationRequest.dosageInstruction",
                 "path": "MedicationRequest.dosageInstruction",
                 "mustSupport": true
@@ -348,6 +372,45 @@
                 "id": "MedicationRequest.dosageInstruction.text",
                 "path": "MedicationRequest.dosageInstruction.text",
                 "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dosageInstruction.timing",
+                "path": "MedicationRequest.dosageInstruction.timing",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dosageInstruction.doseAndRate",
+                "path": "MedicationRequest.dosageInstruction.doseAndRate",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+                "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "Quantity"
+                    },
+                    {
+                        "code": "Range"
+                    }
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+                            "valueCanonical": "http://hl7.org/fhir/ValueSet/ucum-units"
+                        }
+                    ],
+                    "strength": "preferred",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/ucum-common"
+                }
             }
         ]
     }

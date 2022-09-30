@@ -8,7 +8,7 @@ meta:
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
       valueString: Medication Dispense Example
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
-      valueMarkdown: This is a insulin dispense example for the *US Core Medication Dispense Profile*.
+      valueMarkdown: This is a insulin dispense example for the *US Core MedicationDispense Profile*.
 
 status: completed
 
@@ -41,3 +41,14 @@ dosageInstruction:
     - 
         sequence: 1
         text: 20 Units SC three times daily
+        timing:
+          repeat:
+            frequency: 3
+            period: 1
+            periodUnit: d
+        doseAndRate:
+            - doseQuantity:
+                value: 20
+                unit: U
+                system: 'http://unitsofmeasure.org'
+                code: U

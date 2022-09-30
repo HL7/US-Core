@@ -1,3 +1,4 @@
+{% include new_page.md %}
 
 **Example Usage Scenarios:**
 
@@ -26,15 +27,13 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 1. who dispensed the medication
 2. type of dispense (e.g., partially dispensed)
+3. the prescription *Sig*
+4. the dose and rate
 
 
 **Profile specific implementation guidance:**
 
-*  The Fill status is often captured at the pharmacy and not communicated back to EHR/HIT. However, to meet ONC’s USCDI requirements, the HIT/EHR system must support this profile.
-*  \*The MedicationDispense resources can represent a medication using either a code, or reference a [Medication] resource.
-    *  When referencing a Medication resource, the resource may be [contained] or an external resource.
-    *  The server systems are not required to support both a code and a reference, but **SHALL** support *at least one* of these methods.
-    * If an external reference to Medication is used, the server **SHALL** support the [`_include`] parameter for searching this element.
-    *  The client application **SHALL** support all methods.
+* The Fill status is often captured at the pharmacy and not communicated back to EHR/HIT. However, to meet ONC’s USCDI requirements, the HIT/EHR system must support this profile.
+{% include representing-meds.md %}
 
 {% include link-list.md %}

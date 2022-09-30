@@ -76,11 +76,43 @@
     "resource": [
       {
         "reference": {
+          "reference": "CodeSystem/careplan-category"
+        },
+        "description": "Set of codes that are needed for implementation of the US-Core CarePlan Profile. These codes are used as extensions to the FHIR ValueSet.",
+        "exampleBoolean": false,
+        "name": "US Core CarePlan Category Extension Codes"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/condition-category"
+        },
+        "description": "Set of codes that are needed for implementation of the US-Core Condition Profile. These codes are used as extensions to the FHIR and US Core value sets.",
+        "exampleBoolean": false,
+        "name": "US Core Condition Category Extension Codes"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/us-core-documentreference-category"
+        },
+        "description": "The US Core DocumentReferences Type Code System is a 'starter set' of categories supported for fetching and storing DocumentReference Resources.",
+        "exampleBoolean": false,
+        "name": "US Core DocumentReferences Category Codes"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/us-core-observation-category"
         },
         "description": "Set of codes for implementation of the US-Core profiles. These codes are  extensions to the [FHIR Observation Category Codes](http://terminology.hl7.org/CodeSystem/observation-category).",
         "exampleBoolean": false,
         "name": "US Core Observation Category Extension Codes"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/us-core-provenance-participant-type"
+        },
+        "description": "Set of codes that are needed for implementation of the US-Core Provenance Profile. These codes are used as extensions to the FHIR value sets.",
+        "exampleBoolean": false,
+        "name": "US Core Provenance Participant Type Extension Codes"
       },
       {
         "reference": {
@@ -312,7 +344,7 @@
         },
         "description": "This profile sets minimum expectations for the MedicationDispense resource to record, search, and fetch the \"state of a medication with regards to dispensing or other activity. (e.g., dispensed, partially dispensed, not dispensed)\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
-        "name": "US Core Medication Dispense Profile"
+        "name": "US Core MedicationDispense Profile"
       },
       {
         "reference": {
@@ -524,6 +556,190 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/birthsex"
+        },
+        "description": "Codes for assigning sex at birth as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc)",
+        "exampleBoolean": false,
+        "name": "Birth Sex"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/detailed-ethnicity"
+        },
+        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 41 [CDC ethnicity codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 2 OMB ethnicity category codes.",
+        "exampleBoolean": false,
+        "name": "Detailed ethnicity"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/detailed-race"
+        },
+        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 900+ [CDC Race codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 5 OMB race category codes.",
+        "exampleBoolean": false,
+        "name": "Detailed Race"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/omb-ethnicity-category"
+        },
+        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', and the ethnicity categories - 'Hispanic or Latino' and 'Not Hispanic or Latino' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
+        "exampleBoolean": false,
+        "name": "OMB Ethnicity Categories"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/omb-race-category"
+        },
+        "description": "The codes for the concepts 'Unknown', 'Asked but Unknown', 'Other Race'* and\nthe codes for the five race categories - 'American Indian' or 'Alaska Native',\n'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific\nIslander', and 'White' - as defined by the [OMB Standards for Maintaining,\nCollecting, and Presenting Federal Data on Race and Ethnicity, Statistical\nPolicy Directive No. 15, as revised, October 30,\n1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf)\n\n\\* The use of 'Other Race' is discouraged for statistical analysis.",
+        "exampleBoolean": false,
+        "name": "OMB Race Categories"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/simple-language"
+        },
+        "description": "This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47). This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,   and a 3 character code if a 2 character code does not exist. It points back to [RFC 5646](https://tools.ietf.org/html/rfc5646), however only the language codes are required, all other elements are optional.",
+        "exampleBoolean": false,
+        "name": "Language codes with language and optionally a region modifier"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-clinical-note-type"
+        },
+        "description": "The US Core Clinical Note Type Value Set is a 'starter set' of types supported for fetching and storing clinical notes.",
+        "exampleBoolean": false,
+        "name": "US Core Clinical Note Type"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-clinical-test-codes"
+        },
+        "description": "Starter set of clinical test LOINC codes identified in Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter",
+        "exampleBoolean": false,
+        "name": "US Core Clinical Test Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-common-sdoh-assessments"
+        },
+        "description": "Common SDOH assessment concepts covering the following categories (Gravity Project SDOH Domains):\n - Food (Food Insecurity)\n - Housing (Housing Instability)\n - Health (Social Connection, Stress)\n - Employment (Employment Status)\n - Care (SDOH Category Unspecified)\n - Transit (Transportation Insecurity)\n - Money (Financial Insecurity)\n - Goods (Material Hardship)\n - Education (SDOH Category Unspecified)\n - Legal (SDOH Category Unspecified)",
+        "exampleBoolean": false,
+        "name": "US Core Common SDOH Assessments"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-condition-code"
+        },
+        "description": "This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions). ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical information.",
+        "exampleBoolean": false,
+        "name": "US Core Condition Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-diagnosticreport-category"
+        },
+        "description": "The US Core Diagnostic Report Category Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and notes.",
+        "exampleBoolean": false,
+        "name": "US Core Diagnostic Report Category Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-diagnosticreport-lab-codes"
+        },
+        "description": "The Document Type value set includes all LOINC  values whose CLASSTYPE is LABORATORY in the LOINC database",
+        "exampleBoolean": false,
+        "name": "US Core Diagnostic Report Laboratory Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-diagnosticreport-report-and-note-codes"
+        },
+        "description": "Non laboratory LOINC concepts such as codes for observations like vital signs, hemodynamics, intake/output, EKG, obstetric ultrasound, cardiac echo and other clinical observations. The codes selected should represent discrete and narrative diagnostic observations and reports",
+        "exampleBoolean": false,
+        "name": "US Core Non Laboratory Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-discharge-disposition"
+        },
+        "description": "[National Uniform Billing Committee](http://www.nubc.org/), manual UB-04, UB form locator 17.",
+        "exampleBoolean": false,
+        "name": "US Core Discharge Disposition"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-documentreference-category"
+        },
+        "description": "The US Core DocumentReferences Category Value Set is a 'starter set' of categories supported for fetching and storing clinical notes.",
+        "exampleBoolean": false,
+        "name": "US Core DocumentReference Category"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-documentreference-type"
+        },
+        "description": "The US Core DocumentReference Type Value Set includes all LOINC  values whose SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor concept 'unknown'",
+        "exampleBoolean": false,
+        "name": "US Core DocumentReference Type"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-encounter-type"
+        },
+        "description": "The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure)) and codes from the Current Procedure and Terminology (CPT) found in the following CPT sections:\n- 99201-99499 E/M - 99500-99600 home health (mainly nonphysician, such as newborn care in home) - 99605-99607 medication management - 98966-98968 non physician telephone services\n(subscription to AMA Required)",
+        "exampleBoolean": false,
+        "name": "US Core Encounter Type"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-goal-description"
+        },
+        "description": "Concepts from CPT and LOINC code systems that can be used to indicate the goal.",
+        "exampleBoolean": false,
+        "name": "US Core Goal Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-narrative-status"
+        },
+        "description": "The US Core Narrative Status Value Set limits the text status for the resource narrative.",
+        "exampleBoolean": false,
+        "name": "US Core Narrative Status"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-observation-category"
+        },
+        "description": "HL7 FHIR concepts to classify an observation",
+        "exampleBoolean": false,
+        "name": "US Core Observation Category"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-observation-smoking-status-status"
+        },
+        "description": "Codes providing the status of an observation for smoking status. Constrained to `final`and `entered-in-error`.",
+        "exampleBoolean": false,
+        "name": "US Core Status for Smoking Status Observation"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-observation-smokingstatus-max"
+        },
+        "description": "Representing a patient’s smoking behavior using concepts from SNOMED CT.",
+        "exampleBoolean": false,
+        "name": "US Core Smoking Status Max-Binding"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-observation-value-codes"
+        },
+        "description": "[Snomed-CT](http://www.ihtsdo.org/) concept codes for coded results",
+        "exampleBoolean": false,
+        "name": "US Core Observation Value Codes (SNOMED-CT)"
+      },
+      {
+        "reference": {
           "reference": "ValueSet/us-core-pregnancy-intent"
         },
         "description": "This value set includes SNOMED CT codes and the HL7 V3 code for the concept \"unknown\".",
@@ -537,6 +753,62 @@
         "description": "This value set includes SNOMED CT codes and the HL7 V3 code for the concept \"unknown\". These codes have historically been used to communicate the pregnancy status of a patient.",
         "exampleBoolean": false,
         "name": "US Core Pregnancy Status Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-problem-or-health-concern"
+        },
+        "description": "Code set for category codes for *US Core Condition Problems and Health Concerns Profile* consisting of the concepts \"problem\" and \"health-concern\".",
+        "exampleBoolean": false,
+        "name": "US Core Problem or Health Concern"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-procedure-code"
+        },
+        "description": "Concepts from CPT, SNOMED CT, HCPCS Level II Alphanumeric Codes, ICD-10-PCS,CDT and LOINC code systems that can be used to indicate the type of procedure performed.",
+        "exampleBoolean": false,
+        "name": "US Core Procedure Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-provenance-participant-type"
+        },
+        "description": "The type of participation a provenance agent played for a given target.",
+        "exampleBoolean": false,
+        "name": "US Core Provenance Participant Type Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-provider-role"
+        },
+        "description": "Provider roles codes which are composed of the NUCC Health Care Provider Taxonomy Code Set classification codes for providers. Only concepts with a classification and no specialization are included.",
+        "exampleBoolean": false,
+        "name": "US Core Provider Role (NUCC)"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-servicerequest-category"
+        },
+        "description": "A set of SNOMED CT and LOINC concepts to classify a requested service",
+        "exampleBoolean": false,
+        "name": "US Core ServiceRequest Category Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-sexual-orientation"
+        },
+        "description": "The US Core Sexual Orientation Value Set includes concepts to describe a person’s sexual orientation (who they are attracted to).",
+        "exampleBoolean": false,
+        "name": "US Core Sexual Orientation"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-smoking-status-observation-codes"
+        },
+        "description": "The US Core Smoking Status Observation Codes Value Set is a 'starter set' of concepts to capture smoking status.",
+        "exampleBoolean": false,
+        "name": "US Core Smoking Status Observation Codes"
       },
       {
         "reference": {
@@ -556,6 +828,22 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/us-core-usps-state"
+        },
+        "description": "This value set defines two letter USPS alphabetic codes.",
+        "exampleBoolean": false,
+        "name": "USPS Two Letter Alphabetic Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-vital-signs"
+        },
+        "description": "The vital sign codes from the base FHIR and US Core Vital Signs.",
+        "exampleBoolean": false,
+        "name": "US Core Vital Signs ValueSet"
+      },
+      {
+        "reference": {
           "reference": "CapabilityStatement/us-core-client"
         },
         "description": "This Section describes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the [Conformance Requirements for Server](CapabilityStatement-us-core-server.html). US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
@@ -569,38 +857,6 @@
         "description": "This Section describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ONC 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ONC [U.S. Core Data for Interoperability (USCDI) Version 3 July 2022](https://www.healthit.gov/isa/sites/isa/files/2022-07/USCDI-Version-3-July-2022-Final.pdf).  US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
         "exampleBoolean": false,
         "name": "US Core Server CapabilityStatement"
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/careplan-category"
-        },
-        "description": "Set of codes that are needed for implementation of the US-Core CarePlan Profile. These codes are used as extensions to the FHIR ValueSet.",
-        "exampleBoolean": false,
-        "name": "US Core CarePlan Category Extension Codes"
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/condition-category"
-        },
-        "description": "Set of codes that are needed for implementation of the US-Core Condition Profile. These codes are used as extensions to the FHIR and US Core value sets.",
-        "exampleBoolean": false,
-        "name": "US Core Condition Category Extension Codes"
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/us-core-documentreference-category"
-        },
-        "description": "The US Core DocumentReferences Type Code System is a 'starter set' of categories supported for fetching and storing DocumentReference Resources.",
-        "exampleBoolean": false,
-        "name": "US Core DocumentReferences Category Codes"
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/us-core-provenance-participant-type"
-        },
-        "description": "Set of codes that are needed for implementation of the US-Core Provenance Profile. These codes are used as extensions to the FHIR value sets.",
-        "exampleBoolean": false,
-        "name": "US Core Provenance Participant Type Extension Codes"
       },
       {
         "reference": {
@@ -1452,262 +1708,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/detailed-ethnicity"
-        },
-        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 41 [CDC ethnicity codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 2 OMB ethnicity category codes.",
-        "exampleBoolean": false,
-        "name": "Detailed ethnicity"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/detailed-race"
-        },
-        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 900+ [CDC Race codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 5 OMB race category codes.",
-        "exampleBoolean": false,
-        "name": "Detailed Race"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-discharge-disposition"
-        },
-        "description": "[National Uniform Billing Committee](http://www.nubc.org/), manual UB-04, UB form locator 17.",
-        "exampleBoolean": false,
-        "name": "US Core Discharge Disposition"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/omb-ethnicity-category"
-        },
-        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', and the ethnicity categories - 'Hispanic or Latino' and 'Not Hispanic or Latino' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
-        "exampleBoolean": false,
-        "name": "OMB Ethnicity Categories"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/omb-race-category"
-        },
-        "description": "The codes for the concepts 'Unknown', 'Asked but Unknown', 'Other Race'* and\nthe codes for the five race categories - 'American Indian' or 'Alaska Native',\n'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific\nIslander', and 'White' - as defined by the [OMB Standards for Maintaining,\nCollecting, and Presenting Federal Data on Race and Ethnicity, Statistical\nPolicy Directive No. 15, as revised, October 30,\n1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf)\n\n\\* The use of 'Other Race' is discouraged for statistical analysis.",
-        "exampleBoolean": false,
-        "name": "OMB Race Categories"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/simple-language"
-        },
-        "description": "This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47). This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,   and a 3 character code if a 2 character code does not exist. It points back to [RFC 5646](https://tools.ietf.org/html/rfc5646), however only the language codes are required, all other elements are optional.",
-        "exampleBoolean": false,
-        "name": "Language codes with language and optionally a region modifier"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/birthsex"
-        },
-        "description": "Codes for assigning sex at birth as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc)",
-        "exampleBoolean": false,
-        "name": "Birth Sex"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-clinical-note-type"
-        },
-        "description": "The US Core Clinical Note Type Value Set is a 'starter set' of types supported for fetching and storing clinical notes.",
-        "exampleBoolean": false,
-        "name": "US Core Clinical Note Type"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-clinical-test-codes"
-        },
-        "description": "Starter set of clinical test LOINC codes identified in Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter",
-        "exampleBoolean": false,
-        "name": "US Core Clinical Test Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-common-sdoh-assessments"
-        },
-        "description": "Common SDOH assessment concepts covering the following categories (Gravity Project SDOH Domains):\n - Food (Food Insecurity)\n - Housing (Housing Instability)\n - Health (Social Connection, Stress)\n - Employment (Employment Status)\n - Care (SDOH Category Unspecified)\n - Transit (Transportation Insecurity)\n - Money (Financial Insecurity)\n - Goods (Material Hardship)\n - Education (SDOH Category Unspecified)\n - Legal (SDOH Category Unspecified)",
-        "exampleBoolean": false,
-        "name": "US Core Common SDOH Assessments"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-condition-code"
-        },
-        "description": "This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions). ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical information.",
-        "exampleBoolean": false,
-        "name": "US Core Condition Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-diagnosticreport-category"
-        },
-        "description": "The US Core Diagnostic Report Category Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and notes.",
-        "exampleBoolean": false,
-        "name": "US Core Diagnostic Report Category Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-diagnosticreport-lab-codes"
-        },
-        "description": "The Document Type value set includes all LOINC  values whose CLASSTYPE is LABORATORY in the LOINC database",
-        "exampleBoolean": false,
-        "name": "US Core Diagnostic Report Laboratory Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-diagnosticreport-report-and-note-codes"
-        },
-        "description": "Non laboratory LOINC concepts such as codes for observations like vital signs, hemodynamics, intake/output, EKG, obstetric ultrasound, cardiac echo and other clinical observations. The codes selected should represent discrete and narrative diagnostic observations and reports",
-        "exampleBoolean": false,
-        "name": "US Core Non Laboratory Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-documentreference-category"
-        },
-        "description": "The US Core DocumentReferences Category Value Set is a 'starter set' of categories supported for fetching and storing clinical notes.",
-        "exampleBoolean": false,
-        "name": "US Core DocumentReference Category"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-documentreference-type"
-        },
-        "description": "The US Core DocumentReference Type Value Set includes all LOINC  values whose SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor concept 'unknown'",
-        "exampleBoolean": false,
-        "name": "US Core DocumentReference Type"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-encounter-type"
-        },
-        "description": "The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure)) and codes from the Current Procedure and Terminology (CPT) found in the following CPT sections:\n- 99201-99499 E/M - 99500-99600 home health (mainly nonphysician, such as newborn care in home) - 99605-99607 medication management - 98966-98968 non physician telephone services\n(subscription to AMA Required)",
-        "exampleBoolean": false,
-        "name": "US Core Encounter Type"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-goal-description"
-        },
-        "description": "Concepts from CPT and LOINC code systems that can be used to indicate the goal.",
-        "exampleBoolean": false,
-        "name": "US Core Goal Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-narrative-status"
-        },
-        "description": "The US Core Narrative Status Value Set limits the text status for the resource narrative.",
-        "exampleBoolean": false,
-        "name": "US Core Narrative Status"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-observation-category"
-        },
-        "description": "HL7 FHIR concepts to classify an observation",
-        "exampleBoolean": false,
-        "name": "US Core Observation Category"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-observation-smokingstatus-max"
-        },
-        "description": "Representing a patient’s smoking behavior using concepts from SNOMED CT.",
-        "exampleBoolean": false,
-        "name": "US Core Smoking Status Max-Binding"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-observation-smoking-status-status"
-        },
-        "description": "Codes providing the status of an observation for smoking status. Constrained to `final`and `entered-in-error`.",
-        "exampleBoolean": false,
-        "name": "US Core Status for Smoking Status Observation"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-observation-value-codes"
-        },
-        "description": "[Snomed-CT](http://www.ihtsdo.org/) concept codes for coded results",
-        "exampleBoolean": false,
-        "name": "US Core Observation Value Codes (SNOMED-CT)"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-problem-or-health-concern"
-        },
-        "description": "Code set for category codes for *US Core Condition Problems and Health Concerns Profile* consisting of the concepts \"problem\" and \"health-concern\".",
-        "exampleBoolean": false,
-        "name": "US Core Problem or Health Concern"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-procedure-code"
-        },
-        "description": "Concepts from CPT, SNOMED CT, HCPCS Level II Alphanumeric Codes, ICD-10-PCS,CDT and LOINC code systems that can be used to indicate the type of procedure performed.",
-        "exampleBoolean": false,
-        "name": "US Core Procedure Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-provenance-participant-type"
-        },
-        "description": "The type of participation a provenance agent played for a given target.",
-        "exampleBoolean": false,
-        "name": "US Core Provenance Participant Type Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-provider-role"
-        },
-        "description": "Provider roles codes which are composed of the NUCC Health Care Provider Taxonomy Code Set classification codes for providers. Only concepts with a classification and no specialization are included.",
-        "exampleBoolean": false,
-        "name": "US Core Provider Role (NUCC)"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-servicerequest-category"
-        },
-        "description": "A set of SNOMED CT and LOINC concepts to classify a requested service",
-        "exampleBoolean": false,
-        "name": "US Core ServiceRequest Category Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-sexual-orientation"
-        },
-        "description": "The US Core Sexual Orientation Value Set includes concepts to describe a person’s sexual orientation (who they are attracted to).",
-        "exampleBoolean": false,
-        "name": "US Core Sexual Orientation"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-smoking-status-observation-codes"
-        },
-        "description": "The US Core Smoking Status Observation Codes Value Set is a 'starter set' of concepts to capture smoking status.",
-        "exampleBoolean": false,
-        "name": "US Core Smoking Status Observation Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-usps-state"
-        },
-        "description": "This value set defines two letter USPS alphabetic codes.",
-        "exampleBoolean": false,
-        "name": "USPS Two Letter Alphabetic Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-vital-signs"
-        },
-        "description": "The vital sign codes from the base FHIR and US Core Vital Signs.",
-        "exampleBoolean": false,
-        "name": "US Core Vital Signs ValueSet"
-      },
-      {
-        "reference": {
           "reference": "Device/udi-2"
         },
         "description": "This is a Device defib example for the *US Core Implantable Device Profile*.",
@@ -2364,6 +2364,14 @@
       },
       {
         "reference": {
+          "reference": "Coverage/coverage-selfpay-example"
+        },
+        "description": "This is a self-pay coverage example for the *US Core Coverage Profile*.",
+        "name": "Self Pay Coverage Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage"
+      },
+      {
+        "reference": {
           "reference": "DiagnosticReport/cbc"
         },
         "description": "This is a CBC example for the *US Core DiagnosticReport Lab Profile*.",
@@ -2606,7 +2614,7 @@
         "reference": {
           "reference": "MedicationDispense/medicationdispense-example"
         },
-        "description": "This is a insulin dispense example for the *US Core Medication Dispense Profile*.",
+        "description": "This is a insulin dispense example for the *US Core MedicationDispense Profile*.",
         "name": "Medication Dispense Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense"
       },

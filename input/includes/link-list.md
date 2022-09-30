@@ -349,3 +349,4 @@
 [HL7 C-CDA]: http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492
 [Observation Summary Table]: observation-summary.html
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/index.html
+[National Drug Codes (NDC)]: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
