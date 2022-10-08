@@ -100,7 +100,7 @@
 ##### Patient
 - [_id](SearchParameter-us-core-patient-id.html)
 - [birthdate](SearchParameter-us-core-patient-birthdate.html)
-- {:.new-content}[deceased](SearchParameter-us-core-patient-deceased.html)
+- {:.new-content}[death-date](SearchParameter-us-core-patient-death-date.html)
 - [family](SearchParameter-us-core-patient-family.html)
 - [gender](SearchParameter-us-core-patient-gender.html)
 - [given](SearchParameter-us-core-patient-given.html)
@@ -133,6 +133,7 @@
 ##### RelatedPerson
 - [_id](SearchParameter-us-core-relatedperson-id.html)
 - [patient](SearchParameter-us-core-relatedperson-patient.html)
+- {:.new-content}[name](SearchParameter-us-core-relatedperson-name.html)
 
 ##### ServiceRequest
 - [status](SearchParameter-us-core-servicerequest-status.html)

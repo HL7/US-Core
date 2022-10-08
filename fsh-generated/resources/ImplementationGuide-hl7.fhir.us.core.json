@@ -374,7 +374,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-lab"
         },
-        "description": "﻿The US Core Laboratory Result Observation Profile is based upon the core FHIR Observation Resource, and, along with the US Core DiagnosticReport Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability (USCDI) v2 ‘Laboratory’ requirements.  Laboratory results are grouped and summarized using the DiagnosticReport resource which reference Observation resources.  Each Observation resource represents an individual laboratory test and result value, a “nested” panel (such as a microbial susceptibility panel) which references other observations, or rarely a laboratory test with component result values. The US Core Laboratory Result Observation Profile sets minimum expectations for the Observation resource resource to record, search, and fetch laboratory test results associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Laboratory Result Observation Profile is based upon the core FHIR Observation Resource, and, along with the US Core DiagnosticReport Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability (USCDI) v3 ‘Laboratory’ requirements.  Laboratory results are grouped and summarized using the DiagnosticReport resource which reference Observation resources.  Each Observation resource represents an individual laboratory test and result value, a “nested” panel (such as a microbial susceptibility panel) which references other observations, or rarely a laboratory test with component result values. The US Core Laboratory Result Observation Profile sets minimum expectations for the Observation resource resource to record, search, and fetch laboratory test results associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Laboratory Result Observation Profile"
       },
@@ -518,7 +518,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-relatedperson"
         },
-        "description": "This profile sets minimum expectations for the RelatedPerson resource to record, search, and fetch related persons associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for the RelatedPerson resource to record, search, and fetch basic administrative information about persons with a legal or familial relationship to a patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core RelatedPerson Profile"
       },
@@ -529,6 +529,14 @@
         "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch respiratory rate observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Respiratory Rate Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-sex"
+        },
+        "description": "This extension aligns with the LOINC® concept 46098-0 (Sex).  It describes the biological sex of an organism, which is most commonly determined based on anatomy and physiology or genetic (chromosome) analysis.  It also optionally communicates the date when the sex was determined.",
+        "exampleBoolean": false,
+        "name": "US Core Sex Extension"
       },
       {
         "reference": {
@@ -601,6 +609,14 @@
         "description": "The codes for the concepts 'Unknown', 'Asked but Unknown', 'Other Race'* and\nthe codes for the five race categories - 'American Indian' or 'Alaska Native',\n'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific\nIslander', and 'White' - as defined by the [OMB Standards for Maintaining,\nCollecting, and Presenting Federal Data on Race and Ethnicity, Statistical\nPolicy Directive No. 15, as revised, October 30,\n1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf)\n\n\\* The use of 'Other Race' is discouraged for statistical analysis.",
         "exampleBoolean": false,
         "name": "OMB Race Categories"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/sex"
+        },
+        "description": "Codes for assigning the biological sex of an organism, which is most commonly determined based on anatomy and physiology or genetic (chromosome) analysis.",
+        "exampleBoolean": false,
+        "name": "Sex"
       },
       {
         "reference": {
@@ -1444,11 +1460,11 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/us-core-patient-deceased"
+          "reference": "SearchParameter/us-core-patient-death-date"
         },
-        "description": "**This patient has been marked as deceased, or as a death date entered**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "description": "**The date of death has been provided and satisfies this search value**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
-        "name": "USCorePatientDeceased"
+        "name": "USCorePatientDeathDate"
       },
       {
         "reference": {
@@ -1644,6 +1660,14 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-relatedperson-name"
+        },
+        "description": "**A server defined search that may match any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreRelatedpersonName"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-relatedperson-patient"
         },
         "description": "**The patient this related person is related to**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
@@ -1718,7 +1742,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-servicerequest"
         },
-        "description": "This profile sets minimum expectations for recording, searching, and fetching  using the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for recording, searching, and fetching the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.fhirVersion: 4.0.1",
         "exampleBoolean": false,
         "name": "US Core ServiceRequest Profile"
       },

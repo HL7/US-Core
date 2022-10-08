@@ -35,11 +35,12 @@ For ONC's USCDI requirements, each Patient must support the following additional
 1. an ethnicity
 2. <span class="bg-success" markdown="1">a tribal affiliation</span><!-- new-content -->
 3. a birth sex*
-4. gender identity*
-5. <span class="bg-success" markdown="1">date of death</span><!-- new-content -->
-6. previous address
-7. previous name
-8. suffix
+4. <span class="bg-success" markdown="1">sex*</span><!-- new-content -->
+5. gender identity*
+6. <span class="bg-success" markdown="1">date of death</span><!-- new-content -->
+7. previous address
+8. previous name
+9. suffix
 
 *see guidance below
 

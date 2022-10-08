@@ -4,10 +4,9 @@ url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest'
 name: USCoreServiceRequestProfile
 title: US Core ServiceRequest Profile
 status: active
-date: '2022-04-20'
+date: '2022-10-07'
 description: >-
-  This profile sets minimum expectations for recording, searching, and fetching  using the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.
-fhirVersion: 4.0.1
+  This profile sets minimum expectations for recording, searching, and fetching the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.fhirVersion: 4.0.1
 kind: resource
 abstract: false
 type: ServiceRequest
@@ -110,3 +109,25 @@ differential:
                     http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
                   valueBoolean: false
       mustSupport: true
+
+    - 
+        id: ServiceRequest.reasonCode
+        path: ServiceRequest.reasonCode
+        mustSupport: true
+        binding:
+            strength: extensible
+            valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code'
+    - 
+        id: ServiceRequest.reasonReference
+        path: ServiceRequest.reasonReference
+        mustSupport: true
+        type:
+            - 
+                code: Reference
+                targetProfile:
+                    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis'
+                    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns'
+                    - 'http://hl7.org/fhir/StructureDefinition/Observation'
+                    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
+                    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
+                    - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference

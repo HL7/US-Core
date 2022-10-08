@@ -83,9 +83,9 @@
                 ]
             },
             {
-                "id": "Patient.extension:tribe",
+                "id": "Patient.extension:tribalAffiliation",
                 "path": "Patient.extension",
-                "sliceName": "tribe",
+                "sliceName": "tribalAffiliation",
                 "min": 0,
                 "max": "*",
                 "type": [
@@ -119,6 +119,22 @@
                         "map": "Patient.extension"
                     }
                 ]
+            },
+            {
+                "id": "Patient.extension:sex",
+                "path": "Patient.extension",
+                "sliceName": "sex",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+                        ]
+                    }
+                ],
+                "mustSupport": false
             },
             {
                 "id": "Patient.extension:genderIdentity",

@@ -1,0 +1,40 @@
+{% comment %}{% raw %}<!--
+Includes the specified lines from another file.
+this helper lives in the input/images folder not the include file folder
+
+├── examples
+│   ├── patient-deceased-example.json
+│   └── patient-example.json
+├── fsh
+│   ├── fsh
+│   ├── my-extensions.fsh
+│   └── my-profiles.fsh
+├── ignoreWarnings.txt
+├── images
+│   ├── cat.jpg
+│   ├── includelines  <<<< HERE
+├── includes  <<<< NOT HERE
+│   ├── DAR-exception.md
+│ 
+
+Usage:
+  {% include_relative includelines filename=PATH start=INT count=INT %}
+
+  - filename: path to file in temp/pages  (not under _includes)
+  - start: first line to include, starting at 1
+  - count: number of lines to include
+
+Example:
+
+  {% include_relative includelines filename='patient-deceased-example.json' start=10 count=5 %}
+  
+-->{% endraw %}{% endcomment %}
+
+
+{% capture filecontent %}
+    {% include_relative {{include.filename}} %}
+{% endcapture %}
+
+{% assign lines = filecontent | newline_to_br | split: '<br />' %}
+
+{% for line in lines offset: include.start limit:include.count %}{{ line }}{% endfor %}
