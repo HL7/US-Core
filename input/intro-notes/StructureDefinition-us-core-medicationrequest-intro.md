@@ -31,20 +31,24 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. the `reported` flag  or reference signaling that information is from a secondary source such as a patient
 1. the encounters
 1. a date for when written
-1. the prescription *Sig*
+2. <span class="bg-success" markdown="1">the reason or indication for the prescription</span><!-- new-content -->
+3. the prescription *Sig*
+4. <span class="bg-success" markdown="1">the dose and rate</span><!-- new-content -->
 
 **Profile specific implementation guidance:**
 
 * See the [Medication List] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
-*  \*The MedicationRequest resources can represent a medication using either a code, or reference a [Medication] resource.
-    *  When referencing a Medication resource, the resource may be [contained] or an external resource.
-    *  The server systems are not required to support both a code and a reference, but **SHALL** support *at least one* of these methods.
-    * If an external reference to Medication is used, the server **SHALL** support the [`_include`] parameter for searching this element.
-    *  The client application **SHALL** support all methods.
+<div class="bg-success" markdown="1">
+{% include representing-meds.md %}
+</div><!-- new-content -->
 * The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or a reference using `MedicationRequest.reportedReference`.
-   *  Although both are marked as must support, the server system is not required to support both a boolean and a reference, but **SHALL** support at least one of these elements.
+   *  Although both are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements.
+   *  The client application **SHALL** support both elements.
+* The MedicationRequest resource can communicate the reason or indication for the prescription using either a code in `MedicationRequest.reasonCodeableConcept` or a reference using `MedicationRequest.reasonReference`.
+   *  Although both are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements.
    *  The client application **SHALL** support both elements.
 * Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
 * Servers **SHALL** follow the guidance in the [Medication List] page  and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.
+* 
 
 {% include link-list.md %}

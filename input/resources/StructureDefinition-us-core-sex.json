@@ -1,0 +1,127 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-sex",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+    "name": "USCoreSexExtension",
+    "title": "US Core Sex Extension",
+    "status": "active",
+    "date": "2022-10-07",
+    "description": "This extension aligns with the LOINC\u00ae concept 46098-0 (Sex).  It describes the biological sex of an organism, which is most commonly determined based on anatomy and physiology or genetic (chromosome) analysis.  It also optionally communicates the date when the sex was determined.",
+    "fhirVersion": "4.0.1",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Patient"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "path": "Extension",
+                "definition": "The biological sex of an organism and an optional date or datetime when the sex was determined.",
+                "comment": "It is not intended to represent gender identity or reassigned sex.",
+                "min": 0,
+                "max": "1"
+            },
+            {
+                "id": "Extension.extension:sex",
+                "path": "Extension.extension",
+                "slicename": "sex",
+                "short": "Male (finding)| Female (finding)| Patient sex unknown (finding)",
+                "definition": "Codes classifying the biological sex of an organism, which is most commonly determined based on anatomy and physiology or genetic (chromosome) analysis.",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Extension.extension:sex.url",
+                "path": "Extension.extension.url",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "fixedUri": "sex"
+            },
+            {
+                "id": "Extension.extension:sex.value[x]",
+                "path": "Extension.extension.value[x]",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/sex"
+                }
+            },
+            {
+                "id": "Extension.extension:whenAsserted",
+                "path": "Extension.extension",
+                "slicename": "whenAsserted",
+                "short": "When the sex was determined.",
+                "definition": "The date or datetime when the sex was determined.",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Extension.extension:whenAsserted.url",
+                "path": "Extension.extension.url",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "fixedUri": "whenAsserted"
+            },
+            {
+                "id": "Extension.extension:whenAsserted.value[x]",
+                "path": "Extension.extension.value[x]",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "dateTime"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "min": 1,
+                "max": "1",
+                "fixedUri": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "min": 0,
+                "max": "0"
+            }
+        ]
+    }
+}

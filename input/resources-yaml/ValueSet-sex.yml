@@ -1,0 +1,23 @@
+resourceType: ValueSet
+id: sex
+url: http://hl7.org/fhir/us/core/ValueSet/sex
+name: Sex
+title: Sex
+status: active
+experimental: false
+date: 2022-10-07
+description: Codes for assigning the biological sex of an organism, which is most commonly determined based on anatomy and physiology or genetic (chromosome) analysis.
+copyright: >-
+  This value set includes content from SNOMED CT, which is copyright © 2002+
+  International Health Terminology Standards Development Organisation (IHTSDO),
+  and distributed by agreement between IHTSDO and HL7. Implementer use of
+  SNOMED CT is not covered by this agreement.
+compose:
+  include:
+  - system: http://snomed.info/sct
+    concept:
+    - code: 248153007
+    - code: 248152002
+    - code: 184115007
+
+

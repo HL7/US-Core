@@ -1,0 +1,153 @@
+resourceType: StructureDefinition
+id: us-core-observation-occupation
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation'
+name: USCoreObservationOccupationProfile
+title: US Core Observation Occupation Profile
+status: active
+experimental: false
+date: '2022-08-24'
+description: The US Core Occupation Status Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) v3 Occupation status requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch the "Type of work of a person" and "Type of business that compensates for work or assigns work to an unpaid worker or volunteer"  associated with a patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Observation
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Observation'
+derivation: constraint
+differential:
+    element:
+        - 
+            id: Observation
+            path: Observation
+            short: Past Or Present Occupation
+            definition: Related data elements for a current or previous job.
+            comment: A person can have more than one job at the same time and multiple jobs over time
+            mustSupport: false
+        - 
+            id: Observation.status
+            path: Observation.status
+            mustSupport: true
+            binding:
+                strength: required
+                valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status'
+        - 
+            id: Observation.category
+            path: Observation.category
+            slicing:
+                discriminator:
+                    - 
+                        type: pattern
+                        path: $this
+                rules: open
+            # min: 1
+            mustSupport: true
+        - 
+            id: 'Observation.category:socialhistory'
+            path: Observation.category
+            sliceName: socialhistory
+            min: 0
+            max: '1'
+            patternCodeableConcept:
+                coding:
+                    - 
+                        system: 'http://terminology.hl7.org/CodeSystem/observation-category'
+                        code: social-history
+            mustSupport: true
+        - 
+            id: Observation.code
+            path: Observation.code
+            short: Occupation history
+            patternCodeableConcept:
+                coding:
+                    - 
+                      system: 'http://loinc.org'
+                      code: 11341-5
+            mustSupport: true
+
+        - 
+            id: Observation.subject
+            path: Observation.subject
+            min: 1
+            type:
+                - 
+                    code: Reference
+                    targetProfile:
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+            mustSupport: true
+        -
+            id: Observation.effectivePeriod
+            path: Observation.effectivePeriod
+            min: 1
+            mustSupport: true
+        - 
+            id: Observation.valueCodeableConcept
+            path: Observation.valueCodeableConcept
+            short: Coded occupation or text
+            comment: Express the occupation type using a coded value. If no coded value is available, use text. If the occupation is not available, the reason should be communicated in `Observation.dataAbsentReason`.
+            min: 1
+            type:
+                - 
+                    code: CodeableConcept
+            mustSupport: true
+            binding:
+              strength: extensible
+              description: Occupational Data for Health # scrub the  version 20201030 and assume the latest
+              valueSet: 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8065' # this is not in THO, can we get this in VSAC or to link directly to cdc?
+        - 
+            id: Observation.component
+            path: Observation.component
+            slicing:
+              discriminator:
+                - type: pattern
+                  path: code.coding
+              rules: open
+            mustSupport: true
+
+        - id: 'Observation.component:industry'
+          path: Observation.component
+          sliceName: industry
+          short: Occupation industry
+          min: 0
+          max: '1'
+          mustSupport: true
+
+        - id: 'Observation.component:industry.code'
+          path: Observation.component.code
+          short: Occupation industry history
+          mustSupport: true
+
+        - 
+            id: 'Observation.component:industry.code.coding'
+            path: Observation.component.code.coding
+            slicing:
+              discriminator:
+                - type: pattern
+                  path: $this
+              rules: open
+            mustSupport: true
+        - 
+            id: 'Observation.component:industry.code.coding:86188-0'
+            path: Observation.component.code.coding
+            sliceName: 86188-0
+            min: 1
+            max: '1'
+            # type:
+            #   - code: Coding
+            patternCoding:
+              system: 'http://loinc.org'
+              code: 86188-0
+            mustSupport: true
+
+
+        - id: 'Observation.component:industry.valueCodeableConcept'
+          path: Observation.component.valueCodeableConcept
+          short: Occupation industry or text
+          comment: Express the occupation industry type using a coded value. If no coded value is available, use text. If the occupation industry is not available, the reason should be communicated `Observation.component.dataAbsentReason`
+          min: 1
+          type:
+              - 
+                  code: CodeableConcept
+          mustSupport: true
+          binding:
+            strength: required
+            description: Occupational Data for Health # scrub the version 20201030 assume the latest for now
+            valueSet: 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8065'  # this is not expanded in THO, can we get this in VSAC or to link directly to cdc?

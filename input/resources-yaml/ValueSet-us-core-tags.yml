@@ -1,23 +1,15 @@
 resourceType: ValueSet
 id: us-core-tags
-status: active
-date: '2022-04-20'
+url: http://hl7.org/fhir/us/core/ValueSet/us-core-tags
 name: USCoreTagsValueSet
 title: US Core Tags ValueSet
-description: >-
-  Used to tag patient submitted resources for writing and searching from EHRs
-version: 0.1.0
-url: >-
-  http://hl7.org/fhir/us/core/ValueSet/us-core-tags
+status: active
+experimental: false
+date: 2022-09-29
+description: Used to tag patient submitted resources for writing and searching from
+  EHRs
+copyright: Used by permission of HL7 International, all rights reserved Creative Commons
+  License
 compose:
   include:
-    - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-tags
-# expansion:
-#   identifier: my_temporary_expansion
-#   timestamp: '2015-06-22T13:56:07Z' # <--- needs to be a timestamp
-#   contains:
-#     - system: 'http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/tags'
-#       code: uploaded-data
-#       display: 'FOO'
-#       designation:
-#         - value: "my designation - could put definition here?"
+  - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-tags

@@ -6,8 +6,8 @@
     "title": "US Core Patient Profile",
     "status": "active",
     "experimental": false,
-    "date": "2022-04-20T15:02:49-07:00",
-    "description": "The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v2 'Patient Demographics' requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases.",
+    "date": "2022-09-30",
+    "description": "The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v3 'Patient Demographics' requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
@@ -83,6 +83,22 @@
                 ]
             },
             {
+                "id": "Patient.extension:tribalAffiliation",
+                "path": "Patient.extension",
+                "sliceName": "tribalAffiliation",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation"
+                        ]
+                    }
+                ],
+                "mustSupport": false
+            },
+            {
                 "id": "Patient.extension:birthsex",
                 "path": "Patient.extension",
                 "sliceName": "birthsex",
@@ -103,6 +119,22 @@
                         "map": "Patient.extension"
                     }
                 ]
+            },
+            {
+                "id": "Patient.extension:sex",
+                "path": "Patient.extension",
+                "sliceName": "sex",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+                        ]
+                    }
+                ],
+                "mustSupport": false
             },
             {
                 "id": "Patient.extension:genderIdentity",
@@ -315,6 +347,11 @@
                         "map": "Patient.birthDate"
                     }
                 ]
+            },
+            {
+                "id": "Patient.deceased[x]",
+                "path": "Patient.deceased[x]",
+                "mustSupport": true
             },
             {
                 "id": "Patient.address",

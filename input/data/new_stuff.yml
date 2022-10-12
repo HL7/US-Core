@@ -9,6 +9,9 @@
 # - USCoreCommonSDOHAssessments
 # - USCoreTagsValueSet
 # - USCoreServiceRequestCategoryCodes
+- USCorePregnancyIntentCodes
+- USCorePregnancyStatusCodes
+
 
 # CodeSystems
 # - USCoreObservationCategoryExtensionCodes
@@ -20,9 +23,17 @@
 # - USCoreQuestionnaireResponseProfile
 # - USCoreObservationSurveyProfile
 # - USCoreObservationSDOHAssessment
+- USCoreObservationOccupationProfile
+- USCoreObservationPregnancyStatusProfile
+- USCoreObservationPregnancyIntentProfile
+- USCoreCoverageProfile
+- USCoreSpecimenProfile
+- USCoreMedicationDispenseProfile
 
 # Extensions
 # - USCoreExtensionQuestionnaireUri
+- USCoreTribalAffiliationExtension
+- USCoreSexExtension
 
 # OperationDefinition
 
@@ -93,3 +104,16 @@
 # - PRAPARE Example
 # - Glasgow Coma Score Example
 # - Hunger Vital Sign [HVS] Example
+- Occupation Observation Example
+- Pregnancy Intent Example
+- Pregnancy Status Example
+- Coverage Example
+- Specimen Example
+- Medication Dispense Example
+- Self Pay Coverage Example
+- Condition Duodenal Ulcer Example
+- MedicationRequest Coded Oral Axid Example
+- MedicationRequest Contained Oral Axid Example
+- MedicationRequest Referenced Oral Axid Example
+- MedicationRequest Self Tylenol Example
+- Deceased Patient Example

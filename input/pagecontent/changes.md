@@ -1,5 +1,29 @@
+### Version = 6.0.0 - ballot
+- Publication Date: TBD
+- url: <http://build.fhir.org/ig/HL7/US-Core/>
+- Based on FHIR version : 4.0.1
+
+#### The January 2023 Ballot
+
+This ballot addresses the following issues:
+- Adds [United States Core Data for Interoperability (USCDI) V3](https://www.healthit.gov/isa/sites/isa/files/2022-07/USCDI-Version-3-July-2022-Final.pdf) updates that the Office of the National Coordinator (ONC) published in July of 2021 with these new Data Elements and Classes:
+
+  - **Applied**: [Health Insurance Information](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual’s insurance coverage for health care.
+  - **Pending**: [Health Status/Assessments Data Elements Guidance page](http://hl7.org/fhir/us/core/2022Jan/assessments.html] to document how to use US Core to represent and access health status and assessments]including: [Functional Status](#.html), [Disability Status](#.html), [Mental/Cognitive Status](#.html), and [Pregnancy Status](#.html).
+  - **Pending**: **Laboratory:** Specimen Type, Result Status, and new terminology requirements for coded and numeric results. [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-specimen.html).
+  - **Pending**: **Medications:** Dose, Dose Unit of Measure, Indication, and Fill Status [See Changes Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationdispense.html)
+  - **Pending**: **Patient Demographics/Information**
+      - Date of Death, Tribal Affiliation, and Change Birth Sex to Sex [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
+      - Related Person’s Name and Related Person’s Relationship [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-relatedperson.html)
+      - Occupation and Occupation Industry [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-occupation.html)
+  - **Pending**: **Procedures:** Reason for Referral [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html)
+- Continued efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
+- Addressed and applied over 30 trackers submitted by implementers since the previous STU2 ballot for US Core ver 4.0.0:
+
+ **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
+
 ### Version = 5.0.1
-- url: <http://build.fhir.org/ig/HL7/US-Core/STU5.0.1>
+- url: <http://hl7.org/fhir/us/core/STU5.0.1/>
 - Based on FHIR version : 4.0.1
 
 The changes in this errata to version 5.0.0 of US Core have been reviewed by the public through the HL7 errata process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
@@ -15,7 +39,7 @@ The changes in this errata to version 5.0.0 of US Core have been reviewed by the
 
 
 ### Version = 5.0.0
-- url: <http://build.fhir.org/ig/HL7/US-Core/STU5>
+- url: <http://hl7.org/fhir/us/core/STU5/>
 - Based on FHIR version : 4.0.1
 
 The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2022 HL7 balloting process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
@@ -335,13 +359,13 @@ Listed below are the resolved trackers for this version:
 1. **Applied**:Move section 1.5 US Core Conformance Requirements ([FHIR-30103](https://jira.hl7.org/browse/FHIR-30103)) [See Change Here](http://hl7.org/fhir/us/core/STU4/conformance-expectations.html)
 1. **Applied**:Make custodian optional on document reference ([FHIR-30108](https://jira.hl7.org/browse/FHIR-30108)) [See Change Here](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html)
 1. **Applied**:Remove required binding on procedure and condition ([FHIR-30109](https://jira.hl7.org/browse/FHIR-30109)) See Changes:
-   - [Here](https://build.fhir.org/ig/HL7/US-Core/conformance-expectations.html#extensible-binding-for-codeableconcept-datatype)
-   - [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition.html#profile)
-   - [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-procedure.html#profile)
+   - [Here](http://hl7.org/fhir/us/core/STU4/conformance-expectations.html#extensible-binding-for-codeableconcept-datatype)
+   - [Here](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-condition.html#profile)
+   - [Here](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-procedure.html#profile)
 
 1. **Applied**:Update DocumentReference CCD operation ([FHIR-30110](https://jira.hl7.org/browse/FHIR-30110)) [See Change Here](http://hl7.org/fhir/us/core/STU4/OperationDefinition-docref.html)
 1. **Applied**:Update DocumentReference MustSupport to choice of data or url ([FHIR-30111](https://jira.hl7.org/browse/FHIR-30111)) [See Change Here](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
-1. **Applied**:Reference to 3 new document types - addressing corresponding metadat ([FHIR-30112](https://jira.hl7.org/browse/FHIR-30112)) [See Change Here](https://build.fhir.org/ig/HL7/US-Core/clinical-notes-guidance.html#clinical-notes) AND [See Change Here](https://build.fhir.org/ig/HL7/US-Core/clinical-notes-guidance.html#support-requirements)
+1. **Applied**:Reference to 3 new document types - addressing corresponding metadat ([FHIR-30112](https://jira.hl7.org/browse/FHIR-30112)) [See Change Here](http://hl7.org/fhir/us/core/STU4/clinical-notes-guidance.html#clinical-notes) AND [See Change Here](http://hl7.org/fhir/us/core/STU4/clinical-notes-guidance.html#support-requirements)
 1. **Applied**:Typo ([FHIR-30113](https://jira.hl7.org/browse/FHIR-30113))
 1. **Applied**:Clarify Must Support of Complex elements ([FHIR-30321](https://jira.hl7.org/browse/FHIR-30321)) [See Change Here](http://hl7.org/fhir/us/core/STU4/conformance-expectations.html#must-support---complex-elements)
 1. **Applied**:Clarify that VSAC FHIR API only retrieves a definition ([FHIR-30344](https://jira.hl7.org/browse/FHIR-30344)) [See Change Here](http://hl7.org/fhir/us/core/STU4/terminology.html#using-value-set-authority-center-vsac)
@@ -392,7 +416,7 @@ Listed below are the resolved trackers for this version:
    - [Here](http://hl7.org/fhir/us/core/STU4/general-guidance.html#searching-multiple-patients)
    - [Here](http://hl7.org/fhir/us/core/STU4/CapabilityStatement-us-core-server.html#condition)
 1. **Applied**: Add MedicationAdministration to the Future Page. ([FHIR-30788](https://jira.hl7.org/browse/FHIR-30788)) [See Change Here](http://hl7.org/fhir/us/core/STU4/future-of-US-core.html#future-candidate-requirements-under-consideration)
-1. **Applied**: Fix text in $docref description ([FHIR-30810](https://jira.hl7.org/browse/FHIR-30810)) [See Change Here](https://build.fhir.org/ig/HL7/US-Core/OperationDefinition-docref.html)
+1. **Applied**: Fix text in $docref description ([FHIR-30810](https://jira.hl7.org/browse/FHIR-30810)) [See Change Here](http://hl7.org/fhir/us/core/STU4/OperationDefinition-docref.html)
 1. **Applied**: Mandate that CapabilityStatement.instantiates refer to US Core ([FHIR-30889](https://jira.hl7.org/browse/FHIR-30889)) [See Change Here](http://hl7.org/fhir/us/core/STU4/CapabilityStatement-us-core-server.html#shall_css)
 1. **Applied**: Add binding so Vitals will render it in differential view ([FHIR-31391](https://jira.hl7.org/browse/FHIR-31391)) [See Change Here](http://hl7.org/fhir/us/core/2021JAN/StructureDefinition-us-core-vital-signs.html#profile)
 1. **Applied**: Update to URI from OID for CDT in Procedure Code ValueSet ([FHIR-31556](https://jira.hl7.org/browse/FHIR-31556)) [See Change Here](http://hl7.org/fhir/us/core/STU4/ValueSet-us-core-procedure-code.html)
@@ -406,7 +430,7 @@ Listed below are the resolved trackers for this version:
 1. **Applied**: Update Observation.value[x] definition ([FHIR-31083](https://jira.hl7.org/browse/FHIR-31083)) [See Change Here](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-observation-lab-definitions.html#Observation.value[x])
 1. **Applied**: Add LOINC to procedure codes ([FHIR-31514](https://jira.hl7.org/browse/FHIR-31514)) [See Change Here](http://hl7.org/fhir/us/core/STU4/ValueSet-us-core-procedure-code.html)
 1. **Applied**: Make PractitionerRole.organization must support and add invariant ([FHIR-29680](https://jira.hl7.org/browse/FHIR-29680)) [See Change Here](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-practitionerrole.html)
-1. **Applied**: Fix FHIRPath constraint for provenance-1([FHIR-31020](https://jira.hl7.org/browse/FHIR-31020)) [See Change Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html)
+1. **Applied**: Fix FHIRPath constraint for provenance-1([FHIR-31020](https://jira.hl7.org/browse/FHIR-31020)) [See Change Here](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-provenance.html)
 1. **Applied**: Add guidance to BMI Profile([FHIR-32658](https://jira.hl7.org/browse/FHIR-32658)) [See Change Here](https://build.fhir.org/ig/HL7/StructureDefinition-us-core-bmi.html)
 1. **Applied**: Write usage note for non-vaccination CVX codes([FHIR-31899](https://jira.hl7.org/browse/FHIR-31899)) [See Change Here](http://hl7.org/fhir/us/core/STU4/StructureDefinition-us-core-immunization.html#mandatory-and-must-support-data-elements)
 1. **Applied**: Clarify that Extensible binding can always provide a mapped code([FHIR-32010](https://jira.hl7.org/browse/FHIR-32010)) [See Change Here](http://hl7.org/fhir/us/core/STU4/conformance-expectations.html#extensible-binding-for-codeableconcept-datatype)

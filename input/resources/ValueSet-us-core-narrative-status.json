@@ -1,0 +1,29 @@
+{
+    "resourceType": "ValueSet",
+    "id": "us-core-narrative-status",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-narrative-status",
+    "name": "NarrativeStatus",
+    "title": "US Core Narrative Status",
+    "status": "active",
+    "experimental": false,
+    "date": "2022-09-29",
+    "description": "The US Core Narrative Status Value Set limits the text status for the resource narrative.",
+    "copyright": "HL7",
+    "compose": {
+        "include": [
+            {
+                "system": "http://hl7.org/fhir/narrative-status",
+                "concept": [
+                    {
+                        "code": "additional",
+                        "display": "additional"
+                    },
+                    {
+                        "code": "generated",
+                        "display": "generated"
+                    }
+                ]
+            }
+        ]
+    }
+}

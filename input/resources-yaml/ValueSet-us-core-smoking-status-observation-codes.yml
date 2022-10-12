@@ -1,0 +1,21 @@
+resourceType: ValueSet
+id: us-core-smoking-status-observation-codes
+url: http://hl7.org/fhir/us/core/ValueSet/us-core-smoking-status-observation-codes
+name: USCoreSmokingStatusObservationCodes
+title: US Core Smoking Status Observation Codes
+status: active
+experimental: false
+date: 2022-09-29
+description: The US Core Smoking Status Observation Codes Value Set is a 'starter
+  set' of concepts to capture smoking status.
+copyright: "This material contains content from LOINC (http://loinc.org). LOINC is
+  copyright \xA9 1995-2020, Regenstrief Institute, Inc. and the Logical Observation
+  Identifiers Names and Codes (LOINC) Committee and is available at no cost under
+  the license at http://loinc.org/license. LOINC\xAE is a registered United States
+  trademark of Regenstrief Institute, Inc"
+compose:
+  include:
+  - system: http://loinc.org
+    concept:
+    - code: 72166-2
+      display: Tobacco smoking status NHIS

@@ -1,0 +1,20 @@
+resourceType: ValueSet
+id: us-core-pregnancy-intent
+url: http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-intent
+name: USCorePregnancyIntentCodes
+title: US Core Pregnancy Intent Codes
+status: active
+experimental: false
+date: 2022-09-29
+description: This value set includes SNOMED CT codes and the HL7 V3 code for the concept
+  "unknown".
+copyright: Used by permission of HL7 International, all rights reserved Creative Commons
+  License
+compose:
+  include:
+  - valueSet:
+    - http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1166.22
+  - system: http://terminology.hl7.org/CodeSystem/v3-NullFlavor
+    concept:
+    - code: UNK
+      display: Unknown

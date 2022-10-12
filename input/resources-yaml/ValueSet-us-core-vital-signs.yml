@@ -1,0 +1,26 @@
+resourceType: ValueSet
+id: us-core-vital-signs
+url: http://hl7.org/fhir/us/core/ValueSet/us-core-vital-signs
+name: UsCoreVitalSigns
+title: US Core Vital Signs ValueSet
+status: active
+experimental: false
+date: 2022-09-29
+description: The vital sign codes from the base FHIR and US Core Vital Signs.
+copyright: "This material contains content from LOINC (http://loinc.org). LOINC is
+  copyright \xA9 1995-2020, Regenstrief Institute, Inc. and the Logical Observation
+  Identifiers Names and Codes (LOINC) Committee and is available at no cost under
+  the license at http://loinc.org/license. LOINC\xAE is a registered United States
+  trademark of Regenstrief Institute, Inc"
+compose:
+  include:
+  - system: http://loinc.org
+    concept:
+    - code: 59576-9
+    - code: 8289-1
+    - code: 77606-2
+    - code: 59408-5
+    - code: 3150-0
+    - code: 3151-8
+  - valueSet:
+    - http://hl7.org/fhir/ValueSet/observation-vitalsignresult

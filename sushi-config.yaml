@@ -20,8 +20,8 @@ description: >-
   These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the Office of the National Coordinator for Health Information Technology (ONC) sponsored Data Access Framework (DAF) project. For more information on how DAF became US Core see the US Core change notes.
 
 license: CC0-1.0
-date: 2022-06-13
-version: '5.0.1'
+date: 2022-09-23
+version: '6.0.0-preview'
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.uv.bulkdata: 2.0.0
@@ -32,6 +32,10 @@ dependencies:
     id: vsac
   hl7.fhir.uv.sdc: 3.0.0
   # hl7.fhir.us.sdoh-clinicalcare: 1.0.0
+  us.cdc.phinvads:
+    id: uscdcphinvads
+    uri: 'http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads'
+    version: 0.12.0
 pages:
   index.md:
     title: Home
@@ -93,10 +97,11 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
   version-comparison:
+     - 5.0.1
      - 4.0.0
      - 3.1.1
 copyrightyear: '2022+'
-releaselabel: STU5 Release
+releaselabel: CI Build
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │

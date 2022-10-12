@@ -39,13 +39,13 @@ Additionally, the [US Core Observation Social History Profile] is for simple obs
 
 #### Assessment Screenings Using Observations
 
-To meets the USCDI v2 requirements for SDOH Assessments, US Core defines the [US Core Observation Survey Profile] and the [US Core Observation SDOH Assessment Profile].  The [US Core Observation Survey Profile] is defined to record responses from a survey or a questionnaire for *any* context including SDOH.  The [US Core Observation SDOH Assessment Profile] is derived from the [US Core Observation Survey Profile] and constrains the category and terminology to SDOH. To keep related data together and preserve the survey structure, these profiles can be used to represent multi-question "panels" of responses, individual responses (including multi-select or "check all that apply" responses).  The figure below illustrates the relationship between the Observation survey "panel" and the individual Observations survey responses. Each box represents an Observation using either profile:
+To meets the USCDI v2+ requirements for SDOH Assessments, US Core defines the [US Core Observation Survey Profile] and the [US Core Observation SDOH Assessment Profile].  The [US Core Observation Survey Profile] is defined to record responses from a survey or a questionnaire for *any* context including SDOH.  The [US Core Observation SDOH Assessment Profile] is derived from the [US Core Observation Survey Profile] and constrains the category and terminology to SDOH. To keep related data together and preserve the survey structure, these profiles can be used to represent multi-question "panels" of responses, individual responses (including multi-select or "check all that apply" responses).  The figure below illustrates the relationship between the Observation survey "panel" and the individual Observations survey responses. Each box represents an Observation using either profile:
 
 {% include img-med.html img="uscore-survey-structure.svg" caption="Relationship Between Survey Response Observations" %}
 
 Note that the panels can be nested to create additional groupings of responses.  See the [US Core Observation Survey Profile] profile page for detailed documentation on how the observations are linked, examples, and search requirements.
 
-The Observations may be extracted from QuestionnaireResponse. [SDOH Clinical Care](http://build.fhir.org/ig/HL7/fhir-sdoh-clinicalcare/survey_instrument_support.html) guides define how SDOH data captured in a QuestionnaireResponse can be extracted and used to create or update Observations or other FHIR resources.
+The Observations may be extracted from QuestionnaireResponse. The [SDOH Clinical Care] guide define how SDOH data captured in a QuestionnaireResponse can be extracted and used to create or update Observations or other FHIR resources.
 {:.bg-info}
 
 #### Assessment Screenings Using QuestionnaireResponse
@@ -85,7 +85,7 @@ US Core uses broadly defined value sets that contain concepts that are used acro
 {% include img-med.html img="sdoh_condition.svg" caption="Example of SDOH Grouping Value set in US Core Condition Codes Value Set" %}
 
 #### Assessment Codes
-US Core has created the [US Core Common SDOH Assessments] ValueSet - commonly asked social questions as identified by [FindHelp.org], a social service assistance tool, and  the PRAPARE, Hunger Vital Sign, AHC-HRSN screening tools referenced in USCDI v2. This is not intended to replicate the complexities and robustness of the FHIR Questionnaire and QuestionnaireResponse resources developed for SDOH assessment screening tools and other questionnaires.  The Gravity Project is working on a more comprehensive set of codes to meet these challenges and this guide may leverage that work in the future.
+US Core has created the [US Core Common SDOH Assessments] ValueSet - commonly asked social questions as identified by [FindHelp.org], a social service assistance tool, and  the PRAPARE, Hunger Vital Sign, AHC-HRSN screening tools referenced in USCDI v2+. This is not intended to replicate the complexities and robustness of the FHIR Questionnaire and QuestionnaireResponse resources developed for SDOH assessment screening tools and other questionnaires.  The Gravity Project is working on a more comprehensive set of codes to meet these challenges and this guide may leverage that work in the future.
 
 ---
 

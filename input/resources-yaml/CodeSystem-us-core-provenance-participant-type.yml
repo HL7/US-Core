@@ -1,0 +1,18 @@
+resourceType: CodeSystem
+id: us-core-provenance-participant-type
+url: http://hl7.org/fhir/us/core/CodeSystem/us-core-provenance-participant-type
+name: USCoreProvenancePaticipantTypeExtensionCodes
+title: US Core Provenance Participant Type Extension Codes
+status: active
+experimental: false
+date: 2022-09-29T14:59:24-07:00
+description: Set of codes that are needed for implementation of the US-Core Provenance
+  Profile. These codes are used as extensions to the FHIR value sets.
+copyright: Used by permission of HL7 International, all rights reserved Creative Commons
+  License
+caseSensitive: true
+content: complete
+concept:
+- code: transmitter
+  display: Transmitter
+  definition: The entity that provided the copy to your system.

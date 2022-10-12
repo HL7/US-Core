@@ -26,11 +26,11 @@ The following search parameters and search parameter combinations SHALL be suppo
     Example:
 
       1. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|{{include.code1 | default: '[code]'}}
-      1. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|{{include.code1 | default: '[code]'}},http://loinc.org\|{{include.code2 | default: '[code]'}},http://loinc.org\|{{include.code3 | default: '[code]'}}
+      {% if include.code2 %}2. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|{{include.code1 | default: '[code]'}},http://loinc.org\|{{include.code2 | default: '[code]'}},http://loinc.org\|{{include.code3 | default: '[code]'}}{% endif %}
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code(s).  SHOULD support search by multiple report codes. The Observation `code` parameter searches `Observation.code only. ([how to search by reference] and [how to search by token])
 
-1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`date`](SearchParameter-us-core-observation-date.html)** search parameters:
+2. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`date`](SearchParameter-us-core-observation-date.html)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`
     - including optional support for *AND* search on `date` (e.g.`date=[date]&date=[date]]&...`)
 
