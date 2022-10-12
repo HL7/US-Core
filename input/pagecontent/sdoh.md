@@ -23,6 +23,9 @@ The figure below shows how the SDOH elements are inter-related:
 {% include img.html img="sdoh_assessment.svg" caption="SDOH Activities" %}
 
 
+{% include img.html img="screening_and_assessments.svg" caption="Screening and Assessment Activities" %}
+{:.new-content}
+
 ### Assessment Screenings
 
 Assessment Screenings can represent a structured evaluation of risk (e.g., PRAPARE, Hunger Vital Sign, AHC-HRSN screening tool) for any Social Determinants of Health domain such as food, housing, or transportation security. They are often captured using a screening tool such as a survey or questionnaire. US Core provides two ways to represent SDOH assessment screening results using:
