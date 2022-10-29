@@ -2620,8 +2620,7 @@ definition:
     exampleBoolean: true
   - reference:
       reference: MedicationDispense/medicationdispense-example
-    description: This is a insulin dispense example for the *US Core MedicationDispense
-      Profile*.
+    description: This is a dispense example for the *US Core MedicationDispense Profile*.
     name: Medication Dispense Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense
   - reference:
@@ -2815,6 +2814,11 @@ definition:
       reference: Practitioner/practitioner-2
     description: This is a practitioner 2 example for the *US Core Practitioner Profile*.
     name: Practitioner 2 Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+  - reference:
+      reference: Practitioner/practitioner-pharmacist
+    description: This is a pharmacist example using the *US Core Practitioner Profile*.
+    name: Practitioner Pharmacist Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
   - reference:
       reference: Observation/pulse-intensity-palpation

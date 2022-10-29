@@ -411,6 +411,21 @@
                     "strength": "preferred",
                     "valueSet": "http://hl7.org/fhir/ValueSet/ucum-common"
                 }
+            },
+            {
+                "id": "MedicationRequest.dispenseRequest",
+                "path": "MedicationRequest.dispenseRequest",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+                "path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dispenseRequest.quantity",
+                "path": "MedicationRequest.dispenseRequest.quantity",
+                "mustSupport": true
             }
         ]
     }

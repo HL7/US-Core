@@ -26,9 +26,11 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Each MedicationDispense must support:**
 
 1. who dispensed the medication
-2. type of dispense (e.g., partially dispensed)
-3. the prescription *Sig*
-4. the dose and rate
+2. the authorizing prescription
+3. type of dispense (e.g., partially dispensed)
+4. the quantity dispensed
+5. the prescription *Sig*
+6. the dose and rate
 
 
 **Profile specific implementation guidance:**

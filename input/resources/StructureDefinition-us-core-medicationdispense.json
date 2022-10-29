@@ -131,12 +131,45 @@
                 "mustSupport": true
             },
             {
+                "id": "MedicationDispense.authorizingPrescription",
+                "path": "MedicationDispense.authorizingPrescription",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
                 "id": "MedicationDispense.type",
                 "path": "MedicationDispense.type",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
                     "valueSet": "http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType"
+                }
+            },
+            {
+                "id": "MedicationDispense.quantity",
+                "path": "MedicationDispense.quantity",
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+                            "valueCanonical": "http://hl7.org/fhir/ValueSet/ucum-units"
+                        }
+                    ],
+                    "strength": "preferred",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/ucum-common"
                 }
             },
             {

@@ -1,6 +1,6 @@
 {
     "resourceType": "Practitioner",
-    "id": "practitioner-1",
+    "id": "practitioner-pharmacist",
     "meta": {
         "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
@@ -8,32 +8,28 @@
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Practitioner 1 Example"
+                "valueString": "Practitioner Pharmacist Example"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a practitioner 1 example for the *US Core Practitioner Profile*."
+                "valueMarkdown": "This is a pharmacist example using the *US Core Practitioner Profile*."
             }
         ]
     },
     "identifier": [
         {
             "system": "http://hl7.org/fhir/sid/us-npi",
-            "value": "9941339108"
-        },
-        {
-            "system": "http://www.acme.org/practitioners",
-            "value": "25456"
+            "value": "3412549073"
         }
     ],
     "name": [
         {
-            "family": "Bone",
+            "family": "Douglas",
             "given": [
-                "Ronald"
+                "Dispenser"
             ],
             "prefix": [
-                "Dr"
+                "PharmD"
             ]
         }
     ],
@@ -41,7 +37,7 @@
         {
             "use": "work",
             "line": [
-                "1003 Healthcare Drive"
+                "1015 Healthcare Drive"
             ],
             "city": "Amherst",
             "state": "MA",
