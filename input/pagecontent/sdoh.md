@@ -1,34 +1,40 @@
 
-This US Core Social Determinant of Health (SDOH) Guidance Page has been added in response to  United States Core Data for Interoperability (USCDI) V2 updates that the Office of the National Coordinator (ONC) published by the Office of the National Coordinator (ONC) in July of 2021. SDOH data relate to conditions in which people live, learn, work, and play and their effects on health risks and outcomes.[^1]  The new data elements include:
-- SDOH Assessments
-- SDOH Goals
-- SDOH Interventions
-- SDOH Problems/Health Concerns
+This US Core Screenings and Assessments Guidance page outlines how to implement the Office of the National Coordinator (ONC) United States Core Data for Interoperability (USCDI) v3 data class Health Status and Assessments. In US Core 5.0.1, this guidance page focused exclusively on Social Determinant of Health (SDOH) and the data elements: SDOH Assessments, SDOH Goals, SDOH Interventions, and SDOH Problems/Health Concerns. The new USCDI v3 elements include:
+- Functional Status
+- Disability Status
+- Mental/Cognitive Status
 
-This page documents how the US Core Profile can be use to represent these elements.
+
+This page documents US Core Profiles can be used to represent these elements and the SDOH elements
 
 ### Purpose and Intent
 
-The intent of adding these SDOH data elements to US Core is to be able to use US Core Profiles along with a defined set of FHIR RESTful interactions to represent and access SDOH patient data.  This is in contrast to the [SDOH Clinical Care](http://hl7.org/fhir/us/sdoh-clinicalcare/) HL7 Implementation Guide. This guide was developed by the [Gravity Project](https://hl7.org/gravity) and documents the orchestration of SDOH data capture and related interventions and how it is represented using FHIR.  US Core Profile span across use cases and thus less constrained, but they form backbone for the SDOH Clinical Care Profiles.  Many of the additions to US Core Profiles to meet the SDOH data element requirements are based on the efforts by the Gravity led project.  In the following sections the interrelation between the SDOH elements and how US Core represents them is summarized.
+Screenings and Assessments aren’t unique to social needs, and this page reflects the variety of instruments clinical systems may support. US Core Profiles along with a defined set of FHIR RESTful interactions are defined here, and formally in the profiles, to represent and access functional status, disability status, mental/cognitive Status, SDOH patient data.
+This is in contrast to the [SDOH Clinical Care](http://hl7.org/fhir/us/sdoh-clinicalcare/) HL7 Implementation Guide. The SDOH Clinical Care guide was developed by the [Gravity Project](https://hl7.org/gravity) and documents the orchestration of SDOH data capture and related interventions and how it is represented using FHIR. US Core Profiles span across use cases and thus are less constrained, but they form the backbone for the Clinical Care Profiles. Many of the additions to US Core Profiles to meet the SDOH data element requirements are based on the efforts by the Gravity led project. In the following sections the interrelation between the SDOH elements and how US Core represents them is summarized.
+
 
 ### Activities
 
-The figure below shows how the SDOH elements are inter-related:
+The figure below shows how screenings, assessments, and referrals (requests) relate to provide the services required by a patient.
 
-- **SDOH Assessment**: SDOH Assessments represent the recording of SDOH assessment screening tools and other questionnaires as well as individual clinical observations.  These assessments are represented by the [US Core Observation Social History Profile] and [US Core Observation Survey Profile]
-- **SDOH Problems/Health Concerns**: Identifying a Social Determinants of Health-related condition (for example, homelessness) is represented by the [US Core Condition Problems and Health Concerns Profile].
-- **SDOH Interventions**:  Services offered to a patient to address identified Social Determinants of Health problems/health concerns (for example, referral to transportation support programs) are represented by the [US Core ServiceRequest Profile].  In addition, the [US Core Procedure Profile] can be used to record a completed service or intervention.
-- **SDOH Goals**: Identifying and defining a future desired condition or change in condition related to an SDOH risk (for example, Has adequate quality meals and snacks) is represented by [US Core Goal Profile]
-
-{% include img.html img="sdoh_assessment.svg" caption="SDOH Activities" %}
-
+- **Screening and Assessments**: Prior to delivering appropriate clinical care an accurate [Screening and Assessment](#screening-and-assessments) is necessary. US Core defines three observations to support this process:
+	- US Core Screening and Assessment Component Observation - individual question and answer.
+	- US Core Screening and Assessment Panel Observation - panel of screening and assessment components that were collected together.
+	- US Core Clinical Judgment Observation - clinician decision to document a specific item - “patient has problems with housing". Note, this observation is only appropriate when the judgment isn’t appropriate on the list of Problems or Health Concerns.
+- **Problems/Health Concerns**: Identifying a Health-related condition (for example, homelessness), Disability concern, or Functional concern, is represented by the [US Core Condition Problems and Health Concerns Profile]. A category code of `sdoh` can be assigned by the server to support discovery of Social Determinants of Health  Problems/Health Concerns.
+- **Interventions**:  Services offered to a patient to address problems/health concerns are represented by the [US Core ServiceRequest Profile].  When the ServiceRequest is for an identified Social Determinants of Health (for example, referral to transportation support programs) the ServiceRequest.category is set to `sdoh`. In addition, the [US Core Procedure Profile] can be used to record a completed service or intervention.
+- **Goals**: Identifying and defining a future desired condition or change in condition related to an SDOH risk (for example, Has adequate quality meals and snacks) is represented by [US Core Goal Profile]
 
 {% include img.html img="screening_and_assessments.svg" caption="Screening and Assessment Activities" %}
+
 {:.new-content}
 
-### Assessment Screenings
+### Screening and Assessments
 
-Assessment Screenings can represent a structured evaluation of risk (e.g., PRAPARE, Hunger Vital Sign, AHC-HRSN screening tool) for any Social Determinants of Health domain such as food, housing, or transportation security. They are often captured using a screening tool such as a survey or questionnaire. US Core provides two ways to represent SDOH assessment screening results using:
+Screening and Assessments can represent a structured evaluation of functional status, disability status, mental/cognitive Status, SDOH patient data.
+
+
+They are often captured using a screening tool such as a survey or questionnaire. US Core provides two ways to represent SDOH assessment screening results using:
 
 1. Observation*: [US Core Observation SDOH Assessment Profile]
 1. QuestionnaireResponse: [US Core QuestionnaireResponse Profile]
