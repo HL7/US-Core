@@ -1,13 +1,13 @@
 resourceType: StructureDefinition
-id: us-core-observation-survey
+id: us-core-observation-screening-assessments
 url: >-
-  http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey
-name: USCoreObservationSurveyProfile
-title: US Core Observation Survey Profile
+  http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
+name: USCoreObservationScreeningAssessmentsProfile
+title: US Core Observation Screening Assessments Profile
 status: active
 date: '2022-04-20'
 description: >-
-   To promote interoperability and adoption through common implementation, the US Core Observation Survey Profile sets minimum expectations for the Observation Resource to record, search, and fetch retrieve observations that represent the questions and responses to form/survey and assessment tools.  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
+   To promote interoperability and adoption through common implementation, the US Core Observation Survey Profile sets minimum expectations for the Observation Resource to record, search, and fetch retrieve observations that represent the questions and responses to surveys, and screening and assessment tools.  It can be used to represent a single response, multiple responses, and multi-select “check all that apply” type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
 
 fhirVersion: 4.0.1
 kind: resource
@@ -71,19 +71,16 @@ differential:
             code: survey
       mustSupport: true
 
-    # - id: 'Observation.category:sdoh'
-    #   path: Observation.category
-    #   sliceName: sdoh
-    #   requirements: >-
-    #     Used for filtering what that this is an observation derived from an SDOH
-    #     survey/questionnaire.
-    #   min: 0
-    #   max: '1'
-    #   patternCodeableConcept:
-    #     coding:
-    #       - system: 'http://loinc.org'
-    #         code: LG41762-2  #The LOINC “grouping” code: LG41762-2 Social Determinants Of Health
-    #   mustSupport: true
+    - id: 'Observation.category:domain'
+      path: Observation.category
+      sliceName: domain
+      requirements: >-
+        Used for filtering whether this is an observation derived from an SDOH, Functional Status, Disability Status,  •Mental/Cognitive Status or other screening or assessment.
+      min: 1
+      binding:
+          strength: required
+          valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-assessment-category'
+      mustSupport: true
 
     - id: Observation.code
       path: Observation.code
@@ -178,7 +175,7 @@ differential:
     - id: 'Observation.value[x]'
       path: 'Observation.value[x]'
       comment: >-
-        An observation may have a value if it represents an individual survey question and answer pair. An observation should not have a value if it represents a multi-question survey or multi-select “check all that apply” question. If a value is present, the datatype for this element
+        An observation may have a value if it represents an individual survey, screening, or assessment question and answer pair. An observation should not have a value if it represents a multi-question or multi-select “check all that apply” responses. If a value is present, the datatype for this element
         should be determined by Observation.code.  A CodeableConcept with just a
         text would be used instead of a string if the field was usually coded,
         or if the type associated with the Observation.code defines a coded
@@ -234,14 +231,14 @@ differential:
       short: >-
         Reference to panel or multi-select responses
       definition: >-
-        Aggregate set of Observations that represent question answer pairs for both multi-question surveys and multi-select questions.
+        Aggregate set of Observations that represent question answer pairs for both multi-question surveys, screenings, and assessments and multi-select questions.
       comment: >-
-         This grouping element is used to represent surveys that group several questions together or individual questions with  “check all that apply” responses. For example in the simplest case a flat multi-question survey where the "panel" observation is the survey instrument itself and instead of an `Observation.value` the `hasMember` element references other Observation that represent the individual questions answer pairs. In a survey that has a heirarchical grouping of questions, the observation "panels" can be nested. Because surveys can be arbitrarily complex structurally, not all survey structures can be represented using this Observation grouping pattern.
+         This grouping element is used to represent surveys, screenings, and assessments that group several questions together or individual questions with  “check all that apply” responses. For example in the simplest case a flat multi-question survey where the "panel" observation is the survey instrument itself and instead of an `Observation.value` the `hasMember` element references other Observation that represent the individual questions answer pairs. When there is a heirarchical grouping of questions, the observation "panels" can be nested. Because surveys, screenings, and assessments can be arbitrarily complex structurally, not all structures can be represented using this Observation grouping pattern.
       type:
         - code: Reference
           targetProfile:
             - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey
+              http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
             - >-
               http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
             - >-
@@ -272,7 +269,7 @@ differential:
         - code: Reference
           targetProfile:
             - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey
+              http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
             - >-
               http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
             - >-

@@ -317,10 +317,10 @@
 [US Core RelatedPerson Profile]: StructureDefinition-us-core-relatedperson.html
 [US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
 [Using multiple codes with CodeableConcept Datatype]: general-requirements.html#translations
-[US Core Observation Survey Profile]: StructureDefinition-us-core-observation-survey.html
+[US Core Observation Screening and Assessments Profile]: StructureDefinition-us-core-observation-screening-assessments.html
 [US Core Observation SDOH Assessment Profile]: StructureDefinition-us-core-observation-sdoh-assessment.html
 [US Core QuestionnaireResponse Profile]: StructureDefinition-us-core-questionnaireresponse.html
-[US Core Observation Social History Profile]: StructureDefinition-us-core-observation-social-history.html
+[US Core Observation Clinical Judgement Profile]: StructureDefinition-us-core-observation-clinical-judgement.html
 [Protocol for Responding to and Assessing PUS Core Social History Assessment Observation Profileatients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
 [Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
 [Screening and Assessments]: screening-and-assessments.html

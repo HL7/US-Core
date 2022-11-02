@@ -430,6 +430,19 @@ definition:
     exampleBoolean: false
     name: US Core MedicationRequest Profile
   - reference:
+      reference: StructureDefinition/us-core-observation-social-history
+    description: "The US Core Observation Social History Profile meets the U.S. Core\
+      \ Data for Interoperability (USCDI) v2 \u2018SDOH Assessments\u2019 requirements.\
+      \ To promote interoperability and adoption through common implementation, this\
+      \ profile sets minimum expectations for the Observation resource to record,\
+      \ search, and fetch retrieve observations that represent simple observations\
+      \ made by an individual about a patient's social history status such as education,\
+      \ food insecurity, etc. It identifies which core elements, extensions, vocabularies,\
+      \ and value sets **SHALL** be present in the resource when using this profile.\
+      \ It provides the floor for standards development for specific use cases."
+    exampleBoolean: false
+    name: US Core Observation Social History Profile
+  - reference:
       reference: StructureDefinition/us-core-observation-clinical-test
     description: "The US Core Observation Clinical Test Result Profile is based upon\
       \ the core FHIR Observation Resource, and, along with the US Core DiagnosticReport\
@@ -520,20 +533,18 @@ definition:
     exampleBoolean: false
     name: US Core Observation Pregnancy Status Profile
   - reference:
-      reference: StructureDefinition/us-core-observation-sdoh-assessment
-    description: "The US Core Observation SDOH Assessment Profile meets the U.S. Core\
-      \ Data for Interoperability (USCDI) v2 'SDOH Assessments' requirements.  This\
-      \ profile is based on the US Core Observation Survey Profile and sets minimum\
-      \ expectations for representing responses to assessment tools such as the *Protocol\
-      \ for Responding to and Assessing Patients\u2019 Assets, Risks, and Experiences\
-      \ (PRAPARE) Survey*.  It can be used to represent individual responses, panels\
-      \ of multi-question surveys, and multi-select responses to \u201Ccheck all that\
-      \ apply\u201D questions. It identifies the *additional* core elements, extensions,\
-      \ vocabularies and value sets which SHALL be present in the Observation resource\
-      \ when using this profile. It provides the floor for standards development for\
-      \ specific use cases."
+      reference: StructureDefinition/us-core-observation-screening-assessments
+    description: "To promote interoperability and adoption through common implementation,\
+      \ the US Core Observation Survey Profile sets minimum expectations for the Observation\
+      \ Resource to record, search, and fetch retrieve observations that represent\
+      \ the questions and responses to surveys, and screening and assessment tools.\
+      \  It can be used to represent a single response, multiple responses, and multi-select\
+      \ \u201Ccheck all that apply\u201D type questions. It identifies which core\
+      \ elements, extensions, vocabularies, and value sets **SHALL** be present in\
+      \ the resource when using this profile. It provides the floor for standards\
+      \ development for specific use cases."
     exampleBoolean: false
-    name: US Core Observation SDOH Assessment Profile
+    name: US Core Observation Screening Assessments Profile
   - reference:
       reference: StructureDefinition/us-core-observation-sexual-orientation
     description: The US Core Observation Sexual Orientation Profile meets the U.S.
@@ -546,32 +557,6 @@ definition:
       standards development for specific use cases.
     exampleBoolean: false
     name: US Core Observation Sexual Orientation Profile
-  - reference:
-      reference: StructureDefinition/us-core-observation-social-history
-    description: "The US Core Observation Social History Profile meets the U.S. Core\
-      \ Data for Interoperability (USCDI) v2 \u2018SDOH Assessments\u2019 requirements.\
-      \ To promote interoperability and adoption through common implementation, this\
-      \ profile sets minimum expectations for the Observation resource to record,\
-      \ search, and fetch retrieve observations that represent simple observations\
-      \ made by an individual about a patient's social history status such as education,\
-      \ food insecurity, etc. It identifies which core elements, extensions, vocabularies,\
-      \ and value sets **SHALL** be present in the resource when using this profile.\
-      \ It provides the floor for standards development for specific use cases."
-    exampleBoolean: false
-    name: US Core Observation Social History Profile
-  - reference:
-      reference: StructureDefinition/us-core-observation-survey
-    description: "To promote interoperability and adoption through common implementation,\
-      \ the US Core Observation Survey Profile sets minimum expectations for the Observation\
-      \ Resource to record, search, and fetch retrieve observations that represent\
-      \ the questions and responses to form/survey and assessment tools.  It can be\
-      \ used to represent individual responses, panels of multi-question surveys,\
-      \ and multi-select responses to \u201Ccheck all that apply\u201D questions.\
-      \ It identifies which core elements, extensions, vocabularies, and value sets\
-      \ **SHALL** be present in the resource when using this profile. It provides\
-      \ the floor for standards development for specific use cases."
-    exampleBoolean: false
-    name: US Core Observation Survey Profile
   - reference:
       reference: StructureDefinition/us-core-organization
     description: This profile sets minimum expectations for the Organization resource
@@ -1931,89 +1916,89 @@ definition:
       its use to directly capture individual surveys assessment items as an observations.
       It is not derived from a FHIR QuestionnaireResponse.
     name: 10 minute Apgar Color Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
   - reference:
       reference: Observation/10-minute-apgar-heart-rate
     description: This example of a US Core Survey Observation Profile illustrates
       its use to directly capture individual surveys assessment items as an observations.
       It is not derived from a FHIR QuestionnaireResponse.
     name: 10 minute Apgar Heart Rate Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
   - reference:
       reference: Observation/10-minute-apgar-muscle-tone
     description: This example of a US Core Survey Observation Profile illustrates
       its use to directly capture individual surveys assessment items as an observations.
       It is not derived from a FHIR QuestionnaireResponse.
     name: 10 minute Apgar Muscle Tone Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
   - reference:
       reference: Observation/10-minute-apgar-reflex-irritability
     description: This example of a US Core Survey Observation Profile illustrates
       its use to directly capture individual surveys assessment items as an observations.
       It is not derived from a FHIR QuestionnaireResponse..
     name: 10 minute Apgar Reflex Irritability Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
   - reference:
       reference: Observation/10-minute-apgar-respiratory-effort
     description: This example of a US Core Survey Observation Profile illustrates
       its use to directly capture individual surveys assessment items as an observations.
       It is not derived from a FHIR QuestionnaireResponse.
     name: 10 minute Apgar Respiratory effort Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
   - reference:
       reference: Observation/10-minute-apgar-score-panel
     description: This example of a US Core Survey Observation Profile illustrates
       its use to directly capture surveys assessments as a panel of observations.
       It is not derived from a FHIR QuestionnaireResponse.
     name: 10 Minute Apgar Score Panel Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
   - reference:
       reference: Observation/10-minute-apgar-score
     description: This example of a US Core Survey Observation Profile illustrates
       its use to directly capture individual surveys assessment items as an observations.
       It is not derived from a FHIR QuestionnaireResponse.
     name: 10 Minute Apgar Score Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
   - reference:
       reference: Observation/AHC-HRSN-item-example-44250-9
     description: This is a Ahc-Hrsn Item Example 44250-9 (Little interest or pleasure
       in doing things?) for the *US Core Screening Response Observation Profile*
     name: Ahc-Hrsn Item Example 44250-9
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-44255-8
     description: This is a Ahc-Hrsn Item Example 44255-8 (Feeling down, depressed,
       or hopeless?) for the *US Core Screening Response Observation Profile*
     name: Ahc-Hrsn Item Example 44255-8
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-68516-4
     description: This is a Ahc-Hrsn Item Example 68516-4 (On average, how many minutes
       did you usually spend exercising at this level on one of those days?) for the
       *US Core Screening Response Observation Profile*
     name: Ahc-Hrsn Item Example 68516-4
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-68517-2
     description: This is a Ahc-Hrsn Item Example 68517-2 (How many times in the past
       12 months have you had 5 or more drinks in a day (males) or 4 or more drinks
       in a day (females)?) for the *US Core Screening Response Observation Profile*
     name: Ahc-Hrsn Item Example 68517-2
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-68524-8
     description: This is a Ahc-Hrsn Item Example 68524-8 (How many times in the past
       year have you used illegal drugs?) for the *US Core Screening Response Observation
       Profile*
     name: Ahc-Hrsn Item Example 68524-8
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-69858-9
     description: This is a Ahc-Hrsn Item Example 69858-9 (Because of a physical, mental,
       or emotional condition, do you have serious difficulty concentrating, remembering,
       or making decisions?) for the *US Core Screening Response Observation Profile*
     name: Ahc-Hrsn Item Example 69858-9
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-69861-3
     description: This is a Ahc-Hrsn Item Example 69861-3 (Because of a physical, mental,
@@ -2021,14 +2006,14 @@ definition:
       a physician's office or shopping?) for the *US Core Screening Response Observation
       Profile*
     name: Ahc-Hrsn Item Example 69861-3
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-76513-1
     description: This is a Ahc-Hrsn Item Example 76513-1 (How hard is it for you to
       pay for the very basics like food, housing, medical care, and heating?) for
       the *US Core Screening Response Observation Profile*
     name: Ahc-Hrsn Item Example 76513-1
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-89555-7
     description: This is a Ahc-Hrsn Item Example 89555-7 (In the last 30 days, other
@@ -2037,7 +2022,7 @@ definition:
       swimming, biking, or other similar activities)?) for the *US Core Screening
       Response Observation Profile*
     name: Ahc-Hrsn Item Example 89555-7
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-93038-8
     description: This is a Ahc-Hrsn Item Example 93038-8 (Stress means a situation
@@ -2046,27 +2031,27 @@ definition:
       this kind of stress these days?) for the *US Core Screening Response Observation
       Profile*
     name: Ahc-Hrsn Item Example 93038-8
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-93159-2
     description: This is a Ahc-Hrsn Item Example 93159-2 (How often do you feel lonely
       or isolated from those around you?) for the *US Core Screening Response Observation
       Profile*
     name: Ahc-Hrsn Item Example 93159-2
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-95530-2
     description: This is a Ahc-Hrsn Item Example 95530-2 (How many times in the past
       year have you used prescription drugs for non-medical reasons?) for the *US
       Core Screening Response Observation Profile*
     name: Ahc-Hrsn Item Example 95530-2
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-96780-2
     description: This is a Ahc-Hrsn Item Example 96780-2 (Do you want help finding
       or keeping work or a job?) for the *US Core Screening Response Observation Profile*
     name: Ahc-Hrsn Item Example 96780-2
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-96781-0
     description: This is a Ahc-Hrsn Item Example 96781-0 (If for any reason you need
@@ -2074,7 +2059,7 @@ definition:
       managing finances, etc., do you get the help you need?) for the *US Core Screening
       Response Observation Profile*
     name: Ahc-Hrsn Item Example 96781-0
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-96782-8
     description: This is a Ahc-Hrsn Item Example 96782-8 (Do you want help with school
@@ -2082,137 +2067,137 @@ definition:
       school diploma, GED or equivalent.) for the *US Core Screening Response Observation
       Profile*
     name: Ahc-Hrsn Item Example 96782-8
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-96842-0
     description: This is a Ahc-Hrsn Item Example 96842-0 (How often have you used
       any tobacco product in past 12 months?) for the *US Core Screening Response
       Observation Profile*
     name: Ahc-Hrsn Item Example 96842-0
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-item-example-97027-7
     description: This is a Ahc-Hrsn Item Example 97027-7 (Do you speak a language
       other than English at home?) for the *US Core Screening Response Observation
       Profile*
     name: Ahc-Hrsn Item Example 97027-7
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/AHC-HRSN-panel-example-96777-8
     description: This is a Ahc-Hrsn Panel Example 96777-8 (Accountable health communities
       (AHC) health-related social needs screening (HRSN) tool) for the *US Core Screening
       Response Observation Profile*
     name: Ahc-Hrsn Panel Example 96777-8
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/HVS-item-example-88122-7
     description: This is a Hvs Item Example 88122-7 ((I/We) worried whether (my/our)
       food would run out before (I/we) got money to buy more.) for the *US Core Screening
       Response Observation Profile*
     name: Hvs Item Example 88122-7
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/HVS-item-example-88123-5
     description: This is a Hvs Item Example 88123-5 (The food that (I/we) bought just
       didn't last, and (I/we) didn't have money to get more.) for the *US Core Screening
       Response Observation Profile*
     name: Hvs Item Example 88123-5
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/HVS-item-example-88124-3
     description: This is a Hvs Item Example 88124-3 (Food insecurity risk) for the
       *US Core Screening Response Observation Profile*
     name: Hvs Item Example 88124-3
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/HVS-panel-example-88121-9
     description: This is a Hvs Panel Example 88121-9 (Hunger Vital Sign [HVS]) for
       the *US Core Screening Response Observation Profile*
     name: Hvs Panel Example 88121-9
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-54899-0
     description: This is a Prapare Item Example 54899-0 (Preferred language) for the
       *US Core Screening Response Observation Profile*
     name: Prapare Item Example 54899-0
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-56051-6
     description: This is a Prapare Item Example 56051-6 (Do you consider yourself
       Hispanic/Latino?) for the *US Core Screening Response Observation Profile*
     name: Prapare Item Example 56051-6
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-56799-0
     description: This is a Prapare Item Example 56799-0 (Address) for the *US Core
       Screening Response Observation Profile*
     name: Prapare Item Example 56799-0
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-63512-8
     description: This is a Prapare Item Example 63512-8 (How many people are living
       or staying at this address?) for the *US Core Screening Response Observation
       Profile*
     name: Prapare Item Example 63512-8
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-63586-2
     description: This is a Prapare Item Example 63586-2 (What was your best estimate
       of the total income of all family members from all sources, before taxes, in
       last year?) for the *US Core Screening Response Observation Profile*
     name: Prapare Item Example 63586-2
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-67875-5
     description: This is a Prapare Item Example 67875-5 (Employment status current)
       for the *US Core Screening Response Observation Profile*
     name: Prapare Item Example 67875-5
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-71802-3
     description: This is a Prapare Item Example 71802-3 (Housing status) for the *US
       Core Screening Response Observation Profile*
     name: Prapare Item Example 71802-3
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-76437-3
     description: This is a Prapare Item Example 76437-3 (Primary insurance) for the
       *US Core Screening Response Observation Profile*
     name: Prapare Item Example 76437-3
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-76501-6
     description: This is a Prapare Item Example 76501-6 (Within the last year, have
       you been afraid of your partner or ex-partner?) for the *US Core Screening Response
       Observation Profile*
     name: Prapare Item Example 76501-6
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-82589-3
     description: This is a Prapare Item Example 82589-3 (Highest level of educ) for
       the *US Core Screening Response Observation Profile*
     name: Prapare Item Example 82589-3
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-93026-3
     description: This is a Prapare Item Example 93026-3 (Do you feel physically and
       emotionally safe where you currently live?) for the *US Core Screening Response
       Observation Profile*
     name: Prapare Item Example 93026-3
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-93027-1
     description: This is a Prapare Item Example 93027-1 (Are you a refugee?) for the
       *US Core Screening Response Observation Profile*
     name: Prapare Item Example 93027-1
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-93028-9
     description: This is a Prapare Item Example 93028-9 (In the past year, have you
       spent more than 2 nights in a row in a jail, prison, detention center, or juvenile
       correctional facility?) for the *US Core Screening Response Observation Profile*
     name: Prapare Item Example 93028-9
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-93029-7
     description: 'This is a Prapare Item Example 93029-7 (How often do you see or
@@ -2220,53 +2205,53 @@ definition:
       friends on the phone, visiting friends or family, going to church or club meetings)?)
       for the *US Core Screening Response Observation Profile*'
     name: Prapare Item Example 93029-7
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-93030-5
     description: This is a Prapare Item Example 93030-5 (Has lack of transportation
       kept you from medical appointments, meetings, work, or from getting things needed
       for daily living?) for the *US Core Screening Response Observation Profile*
     name: Prapare Item Example 93030-5
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-93033-9
     description: This is a Prapare Item Example 93033-9 (Are you worried about losing
       your housing?) for the *US Core Screening Response Observation Profile*
     name: Prapare Item Example 93033-9
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-93034-7
     description: This is a Prapare Item Example 93034-7 (Have you been discharged
       from the armed forces of the United States?) for the *US Core Screening Response
       Observation Profile*
     name: Prapare Item Example 93034-7
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-93035-4
     description: This is a Prapare Item Example 93035-4 (At any point in the past
       2 years, has season or migrant farm work been your or your family's main source
       of income?) for the *US Core Screening Response Observation Profile*
     name: Prapare Item Example 93035-4
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-item-example-93038-8
     description: This is a Prapare Item Example 93038-8 (Stress is when someone feels
       tense, nervous, anxious or can't sleep at night because their mind is troubled.
       How stressed are you?) for the *US Core Screening Response Observation Profile*
     name: Prapare Item Example 93038-8
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-multiselect-item-example-32624-9-answer0
     description: This is a Prapare Multiselect-Item Example 32624-9-Answer0 (Race)
       for the *US Core Screening Response Observation Profile*
     name: Prapare Multiselect-Item Example 32624-9-Answer0
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-multiselect-item-example-32624-9-answer1
     description: This is a Prapare Multiselect-Item Example 32624-9-Answer1 (Race)
       for the *US Core Screening Response Observation Profile*
     name: Prapare Multiselect-Item Example 32624-9-Answer1
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-multiselect-item-example-93031-3-answer0
     description: This is a Prapare Multiselect-Item Example 93031-3-Answer0 (In the
@@ -2274,7 +2259,7 @@ definition:
       of the following when it was really needed?) for the *US Core Screening Response
       Observation Profile*
     name: Prapare Multiselect-Item Example 93031-3-Answer0
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-multiselect-item-example-93031-3-answer1
     description: This is a Prapare Multiselect-Item Example 93031-3-Answer1 (In the
@@ -2282,44 +2267,44 @@ definition:
       of the following when it was really needed?) for the *US Core Screening Response
       Observation Profile*
     name: Prapare Multiselect-Item Example 93031-3-Answer1
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-panel-example-93025-5
     description: This is a Prapare Panel Example 93025-5 (Protocol for Responding
       to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]) for the
       *US Core Screening Response Observation Profile*
     name: Prapare Panel Example 93025-5
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-panel-example-93039-6
     description: This is a Prapare Panel Example 93039-6 (Optional additional questions)
       for the *US Core Screening Response Observation Profile*
     name: Prapare Panel Example 93039-6
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-panel-example-93040-4
     description: This is a Prapare Panel Example 93040-4 (Social and emotional health)
       for the *US Core Screening Response Observation Profile*
     name: Prapare Panel Example 93040-4
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-panel-example-93041-2
     description: This is a Prapare Panel Example 93041-2 (Money and resources) for
       the *US Core Screening Response Observation Profile*
     name: Prapare Panel Example 93041-2
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-panel-example-93042-0
     description: This is a Prapare Panel Example 93042-0 (Family and home) for the
       *US Core Screening Response Observation Profile*
     name: Prapare Panel Example 93042-0
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Observation/PRAPARE-panel-example-93043-8
     description: This is a Prapare Panel Example 93043-8 (Personal characteristics)
       for the *US Core Screening Response Observation Profile*
     name: PRAPARE Panel Example 93043-8
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+    exampleBoolean: true
   - reference:
       reference: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2
     description: This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example example
