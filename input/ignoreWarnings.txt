@@ -1,5 +1,12 @@
 == Suppressed Messages ==
 
+# === ERRORS to Discuss with FMG ===
+
+# === The inherited markdown link is relative and cannot be resolved - known issues with tracker and discussed in IG-Publishing call ===
+
+ERROR: /Users/ehaas/Documents/FHIR/US-Core/output/ValueSet-us-core-observation-smoking-status-status.html#/html/body/div/div/div/div/div/div/table/tr/td/div/p/a at Line 312, column 911: The link 'provenance.html' for "Provenance" cannot be resolved
+
+
 # === === VSAC issues - The tooling infrastructure currently is unable to access these codes. They have been checked and the concepts are correct === ===
 
 # === Added this STU NOTE: This profile is technically non-conformant with the base FHIR ver 4.0.1 vitals profile which defines a required binding that excludes the concept for L/min for Observation.component.value(x). This is a known issue in and it means validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile. A change request to correct this has been applied to the base FHIR ver 4.3.0 (“Release 4B”)===

@@ -27,6 +27,6 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
-- A person can have more than one job at the same time and many jobs over time. Therefore,  See the [Occupational Data for Health (ODH) Usual Work Profile](#.html) for a stand-alone observation to communicate the concept of “usual or longest-held work” This can also be determined by reviewing all known occupations.
+- A person can have more than one job at the same time and many jobs over time. Therefore,  See the [Occupational Data for Health (ODH) Usual Work Profile] for a stand-alone observation to communicate the concept of “usual or longest-held work” This can also be determined by reviewing all known occupations.
 
 {% include link-list.md %}

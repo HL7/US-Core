@@ -323,8 +323,8 @@
 [US Core Observation Social History Profile]: StructureDefinition-us-core-observation-social-history.html
 [Protocol for Responding to and Assessing PUS Core Social History Assessment Observation Profileatients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
 [Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
-[SDOH]: sdoh.html
-[Social Determinants of Health (SDOH)]: sdoh.html
+[Screening and Assessments]: screening-and-assessments.html
+[Social Determinants of Health (SDOH)]: screening-and-assessments.html
 [US Core Common SDOH Assessments]: ValueSet-us-core-common-sdoh-assessments.html
 [slicing]: {{site.data.fhir.path}}profiling.html#slicing
 [Change Log]: changes.html
@@ -350,3 +350,4 @@
 [Observation Summary Table]: observation-summary.html
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/index.html
 [National Drug Codes (NDC)]: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
+[Occupational Data for Health (ODH) Usual Work Profile]: http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork
