@@ -24,7 +24,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. a category code of 'sdoh'
 1. a time indicating when observation was made
 1. who answered the questions
-3. a value
+1. a value
+1. references to associated survey, assessment or screening tool
 
 **Profile specific implementation guidance:**
 - See the [SDOH] guidance page for how this profile can used to represent SDOH assessments.<sup>1</sup>
