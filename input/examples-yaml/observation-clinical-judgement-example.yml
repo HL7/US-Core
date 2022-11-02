@@ -1,0 +1,36 @@
+resourceType: Observation
+id: clinical-judgement-example
+meta:
+    extension:
+        - 
+            url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
+            valueString: Clinical Judgment Observation Example
+        - 
+            url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
+            valueMarkdown: 'This *US Core Observation Clinical Judgment Profile* is a simple SDOH determination which is not based on any formal assessment tool or survey.'
+    profile:
+        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-judgment'
+status: final
+category:
+    - 
+        coding:
+            - 
+                system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-tags'
+                code: sdoh
+                display: SDOH
+    # - 
+    #     coding:
+    #         - 
+    #             system: 'http://terminology.hl7.org/CodeSystem/observation-category'
+    #             code: social-history
+    #             display: Social History
+code:
+    coding:
+        - 
+            system: 'http://snomed.info/sct'
+            code: '160695008'
+            display: Transport too expensive
+subject:
+    reference: Patient/example
+effectiveDateTime: '2021-05-10T21:56:54.671Z'
+valueBoolean: true

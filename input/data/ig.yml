@@ -430,6 +430,22 @@ definition:
     exampleBoolean: false
     name: US Core MedicationRequest Profile
   - reference:
+      reference: StructureDefinition/us-core-observation-clinical-judgment
+    description: The U.S. Core Observation Clinical Judgment Profile meets the requirements
+      of the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments and v3
+      Health Assessments. To promote interoperability and adoption through common
+      implementation, this profile sets minimum expectations for the Observation resource
+      to record, search, and retrieve observations that represent an individual's
+      clinical judgment about a patient's health status. For example, a social history
+      status such as education or food insecurity or an assessment of the patient's
+      cognitive, functional, or disability status. It may or may not be associated
+      with a formal survey, screening, or assessment tool. It identifies which core
+      elements, extensions, vocabularies, and value sets **SHALL** be present in the
+      resource when using this profile. It provides the floor for standards development
+      for specific use cases.
+    exampleBoolean: false
+    name: US Core Observation Clinical Judgment Profile
+  - reference:
       reference: StructureDefinition/us-core-observation-clinical-test
     description: "The US Core Observation Clinical Test Result Profile is based upon\
       \ the core FHIR Observation Resource, and, along with the US Core DiagnosticReport\
@@ -546,19 +562,6 @@ definition:
       standards development for specific use cases.
     exampleBoolean: false
     name: US Core Observation Sexual Orientation Profile
-  - reference:
-      reference: StructureDefinition/us-core-observation-social-history
-    description: "The US Core Observation Social History Profile meets the U.S. Core\
-      \ Data for Interoperability (USCDI) v2 \u2018SDOH Assessments\u2019 requirements.\
-      \ To promote interoperability and adoption through common implementation, this\
-      \ profile sets minimum expectations for the Observation resource to record,\
-      \ search, and fetch retrieve observations that represent simple observations\
-      \ made by an individual about a patient's social history status such as education,\
-      \ food insecurity, etc. It identifies which core elements, extensions, vocabularies,\
-      \ and value sets **SHALL** be present in the resource when using this profile.\
-      \ It provides the floor for standards development for specific use cases."
-    exampleBoolean: false
-    name: US Core Observation Social History Profile
   - reference:
       reference: StructureDefinition/us-core-observation-survey
     description: "To promote interoperability and adoption through common implementation,\
@@ -2660,6 +2663,12 @@ definition:
     name: BUN Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
+      reference: Observation/clinical-judgement-example
+    description: This *US Core Observation Clinical Judgment Profile* is a simple
+      SDOH determination which is not based on any formal assessment tool or survey.
+    name: Clinical Judgment Observation Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-judgment
+  - reference:
       reference: Observation/erythrocytes
     description: This is a erythrocytes example for the *US Core Observation Lab Profile*.
     name: Erythrocytes Example
@@ -2866,12 +2875,6 @@ definition:
       Sexual Orientation Profile*.
     name: Sexual Orientation Observation Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation
-  - reference:
-      reference: Observation/socialhistory-assessment-example
-    description: This is a Social History Assessment Example for the *US Core Observation
-      Social History Profile*.
-    name: Social History Assessment Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-social-history
   - reference:
       reference: Observation/some-day-smoker
     description: This is a some day smoker example for the *US Core Smokingstatus
