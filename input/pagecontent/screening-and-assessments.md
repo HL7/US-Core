@@ -1,3 +1,5 @@
+This page is new content for US Core Version 6.0.0
+{:.new-content}
 
 This US Core Screenings and Assessments Guidance page outlines how to implement the Office of the National Coordinator (ONC) United States Core Data for Interoperability (USCDI) v3 data class Health Status and Assessments. In US Core 5.0.1, this guidance page focused exclusively on Social Determinant of Health (SDOH) and the data elements: SDOH Assessments, SDOH Goals, SDOH Interventions, and SDOH Problems/Health Concerns. The new USCDI v3 elements include:
 - Functional Status
