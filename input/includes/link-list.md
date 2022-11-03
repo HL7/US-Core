@@ -351,3 +351,6 @@
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/index.html
 [National Drug Codes (NDC)]: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
 [Occupational Data for Health (ODH) Usual Work Profile]: http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork
+[ImplementationGuide]: {{site.data.fhir.path}}implementationguide.html
+[US Core ImplementationGuide Resource]: ig_template.html
+[FHIR profiles and resources]: {{site.data.fhir.path}}validation.html

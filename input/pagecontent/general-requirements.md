@@ -55,6 +55,11 @@ To support a US Core Profile, a server:
       }
       ~~~
 
+##### Global Profiles
+
+There are no global profiles defined for US Core.
+
+{% include globals-table.xhtml %}
 
 #### Profile Support + Interaction Support
 
