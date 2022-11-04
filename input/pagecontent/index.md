@@ -1,3 +1,5 @@
+{% capture cross-version-analysis %}{% include cross-version-analysis.xhtml %}{% endcapture %}
+{% capture ip-statement %}{% include ip-statements.xhtml %}{% endcapture %}
 
 Where possible, new and updated content are highlighted with green text and background
 {:.new-content}
@@ -7,10 +9,9 @@ Key updates and detailed changes between this and prior versions are available i
 
 ### Introduction
 
-
-The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. By establishing the “floor” of standards to promote interoperability and adoption through common implementation, it allows for further standards development evolution for specific uses cases. There are two different ways to implement US Core:
+The US Core Implementation Guide is based on [FHIR Version R4]. {{ cross-version-analysis | remove: '<p>' | remove: '</p>'}} It defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. By establishing the “floor” of standards to promote interoperability and adoption through common implementation, it allows for further standards development evolution for specific uses cases. There are two different ways to implement US Core:
 1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information.
-1. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
+2. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
 
 For a detailed description between these different usages of US Core, see the [Conformance Requirements] page.
 
@@ -19,7 +20,6 @@ US Core has benefitted from testing and guidance by the Argonaut Project Team to
 ### Background
 
 The US Core requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the [Office of the National Coordinator for Health Information Technology (ONC)] sponsored Data Access Framework (DAF) project. The Argonaut Data Query Implementation Guide superseded DAF and documented security and authorization and the querying of the [2015 Edition Common Clinical Data Set (CCDS)] and static documents.  US Core descended directly from the Argonaut guide to support FHIR Version STU3 and eventually FHIR R4 and The ONC [U.S. Core Data for Interoperability (USCDI)].
-
 
 ### How to read this Guide
 
@@ -82,8 +82,12 @@ See the FHIR specification for details on [FHIR RESTful Search API] and the [SMA
 
 ----
 
+### Acknowledgements
+
 Primary Authors: Brett Marquard, Eric Haas, Gay Dolin
 
-Secondary Authors: Grahame Grieve, Nagesh Bashyam
+### Copyrights
+
+{{ ip-statement | remove: '<p>' | remove: '</p>'}}
 
 {% include link-list.md %}

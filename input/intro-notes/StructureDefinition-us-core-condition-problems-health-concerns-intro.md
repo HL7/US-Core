@@ -3,8 +3,8 @@
 
 The following are example usage scenarios for the this profile:
 
--   Query for a Patient’s current or historical problems and health concerns
--   [Record or update] a Patient’s problems and health concerns
+-   Query for a Patient's current or historical problems and health concerns
+-   [Record or update] a Patient's problems and health concerns
 
 ### Mandatory and Must Support Data Elements
 

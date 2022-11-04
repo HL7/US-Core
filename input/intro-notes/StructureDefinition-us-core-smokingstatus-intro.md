@@ -14,7 +14,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Each Observation must have:**
 
 1.  a status
-1.  a category code of ‘social-history’
+1.  a category code of "social-history"
 1.  a code for smoking observation
 1.  a patient
 1.  when the observation occurred

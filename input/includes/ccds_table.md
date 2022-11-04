@@ -18,7 +18,7 @@ USCDI Data Element | US Core Profile | FHIR Resource
 (15) |  Procedures | [US Core Procedure Profile] | Procedure
 (16) |  Care team member(s) | [US Core CareTeam Profile] | CareTeam
 (17) |  Immunizations | [US Core Immunization Profile] | Immunization
-(18) |  Unique device identifier(s) for a patient’s implantable device(s) | [US Core Implantable Device Profile] | Device
+(18) |  Unique device identifier(s) for a patient's implantable device(s) | [US Core Implantable Device Profile] | Device
 (19) |  Assessment and plan of treatment | [US Core CarePlan Profile] | CarePlan
 (20) |  Goals | [US Core Goal Profile] | Goal
 (21) |  Health concerns | [US Core Condition Problems and Health Concerns Profile] | Condition
