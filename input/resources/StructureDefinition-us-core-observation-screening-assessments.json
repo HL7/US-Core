@@ -63,7 +63,7 @@
                 "id": "Observation.category:survey",
                 "path": "Observation.category",
                 "sliceName": "survey",
-                "requirements": "Used for filtering what that this is an observation derived from a survey/questionnaire.",
+                "requirements": "Used for filtering what that this is an observation derived from a survey, assessment, or screening.",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -77,11 +77,12 @@
                 "mustSupport": true
             },
             {
-                "id": "Observation.category:domain",
+                "id": "Observation.category:uscore",
                 "path": "Observation.category",
-                "sliceName": "domain",
-                "requirements": "Used for filtering whether this is an observation derived from an SDOH, Functional Status, Disability Status,  \u2022Mental/Cognitive Status or other screening or assessment.",
-                "min": 1,
+                "definition": "Used to classify the context of a survey, screening, or assessment.",
+                "sliceName": "uscore",
+                "requirements": "Used to assist with indexing and searching for appropriate instances.",
+                "max": "1",
                 "binding": {
                     "strength": "required",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-assessment-category"

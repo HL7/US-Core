@@ -92,6 +92,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/us-core-category"
+        },
+        "description": "Codes used in US Core *category* profiles. The are typically used when there is a need for categorization or workflow hints.",
+        "exampleBoolean": false,
+        "name": "US Core Category Codes"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/us-core-documentreference-category"
         },
         "description": "The US Core DocumentReferences Type Code System is a 'starter set' of categories supported for fetching and storing DocumentReference Resources.",
@@ -113,14 +121,6 @@
         "description": "Set of codes that are needed for implementation of the US-Core Provenance Profile. These codes are used as extensions to the FHIR value sets.",
         "exampleBoolean": false,
         "name": "US Core Provenance Participant Type Extension Codes"
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/us-core-tags"
-        },
-        "description": "Codes used in US Core `meta.tag` and 'category' profiles. The are typically used when there is a need for categorization or workflow hints.",
-        "exampleBoolean": false,
-        "name": "US Core Tags CodeSystem"
       },
       {
         "reference": {
@@ -492,14 +492,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-questionnaireresponse"
-        },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the QuestionnaireResponse resource to record, search, and fetch retrieve captures the responses to form/survey and assessment tools such as the *Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey*.   This profile is based on the [Structured Data Capture (SDC) Questionnaire Response Profile](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaireresponse.html) and identifies the *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
-        "exampleBoolean": false,
-        "name": "US Core QuestionnaireResponse Profile"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/us-core-race"
         },
         "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.",
@@ -609,6 +601,14 @@
         "description": "This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47). This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,   and a 3 character code if a 2 character code does not exist. It points back to [RFC 5646](https://tools.ietf.org/html/rfc5646), however only the language codes are required, all other elements are optional.",
         "exampleBoolean": false,
         "name": "Language codes with language and optionally a region modifier"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-assessment-category"
+        },
+        "description": "Used to classify the context of a survey, screening or assessment tools and may be used to assist with indexing and searching for appropriate instances.",
+        "exampleBoolean": false,
+        "name": "US Core Assessment Category"
       },
       {
         "reference": {
@@ -825,14 +825,6 @@
         "description": "This value set includes all LOINC values whose CLASSTYPE is SURVEY in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)",
         "exampleBoolean": false,
         "name": "US Core Survey Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-tags"
-        },
-        "description": "Used to tag patient submitted resources for writing and searching from EHRs",
-        "exampleBoolean": false,
-        "name": "US Core Tags ValueSet"
       },
       {
         "reference": {
@@ -1580,54 +1572,6 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/us-core-questionnaireresponse-authored"
-        },
-        "description": "**When the questionnaire response was last changed**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
-        "exampleBoolean": false,
-        "name": "USCoreQuestionnaireresponseAuthored"
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/us-core-questionnaireresponse-id"
-        },
-        "description": "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
-        "exampleBoolean": false,
-        "name": "USCoreQuestionnaireresponseId"
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/us-core-questionnaireresponse-patient"
-        },
-        "description": "**The patient that is the subject of the questionnaire response**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
-        "exampleBoolean": false,
-        "name": "USCoreQuestionnaireresponsePatient"
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/us-core-questionnaireresponse-questionnaire"
-        },
-        "description": "**The questionnaire the answers are provided for**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
-        "exampleBoolean": false,
-        "name": "USCoreQuestionnaireresponseQuestionnaire"
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/us-core-questionnaireresponse-status"
-        },
-        "description": "**The status of the questionnaire response**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
-        "exampleBoolean": false,
-        "name": "USCoreQuestionnaireresponseStatus"
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/us-core-questionnaireresponse-tag"
-        },
-        "description": "**Tags applied to this resource**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
-        "exampleBoolean": false,
-        "name": "USCoreQuestionnaireresponseTag"
-      },
-      {
-        "reference": {
           "reference": "SearchParameter/us-core-race"
         },
         "description": "Returns patients with a race extension matching the specified code.",
@@ -2256,7 +2200,7 @@
         },
         "description": "'An example of an SDC QuestionnaireResponse that represents questions and selected answers from the Accountable health communities (AHC) health-related social needs screening (HRSN) tool in LOINC (code  96777-8). The example is generated using the LHC-Forms SDC Questionnaire App.'",
         "name": "AHC HRSN Screening Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -2264,7 +2208,7 @@
         },
         "description": "'An example of an US Core QuestionnaireResponse that represents questions and selected answers from the PRAPARE questionnaire represented in LOINC (code 93025-5). The example is generated using the LHC-Forms SDC Questionnaire App.'",
         "name": "PRAPARE Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -2272,7 +2216,7 @@
         },
         "description": "'This example of a US Core QuestionnaireResponse illustrate using Questionnaire as a *stand alone* resource. It does not point to the definition of the questions in  a FHIR Questionnaire, but represents the answers from a non FHIR survey instrument (in this case a pdf).'",
         "name": "Glascow Coma Score Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -2280,7 +2224,7 @@
         },
         "description": "'An example of an SDC QuestionnaireResponse that represents questions and selected answers from the Hunger Vital Sign Example questionnaire represented in LOINC (code 88122-7). The example is generated using the LHC-Forms SDC Questionnaire App.'",
         "name": "Hunger Vital Sign [HVS] Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+        "exampleBoolean": true
       },
       {
         "reference": {

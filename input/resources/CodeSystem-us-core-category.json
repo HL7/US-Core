@@ -1,0 +1,31 @@
+{
+    "resourceType": "CodeSystem",
+    "id": "us-core-category",
+    "url": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+    "name": "USCoreCategory",
+    "title": "US Core Category",
+    "status": "active",
+    "experimental": false,
+    "date": "2022-04-20",
+    "description": "Codes used in US Core *category* profiles. The are typically used when there is a need for categorization or workflow hints.",
+    "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
+    "caseSensitive": true,
+    "content": "complete",
+    "concept": [
+        {
+            "code": "sdoh",
+            "display": "SDOH",
+            "definition": "Social Determinants of Health category"
+        },
+        {
+            "code": "functional-status",
+            "display": "Functional Status",
+            "definition": "Functional Status category"
+        },
+        {
+            "code": "disability-status",
+            "display": "Disability Status",
+            "definition": "Disability Status category"
+        }
+    ]
+}
