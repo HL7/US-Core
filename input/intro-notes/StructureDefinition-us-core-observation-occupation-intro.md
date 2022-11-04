@@ -21,7 +21,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each Observation must support:**
 
-1. a category code of ‘social-history’
+1. a category code of "social-history"
 2. a code for job history industry
 3. the industry code or text 
 

@@ -273,8 +273,15 @@ differential:
         - 
             id: Patient.deceased[x]
             path: Patient.deceased[x]
-            mustSupport: true
-
+            # the element is not must support so can not limit to dateTime - this is a USCDI Requirement
+            # See notes
+            # type:
+            #     - extension:
+            #         - url: >-
+            #             http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+            #           valueBoolean: true
+            #       code: dateTime
+            #     - code: boolean
         - 
             id: Patient.address
             path: Patient.address

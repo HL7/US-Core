@@ -16,7 +16,7 @@ property:
 - code: status
   uri: http://hl7.org/fhir/concept-properties#status
   description: A property that indicates the status of the concept. One of active,
-    experimental, deprecated,        retired
+    experimental, deprecated, retired
   type: code
 concept:
 - extension:
@@ -28,11 +28,11 @@ concept:
   code: problem
   display: Problem
   definition: "The patients problems as identified by the provider(s). Items on the
-    provider\u2019s problem list"
+    provider's problem list"
   property:
   - code: status
     valueCode: deprecated
 - code: health-concern
   display: Health Concern
   definition: "Additional health concerns from other stakeholders which are outside
-    the provider\u2019s problem list."
+    the provider's problem list."
