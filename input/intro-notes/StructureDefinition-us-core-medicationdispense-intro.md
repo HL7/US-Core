@@ -35,7 +35,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
-* The Fill status is often captured at the pharmacy and not communicated back to EHR/HIT. However, to meet ONC’s USCDI requirements, the HIT/EHR system must support this profile.
+* The Fill status is often captured at the pharmacy and not communicated back to EHR/HIT. However, to meet ONC's USCDI requirements, the HIT/EHR system must support this profile.
 {% include representing-meds.md %}
 
 {% include link-list.md %}

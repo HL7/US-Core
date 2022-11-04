@@ -8,14 +8,14 @@
 This ballot addresses the following issues:
 - Adds [United States Core Data for Interoperability (USCDI) V3](https://www.healthit.gov/isa/sites/isa/files/2022-07/USCDI-Version-3-July-2022-Final.pdf) updates that the Office of the National Coordinator (ONC) published in July of 2021 with these new Data Elements and Classes:
 
-  - **Applied**: [Health Insurance Information](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual’s insurance coverage for health care.
+  - **Applied**: [Health Insurance Information](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual's insurance coverage for health care.
   - **Pending**: The SDOH Assessments documentation has been fully revised and updated to cover [Health Status/Assessments Data Elements](http://hl7.org/fhir/us/core/2022Jan/screening-and-assessments.html] to document how to use US Core to represent and access health status and assessments including: *Functional Status*, *Disability Status*,and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
   - **Applied**: [US Core Observation Pregnancy Status Profile](StructureDefinition-us-core-observation-pregnancystatus.html) and [US Core Observation Pregnancy Intent Profile](StructureDefinition-us-core-observation-pregnancyintent.html) have been added to specifically address pregnancy status.
   - **Pending**: **Laboratory:** Specimen Type, Result Status, and new terminology requirements for coded and numeric results. [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-specimen.html).
   - **Pending**: **Medications:** Dose, Dose Unit of Measure, Indication, and Fill Status [See Changes Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationdispense.html)
   - **Pending**: **Patient Demographics/Information**
       - Date of Death, Tribal Affiliation, and Change Birth Sex to Sex [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
-      - Related Person’s Name and Related Person’s Relationship [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-relatedperson.html)
+      - Related Person's Name and Related Person's Relationship [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-relatedperson.html)
       - Occupation and Occupation Industry [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-occupation.html)
   - **Pending**: **Procedures:** Reason for Referral [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html)
 - Continued efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
@@ -833,7 +833,7 @@ These sections as well as several other clarifications, corrections and technica
 #### Changes:
  In order meet the proposed ONC U.S. Core Data for Interoperability (USCDI) regulatory requirements for access to patient data, this STU Update for Comment Version of the US Core Implementation Guide has added new content. The Argonaut Project Team has spent the last several months reviewing, testing and providing invaluable feedback on these and other topics including most notably:
 1) A US Core Provenance Profile and guidance on fetching Provenance for patient data.
-2) Guidance on fetching a patient’s medications
+2) Guidance on fetching a patient's medications
 3) A US Core spO2 by Pulse Oximetry profile
 4) Recasting the US Core Device profile into a US Core Implantable Device profile
 5) Making server search requirements less opaque and requiring search by multiple statuses.

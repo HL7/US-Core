@@ -126,6 +126,19 @@
             "valueCode": "F"
         },
         {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+            "extension": [
+                {
+                    "url": "sex",
+                    "valueCode": "Female (finding)"
+                },
+                {
+                    "url": "whenAsserted",
+                    "valueDateTime": "2022-11-03"
+                }
+            ]
+        },
+        {
             "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity",
             "valueCodeableConcept": {
                 "coding": [

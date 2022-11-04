@@ -21,13 +21,13 @@ There are two different ways to implement US Core:
 
 #### Profile Only Support
 
-Systems may deploy, and support, one or more US Core Profiles to represent clinical information. They are using the profile’s content model without any expectations to implement the US Core interactions.
+Systems may deploy, and support, one or more US Core Profiles to represent clinical information. They are using the profile's content model without any expectations to implement the US Core interactions.
 
 An example scenario would be a server using only the [FHIR Bulk Data Access (Flat FHIR)] approach to export resources needed for the US Core Data for Interoperability.  For this server, the US Core interactions are unnecessary.
 
 To support a US Core Profile, a server:
 
-- **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition.
+- **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.
 - **SHOULD** declare support for a US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
     - the US Core Profile's official or "canonical" URL can be found on each US Core Profile page
 
@@ -70,7 +70,7 @@ A server that certifies to the [21st Century Cures Act for accessing patient dat
 
 To claim conformance to a US Core Profile a server:
 
-- **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile’s StructureDefinition.
+- **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.
 - **SHALL** declare conformance with the [US Core Server Capability Statement] by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`
 
 - **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.

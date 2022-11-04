@@ -91,7 +91,7 @@ See the [US Core Server Capability Statement] for a complete list of supported R
 
 #### De-duplication of Data
 
-Medications may be duplicated in a medication list when multiple sources of data are used to generate the list.  To provide a list of a patient’s medications, it may be necessary to “de-duplicate” the medications on the list. The deduplication activity **MAY** be provided by the server but **SHOULD** be provided by the client.
+Medications may be duplicated in a medication list when multiple sources of data are used to generate the list.  To provide a list of a patient's medications, it may be necessary to “de-duplicate” the medications on the list. The deduplication activity **MAY** be provided by the server but **SHOULD** be provided by the client.
 
 This specification does not specify deduplication best practices, however systems can consider the following approaches:
 

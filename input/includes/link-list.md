@@ -321,7 +321,7 @@
 [US Core Observation SDOH Assessment Profile]: StructureDefinition-us-core-observation-sdoh-assessment.html
 [US Core QuestionnaireResponse Profile]: StructureDefinition-us-core-questionnaireresponse.html
 [US Core Observation Clinical Judgment Profile]: StructureDefinition-us-core-observation-clinical-judgment.html
-[Protocol for Responding to and Assessing PUS Core Social History Assessment Observation Profileatients’ Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
+[Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey]: https://www.nachc.org/research-and-data/prapare/
 [Maturity Level]: {{site.data.fhir.path}}versions.html#maturity
 [Screening and Assessments]: screening-and-assessments.html
 [Social Determinants of Health (SDOH)]: screening-and-assessments.html
@@ -352,5 +352,5 @@
 [National Drug Codes (NDC)]: https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory
 [Occupational Data for Health (ODH) Usual Work Profile]: http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork
 [ImplementationGuide]: {{site.data.fhir.path}}implementationguide.html
-[US Core ImplementationGuide Resource]: ig_template.html
-[FHIR profiles and resources]: {{site.data.fhir.path}}validation.html
+[US Core ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.core.html
+[validating profiles and resources]: {{site.data.fhir.path}}validation.html
