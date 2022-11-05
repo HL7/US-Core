@@ -81,7 +81,7 @@ definition:
     description: Codes used in US Core *category* profiles. The are typically used
       when there is a need for categorization or workflow hints.
     exampleBoolean: false
-    name: US Core Category Codes
+    name: US Core Category
   - reference:
       reference: CodeSystem/us-core-documentreference-category
     description: The US Core DocumentReferences Type Code System is a 'starter set'
@@ -799,8 +799,7 @@ definition:
   - reference:
       reference: ValueSet/us-core-assessment-category
     description: Used to classify the context of a survey, screening or assessment
-      tools and may be used to assist with indexing and searching for appropriate
-      instances.
+      and may be used to assist with indexing and searching for appropriate instances.
     exampleBoolean: false
     name: US Core Assessment Category
   - reference:
