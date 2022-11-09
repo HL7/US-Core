@@ -7,11 +7,11 @@ This US Core Screenings and Assessments Guidance page outlines how to implement 
 - Mental/Cognitive Status
 
 
-This page documents how US Core Profiles can be used to represent these elements and the SDOH elements.{:.new-content}
+This page documents how US Core Profiles can be used to represent these elements and the SDOH elements.
 
 ### Purpose and Intent
 
-Screenings and Assessments aren't unique to social needs, and this page reflects the variety of instruments clinical systems may support. US Core Profiles along with a defined set of FHIR RESTful interactions are defined here, and formally in the profiles, to represent and access functional status, disability status, mental/cognitive Status, SDOH patient data.
+Screenings and Assessments aren't unique to social needs, and this page reflects the variety of instruments clinical systems may support. US Core Profiles along with a defined set of FHIR RESTful interactions are defined here, and formally in the profiles, to represent and access functional status, disability status, mental/cognitive status, and SDOH patient data.
 This is in contrast to the [SDOH Clinical Care](http://hl7.org/fhir/us/sdoh-clinicalcare/) HL7 Implementation Guide. The SDOH Clinical Care guide was developed by the [Gravity Project](https://hl7.org/gravity) and documents the orchestration of SDOH data capture and related interventions and how it is represented using FHIR. US Core Profiles span across use cases and thus are less constrained, but they form the backbone for the Clinical Care Profiles. Many of the additions to US Core Profiles to meet the SDOH data element requirements are based on the efforts by the Gravity led project. In the following sections the interrelation between the SDOH elements and how US Core represents them is summarized.
 
 
@@ -19,10 +19,9 @@ This is in contrast to the [SDOH Clinical Care](http://hl7.org/fhir/us/sdoh-clin
 
 The figure below shows how screenings, assessments, and referrals (requests) relate to provide the services required by a patient.
 
-- **Screening and Assessments**: Prior to delivering appropriate clinical care an accurate [Screening and Assessment](#screening-and-assessments) is necessary. US Core defines three observations to support this process:
-	- US Core Screening and Assessment Component Observation - individual question and answer.
-	- US Core Screening and Assessment Panel Observation - panel of screening and assessment components that were collected together.
-	- US Core Clinical Judgment Observation - clinician decision to document a specific item - “patient has problems with housing". Note, this observation is only appropriate when the judgment isn't appropriate on the list of Problems or Health Concerns.
+- **Screening and Assessments**: Prior to delivering appropriate clinical care an accurate [Screening and Assessment](#screening-and-assessments) is necessary. US Core defines two observations to support this process:
+	- [US Core Observation Screening and Assessments Profile] - represents the questions and responses to screening and assessment tools. It can be used to represent a single response, multiple responses, and multi-select “check all that apply” type questions. 
+	- [US Core Observation Clinical Judgment Profile] - a clinician decision to document a specific item - “patient has problems with housing". Note, this observation is only appropriate when the judgment isn't appropriate on the list of Problems or Health Concerns.
 - **Problems/Health Concerns**: Identifying a Health-related condition (for example, homelessness), Disability concern, or Functional concern, is represented by the [US Core Condition Problems and Health Concerns Profile]. A category code of `sdoh` can be assigned by the server to support discovery of Social Determinants of Health  Problems/Health Concerns.
 - **Interventions**:  Services offered to a patient to address problems/health concerns are represented by the [US Core ServiceRequest Profile].  When the ServiceRequest is for an identified Social Determinants of Health (for example, referral to transportation support programs) the ServiceRequest.category is set to `sdoh`. In addition, the [US Core Procedure Profile] can be used to record a completed service or intervention.
 - **Goals**: Identifying and defining a future desired condition or change in condition related to an SDOH risk (for example, Has adequate quality meals and snacks) is represented by [US Core Goal Profile]
@@ -33,20 +32,15 @@ The figure below shows how screenings, assessments, and referrals (requests) rel
 
 Screening and Assessments can represent a simple observation or a structured evaluation to identify a specific problem or health concern. The guidance here was developed after reviewing several functional status, disability status, mental/cognitive status, and SDOH screening and assessment tools.
 
-US Core defines two profiles to support Assessment Screening tools:
+US Core defines a single [US Core Observation Screening and Assessments Profile] to support questions and responses to screening and assessment tools. It can be used to represent a single response, multiple responses, and multi-select “check all that apply” type questions. 
 
-1. Component Observation*: <-- insert link to updated US Core Screening and Assessment Component Observation
-1. Panel Observation : <-- insert link to updated US Core Screening and Assessment Panel Observation
+US Core Servers **SHALL** support the [US Core Observation Screening and Assessments Profile].
 
-US Core Servers **SHALL** support:
-- ADD NEW US Core Screening and Assessment Component Observation
-- ADD NEW US Core Screening and Assessment Panel Observation
+When an Assessment Screening tool includes a total score it **SHALL** be included as a separate Observation ([US Core Observation Screening and Assessments Profile]).
 
-When an Assessment Screening tool includes a total score it **SHALL** be included as a separate Component Observation.
+Additionally US Core defines a [US Core Observation Clinical Judgment Profile] to support a simple assertion. This observation is optional since some systems always record Judgment as a Problem or Health Concern. When a Problem or Health Concern is recorded based on an Assessment Screening tool Systems **SHOULD** associate it with the Observation ([US Core Observation Screening and Assessments Profile] reference in (Condition.evidence)]
 
-Additionally US Core defines a ADD NEW US Core Clinical Judgment Observation to support a simple assertion. This observation is optional since some systems always record Judgment as a Problem or Health Concern. When a Problem or Health Concern is recorded based on an Assessment Screening tool Systems **SHOULD** associated it with the Panel Observation (Condition.evidence)
-
- This Observation can contribute to the identification of future Problems or Health Concerns and can support Service Requests or Procedures.
+ The Judgment Observation can contribute to the identification of future Problems or Health Concerns and can support Service Requests or Procedures.
 
 Note that use of the QuestionnaireResponse resource is no longer recommended for Assessment Screening tools.
 
@@ -54,40 +48,30 @@ Note that use of the QuestionnaireResponse resource is no longer recommended for
 {:.bg-info}
 
 
-#### Assessment Screenings Using Observations
+#### Screening and Assessments Using Observations
 
-**NEEDS TO BE REWRITTEN ONCE WE FINALIZE PROFilE NAMES** To meets the USCDI v2+ requirements for SDOH Assessments, US Core defines the [US Core Observation Survey Profile] and the [US Core Observation SDOH Assessment Profile].  The [US Core Observation Survey Profile] is defined to record responses from a survey or a questionnaire for *any* context including SDOH.  The [US Core Observation SDOH Assessment Profile] is derived from the [US Core Observation Survey Profile] and constrains the category and terminology to SDOH. To keep related data together and preserve the survey structure, these profiles can be used to represent multi-question "panels" of responses, individual responses (including multi-select or "check all that apply" responses).  The figure below illustrates the relationship between the Observation survey "panel" and the individual Observations survey responses. Each box represents an Observation using either profile:
+To meet the requirements for USCDI v3 data class Health Status and Assessments, and SDOH Assessments, US Core defines the [US Core Observation Screening and Assessments Profile].
 
-{% include img-med.html img="uscore-survey-structure.svg" caption="Relationship Between Survey Response Observations" %}
+The [US Core Observation Screening and Assessments Profile] is defined to record responses from a screening or assessments for *any* context including SDOH. To keep related data together and preserve the survey structure, the profile can be used to represent multi-question "panels" of responses, individual responses (including multi-select or "check all that apply" responses).  The figure below illustrates the relationship between the Observation screening and assessments "panel" and the individual screening and assessment Observations. Each box represents an Observation:
 
-Note that the panels can be nested to create additional groupings of responses.  See the [US Core Observation Survey Profile] profile page for detailed documentation on how the observations are linked, examples, and search requirements.
+{% include img-med.html img="uscore-observation-assessment-structure.svg" caption="Relationship Between Screening and Assessment Observations" %}
 
-The Observations may be extracted from QuestionnaireResponse. The [SDOH Clinical Care] guide define how SDOH data captured in a QuestionnaireResponse can be extracted and used to create or update Observations or other FHIR resources.
-{:.bg-info}
+Note that the panels can be nested to create additional groupings of responses.  See the [US Core Observation Screening and Assessments Profile] profile page for detailed documentation on how the observations are linked, examples, and search requirements.
 
-#### Assessment Screenings Using QuestionnaireResponse
+
+#### Screening and Assessments Using QuestionnaireResponse - Not Recommended
 
 For recording and exchanging Assessment Screening tools, US Core 5.0.1 required support for Observation, and recommended support for QuestionnaireResponse. 
 
 Promoting two different ways to exchange a common set of data forces Clients to support both, and complicates future FHIR Write efforts.
 
-Additional compliexities when both are allowed:
+Additional compliexities when both are used:
 - Who is responsible for transforming from QuestionnaireResponse to Observations if a server only supports Observations?
 - How does a Client query for individual questions if a server only stores in QuestionnaireResponse? (FHIR Core design doesn't support individual question query into QuestionnaireResponse)
 - How do we avoid clinical safety issues with clinical information spread across two resources?
 
-US Core 6.0.0 avoids these compliexities by only requiring Observation support.
+US Core 6.0.0 avoids these compliexities by only requiring [US Core Observation Screening and Assessments Profile] and no longer promotes support for QuestionnaireResponse.
  
-
-
-Remove below...
-Survey instruments may be represented by a Questionnaire including a FHIR Questionnaire. A FHIR QuestionnaireResponse captures the responses to the survey and may be stand-alone or may point to the definition of the questions in a questionnaire (typically a FHIR Questionnaire). The US Core QuestionnaireResponse Profile which is based on the [Structured Data Capture (SDC) Questionnaire Response Profile] is  used to capture, exchange and persist the response data. It represents the response data to the individual questions on the form and is ordered and grouped corresponding to the structure and grouping of the Questionnaire being responded to.  Although QuestionnaireResponse can be searched using the standard FHIR RESTful API search parameters, individual responses are not directly searchable in QuestionnaireResponse. In order to search directly for and individual responses, they must be “parsed” into a searchable form - i.e. to a local FHIR or non-FHIR data store such as a database or FHIR Observations.
-
-The basic workflow for the creation, discovery and retrieval and data-extraction of FHIR Questionnaire and QuestionnaireResponse is thoroughly documented in the [Structured Data Capture (SDC)] specification.
-{:.bg-info}
-
-See the [US Core QuestionnaireResponse Profile] profile page for detailed documentation, examples and search requirements.
-
 #### Searching for SDOH Patient Data
 
 Below is a simple example of FHIR RESTful search transaction on Observation to access a patient's SDOH assessment data
