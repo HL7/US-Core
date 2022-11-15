@@ -69,7 +69,7 @@ This ballot addresses the following issues:
 45. **Resolved - change required:** $docref should accept multiple coding parameters instead of CodeableConcept for type parameter [FHIR-37894](https://jira.hl7.org/browse/FHIR-37894) [See Changes Here](#)
 46. **Resolved - change required:** Add Conformance expectation of  SHOULD to resolve for server Capability [FHIR-37901](https://jira.hl7.org/browse/FHIR-37901) [See Changes Here](#)
 47. **Triaged:** Change Condition patient + category search to SHALL support [FHIR-37918](https://jira.hl7.org/browse/FHIR-37918) [See Changes Here](#)
-48. **Submitted:** Typo in Observation SDOH profile [FHIR-37928](https://jira.hl7.org/browse/FHIR-37928) [See Changes Here](#)
+48. **Applied:** Typo in Observation SDOH profile [FHIR-37928](https://jira.hl7.org/browse/FHIR-37928) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-screening-assessments.html)
 49. **Submitted:** Typo in Condition Problems and Health Concerns search example [FHIR-37929](https://jira.hl7.org/browse/FHIR-37929) [See Changes Here](#)
 50. **Submitted:** Diagnostic Report Laboratory Codes LOINC CLASSTYPE value should be ""1"" [FHIR-37933](https://jira.hl7.org/browse/FHIR-37933) [See Changes Here](#)
 51. **Submitted:** SNOMED URI should be the US Edition URI - or at least call out US Edition in addition to the international SNOMED edition [FHIR-38190](https://jira.hl7.org/browse/FHIR-38190) [See Changes Here](#)
