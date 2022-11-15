@@ -25,7 +25,7 @@ Systems **SHALL** support, at *minimum*, these three DiagnosticReport categories
   1. [Pathology (LP7839-6)]
   1. [Radiology (LP29684-5)]
 
-A DiagnostisReport category query allows a Client to retrieve multiple documents in a single query (see [Support Requirements](#support-requirements)).
+A DiagnosticReport category query allows a Client to retrieve multiple documents in a single query (see [Support Requirements](#support-requirements)).
 
 The Argonaut project team provided this initial list to HL7 after surveying the participants in Argonaut and the US Veterans Administration (VA). They represent the *minimum* set a system must support to claim conformance to this guide. In addition, systems are encouraged to support other common notes types such as:
 
