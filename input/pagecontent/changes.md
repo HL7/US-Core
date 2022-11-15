@@ -49,7 +49,7 @@ This ballot addresses the following issues:
 25. **Resolved - change required:** Expectations for Observation.value[x] in blood pressure and pulse oximetry profiles are unclear [FHIR-37358](https://jira.hl7.org/browse/FHIR-37358) [See Changes Here](#)
 26. **Triaged:** Immunization.vaccineCode code system URI [FHIR-37400](https://jira.hl7.org/browse/FHIR-37400) [See Changes Here](#)
 27. **Submitted:** Broken link [FHIR-37445](https://jira.hl7.org/browse/FHIR-37445) [See Changes Here](#)
-28. **Submitted:** Typos on SDOH Guidance Page [FHIR-37469](https://jira.hl7.org/browse/FHIR-37469) [See Changes Here](#)
+28. **Applied:** Typos on SDOH Guidance Page [FHIR-37469](https://jira.hl7.org/browse/FHIR-37469) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/screening-and-assessments.html)
 29. **Submitted:** Duplicate us-core-ethnicity [FHIR-37488](https://jira.hl7.org/browse/FHIR-37488) [See Changes Here](#)
 30. **Triaged:** US Core Needs to include a Profile on Composition [FHIR-37491](https://jira.hl7.org/browse/FHIR-37491) [See Changes Here](#)
 31. **Resolved - change required:** Add 10-digit pattern value for Practitioner and Organization identifier:NPI slices [FHIR-37498](https://jira.hl7.org/browse/FHIR-37498) [See Changes Here](#)

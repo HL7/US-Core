@@ -184,7 +184,9 @@
 [Terminology Binding Extensible]: http://hl7.org/fhir/R4/terminologies.html#extensible
 [U.S. Core Data for Interoperability (USCDI) v1]: https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf
 [U.S. Core Data for Interoperability (USCDI) v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2
+[USCDI v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2
 [U.S. Core Data for Interoperability (USCDI) v3]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v3
+[USCDI v3]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v3
 [U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi
 [UCUM Codes value set]: {{site.data.fhir.path}}valueset-ucum-units.html
 [UCUM]: http://unitsofmeasure.org
