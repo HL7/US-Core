@@ -51,7 +51,7 @@ The following search parameter combinations SHOULD be supported:
 
     Example:
 
-      1. GET [base]/Condition?patient=1032702&amp;category=http://terminology.hl7.org/CodeSystem/condition-category\|encounter-diagnosis?encounter=1036
+      1. GET [base]/Condition?patient=1032702&amp;category=http://terminology.hl7.org/CodeSystem/condition-category\|encounter-diagnosis&amp;encounter=1036
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and category and encounter. When category = &#34;encounter-diagnosis&#34; will return the encounter diagnosis for the encounter. ([how to search by reference] and [how to search by token])
 
