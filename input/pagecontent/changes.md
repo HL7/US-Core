@@ -22,7 +22,7 @@ This ballot addresses the following issues:
 - Addressed and applied over 30 trackers submitted by implementers since the previous STU2 ballot for US Core ver 4.0.0:
 
  **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
-1. **Resolved - change required:** US Core: Require Provenance Resource for Create/Update/Delete Events, AuditEvent for Read [FHIR-14388](https://jira.hl7.org/browse/FHIR-14388) [See Changes Here](#)
+1. **Resolved - change required:** US Core: Require Provenance Resource for Create/Update/Delete Events, AuditEvent for Read [FHIR-14388](https://jira.hl7.org/browse/FHIR-14388) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/basic-provenance.html) and [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html)
 2. **Resolved - change required:** Incorrect Implantable Device list query for US Core Device (Implantable Device List) [FHIR-19803](https://jira.hl7.org/browse/FHIR-19803) [See Changes Here](#)
 3. **Triaged:** Updated MedicationRequest.route value set to extensible - USCore #122 [FHIR-20099](https://jira.hl7.org/browse/FHIR-20099) [See Changes Here](#)
 4. **Triaged:** Update patientInstruction to must support - USCore #123 [FHIR-20100](https://jira.hl7.org/browse/FHIR-20100) [See Changes Here](#)
