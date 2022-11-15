@@ -28,6 +28,17 @@ The following search parameter combinations SHOULD be supported:
       1. GET [base]/Device?patient=1316024&amp;type=http://snomed.info/sct\|468063009
 
     *Implementation Notes:* Fetches a bundle of all Device resources for the specified patient and type.  ([how to search by reference] and [how to search by token])
+	
+	
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-device-patient.html)** and **[`status`](SearchParameter-us-core-device-status.html)** search parameters:
+
+    `GET [base]/Device?patient={Type/}[id]&status={system|}[code]`
+
+    Example:
+    
+      1. GET [base]/Device?patient=1316024&amp;status=active
+
+    *Implementation Notes:* Fetches a bundle of all Device resources for the specified patient and status.  ([how to search by reference] and [how to search by token])
 
 
 
