@@ -6,7 +6,7 @@
 
 1. **SHALL** support fetching a RelatedPerson using the **[`_id`](SearchParameter-us-core-relatedperson-id.html)** search parameter:
 
-    `GET [base]/RelatedPerson[id]`
+    `GET [base]/RelatedPerson[id]` or `GET [base]/RelatedPerson?_id=[id]`
 
     Example:
     
@@ -28,7 +28,7 @@ The following search parameter combinations SHOULD be supported:
     
       1. GET [base]/RelatedPerson?patient=1032702
 
-     *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient ([how to search by reference])
+      *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient ([how to search by reference])
 
 1. {:.new-content}**SHOULD** support searching using the **[`name`](SearchParameter-us-core-relatedperson-name.html)** search parameter:
 
@@ -38,7 +38,7 @@ The following search parameter combinations SHOULD be supported:
     
       1. GET [base]/RelatedPerson?name=Mary Shaw
 
-     *Implementation Notes:* Fetches a bundle of all RelatedPerson resources matching the name ([how to search by string])
+      *Implementation Notes:* Fetches a bundle of all RelatedPerson resources matching the name ([how to search by string])
 
 
 

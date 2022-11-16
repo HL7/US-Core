@@ -84,7 +84,7 @@ This ballot addresses the following issues:
 60. **Submitted:** change title for US Core Pediatric Head Occipital Frontal Circumference Observation Profile [FHIR-38794](https://jira.hl7.org/browse/FHIR-38794) [See Changes Here](#)
 61. **Triaged:** Add Refill and Quantity to MedRequest [FHIR-39343](https://jira.hl7.org/browse/FHIR-39343) [See Changes Here](#)
 61. **Triaged:** Fix Incorrect category CodeSystem in Mandatory Searches in US Core Observation Clinical Test Result Profile [FHIR-39355](https://jira.hl7.org/browse/FHIR-39355) [See Changes Here](#)
-62. **Triaged:** Fix Quick Start Rendering [FHIR-39397](https://jira.hl7.org/browse/FHIR-39397) [See Changes Here](#)
+62. **Applied:** Fix Quick Start Rendering [FHIR-39367](https://jira.hl7.org/browse/FHIR-39367) [See Changes Here](StructureDefinition-us-core-patient.html#notes)
 63. **RESOLVED - CHANGE REQUIRED:** Fix Cross Version Comparisons section [FHIR-39](https://jira.hl7.org/browse/FHIR-39417) [See Changes Here](#)
 
 
