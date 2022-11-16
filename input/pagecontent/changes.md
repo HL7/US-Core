@@ -47,7 +47,7 @@ This ballot addresses the following issues:
 23. **Submitted:** standard code system uri for HCPCS does not match HL7 Fhir standard [FHIR-37336](https://jira.hl7.org/browse/FHIR-37336) [See Changes Here](#)
 24. **Triaged:** Clarify conformance for SHALL and SHOULD  by type or instance of type [FHIR-37343](https://jira.hl7.org/browse/FHIR-37343) [See Changes Here](#)
 25. **Resolved - change required:** Expectations for Observation.value[x] in blood pressure and pulse oximetry profiles are unclear [FHIR-37358](https://jira.hl7.org/browse/FHIR-37358) [See Changes Here](#)
-26. **Triaged:** Immunization.vaccineCode code system URI [FHIR-37400](https://jira.hl7.org/browse/FHIR-37400) [See Changes Here](#)
+26. **Applied:** Immunization.vaccineCode code system URI [FHIR-37400](https://jira.hl7.org/browse/FHIR-37400) [See Changes Here](StructureDefinition-us-core-immunization.html#mandatory-and-must-support-data-elements)
 27. **Submitted:** Broken link [FHIR-37445](https://jira.hl7.org/browse/FHIR-37445) [See Changes Here](#)
 28. **Applied:** Typos on SDOH Guidance Page [FHIR-37469](https://jira.hl7.org/browse/FHIR-37469) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/screening-and-assessments.html)
 29. **Submitted:** Duplicate us-core-ethnicity [FHIR-37488](https://jira.hl7.org/browse/FHIR-37488) [See Changes Here](#)
