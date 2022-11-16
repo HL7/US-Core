@@ -4,7 +4,7 @@ url: >-
   http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile
 version: 3.1.1
 name: USCorePediatricHeadOccipitalFrontalCircumferencePercentileProfile
-title: US Core Pediatric Head Occipital-frontal Circumference Percentile Profile
+title: US Core Pediatric Head Occipital Frontal Circumference Percentile Profile
 status: active
 experimental: false
 date: '2020-11-18'
@@ -26,7 +26,7 @@ differential:
     - id: Observation
       path: Observation
       short: >-
-        US Core Pediatric Head Occipital-frontal Circumference Percentile
+        US Core Pediatric Head Occipital Frontal Circumference Percentile
         Profile
       definition: '\-'
       comment: '\-'
@@ -34,7 +34,7 @@ differential:
       mustSupport: false
     - id: Observation.code
       path: Observation.code
-      short: Head Occipital-frontal circumference Percentile
+      short: Head Occipital Frontal circumference Percentile
       type:
         - code: CodeableConcept
       patternCodeableConcept:
