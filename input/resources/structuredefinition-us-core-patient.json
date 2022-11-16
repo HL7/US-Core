@@ -21,15 +21,6 @@
                 "path": "Patient",
                 "definition": "\\-",
                 "comment": "\\-",
-                "constraint": [
-                    {
-                        "key": "us-core-6",
-                        "severity": "error",
-                        "human": "Either Patient.name.given and/or Patient.name.family SHALL be present or a Data Absent Reason Extension SHALL be present.",
-                        "expression": "(name.family.exists() or name.given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
-                        "xpath": "(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:name/f:family or /f:name/f:given)) or (not(/f:name/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:name/f:family or /f:name/f:given))"
-                    }
-                ],
                 "mustSupport": false,
                 "mapping": [
                     {
@@ -198,6 +189,15 @@
             {
                 "id": "Patient.name",
                 "path": "Patient.name",
+                "constraint": [
+                    {
+                        "key": "us-core-6",
+                        "severity": "error",
+                        "human": "At least `given` and/or `family` are present or neither is available and the Data Absent Reason Extension is present.",
+                        "expression": "(family.exists() or given.exists()) xor extension.where(url='http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()",
+                        "xpath": "(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason' and not(/f:family or /f:given)) or (not(/f:extension/@url='http://hl7.org/fhir/StructureDefinition/data-absent-reason') and (/f:family or /f:given))"
+                    }
+                ],
                 "min": 1,
                 "mustSupport": true,
                 "mapping": [
