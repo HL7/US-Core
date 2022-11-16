@@ -171,8 +171,8 @@
 [Respiratory rate]: {{site.data.fhir.path}}resprate.html
 [Required Binding]: {{site.data.fhir.path}}terminologies.html#required
 [SMART App Launch Framework]: {{site.data.fhir.hl7_fhir_uv_smart_app_launch}}
-[SNOMED CT]: http://snomed.info/sct
-[SNOMED CT]: {{site.data.fhir.path}}valueset-procedure-code.html
+<!-- [SNOMED CT]: http://snomed.info/sct -->
+[SNOMED CT]:  http://snomed.info/sct/731000124108 "SNOMED CT US Edition"
 [Search Parameter Registry]: {{site.data.fhir.path}}searchparameter-registry.html
 [Search Parameters and Operations]: search-parameters-and-operations.html
 [Security Labels]: {{site.data.fhir.path}}security-labels.html
