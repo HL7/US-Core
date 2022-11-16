@@ -9,7 +9,7 @@ Key updates and detailed changes between this and prior versions are available i
 
 ### Introduction
 
-The US Core Implementation Guide is based on [FHIR Version R4]. {{ cross-version-analysis | remove: '<p>' | remove: '</p>'}} It defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. By establishing the “floor” of standards to promote interoperability and adoption through common implementation, it allows for further standards development evolution for specific uses cases. There are two different ways to implement US Core:
+The US Core Implementation Guide is based on [FHIR Version R4]. It defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. By establishing the “floor” of standards to promote interoperability and adoption through common implementation, it allows for further standards development evolution for specific uses cases. There are two different ways to implement US Core:
 1. Profile Only Support: Systems may support *only* the US Core Profiles to represent clinical information.
 2. Profile Support + Interaction Support: Systems may support *both* the US Core Profile content structure *and* the RESTful interactions defined for a resource.
 
@@ -80,14 +80,6 @@ For systems that support both the US Core Profile content structure and the REST
 
 See the FHIR specification for details on [FHIR RESTful Search API] and the [SMART App Launch Framework] for how an application gets access to a patient record.
 
-----
-
-### Acknowledgements
+---
 
 Primary Authors: Brett Marquard, Eric Haas, Gay Dolin
-
-### Copyrights
-
-{{ ip-statement | remove: '<p>' | remove: '</p>'}}
-
-{% include link-list.md %}

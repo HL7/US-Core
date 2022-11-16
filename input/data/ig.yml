@@ -1,7 +1,7 @@
 resourceType: ImplementationGuide
 id: hl7.fhir.us.core
 url: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-version: 6.0.0-preview
+version: 6.0.0-ballot
 name: USCore
 title: US Core Implementation Guide
 status: active
@@ -429,22 +429,6 @@ definition:
     exampleBoolean: false
     name: US Core MedicationRequest Profile
   - reference:
-      reference: StructureDefinition/us-core-observation-clinical-judgment
-    description: The U.S. Core Observation Clinical Judgment Profile meets the requirements
-      of the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments and v3
-      Health Assessments. To promote interoperability and adoption through common
-      implementation, this profile sets minimum expectations for the Observation resource
-      to record, search, and retrieve observations that represent an individual's
-      clinical judgment about a patient's health status. For example, a social history
-      status such as education or food insecurity or an assessment of the patient's
-      cognitive, functional, or disability status. It may or may not be associated
-      with a formal survey, screening, or assessment tool. It identifies which core
-      elements, extensions, vocabularies, and value sets **SHALL** be present in the
-      resource when using this profile. It provides the floor for standards development
-      for specific use cases.
-    exampleBoolean: false
-    name: US Core Observation Clinical Judgment Profile
-  - reference:
       reference: StructureDefinition/us-core-observation-clinical-test
     description: The US Core Observation Clinical Test Result Profile is based upon
       the core FHIR Observation Resource, and, along with the US Core DiagnosticReport
@@ -696,6 +680,22 @@ definition:
       \ optionally communicates the date when the sex was determined."
     exampleBoolean: false
     name: US Core Sex Extension
+  - reference:
+      reference: StructureDefinition/us-core-observation-clinical-judgment
+    description: The U.S. Core Observation Clinical Judgment Profile meets the requirements
+      of the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments and v3
+      Health Assessments. To promote interoperability and adoption through common
+      implementation, this profile sets minimum expectations for the Observation resource
+      to record, search, and retrieve observations that represent an individual's
+      clinical judgment about a patient's health status. For example, a social history
+      status such as education or food insecurity or an assessment of the patient's
+      cognitive, functional, or disability status. It may or may not be associated
+      with a formal survey, screening, or assessment tool. It identifies which core
+      elements, extensions, vocabularies, and value sets **SHALL** be present in the
+      resource when using this profile. It provides the floor for standards development
+      for specific use cases.
+    exampleBoolean: false
+    name: US Core Observation Clinical Judgment Profile
   - reference:
       reference: StructureDefinition/us-core-smokingstatus
     description: The US Core Smoking Status Observation Profile is based upon the
@@ -1633,8 +1633,8 @@ definition:
   - reference:
       reference: SearchParameter/us-core-patient-name
     description: "**A server defined search that may match any of the string fields\
-      \ in the HumanName, including family, give, prefix, suffix, suffix, and/or text**\
-      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
+      \ in the HumanName, including family, given, prefix, suffix, and/or text** \
+      \ \n**NOTE**: This US Core SearchParameter definition extends the usage context\
       \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
       \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
     exampleBoolean: false
@@ -1656,8 +1656,8 @@ definition:
   - reference:
       reference: SearchParameter/us-core-practitioner-name
     description: "**A server defined search that may match any of the string fields\
-      \ in the HumanName, including family, give, prefix, suffix, suffix, and/or text**\
-      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
+      \ in the HumanName, including family, given, prefix, suffix, and/or text** \
+      \ \n**NOTE**: This US Core SearchParameter definition extends the usage context\
       \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
       \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
     exampleBoolean: false

@@ -55,12 +55,6 @@ To support a US Core Profile, a server:
       }
       ~~~
 
-##### Global Profiles
-
-There are no global profiles defined for US Core.
-
-{% include globals-table.xhtml %}
-
 #### Profile Support + Interaction Support
 
 Systems may deploy, and support, one or more US Core Profiles to represent clinical information *and* the US Core interactions to access the information. Systems that implement *both* can claim conformance to US Core Profile content structure *and* the RESTful interactions defined for it. This is done by implementing all or parts of the USCore CapabilityStatement into their capabilities.

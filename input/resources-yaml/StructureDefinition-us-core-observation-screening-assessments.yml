@@ -1,14 +1,11 @@
 resourceType: StructureDefinition
 id: us-core-observation-screening-assessments
-url: >-
-  http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments'
 name: USCoreObservationScreeningAssessmentsProfile
 title: US Core Observation Screening Assessments Profile
 status: active
 date: '2022-04-20'
-description: >-
-   To promote interoperability and adoption through common implementation, the US Core Observation Survey Profile sets minimum expectations for the Observation Resource to record, search, and fetch retrieve observations that represent the questions and responses to surveys, and screening and assessment tools.  It can be used to represent a single response, multiple responses, and multi-select “check all that apply” type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
-
+description: 'To promote interoperability and adoption through common implementation, the US Core Observation Survey Profile sets minimum expectations for the Observation Resource to record, search, and fetch retrieve observations that represent the questions and responses to surveys, and screening and assessment tools.  It can be used to represent a single response, multiple responses, and multi-select “check all that apply” type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.'
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -16,357 +13,282 @@ type: Observation
 baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Observation'
 derivation: constraint
 differential:
-  element:
-    - id: Observation
-      path: Observation
-      short: Survey Observation
-      definition: '\-'
-      comment: '\-'
-      constraint:
-        - key: us-core-2
-          severity: error
-          human: >-
-            If there is no component or hasMember element then either a value[x]
-            or a data absent reason must be present
-          expression: >-
-            (component.empty() and hasMember.empty()) implies
-            (dataAbsentReason.exists() or value.exists())
-          xpath: >-
-            exists(f:component) or exists(f:hasMember) or
-            exists(f:*[starts-with(local-name(.), 'value')]) or
-            exists(f:dataAbsentReason)
-        - key: us-core-3
-          severity: error
-          human: SHALL use UCUM for coded quantity units.
-          expression: >-
-            valueQuantity.system.empty() or valueQuantity.system =
-            'http://unitsofmeasure.org'
-          xpath: >-
-            not(exists(f:valueQuantity/f:system) ) or
-            f:valueQuantity/f:system[@value='http://unitsofmeasure.org']
-    - id: Observation.status
-      path: Observation.status
-      mustSupport: true
-    - id: Observation.category
-      path: Observation.category
-      slicing:
-        discriminator:
-          - type: pattern
-            path: $this
-        rules: open
-      requirements: To identify that observation is derived from a questionnaire.
-      min: 1
-      mustSupport: true
-    - id: 'Observation.category:survey'
-      path: Observation.category
-      sliceName: survey
-      requirements: >-
-        Used for filtering what that this is an observation derived from a
-        survey, assessment, or screening.
-      min: 1
-      max: '1'
-      patternCodeableConcept:
-        coding:
-          - system: 'http://terminology.hl7.org/CodeSystem/observation-category'
-            code: survey
-      mustSupport: true
-
-    - id: 'Observation.category:uscore'
-      path: Observation.category
-      definition: Used to classify the context of a survey, screening, or assessment.
-      sliceName: uscore
-      requirements: >-
-        Used to assist with indexing and searching for appropriate instances.
-      max: '1'
-      binding:
-          strength: required
-          valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-assessment-category'
-      mustSupport: true
-
-    - id: Observation.code
-      path: Observation.code
-      mustSupport: true
-      binding:
-        strength: preferred
-        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes'
-
-    - id: Observation.subject
-      path: Observation.subject
-      min: 1
-      type:
-        - code: Reference
-          targetProfile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
-      mustSupport: true
-    - id: 'Observation.effective[x]'
-      path: 'Observation.effective[x]'
-      definition: >-
-        The time or time-period the observed value is asserted as being true.
-        For biological subjects - e.g. human patients - this is usually called
-        the "physiologically relevant time".
-      comment: >-
-        At least a date should be present unless this observation is a
-        historical report.
-      type:
-        - extension:
-            - url: >-
-                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-              valueBoolean: true
-          code: dateTime
-        - code: Period
-        - code: Timing
-        - code: instant
-      condition:
-        - us-core-1
-      constraint:
-        - key: us-core-1
-          severity: error
-          human: Datetime must be at least to day.
-          expression: $this is DateTime implies $this.toString().length() >= 10
-          xpath: >-
-            f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)
-      mustSupport: true
-    - id: Observation.performer
-      path: Observation.performer
-      comment: >-
-        Some questions on questionnaires are not answered directly (e.g.,
-        asserted) by the individual completing the questionnaire, but are
-        derived from answers to one or more other questions. For types of
-        answers, `Observation.performer` should not be specified and
-        `Observation.derivedFrom` should reference the relevant Screening
-        Response Observation(s).
-      type:
-        - code: Reference
-          targetProfile:
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
-            - 'http://hl7.org/fhir/StructureDefinition/PractitionerRole'
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam'
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
-          _targetProfile:
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: true
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-      mustSupport: true
-    - id: 'Observation.value[x]'
-      path: 'Observation.value[x]'
-      comment: >-
-        An observation may have a value if it represents an individual survey, screening, or assessment question and answer pair. An observation should not have a value if it represents a multi-question or multi-select “check all that apply” responses. If a value is present, the datatype for this element
-        should be determined by Observation.code.  A CodeableConcept with just a
-        text would be used instead of a string if the field was usually coded,
-        or if the type associated with the Observation.code defines a coded
-        value.
-      meaningWhenMissing: >-
-        For questions represented in LOINC that allow one answer, If the LOINC Normative Answer List for a LOINC code offers an adequate code for why an Observation.value may not be known, it should be used as the value for Observation.value. However, If the LOINC Normative Answer List for a LOINC code does not offer an adequate code for why an Observation.value may not be known, Observation.dataAbsentReason should be used in lieu of Observation.value.
-      type:
-        - code: Quantity
-          extension:
-            - url: >-
-                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-              valueBoolean: true
-        - code: CodeableConcept
-          extension:
-            - url: >-
-                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-              valueBoolean: true
-        - code: string
-          extension:
-            - url: >-
-                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-              valueBoolean: true
-        - code: boolean
-        - code: integer
-        - code: Range
-        - code: Ratio
-        - code: SampledData
-        - code: time
-        - code: dateTime
-        - code: Period
-      condition:
-        - us-core-2
-        - us-core-3
-
-      mustSupport: true
-    - id: Observation.dataAbsentReason
-      path: Observation.dataAbsentReason
-      comment: >-
-        "Null" or exceptional values can be represented two ways in FHIR
-        Observations.  One way is to simply include them in the value set and
-        represent the exceptions in the value.  The alternate way is to use the
-        value element for actual observations and use the explicit
-        dataAbsentReason element to record exceptional values. For a given LOINC
-        question, if the LOINC answer list includes concepts such as 'unknown'
-        or 'not available', they should be used for Observation.value. Where
-        these concepts are not part of the value set for Observation.value, the
-        Observation.dataAbsentReason can be used if necessary and appropriate.
-      condition:
-        - us-core-2
-      mustSupport: true
-    - id: Observation.hasMember
-      path: Observation.hasMember
-      short: >-
-        Reference to panel or multi-select responses
-      definition: >-
-        Aggregate set of Observations that represent question answer pairs for both multi-question surveys, screenings, and assessments and multi-select questions.
-      comment: >-
-         This grouping element is used to represent surveys, screenings, and assessments that group several questions together or individual questions with  “check all that apply” responses. For example in the simplest case a flat multi-question survey where the "panel" observation is the survey instrument itself and instead of an `Observation.value` the `hasMember` element references other Observation that represent the individual questions answer pairs. When there is a heirarchical grouping of questions, the observation "panels" can be nested. Because surveys, screenings, and assessments can be arbitrarily complex structurally, not all structures can be represented using this Observation grouping pattern.
-      type:
-        - code: Reference
-          targetProfile:
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
-            - >-
-              http://hl7.org/fhir/StructureDefinition/MolecularSequence
-          _targetProfile:
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: true
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-      mustSupport: true
-    - id: Observation.derivedFrom
-      path: Observation.derivedFrom
-      short: >-
-        Related Observations or QuestionnaireResponses that the observation is
-        made from
-      definition: >-
-        Observations or QuestionnaireResponses from which this observation
-        value is derived.
-      type:
-        - code: Reference
-          targetProfile:
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
-            - 'http://hl7.org/fhir/StructureDefinition/ImagingStudy'
-            - 'http://hl7.org/fhir/StructureDefinition/Media'
-            - 'http://hl7.org/fhir/StructureDefinition/MolecularSequence'
-          _targetProfile:
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: true
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: true
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-      mustSupport: true
-    # - id: Observation.component
-    #   path: Observation.component
-    #   definition: >-
-    #     Some observations have multiple component observations.  These component
-    #     observations are expressed as separate code value pairs that share the
-    #     same attributes.  Examples: Individuals may be multiracial. Component is
-    #     used to capture one or more races.
-    #   comment: >-
-    #     For questions represented in LOINC that specify “check all that apply”,
-    #     the LOINC question should be used for Observation.code and for
-    #     Observation.component.code. For “check all that apply” questions, the
-    #     answers (regardless of whether one or more are selected) should only be
-    #     represented using Observation.component.value and Observation.value
-    #     should be empty.
-    #   mustSupport: true
-    # - id: Observation.component.code
-    #   path: Observation.component.code
-    #   mustSupport: true
-    #   binding:
-    #     strength: extensible
-    # - id: 'Observation.component.value[x]'
-    #   path: 'Observation.component.value[x]'
-    #   comment: 'see `Observation.value[x]` comments'
-    #   meaningWhenMissing: "If the LOINC Normative Answer List for a LOINC code offers an adequate code for why a value may not be known, that code should be used for Observation.component.value . \r\nIf the LOINC Normative Answer List for a LOINC code does not offer an adequate code for why a value may not be known,  Observation.component.dataAbsentReason should be used in lieu of Observation.component.value ."
-    #   type:
-    #     - code: Quantity
-    #       extension:
-    #         - url: >-
-    #             http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-    #           valueBoolean: true
-    #     - code: CodeableConcept
-    #       extension:
-    #         - url: >-
-    #             http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-    #           valueBoolean: true
-    #     - code: string
-    #       extension:
-    #         - url: >-
-    #             http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-    #           valueBoolean: true
-    #     - code: boolean
-    #     - code: integer
-    #     - code: Range
-    #     - code: Ratio
-    #     - code: SampledData
-    #     - code: time
-    #     - code: dateTime
-    #     - code: Period
-    #   condition:
-    #     - us-core-2
-    #     - us-core-3
-    #   constraint:
-    #     - key: us-core-3
-    #       severity: error
-    #       human: SHALL use UCUM for coded quantity units.
-    #       expression: >-
-    #         valueQuantity.system.empty() or valueQuantity.system =
-    #         'http://unitsofmeasure.org'
-    #       xpath: >-
-    #         not(exists(f:valueQuantity/f:system) ) or
-    #         f:valueQuantity/f:system[@value='http://unitsofmeasure.org']
-    #   mustSupport: true
-    # - id: Observation.component.dataAbsentReason
-    #   path: Observation.component.dataAbsentReason
-    #   comment: see `Observation.dataAbsentReason` comments
-    #   mustSupport: true
+    element:
+        - 
+            id: Observation
+            path: Observation
+            short: Survey Observation
+            definition: "\\-"
+            comment: "\\-"
+            constraint:
+                - 
+                    key: us-core-2
+                    severity: error
+                    human: 'If there is no component or hasMember element then either a value[x] or a data absent reason must be present'
+                    expression: (component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())
+                    xpath: "exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.), 'value')]) or exists(f:dataAbsentReason)"
+                - 
+                    key: us-core-3
+                    severity: error
+                    human: SHALL use UCUM for coded quantity units.
+                    expression: "valueQuantity.system.empty() or valueQuantity.system = 'http://unitsofmeasure.org'"
+                    xpath: "not(exists(f:valueQuantity/f:system) ) or f:valueQuantity/f:system[@value='http://unitsofmeasure.org']"
+        - 
+            id: Observation.status
+            path: Observation.status
+            mustSupport: true
+        - 
+            id: Observation.category
+            path: Observation.category
+            slicing:
+                discriminator:
+                    - 
+                        type: pattern
+                        path: $this
+                rules: open
+            requirements: To identify that observation is derived from a questionnaire.
+            min: 1
+            mustSupport: true
+        - 
+            id: 'Observation.category:survey'
+            path: Observation.category
+            sliceName: survey
+            requirements: 'Used for filtering what that this is an observation derived from a survey, assessment, or screening.'
+            min: 1
+            max: '1'
+            patternCodeableConcept:
+                coding:
+                    - 
+                        system: 'http://terminology.hl7.org/CodeSystem/observation-category'
+                        code: survey
+            mustSupport: true
+        - 
+            id: 'Observation.category:uscore'
+            path: Observation.category
+            definition: 'Used to classify the context of a survey, screening, or assessment.'
+            sliceName: uscore
+            requirements: Used to assist with indexing and searching for appropriate instances.
+            max: '1'
+            binding:
+                strength: required
+                valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-assessment-category'
+            mustSupport: true
+        - 
+            id: Observation.code
+            path: Observation.code
+            mustSupport: true
+            binding:
+                strength: preferred
+                valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes'
+        - 
+            id: Observation.subject
+            path: Observation.subject
+            min: 1
+            type:
+                - 
+                    code: Reference
+                    targetProfile:
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+            mustSupport: true
+        - 
+            id: 'Observation.effective[x]'
+            path: 'Observation.effective[x]'
+            definition: 'The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the "physiologically relevant time".'
+            comment: At least a date should be present unless this observation is a historical report.
+            type:
+                - 
+                    extension:
+                        - 
+                            url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                            valueBoolean: true
+                    code: dateTime
+                - 
+                    code: Period
+                - 
+                    code: Timing
+                - 
+                    code: instant
+            condition:
+                - us-core-1
+            constraint:
+                - 
+                    key: us-core-1
+                    severity: error
+                    human: Datetime must be at least to day.
+                    expression: '$this is DateTime implies $this.toString().length() >= 10'
+                    xpath: "f:matches(effectiveDateTime,/\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z)/)"
+            mustSupport: true
+        - 
+            id: Observation.performer
+            path: Observation.performer
+            comment: 'Some questions on questionnaires are not answered directly (e.g., asserted) by the individual completing the questionnaire, but are derived from answers to one or more other questions. For types of answers, `Observation.performer` should not be specified and `Observation.derivedFrom` should reference the relevant Screening Response Observation(s).'
+            type:
+                - 
+                    code: Reference
+                    targetProfile:
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner'
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization'
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+                        - 'http://hl7.org/fhir/StructureDefinition/PractitionerRole'
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam'
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson'
+                    _targetProfile:
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: true
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+            mustSupport: true
+        - 
+            id: 'Observation.value[x]'
+            path: 'Observation.value[x]'
+            comment: 'An observation may have a value if it represents an individual survey, screening, or assessment question and answer pair. An observation should not have a value if it represents a multi-question or multi-select “check all that apply” responses. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.'
+            meaningWhenMissing: 'For questions represented in LOINC that allow one answer, If the LOINC Normative Answer List for a LOINC code offers an adequate code for why an Observation.value may not be known, it should be used as the value for Observation.value. However, If the LOINC Normative Answer List for a LOINC code does not offer an adequate code for why an Observation.value may not be known, Observation.dataAbsentReason should be used in lieu of Observation.value.'
+            type:
+                - 
+                    code: Quantity
+                    extension:
+                        - 
+                            url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                            valueBoolean: true
+                - 
+                    code: CodeableConcept
+                    extension:
+                        - 
+                            url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                            valueBoolean: true
+                - 
+                    code: string
+                    extension:
+                        - 
+                            url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                            valueBoolean: true
+                - 
+                    code: boolean
+                - 
+                    code: integer
+                - 
+                    code: Range
+                - 
+                    code: Ratio
+                - 
+                    code: SampledData
+                - 
+                    code: time
+                - 
+                    code: dateTime
+                - 
+                    code: Period
+            condition:
+                - us-core-2
+                - us-core-3
+            mustSupport: true
+        - 
+            id: Observation.dataAbsentReason
+            path: Observation.dataAbsentReason
+            comment: "\"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values. For a given LOINC question, if the LOINC answer list includes concepts such as 'unknown' or 'not available', they should be used for Observation.value. Where these concepts are not part of the value set for Observation.value, the Observation.dataAbsentReason can be used if necessary and appropriate."
+            condition:
+                - us-core-2
+            mustSupport: true
+        - 
+            id: Observation.hasMember
+            path: Observation.hasMember
+            short: Reference to panel or multi-select responses
+            definition: 'Aggregate set of Observations that represent question answer pairs for both multi-question surveys, screenings, and assessments and multi-select questions.'
+            comment: 'This grouping element is used to represent surveys, screenings, and assessments that group several questions together or individual questions with  “check all that apply” responses. For example in the simplest case a flat multi-question survey where the "panel" observation is the survey instrument itself and instead of an `Observation.value` the `hasMember` element references other Observation that represent the individual questions answer pairs. When there is a heirarchical grouping of questions, the observation "panels" can be nested. Because surveys, screenings, and assessments can be arbitrarily complex structurally, not all structures can be represented using this Observation grouping pattern.'
+            type:
+                - 
+                    code: Reference
+                    targetProfile:
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments'
+                        - 'http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse'
+                        - 'http://hl7.org/fhir/StructureDefinition/MolecularSequence'
+                    _targetProfile:
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: true
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+            mustSupport: true
+        - 
+            id: Observation.derivedFrom
+            path: Observation.derivedFrom
+            short: Related Observations or QuestionnaireResponses that the observation is made from
+            definition: Observations or QuestionnaireResponses from which this observation value is derived.
+            type:
+                - 
+                    code: Reference
+                    targetProfile:
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments'
+                        - 'http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse'
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference'
+                        - 'http://hl7.org/fhir/StructureDefinition/ImagingStudy'
+                        - 'http://hl7.org/fhir/StructureDefinition/Media'
+                        - 'http://hl7.org/fhir/StructureDefinition/MolecularSequence'
+                    _targetProfile:
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: true
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+                        - 
+                            extension:
+                                - 
+                                    url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support'
+                                    valueBoolean: false
+            mustSupport: true
