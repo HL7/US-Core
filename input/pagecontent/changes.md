@@ -78,14 +78,14 @@ This ballot addresses the following issues:
 54. **Triaged:** Remove comment in $docref [FHIR-38686](https://jira.hl7.org/browse/FHIR-38686) [See Changes Here](#)
 55. **Triaged:** make DocRef.custodian optional in v3 as it is in v4 and v5 [FHIR-38700](https://jira.hl7.org/browse/FHIR-38700) [See Changes Here](#)
 56. **Resolved - change required:** Add USCDI V3 Requirements [FHIR-38702](https://jira.hl7.org/browse/FHIR-38702) [See Changes Here](#)
-57. **Submitted:** Update the documentation on performed attribute on Procedure [FHIR-38737](https://jira.hl7.org/browse/FHIR-38737) [See Changes Here](#)
+57. **Applied:** Correct documentation on Procedure.performed attribute [FHIR-38737](https://jira.hl7.org/browse/FHIR-38737) [See Changes Here](StructureDefinition-us-core-procedure.html#mandatory-and-must-support-data-elements)
 58. **Triaged:** Recommend against using LOINC procedure codes [FHIR-38739](https://jira.hl7.org/browse/FHIR-38739) [See Changes Here](#)
 59. **Triaged:** Consider improving description of docref for clarity [FHIR-38746](https://jira.hl7.org/browse/FHIR-38746) [See Changes Here](#)
-60. **Submitted:** change title for US Core Pediatric Head Occipital Frontal Circumference Observation Profile [FHIR-38794](https://jira.hl7.org/browse/FHIR-38794) [See Changes Here](#)
+60. **Applied:** Fix title for US Core Pediatric Head Occipital Frontal Circumference Observation Profile [FHIR-38794](https://jira.hl7.org/browse/FHIR-38794) [See Changes Here](StructureDefinition-head-occipital-frontal-circumference-percentile.html)
 61. **Triaged:** Add Refill and Quantity to MedRequest [FHIR-39343](https://jira.hl7.org/browse/FHIR-39343) [See Changes Here](#)
-61. **RESOLVED - CHANGE REQUIRED:** Fix Incorrect category CodeSystem in Mandatory Searches in US Core Observation Clinical Test Result Profile [FHIR-39355](https://jira.hl7.org/browse/FHIR-39355) [See Changes Here](#)
-62. **Applied:** Fix Quick Start Rendering [FHIR-39367](https://jira.hl7.org/browse/FHIR-39367) [See Changes Here](StructureDefinition-us-core-patient.html#notes)
-63. **RESOLVED - CHANGE REQUIRED:** Fix Cross Version Comparisons section [FHIR-39](https://jira.hl7.org/browse/FHIR-39417) [See Changes Here](changes-between-versions.html#cross-version-comparisons)
+62. **RESOLVED - CHANGE REQUIRED:** Fix Incorrect category CodeSystem in Mandatory Searches in US Core Observation Clinical Test Result Profile [FHIR-39355](https://jira.hl7.org/browse/FHIR-39355) [See Changes Here](#)
+63. **Applied:** Fix Quick Start Rendering [FHIR-39367](https://jira.hl7.org/browse/FHIR-39367) [See Changes Here](StructureDefinition-us-core-patient.html#notes)
+64. **RESOLVED - CHANGE REQUIRED:** Fix Cross Version Comparisons section [FHIR-39](https://jira.hl7.org/browse/FHIR-39417) [See Changes Here](changes-between-versions.html#cross-version-comparisons)
 
 
 ### Version = 5.0.1

@@ -17,7 +17,10 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  a status
 1.  a code that identifies the type of procedure performed on the patient
 1.  a patient
-1.  when the procedure was performed
+
+**Each Procedure must support:**
+
+1.  <span class="bg-success" markdown="1">when the procedure was performed</span><!-- new-content -->
 
 **Profile specific implementation guidance:**
 
