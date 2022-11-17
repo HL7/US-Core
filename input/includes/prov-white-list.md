@@ -1,15 +1,18 @@
-<li> The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core </li> resources:
-<ul id="prov-white-list">
 {%- assign black_list = "Extension,Provenance,Medication,Organization,Practitioner,PractitionerRole,Location,Specimen" | split:"," -%}
+{% assign r_list = "" %}
 {%- for sd_hash in site.data.structuredefinitions -%}
   {%- assign sd = sd_hash[1] -%}
   {%- unless black_list contains sd.type -%}
-    {%- for r_hash in site.data.resources -%}
-      {%- assign r = r_hash[1] -%}
-      {%- if r.name == sd.name -%}
-         <li>{{r.title}}</li>
-      {%- endif -%}
-    {%- endfor -%}
+       {% capture r_list %}{{ r_list | append: sd.type | append: "," }}{% endcapture %}
   {%- endunless -%}
 {%- endfor -%}
+{% assign ur_list = r_list | split: "," | uniq | sort %}
+<ul>
+<li> The US Core Provenance resource <strong>SHALL</strong> be supported for these US Core resources: 
+<ul id="prov-white-list">
+{% for r in  ur_list %}
+    <li>{{r}}</li>
+{% endfor %}
+</ul>
+</li>
 </ul>
