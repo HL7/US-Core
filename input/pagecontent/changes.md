@@ -23,13 +23,13 @@ This ballot addresses the following issues:
 
  **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 1. **Applied:** US Core: Require Provenance Resource for Create/Update/Delete Events, AuditEvent for Read [FHIR-14388](https://jira.hl7.org/browse/FHIR-14388) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/basic-provenance.html) and [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html)
-2. **Partially Applied:** Incorrect Implantable Device list query for US Core Device (Implantable Device List) [FHIR-19803](https://jira.hl7.org/browse/FHIR-19803) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-implantable-device.html)
+2. **Applied:** Add recommended search combination of patient + status [FHIR-19803](https://jira.hl7.org/browse/FHIR-19803) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-implantable-device.html#notes)
 3. **No Change:** Updated MedicationRequest.route value set to extensible - USCore #122 [FHIR-20099](https://jira.hl7.org/browse/FHIR-20099) [See Changes Here](#)
 4. **No Change:** Update patientInstruction to must support - USCore #123 [FHIR-20100](https://jira.hl7.org/browse/FHIR-20100) [See Changes Here](#)
 5. **No Change:** Add Past Medical History and Chief Complaint to condition types. - USCore #150 [FHIR-20127](https://jira.hl7.org/browse/FHIR-20127) [See Changes Here](#)
 6. **Applied:** Consider adding years since quite smoking - USCore #154 [FHIR-20131](https://jira.hl7.org/browse/FHIR-20131) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-smokingstatus.html)
 7. **No Change:** Specify that the us-core-county extension should be used only when both district and county are required [FHIR-20657](https://jira.hl7.org/browse/FHIR-20657) [See Changes Here](#)
-8. **Triaged:** Create standard extension for ""US State"" for use in all versions of FHIR [FHIR-26943](https://jira.hl7.org/browse/FHIR-26943) [See Changes Here](#)
+8. **Applied:** Create a US Core extension to communicate the state jurisdiction for an element [FHIR-26943](https://jira.hl7.org/browse/FHIR-26943) [See Changes Here](StructureDefinition-us-core-jurisdiction.html)
 9. **Triaged:** Define a primary Vs principal Vs other type of encounter-specific condition [FHIR-28186](https://jira.hl7.org/browse/FHIR-28186) [See Changes Here](#)
 10. **Resolved - change required:** US Core general guidance about missing data for coded data elements need clarification [FHIR-31381](https://jira.hl7.org/browse/FHIR-31381) [See Changes Here](#)
 11. **Triaged:** Update Valuesets in PractitionerRole [FHIR-31997](https://jira.hl7.org/browse/FHIR-31997) [See Changes Here](#)

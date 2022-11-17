@@ -383,6 +383,13 @@ definition:
     exampleBoolean: false
     name: US Core Implantable Device Profile
   - reference:
+      reference: StructureDefinition/us-core-jurisdiction
+    description: An extension to communicate the US state or local jurisdiction for
+      an element. For example, a practitioner's state or local jurisdiction for a
+      license or identifier.
+    exampleBoolean: false
+    name: US Core Jurisdiction Extension
+  - reference:
       reference: StructureDefinition/us-core-location
     description: This profile sets minimum expectations for the Location resource
       for recording, searching for and fetching a Location associated with a patient,

@@ -23,7 +23,21 @@
         },
         {
             "system": "http://www.acme.org/practitioners",
-            "value": "25456"
+            "value": "25456",
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-jurisdiction",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "https://www.usps.com",
+                                "code": "MA"
+                            }
+                        ],
+                        "text": "Massachusetts"
+                    }
+                }
+            ]
         }
     ],
     "name": [

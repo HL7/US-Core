@@ -17,6 +17,18 @@ identifier:
     - 
         system: 'http://www.acme.org/practitioners'
         value: '25456'
+
+        #========= New US Core extension to indicate ==============================
+        #========== Massachusetts jurisdiction associated with this identifier ====
+        extension:
+            - url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-jurisdiction'
+              valueCodeableConcept:
+                coding:
+                    - system: 'https://www.usps.com'
+                      code: MA
+                text: Massachusetts
+        #===========================================================================
+
 name:
     - 
         family: Bone

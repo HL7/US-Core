@@ -1,0 +1,47 @@
+resourceType: StructureDefinition
+id: us-core-jurisdiction
+
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-jurisdiction'
+
+name: USCoreJurisdictionExtension
+title: US Core Jurisdiction Extension
+status: active
+
+date: '2022-11-16'
+description: >-
+    An extension to communicate the US state or local jurisdiction for an element. For example, a practitioner's state or local jurisdiction for a license or identifier.
+fhirVersion: '4.0.1'
+
+kind: complex-type
+abstract: false
+context:
+  - type: element
+    expression: Element
+type: Extension
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
+derivation: constraint
+
+differential:
+  element:
+    - id: Extension
+      path: Extension
+      short: 'US State or local jurisdiction'
+      definition: >-
+        An extension to communicate the US state or local jurisdiction for an element.
+      min: 0
+      max: '*'
+    - id: Extension.extension
+      path: Extension.extension
+      max: '0'
+    - id: Extension.url
+      path: Extension.url
+      fixedUri: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-jurisdiction'
+    - id: 'Extension.value[x]'
+      path: 'Extension.value[x]'
+      min: 1
+      type:
+        - code: CodeableConcept
+      binding:
+        strength: extensible
+        description: Target US State or local jurisdiction.
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state'
