@@ -1,0 +1,48 @@
+resourceType: StructureDefinition
+id: us-core-direct
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct'
+name: USCoreDirectEmailExtension
+title: US Core Direct email Extension
+status: active
+date: '2022-11-16'
+description: "This email address is associated with a [\"Direct Secure Messaging\"](https://directtrust.org/what-we-do/direct-secure-messaging) service.  This extension can only be used on contact points where the system = 'email'"
+fhirVersion: 4.0.1
+kind: complex-type
+abstract: false
+context:
+    - 
+        type: element
+        expression: ContactPoint
+type: Extension
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
+derivation: constraint
+differential:
+    element:
+        - 
+            id: Extension
+            path: Extension
+            short: 'Email is a "Direct" email'
+            definition: "This email address is associated with a \"Direct Secure Messaging\" service. This extension can only be used on contact points where the system = 'email'"
+            comment: "This extension can only be used on contact points where the system = 'email'."
+            min: 0
+            max: '1'
+            isModifier: false
+            mapping:
+                - 
+                    identity: v2
+                    map: No v2 equivalent
+                - 
+                    identity: rim
+                    map: No RIM equivalent
+        - 
+            id: Extension.url
+            path: Extension.url
+            fixedUri: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct'
+        - 
+            id: 'Extension.value[x]'
+            path: 'Extension.value[x]'
+            min: 1
+            max: '1'
+            type:
+                - 
+                    code: boolean

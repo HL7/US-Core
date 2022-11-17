@@ -39,7 +39,7 @@ This ballot addresses the following issues:
 15. **Resolved - change required:** Clarify Device UDI-PI requirement [FHIR-36657](https://jira.hl7.org/browse/FHIR-36657) [See Changes Here](#)
 16. **Resolved - change required:** Condition problem example incorrectly has a category of encounter-diagnosis [FHIR-36759](https://jira.hl7.org/browse/FHIR-36759) [See Changes Here](#)
 17. **Triaged:** The links are not executable at LOINC and should point to Class = Doc [FHIR-36763](https://jira.hl7.org/browse/FHIR-36763) [See Changes Here](#)
-18. **Submitted:** Link to ""direct service"" goes to an empty page [FHIR-36764](https://jira.hl7.org/browse/FHIR-36764) [See Changes Here](#)
+18. **Applied:** Fix Link to "Direct Secure Messaging" [FHIR-36764](https://jira.hl7.org/browse/FHIR-36764) [See Changes Here](StructureDefinition-us-core-direct.html)
 19. **Resolved - change required:** Is the intent really to have a practice share the practitioner's home address? [FHIR-36765](https://jira.hl7.org/browse/FHIR-36765) [See Changes Here](#)
 20. **Triaged:** CLD for US Core Non Laboratory Codes value set is not computable [FHIR-36789](https://jira.hl7.org/browse/FHIR-36789) [See Changes Here](#)
 21. **Applied:** US Core Organization slice for CLIA does not list an HTA/THO approved external identifier system [FHIR-36926](https://jira.hl7.org/browse/FHIR-36926) [See Changes Here](#)
