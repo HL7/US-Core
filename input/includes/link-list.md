@@ -356,3 +356,4 @@
 [ImplementationGuide]: {{site.data.fhir.path}}implementationguide.html
 [US Core ImplementationGuide Resource]: ImplementationGuide-hl7.fhir.us.core.html
 [validating profiles and resources]: {{site.data.fhir.path}}validation.html
+[Using SNOMED CT with FHIR]: {{site.data.fhir.path}}snomedct.html

@@ -68,7 +68,7 @@ This ballot addresses the following issues:
 44. **Applied:** Typo in Observation SDOH profile [FHIR-37928](https://jira.hl7.org/browse/FHIR-37928) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-screening-assessments.html)
 45. **Applied:** Typo in Condition Problems and Health Concerns search example [FHIR-37929](https://jira.hl7.org/browse/FHIR-37929) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition-problems-health-concerns.html)
 46. **Triaged:** Diagnostic Report Laboratory Codes LOINC CLASSTYPE value should be ""1"" [FHIR-37933](https://jira.hl7.org/browse/FHIR-37933) [See Changes Here](#)
-47. **RESOLVED - CHANGE REQUIRED:** Clarify that guide uses US Edition of SNOMED and update link to it [FHIR-38190](https://jira.hl7.org/browse/FHIR-38190) [See Changes Here](#)
+47. **Applied:** Clarify that guide uses US Edition of SNOMED and update links to it  [FHIR-38190](https://jira.hl7.org/browse/FHIR-38190) [See Changes Here](general-guidance.html#snomed-ct-united-states-edition)
 48. **Resolved - change required:** update QuickStart to include all the search requirements by type. [FHIR-38629](https://jira.hl7.org/browse/FHIR-38629) [See Changes Here](#)
 49. **Triaged:** specify $docref's OperationDefinition.resource to be DocumentReference [FHIR-38658](https://jira.hl7.org/browse/FHIR-38658) [See Changes Here](#)
 50. **Triaged:** Remove comment in $docref [FHIR-38686](https://jira.hl7.org/browse/FHIR-38686) [See Changes Here](#)
