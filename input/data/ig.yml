@@ -272,7 +272,7 @@ definition:
     name: US Core DiagnosticReport Profile for Report and Note Exchange
   - reference:
       reference: StructureDefinition/us-core-direct
-    description: This email address is associated with a [direct](http://wiki.directproject.org/Addressing+Specification)
+    description: This email address is associated with a ["Direct Secure Messaging"](https://directtrust.org/what-we-do/direct-secure-messaging)
       service.  This extension can only be used on contact points where the system
       = 'email'
     exampleBoolean: false
@@ -462,20 +462,20 @@ definition:
   - reference:
       reference: StructureDefinition/us-core-observation-lab
     description: "The US Core Laboratory Result Observation Profile is based upon\
-      \ the core FHIR Observation Resource, and, along with the US Core DiagnosticReport\
+      \ the core FHIR Observation Resource and, along with the US Core DiagnosticReport\
       \ Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability\
-      \ (USCDI) v3 *Laboratory* requirements.  Laboratory results are grouped and\
-      \ summarized using the DiagnosticReport resource which reference Observation\
-      \ resources.  Each Observation resource represents an individual laboratory\
-      \ test and result value, a \u201Cnested\u201D panel (such as a microbial susceptibility\
-      \ panel) which references other observations, or rarely a laboratory test with\
-      \ component result values. The US Core Laboratory Result Observation Profile\
-      \ sets minimum expectations for the Observation resource resource to record,\
-      \ search, and fetch laboratory test results associated with a patient to promote\
-      \ interoperability and adoption through common implementation.  It identifies\
-      \ which core elements, extensions, vocabularies, and value sets **SHALL** be\
-      \ present in the resource when using this profile.  It provides the floor for\
-      \ standards development for specific use cases."
+      \ (USCDI) v3 *Laboratory* requirements. Laboratory results are grouped and summarized\
+      \ using the DiagnosticReport resource, which references Observation resources.\
+      \ Each Observation resource represents an individual laboratory test and result\
+      \ value, a \u201Cnested\u201D panel (such as a microbial susceptibility panel)\
+      \ that references other observations, or rarely a laboratory test with component\
+      \ result values. The US Core Laboratory Result Observation Profile sets minimum\
+      \ expectations for the Observation resource to record, search, and fetch laboratory\
+      \ test results associated with a patient to promote interoperability and adoption\
+      \ through common implementation. It identifies which core elements, extensions,\
+      \ vocabularies, and value sets **SHALL** be present in the resource when using\
+      \ this profile. It provides the floor for standards development for specific\
+      \ use cases."
     exampleBoolean: false
     name: US Core Laboratory Result Observation Profile
   - reference:
@@ -1188,6 +1188,14 @@ definition:
       \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
     exampleBoolean: false
     name: USCoreDevicePatient
+  - reference:
+      reference: SearchParameter/us-core-device-status
+    description: "**active | inactive | entered-in-error | unknown**  \n**NOTE**:\
+      \ This US Core SearchParameter definition extends the usage context of the\n\
+      [Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    exampleBoolean: false
+    name: USCoreDeviceStatus
   - reference:
       reference: SearchParameter/us-core-device-type
     description: "**The type of the device**  \n**NOTE**: This US Core SearchParameter\
