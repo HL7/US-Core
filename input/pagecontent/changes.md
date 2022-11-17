@@ -75,7 +75,7 @@ This ballot addresses the following issues:
 51. **Triaged:** make DocRef.custodian optional in v3 as it is in v4 and v5 [FHIR-38700](https://jira.hl7.org/browse/FHIR-38700) [See Changes Here](#)
 52. **Resolved - change required:** Add USCDI V3 Requirements [FHIR-38702](https://jira.hl7.org/browse/FHIR-38702) [See Changes Here](#)
 53. **Applied:** Correct documentation on Procedure.performed attribute [FHIR-38737](https://jira.hl7.org/browse/FHIR-38737) [See Changes Here](StructureDefinition-us-core-procedure.html#mandatory-and-must-support-data-elements)
-54. **Triaged:** Recommend against using LOINC procedure codes [FHIR-38739](https://jira.hl7.org/browse/FHIR-38739) [See Changes Here](#)
+54. **No Change:** Recommend against using LOINC procedure codes [FHIR-38739](https://jira.hl7.org/browse/FHIR-38739) [See Changes Here](#)
 55. **Triaged:** Consider improving description of docref for clarity [FHIR-38746](https://jira.hl7.org/browse/FHIR-38746) [See Changes Here](#)
 56. **Applied:** Fix title for US Core Pediatric Head Occipital Frontal Circumference Observation Profile [FHIR-38794](https://jira.hl7.org/browse/FHIR-38794) [See Changes Here](StructureDefinition-head-occipital-frontal-circumference-percentile.html)
 57. **Triaged:** Add Refill and Quantity to MedRequest [FHIR-39343](https://jira.hl7.org/browse/FHIR-39343) [See Changes Here](#)
