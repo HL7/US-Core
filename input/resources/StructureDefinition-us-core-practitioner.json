@@ -112,13 +112,10 @@
             {
                 "id": "Practitioner.address",
                 "path": "Practitioner.address",
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "servd",
-                        "map": "n/a"
-                    }
-                ]
+                "definition": "Address(es) of the practitioner",
+                "short": "Address(es) of the practitioner",
+                "requirements": "\\-",
+                "mustSupport": true
             },
             {
                 "id": "Practitioner.address.line",

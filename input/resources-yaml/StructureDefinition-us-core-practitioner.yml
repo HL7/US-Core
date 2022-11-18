@@ -80,10 +80,10 @@ differential:
       mustSupport: true
     - id: Practitioner.address
       path: Practitioner.address
+      definition: Address(es) of the practitioner
+      short: Address(es) of the practitioner
+      requirements: '\-'
       mustSupport: true
-      mapping:
-        - identity: servd
-          map: n/a
     - id: Practitioner.address.line
       path: Practitioner.address.line
       max: '4'
