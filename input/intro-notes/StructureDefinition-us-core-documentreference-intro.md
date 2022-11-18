@@ -33,16 +33,16 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Profile specific implementation guidance:**
 
 - See [Clinical Notes]
-- The `DocumentReference.type` binding must support at a minimum the [5 Common Clinical Notes] and may extend to the full  [US Core DocumentReference Type Value Set]
+- The `DocumentReference.type` binding must support, at a minimum, the [5 Common Clinical Notes] and may extend to the whole [US Core DocumentReference Type Value Set]
 - For a C-CDA Clinical Summary of Care (CCD):
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.
    -  The format code is `urn:hl7-org:sdwg:ccda-structuredBody:2.1`
 - The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.attachment.url` or the content as inline base64 encoded data using `DocumentReference.attachment.data`.
-    -  Although both are marked as must support, the server system is not required to support both an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
+    -  Although both are marked as must support, the server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
     -  The client application **SHALL** support both elements.
-    -  The `content.url` may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]), FHIR Document Bundle (i.e [base]/Bundle/[id] or other endpoint.
-        - If the endpoint is outside of the FHIR base URL, it **SHOULD NOT** require additional authorization to access.
-- The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
-   - Some system may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.
+    -  The `content.url` may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]), FHIR Document Bundle (i.e. [base]/Bundle/[id], or another endpoint.
+        - If the endpoint is outside the FHIR base URL, it **SHOULD NOT** require additional authorization to access.
+- <span class="bg-success" markdown="1">Every DocumentReference must have a responsible Organization.</span><!-- new-content --> The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
+   - Some systems may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.
 
 {% include link-list.md %}
