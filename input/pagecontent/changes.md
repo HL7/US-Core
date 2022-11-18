@@ -34,7 +34,7 @@ This ballot addresses the following issues:
 10. **Applied:** Update missing data for coded data examples [FHIR-31381](https://jira.hl7.org/browse/FHIR-31381) [See Changes Here](general-requirements.html#missing-data)
 11. **No Change:** Update Valuesets in PractitionerRole [FHIR-31997](https://jira.hl7.org/browse/FHIR-31997) [See Changes Here](#)
 12. **Resolved - change required:** Need to clarify the meaning/purpose of this profile/observation category [FHIR-35114](https://jira.hl7.org/browse/FHIR-35114) [See Changes Here](#)
-13. **Resolved - change required:** Simultaneous usage of Observation.value[x] & Observation.component.value[x] is not clear from the spec [FHIR-36083](https://jira.hl7.org/browse/FHIR-36083) [See Changes Here](#)
+13. **Resolved - change required:** Clarify how to read Profile Page [FHIR-36083](https://jira.hl7.org/browse/FHIR-36083) [See Changes Here](index.html#how-to-read-this-guide)
 14. **Resolved - change required:** Clarify organization responsible for the DocumentReference [FHIR-36654](https://jira.hl7.org/browse/FHIR-36654) [See Changes Here](#)
 15. **Resolved - change required:** Clarify Device UDI-PI requirement [FHIR-36657](https://jira.hl7.org/browse/FHIR-36657) [See Changes Here](#)
 16. **Resolved - change required:** Condition problem example incorrectly has a category of encounter-diagnosis [FHIR-36759](https://jira.hl7.org/browse/FHIR-36759) [See Changes Here](#)

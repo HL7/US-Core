@@ -38,8 +38,9 @@ This Guide is divided into several pages which are listed at the top of each pag
   - [Social Determinants of Health (SDOH)]\: This page gives background on the exchange of Social Determinants of Health (SDOH) data elements.
   - [Changes Between Versions]\: This page considers the user and developer experience when transitioning between versions of US Core.
   - [Future of US Core]\: This page outlines the approach to adding new content to US Core.
-- [FHIR Artifacts]\: Thes pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
-  - [Profiles and Extensions]\: This page page lists the set of Profile and Extension that are defined in this guide to exchange quality data. Each Profile page includes a narrative description and guidance, formal definition and a "Quick Start" guide which summarizes the supported search transactions for each Profile. Although the guidance typically focuses on the profiled elements, it may also may focus on un-profiled elements to aid with implementation and certification.
+- [FHIR Artifacts]\: These pages provides detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
+  - [Profiles and Extensions]\: This page lists the Profiles and Extensions defined in this guide to exchange quality data.
+    - <span class="bg-success" markdown="1">Each Profile page includes a narrative description that lists all the [Mandatory] and [Must Support] data elements, profile-specific implementation guidance, formal definition, and a "Quick Start" guide that summarizes the supported search transactions for each Profile. Although the guidance typically focuses on the profiled elements, it also may focus on un-profiled elements to aid with implementation and certification.</span><!-- new-content -->
   - [Search Parameters and Operations]\: This page page lists the  defined Operations and Search Parameters that are used in US Core transactions.
   - [Terminology]\: This page page lists the value sets and code system defined for  profiles.
   - [Capability Statements]\: This set of pages describes the expected FHIR capabilities of the various  actors.
@@ -83,3 +84,5 @@ See the FHIR specification for details on [FHIR RESTful Search API] and the [SMA
 ---
 
 Primary Authors: Brett Marquard, Eric Haas, Gay Dolin
+
+{% include link-list.md %}
