@@ -100,7 +100,7 @@
 [Directory of published versions]: {{site.data.fhir.canonical}}/history.html
 [Discharge Summary (18842-5)]: https://loinc.org/18842-5.html
 [discharge-disposition]: SearchParameter-us-core-encounter-discharge-disposition.html
-[Document Class Value Set]: #.html
+[Document Class Value Set]: {{site.data.fhir.path}}valueset-document-classcodes.html
 [DocumentReference Format]: http://hl7.org/fhir/ValueSet-formatcodes.html
 [DocumentReference vs DiagnosticReport]: clinical-notes-guidance.html#documentreference-vs-diagnosticreport
 [DocumentReference-episode-summary]: DocumentReference-episode-summary.html
@@ -298,7 +298,7 @@
 [US Core DiagnosticReport Category Codes]: ValueSet-us-core-diagnosticreport-category.html
 [US Core DiagnosticReport Profile for Laboratory Results Reporting]: StructureDefinition-us-core-diagnosticreport-lab.html
 [US Core DiagnosticReport Profile for Report and Note exchange]: StructureDefinition-us-core-diagnosticreport-note.html
-[US Core DocumentReference Category]: #.html
+[US Core DocumentReference Category]: ValueSet-us-core-documentreference-category.html
 [US Core DocumentReference Profile]: StructureDefinition-us-core-documentreference.html
 [US Core DocumentReference Type Value Set]: ValueSet-us-core-documentreference-type.html
 [US Core DocumentReference]: StructureDefinition-us-core-documentreference.html
