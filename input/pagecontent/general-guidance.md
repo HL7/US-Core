@@ -15,9 +15,12 @@ When responding to a query, servers should not use inline [contained] resources 
 
 In situations where the specific piece of data is hidden due to a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know and should be avoided. For elements with a minimum cardinality = 0 (including elements labeled *Must Support*), the element should be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code `unknown` following the guidance on [Missing Data] in the Conformance Sections.
 
+<div class="bg-success" markdown="1">
+
 ### SNOMED CT United States Edition
 
 US Core uses the US Edition of [SNOMED CT] which is the official source of SNOMED CT for use in US healthcare systems. The US Edition is a standalone release that combines the content of both the US Extension and the International releases of SNOMED CT. For terminology servers to validate US Edition only codes, the proper URI should be used. `http://snomed.info/sct` should be understood to mean an unspecified edition/version and US Edition URI is `http://snomed.info/sct/731000124108`. To reference a particular version of the US Edition, the format should be `http://snomed.info/sct/731000124108/version/[YYYYMMDD]`. For more details see [Using SNOMED CT with FHIR].
+</div><!-- new-content -->
 
 ###  Using UCUM codes in the [Quantity] datatype
 

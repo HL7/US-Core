@@ -4,7 +4,7 @@
 
 
 
-1. **SHALL** support fetching a Patient using the **[`_id`](SearchParameter-us-core-patient-id.html)** search parameter:
+1. {:.new-content}**SHALL** support fetching a Patient using the **[`_id`](SearchParameter-us-core-patient-id.html)** search parameter:
 
     `GET [base]/Patient[id]` or `GET [base]/Patient?_id=[id]`
 
@@ -25,7 +25,7 @@
 
     *Implementation Notes:* Fetches a bundle containing any Patient resources matching the identifier ([how to search by token])
 
-1. **SHALL** support searching for a patient by a server defined search that matches any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text using the **[`name`](SearchParameter-us-core-patient-name.html)** search parameter:
+1. **SHALL** support searching for a patient by a server defined search that matches any of the string fields in the HumanName, including family, given, prefix, suffix, and/or text using the **[`name`](SearchParameter-us-core-patient-name.html)** search parameter:
 
     `GET [base]/Patient?name=[string]`
 

@@ -14,7 +14,7 @@
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient ([how to search by reference])
 
-1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`category`](SearchParameter-us-core-condition-category.html)** search parameters:
+1. {:.new-content}**SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`category`](SearchParameter-us-core-condition-category.html)** search parameters:
 
     `GET [base]/Condition?patient={Type/}[id]&category={system|}[code]`
 

@@ -26,7 +26,11 @@ The following data-elements are mandatory (i.e. data MUST be present) or must be
 
 **Profile specific implementation guidance:**
 
+<div class="bg-success" markdown="1">
+
 {% include prov-white-list.md %}
+
+</div><!-- new-content -->
 
 *  If a system receives a provider in `Provenance.agent.who` as free text they must capture who sent them the information as the organization. On request they  **SHALL** provide this organization as the source and **MAY** include the free text provider.
 * Systems that need to know the activity has occurred **SHOULD** populate the activity.

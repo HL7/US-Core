@@ -1648,8 +1648,8 @@ definition:
   - reference:
       reference: SearchParameter/us-core-patient-name
     description: "**A server defined search that may match any of the string fields\
-      \ in the HumanName, including family, given, prefix, suffix, and/or text** \
-      \ \n**NOTE**: This US Core SearchParameter definition extends the usage context\
+      \ in the HumanName, including family, give, prefix, suffix, suffix, and/or text**\
+      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
       \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
       \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
     exampleBoolean: false
@@ -2584,6 +2584,13 @@ definition:
       \ Profile*."
     name: MedicationRequest Self Tylenol Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+  - reference:
+      reference: CareTeam/missing-coded-data-example
+    description: This is an example to demonstrate the using 'unknown' from the *DataAbsentReason
+      Code System* when data is missing for a CareTeam resource where the mandatory
+      `CareTeam.participant.role` value is unknown.
+    name: Missing Coded Data Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
   - reference:
       reference: Observation/blood-glucose
     description: This is a blood glucose example for the *US Core Observation Lab

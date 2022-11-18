@@ -218,26 +218,32 @@ There are situations when information on a particular data element is missing an
         - use the appropriate "unknown" concept code from the value set if available
         - if the value set does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
 
-        Example: AllergyIntolerance resource where the manifestation is unknown.
+      <div class="bg-success" markdown="1">
+
+        Example: CareTeam resource where the mandatory `CareTeam.participant.role` value is unknown.
         ~~~
         ...
-        "reaction" : [
-          {
-            "manifestation" : [
-              {
-                "coding" : [
-                  {
-                    "system" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
-                    "code" : "unknown",
-                    "display" : "unknown"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "participant": [
+            {
+                "role": [
+                    {
+                        "coding" : [
+                            {
+                                "system" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                                "code" : "unknown",
+                                "display" : "unknown"
+                            }
+                        ]
+                    }
+                ],
+                "member": {
+                    "reference": "Practitioner/practitioner-1",
+                    "display": "Ronald Bone, MD"
+                }
+            },
         ...
         ~~~
+</div><!-- new-content -->
 
    - *required* binding strength (CodeableConcept or code datatypes):
       - use the appropriate "unknown" concept code from the value set if available
