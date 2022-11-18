@@ -25,10 +25,11 @@ healt
 **Profile specific implementation guidance:**
 
 - See the implementation guidance section for the [US Core Vital Signs Profile]
-- An Observation without a systolic or diastolic result value, **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
-   -  Because all the components are *mandatory* (in other words the minimum cardinality is =>1), all server systems - including those that never provide a component observation without a value - must to support `Observation.component.dataAbsentReason` for the components.
-
-Even a server that always values diastolic and systolic  needs to support DAR
-
+<div class="bg-success" markdown="1">
+- Because the blood pressure values are communicated in the *mandatory* systolic and diastolic components:
+  - the `Observation.value[x]` element should be omitted
+  - an Observation without a systolic or diastolic result value, **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
+  - *all server systems* - including those that never provide a component observation without a value - **SHALL** support `Observation.component.dataAbsentReason` for the components.
+</div><!-- new-content -->
 
 {% include link-list.md %}

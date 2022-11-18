@@ -8,7 +8,7 @@ The following are example usage scenarios for the this profile:
 
 ### Mandatory and Must Support Data Elements
 
-In addition to the mandatory and must support data elements in the FHIR Oxygen Saturation Profile, the following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.
+In addition to the mandatory and must support data elements in the <span class="bg-success" markdown="1">[US Core Vital Signs Profile]</span><!-- new-content -->, the following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Profile Definition] below provides the  formal summary, definitions, and  terminology requirements.
 
 **Each Observation must have:**
 
@@ -17,8 +17,11 @@ In addition to the mandatory and must support data elements in the FHIR Oxygen S
 
 **Each Observation must support:**
 
-1. a code for inspired oxygen concentration
-1. a value for inspired oxygen concentration
+1. <span class="bg-success" markdown="1">a value for oxygen saturation</span><!-- new-content -->
+2. a code for inspired oxygen concentration*
+3. a value for inspired oxygen concentration
+
+<span class="bg-success" markdown="1">\*see guidance below</span><!-- new-content -->
 
 **Profile specific implementation guidance:**
 
