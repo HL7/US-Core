@@ -113,17 +113,14 @@ differential:
             path: Patient.extension
             sliceName: genderIdentity
             min: 0
-            max: '1'
+            max: '*'
             type:
                 - 
                     code: Extension
                     profile:
                         - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity'
             mustSupport: false
-            mapping:
-                - 
-                    identity: argonaut-dq-dstu2
-                    map: Patient.extension
+
         - 
             id: Patient.identifier
             path: Patient.identifier

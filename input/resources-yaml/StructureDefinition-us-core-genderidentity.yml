@@ -4,10 +4,9 @@ url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity'
 name: USCoreGenderIdentityExtension
 title: US Core Gender Identity Extension
 status: active
-date: '2022-01-22'
+date: '2022-11-17'
 description: >-
-  This extension provides concepts to describe the gender a person identifies
-  as.
+  An individual's personal sense of being a man, woman, boy, girl, nonbinary, or something else. This represents an individual’s identity, ascertained by asking them what that identity is. This extension is a copy of the FHIR R5 [genderIdentity extension](http://hl7.org/fhir/2022Sep/extension-individual-genderidentity.html) and may be superseded by it in futures versions of FHIR R5-based US Core.
 purpose: Complies with USCDI v2+
 fhirVersion: 4.0.1
 kind: complex-type
@@ -22,15 +21,109 @@ context:
   - type: element
     expression: Practitioner
 type: Extension
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/patient-genderIdentity'
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
 derivation: constraint
+
 differential:
   element:
+    - id: Extension
+      path: Extension
+      short: The individual's gender identity
+      definition: >-
+        An individual's personal sense of being a man, woman, boy, girl,
+        nonbinary, or something else.
+      comment: >-
+        This represents an individual’s identity, ascertained by asking them
+        what that identity is.
+      min: 0
+    - id: 'Extension.extension:value'
+      path: Extension.extension
+      sliceName: value
+      short: The individual's gender identity
+      definition: >-
+        An individual's personal sense of being a man, woman, boy, girl,
+        nonbinary, or something else. 
+      comment: >-
+        This represents an individual’s identity, ascertained by asking them
+        what that identity is.
+      min: 1
+      max: '1'
+      type:
+        - code: Extension
+    - id: 'Extension.extension:value.extension'
+      path: Extension.extension.extension
+      max: '0'
+    - id: 'Extension.extension:value.url'
+      path: Extension.extension.url
+      type:
+        - code: uri
+      fixedUri: value
+    - id: 'Extension.extension:value.value[x]'
+      path: 'Extension.extension.value[x]'
+      min: 1
+      type:
+        - code: CodeableConcept
+      binding:
+        extension:
+          - url: >-
+              http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName
+            valueString: GenderIdentity
+        strength: extensible
+        valueSet: 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.32'
+        # strength: preferred
+        # valueSet: 'http://terminology.hl7.org/ValueSet/gender-identity'
+    - id: 'Extension.extension:period'
+      path: Extension.extension
+      sliceName: period
+      short: >-
+        The time period during which the gender identity applies to the
+        individual
+      definition: >-
+        The time period during which the gender identity applies to the
+        individual
+      min: 0
+      max: '1'
+      type:
+        - code: Extension
+    - id: 'Extension.extension:period.extension'
+      path: Extension.extension.extension
+      max: '0'
+    - id: 'Extension.extension:period.url'
+      path: Extension.extension.url
+      type:
+        - code: uri
+      fixedUri: period
+    - id: 'Extension.extension:period.value[x]'
+      path: 'Extension.extension.value[x]'
+      min: 1
+      type:
+        - code: Period
+    # - id: 'Extension.extension:comment'
+    #   path: Extension.extension
+    #   sliceName: comment
+    #   short: Text to further explain the use of the specified gender identity
+    #   definition: Text to further explain the use of the specified gender identity
+    #   min: 0
+    #   max: '1'
+    #   type:
+    #     - code: Extension
+    # - id: 'Extension.extension:comment.extension'
+    #   path: Extension.extension.extension
+    #   max: '0'
+    # - id: 'Extension.extension:comment.url'
+    #   path: Extension.extension.url
+    #   type:
+    #     - code: uri
+    #   fixedUri: comment
+    # - id: 'Extension.extension:comment.value[x]'
+    #   path: 'Extension.extension.value[x]'
+    #   min: 1
+    #   type:
+    #     - code: string
     - id: Extension.url
       path: Extension.url
       fixedUri: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity'
     - id: 'Extension.value[x]'
       path: 'Extension.value[x]'
-      binding:
-        strength: extensible
-        valueSet: 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.32'
+      min: 0
+      max: '0'

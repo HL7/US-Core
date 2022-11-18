@@ -322,8 +322,11 @@ definition:
     name: US Core Extension Questionnaire URI
   - reference:
       reference: StructureDefinition/us-core-genderIdentity
-    description: This extension provides concepts to describe the gender a person
-      identifies as.
+    description: "An individual's personal sense of being a man, woman, boy, girl,\
+      \ nonbinary, or something else. This represents an individual\u2019s identity,\
+      \ ascertained by asking them what that identity is. This extension is a copy\
+      \ of the FHIR R5 [genderIdentity extension](http://hl7.org/fhir/2022Sep/extension-individual-genderidentity.html)\
+      \ and may be superseded by it in futures versions of FHIR R5-based US Core."
     exampleBoolean: false
     name: US Core Gender Identity Extension
   - reference:

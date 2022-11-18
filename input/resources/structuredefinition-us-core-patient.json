@@ -132,7 +132,7 @@
                 "path": "Patient.extension",
                 "sliceName": "genderIdentity",
                 "min": 0,
-                "max": "1",
+                "max": "*",
                 "type": [
                     {
                         "code": "Extension",
@@ -141,13 +141,7 @@
                         ]
                     }
                 ],
-                "mustSupport": false,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Patient.extension"
-                    }
-                ]
+                "mustSupport": false
             },
             {
                 "id": "Patient.identifier",
