@@ -50,7 +50,7 @@ This ballot addresses the following issues:
 26. **Applied:** Clarify vaccineCode code system URI [FHIR-37400](https://jira.hl7.org/browse/FHIR-37400) [See Changes Here](StructureDefinition-us-core-immunization.html#mandatory-and-must-support-data-elements)
 27. **Applied:** Typos on SDOH Guidance Page [FHIR-37469](https://jira.hl7.org/browse/FHIR-37469) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/screening-and-assessments.html)
 28. **No Change:** US Core Needs to include a Profile on Composition [FHIR-37491](https://jira.hl7.org/browse/FHIR-37491) [See Changes Here](#)
-29. **Resolved - change required:** Add 10-digit pattern value for Practitioner and Organization identifier:NPI slices [FHIR-37498](https://jira.hl7.org/browse/FHIR-37498) [See Changes Here](#)
+29. **Applied** Add 10-digit pattern value for Practitioner and Organization identifier:NPI slices [FHIR-37498](https://jira.hl7.org/browse/FHIR-37498) [See Changes Here](StructureDefinition-us-core-practitioner.html) and [See Changes Here](StructureDefinition-us-core-organization.html)
 30. **Applied:** Remove extra instance or the word ""resource"" in Lab observation narrative profile [FHIR-37507](https://jira.hl7.org/browse/FHIR-37507) [See Changes Here](StructureDefinition-us-core-observation-lab.html)
 31. **Resolved - change required:** Gender Identity in US Core Patient should allow multiple and the extension should be updated to contain date ranges. [FHIR-37509](https://jira.hl7.org/browse/FHIR-37509) [See Changes Here](#)
 32. **Triaged:** Update US Core Encounter to use profiled resources for Encounter.diagnosis.condition [FHIR-37511](https://jira.hl7.org/browse/FHIR-37511) [See Changes Here](#)

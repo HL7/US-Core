@@ -49,6 +49,17 @@ differential:
       max: '1'
       patternIdentifier:
         system: 'http://hl7.org/fhir/sid/us-npi'
+
+      condition:
+        - us-core-16
+      constraint:
+        - key: us-core-16
+          severity: error
+          human: NPI must be 10 digits (does not validate NPI check digit).
+          expression: value.matches('^[0-9]{10}$')
+          xpath: >-
+            f:value/f:matches(value,/^[0-9]{10}$/)
+
       mustSupport: true
     - id: 'Organization.identifier:CLIA'
       path: Organization.identifier
