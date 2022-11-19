@@ -53,13 +53,13 @@ This ballot addresses the following issues:
 29. **Applied** Add Constraint to validate NPI [FHIR-37498](https://jira.hl7.org/browse/FHIR-37498) [See Changes Here](StructureDefinition-us-core-practitioner.html) and [See Changes Here](StructureDefinition-us-core-organization.html)
 30. **Applied:** Remove extra instance or the word ""resource"" in Lab observation narrative profile [FHIR-37507](https://jira.hl7.org/browse/FHIR-37507) [See Changes Here](StructureDefinition-us-core-observation-lab.html)
 31. **Applied:** Allow multiple Gender Identities and associated dates. [FHIR-37509](https://jira.hl7.org/browse/FHIR-37509) [See Changes Here](StructureDefinition-us-core-genderIdentity.html)
-32. **Triaged:** Update US Core Encounter to use profiled resources for Encounter.diagnosis.condition [FHIR-37511](https://jira.hl7.org/browse/FHIR-37511) [See Changes Here](#)
+32. **No Change:** Update US Core Encounter to use profiled resources for Encounter.diagnosis.condition [FHIR-37511](https://jira.hl7.org/browse/FHIR-37511) [See Changes Here](#)
 33. **Applied:** Typos on Patient and Practitioner ""Name"" SearchParameter pages [FHIR-37541](https://jira.hl7.org/browse/FHIR-37541) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/SearchParameter-us-core-patient-name.html) and [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/SearchParameter-us-core-practitioner-name.html)
 34. **Applied:** Add Guidance on DocumentReference.category [FHIR-37592](https://jira.hl7.org/browse/FHIR-37592) [See Changes Here](StructureDefinition-us-core-documentreference#mandatory-and-must-support-data-elements)
 35. **Applied:** Correct us-core-6 invariant expression [FHIR-37704](https://jira.hl7.org/browse/FHIR-37704) [See Changes Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html#constraints)
-36. **Resolved - change required:**  Immunization.primarySource requirement change and/or text edit [FHIR-37723](https://jira.hl7.org/browse/FHIR-37723) [See Changes Here](#)
+36. **Applied:**  Change Immunization.primarySource to must support and update definition [FHIR-37723](https://jira.hl7.org/browse/FHIR-37723) [See Changes Here](StructureDefinition-us-core-immunization.html)
 37. **Applied:** Added supportedProfiles to US Core CapabilityStatements[FHIR-37766](https://jira.hl7.org/browse/FHIR-37766) [See Changes Here](CapabilityStatement-us-core-server.html#encounter)
-38. **Resolved - change required:** US Core Diagnostic Report Category element is not usable as is [FHIR-37770](https://jira.hl7.org/browse/FHIR-37770) [See Changes Here](#)
+38. **Applied:** Clarify how to use categories vis a vis codes in US Core Diagnostic Report Category element [FHIR-37770](https://jira.hl7.org/browse/FHIR-37770) [See Changes Here](StructureDefinition-us-core-diagnosticreport-note.html)
 39. **Resolved - change required:** Does US Core 5 require SMARTv2 ? [FHIR-37813](https://jira.hl7.org/browse/FHIR-37813) [See Changes Here](#)
 40. **Applied:** Typo of ""DiagnostisReport"" in Clinical Notes Guidance [FHIR-37819](https://jira.hl7.org/browse/FHIR-37819) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/clinical-notes.html)
 41. **Resolved - change required:** $docref should accept multiple coding parameters instead of CodeableConcept for type parameter [FHIR-37894](https://jira.hl7.org/browse/FHIR-37894) [See Changes Here](#)
@@ -83,7 +83,7 @@ This ballot addresses the following issues:
 59. **Applied:** Fix Quick Start Rendering [FHIR-39367](https://jira.hl7.org/browse/FHIR-39367) [See Changes Here](StructureDefinition-us-core-patient.html#notes)
 60. **Applied:** Remove Bulk Dependency  [FHIR-39377](https://jira.hl7.org/browse/FHIR-39377) [See Changes Here](CapabilityStatement-us-core-server.html#should_igs)
 61. **RESOLVED - CHANGE REQUIRED:** Fix Cross Version Comparisons section [FHIR-39417](https://jira.hl7.org/browse/FHIR-39417) [See Changes Here](changes-between-versions.html#cross-version-comparisons)
-
+62. **RESOLVED - CHANGE REQUIRED:** Add Ballot Comment to CarePlan resource get community feedback [FHIR-32949](https://jira.hl7.org/browse/FHIR-32949) [See Changes Here](index.htm)
 
 ### Version = 5.0.1
 - url: <http://hl7.org/fhir/us/core/STU5.0.1/>

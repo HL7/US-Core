@@ -66,10 +66,6 @@ differential:
         strength: extensible
         valueSet: 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1010.6'
       mapping:
-        - identity: quick
-          map: vaccine
-        - identity: quick
-          map: vaccine
         - identity: argonaut-dq-dstu2
           map: Immunization.vaccineCode
     - id: Immunization.patient
@@ -82,10 +78,6 @@ differential:
             - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
       mustSupport: true
       mapping:
-        - identity: quick
-          map: subject
-        - identity: quick
-          map: subject
         - identity: argonaut-dq-dstu2
           map: Immunization.patient
     - id: 'Immunization.occurrence[x]'
@@ -99,20 +91,18 @@ differential:
         - code: string
       mustSupport: true
       mapping:
-        - identity: quick
-          map: performanceTime
-        - identity: quick
-          map: performanceTime
         - identity: argonaut-dq-dstu2
           map: Immunization.date
     - id: Immunization.primarySource
       path: Immunization.primarySource
-      min: 1
+      definition: >-
+        Indicates whether the data contained in the resource was captured by the individual/organization
+        which was responsible for the administration of the vaccine rather than as 'secondary reported' data 
+        documented by a third party. A value of 'true' means this data originated with the individual/organization
+        which was responsible for the administration of the vaccine.
+      comment: >-
+        This updated definition is adopted from the FHIR R5 Immunization resource.
       mustSupport: true
       mapping:
-        - identity: quick
-          map: reported
-        - identity: quick
-          map: reported
         - identity: argonaut-dq-dstu2
           map: Immunization.reported
