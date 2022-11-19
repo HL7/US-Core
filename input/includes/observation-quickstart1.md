@@ -1,3 +1,12 @@
+<!--format of include file 
+include parameters:
+system-category (optional)
+category (required)
+up to three LOINCs (1 or 3 required)
+
+{% raw %} {% include observation-quickstart1.md system="http://terminology.hl7.org/CodeSystem/observation-category" category="imaging" code1="2339-0" code2="25428-4" code3="2514-8" %} {% endraw %} -->
+
+
 {% include quickstart-intro.md %}
 
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
