@@ -13,7 +13,7 @@
 
 <div class="bg-success" markdown="1">
 
-    This [$docref operation] is used to request a server *generate* a document based on the specified parameters. This operation is invoked on a FHIR Server's DocumentReference endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all DocumentReference instances returning a Bundle of DocumentReference resources. See the [$docref operation] definition for detailed documentation.
+   This [$docref operation] is used to request a server *generate* a document based on the specified parameters. This operation is invoked on a FHIR Server's DocumentReference endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all DocumentReference instances returning a Bundle of DocumentReference resources. See the [$docref operation] definition for detailed documentation.
 
 - The operation can be invoked using the GET Syntax if the complex type parameter is omitted:
 
