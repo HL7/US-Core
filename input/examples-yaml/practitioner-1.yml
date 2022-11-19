@@ -14,7 +14,8 @@ identifier:
     - 
         system: 'http://hl7.org/fhir/sid/us-npi'
         # value: '9941339108abnc' #should lead to error
-        value: '9941339108'
+        # value: '9941339108' #should lead to error bad check digit
+        value: '9941339100' #should be valid NPI
     - 
         system: 'http://www.acme.org/practitioners'
         value: '25456'

@@ -70,15 +70,22 @@
                     "system": "http://hl7.org/fhir/sid/us-npi"
                 },
                 "condition": [
-                    "us-core-16"
+                    "us-core-16",
+                    "us-core-17"
                 ],
                 "constraint": [
                     {
                         "key": "us-core-16",
                         "severity": "error",
-                        "human": "NPI must be 10 digits (does not validate NPI check digit).",
+                        "human": "NPI must be 10 digits",
                         "expression": "value.matches('^[0-9]{10}$')",
                         "xpath": "f:value/f:matches(value,/^[0-9]{10}$/)"
+                    },
+                    {
+                        "key": "us-core-17",
+                        "severity": "error",
+                        "human": "NPI check digit must be valid (Luhn algorithm check)",
+                        "expression": "(((select(value.substring(0,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger()) + 24)mod 10=0)"
                     }
                 ],
                 "mustSupport": true
