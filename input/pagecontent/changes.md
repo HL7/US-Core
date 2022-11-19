@@ -19,7 +19,7 @@ This ballot addresses the following issues:
       - Occupation and Occupation Industry [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-occupation.html)
   - **Pending**: **Procedures:** Reason for Referral [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html)
 - Continued efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
-- Addressed and applied over 30 trackers submitted by implementers since the previous STU2 ballot for US Core ver 4.0.0:
+- Addressed and applied over 70 trackers submitted by implementers since the publication of US Core ver 5.0.0 and 5.0.1.
 
  **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 1. **Applied:** US Core: Require Provenance Resource for Create/Update/Delete Events, AuditEvent for Read [FHIR-14388](https://jira.hl7.org/browse/FHIR-14388) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/basic-provenance.html) and [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html)
