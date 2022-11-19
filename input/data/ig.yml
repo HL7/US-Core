@@ -1031,27 +1031,30 @@ definition:
   - reference:
       reference: OperationDefinition/docref
     description: "This operation is used to return all the references to documents\
-      \ related to a patient. \n\n The operation requires a patient id and takes the\
-      \ optional input parameters: \n  - start date\n  - end date\n  - document type\
-      \ \n\n and returns a [Bundle](http://hl7.org/fhir/bundle.html) of type \"searchset\"\
+      \ related to a\npatient. It is invoked on a FHIR Server's DocumentReference\
+      \ endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all\
+      \ DocumentReference instances.\n\nThe operation requires a patient id and takes\
+      \ the optional input parameters:\n- start date\n- end date\n- document type\n\
+      - on-demand\n- profile\n\nand returns a *searchset* [Bundle](http://hl7.org/fhir/bundle.html)\
       \ containing [DocumentReference](http://hl7.org/fhir/documentreference.html)\
-      \ resources for the patient. The DocumentReference resources **SHOULD** conform\
-      \ to the [US Core DocumentReference\n Profiles](http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference).\
-      \ If the server has or can create documents that are related to the patient,\
-      \ and that are available for the given user, the server returns the DocumentReference\
-      \ resources needed to support the records.  The principle intended use for this\
-      \ operation is to provide a provider or patient with access to their available\
-      \ document information. \n\n This operation is *different* from a search by\
-      \ patient and type and date range because: \n\n 1. It is used to request a server\
-      \ *generate* a document based on the specified parameters. \n\n 1. If no parameters\
-      \ are specified, the server SHALL return a DocumentReference to the patient's\
-      \ most current CCD \n\n 1. If the server cannot *generate* a document based\
-      \ on the specified parameters, the operation will return an empty search bundle.\
-      \ \n\n This operation is the *same* as a FHIR RESTful search by patient,type\
-      \ and date range because: \n\n 1. References for *existing* documents that meet\
-      \ the requirements of the request SHOULD also be returned unless the client\
-      \ indicates they are only interested in 'on-demand' documents using the *on-demand*\
-      \ parameter."
+      \ resources for the patient. If the server has stored documents or can create\
+      \ documents for the patient and those documents are available for the user,\
+      \ the server returns the DocumentReference resources associated with documents.\
+      \ This operation's intended use is to provide a way for providers or patients\
+      \ to access their available documents. The document itself can be subsequently\
+      \ retrieved using the link provided  in the `DocumentReference.content.attachment.url\
+      \ element`. The link could be a FHIR endpoint to a [Binary](http://hl7.org/fhir/R4/binary.html)\
+      \ Resource or some other document repository.\n\nThis operation is *different*\
+      \ from a FHIR RESTful query on DocumentReference by patient and type and date\
+      \ range because: \n\n1. It is used to request a server to *generate* a document\
+      \ based on the specified parameters.\n\n1. If no parameters are specified, the\
+      \ server SHALL return a DocumentReference to the patient's current C-CDA CCD.\n\
+      \n1. If the server cannot *generate* a document based on the specified parameters,\
+      \ the operation will return an empty search bundle.\n\nUnless the client indicates\
+      \ they are only interested in 'on-demand' documents using the *on-demand* parameter,\
+      \ the server SHOULD return DocumentReference instances for *existing* documents\
+      \ that meet the request parameters  In this regard, this operation is *similar*\
+      \ to a FHIR RESTful query."
     exampleBoolean: false
     name: US Core Fetch DocumentReference
   - reference:
@@ -2271,38 +2274,6 @@ definition:
       Profile*.
     name: Procedure R4 Defib Implant Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
-  - reference:
-      reference: QuestionnaireResponse/AHC-HRSN-screening-example
-    description: '''An example of an SDC QuestionnaireResponse that represents questions
-      and selected answers from the Accountable health communities (AHC) health-related
-      social needs screening (HRSN) tool in LOINC (code  96777-8). The example is
-      generated using the LHC-Forms SDC Questionnaire App.'''
-    name: AHC HRSN Screening Example
-    exampleBoolean: true
-  - reference:
-      reference: QuestionnaireResponse/PRAPARE-example
-    description: '''An example of an US Core QuestionnaireResponse that represents
-      questions and selected answers from the PRAPARE questionnaire represented in
-      LOINC (code 93025-5). The example is generated using the LHC-Forms SDC Questionnaire
-      App.'''
-    name: PRAPARE Example
-    exampleBoolean: true
-  - reference:
-      reference: QuestionnaireResponse/glascow-coma-score
-    description: '''This example of a US Core QuestionnaireResponse illustrate using
-      Questionnaire as a *stand alone* resource. It does not point to the definition
-      of the questions in  a FHIR Questionnaire, but represents the answers from a
-      non FHIR survey instrument (in this case a pdf).'''
-    name: Glascow Coma Score Example
-    exampleBoolean: true
-  - reference:
-      reference: QuestionnaireResponse/hunger-vital-sign-example
-    description: '''An example of an SDC QuestionnaireResponse that represents questions
-      and selected answers from the Hunger Vital Sign Example questionnaire represented
-      in LOINC (code 88122-7). The example is generated using the LHC-Forms SDC Questionnaire
-      App.'''
-    name: Hunger Vital Sign [HVS] Example
-    exampleBoolean: true
   - reference:
       reference: Organization/acme-lab
     description: This is a acme lab example for the *US Core Organization Profile*.

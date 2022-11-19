@@ -60,9 +60,9 @@ This ballot addresses the following issues:
 36. **Applied:**  Change Immunization.primarySource to must support and update definition [FHIR-37723](https://jira.hl7.org/browse/FHIR-37723) [See Changes Here](StructureDefinition-us-core-immunization.html)
 37. **Applied:** Added supportedProfiles to US Core CapabilityStatements[FHIR-37766](https://jira.hl7.org/browse/FHIR-37766) [See Changes Here](CapabilityStatement-us-core-server.html#encounter)
 38. **Applied:** Clarify how to use categories vis a vis codes in US Core Diagnostic Report Category element [FHIR-37770](https://jira.hl7.org/browse/FHIR-37770) [See Changes Here](StructureDefinition-us-core-diagnosticreport-note.html)
-39. **Resolved - change required:** Does US Core 5 require SMARTv2 ? [FHIR-37813](https://jira.hl7.org/browse/FHIR-37813) [See Changes Here](#)
+39. **Applied:** Clarify that US Core requires any version of SMART? [FHIR-37813](https://jira.hl7.org/browse/FHIR-37813) [See Changes Here](security.html)
 40. **Applied:** Typo of ""DiagnostisReport"" in Clinical Notes Guidance [FHIR-37819](https://jira.hl7.org/browse/FHIR-37819) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/clinical-notes.html)
-41. **Resolved - change required:** $docref should accept multiple coding parameters instead of CodeableConcept for type parameter [FHIR-37894](https://jira.hl7.org/browse/FHIR-37894) [See Changes Here](#)
+41. **Applied:** Update $docref type input to multiple Codings [FHIR-37894](https://jira.hl7.org/browse/FHIR-37894) [See Changes Here](OperationDefinition-docref.html) and [See Changes Here](StructureDefinition-us-core-documentreferencel#mandatory-operation)
 42. **Resolved - change required:** Add Conformance expectation of  SHOULD to resolve for server Capability [FHIR-37901](https://jira.hl7.org/browse/FHIR-37901) [See Changes Here](#)
 43. **Applied:** Change Condition patient + category search to SHALL support [FHIR-37918](https://jira.hl7.org/browse/FHIR-37918) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#notes)
 44. **Applied:** Typo in Observation SDOH profile [FHIR-37928](https://jira.hl7.org/browse/FHIR-37928) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-screening-assessments.html)
@@ -70,20 +70,20 @@ This ballot addresses the following issues:
 46. **Triaged:** Diagnostic Report Laboratory Codes LOINC CLASSTYPE value should be ""1"" [FHIR-37933](https://jira.hl7.org/browse/FHIR-37933) [See Changes Here](#)
 47. **Applied:** Clarify that guide uses US Edition of SNOMED and update links to it  [FHIR-38190](https://jira.hl7.org/browse/FHIR-38190) [See Changes Here](general-guidance.html#snomed-ct-united-states-edition)
 48. **Resolved - change required:** update QuickStart to include all the search requirements by type. [FHIR-38629](https://jira.hl7.org/browse/FHIR-38629) [See Changes Here](#)
-49. **Resolved - change required:** specify $docref's OperationDefinition.resource to be DocumentReference [FHIR-38658](https://jira.hl7.org/browse/FHIR-38658) [See Changes Here](#)
-50. **Resolved - change required:** Remove comment in $docref [FHIR-38686](https://jira.hl7.org/browse/FHIR-38686) [See Changes Here](#)
+49. **Applied:** Specify $docref's operates on DocumentReference endpoint [FHIR-38658](https://jira.hl7.org/browse/FHIR-38658) [See Changes Here](OperationDefinition-docref.html)
+50. **Applied:** Remove comment in $docref [FHIR-38686](https://jira.hl7.org/browse/FHIR-38686) [See Changes Here](#)
 51. **Retracted:** make DocRef.custodian optional in v3 as it is in v4 and v5 [FHIR-38700](https://jira.hl7.org/browse/FHIR-38700) [See Changes Here](#)
 52. **Resolved - change required:** Add USCDI V3 Requirements [FHIR-38702](https://jira.hl7.org/browse/FHIR-38702) [See Changes Here](#)
 53. **Applied:** Correct documentation on Procedure.performed attribute [FHIR-38737](https://jira.hl7.org/browse/FHIR-38737) [See Changes Here](StructureDefinition-us-core-procedure.html#mandatory-and-must-support-data-elements)
 54. **No Change:** Recommend against using LOINC procedure codes [FHIR-38739](https://jira.hl7.org/browse/FHIR-38739) [See Changes Here](#)
-55. **RESOVED - CHANGE REQUIRED:** Consider improving description of docref for clarity [FHIR-38746](https://jira.hl7.org/browse/FHIR-38746) [See Changes Here](#)
+55. **Applied:** Improve docref documentation [FHIR-38746](https://jira.hl7.org/browse/FHIR-38746) [See Changes Here](OperationDefinition-docref.html)
 56. **Applied:** Fix title for US Core Pediatric Head Occipital Frontal Circumference Observation Profile [FHIR-38794](https://jira.hl7.org/browse/FHIR-38794) [See Changes Here](StructureDefinition-head-occipital-frontal-circumference-percentile.html)
 57. **Applied:** Add Refill and Quantity to MedRequest [FHIR-39343](https://jira.hl7.org/browse/FHIR-39343) [See Changes Here](StructureDefinition-us-core-medicationrequest.html)
 58. **RESOLVED - CHANGE REQUIRED:** Fix Incorrect category CodeSystem in Mandatory Searches in US Core Observation Clinical Test Result Profile [FHIR-39355](https://jira.hl7.org/browse/FHIR-39355) [See Changes Here](#)
 59. **Applied:** Fix Quick Start Rendering [FHIR-39367](https://jira.hl7.org/browse/FHIR-39367) [See Changes Here](StructureDefinition-us-core-patient.html#notes)
 60. **Applied:** Remove Bulk Dependency  [FHIR-39377](https://jira.hl7.org/browse/FHIR-39377) [See Changes Here](CapabilityStatement-us-core-server.html#should_igs)
 61. **RESOLVED - CHANGE REQUIRED:** Fix Cross Version Comparisons section [FHIR-39417](https://jira.hl7.org/browse/FHIR-39417) [See Changes Here](changes-between-versions.html#cross-version-comparisons)
-62. **RESOLVED - CHANGE REQUIRED:** Add Ballot Comment to CarePlan resource get community feedback [FHIR-32949](https://jira.hl7.org/browse/FHIR-32949) [See Changes Here](index.htm)
+62. **RESOLVED - CHANGE REQUIRED:** Add Ballot Comment to CarePlan resource get community feedback [FHIR-32949](https://jira.hl7.org/browse/FHIR-32949) [See Changes Here](index.html)
 
 ### Version = 5.0.1
 - url: <http://hl7.org/fhir/us/core/STU5.0.1/>
@@ -355,7 +355,7 @@ This Ballot addresses the following issues:
   1. **Applied**: Make DiagnosticReport.effective and DiagnosticReport.issued conditionally mandatory [FHIR-34330](https://jira.hl7.org/browse/FHIR-34330) See Change:
       - [Here](http://hl7.org/fhir/us/core/2022Jan/StructureDefinition-us-core-diagnosticreport-lab.html)
       - [Here](http://hl7.org/fhir/us/core/2022Jan/StructureDefinition-us-core-diagnosticreport-note.html)
-  1. **Applied**: Resolution of http://hl7.org/fhir/us/core/OperationDefinition/docref [FHIR-34044](https://jira.hl7.org/browse/FHIR-34044) [See Change Here](http://hl7.org/fhir/us/core/2022Jan/search-parameters-and-operations.html#operations)
+  1. **Applied**: fix URL[See Change Here](http://hl7.org/fhir/us/core/2022Jan/search-parameters-and-operations.html#operations)
   1. **Applied**: US Core search page is not working [FHIR-34028](https://jira.hl7.org/browse/FHIR-34028) [See Change Here](http://hl7.org/fhir/us/core/2022Jan/#) - Coordination with HL7 IG publishing team to Correct
 
   **The Following Trackers Will be Applied Following this Ballot**

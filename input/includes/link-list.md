@@ -263,6 +263,7 @@
 [ServiceRequest]: {{site.data.fhir.path}}servicerequest.html
 [slicing]: {{site.data.fhir.path}}profiling.html#slicing
 [SMART App Launch Framework]: {{site.data.fhir.hl7_fhir_uv_smart_app_launch}}
+[SMART App Launch version]: http://hl7.org/fhir/smart-app-launch/history.html
 [SNOMED CT]:  http://snomed.info/sct/731000124108 "SNOMED CT US Edition"
 [Social Determinants of Health (SDOH)]: screening-and-assessments.html
 [Structured Data Capture (SDC) Questionnaire Response Profile]: {{site.data.fhir.hl7_fhir_uv_sdc}}/StructureDefinition-sdc-questionnaireresponse.html
@@ -357,4 +358,5 @@
 [Vital Signs Quick Start]: vitals-search.html
 [vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
 [writing and updating]: future-of-US-core.html#future-candidate-requirements-under-consideration
+[Parameters]: {{site.data.fhir.path}}parameters.html
 <!-- [SNOMED CT]: http://snomed.info/sct -->

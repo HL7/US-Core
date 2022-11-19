@@ -1,15 +1,5 @@
-
-The operation can be invoked using the GET Syntax if the complex type parameter is omitted:
-
-`GET [base]/DocumentReference/$docref?{parameters}`
-
-Otherwise the POST transaction is used as follows:
-
-`POST [base]/DocumentReference/$docref}`
-
----
-
-### Example
+<!-- includes/docref-example1.md -->
+<!-- Example 1 : Request the latest CCD -->
 
 **Request the latest CCD for a patient using `GET` syntax**
 
