@@ -27,7 +27,7 @@ This ballot addresses the following issues:
 3. **Applied:** Consider adding years since quite smoking - USCore #154 [FHIR-20131](https://jira.hl7.org/browse/FHIR-20131) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-smokingstatus.html)
 4. **Applied:** Create a US Core extension to communicate the state jurisdiction for an element [FHIR-26943](https://jira.hl7.org/browse/FHIR-26943) [See Changes Here](StructureDefinition-us-core-jurisdiction.html)
 5.  **Applied:** Update missing data for coded data examples [FHIR-31381](https://jira.hl7.org/browse/FHIR-31381) [See Changes Here](general-requirements.html#missing-data)
-6.  **Resolved - change required:** Need to clarify the meaning/purpose of this profile/observation category [FHIR-35114](https://jira.hl7.org/browse/FHIR-35114) [See Changes Here](#)
+6.  **Applied:** Clarify the purpose of Clinical Test Observation Profile [FHIR-35114](https://jira.hl7.org/browse/FHIR-35114) [See Changes Here](StructureDefinition-us-core-observation-clinical-result.html)
 7.  **Applied:** Clarify how to read Profile Page [FHIR-36083](https://jira.hl7.org/browse/FHIR-36083) [See Changes Here](index.html#how-to-read-this-guide)
 8.  **Applied:** Clarify organization responsible for the DocumentReference [FHIR-36654](https://jira.hl7.org/browse/FHIR-36654) [See Changes Here](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
 9.  **Applied:** Clarify Device UDI-PI requirements [FHIR-36657](https://jira.hl7.org/browse/FHIR-36657) [See Changes Here](StructureDefinition-us-core-implantable-device.html#mandatory-and-must-support-data-elements)
@@ -59,7 +59,7 @@ This ballot addresses the following issues:
 35. **Applied:** Change Condition patient + category search to SHALL support [FHIR-37918](https://jira.hl7.org/browse/FHIR-37918) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#notes)
 36. **Applied:** Typo in Observation SDOH profile [FHIR-37928](https://jira.hl7.org/browse/FHIR-37928) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-screening-assessments.html)
 37. **Applied:** Typo in Condition Problems and Health Concerns search example [FHIR-37929](https://jira.hl7.org/browse/FHIR-37929) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-condition-problems-health-concerns.html)
-38. **Triaged:** Diagnostic Report Laboratory Codes LOINC CLASSTYPE value should be "1" [FHIR-37933](https://jira.hl7.org/browse/FHIR-37933) [See Changes Here](#)
+38. **Applied:** Update Laboratory Loinc Valueset description [FHIR-37933](https://jira.hl7.org/browse/FHIR-37933) [See Changes Here](#)
 39. **Applied:** Clarify that guide uses US Edition of SNOMED and update links to it  [FHIR-38190](https://jira.hl7.org/browse/FHIR-38190) [See Changes Here](general-guidance.html#snomed-ct-united-states-edition)
 40. **Applied:** Update QuickStart to include all the search requirements by type. [FHIR-38629](https://jira.hl7.org/browse/FHIR-38629) [See Changes Here](StructureDefinition-us-core-observation-sexual-orientation.html)
 41. **Applied:** Specify $docref's operates on DocumentReference endpoint [FHIR-38658](https://jira.hl7.org/browse/FHIR-38658) [See Changes Here](OperationDefinition-docref.html)
@@ -69,11 +69,10 @@ This ballot addresses the following issues:
 45. **Applied:** Improve docref documentation [FHIR-38746](https://jira.hl7.org/browse/FHIR-38746) [See Changes Here](OperationDefinition-docref.html)
 46. **Applied:** Fix title for US Core Pediatric Head Occipital Frontal Circumference Observation Profile [FHIR-38794](https://jira.hl7.org/browse/FHIR-38794) [See Changes Here](StructureDefinition-head-occipital-frontal-circumference-percentile.html)
 47. **Applied:** Add Refill and Quantity to MedRequest [FHIR-39343](https://jira.hl7.org/browse/FHIR-39343) [See Changes Here](StructureDefinition-us-core-medicationrequest.html)
-48. **RESOLVED - CHANGE REQUIRED:** Fix Incorrect category CodeSystem in Mandatory Searches in US Core Observation Clinical Test Result Profile [FHIR-39355](https://jira.hl7.org/browse/FHIR-39355) [See Changes Here](#)
-49. **Applied:** Fix Quick Start Rendering [FHIR-39367](https://jira.hl7.org/browse/FHIR-39367) [See Changes Here](StructureDefinition-us-core-patient.html#notes)
-50. **Applied:** Remove Bulk Dependency  [FHIR-39377](https://jira.hl7.org/browse/FHIR-39377) [See Changes Here](CapabilityStatement-us-core-server.html#should_igs)
-51. **RESOLVED - CHANGE REQUIRED:** Fix Cross Version Comparisons section [FHIR-39417](https://jira.hl7.org/browse/FHIR-39417) [See Changes Here](changes-between-versions.html#cross-version-comparisons)
-52. **RESOLVED - CHANGE REQUIRED:** Add Ballot Comment to CarePlan resource get community feedback [FHIR-32949](https://jira.hl7.org/browse/FHIR-32949) [See Changes Here](index.html)
+48. **Applied:** Fix Quick Start Rendering [FHIR-39367](https://jira.hl7.org/browse/FHIR-39367) [See Changes Here](StructureDefinition-us-core-patient.html#notes)
+49. **Applied:** Remove Bulk Dependency  [FHIR-39377](https://jira.hl7.org/browse/FHIR-39377) [See Changes Here](CapabilityStatement-us-core-server.html#should_igs)
+50. **RESOLVED - CHANGE REQUIRED:** Fix Cross Version Comparisons section [FHIR-39417](https://jira.hl7.org/browse/FHIR-39417) [See Changes Here](changes-between-versions.html#cross-version-comparisons)
+51. **RESOLVED - CHANGE REQUIRED:** Add Ballot Comment to CarePlan resource get community feedback [FHIR-32949](https://jira.hl7.org/browse/FHIR-32949) [See Changes Here](index.html)
 
 ### Version = 5.0.1
 - url: <http://hl7.org/fhir/us/core/STU5.0.1/>
@@ -102,8 +101,8 @@ The changes in this annual update to US Core have been reviewed and commented up
   -  A Social Determinants Of Health ([SDOH](http://hl7.org/fhir/us/core/STU5/sdoh.html)) guidance page on using US Core to represent and access SDOH Assessments, Goals, Interventions, and Problems/Health Concerns.
   - [US Core Observation Survey Profile](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-observation-survey.html), [US Core Observation SDOH Assessment Profile](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-sdoh-assessment.html), and [US Core QuestionnaireResponse Profile](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-questionnaireresponse.html) to represent SDOH Assessments
   - [US Core ServiceRequest Profile](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-servicerequest.html) to represent SDOH Interventions
-  - [US Core Observation Clinical Test Result Profile](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-observation-clinical-test.html) to represent Clinical Test Results
-  - [US Core Observation Imaging Result Profile](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-observation-imaging.html) to represent Imaging Results
+  - [US Core Observation Clinical Result Profile](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-observation-clinical-test.html) to represent Clinical Test Results
+  - [US Core Observation Clinical Result Profile](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-observation-imaging.html) to represent Imaging Results
   - [US Core Gender Identity Extension](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-genderIdentity.html) for patient demographics
   - [US Core Observation Sexual Orientation Profile](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-sexual-orientation.html) for patient demographics
   - [US Core RelatedPerson Profile](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-relatedperson.html) to represent care member such as a caretaker.

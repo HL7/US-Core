@@ -5,48 +5,49 @@ name: USCoreLaboratoryResultObservationProfile
 title: US Core Laboratory Result Observation Profile
 status: active
 experimental: false
-date: '2022-10-07'
+date: '2022-11-19'
 
 description: >-
-  The US Core Laboratory Result Observation Profile is based upon the core FHIR Observation Resource and, along with the US Core DiagnosticReport Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability (USCDI) v3 *Laboratory* requirements. Laboratory results are grouped and summarized using the DiagnosticReport resource, which references Observation resources. Each Observation resource represents an individual laboratory test and result value, a “nested” panel (such as a microbial susceptibility panel) that references other observations, or rarely a laboratory test with component result values. The US Core Laboratory Result Observation Profile sets minimum expectations for the Observation resource to record, search, and fetch laboratory test results associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
+  The US Core Laboratory Result Observation Profile is based upon the US Core Observation Clinical Result Profile and, along with the US Core DiagnosticReport Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability (USCDI) Laboratory requirements. Laboratory results are grouped and summarized using the DiagnosticReport resource, which references Observation resources. Each Observation resource represents an individual laboratory test and result value, a “nested” panel (such as a microbial susceptibility panel) that references other observations, or rarely a laboratory test with component result values. The US Core Laboratory Result Observation Profile sets minimum expectations for the Observation resource to record, search, and fetch laboratory test results associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets SHALL be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
 type: Observation
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Observation'
+# baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Observation'
+baseDefinition: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result'
 derivation: constraint
 differential:
   element:
-    - id: Observation
-      path: Observation
-      definition: '\-'
-      comment: '\-'
-      constraint:
-        - key: us-core-2
-          severity: error
-          human: >-
-            If there is no component or hasMember element then either a value[x]
-            or a data absent reason must be present
-          expression: >-
-            (component.empty() and hasMember.empty()) implies
-            (dataAbsentReason.exists() or value.exists())
-          xpath: >-
-            exists(f:component) or exists(f:hasMember) or
-            exists(f:*[starts-with(local-name(.), 'value')]) or
-            exists(f:dataAbsentReason)
-      mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation
-    - id: Observation.status
-      path: Observation.status
-      mustSupport: true
-      binding:
-        strength: required
-        valueSet: 'http://hl7.org/fhir/ValueSet/observation-status'
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.status
+    # - id: Observation
+    #   path: Observation
+    #   definition: '\-'
+    #   comment: '\-'
+    #   constraint:
+    #     - key: us-core-2
+    #       severity: error
+    #       human: >-
+    #         If there is no component or hasMember element then either a value[x]
+    #         or a data absent reason must be present
+    #       expression: >-
+    #         (component.empty() and hasMember.empty()) implies
+    #         (dataAbsentReason.exists() or value.exists())
+    #       xpath: >-
+    #         exists(f:component) or exists(f:hasMember) or
+    #         exists(f:*[starts-with(local-name(.), 'value')]) or
+    #         exists(f:dataAbsentReason)
+    #   mustSupport: false
+    #   mapping:
+    #     - identity: argonaut-dq-dstu2
+    #       map: Observation
+    # - id: Observation.status
+    #   path: Observation.status
+    #   mustSupport: true
+    #   binding:
+    #     strength: required
+    #     valueSet: 'http://hl7.org/fhir/ValueSet/observation-status'
+      # mapping:
+      #   - identity: argonaut-dq-dstu2
+      #     map: Observation.status
     - id: Observation.category
       path: Observation.category
       slicing:
@@ -59,9 +60,9 @@ differential:
       mapping:
         - identity: argonaut-dq-dstu2
           map: Observation.category
-    - id: 'Observation.category:Laboratory'
+    - id: 'Observation.category:laboratory'
       path: Observation.category
-      sliceName: Laboratory
+      sliceName: laboratory
       min: 1
       max: '1'
       patternCodeableConcept:
@@ -72,68 +73,72 @@ differential:
       mapping:
         - identity: argonaut-dq-dstu2
           map: Observation.category
+
+
     - id: Observation.code
       path: Observation.code
       short: Laboratory Test Name
-      definition: >-
-        The test that was performed.  A LOINC **SHALL** be used if the concept
-        is present in LOINC.
-      comment: >-
-        The typical patterns for codes are:  1)  a LOINC code either as a
-        translation from a "local" code or as a primary code, or 2)  a local
-        code only if no suitable LOINC exists,  or 3)  both the local and the
-        LOINC translation.   Systems SHALL be capable of sending the local code
-        if one exists.  When using LOINC , Use either the SHORTNAME or
-        LONG_COMMON_NAME field for the display.
-      alias:
-        - Test Name
-        - Observation Identifer
+    #   definition: >-
+    #     The test that was performed.  A LOINC **SHALL** be used if the concept
+    #     is present in LOINC.
+    #   comment: >-
+    #     The typical patterns for codes are:  1)  a LOINC code either as a
+    #     translation from a "local" code or as a primary code, or 2)  a local
+    #     code only if no suitable LOINC exists,  or 3)  both the local and the
+    #     LOINC translation.   Systems SHALL be capable of sending the local code
+    #     if one exists.  When using LOINC , Use either the SHORTNAME or
+    #     LONG_COMMON_NAME field for the display.
+    #   alias:
+    #     - Test Name
+    #     - Observation Identifier
       mustSupport: true
       binding:
         strength: extensible
-        description: LOINC codes
-        valueSet: 'http://hl7.org/fhir/ValueSet/observation-codes'
+        description: Laboratory LOINC Codes
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-laboratory-test-codes'
       mapping:
         - identity: argonaut-dq-dstu2
           map: Observation.code
-    - id: Observation.subject
-      path: Observation.subject
-      min: 1
-      type:
-        - code: Reference
-          targetProfile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.subject
-    - id: 'Observation.effective[x]'
-      path: 'Observation.effective[x]'
-      definition: >-
-        For lab tests this is the specimen collection date.  For Ask at Order
-        Entry Questions (AOE)'s this is the date the question was asked.
-      type:
-        - extension:
-            - url: >-
-                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-              valueBoolean: true
-          code: dateTime
-        - code: Period
-        - code: Timing
-        - code: instant
-      condition:
-        - us-core-1
-      constraint:
-        - key: us-core-1
-          severity: error
-          human: Datetime must be at least to day.
-          expression: $this is DateTime implies $this.toString().length() >= 10
-          xpath: >-
-            f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: 'Observation.effective[x]'
+
+    # - id: Observation.subject
+    #   path: Observation.subject
+    #   min: 1
+    #   type:
+    #     - code: Reference
+    #       targetProfile:
+    #         - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+    #   mustSupport: true
+    #   mapping:
+    #     - identity: argonaut-dq-dstu2
+    #       map: Observation.subject
+    # - id: 'Observation.effective[x]'
+    #   path: 'Observation.effective[x]'
+    #   definition: >-
+    #     For lab tests this is the specimen collection date.  For Ask at Order
+    #     Entry Questions (AOE)'s this is the date the question was asked.
+      # type:
+      #   - extension:
+      #       - url: >-
+      #           http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+      #         valueBoolean: true
+      #     code: dateTime
+      #   - code: Period
+      #   - code: Timing
+      #   - code: instant
+      # condition:
+      #   - us-core-1
+      # constraint:
+      #   - key: us-core-1
+      #     severity: error
+      #     human: Datetime must be at least to day.
+      #     expression: $this is DateTime implies $this.toString().length() >= 10
+      #     xpath: >-
+      #       f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)
+      # mustSupport: true
+      # mapping:
+      #   - identity: argonaut-dq-dstu2
+      #     map: 'Observation.effective[x]'
+
     - id: 'Observation.value[x]'
       path: 'Observation.value[x]'
       short: Result Value
@@ -170,8 +175,8 @@ differential:
         - code: dateTime
         - code: Period
       condition:
-        - us-core-2
-        - us-core-3
+        # - us-core-2
+        # - us-core-3
         - us-core-4
       constraint:
         - extension:
@@ -200,21 +205,22 @@ differential:
       mapping:
         - identity: argonaut-dq-dstu2
           map: 'Observation.value[x]'
-    - id: Observation.dataAbsentReason
-      path: Observation.dataAbsentReason
-      condition:
-        - us-core-2
-      mustSupport: true
-      binding:
-        strength: extensible
-        valueSet: 'http://hl7.org/fhir/ValueSet/data-absent-reason'
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Observation.dataAbsentReason
+
+
+    # - id: Observation.dataAbsentReason
+    #   path: Observation.dataAbsentReason
+    #   condition:
+    #     - us-core-2
+    #   mustSupport: true
+    #   binding:
+    #     strength: extensible
+    #     valueSet: 'http://hl7.org/fhir/ValueSet/data-absent-reason'
+    #   mapping:
+    #     - identity: argonaut-dq-dstu2
+    #       map: Observation.dataAbsentReason
 
     - id: Observation.specimen
       path: Observation.specimen
-      mustSupport: true
       type:
         - code: Reference
           targetProfile:

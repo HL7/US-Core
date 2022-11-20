@@ -138,10 +138,9 @@
 [FHIR Version R4]: {{site.data.fhir.path}}index.html "FHIR Version R4 Specification Home Page"
 [FHIR Version STU3]: http://hl7.org/fhir/STU3/index.html "FHIR Version STU3 Specification Home Page"
 [FindHelp.org]: https://company.findhelp.com/
-[Formal Profile Definition]: #profile
+[Formal Views]: #profile
 [Future of US Core]: future-of-US-core.html
 [gender-identity]: SearchParameter-us-core-patient-gender-identity.html
-[General Guidance Section]: general-guidance.html#using-ucum-codes-in-the-quantity-datatype
 [General Guidance]: general-guidance.html  "General Guidance Page"
 [General Requirements]: general-requirements.html
 [General Security Considerations]: security.html
@@ -320,8 +319,7 @@
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
 [US Core MedicationRequest Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Observation Clinical Judgment Profile]: StructureDefinition-us-core-observation-clinical-judgment.html
-[US Core Observation Clinical Test Result Profile]: StructureDefinition-us-core-observation-clinical-test.html
-[US Core Observation Imaging Result Profile]: StructureDefinition-us-core-observation-imaging.html
+[US Core Observation Clinical Result Profile]: StructureDefinition-us-core-observation-clinical-result.html
 [US Core Observation Screening and Assessments Profile]: StructureDefinition-us-core-observation-screening-assessments.html
 [US Core Observation SDOH Assessment Profile]: StructureDefinition-us-core-observation-sdoh-assessment.html
 [US Core Observation Sexual Orientation Profile]: StructureDefinition-us-core-observation-sexual-orientation.html

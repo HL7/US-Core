@@ -1,13 +1,15 @@
 resourceType: StructureDefinition
-id: us-core-observation-clinical-test
+id: us-core-observation-clinical-result
 url: >-
-  http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
-name: USCoreObservationClinicalTestResultProfile
-title: US Core Observation Clinical Test Result Profile
+  http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+name: USCoreObservationClinicalResultProfile
+title: US Core Observation Clinical Result Profile
 status: active
 date: '2022-04-20'
-description: >-
-  The US Core Observation Clinical Test Result Profile is based upon the core FHIR Observation Resource, and, along with the US Core DiagnosticReport Profile for Report and Note exchange, meets the U.S. Core Data for Interoperability (USCDI) v2 *Clinical Tests* requirements. Clinical tests includes non-imaging and non-laboratory tests performed on a patient that results in structured or unstructured (narrative) findings specific to the patient, such as electrocardiogram (ECG), visual acuity exam, macular exam, or graded exercise testing (GXT), to facilitate the diagnosis and management of conditions. The US Core Observation Clinical Test Result Profile profile sets minimum expectations for the Observation resource to record, search, and fetch clinical tests for a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.
+description: |-
+  The US Core Observation Clinical Result Profile is based upon the core FHIR Observation Resource and, along with the US Core DiagnosticReport Profile, meets the US Core Data for Interoperability (USCDI) requirements for *Diagnostic Imaging* and *Clinical Tests* Data Classes. This profile sets minimum expectations for the Observation resource to record and search non-laboratory clinical test results (e.g., radiology and other clinical observations generated from procedures). An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy. This profile is the basis for the US Core Laboratory Result Observation Profile, which defines additional data elements to record and search laboratory test results.
+  
+  The US Core Observation Clinical Result Profile sets minimum expectations to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -47,13 +49,12 @@ differential:
       min: 1
       mustSupport: true
 
-    - id: 'Observation.category:clinical-test'
+    - id: 'Observation.category:us-core'
       path: Observation.category
-      sliceName: clinical-test
+      sliceName: us-core
       patternCodeableConcept:
         coding:
-          - system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-observation-category'
-            code: clinical-test
+          - system: 'http://terminology.hl7.org/CodeSystem/observation-category'
       min: 1
       max: "1"
       mustSupport: true
@@ -61,9 +62,9 @@ differential:
 
     - id: Observation.code
       path: Observation.code
-      short: Clinical Test Name
+      short: Clinical Test or Procedure Name
       definition: >-
-        The name of the non-imaging or non-laboratory test performed on a
+        The name of the clinical test or procedure performed on a
         patient.  A LOINC **SHALL** be used if the concept is present in LOINC.
       comment: >-
         The typical patterns for codes are:  1)  a LOINC code either as a
@@ -75,8 +76,8 @@ differential:
       mustSupport: true
       binding:
         strength: extensible
-        valueSet: >-
-          http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-test-codes
+        # valueSet: >-
+        #   http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-test-codes
     - id: Observation.subject
       path: Observation.subject
       min: 1
@@ -108,6 +109,12 @@ differential:
       mustSupport: true
     - id: 'Observation.value[x]'
       path: 'Observation.value[x]'
+      definition: >-
+        The clinical test or procedure result value. If a numeric value, valueQuantity.code **SHALL** be selected
+        from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value
+        set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all
+        UCUM codes is in the FHIR specification.
+
       short: Result Value
       type:
         - code: Quantity
@@ -147,6 +154,8 @@ differential:
             not(exists(f:valueQuantity/f:system) ) or
             f:valueQuantity/f:system[@value='http://unitsofmeasure.org']
       mustSupport: true
+
+
     - id: Observation.dataAbsentReason
       path: Observation.dataAbsentReason
       condition:

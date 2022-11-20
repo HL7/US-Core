@@ -89,12 +89,6 @@ definition:
     exampleBoolean: false
     name: US Core DocumentReferences Category Codes
   - reference:
-      reference: CodeSystem/us-core-observation-category
-    description: Set of codes for implementation of the US-Core profiles. These codes
-      are  extensions to the [FHIR Observation Category Codes](http://terminology.hl7.org/CodeSystem/observation-category).
-    exampleBoolean: false
-    name: US Core Observation Category Extension Codes
-  - reference:
       reference: CodeSystem/us-core-provenance-participant-type
     description: Set of codes that are needed for implementation of the US-Core Provenance
       Profile. These codes are used as extensions to the FHIR value sets.
@@ -439,53 +433,43 @@ definition:
     exampleBoolean: false
     name: US Core MedicationRequest Profile
   - reference:
-      reference: StructureDefinition/us-core-observation-clinical-test
-    description: The US Core Observation Clinical Test Result Profile is based upon
-      the core FHIR Observation Resource, and, along with the US Core DiagnosticReport
-      Profile for Report and Note exchange, meets the U.S. Core Data for Interoperability
-      (USCDI) v2 *Clinical Tests* requirements. Clinical tests includes non-imaging
-      and non-laboratory tests performed on a patient that results in structured or
-      unstructured (narrative) findings specific to the patient, such as electrocardiogram
-      (ECG), visual acuity exam, macular exam, or graded exercise testing (GXT), to
-      facilitate the diagnosis and management of conditions. The US Core Observation
-      Clinical Test Result Profile profile sets minimum expectations for the Observation
-      resource to record, search, and fetch clinical tests for a patient to promote
-      interoperability and adoption through common implementation.  It identifies
+      reference: StructureDefinition/us-core-observation-clinical-result
+    description: 'The US Core Observation Clinical Result Profile is based upon the
+      core FHIR Observation Resource and, along with the US Core DiagnosticReport
+      Profile, meets the US Core Data for Interoperability (USCDI) requirements for
+      *Diagnostic Imaging* and *Clinical Tests* Data Classes. This profile sets minimum
+      expectations for the Observation resource to record and search non-laboratory
+      clinical test results (e.g., radiology and other clinical observations generated
+      from procedures). An example would be when a gastroenterologist reports the
+      size of a polyp observed during a colonoscopy. This profile is the basis for
+      the US Core Laboratory Result Observation Profile, which defines additional
+      data elements to record and search laboratory test results.
+
+
+      The US Core Observation Clinical Result Profile sets minimum expectations to
+      promote interoperability and adoption through common implementation. It identifies
       which core elements, extensions, vocabularies, and value sets **SHALL** be present
-      in the resource when using this profile.  It provides the floor for standards
-      development for specific use cases.
+      in the resource when using this profile. It provides the floor for standards
+      development for specific use cases.'
     exampleBoolean: false
-    name: US Core Observation Clinical Test Result Profile
-  - reference:
-      reference: StructureDefinition/us-core-observation-imaging
-    description: The US Core Observation Imaging Result Profile is based upon the
-      core FHIR Observation Resource, and, along with the US Core DiagnosticReport
-      Profile for Report and Note exchange, meets the U.S. Core Data for Interoperability
-      (USCDI) v2 *Diagnostic Imaging* requirements. To promote interoperability and
-      adoption through common implementation, this profile sets minimum expectations
-      for the Observation resource to record, search, and fetch retrieve structured
-      and unstructured (narrative) components of diagnostic imaging test results for
-      a patient. These observations include reasons, findings, and impressions. It
-      provides the floor for standards development for specific use cases.
-    exampleBoolean: false
-    name: US Core Observation Imaging Result Profile
+    name: US Core Observation Clinical Result Profile
   - reference:
       reference: StructureDefinition/us-core-observation-lab
     description: "The US Core Laboratory Result Observation Profile is based upon\
-      \ the core FHIR Observation Resource and, along with the US Core DiagnosticReport\
-      \ Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability\
-      \ (USCDI) v3 *Laboratory* requirements. Laboratory results are grouped and summarized\
-      \ using the DiagnosticReport resource, which references Observation resources.\
-      \ Each Observation resource represents an individual laboratory test and result\
-      \ value, a \u201Cnested\u201D panel (such as a microbial susceptibility panel)\
-      \ that references other observations, or rarely a laboratory test with component\
-      \ result values. The US Core Laboratory Result Observation Profile sets minimum\
-      \ expectations for the Observation resource to record, search, and fetch laboratory\
-      \ test results associated with a patient to promote interoperability and adoption\
-      \ through common implementation. It identifies which core elements, extensions,\
-      \ vocabularies, and value sets **SHALL** be present in the resource when using\
-      \ this profile. It provides the floor for standards development for specific\
-      \ use cases."
+      \ the US Core Observation Clinical Result Profile and, along with the US Core\
+      \ DiagnosticReport Profile for Laboratory Results Reporting, meets the U.S.\
+      \ Core Data for Interoperability (USCDI) Laboratory requirements. Laboratory\
+      \ results are grouped and summarized using the DiagnosticReport resource, which\
+      \ references Observation resources. Each Observation resource represents an\
+      \ individual laboratory test and result value, a \u201Cnested\u201D panel (such\
+      \ as a microbial susceptibility panel) that references other observations, or\
+      \ rarely a laboratory test with component result values. The US Core Laboratory\
+      \ Result Observation Profile sets minimum expectations for the Observation resource\
+      \ to record, search, and fetch laboratory test results associated with a patient\
+      \ to promote interoperability and adoption through common implementation. It\
+      \ identifies which core elements, extensions, vocabularies, and value sets SHALL\
+      \ be present in the resource when using this profile. It provides the floor\
+      \ for standards development for specific use cases."
     exampleBoolean: false
     name: US Core Laboratory Result Observation Profile
   - reference:
@@ -819,13 +803,6 @@ definition:
     exampleBoolean: false
     name: US Core Clinical Note Type
   - reference:
-      reference: ValueSet/us-core-clinical-test-codes
-    description: Starter set of clinical test LOINC codes identified in Appendix B
-      in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3
-      Recommendations Report Letter
-    exampleBoolean: false
-    name: US Core Clinical Test Codes
-  - reference:
       reference: ValueSet/us-core-common-sdoh-assessments
     description: "Common SDOH assessment concepts covering the following categories\
       \ (Gravity Project SDOH Domains):\n - Food (Food Insecurity)\n - Housing (Housing\
@@ -850,12 +827,6 @@ definition:
       of categories supported for fetching and Diagnostic Reports and notes.
     exampleBoolean: false
     name: US Core Diagnostic Report Category Codes
-  - reference:
-      reference: ValueSet/us-core-diagnosticreport-lab-codes
-    description: The Document Type value set includes all LOINC  values whose CLASSTYPE
-      is LABORATORY in the LOINC database
-    exampleBoolean: false
-    name: US Core Diagnostic Report Laboratory Codes
   - reference:
       reference: ValueSet/us-core-diagnosticreport-report-and-note-codes
     description: Non laboratory LOINC concepts such as codes for observations like
@@ -1838,6 +1809,18 @@ definition:
     exampleBoolean: false
     name: US Core ServiceRequest Profile
   - reference:
+      reference: ValueSet/us-core-laboratory-test-codes
+    description: 'Laboratory LOINC codes: From the introduction to August 2022 LOINC
+      Users'' guide; "The current scope of the existing laboratory portion of the
+      LOINC  database includes all observations reported by clinical laboratories,
+      including the specialty areas: chemistry, including therapeutic drug monitoring
+      and toxicology; hematology; serology; blood bank; microbiology; cytology; surgical
+      pathology; and fertility."
+
+      '
+    exampleBoolean: false
+    name: US Core Laboratory Test Codes
+  - reference:
       reference: Device/udi-2
     description: This is a Device defib example for the *US Core Implantable Device
       Profile*.
@@ -2311,7 +2294,7 @@ definition:
     description: This is a Capillary refill Time Nail Bed Example for the *Clinical
       Test Result Observation Profile*.
     name: Capillary refill Time Nail Bed Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: CareTeam/example
     description: This is a careteam example for the *US Core CareTeam Profile*.
@@ -2374,49 +2357,49 @@ definition:
     description: This is a DXA Femur-L ArMass BMD Example for the *Clinical Test Result
       Observation Profile*.
     name: DXA Femur-L ArMass BMD Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/dxa-femur-l-t-score-bmd
     description: This is a DXA Femur-L T-score BMD Example for the *Clinical Test
       Result Observation Profile*.
     name: DXA Femur-L T-score BMD Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/dxa-femur-l-z-score-bmd
     description: This is a DXA Femur-L Z-score BMD Example for the *Clinical Test
       Result Observation Profile*.
     name: DXA Femur-L Z-score BMD Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/dxa-hip-l-armass-bmd
     description: This is a DXA Hip-L ArMass BMD Example for the *Clinical Test Result
       Observation Profile*.
     name: DXA Hip-L ArMass BMD Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/dxa-hip-l-t-score-bmd
     description: This is a DXA Hip-L T-score BMD Example for the *Clinical Test Result
       Observation Profile*.
     name: DXA Hip-L T-score BMD Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/dxa-hip-l-z-score-bmd
     description: This is a DXA Hip-L Z-score BMD Example for the *Clinical Test Result
       Observation Profile*.
     name: DXA Hip-L Z-score BMD Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/ekg-impression
     description: This is a EKG impression Example for the *Clinical Test Result Observation
       Profile*.
     name: EKG impression Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/ekg-lead
     description: This is a EKG lead Example for the *Clinical Test Result Observation
       Profile*.
     name: EKG lead Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Encounter/1036
     description: This is a encounter 1036 example for the *Encounter Profile*.
@@ -2477,7 +2460,7 @@ definition:
     description: This is a Heart rate rhythm Example for the *Clinical Test Result
       Observation Profile*.
     name: Heart rate rhythm Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/heart-rate
     description: This is a heart rate example for the *Vitalsigns Profile*.
@@ -2503,7 +2486,7 @@ definition:
     description: This is a Jugular vein distension Example for the *Clinical Test
       Result Observation Profile*.
     name: Jugular vein distension Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/length
     description: This is a length example for the *Vitalsigns Profile* which shows
@@ -2669,16 +2652,16 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
       reference: Observation/xray-chest-findings
-    description: This example of a US Core Observation Imaging Result Profile illustrates
+    description: This example of a US Core Observation Clinical Result Profile illustrates
       its use to capture information about a patient's radiology study findings.
     name: Xray Chest Findings Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/xray-chest-impression
-    description: This example of a US Core Observation Imaging Result Profile illustrates
+    description: This example of a US Core Observation Clinical Result Profile illustrates
       its use to capture information about a patient's radiology study impression.
     name: Xray Chest Impression Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/ofc-percentile
     description: This is a OFC percentile example for the *Head Occipital Frontal
@@ -2696,7 +2679,7 @@ definition:
     description: This is a P-R interval {EKG lead} Example for the *Clinical Test
       Result Observation Profile*.
     name: P-R interval {EKG lead} Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Patient/child-example
     description: This is a patient child example for the *US Core Patient Profile*.
@@ -2748,19 +2731,19 @@ definition:
     description: This is a Pulse intensity Palpation Example for the *Clinical Test
       Result Observation Profile*.
     name: Pulse intensity Palpation Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/q-t-interval-ekg-lead
     description: This is a Q-T interval {EKG lead} Example for the *Clinical Test
       Result Observation Profile*.
     name: Q-T interval {EKG lead} Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/qrs-dur-ekg-lead
     description: This is a QRS dur {EKG lead} Example for the *Clinical Test Result
       Observation Profile*.
     name: QRS dur {EKG lead} Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Procedure/rehab
     description: This is a rehab example for the *US Core Procedure Profile*.
