@@ -72,7 +72,7 @@ This ballot addresses the following issues:
 48. **Applied:** Fix Quick Start Rendering [FHIR-39367](https://jira.hl7.org/browse/FHIR-39367) [See Changes Here](StructureDefinition-us-core-patient.html#notes)
 49. **Applied:** Remove Bulk Dependency  [FHIR-39377](https://jira.hl7.org/browse/FHIR-39377) [See Changes Here](CapabilityStatement-us-core-server.html#should_igs)
 50. **RESOLVED - CHANGE REQUIRED:** Fix Cross Version Comparisons section [FHIR-39417](https://jira.hl7.org/browse/FHIR-39417) [See Changes Here](changes-between-versions.html#cross-version-comparisons)
-51. **RESOLVED - CHANGE REQUIRED:** Add Ballot Comment to CarePlan resource get community feedback [FHIR-32949](https://jira.hl7.org/browse/FHIR-32949) [See Changes Here](index.html)
+51. **Applied:** Add Ballot Comment to CarePlan for community feedback [FHIR-32949](https://jira.hl7.org/browse/FHIR-32949) [See Changes Here](StructureDefinition-us-core-careplan.html)
 
 ### Version = 5.0.1
 - url: <http://hl7.org/fhir/us/core/STU5.0.1/>

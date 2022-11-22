@@ -11,22 +11,24 @@
 ##### CareTeam
 - [patient](SearchParameter-us-core-careteam-patient.html)
 - [status](SearchParameter-us-core-careteam-status.html)
-- [role](SearchParameter-us-core-careteam-role.html)
 
 ##### Condition
 - [category](SearchParameter-us-core-condition-category.html)
 - [clinical-status](SearchParameter-us-core-condition-clinical-status.html)
 - [patient](SearchParameter-us-core-condition-patient.html)
 - [onset-date](SearchParameter-us-core-condition-onset-date.html)
-- [asserted-date](SearchParameter-us-core-condition-asserted-date.html)
 - [recorded-date](SearchParameter-us-core-condition-recorded-date.html)
 - [abatement-date](SearchParameter-us-core-condition-abatement-date.html)
 - [code](SearchParameter-us-core-condition-code.html)
 - [encounter](SearchParameter-us-core-condition-encounter.html)
 
+##### Coverage
+- {:.new-content}[patient](SearchParameter-us-core-coverage-patient.html)
+
 ##### Device
 - [patient](SearchParameter-us-core-device-patient.html)
 - [type](SearchParameter-us-core-device-type.html)
+- {:.new-content}[status](SearchParameter-us-core-device-status.html)
 
 ##### DiagnosticReport
 - [status](SearchParameter-us-core-diagnosticreport-status.html)
@@ -53,13 +55,11 @@
 - [location](SearchParameter-us-core-encounter-location.html)
 - [status](SearchParameter-us-core-encounter-status.html)
 - [type](SearchParameter-us-core-encounter-type.html)
-- [discharge-disposition](SearchParameter-us-core-encounter-discharge-disposition.html)
 
 ##### Goal
 - [lifecycle-status](SearchParameter-us-core-goal-lifecycle-status.html)
 - [patient](SearchParameter-us-core-goal-patient.html)
 - [target-date](SearchParameter-us-core-goal-target-date.html)
-- [description](SearchParameter-us-core-goal-description.html)
 
 ##### Immunization
 - [patient](SearchParameter-us-core-immunization-patient.html)
@@ -72,6 +72,11 @@
 - [address-city](SearchParameter-us-core-location-address-city.html)
 - [address-state](SearchParameter-us-core-location-address-state.html)
 - [address-postalcode](SearchParameter-us-core-location-address-postalcode.html)
+
+##### MedicationDispense
+- {:.new-content}[status](SearchParameter-us-core-medicationdispense-status.html)
+- {:.new-content}[type](SearchParameter-us-core-medicationdispense-type.html)
+- {:.new-content}[patient](SearchParameter-us-core-medicationdispense-patient.html)
 
 ##### MedicationRequest
 - [status](SearchParameter-us-core-medicationrequest-status.html)
@@ -92,8 +97,9 @@
 - [address](SearchParameter-us-core-organization-address.html)
 
 ##### Patient
-- [_id](SearchParameter-us-core-patient-id.html)
+- {:.new-content}[_id](SearchParameter-us-core-patient-id.html)
 - [birthdate](SearchParameter-us-core-patient-birthdate.html)
+- {:.new-content}[death-date](SearchParameter-us-core-patient-death-date.html)
 - [family](SearchParameter-us-core-patient-family.html)
 - [gender](SearchParameter-us-core-patient-gender.html)
 - [given](SearchParameter-us-core-patient-given.html)
@@ -115,17 +121,10 @@
 - [date](SearchParameter-us-core-procedure-date.html)
 - [code](SearchParameter-us-core-procedure-code.html)
 
-##### QuestionnaireResponse
-- [_id](SearchParameter-us-core-questionnaireresponse-id.html)
-- [patient](SearchParameter-us-core-questionnaireresponse-patient.html)
-- [status](SearchParameter-us-core-questionnaireresponse-status.html)
-- [_tag](SearchParameter-us-core-questionnaireresponse-tag.html)
-- [authored](SearchParameter-us-core-questionnaireresponse-authored.html)
-- [questionnaire](SearchParameter-us-core-questionnaireresponse-questionnaire.html)
-
 ##### RelatedPerson
 - [_id](SearchParameter-us-core-relatedperson-id.html)
 - [patient](SearchParameter-us-core-relatedperson-patient.html)
+- {:.new-content}[name](SearchParameter-us-core-relatedperson-name.html)
 
 ##### ServiceRequest
 - [status](SearchParameter-us-core-servicerequest-status.html)

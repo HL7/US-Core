@@ -7,6 +7,9 @@ Where possible, new and updated content are highlighted with green text and back
 Key updates and detailed changes between this and prior versions are available in the US Core [Change Log]
 {:.stu-note}
 
+Stub for future introduction to the ballot, and "new and improved" areas to focus on
+{:.note-to-balloters}
+
 ### Introduction
 
 The US Core Implementation Guide is based on [FHIR Version R4]. It defines the minimum set of constraints on the FHIR resources to create the US Core Profiles. It also defines the minimum set of FHIR RESTful interactions for each of the US Core Profiles to access patient data. By establishing the “floor” of standards to promote interoperability and adoption through common implementation, it allows for further standards development evolution for specific uses cases. There are two different ways to implement US Core:

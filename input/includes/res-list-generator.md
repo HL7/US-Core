@@ -1,4 +1,5 @@
-<!-- Use for sorted flat list resources ValueSet, CodeSystem, SearchParameter, OperationDefinition  allows for highlighting new stuff using include parameter -->
+
+<!-- Use for sorted flat list resources ValueSet, CodeSystem, OperationDefinition  allows for highlighting new stuff using include parameter. SearchParameter works too but can't be sorted by Type and no title element so need to convert id to title using something like {%raw%}{r.id|split "-" | join | capitalize}}{%endraw%}-->
 {% assign my_types = "" %}
 {%- for r_hash in site.data.resources -%}
   {% assign r_type = r_hash[0] | split: '/' | first %}
