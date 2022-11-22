@@ -39,6 +39,20 @@
                 ]
             },
             {
+                "id": "Procedure.baseOn",
+                "path": "Procedure.basedOn",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+                        ]
+                    }
+                ],
+                "mustSupport": false
+            },
+            {
                 "id": "Procedure.status",
                 "path": "Procedure.status",
                 "condition": [

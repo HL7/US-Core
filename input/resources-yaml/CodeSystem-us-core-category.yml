@@ -7,7 +7,7 @@ status: active
 experimental: false
 date: 2022-04-20
 description: Codes used in US Core *category* profiles. The are typically
-  used when there is a need for categorization or workflow hints.
+  used when there is a need for categorization for searching and finding resources or workflow hints.
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons
   License
 caseSensitive: true
@@ -25,9 +25,9 @@ concept:
   display: Disability Status
   definition: Disability Status category
 
-# - code: cognitive-status
-#   display: Cognitive Status
-#   definition: Cognitive Status category
+- code: cognitive-status
+  display: Cognitive Status
+  definition: Cognitive Status category
 
 # - code: pregnancy-status
 #   display: Functional Status

@@ -1,0 +1,42 @@
+resourceType: ServiceRequest
+id: rehab
+meta:
+    extension:
+        - 
+            url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
+            valueString: ServiceRequest for Rehab Example
+        - 
+            url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
+            valueMarkdown: 'This is an example requesting alcohol rehab sessions for a patient using the *US Core ServiceRequest Profile Profile*.'
+    profile:
+        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest'
+status: active
+intent: order
+category:
+    - 
+        coding:
+            - 
+                system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'
+                code: sdoh
+                display: SDOH
+        text: Social Determinants Of Health
+code:
+  coding:
+    - system: 'http://snomed.info/sct'
+      code: '24165007'
+      display: Alcoholism counseling
+    - system: 'http://www.cms.gov/Medicare/Coding/ICD10'
+      code: HZ30ZZZ
+      display: 'Individual Counseling for Substance Abuse Treatment, Cognitive'
+  text: Alcohol rehabilitation
+subject:
+    reference: Patient/example
+occurrenceDateTime: '2021-11-20'
+authoredOn: '2021-11-12T10:59:38-08:00'
+requester:
+    reference: Practitioner/practitioner-1
+reasonReference:
+    - 
+        reference: Observation/AHC-HRSN-item-example-68517-2
+        display: 'Alcohol use disorder (disorder)'
+

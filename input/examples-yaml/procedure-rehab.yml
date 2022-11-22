@@ -8,6 +8,11 @@ meta:
       valueString: Rehab Example
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
       valueMarkdown: This is a rehab example for the *US Core Procedure Profile*.
+
+basedOn:
+    - 
+        reference: 'ServiceRequest/rehab'
+
 status: completed
 code:
   coding:

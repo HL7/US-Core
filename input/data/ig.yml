@@ -79,7 +79,8 @@ definition:
   - reference:
       reference: CodeSystem/us-core-category
     description: Codes used in US Core *category* profiles. The are typically used
-      when there is a need for categorization or workflow hints.
+      when there is a need for categorization for searching and finding resources
+      or workflow hints.
     exampleBoolean: false
     name: US Core Category
   - reference:
@@ -2253,9 +2254,9 @@ definition:
     exampleBoolean: true
   - reference:
       reference: Procedure/defib-implant
-    description: This is a Procedure R4 defib implant example for the *US Core Procedure
-      Profile*.
-    name: Procedure R4 Defib Implant Example
+    description: This *US Core Procedure Profile* is an example of an Defibrillator
+      implant Procedure.
+    name: Procedure Defibrillator Implant Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
   - reference:
       reference: Organization/acme-lab
@@ -2727,6 +2728,11 @@ definition:
     name: Practitioner Pharmacist Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
   - reference:
+      reference: Procedure/rehab
+    description: This is a rehab example for the *US Core Procedure Profile*.
+    name: Rehab Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
+  - reference:
       reference: Observation/pulse-intensity-palpation
     description: This is a Pulse intensity Palpation Example for the *Clinical Test
       Result Observation Profile*.
@@ -2745,11 +2751,6 @@ definition:
     name: QRS dur {EKG lead} Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
-      reference: Procedure/rehab
-    description: This is a rehab example for the *US Core Procedure Profile*.
-    name: Rehab Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
-  - reference:
       reference: RelatedPerson/shaw-niece
     description: This is a patient niece example for the *US Core RelatedPerson Profile
       Profile*.
@@ -2766,6 +2767,18 @@ definition:
       Profile*.
     name: Saint Luke W Endpoint Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+  - reference:
+      reference: ServiceRequest/defib-implant
+    description: This *US Core ServiceRequest Profile* is an example for a defibrillator
+      implant referral request.
+    name: ServiceRequest Defibrillator Implant Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
+  - reference:
+      reference: ServiceRequest/rehab
+    description: This is an example requesting alcohol rehab sessions for a patient
+      using the *US Core ServiceRequest Profile Profile*.
+    name: ServiceRequest for Rehab Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
   - reference:
       reference: Observation/sexual-orientation-example
     description: This is an sexual orientation example for the *US Core Observation

@@ -6,14 +6,17 @@ meta:
     extension:
         - 
             url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
-            valueString: Procedure R4 Defib Implant Example
+            valueString: Procedure Defibrillator Implant Example
         - 
             url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
-            valueMarkdown: 'This is a Procedure R4 defib implant example for the *US Core Procedure Profile*.'
+            valueMarkdown: 'This *US Core Procedure Profile* is an example of an Defibrillator implant Procedure.'
 identifier:
     - 
         system: 'urn:ietf:rfc:3986'
         value: 'urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff'
+basedOn:
+    - 
+        reference: 'ServiceRequest/defib-implant'
 status: completed
 code:
     coding:
