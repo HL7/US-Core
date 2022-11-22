@@ -27,11 +27,7 @@
             {
                 "id": "Observation.status",
                 "path": "Observation.status",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status"
-                }
+                "mustSupport": true
             },
             {
                 "id": "Observation.category",
@@ -112,7 +108,7 @@
                 "binding": {
                     "strength": "extensible",
                     "description": "Occupational Data for Health",
-                    "valueSet": "http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8065"
+                    "valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7901"
                 }
             },
             {
@@ -185,7 +181,7 @@
                 "binding": {
                     "strength": "required",
                     "description": "Occupational Data for Health",
-                    "valueSet": "http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8065"
+                    "valueSet": "https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7900"
                 }
             }
         ]

@@ -2792,6 +2792,11 @@ definition:
     name: Some Day Smoker Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus
   - reference:
+      reference: Specimen/specimen-example-serum
+    description: This is a serum specimen example for the *US Core Specimen Profile*.
+    name: Serum Specimen Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen
+  - reference:
       reference: Specimen/specimen-example
     description: This is a serum specimen example for the *US Core Specimen Profile*.
     name: Specimen Example

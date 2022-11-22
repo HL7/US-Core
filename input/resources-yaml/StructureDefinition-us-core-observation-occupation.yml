@@ -26,9 +26,6 @@ differential:
             id: Observation.status
             path: Observation.status
             mustSupport: true
-            binding:
-                strength: required
-                valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status'
         - 
             id: Observation.category
             path: Observation.category
@@ -91,7 +88,7 @@ differential:
             binding:
               strength: extensible
               description: Occupational Data for Health # scrub the  version 20201030 and assume the latest
-              valueSet: 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8065' # this is not in THO, can we get this in VSAC or to link directly to cdc?
+              valueSet: 'https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7901' # this is not in THO, can we get this in VSAC or to link directly to cdc?
         - 
             id: Observation.component
             path: Observation.component
@@ -150,4 +147,4 @@ differential:
           binding:
             strength: required
             description: Occupational Data for Health # scrub the version 20201030 assume the latest for now
-            valueSet: 'http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.8065'  # this is not expanded in THO, can we get this in VSAC or to link directly to cdc?
+            valueSet: 'https://phinvads.cdc.gov/vads/ViewValueSet.action?oid=2.16.840.1.114222.4.11.7900'  # this is not expanded in THO, can we get this in VSAC or to link directly to cdc?
