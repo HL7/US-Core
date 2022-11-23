@@ -16,14 +16,15 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  a status
 2.  a code for job history
 3.  a patient
-4.  when the job occurred
+
 5.  the job code or text 
 
 **Each Observation must support:**
 
 1. a category code of "social-history"
-2. a code for job history industry
-3. the industry code or text 
+2. when the job occurred
+3. a code for job history industry
+4. the industry code or text 
 
 **Profile specific implementation guidance:**
 
