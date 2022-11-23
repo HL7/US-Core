@@ -342,7 +342,6 @@
             {
                 "id": "MedicationRequest.reasonCode",
                 "path": "MedicationRequest.reasonCode",
-                "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
@@ -351,14 +350,26 @@
             {
                 "id": "MedicationRequest.reasonReference",
                 "path": "MedicationRequest.reasonReference",
-                "mustSupport": true,
                 "type": [
                     {
                         "code": "Reference",
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns",
-                            "http://hl7.org/fhir/StructureDefinition/Observation"
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs"
                         ]
                     }
                 ]

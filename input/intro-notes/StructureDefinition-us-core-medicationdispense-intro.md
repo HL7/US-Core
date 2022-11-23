@@ -29,7 +29,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 2. the authorizing prescription
 3. type of dispense (e.g., partially dispensed)
 4. the quantity dispensed
-5. the prescription *Sig*
+5. free text dosage instructions (the *SIG*)
 6. the dose and rate
 
 
