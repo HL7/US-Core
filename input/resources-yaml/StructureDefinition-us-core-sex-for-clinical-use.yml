@@ -62,7 +62,7 @@ differential:
         - code: CodeableConcept
       binding:
         strength: required
-        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/sex-for-clinical-use'
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-sex-for-clinical-use'
         description: Sex for Clinical Use
     - id: 'Extension.extension:period'
       path: Extension.extension
