@@ -126,11 +126,24 @@
             "valueCode": "F"
         },
         {
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+            "url": "http://hl7.org/fhir/us/core/CodeSystem/sex-for-clinical-use",
             "extension": [
                 {
-                    "url": "sex",
-                    "valueCode": "248152002"
+                    "url": "value",
+                    "valueCodeableConcept": {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/us/core/CodeSystem/sex-for-clinical-use",
+                                "code": "female",
+                                "display": "Female sex for clinical use"
+                            },
+                            {
+                                "code": "248152002",
+                                "system": "http://snomed.info/sct",
+                                "display": "Female (finding)"
+                            }
+                        ]
+                    }
                 },
                 {
                     "url": "whenAsserted",

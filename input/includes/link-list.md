@@ -357,4 +357,6 @@
 [vital signs table]: {{site.data.fhir.path}}observation-vitalsigns.html#vitals-table
 [writing and updating]: future-of-US-core.html#future-candidate-requirements-under-consideration
 [Parameters]: {{site.data.fhir.path}}parameters.html
+[Patient Example]: Patient-example.html 
+[US Core Sex for Clinical Use Value Set]: ValueSet-sex-for-clinical-use.html
 <!-- [SNOMED CT]: http://snomed.info/sct -->

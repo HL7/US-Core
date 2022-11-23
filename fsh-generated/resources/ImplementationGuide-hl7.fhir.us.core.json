@@ -92,6 +92,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/sex-for-clinical-use"
+        },
+        "description": "Codes that represent the sex characterization appropriate for the associated clinical context.",
+        "exampleBoolean": false,
+        "name": "US Core Sex for Clinical Use"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/us-core-category"
         },
         "description": "Codes used in US Core *category* profiles. The are typically used when there is a need for categorization for searching and finding resources or workflow hints.",
@@ -500,11 +508,11 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-sex"
+          "reference": "StructureDefinition/us-core-sex-for-clinical-use"
         },
-        "description": "This extension aligns with the LOINC® concept 46098-0 (Sex).  It describes the biological sex of an organism, which is most commonly determined based on anatomy and physiology or genetic (chromosome) analysis.  It also optionally communicates the date when the sex was determined.",
+        "description": "This extension aligns with FHIR R5 [sexForClinicalUse extension](http://hl7.org/fhir/2022Sep/extension-patient-sexforclinicaluse.html) from which the following description is excerpted, \"Sex for Clinical Use is a categorization of sex derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. This property is intended for use in clinical decision making and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population  It describes the biological sex of an organism, which is most commonly determined based on anatomy and physiology or genetic (chromosome) analysis.  It also optionally communicates the date when the sex was determined.\" See the referenced extension for more information.",
         "exampleBoolean": false,
-        "name": "US Core Sex Extension"
+        "name": "US Core Sex For Clinical Use"
       },
       {
         "reference": {
@@ -585,6 +593,14 @@
         "description": "The codes for the concepts 'Unknown', 'Asked but Unknown', 'Other Race'* and\nthe codes for the five race categories - 'American Indian' or 'Alaska Native',\n'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific\nIslander', and 'White' - as defined by the [OMB Standards for Maintaining,\nCollecting, and Presenting Federal Data on Race and Ethnicity, Statistical\nPolicy Directive No. 15, as revised, October 30,\n1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf)\n\n\\* The use of 'Other Race' is discouraged for statistical analysis.",
         "exampleBoolean": false,
         "name": "OMB Race Categories"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/sex-for-clinical-use"
+        },
+        "description": "Codes that represent the sex characterization appropriate for the associated clinical context.",
+        "exampleBoolean": false,
+        "name": "US Core Sex for Clinical Use Codes"
       },
       {
         "reference": {
@@ -2944,14 +2960,6 @@
         },
         "description": "This is a serum specimen example for the *US Core Specimen Profile*.",
         "name": "Serum Specimen Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
-      },
-      {
-        "reference": {
-          "reference": "Specimen/specimen-example"
-        },
-        "description": "This is a serum specimen example for the *US Core Specimen Profile*.",
-        "name": "Specimen Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
       },
       {

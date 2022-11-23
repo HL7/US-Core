@@ -1,3 +1,4 @@
+{% include new_page.md %}
 
 **Example Usage Scenarios:**
 

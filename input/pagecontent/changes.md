@@ -14,8 +14,11 @@ This ballot addresses the following issues:
   - **Applied**: **Laboratory:** Specimen Type, Result Status, and terminology requirements for coded and numeric results. [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-specimen.html).
   - **Pending**: **Medications:** Dose, Dose Unit of Measure, Indication, and Fill Status [See Changes Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationdispense.html)
   - **Pending**: **Patient Demographics/Information**
-      - Date of Death, Tribal Affiliation, and Change Birth Sex to Sex [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
-      - Related Person's Name and Related Person's Relationship [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-relatedperson.html)
+      - Date of Death [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
+      - Tribal Affiliation [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html) 
+      - Sex (for clinical use)[See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-sex-for-clincal-use.html) 
+        - Note that the [US Core BirthSex Extension](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-birthsex.html) will not be deprecated.
+      - Related Person's Name and Related Person's Relationship [See](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-relatedperson.html)
       - Occupation and Occupation Industry [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-occupation.html)
   - **Applied**: **Procedures:** Reason for Referral [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html) and See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-procedure.html)
 - Continued efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).

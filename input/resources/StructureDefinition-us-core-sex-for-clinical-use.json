@@ -1,0 +1,128 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-sex-for-clinical-use",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex-for-clinical-use",
+    "name": "USCoreSexForClinicalUse",
+    "title": "US Core Sex For Clinical Use",
+    "status": "active",
+    "date": "2022-10-07",
+    "description": "This extension aligns with FHIR R5 [sexForClinicalUse extension](http://hl7.org/fhir/2022Sep/extension-patient-sexforclinicaluse.html) from which the following description is excerpted, \"Sex for Clinical Use is a categorization of sex derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. This property is intended for use in clinical decision making and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population  It describes the biological sex of an organism, which is most commonly determined based on anatomy and physiology or genetic (chromosome) analysis.  It also optionally communicates the date when the sex was determined.\" See the referenced extension for more information.",
+    "fhirVersion": "4.0.1",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Patient"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "path": "Extension",
+                "short": "A context-specific sex for clinical use",
+                "definition": "A context-specific categorization of a patient's sex for the purpose of clinical use",
+                "min": 0
+            },
+            {
+                "id": "Extension.extension:value",
+                "path": "Extension.extension",
+                "sliceName": "value",
+                "short": "A context-specific sex for clinical use",
+                "definition": "A context-specific categorization of a patient's sex for the purpose of clinical use",
+                "comment": "Sex for clinical use may be contexual. For example, the sex for clinical use for mammogram health maintenance may by different than the sex for clinical use for the purpose of selecting a reference range for a lab test.  There may also be a patient-context sex for clinical use that is a general categorization that would apply across all contexts if more specific information is not available.",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:value.extension",
+                "path": "Extension.extension.extension",
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:value.url",
+                "path": "Extension.extension.url",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "fixedUri": "value"
+            },
+            {
+                "id": "Extension.extension:value.value[x]",
+                "path": "Extension.extension.value[x]",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/sex-for-clinical-use",
+                    "description": "Sex for Clinical Use"
+                }
+            },
+            {
+                "id": "Extension.extension:period",
+                "path": "Extension.extension",
+                "sliceName": "period",
+                "short": "When the sex for clinical use applies",
+                "definition": "The time period during which the sex for clinical use applies to the patient",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.extension:period.extension",
+                "path": "Extension.extension.extension",
+                "max": "0"
+            },
+            {
+                "id": "Extension.extension:period.url",
+                "path": "Extension.extension.url",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "fixedUri": "period"
+            },
+            {
+                "id": "Extension.extension:period.value[x]",
+                "path": "Extension.extension.value[x]",
+                "min": 1,
+                "type": [
+                    {
+                        "code": "Period"
+                    }
+                ]
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex-for-clinical-use"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "min": 0,
+                "max": "0"
+            }
+        ]
+    }
+}
