@@ -2277,11 +2277,6 @@ definition:
     name: Procedure Defibrillator Implant Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
   - reference:
-      reference: Organization/acme-lab
-    description: This is a acme lab example for the *US Core Organization Profile*.
-    name: Acme Lab Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
-  - reference:
       reference: AllergyIntolerance/example
     description: This is a allergyintolerance example for the *US Core AllergyIntolerance
       Profile*.
@@ -2354,11 +2349,6 @@ definition:
       reference: Coverage/coverage-example
     description: This is a coverage example for the *US Core Coverage Profile*.
     name: Coverage Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage
-  - reference:
-      reference: Coverage/coverage-selfpay-example
-    description: This is a self-pay coverage example for the *US Core Coverage Profile*.
-    name: Self Pay Coverage Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage
   - reference:
       reference: DiagnosticReport/cbc
@@ -2687,6 +2677,17 @@ definition:
       Circumference Percentile Profile*.
     name: OFC Percentile Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile
+  - reference:
+      reference: Organization/acme-lab
+    description: This is an example laboratory example using the *US Core Organization
+      Profile*.
+    name: Organization Acme Lab Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+  - reference:
+      reference: Organization/acme-payer
+    description: This is an example payer using the *US Core Organization Profile*.
+    name: Organization Acme Payer Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
   - reference:
       reference: Observation/oxygen-saturation
     description: This is a typical oxygen saturation example for the *US Core Pulse

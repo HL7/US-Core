@@ -66,6 +66,7 @@ differential:
           expression: '(((select(value.substring(0,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(1,1).toInteger())+(select(value.substring(2,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(3,1).toInteger())+(select(value.substring(4,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(5,1).toInteger())+(select(value.substring(6,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(7,1).toInteger())+(select(value.substring(8,1).toInteger()).select(iif($this<5, $this*2, (($this*2)-9))))+(value.substring(9,1).toInteger()) + 24)mod 10=0)'
 
       mustSupport: true
+      
     - id: 'Organization.identifier:CLIA'
       path: Organization.identifier
       sliceName: CLIA
@@ -75,7 +76,36 @@ differential:
       max: '1'
       patternIdentifier:
         system: 'urn:oid:2.16.840.1.113883.4.7'
+      condition:
+        - us-core-18
+      constraint:
+        - key: us-core-18
+          severity: error
+          human: CLIA number must be 10 digits with a letter "D" in third position
+          expression: value.matches('^[0-9]{2}D[0-9]{7}$')
+          xpath: >-
+            f:value/f:matches(value,/^[0-9]{2}D[0-9]{7}$/)
       mustSupport: false
+
+    - id: 'Organization.identifier:NAIC'
+      path: Organization.identifier
+      sliceName: NAIC
+      short: NAIC Code
+      comment: NAIC Company code (sometimes called "NAIC Number" or "cocode") for payers.
+      patternIdentifier:
+        system: 'urn:oid:2.16.840.1.113883.6.300'
+      condition:
+        - us-core-19       
+      constraint:
+        - key: us-core-19
+          severity: error
+          human: NAIC must be 5 digits
+          expression: value.matches('^[0-9]{5}$')
+          xpath: >-
+            f:value/f:matches(value,/^[0-9]{5}$/)
+      mustSupport: false
+
+
     - id: Organization.active
       path: Organization.active
       min: 1
