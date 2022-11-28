@@ -2,7 +2,7 @@ category:
 - coding:
   - code: sdoh
     display: SDOH
-    system: http://hl7.org/fhir/us/core/CodeSystem/us-core-tags
+    system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
 - coding:
   - code: survey
     display: Survey
@@ -17,7 +17,7 @@ code:
     difficulty concentrating, remembering, or making decisions?
 derivedFrom:
 - display: US Core QuestionnaireResponse AHC HRSN Screening-Example Example
-  reference: QuestionnaireResponse/AHC-HRSN-screening-example
+  reference: http://example.org/fhir/QuestionnaireResponse/AHC-HRSN-screening-example
 effectiveDateTime: '2022-03-29T22:38:59.084000+00:00'
 id: AHC-HRSN-item-example-69858-9
 meta:
@@ -27,10 +27,9 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is a Ahc-Hrsn Item Example 69858-9 (Because of a physical,
       mental, or emotional condition, do you have serious difficulty concentrating,
-      remembering, or making decisions?) for the *US Core Screening Response Observation
-      Profile*
+      remembering, or making decisions?) for the *US Core Observation Screening Assessment Profile*
   profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
 performer:
 - reference: Patient/example
 resourceType: Observation

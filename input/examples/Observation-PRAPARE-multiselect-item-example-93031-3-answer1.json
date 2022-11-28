@@ -5,7 +5,7 @@
                 {
                     "code": "sdoh",
                     "display": "SDOH",
-                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-tags"
+                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"
                 }
             ]
         },
@@ -45,11 +45,11 @@
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a Prapare Multiselect-Item Example 93031-3-Answer1 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the *US Core Screening Response Observation Profile*"
+                "valueMarkdown": "This is a Prapare Multiselect-Item Example 93031-3-Answer1 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the *US Core Observation Screening Assessment Profile*"
             }
         ],
         "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
         ]
     },
     "performer": [

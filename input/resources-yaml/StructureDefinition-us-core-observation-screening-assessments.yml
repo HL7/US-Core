@@ -1,8 +1,8 @@
 resourceType: StructureDefinition
-id: us-core-observation-screening-assessments
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments'
-name: USCoreObservationScreeningAssessmentsProfile
-title: US Core Observation Screening Assessments Profile
+id: us-core-observation-screening-assessment
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment'
+name: USCoreObservationScreeningAssessmentProfile
+title: US Core Observation Screening Assessment Profile
 status: active
 date: '2022-04-20'
 description: 'To promote interoperability and adoption through common implementation, the US Core Observation Survey Profile sets minimum expectations for the Observation Resource to record, search, and fetch retrieve observations that represent the questions and responses to surveys, and screening and assessment tools.  It can be used to represent a single response, multiple responses, and multi-select “check all that apply” type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.'
@@ -225,7 +225,7 @@ differential:
                 - 
                     code: Reference
                     targetProfile:
-                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments'
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment'
                         - 'http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse'
                         - 'http://hl7.org/fhir/StructureDefinition/MolecularSequence'
                     _targetProfile:
@@ -254,7 +254,7 @@ differential:
                 - 
                     code: Reference
                     targetProfile:
-                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments'
+                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment'
                         - 'http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse'
                         - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference'
                         - 'http://hl7.org/fhir/StructureDefinition/ImagingStudy'

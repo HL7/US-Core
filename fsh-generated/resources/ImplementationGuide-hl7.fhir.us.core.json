@@ -404,11 +404,11 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-observation-screening-assessments"
+          "reference": "StructureDefinition/us-core-observation-screening-assessment"
         },
         "description": "To promote interoperability and adoption through common implementation, the US Core Observation Survey Profile sets minimum expectations for the Observation Resource to record, search, and fetch retrieve observations that represent the questions and responses to surveys, and screening and assessment tools.  It can be used to represent a single response, multiple responses, and multi-select “check all that apply” type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
-        "name": "US Core Observation Screening Assessments Profile"
+        "name": "US Core Observation Screening Assessment Profile"
       },
       {
         "reference": {
@@ -516,11 +516,11 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-observation-clinical-judgment"
+          "reference": "StructureDefinition/us-core-simple-observation"
         },
-        "description": "The U.S. Core Observation Clinical Judgment Profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments and v3 Health Assessments. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and retrieve observations that represent an individual's clinical judgment about a patient's health status. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. It may or may not be associated with a formal survey, screening, or assessment tool. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Simple Observation Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and retrieve observations representing an individual's clinical judgment about a patient's health status. The observation may or may not be associated with a formal survey, screening, or assessment tool. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. This profile identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
-        "name": "US Core Observation Clinical Judgment Profile"
+        "name": "US Core Simple Observation Profile"
       },
       {
         "reference": {
@@ -1728,7 +1728,7 @@
         },
         "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
         "name": "10 minute Apgar Color Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
@@ -1736,7 +1736,7 @@
         },
         "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
         "name": "10 minute Apgar Heart Rate Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
@@ -1744,7 +1744,7 @@
         },
         "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
         "name": "10 minute Apgar Muscle Tone Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
@@ -1752,7 +1752,7 @@
         },
         "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse..",
         "name": "10 minute Apgar Reflex Irritability Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
@@ -1760,7 +1760,7 @@
         },
         "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
         "name": "10 minute Apgar Respiratory effort Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
@@ -1768,7 +1768,7 @@
         },
         "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture surveys assessments as a panel of observations. It is not derived from a FHIR QuestionnaireResponse.",
         "name": "10 Minute Apgar Score Panel Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
@@ -1776,415 +1776,431 @@
         },
         "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
         "name": "10 Minute Apgar Score Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessments"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-44250-9"
         },
-        "description": "This is a Ahc-Hrsn Item Example 44250-9 (Little interest or pleasure in doing things?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 44250-9 (Little interest or pleasure in doing things?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 44250-9",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-44255-8"
         },
-        "description": "This is a Ahc-Hrsn Item Example 44255-8 (Feeling down, depressed, or hopeless?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 44255-8 (Feeling down, depressed, or hopeless?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 44255-8",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-68516-4"
         },
-        "description": "This is a Ahc-Hrsn Item Example 68516-4 (On average, how many minutes did you usually spend exercising at this level on one of those days?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 68516-4 (On average, how many minutes did you usually spend exercising at this level on one of those days?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 68516-4",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-68517-2"
         },
-        "description": "This is a Ahc-Hrsn Item Example 68517-2 (How many times in the past 12 months have you had 5 or more drinks in a day (males) or 4 or more drinks in a day (females)?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 68517-2 (How many times in the past 12 months have you had 5 or more drinks in a day (males) or 4 or more drinks in a day (females)?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 68517-2",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-68524-8"
         },
-        "description": "This is a Ahc-Hrsn Item Example 68524-8 (How many times in the past year have you used illegal drugs?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 68524-8 (How many times in the past year have you used illegal drugs?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 68524-8",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-69858-9"
         },
-        "description": "This is a Ahc-Hrsn Item Example 69858-9 (Because of a physical, mental, or emotional condition, do you have serious difficulty concentrating, remembering, or making decisions?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 69858-9 (Because of a physical, mental, or emotional condition, do you have serious difficulty concentrating, remembering, or making decisions?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 69858-9",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-69861-3"
         },
-        "description": "This is a Ahc-Hrsn Item Example 69861-3 (Because of a physical, mental, or emotional condition, do you have difficulty doing errands alone such as visiting a physician's office or shopping?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 69861-3 (Because of a physical, mental, or emotional condition, do you have difficulty doing errands alone such as visiting a physician's office or shopping?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 69861-3",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-76513-1"
         },
-        "description": "This is a Ahc-Hrsn Item Example 76513-1 (How hard is it for you to pay for the very basics like food, housing, medical care, and heating?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 76513-1 (How hard is it for you to pay for the very basics like food, housing, medical care, and heating?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 76513-1",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-89555-7"
         },
-        "description": "This is a Ahc-Hrsn Item Example 89555-7 (In the last 30 days, other than the activities you did for work, on average, how many days per week did you engage in moderate exercise (like walking fast, running, jogging, dancing, swimming, biking, or other similar activities)?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 89555-7 (In the last 30 days, other than the activities you did for work, on average, how many days per week did you engage in moderate exercise (like walking fast, running, jogging, dancing, swimming, biking, or other similar activities)?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 89555-7",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-93038-8"
         },
-        "description": "This is a Ahc-Hrsn Item Example 93038-8 (Stress means a situation in which a person feels tense, restless, nervous, or anxious, or is unable to sleep at night because his or her mind is troubled all the time.  Do you feel this kind of stress these days?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 93038-8 (Stress means a situation in which a person feels tense, restless, nervous, or anxious, or is unable to sleep at night because his or her mind is troubled all the time.  Do you feel this kind of stress these days?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 93038-8",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-93159-2"
         },
-        "description": "This is a Ahc-Hrsn Item Example 93159-2 (How often do you feel lonely or isolated from those around you?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 93159-2 (How often do you feel lonely or isolated from those around you?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 93159-2",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-95530-2"
         },
-        "description": "This is a Ahc-Hrsn Item Example 95530-2 (How many times in the past year have you used prescription drugs for non-medical reasons?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 95530-2 (How many times in the past year have you used prescription drugs for non-medical reasons?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 95530-2",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-96780-2"
         },
-        "description": "This is a Ahc-Hrsn Item Example 96780-2 (Do you want help finding or keeping work or a job?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 96780-2 (Do you want help finding or keeping work or a job?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 96780-2",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-96781-0"
         },
-        "description": "This is a Ahc-Hrsn Item Example 96781-0 (If for any reason you need help with day-to-day activities such as bathing, preparing meals, shopping, managing finances, etc., do you get the help you need?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 96781-0 (If for any reason you need help with day-to-day activities such as bathing, preparing meals, shopping, managing finances, etc., do you get the help you need?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 96781-0",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-96782-8"
         },
-        "description": "This is a Ahc-Hrsn Item Example 96782-8 (Do you want help with school or training? For example, starting or completing job training or getting a high school diploma, GED or equivalent.) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 96782-8 (Do you want help with school or training? For example, starting or completing job training or getting a high school diploma, GED or equivalent.) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 96782-8",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-96842-0"
         },
-        "description": "This is a Ahc-Hrsn Item Example 96842-0 (How often have you used any tobacco product in past 12 months?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 96842-0 (How often have you used any tobacco product in past 12 months?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 96842-0",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-item-example-97027-7"
         },
-        "description": "This is a Ahc-Hrsn Item Example 97027-7 (Do you speak a language other than English at home?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Item Example 97027-7 (Do you speak a language other than English at home?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Item Example 97027-7",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/AHC-HRSN-panel-example-96777-8"
         },
-        "description": "This is a Ahc-Hrsn Panel Example 96777-8 (Accountable health communities (AHC) health-related social needs screening (HRSN) tool) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Ahc-Hrsn Panel Example 96777-8 (Accountable health communities (AHC) health-related social needs screening (HRSN) tool) for the *US Core Observation Screening Assessment Profile*",
         "name": "Ahc-Hrsn Panel Example 96777-8",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/HVS-item-example-88122-7"
         },
-        "description": "This is a Hvs Item Example 88122-7 ((I/We) worried whether (my/our) food would run out before (I/we) got money to buy more.) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Hvs Item Example 88122-7 ((I/We) worried whether (my/our) food would run out before (I/we) got money to buy more.) for the *US Core Observation Screening Assessment Profile*",
         "name": "Hvs Item Example 88122-7",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/HVS-item-example-88123-5"
         },
-        "description": "This is a Hvs Item Example 88123-5 (The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Hvs Item Example 88123-5 (The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.) for the *US Core Observation Screening Assessment Profile*",
         "name": "Hvs Item Example 88123-5",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/HVS-item-example-88124-3"
         },
-        "description": "This is a Hvs Item Example 88124-3 (Food insecurity risk) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Hvs Item Example 88124-3 (Food insecurity risk) for the *US Core Observation Screening Assessment Profile*",
         "name": "Hvs Item Example 88124-3",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/HVS-panel-example-88121-9"
         },
-        "description": "This is a Hvs Panel Example 88121-9 (Hunger Vital Sign [HVS]) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Hvs Panel Example 88121-9 (Hunger Vital Sign [HVS]) for the *US Core Observation Screening Assessment Profile*",
         "name": "Hvs Panel Example 88121-9",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-54899-0"
         },
-        "description": "This is a Prapare Item Example 54899-0 (Preferred language) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 54899-0 (Preferred language) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 54899-0",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-56051-6"
         },
-        "description": "This is a Prapare Item Example 56051-6 (Do you consider yourself Hispanic/Latino?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 56051-6 (Do you consider yourself Hispanic/Latino?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 56051-6",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-56799-0"
         },
-        "description": "This is a Prapare Item Example 56799-0 (Address) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 56799-0 (Address) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 56799-0",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-63512-8"
         },
-        "description": "This is a Prapare Item Example 63512-8 (How many people are living or staying at this address?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 63512-8 (How many people are living or staying at this address?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 63512-8",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-63586-2"
         },
-        "description": "This is a Prapare Item Example 63586-2 (What was your best estimate of the total income of all family members from all sources, before taxes, in last year?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 63586-2 (What was your best estimate of the total income of all family members from all sources, before taxes, in last year?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 63586-2",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-67875-5"
         },
-        "description": "This is a Prapare Item Example 67875-5 (Employment status current) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 67875-5 (Employment status current) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 67875-5",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-71802-3"
         },
-        "description": "This is a Prapare Item Example 71802-3 (Housing status) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 71802-3 (Housing status) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 71802-3",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-76437-3"
         },
-        "description": "This is a Prapare Item Example 76437-3 (Primary insurance) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 76437-3 (Primary insurance) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 76437-3",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-76501-6"
         },
-        "description": "This is a Prapare Item Example 76501-6 (Within the last year, have you been afraid of your partner or ex-partner?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 76501-6 (Within the last year, have you been afraid of your partner or ex-partner?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 76501-6",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-82589-3"
         },
-        "description": "This is a Prapare Item Example 82589-3 (Highest level of educ) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 82589-3 (Highest level of educ) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 82589-3",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-93026-3"
         },
-        "description": "This is a Prapare Item Example 93026-3 (Do you feel physically and emotionally safe where you currently live?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 93026-3 (Do you feel physically and emotionally safe where you currently live?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 93026-3",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-93027-1"
         },
-        "description": "This is a Prapare Item Example 93027-1 (Are you a refugee?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 93027-1 (Are you a refugee?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 93027-1",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-93028-9"
         },
-        "description": "This is a Prapare Item Example 93028-9 (In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 93028-9 (In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 93028-9",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-93029-7"
         },
-        "description": "This is a Prapare Item Example 93029-7 (How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 93029-7 (How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 93029-7",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-93030-5"
         },
-        "description": "This is a Prapare Item Example 93030-5 (Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 93030-5 (Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 93030-5",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-93033-9"
         },
-        "description": "This is a Prapare Item Example 93033-9 (Are you worried about losing your housing?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 93033-9 (Are you worried about losing your housing?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 93033-9",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-93034-7"
         },
-        "description": "This is a Prapare Item Example 93034-7 (Have you been discharged from the armed forces of the United States?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 93034-7 (Have you been discharged from the armed forces of the United States?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 93034-7",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-93035-4"
         },
-        "description": "This is a Prapare Item Example 93035-4 (At any point in the past 2 years, has season or migrant farm work been your or your family's main source of income?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 93035-4 (At any point in the past 2 years, has season or migrant farm work been your or your family's main source of income?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 93035-4",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-item-example-93038-8"
         },
-        "description": "This is a Prapare Item Example 93038-8 (Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Item Example 93038-8 (Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Item Example 93038-8",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-multiselect-item-example-32624-9-answer0"
         },
-        "description": "This is a Prapare Multiselect-Item Example 32624-9-Answer0 (Race) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Multiselect-Item Example 32624-9-Answer0 (Race) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Multiselect-Item Example 32624-9-Answer0",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-multiselect-item-example-32624-9-answer1"
         },
-        "description": "This is a Prapare Multiselect-Item Example 32624-9-Answer1 (Race) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Multiselect-Item Example 32624-9-Answer1 (Race) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Multiselect-Item Example 32624-9-Answer1",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-multiselect-item-example-93031-3-answer0"
         },
-        "description": "This is a Prapare Multiselect-Item Example 93031-3-Answer0 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Multiselect-Item Example 93031-3-Answer0 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Multiselect-Item Example 93031-3-Answer0",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-multiselect-item-example-93031-3-answer1"
         },
-        "description": "This is a Prapare Multiselect-Item Example 93031-3-Answer1 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Multiselect-Item Example 93031-3-Answer1 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Multiselect-Item Example 93031-3-Answer1",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-panel-example-93025-5"
         },
-        "description": "This is a Prapare Panel Example 93025-5 (Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Panel Example 93025-5 (Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Panel Example 93025-5",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-panel-example-93039-6"
         },
-        "description": "This is a Prapare Panel Example 93039-6 (Optional additional questions) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Panel Example 93039-6 (Optional additional questions) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Panel Example 93039-6",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-panel-example-93040-4"
         },
-        "description": "This is a Prapare Panel Example 93040-4 (Social and emotional health) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Panel Example 93040-4 (Social and emotional health) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Panel Example 93040-4",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-panel-example-93041-2"
         },
-        "description": "This is a Prapare Panel Example 93041-2 (Money and resources) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Panel Example 93041-2 (Money and resources) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Panel Example 93041-2",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-panel-example-93042-0"
         },
-        "description": "This is a Prapare Panel Example 93042-0 (Family and home) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Panel Example 93042-0 (Family and home) for the *US Core Observation Screening Assessment Profile*",
         "name": "Prapare Panel Example 93042-0",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
           "reference": "Observation/PRAPARE-panel-example-93043-8"
         },
-        "description": "This is a Prapare Panel Example 93043-8 (Personal characteristics) for the *US Core Screening Response Observation Profile*",
+        "description": "This is a Prapare Panel Example 93043-8 (Personal characteristics) for the *US Core Observation Screening Assessment Profile*",
         "name": "PRAPARE Panel Example 93043-8",
-        "exampleBoolean": true
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/simple-observation-cognitive-status"
+        },
+        "description": "This *US Core Simple Observation Profile* is a cognitive status determination which is not based on any formal assessment tool or survey. (This example is adapted from the [PACIO Cognitive Status Implementation Guide ver 1.0.0](https://build.fhir.org/ig/HL7/PACIO-CognitiveStatus/).)",
+        "name": "Simple Observation Cognitive Status Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/simple-observation-sdoh"
+        },
+        "description": "This *US Core Simple Observation Profile* is a SDOH determination which is not based on any formal assessment tool or survey.",
+        "name": "Simple Observation SDOH Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
       },
       {
         "reference": {
@@ -2609,14 +2625,6 @@
         "description": "This is a BUN example for the *US Core Observation Lab Profile*.",
         "name": "BUN Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/clinical-judgement-example"
-        },
-        "description": "This *US Core Observation Clinical Judgment Profile* is a simple SDOH determination which is not based on any formal assessment tool or survey.",
-        "name": "Clinical Judgment Observation Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-judgment"
       },
       {
         "reference": {

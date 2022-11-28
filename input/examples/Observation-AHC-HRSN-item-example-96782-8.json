@@ -5,7 +5,7 @@
                 {
                     "code": "sdoh",
                     "display": "SDOH",
-                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-tags"
+                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"
                 }
             ]
         },
@@ -32,7 +32,7 @@
     "derivedFrom": [
         {
             "display": "US Core QuestionnaireResponse AHC HRSN Screening-Example Example",
-            "reference": "QuestionnaireResponse/AHC-HRSN-screening-example"
+            "reference": "http://example.org/fhir/QuestionnaireResponse/AHC-HRSN-screening-example"
         }
     ],
     "effectiveDateTime": "2022-03-29T22:38:59.084000+00:00",
@@ -45,11 +45,11 @@
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a Ahc-Hrsn Item Example 96782-8 (Do you want help with school or training? For example, starting or completing job training or getting a high school diploma, GED or equivalent.) for the *US Core Screening Response Observation Profile*"
+                "valueMarkdown": "This is a Ahc-Hrsn Item Example 96782-8 (Do you want help with school or training? For example, starting or completing job training or getting a high school diploma, GED or equivalent.) for the *US Core Observation Screening Assessment Profile*"
             }
         ],
         "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
         ]
     },
     "performer": [

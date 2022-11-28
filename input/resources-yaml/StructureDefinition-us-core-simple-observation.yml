@@ -1,13 +1,13 @@
 resourceType: StructureDefinition
-id: us-core-observation-clinical-judgment
+id: us-core-simple-observation
 url: >-
-  http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-judgment
-name: USCoreObservationClinicalJudgmentProfile
-title: US Core Observation Clinical Judgment Profile
+  http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+name: USCoreSimpleObservationProfile
+title: US Core Simple Observation Profile
 status: active
 date: '2022-04-20'
 description: >-
-  The U.S. Core Observation Clinical Judgment Profile meets the requirements of the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments and v3 Health Assessments. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and retrieve observations that represent an individual's clinical judgment about a patient's health status. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. It may or may not be associated with a formal survey, screening, or assessment tool. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
+  The US Core Simple Observation Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and retrieve observations representing an individual's clinical judgment about a patient's health status. The observation may or may not be associated with a formal survey, screening, or assessment tool. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. This profile identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -59,6 +59,8 @@ differential:
       mustSupport: true
       binding:
         strength: preferred
+
+
     - id: Observation.subject
       path: Observation.subject
       min: 1
@@ -160,20 +162,21 @@ differential:
     - id: Observation.derivedFrom
       path: Observation.derivedFrom
       short: >-
-        Related Observations or QuestionnaireResponses that the observation is
+        Related Observation(s) or other resource the observation is
         made from
       definition: >-
-        Observations or QuestionnaireResponses from which this observation
+        Observations or or other resource such as a QuestionnaireResponse from which this observation
         value is derived.
       type:
         - code: Reference
           targetProfile:
             - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-survey
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
+              http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+            # - >-
+            #   http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
             - >-
               http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
+            - 'http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse'
             - 'http://hl7.org/fhir/StructureDefinition/ImagingStudy'
             - 'http://hl7.org/fhir/StructureDefinition/Media'
             - 'http://hl7.org/fhir/StructureDefinition/MolecularSequence'
@@ -182,24 +185,4 @@ differential:
                 - url: >-
                     http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
                   valueBoolean: true
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: true
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
       mustSupport: true

@@ -5,7 +5,7 @@
                 {
                     "code": "sdoh",
                     "display": "SDOH",
-                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-tags"
+                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"
                 }
             ]
         },
@@ -45,11 +45,11 @@
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a Hvs Item Example 88123-5 (The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.) for the *US Core Screening Response Observation Profile*"
+                "valueMarkdown": "This is a Hvs Item Example 88123-5 (The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.) for the *US Core Observation Screening Assessment Profile*"
             }
         ],
         "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
         ]
     },
     "performer": [

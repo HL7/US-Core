@@ -2,7 +2,7 @@ category:
 - coding:
   - code: sdoh
     display: SDOH
-    system: http://hl7.org/fhir/us/core/CodeSystem/us-core-tags
+    system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
 - coding:
   - code: survey
     display: Survey
@@ -26,10 +26,9 @@ meta:
     valueString: Hvs Item Example 88122-7
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is a Hvs Item Example 88122-7 ((I/We) worried whether (my/our)
-      food would run out before (I/we) got money to buy more.) for the *US Core Screening
-      Response Observation Profile*
+      food would run out before (I/we) got money to buy more.) for the *US Core Observation Screening Assessment Profile*
   profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
 performer:
 - reference: Patient/example
 resourceType: Observation

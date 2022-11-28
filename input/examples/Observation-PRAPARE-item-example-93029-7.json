@@ -5,7 +5,7 @@
                 {
                     "code": "sdoh",
                     "display": "SDOH",
-                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-tags"
+                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"
                 }
             ]
         },
@@ -45,11 +45,11 @@
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a Prapare Item Example 93029-7 (How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?) for the *US Core Screening Response Observation Profile*"
+                "valueMarkdown": "This is a Prapare Item Example 93029-7 (How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?) for the *US Core Observation Screening Assessment Profile*"
             }
         ],
         "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sdoh-assessment"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
         ]
     },
     "performer": [

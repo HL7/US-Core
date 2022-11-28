@@ -1,21 +1,21 @@
 resourceType: Observation
-id: clinical-judgement-example
+id: simple-observation-sdoh
 meta:
     extension:
         - 
             url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
-            valueString: Clinical Judgment Observation Example
+            valueString: Simple Observation SDOH Example
         - 
             url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
-            valueMarkdown: 'This *US Core Observation Clinical Judgment Profile* is a simple SDOH determination which is not based on any formal assessment tool or survey.'
+            valueMarkdown: 'This *US Core Simple Observation Profile* is a SDOH determination which is not based on any formal assessment tool or survey.'
     profile:
-        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-judgment'
+        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation'
 status: final
 category:
     - 
         coding:
             - 
-                system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-tags'
+                system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'
                 code: sdoh
                 display: SDOH
     # - 

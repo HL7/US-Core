@@ -320,7 +320,7 @@
 [US Core MedicationRequest Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Observation Clinical Judgment Profile]: StructureDefinition-us-core-observation-clinical-judgment.html
 [US Core Observation Clinical Result Profile]: StructureDefinition-us-core-observation-clinical-result.html
-[US Core Observation Screening and Assessments Profile]: StructureDefinition-us-core-observation-screening-assessments.html
+[US Core Observation Screening and Assessments Profile]: StructureDefinition-us-core-observation-screening-assessment.html
 [US Core Observation SDOH Assessment Profile]: StructureDefinition-us-core-observation-sdoh-assessment.html
 [US Core Observation Sexual Orientation Profile]: StructureDefinition-us-core-observation-sexual-orientation.html
 [US Core Organization Profile]: StructureDefinition-us-core-organization.html
