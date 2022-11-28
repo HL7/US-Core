@@ -84,9 +84,9 @@ definition:
     name: US Core Sex for Clinical Use
   - reference:
       reference: CodeSystem/us-core-category
-    description: Codes used in US Core *category* profiles. The are typically used
-      when there is a need for categorization for searching and finding resources
-      or workflow hints.
+    description: Codes used in US Core *category* profiles such as the US Core Simple
+      Observation Profile. The are typically used when there is a need for categorization
+      for searching and finding resources or workflow hints.
     exampleBoolean: false
     name: US Core Category
   - reference:
@@ -1834,9 +1834,7 @@ definition:
       LOINC  database includes all observations reported by clinical laboratories,
       including the specialty areas: chemistry, including therapeutic drug monitoring
       and toxicology; hematology; serology; blood bank; microbiology; cytology; surgical
-      pathology; and fertility."
-
-      '
+      pathology; and fertility.'
     exampleBoolean: false
     name: US Core Laboratory Test Codes
   - reference:
@@ -2377,7 +2375,7 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab
   - reference:
       reference: Observation/dxa-femur-l-armass-bmd
-    description: This is a DXA Femur-L ArMass BMD Example for the *Clinical Test Result
+    description: This is a DXA Femur-L ArMass BMD Example for the *Imaging Result
       Observation Profile*.
     name: DXA Femur-L ArMass BMD Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
@@ -2389,26 +2387,26 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/dxa-femur-l-z-score-bmd
-    description: This is a DXA Femur-L Z-score BMD Example for the *Clinical Test
-      Result Observation Profile*.
+    description: This is a DXA Femur-L Z-score BMD Example for the *Imaging Result
+      Observation Profile*.
     name: DXA Femur-L Z-score BMD Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/dxa-hip-l-armass-bmd
-    description: This is a DXA Hip-L ArMass BMD Example for the *Clinical Test Result
-      Observation Profile*.
+    description: This is a DXA Hip-L ArMass BMD Example for the *Imaging Result Observation
+      Profile*.
     name: DXA Hip-L ArMass BMD Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/dxa-hip-l-t-score-bmd
-    description: This is a DXA Hip-L T-score BMD Example for the *Clinical Test Result
-      Observation Profile*.
+    description: This is a DXA Hip-L T-score BMD Example for the *Imaging Result Observation
+      Profile*.
     name: DXA Hip-L T-score BMD Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:
       reference: Observation/dxa-hip-l-z-score-bmd
-    description: This is a DXA Hip-L Z-score BMD Example for the *Clinical Test Result
-      Observation Profile*.
+    description: This is a DXA Hip-L Z-score BMD Example for the *Imaging Result Observation
+      Profile*.
     name: DXA Hip-L Z-score BMD Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
   - reference:

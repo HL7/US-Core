@@ -13,7 +13,7 @@ The figure below shows how screenings, assessments, and referrals (requests) rel
 
 - **Screening and Assessments**: An accurate [Screening and Assessment](#screening-and-assessments) is necessary before delivering appropriate clinical care. US Core defines two observations to support this process:
     - [US Core Observation Screening and Assessments Profile] - represents the questions and responses to screening and assessment tools. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. 
-    - [US Core Observation Clinical Judgment Profile] - a clinician's decision to document a specific item - "patient has problems with housing". Note this observation is only appropriate when the judgment isn't appropriate on the list of Problems or Health Concerns.
+    - [US Core Simple Observation Profile] - a clinician's decision to document a specific item - "patient has problems with housing". Note this observation is only appropriate when the judgment isn't appropriate on the list of Problems or Health Concerns.
 - **Problems/Health Concerns**: Identifying a Health-related condition (for example, homelessness), Disability concern, or Functional concern is represented by the [US Core Condition Problems and Health Concerns Profile]. 
 - **Interventions**:  The [US Core ServiceRequest Profile] communicates services offered to patients to address problems/health concerns. The [US Core Procedure Profile] can also record a completed service or intervention.
 - **Goals**: Identifying and defining a future desired condition or change in condition (for example, Has adequate quality meals and snacks) is represented by [US Core Goal Profile].

@@ -1,6 +1,5 @@
 ### Version = 6.0.0 - ballot
-- Publication Date: TBD
-- url: <http://build.fhir.org/ig/HL7/US-Core/>
+- url: <http://hl7.org/fhir/us/core/2022Jan/>
 - Based on FHIR version : 4.0.1
 
 #### The January 2023 Ballot
@@ -8,19 +7,19 @@
 This ballot addresses the following issues:
 - Adds [United States Core Data for Interoperability (USCDI) V3](https://www.healthit.gov/isa/sites/isa/files/2022-07/USCDI-Version-3-July-2022-Final.pdf) updates that the Office of the National Coordinator (ONC) published in July of 2021 with these new Data Elements and Classes:
 
-  - **Applied**: [Health Insurance Information](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual's insurance coverage for health care.
+  - **Applied**: [Health Insurance Information](StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual's insurance coverage for health care.
   - **Pending**: The SDOH Assessments documentation has been fully revised and updated to cover [Health Status/Assessments Data Elements](http://hl7.org/fhir/us/core/2022Jan/screening-and-assessments.html] to document how to use US Core to represent and access health status and assessments including: *Functional Status*, *Disability Status*,and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
   - **Applied**: [US Core Observation Pregnancy Status Profile](StructureDefinition-us-core-observation-pregnancystatus.html) and [US Core Observation Pregnancy Intent Profile](StructureDefinition-us-core-observation-pregnancyintent.html) have been added to specifically address pregnancy status.
-  - **Applied**: **Laboratory:** Specimen Type, Result Status, and terminology requirements for coded and numeric results. [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-lab.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-specimen.html).
-  - **Applied**: **Medications:** Dose, Dose Unit of Measure, Indication, and Fill Status [See Changes Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationrequest.html) and [Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-medicationdispense.html)
+  - **Applied**: **Laboratory:** Specimen Type, Result Status, and terminology requirements for coded and numeric results. [See Change Here](StructureDefinition-us-core-observation-lab.html) and [Here](StructureDefinition-us-core-specimen.html).
+  - **Applied**: **Medications:** Dose, Dose Unit of Measure, Indication, and Fill Status [See Changes Here](StructureDefinition-us-core-medicationrequest.html) and [Here](StructureDefinition-us-core-medicationdispense.html)
   - **Applied**: **Patient Demographics/Information**
-      - Date of Death [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html)
-      - Tribal Affiliation [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html) 
-      - Sex (for clinical use)[See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-sex-for-clinical-use.html) 
-        - Note that the [US Core BirthSex Extension](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-birthsex.html) will not be deprecated.
-      - Related Person's Name and Related Person's Relationship [See](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-relatedperson.html)
-      - Occupation and Occupation Industry [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-occupation.html)
-  - **Applied**: **Procedures:** Reason for Referral [See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-servicerequest.html) and See Change Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-procedure.html)
+      - Date of Death [See Change Here](StructureDefinition-us-core-patient.html)
+      - Tribal Affiliation [See Change Here](StructureDefinition-us-core-patient.html) 
+      - Sex (for clinical use)[See Change Here](StructureDefinition-us-core-sex-for-clinical-use.html) 
+        - Note that the [US Core BirthSex Extension](StructureDefinition-us-core-birthsex.html) will not be deprecated.
+      - Related Person's Name and Related Person's Relationship [See](StructureDefinition-us-core-relatedperson.html)
+      - Occupation and Occupation Industry [See Change Here](StructureDefinition-us-core-observation-occupation.html)
+  - **Applied**: **Procedures:** Reason for Referral [See Change Here](StructureDefinition-us-core-servicerequest.html) and See Change Here](StructureDefinition-us-core-procedure.html)
 - Continued efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
 - Addressed and applied over 70 trackers submitted by implementers since the publication of US Core ver 5.0.0 and 5.0.1.
 
@@ -40,7 +39,7 @@ This ballot addresses the following issues:
 13. **Applied:** Update US Core Practitioner to clarify work related contact information [FHIR-36765](https://jira.hl7.org/browse/FHIR-36765) [See Changes Here](StructureDefinition-us-core-practitioner.html)
 14. **Resolved - change required:** CLD for US Core Non Laboratory Codes value set is not computable [FHIR-36789](https://jira.hl7.org/browse/FHIR-36789) [See Changes Here](#)
 15. **Applied:** US Core Organization slice for CLIA does not list an HTA/THO approved external identifier system [FHIR-36926](https://jira.hl7.org/browse/FHIR-36926) [See Changes Here](#)
-16. **Applied:** Remove effectiveDateTime invariant from Sexual Orientation and Simple Observation (aka Social History) Profiles [FHIR-36932](https://jira.hl7.org/browse/FHIR-36932) [See Changes Here](StructureDefinition-us-core-observation-sexual-orientation.html) and [See Changes Here](StructureDefinition-us-core-observation-clinical-judgment.html)
+16. **Applied:** Remove effectiveDateTime invariant from Sexual Orientation and Simple Observation (aka Social History) Profiles [FHIR-36932](https://jira.hl7.org/browse/FHIR-36932) [See Changes Here](StructureDefinition-us-core-observation-sexual-orientation.html) and [See Changes Here](StructureDefinition-us-core-simple-observation.html)
 17. **Applied:** Correct code system URI for HCPCS [FHIR-37336](https://jira.hl7.org/browse/FHIR-37336) [See Changes Here](ValueSet-us-core-procedure-code.html)
 18. **Applied** change 'resources' to 'profiles' [FHIR-37343](https://jira.hl7.org/browse/FHIR-37343) [See Changes Here](StructureDefinition-us-core-provenance.html#mandatory-and-must-support-data-elements)
 19. **Applied:** Clarify Expectations for Observation.value[x] in blood pressure and pulse oximetry profiles [FHIR-37358](https://jira.hl7.org/browse/FHIR-37358) [See Changes Here](StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements) and [See Changes Here](StructureDefinition-blood-pressure.html#mandatory-and-must-support-data-elements)
@@ -50,14 +49,14 @@ This ballot addresses the following issues:
 23. **Applied:** Remove extra instance or the word "resource" in Lab observation narrative profile [FHIR-37507](https://jira.hl7.org/browse/FHIR-37507) [See Changes Here](StructureDefinition-us-core-observation-lab.html)
 24. **Applied:** Allow multiple Gender Identities and associated dates. [FHIR-37509](https://jira.hl7.org/browse/FHIR-37509) [See Changes Here](StructureDefinition-us-core-genderIdentity.html)
 25. **Applied:** Typos on Patient and Practitioner "Name" SearchParameter pages [FHIR-37541](https://jira.hl7.org/browse/FHIR-37541) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/SearchParameter-us-core-patient-name.html) and [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/SearchParameter-us-core-practitioner-name.html)
-26. **Applied:** Add Guidance on DocumentReference.category [FHIR-37592](https://jira.hl7.org/browse/FHIR-37592) [See Changes Here](StructureDefinition-us-core-documentreference#mandatory-and-must-support-data-elements)
-27. **Applied:** Correct us-core-6 invariant expression [FHIR-37704](https://jira.hl7.org/browse/FHIR-37704) [See Changes Here](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-patient.html#constraints)
+26. **Applied:** Add Guidance on DocumentReference.category [FHIR-37592](https://jira.hl7.org/browse/FHIR-37592) [See Changes Here](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
+27. **Applied:** Correct us-core-6 invariant expression [FHIR-37704](https://jira.hl7.org/browse/FHIR-37704) [See Changes Here](StructureDefinition-us-core-patient.html#constraints)
 28. **Applied:**  Change Immunization.primarySource to must support and update definition [FHIR-37723](https://jira.hl7.org/browse/FHIR-37723) [See Changes Here](StructureDefinition-us-core-immunization.html)
 29. **Applied:** Added supportedProfiles to US Core CapabilityStatements[FHIR-37766](https://jira.hl7.org/browse/FHIR-37766) [See Changes Here](CapabilityStatement-us-core-server.html#encounter)
 30. **Applied:** Clarify how to use categories vis a vis codes in US Core Diagnostic Report Category element [FHIR-37770](https://jira.hl7.org/browse/FHIR-37770) [See Changes Here](StructureDefinition-us-core-diagnosticreport-note.html)
 31. **Applied:** Clarify that US Core requires any version of SMART? [FHIR-37813](https://jira.hl7.org/browse/FHIR-37813) [See Changes Here](security.html)
 32. **Applied:** Typo of "DiagnostisReport" in Clinical Notes Guidance [FHIR-37819](https://jira.hl7.org/browse/FHIR-37819) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/clinical-notes.html)
-33. **Applied:** Update $docref type input to multiple Codings [FHIR-37894](https://jira.hl7.org/browse/FHIR-37894) [See Changes Here](OperationDefinition-docref.html) and [See Changes Here](StructureDefinition-us-core-documentreferencel#mandatory-operation)
+33. **Applied:** Update $docref type input to multiple Codings [FHIR-37894](https://jira.hl7.org/browse/FHIR-37894) [See Changes Here](OperationDefinition-docref.html) and [See Changes Here](StructureDefinition-us-core-documentreferencel.html#mandatory-operation)
 34. **Applied:** Add Conformance expectation of SHOULD to resolve for server Capability [FHIR-37901](https://jira.hl7.org/browse/FHIR-37901) [See Changes Here](CapabilityStatement-us-core-client.html)
 35. **Applied:** Change Condition patient + category search to SHALL support [FHIR-37918](https://jira.hl7.org/browse/FHIR-37918) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#notes)
 36. **Applied:** Typo in Observation SDOH p7764rofile [FHIR-37928](https://jira.hl7.org/browse/FHIR-37928) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-screening-assessment.html)
