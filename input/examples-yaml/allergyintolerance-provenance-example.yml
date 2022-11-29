@@ -14,9 +14,9 @@ total: 1
 link:
   - relation: self
     url: >-
-      https://example.org/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples
+      http://example.org/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples
 entry:
-  - fullUrl: 'https://example.org/AllergyIntolerance/79613'
+  - fullUrl: 'http://example.org/AllergyIntolerance/79613'
     resource:
       resourceType: AllergyIntolerance
       id: '79613'
@@ -58,7 +58,7 @@ entry:
           onset: '2017-06-09'
     search:
       mode: match
-  - fullUrl: 'https://example.org/Provenance/79614'
+  - fullUrl: 'http://example.org/Provenance/79614'
     resource:
       resourceType: Provenance
       id: '79614'

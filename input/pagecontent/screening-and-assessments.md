@@ -37,9 +37,9 @@ Note that the panels can be nested to create additional groupings of responses. 
 Not all questions and answers in an assessment tool may or should be represented as FHIR Observations. For example, the FHIR patient resource best represents patient demographic information.
 {:.bg-info}
 
-#### US Core Observation Clinical Judgment Profile
+#### US Core Observation Simple Observation Profile
 
-Some systems record clinical judgments as a Problem or Health Concern. For those systems that support them as observations, US Core defines a [US Core Observation Clinical Judgment Profile] that US Core Servers **MAY** support. The Judgment may contribute to the identification of future problems or health concerns and can support service requests and procedures. When a Clinical Judgment or Problem or Health Concern is recorded based on an Assessment or Screening tool, systems **SHOULD** associate it with the US Core Observation Screening and Assessments observation.
+Some systems record clinical judgments as a Problem or Health Concern. For those systems that support them as observations, US Core defines a [US Core Simple Observation Profile] that US Core Servers **MAY** support. This observation may contribute to the identification of future problems or health concerns and can support service requests and procedures. When an Simple Observation or Problem or Health Concern is recorded based on an Assessment or Screening tool, systems **SHOULD** associate it with the US Core Observation Screening and Assessments observation.
 
 #### What About QuestionnaireResponse?
 
@@ -78,10 +78,6 @@ For the SDOH Clinical Care HL7 Implementation Guide, the Gravity project has def
 US Core uses broadly defined value sets that contain concepts that are used across many use cases including SDOH. The Figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Problems and Health Concerns Profile and how the grouped valueset is compatible with the US Core Problem code valueset.   When recording SDOH data US Core Profiles, servers **SHOULD** use the SDOH value sets listed above.
 
 {% include img-med.html img="sdoh_condition.svg" caption="Example of SDOH Grouping Value set in US Core Condition Codes Value Set" %}
-
-#### Assessment Codes
-
-US Core has created the [US Core Common SDOH Assessments] ValueSet ...todo...
 
 ---
 

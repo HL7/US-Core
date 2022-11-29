@@ -19,12 +19,12 @@
     "link": [
         {
             "relation": "self",
-            "url": "https://example.org/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples"
+            "url": "http://example.org/AllergyIntolerance?_revinclude=Provenance%3Atarget&patient=Examples"
         }
     ],
     "entry": [
         {
-            "fullUrl": "https://example.org/AllergyIntolerance/79613",
+            "fullUrl": "http://example.org/AllergyIntolerance/79613",
             "resource": {
                 "resourceType": "AllergyIntolerance",
                 "id": "79613",
@@ -93,7 +93,7 @@
             }
         },
         {
-            "fullUrl": "https://example.org/Provenance/79614",
+            "fullUrl": "http://example.org/Provenance/79614",
             "resource": {
                 "resourceType": "Provenance",
                 "id": "79614",

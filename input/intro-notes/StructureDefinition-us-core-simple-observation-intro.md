@@ -4,8 +4,8 @@
 
 The following are example usage scenarios for the this profile:
 
--   Query for social history results for a patient.
--  [Record or update] social history results results belonging to a Patient
+-  Query for clinical judgments about a patient’s health status.
+-  [Record or update] clinical judgments about a patient’s health status.
 
 ### Mandatory and Must Support Data Elements
 
@@ -15,25 +15,27 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Each Observation must have:**
 
 1. a status
-1. a category code of "social-history"
-1. a code
-1. a patient
+1. a category code
+2. a code
+3. a patient
 
 **Each Observation must support:**
 
-1. a category code of 'sdoh'
-1. a time indicating when observation was made
-1. who answered the questions
-1. a value
-1. references to associated survey, assessment or screening tool
+
+2. a time indicating when observation was made
+3. who answered the questions
+4. a value
+5. references to associated survey, assessment or screening tool
 
 **Profile specific implementation guidance:**
-- See the [SDOH] guidance page for how this profile can used to represent SDOH assessments.<sup>1</sup>
-- Observations that are formally derived from an assessment tool or survey should use the [US Core Observation Survey Profile]. However, simple assertion may be derived from a screening tool assessments and can reference them using `Observation.derivedFrom`.
+- See the [SDOH] guidance page for how this profile can used to represent SDOH assessments.
+- Observations that are formally part of an assessment tool or survey should use the [US Core Observation Screening Assessment Profile]. However, simple assertion may be derived from a screening tool assessments and can reference them using `Observation.derivedFrom`.
 - The codes can be from LOINC or SNOMED CT.
-- Often the pattern for these types of observations that the `Observation.code` indicates a statement about findings and the `Observation.value` is present and "qualifies" the finding typically confirming or refuting it. For example:
-
-  **code**: Transport too expensive (SNOMED CT: 160695008)  
-  **value**: true
+- The value for these types of observations may be:
+  -  a string
+  -  a code
+  -  a "qualifier" confirming or refuting a statement about findings in code. For example:
+      **code**: Transport too expensive (SNOMED CT: 160695008)  
+      **value**: true
 
 {% include link-list.md %}

@@ -42,7 +42,7 @@ This ballot addresses the following issues:
 16. **Applied:** Remove effectiveDateTime invariant from Sexual Orientation and Simple Observation (aka Social History) Profiles [FHIR-36932](https://jira.hl7.org/browse/FHIR-36932) [See Changes Here](StructureDefinition-us-core-observation-sexual-orientation.html) and [See Changes Here](StructureDefinition-us-core-simple-observation.html)
 17. **Applied:** Correct code system URI for HCPCS [FHIR-37336](https://jira.hl7.org/browse/FHIR-37336) [See Changes Here](ValueSet-us-core-procedure-code.html)
 18. **Applied** change 'resources' to 'profiles' [FHIR-37343](https://jira.hl7.org/browse/FHIR-37343) [See Changes Here](StructureDefinition-us-core-provenance.html#mandatory-and-must-support-data-elements)
-19. **Applied:** Clarify Expectations for Observation.value[x] in blood pressure and pulse oximetry profiles [FHIR-37358](https://jira.hl7.org/browse/FHIR-37358) [See Changes Here](StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements) and [See Changes Here](StructureDefinition-blood-pressure.html#mandatory-and-must-support-data-elements)
+19. **Applied:** Clarify Expectations for Observation.value[x] in blood pressure and pulse oximetry profiles [FHIR-37358](https://jira.hl7.org/browse/FHIR-37358) [See Changes Here](StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements) and [See Changes Here](StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)
 20. **Applied:** Clarify vaccineCode code system URI [FHIR-37400](https://jira.hl7.org/browse/FHIR-37400) [See Changes Here](StructureDefinition-us-core-immunization.html#mandatory-and-must-support-data-elements)
 21. **Applied:** Typos on SDOH Guidance Page [FHIR-37469](https://jira.hl7.org/browse/FHIR-37469) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/screening-and-assessments.html)
 22. **Applied** Add Constraint to validate NPI [FHIR-37498](https://jira.hl7.org/browse/FHIR-37498) [See Changes Here](StructureDefinition-us-core-practitioner.html) and [See Changes Here](StructureDefinition-us-core-organization.html)
@@ -56,7 +56,7 @@ This ballot addresses the following issues:
 30. **Applied:** Clarify how to use categories vis a vis codes in US Core Diagnostic Report Category element [FHIR-37770](https://jira.hl7.org/browse/FHIR-37770) [See Changes Here](StructureDefinition-us-core-diagnosticreport-note.html)
 31. **Applied:** Clarify that US Core requires any version of SMART? [FHIR-37813](https://jira.hl7.org/browse/FHIR-37813) [See Changes Here](security.html)
 32. **Applied:** Typo of "DiagnostisReport" in Clinical Notes Guidance [FHIR-37819](https://jira.hl7.org/browse/FHIR-37819) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/clinical-notes.html)
-33. **Applied:** Update $docref type input to multiple Codings [FHIR-37894](https://jira.hl7.org/browse/FHIR-37894) [See Changes Here](OperationDefinition-docref.html) and [See Changes Here](StructureDefinition-us-core-documentreferencel.html#mandatory-operation)
+33. **Applied:** Update $docref type input to multiple Codings [FHIR-37894](https://jira.hl7.org/browse/FHIR-37894) [See Changes Here](OperationDefinition-docref.html) and [See Changes Here](StructureDefinition-us-core-documentreference.html#mandatory-operation)
 34. **Applied:** Add Conformance expectation of SHOULD to resolve for server Capability [FHIR-37901](https://jira.hl7.org/browse/FHIR-37901) [See Changes Here](CapabilityStatement-us-core-client.html)
 35. **Applied:** Change Condition patient + category search to SHALL support [FHIR-37918](https://jira.hl7.org/browse/FHIR-37918) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#notes)
 36. **Applied:** Typo in Observation SDOH p7764rofile [FHIR-37928](https://jira.hl7.org/browse/FHIR-37928) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-screening-assessment.html)
@@ -76,6 +76,7 @@ This ballot addresses the following issues:
 50. **RESOLVED - CHANGE REQUIRED:** Fix Cross Version Comparisons section [FHIR-39417](https://jira.hl7.org/browse/FHIR-39417) [See Changes Here](changes-between-versions.html#cross-version-comparisons)
 51. **Applied:** Add Ballot Comment to CarePlan for community feedback [FHIR-32949](https://jira.hl7.org/browse/FHIR-32949) [See Changes Here](StructureDefinition-us-core-careplan.html)
 52.  **Applied:** Change ServiceRequest.category to min=0 [FHIR-39493](https://jira.hl7.org/browse/FHIR-39493) [See Changes Here](StructureDefinition-us-core-servicerequest.html)
+53.  **Applied:** Fix provenance-1 [FHIR-39518](https://jira.hl7.org/browse/FHIR-39518) [See Changes Here](StructureDefinition-us-core-provenance.html)
 
 ### Version = 5.0.1
 - url: <http://hl7.org/fhir/us/core/STU5.0.1/>

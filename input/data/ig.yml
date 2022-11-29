@@ -77,12 +77,6 @@ definition:
     exampleBoolean: false
     name: US Core Condition Category Extension Codes
   - reference:
-      reference: CodeSystem/sex-for-clinical-use
-    description: Codes that represent the sex characterization appropriate for the
-      associated clinical context.
-    exampleBoolean: false
-    name: US Core Sex for Clinical Use
-  - reference:
       reference: CodeSystem/us-core-category
     description: Codes used in US Core *category* profiles such as the US Core Simple
       Observation Profile. The are typically used when there is a need for categorization
@@ -101,6 +95,12 @@ definition:
       Profile. These codes are used as extensions to the FHIR value sets.
     exampleBoolean: false
     name: US Core Provenance Participant Type Extension Codes
+  - reference:
+      reference: CodeSystem/us-core-sex-for-clinical-use
+    description: Codes that represent the sex characterization appropriate for the
+      associated clinical context.
+    exampleBoolean: false
+    name: US Core Sex for Clinical Use
   - reference:
       reference: StructureDefinition/us-core-allergyintolerance
     description: To promote interoperability and adoption through common implementation,
@@ -794,12 +794,6 @@ definition:
     exampleBoolean: false
     name: OMB Race Categories
   - reference:
-      reference: ValueSet/sex-for-clinical-use
-    description: Codes that represent the sex characterization appropriate for the
-      associated clinical context.
-    exampleBoolean: false
-    name: US Core Sex for Clinical Use Codes
-  - reference:
       reference: ValueSet/simple-language
     description: This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47).
       This value set matches the ONC 2015 Edition LanguageCommunication data element
@@ -900,11 +894,6 @@ definition:
     exampleBoolean: false
     name: US Core Narrative Status
   - reference:
-      reference: ValueSet/us-core-observation-category
-    description: HL7 FHIR concepts to classify an observation
-    exampleBoolean: false
-    name: US Core Observation Category
-  - reference:
       reference: ValueSet/us-core-observation-smoking-status-status
     description: Codes providing the status of an observation for smoking status.
       Constrained to `final`and `entered-in-error`.
@@ -965,11 +954,23 @@ definition:
     exampleBoolean: false
     name: US Core ServiceRequest Category Codes
   - reference:
+      reference: ValueSet/us-core-sex-for-clinical-use
+    description: Codes that represent the sex characterization appropriate for the
+      associated clinical context.
+    exampleBoolean: false
+    name: US Core Sex for Clinical Use Codes
+  - reference:
       reference: ValueSet/us-core-sexual-orientation
     description: The US Core Sexual Orientation Value Set includes concepts to describe
       a person's sexual orientation (who they are attracted to).
     exampleBoolean: false
     name: US Core Sexual Orientation
+  - reference:
+      reference: ValueSet/simple-observation
+    description: This value set includes all LOINC codes and the SNOMED CT finding
+      hierarchy codes
+    exampleBoolean: false
+    name: US Core Simple Observation Codes
   - reference:
       reference: ValueSet/us-core-smoking-status-observation-codes
     description: The US Core Smoking Status Observation Codes Value Set is a 'starter
