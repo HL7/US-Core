@@ -318,7 +318,7 @@
 [US Core Medication Request Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
 [US Core MedicationRequest Profile]: StructureDefinition-us-core-medicationrequest.html
-[US Core Observation Clinical Judgment Profile]: StructureDefinition-us-core-observation-clinical-judgment.html
+[US Core Simple Observation Profile]: StructureDefinition-us-core-simple-observation.html
 [US Core Observation Clinical Result Profile]: StructureDefinition-us-core-observation-clinical-result.html
 [US Core Observation Screening and Assessments Profile]: StructureDefinition-us-core-observation-screening-assessment.html
 [US Core Observation SDOH Assessment Profile]: StructureDefinition-us-core-observation-sdoh-assessment.html

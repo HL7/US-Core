@@ -5,7 +5,8 @@ name: USCoreObservationScreeningAssessmentProfile
 title: US Core Observation Screening Assessment Profile
 status: active
 date: '2022-04-20'
-description: 'To promote interoperability and adoption through common implementation, the US Core Observation Survey Profile sets minimum expectations for the Observation Resource to record, search, and fetch retrieve observations that represent the questions and responses to surveys, and screening and assessment tools.  It can be used to represent a single response, multiple responses, and multi-select “check all that apply” type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.'
+description: >-
+    The US Core Simple Observation Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. To promote interoperability and adoption through common implementation, the US Core Observation Screening Assessment Profile sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -257,8 +258,8 @@ differential:
         - 
             id: Observation.derivedFrom
             path: Observation.derivedFrom
-            short: Related Observations or QuestionnaireResponses that the observation is made from
-            definition: Observations or QuestionnaireResponses from which this observation value is derived.
+            short: Related Observation(s) or other resource the observation is made from
+            definition: Observations or or other resource such as a QuestionnaireResponse from which this observation value is derived.
             type:
                 - 
                     code: Reference

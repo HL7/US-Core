@@ -29,11 +29,10 @@ The following data-elements must always be present ([Mandatory] definition) or m
 \* \*\* see guidance below
 
 **Profile specific implementation guidance:**
-- \*\*For responses to individual survey questions, the question is represented in `Observation.code`, and the answer in  `Observation.value`.
-- \*\*For responses to multi-select or “check all that apply” questions, each response is represented as individual US Core Survey Observations. For each response, the question is represented in `Observation.code`, and the answer in  `Observation.value`.
-- \*\*For multi-question surveys and assessments represented in `Observation.code`, the  `Observation.value` element should be empty, and the individual survey questions represented as distinct US Core Survey Observations and referenced using `Observation.hasMember`.
-- See the [SDOH] guidance page for how this profile *along with other Observation Profiles or alternatively QuestionnaireResponse* to is used represent SDOH assessments.
-- Individual clinical assessments made by an individual about a patient's social history which array_to_sentence_string not derived from an assessment tool or survey should use the [US Core Observation Social History Profile] instead.
+- \*\*See the [Screening and Assessments] guidance page for how this profile is used to represent surveys, screenings, and assessments.
+  - Each response to individual questions and each answer to a multi-select or “check all that apply” question is a separate US Core Screening and Assessments Observation. The question is communicated in `Observation.code` and the answer in `Observation.value`.
+  - Multi-question screenings and assessments use the US Core Screening and Assessments Observation to represent a “panel” or grouping. The multi-question surveys or assessments  `Observation.code` is an overarching assessment or screening code, and the `Observation.value` element should be empty. `Observation.hasMember` references US Core Screening and Assessments Observations that represent the responses to each question in the screening or assessment. 
+- An individual’s clinical judgment about a patient’s health status, which is not a response to screening or assessment question should use the [US Core Simple Observation Profile] instead.
 {% include obs_cat_guidance.md category='survey'-%}
 {% include DAR-exception.md %}
 

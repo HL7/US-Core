@@ -28,7 +28,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 5. references to associated survey, assessment or screening tool
 
 **Profile specific implementation guidance:**
-- See the [SDOH] guidance page for how this profile can used to represent SDOH assessments.
+- See the [[Screening and Assessments] guidance page for how this profile can used to represent SDOH assessments.
 - Observations that are formally part of an assessment tool or survey should use the [US Core Observation Screening Assessment Profile]. However, simple assertion may be derived from a screening tool assessments and can reference them using `Observation.derivedFrom`.
 - The codes can be from LOINC or SNOMED CT.
 - The value for these types of observations may be:
