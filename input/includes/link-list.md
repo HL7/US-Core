@@ -360,3 +360,4 @@
 [Patient Example]: Patient-example.html 
 [US Core Sex for Clinical Use Value Set]: ValueSet-us-core-sex-for-clinical-use.html
 <!-- [SNOMED CT]: http://snomed.info/sct -->
+[Observation Category Codes]: {{site.data.fhir.path}}valueset-observation-category.html
