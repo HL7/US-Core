@@ -22,7 +22,13 @@ The figure below shows how screenings, assessments, and referrals (requests) rel
 
 ### Screening and Assessments
 
-Screening and Assessments are used to identify various problems or health concerns. Their complexity ranges from simple observations to complex structured evaluations. This guidance was developed after reviewing several functional status, disability status, mental/cognitive status, and SDOH screening and assessment tools.
+Screening and Assessments are used to identify various problems or health concerns. Their complexity ranges from simple observations to complex structured evaluations: 
+
+- Clinician makes an 'observation' - I found patient has this problem
+- Clinician completes and shares detailed assessments 
+- Clinician makes an 'observation' based on detailed assessment.
+
+The following guidance was developed after reviewing several functional status, disability status, mental/cognitive status, and SDOH screening and assessment tools.
 
 #### US Core Observation Screening and Assessments Profile
 
