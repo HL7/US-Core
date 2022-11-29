@@ -24,15 +24,15 @@ The figure below shows how screenings, assessments, and referrals (requests) rel
 
 Screening and Assessments are used to identify various problems or health concerns. Their complexity ranges from simple observations to complex structured evaluations: 
 
-- Clinician makes an 'observation' - I found patient has this problem
+- Clinician makes a 'clinical judgment' - I found patient has this problem
 - Clinician completes and shares detailed assessments 
-- Clinician makes an 'observation' based on detailed assessment.
+- Clinician makes an 'clinical judgment' based on detailed assessment.
 
 The following guidance was developed after reviewing several functional status, disability status, mental/cognitive status, and SDOH screening and assessment tools.
 
 #### US Core Observation Screening and Assessments Profile
 
-To meet the requirements for USCDI v3 data class Health Status and Assessments, and SDOH Assessments, US Core defines the [US Core Observation Screening and Assessments Profile] to support questions and responses to screening and assessment tools. It can represent a single response, multiple responses, and multi-select “check all that apply” type questions. It also is used for recording a total score when a screening or assessment tool includes one. US Core Servers **SHALL** support the [US Core Observation Screening and Assessments Profile] for recording screening and assessments.
+To meet the requirements for USCDI v3 data class Health Status and Assessments, and SDOH Assessments, US Core defines the [US Core Observation Screening and Assessments Profile] to support questions and responses to screening and assessment tools when an assessment is done. It can represent a single response, multiple responses, and multi-select “check all that apply” type questions. It also is used for recording a total score when a screening or assessment tool includes one. US Core Servers **SHALL** support the [US Core Observation Screening and Assessments Profile] for recording screening and assessments.
 
 The [US Core Observation Screening and Assessments Profile] is defined to record responses from a screening or assessments for *any* context. To keep related data together and preserve the survey structure, the profile can be used to represent multi-question "panels" of responses, individual responses (including multi-select or "check all that apply" responses), and calculated scores.  The figure below illustrates the relationship between the Observation screening and assessments "panel" and the individual screening and assessment Observations. Each box represents an Observation:
 
@@ -45,7 +45,7 @@ Not all questions and answers in an assessment tool may or should be represented
 
 #### US Core Observation Simple Observation Profile
 
-Some systems record clinical judgments as a Problem or Health Concern. For those systems that support them as observations, US Core defines a [US Core Simple Observation Profile] that US Core Servers **MAY** support. This observation may contribute to the identification of future problems or health concerns and can support service requests and procedures. When an Simple Observation or Problem or Health Concern is recorded based on an Assessment or Screening tool, systems **SHOULD** associate it with the US Core Observation Screening and Assessments observation.
+Systems record clinical judgments as a problem or health concern or as an observation. For systems that support clinical judgments as observations, US Core defines a [US Core Simple Observation Profile] to represent these findings (for example, “I found patient has this problem”). US Core Servers **MAY** support this profile. This observation can contribute to the identification of future problems or health concerns and support service requests and procedures. When an Simple Observation or Problem or Health Concern is recorded based on an Assessment or Screening tool, systems **SHOULD** associate it with the US Core Observation Screening and Assessments observation.
 
 #### What About QuestionnaireResponse?
 
