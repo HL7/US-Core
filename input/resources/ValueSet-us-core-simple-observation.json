@@ -1,13 +1,13 @@
 {
     "resourceType": "ValueSet",
     "id": "simple-observation",
-    "url": "http://hl7.org/fhir/ValueSet/simple-observation",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/simple-observation",
     "name": "USCoreSimpleObservationCodes",
     "title": "US Core Simple Observation Codes",
     "status": "active",
     "experimental": false,
     "description": "This value set includes all LOINC codes and the SNOMED CT finding hierarchy codes",
-    "copyright": "This content from LOINC\u00ae is copyright \u00a9 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.\n\nThis value set includes content from SNOMED CT, which is copyright \\xA9 2002+ International Health Terminology  Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.\n",
+    "copyright": "1. This material contains content from LOINC (http://loinc.org). LOINC is copyright \u00a9 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC\u00ae is a registered United States trademark of Regenstrief Institute, Inc\n2. This value set includes content from SNOMED CT, which is copyright \u00a9 2002+ International Health Terminology  Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement.\n",
     "compose": {
         "include": [
             {

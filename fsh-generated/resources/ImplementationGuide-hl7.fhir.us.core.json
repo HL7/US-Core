@@ -268,14 +268,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-extension-questionnaire-uri"
-        },
-        "description": "The location where a non-FHIR questionnaire/survey form can be found. This extension is used when the survey,form, or questionnaire which is being anwered is not a FHIR [Questionnaire](https://www.hl7.org/fhir/questionnaire.html), otherwise the [canonical url](https://www.hl7.org/fhir/references.html#canonical) for the FHIR Questionnaire is used.",
-        "exampleBoolean": false,
-        "name": "US Core Extension Questionnaire URI"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/us-core-genderIdentity"
         },
         "description": "An individual's personal sense of being a man, woman, boy, girl, nonbinary, or something else. This represents an individual’s identity, ascertained by asking them what that identity is. This extension is a copy of the FHIR R5 [genderIdentity extension](http://hl7.org/fhir/2022Sep/extension-individual-genderidentity.html) and may be superseded by it in futures versions of FHIR R5-based US Core.",
@@ -406,7 +398,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-screening-assessment"
         },
-        "description": "The US Core Simple Observation Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. To promote interoperability and adoption through common implementation, the US Core Observation Screening Assessment Profile sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select \"check all that apply\" type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Observation Screening Assessment Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. To promote interoperability and adoption through common implementation,it sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select \"check all that apply\" type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Observation Screening Assessment Profile"
       },

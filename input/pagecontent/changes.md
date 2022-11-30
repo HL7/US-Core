@@ -5,13 +5,13 @@
 #### The January 2023 Ballot
 
 This ballot addresses the following issues:
-- Adds [United States Core Data for Interoperability (USCDI) V3](https://www.healthit.gov/isa/sites/isa/files/2022-07/USCDI-Version-3-July-2022-Final.pdf) updates that the Office of the National Coordinator (ONC) published in July of 2021 with these new Data Elements and Classes:
+- Adds [U.S. Core Data for Interoperability (USCDI) v3] updates that the Office of the National Coordinator (ONC) published in July of 2021 with these new Data Elements and Classes:
 
   - **Applied**: [Health Insurance Information](StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual's insurance coverage for health care.
-  - **Pending**: The SDOH Assessments documentation has been fully revised and updated to cover [Health Status/Assessments Data Elements](http://hl7.org/fhir/us/core/2022Jan/screening-and-assessments.html] to document how to use US Core to represent and access health status and assessments including: *Functional Status*, *Disability Status*,and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
+  - **Applied**: The SDOH Assessments documentation has been rewritten and renamed to [Screening and Assessments](screening-and-assessments.html) reflecting its expanded coverage of Health Status/Assessments Data Elements. It documents how to use US Core to represent and access health status and assessments including: *Functional Status*, *Disability Status*,and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
   - **Applied**: [US Core Observation Pregnancy Status Profile](StructureDefinition-us-core-observation-pregnancystatus.html) and [US Core Observation Pregnancy Intent Profile](StructureDefinition-us-core-observation-pregnancyintent.html) have been added to specifically address pregnancy status.
-  - **Applied**: **Laboratory:** Specimen Type, Result Status, and terminology requirements for coded and numeric results. [See Change Here](StructureDefinition-us-core-observation-lab.html) and [Here](StructureDefinition-us-core-specimen.html).
-  - **Applied**: **Medications:** Dose, Dose Unit of Measure, Indication, and Fill Status [See Changes Here](StructureDefinition-us-core-medicationrequest.html) and [Here](StructureDefinition-us-core-medicationdispense.html)
+  - **Applied**: **Laboratory:** The [US Core Laboratory Observation Profile](StructureDefinition-us-core-observation-lab.html) already supports the result status, and terminology requirements for coded and numeric results. The [US Core Specimen Profile](StructureDefinition-us-core-specimen.html) has been added to support Specimen Type.  
+  - **Applied**: **Medications:** Updates to the [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html) to support Dose, Dose Unit of Measure, Indication and the [US Core MedicationDispense Profile](StructureDefinition-us-core-medicationdispense.html) has been added to support Fill Status.
   - **Applied**: **Patient Demographics/Information**
       - Date of Death [See Change Here](StructureDefinition-us-core-patient.html)
       - Tribal Affiliation [See Change Here](StructureDefinition-us-core-patient.html) 
@@ -19,7 +19,7 @@ This ballot addresses the following issues:
         - Note that the [US Core BirthSex Extension](StructureDefinition-us-core-birthsex.html) will not be deprecated.
       - Related Person's Name and Related Person's Relationship [See](StructureDefinition-us-core-relatedperson.html)
       - Occupation and Occupation Industry [See Change Here](StructureDefinition-us-core-observation-occupation.html)
-  - **Applied**: **Procedures:** Reason for Referral [See Change Here](StructureDefinition-us-core-servicerequest.html) and See Change Here](StructureDefinition-us-core-procedure.html)
+  - **Applied**: **Procedures:** Reason for Referral [See Change Here](StructureDefinition-us-core-servicerequest.html) and [See Change Here](StructureDefinition-us-core-procedure.html)
 - Continued efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
 - Addressed and applied over 70 trackers submitted by implementers since the publication of US Core ver 5.0.0 and 5.0.1.
 

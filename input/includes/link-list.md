@@ -361,3 +361,7 @@
 [US Core Sex for Clinical Use Value Set]: ValueSet-us-core-sex-for-clinical-use.html
 <!-- [SNOMED CT]: http://snomed.info/sct -->
 [Observation Category Codes]: {{site.data.fhir.path}}valueset-observation-category.html
+[US Core Common SDOH Assessments ValueSet]: ValueSet-us-core-common-sdoh-assessments.html
+[Gravity Project]: https://hl7.org/gravity
+[SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/
+
