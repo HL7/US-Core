@@ -1,0 +1,74 @@
+{
+    "resourceType": "Observation",
+    "id": "PHQ9-item-example-44255-8",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "PHQ9 Item Example 44255-8"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a PHQ9 Item Example 44255-8 (Feeling down, depressed, or hopeless in last 2 weeks) for the *US Core Observation Screening Assessment Profile*"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "survey",
+                    "display": "Survey"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-observation-category",
+                    "code": "disability-status",
+                    "display": "Disability Status"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "44255-8",
+                "display": "Feeling down, depressed, or hopeless in last 2 weeks"
+            }
+        ],
+        "text": "Feeling down, depressed, or hopeless in last 2 weeks"
+    },
+    "subject": {
+        "reference": "Patient/example"
+    },
+    "effectiveDateTime": "2022-11-29T20:50:32.718000+00:00",
+    "performer": [
+        {
+            "reference": "Practitioner/practitioner-1"
+        }
+    ],
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "LA6570-1",
+                "display": "More than half the days"
+            }
+        ],
+        "text": "More than half the days"
+    },
+    "derivedFrom": [
+        {
+            "reference": "QuestionnaireResponse/5774968"
+        }
+    ]
+}

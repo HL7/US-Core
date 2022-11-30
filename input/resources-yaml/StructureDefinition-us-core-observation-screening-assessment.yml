@@ -6,7 +6,7 @@ title: US Core Observation Screening Assessment Profile
 status: active
 date: '2022-04-20'
 description: >-
-    The US Core Simple Observation Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. To promote interoperability and adoption through common implementation, the US Core Observation Screening Assessment Profile sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
+    The US Core Observation Screening Assessment Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. To promote interoperability and adoption through common implementation,it sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -51,27 +51,9 @@ differential:
             mustSupport: true
 
         - 
-            id: 'Observation.category:uscore'
+            id: 'Observation.category:survey'
             path: Observation.category
-            slicing:                  # <<<<<<<<<< 2nd level slicing
-                discriminator:        # <<<<<<<<<< 2nd level slicing
-                    -                 # <<<<<<<<<< 2nd level slicing
-                        type: pattern # <<<<<<<<<< 2nd level slicing
-                        path: $this   # <<<<<<<<<< 2nd level slicing
-                rules: open
-            definition: Used to classify the context of a screening or assessment observation.
-            sliceName: uscore
-            requirements: Used for filtering the type of assessment or screening observation.
-            min: 1
-            binding:
-                strength: required
-                valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-assessment-category'
-            mustSupport: true
-
-        - 
-            id: 'Observation.category:uscore/survey'
-            path: Observation.category
-            sliceName: uscore/survey
+            sliceName: survey
             requirements: Used for filtering if the observation is an assessment or screening.
             min: 1
             max: '1'
@@ -81,6 +63,19 @@ differential:
                         system: 'http://terminology.hl7.org/CodeSystem/observation-category'
                         code: survey
             mustSupport: true
+
+        - 
+            id: 'Observation.category:uscore'
+            path: Observation.category
+            definition: Used to classify the context of a screening or assessment observation.
+            sliceName: uscore
+            requirements: Used for filtering the type of assessment or screening observation.
+ 
+            binding:
+                strength: required
+                valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-observation-category'
+            mustSupport: true
+
 
         - 
             id: Observation.code

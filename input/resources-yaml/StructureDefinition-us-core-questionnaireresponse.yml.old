@@ -47,7 +47,7 @@ differential:
         to indicate/categorize that the context of this Questionnaire Response relates to Social Determinants of Health.
       max: "1"
       patternCoding:
-          system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'
+          system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-observation-category'
           code: sdoh
       binding:
         strength: required

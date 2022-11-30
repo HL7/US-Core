@@ -92,19 +92,19 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/us-core-category"
-        },
-        "description": "Codes used in US Core *category* profiles such as the US Core Simple Observation Profile. The are typically used when there is a need for categorization for searching and finding resources or workflow hints.",
-        "exampleBoolean": false,
-        "name": "US Core Category"
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/us-core-documentreference-category"
         },
         "description": "The US Core DocumentReferences Type Code System is a 'starter set' of categories supported for fetching and storing DocumentReference Resources.",
         "exampleBoolean": false,
         "name": "US Core DocumentReferences Category Codes"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/us-core-observation-category"
+        },
+        "description": "Codes used in US Core Observation profiles such as the US Core Simple Observation Profile. The are typically used when there is a need for categorization for searching and finding resources or workflow hints.",
+        "exampleBoolean": false,
+        "name": "US Core Observation Category"
       },
       {
         "reference": {
@@ -604,14 +604,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/us-core-assessment-category"
-        },
-        "description": "Used to classify the context of a survey, screening or assessment and may be used to assist with indexing and searching for appropriate instances.",
-        "exampleBoolean": false,
-        "name": "US Core Assessment Category"
-      },
-      {
-        "reference": {
           "reference": "ValueSet/us-core-clinical-note-type"
         },
         "description": "The US Core Clinical Note Type Value Set is a 'starter set' of types supported for fetching and storing clinical notes.",
@@ -697,6 +689,14 @@
         "description": "The US Core Narrative Status Value Set limits the text status for the resource narrative.",
         "exampleBoolean": false,
         "name": "US Core Narrative Status"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-observation-category"
+        },
+        "description": "Codes used in US Core Observation profiles such as the US Core Screening and Assessments Profile. The are typically used when there is a need for categorization for searching and finding resources or workflow hints beyond the Base set of Observation categories.",
+        "exampleBoolean": false,
+        "name": "US Core Observation Category"
       },
       {
         "reference": {
@@ -793,6 +793,14 @@
         "description": "The US Core Sexual Orientation Value Set includes concepts to describe a person's sexual orientation (who they are attracted to).",
         "exampleBoolean": false,
         "name": "US Core Sexual Orientation"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-simple-observation-category"
+        },
+        "description": "Used to classify the context of a survey, screening or assessment for simple observations and may be used to assist with indexing and searching for appropriate instances.",
+        "exampleBoolean": false,
+        "name": "US Core Simple Observation Category"
       },
       {
         "reference": {
@@ -1956,6 +1964,102 @@
       },
       {
         "reference": {
+          "reference": "Observation/PHQ9-item-example-44250-9"
+        },
+        "description": "This is a PHQ9 Item Example 44250-9 (Little interest or pleasure in doing things in last 2 weeks) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44250-9",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44251-7"
+        },
+        "description": "This is a PHQ9 Item Example 44251-7 (Poor appetite or overeating) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44251-7",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44252-5"
+        },
+        "description": "This is a PHQ9 Item Example 44252-5 (Trouble concentrating on things, such as reading the newspaper or watching television) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44252-5",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44253-3"
+        },
+        "description": "This is a PHQ9 Item Example 44253-3 (Moving or speaking so slowly that other people could have noticed. Or the opposite-being so fidgety or restless that you have been moving around a lot more than usual) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44253-3",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44254-1"
+        },
+        "description": "This is a PHQ9 Item Example 44254-1 (Feeling tired or having little energy) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44254-1",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44255-8"
+        },
+        "description": "This is a PHQ9 Item Example 44255-8 (Feeling down, depressed, or hopeless in last 2 weeks) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44255-8",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44258-2"
+        },
+        "description": "This is a PHQ9 Item Example 44258-2 (Feeling bad about yourself-or that you are a failure or have let yourself or your family down) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44258-2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44259-0"
+        },
+        "description": "This is a PHQ9 Item Example 44259-0 (Trouble falling or staying asleep, or sleeping too much) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44259-0",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44260-8"
+        },
+        "description": "This is a PHQ9 Item Example 44260-8 (Thoughts that you would be better off dead, or of hurting yourself in some way) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44260-8",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44261-6"
+        },
+        "description": "This is a PHQ9 Item Example 44261-6 (Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44261-6",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-69722-7"
+        },
+        "description": "This is a PHQ9 Item Example 69722-7 (How difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 69722-7",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-panel-example-44249-1"
+        },
+        "description": "This is a PHQ9 Panel Example 44249-1 (PHQ-9 quick depression assessment panel [Reported.PHQ]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Panel Example 44249-1",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
           "reference": "Observation/PRAPARE-item-example-54899-0"
         },
         "description": "This is a Prapare Item Example 54899-0 (Preferred language) for the *US Core Observation Screening Assessment Profile*",
@@ -2196,6 +2300,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/simple-observation-disability-status"
+        },
+        "description": "This *US Core Simple Observation Profile* is a degree of depression severity determination which is based on the results of a PHQ-9 (Patient Health Questionnaire-9) screening.",
+        "name": "Simple Observation Disability Status Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
           "reference": "Observation/simple-observation-sdoh"
         },
         "description": "This *US Core Simple Observation Profile* is a SDOH determination which is not based on any formal assessment tool or survey.",
@@ -2217,6 +2329,14 @@
         "description": "This *US Core Procedure Profile* is an example of an Defibrillator implant Procedure.",
         "name": "Procedure Defibrillator Implant Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+      },
+      {
+        "reference": {
+          "reference": "QuestionnaireResponse/5774968"
+        },
+        "description": "This is the QuestionnaireResponse example that is referenced by the *US Core Observation Screening Assessment Profile* PHQ9 examples",
+        "name": "QuestionnaireResponse Example 44250-9",
+        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
       },
       {
         "reference": {

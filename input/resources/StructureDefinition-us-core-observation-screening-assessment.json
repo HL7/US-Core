@@ -59,31 +59,9 @@
                 "mustSupport": true
             },
             {
-                "id": "Observation.category:uscore",
+                "id": "Observation.category:survey",
                 "path": "Observation.category",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "pattern",
-                            "path": "$this"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "definition": "Used to classify the context of a screening or assessment observation.",
-                "sliceName": "uscore",
-                "requirements": "Used for filtering the type of assessment or screening observation.",
-                "min": 1,
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-assessment-category"
-                },
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.category:uscore/survey",
-                "path": "Observation.category",
-                "sliceName": "uscore/survey",
+                "sliceName": "survey",
                 "requirements": "Used for filtering if the observation is an assessment or screening.",
                 "min": 1,
                 "max": "1",
@@ -94,6 +72,18 @@
                             "code": "survey"
                         }
                     ]
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.category:uscore",
+                "path": "Observation.category",
+                "definition": "Used to classify the context of a screening or assessment observation.",
+                "sliceName": "uscore",
+                "requirements": "Used for filtering the type of assessment or screening observation.",
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-category"
                 },
                 "mustSupport": true
             },

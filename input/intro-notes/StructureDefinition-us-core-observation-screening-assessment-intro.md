@@ -19,12 +19,13 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each Observation must support:**
 
-1. a time indicating when survey was taken
-1. the answer or a reason why the data is absent*
+1. additional categories
+2. a time indicating when survey was taken
+3. the answer or a reason why the data is absent*
    - if the result value is a numeric quantity and coded quantity units are used, [UCUM] is required.
-3. who answered the questions
-4. related questionnaire responses or observations that this observation is made from
-5. reference to observations that make up this observation**
+4. who answered the questions
+5. related questionnaire responses or observations that this observation is made from
+6. reference to observations that make up this observation**
 
 \* \*\* see guidance below
 
