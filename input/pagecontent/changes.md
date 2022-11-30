@@ -21,11 +21,7 @@ This ballot addresses the following issues:
       - Occupation and Occupation Industry [See Change Here](StructureDefinition-us-core-observation-occupation.html)
   - **Applied**: **Procedures:** Reason for Referral [See Change Here](StructureDefinition-us-core-servicerequest.html) and [See Change Here](StructureDefinition-us-core-procedure.html)
 
-- Several profiles from version 5.0.1 have been *retired* or *renamed* and *rescoped* to accomodate the the USCDI Health Status/Assessments Data Classes and as a result of implementer feedback. The table below summarized these major revisions.
-  |Profile|US Core Version 5.0.1 |US Core Version 6.0.0|
-  |---|---|---|
-  |Foo|Bar|Baz|
-  {:.grid}
+- Several profiles from version 5.0.1 have been *retired* or *renamed* and *rescoped* in this version to accomodate the the USCDI Health Status/Assessments Data Classes and as a result of implementer feedback. The [Cross Version Comparisions Table](changes-between-versions.html#cross-version-comparisons) summarized these major revisions.
 - We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
 - Over 70 trackers were submitted by implementers since the publication of US Core ver 5.0.0 and 5.0.1. WE have addressed them and applied over 50 changes list below:
 
