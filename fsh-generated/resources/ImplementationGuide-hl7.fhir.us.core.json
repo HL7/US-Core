@@ -630,7 +630,7 @@
         "reference": {
           "reference": "ValueSet/us-core-diagnosticreport-report-and-note-codes"
         },
-        "description": "Non laboratory LOINC concepts such as codes for observations like vital signs, hemodynamics, intake/output, EKG, obstetric ultrasound, cardiac echo and other clinical observations. The codes selected should represent discrete and narrative diagnostic observations and reports",
+        "description": "This value set includes All LOINC codes defined as type \"clinical,\" therefore excluding laboratory tests, survey instruments, and claims documents. This includes observables such as vital signs, hemodynamics, intake/output, EKG, obstetric ultrasound, and cardiac echo, and includes discrete and narrative diagnostic observations and reports.",
         "exampleBoolean": false,
         "name": "US Core Non Laboratory Codes"
       },

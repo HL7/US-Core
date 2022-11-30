@@ -1,14 +1,14 @@
 ### Version = 6.0.0 - ballot
-- url: <http://hl7.org/fhir/us/core/2022Jan/>
+- url: <http://hl7.org/fhir/us/core/2023Jan/>
 - Based on FHIR version : 4.0.1
 
 #### The January 2023 Ballot
 
 This ballot addresses the following issues:
-- Adds [U.S. Core Data for Interoperability (USCDI) v3] updates that the Office of the National Coordinator (ONC) published in July of 2021 with these new Data Elements and Classes:
+- We have updated US Core to include the [U.S. Core Data for Interoperability (USCDI) v3] Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2021:
 
   - **Applied**: [Health Insurance Information](StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual's insurance coverage for health care.
-  - **Applied**: The SDOH Assessments documentation has been rewritten and renamed to [Screening and Assessments](screening-and-assessments.html) reflecting its expanded coverage of Health Status/Assessments Data Elements. It documents how to use US Core to represent and access health status and assessments including: *Functional Status*, *Disability Status*,and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
+  - **Applied**: The SDOH Assessments documentation has been rewritten and renamed to [Screening and Assessments](screening-and-assessments.html) reflecting its expanded coverage of Health Status/Assessments Data Elements. It documents how to use [US Core Observation Screening Assessment Profile] and the [US Core Simple Observation Profile] to represent and access health status and assessments including: *Functional Status*, *Disability Status*,and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
   - **Applied**: [US Core Observation Pregnancy Status Profile](StructureDefinition-us-core-observation-pregnancystatus.html) and [US Core Observation Pregnancy Intent Profile](StructureDefinition-us-core-observation-pregnancyintent.html) have been added to specifically address pregnancy status.
   - **Applied**: **Laboratory:** The [US Core Laboratory Observation Profile](StructureDefinition-us-core-observation-lab.html) already supports the result status, and terminology requirements for coded and numeric results. The [US Core Specimen Profile](StructureDefinition-us-core-specimen.html) has been added to support Specimen Type.  
   - **Applied**: **Medications:** Updates to the [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html) to support Dose, Dose Unit of Measure, Indication and the [US Core MedicationDispense Profile](StructureDefinition-us-core-medicationdispense.html) has been added to support Fill Status.
@@ -20,8 +20,14 @@ This ballot addresses the following issues:
       - Related Person's Name and Related Person's Relationship [See](StructureDefinition-us-core-relatedperson.html)
       - Occupation and Occupation Industry [See Change Here](StructureDefinition-us-core-observation-occupation.html)
   - **Applied**: **Procedures:** Reason for Referral [See Change Here](StructureDefinition-us-core-servicerequest.html) and [See Change Here](StructureDefinition-us-core-procedure.html)
-- Continued efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
-- Addressed and applied over 70 trackers submitted by implementers since the publication of US Core ver 5.0.0 and 5.0.1.
+
+- Several profiles from version 5.0.1 have been *retired* or *renamed* and *rescoped* to accomodate the the USCDI Health Status/Assessments Data Classes and as a result of implementer feedback. The table below summarized these major revisions.
+  |Profile|US Core Version 5.0.1 |US Core Version 6.0.0|
+  |---|---|---|
+  |Foo|Bar|Baz|
+  {:.grid}
+- We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
+- Over 70 trackers were submitted by implementers since the publication of US Core ver 5.0.0 and 5.0.1. WE have addressed them and applied over 50 changes list below:
 
  **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 1. **Applied:** US Core: Require Provenance Resource for Create/Update/Delete Events, AuditEvent for Read [FHIR-14388](https://jira.hl7.org/browse/FHIR-14388) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/basic-provenance.html) and [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-provenance.html)
@@ -33,11 +39,11 @@ This ballot addresses the following issues:
 7.  **Applied:** Clarify how to read Profile Page [FHIR-36083](https://jira.hl7.org/browse/FHIR-36083) [See Changes Here](index.html#how-to-read-this-guide)
 8.  **Applied:** Clarify organization responsible for the DocumentReference [FHIR-36654](https://jira.hl7.org/browse/FHIR-36654) [See Changes Here](StructureDefinition-us-core-documentreference.html#mandatory-and-must-support-data-elements)
 9.  **Applied:** Clarify Device UDI-PI requirements [FHIR-36657](https://jira.hl7.org/browse/FHIR-36657) [See Changes Here](StructureDefinition-us-core-implantable-device.html#mandatory-and-must-support-data-elements)
-10. **Applied** Add 'problem-list-item' condition example [FHIR-36759](https://jira.hl7.org/browse/FHIR-36759) [See Changes Here](Condition-condition-duodenal-ulcer.html)
-11. **Resolved - change required:** Fix LOINC LP code links [FHIR-36763](https://jira.hl7.org/browse/FHIR-36763) [See Changes Here](#)
+10. **Applied:** Add 'problem-list-item' condition example [FHIR-36759](https://jira.hl7.org/browse/FHIR-36759) [See Changes Here](Condition-condition-duodenal-ulcer.html)
+11. **Applied:** Fix LOINC LP code links [FHIR-36763](https://jira.hl7.org/browse/FHIR-36763) [See Changes Here](#)
 12. **Applied:** Fix Link to "Direct Secure Messaging" [FHIR-36764](https://jira.hl7.org/browse/FHIR-36764) [See Changes Here](StructureDefinition-us-core-direct.html)
 13. **Applied:** Update US Core Practitioner to clarify work related contact information [FHIR-36765](https://jira.hl7.org/browse/FHIR-36765) [See Changes Here](StructureDefinition-us-core-practitioner.html)
-14. **Resolved - change required:** CLD for US Core Non Laboratory Codes value set is not computable [FHIR-36789](https://jira.hl7.org/browse/FHIR-36789) [See Changes Here](#)
+14. **Applied:** CLD for US Core Non Laboratory Codes value set is not computable [FHIR-36789](https://jira.hl7.org/browse/FHIR-36789) [See Changes Here](#)
 15. **Applied:** US Core Organization slice for CLIA does not list an HTA/THO approved external identifier system [FHIR-36926](https://jira.hl7.org/browse/FHIR-36926) [See Changes Here](#)
 16. **Applied:** Remove effectiveDateTime invariant from Sexual Orientation and Simple Observation (aka Social History) Profiles [FHIR-36932](https://jira.hl7.org/browse/FHIR-36932) [See Changes Here](StructureDefinition-us-core-observation-sexual-orientation.html) and [See Changes Here](StructureDefinition-us-core-simple-observation.html)
 17. **Applied:** Correct code system URI for HCPCS [FHIR-37336](https://jira.hl7.org/browse/FHIR-37336) [See Changes Here](ValueSet-us-core-procedure-code.html)
@@ -66,17 +72,17 @@ This ballot addresses the following issues:
 40. **Applied:** Update QuickStart to include all the search requirements by type. [FHIR-38629](https://jira.hl7.org/browse/FHIR-38629) [See Changes Here](StructureDefinition-us-core-observation-sexual-orientation.html)
 41. **Applied:** Specify $docref's operates on DocumentReference endpoint [FHIR-38658](https://jira.hl7.org/browse/FHIR-38658) [See Changes Here](OperationDefinition-docref.html)
 42. **Applied:** Remove comment in $docref [FHIR-38686](https://jira.hl7.org/browse/FHIR-38686) [See Changes Here](OperationDefinition-docref.html)
-43. **Resolved - change required:** Add USCDI V3 Requirements [FHIR-38702](https://jira.hl7.org/browse/FHIR-38702) [See Changes Here](#)
+43. **Applied:** Add USCDI V3 Requirements [FHIR-38702](https://jira.hl7.org/browse/FHIR-38702) See Changes Listed in introduction above.
 44. **Applied:** Correct documentation on Procedure.performed attribute [FHIR-38737](https://jira.hl7.org/browse/FHIR-38737) [See Changes Here](StructureDefinition-us-core-procedure.html#mandatory-and-must-support-data-elements)
 45. **Applied:** Improve docref documentation [FHIR-38746](https://jira.hl7.org/browse/FHIR-38746) [See Changes Here](OperationDefinition-docref.html)
 46. **Applied:** Fix title for US Core Pediatric Head Occipital Frontal Circumference Observation Profile [FHIR-38794](https://jira.hl7.org/browse/FHIR-38794) [See Changes Here](StructureDefinition-head-occipital-frontal-circumference-percentile.html)
 47. **Applied:** Add Refill and Quantity to MedRequest [FHIR-39343](https://jira.hl7.org/browse/FHIR-39343) [See Changes Here](StructureDefinition-us-core-medicationrequest.html)
 48. **Applied:** Fix Quick Start Rendering [FHIR-39367](https://jira.hl7.org/browse/FHIR-39367) [See Changes Here](StructureDefinition-us-core-patient.html#notes)
 49. **Applied:** Remove Bulk Dependency  [FHIR-39377](https://jira.hl7.org/browse/FHIR-39377) [See Changes Here](CapabilityStatement-us-core-server.html#should_igs)
-50. **RESOLVED - CHANGE REQUIRED:** Fix Cross Version Comparisons section [FHIR-39417](https://jira.hl7.org/browse/FHIR-39417) [See Changes Here](changes-between-versions.html#cross-version-comparisons)
+50. **Applied:** Fix Cross Version Comparisons section [FHIR-39417](https://jira.hl7.org/browse/FHIR-39417) [See Changes Here](changes-between-versions.html#cross-version-comparisons)
 51. **Applied:** Add Ballot Comment to CarePlan for community feedback [FHIR-32949](https://jira.hl7.org/browse/FHIR-32949) [See Changes Here](StructureDefinition-us-core-careplan.html)
-52.  **Applied:** Change ServiceRequest.category to min=0 [FHIR-39493](https://jira.hl7.org/browse/FHIR-39493) [See Changes Here](StructureDefinition-us-core-servicerequest.html)
-53.  **Applied:** Fix provenance-1 [FHIR-39518](https://jira.hl7.org/browse/FHIR-39518) [See Changes Here](StructureDefinition-us-core-provenance.html)
+52. **Applied:** Change ServiceRequest.category to min=0 [FHIR-39493](https://jira.hl7.org/browse/FHIR-39493) [See Changes Here](StructureDefinition-us-core-servicerequest.html)
+53. **Applied:** Fix provenance-1 [FHIR-39518](https://jira.hl7.org/browse/FHIR-39518) [See Changes Here](StructureDefinition-us-core-provenance.html)
 
 ### Version = 5.0.1
 - url: <http://hl7.org/fhir/us/core/STU5.0.1/>

@@ -5,7 +5,7 @@ Allergies and Intolerances,Substance (Drug Class),,,,
 Allergies and Intolerances,Reaction,,,,
 Assessment and Plan of Treatment,,,US Core CarePlan Profile,CarePlan,
 Assessment and Plan of Treatment,Assessment and Plan of Treatment,US Core CarePlan Profile,,,
-Assessment and Plan of Treatment,SDOH Assessment,US Core Observation SDOH Assessment Profile|US Core Observation Social History Profile| US Core QuestionnaireResponse Profile,US Core Observation SDOH Assessment Profile|US Core Observation Social History Profile| US Core QuestionnaireResponse Profile,"Observation, QuestionnaireResponse",See Assessments Guidance
+Assessment and Plan of Treatment,SDOH Assessment,US Core Observation Screening Assessment Profile | US Core Simple Observation Profile,,Observation,See Assessments Guidance
 Care Team Members,,US Core CareTeam Profile,US Core CareTeam Profile,CareTeam.participant,
 Care Team Members,Name,,US Core Practitioner Profile| US Core Patient Profile| US Core RelatedPerson Profile,"Practitioner.name, Patient.name, RelatedPerson.name",
 Care Team Members,Identifier,,US Core Practitioner Profile| US Core Patient Profile,"Practitioner.identifier, Patient.identifier",
@@ -37,7 +37,7 @@ Goals,,,,,
 Goals,Patient Goals,US Core Goal Profile,US Core Goal Profile,Goal,
 Goals,SDOH Goals,,,Goal,See Assessments Guidance
 Health Insurance Information,,US Core Coverage Profile,,,
-Health Insurance Information,Coverage Status,US Core Coverage Profile,US Core Coverage Profile,Coverage.status + Coverage.period,
+Health Insurance Information,Coverage Status,,US Core Coverage Profile,Coverage.status + Coverage.period,
 Health Insurance Information,Coverage Type,,US Core Coverage Profile,Coverage.type,
 Health Insurance Information,Relationship to Subscriber,,US Core Coverage Profile,"Coverage,relationship",
 Health Insurance Information,Member Identifier,,US Core Coverage Profile,Coverage.identifier,
@@ -46,9 +46,9 @@ Health Insurance Information,Group Number,,US Core Coverage Profile,Coverage.cla
 Health Insurance Information,Payer Identifier,,US Core Coverage Profile,Coverage.payer,
 Health Status/Assessments,Health Status/Assessments,,,,
 Health Status/Assessments,Health Concerns,US Core Condition Problems and Health Concerns Profile,US Core Condition Problems and Health Concerns Profile,Condition,
-Health Status/Assessments,Functional Status,US Core Observation Screening and Assessment Profile | US Core Simple Observation,US Core Observation Screening and Assessment Profile | US Core Simple Observation,Observation,See Assessments Guidance
-Health Status/Assessments,Disability Status,US Core Observation Screening and Assessment Profile | US Core Simple Observation,US Core Observation Screening and Assessment Profile | US Core Simple Observation,Observation,
-Health Status/Assessments,Mental/Cognitive Status,US Core Observation Screening and Assessment Profile | US Core Simple Observation,US Core Observation Screening and Assessment Profile | US Core Simple Observation,Observation,
+Health Status/Assessments,Functional Status,US Core Observation Screening Assessment Profile | US Core Simple Observation Profile,US Core Observation Screening Assessment Profile | US Core Simple Observation Profile,Observation,See Assessments Guidance
+Health Status/Assessments,Disability Status,,US Core Observation Screening Assessment Profile | US Core Simple Observation Profile,Observation,
+Health Status/Assessments,Mental/Cognitive Status,,US Core Observation Screening Assessment Profile | US Core Simple Observation Profile,Observation,
 Health Status/Assessments,Pregnancy Status,US Core Observation Pregnancy Status Profile| US Core Observation Pregnancy Intent Profile,US Core Observation Pregnancy Status Profile| US Core Observation Pregnancy Intent Profile,Observation,
 Health Status/Assessments,Smoking Status,US Core Smoking Status Observation Profile,US Core Smoking Status Observation Profile,Observation,
 Immunizations,,US Core Immunization Profile,US Core Immunization Profile,Immunization,
@@ -113,4 +113,4 @@ Vital Signs,Pulse oximetry,US Core Pulse Oximetry Profile ,US Core Pulse Oximetr
 Vital Signs,Inhaled oxygen concentration,US Core Pulse Oximetry Profile ,US Core Pulse Oximetry Profile ,Observation,
 Vital Signs,BMI Percentile (2-20 years old),US Core Pediatric BMI for Age Observation Profile ,US Core Pediatric BMI for Age Observation Profile ,Observation,
 Vital Signs,Weight-for-length Percentile (Birth - 36 months),US Core Pediatric Weight for Height Observation Profile ,US Core Pediatric Weight for Height Observation Profile ,Observation,
-Vital Signs,Occipital Frontal Head Circumference Percentile (Birth - 36 months),US Core Pediatric Head Occipital Frontal Circumference Observation Profile ,US Core Pediatric Head Occipital Frontal Circumference Observation Profile ,Observation,
+Vital Signs,Occipital Frontal Head Circumference Percentile (Birth - 36 months),US Core Pediatric Head Occipital Frontal Circumference Percentile Profile,US Core Pediatric Head Occipital Frontal Circumference Percentile Profile,Observation,
