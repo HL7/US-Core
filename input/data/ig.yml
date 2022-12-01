@@ -2572,12 +2572,14 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
   - reference:
       reference: Goal/goal-1
-    description: This is a goal 1 example for the *US Core Goal Profile*.
+    description: This is a goal 1 example for the *US Core Goal Profile* and demonstrates
+      use free text for Goal.description.
     name: Goal 1 Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal
   - reference:
       reference: Goal/goal-sdoh-2
-    description: This is a goal 2 example for the *US Core Goal Profile*.
+    description: This is a goal 2 example for the *US Core Goal Profile* and demonstrates
+      use of a code for Goal.description.
     name: Goal 2 Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal
   - reference:
