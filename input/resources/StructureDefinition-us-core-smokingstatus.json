@@ -127,13 +127,61 @@
                 ]
             },
             {
-                "id": "Observation.valueCodeableConcept",
-                "path": "Observation.valueCodeableConcept",
-                "short": "Coded Responses from Smoking Status Value Set",
+                "id": "Observation.value[x]",
+                "path": "Observation.value[x]",
+                "short": "Typically Coded Responses from Smoking Status Value Set",
                 "min": 1,
                 "type": [
                     {
-                        "code": "CodeableConcept"
+                        "code": "CodeableConcept",
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ]
+                    },
+                    {
+                        "code": "Quantity"
+                    },
+                    {
+                        "code": "string"
+                    },
+                    {
+                        "code": "boolean"
+                    },
+                    {
+                        "code": "integer"
+                    },
+                    {
+                        "code": "Range"
+                    },
+                    {
+                        "code": "Ratio"
+                    },
+                    {
+                        "code": "SampledData"
+                    },
+                    {
+                        "code": "time"
+                    },
+                    {
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Period"
+                    }
+                ],
+                "condition": [
+                    "us-core-3"
+                ],
+                "constraint": [
+                    {
+                        "key": "us-core-3",
+                        "severity": "error",
+                        "human": "SHALL use UCUM for coded quantity units.",
+                        "expression": "valueQuantity.system.empty() or valueQuantity.system = 'http://unitsofmeasure.org'",
+                        "xpath": "not(exists(f:valueQuantity/f:system) ) or f:valueQuantity/f:system[@value='http://unitsofmeasure.org']"
                     }
                 ],
                 "mustSupport": true,

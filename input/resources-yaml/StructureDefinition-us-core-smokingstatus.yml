@@ -87,12 +87,53 @@ differential:
       mapping:
         - identity: argonaut-dq-dstu2
           map: Observation.issued
-    - id: Observation.valueCodeableConcept
-      path: Observation.valueCodeableConcept
-      short: Coded Responses from Smoking Status Value Set
+    - id: 'Observation.value[x]'
+      path: 'Observation.value[x]'
+      short: Typically Coded Responses from Smoking Status Value Set
       min: 1
       type:
         - code: CodeableConcept
+          extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+        - code: Quantity
+        - code: string
+        - code: boolean
+        - code: integer
+        - code: Range
+        - code: Ratio
+        - code: SampledData
+        - code: time
+        - code: dateTime
+        - code: Period
+      condition:
+        # - us-core-2
+        - us-core-3
+        # - us-core-4
+      constraint:
+        # - extension:
+        #     - url: >-
+        #         http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice
+        #       valueBoolean: true
+        #   key: us-core-4
+        #   severity: warning
+        #   human: SHOULD use Snomed CT for coded Results
+        #   expression: >-
+        #     valueCodeableConcept.coding.system.empty() or
+        #     valueCodeableConcept.coding.system = 'http://snomed.info/sct'
+        #   xpath: >-
+        #     not(exists(f:valueCodeableConcept/f:coding/f:system) ) or
+        #     f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']
+        - key: us-core-3
+          severity: error
+          human: SHALL use UCUM for coded quantity units.
+          expression: >-
+            valueQuantity.system.empty() or valueQuantity.system =
+            'http://unitsofmeasure.org'
+          xpath: >-
+            not(exists(f:valueQuantity/f:system) ) or
+            f:valueQuantity/f:system[@value='http://unitsofmeasure.org']
       mustSupport: true
       binding:
         extension:

@@ -1,73 +1,88 @@
 {
-  "status": "final",
-  "category": [
-    {
-      "text": "Vital Signs",
-      "coding": [
+    "status": "final",
+    "category": [
         {
-          "code": "vital-signs",
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-          "display": "Vital Signs"
+            "text": "Vital Signs",
+            "coding": [
+                {
+                    "code": "vital-signs",
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "display": "Vital Signs"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "code": {
-    "text": "Blood pressure systolic and diastolic",
-    "coding": [
-      {
-        "code": "85354-9",
-        "system": "http://loinc.org",
-        "display": "Blood pressure panel with all children optional"
-      }
-    ]
-  },
-  "resourceType": "Observation",
-  "component": [
-    {
-      "valueQuantity": {
-        "code": "mm[Hg]",
-        "unit": "mmHg",
-        "value": 109,
-        "system": "http://unitsofmeasure.org"
-      },
-      "code": {
-        "text": "Systolic blood pressure",
+    ],
+    "code": {
+        "text": "Blood pressure systolic and diastolic",
         "coding": [
-          {
-            "code": "8480-6",
-            "system": "http://loinc.org",
-            "display": "Systolic blood pressure"
-          }
+            {
+                "code": "85354-9",
+                "system": "http://loinc.org",
+                "display": "Blood pressure panel with all children optional"
+            }
         ]
-      }
     },
-    {
-      "valueQuantity": {
-        "code": "mm[Hg]",
-        "unit": "mmHg",
-        "value": 44,
-        "system": "http://unitsofmeasure.org"
-      },
-      "code": {
-        "text": "Diastolic blood pressure",
-        "coding": [
-          {
-            "code": "8462-4",
-            "system": "http://loinc.org",
-            "display": "Diastolic blood pressure"
-          }
+    "resourceType": "Observation",
+    "component": [
+        {
+            "valueQuantity": {
+                "code": "mm[Hg]",
+                "unit": "mmHg",
+                "value": 109,
+                "system": "http://unitsofmeasure.org"
+            },
+            "code": {
+                "text": "Systolic blood pressure",
+                "coding": [
+                    {
+                        "code": "8480-6",
+                        "system": "http://loinc.org",
+                        "display": "Systolic blood pressure"
+                    }
+                ]
+            }
+        },
+        {
+            "valueQuantity": {
+                "code": "mm[Hg]",
+                "unit": "mmHg",
+                "value": 44,
+                "system": "http://unitsofmeasure.org"
+            },
+            "code": {
+                "text": "Diastolic blood pressure",
+                "coding": [
+                    {
+                        "code": "8462-4",
+                        "system": "http://loinc.org",
+                        "display": "Diastolic blood pressure"
+                    }
+                ]
+            }
+        }
+    ],
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
+        ],
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Blood Pressure Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a blood pressure example for the *Vitalsigns Profile*."
+            }
         ]
-      }
+    },
+    "encounter": {
+        "display": "GP Visit"
+    },
+    "effectiveDateTime": "1999-07-02",
+    "id": "blood-pressure",
+    "subject": {
+        "display": "Amy Shaw",
+        "reference": "Patient/example"
     }
-  ],
-  "encounter": {
-    "display": "GP Visit"
-  },
-  "effectiveDateTime": "1999-07-02",
-  "id": "blood-pressure",
-  "subject": {
-    "display": "Amy Shaw",
-    "reference": "Patient/example"
-  }
 }

@@ -1,30 +1,45 @@
 {
-  "resourceType": "Observation",
-  "id": "simple-observation-sdoh",
-  "status": "final",
-  "category": [
-    {
-      "coding": [
+    "resourceType": "Observation",
+    "id": "simple-observation-sdoh",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Simple Observation SDOH Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This *US Core Simple Observation Profile* is a SDOH determination which is not based on any formal assessment tool or survey."
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+        ]
+    },
+    "status": "final",
+    "category": [
         {
-          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-          "code": "sdoh",
-          "display": "SDOH"
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                    "code": "sdoh",
+                    "display": "SDOH"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "160695008",
-        "display": "Transport too expensive"
-      }
-    ]
-  },
-  "subject": {
-    "reference": "Patient/example"
-  },
-  "effectiveDateTime": "2021-05-10T21:56:54.671Z",
-  "valueBoolean": true
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "160695008",
+                "display": "Transport too expensive"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/example"
+    },
+    "effectiveDateTime": "2021-05-10T21:56:54.671Z",
+    "valueBoolean": true
 }

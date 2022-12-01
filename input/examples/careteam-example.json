@@ -1,80 +1,95 @@
 {
-  "resourceType": "CareTeam",
-  "id": "example",
-  "status": "active",
-  "name": "US-Core example CareTeam",
-  "subject": {
-    "reference": "Patient/example",
-    "display": "Amy V. Shaw"
-  },
-  "participant": [
-    {
-      "role": [
-        {
-          "coding": [
+    "resourceType": "CareTeam",
+    "id": "example",
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+        ],
+        "extension": [
             {
-              "system": "http://snomed.info/sct",
-              "code": "17561000",
-              "display": "Cardiologist"
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "CareTeam Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a careteam example for the *US Core CareTeam Profile*."
             }
-          ]
-        }
-      ],
-      "member": {
-        "reference": "Practitioner/practitioner-1",
-        "display": "Ronald Bone, MD"
-      }
+        ]
     },
-    {
-      "role": [
-        {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "453231000124104",
-              "display": "Primary care provider"
-            }
-          ]
-        }
-      ],
-      "member": {
-        "reference": "Practitioner/practitioner-2",
-        "display": "Kathy Fielding, MD"
-      }
-    },
-    {
-      "role": [
-        {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "116154003",
-              "display": "Patient (person)"
-            }
-          ]
-        }
-      ],
-      "member": {
+    "status": "active",
+    "name": "US-Core example CareTeam",
+    "subject": {
         "reference": "Patient/example",
         "display": "Amy V. Shaw"
-      }
     },
-    {
-      "role": [
+    "participant": [
         {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "133932002",
-              "display": "Caregiver (person)"
+            "role": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "17561000",
+                            "display": "Cardiologist"
+                        }
+                    ]
+                }
+            ],
+            "member": {
+                "reference": "Practitioner/practitioner-1",
+                "display": "Ronald Bone, MD"
             }
-          ]
+        },
+        {
+            "role": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "453231000124104",
+                            "display": "Primary care provider"
+                        }
+                    ]
+                }
+            ],
+            "member": {
+                "reference": "Practitioner/practitioner-2",
+                "display": "Kathy Fielding, MD"
+            }
+        },
+        {
+            "role": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "116154003",
+                            "display": "Patient (person)"
+                        }
+                    ]
+                }
+            ],
+            "member": {
+                "reference": "Patient/example",
+                "display": "Amy V. Shaw"
+            }
+        },
+        {
+            "role": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "133932002",
+                            "display": "Caregiver (person)"
+                        }
+                    ]
+                }
+            ],
+            "member": {
+                "reference": "RelatedPerson/shaw-niece",
+                "display": "Sarah van Putten"
+            }
         }
-      ],
-      "member": {
-        "reference": "RelatedPerson/shaw-niece",
-        "display": "Sarah van Putten"
-      }
-    }
-  ]
+    ]
 }

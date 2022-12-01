@@ -9,19 +9,21 @@ profile:
 
 ### Mandatory and Must Support Data Elements
 
-The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.  
+The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile-specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
 
 **Each Observation must have:**
 
 1.  a status
 1.  a category code of "social-history"
-1.  a code for smoking observation
+1.  a code for smoking observation*
 1.  a patient
 1.  when the observation occurred
-1.  a result value code for smoking status
+2.  a result value*
+
+\* see guidance below
 
 **Profile specific implementation guidance:**
 
- - Smoking observation LOINC = 72166-2 *Tobacco smoking status NHIS*
+- \*The US Core Smoking Status Observation Codes Value Set is a ‘starter set’ of concepts to capture smoking status and is composed of a single code -72166-2 *Tobacco smoking status NHIS*.  The binding on `Observation.code` is [extensible], and all `Observation.value[x]` data types are available to encourage the use of this profile for other smoking questions such as the code - 67741-9 *Smoking tobacco use duration*.
 
 {% include link-list.md %}

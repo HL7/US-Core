@@ -192,15 +192,15 @@ differential:
           xpath: >-
             not(exists(f:valueCodeableConcept/f:coding/f:system) ) or
             f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']
-        - key: us-core-3
-          severity: error
-          human: SHALL use UCUM for coded quantity units.
-          expression: >-
-            valueQuantity.system.empty() or valueQuantity.system =
-            'http://unitsofmeasure.org'
-          xpath: >-
-            not(exists(f:valueQuantity/f:system) ) or
-            f:valueQuantity/f:system[@value='http://unitsofmeasure.org']
+        # - key: us-core-3
+        #   severity: error
+        #   human: SHALL use UCUM for coded quantity units.
+        #   expression: >-
+        #     valueQuantity.system.empty() or valueQuantity.system =
+        #     'http://unitsofmeasure.org'
+        #   xpath: >-
+        #     not(exists(f:valueQuantity/f:system) ) or
+        #     f:valueQuantity/f:system[@value='http://unitsofmeasure.org']
       mustSupport: true
       mapping:
         - identity: argonaut-dq-dstu2

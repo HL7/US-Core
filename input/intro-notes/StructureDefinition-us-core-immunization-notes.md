@@ -41,6 +41,8 @@ The following search parameter combinations SHOULD be supported:
 
     *Implementation Notes:* Fetches a bundle of all Immunization resources for the specified patient and status ([how to search by reference] and [how to search by date])
 
+---
 
+<sup>1</sup> Although the CVX code system contains some concepts that are  procedures, medications, or substances rather than immunizations, the value set defined in VSAC has removed those and retained only the vaccine codes (see the exclusion definition in VSAC for more detail)
 
 {% include link-list.md %}
