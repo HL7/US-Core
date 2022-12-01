@@ -6,9 +6,8 @@ title: US Core Survey Codes
 status: active
 experimental: false
 date: 2022-09-29
-description: This value set includes all LOINC values whose CLASSTYPE is 4 (Surveys) in
-  the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/)
-  of LOINC Users' Guide)
+description: This value set includes screening and assessment panel codes in LOINC (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/)
+  of LOINC Users' Guide).
 copyright: "This material contains content from LOINC (http://loinc.org). LOINC is
   copyright \xA9 1995-2020, Regenstrief Institute, Inc. and the Logical Observation
   Identifiers Names and Codes (LOINC) Committee and is available at no cost under
@@ -21,3 +20,10 @@ compose:
     - property: CLASSTYPE
       op: '='
       value: '4'
+    - property: CLASSTYPE
+      op: '='
+      value: '2'
+    - property: CLASS
+      op: '='
+      value: 'PANEL.NEONAT'
+    
