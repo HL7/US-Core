@@ -1,14 +1,10 @@
 {% capture cross-version-analysis %}{% include cross-version-analysis.xhtml %}{% endcapture %}
 {% capture ip-statement %}{% include ip-statements.xhtml %}{% endcapture %}
 
-Where possible, new and updated content are highlighted with green text and background
-{:.new-content}
+{% include note-to-balloters.md %}
 
-Key updates and detailed changes between this and prior versions are available in the US Core [Change Log]
+Key updates and detailed changes between this and prior versions are available in the US Core [Change Log] and [Changes Between Versions] page.
 {:.stu-note}
-
-Stub for future introduction to the ballot, and "new and improved" areas to focus on
-{:.note-to-balloters}
 
 ### Introduction
 
