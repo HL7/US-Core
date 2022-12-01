@@ -25,11 +25,11 @@
 
        The body of the POST contains the [Parameters] resource with the [$docref operation] input parameters.
 
-   **Example 1: Request the latest CCD**
+**Example 1: Request the latest CCD**
 
    {% include examplebutton_default.html example="docref-example1" b_title = "Click Here To See Example" %}
 
-   **Example 2: Request Procedure Notes and Discharge Summaries for 2019**
+**Example 2: Request Procedure Notes and Discharge Summaries for 2019**
 
    {% include examplebutton_default.html example="docref-example2" b_title = "Click Here To See Example" %}
 

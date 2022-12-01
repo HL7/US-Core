@@ -2,7 +2,8 @@
 <!-- includes/docref-example2 -->
 <!-- Example 2: Request Procedure Notes and Discharge Summaries for 2019 -->
 
-**Request procedure notes and discharge summaries for 2019 using `POST` syntax**
+
+** Request Procedure Notes and Discharge Summaries for 2019 using `POST` syntax**
 
 `POST [base]/DocumentReference/$docref}`
 
