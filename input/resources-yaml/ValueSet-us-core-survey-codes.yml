@@ -20,9 +20,15 @@ compose:
     - property: CLASSTYPE
       op: '='
       value: '4'
+
+  - system: http://loinc.org
+    filter:
     - property: CLASSTYPE
       op: '='
       value: '2'
+
+  - system: http://loinc.org
+    filter:
     - property: CLASS
       op: '='
       value: 'PANEL.NEONAT'
