@@ -77,18 +77,18 @@ definition:
     exampleBoolean: false
     name: US Core Condition Category Extension Codes
   - reference:
+      reference: CodeSystem/us-core-category
+    description: Category codes used in US Core Profiles such as the US Core Simple
+      Observation Profile. The are typically used when there is a need for categorization
+      for searching and finding resources or workflow hints.
+    exampleBoolean: false
+    name: US Core Category
+  - reference:
       reference: CodeSystem/us-core-documentreference-category
     description: The US Core DocumentReferences Type Code System is a 'starter set'
       of categories supported for fetching and storing DocumentReference Resources.
     exampleBoolean: false
     name: US Core DocumentReferences Category Codes
-  - reference:
-      reference: CodeSystem/us-core-observation-category
-    description: Codes used in US Core Observation profiles such as the US Core Simple
-      Observation Profile. The are typically used when there is a need for categorization
-      for searching and finding resources or workflow hints.
-    exampleBoolean: false
-    name: US Core Observation Category
   - reference:
       reference: CodeSystem/us-core-provenance-participant-type
     description: Set of codes that are needed for implementation of the US-Core Provenance
@@ -883,7 +883,7 @@ definition:
     exampleBoolean: false
     name: US Core Narrative Status
   - reference:
-      reference: ValueSet/us-core-observation-category
+      reference: ValueSet/us-core-category
     description: Codes used in US Core Observation profiles such as the US Core Screening
       and Assessments Profile. The are typically used when there is a need for categorization
       for searching and finding resources or workflow hints beyond the Base set of
@@ -3092,6 +3092,8 @@ definition:
     value: 'true'
   - code: excludeexample
     value: 'true'
+  - code: suppressed-ids
+    value: $examples
   - code: version-comparison
     value: 5.0.1
   - code: version-comparison

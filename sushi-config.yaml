@@ -89,6 +89,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   excludettl: 'true'
   excludemap: 'true'
   excludeexample: 'true'
+  suppressed-ids: '$examples'
   # generate: #what does this do - todo: remove and see
   #   - xml
   #   - json
