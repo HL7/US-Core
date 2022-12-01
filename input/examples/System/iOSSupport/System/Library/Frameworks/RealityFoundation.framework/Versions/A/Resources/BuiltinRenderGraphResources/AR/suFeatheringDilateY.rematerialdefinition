@@ -1,0 +1,28 @@
+{
+    "Name": "suFeatheringDilateY",
+    "OverrideMaterial": "engine:pbr.rematerialdefinition",
+    "Parameters": {
+        "Textures": {
+            "input" : "rendergraph.suMergedOcclusionMaskDilated1"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "DilateY",
+            "VertexShader": {
+                "Entry": "vsFullscreenForSUFeathering"
+            },
+            "PixelShader": {
+                "Entry": "fsSUFeatheringDilateY"
+            },
+            "State" : {
+                "DepthCompareFunction" : "Always",
+                "WriteDepth" : false,
+                "AlphaBlend" : false
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "DilateY": "DilateY"
+    }
+}

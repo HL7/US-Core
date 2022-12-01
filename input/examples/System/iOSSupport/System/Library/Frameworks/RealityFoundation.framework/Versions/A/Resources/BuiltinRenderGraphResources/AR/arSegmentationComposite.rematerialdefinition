@@ -1,0 +1,56 @@
+{
+    "Name": "arSegmentationCompositeDefinition",
+    "Parameters": {
+        "Constants": {
+            "correctionMatrix": "material.correctionMatrix",
+            "projFromView" : "view.viewToProj",
+            "depthScaleOffset" : "[1.0, 0.0]"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV"
+        },
+        "Textures": {
+            "cameraTextureY" : "rendergraph.cameraTextureY",
+            "cameraTextureCbCr" : "rendergraph.cameraTextureCbCr",
+            "dilatedDepth" : "rendergraph.dilatedDepthTexture",
+            "coefficientsTextureFG" : "rendergraph.coefficientsTextureFG",
+            "coefficientsTextureBG" : "rendergraph.coefficientsTextureBG"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "arSegmentationCompositeTechnique",
+            "VertexShader": {
+                "Entry": "arKitPassthroughVertexShader"
+            },
+            "PixelShader": {
+                "Entry": "fsSegmentationComposite"
+            },
+            "State" : {
+                "ColorWriteMask" : "None",
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "Always"
+            }
+        },
+        {
+            "Name": "arSegmentationCompositeAlphaTechnique",
+            "VertexShader": {
+                "Entry": "arKitPassthroughVertexShader"
+            },
+            "PixelShader": {
+                "Entry": "fsSegmentationCompositeAlpha"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Always"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "fullscreen": "arSegmentationCompositeTechnique",
+        "fullscreen_alpha": "arSegmentationCompositeAlphaTechnique"
+    }
+}

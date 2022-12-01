@@ -1,0 +1,17 @@
+{
+    "context": {
+        "request": {
+            "grounding": true,
+            "multiuser": true,
+            "pluginName": "phonePlugin",
+            "voiceGender": "female",
+            "parameters": {},
+            "globalParameters": {},
+            "test": true
+        }
+    },
+    "assertions": [{
+        "contains": "Je n’ai pas de numéro de téléphone pour ce contact.",
+        "contains": "Je regrette, John, je n’ai pas d’e-mail"
+    }]
+}

@@ -1,0 +1,90 @@
+#CAT-SCHEMA 1.0
+
+name: audio.WholeHouseAudio
+
+inputs:
+  firstSpeakerName:
+    access_mode: public
+  secondSpeakerName:
+    access_mode: public
+  firstSpeakerRoom:
+    access_mode: public
+  secondSpeakerRoom:
+    access_mode: public
+  firstPermanentNameFromSpokenEntities:
+    access_mode: public
+  secondPermanentNameFromSpokenEntities:
+    access_mode: public
+  firstRoomNameFromSpokenEntities:
+    access_mode: public
+  isAllSpeakers:
+    access_mode: public
+  isWholeHouseAudioCommand:
+    access_mode: public
+  isInHere:
+    access_mode: public
+  hasExcept:
+    access_mode: public
+  hasTwoOrMoreRooms:
+    access_mode: public
+  hasThreeOrMoreRooms:
+    access_mode: public
+  hasGroups:
+    access_mode: public
+  isParticipatingSpeaker:
+    access_mode: public
+  
+
+properties:
+  firstSpeakerName:
+    type: dialog.String
+    description: First speaker name
+    sample_value: Blue Speaker
+  secondSpeakerName:
+    type: dialog.String
+    description: Second speaker name
+    sample_value: Red Speaker
+  firstSpeakerRoom:
+    type: dialog.String
+    description: First speaker room
+    sample_value: Bedroom
+  secondSpeakerRoom:
+    type: dialog.String
+    description: Second speaker room
+    sample_value: Kitchen
+  firstPermanentNameFromSpokenEntities:
+    type: dialog.String
+    description: First permanent name from spoken entities
+    sample_value: Party Speakers
+  secondPermanentNameFromSpokenEntities:
+    type: dialog.String
+    description: Second permanent name from spoken entities
+    sample_value: Hallway speakers
+  firstRoomNameFromSpokenEntities:
+    type: dialog.String
+    description: First room name from spoken entities
+    sample_value: Living Room
+  isAllSpeakers:
+    type: dialog.Boolean
+    description: If utterance mentioned everywhere in WHA request
+  isWholeHouseAudioCommand:
+    type: dialog.Boolean
+    description: If this is a WHA command
+  isInHere:
+    type: dialog.Boolean
+    description: If this is an in here command
+  hasExcept:
+    type: dialog.Boolean
+    description: If this command has the word except in it
+  hasTwoOrMoreRooms:
+    type: dialog.Boolean
+    description: If there are two or more rooms resolved in WHA request
+  hasThreeOrMoreRooms:
+    type: dialog.Boolean
+    description: If there are three or more rooms resolved in WHA request
+  hasGroups:
+    type: dialog.Boolean
+    description: If there are permanents in the WHA request
+  isParticipatingSpeaker:
+    type: dialog.Boolean
+    description: If the speaker on which request was issued is part of playback targets

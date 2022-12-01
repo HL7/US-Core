@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runVoiceCommand#intentConfirmationPrompt">
+    <meta name="description" value="Confirmation with custom prompt provided by the app."/>
+    <meta name="category" value="Confirm"/>
+    <meta name="whitespace" value="preserve"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="customResponsesEnabled" type="dialog.Boolean" description="If custom responses from apps are enabled"/>
+        <parameter name="localizedAppName" type="dialog.String" description="The app name"/>
+        <parameter name="customResponse" type="dialog.String" description="A custom confirmation provided by the app"/>
+        <parameter name="intentCategory" type="dialog.String" description="The intent category from the intent response, as a string"/>
+        <parameter name="intentVerb" type="dialog.String" description="The intent verb from the intent response"/>
+    </parameters>
+</cat>

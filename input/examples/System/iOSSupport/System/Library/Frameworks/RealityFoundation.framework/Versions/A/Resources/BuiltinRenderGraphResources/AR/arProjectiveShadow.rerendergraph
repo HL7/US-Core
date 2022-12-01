@@ -1,0 +1,111 @@
+{
+    "Name" : "PlanarShadowGraph",
+    "Targets" : [
+        {
+            "Name" : "ProjectiveShadowMapTexture",
+            "Description" : {
+                "Format" : "R8Unorm",
+                "Type" : "MemoryManaged",
+                "ExposeToMaterial" : true
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["width"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["height"]
+                }
+            ]
+        },
+        {
+            "Name" : "DownsampledShadowMapTexture",
+            "Description" : {
+                "Format" : "R8Unorm",
+                 "Type" : "MemoryManaged",
+                 "ExposeToMaterial" : true
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["downsampleWidth"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["downsampleHeight"]
+                }
+            ]
+        },
+        {
+            "Name" : "IntermediateBlurTarget",
+            "Description" : {
+                "Format" : "R8Unorm",
+                 "Type" : "MemoryManaged"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["downsampleWidth"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["downsampleHeight"]
+                }
+            ]
+        }
+    ],
+    "Nodes" : [
+        {
+            "GenerateProjectiveShadowMap" : {
+                "Name" : "PlanarShadowMapNode",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ProjectiveShadowMapTexture",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ClearColor" : [1,1,1,1]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "DownsampleShadowMap" : {
+                "Name" : "DownsampleShadowMapNode",
+                "Library" : "engine:default.metallib",
+                "ShadowMapHandle" : "ProjectiveShadowMapTexture",
+                "DownsampledShadowMapHandle" : "DownsampledShadowMapTexture"
+            }
+        },
+        {
+            "GaussianBlur1DHorizontalPass" : {
+                "Name" : "GaussianHorizontalBlurShadowMapNode",
+                "Library" : "engine:default.metallib",
+                "IntermediateMapHandle" : "IntermediateBlurTarget",
+                "ShadowMapHandle" : "DownsampledShadowMapTexture"
+            }
+        },
+        {
+            "GaussianBlur1DVerticalPass" : {
+                "Name" : "GaussianVerticalBlurShadowMapNode",
+                "Library" : "engine:default.metallib",
+                "IntermediateMapHandle" : "IntermediateBlurTarget",
+                "ShadowMapHandle" : "DownsampledShadowMapTexture"
+            }
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "projectiveShadowMapLane",
+            "Target" : "DownsampledShadowMapTexture",
+            "GraphScopeOverride" : "projectiveShadowMapScope"
+        }
+    ]
+}

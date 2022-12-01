@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runCustomIntent#offerMoreDisambiguationItems">
+    <meta name="description" value="Offer to read the next page of dismabiguation items."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="remainingPages" type="dialog.Number" description="The number of pages left"/>
+        <parameter name="customSelectionPrompt" type="dialog.String" description="The custom prompt provided by the app, e.g. Which one?"/>
+    </parameters>
+</cat>

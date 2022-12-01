@@ -1,0 +1,63 @@
+{
+    "associatedApplicationIdentifiers": [
+    ],
+    "associatedStoreIdentifiers": [
+    ],
+    "associatedWebDomains": [
+    ],
+    "authenticationToken": "0000000000000000000000",
+    "backgroundColor": "rgb(255,255,255)",
+    "description": "Simulated Card",
+    "foregroundColor": "rgb(0, 0, 0)",
+    "formatVersion": 1,
+    "labelColor": "rgb(126, 106, 136)",
+    "organizationName": "Apple Inc",
+    "passTypeIdentifier": "paymentpass.com.apple.simulator.card",
+    "paymentApplications": [
+                            {
+                            "DPANIdentifier": "00000011111122222333333AAAAA",
+                            "DPANSuffix": "1234",
+                            "FPANSuffix": "4321",
+                            "applicationIdentifier": "A00000000000000000000000",
+                            "state": 1,
+                            "secureElementIdentifier": "000000000000000000000000000000000000000000000000",
+                            "supportsContactlessPayment": 0,
+                            "supportsInAppPayment": 1,
+                            "paymentNetworkIdentifier": 3
+                            }
+                            ],
+    "paymentCard": {
+        "auxilliaryFields": [
+                             {
+                             "key": "expiration",
+                             "label": "",
+                             "value": "01/20"
+                             }
+                             ],
+        "backFields": [
+                       {
+                       "key": "notice",
+                       "label": "INFORMATION",
+                       "value": "Apple Inc"
+                       }
+                       ],
+        "primaryFields": [
+                          {
+                          "key": "card",
+                          "label": "",
+                          "value": "\u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 \u2022\u2022\u2022\u2022 1234",
+                          "PKTextAlignment" : "PKTextAlignmentCenter"
+                          }
+                          ],
+        "secondaryFields": [
+                            {
+                            "key": "name",
+                            "label": "",
+                            "value": "Johnny Appleseed"
+                            }
+                            ]
+    },
+    "serialNumber": "1234567890",
+    "teamIdentifier": "1234567890",
+    "appLaunchURLScheme" : ""
+}

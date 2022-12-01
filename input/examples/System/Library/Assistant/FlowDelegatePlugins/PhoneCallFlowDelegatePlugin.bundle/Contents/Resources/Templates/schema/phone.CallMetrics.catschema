@@ -1,0 +1,20 @@
+#CAT-SCHEMA 1.0
+
+name: phone.CallMetrics
+
+inputs:
+  timeToEstablish:
+    access_mode: public
+
+  duration:
+    access_mode: public
+
+
+properties:
+  timeToEstablish:
+    type: dialog.Number
+    description: The time period from call initiated -> call active. It is reported by the app initiating the call.
+
+  duration:
+    type: dialog.Number
+    description: The time period from call active -> call ended.

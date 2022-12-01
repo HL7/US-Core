@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="deleteTasks#disambiguateTaskList" locale="en">
+
+  <phrases>
+    <first phrase="phrase_0">
+      <text>Which <var name="valueToDisambiguate"/> list?</text>
+      <text>Which list?</text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog><opt>OK <var name="user.groundingIfNeeded"/>. </opt><opt><phrase name="phrase_0"/></opt></dialog>
+  </first>
+
+</cat>

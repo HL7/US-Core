@@ -1,0 +1,41 @@
+{
+    "nodes":[
+        {
+            "label":"All",
+            "exposed":1,
+            "children":["Handles"]
+        },
+        {
+            "label":"Default",
+            "exposed":1,
+            "children":["Handles"]
+        },
+        {
+            "label":"Handles",
+            "exposed":1,
+            "children":["Left Handle", "Right Handle"]
+        },
+        {
+            "label":"Left Handle",
+            "exposed":1,
+            "actuators":["Left Handle"]
+        },
+        {
+            "label":"Right Handle",
+            "exposed":1,
+            "actuators":["Right Handle"]
+        }
+    ],
+    "actuators":[
+        {
+            "label":"Left Handle",
+            "type":0,
+            "index":0
+        },
+        {
+            "label":"Right Handle",
+            "type":0,
+            "index":1
+        }
+    ]
+}

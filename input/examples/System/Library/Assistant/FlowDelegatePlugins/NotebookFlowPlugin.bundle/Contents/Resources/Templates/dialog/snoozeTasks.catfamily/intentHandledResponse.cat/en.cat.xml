@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="snoozeTasks#intentHandledResponse" locale="en"> 
+  <phrases>
+    <random phrase="displayDuration">
+      <text condition="hasValidNextTriggerTime"><opt> for <var name="duration.hoursMinutes"/></opt></text>
+    </random>
+    <random phrase="displayTitle">
+      <text condition="oneReminderSnoozed"><opt> about <var name="taskTitle"/></opt></text>
+    </random>
+  </phrases>
+
+
+  <first>
+    <dialog condition="isHomePod">OK, <opt><var name="user.groundingIfNeeded"/>, </opt>I’ve snoozed the reminder on your <var name="companionName"/><opt><phrase name="displayDuration"/></opt>.</dialog>
+    
+    <dialog condition="hasValidNextTriggerTime">Ok, Iʼll remind you<opt><phrase name="displayTitle"/></opt> again in <var name="duration.hoursMinutes"/>.</dialog>
+    
+    <dialog>Ok, Iʼll remind you<opt><phrase name="displayTitle"/></opt> again later.</dialog>
+    
+    <dialog>OK, snoozed.</dialog>
+  </first>
+
+</cat>

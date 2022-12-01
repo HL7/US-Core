@@ -1,0 +1,42 @@
+{
+    "Name": "arProjectiveShadow",
+    "Parameters": {
+        "Constants": {
+            "crwsReferencePosition": "global.crwsReferencePosition",
+            "objectToCrWorld": "instance.objectToCrWorld",
+            "planeSurfaceViewMatrix": "[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]",
+            "intensity": "2.5",
+            "objectDecayRate": "8.0",
+            "decayToGround": "4.0",
+            "radialDistanceToGround": "0.0"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "arProjectiveShadow",
+            "VertexShader": {
+                "Entry": "vsProjectiveShadow"
+            },
+            "PixelShader": {
+                "Entry": "fsProjectiveShadow"
+            },
+            "State" : {
+                "AlphaBlend" : true,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Always",
+                "AlphaBlendOperation"       : "Min",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "One",
+                "RgbBlendOperation"         : "Min",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "One"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "arProjectiveShadowTechnique": "arProjectiveShadow"
+    }
+}

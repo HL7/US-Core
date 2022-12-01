@@ -1,0 +1,57 @@
+{
+    "Name": "arProjectiveShadowPlaneDefinition",
+    "Parameters": {
+        "Constants": {
+            "objectToCrWorld": "instance.objectToCrWorld",
+            "crWorldToProj" : "view.crWorldToProj",
+            "crWorldToProjInstanced" : "view.crWorldToProjInstanced",
+            "viewportCount" : "instance.viewportCount",
+
+            "uvStart" : "[0, 0]",
+            "uvScale" : "[1, 1]",
+            "normalOffset" : "0.0"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV"
+        },
+        "Textures": {
+            "projectiveShadowMapTexture" : "rendergraph.DownsampledShadowMapTexture"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "RenderShadowReceiverPlane",
+        "VertexShader": {
+            "Entry": "vsRenderShadowReceiverPlane"
+        },
+        "PixelShader": {
+            "Entry": "fsRenderShadowReceiverPlane"
+        },
+        "State" : {
+            "AlphaBlend" : true,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "GreaterEqual",
+            "AlphaBlendOperation"       : "Add",
+            "AlphaSourceFactor"         : "One",
+            "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+            "RgbBlendOperation"         : "Add",
+            "RgbSourceFactor"           : "One",
+            "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+        }
+    },
+    {
+        "Name": "RenderShadowReceiverPlaneDepth",
+        "VertexShader": {
+            "Entry": "vsRenderShadowReceiverPlane"
+        },
+        "State" : {
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        }
+    }],
+    "TechniqueMapping": {
+        "ShadowReceiverPlaneDepthOnly": "RenderShadowReceiverPlaneDepth",
+        "ShadowReceiverPlaneTechnique": "RenderShadowReceiverPlane"
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "Name" : "ProfilerPostPassGraph",
+    "Targets" : [
+        {
+            "Name" : "ProfilerPostPassInputColor"
+        },
+        {
+            "Name" : "ProfilerPostPassOutputColor"
+        }
+    ],
+    "Nodes" : [
+        {
+            "ProfilerOverlay" : {
+                "Name" : "FrameProfilerOverlay",
+                "profilerMaterialAsset" : "profilerMaterial.rematerial",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ProfilerPostPassInputColor"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ProfilerPostPassOutputColor",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName" : "inputImage",
+                        "TargetHandle" : "ProfilerPostPassInputColor"
+                    }
+                ]
+            }
+        }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "Color",
+            "Target" : "ProfilerPostPassInputColor",
+            "InputOnly" : true
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "Color",
+            "Target" : "ProfilerPostPassOutputColor"
+        }
+    ]
+}

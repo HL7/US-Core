@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#intentHandledResponseSpokenOnly">
+  <meta name="category" value="Handled"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="A summary of the list after it was handled by the app."/>
+  <parameters>
+    <parameter name="addedTaskCount" type="dialog.Number"/>
+    <parameter name="isDefaultList" type="dialog.Boolean"/>
+    <parameter name="listTitle" type="dialog.String"/>
+    <parameter name="isTaskFlagged" type="dialog.Boolean"/>
+    <parameter name="didUserSpecifyTime" type="dialog.Boolean"/>
+    <parameter name="isRecurringTrigger" type="dialog.Boolean"/>
+    <parameter name="isTriggerTemporal" type="dialog.Boolean"/>
+    <parameter name="calendar" type="dialog.Calendar"/>
+    <parameter name="isTriggerSpatial" type="dialog.Boolean"/>
+    <parameter name="isSpatialTriggerArriveCar" type="dialog.Boolean"/>
+    <parameter name="isSpatialTriggerDepartCar" type="dialog.Boolean"/>
+    <parameter name="isTriggerContact" type="dialog.Boolean"/>
+    <parameter name="isLocationServiceDisabled" type="dialog.Boolean"/>
+    <parameter name="isFlaggedNotAllowed" type="dialog.Boolean"/>
+    <parameter name="isNotUpgradedToCloudkitForFlag" type="dialog.Boolean"/>
+    <parameter name="isVox" type="dialog.Boolean"/>
+    <parameter name="isCarPlay" type="dialog.Boolean"/>
+    <parameter name="isMac" type="dialog.Boolean"/>
+    <parameter name="isFirstPartyApp" type="dialog.Boolean"/>
+    <parameter name="appName" type="dialog.String"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="ShareETA#ConfirmationDenied" xmlns="urn:apple:names:siri:cat:1.0" locale="en">  
+  <conditions>
+      <condition name="isStopShareETA"><expression name="ifStopShareETA" op="set"/></condition>
+      <condition name="isShareETA"><expression name="ifStopShareETA" op="unset"/></condition>
+  </conditions>
+  
+  <phrases>
+      <switch phrase="sharing_mode" value="mode">
+          <text case="1">Maps</text>
+          <text case="2">SMS</text>
+          <text case="3">iMessage</text>
+      </switch>
+  </phrases>
+  
+  <random>
+    <dialog id="shareETA" condition="isShareETA">OK. I won't be able to share your ETA<opt> using <phrase name="sharing_mode"/></opt>. </dialog>
+    <dialog id="stopShareETA" condition="isStopShareETA">OK, still sharing your ETA. </dialog>
+  </random>
+</cat>

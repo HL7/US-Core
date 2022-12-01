@@ -1,0 +1,139 @@
+{
+    "Name": "SurfaceShader",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "userParameter"  : "[0,0,0,0]"
+        },
+        "Buffers": {
+            "userConstants"  : "fallback.zeros"
+        },
+        "Textures": {
+            "textureCustom"  : "fallback.black"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "SurfaceShaderOpaque",
+        "VertexShader": {
+            "Entry": "realitykit::vsGeometryModifier",
+        },
+        "PixelShader": {
+            "Entry": "realitykit::fsSurfacePbr",
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "GreaterEqual"
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"        : "true",
+            "EnableNormalMap"           : "true",
+            "EnableEmissiveMap"         : "true",
+            "EnableSeparateRMAS"        : "true",
+            "EnableSingleRMAS"          : "false",
+            "EnableRoughnessMap"        : "true",
+            "EnableMetallicMap"         : "true",
+            "EnableAOMap"               : "true",
+            "EnableSpecularMap"         : "true",
+            "EnableOpacityMap"          : "true",
+
+            "VertexColorOption"         : "0",
+            "EnableVertexColor"         : "true",
+            "EnableMultiUVs"            : "true",
+
+            "EnableAreaLight"           : "false",
+            "EnableClearcoat"           : "false",
+            "EnableCloth"               : "false",
+            "EnableAnisotropy"          : "false",
+            "EnableIBL"                 : "true",
+            "EnableAREnvProbe"          : "false",
+            "EnableDynamicLighting"     : "false",
+            "EnableSSAO"                : "false",
+            "EnableSSDO"                : "false",
+            "EnableMultiscatter"        : "true"
+        },
+        "DefaultVariations" : [ "OpaqueCommon" ],
+    },
+    {
+        "Name": "SurfaceShaderTransparent",
+        "VertexShader": {
+            "Entry": "realitykit::vsGeometryModifier",
+        },
+        "PixelShader": {
+            "Entry": "realitykit::fsSurfacePbr",
+        },
+        "State" : {
+            "AlphaBlend"                : true,
+            "WriteDepth"                : true,
+            "DepthCompareFunction"      : "GreaterEqual",
+            "AlphaBlendOperation"       : "Add",
+            "AlphaSourceFactor"         : "One",
+            "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+            "RgbBlendOperation"         : "Add",
+            "RgbSourceFactor"           : "One",
+            "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"        : "true",
+            "EnableNormalMap"           : "true",
+            "EnableEmissiveMap"         : "true",
+            "EnableSeparateRMAS"        : "true",
+            "EnableSingleRMAS"          : "false",
+            "EnableRoughnessMap"        : "true",
+            "EnableMetallicMap"         : "true",
+            "EnableAOMap"               : "true",
+            "EnableSpecularMap"         : "true",
+            "EnableOpacityMap"          : "true",
+
+            "EnableTransparency"        : "true",
+            "VertexColorOption"         : "0",
+            "EnableVertexColor"         : "true",
+            "EnableMultiUVs"            : "true",
+
+            "EnableAreaLight"           : "false",
+            "EnableClearcoat"           : "false",
+            "EnableCloth"               : "false",
+            "EnableAnisotropy"          : "false",
+            "EnableIBL"                 : "true",
+            "EnableAREnvProbe"          : "false",
+            "EnableDynamicLighting"     : "false",
+            "EnableSSAO"                : "false",
+            "EnableSSDO"                : "false",
+            "EnableMultiscatter"        : "true"
+        },
+        "DefaultVariations" : [ "TransparentCommon" ],
+    },
+    {
+        "Name": "Shadow",
+        "VertexShader": {
+            "Entry": "realitykit::vsGeometryModifier"
+        },
+        "PixelShader": {
+            "Entry": "realitykit::fsSurfaceShadow"
+        },
+        "State" : {
+            "ColorWriteMask" : "None"
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"        : "true",
+            "EnableNormalMap"           : "true",
+            "EnableEmissiveMap"         : "true",
+            "EnableSeparateRMAS"        : "true",
+            "EnableSingleRMAS"          : "false",
+            "EnableRoughnessMap"        : "true",
+            "EnableMetallicMap"         : "true",
+            "EnableAOMap"               : "true",
+            "EnableSpecularMap"         : "true",
+            "EnableOpacityMap"          : "true",
+
+            "VertexColorOption"         : "0",
+            "EnableVertexColor"         : "true",
+            "EnableMultiUVs"            : "true",
+        },
+    }],
+    "TechniqueMapping": {
+        "Opaque": "SurfaceShaderOpaque",
+        "Shadow": "Shadow"
+    }
+}

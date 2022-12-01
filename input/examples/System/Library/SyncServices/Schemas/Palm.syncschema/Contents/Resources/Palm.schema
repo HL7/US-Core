@@ -1,0 +1,49 @@
+
+schema name: com.apple.Palm
+ui helper class: PalmUIHelper
+
+//
+// --- Data Classes ---
+//
+//
+// +++ Entity Types +++
+//
+entity type: {com.apple.palm.contacts.Category}
+	comment: Palm Category for Contacts
+	data class: com.apple.Contacts
+	attributes:
+		name: string
+		index: number
+	identity key: index
+end entity type
+
+entity type: {com.apple.palm.calendars.Category}
+	comment: Palm Category for Events and Tasks
+	data class: com.apple.Calendars
+	attributes:
+		name: string
+		index: number
+	identity key: index
+end entity type
+
+entity type: com.apple.contacts.Contact
+	extension name: com.apple.palm.contacts.Contact
+	attributes:
+		{com.apple.palm.category}: number
+		com.apple.palm.private: boolean
+end entity type
+
+entity type: com.apple.calendars.Event
+	extension name: com.apple.palm.calendars.Event
+	attributes:
+		{com.apple.palm.category}: number
+		com.apple.palm.private: boolean
+end entity type
+
+entity type: com.apple.calendars.Task
+	extension name: com.apple.palm.calendars.Task
+	attributes:
+		{com.apple.palm.category}: number
+		com.apple.palm.private: boolean
+end entity type
+

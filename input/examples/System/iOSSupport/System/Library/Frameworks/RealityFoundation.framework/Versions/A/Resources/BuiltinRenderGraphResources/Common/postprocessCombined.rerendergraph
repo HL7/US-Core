@@ -1,0 +1,160 @@
+{
+    "Name" : "PostProcessGraph",
+    "Targets" : [
+        {
+            "Name" : "DownsampledTarget",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA16Float",
+                "WidthMultiplier" : 0.5,
+                "HeightMultiplier" : 0.5,
+                "MipLevelCount" : 5,
+                "SampleCount" : 1
+            }
+        },
+        {
+            "Name" : "PostProcessInputColor"
+        },
+        {
+            "Name" : "PostProcessOutputColor"
+        }
+    ],
+    "Buffers" : [
+    ],
+    "Nodes" : [
+        {
+            "RenderGraphUploadPostParams" : {
+                "Name" : "UploadPostParams",
+                "TonemappingEnabled" : true,
+                "BloomEnabled" : false,
+                "TonemapUserParameters" : {
+                    "ToeStrength" : 0.25,
+                    "ToeLength" : 0.37,
+                    "ShoulderStrength" : 0.7,
+                    "ShoulderLength" : 1.0,
+                    "ShoulderAngle" : 1.0,
+                    "Gamma" : 1.0,
+                    "WhiteLevel" : 1.0,
+                    "Exposure" : 0.0
+                },
+                "BloomUserParameters" : {
+                    "Strength" : 0.25,
+                    "Threshold" : 1.0,
+                    "Spread" : 1.0,
+                    "NumPasses" : 1
+                }
+            }
+        },
+        {
+            "RenderGraphDownsampleThresholdNode" : {
+                "Name" : "DownsampleThresholdNode",
+                "DownsampleThresholdMaterial" : "downsampleThreshold.rematerial",
+                "TargetReads" : [
+                    { "TargetHandle" : "PostProcessInputColor" }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "DownsampledTarget",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "GenerateMipmaps" : {
+                "Name" : "BloomGenerateMips",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "DownsampledTarget",
+                        "Settings" : {
+                            "Type" : "WriteBlit"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "RenderGraphDownsampleBlur" : {
+                "Name" : "DownsampleBlur",
+                "Library" : "engine:default.metallib",
+                "DownsampledTarget" : "DownsampledTarget"
+            }
+        },
+        {
+            "RenderGraphCombinedPostProcessNode" : {
+                "Name" : "PostProcessCombined",
+                "TonemappingEnabled" : true,
+                "BloomEnabled" : false,
+                "VignetteEnabled" : false,
+                "GzEnabled" : false,
+                "CombinedMaterialPermutations" : [
+                    "postProcessCombinedPermute0.rematerial",
+                    "postProcessCombinedPermute1.rematerial",
+                    "postProcessCombinedPermute2.rematerial",
+                    "postProcessCombinedPermute3.rematerial",
+                    "postProcessCombinedPermute4.rematerial",
+                    "postProcessCombinedPermute5.rematerial",
+                    "postProcessCombinedPermute6.rematerial",
+                    "postProcessCombinedPermute7.rematerial",
+                    "postProcessCombinedTonemapGz.rematerial"
+                ],
+                "DownsampledTarget" : "DownsampledTarget",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "PostProcessInputColor"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "PostProcessOutputColor",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "ProfilerOverlay" : {
+                "Name" : "FrameProfilerOverlay",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "PostProcessOutputColor",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "Color",
+            "Target" : "PostProcessInputColor",
+            "InputOnly" : true
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "Color",
+            "Target" : "DownsampledTarget"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "PostProcessOutputColor"
+        }
+    ],
+    "Operations" : [
+        {
+            "RenderGraphSpecifyLaneOperation" : {
+                "Lane" : "Color",
+                "Description" : {
+                    "Format" : "RGBA16Float"
+                }
+            }
+        }
+    ]
+}

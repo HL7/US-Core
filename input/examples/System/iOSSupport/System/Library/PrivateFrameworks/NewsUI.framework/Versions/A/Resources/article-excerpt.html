@@ -1,0 +1,33 @@
+<!-- 
+ This HTML is used by the `NUArticleExcerptHTML` class to wrap the article excerpt content with
+ our own style styles. The styles are located in `article-excerpt.css`. There are 2 "template"
+ entries in this HTML: style and body. These are replaced at runtime with the actual styles and excerpt
+ body to use.
+ -->
+<html>
+    <head>
+        <title>Excerpt</title>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+        <style type="text/css">
+            html, body, img, audio, movie, p, div {
+                max-width: 100%%;
+            }
+            html {
+                padding: 0; margin: 0;
+            }
+            hr {
+                {{hr-style}}
+            }
+            {{excerpt-style}}
+            img {
+                height: auto !important;
+            } a {
+                color: {{link-color}};
+            }
+            {{style}}
+        </style>
+    </head>
+    <body>
+        {{body}}
+    </body>
+</html>

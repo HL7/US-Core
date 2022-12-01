@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="runVoiceCommand#errorWithCodeUnsupportedOnHomePod" xmlns="urn:apple:names:siri:cat:1.4">
+	<meta name="description" value="The underlying intent is not supported on HomePod."/>
+	<meta name="category" value="Can't Do"/>
+	<meta name="readyForLoc" value="true"/>
+	<parameters>
+		<parameter name="device" type="sirikit.DeviceState"/>
+	</parameters>
+</cat>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#interstitialForPlayingMedia">
+    <conditions>
+        <condition name="playAudioOrVideo">
+            <or>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_AUDIO'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_VIDEO'"/>
+            </or>
+        </condition>
+        <condition name="playSound">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_SOUND'"/>
+        </condition>
+    </conditions>
+    <all>
+        <first condition="playAudioOrVideo">
+            <random condition="device.isDialogDriven">
+                <dialog>On it<opt>, <var name="user.groundingIfNeeded"/></opt>.</dialog>
+                <dialog>Got it<opt>, <var name="user.groundingIfNeeded"/></opt>.</dialog>
+                <dialog>OK<opt>, <var name="user.groundingIfNeeded"/></opt>.</dialog>
+                <dialog>Pressing Play<opt>, <var name="user.groundingIfNeeded"/></opt>.</dialog>
+            </random>
+            <random>
+                <dialog>
+                    <print>On it<opt>, <var name="user.groundingIfNeeded"/></opt>.</print>
+                </dialog>
+                <dialog>
+                    <print>Got it<opt>, <var name="user.groundingIfNeeded"/></opt>.</print>
+                </dialog>
+                <dialog>
+                    <print>OK<opt>, <var name="user.groundingIfNeeded"/></opt>.</print>
+                </dialog>
+                <dialog>
+                    <print>Pressing Play<opt>, <var name="user.groundingIfNeeded"/></opt>.</print>
+                </dialog>
+            </random>
+        </first>
+        <first condition="playSound">
+            <dialog condition="device.isDialogDriven">OK<opt>, <var name="user.groundingIfNeeded"/></opt>.</dialog>
+            <dialog><print>OK<opt>, <var name="user.groundingIfNeeded"/></opt>.</print></dialog>
+        </first>
+    </all>
+</cat>

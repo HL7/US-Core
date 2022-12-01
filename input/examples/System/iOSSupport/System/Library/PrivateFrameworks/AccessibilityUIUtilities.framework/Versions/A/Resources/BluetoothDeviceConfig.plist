@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>FORGET_BUTTON</string>
+			<key>buttonAction</key>
+			<string>forgetDevice:</string>
+			<key>confirmation</key>
+			<dict>
+				<key>okTitle</key>
+				<string>OK</string>
+				<key>cancelTitle</key>
+				<string>CANCEL</string>
+			</dict>
+			<key>isDestructive</key>
+			<true/>
+			<key>File</key>
+			<string>AXUILocalizedStrings</string>
+		</dict>
+	</array>
+</dict>
+</plist>

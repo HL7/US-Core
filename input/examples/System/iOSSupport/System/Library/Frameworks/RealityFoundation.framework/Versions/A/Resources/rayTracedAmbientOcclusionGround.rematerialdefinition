@@ -1,0 +1,36 @@
+{
+    "Name": "RayTracedAmbientOcclusionGroundMaterialDefinition",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Techniques": [
+    {
+        "Name": "HybridRendering",
+        "VertexShader": {
+            "Entry": "vsHybridRendering"
+        },
+        "PixelShader": {
+            "Entry": "fsHybridRendering"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        }
+    },
+    {
+        "Name": "FullResHybridRendering",
+        "VertexShader": {
+            "Entry": "vsOcclusion"
+        },
+        "PixelShader": {
+            "Entry": "fsOcclusionMatte"
+        },
+        "State" : {
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        }
+    }],
+    "TechniqueMapping": {
+        "Ground": "HybridRendering",
+        "FullResGround": "FullResHybridRendering"
+    }
+}

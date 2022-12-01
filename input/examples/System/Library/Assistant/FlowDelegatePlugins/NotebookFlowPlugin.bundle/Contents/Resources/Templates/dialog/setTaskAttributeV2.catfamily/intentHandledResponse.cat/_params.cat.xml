@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="setTaskAttributeV2#intentHandledResponse">
+  <meta name="category" value="Handled"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="A summary of the task after it was modified by the app."/>
+  <parameters>
+    <parameter name="multipleChanges" type="dialog.Boolean"/>
+    <parameter name="newTitle" type="dialog.String"/>
+    <parameter name="targetTitle" type="dialog.String"/>
+    <parameter name="newCalendar" type="dialog.Calendar"/>
+    <parameter name="unflag" type="dialog.Boolean"/>
+    <parameter name="markFlagged" type="dialog.Boolean"/>
+    <parameter name="markIncomplete" type="dialog.Boolean"/>
+    <parameter name="markComplete" type="dialog.Boolean"/>
+    <parameter name="changeTitle" type="dialog.Boolean"/>
+    <parameter name="changeTemporalTrigger" type="dialog.Boolean"/>
+    <parameter name="changeSpatialTrigger" type="dialog.Boolean"/>
+    <parameter name="changeStatus" type="dialog.Boolean"/>
+    <parameter name="changePriority" type="dialog.Boolean"/>
+    <parameter name="notUpgradedToCloudkitWarning" type="dialog.Boolean"/>
+    <parameter name="locationDisabledWarning" type="dialog.Boolean"/>
+    <parameter name="flagNotAllowedWarning" type="dialog.Boolean"/>
+    <parameter name="appName" type="dialog.String"/>
+    <parameter name="isVox" type="dialog.Boolean"/>
+    <parameter name="isFirstPartyApp" type="dialog.Boolean"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

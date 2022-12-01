@@ -1,0 +1,35 @@
+{
+    "Name": "fakeLightReceiverMaterialDefinition",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "lightScale" : "3"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "FakeLight",
+        "VertexShader": {
+            "Entry": "vsFakeLightReceiver"
+        },
+        "PixelShader": {
+            "Entry": "fsFakeLightReceiver"
+        },
+        "State" : {
+            "AlphaBlend"                : true,
+            "WriteDepth"                : true,
+            "DepthCompareFunction"      : "Greater",
+            "AlphaBlendOperation"       : "Add",
+            "AlphaSourceFactor"         : "One",
+            "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+            "RgbBlendOperation"         : "Add",
+            "RgbSourceFactor"           : "One",
+            "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+        },
+        "FunctionConstants" : {
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque": "FakeLight"
+    }
+}

@@ -1,0 +1,10 @@
+#CAT-SCHEMA 1.0
+
+name: phone.Person
+
+extends: dialog.Person
+
+properties:
+  isUnnamedPhoneNumber:
+    type: dialog.Boolean
+    description: person has no name and is an unnamed phone number

@@ -1,0 +1,282 @@
+{
+  "Name": "debugPasses",
+  "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+  "Parameters": {
+    "Constants": {
+      "partDebugColor": "-1"
+    },
+    "Textures": {
+      "textureRMAS": "material.textureRMAS"
+    }
+  },
+  "Techniques": [
+    {
+      "Name": "DebugBaseColor",
+      "VertexShader": {
+        "Entry": "vsDebugMapped"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugBaseColorMap"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugCavity",
+      "VertexShader": {
+        "Entry": "vsDebugMapped"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugCavityMap"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugEmissive",
+      "VertexShader": {
+        "Entry": "vsDebugMapped"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugEmissiveMap"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugNormalMap",
+      "VertexShader": {
+        "Entry": "vsDebugMapped"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugNormalMap"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugMetallic",
+      "VertexShader": {
+        "Entry": "vsDebugMapped"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugMetallicMap"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugRoughness",
+      "VertexShader": {
+        "Entry": "vsDebugMapped"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugRoughnessMap"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugAmbientOcclusion",
+      "VertexShader": {
+        "Entry": "vsDebugMapped"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugAmbientOcclusionMap"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugRMAS",
+      "VertexShader": {
+        "Entry": "vsDebugMapped"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugRMASMap"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugMeshPart",
+      "VertexShader": {
+        "Entry": "vsFlat"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugMeshPart"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugNormals",
+      "VertexShader": {
+        "Entry": "vsDebugNormals"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugColored"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugTexcoords",
+      "VertexShader": {
+        "Entry": "vsDebugTexcoords"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugColored"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugTangents",
+      "VertexShader": {
+        "Buffers": {
+          "tangent": "geometry.vertexTangents"
+        },
+        "Entry": "vsDebugTangents"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugColored"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugBitangents",
+      "VertexShader": {
+        "Entry": "vsDebugBitangents"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugColored"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugCalcNormals",
+      "VertexShader": {
+        "Entry": "vsRealityPbr"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugCalculatedNormals"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugCalcBitangents",
+      "VertexShader": {
+        "Entry": "vsRealityPbr"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugCalculatedBitangents"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugCalcTangents",
+      "VertexShader": {
+        "Entry": "vsRealityPbr"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugCalculatedTangents"
+      },
+      "FunctionConstants": {
+        "EnableDetailMapping": "false"
+      }
+    },
+    {
+      "Name": "DebugLightRadiance",
+      "VertexShader": {
+        "Entry": "vsRealityPbr"
+      },
+      "PixelShader": {
+        "Entry": "fsRealityPbr"
+      },
+      "FunctionConstants": {
+        "EnableBaseColorMap": "false",
+        "EnableEmissiveMap": "false",
+        "EnableNormalMap": "false",
+        "EnableDetailMapping": "false",
+        "EnableIBL": "true",
+        "EnableAreaLight": "true",
+        "EnableSingleRMAS": "false",
+        "EnableSeparateRMAS": "true",
+        "EnableSRGBOutput": "false",
+        "EnableTransparency": "false",
+        "DiffuseOption": "0"
+      }
+    },
+    {
+      "Name": "DebugLightRadianceRMAS",
+      "VertexShader": {
+        "Entry": "vsRealityPbr"
+      },
+      "PixelShader": {
+        "Entry": "fsRealityPbr"
+      },
+      "FunctionConstants": {
+        "EnableBaseColorMap": "false",
+        "EnableEmissiveMap": "false",
+        "EnableNormalMap": "false",
+        "EnableDetailMapping": "false",
+        "EnableIBL": "true",
+        "EnableAreaLight": "true",
+        "EnableSingleRMAS": "true",
+        "EnableSeparateRMAS": "false",
+        "EnableSRGBOutput": "false",
+        "EnableTransparency": "false"
+      }
+    },
+    {
+      "Name": "DebugLod",
+      "VertexShader": {
+        "Entry": "vsDebugMapped"
+      },
+      "PixelShader": {
+        "Entry": "fsDebugLod"
+      }
+    }
+  ],
+  "TechniqueMapping": {
+    "DebugBaseColor": "DebugBaseColor",
+    "DebugCavity": "DebugCavity",
+    "DebugEmissive": "DebugEmissive",
+    "DebugNormalMap": "DebugNormalMap",
+    "DebugMetallic": "DebugMetallic",
+    "DebugRoughness": "DebugRoughness",
+    "DebugAmbientOcclusion": "DebugAmbientOcclusion",
+    "DebugMeshPart": "DebugMeshPart",
+    "DebugNormals": "DebugNormals",
+    "DebugTexcoords": "DebugTexcoords",
+    "DebugTangents": "DebugTangents",
+    "DebugBitangents": "DebugBitangents",
+    "DebugCalcNormals": "DebugCalcNormals",
+    "DebugCalcBitangents": "DebugCalcBitangents",
+    "DebugCalcTangents": "DebugCalcTangents",
+    "DebugRMAS": "DebugRMAS",
+    "DebugLightRadiance": "DebugLightRadiance",
+    "DebugLightRadianceRMAS": "DebugLightRadianceRMAS",
+    "DebugLod": "DebugLod"
+  }
+}

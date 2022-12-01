@@ -1,0 +1,27 @@
+#CAT-SCHEMA 1.0
+
+name: phone.IncomingCall
+
+inputs:
+  incomingCall:
+    access_mode: public
+    
+  unknownCaller:
+    access_mode: public
+
+  latestCallRecord:
+    access_mode: public
+
+
+properties:
+  incomingCall:
+    type: dialog.Boolean
+    description: True if there's an incoming call right now
+    
+  unknownCaller:
+    type: dialog.Boolean
+    description: True if incoming or last missed caller has no caller ID
+
+  latestCallRecord:
+    type: phone.CallRecord
+    description: CallRecord representing an incoming call, recently missed call, or empty if no call history

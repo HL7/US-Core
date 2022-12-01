@@ -1,0 +1,38 @@
+{
+    "Name": "arCameraNoise",
+    "Parameters": {
+        "Constants": {
+            "viewportPercents" : "view.viewportPercents",
+            "scale": "material.cameraNoiseScale",
+            "translation": "material.cameraNoiseTranslation",
+            "grainIntensity": "material.cameraNoiseGrainIntensity"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV"
+        },
+        "Textures": {
+            "inputColor" : "rendergraph.inputColor",
+            "grainTexture" : "fallback.black3D"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "arCameraNoise",
+            "VertexShader": {
+                "Entry": "fullScreenVert"
+            },
+            "PixelShader": {
+                "Entry": "fsARCameraNoise"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Always"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "arCameraNoiseTechnique": "arCameraNoise"
+    }
+}

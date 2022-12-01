@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runCustomIntent#disambiguateSlotValueWithCustomText">
+    <meta name="description" value="Asking the user to select from a list of options."/>
+    <meta name="category" value="Disambiguate"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="customIntroductionPrompt" type="dialog.String" description="The custom prompt provided by the app, e.g. You have 7 items"/>
+        <parameter name="customSelectionPrompt" type="dialog.String" description="The custom prompt provided by the app, e.g. Which one?"/>
+        <parameter name="localizedAppName" type="dialog.String" description="The localized name of the app"/>
+    </parameters>
+</cat>

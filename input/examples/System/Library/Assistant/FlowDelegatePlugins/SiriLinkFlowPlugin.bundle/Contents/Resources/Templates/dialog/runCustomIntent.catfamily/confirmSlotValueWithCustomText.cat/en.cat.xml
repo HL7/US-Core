@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runCustomIntent#confirmSlotValueWithCustomText">
+    <conditions>
+        <condition name="shouldShowAppName" note="Checks if we should show app name">
+            <and>
+                <expression name="localizedAppName.length" op="gt" value="0"/>
+                <or>
+                    <expression name="dialogState.usageCount" op="lt" value="2"/>
+                    <expression name="dialogState.hoursSinceLastUse" op="gt" value="720"/>
+                </or>
+            </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="multiUserIntroduction">
+            <text condition="user.groundingIfNeeded">Ok, <var name="user.groundingIfNeeded"/>. </text>
+            <text></text>
+        </first>
+    </phrases>
+    <first>
+        <dialog condition="shouldShowAppName"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customPrompt"/>"</dialog>
+        <dialog><phrase name="multiUserIntroduction"/><var name="customPrompt"/></dialog>
+    </first>
+</cat>

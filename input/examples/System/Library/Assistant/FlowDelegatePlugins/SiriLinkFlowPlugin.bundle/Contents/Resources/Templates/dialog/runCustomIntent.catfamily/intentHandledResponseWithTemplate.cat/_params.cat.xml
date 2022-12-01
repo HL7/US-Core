@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runCustomIntent#intentHandledResponseWithTemplate">
+    <meta name="description" value="Intent Handled Response with template."/>
+    <meta name="category" value="Handled"/>
+    <meta name="whitespace" value="preserve"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="intentCategory" type="dialog.String" description="The category of the intent"/>
+        <parameter name="categoryVerb" type="dialog.String" description="The verb further describing the category"/>
+        <parameter name="customDialog" type="dialog.String" description="The custom dialog the app said"/>
+        <parameter name="localizedAppName" type="dialog.String" description="The localized name of the app"/>
+    </parameters>
+</cat>

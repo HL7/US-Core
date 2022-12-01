@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Descriptions</key>
+	<dict>
+		<key>Headers</key>
+		<string>This key contains various header words which can be found in the beginning of multi-line attribution blocks. Ex: "From: steve@apple.com". Each line of the attribution block begins with exactly one header word followed by a colon. The colon should not be included in this file.</string>
+		<key>Separators</key>
+		<string>This key contains various lines which can be found at the beginning of a multi-line attribution block. Ex: "----Original Message----". If the separator line contains a colon, it should be included in this file.</string>
+		<key>Single Line</key>
+		<string>This key contains various formats for single line attributions with the value parts replaced by placeholders. Ex: "On May 1, 2011 at 2:20pm, Steve Jobs wrote:" is stored as  "On %@ at %@ wrote:". These lines always end with a colon, so the colon should not be included in this file. Commas are also stripped out since many clients may use the same word pattern with varying punctuation.</string>
+		<key>Targeted Clients</key>
+		<array>
+			<string>Mail</string>
+			<string>Gmail</string>
+			<string>iOS Mail</string>
+			<string>MobileMe</string>
+			<string>OWA</string>
+			<string>Windows Outlook 2003</string>
+			<string>Windows Outlook 2007</string>
+			<string>Windows Outlook 2010</string>
+			<string>Yahoo</string>
+		</array>
+		<key>Targeted Languages</key>
+		<array>
+			<string>Arabic</string>
+			<string>Chinese</string>
+			<string>Danish</string>
+			<string>Dutch</string>
+			<string>English</string>
+			<string>Finnish</string>
+			<string>French</string>
+			<string>German</string>
+			<string>Hebrew</string>
+			<string>Italian</string>
+			<string>Japanese</string>
+			<string>Korean</string>
+			<string>Norwegian</string>
+			<string>Polish</string>
+			<string>Portuguese</string>
+			<string>Russian</string>
+			<string>Spanish</string>
+			<string>Swedish</string>
+		</array>
+	</dict>
+	<key>Headers</key>
+	<dict>
+		<key>BCC</key>
+		<array>
+			<string>BCC</string>
+			<string>نسخة مخفية</string>
+			<string>Blinde kopie</string>
+			<string>CCi</string>
+			<string>Blindkopie</string>
+			<string>Скрытая копия</string>
+			<string>Cco</string>
+			<string>密送</string>
+			<string>密件副本</string>
+			<string>Piilokopio</string>
+			<string>숨은 참조</string>
+			<string>Blindkopi</string>
+			<string>Udw</string>
+			<string>Dold kopia</string>
+		</array>
+		<key>CC</key>
+		<array>
+			<string>CC</string>
+			<string>نسخة</string>
+			<string>Kopie</string>
+			<string>Копия</string>
+			<string>抄送</string>
+			<string>副本</string>
+			<string>עותק לידיעה</string>
+			<string>עותק</string>
+			<string>Kopio</string>
+			<string>참조</string>
+			<string>Kopi</string>
+			<string>Dw</string>
+			<string>Kopia</string>
+		</array>
+		<key>Date</key>
+		<array>
+			<string>Date</string>
+			<string>Sent</string>
+			<string>التاريخ</string>
+			<string>Dato</string>
+			<string>Datum</string>
+			<string>Data</string>
+			<string>日時</string>
+			<string>Дата</string>
+			<string>Fecha</string>
+			<string>日付</string>
+			<string>日期</string>
+			<string>Gesendet</string>
+			<string>Envoyé le</string>
+			<string>Enviado el</string>
+			<string>发送时间</string>
+			<string>送信日時</string>
+			<string>Отправлено</string>
+			<string>Inviato</string>
+			<string>Sendt</string>
+			<string>Verzonden</string>
+			<string>Date d'envoi</string>
+			<string>تاريخ الإرسال</string>
+			<string>Envoyé</string>
+			<string>נשלח</string>
+			<string>תאריך</string>
+			<string>Päivämäärä</string>
+			<string>날짜</string>
+		</array>
+		<key>From</key>
+		<array>
+			<string>From</string>
+			<string>من</string>
+			<string>Fra</string>
+			<string>Van</string>
+			<string>De</string>
+			<string>Von</string>
+			<string>Da</string>
+			<string>差出人</string>
+			<string>От</string>
+			<string>发件人</string>
+			<string>寄件人</string>
+			<string>Expéditeur</string>
+			<string>Desde</string>
+			<string>מ</string>
+			<string>Inizio</string>
+			<string>מאת</string>
+			<string>Lähettäjä</string>
+			<string>보낸 사람</string>
+			<string>Od</string>
+			<string>De</string>
+			<string>Från</string>
+		</array>
+		<key>Other</key>
+		<array>
+			<string>Importance</string>
+			<string>Attachments</string>
+			<string>Flag</string>
+			<string>Resent-Cc</string>
+			<string>Resent-From</string>
+			<string>Resent-To</string>
+			<string>Return-Path</string>
+			<string>Received</string>
+			<string>Original-Recipient</string>
+			<string>X-Auditid</string>
+			<string>Mime-Version</string>
+			<string>Content-Type</string>
+			<string>X-Mailer</string>
+			<string>X-Radar</string>
+			<string>In-Reply-To</string>
+			<string>References</string>
+			<string>Message-Id</string>
+			<string>X-Brightmail-Tracker</string>
+			<string>Thread-Topic</string>
+			<string>Thread-Index</string>
+			<string>Accept-Language</string>
+			<string>Content-Language</string>
+			<string>Content-Transfer-Encoding</string>
+			<string>List-Id</string>
+		</array>
+		<key>Reply-to</key>
+		<array>
+			<string>Reply-To</string>
+			<string>Svar til</string>
+			<string>Antwoord aan</string>
+			<string>Répondre à</string>
+			<string>Antwort an</string>
+			<string>Rispondi a</string>
+			<string>返信先</string>
+			<string>Ответ-Кому</string>
+			<string>Responder a</string>
+			<string>回复</string>
+			<string>回覆給</string>
+			<string>Vastaus</string>
+			<string>답장 받는 사람</string>
+			<string>Odpowiedź-do</string>
+			<string>Svara till</string>
+		</array>
+		<key>Subject</key>
+		<array>
+			<string>Subject</string>
+			<string>الموضوع</string>
+			<string>נושא</string>
+			<string>Emne</string>
+			<string>Onderwerp</string>
+			<string>Objet</string>
+			<string>Betreff</string>
+			<string>Oggetto</string>
+			<string>件名</string>
+			<string>標題</string>
+			<string>Тема</string>
+			<string>Asunto</string>
+			<string>主题</string>
+			<string>‏נושא</string>
+			<string>Aihe</string>
+			<string>제목</string>
+			<string>Temat</string>
+			<string>Assunto</string>
+			<string>Ämne</string>
+		</array>
+		<key>To</key>
+		<array>
+			<string>To</string>
+			<string>إلى</string>
+			<string>Til</string>
+			<string>Aan</string>
+			<string>À</string>
+			<string>An</string>
+			<string>A</string>
+			<string>宛先</string>
+			<string>Мне</string>
+			<string>Para</string>
+			<string>收件人</string>
+			<string>Destinataire</string>
+			<string>Кому</string>
+			<string>עד</string>
+			<string>到</string>
+			<string>Fine</string>
+			<string>Bis</string>
+			<string>אל</string>
+			<string>Hasta</string>
+			<string>Vastaanottaja</string>
+			<string>받는 사람</string>
+			<string>Do</string>
+			<string>Para</string>
+			<string>Till</string>
+		</array>
+	</dict>
+	<key>Separators</key>
+	<array>
+		<string>Begin forwarded message:</string>
+		<string>Start på videresendt besked:</string>
+		<string>---------- Forwarded message ----------</string>
+		<string>Begin doorgestuurd bericht:</string>
+		<string>Début du message réexpédié:</string>
+		<string>Anfang der weitergeleiteten E-Mail:</string>
+		<string>Inizio messaggio inoltrato:</string>
+		<string>Начало переадресованного сообщения:</string>
+		<string>Inicio del mensaje reenviado:</string>
+		<string>-----Original Message-----</string>
+		<string>----- Original Message ----</string>
+		<string>------Original Message------</string>
+		<string>----- Original Message -----</string>
+		<string>---------- 転送メッセージ ----------</string>
+		<string>下面是被转发的邮件：</string>
+		<string>開始轉寄郵件：</string>
+		<string>以下是转发的邮件：</string>
+		<string>Début du message transféré:</string>
+		<string>Anfang der weitergeleiteten E‑Mail:</string>
+		<string>----- Messaggio originale -----</string>
+		<string>----- Ursprüngliche Mail ----</string>
+		<string>----- Message d'origine ----</string>
+		<string>بدايةالرسالةالمحوّلة:</string>
+		<string>________________________________________</string>
+		<string>________________________________</string>
+		<string>-----Oprindelig meddelelse-----</string>
+		<string>-----Oorspronkelijk bericht-----</string>
+		<string>Début du message transféré :</string>
+		<string>-----Ursprüngliche Nachricht-----</string>
+		<string>-----Исходное сообщение-----</string>
+		<string>-----Mensaje original-----</string>
+		<string>----- Original meddelelse -----</string>
+		<string>---------- Forwarded message ----------‎</string>
+		<string>-----الرسالة الأصلية-----</string>
+		<string>-----Messaggio originale-----</string>
+		<string>-----Message d'origine-----</string>
+		<string>תחילת ההודעה שהועברה:</string>
+		<string>بداية الرسالة المحوّلة:</string>
+		<string>Välitetty viesti alkaa:</string>
+		<string>전달된 메시지 시작:</string>
+		<string>Videresendt melding:</string>
+		<string>Początek przekazywanej wiadomości:</string>
+		<string>Início da mensagem encaminhada:</string>
+		<string>Início da mensagem reenviada:</string>
+		<string>Vidarebefordrat brev:</string>
+	</array>
+	<key>Signatures</key>
+	<array>
+		<string>‏من جهاز الـ %@ الخاص بي</string>
+		<string>Enviat des del meu %@</string>
+		<string>Odesláno z %@</string>
+		<string>Sendt fra min %@</string>
+		<string>Verstuurd vanaf mijn %@</string>
+		<string>Από το %@ μου</string>
+		<string>Sent from my %@</string>
+		<string>Lähetetty %@sta</string>
+		<string>Envoyé de mon %@</string>
+		<string>Von meinem %@ gesendet</string>
+		<string>נשלח מה-%@ שלי</string>
+		<string>Poslano s mog %@ uređaja</string>
+		<string>Az %@ készülékemről küldve</string>
+		<string>Dikirim dari %@ saya</string>
+		<string>Inviato da %@</string>
+		<string>%@から送信</string>
+		<string>나의 %@에서 보냄</string>
+		<string>Dihantar dari %@ saya</string>
+		<string>Sendt fra min %@</string>
+		<string>Wysłane z %@a</string>
+		<string>Enviado do meu %@</string>
+		<string>Enviado via %@</string>
+		<string>Trimis de pe %@-ul meu</string>
+		<string>Отправлено с %@</string>
+		<string>Odoslané z %@u</string>
+		<string>Enviado desde mi %@</string>
+		<string>Skickat från min %@</string>
+		<string>ส่งจาก %@</string>
+		<string>%@’imden gönderildi</string>
+		<string>%@'umdan gönderildi</string>
+		<string>Надіслано з %@</string>
+		<string>Đã gửi từ %@ của tôi</string>
+		<string>发自我的 %@</string>
+		<string>從我的 %@ 傳送</string>
+	</array>
+	<key>Single Line</key>
+	<array>
+		<string>Den %@ kl. %@ skrev %@</string>
+		<string>Op %@ om %@ heeft %@ het volgende geschreven</string>
+		<string>On %@ wrote</string>
+		<string>--- On %@ wrote</string>
+		<string>Le %@ à %@ a écrit</string>
+		<string>Am %@ um %@ schrieb %@</string>
+		<string>Il giorno %@ alle ore %@ ha scritto</string>
+		<string>%@ в %@ написал(а)</string>
+		<string>El %@ a las %@ escribió</string>
+		<string>在 %@ 写道</string>
+		<string>%@ 於 %@ 寫道</string>
+		<string>في %@ الساعة %@ كتب %@</string>
+		<string>在 佛历%@ 写道</string>
+		<string>%@בפבר%@כתב/ה</string>
+		<string>%@ kirjoitti %@ kello %@</string>
+		<string>%@ 작성</string>
+		<string>Den %@ kl. %@ skrev %@</string>
+		<string>Wiadomość napisana przez %@ w dniu %@, o godz. %@</string>
+		<string>Em %@ às %@ escreveu</string>
+		<string>A %@ às %@ escreveu</string>
+		<string>%@ kl. %@ skrev %@</string>
+	</array>
+</dict>
+</plist>

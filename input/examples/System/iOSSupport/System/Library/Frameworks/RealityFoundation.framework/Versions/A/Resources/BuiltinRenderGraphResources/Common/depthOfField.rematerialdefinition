@@ -1,0 +1,40 @@
+{
+    "Name": "DepthOfFieldMaterial",
+    "Parameters": {
+        "Constants": {
+            "circleOfConfusion": "0.019",
+            "focusDistance": "8",
+	        "lensFocalLength": "35",
+	        "fStop": "1",
+            "depthNear": "0",
+            "depthFar": "1",
+            "viewportPercents" : "view.viewportPercents"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV"
+        },
+        "Textures": {
+            "renderGraphTexture" : "rendergraph.renderGraphTexture",
+	        "linearDepthTexture" : "rendergraph.linearDepthTexture"
+	    }
+    },
+    "Techniques": [
+    {
+        "Name": "DepthOfField",
+        "VertexShader": {
+            "Entry": "fullScreenVert"
+        },
+        "PixelShader": {
+            "Entry": "fsDOF"
+        },
+        "State" : {
+            "AlphaBlend" : true,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        }
+    }],
+    "TechniqueMapping": {
+        "fullscreen": "DepthOfField"
+    }
+}

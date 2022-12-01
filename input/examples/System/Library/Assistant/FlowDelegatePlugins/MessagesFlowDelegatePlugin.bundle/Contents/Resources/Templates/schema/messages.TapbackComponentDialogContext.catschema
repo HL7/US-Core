@@ -1,0 +1,72 @@
+#CAT-SCHEMA 1.0
+
+name: messages.TapbackComponentDialogContext
+
+inputs:
+    isAppended:
+        access_mode: public
+    isFirstTapbackOnMessage:
+        access_mode: public
+    isLastTapbackOnMessage:
+        access_mode: public
+    isFirstComponentFromSender:
+        access_mode: public
+    isLastComponentFromSender:
+        access_mode: public
+    type:
+        access_mode: public
+    sentiment:
+        access_mode: public
+    isTapbackOnMyMessage:
+        access_mode: public
+    isTapbackOnSendersOwnMessage:
+        access_mode: public
+    referencedMessage:
+        access_mode: public
+    needsAndConnector:
+        access_mode: public
+    needsAlsoConnector:
+        access_mode: public
+    needsRandomConnector:
+        access_mode: public
+
+properties:
+    isAppended:
+        type: dialog.Boolean
+        description: Was this component appended
+    isFirstTapbackOnMessage:
+        type: dialog.Boolean
+        description: Is this the first tapback on the referenced message
+    isLastTapbackOnMessage:
+        type: dialog.Boolean
+        description: Is this the last tapback on the referenced message
+    isFirstComponentFromSender:
+        type: dialog.Boolean
+        description: Is this the first component from the same sender
+    isLastComponentFromSender:
+        type: dialog.Boolean
+        description: Is this the last component from the same sender
+    type:
+        type: dialog.String
+        description: type of the tapback (inline or standalone)
+    sentiment:
+        type: dialog.String
+        description: sentiment of the tapback (liked, laughed, etc)
+    isTapbackOnMyMessage:
+        type: dialog.Boolean
+        description: Was the tapback on the device users message
+    isTapbackOnSendersOwnMessage:
+        type: dialog.Boolean
+        description: Was the tapback on the senders own message
+    referencedMessage:
+        type: messages.ReferencedTapbackMessage
+        description: The message referenced by the tapback we're reading
+    needsAndConnector:
+        type: dialog.Boolean
+        description: Should this start with "and".
+    needsAlsoConnector:
+        type: dialog.Boolean
+        description: Should this start with "also".
+    needsRandomConnector:
+        type: dialog.Boolean
+        description: Should this start with "and/also".

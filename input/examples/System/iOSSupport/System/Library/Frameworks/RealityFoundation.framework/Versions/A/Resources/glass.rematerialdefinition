@@ -1,0 +1,34 @@
+{
+    "Name": "GlassMaterialDefinition",
+    "OverrideMaterial": "pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "targetSize": "view.renderTargetSize",
+            "boxScale": "5"
+        },
+        "Textures": {
+            "textureBaseColor" : "rendergraph.inputColor"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "Glass",
+        "VertexShader": {
+            "Entry": "vsRealityPbr"
+        },
+        "PixelShader": {
+            "Entry": "fsBlurTransparent"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Greater"
+        },
+        "FunctionConstants" : {
+            "EnableDetailMapping" : "false"
+        }
+    }],
+    "TechniqueMapping": {
+        "Glass": "Glass"
+    }
+}

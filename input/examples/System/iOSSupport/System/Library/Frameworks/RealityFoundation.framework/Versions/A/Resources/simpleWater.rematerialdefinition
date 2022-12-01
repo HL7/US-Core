@@ -1,0 +1,41 @@
+{
+    "Name": "RealitySimpleWaterMaterialDefinition",
+    "OverrideMaterial": "pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "speed"          : "1.0",
+            "noiseLevel"     : "5.0",
+            "frequency"      : "1.0",
+            "normalFactor"   : "1.0",
+            "baseColorTint"  : "[1, 1, 1, 1]",
+            "metallicScale"  : "1.0",
+            "specularScale"  : "0.5",
+            "roughnessScale" : "0.0",
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "Opaque",
+        "VertexShader": {
+            "Entry": "vsRealityPbr"
+        },
+        "PixelShader": {
+            "Entry": "fsSimpleWater"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater",
+            "AlphaBlendOperation" : "Add",
+            "AlphaSourceFactor" : "SourceAlpha",
+            "AlphaDestinationFactor" : "OneMinusSourceAlpha",
+            "RgbBlendOperation" : "Add",
+            "RgbSourceFactor" : "SourceAlpha",
+            "RgbDestinationFactor" : "OneMinusSourceAlpha"
+        },
+        "DefaultVariations" : [ "OpaqueCommon" ],
+    }],
+    "TechniqueMapping": {
+        "Opaque": "Opaque"
+    }
+}

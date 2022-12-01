@@ -1,0 +1,28 @@
+{
+    "Name": "PrimitiveMeshWireframe",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Library": "",
+    "Parameters": {
+        "Buffers": {
+            "position": "geometry.vertexPosition"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "PrimitiveMesh",
+        "VertexShader": {
+            "Entry": "vsPrimitiveMesh"
+        },
+        "PixelShader": {
+            "Entry": "fsPrimitivePoint"
+        },
+        "State": {
+            "AlphaBlend": false,
+            "WriteDepth": true,
+            "DepthCompareFunction": "Greater"
+        }
+    }],
+    "TechniqueMapping": {
+        "PrimitiveRendererWireframe": "PrimitiveMesh"
+    }
+}

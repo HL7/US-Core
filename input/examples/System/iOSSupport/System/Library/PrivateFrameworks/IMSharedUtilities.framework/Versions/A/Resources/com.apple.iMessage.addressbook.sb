@@ -1,0 +1,50 @@
+;;; Copyright (c) 2017 Apple Inc.  All Rights reserved.
+;;;
+;;; WARNING: The sandbox rules in this file currently constitute
+;;; Apple System Private Interface and are subject to change at any time and
+;;; without notice.
+;;;
+
+;;;
+;;; Address book
+;;;
+(version 1)
+(import "com.apple.iMessage.shared.sb")
+
+(allow mach-lookup
+    (global-name "com.apple.AddressBook.abd")
+    (global-name "com.apple.AddressBook.AddressBookApplicationFrameworkIPC")
+    (global-name "com.apple.AddressBook.ContactsAccountsService")
+    (global-name "com.apple.AddressBook.SourceSync")
+    (global-name "com.apple.backupd.xpc")
+    (global-name "com.apple.corerecents.recentsd")
+    (global-name "com.apple.logind")
+    (global-name "com.apple.lsd.mapdb")
+    (global-name "com.apple.metadata.mds")
+    (global-name "com.apple.spotlight.IndexAgent")
+    (global-name "com.apple.system.opendirectoryd.api")
+    )
+
+(allow user-preference-read
+    (preference-domain "com.apple.AddressBook")
+    (preference-domain "com.apple.AddressBook.CardDAVPlugin")
+    )
+
+(allow user-preference-write
+    (preference-domain "com.apple.AddressBook")
+    )
+
+(allow file-map-executable
+    (subpath "/System/Library/Address Book Plug-Ins")
+    (home-subpath "/Library/Application Support/AddressBook/Sources")
+    )
+
+(allow file*
+    (darwin-user-root-subpath "/T/.AddressBookLocks")
+    (home-subpath "/Library/Application Support/AddressBook")
+    (home-subpath "/Library/Preferences/com.apple.AddressBook.plist")
+    )
+
+(allow network*
+    (home-subpath "/Library/Application Support/AddressBook")
+    )

@@ -1,0 +1,22 @@
+#CAT-SCHEMA 1.0
+
+name: messages.ReadingRequestDialogContext
+
+inputs:
+    conversationCount:
+        access_mode: public
+    didReadRequestIntroduction:
+        access_mode: public
+    didReadSingleSenderUnreadMessagesIntro:
+        access_mode: public
+
+properties:
+    conversationCount:
+        type: dialog.Number
+        description: The number of conversations being read in this request.
+    didReadRequestIntroduction:
+        type: dialog.Boolean
+        description: Did we read the summary of this request out to the user.
+    didReadSingleSenderUnreadMessagesIntro:
+        type: dialog.Boolean
+        description: We read out the sender name in request introduction.

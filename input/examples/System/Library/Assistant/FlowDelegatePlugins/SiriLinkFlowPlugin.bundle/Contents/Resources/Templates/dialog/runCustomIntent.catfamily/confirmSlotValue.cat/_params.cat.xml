@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runCustomIntent#confirmSlotValue">
+    <meta name="description" value="Executed when the app requests confirmation of the resolved slot value."/>
+    <meta name="category" value="Confirm"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="parameterName" type="dialog.String" description="The name of the parameter"/>
+    </parameters>
+</cat>

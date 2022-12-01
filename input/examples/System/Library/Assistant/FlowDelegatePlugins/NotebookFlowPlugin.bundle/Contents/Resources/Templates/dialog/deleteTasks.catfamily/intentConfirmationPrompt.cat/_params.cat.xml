@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="deleteTasks#intentConfirmationPrompt">
+  <meta name="category" value="Confirm"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="Confirmation to delete task(s)"/>
+  <parameters>
+    <parameter name="all" type="dialog.Boolean"/>
+    <parameter name="taskListName" type="dialog.String"/>
+    <parameter name="taskName" type="dialog.String"/>
+    <parameter name="parentTaskName" type="dialog.String"/>
+    <parameter name="taskCount" type="dialog.Number"/>
+    <parameter name="hasSubtasks" type="dialog.Boolean"/>
+    <parameter name="isFirstPartyApp" type="dialog.Boolean"/>
+    <parameter name="appName" type="dialog.String"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

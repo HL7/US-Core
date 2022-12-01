@@ -1,0 +1,35 @@
+{
+    "Name": "visualProxyMaterialDefinition",
+    "OverrideMaterial": "unlitCommon.rematerialdefinition",
+    "Techniques": [
+    {
+        "Name": "UnlitTransparent",
+        "VertexShader": {
+            "Entry": "vsUnlit"
+        },
+        "PixelShader": {
+            "Entry": "fsUnlit"
+        },
+        "State" : {
+            "AlphaBlend"                : true,
+            "WriteDepth"                : true,
+            "DepthCompareFunction"      : "Greater",
+            "AlphaBlendOperation"       : "Add",
+            "AlphaSourceFactor"         : "One",
+            "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+            "RgbBlendOperation"         : "Add",
+            "RgbSourceFactor"           : "One",
+            "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+        },
+        "FunctionConstants" : {
+            "EnableUnlitTexture"             : "true",
+            "EnableOpacityMap"               : "true",
+            "EnableTransparency"             : "true",
+            "EnableSRGBToLinearConversion"   : "false"
+
+        }
+    }],
+    "TechniqueMapping": {
+        "Transparent": "UnlitTransparent"
+    }
+}

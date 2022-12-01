@@ -1,0 +1,31 @@
+{
+    "Name": "PCTGeometryTechniqueClip_macOS",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Techniques": [
+        {
+            "Name": "PCTGeometryTechniqueClip",
+            "VertexShader": {
+                "Entry": "vsPCTGeometryTechniqueClip",
+                "Library": "default.metallib",
+                "Buffers": {
+                    "positions"             : "geometry.positions",
+                    "flags"                 : "geometry.flags",
+                    "state"                 : "geometry.state"
+                }
+            },
+            "PixelShader": {
+                "Entry":   "fsPCTGeometryTechniqueClip",
+                "Library": "default.metallib"
+            },
+            "State" : {
+                "WriteDepth"            : false,
+                "AlphaBlend"            : false,
+                "ColorWriteMask"        : "None",
+                "StencilOperation"      : "Replace",
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "PCTGeometryTechnique": "PCTGeometryTechniqueClip"
+    }
+}

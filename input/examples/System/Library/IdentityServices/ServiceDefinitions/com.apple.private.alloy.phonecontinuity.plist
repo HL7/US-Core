@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AutoConfigureVettedAddresses</key>
+	<true/>
+	<key>DisplayName</key>
+	<string>Phone Continuity</string>
+	<key>Identifier</key>
+	<string>com.apple.private.alloy.phonecontinuity</string>
+	<key>ProtocolName</key>
+	<string>com.apple.private.alloy</string>
+	<key>PushTopic</key>
+	<string>com.apple.private.alloy.phonecontinuity</string>
+	<key>ServiceName</key>
+	<string>com.apple.private.alloy.phonecontinuity</string>
+	<key>iCloudService</key>
+	<true/>
+	<key>AdHocServiceType</key>
+	<integer>1</integer>
+	<key>AllowMagnetDelivery</key>
+	<true/>
+	<key>LaunchMachServiceNotification</key>
+	<string>com.apple.private.alloy.phonecontinuity-idswake</string>
+	<key>CanUseLargePayload</key>
+	<true/>
+	<key>DataProtectionClass</key>
+	<string>D</string>
+</dict>
+</plist>

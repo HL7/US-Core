@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="searchForNotebookItemsV2#intentHandledResponse" locale="en">
+
+  <conditions>
+    <condition name="multipleLists">
+      <expression name="taskListCount" op="gt" value="1"/>
+    </condition>
+    <condition name="isThirdPartyApp">
+      <not>
+        <expression name="isFirstPartyApp"/>
+      </not>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <first phrase="mainContent">
+      <text condition="isResponseEmpty">You don't have any reminders on your<opt> <var name="searchText"/></opt> list.</text>
+      <text condition="isAboveThreshold">You have more than <var name="threshold"/> reminders on your<opt> <var name="searchText"/></opt> list.</text>
+      <text><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>You have <var name="totalItemCount"/><opt><phrase name="typeReminder"/></opt> on your<opt> <var name="searchText"/></opt> list.</text>
+    </first>
+    <first phrase="noItemsFound">
+      <text condition="isThirdPartyApp"><var name="appName"/> didn’t find any</text>
+      <text><opt>Sorry, <var name="user.groundingIfNeeded"/>. </opt>You don’t have any</text>
+    </first>
+    <first phrase="typeMixed">
+      <text condition="isPlural"> items</text>
+      <text> item</text>
+    </first>
+    <random phrase="completed">
+      <text condition="isCompleted"> completed</text>
+    </random>
+    <first phrase="displayType">
+      <text condition="isTasksOnly"><phrase name="typeReminder"/></text>
+      <text condition="isNotesOnly"><phrase name="typeNotes"/></text>
+      <text><phrase name="typeMixed"/></text>
+    </first>
+    <random phrase="recurring">
+      <text condition="isRecurring"> recurring</text>
+    </random>
+    <random phrase="scheduled">
+      <text condition="isScheduled"> scheduled</text>
+    </random>
+    <random phrase="flagged">
+      <text condition="isFlagged"> flagged</text>
+    </random>
+    <first phrase="introPhrase">
+      <text condition="isResponseEmpty"><phrase name="noItemsFound"/></text>
+      <text condition="isAboveThreshold"><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>You have more than <var name="threshold"/></text>
+      <text><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>You have <var name="totalItemCount"/></text>
+    </first>
+    <random phrase="dueBy">
+      <text condition="isDueBy"> due<opt><phrase name="datePhrase"/></opt></text>
+    </random>
+    <random phrase="showListCount">
+      <text condition="multipleLists"> in <var name="taskListCount"/> lists</text>
+    </random>
+    <random phrase="itemType">
+      <text condition="isTasksOnly"><opt><phrase name="flagged"/></opt><opt><phrase name="completed"/></opt><opt><phrase name="scheduled"/></opt><opt><phrase name="recurring"/></opt></text>
+    </random>
+    <first phrase="typeReminder">
+      <text condition="isPlural"> reminders</text>
+      <text> reminder</text>
+    </first>
+    <first phrase="colonOrFullStop">
+      <text>.</text>
+    </first>
+    <first phrase="datePhrase">
+      <text condition="isSingleDay"> <var name="calendar.dateDescriptive"/></text>
+      <text> for then</text>
+    </first>
+    <first phrase="typeNotes">
+      <text condition="isPlural"> notes</text>
+      <text> note</text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog condition="isSingleTaskList"><phrase name="mainContent"/></dialog>
+    <dialog><opt><phrase name="introPhrase"/></opt><opt><phrase name="itemType"/></opt><opt><phrase name="displayType"/></opt><opt><phrase name="showListCount"/></opt><opt> about <var name="searchText"/></opt><opt><phrase name="dueBy"/></opt><opt><phrase name="colonOrFullStop"/></opt></dialog>
+  </first>
+
+</cat>

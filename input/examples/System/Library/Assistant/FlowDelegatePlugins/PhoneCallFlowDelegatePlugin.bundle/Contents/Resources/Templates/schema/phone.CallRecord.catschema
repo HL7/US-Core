@@ -1,0 +1,89 @@
+#CAT-SCHEMA 1.0
+
+name: phone.CallRecord
+
+inputs:
+  identifier:
+    access_mode: public
+
+  dateCreated:
+    access_mode: public
+
+  caller:
+    access_mode: public
+
+  aliases:
+    access_mode: private
+    type: phone.Person[]
+    description: Aliases for other person (caller) involved in call record
+
+  callRecordType:
+    access_mode: public
+    sample_value: OUTGOING, MISSED, RECEIVED, LATEST, UNSEEN, VOICEMAIL, RINGING, IN_PROGRESS, ON_HOLD
+
+  callMetrics:
+    access_mode: public
+    
+  unseen:
+    access_mode: public
+    
+  callCapability:
+    access_mode: public
+    sample_value: AUDIO_CALL, VIDEO_CALL
+    
+  numberOfCalls:
+    access_mode: public
+
+  callProvider:
+    access_mode: public
+    
+  isCallerIdBlocked:
+    access_mode: public
+
+
+properties:
+  identifier:
+    type: dialog.String
+    description: Unique identifier of the call record
+
+  dateCreated:
+    type: dialog.Calendar
+    description: Date of occurrence
+
+  caller:
+    type: phone.Person
+    description: Other person involved in call record
+
+  callerWithAliases:
+    type: phone.PersonWithAliasesList
+    description: List of caller and aliases
+
+  callRecordType:
+    type: dialog.String
+    description: Marks the type of a call detail record
+    sample_value: OUTGOING, MISSED, RECEIVED, LATEST, UNSEEN, VOICEMAIL, RINGING, IN_PROGRESS, ON_HOLD
+
+  callMetrics:
+    type: phone.CallMetrics
+    description: Metrics of a call record -- time to establish and call duration
+    
+  unseen:
+    type: dialog.Boolean
+    description: True if call record was seen
+    
+  callCapability:
+    type: dialog.String
+    description: Marks the capabilities enabled for a call
+    sample_value: AUDIO_CALL, VIDEO_CALL
+    
+  numberOfCalls:
+    type: dialog.Number
+    description: Number of calls in record
+
+  callProvider:
+    type: phone.CallProvider
+    description: Call Provider for this callRecord
+    
+  isCallerIdBlocked:
+    type: dialog.Boolean
+    description: Caller ID information is blocked

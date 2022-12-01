@@ -1,0 +1,46 @@
+{
+    "Name": "projectiveMeshShadowCaster",
+    "Parameters": {
+        "Constants": {
+            "crwsReferencePosition": "global.crwsReferencePosition",
+            "objectToCrWorld": "instance.objectToCrWorld",
+            "renderTargetSize": "view.renderTargetSize",
+            "worldToShadowTileProj" : "[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]",
+            "boundsDecayRate": "4",
+            "receiverDecayRate": "12",
+            "receiverDepthConversion": "1",
+            "receiverAlignmentShift": "0"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition"
+        },
+        "Textures": {
+            "textureTiledDepthPrepass": "fallback.white"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "meshShadowCaster",
+            "VertexShader": {
+                "Entry": "vsMeshShadowCaster"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshShadowCaster"
+            },
+            "State" : {
+                "AlphaBlend" : true,
+                "WriteDepth" : false,
+                "DepthCompareFunction"      : "Always",
+                "AlphaBlendOperation"       : "Max",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "One",
+                "RgbBlendOperation"         : "Max",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "One"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "projectiveMeshShadowTechnique": "meshShadowCaster"
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#intentHandledResponseForSetIntentCategory">
+    <phrases>
+        <first phrase="verbPhrase">
+            <random>
+                <text>It's set</text>
+                <text>Done</text>
+            </random>
+            <text>All set</text>
+        </first>
+    </phrases>
+    
+    <first>
+        <dialog>OK<opt>, <var name="user.groundingIfNeeded"/></opt>. <phrase name="verbPhrase"/>.</dialog>
+    </first>
+</cat>

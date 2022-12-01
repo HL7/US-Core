@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="NotebookBase#formatSpatialEventTrigger">
+    <meta name="category" value="UsedForSnippet"/>
+    <meta name="usesDialogHistory" value="true"/>
+    <meta name="description" value="a formatter for the spatialEventTriggers in the NotebookDomain."/>
+    <parameters>
+        <parameter name="location" type="dialog.Location"/>
+        <parameter name="device" type="sirikit.DeviceState"/>
+    </parameters>
+</cat>

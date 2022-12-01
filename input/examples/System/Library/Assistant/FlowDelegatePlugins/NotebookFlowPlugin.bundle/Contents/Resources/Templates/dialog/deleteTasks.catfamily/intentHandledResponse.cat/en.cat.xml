@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="deleteTasks#intentHandledResponse" locale="en">
+
+  <conditions>
+    <condition name="oneDeletedReminder">
+      <expression name="taskCount" op="eq" value="1"/>
+    </condition>
+    <condition name="multipleDeletedReminders">
+      <expression name="taskCount" op="gt" value="1"/>
+    </condition>
+    <condition name="notVox">
+      <not>
+        <expression name="isVox"/>
+      </not>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <first phrase="voxDialog">
+      <text condition="multipleDeletedReminders">OK, all gone.</text>
+      <text condition="oneDeletedReminder">OK, it's gone.</text>
+    </first>
+    <first phrase="nonVoxDialog">
+      <text condition="multipleDeletedReminders"><opt>OK, <var name="user.groundingIfNeeded"/>, </opt>They’ve been deleted.</text>
+      <text condition="oneDeletedReminder"><opt><var name="user.groundingIfNeeded"/>, </opt>It’s deleted. </text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog condition="isVox"><phrase name="voxDialog"/></dialog>
+    <dialog condition="notVox"><phrase name="nonVoxDialog"/></dialog>
+    <dialog>OK, deleted.</dialog>
+  </first>
+
+</cat>

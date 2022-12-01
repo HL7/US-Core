@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="searchForNotebookItemsV2#intentHandledResponse">
+  <meta name="category" value="Handled"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="A summary of the notebook items after it was handled by the app."/>
+  <parameters>
+    <parameter name="searchText" type="dialog.String"/>
+    <parameter name="isResponseEmpty" type="dialog.Boolean"/>
+    <parameter name="taskListCount" type="dialog.Number"/>
+    <parameter name="isSingleTaskList" type="dialog.Boolean"/>
+    <parameter name="isNotesOnly" type="dialog.Boolean"/>
+    <parameter name="isTasksOnly" type="dialog.Boolean"/>
+    <parameter name="isCompleted" type="dialog.Boolean"/>
+    <parameter name="isDueBy" type="dialog.Boolean"/>
+    <parameter name="isFlagged" type="dialog.Boolean"/>
+    <parameter name="isAboveThreshold" type="dialog.Boolean"/>
+    <parameter name="threshold" type="dialog.Number"/>
+    <parameter name="totalItemCount" type="dialog.Number"/>
+    <parameter name="isPlural" type="dialog.Boolean"/>
+    <parameter name="isScheduled" type="dialog.Boolean"/>
+    <parameter name="isRecurring" type="dialog.Boolean"/>
+    <parameter name="isSingleDay" type="dialog.Boolean"/>
+    <parameter name="isFirstPartyApp" type="dialog.Boolean"/>
+    <parameter name="calendar" type="dialog.Calendar"/>
+    <parameter name="appName" type="dialog.String"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

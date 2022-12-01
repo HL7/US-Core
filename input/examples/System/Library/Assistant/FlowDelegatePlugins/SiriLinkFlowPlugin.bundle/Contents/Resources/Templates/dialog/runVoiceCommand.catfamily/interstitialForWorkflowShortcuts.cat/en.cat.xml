@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#interstitialForWorkflowShortcuts">
+    <first>
+        <dialog condition="device.isDialogDriven">Running your shortcut<opt>, <var name="user.groundingIfNeeded"/></opt>…</dialog>
+        <dialog>
+            <print>Running your shortcut<opt>, <var name="user.groundingIfNeeded"/></opt>…</print>
+        </dialog>
+    </first>
+</cat>

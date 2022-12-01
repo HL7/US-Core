@@ -1,0 +1,100 @@
+{
+    "sequence" : [
+        "CustomPass",
+        "CompositePass",
+        "DebugPass"
+    ],
+    "passes" : {
+        "CustomPass" : {
+            "inputs" : {
+                "sceneColorTex" : "sceneColorTexture_target",
+                "sceneOnTopTex" : "sceneOnTopTexture_target",
+                "sceneDepthTex" : "sceneDepthTexture_target"
+            },
+            "outputs" : {
+                "color0" : "mask_target",
+                "color1" : "camDepth_target"
+            },
+            "draw" : "CUSTOM"
+        },
+        "CompositePass" : {
+            "inputs" : {
+                "sceneColorTex" : "sceneColorTexture_target",
+                "sceneOnTopTex" : "sceneOnTopTexture_target",
+                "maskTex" : "mask_target",
+                "headZ" : "headZ_symbol",
+                "shadowMaskFactor" : "shadowMaskFactor_symbol",
+                "shadowUVOffset" : "shadowUVOffset_symbol"
+            },
+            "outputs" : {
+                "color" : "finalTexture_target"
+            },
+            "metalVertexShader" : "AVT_fullscreen_quad_orientation_vertex",
+            "metalFragmentShader" : "AVT_composite_fragment",
+            "draw" : "DRAW_QUAD",
+            "colorStates" : {
+                "clear" : true,
+                "clearColor" : "sceneBackground"
+            },
+            "blendStates" : {
+                "enable" : true,
+                "colorDst" : "oneMinusSrcAlpha",
+                "colorSrc" : "one"
+            }
+        },
+        "DebugPass" : {
+            "inputs" : {
+                "finalTex" : "finalTexture_target",
+                "sceneColorTex" : "sceneColorTexture_target",
+                "sceneOnTopTex" : "sceneOnTopTexture_target",
+                "sceneDepthTex" : "sceneDepthTexture_target",
+                "camDepthTex" : "camDepth_target",
+                "maskTex" : "mask_target"
+            },
+            "outputs" : {
+                "color" : "COLOR"
+            },
+            "metalVertexShader" : "AVT_fullscreen_quad_vertex",
+            "metalFragmentShader" : "AVT_dbg_fragment",
+            "draw" : "DRAW_QUAD"
+        }
+    },
+    "targets" : {
+        "sceneColorTexture_target" : {
+            "format" : "rgba",
+            "type" : "color"
+        },
+        "sceneOnTopTexture_target" : {
+            "format" : "rg8s",
+            "type" : "color"
+        },
+        "sceneDepthTexture_target" : {
+            "type" : "depth"
+        },
+        "finalTexture_target" : {
+            "format" : "rgba",
+            "type" : "color"
+        },
+        "mask_target" : {
+            "type" : "color",
+            "format" : "rgba16f",
+            "scaleFactor" : 0.25
+        },
+        "camDepth_target" : {
+            "type" : "color",
+            "format" : "r16f",
+            "scaleFactor" : 0.5
+        }
+    },
+    "symbols" : {
+        "headZ_symbol" : {
+            "type" : "float"
+        },
+        "shadowMaskFactor_symbol" : {
+            "type" : "float"
+        },
+        "shadowUVOffset_symbol" : {
+            "type" : "float"
+        }
+    }
+}

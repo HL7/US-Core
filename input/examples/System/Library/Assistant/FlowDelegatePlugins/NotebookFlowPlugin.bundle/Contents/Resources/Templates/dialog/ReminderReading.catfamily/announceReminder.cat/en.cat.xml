@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="ReminderReading#announceReminder" locale="en">
+    <conditions>
+        
+        <condition name="isTitleLong">
+            <expression name="concept.title.length" op="gt" value="200"/>
+        </condition>
+        
+        <condition name="arrivalWithLongTitle">
+            <and>
+                <sub-condition name="isTitleLong"/>
+                <expression name="isArriving"/>
+            </and>
+        </condition>
+        
+        <condition name="departureWithLongTitle">
+            <and>
+                <sub-condition name="isTitleLong"/>
+                <expression name="isLeaving"/>
+            </and>
+        </condition>
+        
+        <condition name="firstSynchronous">
+            <expression name="synchronousBurstIndex" op="eq" value="1"/>
+        </condition>
+        
+        <condition name="secondSynchronous">
+            <expression name="synchronousBurstIndex" op="eq" value="2"/>
+        </condition>
+        
+        <condition name="randomSynchronous">
+            <expression name="synchronousBurstIndex" op="gt" value="2"/>
+        </condition>
+        
+    </conditions>
+    
+    <phrases>
+        <first phrase="synchonronousContinuation">
+            <text condition="firstSynchronous"> and </text>
+            <text condition="secondSynchronous"> also </text>
+        </first>
+        <random phrase="randomContinuation">
+            <text> and </text>
+            <text> also </text>
+        </random>
+    </phrases>
+
+    <all>
+        <first>
+            <dialog id="randomContinuation" condition="randomSynchronous"><phrase name="randomContinuation"/></dialog>
+            <dialog id="synchonronousContinuation"><phrase name="synchonronousContinuation"/></dialog>
+        </first>
+        
+        <first>
+            <dialog condition="isTitleLong" id="timeReminderWithoutTitle">
+                You have a <var name="concept.calendar.timeDescriptive"/> reminder.
+            </dialog>
+            
+            <dialog condition="arrivalWithLongTitle" id="arrivalReminderWithoutTitle">
+                You have a reminder for when you arrive at <var name="concept.location.shortLocation"/>.
+            </dialog>
+            
+            <dialog condition="departureWithLongTitle" id="departureReminderWithoutTitle">
+                You have a reminder for when you leave <var name="concept.location.shortLocation"/>.
+            </dialog>
+            
+            <dialog id="reminderWithTitle">Reminder: <var name="concept.title"/></dialog>
+        </first>
+    </all>
+</cat>

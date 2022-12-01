@@ -1,0 +1,28 @@
+{
+    "Name": "suFeatheringBlurX",
+    "OverrideMaterial": "engine:pbr.rematerialdefinition",
+    "Parameters": {
+        "Textures": {
+            "input" : "rendergraph.suMergedOcclusionMaskDilated2"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "SUFeatheringBlurX",
+            "VertexShader": {
+                "Entry": "vsFullscreenForSUFeathering"
+            },
+            "PixelShader": {
+                "Entry": "fsSUFeatheringBlurX"
+            },
+            "State" : {
+                "DepthCompareFunction" : "Always",
+                "WriteDepth" : false,
+                "AlphaBlend" : false
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "SUFeatheringBlurX": "SUFeatheringBlurX"
+    }
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="ReminderReading#readReminder" locale="en">
+    <conditions>
+        <condition name="hasTemporalTrigger">
+            <expression name="concept.calendar"/>
+        </condition>
+        <condition name="hasSpatialTrigger">
+            <expression name="concept.location"/>
+        </condition>
+        <condition name="hasContactTrigger">
+            <expression name="concept.contactName"/>
+        </condition>
+        <condition name="hasTemporalOrSpatialAndMessaging">
+            <and>
+                <expression name="concept.contactName"/>
+                <or>
+                    <expression name="concept.calendar"/>
+                    <expression name="concept.location"/>
+                </or>
+            </and>
+        </condition>
+        <condition name="hasTemporalAndSpatial">
+           <and>
+               <expression name="concept.calendar"/>
+               <expression name="concept.location"/>
+           </and>
+       </condition>
+    </conditions>
+
+    <phrases>
+        <first phrase="showDate">
+            <first condition="hasTemporalTrigger">
+                <text condition="concept.isAllDay"><var name="concept.calendar.dateDescriptive"/></text>
+                <text><var name="concept.calendar.dateTimeDescriptive"/></text>
+            </first>
+            <text></text>
+        </first>
+        
+        <first phrase="or1">
+            <first>
+                <text condition="hasTemporalAndSpatial">or</text>
+                <text></text>
+            </first>
+            <text></text>
+        </first>
+            
+        <first phrase="showLocation">
+            <first condition="hasSpatialTrigger">
+                <text condition="isArriving"> when arriving at <var name="concept.location.shortLocation"/></text>
+                <text condition="isLeaving"> when leaving <var name="concept.location.shortLocation"/></text>
+            </first>
+            <text></text>
+        </first>
+        
+        <first phrase="or2">
+            <first condition="hasTemporalOrSpatialAndMessaging">
+                <text condition="concept.isAllDay">or</text>
+                <text></text>
+            </first>
+            <text></text>
+        </first>
+        
+        <first phrase="showMessaging">
+            <text condition="hasContactTrigger">
+                when messaging: <var name="concept.contactName"/>
+            </text>
+            <text></text>
+        </first>
+    </phrases>
+
+    <first>
+        <dialog spokenOnly="true">
+            <var name="concept.title"/>
+            <phrase name="showDate" />
+            <phrase name="or1" />
+            <phrase name="showLocation" />
+            <phrase name="or2" />
+            <phrase name="showMessaging" />
+        </dialog>
+    </first>
+</cat>

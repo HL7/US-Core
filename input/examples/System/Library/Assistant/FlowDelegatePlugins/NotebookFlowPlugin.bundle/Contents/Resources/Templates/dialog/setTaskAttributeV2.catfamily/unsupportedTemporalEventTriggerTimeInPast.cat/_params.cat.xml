@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="setTaskAttributeV2#unsupportedTemporalEventTriggerTimeInPast">
+  <meta name="category" value="Can't Do"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="Executed when the temporalEventTrigger slot is unsupported because the time is in the past."/>
+  <parameters>
+    <parameter name="isFirstPartyApp" type="dialog.Boolean"/>
+    <parameter name="appName" type="dialog.String"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

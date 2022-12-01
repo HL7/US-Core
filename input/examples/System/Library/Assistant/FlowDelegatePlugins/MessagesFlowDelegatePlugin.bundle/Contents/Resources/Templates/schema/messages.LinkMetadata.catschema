@@ -1,0 +1,128 @@
+#CAT-SCHEMA 1.0
+
+name: messages.LinkMetadata
+
+inputs:
+    siteName:
+        access_mode: public
+    title:
+        access_mode: public
+    linkMediaType:
+        access_mode: public
+    songTitle:
+        access_mode: public
+    songArtist:
+        access_mode: public
+    albumName:
+        access_mode: public
+    albumArtist:
+        access_mode: public
+    musicVideoName:
+        access_mode: public
+    musicVideoArtist:
+        access_mode: public
+    artistName:
+        access_mode: public
+    playlistName:
+        access_mode: public
+    playlistCurator:
+        access_mode: public
+    radioName:
+        access_mode: public
+    radioCurator:
+        access_mode: public
+    softwareName:
+        access_mode: public
+    bookName:
+        access_mode: public
+    bookAuthor:
+        access_mode: public
+    audioBookName:
+        access_mode: public
+    audioBookAuthor:
+        access_mode: public
+    podcastName:
+        access_mode: public
+    podcastArtist:
+        access_mode: public
+    podcastEpisodeName:
+        access_mode: public
+    podcastEpisodePodcastName:
+        access_mode: public
+    tvEpisodeEpisodeName:
+        access_mode: public
+    tvEpisodeSeasonName:
+        access_mode: public
+    tvSeasonName:
+        access_mode: public
+    movieName:
+        access_mode: public
+    tvShowName:
+        access_mode: public
+    movieBundleName:
+        access_mode: public
+    appleTvTitle:
+        access_mode: public
+
+
+properties:
+    siteName:
+        type: dialog.String
+    title:
+        type: dialog.String
+    linkMediaType:
+        type: dialog.String
+    songTitle:
+        type: dialog.String
+    songArtist:
+        type: dialog.String
+    albumName:
+        type: dialog.String
+    albumArtist:
+        type: dialog.String
+    musicVideoName:
+        type: dialog.String
+    musicVideoArtist:
+        type: dialog.String
+    artistName:
+        type: dialog.String
+    playlistName:
+        type: dialog.String
+    playlistCurator:
+        type: dialog.String
+    radioName:
+        type: dialog.String
+    radioCurator:
+        type: dialog.String
+    softwareName:
+        type: dialog.String
+    bookName:
+        type: dialog.String
+    bookAuthor:
+        type: dialog.String
+    audioBookName:
+        type: dialog.String
+    audioBookAuthor:
+        type: dialog.String
+    podcastName:
+        type: dialog.String
+    podcastArtist:
+        type: dialog.String
+    podcastEpisodeName:
+        type: dialog.String
+    podcastEpisodePodcastName:
+        type: dialog.String
+    tvEpisodeEpisodeName:
+        type: dialog.String
+    tvEpisodeSeasonName:
+        type: dialog.String
+    tvSeasonName:
+        type: dialog.String
+    movieName:
+        type: dialog.String
+    tvShowName:
+        type: dialog.String
+    movieBundleName:
+        type: dialog.String
+    appleTvTitle:
+        type: dialog.String

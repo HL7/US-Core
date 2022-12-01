@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runCustomIntent#offerMoreDisambiguationItems">
+    <conditions>
+        <condition name="isLastPage">
+            <expression name="remainingPages" op="eq" value="0"/>
+        </condition>
+        <condition name="hasCustomPrompt" note="Checks if we have custom prompt">
+            <expression name="customSelectionPrompt.length" op="gt" value="0"/>
+        </condition>
+    </conditions>
+    <first>
+        <dialog condition="hasCustomPrompt"><var name="customSelectionPrompt"/></dialog>
+        <dialog condition="isLastPage">Which one?</dialog>
+        <dialog>Did you want one of these?</dialog>
+    </first>
+</cat>

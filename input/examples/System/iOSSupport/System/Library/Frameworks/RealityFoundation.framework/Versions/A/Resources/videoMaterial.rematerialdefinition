@@ -1,0 +1,162 @@
+{
+    "Name": "VideoMaterial",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "YCbCrMatrixOption" : "0",
+            "imageFunctionOption" : "0",
+            "stereoModeOption" : "0",
+            "fadeThreshold" : "[0.5, 0.15]"
+        },
+        "Textures": {
+            "texturePlane0": "fallback.black",
+            "texturePlane1": "fallback.black",
+            "texturePlane2": "fallback.white",
+            "textureSpill": "fallback.black"
+        }
+    },
+    "DebugMappings": [
+        {
+            "Name": "VideoDebug",
+            "Mappings": {
+                "NoDebug": 0,
+                "VertexUV": 1,
+                "DerivedNormal": 2,
+                "DerivedTangent": 3,
+                "DerivedBitangent": 4,
+                "FinalColor": 5,
+                "FinalAlpha": 6
+            }
+        }
+    ],
+    "Techniques": [
+        {
+            "Name": "VideoColor",
+            "VertexShader": {
+                "Entry": "vsVideoPlayback"
+            },
+            "PixelShader": {
+                "Entry": "fsVideoColorPlayback"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "SourceAlpha",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "SourceAlpha",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha",
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            },
+            "DebugMapping": "VideoDebug"
+        },
+        {
+            "Name": "VideoSpill",
+            "VertexShader": {
+                "Entry": "vsVideoPlayback"
+            },
+            "PixelShader": {
+                "Entry": "fsVideoSpillPlayback"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha",
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            }
+        },
+        {
+            "Name": "VideoColorWrapping",
+            "VertexShader": {
+                "Entry": "vsVideoPlayback"
+            },
+            "PixelShader": {
+                "Entry": "fsVideoColorWrappingPlayback"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha",
+                "WriteDepth"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            }
+        },
+        {
+            "Name": "VideoSpillWrapping",
+            "VertexShader": {
+                "Entry": "vsVideoPlayback"
+            },
+            "PixelShader": {
+                "Entry": "fsVideoSpillWrappingPlayback"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha",
+                "WriteDepth"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            }
+        },
+        {
+            "Name": "VideoColorReflectedWrapping",
+            "VertexShader": {
+                "Entry": "vsVideoPlayback"
+            },
+            "PixelShader": {
+                "Entry": "fsVideoColorReflectedWrappingPlayback"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha",
+                "WriteDepth"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            }
+        },
+        {
+            "Name": "VideoSpillReflectedWrapping",
+            "VertexShader": {
+                "Entry": "vsVideoPlayback"
+            },
+            "PixelShader": {
+                "Entry": "fsVideoSpillReflectedWrappingPlayback"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha",
+                "WriteDepth"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "Transparent": "VideoColor"
+    }
+}

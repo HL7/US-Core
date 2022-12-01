@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="deleteTasks#unsupportedTasksNoTasksInApp" locale="en">
+
+  <conditions>
+    <condition name="isThirdParty">
+      <not>
+        <expression name="isFirstParty"/>
+      </not>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <random phrase="appNamePhrase">
+      <text condition="isThirdParty"><opt> in <var name="appName"/></opt></text>
+    </random>
+  </phrases>
+
+
+  <first>
+    <dialog><opt>Sorry <var name="user.groundingIfNeeded"/>. </opt>You don't have any reminders<opt><phrase name="appNamePhrase"/></opt>.</dialog>
+  </first>
+
+</cat>

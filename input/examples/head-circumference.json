@@ -1,21 +1,6 @@
 {
   "resourceType": "Observation",
   "id": "head-circumference",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference"
-    ],
-    "extension": [
-       {
-          "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-          "valueString": "Head Circumference Example"
-       },
-       {
-          "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-          "valueMarkdown": "This is a head circumference example for the *US Core Head Circumference Profile*."
-       }
-    ]
-  },
   "status": "final",
   "category": [
     {

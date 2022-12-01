@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#disambiguateSlotValue" locale="en">
+
+  <conditions>
+    <condition name="slot_slotName_eq_contactEventTrigger">
+      <expression name="slotName" op="eq" value="'contactEventTrigger'"/>
+    </condition>
+    <condition name="slot_slotName_eq_spatialEventTrigger">
+      <expression name="slotName" op="eq" value="'spatialEventTrigger'"/>
+    </condition>
+    <condition name="slot_slotName_eq_targetTaskList">
+      <expression name="slotName" op="eq" value="'targetTaskList'"/>
+    </condition>
+    <condition name="slot_slotName_eq_taskTitles">
+      <expression name="slotName" op="eq" value="'taskTitles'"/>
+    </condition>
+    <condition name="slot_slotName_eq_temporalEventTrigger">
+      <expression name="slotName" op="eq" value="'temporalEventTrigger'"/>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <random phrase="phrase_0">
+      <text>I have a few options. </text>
+      <text>I found a few options. </text>
+    </random>
+    <first phrase="phrase_1">
+      <text condition="slot_slotName_eq_targetTaskList"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>Which list should I add it to?</text>
+      <text condition="slot_slotName_eq_taskTitles"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>What would you like to call it?</text>
+      <text condition="slot_slotName_eq_spatialEventTrigger"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>Which location?</text>
+      <text condition="slot_slotName_eq_temporalEventTrigger"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>When is it for?</text>
+      <text condition="slot_slotName_eq_contactEventTrigger"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>Which one?</text>
+      <text>Which one?</text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog><opt><phrase name="phrase_0"/></opt><opt><phrase name="phrase_1"/></opt></dialog>
+  </first>
+
+</cat>

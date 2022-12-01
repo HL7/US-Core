@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#disambiguateSlotValue">
+    <meta name="category" value="Disambiguate"/>
+	<meta name="readyForLoc" value="true"/>
+    <meta name="description" value="A task sending needs disambiguation."/>
+    <parameters>
+        <parameter name="numberOfValuesToDisambiguate" type="dialog.Number"/>
+        <parameter name="valueToDisambiguate" type="dialog.String"/>
+        <parameter name="slotName" type="dialog.String"/>
+    </parameters>
+</cat>

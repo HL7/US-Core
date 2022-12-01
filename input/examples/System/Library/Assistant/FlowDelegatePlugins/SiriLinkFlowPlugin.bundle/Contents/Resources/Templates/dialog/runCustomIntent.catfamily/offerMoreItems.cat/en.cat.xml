@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runCustomIntent#offerMoreItems">
+    <conditions>
+        <condition name="isNextPageLast">
+            <expression name="remainingPages" op="eq" value="1"/>
+        </condition>
+    </conditions>
+    <first>
+        <dialog condition="isNextPageLast">Do you want to hear the last <var name="nextPageSize" number="asWords"/>?</dialog>
+        <dialog>Do you want to hear the next <var name="nextPageSize" number="asWords"/>?</dialog>
+    </first>
+</cat>
+

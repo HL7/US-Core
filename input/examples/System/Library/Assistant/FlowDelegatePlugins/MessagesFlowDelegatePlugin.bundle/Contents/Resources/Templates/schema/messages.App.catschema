@@ -1,0 +1,17 @@
+#CAT-SCHEMA 1.0
+
+name: messages.App
+
+inputs:
+    name:
+        access_mode: public
+    isDesignedByApple:
+        access_mode: public
+    
+properties:
+    name:
+        type: dialog.String
+        description: The name of the app used to send the message
+    isDesignedByApple:
+        type: dialog.Boolean
+        description: True if the app is a first party app

@@ -1,0 +1,39 @@
+#CAT-SCHEMA 1.0
+
+name: phone.CallProvider
+
+description: A call provider, i.e. Telephony, FaceTime, or a 3P provider
+
+inputs:
+  preferredCallProvider:
+    access_mode: public
+    optional: no
+    
+  providerName:
+    access_mode: public
+    
+  providerBundleId:
+    access_mode: public
+
+properties:
+  preferredCallProvider:
+    type: dialog.String
+    description: The provider of the call
+    sample_value: UNKNOWN, TELEPHONY_PROVIDER, FACETIME_PROVIDER
+    optional: no
+
+  providerName:
+    type: dialog.String
+    description: Localized app name from bundle
+
+  providerBundleId:
+    type: dialog.String
+    description: bundleId of the call provider
+
+  isFirstPartyPhone:
+    type: dialog.Boolean
+    description: convenience property for checking whether this is a 1P phone call
+
+  isFaceTime:
+    type: dialog.Boolean
+    description: convenience property for checking whether this is a FaceTime call

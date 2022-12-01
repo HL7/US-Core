@@ -1,0 +1,25 @@
+#CAT-SCHEMA 1.0
+
+name: phone.CallGroup
+
+description: A message group details.
+
+inputs:
+  groupName:
+    access_mode: public
+    optional: no
+
+  groupId:
+    access_mode: public
+    optional: no
+
+properties:
+  groupName:
+    type: dialog.String
+    description: Message group name
+    optional: no
+
+  groupId:
+    type: dialog.String
+    description: Message group chat Id
+    optional: no

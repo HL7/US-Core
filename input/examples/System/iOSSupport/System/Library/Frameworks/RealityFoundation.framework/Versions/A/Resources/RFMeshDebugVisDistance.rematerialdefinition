@@ -1,0 +1,28 @@
+{
+    "Name": "Reality Fusion Debug Mesh Visualization: Distance",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "meshPosition": "[0.0, 0.0, 0.0, 1.0]",
+            "meshOrientation": "[0.0, 0.0, 0.0, 1.0]",
+        },
+        "Buffers": {
+            "position" : "geometry.vertexPosition"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "RFMeshDebugVisDistance",
+        "VertexShader": {
+            "Entry": "vsRFMeshDebugVis"
+        },
+        "PixelShader": {
+            "Entry": "fsMeshDepth"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        }
+    }]
+}

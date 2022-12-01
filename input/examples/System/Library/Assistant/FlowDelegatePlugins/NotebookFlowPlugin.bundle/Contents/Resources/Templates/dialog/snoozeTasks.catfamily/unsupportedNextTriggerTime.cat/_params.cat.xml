@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="snoozeTasks#unsupportedNextTriggerTime">
+  <meta name="category" value="Can't Do"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="Executed when the nextTriggerTime slot is unsupported."/>
+  <parameters>
+    <parameter name="slotName" type="dialog.String"/>
+    <parameter name="unsupportedValue" type="dialog.String"/>
+    <parameter name="unsupportedReason" type="dialog.Number"/>
+    <parameter name="appName" type="dialog.String"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

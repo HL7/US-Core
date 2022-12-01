@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#unsupportedTargetTaskListMembersNoSharedListWithContact" locale="en">
+
+  <phrases>
+    <first phrase="phrase_0">
+      <text><var name="unsupportedValue"/>.</text>
+      <text>that person.</text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog>Sorry, <opt><var name="user.groundingIfNeeded"/>, </opt>I didn’t find any lists shared with <opt><phrase name="phrase_0"/></opt></dialog>
+  </first>
+
+</cat>

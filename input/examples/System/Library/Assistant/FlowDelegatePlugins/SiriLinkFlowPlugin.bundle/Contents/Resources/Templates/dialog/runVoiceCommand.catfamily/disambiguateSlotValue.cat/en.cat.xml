@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#disambiguateSlotValue">
+    <conditions>
+        <condition name="slotNameIsVoiceCommand" note="If this slot name is equal to: voiceCommand">
+            <expression name="slotName" op="eq" value="'voiceCommand'"/>
+        </condition>
+    </conditions>
+    <first>
+        <dialog condition="slotNameIsVoiceCommand"><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>Which shortcut would you like to run?</dialog>
+    </first>
+</cat>

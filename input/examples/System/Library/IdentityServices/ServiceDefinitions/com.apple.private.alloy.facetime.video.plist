@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DisplayName</key>
+	<string>FaceTime Video</string>
+	<key>Identifier</key>
+	<string>com.apple.private.alloy.facetime.video</string>
+	<key>ProtocolName</key>
+	<string>com.apple.private.alloy</string>
+	<key>PushTopic</key>
+	<string>com.apple.private.alloy.facetime.video</string>
+	<key>ServiceName</key>
+	<string>com.apple.private.alloy.facetime.video</string>
+	<key>LaunchMachServiceNotification</key>
+	<string>com.apple.private.alloy.facetime.video-idswake</string>
+	<key>AdHocServiceType</key>
+	<integer>7</integer>
+	<key>DataProtectionClass</key>
+	<string>D</string>
+	<key>CanUseLargePayload</key>
+	<true/>
+	<key>SupportsPhoneNumberRegistration</key>
+	<true/>
+	<key>AllowPartialSendsToSucceed</key>
+	<true/>
+	<key>WantsPendingMessageUpdates</key>
+	<true/>
+</dict>
+</plist>

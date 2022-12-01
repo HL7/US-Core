@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#intentConfirmationPrompt" locale="en">
+
+  <conditions>
+    <condition name="isSpatialOrTemporalTrigger">
+      <or>
+        <expression name="isTriggerTemporal"/>
+        <expression name="isTriggerSpatial"/>
+      </or>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <first phrase="addItQuestion">
+        <text condition="isSpatialOrTemporalTrigger">Here’s your reminder. Shall I create it?</text>
+        <text condition="modifiedTaskListDefined">Here’s what I have. Shall I add it?</text>
+        <text>Here’s what I have. Good to go?</text>
+    </first>
+  </phrases>
+
+  <first>
+    <dialog><opt>OK <var name="user.groundingIfNeeded"/>. </opt><phrase name="addItQuestion"/></dialog>
+  </first>
+
+</cat>

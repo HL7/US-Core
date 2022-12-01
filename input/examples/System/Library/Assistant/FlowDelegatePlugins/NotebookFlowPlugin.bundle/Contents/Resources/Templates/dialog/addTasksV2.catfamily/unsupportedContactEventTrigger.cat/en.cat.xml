@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#unsupportedContactEventTrigger" locale="en">
+
+  <conditions>
+    <condition name="device_capabilities_homePod_set">
+      <expression name="isHomepod"/>
+    </condition>
+    <condition name="not_device_companionName_empty">
+      <not>
+        <expression name="companionName" op="empty"/>
+      </not>
+    </condition>
+    <condition name="hasRelationship">
+      <expression name="relationship" op="defined"/>
+    </condition>
+    <condition name="noRelationship">
+      <expression name="relationship" op="undefined"/>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <first phrase="phrase_0">
+      <text>Sorry, <opt><var name="user.groundingIfNeeded"/>, </opt>I didn’t find <var name="unsupportedValue"/>.</text>
+      <text>Sorry, <opt><var name="user.groundingIfNeeded"/>, </opt>I didn’t find that contact.</text>
+    </first>
+    <first phrase="phrase_1">
+      <text condition="device_capabilities_homePod_set">Sorry, <opt><var name="user.groundingIfNeeded"/>, </opt>I’m not sure who your <var name="unsupportedValue"/> is. But you can set relationships on your <opt><phrase name="phrase_2"/></opt></text>
+      <text>Sorry, I’m not sure who your <var name="unsupportedValue"/> is.</text>
+    </first>
+    <first phrase="phrase_2">
+      <text condition="not_device_companionName_empty"><var name="companionName"/>.</text>
+      <text>personal device.</text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog condition="noRelationship"><phrase name="phrase_0"/></dialog>
+    <dialog condition="hasRelationship"><phrase name="phrase_1"/></dialog>
+    <dialog>Sorry, I don’t know who that is.</dialog>
+  </first>
+
+</cat>

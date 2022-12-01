@@ -1,0 +1,460 @@
+{
+    "Name" : "GuidedFilterOcclusionGraph",
+    "Targets" : [
+        {
+            "Name" : "rdar61525635_Workaround_MeshShadowMap"
+        },
+        {
+            "Name" : "suMeshDepth",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "Depth32Float"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "suMeshBackfacesDepth",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "Depth32Float"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "suAllVirtualContentDepth",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "Depth32Float"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "suVirtualContentOpaqueOnlyDepth",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "Depth32Float"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "suVirtualContentDepthAsR16",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R16Float"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "processedVirtualDepthAsR16",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R16Float"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "suMeshDepthEdgesScratch",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["suMeshDepthEdgesResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["suMeshDepthEdgesResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "suMeshDepthEdges",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["suMeshDepthEdgesResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["suMeshDepthEdgesResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "maskOfAllOcclusions",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RG8Unorm"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "regressionInputCameraFeed",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA8Unorm"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "reconstructionInputCameraFeed",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA8Unorm"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["outputMatteResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["outputMatteResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "cameraFeedRGBDownsampled",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA8Unorm"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["outputMatteResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["outputMatteResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "guidedFilterInputWeights",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R16Float"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "guidedFilterInputMask",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["guidedFilterResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "reconstructedAlpha",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "ExposeToMaterial" : true
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["outputMatteResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["outputMatteResolutionY"]
+                }
+            ]
+        },
+        {
+            "Name" : "SUOcclusionMatte",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "ExposeToMaterial" : true
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["outputMatteResolutionX"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "SceneUnderstandingGuidedFilterOcclusionConnectionData",
+                    "FromMember" : ["outputMatteResolutionY"]
+                }
+            ]
+        }
+    ],
+    "Nodes" : [
+        {
+            "CameraSetup" : {
+                "Name" : "CameraSetup",
+                "UpdateSceneMaterialData" : true,
+                "FrustumCulling" : true
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "SUVirtualObjectsOpaqueDepth",
+                "CullMode" : "CullModeBack",
+                "MaterialPassName" : "Opaque",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "suAllVirtualContentDepth",
+                        "Settings" : {
+                            "Type" : "WriteDepth",
+                            "ForceClear" : true
+                        }
+                    }
+                ],
+                "TargetReads" : [
+                    {
+                        "TargetHandle": "rdar61525635_Workaround_MeshShadowMap",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+            }
+        },
+        {
+            "TargetCopy" : {
+                "Name" : "SUVirtualObjectsOpaqueDepthCopy",
+                "Enabled" : true,
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "suAllVirtualContentDepth",
+                        "Settings" : {}
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "suVirtualContentOpaqueOnlyDepth",
+                        "Settings" : { "Type" : "WriteBlit" }
+                    }
+                ]
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "SUVirtualObjectsTransparentDepth",
+                "CullMode" : "CullModeBack",
+                "MaterialPassName" : "Transparent",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "suAllVirtualContentDepth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ],
+                "TargetReads" : [
+                    {
+                        "TargetHandle": "rdar61525635_Workaround_MeshShadowMap",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "SUDepthNode",
+                "CullMode" : "CullModeBack",
+                "FillMode" : "Fill",
+                "Enabled"  : true,
+                "MaterialPassName" : "SceneUnderstandingOcclusionOnly",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "suMeshDepth",
+                        "Settings" : {
+                            "Type" : "WriteDepth",
+                            "ForceClear" : true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "SUBackfacesDepthNode",
+                "CullMode" : "CullModeFront",
+                "FillMode" : "Fill",
+                "Enabled"  : true,
+                "MaterialPassName" : "SceneUnderstandingOcclusionOnly",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "suMeshBackfacesDepth",
+                        "Settings" : {
+                            "Type" : "WriteDepth",
+                            "ForceClear" : true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "ARGuidedFilterOcclusionNode" : {
+                "Name" : "ARGuidedFilterOcclusionNode",
+                "suAllVirtualContentDepth" : "suAllVirtualContentDepth",
+                "suVirtualContentOpaqueOnlyDepth" : "suVirtualContentOpaqueOnlyDepth",
+                "suVirtualContentDepthAsR16" : "suVirtualContentDepthAsR16",
+                "processedVirtualDepthAsR16" : "processedVirtualDepthAsR16",
+                "suMeshDepthEdgesScratch" : "suMeshDepthEdgesScratch",
+                "suMeshDepthEdges" : "suMeshDepthEdges",
+                "maskOfAllOcclusions" : "maskOfAllOcclusions",
+                "regressionInputCameraFeed" : "regressionInputCameraFeed",
+                "reconstructionInputCameraFeed" : "reconstructionInputCameraFeed",
+                "cameraFeedRGBDownsampled" : "cameraFeedRGBDownsampled",
+                "guidedFilterInputWeights" : "guidedFilterInputWeights",
+                "guidedFilterInputMask" : "guidedFilterInputMask",
+                "reconstructedAlpha" : "reconstructedAlpha",
+                "suMeshDepth" : "suMeshDepth",
+                "suMeshBackfacesDepth" : "suMeshBackfacesDepth",
+                "suOcclusionMatte" : "SUOcclusionMatte"
+            }
+        }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "ProjectiveMeshShadowMapLane",
+            "Target" : "rdar61525635_Workaround_MeshShadowMap",
+            "GraphScopeOverride" : "ProjectiveMeshShadowMapScope",
+            "InputOnly" : true
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "SUOcclusionMatteLane",
+            "Target" : "SUOcclusionMatte",
+            "GraphScopeOverride" : "SUOcclusionMatteScope"
+        }
+    ]
+}

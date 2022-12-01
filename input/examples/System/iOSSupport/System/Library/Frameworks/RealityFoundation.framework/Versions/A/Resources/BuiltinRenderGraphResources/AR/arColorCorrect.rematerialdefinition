@@ -1,0 +1,34 @@
+{
+    "Name": "arColorCorrectMaterial",
+    "Parameters": {
+        "Constants": {
+            "viewportPercents" : "view.viewportPercents"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV"
+        },
+        "Textures": {
+            "colorBufferTexture" : "rendergraph.inputColor",
+	        "lut3d" : "fallback.white3D"
+	}
+    },
+    "Techniques": [
+    {
+        "Name": "arColorCorrect",
+        "VertexShader": {
+            "Entry": "fullScreenVert"
+        },
+        "PixelShader": {
+            "Entry": "fsARColorCorrect"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        }
+    }],
+    "TechniqueMapping": {
+        "arColorCorrectTechnique": "arColorCorrect"
+    }
+}

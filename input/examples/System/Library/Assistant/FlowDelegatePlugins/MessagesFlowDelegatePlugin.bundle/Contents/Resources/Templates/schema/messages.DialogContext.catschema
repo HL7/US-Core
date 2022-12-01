@@ -1,0 +1,17 @@
+#CAT-SCHEMA 1.0
+
+name: messages.DialogContext
+
+inputs:
+    conversation:
+        access_mode: public
+    readingRequest:
+        access_mode: public
+
+properties:
+    conversation:
+        type: messages.ConversationDialogContext
+        description: Dialoging info describing the conversation we're reading in.
+    readingRequest:
+        type: messages.ReadingRequestDialogContext
+        description: Dialoging info describing this whole reading request

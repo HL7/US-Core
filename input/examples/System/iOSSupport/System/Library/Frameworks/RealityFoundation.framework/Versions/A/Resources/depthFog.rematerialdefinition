@@ -1,0 +1,36 @@
+{
+    "Name": "depthFog",
+    "Parameters": {
+        "Constants": {
+            "fogColor": "[0.5, 0.6, 0.7]",
+            "fogDensity": "0.05",
+            "viewportPercents" : "view.viewportPercents"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV"
+        },
+        "Textures": {
+            "renderGraphTexture" : "rendergraph.renderGraphTexture",
+	        "linearDepthTexture" : "rendergraph.linearDepthTexture"        
+	}
+    },
+    "Techniques": [
+    {
+        "Name": "DepthFog",
+        "VertexShader": {
+            "Entry": "fullScreenVert"
+        },
+        "PixelShader": {
+            "Entry": "fsDepthFog"
+        },
+        "State" : {
+            "AlphaBlend" : true,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        }
+    }],
+    "TechniqueMapping": {
+        "fullscreen": "DepthFog"
+    }
+}

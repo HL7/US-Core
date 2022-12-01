@@ -1,0 +1,13 @@
+{
+    "MaterialDefinition": "arInPlacePostProcessCombined.rematerialdefinition",
+    "FunctionConstants" : {
+        "re::tonemapPass" : "true",
+        "re::colorCorrectPass" : "true",
+        "re::cameraNoisePass" : "true"
+    },
+    "Parameters": {
+        "Textures": {
+            "lut3d" : "engine:lut3d_cc_v002.cube"
+	    }
+    }
+}

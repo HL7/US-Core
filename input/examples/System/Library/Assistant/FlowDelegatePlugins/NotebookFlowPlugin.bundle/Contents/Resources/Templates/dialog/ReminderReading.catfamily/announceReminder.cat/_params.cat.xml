@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="ReminderReading#announceReminder">
+  <meta name="readyForLoc" value="true"/>
+  <meta name="category" value="Handled"/>
+  <meta name="usesDialogHistory" value="true"/>
+  <meta name="description" value="Reading out a reminder title and its triggers to a user"/>
+  <parameters>
+    <parameter name="concept" type="notebook.ReminderConcept"/>
+    <parameter name="isArriving" type="dialog.Boolean"/>
+    <parameter name="isLeaving" type="dialog.Boolean"/>
+    <parameter name="synchronousBurstIndex" type="dialog.Number"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

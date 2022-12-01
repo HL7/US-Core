@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BonjourNetwork</key>
+	<dict>
+		<key>_ptp._tcp.</key>
+		<array>
+			<dict>
+				<key>device type</key>
+				<string>camera</string>
+			</dict>
+		</array>
+	</dict>
+	<key>usb</key>
+	<dict>
+		<key>IOUSBDevice</key>
+		<array>
+			<dict>
+				<key>idProduct</key>
+				<string>0x0160</string>
+				<key>idVendor</key>
+				<string>0x040A</string>
+				<key>Product Identification</key>
+				<string>DC4800 Zoom Digital Camera</string>
+			</dict>
+		</array>
+		<key>IOUSBInterface</key>
+		<array>
+			<dict>
+				<key>bInterfaceClass</key>
+				<string>0x06</string>
+				<key>bInterfaceProtocol</key>
+				<string>0x01</string>
+				<key>bInterfaceSubClass</key>
+				<string>0x01</string>
+				<key>Product Identification</key>
+				<string>Digital Still Camera</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Version</key>
+	<string>1.0</string>
+</dict>
+</plist>

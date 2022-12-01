@@ -1,0 +1,82 @@
+{
+    "Targets" : [
+        {
+            "Name" : "ColorInput"
+        },
+        {
+            "Name" : "Depth"
+        },
+        {
+            "Name" : "ColorAfterMotionBlur",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA16Float"
+            }
+        }
+    ],
+    "Nodes" : [
+        {
+            "RenderGraphMotionBlurNode" : {
+                "Name" : "CameraMotionBlur",
+                "MotionBlurLowSampleCountMaterial" : "../Common/cameraMotionBlurLowSampleCount.rematerial",
+                "MotionBlurMediumSampleCountMaterial" : "../Common/cameraMotionBlurMediumSampleCount.rematerial",
+                "MotionBlurHighSampleCountMaterial" : "../Common/cameraMotionBlurHighSampleCount.rematerial",
+                "DebugPassthroughMaterial" : "../Common/cameraMotionBlurDebugPassthrough.rematerial",
+                "DebugPassthrough" : false,
+                "TechniqueName" : "fullscreen",
+                "MotionBlurUserParameters" : {
+                    "ExposureTime" : 0.01667,
+                    "FrameRate" : 60
+                },
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ColorInput"
+                    },
+                    {
+                        "TargetHandle" : "Depth"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ColorAfterMotionBlur",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName" : "renderGraphTexture",
+                        "TargetHandle" : "ColorInput"
+                    },
+                    {
+                        "BindingName" : "renderGraphDepth",
+                        "TargetHandle" : "Depth"
+                    }
+                ]
+            }
+        }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "Color",
+            "Target": "ColorInput"
+        },
+        {
+            "Lane" : "Depth",
+            "Target": "Depth"
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "Color",
+            "Target" : "ColorAfterMotionBlur"
+        },
+        {
+            "Lane" : "Depth",
+            "Target" : "Depth"
+        }
+    ],
+    "Operations" : [
+    ]
+}

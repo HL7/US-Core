@@ -1,0 +1,26 @@
+resourceType: Location
+id: hospital
+meta:
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Hospital Location
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is an example hospital location for the *US Core Location
+      Profile*.
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+status: active
+name: Holy Family Hospital
+telecom:
+- system: phone
+  value: '9786870156'
+address:
+  line:
+  - 70 EAST STREET
+  city: METHUEN
+  state: MA
+  postalCode: 01844
+  country: US
+managingOrganization:
+  reference: http://example.org/Organization/holy-healthcare
+  display: Holy Healthcare

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="setTaskAttributeV2#slotDisplayValue" locale="en">
+
+  <conditions>
+    <condition name="slotName_eq_spatialEventTrigger">
+      <expression name="slotName" op="eq" value="'spatialEventTrigger'"/>
+    </condition>
+    <condition name="slotName_eq_status">
+      <expression name="slotName" op="eq" value="'status'"/>
+    </condition>
+    <condition name="slotName_eq_targetTask">
+      <expression name="slotName" op="eq" value="'targetTask'"/>
+    </condition>
+    <condition name="slotName_eq_temporalEventTrigger">
+      <expression name="slotName" op="eq" value="'temporalEventTrigger'"/>
+    </condition>
+  </conditions>
+ 
+  <first>
+    <dialog condition="slotName_eq_targetTask">Task</dialog>
+    <dialog condition="slotName_eq_status">Status</dialog>
+    <dialog condition="slotName_eq_spatialEventTrigger">Location</dialog>
+    <dialog condition="slotName_eq_temporalEventTrigger">Date</dialog>
+  </first>
+
+</cat>

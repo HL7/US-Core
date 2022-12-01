@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.ink.lasso.0</key>
+	<dict>
+		<key>blend-mode</key>
+		<string>src-over</string>
+		<key>type</key>
+		<string>vector</string>
+	</dict>
+	<key>com.apple.ink.lasso.0.default</key>
+	<dict>
+		<key>stylusSmoothing</key>
+		<integer>10</integer>
+		<key>base-alpha</key>
+		<real>0.97</real>
+		<key>radius</key>
+		<array>
+			<dict>
+				<key>function</key>
+				<dict>
+					<key>defaultValue</key>
+					<string>2.75</string>
+					<key>type</key>
+					<string>constant</string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<key>com.apple.ink.lasso.3</key>
+	<dict>
+		<key>blend-mode</key>
+		<string>src-over</string>
+		<key>type</key>
+		<string>vector</string>
+	</dict>
+	<key>com.apple.ink.lasso.3.default</key>
+	<dict>
+		<key>stylusSmoothing</key>
+		<integer>10</integer>
+		<key>base-alpha</key>
+		<real>1</real>
+		<key>radius</key>
+		<array>
+			<dict>
+				<key>function</key>
+				<dict>
+					<key>defaultValue</key>
+					<string>2.75</string>
+					<key>minValue</key>
+					<string>2.75</string>
+					<key>maxValue</key>
+					<string>2.75</string>
+					<key>type</key>
+					<string>constant</string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

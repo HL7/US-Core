@@ -1,0 +1,29 @@
+resourceType: Encounter
+id: delivery
+status: finished
+class:
+  system: http://terminology.hl7.org/CodeSystem/v3-ActCode
+  code: IMP
+  display: inpatient encounter
+subject:
+  reference: Patient/example
+  display: Amy V. Shaw
+location:
+- location:
+    reference: Location/hospital
+    display: Holy Family Hospital
+type:
+- coding:
+  - system: http://snomed.info/sct
+    code: '177184002'
+    display: Normal delivery procedure (procedure)
+  text: Normal delivery procedure (procedure)
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Encounter Delivery Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a patient delivery encounter example for the *Encounter
+      Profile*.

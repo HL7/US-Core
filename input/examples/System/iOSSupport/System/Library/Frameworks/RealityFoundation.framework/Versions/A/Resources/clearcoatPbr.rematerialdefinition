@@ -1,0 +1,47 @@
+{
+    "Name": "ClearcoatPbr",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Parameters": {
+    },
+    "Techniques": [
+    {
+        "Name": "Opaque",
+        "VertexShader": {
+            "Entry": "vsRealityPbr"
+        },
+        "PixelShader": {
+            "Entry": "fsRealityPbr"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"    : "true",
+            "EnableNormalMap"       : "true",
+            "EnableEmissiveMap"     : "true",
+            "EnableAreaLight"       : "true",
+            "EnableSeparateRMAS"    : "true",
+            "EnableClearcoat"       : "true"
+        },
+        "DefaultVariations" : [ "OpaqueCommon" ],
+        "DebugMapping": "PbrDebug"
+    },
+    {
+        "Name": "Shadow",
+        "VertexShader": {
+            "Entry": "vsShadow"
+        },
+        "PixelShader": {
+            "Entry": "fsShadow"
+        },
+        "State" : {
+            "ColorWriteMask" : "None"
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque": "Opaque",
+        "Shadow": "Shadow"
+    }
+}

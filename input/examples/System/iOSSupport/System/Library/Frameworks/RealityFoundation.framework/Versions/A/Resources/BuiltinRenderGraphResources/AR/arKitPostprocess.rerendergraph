@@ -1,0 +1,450 @@
+{
+    "Targets" : [
+        {
+            "Name" : "ColorInput"
+        },
+        {
+            "Name" : "Depth"
+        },
+        {
+            "Name" : "DofCircleOfConfusion",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "WidthMultiplier" : 0.5,
+                "HeightMultiplier" : 0.5
+            }
+        },
+        {
+            "Name" : "DofDownsampledColor",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA16Float",
+                "WidthMultiplier" : 0.5,
+                "HeightMultiplier" : 0.5
+            }
+        },
+        {
+            "Name" : "DofBokehBlurredColor",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA16Float",
+                "WidthMultiplier" : 0.5,
+                "HeightMultiplier" : 0.5
+            }
+        },
+        {
+            "Name" : "DofExtraBlurredColor",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA16Float",
+                "WidthMultiplier" : 0.5,
+                "HeightMultiplier" : 0.5
+            }
+        },
+        {
+            "Name" : "DofCompositionMask",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "WidthMultiplier" : 0.5,
+                "HeightMultiplier" : 0.5
+            }
+        },
+        {
+            "Name" : "DofBlurredCompositionMask",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "WidthMultiplier" : 0.5,
+                "HeightMultiplier" : 0.5
+            }
+        },
+        {
+            "Name" : "ColorAfterDepthOfField",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA16Float"
+            }
+        },
+        {
+            "Name" : "ColorAfterMotionBlur",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA16Float"
+            }
+        },
+        {
+            "Name" : "ColorAfterCombinedPostProcess"
+        }
+    ],
+    "Nodes" : [
+        {
+          "RenderGraphDofSetupNode" : {
+                "Name" : "DepthOfFieldSetup",
+                "Material" : "../Common/dofSetup.rematerial",
+                "TechniqueName" : "fullscreen",
+                "FocalLength" : 50.0,
+                "Aperture" : 2,
+                "FocalDistance" : 5.0,
+                "SensorSize" : 50.0,
+                "QualityProfile" : "Medium",
+                "BlurMaterialLowQuality" : "../Common/dofBokehBlurLow.rematerial",
+                "BlurMaterialMediumQuality" : "../Common/dofBokehBlurMedium.rematerial",
+                "BlurMaterialHighQuality" : "../Common/dofBokehBlurHigh.rematerial",
+                "TargetReads" : [
+                    {
+                        "Settings" : {
+                        },
+                        "TargetHandle" : "Depth"
+                    },
+                    {
+                        "Settings" : {
+                        },
+                        "TargetHandle" : "ColorInput"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        },
+                        "TargetHandle" : "DofDownsampledColor"
+                    },
+                    {
+                        "Settings" : {
+                            "AttachmentIndex" : 1
+                        },
+                        "TargetHandle" : "DofCircleOfConfusion"
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                  {
+                    "BindingName" : "sceneDepth",
+                    "TargetHandle" : "Depth"
+                  },
+                  {
+                    "BindingName" : "sceneSource",
+                    "TargetHandle" : "ColorInput"
+                  }
+                ]
+            }
+        },
+        {
+            "RenderGraphDofBokehBlurNode" : {
+                "Name" : "DepthOfFieldBokehBlur",
+                "TargetReads" : [
+                    {
+                        "Settings" : {
+                        },
+                        "TargetHandle" : "DofDownsampledColor"
+                    },
+                    {
+                        "Settings" : {
+                        },
+                        "TargetHandle" : "DofCircleOfConfusion"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        },
+                        "TargetHandle" : "DofBokehBlurredColor"
+                    },
+                    {
+                        "Settings" : {
+                            "AttachmentIndex" : 1
+                        },
+                        "TargetHandle" : "DofCompositionMask"
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                  {
+                    "BindingName" : "inputColor",
+                    "TargetHandle" : "DofDownsampledColor"
+                  },
+                  {
+                    "BindingName" : "inputCircleOfConfusion",
+                    "TargetHandle" : "DofCircleOfConfusion"
+                  }
+                ]
+            }
+        },
+        {
+            "Fullscreen" : {
+                "Name" : "DepthOfFieldExtraBlur",
+                "Material" : "../Common/dofExtraBlur.rematerial",
+                "TechniqueName" : "fullscreen",
+                "TargetReads" : [
+                    {
+                        "Settings" : {
+                        },
+                        "TargetHandle" : "DofBokehBlurredColor"
+                    },
+                    {
+                        "Settings" : {
+                        },
+                        "TargetHandle" : "DofCompositionMask"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        },
+                        "TargetHandle" : "DofExtraBlurredColor"
+                    },
+                    {
+                        "Settings" : {
+                            "AttachmentIndex" : 1
+                        },
+                        "TargetHandle" : "DofBlurredCompositionMask"
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName" : "inputColor",
+                        "TargetHandle" : "DofBokehBlurredColor"
+                    },
+                    {
+                        "BindingName" : "inputCompositionMask",
+                        "TargetHandle" : "DofCompositionMask"
+                    }
+                ]
+            }
+        },
+        {
+            "RenderGraphDofCompositeNode" : {
+                "Name" : "DepthOfFieldComposite",
+                "CompositeMaterial" : "../Common/dofComposite.rematerial",
+                "DebugPassthroughMaterial" : "../Common/dofCompositeDebugPassthrough.rematerial",
+                "DebugPassthrough" : false,
+                "TechniqueName" : "fullscreen",
+                "TargetReads" : [
+                    {
+                        "Settings" : {
+                        },
+                        "TargetHandle" : "ColorInput"
+                    },
+                    {
+                        "Settings" : {
+                        },
+                        "TargetHandle" : "DofExtraBlurredColor"
+                    },
+                    {
+                        "Settings" : {
+                        },
+                        "TargetHandle" : "DofBlurredCompositionMask"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        },
+                        "TargetHandle" : "ColorAfterDepthOfField"
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                  {
+                    "BindingName" : "sceneSource",
+                    "TargetHandle" : "ColorInput"
+                  },
+                  {
+                    "BindingName" : "sceneBlurred",
+                    "TargetHandle" : "DofExtraBlurredColor"
+                  },
+                  {
+                    "BindingName" : "compositeMask",
+                    "TargetHandle" : "DofBlurredCompositionMask"
+                  }
+                ]
+            }
+        },
+        {
+            "RenderGraphARUploadPostParams" : {
+                "Name" : "ARUploadPostParams",
+                "TonemappingEnabled" : true,
+                "TonemapUserParameters" : {
+                    "ToeStrength" : 0.25,
+                    "ToeLength" : 0.37,
+                    "ShoulderStrength" : 0.7,
+                    "ShoulderLength" : 1.0,
+                    "ShoulderAngle" : 1.0,
+                    "Gamma" : 1.0,
+                    "WhiteLevel" : 1.0,
+                    "Exposure" : 0.0
+                }
+            }
+        },
+        {
+            "RenderGraphMotionBlurNode" : {
+                "Name" : "CameraMotionBlur",
+                "MotionBlurLowSampleCountMaterial" : "../Common/cameraMotionBlurLowSampleCount.rematerial",
+                "MotionBlurMediumSampleCountMaterial" : "../Common/cameraMotionBlurMediumSampleCount.rematerial",
+                "MotionBlurHighSampleCountMaterial" : "../Common/cameraMotionBlurHighSampleCount.rematerial",
+                "DebugPassthroughMaterial" : "../Common/cameraMotionBlurDebugPassthrough.rematerial",
+                "DebugPassthrough" : false,
+                "TechniqueName" : "fullscreen",
+                "MotionBlurUserParameters" : {
+                    "ExposureTime" : 0.01667,
+                    "FrameRate" : 60
+                },
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ColorAfterDepthOfField"
+                    },
+                    {
+                        "TargetHandle" : "Depth"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ColorAfterMotionBlur",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName" : "renderGraphTexture",
+                        "TargetHandle" : "ColorAfterDepthOfField"
+                    },
+                    {
+                        "BindingName" : "renderGraphDepth",
+                        "TargetHandle" : "Depth"
+                    }
+                ]
+            }
+        },
+        {
+            "RenderGraphARCombinedPostProcessNode" : {
+                "Name" : "ARPostProcessCombined",
+                "TonemappingEnabled" : true,
+                "ColorCorrectionEnabled" : false ,
+                "CameraNoiseEnabled" : true,
+                "CombinedMaterialPermutations" : [
+                    "arInPlacePostProcessCombinedPermute0.rematerial",
+                    "arInPlacePostProcessCombinedPermute1.rematerial",
+                    "arInPlacePostProcessCombinedPermute2.rematerial",
+                    "arInPlacePostProcessCombinedPermute3.rematerial",
+                    "arInPlacePostProcessCombinedPermute4.rematerial",
+                    "arInPlacePostProcessCombinedPermute5.rematerial",
+                    "arInPlacePostProcessCombinedPermute6.rematerial",
+                    "arInPlacePostProcessCombinedPermute7.rematerial"
+                ],
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ColorAfterMotionBlur"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ColorAfterCombinedPostProcess",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Fullscreen" : {
+                "Name" : "Fullscreen_ARKitPassthrough",
+                "Material" : "arKitPassthrough.rematerial",
+                "TechniqueName" : "arKitPassthroughTechnique",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ColorAfterCombinedPostProcess",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "ProfilerOverlay" : {
+                "Name" : "FrameProfilerOverlay",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ColorAfterCombinedPostProcess",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "Color",
+            "Target": "ColorInput"
+        },
+        {
+            "Lane" : "Depth",
+            "Target": "Depth"
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "Color",
+            "Target" : "DofDownsampledColor"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "DofCircleOfConfusion"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "DofBokehBlurredColor"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "DofExtraBlurredColor"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "DofCompositionMask"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "DofBlurredCompositionMask"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "ColorAfterDepthOfField"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "ColorAfterMotionBlur"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "ColorAfterCombinedPostProcess"
+        },
+        {
+            "Lane" : "Depth",
+            "Target" : "Depth"
+        }
+    ],
+    "Operations" : [
+        {
+            "RenderGraphSpecifyLaneOperation" : {
+                "Lane" : "Color",
+                "Description" : {
+                    "Format" : "RGBA16Float"
+                }
+            }
+        }
+    ]
+}

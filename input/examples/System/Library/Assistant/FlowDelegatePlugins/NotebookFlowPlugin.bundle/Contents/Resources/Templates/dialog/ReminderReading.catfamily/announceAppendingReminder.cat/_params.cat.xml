@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="ReminderReading#announceAppendingReminder">
+  <meta name="readyForLoc" value="true"/>
+  <meta name="category" value="Handled"/>
+  <meta name="usesDialogHistory" value="true"/>
+  <meta name="description" value="This cat reads out a succeeding reminder. It is intended to be used only if Siri has first announced a reminder already and has another reminder to announce."/>
+  <parameters>
+    <parameter name="concept" type="notebook.ReminderConcept"/>
+    <parameter name="isArriving" type="dialog.Boolean"/>
+    <parameter name="isLeaving" type="dialog.Boolean"/>
+    <parameter name="synchronousBurstIndex" type="dialog.Number"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

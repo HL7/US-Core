@@ -1,0 +1,40 @@
+{
+    "Name": "DepthOfFieldBokehBlurDefinition",
+    "Parameters": {
+        "Constants": {
+            "viewportPercents" : "view.viewportPercents"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV",
+            "dofConstants" : "rendergraph.dofConstants"
+        },
+        "Textures": {
+            "inputColor" : "rendergraph.inputColor",
+            "inputCircleOfConfusion" : "rendergraph.inputCircleOfConfusion",
+            "tileNearCoc" : "rendergraph.tileNearCoc",
+            "tileFarCoc" : "rendergraph.tileFarCoc"
+	    }
+    },
+    "Techniques": [
+    {
+        "Name": "DofBokehBlurTechnique",
+        "VertexShader": {
+            "Entry": "fullScreenVert"
+        },
+        "PixelShader": {
+            "Entry": "depthOfFieldBokehBlur"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        },
+        "FunctionConstants" : {
+            "DepthOfFieldQuality" : "1"
+        }
+    }],
+    "TechniqueMapping": {
+        "fullscreen": "DofBokehBlurTechnique"
+    }
+}

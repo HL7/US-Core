@@ -1,0 +1,27 @@
+#CAT-SCHEMA 1.0
+
+name: messages.ReferencedTapbackMessage
+
+inputs:
+    sender:
+        access_mode: public
+    messageType:
+        access_mode: public
+    content:
+        access_mode: public
+    paymentTransferAmount:
+        access_mode: public
+
+properties:
+    sender:
+        type: dialog.Person
+        description: Sender of the referenced message
+    messageType:
+        type: dialog.String
+        description: Type of the referenced message
+    content:
+        type: dialog.String
+        description: Content of the referenced message
+    paymentTransferAmount:
+        type: dialog.Number
+        description: Amount of the payment transfer that was tapbacked

@@ -1,0 +1,28 @@
+{
+    "Name": "DebugBaseColor",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Library": "",
+    "Parameters": {
+        "Textures": {
+          "texture" : "material.textureBaseColor"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "DebugBaseColor",
+        "VertexShader": {
+            "Entry": "vsDebugMapped"
+        },
+        "PixelShader": {
+            "Entry": "fsDebugBaseColorMap"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque": "DebugBaseColor"
+    }
+}

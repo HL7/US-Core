@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <!-- BOGUS note that the quiet flag currently serves no real purpose, as these replacements are no longer reported to the user EVER -->
+
+
+    <!-- Old Microsoft fonts rdar://4474430&4575980 -->
+    <key>Arial-BoldItalicMS</key>
+    <string>Arial-BoldItalicMT</string>
+    <key>Arial-BoldMS</key>
+    <string>Arial-BoldMT</string>
+    <key>Arial-ItalicMS</key>
+    <string>Arial-ItalicMT</string>
+    <key>ArialMS</key>
+    <string>ArialMT</string>
+    <key>TimesNewRomanMS</key>
+    <string>TimesNewRomanPSMT</string>
+    <key>TimesNewRomanBdItMS</key>
+    <string>TimesNewRomanPS-BoldItalicMT</string>
+    <key>TimesNewRomanBdMS</key>
+    <string>TimesNewRomanPS-BoldMT</string>
+    <key>TimesNewRomanItMS</key>
+    <string>TimesNewRomanPS-ItalicMT</string>
+
+
+
+    <!-- Font names that changed between Tiger and Leopard rdar://4707403 -->
+    <key>BradleyHandITCTTBold</key>
+    <dict>
+        <key>font</key>
+        <string>BradleyHandITCTT-Bold</string>
+        <key>quiet</key>
+        <true/>
+    </dict>
+    <key>StoneSansSemITCTTSemi</key>
+    <dict>
+        <key>font</key>
+        <string>StoneSansITCTT-Semi</string>
+        <key>quiet</key>
+        <true/>
+    </dict>
+    <key>StoneSansSemITCTTSemiIta</key>
+    <dict>
+        <key>font</key>
+        <string>StoneSansITCTT-SemiIta</string>
+        <key>quiet</key>
+        <true/>
+    </dict>
+    <key>StoneSansITCTTBold</key>
+    <dict>
+        <key>font</key>
+        <string>StoneSansITCTT-Bold</string>
+        <key>quiet</key>
+        <true/>
+        <key>bold</key>
+        <true/>
+    </dict>
+
+
+
+    <!-- Be nice.  If there's no Times, map to Times New.  Particularly under iOS. rdar://problem/7671556 -->
+    <key>Times-Roman</key>
+    <string>TimesNewRomanPSMT</string>
+    <key>Times-Italic</key>
+    <string>TimesNewRomanPS-ItalicMT</string>
+    <key>Times-Bold</key>
+    <string>TimesNewRomanPS-BoldMT</string>
+    <key>Times-BoldItalic</key>
+    <string>TimesNewRomanPS-BoldItalicMT</string>
+
+    <!-- Common Microsoft CJK fonts rdar://problem/9771888 -->
+	<key>MS-Gothic</key>
+	<string>STHeitiTC-Medium</string>
+	<key>MS-Mincho</key>
+	<string>HiraMinProN-W3</string>
+	<key>MS-PGothic</key>
+	<string>STHeitiTC-Medium</string>
+	<key>MS-PMincho</key>
+	<string>HiraMinProN-W3</string>
+	<key>Batang</key>
+	<string>HiraMinProN-W3</string>
+	
+</dict>
+</plist>

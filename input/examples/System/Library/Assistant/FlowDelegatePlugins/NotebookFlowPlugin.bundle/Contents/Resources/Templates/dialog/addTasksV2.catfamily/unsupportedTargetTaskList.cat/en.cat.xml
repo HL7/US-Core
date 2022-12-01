@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#unsupportedTargetTaskList" locale="en">
+    
+  <phrases>
+    <first phrase="phrase_0">
+      <text condition="isFirstPartyApp">You don’t have a default list.</text>
+      <text>You cannot add a reminder to that list. Try again with another.</text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog><opt>Sorry <var name="user.groundingIfNeeded"/>. </opt><opt><phrase name="phrase_0"/></opt></dialog>
+  </first>
+
+</cat>

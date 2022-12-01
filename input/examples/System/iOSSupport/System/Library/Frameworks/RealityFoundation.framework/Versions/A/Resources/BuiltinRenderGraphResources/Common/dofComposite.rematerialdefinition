@@ -1,0 +1,39 @@
+{
+    "Name": "DepthOfFieldCompositeDefinition",
+    "Parameters": {
+        "Constants": {
+            "viewportPercents" : "view.viewportPercents"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV",
+            "dofConstants" : "rendergraph.dofConstants"
+        },
+        "Textures": {
+            "sceneSource" : "rendergraph.sceneSource",
+            "sceneBlurred" : "rendergraph.sceneBlurred",
+            "compositeMask" : "rendergraph.compositeMask"
+	    }
+    },
+    "Techniques": [
+    {
+        "Name": "DofCompositeTechnique",
+        "VertexShader": {
+            "Entry": "fullScreenVert"
+        },
+        "PixelShader": {
+            "Entry": "depthOfFieldComposite"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        },
+        "FunctionConstants" : {
+            "DebugPassthrough" : "false"
+        }
+    }],
+    "TechniqueMapping": {
+        "fullscreen": "DofCompositeTechnique"
+    }
+}

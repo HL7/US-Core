@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#intentHandledResponseForToggleIntentCategory">
+    <conditions>
+        <condition name="isTurnOn">
+            <expression name="intentVerb.lowercase" op="eq" value="'turn on'"/>
+        </condition>
+        <condition name="isTurnOff">
+            <expression name="intentVerb.lowercase" op="eq" value="'pay'"/>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="verbPhrase">
+            <random condition="isTurnOn">
+                <text>Turned on</text>
+                <text>Switched on</text>
+            </random>
+            <random condition="isTurnOff">
+                <text>Turned off</text>
+                <text>Switched off</text>
+            </random>
+            <text>Toggled</text>
+        </first>
+    </phrases>
+    
+    <first>
+        <dialog>OK<opt>, <var name="user.groundingIfNeeded"/></opt>. <phrase name="verbPhrase"/></dialog>
+    </first>
+</cat>

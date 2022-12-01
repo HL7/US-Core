@@ -1,0 +1,79 @@
+#CAT-SCHEMA 1.0
+
+name: phone.SearchCallHistoryIntent
+
+inputs:
+  callTypes:
+    type: dialog.String[]
+    description: Describes the call types of all the entries
+    sample_value: [MISSED, LATEST, VOICEMAIL, VIDEO_CALL]
+    optional: no
+    access_mode: public
+  preferredCallProvider:
+    type: dialog.String
+    description: The provider of the call
+    sample_value: UNKNOWN, TELEPHONY_PROVIDER, FACETIME_PROVIDER
+    optional: no
+    access_mode: public
+  callCapabilities:
+    type: dialog.String[]
+    description: Describes whether this is an audio or video call
+    sample_value: [UNKNOWN, AUDIO_CALL, VIDEO_CALL]
+    optional: no
+    access_mode: public
+  recipient:
+    type: phone.PersonList
+    description: The list of recipients in the call record
+    optional: no
+    access_mode: public
+    
+    
+properties:
+  isRequestForLatest:
+    type: dialog.Boolean
+    description: whether the request is for latest calls
+    optional: no
+  isRequestForMissed:
+    type: dialog.Boolean
+    description: whether the request is for missed calls
+    optional: no
+  isRequestForFaceTime:
+    type: dialog.Boolean
+    description: whether the request is for FaceTime calls
+    optional: no
+  isRequestForVideo:
+    type: dialog.Boolean
+    description: whether the request is for video calls
+    optional: no
+  isRequestForVoicemail:
+    type: dialog.Boolean
+    description: whether the request is for voicemails
+    optional: no
+  isRequestForReceived:
+    type: dialog.Boolean
+    description: whether the request is for received calls
+    optional: no
+  isRequestForOutgoing:
+    type: dialog.Boolean
+    description: whether the request is for outgoing calls
+    optional: no
+  getContactRole:
+    type: dialog.String
+    description: get the contact role (to, from, with)
+    optional: no
+  callTypes:
+    type: dialog.String[]
+    description: Describes the call types of all the entries
+    optional: no
+  preferredCallProvider:
+    type: dialog.String
+    description: The provider of the call
+    optional: no
+  callCapabilities:
+    type: dialog.String[]
+    description: Describes whether this is an audio or video call
+    optional: no
+  recipient:
+    type: phone.PersonList
+    description: The list of recipients in the call record
+    optional: no

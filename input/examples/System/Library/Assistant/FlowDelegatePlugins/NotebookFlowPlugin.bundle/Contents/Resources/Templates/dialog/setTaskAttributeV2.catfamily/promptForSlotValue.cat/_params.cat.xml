@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="setTaskAttributeV2#promptForSlotValue">
+  <meta name="category" value="Prompt"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="Prompting for the note details before creating it."/>
+  <parameters>
+    <parameter name="slotName" type="dialog.String"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

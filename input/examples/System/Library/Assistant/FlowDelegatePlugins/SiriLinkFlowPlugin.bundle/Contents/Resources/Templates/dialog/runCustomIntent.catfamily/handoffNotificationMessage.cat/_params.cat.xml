@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.4" id="runCustomIntent#handoffNotificationMessage">
+    <meta name="description" value="Shows up in a notification pop-up on the device that the session is to be handed off to."/>
+    <meta name="category" value="UsedForSnippet"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+    </parameters>
+</cat>

@@ -1,0 +1,35 @@
+{
+    "Name" : "diffrender",
+    "OverrideMaterial" : "engine:pbrCommon.rematerialdefinition",
+    "Parameters" : {
+        "Buffers" : {
+            "position" : "geometry.vertexPosition",
+            "texcoord" : "geometry.vertexUV"
+        },
+        "Textures" : {
+            "sceneColorTexture" : "rendergraph.sceneColorTexture",
+            "receiverColorTexture" : "rendergraph.receiverColorTexture",
+            "stencilTexture" : "rendergraph.stencilTexture"
+        }
+    },
+    "Techniques" : [
+        {
+            "Name" : "DRSubtraction",
+            "VertexShader" : {
+                "Entry" : "fullScreenVert"
+            },
+            "PixelShader" : {
+                "Library" : "engine:default.metallib",
+                "Entry" : "fsDRSubtraction"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Always"
+            }
+        }
+    ],
+    "TechniqueMapping" : {
+        "DRSubtraction" : "DRSubtraction"
+    }
+}

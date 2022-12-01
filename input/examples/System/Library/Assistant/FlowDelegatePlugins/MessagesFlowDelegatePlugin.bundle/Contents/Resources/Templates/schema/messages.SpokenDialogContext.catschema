@@ -1,0 +1,33 @@
+#CAT-SCHEMA 1.0
+
+name: messages.SpokenDialogContext
+extends: messages.DialogContext
+
+inputs:
+    useAppendedConnector:
+        access_mode: public
+    shouldSpecifyPrivateConversation:
+        access_mode: public
+    useTextRequestConnector:
+        access_mode: public
+    shouldShortenGroupMembership:
+        access_mode: public
+    sameConsecutiveComponentTypeCount:
+        access_mode: public
+
+properties:
+    useAppendedConnector:
+        type: dialog.Boolean
+        description: Was the previous component in the same request and from a different sender.
+    shouldSpecifyPrivateConversation:
+        type: dialog.Boolean
+        description: Is this in a private conversation, is this the first component in the request, and was the previous component in a different request, from the same sender, and in a group.
+    useTextRequestConnector:
+        type: dialog.Boolean
+        description: Is this the first component in the request and was the previous component in a different request, from the same sender, and also a text. Only to be used for TextComponents.
+    shouldShortenGroupMembership:
+        type: dialog.Boolean
+        description: Is this the first component in the request and was the previous component from the same group and third or more in a row.
+    sameConsecutiveComponentTypeCount:
+        type: dialog.Number
+        description: Count of consecutive previous components in the same conversation with the same sender and component type. Only to be used for GenericCountableComponents.

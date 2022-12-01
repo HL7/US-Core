@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runCustomIntent#intentHandledResponse">
+    <conditions>
+        <condition name="workflow" note="True if intent category is CATEGORY_WORKFLOW">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_WORKFLOW'"/>
+        </condition>
+        <condition name="information" note="True if intent category is CATEGORY_INFORMATION">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_INFORMATION'"/>
+        </condition>
+        <condition name="media" note="True if intent category is for playing media">
+            <or>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_AUDIO'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_VIDEO'"/>
+            </or>
+        </condition>
+        <condition name="phonecall" note="True if intent category is for playing media">
+            <or>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_CALL_AUDIO'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_CALL_VIDEO'"/>
+            </or>
+        </condition>
+        <condition name="order" note="True if intent category is CATEGORY_ORDER">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_ORDER'"/>
+        </condition>
+        <condition name="request" note="True if intent category is CATEGORY_REQUEST">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_REQUEST'"/>
+        </condition>
+        <condition name="share" note="True if intent category is CATEGORY_SHARE">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_SHARE'"/>
+        </condition>
+        <condition name="create" note="True if intent category is CATEGORY_CREATE">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_CREATE'"/>
+        </condition>
+        <condition name="search" note="True if intent category is CATEGORY_SEARCH">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_WORKFLOW'"/>
+        </condition>
+        <condition name="toggle" note="True if intent category is CATEGORY_TOGGLE">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_TOGGLE'"/>
+        </condition>
+        <condition name="setcategory" note="True if intent category is CATEGORY_SET">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_SET'"/>
+        </condition>
+        <condition name="download" note="True if intent category is CATEGORY_DOWNLOAD">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_DOWNLOAD'"/>
+        </condition>
+        <condition name="checkin" note="True if intent category is CATEGORY_CHECK_IN">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_CHECK_IN'"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="multiUserOk">
+            <text condition="user.groundingIfNeeded">OK, <var name="user.groundingIfNeeded"/>,</text>
+            <text>OK,</text>
+        </first>
+    </phrases>
+    <first>
+        <first condition="localizedAppName">
+            <switch value="categoryVerb" condition="information">
+                <dialog case="'view'"><phrase name="multiUserOk"/> viewing with <var name="localizedAppName"/>.</dialog>
+                <dialog case="'open'"><phrase name="multiUserOk"/> opening with <var name="localizedAppName"/>.</dialog>
+                <dialog><phrase name="multiUserOk"/> viewing with <var name="localizedAppName"/>.</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="order">
+                <dialog case="'buy'"><phrase name="multiUserOk"/> buying with <var name="localizedAppName"/>.</dialog>
+                <dialog case="'pay'"><phrase name="multiUserOk"/> paying with <var name="localizedAppName"/>.</dialog>
+                <dialog case="'order'"><phrase name="multiUserOk"/> ordering with <var name="localizedAppName"/>.</dialog>
+                <dialog case="'book'"><phrase name="multiUserOk"/> booking with <var name="localizedAppName"/>.</dialog>
+                <dialog><phrase name="multiUserOk"/> ordering with <var name="localizedAppName"/>.</dialog>
+            </switch>
+            <first condition="media">
+                <dialog>
+                    <print><phrase name="multiUserOk"/> playing with <var name="localizedAppName"/>.</print>
+                    <speak/>
+                </dialog>
+            </first>
+            <first condition="phonecall">
+                <dialog>
+                    <print><phrase name="multiUserOk"/> calling with <var name="localizedAppName"/>.</print>
+                    <speak/>
+                </dialog>
+            </first>
+            <first condition="request">
+                <dialog><phrase name="multiUserOk"/> requesting using <var name="localizedAppName"/>.</dialog>
+            </first>
+            <switch value="categoryVerb" condition="share">
+                <dialog case="'share'"><phrase name="multiUserOk"/> sharing using <var name="localizedAppName"/>.</dialog>
+                <dialog case="'post'"><phrase name="multiUserOk"/> posting with <var name="localizedAppName"/>.</dialog>
+                <dialog case="'send'"><phrase name="multiUserOk"/> sending with <var name="localizedAppName"/>.</dialog>
+                <dialog><phrase name="multiUserOk"/> sending with <var name="localizedAppName"/>.</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="create">
+                <dialog case="'create'"><phrase name="multiUserOk"/> creating with <var name="localizedAppName"/>.</dialog>
+                <dialog case="'add'"><phrase name="multiUserOk"/> adding with <var name="localizedAppName"/>.</dialog>
+                <dialog><phrase name="multiUserOk"/> creating with <var name="localizedAppName"/>.</dialog>
+            </switch>
+            <first condition="search">
+                <dialog><phrase name="multiUserOk"/> searching using <var name="localizedAppName"/>.</dialog>
+            </first>
+            <first condition="setcategory">
+                <dialog><phrase name="multiUserOk"/> setting using <var name="localizedAppName"/>.</dialog>
+            </first>
+            <switch value="categoryVerb" condition="toggle">
+                <dialog case="'turn on'"><phrase name="multiUserOk"/> turning on using <var name="localizedAppName"/>.</dialog>
+                <dialog case="'turn off'"><phrase name="multiUserOk"/> turning off using <var name="localizedAppName"/>.</dialog>
+                <dialog><phrase name="multiUserOk"/> toggling using <var name="localizedAppName"/>.</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="download">
+                <dialog case="'download'"><phrase name="multiUserOk"/> downloading using <var name="localizedAppName"/>.</dialog>
+                <dialog case="'get'"><phrase name="multiUserOk"/> getting using <var name="localizedAppName"/>.</dialog>
+                <dialog><phrase name="multiUserOk"/> downloading using <var name="localizedAppName"/>.</dialog>
+            </switch>
+        </first>
+        <first note="Without app name">
+            <switch value="categoryVerb" condition="information">
+                <dialog case="'view'"><phrase name="multiUserOk"/> viewing.</dialog>
+                <dialog case="'open'"><phrase name="multiUserOk"/> opening.</dialog>
+                <dialog><phrase name="multiUserOk"/> viewing.</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="order">
+                <dialog case="'buy'"><phrase name="multiUserOk"/> buying.</dialog>
+                <dialog case="'pay'"><phrase name="multiUserOk"/> paying.</dialog>
+                <dialog case="'order'"><phrase name="multiUserOk"/> ordering.</dialog>
+                <dialog case="'book'"><phrase name="multiUserOk"/> booking.</dialog>
+                <dialog><phrase name="multiUserOk"/> ordering.</dialog>
+            </switch>
+            <first condition="media">
+                <dialog>
+                    <print><phrase name="multiUserOk"/> playing.</print>
+                    <speak/>
+                </dialog>
+            </first>
+            <first condition="phonecall">
+                <dialog>
+                    <print><phrase name="multiUserOk"/> calling.</print>
+                    <speak/>
+                </dialog>
+            </first>
+            <first condition="request">
+                <dialog><phrase name="multiUserOk"/> requesting.</dialog>
+            </first>
+            <switch value="categoryVerb" condition="share">
+                <dialog case="'share'"><phrase name="multiUserOk"/> sharing.</dialog>
+                <dialog case="'post'"><phrase name="multiUserOk"/> posting.</dialog>
+                <dialog case="'send'"><phrase name="multiUserOk"/> sending.</dialog>
+                <dialog><phrase name="multiUserOk"/> sending.</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="create">
+                <dialog case="'create'"><phrase name="multiUserOk"/> creating.</dialog>
+                <dialog case="'add'"><phrase name="multiUserOk"/> adding.</dialog>
+                <dialog><phrase name="multiUserOk"/> creating.</dialog>
+            </switch>
+            <first condition="search">
+                <dialog><phrase name="multiUserOk"/> searching.</dialog>
+            </first>
+            <first condition="setcategory">
+                <dialog><phrase name="multiUserOk"/> setting.</dialog>
+            </first>
+            <switch value="categoryVerb" condition="toggle">
+                <dialog case="'turn on'"><phrase name="multiUserOk"/> turning on.</dialog>
+                <dialog case="'turn off'"><phrase name="multiUserOk"/> turning off.</dialog>
+                <dialog><phrase name="multiUserOk"/> toggling.</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="download">
+                <dialog case="'download'"><phrase name="multiUserOk"/> downloading.</dialog>
+                <dialog case="'get'"><phrase name="multiUserOk"/> getting.</dialog>
+                <dialog><phrase name="multiUserOk"/> downloading.</dialog>
+            </switch>
+            <dialog note="The base case"><phrase name="multiUserOk"/> done.</dialog>
+        </first>
+    </first>
+</cat>

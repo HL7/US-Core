@@ -1,0 +1,17 @@
+{
+    "Name" : "arKitPassthrough",
+    "MaterialDefinition": "arKitPassthrough.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "correctionMatrix": "[1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0]",
+            "intensityScale": "1",
+            "useTextureAlpha": "0",
+            "useFeatherMask": "0",
+            "useOcclusionMatte": "0"
+        },
+        "Textures": {
+            "textureAlpha" : "rendergraph.textureAlpha",
+            "suOcclusionMatte" : "rendergraph.SUOcclusionMatte"
+        }
+    }
+}

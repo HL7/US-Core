@@ -1,0 +1,60 @@
+{
+    "Name": "EngineDefaults",
+    "Parameters": {
+        "Constants": {
+            "crwsReferencePosition": "global.crwsReferencePosition",
+            "time": "global.time",
+            "frameCount": "global.frameCount",
+
+            "objectToCrWorld": "instance.objectToCrWorld",
+            "normalToCrWorld": "instance.normalToCrWorld",
+            "lodDrawInfo": "instance.lodDrawInfo",
+            "fadeOpacity": "instance.fadeOpacity",
+            "viewportCount": "instance.viewportCount",
+            "debugMode": "instance.debugMode",
+            "ptIndex": "instance.ptIndex",
+            "clippingIndices": "instance.clippingIndices",
+            "samplerIndexCount" : "instance.samplerIndexCount",
+
+            "viewportPercents": "view.viewportPercents",
+            "renderTargetSize": "view.renderTargetSize",
+            "renderTargetColorFormats": "view.renderTargetColorFormats",
+            "renderTargetDepthStencilFormatSampleCount": "view.renderTargetDepthStencilFormatSampleCount",
+
+            "vrrMapScreenSize" : "view.vrrMapScreenSize",
+            "vrrMapPhysicalSize" : "view.vrrMapPhysicalSize",
+            "vrrMapPhysicalSizeInstanced" : "view.vrrMapPhysicalSizeInstanced",
+
+            "crWorldToView": "view.crWorldToView",
+            "crWorldToProj": "view.crWorldToProj",
+            "viewToProj": "view.viewToProj",
+            "projToView": "view.projToView",
+            "crwsCameraPosition": "view.crwsCameraPosition",
+
+            "crWorldToViewInstanced": "view.crWorldToViewInstanced",
+            "crWorldToProjInstanced": "view.crWorldToProjInstanced",
+            "viewToProjInstanced": "view.viewToProjInstanced",
+            "projToViewInstanced": "view.projToViewInstanced",
+            "crwsCameraPositionInstanced": "view.crwsCameraPositionInstanced",
+            "tonemapInPlace": "view.tonemapInPlace",
+            "ptTilesIndexOffset": "view.ptTilesIndexOffset",
+            "useVertexAmplification": "view.useVertexAmplification",
+            "cameraEye": "view.cameraEye",
+            "additiveTintColor" : "view.additiveTintColor"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV",
+            "normal": "geometry.vertexNormal",
+            "bitangent": "geometry.vertexBitangent",
+            "color": "geometry.vertexColor",
+            "tension" : "geometry.tension",
+            "lightConstants": "light.lightBuffer"
+        },
+        "Textures": {
+            "textureEnvironment": "scene.environmentMap",
+            "textureFilter": "scene.filterMap",
+            "textureShadow": "scene.shadowMap"
+        }
+    }
+}

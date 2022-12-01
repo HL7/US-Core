@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#intentConfirmationPrompt">
+  <meta name="category" value="Prompt"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="Confirmation to create a new task"/>
+  
+  <parameters>
+    <parameter name="isTriggerTemporal" type="dialog.Boolean"/>
+    <parameter name="isTriggerSpatial" type="dialog.Boolean"/>
+    <parameter name="modifiedTaskListDefined" type="dialog.Boolean"/>
+  </parameters>
+</cat>

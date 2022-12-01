@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#intentHandledResponse" locale="en">
+
+  <conditions>
+    <condition name="isVoiceOnly">
+      <or>
+        <expression name="isVox"/>
+        <expression name="isCarPlay"/>
+      </or>
+    </condition>
+    <condition name="isFirstPartyAndIsToday">
+      <and>
+        <and>
+          <expression name="isFirstPartyApp"/>
+          <not>
+            <expression name="didUserSpecifyTime"/>
+          </not>
+        </and>
+        <expression name="calendar.isToday"/>
+      </and>
+    </condition>
+    <condition name="hasTrigger">
+      <or>
+        <or>
+          <expression name="isTriggerTemporal"/>
+          <expression name="isTriggerSpatial"/>
+        </or>
+        <expression name="isTriggerContact"/>
+      </or>
+    </condition>
+    <condition name="locationServicesDisabledAndNotMac">
+      <and>
+        <expression name="isLocationServiceDisabled"/>
+        <not>
+          <expression name="isMac"/>
+        </not>
+      </and>
+    </condition>
+    <condition name="multipleRemindersAdded">
+      <expression name="addedTaskCount" op="gt" value="1"/>
+    </condition>
+    <condition name="notDefaultList">
+      <not>
+        <expression name="isDefaultList"/>
+      </not>
+    </condition>
+    <condition name="listNameContainsList">
+        <expression name="listTitle.lowercase" op="contains" value="'list'"/>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <first phrase="warnings">
+      <text condition="isFlaggedNotAllowed">
+                    OK<opt> <var name="user.groundingIfNeeded"/></opt>, I’ve added the reminder but without flagging it. Only reminders in your iCloud account can be flagged.
+                    You can change your default Reminders list in Settings.
+                </text>
+      <text condition="isNotUpgradedToCloudkitForFlag">
+                    OK<opt> <var name="user.groundingIfNeeded"/></opt>, I’ve added the reminder but without flagging it. To use the flagging feature, you’ll need to upgrade your iCloud account in the Reminders app.
+                </text>
+      <text condition="isVoiceOnly"><phrase name="displayTrigger"/></text>
+      <text><phrase name="mobileTriggerDialog"/></text>
+    </first>
+    <random phrase="triggerPhrase">
+      <text condition="hasTrigger">for then </text>
+    </random>
+    <first phrase="recurrencePhrase">
+      <text condition="isRecurringTrigger">starting </text>
+      <text>for </text>
+    </first>
+    <random phrase="nonVoxBasic">
+      <text>OK, added.</text>
+      <text>Done.</text>
+    </random>
+    <first phrase="showTime">
+      <text condition="didUserSpecifyTime"><var name="calendar.dateTimeDescriptive"/></text>
+      <text><var name="calendar.dateTimeDescriptive"/></text>
+    </first>
+    <first phrase="mobileTriggerDialog">
+      <text condition="isSpatialTriggerArriveCar">OK, <opt><var name="user.groundingIfNeeded"/>, </opt>your reminder’s set for next time you connect to the car.</text>
+      <text condition="isSpatialTriggerDepartCar">OK, <opt><var name="user.groundingIfNeeded"/>, </opt>your reminder’s set for next time you disconnect from the car.</text>
+      <text><phrase name="nonVoxBasic"/></text>
+    </first>
+    <random phrase="thirdPartyBasicDialog">
+      <text>OK, <opt><var name="user.groundingIfNeeded"/>, </opt>added to <var name="appName"/> </text>
+      <text>OK, <opt><var name="user.groundingIfNeeded"/>, it’s </opt>scheduled </text>
+    </random>
+    <first phrase="listTitleDialog">
+        <text condition="listNameContainsList">your <var name="listTitle"/></text>
+        <text>your <var name="listTitle"/> list</text>
+    </first>
+    <first phrase="listDialog">
+      <text condition="notDefaultList"><phrase name="listTitleDialog"/>.</text>
+      <text><var name="appName"/>.</text>
+    </first>
+    <first phrase="nounDialog">
+      <text condition="multipleRemindersAdded">reminders are </text>
+      <text>reminder is </text>
+    </first>
+    <first phrase="basicFlow">
+      <text condition="isFirstPartyApp">OK, <opt><var name="user.groundingIfNeeded"/>, </opt>your <opt><phrase name="nounDialog"/></opt>set </text>
+      <text><phrase name="thirdPartyBasicDialog"/></text>
+    </first>
+    <random phrase="addedDialog">
+      <text>OK, <opt><var name="user.groundingIfNeeded"/>, </opt>added to </text>
+      <text>Alright, <opt><var name="user.groundingIfNeeded"/>, </opt>I’ve added it to </text>
+    </random>
+    <first phrase="displayTrigger">
+      <text condition="isTaskFlagged"><opt><phrase name="basicCase"/></opt><opt><phrase name="triggerPhrase"/></opt>and flagged.</text>
+      <text condition="isTriggerTemporal"><phrase name="temporalDialog"/></text>
+      <text condition="isTriggerSpatial"><phrase name="spatialTriggerDialog"/></text>
+      <text condition="isTriggerContact"><phrase name="contactTriggerDialog"/></text>
+      <text condition="multipleRemindersAdded"><opt><phrase name="Ok"/></opt><opt><var name="user.groundingIfNeeded"/>, </opt>I added those <var name="addedTaskCount"/> things.</text>
+      <text><opt><phrase name="addedDialog"/></opt><opt><phrase name="listDialog"/></opt></text>
+    </first>
+    <random phrase="Ok">
+      <text>OK, </text>
+      <text>Alright, </text>
+    </random>
+    <random phrase="basicCase">
+      <text>OK<opt> <var name="user.groundingIfNeeded"/></opt>, added </text>
+      <text>Alright<opt> <var name="user.groundingIfNeeded"/></opt>, added </text>
+    </random>
+    <random phrase="contactTriggerDialog">
+      <text condition="isFirstPartyApp">OK, <opt><var name="user.groundingIfNeeded"/>, </opt>it’s set for then.</text>
+    </random>
+    <first phrase="temporalDialog">
+      <text condition="isFirstPartyAndIsToday">
+                                    OK, <opt><var name="user.groundingIfNeeded"/>, it’s </opt>added to today’s reminders.
+                                </text>
+      <text><opt><phrase name="basicFlow"/></opt><opt><phrase name="recurrencePhrase"/></opt><opt><phrase name="showTime"/></opt>.</text>
+    </first>
+    <first phrase="locationWarning">
+      <text condition="isFirstPartyApp"> In order to receive notifications you’ll need to enable Location Services for the <var name="appName"/> app.</text>
+      <text> In order to receive notifications you’ll need to enable Location Services for <var name="appName"/>.</text>
+    </first>
+    <first phrase="spatialTriggerDialog">
+      <text condition="isSpatialTriggerArriveCar">OK, <opt><var name="user.groundingIfNeeded"/>, </opt>your reminder’s set for next time you connect to the car.</text>
+      <text condition="isSpatialTriggerDepartCar">OK, <opt><var name="user.groundingIfNeeded"/>, </opt>your reminder’s set for next time you disconnect from the car.</text>
+      <text condition="isFirstPartyApp">OK, <opt><var name="user.groundingIfNeeded"/>, </opt>your reminder is set.</text>
+      <text>OK, <opt><var name="user.groundingIfNeeded"/>, </opt>added to <var name="appName"/>.</text>
+    </first>
+    <random phrase="shouldShowLocationWarning">
+      <text condition="locationServicesDisabledAndNotMac"><phrase name="locationWarning"/></text>
+    </random>
+  </phrases>
+
+
+  <first>
+    <dialog><opt><phrase name="warnings"/></opt><opt><phrase name="shouldShowLocationWarning"/></opt></dialog>
+  </first>
+
+</cat>

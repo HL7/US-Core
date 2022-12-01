@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="deleteTasks#unsupportedTaskList">
+  <meta name="category" value="Can't Do"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="Executed when the taskList slot is unsupported."/>
+  <parameters>
+    <parameter name="unsupportedValue" type="dialog.String"/>
+    <parameter name="slotName" type="dialog.String"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

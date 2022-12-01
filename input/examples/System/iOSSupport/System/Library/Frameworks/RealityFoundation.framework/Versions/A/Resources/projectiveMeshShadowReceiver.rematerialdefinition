@@ -1,0 +1,58 @@
+{
+    "Name": "Projective Mesh Shadow Receiver",
+    "OverrideMaterial": "engine:meshReconstructionCommon.rematerialdefinition",
+    "Techniques" : [
+        {
+            "Name": "OcclusionWithSoftShadowSingleChannel_RealityComposer_iOS",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshSoftShadowReceiverSingleChannel_RealityComposer_iOS"
+            },
+            "State" : {
+                "AlphaBlend"                : false,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            }
+
+        },
+        {
+            "Name": "CompositeMeshShadowsWithDepthTest_RealityComposer_iOS",
+            "VertexShader": {
+                "Entry": "fullScreenVert"
+            },
+            "PixelShader": {
+                "Entry": "fsCompositeMeshShadowsWithDepth_RealityComposer_iOS"
+            },
+            "State" : {
+                "AlphaBlend"                : false,
+                "WriteDepth"                : false,
+                "DepthCompareFunction"      : "GreaterEqual"
+            }
+        },
+        {
+            "Name": "InvisibleTechnique_RealityComposer_iOS",
+            "VertexShader": {
+                "Entry": "vsSceneUnderstandingMeshShadowsInvisible_RealityComposer_iOS",
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Never"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "SceneUnderstandingMeshShadowSingleChannel": "OcclusionWithSoftShadowSingleChannel_RealityComposer_iOS",
+        "CompositeMeshShadowsWithDepthTest" : "CompositeMeshShadowsWithDepthTest_RealityComposer_iOS",
+        "InvisibleTechnique" : "InvisibleTechnique_RealityComposer_iOS",
+
+        "SceneUnderstandingMeshShadow": "OcclusionWithShadowAndLighting",
+        "SceneUnderstandingOcclusionOnly": "OcclusionOnly",
+        "SceneUnderstandingOcclusionWithFakeColorWrite": "OcclusionFakeColorWrite",
+        "SceneUnderstandingMeshShadowWithBlend": "OcclusionAlphaBlendWithShadowAndLighting",
+        "SceneUnderstandingWireframe": "WireframeMesh",
+        "CompositeMeshShadowsWithDepthTestRGBA" : "CompositeMeshShadowsWithDepthTest"
+    }
+}

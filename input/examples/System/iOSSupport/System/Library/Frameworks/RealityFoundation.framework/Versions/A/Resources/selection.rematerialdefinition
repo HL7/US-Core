@@ -1,0 +1,60 @@
+{
+    "Name": "Selection",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Techniques": [
+        {
+            "Name": "SelectionAll",
+            "VertexShader": {
+                "Entry": "vsSelectionMaterial",
+                "Library": ""
+            },
+            "PixelShader": {
+                "Entry": "fsSelectionMaterial",
+                "Library": ""
+            },
+            "State": {
+                "AlphaBlend": false,
+                "WriteDepth": false,
+                "DepthCompareFunction": "Always"
+            }
+        },
+        {
+            "Name": "SelectionNearestPass1",
+            "VertexShader": {
+                "Entry": "vsSelectionMaterial",
+                "Library": ""
+            },
+            "PixelShader": {
+                "Entry": "fsSelectionMaterial",
+                "Library": ""
+            },
+            "State": {
+                "AlphaBlend": false,
+                "WriteDepth": true,
+                "DepthCompareFunction": "Greater"
+            }
+        },
+        {
+            "Name": "SelectionNearestPass2",
+            "VertexShader": {
+                "Entry": "vsSelectionMaterial",
+                "Library": ""
+            },
+            "PixelShader": {
+                "Entry": "fsSelectionMaterial",
+                "Library": ""
+            },
+            "State": {
+                "AlphaBlend": false,
+                "WriteDepth": false,
+                "DepthCompareFunction": "GreaterEqual"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "Opaque": "SelectionAll",
+        "SelectionAll": "SelectionAll",
+        "SelectionNearestPass1": "SelectionNearestPass1",
+        "SelectionNearestPass2": "SelectionNearestPass2"
+    }
+}

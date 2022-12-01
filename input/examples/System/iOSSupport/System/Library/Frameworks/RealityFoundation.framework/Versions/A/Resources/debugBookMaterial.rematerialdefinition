@@ -1,0 +1,40 @@
+{
+    "Name": "DebugBook",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Library": "",
+    "Parameters": {
+        "Constants": {
+            "baseColorTint": "[1,1,1,1]",
+            "shadowBias": "0.0001"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "Opaque",
+            "VertexShader": {
+                "Entry": "vsBook"
+            },
+            "PixelShader": {
+                "Entry": "fsBook"
+            },
+            "State": {
+                "AlphaBlend": false,
+                "WriteDepth": true,
+                "DepthCompareFunction": "Greater"
+            }
+        },
+        {
+            "Name": "Shadow",
+            "VertexShader": {
+                "Entry": "vsShadow"
+            },
+            "PixelShader": {
+                "Entry": "fsShadow"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "Opaque": "Opaque",
+        "Shadow": "Shadow"
+    }
+}

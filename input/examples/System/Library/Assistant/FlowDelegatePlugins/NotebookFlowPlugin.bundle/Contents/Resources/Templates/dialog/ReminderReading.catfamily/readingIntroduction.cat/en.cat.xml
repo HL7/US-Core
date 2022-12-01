@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+  <conditions>
+    <condition name="isPlural">
+      <expression name="concept.itemCount" op="ne" value="1"/>
+    </condition>
+    <condition name="isEmpty">
+      <expression name="concept.itemCount" op="eq" value="0"/>
+    </condition>
+    <condition name="isPluralAndEmpty">
+      <expression name="concept.itemCount" op="eq" value="0"/>
+    </condition>
+    <condition name="hasMultipleTaskLists">
+      <expression name="concept.taskListCount" op="gt" value="1"/>
+    </condition>
+    <condition name="hasSearchTerm">
+      <expression name="concept.searchTerm" op="nonempty"/>
+    </condition>
+    <condition name="hasTargetTaskList">
+      <and>
+        <expression name="concept.searchTerm" op="nonempty"/>
+        <expression name="concept.targetTaskList" op="nonempty"/>
+        <expression name="concept.taskListCount" op="eq" value="1"/>
+      </and>
+    </condition>
+    <condition name="hasLocation">
+      <expression name="concept.LocationConcept.shortLocation" op="nonempty"/>
+    </condition>
+  </conditions>
+  <phrases>
+    <first phrase="flaggedOpt">
+      <text condition="concept.isFlagged">flagged</text>
+      <text/>
+    </first>
+    <first phrase="scheduledOpt">
+      <text condition="concept.isScheduled">scheduled</text>
+      <text/>
+    </first>
+    <first phrase="recurringOpt">
+      <text condition="concept.isRecurring">recurring</text>
+      <text/>
+    </first>
+    <first phrase="onNumberOfListsOpt">
+      <text condition="hasMultipleTaskLists">on <var name="concept.taskListCount"/> lists</text>
+      <text/>
+    </first>
+    <first phrase="onTargetTaskList">
+      <text>on your <var name="concept.targetTaskList"/> list</text>
+    </first>
+    <first phrase="aboutSearchTerm">
+      <text>about <var name="concept.searchTerm"/></text>
+    </first>
+    <first phrase="forLocation">
+      <text>for <var name="concept.LocationConcept.shortLocation"/></text>
+    </first>
+    <first phrase="batchOpt">
+      <text condition="hasBatches">Here are the first <var name="concept.readingBatchSize"/>.</text>
+      <text/>
+    </first>
+  </phrases>
+  <first>
+    <first condition="hasTargetTaskList">
+      <dialog condition="isPluralAndEmpty">There are no <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminders <phrase name="onNumberOfListsOpt"/> <phrase name="onTargetTaskList"/>. <phrase name="batchOpt"/></dialog>
+      <dialog condition="isPlural">There are <var name="concept.itemCount"/> <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminders <phrase name="onNumberOfListsOpt"/> <phrase name="onTargetTaskList"/>. <phrase name="batchOpt"/></dialog>
+      <dialog condition="isEmpty">There's no <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminder <phrase name="onNumberOfListsOpt"/> <phrase name="onTargetTaskList"/>. <phrase name="batchOpt"/></dialog>
+      <dialog note="singular and not empty">There's <var name="concept.itemCount"/> <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminder <phrase name="onNumberOfListsOpt"/> <phrase name="onTargetTaskList"/>. <phrase name="batchOpt"/></dialog>
+    </first>
+    <first condition="hasSearchTerm">
+      <dialog condition="isPluralAndEmpty">There are no <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminders <phrase name="onNumberOfListsOpt"/> <phrase name="aboutSearchTerm"/>. <phrase name="batchOpt"/></dialog>
+      <dialog condition="isPlural">There are <var name="concept.itemCount"/> <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminders <phrase name="onNumberOfListsOpt"/> <phrase name="aboutSearchTerm"/>. <phrase name="batchOpt"/></dialog>
+      <dialog condition="isEmpty">There's no <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminder <phrase name="onNumberOfListsOpt"/> <phrase name="aboutSearchTerm"/>. <phrase name="batchOpt"/></dialog>
+      <dialog note="singular and not empty">There's <var name="concept.itemCount"/> <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminder <phrase name="onNumberOfListsOpt"/> <phrase name="aboutSearchTerm"/>. <phrase name="batchOpt"/></dialog>
+    </first>
+    <first condition="hasLocation">
+      <dialog condition="isPluralAndEmpty">There are no <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminders <phrase name="onNumberOfListsOpt"/> <phrase name="forLocation"/>. <phrase name="batchOpt"/></dialog>
+      <dialog condition="isPlural">There are <var name="concept.itemCount"/> <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminders <phrase name="onNumberOfListsOpt"/> <phrase name="forLocation"/>. <phrase name="batchOpt"/></dialog>
+      <dialog condition="isEmpty">There's no <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminder <phrase name="onNumberOfListsOpt"/> <phrase name="forLocation"/>. <phrase name="batchOpt"/></dialog>
+      <dialog note="singular and not empty">There's <var name="concept.itemCount"/> <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminder <phrase name="onNumberOfListsOpt"/> <phrase name="forLocation"/>. <phrase name="batchOpt"/></dialog>
+    </first>
+    <first condition="hasMultipleTaskLists">
+      <dialog condition="isPluralAndEmpty">There are no <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminders <phrase name="onNumberOfListsOpt"/>. <phrase name="batchOpt"/></dialog>
+      <dialog condition="isPlural">There are <var name="concept.itemCount"/> <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminders <phrase name="onNumberOfListsOpt"/>. <phrase name="batchOpt"/></dialog>
+      <dialog condition="isEmpty">There's no <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminder <phrase name="onNumberOfListsOpt"/>. <phrase name="batchOpt"/></dialog>
+      <dialog note="singular and not empty">There's <var name="concept.itemCount"/> <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminder <phrase name="onNumberOfListsOpt"/>. <phrase name="batchOpt"/></dialog>
+    </first>
+    <first>
+      <dialog condition="isPluralAndEmpty">There are no <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminders. <phrase name="batchOpt"/></dialog>
+      <dialog condition="isPlural">There are <var name="concept.itemCount"/> <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminders. <phrase name="batchOpt"/></dialog>
+      <dialog condition="isEmpty">There's no <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminder. <phrase name="batchOpt"/></dialog>
+      <dialog note="singular and not empty">There's <var name="concept.itemCount"/> <phrase name="flaggedOpt"/> <phrase name="scheduledOpt"/> <phrase name="recurringOpt"/> reminder. <phrase name="batchOpt"/></dialog>
+    </first>
+  </first>
+</cat>

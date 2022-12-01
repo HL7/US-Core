@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="TrafficIncident#UnsupportedRegion" xmlns="urn:apple:names:siri:cat:1.0" locale="en" >
+    <conditions>
+        <condition name="isRegionEmpty"><expression name="region" op="empty"/></condition>
+    </conditions>
+    <first>
+        <dialog condition="isRegionEmpty">Incident Reporting isn't available in your region.</dialog>
+        <dialog>Incident Reporting isn't available in <var name="region"/>.</dialog>
+    </first>
+</cat>

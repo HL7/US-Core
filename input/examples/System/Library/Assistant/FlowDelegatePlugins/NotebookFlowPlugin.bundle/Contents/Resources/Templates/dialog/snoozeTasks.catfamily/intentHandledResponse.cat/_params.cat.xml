@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="snoozeTasks#intentHandledResponse">
+  <meta name="category" value="Handled"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="A summary of the list after it was handled by the app."/>
+  <parameters>
+    <parameter name="hasValidNextTriggerTime" type="dialog.Boolean"/>
+    <parameter name="oneReminderSnoozed" type="dialog.Boolean"/>
+    <parameter name="taskTitle" type="dialog.String"/>
+    <parameter name="duration" type="dialog.Duration"/>
+    <parameter name="isVox" type="dialog.Boolean"/>
+    <parameter name="isHomePod" type="dialog.Boolean"/>
+    <parameter name="companionName" type="dialog.String"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

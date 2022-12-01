@@ -1,57 +1,42 @@
 {
-    "status": "final",
-    "category": [
+  "status": "final",
+  "category": [
+    {
+      "text": "Social History",
+      "coding": [
         {
-            "text": "Social History",
-            "coding": [
-                {
-                    "code": "social-history",
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "display": "Social History"
-                }
-            ]
+          "code": "social-history",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Social History"
         }
-    ],
-    "code": {
-        "text": "Pregnancy Intent",
-        "coding": [
-            {
-                "code": "86645-9",
-                "system": "http://loinc.org",
-                "display": "Pregnancy intention in the next year - Reported"
-            }
-        ]
-    },
-    "resourceType": "Observation",
-    "effectiveDateTime": "2022-09-23T22:39:43Z",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Pregnancy Intent Observation Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a pregnancy intent example for the *US Core Observation Pregnancy Intent Profile*."
-            }
-        ]
-    },
-    "valueCodeableConcept": {
-        "text": "Pregnant",
-        "coding": [
-            {
-                "code": "454381000124105",
-                "system": "http://snomed.info/sct",
-                "display": "Not sure of desire to become pregnant (finding)"
-            }
-        ]
-    },
-    "id": "pregnancy-intent",
-    "subject": {
-        "display": "Amy Shaw",
-        "reference": "Patient/example"
+      ]
     }
+  ],
+  "code": {
+    "text": "Pregnancy Intent",
+    "coding": [
+      {
+        "code": "86645-9",
+        "system": "http://loinc.org",
+        "display": "Pregnancy intention in the next year - Reported"
+      }
+    ]
+  },
+  "resourceType": "Observation",
+  "effectiveDateTime": "2022-09-23T22:39:43Z",
+  "valueCodeableConcept": {
+    "text": "Pregnant",
+    "coding": [
+      {
+        "code": "454381000124105",
+        "system": "http://snomed.info/sct",
+        "display": "Not sure of desire to become pregnant (finding)"
+      }
+    ]
+  },
+  "id": "pregnancy-intent",
+  "subject": {
+    "display": "Amy Shaw",
+    "reference": "Patient/example"
+  }
 }

@@ -1,0 +1,40 @@
+{
+    "Name": "drPostAndComposition",
+    "Parameters": {
+        "Constants": {
+            "correctionMatrix": "material.correctionMatrix"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV",
+            "tonemapCurveInverse": "rendergraph.tonemapCurveInverse",
+            "tonemapParams" : "rendergraph.tonemapParams"
+        },
+        "Textures": {
+            "textureY" : "fallback.black",
+            "textureCbCr" : "fallback.gray",
+            "textureRenderedContent" : "fallback.white"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "drPostAndComposition",
+            "VertexShader": {
+                "Entry": "drPostAndCompositionVertexShader",
+                "Library": "engine:default.metallib"
+            },
+            "PixelShader": {
+                "Entry": "drPostAndCompositionFragmentShader",
+                "Library": "engine:default.metallib"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Always"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "drPostAndCompositionTechnique": "drPostAndComposition"
+    }
+}

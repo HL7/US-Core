@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runCustomIntent#introduceDisambiguationList">
+    <meta name="description" value="Introduce how many items in the disambiguation list during paginated reading."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="itemCount" type="dialog.Number" description="The total number of shortcuts we are trying to read"/>
+        <parameter name="pageSize" type="dialog.Number" description="The number of shortcuts per page"/>
+        <parameter name="hasMultiplePages" type="dialog.Boolean" description="Whether there are multiple pages"/>
+        <parameter name="customIntroductionPrompt" type="dialog.String" description="The custom prompt provided by the app, e.g. You have 7 items"/>
+    </parameters>
+</cat>

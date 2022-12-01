@@ -1,0 +1,106 @@
+{
+    "Name": "tileTechniqueDefinition",
+    "OverrideMaterial": "engine:transparentPbr.rematerialdefinition",
+    "Parameters": {
+        "Buffers": {
+            "tileContext": "fallback.zeros",
+            "paths": "fallback.zeros",
+            "points": "fallback.zeros",
+            "commands": "fallback.zeros",
+            "grid": "fallback.zeros",
+            "tiles": "fallback.zeros"
+        },
+        "Textures": {
+            "minificationTexture" : "fallback.zeros",
+            "areaLutTexture" : "engine:AreaLookUpTable.png",
+        },
+        "TextureBlocks": {
+            "imageResources[0]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[1]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[2]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[3]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[4]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[5]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[6]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[7]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[8]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[9]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[10]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[11]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[12]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[13]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[14]": {
+                "Texture": "fallback.white",
+            },
+            "imageResources[15]": {
+                "Texture": "fallback.white",
+            },
+        },
+    },
+    "Techniques": [
+    {
+        "Name": "TransparentCustom",
+        "VertexShader": {
+            "Entry": "vsRealityPbr"
+        },
+        "PixelShader": {
+            "Entry": "fsTileTechnique",
+            "Library": "default.metallib"
+        },
+        "State" : {
+            "AlphaBlend"                : true,
+            "WriteDepth"                : true,
+            "DepthCompareFunction"      : "Greater",
+            "AlphaBlendOperation"       : "Add",
+            "AlphaSourceFactor"         : "One",
+            "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+            "RgbBlendOperation"         : "Add",
+            "RgbSourceFactor"           : "One",
+            "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"            : "true",
+            "EnableNormalMap"               : "true",
+            "EnableEmissiveMap"             : "true",
+            "EnableAreaLight"               : "true",
+            "EnableSeparateRMAS"            : "true",
+            "EnableRoughnessMap"            : "true",
+            "EnableMetallicMap"             : "true",
+            "EnableAOMap"                   : "true",
+            "EnableSpecularMap"             : "true",
+            "EnableTransparency"            : "true",
+            "UserDefinedFunctionConstant"   : "true"
+        }
+    }],
+    "TechniqueMapping": {
+        "Transparent": "TransparentCustom"
+    }
+}

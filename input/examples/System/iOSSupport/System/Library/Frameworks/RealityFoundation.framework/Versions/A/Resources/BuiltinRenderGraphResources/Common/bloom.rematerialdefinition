@@ -1,0 +1,43 @@
+{
+    "Name": "bloomDefinition",
+    "Parameters": {
+        "Constants": {
+            "viewportPercents" : "view.viewportPercents",
+            "bloomStrength" : "0.0",
+            "bloomSpread" : "0.0",
+            "bloomThreshold" : "0.0",
+            "bloomPasses" : "0.0",
+            "extent" : "0.0",
+            "gaussianWeights" : "0.0"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV",
+            "bloomParams" : "rendergraph.bloomParams"
+        },
+        "Textures": {
+            "inputColor" : "rendergraph.inputColor",
+            "downsampled" : "rendergraph.downsampled"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "FullScreen",
+        "VertexShader": {
+            "Entry": "fullScreenVert"
+        },
+        "PixelShader": {
+            "Entry": "fsBloom"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        },
+        "FunctionConstants" : {
+        }
+    }],
+    "TechniqueMapping": {
+        "fullscreen": "FullScreen"
+    }
+}

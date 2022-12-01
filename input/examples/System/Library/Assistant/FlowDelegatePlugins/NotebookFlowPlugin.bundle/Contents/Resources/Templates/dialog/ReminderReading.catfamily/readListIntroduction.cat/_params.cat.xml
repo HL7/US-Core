@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="ReminderReading#readListIntroduction">
+  <meta name="readyForLoc" value="true"/>
+  <meta name="category" value="Handled"/>
+  <meta name="usesDialogHistory" value="true"/>
+  <meta name="description" value="An introduction done before reading the contents of a taskList."/>
+  <parameters>
+    <parameter name="listTitle" type="dialog.String"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#intentHandledResponseForShareIntentCategory">
+    <conditions>
+        <condition name="isShareIntentVerb">
+            <expression name="intentVerb.lowercase" op="eq" value="'share'"/>
+        </condition>
+        <condition name="isSendIntentVerb">
+            <expression name="intentVerb.lowercase" op="eq" value="'send'"/>
+        </condition>
+        <condition name="isPostIntentVerb">
+            <expression name="intentVerb.lowercase" op="eq" value="'post'"/>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="verbPhrase">
+            <text condition="isShareIntentVerb">Shared</text>
+            <text condition="isSendIntentVerb">Sent</text>
+            <text condition="isPostIntentVerb">Posted</text>
+            <text>Shared</text>
+        </first>
+    </phrases>
+    
+    <first>
+        <dialog>OK<opt>, <var name="user.groundingIfNeeded"/></opt>. <phrase name="verbPhrase"/><opt> using <var name="localizedAppName"/></opt>.</dialog>
+    </first>
+</cat>

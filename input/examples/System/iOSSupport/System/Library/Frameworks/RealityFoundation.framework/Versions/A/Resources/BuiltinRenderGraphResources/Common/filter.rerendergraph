@@ -1,0 +1,111 @@
+{
+    "Name" : "FilterGraph",
+    "Targets" : [
+        {
+            "Name" : "FilterMapAtlas",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "SampleCount" : 1,
+                "MipLevelCount" : 1
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "FilterMapAtlasData",
+                    "FromMember" : ["atlasWidth"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "FilterMapAtlasData",
+                    "FromMember" : ["atlasHeight"]
+                },
+                {
+                    "ToMember" : ["format"],
+                    "FromType" : "FilterMapAtlasData",
+                    "FromMember" : ["format"]
+                }
+            ]
+        },
+        {
+            "Name" : "FilterMapAtlasDepth",
+            "Description" : {
+                "Format" : "Depth32Float_Stencil8",
+                "Type" : "MemoryManaged",
+                "ExposeToMaterial" : true,
+                "InitialUsageFlags" : "RenderTarget"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "FilterMapAtlasData",
+                    "FromMember" : ["atlasWidth"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "FilterMapAtlasData",
+                    "FromMember" : ["atlasHeight"]
+                }
+            ]
+        }
+    ],
+    "Nodes" : [
+        {
+            "CameraSetup" : {
+                "Name" : "CameraSetup",
+                "UpdateSceneMaterialData" : false,
+                "FrustumCulling" : false
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "FilterNode",
+                "CullMode" : "CullModeFront",
+                "MaterialPassName" : "Filter",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "FilterMapAtlas",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "FilterMapAtlasDepth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    },
+                    {
+                        "TargetHandle" : "FilterMapAtlasDepth",
+                        "Settings" : {
+                            "Type" : "WriteStencil",
+                            "IsOptional" : true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "UpdateMaterialTextureSource" : {
+                "Name" : "PushFilterToScene",
+                "SourceName" : "scene",
+                "TargetsToUpdate" : {
+                    "filterMap" : "FilterMapAtlas"
+                }
+            }
+        }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "FilterMapAtlasLane",
+            "Target" : "FilterMapAtlas",
+            "GraphScopeOverride" : "FilterMapAtlasScope"
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "FilterMapAtlasLane",
+            "Target" : "FilterMapAtlas",
+            "GraphScopeOverride" : "FilterMapAtlasScope"
+        }
+    ]
+}

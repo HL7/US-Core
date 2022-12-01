@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runVoiceCommand#errorWithCodeCustomError">
+    <meta name="description" value="An error with custom dialogs was returned by the app that handled the underlying intent."/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="whitespace" value="preserve"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="customDialog" type="dialog.String" description="The custom dialog the app said"/>
+        <parameter name="localizedAppName" type="dialog.String" description="The localized name of the app"/>
+    </parameters>
+</cat>

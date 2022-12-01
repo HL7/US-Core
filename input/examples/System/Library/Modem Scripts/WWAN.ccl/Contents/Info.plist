@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CCL Personalities</key>
+	<dict>
+		<key>Franklin CDMA Personality</key>
+		<dict>
+			<key>CCLParameters</key>
+			<dict>
+				<key>Init String</key>
+				<string>E0V1&amp;F&amp;D2&amp;C1S0=0</string>
+			</dict>
+			<key>Connect Type</key>
+			<string>Dialup</string>
+			<key>Device Names</key>
+			<array>
+				<dict>
+					<key>DeviceModel</key>
+					<string>CDMA</string>
+					<key>DeviceVendor</key>
+					<string>Franklin</string>
+				</dict>
+			</array>
+			<key>Script Name</key>
+			<string>CDMA.ccl</string>
+		</dict>
+		<key>Generic CDMA Personality</key>
+		<dict>
+			<key>CCLParameters</key>
+			<dict>
+				<key>Init String</key>
+				<string>E0V1&amp;F&amp;D2&amp;C1S0=0</string>
+			</dict>
+			<key>Connect Type</key>
+			<string>Dialup</string>
+			<key>Device Names</key>
+			<array>
+				<dict>
+					<key>DeviceModel</key>
+					<string>CDMA</string>
+					<key>DeviceVendor</key>
+					<string>Generic</string>
+				</dict>
+			</array>
+			<key>Script Name</key>
+			<string>CDMA.ccl</string>
+		</dict>
+		<key>Novatel CDMA Personality</key>
+		<dict>
+			<key>CCLParameters</key>
+			<dict>
+				<key>Init String</key>
+				<string>E0V1&amp;F&amp;D2&amp;C1S0=0</string>
+			</dict>
+			<key>Connect Type</key>
+			<string>Dialup</string>
+			<key>Device Names</key>
+			<array>
+				<dict>
+					<key>DeviceModel</key>
+					<string>CDMA</string>
+					<key>DeviceVendor</key>
+					<string>Novatel Wireless Inc.</string>
+				</dict>
+			</array>
+			<key>Script Name</key>
+			<string>CDMA.ccl</string>
+		</dict>
+		<key>Novatel GSM Personality</key>
+		<dict>
+			<key>CCLParameters</key>
+			<dict>
+				<key>Init String</key>
+				<string>E0V1&amp;F&amp;D2&amp;C1S0=0</string>
+				<key>Preferred APN</key>
+				<string>ISP.CINGULAR</string>
+				<key>Preferred CID</key>
+				<integer>1</integer>
+				<key>varString 27</key>
+				<string>$NWPDN=0</string>
+			</dict>
+			<key>Connect Type</key>
+			<string>GPRS</string>
+			<key>Device Names</key>
+			<array>
+				<dict>
+					<key>DeviceModel</key>
+					<string>GSM</string>
+					<key>DeviceVendor</key>
+					<string>Novatel Wireless Inc.</string>
+				</dict>
+			</array>
+			<key>GPRS Capabilities</key>
+			<dict>
+				<key>CID Query</key>
+				<true/>
+				<key>Data Mode</key>
+				<false/>
+				<key>Dial Mode</key>
+				<true/>
+				<key>Independent CIDs</key>
+				<false/>
+				<key>Maximum CID</key>
+				<integer>10</integer>
+			</dict>
+			<key>Script Name</key>
+			<string>nvtlGSM.ccl</string>
+		</dict>
+		<key>Option Personality</key>
+		<dict>
+			<key>CCLParameters</key>
+			<dict>
+				<key>Init String</key>
+				<string>E0V1&amp;F&amp;D2&amp;C1S0=0</string>
+				<key>Preferred CID</key>
+				<integer>1</integer>
+			</dict>
+			<key>Connect Type</key>
+			<string>GPRS</string>
+			<key>Device Names</key>
+			<array>
+				<dict>
+					<key>DeviceModel</key>
+					<string>GSM</string>
+					<key>DeviceVendor</key>
+					<string>Option N.V.</string>
+				</dict>
+			</array>
+			<key>GPRS Capabilities</key>
+			<dict>
+				<key>CID Query</key>
+				<true/>
+				<key>Data Mode</key>
+				<false/>
+				<key>Dial Mode</key>
+				<true/>
+				<key>Independent CIDs</key>
+				<false/>
+				<key>Maximum CID</key>
+				<integer>10</integer>
+			</dict>
+			<key>Script Name</key>
+			<string>GSM.ccl</string>
+		</dict>
+		<key>Sierra CDMA Personality</key>
+		<dict>
+			<key>CCLParameters</key>
+			<dict>
+				<key>Init String</key>
+				<string>E0V1&amp;F&amp;D2&amp;C1S0=0</string>
+			</dict>
+			<key>Connect Type</key>
+			<string>Dialup</string>
+			<key>Device Names</key>
+			<array>
+				<dict>
+					<key>DeviceModel</key>
+					<string>CDMA</string>
+					<key>DeviceVendor</key>
+					<string>Sierra Wireless</string>
+				</dict>
+			</array>
+			<key>Script Name</key>
+			<string>CDMA.ccl</string>
+		</dict>
+		<key>Sierra GSM Personality</key>
+		<dict>
+			<key>CCLParameters</key>
+			<dict>
+				<key>Init String</key>
+				<string>E0V1&amp;F&amp;D2&amp;C1S0=0</string>
+				<key>Preferred CID</key>
+				<integer>1</integer>
+			</dict>
+			<key>Connect Type</key>
+			<string>GPRS</string>
+			<key>Device Names</key>
+			<array>
+				<dict>
+					<key>DeviceModel</key>
+					<string>GSM</string>
+					<key>DeviceVendor</key>
+					<string>Sierra Wireless</string>
+				</dict>
+			</array>
+			<key>GPRS Capabilities</key>
+			<dict>
+				<key>CID Query</key>
+				<true/>
+				<key>Data Mode</key>
+				<false/>
+				<key>Dial Mode</key>
+				<true/>
+				<key>Independent CIDs</key>
+				<false/>
+				<key>Maximum CID</key>
+				<integer>10</integer>
+			</dict>
+			<key>Script Name</key>
+			<string>GSM.ccl</string>
+		</dict>
+	</dict>
+	<key>CCL Version</key>
+	<integer>1</integer>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>WWAN v2.2, © Apple</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.modemscript.com.wwan</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>WWAN</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.2</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>2.2b0</string>
+</dict>
+</plist>

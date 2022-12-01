@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runCustomIntent#introduceDisambiguationList">
+    <conditions>
+        <condition name="shouldShowIntro" note="Checks if we should show introduction prompt">
+            <expression name="customIntroductionPrompt.length" op="gt" value="0"/>
+        </condition>
+    </conditions>
+    <first>
+        <dialog condition="shouldShowIntro"><var name="customIntroductionPrompt"/></dialog>
+        <all>
+            <dialog>There are <var name="itemCount"/> options.</dialog>
+            <dialog condition="hasMultiplePages">Here are the first <var name="pageSize" number="asWords"/>:</dialog>
+        </all>
+    </first>
+</cat>

@@ -1,0 +1,177 @@
+{
+    "Targets" : [
+        {
+            "Name" : "ColorInput"
+        },
+        {
+            "Name" : "ColorAfterCombinedPostProcess"
+        },
+        {
+            "Name" : "CompositionAlpha"
+        },
+        {
+            "Name" : "SUOcclusionMatte"
+        }
+    ],
+    "Nodes" : [
+        {
+            "RenderGraphARUploadPostParams" : {
+                "Name" : "ARUploadPostParams",
+                "TonemappingEnabled" : true,
+                "TonemapUserParameters" : {
+                    "ToeStrength" : 0.25,
+                    "ToeLength" : 0.37,
+                    "ShoulderStrength" : 0.7,
+                    "ShoulderLength" : 1.0,
+                    "ShoulderAngle" : 1.0,
+                    "Gamma" : 1.0,
+                    "WhiteLevel" : 1.0,
+                    "Exposure" : 0.0
+                }
+            }
+        },
+        {
+            "RenderGraphARCombinedPostProcessNode" : {
+                "Name" : "ARPostProcessCombined",
+                "TonemappingEnabled" : true,
+                "ColorCorrectionEnabled" : false ,
+                "CameraNoiseEnabled" : true,
+                "CombinedMaterialPermutations" : [
+                    "arInPlacePostProcessCombinedPermute0.rematerial",
+                    "arInPlacePostProcessCombinedPermute1.rematerial",
+                    "arInPlacePostProcessCombinedPermute2.rematerial",
+                    "arInPlacePostProcessCombinedPermute3.rematerial",
+                    "arInPlacePostProcessCombinedPermute4.rematerial",
+                    "arInPlacePostProcessCombinedPermute5.rematerial",
+                    "arInPlacePostProcessCombinedPermute6.rematerial",
+                    "arInPlacePostProcessCombinedPermute7.rematerial"
+                ],
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ColorInput"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ColorAfterCombinedPostProcess",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Fullscreen" : {
+                "Name" : "Fullscreen_ARKitPassthrough",
+                "Material" : "arKitPassthrough.rematerial",
+                "TechniqueName" : "arKitPassthroughTechnique",
+                "TargetReads" : [
+                    { "TargetHandle" : "CompositionAlpha" },
+                    {
+                        "TargetHandle" : "SUOcclusionMatte",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ColorAfterCombinedPostProcess",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName" : "textureAlpha",
+                        "TargetHandle" : "CompositionAlpha"
+                    }
+                ]
+            }
+        },
+        {
+           "DRPostAndComposition" : {
+               "Name" : "DRPostAndCompositionNode",
+               "Enabled" : false,
+               "Material" : "drPostAndComposition.rematerial",
+               "TechniqueName" : "drPostAndCompositionTechnique",
+               "TonemapUserParameters" : {
+                   "ToeStrength" : 0.25,
+                   "ToeLength" : 0.37,
+                   "ShoulderStrength" : 0.7,
+                   "ShoulderLength" : 1.0,
+                   "ShoulderAngle" : 1.0,
+                   "Gamma" : 1.0,
+                   "WhiteLevel" : 1.0,
+                   "Exposure" : 0.0
+               },
+               "TargetReads" : [
+                   {
+                       "TargetHandle" : "ColorInput"
+                   }
+               ],
+               "TargetWrites" : [
+                   {
+                       "TargetHandle" : "ColorAfterCombinedPostProcess",
+                       "Settings" : {
+                           "AttachmentIndex" : 0
+                       }
+                   }
+               ],
+               "RenderGraphTextureCommands" : [
+                   {
+                       "BindingName" : "textureRenderedContent",
+                       "TargetHandle" : "ColorInput"
+                   }
+               ]
+           }
+       },
+       {
+            "ProfilerOverlay" : {
+                "Name" : "FrameProfilerOverlay",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ColorAfterCombinedPostProcess",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ]
+            }
+       }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "Color",
+            "Target": "ColorInput"
+        },
+        {
+            "Lane" : "CompositionAlphaLane",
+            "Target": "CompositionAlpha"
+        },
+        {
+            "Lane" : "SUOcclusionMatteLane",
+            "Target" : "SUOcclusionMatte",
+            "InputOnly" : true,
+            "GraphScopeOverride" : "SUOcclusionMatteScope"
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "Color",
+            "Target" : "ColorAfterCombinedPostProcess"
+        }
+    ],
+    "Operations" : [
+        {
+            "RenderGraphSpecifyLaneOperation" : {
+                "Lane" : "Color",
+                "Description" : {
+                    "Format" : "RGBA16Float"
+                }
+            }
+        }
+    ]
+}

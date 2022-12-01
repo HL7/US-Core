@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runVoiceCommand#yesAndCancel">
+    <meta name="description" value="Used as menu item text prompting a user to confirm a voice command."/>
+    <meta name="category" value="UsedForSnippet"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="intentVerb" type="dialog.String" description="The intent verb."/>
+    </parameters>
+</cat>

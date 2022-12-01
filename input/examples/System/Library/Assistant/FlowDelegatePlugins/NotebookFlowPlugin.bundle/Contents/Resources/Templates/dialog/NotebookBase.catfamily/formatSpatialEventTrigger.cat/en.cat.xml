@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="NotebookBase#formatSpatialEventTrigger" locale="en">
+    
+    <conditions>
+        <condition name="isVoiceOnly">
+          <or>
+            <expression name="device.isVOX"/>
+            <expression name="device.isCarPlay"/>
+          </or>
+        </condition>
+        <condition name="nameAndShortLocationAreDifferent">
+            <not>
+                <expression name="location.name" op="eq" value="location.shortLocation"/>
+            </not>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="voxDialog">
+            <text condition="nameAndShortLocationAreDifferent">
+                <var name="location.name"/> on <var name="location.shortLocation"/>
+            </text>
+            <text><var name="location.name"/></text>
+            <text><var name="location.shortLocation"/></text>            
+        </first>
+        <first phrase="nonVoxDialog">
+            <text><var name="location.shortLocation"/></text>
+        </first>
+    </phrases>
+    
+    <first>
+        <dialog condition="isVoiceOnly"><phrase name="voxDialog"/></dialog>
+        <dialog><phrase name="nonVoxDialog"/></dialog>
+    </first>
+</cat>

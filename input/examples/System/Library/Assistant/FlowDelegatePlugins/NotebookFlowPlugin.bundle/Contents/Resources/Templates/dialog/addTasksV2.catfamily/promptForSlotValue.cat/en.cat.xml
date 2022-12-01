@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#promptForSlotValue" locale="en">
+
+  <conditions>
+    <condition name="slot_slotName_eq_spatialEventTrigger">
+      <expression name="slotName" op="eq" value="'spatialEventTrigger'"/>
+    </condition>
+    <condition name="slot_slotName_eq_targetTaskList">
+      <expression name="slotName" op="eq" value="'targetTaskList'"/>
+    </condition>
+    <condition name="slot_slotName_eq_taskTitles">
+      <expression name="slotName" op="eq" value="'taskTitles'"/>
+    </condition>
+    <condition name="slot_slotName_eq_temporalEventTrigger">
+      <expression name="slotName" op="eq" value="'temporalEventTrigger'"/>
+    </condition>
+  </conditions>
+ 
+  <first>
+    <dialog condition="slot_slotName_eq_targetTaskList"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>Which list should I add that to?</dialog>
+    <dialog condition="slot_slotName_eq_taskTitles"><opt>OK, <var name="user.groundingIfNeeded"/>, </opt>What do you want to be reminded about?</dialog>
+    <dialog condition="slot_slotName_eq_spatialEventTrigger"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>Where would you like to be reminded?</dialog>
+    <dialog condition="slot_slotName_eq_temporalEventTrigger"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>When do you want to be reminded?</dialog>
+  </first>
+
+</cat>

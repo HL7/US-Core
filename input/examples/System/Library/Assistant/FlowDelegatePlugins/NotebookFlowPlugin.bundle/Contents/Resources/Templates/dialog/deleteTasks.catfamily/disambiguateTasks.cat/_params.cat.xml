@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="deleteTasks#disambiguateTasks">
+  <meta name="category" value="Disambiguate"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="A tasks slot needs disambiguation."/>
+  <parameters>
+    <parameter name="numberOfValuesToDisambiguate" type="dialog.Number"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+    <parameter name="disambiguationList" type="dialog.String[]"/>
+  </parameters>
+</cat>

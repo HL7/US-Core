@@ -1,0 +1,36 @@
+{
+    "Name": "DepthOfFieldExtraBlurDefinition",
+    "Parameters": {
+        "Constants": {
+            "viewportPercents" : "view.viewportPercents"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV"
+        },
+        "Textures": {
+            "inputColor" : "rendergraph.inputColor",
+            "inputCompositionMask" : "rendergraph.inputCompositionMask"
+	    }
+    },
+    "Techniques": [
+    {
+        "Name": "DofBlurExtraBlurTechnique",
+        "VertexShader": {
+            "Entry": "fullScreenVert"
+        },
+        "PixelShader": {
+            "Entry": "depthOfFieldExtraBlur"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        },
+        "FunctionConstants" : {
+        }
+    }],
+    "TechniqueMapping": {
+        "fullscreen": "DofBlurExtraBlurTechnique"
+    }
+}

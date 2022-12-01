@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#unsupportedSlotValue" locale="en">
+
+  <conditions>
+    <condition name="appName_empty">
+      <expression name="appName" op="empty"/>
+    </condition>
+    <condition name="slot_slotName_eq_spatialEventTrigger">
+      <expression name="slotName" op="eq" value="'spatialEventTrigger'"/>
+    </condition>
+    <condition name="slot_slotName_eq_targetTaskList">
+      <expression name="slotName" op="eq" value="'targetTaskList'"/>
+    </condition>
+    <condition name="slot_slotName_eq_taskTitles">
+      <expression name="slotName" op="eq" value="'taskTitles'"/>
+    </condition>
+    <condition name="slot_slotName_eq_temporalEventTrigger">
+      <expression name="slotName" op="eq" value="'temporalEventTrigger'"/>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <first phrase="phrase_0">
+      <text condition="isFirstPartyApp">You don’t have a default list.</text>
+      <text>You cannot add a reminder to that list. Try again with another.</text>
+    </first>
+    <first phrase="phrase_1">
+      <text condition="appName">The app</text>
+      <text><var name="appName"/></text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog condition="slot_slotName_eq_targetTaskList"><opt>Sorry <var name="user.groundingIfNeeded"/>. </opt><opt><phrase name="phrase_0"/></opt></dialog>
+    <dialog condition="slot_slotName_eq_taskTitles"><opt><phrase name="phrase_1"/></opt> doesn’t support that name.</dialog>
+    <dialog condition="slot_slotName_eq_spatialEventTrigger"><opt><phrase name="phrase_1"/></opt> doesn’t support that location.</dialog>
+    <dialog condition="slot_slotName_eq_temporalEventTrigger"><opt><phrase name="phrase_1"/></opt> doesn’t support that time.</dialog>
+  </first>
+
+</cat>

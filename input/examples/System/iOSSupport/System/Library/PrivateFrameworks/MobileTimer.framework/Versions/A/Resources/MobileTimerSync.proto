@@ -1,0 +1,22 @@
+package mtpb;
+option objc_use_arc=true;
+option objc_class_naming = "extended";
+
+// Invocation - from the folder containing MobileTimerSync.proto:
+// protocompiler -arc -proto MobileTimerSync.proto -outputDir Generated
+
+message SyncMessage {
+    optional SnoozeAction snoozeAction = 5;
+    optional DismissAction dismissAction = 6;
+    required double syncDate = 7;
+    required string syncID = 8;
+    required double syncVersion = 9;
+}
+
+message SnoozeAction {
+    required double snoozeDate = 1;
+}
+
+message DismissAction {
+    required double dismissDate = 1;
+}

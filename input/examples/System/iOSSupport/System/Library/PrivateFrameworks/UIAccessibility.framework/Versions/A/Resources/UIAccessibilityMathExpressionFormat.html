@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<style type="text/css">
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+</style>
+<script type="text/javascript">
+
+// General strategy:
+// In the static HTML, set an arbitrary font size on the math block.
+// After loading, figure out how big the math block is, and how big the body is.
+// Multiply the font size by the scale factor.
+// In addition, create hidden elements to represent the children of the shown expression to VoiceOver.
+// We can't just show the hidden elements on their own, because we don't know where to position them
+// until we've rendered the entire math expression (and accessibility frames don't correspond well to
+// CSS positioning).
+
+function get_math_root_node()
+{
+    // Get the parent node of the children we want to allow selecting.
+    // For example, if we are showing a square root, we want to allow selecting the radicand and root index,
+    // so the parent node would be the <mroot> node
+    var math_container = document.getElementById("math_object");
+    var math_root_node = null;
+    if ( math_container.childNodes.length == 1 )
+    {
+        math_root_node = math_container.childNodes.item(0);
+    }
+    else
+    {
+        // We are probably guarding against this case, but just to be safe
+        math_root_node = math_container;
+    }
+    return math_root_node;
+}
+
+function get_math_child_nodes()
+{
+    var math_root_node = get_math_root_node();
+    var child_nodes = math_root_node.childNodes;
+    var length = child_nodes.length;
+    while ( length == 1 )
+    {
+        // If there's only one child, go down one more level
+        child_nodes = child_nodes.item(0).childNodes;
+        length = child_nodes.length;
+    }
+    return child_nodes;
+}
+
+function create_math_element_from_clone(id)
+{
+    var mathNode = document.getElementById(id).cloneNode(false);
+    mathNode.removeAttribute('aria-hidden');
+    mathNode.removeAttribute('id');
+    return mathNode;
+}
+
+function setup()
+{
+    // This script relies on there being no whitespace between the math nodes,
+    // but it could be adapted in case we wanted more human-readable MathML
+    // output from SCRCMathExpression
+    var real_element_container = document.getElementById("real_element_container");
+    var child_nodes = get_math_child_nodes();
+    var length = child_nodes.length;
+    for ( var i = 0; i < length; i++ )
+    {
+        var child = child_nodes.item(i);
+        
+        // Create a div to house the math in order to set styles to it
+        var single_math_div = document.createElement('div');
+        single_math_div.style.position = 'absolute';
+        
+        // Also make sure the math element is wrapped in a math block
+        // Clone the math tag from the html to a new node, because createElement with a math tag won't work
+        var single_math_node = create_math_element_from_clone('math_tag');
+        single_math_node.setAttribute('xmlns', 'http://www.w3.org/1998/Math/MathML');
+        
+        // Clone the original math element, and nest it inside the other blocks
+        var cloned_math_element = child.cloneNode(true);
+        // <mo>'s need rows otherwise we get undefined content results for them.
+        if (cloned_math_element.tagName == "mo")
+        {
+            // Clone the mrow tag from the html to a new node, because createElement with a mrow tag won't work
+            var mrow_container = create_math_element_from_clone('mrow_tag');
+            mrow_container.appendChild(cloned_math_element);
+            single_math_node.appendChild(mrow_container);
+        }
+        else
+        {
+            single_math_node.appendChild(cloned_math_element);
+        }
+        single_math_div.appendChild(single_math_node);
+        real_element_container.appendChild(single_math_div);
+    }
+    update_dimensions();
+}
+
+function update_dimensions()
+{
+    // Get the current size of the math expression, and the size of the body
+    // (minus margins).  Scale the font size by that ratio.
+    var math_container = document.getElementById("math_container");
+    var body = document.body;
+    var real_math_font_size = math_container.style.fontSize;
+    var math_font_size = parseFloat(real_math_font_size);
+    var math_width = math_container.offsetWidth;
+    var math_height = math_container.offsetHeight;
+    var x_margin = 20;
+    var y_margin = 44; // hackery to keep it from going under the nav bar
+    var body_width = body.offsetWidth - 2 * x_margin;
+    var body_height = body.offsetHeight - 2 * y_margin;
+    var scale_factor = 0;
+    if ( body_width / body_height > math_width / math_height )
+    {
+        scale_factor = body_height / math_height;
+    }
+    else
+    {
+        scale_factor = body_width / math_width;
+    }
+    math_font_size = math_font_size * scale_factor;
+    real_math_font_size = math_font_size + "pt";
+    math_container.style.fontSize = real_math_font_size;
+    
+    // Also center the math in the view
+    math_container.style.left = (((body_width - math_container.offsetWidth) / 2) + x_margin) + "px";
+    math_container.style.top = (((body_height - math_container.offsetHeight) / 2) + y_margin) + "px";
+    
+    // Update the real (invisible, but visible to VoiceOver) elements with
+    // the properties of the math children.
+    var real_element_container = document.getElementById("real_element_container");
+    var child_nodes = get_math_child_nodes();
+    var real_children = real_element_container.childNodes;
+    var length = real_children.length;
+    for ( var i = 0; i < length; i++ )
+    {
+        // The top level element of each child is a div element,
+        // we need to get that in order to set styles
+        var real_child_element = real_children.item(i);
+        var visible_child_element = child_nodes.item(i);
+        
+        // First copy all the styles so we get margins, text properties, etc.
+        real_child_element.style.cssText = document.defaultView.getComputedStyle(visible_child_element).cssText;
+        
+        // Then make sure we position it in the correct absolute location
+        real_child_element.style.position = 'absolute';
+        var body_rect = document.body.getBoundingClientRect();
+        var visible_rect = visible_child_element.getBoundingClientRect();
+        real_child_element.style.left = visible_rect.left - body_rect.left;
+        real_child_element.style.top = visible_rect.top - body_rect.top;
+        
+        // Finally, make sure we can't see it
+        real_child_element.style.opacity = 0;
+    }
+}
+</script>
+</head>
+<body onload="setup()" onresize="update_dimensions()">
+<math aria-hidden="true" id="math_tag"><mrow aria-hidden="true" id="mrow_tag"></mrow></math>
+<div aria-hidden="true" id="math_container" style="font-size:12pt; position:absolute; left:0px; top:0px;">
+<math xmlns="http://www.w3.org/1998/Math/MathML" id="math_object">%@</math>
+</div>
+<div id="real_element_container" style="position:absolute"></div>
+</body>
+</html>

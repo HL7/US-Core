@@ -1,0 +1,74 @@
+#
+# Swift 3 specific notes are at the end of the file.
+# The following are notes applicable to Swift 3 and Swift 4.
+#
+---
+Name: ShareSheet
+Classes:
+- Name: UIActivityItemSource
+  Methods:
+  - Selector: 'activityViewController:itemForActivityType:'
+    MethodKind: Instance
+    Parameters:
+    - Position: 0
+      Nullability: N
+    - Position: 1
+      Nullability: O
+- Name: UIDocumentInteractionControllerDelegate
+  Methods:
+  - Selector: 'documentInteractionControllerViewControllerForPreview:'
+    SwiftName: documentInteractionControllerViewControllerForPreview(_:)
+    MethodKind: Instance
+  - Selector: 'documentInteractionControllerRectForPreview:'
+    SwiftName: documentInteractionControllerRectForPreview(_:)
+    MethodKind: Instance
+  - Selector: 'documentInteractionControllerViewForPreview:'
+    SwiftName: documentInteractionControllerViewForPreview(_:)
+    MethodKind: Instance
+  - Selector: 'documentInteractionControllerWillPresentOpenInMenu:'
+    SwiftName: documentInteractionControllerWillPresentOpenInMenu(_:)
+    MethodKind: Instance
+  - Selector: 'documentInteractionControllerDidDismissOpenInMenu:'
+    SwiftName: documentInteractionControllerDidDismissOpenInMenu(_:)
+    MethodKind: Instance
+Tags:
+- Name: UIActivityCategory
+  SwiftName: UIActivity.Category
+Typedefs:
+# Swift 4.2 Renames
+- Name: UIActivityType
+  SwiftName: UIActivity.ActivityType
+- Name: UIActivityViewControllerCompletionWithItemsHandler
+  SwiftName: UIActivityViewController.CompletionWithItemsHandler
+- Name: UIActivityViewControllerCompletionHandler
+  SwiftName: UIActivityViewController.CompletionHandler
+SwiftVersions:
+#
+# Swift 4 and below specific conversions
+#
+- Version: 4
+  Tags:
+  - Name: UIActivityCategory
+    SwiftName: UIActivityCategory
+  Typedefs:
+# Swift 4.2 Renames
+  - Name: UIActivityType
+    SwiftName: UIActivityType
+  - Name: UIActivityViewControllerCompletionWithItemsHandler
+    SwiftName: UIActivityViewControllerCompletionWithItemsHandler
+  - Name: UIActivityViewControllerCompletionHandler
+    SwiftName: UIActivityViewControllerCompletionHandler
+#
+# Swift 3 specific conversions
+#
+- Version: 3
+  Protocols:
+  - Name: UIActivityItemSource
+    Methods:
+    - Selector: 'activityViewController:itemForActivityType:'
+      MethodKind: Instance
+      Parameters:
+      - Position: 0
+        Nullability: N
+      - Position: 1
+        Nullability: N

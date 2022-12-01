@@ -1,0 +1,31 @@
+{
+    "Name": "DebugTension",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "compressionRange": "[0.0, 1.0]",
+            "stretchRange": "[0.0, 1.0]"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "DebugTension",
+        "VertexShader": {
+            "Entry": "vsDebugTension"
+        },
+        "PixelShader": {
+            "Entry": "fsDebugColored"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        },
+        "FunctionConstants" : {
+            "EnableTension" : "true"
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque": "DebugTension"
+    }
+}

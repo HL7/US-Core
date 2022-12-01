@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runCustomIntent#offerMoreItems">
+    <meta name="description" value="Describe a single item from custom intent response during paginated reading."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="remainingPages" type="dialog.Number" description="The number of pages left"/>
+        <parameter name="nextPageSize" type="dialog.Number" description="The number of items on the next page"/>
+    </parameters>
+</cat>

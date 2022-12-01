@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AdHocServiceType</key>
+	<integer>2</integer>
+	<key>AllowPendingMessagesForInactiveDevice</key>
+	<true/>
+	<key>AllowSendingMessagesToInactiveDevice</key>
+	<true/>
+	<key>AllowedTrafficClasses</key>
+	<array>
+		<string>com.apple.ids.trafficclass.nanoregistry.configure</string>
+	</array>
+	<key>AutoConfigureVettedAddresses</key>
+	<true/>
+	<key>DisplayName</key>
+	<string>AccountsSync</string>
+	<key>DuetIdentifiers</key>
+	<array>
+		<string>com.apple.Bridge</string>
+		<string>com.apple.Preferences</string>
+	</array>
+	<key>Identifier</key>
+	<string>com.apple.private.alloy.accountssync</string>
+	<key>LaunchMachServiceNotification</key>
+	<string>com.apple.private.alloy.accountssync-idswake</string>
+	<key>ProtocolName</key>
+	<string>com.apple.private.alloy</string>
+	<key>PushTopic</key>
+	<string>com.apple.private.alloy.accountssync</string>
+	<key>ServiceName</key>
+	<string>com.apple.private.alloy.accountssync</string>
+	<key>iCloudService</key>
+	<true/>
+</dict>
+</plist>

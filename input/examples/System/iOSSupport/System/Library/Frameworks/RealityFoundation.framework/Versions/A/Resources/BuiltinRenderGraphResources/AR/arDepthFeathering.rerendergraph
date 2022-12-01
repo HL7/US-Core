@@ -1,0 +1,393 @@
+{
+    "Name" : "DepthFeatheringGraph",
+    "Targets" : [
+        {
+            "Name" : "Color0"
+        },
+        {
+            "Name" : "Depth"
+        },
+        {
+            "Name" : "rdar61525635_Workaround_MeshShadowMap"
+        },
+        {
+            "Name" : "SUMeshDepth",
+            "Description" : {
+                "Format" : "Depth32Float",
+                "WidthMultiplier" : 0.250,
+                "HeightMultiplier" : 0.250
+            }
+        },
+        {
+            "Name" : "suFeatheringReferenceSurfacesDepth",
+            "Description" : {
+                "Format" : "Depth32Float",
+                "WidthMultiplier" : 0.250,
+                "HeightMultiplier" : 0.250
+            }
+        },
+        {
+            "Name" : "SUVirtualContentDepth",
+            "Description" : {
+                "Format" : "Depth32Float",
+                "WidthMultiplier" : 0.250,
+                "HeightMultiplier" : 0.250
+            }
+        },
+        {
+            "Name" : "SUMaskOfAllOcclusions",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "WidthMultiplier" : 0.250,
+                "HeightMultiplier" : 0.250
+            }
+        },
+        {
+            "Name" : "SUMergedOcclusionMaskDilated1",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "WidthMultiplier" : 0.250,
+                "HeightMultiplier" : 0.250
+            }
+        },
+        {
+            "Name" : "SUMergedOcclusionMaskDilated2",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "WidthMultiplier" : 0.250,
+                "HeightMultiplier" : 0.250
+            }
+        },
+        {
+            "Name" : "SUMergedOcclusionMaskBlurred1",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "WidthMultiplier" : 0.250,
+                "HeightMultiplier" : 0.250
+            }
+        },
+        {
+            "Name" : "SUOcclusionMatte",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "WidthMultiplier" : 0.250,
+                "HeightMultiplier" : 0.250,
+                "ExposeToMaterial" : true
+            }
+        }
+    ],
+    "Nodes" : [
+        {
+            "CameraSetup" : {
+                "Name" : "CameraSetup",
+                "UpdateSceneMaterialData" : true,
+                "FrustumCulling" : false
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "SUVirtualObjectsOpaqueDepth",
+                "CullMode" : "CullModeBack",
+                "MaterialPassName" : "Opaque",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "SUVirtualContentDepth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ],
+                "TargetReads" : [
+                    {
+                        "TargetHandle": "rdar61525635_Workaround_MeshShadowMap",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "SUVirtualObjectsTransparentDepth",
+                "CullMode" : "CullModeBack",
+                "MaterialPassName" : "Transparent",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "SUVirtualContentDepth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ],
+                "TargetReads" : [
+                    {
+                        "TargetHandle": "rdar61525635_Workaround_MeshShadowMap",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "SUDepthNode",
+                "CullMode" : "CullModeNone",
+                "FillMode" : "Fill",
+                "Enabled"  : true,
+                "MaterialPassName" : "SceneUnderstandingOcclusionOnly",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "SUMeshDepth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "FeatheringReferenceSurfacesNode",
+                "CullMode" : "CullModeNone",
+                "FillMode" : "Fill",
+                "Enabled"  : true,
+                "MaterialPassName" : "FeatheringReferenceSurfaces",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "suFeatheringReferenceSurfacesDepth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Fullscreen" : {
+                "Name" : "CreateMaskOfAllOcclusions",
+                "Enabled" : true,
+                "Material" : "suFeatheringCreateMergedOcclusionMask.rematerial",
+                "TechniqueName" : "CreateMaskOfAllOcclusions",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "SUMaskOfAllOcclusions",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ForceClear" : false
+                        }
+                    }
+                ],
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "SUMeshDepth",
+                        "Settings" : {}
+                    },
+                    {
+                        "TargetHandle": "SUVirtualContentDepth"
+                    },
+                    {
+                        "TargetHandle": "suFeatheringReferenceSurfacesDepth"
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName": "suMeshDepth",
+                        "TargetHandle": "SUMeshDepth"
+                    },
+                    {
+                        "BindingName": "virtualContentDepth",
+                        "TargetHandle": "SUVirtualContentDepth"
+                    },
+                    {
+                        "BindingName": "suFeatheringReferenceSurfacesDepth",
+                        "TargetHandle": "suFeatheringReferenceSurfacesDepth"
+                    }
+                ]
+            }
+        },
+        {
+            "Fullscreen" : {
+                "Name" : "DilateMaskOfAllOcclusions",
+                "Enabled" : true,
+                "Material" : "suFeatheringDilateX.rematerial",
+                "TechniqueName" : "DilateX",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "SUMergedOcclusionMaskDilated1",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ForceClear" : false
+                        }
+                    }
+                ],
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "SUMaskOfAllOcclusions",
+                        "Settings" : {}
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName": "suMergedOcclusionMask",
+                        "TargetHandle": "SUMaskOfAllOcclusions"
+                    }
+                ]
+            }
+        },
+        {
+            "Fullscreen" : {
+                "Name" : "DilateMaskOfAllOcclusions2",
+                "Enabled" : true,
+                "Material" : "suFeatheringDilateY.rematerial",
+                "TechniqueName" : "DilateY",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "SUMergedOcclusionMaskDilated2",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ForceClear" : false
+                        }
+                    }
+                ],
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "SUMergedOcclusionMaskDilated1"
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName": "suMergedOcclusionMaskDilated1",
+                        "TargetHandle": "SUMergedOcclusionMaskDilated1"
+                    }
+                ]
+            }
+        },
+        {
+            "Fullscreen" : {
+                "Name" : "BlurMaskOfAllOcclusionsX",
+                "Enabled" : true,
+                "Material" : "suFeatheringBlurX.rematerial",
+                "TechniqueName" : "SUFeatheringBlurX",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "SUMergedOcclusionMaskBlurred1",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ForceClear" : false
+                        }
+                    }
+                ],
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "SUMergedOcclusionMaskDilated2",
+                        "Settings" : {}
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName": "suMergedOcclusionMaskDilated2",
+                        "TargetHandle": "SUMergedOcclusionMaskDilated2"
+                    }
+                ]
+            }
+        },
+        {
+            "Fullscreen" : {
+                "Name" : "BlurMaskOfAllOcclusionsY",
+                "Enabled" : true,
+                "Material" : "suFeatheringBlurY.rematerial",
+                "TechniqueName" : "SUFeatheringBlurY",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "SUOcclusionMatte",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ForceClear" : false
+                        }
+                    }
+                ],
+                "TargetReads" : [
+                    {
+                        "TargetHandle": "SUMergedOcclusionMaskBlurred1"
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName": "maskOfAllOcclusionsBlurred1",
+                        "TargetHandle": "SUMergedOcclusionMaskBlurred1"
+                    }
+                ]
+            }
+        }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "Color",
+            "Target": "Color0"
+        },
+        {
+            "Lane" : "Depth",
+            "Target": "Depth"
+        },
+        {
+            "Lane" : "ProjectiveMeshShadowMapLane",
+            "Target" : "rdar61525635_Workaround_MeshShadowMap",
+            "GraphScopeOverride" : "ProjectiveMeshShadowMapScope",
+            "InputOnly" : true
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "Depth",
+            "Target" : "SUVirtualContentDepth"
+        },
+        {
+            "Lane" : "Depth",
+            "Target" : "SUMeshDepth"
+        },
+        {
+            "Lane" : "Depth",
+            "Target" : "suFeatheringReferenceSurfacesDepth"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "SUMaskOfAllOcclusions"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "SUMergedOcclusionMaskDilated1"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "SUMergedOcclusionMaskDilated2"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "SUMergedOcclusionMaskBlurred1"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "SUOcclusionMatte"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "Color0"
+        },
+        {
+            "Lane" : "Depth",
+            "Target" : "Depth"
+        },
+        {
+            "Lane" : "SUOcclusionMatteLane",
+            "Target" : "SUOcclusionMatte",
+            "GraphScopeOverride" : "SUOcclusionMatteScope"
+        }
+    ]
+}

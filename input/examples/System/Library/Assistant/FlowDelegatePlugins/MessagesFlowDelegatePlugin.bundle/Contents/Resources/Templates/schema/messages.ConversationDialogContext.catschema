@@ -1,0 +1,52 @@
+#CAT-SCHEMA 1.0
+
+name: messages.ConversationDialogContext
+
+inputs:
+    isFirst:
+        access_mode: public
+    isSecond:
+        access_mode: public
+    isLast:
+        access_mode: public
+    isAppended:
+        access_mode: public
+    isPreviousConversationAppended:
+        access_mode: public
+    isGroup:
+        access_mode: public
+    group:
+        access_mode: public
+    isFirstComponentInConversation:
+        access_mode: public
+    isFirstComponentInRequest:
+        access_mode: public
+
+properties:
+    isFirst:
+        type: dialog.Boolean
+        description: Is this the first conversation in the reading request.
+    isSecond:
+        type: dialog.Boolean
+        description: Is this the second conversation in the reading request.
+    isLast:
+        type: dialog.Boolean
+        description: Is this the last conversation in the reading request.
+    isAppended:
+        type: dialog.Boolean
+        description: Was this conversation appended.
+    isPreviousConversationAppended:
+        type: dialog.Boolean
+        description: Was the previous conversation appended.
+    isGroup:
+        type: dialog.Boolean
+        description: Is this conversation a group. It is a group if it has a group name or more than 2 members.
+    group:
+        type: messages.Group
+        description: The group representing this conversation.
+    isFirstComponentInConversation:
+        type: dialog.Boolean
+        description: Is this the first component in the conversation.
+    isFirstComponentInRequest:
+        type: dialog.Boolean
+        description: Is this the first component in the reading request.

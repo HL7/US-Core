@@ -1,0 +1,28 @@
+uniform mat4 rotationMatrix;
+
+vec3 frequencyToColor(float w)
+{
+    vec4 bandcenter = vec4(0.279, 0.5, 0.721, 0.8735);
+    vec4 bandwidth = vec4(3.6, 3.6, 3.6, 8.0);
+    vec4 rgbv = bandwidth*(w-bandcenter);
+    vec4 result = clamp(1.0-rgbv*rgbv, 0.0, 1.0);
+    vec3 color = vec3(result.r+0.35*result.a, result.g, result.b);
+    float luma = clamp(max(max(result.r, result.g*2.0), result.b), 0.0, 1.0);
+    return 1.0 + 0.6 * (color - luma);
+}
+
+#pragma opaque
+#pragma body
+
+// Effect
+vec3 eye = (vec4(0.0, 0.0, 1.0, 0.0) * rotationMatrix).xyz;
+float effect = clamp((length(eye.xy) - 0.08) / 0.6271, 0.0, 0.9);
+float dp = dot(eye, _surface.normal) + (_surface.position.x + _surface.position.y) * 0.05;
+float frequency = smoothstep(0.4, 1.0, dp);
+
+// Approximation of ambient occlusion based on depth of chisel
+float depth = (u_inverseModelViewTransform * vec4(_surface.position, 1.0)).z / -0.435;
+float occlusion = 1.0-0.2*depth*depth;
+
+// Add effect to computed color and apply ambient occlusion
+_output.color.rgb = mix(_output.color.rgb, frequencyToColor(frequency)*_output.color.rgb, effect) * occlusion;

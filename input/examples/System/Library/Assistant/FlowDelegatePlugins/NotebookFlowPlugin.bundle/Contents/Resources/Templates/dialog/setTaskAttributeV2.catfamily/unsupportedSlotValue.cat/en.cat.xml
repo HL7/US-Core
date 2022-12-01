@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="setTaskAttributeV2#unsupportedSlotValue" locale="en">
+
+  <conditions>
+    <condition name="appName_empty">
+      <expression name="appName" op="empty"/>
+    </condition>
+    <condition name="slot_slotName_eq_spatialEventTrigger">
+      <expression name="slotName" op="eq" value="'spatialEventTrigger'"/>
+    </condition>
+    <condition name="slot_slotName_eq_status">
+      <expression name="slotName" op="eq" value="'status'"/>
+    </condition>
+    <condition name="slot_slotName_eq_targetTask">
+      <expression name="slotName" op="eq" value="'targetTask'"/>
+    </condition>
+    <condition name="slot_slotName_eq_temporalEventTrigger">
+      <expression name="slotName" op="eq" value="'temporalEventTrigger'"/>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <first phrase="phrase_0">
+      <text condition="appName_empty">The app</text>
+      <text><var name="appName"/></text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog condition="slot_slotName_eq_targetTask">Hmm, I couldn’t find a matching item.</dialog>
+    <dialog condition="slot_slotName_eq_status"><opt><phrase name="phrase_0"/></opt> doesn’t support that status.</dialog>
+    <dialog condition="slot_slotName_eq_spatialEventTrigger"><opt><phrase name="phrase_0"/></opt> doesn’t support that location.</dialog>
+    <dialog condition="slot_slotName_eq_temporalEventTrigger"><opt><phrase name="phrase_0"/></opt> doesn’t support that time.</dialog>
+  </first>
+
+</cat>

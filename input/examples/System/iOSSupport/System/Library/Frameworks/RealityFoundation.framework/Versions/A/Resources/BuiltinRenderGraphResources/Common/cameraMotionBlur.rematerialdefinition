@@ -1,0 +1,39 @@
+{
+    "Name": "CameraMotionBlurDefinition",
+    "Parameters": {
+        "Constants": {
+            "viewportPercents" : "view.viewportPercents"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV",
+            "motionBlurParams" : "rendergraph.motionBlurParams"
+        },
+        "Textures": {
+            "renderGraphTexture" : "rendergraph.renderGraphTexture",
+            "renderGraphDepth" : "rendergraph.renderGraphDepth"
+	    }
+    },
+    "Techniques": [
+    {
+        "Name": "CameraMotionBlur",
+        "VertexShader": {
+            "Entry": "fullScreenVert"
+        },
+        "PixelShader": {
+            "Entry": "fsCameraMotionBlur"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        },
+        "FunctionConstants" : {
+            "CameraMotionBlurSampleCountOption" : "0",
+            "DebugPassthrough" : "false"
+        }
+    }],
+    "TechniqueMapping": {
+        "fullscreen": "CameraMotionBlur"
+    }
+}

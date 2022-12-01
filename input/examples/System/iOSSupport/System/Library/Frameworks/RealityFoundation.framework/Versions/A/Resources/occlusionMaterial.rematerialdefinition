@@ -1,0 +1,25 @@
+{
+    "Name": "OcclusionMaterial",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Library": "",
+    "Techniques": [
+    {
+        "Name": "Occlusion",
+        "VertexShader": {
+            "Entry": "vsOcclusion"
+        },
+        "PixelShader": {
+            "Entry": "fsOcclusion"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "ColorWriteMask" : "None",
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        }
+    }
+    ],
+    "TechniqueMapping": {
+        "Occlusion": "Occlusion"
+    }
+}

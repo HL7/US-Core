@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="ReminderReading#announceReminderFollowupsHint" locale="en">
+    <conditions>
+        
+        <condition name="lowUsageCount">
+            <expression name="dialogState.usageCount" op="le" value="2"/>
+        </condition>
+        
+        <condition name="after2Days">
+            <and>
+                <expression name="dialogState.daysSinceLastUse" op="eq" value="2"/>
+                <expression name="dialogState.isUnfamiliar"/>
+            </and>
+        </condition>
+        
+    </conditions>
+
+    <first>
+        <dialog condition="lowUsageCount" id="lowUsageHint">
+            By the way. After announcing a reminder, I’ll keep listening for a few seconds. You can say, “mark as complete.”
+        </dialog>
+        
+        <dialog condition="after2Days" id="after2DaysHint">
+            By the way, you can ask me to mark that as complete.
+        </dialog>
+        
+        <dialog id="noHint"></dialog>
+    </first>
+</cat>

@@ -1,0 +1,128 @@
+{
+    "Name" : "ProjectiveMeshShadowGraph",
+    "Targets" : [
+        {
+            "Name" : "ProjectiveMeshShadowMapTexture",
+            "Description" : {
+                "Format" : "R16Float",
+                "Type" : "MemoryManaged",
+                "ExposeToMaterial": true
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["width"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["height"]
+                }
+            ]
+        },
+        {
+            "Name" : "IntermediateTexture",
+            "Description" : {
+                "Format" : "R16Float",
+                "Type" : "MemoryManaged"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["width"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["height"]
+                }
+            ]
+        },
+        {
+            "Name" : "TiledShadowDepthPrepassTexture",
+            "Description" : {
+                "Format" : "Depth32Float",
+                "Type" : "MemoryManaged",
+                "ExposeToMaterial" : true
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["width"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ProjectiveShadowMapDimension",
+                    "FromMember" : ["height"]
+                }
+            ]
+        }
+    ],
+    "Nodes" : [
+        {
+            "GenerateTiledShadowDepthPrepassMap" : {
+                "Name" : "TiledShadowDepthPrepassNode",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "TiledShadowDepthPrepassTexture",
+                        "Settings" : {
+                            "Type" : "WriteDepth",
+                            "ForceClear" : true,
+                            "ClearDepth": 0.0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "GenerateProjectiveMeshShadowMap" : {
+                "Name" : "ProjectiveMeshShadowCastingNode",
+                "TargetReads" : [
+                    { "TargetHandle" : "TiledShadowDepthPrepassTexture" }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ProjectiveMeshShadowMapTexture",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ClearColor" : [0, 0, 0, 0]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "HorizontalDilate1DPass" : {
+                "Name" : "Dilate1DHorizontalPass",
+                "Library" : "engine:default.metallib",
+                "InputShadowMapHandle" : "ProjectiveMeshShadowMapTexture",
+                "InputReceiverDepthMapHandle" : "TiledShadowDepthPrepassTexture",
+                "OutputShadowMapHandle" : "IntermediateTexture",
+            }
+        },
+        {
+            "VerticalDilate1DPass" : {
+                "Name" : "Dilate1DVerticalPass",
+                "Library" : "engine:default.metallib",
+                "InputShadowMapHandle" : "IntermediateTexture",
+                "InputReceiverDepthMapHandle" : "TiledShadowDepthPrepassTexture",
+                "OutputShadowMapHandle" : "ProjectiveMeshShadowMapTexture"
+            }
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "ProjectiveMeshShadowMapLane",
+            "Target" : "ProjectiveMeshShadowMapTexture",
+            "GraphScopeOverride" : "ProjectiveMeshShadowMapScope"
+        },
+        {
+            "Lane" : "ProjectiveMeshShadowDepthLane",
+            "Target" : "TiledShadowDepthPrepassTexture",
+            "GraphScopeOverride" : "ProjectiveMeshShadowMapScope"
+        }
+    ]
+}

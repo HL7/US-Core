@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="setTaskAttributeV2#promptForSlotValue" locale="en">
+
+  <conditions>
+    <condition name="slot_slotName_eq_spatialEventTrigger">
+      <expression name="slotName" op="eq" value="'spatialEventTrigger'"/>
+    </condition>
+    <condition name="slot_slotName_eq_status">
+      <expression name="slotName" op="eq" value="'status'"/>
+    </condition>
+    <condition name="slot_slotName_eq_targetTask">
+      <expression name="slotName" op="eq" value="'targetTask'"/>
+    </condition>
+    <condition name="slot_slotName_eq_temporalEventTrigger">
+      <expression name="slotName" op="eq" value="'temporalEventTrigger'"/>
+    </condition>
+  </conditions>
+ 
+  <first>
+    <dialog condition="slot_slotName_eq_targetTask"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>Which reminder do you want to change?</dialog>
+    <dialog condition="slot_slotName_eq_status">Would you like to change the status to complete or incomplete?</dialog>
+    <dialog condition="slot_slotName_eq_spatialEventTrigger"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>Where would you like to be reminded?</dialog>
+    <dialog condition="slot_slotName_eq_temporalEventTrigger"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>When do you want to be reminded?</dialog>
+    <dialog>What would you like to change about this <var name="slotName"/>?</dialog>
+  </first>
+
+</cat>

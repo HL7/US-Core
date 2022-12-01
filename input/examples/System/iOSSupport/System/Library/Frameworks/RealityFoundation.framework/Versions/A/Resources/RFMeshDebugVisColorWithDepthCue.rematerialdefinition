@@ -1,0 +1,32 @@
+{
+    "Name": "Reality Fusion Debug Mesh Visualization: Color with Depth Cue",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "meshPosition": "[0.0, 0.0, 0.0, 1.0]",
+            "meshOrientation": "[0.0, 0.0, 0.0, 1.0]",
+        },
+        "Buffers": {
+            "position" : "geometry.vertexPosition",
+            "color" : "geometry.vertexColor"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "RFMeshDebugVisColorWithDepthCue",
+        "VertexShader": {
+            "Entry": "vsRFMeshDebugVis"
+        },
+        "PixelShader": {
+            "Entry": "fsRFMeshDebugVisColorWithDepthCue"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        },
+        "FunctionConstants" : {
+            "MeshHasColorAttribute"  : "true"
+        }
+    }]
+}

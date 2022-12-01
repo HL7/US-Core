@@ -1,0 +1,37 @@
+{
+    "Name": "arSegmentationPopulateDepthDefinition",
+    "Parameters": {
+        "Constants": {
+            "correctionMatrix": "material.correctionMatrix",
+            "projFromView" : "view.projFromView"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV",
+            "averageSegmentationDepth" : "rendergraph.averageSegmentationDepth"
+        },
+        "Textures": {
+            "downsampledSegmentationBuffer" : "rendergraph.downsampledSegmentationBuffer"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "arSegmentationPopulateDepthTechnique",
+            "VertexShader": {
+                "Entry": "arKitPassthroughVertexShader"
+            },
+            "PixelShader": {
+                "Entry": "fsPopulateEstimatedDepth"
+            },
+            "State" : {
+                "ColorWriteMask" : "None",
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "Always"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "fullscreen": "arSegmentationPopulateDepthTechnique"
+    }
+}

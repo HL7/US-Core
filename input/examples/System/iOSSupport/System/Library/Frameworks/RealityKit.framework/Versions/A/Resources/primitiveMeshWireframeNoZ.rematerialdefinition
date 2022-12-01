@@ -1,0 +1,28 @@
+{
+    "Name": "PrimitiveMeshWireframeNoZ",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Library": "",
+    "Parameters": {
+        "Buffers": {
+            "position": "geometry.vertexPosition"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "PrimitiveMeshNoZ",
+        "VertexShader": {
+            "Entry": "vsPrimitiveMesh"
+        },
+        "PixelShader": {
+            "Entry": "fsPrimitivePoint"
+        },
+        "State": {
+            "AlphaBlend": false,
+            "WriteDepth": true,
+            "DepthCompareFunction": "Always"
+        }
+    }],
+    "TechniqueMapping": {
+        "Transparent": "PrimitiveMeshNoZ"
+    }
+}

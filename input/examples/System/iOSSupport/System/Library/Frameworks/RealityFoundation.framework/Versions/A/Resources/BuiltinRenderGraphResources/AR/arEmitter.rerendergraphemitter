@@ -1,0 +1,26 @@
+{
+    "AREmitter" : {
+        "CameraGraph" : "arEmitterCamera.rerendergraph",
+        "ShadowMapGraph" : "engine:BuiltinRenderGraphResources/Common/shadow.rerendergraph",
+        "PostProcessGraphDepthOfField" : "arDepthOfField.rerendergraph",
+        "PostProcessGraphMotionBlur" : "arMotionBlur.rerendergraph",
+        "PostProcessGraphCombined" : "arPostProcessCombined.rerendergraph",
+        "PostProcessGraphCombinedHDR" : "arPostProcessCombinedHDR.rerendergraph",
+        "PostProcessGraphMultiView" : "arPostProcessMultiView.rerendergraph",
+        "DepthFeatheringGraph": "arDepthFeathering.rerendergraph",
+        "GuidedFilterOcclusionGraph": "arGuidedFilterOcclusion.rerendergraph",
+        "EnableDepthFeathering": true,
+        "EnableDepthOfField" : true,
+        "EnableMotionBlur" : true,
+        "EnablePostProcessCombined" : true,
+        "EnableHDR" : true,
+        "EnableRayTracedAmbientOcclusion" : false,
+        "EnableARProbes" : true,
+        "EnableProjectiveShadow" : false,
+        "EnableGuidedFilterOcclusion" : false,
+        "EnablePostProcessBlur" : false,
+        "RayTracedAmbientOcclusionCompositingMaterial" : "engine:rayTracedAmbientOcclusionCompositing.rematerial",
+        "RayTracedAmbientOcclusionCompositingMaterialDitherSRGB" : "engine:rayTracedAmbientOcclusionCompositingDitherSRGB.rematerial",
+        "RayTracedAmbientOcclusionCompositingMaterialDitherLinear" : "engine:rayTracedAmbientOcclusionCompositingDitherLinear.rematerial"
+    }
+}

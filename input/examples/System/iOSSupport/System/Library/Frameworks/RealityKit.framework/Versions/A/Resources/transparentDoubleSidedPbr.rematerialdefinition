@@ -1,0 +1,60 @@
+{
+    "Name": "TransparentPbr",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Techniques": [
+        {
+            "Name": "TransparentBackFaces",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater",
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha",
+                "CullMode"                  : "CullModeFront"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableSingleRMAS"      : "false",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "EnableTransparency"    : "true",
+                "EnableOpacityMap"      : "true",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "EnableAREnvProbe"      : "false",
+                "EnableDynamicLighting" : "false",
+                "EnableSSAO"            : "false",
+                "EnableSSDO"            : "false",
+                "EnableMultiUVs"        : "false"
+            },
+            "DefaultVariations" : [ "TransparentCommon" ],
+            "DebugMapping": "PbrDebug"
+        }
+    ],
+    "TechniqueGroups": [
+        {
+            "Name" : "TransparentTwoSided",
+            "Techniques": ["TransparentBackFaces", "Transparent"],
+        }
+    ],
+    "TechniqueMapping": {
+        "Transparent": "TransparentTwoSided"
+    }
+}

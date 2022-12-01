@@ -1,0 +1,32 @@
+{
+    "Name": "ShadowReceiver",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Techniques" : [
+        {
+            "Name": "ShadowReceiver",
+            "VertexShader": {
+                "Entry": "vsRealityShadowReceiver"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityShadowReceiver"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater",
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "SourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+            },
+            "FunctionConstants" : {
+                "ShadowPcfFilterOption" : "1"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "Occlusion": "ShadowReceiver"
+    }
+}

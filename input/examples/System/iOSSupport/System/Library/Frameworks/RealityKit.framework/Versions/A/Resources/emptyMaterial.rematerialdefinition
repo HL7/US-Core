@@ -1,0 +1,21 @@
+{
+    "Name": "EmptyMaterial",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Techniques": [
+        {
+            "Name": "__FakeTechnique",
+            "VertexShader": {
+                "Entry": "vsMissing"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Never",
+                "ColorWriteMask" : "None"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "__FakePassMapping": "__FakeTechnique"
+    }
+}

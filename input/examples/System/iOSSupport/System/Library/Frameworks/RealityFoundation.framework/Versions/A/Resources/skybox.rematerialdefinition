@@ -1,0 +1,63 @@
+{
+    "Name": "SkyboxMaterialDefinition",
+    "Parameters": {
+        "Constants": {
+            "matrixRotation": "[1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]",
+            "crWorldToProj": "view.crWorldToProj",
+            "crWorldToProjInstanced": "view.crWorldToProjInstanced",
+            "crwsCameraPosition": "view.crwsCameraPosition",
+            "crwsCameraPositionInstanced": "view.crwsCameraPositionInstanced",
+            "viewportCount": "instance.viewportCount",
+            "useVertexAmplification": "view.useVertexAmplification",
+            "intensityScale": "0"
+        },
+        "Textures": {
+            "texture": "fallback.stockEnvMap",
+            "latLongTexture": "fallback.white"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "Skybox",
+            "VertexShader": {
+                "Entry": "vsSkybox"
+            },
+            "PixelShader": {
+                "Entry": "fsSkybox"
+            },
+            "State": {
+                "AlphaBlend": false,
+                "WriteDepth": true,
+                "DepthCompareFunction": "Greater",
+                "CullMode": "CullModeNone"
+            },
+            "FunctionConstants" : {
+                "EnableSphericalSkybox": "false"
+           }
+        },
+        {
+            "Name": "SphericalSkybox",
+            "VertexShader": {
+                "Entry": "vsSkybox"
+            },
+            "PixelShader": {
+                "Entry": "fsSkybox"
+            },
+            "State": {
+                "AlphaBlend": false,
+                "WriteDepth": true,
+                "DepthCompareFunction": "Greater",
+                "CullMode": "CullModeNone"
+            },
+            "FunctionConstants" : {
+                "EnableSphericalSkybox": "true"
+           }
+        }
+    ],
+    "TechniqueMapping": {
+        "Skybox": "Skybox"
+    }
+}

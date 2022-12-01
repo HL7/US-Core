@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="snoozeTasks#confirmNextTriggerTime" locale="en">
+    
+    <first>
+        <dialog condition="hasValidTime">You said <var name="nextTriggerTime.duration"/>. You confirm?</dialog>
+        <dialog>You didn't specify a time. You confirm?</dialog>
+    </first>
+
+</cat>

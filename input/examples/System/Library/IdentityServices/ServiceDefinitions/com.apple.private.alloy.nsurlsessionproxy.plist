@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AdHocServiceType</key>
+	<integer>2</integer>
+	<key>AutoConfigureVettedAddresses</key>
+	<true/>
+	<key>DisplayName</key>
+	<string>NSURLSession Proxy</string>
+	<key>Identifier</key>
+	<string>com.apple.private.alloy.nsurlsessionproxy</string>
+	<key>LaunchDarwinNotification</key>
+	<string>com.apple.nsurlsessionproxy.idslaunchnotification</string>
+	<key>ProtocolName</key>
+	<string>com.apple.private.alloy</string>
+	<key>PushTopic</key>
+	<string>com.apple.private.alloy.nsurlsessionproxy</string>
+	<key>ServiceName</key>
+	<string>com.apple.private.alloy.nsurlsessionproxy</string>
+	<key>DataProtectionClass</key>
+	<string>D</string>
+	<key>AllowedTrafficClasses</key>
+	<array>
+		<string>com.apple.ids.trafficclass.nanoregistry.update</string>
+		<string>com.apple.ids.trafficclass.nanoregistry.configure</string>
+	</array>
+</dict>
+</plist>

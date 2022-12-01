@@ -1,0 +1,55 @@
+{
+    "Name": "AlphaCutoutUnlitMaterialDefinition",
+    "OverrideMaterial": "unlit.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "opacityThreshold" : "0.0"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "AlphaCutoutUnlitOpaque",
+        "VertexShader": {
+            "Entry": "vsUnlit"
+        },
+        "PixelShader": {
+            "Entry": "fsUnlit"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "AlphaToCoverage" : true,
+            "DepthCompareFunction" : "Greater",
+            "WriteDepth" : true
+        },
+        "FunctionConstants" : {
+            "EnableOpacityMap"              : "true",
+            "EnableOpacityThreshold"        : "true",
+            "EnableSRGBToLinearConversion"  : "true",
+            "EnableTransparency"            : "true",
+            "EnableUnlitTexture"            : "true",
+            "VertexColorOption"             : "0"
+        },
+        "Variations" : {
+            "EnableDitherFade"  : ["true", "false"]
+        }
+    },
+    {
+        "Name": "AlphaCutoutUnlitShadow",
+        "VertexShader": {
+            "Entry": "vsShadow"
+        },
+        "PixelShader": {
+            "Entry": "fsShadow"
+        },
+        "State" : {
+            "ColorWriteMask" : "None"
+        },
+        "FunctionConstants" : {
+            "EnableAlphaCutoutShadows" : "true"
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque": "AlphaCutoutUnlitOpaque",
+        "Shadow": "AlphaCutoutUnlitShadow"
+    }
+}

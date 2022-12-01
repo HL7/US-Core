@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="deleteTasks#intentConfirmationPrompt" locale="en">
+
+  <conditions>
+    <condition name="deleteAllOnList">
+      <and>
+        <expression name="all"/>
+        <expression name="taskListName"/>
+      </and>
+    </condition>
+    <condition name="isDeleteAll">
+      <expression name="all"/>
+    </condition>
+    <condition name="hasSubtasks">
+      <expression name="hasSubtasks"/>
+    </condition>
+    <condition name="singleDeletedTask">
+      <expression name="taskCount" op="eq" value="1"/>
+    </condition>
+    <condition name="multipleDeletedTasks">
+      <expression name="taskCount" op="gt" value="1"/>
+    </condition>
+    <condition name="isThirdParty">
+      <not>
+        <expression name="isFirstPartyApp"/>
+      </not>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <first phrase="deleteAllReminders">
+      <text condition="singleDeletedTask"><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>You have only 1 reminder<opt><phrase name="appName"/></opt>. Just to confirm, you want to delete it?</text>
+      <text condition="multipleDeletedTasks"><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>You have <var name="taskCount"/> reminders<opt><phrase name="appName"/></opt>. Just to confirm, you want to delete all of them?</text>
+    </first>
+    <random phrase="appName">
+      <text condition="isThirdParty"><opt> in <var name="appName"/></opt></text>
+    </random>
+  </phrases>
+
+
+  <first>
+    <dialog condition="deleteAllOnList"><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>There are <var name="taskCount"/> reminders on the <var name="taskListName"/> list.
+                    Just to confirm, you want to delete all of them?
+    </dialog>
+    
+    <dialog condition="isDeleteAll"><phrase name="deleteAllReminders"/></dialog>
+    
+    <dialog condition="hasSubtasks"><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>Delete <var name="parentTaskName"/> and its  subtask?
+    </dialog>
+    
+    <dialog condition="singleDeletedTask"><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>Delete <var name="taskName"/>?
+    </dialog>
+    
+    <dialog><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>Delete the reminder?</dialog>
+    
+  </first>
+</cat>

@@ -1,0 +1,72 @@
+{
+    "Name": "AlphaCutoutPbrOpenSubdiv",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Buffers": {
+            "tessellationHi"        : "geometry.tessellationHi",
+            "tessellationLo"        : "geometry.tessellationLo",
+            "P"                     : "geometry.P",
+            "P1"                    : "geometry.P1",
+            "P2"                    : "geometry.P2",
+            "patchParam"            : "geometry.patchParams",
+            "textureUVCoordinates"  : "geometry.vertexUV|values",
+            "textureUVPatchIndices" : "geometry.vertexUV|indices",
+            "textureUVPatchParams"  : "geometry.vertexUV|patchParams"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "Opaque",
+        "VertexShader": {
+            "Entry": "vsRealityPbrOpenSubdiv"
+        },
+        "PixelShader": {
+            "Entry": "fsRealityPbr"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater",
+            "AlphaToCoverage" : true
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"     : "true",
+            "EnableNormalMap"        : "true",
+            "EnableEmissiveMap"      : "true",
+            "EnableAreaLight"        : "true",
+            "EnableSeparateRMAS"     : "true",
+            "EnableRoughnessMap"     : "true",
+            "EnableMetallicMap"      : "true",
+            "EnableAOMap"            : "true",
+            "EnableSpecularMap"      : "true",
+            "EnableTransparency"     : "true",
+            "EnableOpacityThreshold" : "true",
+            "EnableOpacityMap"       : "true",
+            "EnableIBL"              : "true",
+            "EnableScreenSpaceAdaptiveTessellation" : "false",
+            "EnableAREnvProbe"       : "true",
+        },
+        "DefaultVariations" : [ "OpaqueCommon" ],
+        "DebugMapping": "PbrDebug"
+    },
+    {
+        "Name": "Shadow",
+        "VertexShader": {
+            "Entry": "vsShadow"
+        },
+        "PixelShader": {
+            "Entry": "fsShadow"
+        },
+        "State" : {
+            "ColorWriteMask" : "None"
+        },
+        "FunctionConstants" : {
+            "EnableAlphaCutoutShadows" : "true",
+            "EnableOpacityMap" : "true"
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque": "Opaque",
+        "Shadow": "Shadow"
+    }
+}

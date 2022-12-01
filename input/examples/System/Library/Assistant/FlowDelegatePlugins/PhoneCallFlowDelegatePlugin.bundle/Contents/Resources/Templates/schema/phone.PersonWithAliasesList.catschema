@@ -1,0 +1,17 @@
+#CAT-SCHEMA 1.0
+
+name: phone.PersonWithAliasesList
+
+description: Specialized phone.PersonList for dialoging about a list of contacts that are aliases for the same handle (user saves multiple contacts that share the same handle).
+
+extends: phone.PersonList
+
+properties:
+  numOfOthers:
+    type: dialog.Number
+    description: Number of aliases - 2, to support "Bob, Joe, and 2 others."
+    optional: no
+  allSameFamilyName:
+    type: dialog.Boolean
+    description: whether all persons in the list have the same family name
+    optional: no

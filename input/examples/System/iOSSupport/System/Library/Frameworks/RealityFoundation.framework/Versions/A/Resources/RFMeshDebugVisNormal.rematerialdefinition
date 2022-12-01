@@ -1,0 +1,33 @@
+{
+    "Name": "Reality Fusion Debug Mesh Visualization: Normal",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "meshPosition": "[0.0, 0.0, 0.0, 1.0]",
+            "meshOrientation": "[0.0, 0.0, 0.0, 1.0]",
+        },
+        "Buffers": {
+            "position" : "geometry.vertexPosition",
+            "normal" : "geometry.vertexNormal"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "RFMeshDebugVisNormal",
+        "VertexShader": {
+            "Entry": "vsRFMeshDebugVis"
+        },
+        "PixelShader": {
+            "Entry": "fsRFMeshDebugVisNormal"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        },
+        "FunctionConstants" : {
+            "MeshHasNormalAttribute"  : "true"
+        }
+    }]
+}
+

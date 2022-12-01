@@ -1,0 +1,38 @@
+{
+    "identifier": "1",
+    "version": 1,
+    "card": {
+        "titleKey": "PAYMENT_CARD_TITLE",
+        "backgroundMedia": {
+            "type": "bundleAsset",
+            "bundleAssetFilename": "PaymentCardsExpanded",
+            "width": 1242,
+            "height": 1470,
+            "backgroundColor": "rgb(142,142,147)"
+        },
+        "callToAction": {
+            "subtitleKey": "PAYMENT_CTA_SUBTITLE",
+            "buttonTextKey": "PAYMENT_CTA_BUTTON_TEXT",
+            "action": "addCard",
+            "backgroundColor": "rgb(160,188,197)",
+            "foregroundContentMode": "light"
+        },
+        "backgroundColor": "rgb(142,142,147)",
+        "foregroundContentMode": "light"
+    },
+    "shelves": [
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerC"
+        },
+        {
+            "shelfType": "textBlock",
+            "bodyKey": "WELCOME_CARD_PAYMENTS_BODY"
+        },
+        {
+            "shelfType": "spacer",
+            "type": "cardSpacerA"
+        }
+    ]
+}
+

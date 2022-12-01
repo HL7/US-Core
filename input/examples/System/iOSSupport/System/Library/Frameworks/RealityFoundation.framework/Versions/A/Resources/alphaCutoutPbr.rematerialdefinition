@@ -1,0 +1,58 @@
+{
+    "Name": "AlphaCutoutPbr",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Techniques": [
+    {
+        "Name": "Opaque",
+        "VertexShader": {
+            "Entry": "vsRealityPbr"
+        },
+        "PixelShader": {
+            "Entry": "fsRealityPbr"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater",
+            "AlphaToCoverage" : true
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"     : "true",
+            "EnableNormalMap"        : "true",
+            "EnableEmissiveMap"      : "true",
+            "EnableAreaLight"        : "true",
+            "EnableSeparateRMAS"     : "true",
+            "EnableRoughnessMap"     : "true",
+            "EnableMetallicMap"      : "true",
+            "EnableAOMap"            : "true",
+            "EnableSpecularMap"      : "true",
+            "EnableTransparency"     : "true",
+            "EnableOpacityThreshold" : "true",
+            "EnableOpacityMap"       : "true",
+            "EnableIBL"              : "true",
+            "EnableAREnvProbe"       : "false"
+        },
+        "DefaultVariations" : [ "OpaqueCommon" ],
+        "DebugMapping": "PbrDebug"
+    },
+    {
+        "Name": "Shadow",
+        "VertexShader": {
+            "Entry": "vsShadow"
+        },
+        "PixelShader": {
+            "Entry": "fsShadow"
+        },
+        "State" : {
+            "ColorWriteMask" : "None"
+        },
+        "FunctionConstants" : {
+            "EnableAlphaCutoutShadows" : "true",
+            "EnableOpacityMap" : "true"
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque": "Opaque",
+        "Shadow": "Shadow"
+    }
+}

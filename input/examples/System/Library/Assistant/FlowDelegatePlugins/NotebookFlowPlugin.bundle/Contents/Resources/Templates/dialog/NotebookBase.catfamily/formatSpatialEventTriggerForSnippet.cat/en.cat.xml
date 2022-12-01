@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="NotebookBase#formatSpatialEventTriggerForSnippet" locale="en">
+    <conditions>
+      <condition name="isArriving">
+        <expression name="event" op="eq" value="1"/>
+      </condition>
+      <condition name="isLeaving">
+        <expression name="event" op="eq" value="2"/>
+      </condition>
+    </conditions>
+    <random>
+        <first>
+            <dialog condition="isArriving">Arriving: <var name="location.shortLocation"/></dialog>
+            <dialog condition="isLeaving">Leaving: <var name="location.shortLocation"/></dialog>
+            <dialog><var name="location.shortLocation"/></dialog>
+        </first>
+    </random>
+</cat>

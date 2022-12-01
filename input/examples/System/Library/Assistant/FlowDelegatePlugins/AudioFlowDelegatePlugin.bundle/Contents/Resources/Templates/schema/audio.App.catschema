@@ -1,0 +1,37 @@
+#CAT-SCHEMA 1.0
+
+name: audio.App
+
+inputs:
+  localizedName:
+    access_mode: public
+  isFirstParty:
+    access_mode: public
+  isMusic:
+    access_mode: public
+  isPodcasts:
+    access_mode: public
+  isBooks:
+    access_mode: public
+  isSoundscapes:
+    access_mode: public
+
+properties:
+  localizedName:
+    type: dialog.String
+    description: Localized name of the app
+  isFirstParty:
+    type: dialog.Boolean
+    description: True if bundleIdentifier starts with com.apple
+  isMusic:
+    type: dialog.Boolean
+    description: True if this represents the Music app
+  isPodcasts:
+    type: dialog.Boolean
+    description: True if this represents the Podcasts app
+  isBooks:
+    type: dialog.Boolean
+    description: True if this represents the Books app
+  isSoundscapes:
+    type: dialog.Boolean
+    description: True if this represents the Soundscapes app

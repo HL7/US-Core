@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runCustomIntent#promptForSlotValue">
+    <phrases>
+        <first phrase="multiUserIntroduction">
+            <text condition="user.groundingIfNeeded">OK, <var name="user.groundingIfNeeded"/>. </text>
+            <text></text>
+        </first>
+    </phrases>
+    <all>
+        <dialog><phrase name="multiUserIntroduction"/>What should <var name="parameterName"/> be?</dialog>
+    </all>
+</cat>

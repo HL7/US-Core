@@ -1,0 +1,20 @@
+#CAT-SCHEMA 1.0
+
+name: notebook.ReminderConcept
+
+properties:
+    title:
+        type: dialog.String
+        description: title of the reminder
+    calendar:
+        type: dialog.Calendar
+        description: the date that the reminder will fire
+    isAllDay:
+        type: dialog.Boolean
+        description: indicates if the temporal trigger was an all day trigger (ex tomorrow, next wednesday etc)
+    location:
+        type: dialog.Location
+        description: Location that will trigge the reminder
+    contactName:
+        type: dialog.String
+        description: name of the contact if there is a contact event trigget set

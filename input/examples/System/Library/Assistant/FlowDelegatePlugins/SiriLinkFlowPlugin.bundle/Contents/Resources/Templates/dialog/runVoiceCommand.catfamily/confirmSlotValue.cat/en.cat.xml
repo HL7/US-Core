@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#confirmSlotValue">
+    <conditions>
+        <condition name="slotNameIsVoiceCommand" note="If this slot name is equal to: voiceCommand">
+            <expression name="slotName" op="eq" value="'voiceCommand'"/>
+        </condition>
+    </conditions>
+    <all>
+        <dialog>OK, <var name="user.groundingIfNeeded"/>. </dialog>
+        <first>
+            <dialog condition="slotNameIsVoiceCommand">To confirm, would you like to run <var name="slotValue"/>?</dialog>
+            <dialog>To confirm, you said, “<var name="slotValue"/>”?</dialog>
+        </first>
+    </all>
+</cat>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#disambiguateContactEventTrigger" locale="en">
+    <conditions>
+      <condition name="isVoiceOnly">
+        <or>
+          <expression name="device.isVOX"/>
+          <expression name="device.isCarPlay"/>
+        </or>
+      </condition>
+    </conditions>
+    
+  <all>
+    <dialog><opt>OK <var name="user.groundingIfNeeded"/>. </opt>Which one?</dialog>
+    <dialog condition="isVoiceOnly">
+        <speak><var name="disambiguationList" list="or"/></speak>
+    </dialog>
+  </all>
+
+</cat>

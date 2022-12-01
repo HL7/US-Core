@@ -1,0 +1,34 @@
+
+{
+    "sequence" : ["ScenePass"],
+    
+    "passes" : {
+        "ScenePass" : {
+            "outputs" : {
+                "color"  : "sceneColorTexture_target",
+                "color1" : "sceneOnTopTexture_target",
+                "depth"  : "sceneDepthTexture_target"
+            },
+            "draw" : "DRAW_SCENE",
+            "samples" : -1,
+            "colorStates" : {
+                "clear" : true,
+                "clearColor" : "0 0 0 0"
+            }
+        }
+    },
+    "targets" : {
+        "sceneColorTexture_target" : {
+            "type" : "color"
+        },
+        "sceneOnTopTexture_target" : {
+            "format": "rg8s",
+            "type" : "color"
+        },
+        "sceneDepthTexture_target" : {
+            "type" : "depth"
+        }
+    },
+    "symbols" : {
+    }
+}

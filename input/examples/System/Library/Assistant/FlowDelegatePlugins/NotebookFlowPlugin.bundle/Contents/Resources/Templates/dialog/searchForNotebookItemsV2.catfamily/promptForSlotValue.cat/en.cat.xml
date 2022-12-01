@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="searchForNotebookItemsV2#promptForSlotValue" locale="en">
+
+  <conditions>
+    <condition name="slot_slotName_eq_content">
+      <expression name="slotName" op="eq" value="'content'"/>
+    </condition>
+    <condition name="slot_slotName_eq_dateSearchType">
+      <expression name="slotName" op="eq" value="'dateSearchType'"/>
+    </condition>
+    <condition name="slot_slotName_eq_dateTime">
+      <expression name="slotName" op="eq" value="'dateTime'"/>
+    </condition>
+    <condition name="slot_slotName_eq_itemType">
+      <expression name="slotName" op="eq" value="'itemType'"/>
+    </condition>
+    <condition name="slot_slotName_eq_location">
+      <expression name="slotName" op="eq" value="'location'"/>
+    </condition>
+    <condition name="slot_slotName_eq_locationSearchType">
+      <expression name="slotName" op="eq" value="'locationSearchType'"/>
+    </condition>
+    <condition name="slot_slotName_eq_status">
+      <expression name="slotName" op="eq" value="'status'"/>
+    </condition>
+    <condition name="slot_slotName_eq_title">
+      <expression name="slotName" op="eq" value="'title'"/>
+    </condition>
+  </conditions>
+ 
+  <first>
+    <dialog condition="slot_slotName_eq_title">OK, what’s it called?</dialog>
+    <dialog condition="slot_slotName_eq_content">What does it contain?</dialog>
+    <dialog condition="slot_slotName_eq_itemType">Are you looking for a reminder, note, or list?</dialog>
+    <dialog condition="slot_slotName_eq_status">Are you looking for tasks that are complete or incomplete?</dialog>
+    <dialog condition="slot_slotName_eq_location">OK, for what location?</dialog>
+    <dialog condition="slot_slotName_eq_locationSearchType">OK, for what location?</dialog>
+    <dialog condition="slot_slotName_eq_dateTime">For what time?</dialog>
+    <dialog condition="slot_slotName_eq_dateSearchType">Do you want to search by the due date, the date it was created, or the date it was last modified?</dialog>
+    <dialog>How would you like to search for this <var name="slotName"/>?</dialog>
+  </first>
+
+</cat>

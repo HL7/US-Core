@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#unsupportedPriority" locale="en">
+
+  <conditions>
+    <condition name="siriKitConcept_app_isDesignedByApple_set">
+      <expression name="isFirstPartyApp"/>
+    </condition>
+  </conditions>
+ 
+  <first>
+    <dialog condition="siriKitConcept_app_isDesignedByApple_set">Sorry, <opt><var name="user.groundingIfNeeded"/>, </opt>I can only create flagged reminders in your iCloud account.</dialog>
+    <dialog>Sorry, <var name="appName"/> can’t flag that reminder.</dialog>
+    <dialog>Sorry, the app can’t flag that reminder.</dialog>
+  </first>
+
+</cat>

@@ -1,0 +1,169 @@
+{
+    "Name": "Mesh Reconstruction Common Data",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "colorTint"               : "[1, 1, 1, 1]",
+            "lightingEnabled"         : "false",
+            "intensityMax"            : "1",
+            "intensityScale"          : "0.9",
+            "normalDotThreshold"      : "0",
+            "lightDirection"          : "[0, 0, 1]",
+            "receiverDepthConversion" : "1",
+            "dynamicLightingEnabled"  : "false",
+            "dynamicLightingVertexColorEnabled" : "false",
+            "dynamicLightingMaterialRMSEnabled" : "false"
+        },
+        "Buffers": {
+            "shadowClusterConstants" : "scene.shadowClusterConstants",
+            "shadowTileConstants" : "scene.shadowTileConstants",
+            "materialRMS": "geometry.faceMaterialRMS"
+        },
+        "Textures": {
+            "textureProjectiveMeshShadow"              : "fallback.transparentBlank",
+            "textureTiledDepthPrepass"                 : "fallback.white",
+            "compositedSceneUnderstandingShadowsColor" : "fallback.transparentBlank",
+            "compositedSceneUnderstandingShadowsDepth" : "fallback.transparentBlank"
+        }
+    },
+    "Techniques" : [
+        {
+            "Name": "CompositeMeshShadowsWithDepthTest",
+            "VertexShader": {
+                "Entry": "fullScreenVert"
+            },
+            "PixelShader": {
+                "Entry": "fsCompositeMeshShadowsWithDepth"
+            },
+            "State" : {
+                "AlphaBlend"           : false,
+                "WriteDepth"           : false,
+                "DepthCompareFunction" : "GreaterEqual"
+            }
+        },
+        {
+            "Name": "OcclusionOnly",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "State" : {
+                "WriteDepth"           : true,
+                "DepthCompareFunction" : "Greater"
+            }
+        },
+        {
+            "Name": "OcclusionFakeColorWrite",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend"           : false,
+                "ColorWriteMask"       : "None",
+                "WriteDepth"           : true,
+                "DepthCompareFunction" : "Greater"
+            }
+        },
+        {
+            "Name": "OcclusionWithShadowAndLighting",
+            "VertexShader": {
+                "Entry": "vsMeshSoftShadowReceiver"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshSoftShadowReceiver"
+            },
+            "State" : {
+                "AlphaBlend"           : false,
+                "WriteDepth"           : true,
+                "DepthCompareFunction" : "Greater"
+            },
+            "FunctionConstants" : {
+                "EnableIBL"              : "false",
+                "EnableAREnvProbe"       : "false",
+                "EnableProjectiveShadow" : "true",
+                "ForceEnableShadows"     : "false",
+                "ForceEnableMeshLighting" : "false",
+                "EnableVertexColor"      : "true"
+            },
+            "Variations" : {
+                "EnableDynamicLighting" : ["true", "false"]
+            }
+        },
+        {
+            "Name": "OcclusionAlphaBlendWithShadowAndLighting",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshSoftShadowReceiver"
+            },
+            "State" : {
+                "AlphaBlend"             : true,
+                "WriteDepth"             : true,
+                "DepthCompareFunction"   : "GreaterEqual",
+                "AlphaBlendOperation"    : "Add",
+                "AlphaSourceFactor"      : "One",
+                "AlphaDestinationFactor" : "OneMinusSourceAlpha",
+                "RgbBlendOperation"      : "Add",
+                "RgbSourceFactor"        : "One",
+                "RgbDestinationFactor"   : "OneMinusSourceAlpha"
+            },
+            "FunctionConstants" : {
+                "EnableIBL"              : "false",
+                "EnableAREnvProbe"       : "false",
+                "EnableProjectiveShadow" : "true",
+                "ForceEnableShadows"     : "false",
+                "ForceEnableMeshLighting" : "false",
+            },
+            "Variations" : {
+                "EnableDynamicLighting" : ["true", "false"]
+            }
+        },
+        {
+            "Name": "WireframeMesh",
+            "VertexShader": {
+                "Entry": "vsUnlit"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshDepth"
+            },
+            "State" : {
+                "WriteDepth"           : true,
+                "DepthCompareFunction" : "GreaterEqual"
+            }
+        },
+        {
+            "Name": "OcclusionWithLighting",
+            "VertexShader": {
+                "Entry": "vsMeshSoftShadowReceiver",
+                "Library" : "engine:default.metallib"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshSoftShadowReceiver",
+                "Library" : "engine:default.metallib"
+            },
+            "State" : {
+                "AlphaBlend"             : true,
+                "WriteDepth"             : true,
+                "DepthCompareFunction"   : "Greater",
+                "AlphaBlendOperation"    : "Add",
+                "AlphaSourceFactor"      : "One",
+                "AlphaDestinationFactor" : "OneMinusSourceAlpha",
+                "RgbBlendOperation"      : "Add",
+                "RgbSourceFactor"        : "One",
+                "RgbDestinationFactor"   : "OneMinusSourceAlpha"
+
+            },
+            "FunctionConstants" : {
+                "EnableIBL"              : "false",
+                "EnableAREnvProbe"       : "false",
+                "EnableProjectiveShadow" : "false",
+                "EnableVertexColor"      : "true",
+                "ForceEnableShadows"     : "false",
+                "ForceEnableMeshLighting" : "false"
+            },
+            "Variations" : {
+                "EnableDynamicLighting" : ["true", "false"]
+            }
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#intentHandledResponseForDownloadIntentCategory">
+    <conditions>
+        <condition name="isGetIntentVerb">
+            <expression name="intentVerb.lowercase" op="eq" value="'get'"/>
+        </condition>
+        <condition name="isDownloadIntentVerb">
+            <expression name="intentVerb.lowercase" op="eq" value="'download'"/>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="verbPhrase">
+            <text condition="isGetIntentVerb">Getting it</text>
+            <text condition="isDownloadIntentVerb">Downloading</text>
+            <text>Getting it</text>
+        </first>
+    </phrases>
+    
+    <first>
+        <dialog>OK<opt>, <var name="user.groundingIfNeeded"/></opt>. <phrase name="verbPhrase"/><opt> with <var name="localizedAppName"/></opt>.</dialog>
+    </first>
+</cat>

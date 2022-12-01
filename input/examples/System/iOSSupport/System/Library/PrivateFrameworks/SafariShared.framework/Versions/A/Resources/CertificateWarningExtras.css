@@ -1,0 +1,25 @@
+﻿/*
+    This file has a UTF-8 BOM in it so it can be included from a UTF-16 page
+    without specifying an explicit character set. When editing it, please be
+    sure to preserve the BOM (first three bytes of the file, EF BB BF).
+*/
+
+@media (prefers-dark-interface) {
+    body {
+        background: none;
+        background-color: rgb(30, 30, 30);
+        --font-color: rgb(181, 182, 184);
+        --compact-font-color: rgb(181, 182, 184);
+        --title-color: rgb(224, 225, 225);
+    }
+
+    .alert {
+        background-color: rgb(56, 57, 59);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .24);
+    }
+
+    #details {
+        background-color: rgb(46, 47, 49);
+        border-top-color: rgb(90, 92, 93);
+    }
+}

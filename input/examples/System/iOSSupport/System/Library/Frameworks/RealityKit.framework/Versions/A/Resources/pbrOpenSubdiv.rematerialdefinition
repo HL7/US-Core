@@ -1,0 +1,54 @@
+{
+    "Name": "PbrOpenSubdiv",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Buffers": {
+            "tessellationHi"        : "geometry.tessellationHi",
+            "tessellationLo"        : "geometry.tessellationLo",
+            "P"                     : "geometry.P",
+            "P1"                    : "geometry.P1",
+            "P2"                    : "geometry.P2",
+            "patchParam"            : "geometry.patchParams",
+            "textureUVCoordinates"  : "geometry.vertexUV|values",
+            "textureUVPatchIndices" : "geometry.vertexUV|indices",
+            "textureUVPatchParams"  : "geometry.vertexUV|patchParams"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "Opaque",
+            "VertexShader": {
+                "Entry": "vsRealityPbrOpenSubdiv"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "Greater"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "EnableScreenSpaceAdaptiveTessellation" : "false",
+                "EnableAREnvProbe"      : "false"
+            },
+            "DefaultVariations" : [ "OpaqueCommon" ],
+            "DebugMapping": "PbrDebug"
+        }
+    ],
+    "TechniqueMapping": {
+        "Opaque"   : "Opaque"
+    }
+}

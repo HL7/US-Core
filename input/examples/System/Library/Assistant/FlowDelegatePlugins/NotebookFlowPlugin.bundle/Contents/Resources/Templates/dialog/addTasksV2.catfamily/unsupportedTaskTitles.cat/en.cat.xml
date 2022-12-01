@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#unsupportedTaskTitles" locale="en">
+
+  <conditions>
+    <condition name="appName_empty">
+      <expression name="appName" op="empty"/>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <first phrase="phrase_0">
+      <text condition="appName_empty">The app</text>
+      <text><var name="appName"/></text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog><opt><phrase name="phrase_0"/></opt> doesn’t support that name.</dialog>
+  </first>
+
+</cat>

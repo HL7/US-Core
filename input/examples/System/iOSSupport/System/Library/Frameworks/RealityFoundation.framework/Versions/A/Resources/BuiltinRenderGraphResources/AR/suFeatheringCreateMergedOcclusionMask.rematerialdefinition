@@ -1,0 +1,33 @@
+{
+    "Name": "suFeatheringCreateMergedOcclusionMask",
+    "OverrideMaterial": "engine:pbr.rematerialdefinition",
+    "Parameters": {
+        "Textures": {
+            "suMeshDepth" : "rendergraph.suMeshDepth",
+            "virtualContentDepth" : "rendergraph.virtualContentDepth",
+            "suFeatheringReferenceSurfacesDepth" : "rendergraph.suFeatheringReferenceSurfacesDepth"
+        },
+        "Constants": {
+            "featherDirectIntersections" : "0"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "CreateMaskOfAllOcclusions",
+            "VertexShader": {
+                "Entry": "vsFullscreenForSUFeathering"
+            },
+            "PixelShader": {
+                "Entry": "fsSUFeatheringCreateMergedOcclusionMask"
+            },
+            "State" : {
+                "DepthCompareFunction" : "Always",
+                "WriteDepth" : false,
+                "AlphaBlend" : false
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "CreateMaskOfAllOcclusions": "CreateMaskOfAllOcclusions"
+    }
+}

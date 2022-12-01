@@ -1,0 +1,63 @@
+{
+    "Name": "ClearcoatPbr",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Buffers": {
+            "tessellationHi"        : "geometry.tessellationHi",
+            "tessellationLo"        : "geometry.tessellationLo",
+            "P"                     : "geometry.P",
+            "P1"                    : "geometry.P1",
+            "P2"                    : "geometry.P2",
+            "patchParam"            : "geometry.patchParams",
+            "textureUVCoordinates"  : "geometry.vertexUV|values",
+            "textureUVPatchIndices" : "geometry.vertexUV|indices",
+            "textureUVPatchParams"  : "geometry.vertexUV|patchParams"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "Opaque",
+        "VertexShader": {
+            "Entry": "vsRealityPbrOpenSubdiv"
+        },
+        "PixelShader": {
+            "Entry": "fsRealityPbr"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"    : "true",
+            "EnableNormalMap"       : "true",
+            "EnableEmissiveMap"     : "true",
+            "EnableAreaLight"       : "true",
+            "EnableSeparateRMAS"    : "true",
+            "EnableClearcoat"       : "true",
+            "EnableScreenSpaceAdaptiveTessellation" : "false"
+            "EnableRoughnessMap"    : "true",
+            "EnableMetallicMap"     : "true",
+            "EnableAOMap"           : "true",
+            "EnableSpecularMap"     : "true"
+        },
+        "DebugMapping": "PbrDebug"
+    },
+    {
+        "Name": "Shadow",
+        "VertexShader": {
+            "Entry": "vsShadow"
+        },
+        "PixelShader": {
+            "Entry": "fsShadow"
+        },
+        "State" : {
+            "ColorWriteMask" : "None"
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque": "Opaque",
+        "Shadow": "Shadow"
+    }
+}
+

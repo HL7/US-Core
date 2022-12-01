@@ -1,0 +1,32 @@
+#CAT-SCHEMA 1.0
+
+name: phone.PersonList
+
+inputs:
+  list:
+    type: phone.Person[]
+    description: persons
+    optional: no
+    access_mode: public
+
+properties:
+  list:
+    type: phone.Person[]
+    description: persons
+    optional: no
+  allSameGivenName:
+    type: dialog.Boolean
+    description: whether all persons in the list have the same first name
+    optional: no
+  isUnnamedPhoneNumber:
+    type: dialog.Boolean
+    description: whether contact called is an unnamed phone number (1 contact and unnamed)
+    optional: no
+  hasHandleLabels:
+    type: dialog.Boolean
+    description: whether all contacts have handle labels
+    optional: no
+  hasDifferentNameAndLabel:
+    type: dialog.Boolean
+    description: whether all contacts have labels different from name
+    optional: no

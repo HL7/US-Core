@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="deleteTasks#unsupportedTasksNoTasksFound" locale="en">
+
+  <conditions>
+    <condition name="isFirstPartyAndHasContent">
+      <and>
+        <expression name="isFirstPartyApp"/>
+        <not>
+          <expression name="unsupportedValue" op="empty"/>
+        </not>
+      </and>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <first phrase="phrase">
+      <text condition="isFirstPartyAndHasContent"><phrase name="firstParty"/></text>
+      <text><var name="appName"/> didn’t find any reminders about <transform mode="quote"><var name="unsupportedValue"/></transform>.</text>
+      <text>I didn’t find any reminders to delete.</text>
+    </first>
+    <random phrase="firstParty">
+      <text>I didn’t find any reminders about <transform mode="quote"><var name="unsupportedValue"/></transform>.</text>
+      <text>You don’t have any reminders about <transform mode="quote"><var name="unsupportedValue"/></transform>.</text>
+    </random>
+  </phrases>
+
+
+  <first>
+    <dialog><opt>Sorry <var name="user.groundingIfNeeded"/>. </opt><opt><phrase name="phrase"/></opt></dialog>
+  </first>
+
+</cat>

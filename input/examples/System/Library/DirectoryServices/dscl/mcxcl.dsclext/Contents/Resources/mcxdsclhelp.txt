@@ -1,0 +1,311 @@
+﻿MCX Extensions:
+    -mcxread      <record path> [optArgs] [<appDomain> [<keyName>]]
+    -mcxset       <record path> [optArgs] <appDomain> <keyName> [<mcxDomain> [<keyValue>]]
+    -mcxedit      <record path> [optArgs] <appDomain> <keyPath> [<keyValue>]
+    -mcxdelete    <record path> [optArgs] [<appDomain> [<keyName>]]
+    -mcxdeleteall <record path> [optArgs] [<appDomain> [<keyName>]]
+    -mcxexport    <record path> [optArgs] [<appDomain> [<keyName>]]
+    -mcximport    <record path> [optArgs] <file path>
+    -mcxhelp
+.summaryEnd
+The <record path> specifies which record in the directory node is to be operated
+on (i.e. '/Users/mcx1').  This parameter is always required, but if you are in
+interactive mode, you can use '.' to mean 'current directory' (the directory
+that was last set using the 'cd' command).
+
+The <appDomain> parameter is something like 'com.apple.dock'
+
+The <keyName> parameter is something like 'tilesize'
+
+The <keyPath> parameter is a path to a sub-plist within an existing key value.
+For example 'mount-controls:dvd:1' means the 2nd element within the array with 
+the key name 'dvd' within the key called 'mount-controls'
+
+The <mcxDomain> is the type of management applied to the key.  Legal values are:
+    'none'   (not managed)
+    'always'
+    'once'
+    'often'
+    'unset'
+
+The <keyValue> is the new value to be used for a key.  This parameter can be
+specified using the same syntax as used by the 'defaults' command line tool.
+NOTE: When specifying plist or xml values, you will need to enclose the parameter
+in single quotes.  For example:
+    dscl  ...  '(authenticate, eject)'
+    dscl  ...  '<real>64.0</real>'
+
+
+The MCX extensions follow the same syntax as other dscl comamnds and follow
+the same authentication rules as dscl commands.  They can be used in both
+interactive and command-line modes (with exceptions noted below).  For example:
+
+Local command-line example
+--------------------------
+  $ dscl . mcxread /Users/mcxtest com.apple.dock tilesize
+  $ dscl -u admin -P apple . mcxset /Users/mcxtest com.apple.dock tilesize always -float 32
+
+Local interactive example
+-------------------------
+  $ dscl
+  > cd /NetInfo/Users/mcxtest
+  > mcxread . com.apple.dock =
+  ** for write-based commands you must first 'cd' to the appropriate node and then issue the 'auth' command **
+  > cd /NetInfo/Users/mcxtest
+  > auth admin apple
+  > mcxset . com.apple.dock tilesize always -float 32
+
+Remote command-line example
+---------------------------
+  $ dscl -u diradmin -P apple 10.0.116.132 mcxread /LDAPv3/127.0.0.1/Users/phd1 = = 
+
+  NOTE: It's not currently possible to use commands (e.g. 'mcxset') that require write access
+        to the node remotely due to Radar 4122565
+
+Remote interactive example
+--------------------------
+  $ dscl -u diradmin -P apple 10.0.116.132
+  > mcxread /LDAPv3/127.0.0.1/Users/phd1 com.apple.SoftwareUpdate CatalogURL
+  ** for write-based commands you must first 'cd' to the appropriate node and then issue the 'auth' command **
+  > cd /LDAPv3/127.0.0.1
+  > auth diradmin apple
+  > mcxset Users/phd1 com.apple.dock tilesize always -float 62.5
+
+
+
+mcxread <record path> [optArgs] [<appDomain> [<keyName>]]
+=========================================================
+Used to display existing values for MCX preference key(s).
+
+[optArgs]
+    -v <mcxVersion>
+        Specifies which version of the key should be retrieved.  If this
+        parameter is omitted, version 1 keys are searched for.
+    
+    -o <filePath>
+        Specifies the output file where results should be written. If
+        this parameter is omitted, results are written to stdout.
+        
+    -format <xml | plist | text>
+        Specifies how the output should be formatted.  If omitted, the
+        default is 'text'.
+
+<appDomain>
+    Specify the application domain you want to retrieve keys from.  If
+    this parameter is omitted or is equal to '=' then all application
+    domains will be dumped for the specified record.
+    
+<keyName>
+    Specify the name of the key you want to retrieve.  If this
+    parameter is omitted or is equal to '=' then all keys will be
+    displayed.
+    
+Examples:
+    mcxread /Users/mcx1 com.apple.dock autohide
+        Displays the value of the 'autohide' key in the 'com.apple.dock' application domain
+    
+    mcxread /Users/mcx1 -format xml com.apple.dock =
+        Displays, in XML format, all the keys in the 'com.apple.dock' application domain
+        
+    mcxread . -format plist = =
+        Displays, in plist format, all keys for all application domains for the current record
+
+
+mcxset <record path> [optArgs] <appDomain> <keyName> [<mcxDomain> [<keyValue> [<UPK>]]]
+=======================================================================================
+Used to set values for a new or existing MCX preference key.
+
+[optArgs]
+    -v <mcxVersion>
+        Specifies the version of the key to set.  If this parameter is omitted,
+        version 1 keys will be created.
+
+<appDomain>
+    Specify the application domain in which the key is to be set.
+    
+<keyName>
+    Specify the name of the key being set
+    
+<mcxDomain>
+    Specify the type of management to be applied to the key.   See above for
+    valid values.  Additionally, if this parameter is missing or '.' then
+    an existing key will be searched for and the existing management value
+    will not be changed.  Setting management to 'none' is the same as deleting
+    the key (will remove management for that key in the specified record).
+    
+<keyValue>
+    Specify the new value for the specified key.  Values can be specified using
+    the same syntax as used by the 'defaults' command line tool.  If the value
+    parameter is omitted, then the existing value for the key will not be updated.
+   
+<UPK>
+    The (optional) value for the Union Policy Key.  If present, the UPK *must*
+    be specified as a dictionary.  The valid keys for the dictionary include:
+          mcx_input_key_names      (single string or array of strings)
+          mcx_output_key_name      (single string)
+          mcx_remove_duplicates    (boolean)
+          mcx_union_as_dictionary  (boolean)
+          mcx_replace              (boolean)
+    You can specify 'input' as a shorthand for 'mcx_input_key_names'.
+    You can specify 'output' as a shorthand for 'mcx_output_key_name'.
+    If either mcx_input_key_names or mcx_output_key_name is omitted, the value
+    of <keyName> will be used for the missing value(s).
+   
+Examples:
+    mcxset /Users/mcx1 com.apple.dock autohide always -bool 1
+        Sets the 'autohide' key in the com.apple.dock domain to a value of
+        TRUE with 'always' management.
+    
+    mcxset . com.apple.dock autohide once
+        Moves the 'autohide' key to 'once' management, preserving the existing
+        value of the key.
+        
+    mcxset . com.apple.dock autohide none
+        Removes management of the autohide key in com.apple.dock domain for
+        the current record.
+    
+    mcxset . com.apple.dock autohide . -bool 0
+        Sets the value of autohide to FALSE, preserving the existing management level
+    
+    mcxset . com.apple.dock tilesize . <real>64.0</real>
+        Sets the tilesize key to the floating point number 64.0
+    
+    Examples specifying UPKs:
+        mcxset . com.apple.test testkey-Raw always '(1,2,3)' '{ input=testkey-Raw; output=testkey; mcx_remove_duplicates=1; mcx_replace=1; mcx_union_as_dictionary=0;}'
+        mcxset . com.apple.test testkey-Raw always '{ keya=a; keyb=b; keyc=c; }' '{ output=testkey; mcx_union_as_dictionary=1;}'
+    
+
+
+mcxedit <record path> [optArgs] <appDomain> <keyPath> [<keyValue>]
+==================================================================
+Used to update the value of an existing MCX preference key.
+
+[optArgs]
+    -v <mcxVersion>
+        Specifies the version of the key to set.  If this parameter is omitted,
+        version 1 keys will be edited.
+
+<appDomain>
+    Specify the application domain in which the key is to be set.
+    
+<keyPath>
+    Specify the path to the EXISTING key to be edited.
+
+<keyValue>
+    Specify the new value for the specified key path.  Values can be specified using
+    the same syntax as used by the 'defaults' command line tool.  If the value
+    parameter is omitted, then the key path will be deleted.
+    NOTE: It is not permissable to delete an entire key using this command. To delete
+          an entire key, use 'mcxset' and specify a management domain of 'none'.
+    
+Examples:
+    mcxedit . com.apple.dock autohide -bool 1
+        Change the autohide key to TRUE, preserving current management setting
+    
+    mcxedit . com.apple.systemuiserver mount-controls:dvd '(authenticate, eject)'
+        Sets the 'dvd' key within the 'mount-controls' dictionary to the array
+        containing two strings: 'authenticate' and 'eject'
+        
+    mcxedit . com.apple.systemuiserver mount-controls:dvd <array><string>authenticate</string><string>eject</string></array>
+        Same effect as previous example, just using xml syntax
+        
+    mcxedit . com.apple.systemuiserver mount-controls:dvd:1 deny
+        Change the 2nd array element within the 'dvd' key of the 'mount-controls'
+        dictionary to the string 'deny'
+    
+    mcxedit . com.apple.systemuiserver mount-controls:dvd
+        Remove the 'dvd' key of the 'mount-controls' dictionary
+        
+
+
+mcxdelete <record path> [optArgs] [<appDomain> [<keyName>]]
+===========================================================
+Used to remove management of MCX preference key(s).  This is equivalent to using
+the mcxset command with a 'mcxDomain' value of 'none'.
+
+[optArgs]
+    -v <mcxVersion>
+        Specifies the version of the key to delete.  If this parameter is omitted,
+        version 1 keys will be deleted.
+
+<appDomain>
+    Specify the application domain in which the key is to be set.  Omitting this
+    parameter, or specifying '=' means all application domains will be processed.
+    
+<keyName>
+    Specify the name of the key to be deleted.  Omitting this parameter, or
+    specifying '=' means all keys in the application domain will be deleted.
+    
+Examples:
+    mcxdelete . com.apple.dock autohide
+        No longer manage the 'autohide' Dock key.
+    
+    mcxdelete . com.apple.dock
+        Delete management of all Dock-related keys.
+    
+    mcxdelete .
+        Delete management of all keys for the current record.
+    
+
+
+mcxdeleteall <record path> [optArgs] [<appDomain> [<keyName>]]
+===========================================================
+Works identically to mcxdelete except that this command does not require you
+to specify a path to a specific record.  Instead, the path can point to a node 
+or record type and all records within will be processed.
+
+Examples:
+    mcxdeleteall Users
+        Assuming the current working directory points to a DS node, this
+        command will remove all management keys for all users.
+        
+    mcxdeleteall Computers com.apple.dock
+        Assuming the current working directory points to a DS node, this
+        command will remove management of all Dock-related keys for all
+        computer records.
+        
+    mcxdeleteall Groups com.apple.dock autohide
+        Assuming the current working directory points to a DS node, this
+        command will remove management of the 'autohide' Dock key for
+        all group records.
+
+	mcxdeleteall .
+		Assuming the current working directory points to a DS node, this
+		command will remove all management keys for all users, groups,
+		computers, computer groups and computer lists in the node.
+
+
+
+mcxexport <record path> [optArgs] [<appDomain> [<keyName>]]
+=========================================================
+Same functionality as the 'mcxread' command but produces output in a format that
+can later be imported using 'mcximport'.  Usually you will also want to specify
+the -o optional argument to cause the output to be written to a file.
+
+Examples:
+    mcxexport . -o /tmp/export.plist com.apple.dock
+
+
+
+mcximport <record path> [optArgs] <file path>
+=============================================
+Imports the keys/values previously exported using 'mcxexport'.  Each key/value in
+the import file will be processed as if the data were passed to 'mcxset'.  This
+means the data in the import file is added to the existing data in the record.
+
+[optArgs]
+    -d
+        Causes mcximport to delete any key found in the import file from the
+        record.  This is equivalent to calling mcxdelete for every key in the
+        import file.  The value of the key in the import file is ignored.
+
+<file path>
+    Specify the location of the file containing the data to be imported.
+
+Examples:
+    mcximport . /tmp/export.plist
+    mcximport . -d /tmp/export.plist
+
+---------------
+
+.end

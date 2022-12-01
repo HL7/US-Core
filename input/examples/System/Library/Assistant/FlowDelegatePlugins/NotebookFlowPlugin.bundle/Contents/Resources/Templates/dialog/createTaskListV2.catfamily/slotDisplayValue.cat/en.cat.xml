@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="createTaskListV2#slotDisplayValue" locale="en">
+
+  <conditions>
+    <condition name="slotName_eq_groupName">
+      <expression name="slotName" op="eq" value="'groupName'"/>
+    </condition>
+    <condition name="slotName_eq_taskTitles">
+      <expression name="slotName" op="eq" value="'taskTitles'"/>
+    </condition>
+    <condition name="slotName_eq_title">
+      <expression name="slotName" op="eq" value="'title'"/>
+    </condition>
+  </conditions>
+ 
+  <first>
+    <dialog condition="slotName_eq_title">List</dialog>
+    <dialog condition="slotName_eq_taskTitles">Items</dialog>
+    <dialog condition="slotName_eq_groupName">Folder</dialog>
+    <dialog><var name="slotName"/></dialog>
+  </first>
+
+</cat>

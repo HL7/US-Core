@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#unsupportedTargetTaskList">
+  <meta name="category" value="Can't Do"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="muteIfNeeded" value="false"/>
+  <meta name="notUseful" value="false"/>
+  <meta name="description" value="Executed when the targetTaskList slot is unsupported."/>
+  <parameters>
+    <parameter name="unsupportedValue" type="dialog.String"/>
+    <parameter name="unsupportedReason" type="dialog.Number"/>
+    <parameter name="slotName" type="dialog.String"/>
+    <parameter name="isFirstPartyApp" type="dialog.Boolean"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

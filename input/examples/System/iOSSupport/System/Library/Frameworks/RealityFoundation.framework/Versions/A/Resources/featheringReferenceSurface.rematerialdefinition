@@ -1,0 +1,19 @@
+{
+    "Name": "Feathering Reference Surface",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Techniques" : [
+        {
+            "Name": "DepthOnly",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "State" : {
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "FeatheringReferenceSurfaces": "DepthOnly"
+    }
+}

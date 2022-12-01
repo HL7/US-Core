@@ -1,0 +1,52 @@
+#CAT-SCHEMA 1.0
+
+name: socialConversation.Usage
+
+inputs:
+  usageCount:
+    access_mode: public
+  usageCountInLast2Mins:
+    access_mode: public
+  usageCountInLast10Mins:
+    access_mode: public
+  usageCountInLast1Hour:
+    access_mode: public
+  usageCountInLast6Hours:
+    access_mode: public
+  usageCountInLast1Day:
+    access_mode: public
+  usageCountInLast7Days:
+    access_mode: public
+  usageCountInLast28Days:
+    access_mode: public
+  usedToday:
+    access_mode: public
+
+properties:
+  usageCount:
+    type: dialog.Number
+    description: The number of times this usecase has been invoked.
+  usageCountInLast2Mins:
+    type: dialog.Number
+    description: The number of times this usecase has been invoked in the last 2 minutes.
+  usageCountInLast10Mins:
+    type: dialog.Number
+    description: The number of times this usecase has been invoked in the last 10 minutes.
+  usageCountInLast1Hour:
+    type: dialog.Number
+    description: The number of times this usecase has been invoked in the last 1 hour.
+  usageCountInLast6Hours:
+    type: dialog.Number
+    description: The number of times this usecase has been invoked in the last 6 hours.
+  usageCountInLast1Day:
+    type: dialog.Number
+    description: The number of times this usecase has been invoked in the last 1 day.
+  usageCountInLast7Days:
+    type: dialog.Number
+    description: The number of times this usecase has been invoked in the last 7 days.
+  usageCountInLast28Days:
+    type: dialog.Number
+    description: The number of times this usecase has been invoked in the last 28 days.
+  usedToday:
+    type: dialog.Boolean
+    description: Whether or not the usecase has been invoked since the start of the day (midnight).

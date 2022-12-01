@@ -1,0 +1,85 @@
+{
+    "Name": "DetailedPbr",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "detailTransform"         : "[7.07,7.07,-7.07,7.07]",
+            "detailOffset"            : "[2.73,-9.52]",
+            "detailBaseColorIntensity": "1.0",
+            "detailNormalIntensity"   : "0.3",
+            "detailMetallicIntensity" : "1.0",
+            "detailRoughnessIntensity": "1.0",
+            "detailSpecularIntensity" : "1.0"
+        },
+        "Textures": {
+            "textureBaseColorDetail"  : "fallback.white",
+            "textureMetallicDetail"   : "fallback.black",
+            "textureRoughnessDetail"  : "fallback.black",
+            "textureSpecularDetail"   : "fallback.black",
+            "textureNormalDetail"     : "fallback.lightBlue"
+        }
+    },
+    "ParameterProperties" : {
+        "detailTransform"         : {},
+        "detailOffset"            : {},
+        "detailBaseColorIntensity": {},
+        "detailNormalIntensity"   : {},
+        "detailMetallicIntensity" : {},
+        "detailRoughnessIntensity": {},
+        "detailSpecularIntensity" : {},
+        "textureBaseColorDetail"  : { "DisplayName" : "Base Color Detail Texture" },
+        "textureMetallicDetail"   : { "DisplayName" : "Metallic Detail Texture" },
+        "textureRoughnessDetail"  : { "DisplayName" : "Roughness Detail Texture" },
+        "textureSpecularDetail"   : { "DisplayName" : "Specular Detail Texture" },
+        "textureNormalDetail"     : { "DisplayName" : "Normal Detail Texture" },
+    },
+    "Techniques": [
+    {
+        "Name": "Opaque",
+        "VertexShader": {
+            "Entry": "vsRealityPbr"
+        },
+        "PixelShader": {
+            "Entry": "fsRealityPbr"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"    : "true",
+            "EnableNormalMap"       : "true",
+            "EnableEmissiveMap"     : "true",
+            "EnableAreaLight"       : "true",
+            "EnableSeparateRMAS"    : "true",
+            "EnableRoughnessMap"    : "true",
+            "EnableMetallicMap"     : "true",
+            "EnableAOMap"           : "true",
+            "EnableSpecularMap"     : "true",
+            "EnableClearcoat"       : "false",
+            "VertexColorOption"     : "0",
+            "EnableIBL"             : "true",
+            "EnableDetailMapping"   : "true",
+            "EnableAREnvProbe"      : "false"
+        },
+        "DefaultVariations" : [ "OpaqueCommon" ],
+        "DebugMapping": "PbrDebug"
+    },
+    {
+        "Name": "Shadow",
+        "VertexShader": {
+            "Entry": "vsShadow"
+        },
+        "PixelShader": {
+            "Entry": "fsShadow"
+        },
+        "State" : {
+            "ColorWriteMask" : "None"
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque"   : "Opaque",
+        "Shadow"   : "Shadow"
+    }
+}

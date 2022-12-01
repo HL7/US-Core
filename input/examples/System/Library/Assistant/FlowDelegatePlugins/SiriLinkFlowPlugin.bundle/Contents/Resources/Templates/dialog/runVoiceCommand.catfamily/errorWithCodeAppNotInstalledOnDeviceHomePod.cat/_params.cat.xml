@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runVoiceCommand#errorWithCodeAppNotInstalledOnDeviceHomePod">
+    <meta name="description" value="App for handling the underlying intent was not found on the device, when the user is using HomePod"/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="localizedAppName" type="dialog.String" description="The app name"/>
+    </parameters>
+</cat>

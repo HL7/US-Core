@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runCustomIntent#intentHandledResponseWithTemplate">
+    <conditions>
+        <condition name="shouldShowAppName" note="Checks if we should show app name">
+            <and>
+                <expression name="localizedAppName.length" op="gt" value="0"/>
+                <or>
+                    <expression name="dialogState.usageCount" op="lt" value="2"/>
+                    <expression name="dialogState.hoursSinceLastUse" op="gt" value="720"/>
+                </or>
+            </and>
+        </condition>
+        <condition name="workflow" note="True if intent category is CATEGORY_WORKFLOW">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_WORKFLOW'"/>
+        </condition>
+        <condition name="information" note="True if intent category is CATEGORY_INFORMATION">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_INFORMATION'"/>
+        </condition>
+        <condition name="media" note="True if intent category is for playing media">
+            <or>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_AUDIO'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_VIDEO'"/>
+            </or>
+        </condition>
+        <condition name="phonecall" note="True if intent category is for playing media">
+            <or>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_CALL_AUDIO'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_CALL_VIDEO'"/>
+            </or>
+        </condition>
+        <condition name="order" note="True if intent category is CATEGORY_ORDER">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_ORDER'"/>
+        </condition>
+        <condition name="request" note="True if intent category is CATEGORY_REQUEST">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_REQUEST'"/>
+        </condition>
+        <condition name="share" note="True if intent category is CATEGORY_SHARE">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_SHARE'"/>
+        </condition>
+        <condition name="create" note="True if intent category is CATEGORY_CREATE">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_CREATE'"/>
+        </condition>
+        <condition name="search" note="True if intent category is CATEGORY_SEARCH">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_WORKFLOW'"/>
+        </condition>
+        <condition name="toggle" note="True if intent category is CATEGORY_TOGGLE">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_TOGGLE'"/>
+        </condition>
+        <condition name="setcategory" note="True if intent category is CATEGORY_SET">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_SET'"/>
+        </condition>
+        <condition name="download" note="True if intent category is CATEGORY_DOWNLOAD">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_DOWNLOAD'"/>
+        </condition>
+        <condition name="checkin" note="True if intent category is CATEGORY_CHECK_IN">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_CHECK_IN'"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="multiUserOk">
+            <text condition="user.groundingIfNeeded">OK, <var name="user.groundingIfNeeded"/>, </text>
+            <text>OK,</text>
+        </first>
+    </phrases>
+    <first>
+        <first condition="shouldShowAppName">
+            <switch value="categoryVerb" condition="information">
+                <dialog case="'view'"><phrase name="multiUserOk"/> viewing. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog case="'open'"><phrase name="multiUserOk"/> opening. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog><phrase name="multiUserOk"/> viewing. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="order">
+                <dialog case="'buy'"><phrase name="multiUserOk"/> buying. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog case="'pay'"><phrase name="multiUserOk"/> paying. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog case="'order'"><phrase name="multiUserOk"/> ordering. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog case="'book'"><phrase name="multiUserOk"/> booking. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog><phrase name="multiUserOk"/> ordering. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+            </switch>
+            <first condition="media">
+                <dialog>
+                    <print><phrase name="multiUserOk"/> playing. <var name="localizedAppName"/> says "<var name="customDialog"/>".</print>
+                    <speak/>
+                </dialog>
+            </first>
+            <first condition="phonecall">
+                <dialog>
+                    <print><phrase name="multiUserOk"/> calling. <var name="localizedAppName"/> says "<var name="customDialog"/>".</print>
+                    <speak/>
+                </dialog>
+            </first>
+            <first condition="request">
+                <dialog><phrase name="multiUserOk"/> requesting. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+            </first>
+            <switch value="categoryVerb" condition="share">
+                <dialog case="'share'"><phrase name="multiUserOk"/> sharing. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog case="'post'"><phrase name="multiUserOk"/> paying. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog case="'send'"><phrase name="multiUserOk"/> sending. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog><phrase name="multiUserOk"/> sending. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="create">
+                <dialog case="'create'"><phrase name="multiUserOk"/> creating. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog case="'add'"><phrase name="multiUserOk"/> adding. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog><phrase name="multiUserOk"/> creating. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+            </switch>
+            <first condition="search">
+                <dialog><phrase name="multiUserOk"/> searching. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+            </first>
+            <first condition="setcategory">
+                <dialog><phrase name="multiUserOk"/> setting. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+            </first>
+            <switch value="categoryVerb" condition="toggle">
+                <dialog case="'turn on'"><phrase name="multiUserOk"/> turning on. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog case="'turn off'"><phrase name="multiUserOk"/> turning off. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog><phrase name="multiUserOk"/> toggling. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="download">
+                <dialog case="'download'"><phrase name="multiUserOk"/> downloading. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog case="'get'"><phrase name="multiUserOk"/> getting. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+                <dialog><phrase name="multiUserOk"/> downloading. <var name="localizedAppName"/> says "<var name="customDialog"/>".</dialog>
+            </switch>
+        </first>
+        <first note="Without app name">
+            <switch value="categoryVerb" condition="information">
+                <dialog case="'view'"><phrase name="multiUserOk"/> viewing. <var name="customDialog"/></dialog>
+                <dialog case="'open'"><phrase name="multiUserOk"/> opening. <var name="customDialog"/></dialog>
+                <dialog><phrase name="multiUserOk"/> viewing. <var name="customDialog"/></dialog>
+            </switch>
+            <switch value="categoryVerb" condition="order">
+                <dialog case="'buy'"><phrase name="multiUserOk"/> buying. <var name="customDialog"/></dialog>
+                <dialog case="'pay'"><phrase name="multiUserOk"/> paying. <var name="customDialog"/></dialog>
+                <dialog case="'order'"><phrase name="multiUserOk"/> ordering. <var name="customDialog"/></dialog>
+                <dialog case="'book'"><phrase name="multiUserOk"/> booking. <var name="customDialog"/></dialog>
+                <dialog><phrase name="multiUserOk"/> ordering. <var name="customDialog"/></dialog>
+            </switch>
+            <first condition="media">
+                <dialog>
+                    <print><phrase name="multiUserOk"/> playing. <var name="customDialog"/></print>
+                    <speak/>
+                </dialog>
+            </first>
+            <first condition="phonecall">
+                <dialog>
+                    <print><phrase name="multiUserOk"/> calling. <var name="customDialog"/></print>
+                    <speak/>
+                </dialog>
+            </first>
+            <first condition="request">
+                <dialog><phrase name="multiUserOk"/> requesting. <var name="customDialog"/></dialog>
+            </first>
+            <switch value="categoryVerb" condition="share">
+                <dialog case="'share'"><phrase name="multiUserOk"/> sharing. <var name="customDialog"/></dialog>
+                <dialog case="'post'"><phrase name="multiUserOk"/> paying. <var name="customDialog"/></dialog>
+                <dialog case="'send'"><phrase name="multiUserOk"/> sending. <var name="customDialog"/></dialog>
+                <dialog><phrase name="multiUserOk"/> sending. <var name="customDialog"/></dialog>
+            </switch>
+            <switch value="categoryVerb" condition="create">
+                <dialog case="'create'"><phrase name="multiUserOk"/> creating. <var name="customDialog"/></dialog>
+                <dialog case="'add'"><phrase name="multiUserOk"/> adding. <var name="customDialog"/></dialog>
+                <dialog><phrase name="multiUserOk"/> creating. <var name="customDialog"/></dialog>
+            </switch>
+            <first condition="search">
+                <dialog><phrase name="multiUserOk"/> searching. <var name="customDialog"/></dialog>
+            </first>
+            <first condition="setcategory">
+                <dialog><phrase name="multiUserOk"/> setting. <var name="customDialog"/></dialog>
+            </first>
+            <switch value="categoryVerb" condition="toggle">
+                <dialog case="'turn on'"><phrase name="multiUserOk"/> turning on. <var name="customDialog"/></dialog>
+                <dialog case="'turn off'"><phrase name="multiUserOk"/> turning off. <var name="customDialog"/></dialog>
+                <dialog><phrase name="multiUserOk"/> toggling. <var name="customDialog"/></dialog>
+            </switch>
+            <switch value="categoryVerb" condition="download">
+                <dialog case="'download'"><phrase name="multiUserOk"/> downloading. <var name="customDialog"/></dialog>
+                <dialog case="'get'"><phrase name="multiUserOk"/> getting. <var name="customDialog"/></dialog>
+                <dialog><phrase name="multiUserOk"/> downloading. <var name="customDialog"/></dialog>
+            </switch>
+            <dialog note="The base case"><phrase name="multiUserOk"/> done. <var name="customDialog"/></dialog>
+        </first>
+    </first>
+</cat>

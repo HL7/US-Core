@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DatabaseStatementCacheTransactionScoping</key>
+	<dict>
+		<key>Enabled</key>
+		<true/>
+		<key>DisplayName</key>
+		<string>Shorten the life of SQLite statements </string>
+		<key>Description</key>
+		<string>Only cache SQLite statements to the end of a transaction</string>
+	</dict>
+	<key>CachedStatisticsCollectionQueries</key>
+	<dict>
+		<key>Enabled</key>
+		<true/>
+		<key>DisplayName</key>
+		<string>Use cached results when getting initial results from HKStatisticsCollectionQueries to improve performance. </string>
+		<key>TargetRelease</key>
+		<string>Fall2021</string>
+		<key>CodeComplete</key>
+		<true/>
+	</dict>
+	<key>journal_database</key>
+	<dict>
+		<key>Enabled</key>
+		<true/>
+		<key>DisplayName</key>
+		<string>Journal Health Data Into a Database</string>
+	</dict>
+	<key>UnifiedCloudSync</key>
+	<dict>
+		<key>Enabled</key>
+		<false/>
+		<key>DisplayName</key>
+		<string>Unified Cloud Sync</string>
+		<key>Description</key>
+		<string>Sync using a single zone rather that multiple zones.</string>
+	</dict>
+	<key>CloudSyncSharding</key>
+	<dict>
+		<key>Enabled</key>
+		<true/>
+		<key>DisplayName</key>
+		<string>Cloud Sync sharding</string>
+		<key>Description</key>
+		<string>Shard data across multiple stores to improve performance of rebase and restore operations.</string>
+	</dict>
+	<key>background_observation_extension</key>
+	<dict>
+		<key>Enabled</key>
+		<false/>
+		<key>DisplayName</key>
+		<string>App Extension for Background Observation</string>
+	</dict>
+	<key>WorkoutRouteSmoothing</key>
+	<dict>
+		<key>Enabled</key>
+		<true/>
+		<key>DisplayName</key>
+		<string>Support workout smoothing on Watch</string>
+	</dict>
+	<key>DatabaseValueCacheTransactionScoping</key>
+	<dict>
+		<key>Enabled</key>
+		<true/>
+		<key>DisplayName</key>
+		<string>Default to Transaction Scoped Storage for Database Value Caches</string>
+	</dict>
+	<key>HighFrequencyDataInSQLite</key>
+	<dict>
+		<key>Enabled</key>
+		<false/>
+		<key>DisplayName</key>
+		<string>High Frequency Data in SQLite</string>
+		<key>Description</key>
+		<string>Store high frequency series data in new tables in SQLite instead of the pre-existing custom data store</string>
+	</dict>
+	<key>ActiveQueryTransactions</key>
+	<dict>
+		<key>Enabled</key>
+		<false/>
+		<key>DisplayName</key>
+		<string>Mark healthd dirty for the lifetime of a running query server</string>
+	</dict>
+</dict>
+</plist>

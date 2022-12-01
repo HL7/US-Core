@@ -1,0 +1,36 @@
+{
+  "Name": "DebugVisualize",
+  "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+  "Library": "",
+  "Parameters": {
+  },
+  "Techniques": [
+    {
+      "Name": "DebugVisualize",
+      "VertexShader": {
+        "Entry": "vsVisualize"
+      },
+      "PixelShader": {
+        "Entry": "fsVisualize"
+      },
+      "State" : {
+        "AlphaBlend" : false,
+        "WriteDepth" : true,
+        "DepthCompareFunction" : "Greater"
+      }
+    },
+    {
+      "Name": "Shadow",
+      "VertexShader": {
+        "Entry": "vsShadow"
+      },
+      "PixelShader": {
+        "Entry": "fsShadow"
+      }
+    }
+  ],
+  "TechniqueMapping": {
+    "Opaque": "DebugVisualize",
+    "Shadow": "Shadow"
+  }
+}

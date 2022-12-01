@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runCustomIntent#readDisambiguationItems">
+    <meta name="description" value="Constructs a speakable sentence for the disambiguation items to choose from"/>
+    <meta name="category" value="Disambiguate"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="items" type="dialog.String[]" description="The stringified selection items"/>
+    </parameters>
+</cat>

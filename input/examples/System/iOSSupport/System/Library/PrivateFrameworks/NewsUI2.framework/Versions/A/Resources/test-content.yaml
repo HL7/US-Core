@@ -1,0 +1,141 @@
+type: content
+data:
+  publishDate: 2019-08-06T13:49:59Z
+  tagID: T234972349
+  equivalentTopicIDs:
+    - T234235232
+    - T245345243
+  theme:
+    package:
+      type: url
+      data:
+        value: "https://news-assets.apple.com/news-feed/packages/2020-theme.json"
+    properties:
+      - type: string
+        data:
+          id: title
+          value: 2020 Election
+      - type: string
+        data:
+          id: subtitle
+          value: "Here's what's happening on the campaign trail today"
+      - type: url
+        data:
+          id: titleActionURL
+          value: https://news.apple.com/A345345020
+      - type: string
+        data:
+          id: callToActionText
+          value: See all of our latest 2020 coverage
+      - type: url
+        data:
+          id: callToActionURL
+          value: https://news.apple.com/A345345020
+  subgroups:
+    - layout:
+        type: url
+        data:
+          value: "https://news-assets.apple.com/news-feed/packages/hero-sidebar.json"
+      contents:
+        - slot: hero
+          properties:
+            - type: string
+              data:
+                id: kicker
+                value: The Big Story
+            - type: string
+              data:
+                id: callToAction
+                value: Read This or Else
+          items:
+            - type: article
+              data:
+                id: A4242424242
+                overrides:
+                  title: Another Article About Donald J. Trump
+                  displayDate: '2020-01-01T00:42:42Z'
+                  shortExcerpt: >
+                    Here is another story about Donald John Trump, who is, if you can
+                    believe it, but also if you can't, the President of the United States of
+                    America.
+                  storyType: breaking
+      - slot: sidebar
+        properties:
+             - type: string
+              data:
+                id: kicker
+                value: The Latest
+          - type: url
+            data:
+              id: actionURL
+              value: https://news.apple.com/T2342521324
+        items:
+          - type: article
+            data:
+              id: A4343434343
+              alternate:
+                id: A4747474747
+                alternate:
+                  id: A4848484848
+                  overrides:
+                    title: "Lorem Ipsum Dolor Sit Amet"
+          - type: article
+            data:
+              id: A4444444444
+          - type: article
+            data:
+              id: A4545454545
+    - layout:
+        type: url
+        data:
+          value: "https://news-assets.apple.com/news-feed/packages/nugget-row.json"
+      contents:
+        - slot: nugget-section
+          properties:
+            - type: string
+              data:
+                id: kicker
+                value: Candidate Comparison
+            - type: string
+              data:
+                id: callToAction
+                value: See all candidates
+            - type: url
+              data:
+                id: actionURL
+                value: https://news.apple.com/T2342352352
+          items:
+            - type: article
+              data:
+                id: A4343434343
+            - type: article
+              data:
+                id: A4444444444
+            - type: article
+              data:
+                id: A4545454545
+    - layout:
+        type: url
+        data:
+          value: "https://news-assets.apple.com/news-feed/packages/nugget-row.json"
+      contents:
+        - slot: nugget-section
+          properties:
+            - type: string
+              data:
+                id: kicker
+                value: Issue Explainers
+            - type: url
+              data:
+                id: actionURL
+                value: https://news.apple.com/T2342521324
+          items:
+          - type: article
+            data:
+              id: A4343434343
+          - type: article
+            data:
+              id: A4444444444
+          - type: article
+            data:
+              id: A4545454545

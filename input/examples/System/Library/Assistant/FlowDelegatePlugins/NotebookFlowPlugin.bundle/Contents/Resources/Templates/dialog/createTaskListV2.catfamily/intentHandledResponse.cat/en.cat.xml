@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="createTaskListV2#intentHandledResponse" locale="en">
+
+  <conditions>
+    <condition name="notVox">
+      <not>
+        <expression name="isVox"/>
+      </not>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <first phrase="vox_phrase">
+      <text condition="isVox">OK<opt> <var name="user.groundingIfNeeded"/></opt>, that’s all done.</text>
+      <text condition="notVox">OK, done, and done.</text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog condition="createdListHasReminders"><opt><phrase name="vox_phrase"/></opt></dialog>
+    <dialog><opt>OK, <var name="user.groundingIfNeeded"/>, </opt>Done.</dialog>
+  </first>
+
+</cat>

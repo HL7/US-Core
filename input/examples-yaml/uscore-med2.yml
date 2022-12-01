@@ -1,0 +1,16 @@
+resourceType: Medication
+id: uscore-med2
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Uscore Med2 Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: This is a uscore med2 example for the *US Core Medication Profile*.
+code:
+  coding:
+  - system: http://www.nlm.nih.gov/research/umls/rxnorm
+    code: '582620'
+    display: Nizatidine 15 MG/ML Oral Solution [Axid]
+  text: Nizatidine 15 MG/ML Oral Solution [Axid]

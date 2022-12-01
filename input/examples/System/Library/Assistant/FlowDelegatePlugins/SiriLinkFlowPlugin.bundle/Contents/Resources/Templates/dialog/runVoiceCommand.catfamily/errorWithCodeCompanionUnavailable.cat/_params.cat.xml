@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runVoiceCommand#errorWithCodeCompanionUnavailable">
+    <meta name="description" value="The intent that we're trying to handle requires remote execution and the companion device can't be reached."/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+    </parameters>
+</cat>

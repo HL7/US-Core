@@ -1,0 +1,45 @@
+{
+    "Name": "arKitPassthroughDefinition",
+    "Parameters": {
+        "Constants": {
+            "correctionMatrix": "material.correctionMatrix",
+            "intensityScale" : "material.intensityScale",
+            "useTextureAlpha" : "material.useTextureAlpha",
+            "useOcclusionMatte" : "material.useOcclusionMatte",
+            "useFeatherMask" : "material.useFeatherMask",
+            "shouldOverrideWithSolidColor": "material.shouldOverrideWithSolidColor",
+            "solidColor": "material.solidColor"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV"
+        },
+        "Textures": {
+            "textureY" : "fallback.black",
+            "textureCbCr" : "fallback.gray",
+            "textureAlpha" : "fallback.black",
+            "suOcclusionMatte" : "rendergraph.SUOcclusionMatte"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "arKitPassthrough",
+            "VertexShader": {
+                "Entry": "arKitPassthroughVertexShader",
+                "Library": "engine:default.metallib"
+            },
+            "PixelShader": {
+                "Entry": "arKitPassthroughFragmentShader",
+                "Library": "engine:default.metallib"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Always"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "arKitPassthroughTechnique": "arKitPassthrough"
+    }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="setTaskAttributeV2#disambiguateTargetTask" locale="en">
+    
+    <conditions>
+      <condition name="isVoiceOnly">
+        <or>
+          <expression name="device.isVOX"/>
+          <expression name="device.isCarPlay"/>
+        </or>
+      </condition>
+    </conditions>
+
+  <phrases>
+    <first phrase="phrase_0">
+      <text condition="isVox">You have <var name="numberOfValuesToDisambiguate"/> reminders. Which one do you want to change?</text>
+      <text>Which reminder do you want to change?</text>
+    </first>
+  </phrases>
+
+
+  <all>
+    <dialog><opt>OK <var name="user.groundingIfNeeded"/>. </opt><opt><phrase name="phrase_0"/></opt></dialog>
+    <dialog condition="isVoiceOnly">
+        <speak><var name="disambiguationList" list="or"/></speak>
+    </dialog>
+  </all>
+
+</cat>

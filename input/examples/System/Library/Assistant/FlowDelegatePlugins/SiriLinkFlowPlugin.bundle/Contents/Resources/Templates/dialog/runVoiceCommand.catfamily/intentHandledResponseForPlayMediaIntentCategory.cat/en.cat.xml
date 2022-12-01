@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#intentHandledResponseForPlayMediaIntentCategory">
+    <conditions>
+        <condition name="customFamiliarityCondition" note="Checks if the duc has been seen at least twice and has been seen in last 30 days">
+           <and>
+               <expression name="dialogState.usageCount" op="gt" value="2"/>
+               <expression name="dialogState.hoursSinceLastUse" op="lt" value="720"/>
+           </and>
+        </condition>
+    </conditions>
+    
+    <all>
+        <first condition="customResponsesEnabled">
+            <dialog condition="customFamiliarityCondition"><var name="customResponse"/></dialog>
+            <dialog>OK<opt>, <var name="user.groundingIfNeeded"/></opt>, <var name="localizedAppName"/> says: “<var name="customResponse"/>”</dialog>
+            <dialog><var name="customResponse"/></dialog>
+        </first>
+    </all>
+</cat>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runCustomIntent#promptForSlotValue">
+    <meta name="description" value="Prompting for the request details before handling it."/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="parameterName" type="dialog.String" description="The name of the parameter"/>
+    </parameters>
+</cat>

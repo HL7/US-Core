@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="createTaskListV2#promptForSlotValue" locale="en">
+
+  <conditions>
+    <condition name="slot_slotName_eq_groupName">
+      <expression name="slotName" op="eq" value="'groupName'"/>
+    </condition>
+    <condition name="slot_slotName_eq_taskTitles">
+      <expression name="slotName" op="eq" value="'taskTitles'"/>
+    </condition>
+    <condition name="slot_slotName_eq_title">
+      <expression name="slotName" op="eq" value="'title'"/>
+    </condition>
+  </conditions>
+ 
+  <first>
+    <dialog condition="slot_slotName_eq_title">OK, <opt><var name="user.groundingIfNeeded"/>, </opt>what do you want to call it?</dialog>
+    <dialog condition="slot_slotName_eq_taskTitles"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>What do you want to add to your list?</dialog>
+    <dialog condition="slot_slotName_eq_groupName"><opt>OK <var name="user.groundingIfNeeded"/>. </opt>Which folder do you want to add this list to?</dialog>
+  </first>
+
+</cat>

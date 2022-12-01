@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="createTaskListV2#disambiguateSlotValue">
+  <meta name="category" value="Disambiguate"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="A task list sending needs disambiguation."/>
+  <parameters>
+    <parameter name="slotName" type="dialog.String"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

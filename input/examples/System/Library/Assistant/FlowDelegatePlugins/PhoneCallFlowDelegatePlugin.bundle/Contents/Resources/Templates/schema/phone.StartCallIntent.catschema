@@ -1,0 +1,64 @@
+#CAT-SCHEMA 1.0
+
+name: phone.StartCallIntent
+
+inputs:
+  callCapability:
+    access_mode: public
+    optional: no
+
+  audioRoute:
+    access_mode: public
+    optional: no
+  
+  preferredCallProvider:
+    access_mode: public
+    optional: no
+
+  destinationType:
+    access_mode: public
+    optional: no
+
+  contacts:
+    access_mode: public
+    optional: no
+    
+  callGroups:
+    type: phone.CallGroup[]
+    access_mode: private
+    optional: yes
+
+properties:
+  callCapability:
+    type: dialog.String
+    description: Describes whether this is an audio or video call
+    sample_value: UNKNOWN, AUDIO_CALL, VIDEO_CALL
+    optional: no
+
+  audioRoute:
+    type: dialog.String
+    description: The route that audio is being transmitted through
+    sample_value: UNKNOWN, SPEAKERPHONE_AUDIO_ROUTE, BLUETOOTH_AUDIO_ROUTE
+    optional: no
+  
+  preferredCallProvider:
+    type: dialog.String
+    description: The provider of the call
+    sample_value: UNKNOWN, TELEPHONY_PROVIDER, FACETIME_PROVIDER
+    optional: no
+  
+  destinationType:
+    type: dialog.String
+    description: The destination of the call
+    sample_value: UNKNOWN, NORMAL_DESTINATION, EMERGENCY_DESTINATION, CALL_BACK_DESTINATION, REDIAL_DESTINATION
+    optional: no
+
+  contacts:
+    type: phone.PersonList
+    description: The list of contacts to be called (can be empty)
+    optional: no
+    
+  callGroups:
+    type: phone.CallGroup[]
+    description: The list of group Message names to be called (can be empty)
+    optional: yes

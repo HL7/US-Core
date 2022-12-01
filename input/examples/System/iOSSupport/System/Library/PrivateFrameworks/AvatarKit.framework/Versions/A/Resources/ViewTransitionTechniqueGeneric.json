@@ -1,0 +1,44 @@
+{
+    "sequence" : [
+        "ScenePass",
+        "CompositePass",
+    ],
+    "passes" : {
+        "ScenePass" : {
+            "outputs" : {
+                "color" : "scene_target"
+            },
+            "draw" : "DRAW_SCENE",
+            "colorStates" : {
+                "clear" : true,
+                "clearColor" : "sceneBackground"
+            }
+        },
+        "CompositePass" : {
+            "inputs" : {
+                "sceneTex" : "scene_target",
+                "snapshotTex" : "snapshot_symbol",
+                "opacity" : "opacity_symbol",
+            },
+            "outputs" : {
+                "color" : "COLOR"
+            },
+            "metalVertexShader" : "AVT_view_transition_vertex",
+            "metalFragmentShader" : "AVT_view_transition_generic_fragment",
+            "draw" : "DRAW_QUAD"
+        }
+    },
+    "targets" : {
+        "scene_target" : {
+            "type" : "color"
+        }
+    },
+    "symbols" : {
+        "opacity_symbol" : {
+            "type" : "float"
+        },
+        "snapshot_symbol" : {
+            "type" : "sampler2D"
+        },
+    }
+}

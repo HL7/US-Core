@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#errorWithCodeAppNotInstalledOnDeviceWatch">
+    <first>
+        <dialog>
+            <print><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>Continue on <var name="device.companionName"/>.</print>
+            <speak><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>To do that you'll need to continue on <var name="device.companionName"/>.</speak>
+        </dialog>
+        <dialog>
+            <print><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>Continue on your personal device.</print>
+            <speak><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>To do that you'll need to continue on your personal device.</speak>
+        </dialog>
+    </first>
+</cat>

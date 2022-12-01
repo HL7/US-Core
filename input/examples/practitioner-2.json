@@ -1,64 +1,49 @@
 {
-   "resourceType": "Practitioner",
-   "id": "practitioner-2",
-   "meta": {
-      "profile": [
-         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+  "resourceType": "Practitioner",
+  "id": "practitioner-2",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "value": "1245319599"
+    },
+    {
+      "system": "http://www.acme.org/practitioners",
+      "value": "456789"
+    }
+  ],
+  "name": [
+    {
+      "family": "Kathy",
+      "given": [
+        "Fielding"
       ],
-      "extension": [
-         {
-            "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-            "valueString": "Practitioner 2 Example"
-         },
-         {
-            "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-            "valueMarkdown": "This is a practitioner 2 example for the *US Core Practitioner Profile*."
-         }
+      "prefix": [
+        "Dr"
       ]
-   },
-   "identifier": [
-      {
-         "system": "http://hl7.org/fhir/sid/us-npi",
-         "value": "1245319599"
-      },
-      {
-         "system": "http://www.acme.org/practitioners",
-         "value": "456789"
-      }
-   ],
-   "name": [
-      {
-         "family": "Kathy",
-         "given": [
-            "Fielding"
-         ],
-         "prefix": [
-            "Dr"
-         ]
-      }
-   ],
-   "address": [
-      {
-         "use": "work",
-         "line": [
-            "1080 FIRST COLONIAL RD"
-         ],
-         "city": "Virginia Beach",
-         "state": "VA",
-         "postalCode": "21454-2406"
-      }
-   ],
-   "telecom": [
-      {
-         "system": "email",
-         "value": "Kathy.Fielding@direct.ExampleMedicalPractice.net",
-         "use": "work",
-         "extension": [
-            {
-               "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
-               "valueBoolean": true
-            }
-         ]
-      }
-   ]
+    }
+  ],
+  "address": [
+    {
+      "use": "work",
+      "line": [
+        "1080 FIRST COLONIAL RD"
+      ],
+      "city": "Virginia Beach",
+      "state": "VA",
+      "postalCode": "21454-2406"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "Kathy.Fielding@direct.ExampleMedicalPractice.net",
+      "use": "work",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-direct",
+          "valueBoolean": true
+        }
+      ]
+    }
+  ]
 }

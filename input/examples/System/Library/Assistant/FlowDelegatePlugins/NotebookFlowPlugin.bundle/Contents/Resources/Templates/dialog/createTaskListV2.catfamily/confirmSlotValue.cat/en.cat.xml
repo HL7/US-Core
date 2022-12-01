@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="createTaskListV2#confirmSlotValue" locale="en">
+
+  <conditions>
+    <condition name="slot_slotName_eq_groupName">
+      <expression name="slotName" op="eq" value="'groupName'"/>
+    </condition>
+    <condition name="slot_slotName_eq_taskTitles">
+      <expression name="slotName" op="eq" value="'taskTitles'"/>
+    </condition>
+    <condition name="slot_slotName_eq_title">
+      <expression name="slotName" op="eq" value="'title'"/>
+    </condition>
+  </conditions>
+ 
+  <first>
+    <dialog condition="slot_slotName_eq_title">To confirm, you’d like to create a list called “<var name="valueToConfirm"/>”?</dialog>
+    <dialog condition="slot_slotName_eq_taskTitles">To confirm, you’d like to add “<var name="valueToConfirm"/>” to your list?</dialog>
+    <dialog condition="slot_slotName_eq_groupName">To confirm, you’d like to add this list to “<var name="valueToConfirm"/>”?</dialog>
+    <dialog>To confirm, you said, “<var name="valueToConfirm"/>”?</dialog>
+  </first>
+
+</cat>

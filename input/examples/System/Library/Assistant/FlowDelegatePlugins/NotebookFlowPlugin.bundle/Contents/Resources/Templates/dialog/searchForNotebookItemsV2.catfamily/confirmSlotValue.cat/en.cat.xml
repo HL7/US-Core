@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="searchForNotebookItemsV2#confirmSlotValue" locale="en">
+
+  <conditions>
+    <condition name="slot_slotName_eq_content">
+      <expression name="slotName" op="eq" value="'content'"/>
+    </condition>
+    <condition name="slot_slotName_eq_date">
+      <expression name="slotName" op="eq" value="'date'"/>
+    </condition>
+    <condition name="slot_slotName_eq_dateSearchType">
+      <expression name="slotName" op="eq" value="'dateSearchType'"/>
+    </condition>
+    <condition name="slot_slotName_eq_itemType">
+      <expression name="slotName" op="eq" value="'itemType'"/>
+    </condition>
+    <condition name="slot_slotName_eq_location">
+      <expression name="slotName" op="eq" value="'location'"/>
+    </condition>
+    <condition name="slot_slotName_eq_locationSearchType">
+      <expression name="slotName" op="eq" value="'locationSearchType'"/>
+    </condition>
+    <condition name="slot_slotName_eq_status">
+      <expression name="slotName" op="eq" value="'status'"/>
+    </condition>
+    <condition name="slot_slotName_eq_title">
+      <expression name="slotName" op="eq" value="'title'"/>
+    </condition>
+  </conditions>
+ 
+  <first>
+    <dialog condition="slot_slotName_eq_title">To confirm, you’re looking for items called “<var name="valueToConfirm"/>”?</dialog>
+    <dialog condition="slot_slotName_eq_content">To confirm, you’re looking for items that contain “<var name="valueToConfirm"/>”?</dialog>
+    <dialog condition="slot_slotName_eq_itemType">To confirm, you’re looking for “<var name="valueToConfirm"/>” items?</dialog>
+    <dialog condition="slot_slotName_eq_status">To confirm, you’re looking for items that are “<var name="valueToConfirm"/>”?</dialog>
+    <dialog condition="slot_slotName_eq_location">To confirm, you’re looking for items that are set to the location “<var name="valueToConfirm"/>”?</dialog>
+    <dialog condition="slot_slotName_eq_locationSearchType">To confirm, you’re looking for items that are set to the location “<var name="valueToConfirm"/>”?</dialog>
+    <dialog condition="slot_slotName_eq_date">To confirm, you’re looking for items with a due date of “<var name="valueToConfirm"/>”?</dialog>
+    <dialog condition="slot_slotName_eq_dateSearchType">To confirm, you’re looking for items with a due date of “<var name="valueToConfirm"/>”?</dialog>
+    <dialog>To confirm, you said, “<var name="valueToConfirm"/>”?</dialog>
+  </first>
+
+</cat>

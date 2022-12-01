@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="ShareETA#IntentHandledResponse" xmlns="urn:apple:names:siri:cat:1.0">
+	<meta name="description" value="Intent handled successfully SSI-2, STE-1 https://confluence.sd.apple.com/pages/viewpage.action?pageId=1390032553"/>
+	<meta name="category" value="Handled"/>
+	<meta name="readyForLoc" value="true"/>
+	<parameters>
+		<parameter description="if stop sharing ETA" name="ifStopShareETA" type="dialog.Boolean"/>
+		<parameter description="Person with whom eta will get shared" name="recipient" type="dialog.Person"/>
+		<parameter description="Medium used for sharing eta" name="mode" type="dialog.Number"/>
+	</parameters>
+</cat>

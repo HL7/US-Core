@@ -1,0 +1,230 @@
+{
+    "Name" : "PostProcessGraph",
+    "Targets" : [
+        {
+            "Name" : "DownsampledTarget",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA16Float",
+                "WidthMultiplier" : 0.5,
+                "HeightMultiplier" : 0.5,
+                "MipLevelCount" : 5,
+                "SampleCount" : 1
+            }
+        },
+        {
+            "Name" : "PostProcessInputColor"
+        },
+        {
+            "Name" : "BloomResultColor",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "RGBA16Float"
+            }
+        },
+        {
+            "Name" : "TonemapResultColor",
+            "Description" : {
+                "Type" : "MemoryManaged"
+            }
+        },
+        {
+            "Name" : "PostProcessOutputColor"
+        }
+    ],
+    "Buffers" : [
+    ],
+    "Nodes" : [
+        {
+            "RenderGraphUploadBloomParams" : {
+                "Name" : "UploadBloomParams",
+                "BloomUserParameters" : {
+                    "Strength" : 0.25,
+                    "Threshold" : 1.0,
+                    "Spread" : 1.0,
+                    "NumPasses" : 1
+                }
+            }
+        },
+        {
+            "RenderGraphDownsampleThresholdNode" : {
+                "Name" : "DownsampleThresholdNode",
+                "DownsampleThresholdMaterial" : "downsampleThreshold.rematerial",
+                "TargetReads" : [
+                    { "TargetHandle" : "PostProcessInputColor" }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "DownsampledTarget",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "GenerateMipmaps" : {
+                "Name" : "BloomGenerateMips",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "DownsampledTarget",
+                        "Settings" : {
+                            "Type" : "WriteBlit"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "RenderGraphDownsampleBlur" : {
+                "Name" : "DownsampleBlur",
+                "Library" : "engine:default.metallib",
+                "DownsampledTarget" : "DownsampledTarget"
+            }
+        },
+        {
+            "RenderGraphBloomNode" : {
+                "Name" : "Bloom",
+                "Material" : "bloom.rematerial",
+                "TechniqueName" : "fullscreen",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "PostProcessInputColor"
+                    },
+                    {
+                        "TargetHandle" : "DownsampledTarget"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "BloomResultColor",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName" : "inputColor",
+                        "TargetHandle" : "PostProcessInputColor"
+                    },
+                    {
+                        "BindingName" : "downsampled",
+                        "TargetHandle" : "DownsampledTarget"
+                    }
+                ]
+            }
+        },
+        {
+            "RenderGraphTonemapNode" : {
+                "Name" : "Tonemap",
+                "Material" : "tonemap.rematerial",
+                "TechniqueName" : "fullscreen",
+                "TonemapUserParameters" : {
+                    "ToeStrength" : 0.5,
+                    "ToeLength" : 0.5,
+                    "ShoulderStrength" : 0.5,
+                    "ShoulderLength" : 0.5,
+                    "ShoulderAngle" : 1.0,
+                    "Gamma" : 1.0,
+                    "WhiteLevel" : 1.0,
+                    "Exposure" : 0.0
+                },
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "BloomResultColor"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "TonemapResultColor",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName" : "inputColor",
+                        "TargetHandle" : "BloomResultColor"
+                    }
+                ]
+            }
+        },
+        {
+            "Fullscreen" : {
+                "Name" : "Vignette",
+                "Material" : "vignette.rematerial",
+                "TechniqueName" : "fullscreen",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "TonemapResultColor"
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "PostProcessOutputColor",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName" : "inputColor",
+                        "TargetHandle" : "TonemapResultColor"
+                    }
+                ]
+            }
+        },
+        {
+            "ProfilerOverlay" : {
+                "Name" : "FrameProfilerOverlay",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "PostProcessOutputColor",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "Color",
+            "Target" : "PostProcessInputColor",
+            "InputOnly" : true
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "Color",
+            "Target" : "DownsampledTarget"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "BloomResultColor"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "TonemapResultColor"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "PostProcessOutputColor"
+        }
+    ],
+    "Operations" : [
+        {
+            "RenderGraphSpecifyLaneOperation" : {
+                "Lane" : "Color",
+                "Description" : {
+                    "Format" : "RGBA16Float"
+                }
+            }
+        }
+    ]
+}

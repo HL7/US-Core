@@ -1,0 +1,43 @@
+{
+    "Name": "MissingMaterial",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "divisions": "16"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "Missing",
+            "VertexShader": {
+                "Entry": "vsMissing"
+            },
+            "PixelShader": {
+                "Entry": "fsMissingLinear"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "Greater"
+            }
+        },
+        {
+            "Name": "SphericalMissing",
+            "VertexShader": {
+                "Entry": "vsMissing"
+            },
+            "PixelShader": {
+                "Entry": "fsMissingSpherical"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "Greater"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "Opaque": "Missing",
+        "Filter": "Missing"
+    }
+}

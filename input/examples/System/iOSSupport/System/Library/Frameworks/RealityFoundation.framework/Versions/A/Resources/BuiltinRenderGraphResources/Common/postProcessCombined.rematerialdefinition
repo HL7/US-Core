@@ -1,0 +1,52 @@
+{
+    "Name": "postProcessCombined",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "bloomStrength" : "0.0",
+            "bloomSpread" : "0.0",
+            "bloomThreshold" : "0.0",
+            "bloomPasses" : "0.0",
+            "extent" : "0.0",
+            "gaussianWeights" : "0.0",
+            "oneOverWhitePoint" : "0.0",
+            "x0" : "0.0",
+            "x1" : "0.0",
+            "exposure" : "0.0"
+        },
+        "Buffers": {
+            "tonemapParams" : "rendergraph.tonemapParams",
+            "bloomParams" : "rendergraph.bloomParams",
+            "viewportParams" : "rendergraph.viewportParams"
+        },
+        "Textures": {
+            "inputColor" : "rendergraph.inputColor",
+            "luminanceInput" : "rendergraph.luminanceInput",
+            "downsampled" : "rendergraph.downsampled"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "FullScreen",
+        "VertexShader": {
+            "Entry": "fullScreen2Vert"
+        },
+        "PixelShader": {
+            "Entry": "postProcessCombinedGraphics"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        },
+        "FunctionConstants" : {
+            "re::bloomPass" : "true",
+            "re::tonemapPass" : "true",
+            "re::vignettePass" : "false"
+        }
+    }],
+    "TechniqueMapping": {
+        "fullscreen": "FullScreen",
+        "fullscreenarray": "FullScreen"
+    }
+}

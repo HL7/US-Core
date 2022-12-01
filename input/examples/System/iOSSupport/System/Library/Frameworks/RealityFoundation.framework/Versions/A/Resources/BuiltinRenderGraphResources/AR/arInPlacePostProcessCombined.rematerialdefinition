@@ -1,0 +1,46 @@
+{
+    "Name": "arInPlacePostProcessCombined",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "oneOverWhitePoint" : "0.0",
+            "x0" : "0.0",
+            "x1" : "0.0",
+            "exposure" : "0.0",
+            "scale": "[0.0, 0.0]",
+            "translation": "[0.0, 0.0]",
+            "grainIntensity": "0.0"
+        },
+        "Buffers": {
+            "tonemapParams" : "rendergraph.tonemapParams"
+        },
+        "Textures": {
+            "inputColor" : "rendergraph.inputColor",
+            "lut3d" : "fallback.white3D",
+            "grainTexture" : "fallback.black3D"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "FullScreen",
+        "VertexShader": {
+            "Entry": "fullScreenVert"
+        },
+        "PixelShader": {
+            "Entry": "arPostProcessCombinedGraphics"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        },
+        "FunctionConstants" : {
+            "re::tonemapPass" : "true",
+            "re::colorCorrectPass" : "true",
+            "re::cameraNoisePass" : "true"
+        }
+    }],
+    "TechniqueMapping": {
+        "fullscreen": "FullScreen"
+    }
+}

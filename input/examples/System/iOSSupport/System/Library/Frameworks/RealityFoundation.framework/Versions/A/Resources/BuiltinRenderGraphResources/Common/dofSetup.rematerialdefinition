@@ -1,0 +1,35 @@
+{
+    "Name": "DepthOfFieldSetupDefinition",
+    "Parameters": {
+        "Constants": {
+            "viewportPercents" : "view.viewportPercents"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV",
+            "dofConstants" : "rendergraph.dofConstants"
+        },
+        "Textures": {
+            "sceneSource" : "rendergraph.sceneSource",
+            "sceneDepth" : "rendergraph.sceneDepth"
+	    }
+    },
+    "Techniques": [
+    {
+        "Name": "DofSetupTechnique",
+        "VertexShader": {
+            "Entry": "fullScreenVert"
+        },
+        "PixelShader": {
+            "Entry": "depthOfFieldSetup"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        }
+    }],
+    "TechniqueMapping": {
+        "fullscreen": "DofSetupTechnique"
+    }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="ShareETA#IntentHandledResponse" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<conditions>
+		<condition name="isStopShareETA">
+			<expression name="ifStopShareETA" op="set"/>
+		</condition>
+		<condition name="isShareETA">
+			<expression name="ifStopShareETA" op="unset"/>
+		</condition>
+	</conditions>
+	<phrases>
+		<switch phrase="sharing_mode" value="mode">
+			<text case="1">Maps</text>
+			<text case="2">SMS</text>
+			<text case="3">iMessage</text>
+		</switch>
+	</phrases>
+	<random>
+		<dialog condition="isShareETA" id="shareETAHandled">OK, now sharing your ETA<opt> with <var name="recipient.fullName"/></opt><opt> using <phrase name="sharing_mode"/></opt>.</dialog>
+		<dialog condition="isStopShareETA" id="stopShareETAHandled">OK, no longer sharing your ETA<opt> with <var name="recipient.fullName"/></opt>.</dialog>
+	</random>
+</cat>

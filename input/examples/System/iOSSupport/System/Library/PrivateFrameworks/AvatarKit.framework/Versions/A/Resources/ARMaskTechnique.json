@@ -1,0 +1,72 @@
+{
+    "sequence" : [
+        "CustomPass",
+        "CompositePass"
+    ],
+    "passes" : {
+        "CustomPass" : {
+            "inputs" : {
+                "sceneColorTex" : "sceneColorTexture_target",
+                "sceneOnTopTex" : "sceneOnTopTexture_target",
+                "sceneDepthTex" : "sceneDepthTexture_target"
+            },
+            "outputs" : {
+                "color0" : "mask_target"
+            },
+            "draw" : "CUSTOM"
+        },
+        "CompositePass" : {
+            "inputs" : {
+                "sceneColorTex" : "sceneColorTexture_target",
+                "sceneOnTopTex" : "sceneOnTopTexture_target",
+                "maskTex" : "mask_target",
+                "headZ" : "headZ_symbol",
+                "shadowMaskFactor" : "shadowMaskFactor_symbol",
+                "shadowUVOffset" : "shadowUVOffset_symbol"
+            },
+            "outputs" : {
+                "color" : "COLOR"
+            },
+            "metalVertexShader" : "AVT_fullscreen_quad_orientation_vertex",
+            "metalFragmentShader" : "AVT_composite_fragment",
+            "draw" : "DRAW_QUAD",
+            "colorStates" : {
+                "clear" : true,
+                "clearColor" : "0. 0. 0. 0."
+            },
+            "blendStates" : {
+                "enable" : true,
+                "colorDst" : "oneMinusSrcAlpha",
+                "colorSrc" : "one"
+            }
+        }
+    },
+    "targets" : {
+        "sceneColorTexture_target" : {
+            "type" : "color"
+        },
+        "sceneOnTopTexture_target" : {
+            "format" : "rg8s",
+            "type" : "color"
+        },
+        "sceneDepthTexture_target" : {
+            "type" : "depth"
+        },
+        "mask_target" : {
+            "type" : "color",
+            "format" : "rgba16f",
+            "scaleFactor" : 0.25
+        }
+    },
+    "symbols" : {
+        "headZ_symbol" : {
+            "type" : "float"
+        },
+        "shadowMaskFactor_symbol" : {
+            "type" : "float"
+        },
+        "shadowUVOffset_symbol" : {
+            "type" : "float"
+        }
+    }
+}

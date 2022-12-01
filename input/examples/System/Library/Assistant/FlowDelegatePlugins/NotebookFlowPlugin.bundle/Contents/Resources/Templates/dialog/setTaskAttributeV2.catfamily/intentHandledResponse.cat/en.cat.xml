@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="setTaskAttributeV2#intentHandledResponse" locale="en">
+
+  <conditions>
+  </conditions>
+ 
+  <phrases>
+    <random phrase="phrase_0">
+      <text condition="locationDisabledWarning"><phrase name="phrase_1"/></text>
+    </random>
+    <first phrase="phrase_1">
+      <text condition="isFirstPartyApp"> In order to receive notifications you’ll need to enable Location Services for the <var name="appName"/> app.</text>
+      <text> In order to receive notifications you’ll need to enable Location Services for <var name="appName"/>.</text>
+    </first>
+    <first phrase="phrase_2">
+      <text condition="isVox">OK, <opt><var name="user.groundingIfNeeded"/>, </opt> <var name="targetTitle"/> has been marked as complete.</text>
+      <text>
+                                            Done.
+                                        </text>
+    </first>
+    <first phrase="phrase_3">
+      <text condition="markComplete"><phrase name="phrase_2"/></text>
+      <text condition="markIncomplete">OK<opt> <var name="user.groundingIfNeeded"/></opt>, it’s been marked as not completed.</text>
+    </first>
+    <random phrase="phrase_4">
+      <text>OK.</text>
+      <text>Done.</text>
+    </random>
+    <random phrase="phrase_5">
+      <text>OK, <opt><var name="user.groundingIfNeeded"/>, </opt>it's flagged.</text>
+      <text>Alright, <opt><var name="user.groundingIfNeeded"/>, </opt>it's flagged.</text>
+    </random>
+    <first phrase="phrase_6">
+      <text condition="isVox"><phrase name="phrase_5"/></text>
+      <text><phrase name="phrase_4"/></text>
+    </first>
+    <first phrase="phrase_7">
+      <text condition="markFlagged"><phrase name="phrase_6"/></text>
+      <text condition="unflag"><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>It's no longer flagged.</text>
+    </first>
+    <random phrase="phrase_8">
+      <text><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>Changed it to <var name="newTitle"/>.</text>
+      <text><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>Now it says <var name="newTitle"/>.</text>
+    </random>
+    <first phrase="phrase_9">
+      <text condition="isVox"><phrase name="phrase_8"/></text>
+      <text><phrase name="phrase_4"/></text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog condition="flagNotAllowedWarning">Sorry, only reminders in your iCloud account can be flagged. You can change your default Reminders list in Settings.</dialog>
+    <dialog condition="notUpgradedToCloudkitWarning">Sorry, to use the flagging feature, you’ll need to upgrade your iCloud account in the Reminders app.</dialog>
+    <first>
+      <dialog condition="multipleChanges">Ok, <opt><var name="user.groundingIfNeeded"/>, </opt>I changed it.</dialog>
+      <dialog condition="changeSpatialTrigger">OK, <opt><var name="user.groundingIfNeeded"/>, </opt>it's set for then.<opt><phrase name="phrase_0"/></opt></dialog>
+      <dialog condition="changeTemporalTrigger">OK, <opt><var name="user.groundingIfNeeded"/>, </opt>it's set <var name="newCalendar.dateDescriptiveWithPrefix"/>.</dialog>
+      <dialog condition="changeTitle"><phrase name="phrase_9"/></dialog>
+      <dialog condition="changePriority"><phrase name="phrase_7"/></dialog>
+      <dialog condition="changeStatus"><phrase name="phrase_3"/></dialog>
+    </first>
+    <dialog>Ok, <opt><var name="user.groundingIfNeeded"/>, </opt>I changed it.</dialog>
+  </first>
+
+</cat>

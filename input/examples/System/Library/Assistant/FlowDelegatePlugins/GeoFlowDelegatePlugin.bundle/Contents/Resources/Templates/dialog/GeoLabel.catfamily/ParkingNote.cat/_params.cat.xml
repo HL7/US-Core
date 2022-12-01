@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="GeoLabel#ParkingNote">
+    <meta name="description" value="Adds quotations to emphasize the parking note is not part of the address for the snippet"/>
+    <meta name="readyForLoc" value="true"/>
+    <meta name="category" value="UsedForSnippet"/>
+    
+    <parameters>
+      <parameter name="parkingNote" type="dialog.String" description="User provided information related to parked car location."/>
+    </parameters>
+</cat>

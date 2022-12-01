@@ -1,0 +1,27 @@
+{
+    "Name": "profilerFullScreenColorCopy",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Textures": {
+            "inputImage" : "rendergraph.inputImage"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "FullScreen",
+        "VertexShader": {
+            "Entry": "fullScreenVert"
+        },
+        "PixelShader": {
+            "Entry": "fullScreenTextureCopy"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Always"
+        }
+    }],
+    "TechniqueMapping": {
+        "fullscreen": "FullScreen"
+    }
+}

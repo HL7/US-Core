@@ -1,0 +1,735 @@
+! ----------------------------------------------------------------------
+!
+!  Base script 4/2/2007 version 3
+!
+!
+!  Base modem script designed to work with most standard modems
+!  and phones.  Refer to the CCL Scripting Guide to learn how to
+!  modify this script.
+!
+!  Entry points
+!    @ORIGINATE  Attempt to connect to the specified service
+!    @ANSWER     Not supported in this script
+!    @HANGUP     Disconnect the phone
+!
+!  Label numbers
+!      1-19  Initialize the phone
+!     20-29  Dial the specified phone number
+!     30-39  Parse the connection response
+!     40-49  Hang up the phone
+!     50-59  Error handling
+!    60-119  Parse the communication speed
+!
+!  Supported varString parameters
+!
+!    For GPRS, 3GPP devices:
+!       ^21  Primary AT command used to initialize the phone (required)
+!       ^22  Access Point Name (APN) (optional)
+!       ^23  Connection ID (CID) (required)
+!       ^27  Secondary initialization command (optional)
+!
+!    For all other devices:
+!        ^1  Full phone number to dial (optional)
+!        ^3  Tone 'T' or pulse 'P' dial string (required)
+!        ^7  1st fragment of the phone number to dial (required)
+!        ^8  2nd fragment of the phone number to dial (optional)
+!        ^9  3rd fragment of the phone number to dial (optional)
+!       ^20  Connect Speed as a numeric string suitable for serreset
+!       ^21  Primary AT command used to initialize the phone (required)
+!       ^22  Access Point Name (APN) (must be left blank)
+!       ^23  Connection ID (CID) (must be left blank)
+!       ^27  Secondary initialization command (optional)
+!
+!  Possible error codes
+!     -6019  Modem error; the modem is not responding
+!     -6020  No dial tone
+!     -6021  No carrier
+!     -6022  The line is busy
+!     -6023  No answer
+!     -6025  No @ANSWER command in this modem script
+!
+
+! ----------------------------------------------------------------------
+!
+!  Modem script entry points
+!
+
+@ORIGINATE
+jump 1
+@ANSWER
+exit -6025
+@HANGUP
+jump 40
+
+! ----------------------------------------------------------------------
+!
+!  Initialize the phone
+!
+
+!  Skip setting speed if ^20 is empty.
+@LABEL 1
+ifstr 20 3 ""
+ifstr 20 3 " "
+
+!
+!  Reset the serial communication speed to the value specified in
+!  varString ^20. A numerical value such as 230400 bps is expected. If
+!  the varString is not present, default to 230400 bps.
+!
+
+serreset ^20, 0, 8, 1
+hsreset 0 0 0 0 0 0
+jump 10
+
+@LABEL 3
+serreset 230400, 0, 8, 1
+hsreset 0 0 0 0 0 0
+
+!
+!  Send "AT" and wait for an "OK" response. If there is no response
+!  after 3 seconds, retry the command. If the 3rd attempt fails or the
+!  phone responds with anything other than "OK" terminate the script
+!  with a modem error.
+!
+
+@LABEL 10
+settries 0
+@LABEL 11
+matchclr
+matchstr 1 12 "OK\13\10"
+write "AT\13"
+matchread 30
+inctries
+iftries 3 50
+dtrclear
+pause 5
+dtrset
+flush
+jump 11
+
+!
+!  Send the initialization command specified in varString 21 and
+!  wait for a response. If there is no response after 5 seconds,
+!  retry the command. If the third attempt fails or the phone
+!  returns an "ERROR" response, terminate the script with a modem
+!  error.  If successful, proceed.
+!
+
+@LABEL 12
+settries 0
+@LABEL 13
+note "Initializing phone: AT^21" 3
+matchclr
+matchstr 1 14 "OK\13\10"
+matchstr 2 50 "ERROR\13\10"
+write "AT^21\13"
+matchread 60
+inctries
+iftries 3 50
+dtrclear
+pause 5
+dtrset
+flush
+jump 13
+
+!
+!  Potentially connfigure a GPRS connection.
+!  If the user specified an Access Point Name (APN) and Connection
+!  ID (CID), set up the PDP context. Skip if the APN or CID are blank.
+!
+
+@LABEL 14
+ifstr 22 15 ""
+ifstr 22 15 " "
+ifstr 23 15 ""
+ifstr 23 15 " "
+
+!
+!  Send a +CGDCONT command with the Connection ID (CID) specified in
+!  varString 23 and the Access Point Name (APN) specified in varString
+!  22. If the device responds with an error or fails to respond in 60
+!  seconds, terminate the script with a modem error. If successful,
+!  proceed.
+!
+
+note "Initializing PDP context: AT+CGDCONT=^23,\34IP\34,\34^22\34" 3
+matchclr
+matchstr 1 15 "OK\13\10"
+matchstr 2 50 "ERROR\13\10"
+write "AT+CGDCONT=^23,\34IP\34,\34^22\34\13"
+matchread 60
+jump 50
+
+!
+!  If the user specified a secondary initialization command (^27), send
+!  it now.  Skip if the command is blank.
+!
+
+@LABEL 15
+ifstr 27 20 ""
+ifstr 27 20 " "
+
+note "Initializing with secondary command: AT^27" 3
+matchclr
+matchstr 1 20 "OK\13\10"
+matchstr 2 50 "ERROR\13\10"
+write "AT^27\13"
+matchread 60
+jump 50
+
+! ----------------------------------------------------------------------
+!
+!  Initiate the Connection (Dial specified number or start GPRS connection)
+!
+
+@LABEL 20
+
+!
+!  If a CID is specified, dial the modem using the standard form
+!  *99***^23# where ^23 is subsituted with the CID. After initiating
+!  the GPRS connection, jump to label 30 to parse the modem's response.
+!  If the CID is blank, skip this part and dial the phone number the
+!  traditional way.
+!
+
+ifstr 23 21 ""
+ifstr 23 21 " "
+
+note "Dialing: ATD*99***^23#" 3
+write "ATD*99***^23#\13"
+jump 30
+
+@LABEL 21
+note "Dialing: ATD^3^1" 3
+
+!
+!  The phone number is contained in up to 3 fragments in varString 7, 8
+!  and 9. Both varString 8 and 9 can be empty, so there are 3 possible
+!  combinations:
+!
+!  1) if varString 8 is blank then dial varString 7
+!  2) if varString 9 is blank then dial varString 7 and 8
+!  3) otherwise dial varString 7, 8 and 9
+!
+!  Tone or pulse is contained in varString 3.
+!
+
+ifstr 8 26 ""
+ifstr 8 26 " "
+ifstr 9 24 ""
+ifstr 9 24 " "
+
+!
+!  Dial varString 7, 8 and 9
+!
+
+pause 10
+matchclr
+matchstr 1 22 "OK\13\10"
+write "ATD^3^7;\13"
+matchread 400
+jump 50
+
+@LABEL 22
+pause 10
+matchclr
+matchstr 1 23 "OK\13\10"
+write "ATD^3^8;\13"
+matchread 400
+jump 50
+
+@LABEL 23
+pause 10
+write "ATD^3^9\13"
+jump 30
+
+!
+!  Dial varString 7 and 8
+!
+
+@LABEL 24
+pause 10
+matchclr
+matchstr 1 25 "OK\13\10"
+write "ATD^7;\13"
+matchread 400
+jump 50
+
+@LABEL 25
+pause 10
+write "ATD^8\13"
+jump 30
+
+!
+!  Dial varString 7
+!
+
+@LABEL 26
+write "ATD^7\13"
+
+! ----------------------------------------------------------------------
+!
+!  Parse the connection response
+!
+
+@LABEL 30
+note "Waiting for connection" 3
+
+@LABEL 31
+matchclr
+matchstr  1 34 "CONNECT\13\10"
+matchstr  2 31 "RING\13\10"
+matchstr  3 52 "NO CARRIER"
+matchstr  4 50 "ERROR\13\10"
+matchstr  5 56 "DELAYED\13\10"
+matchstr  6 33 "CONNECT "
+matchstr  7 32 "CARRIER"
+matchstr  8 57 "BLACKLISTED\13\10"
+matchstr  9 57 "BLACKLISTED NUMBER\13\10"
+matchstr 10 51 "NO DIALTONE\13\10"
+matchstr 11 54 "BUSY\13\10"
+matchstr 12 55 "NO ANSWER\13\10"
+matchstr 13 58 "HAND SET IN USE\13\10"
+matchread 700
+jump 50
+
+!
+!  Wait for end of line after CARRIER
+!
+
+@LABEL 32
+matchclr
+matchstr 1 31 "\10"
+matchread 10
+jump 31
+
+!
+!  Wait for end of line after CONNECT
+!
+
+@LABEL 33
+
+note "Communicating at an unknown rate" 2
+
+!
+!  Connection established
+!
+
+@LABEL 34
+! Turn on CTS handshaking.
+note "Connection established" 3
+HSReset 0 1 0 0 0 0
+pause 30
+
+!  Success
+exit 0
+
+
+! ----------------------------------------------------------------------
+!
+!  Hang up and reset modem
+!  (jumped to from @HANGUP)
+!
+
+@LABEL 40
+
+hsreset 0 0 0 0 0 0
+settries 0
+
+!
+!  Escape from data to command mode
+!
+
+@LABEL 41
+flush
+pause 1
+write "+++"
+pause 1
+matchclr
+matchstr 1 42 "OK\13\10"
+matchread 30
+
+@LABEL 42
+pause 50
+matchclr
+matchstr 1 43 "NO CARRIER\13\10"
+matchstr 2 43 "OK\13\10"
+matchstr 3 43 "ERROR\13\10"
+matchstr 4 43 "0\13\10"
+write "ATH\13"
+matchread 150
+dtrclear
+pause 5
+dtrset
+flush
+
+inctries
+iftries 3 50
+jump 41
+
+!
+!  Recall the factory settings
+!
+
+@LABEL 43
+pause 15
+matchclr
+matchstr 1 44 "OK\13\10"
+write "AT&F\13"
+matchread 30
+jump 50
+
+!  Success
+@LABEL 44
+!Save MRU List
+write "AT^27\13"
+exit 0
+
+! ----------------------------------------------------------------------
+!
+!  Error handling
+!
+
+!
+!  Modem error; the modem is not responding.
+!
+
+@LABEL 50
+note "Modem error; the modem is not responding." 3
+exit -6019
+
+!
+!  No dial tone.
+!
+
+@LABEL 51
+note "No dial tone." 3
+exit -6020
+
+!
+!  No carrier.
+!
+
+@LABEL 52
+note "No carrier." 3
+exit -6021
+
+!
+!  The line is busy.
+!
+
+@LABEL 54
+note "The line is busy." 3
+exit -6022
+
+!
+!  No answer.
+!
+
+@LABEL 55
+note "No answer." 3
+exit -6023
+
+!
+!  Delayed.
+!
+
+@LABEL 56
+note "The phone returned a DELAYED response." 3
+exit -6021
+
+!
+!  Blacklisted.
+!
+
+@LABEL 57
+note "The phone returned a BLACKLISTED response." 3
+exit -6022
+
+!
+!  Hand set in use.
+!
+
+@LABEL 58
+note "The phone returned a HAND SET IN USE response." 3
+exit -6020
+
+! ----------------------------------------------------------------------
+!
+!  Parse the communication speed
+!
+
+@LABEL 60
+note "Communicating at 300 bps" 2
+communicatingat 300
+jump 34
+
+@LABEL 61
+note "Communicating at 600 bps" 2
+communicatingat 600
+jump 34
+
+@LABEL 62
+note "Communicating at 1200 bps" 2
+communicatingat 1200
+jump 34
+
+@LABEL 63
+note "Communicating at 2400 bps" 2
+communicatingat 2400
+jump 34
+
+@LABEL 64
+note "Communicating at 4800 bps" 2
+communicatingat 4800
+jump 34
+
+@LABEL 65
+note "Communicating at 7200 bps" 2
+communicatingat 7200
+jump 34
+
+@LABEL 66
+note "Communicating at 9600 bps" 2
+communicatingat 9600
+jump 34
+
+@LABEL 67
+note "Communicating at 12000 bps" 2
+communicatingat 12000
+jump 34
+
+@LABEL 68
+note "Communicating at 14400 bps" 2
+communicatingat 14400
+jump 34
+
+@LABEL 69
+note "Communicating at 16800 bps" 2
+communicatingat 16800
+jump 34
+
+@LABEL 70
+note "Communicating at 19200 bps" 2
+communicatingat 19200
+jump 34
+
+@LABEL 71
+note "Communicating at 21600 bps" 2
+communicatingat 21600
+jump 34
+
+@LABEL 72
+note "Communicating at 24000 bps" 2
+communicatingat 24000
+jump 34
+
+@LABEL 73
+note "Communicating at 26400 bps" 2
+communicatingat 26400
+jump 34
+
+@LABEL 74
+note "Communicating at 28800 bps" 2
+communicatingat 28800
+jump 34
+
+@LABEL 75
+note "Communicating at 29333 bps" 2
+communicatingat 29333
+jump 34
+
+@LABEL 76
+note "Communicating at 30667 bps" 2
+communicatingat 30667
+jump 34
+
+@LABEL 77
+note "Communicating at 31200 bps" 2
+communicatingat 31200
+jump 34
+
+@LABEL 78
+note "Communicating at 32000 bps" 2
+communicatingat 32000
+jump 34
+
+@LABEL 79
+note "Communicating at 33333 bps" 2
+communicatingat 33333
+jump 34
+
+@LABEL 80
+note "Communicating at 33600 bps" 2
+communicatingat 33600
+jump 34
+
+@LABEL 81
+note "Communicating at 34000 bps" 2
+communicatingat 34000
+jump 34
+
+@LABEL 82
+note "Communicating at 34667 bps" 2
+communicatingat 34667
+jump 34
+
+@LABEL 83
+note "Communicating at 36000 bps" 2
+communicatingat 36000
+jump 34
+
+@LABEL 84
+note "Communicating at 37333 bps" 2
+communicatingat 37333
+jump 34
+
+@LABEL 85
+note "Communicating at 38000 bps" 2
+communicatingat 38000
+jump 34
+
+@LABEL 86
+note "Communicating at 38400 bps" 2
+communicatingat 38400
+jump 34
+
+@LABEL 87
+note "Communicating at 38667 bps" 2
+communicatingat 38667
+jump 34
+
+@LABEL 88
+note "Communicating at 40000 bps" 2
+communicatingat 40000
+jump 34
+
+@LABEL 89
+note "Communicating at 41333 bps" 2
+communicatingat 41333
+jump 34
+
+@LABEL 90
+note "Communicating at 42000 bps" 2
+communicatingat 42000
+jump 34
+
+@LABEL 91
+note "Communicating at 42667 bps" 2
+communicatingat 42667
+jump 34
+
+@LABEL 92
+note "Communicating at 44000 bps" 2
+communicatingat 44000
+jump 34
+
+@LABEL 93
+note "Communicating at 45333 bps" 2
+communicatingat 45333
+jump 34
+
+@LABEL 94
+note "Communicating at 46000 bps" 2
+communicatingat 46000
+jump 34
+
+@LABEL 95
+note "Communicating at 46667 bps" 2
+communicatingat 46667
+jump 34
+
+@LABEL 96
+note "Communicating at 48000 bps" 2
+communicatingat 48000
+jump 34
+
+@LABEL 97
+note "Communicating at 49333 bps" 2
+communicatingat 49333
+jump 34
+
+@LABEL 98
+note "Communicating at 50000 bps" 2
+communicatingat 50000
+jump 34
+
+@LABEL 99
+note "Communicating at 50667 bps" 2
+communicatingat 50667
+jump 34
+
+@LABEL 100
+note "Communicating at 52000 bps" 2
+communicatingat 52000
+jump 34
+
+@LABEL 101
+note "Communicating at 53333 bps" 2
+communicatingat 53333
+jump 34
+
+@LABEL 102
+note "Communicating at 54000 bps" 2
+communicatingat 54000
+jump 34
+
+@LABEL 103
+note "Communicating at 54667 bps" 2
+communicatingat 54667
+jump 34
+
+@LABEL 104
+note "Communicating at 56000 bps" 2
+communicatingat 56000
+jump 34
+
+@LABEL 105
+note "Communicating at 57600 bps" 2
+communicatingat 57600
+jump 34
+
+@LABEL 106
+note "Communicating at 64000 bps" 2
+communicatingat 64000
+jump 34
+
+@LABEL 107
+note "Communicating at 115200 bps" 2
+communicatingat 115200
+jump 34
+
+@LABEL 108
+note "Communicating at 128000 bps" 2
+communicatingat 128000
+jump 34
+
+@LABEL 109
+note "Communicating at 230400 bps" 2
+communicatingat 230400
+jump 34
+
+@LABEL 110
+note "Communicating at 240000 bps" 2
+communicatingat 240000
+jump 34
+
+@LABEL 111
+note "Communicating at 256000 bps" 2
+communicatingat 256000
+jump 34
+
+@LABEL 112
+note "Communicating at 358400 bps" 2
+communicatingat 358400
+jump 34
+
+@LABEL 113
+note "Communicating at 460800 bps" 2
+communicatingat 460800
+jump 34
+
+@LABEL 114
+note "Communicating at 512000 bps" 2
+communicatingat 512000
+jump 34

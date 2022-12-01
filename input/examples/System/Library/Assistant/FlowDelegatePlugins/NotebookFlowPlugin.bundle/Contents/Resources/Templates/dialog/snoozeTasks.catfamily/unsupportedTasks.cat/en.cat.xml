@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="snoozeTasks#unsupportedTasks" locale="en">
+
+  <conditions>
+    <condition name="notEmptyAndIsHomepod">
+      <and>
+        <not>
+          <expression name="unsupportedValue" op="empty"/>
+        </not>
+        <expression name="isHomePod"/>
+      </and>
+    </condition>
+    <condition name="notFirstParty">
+      <not>
+        <expression name="isFirstPartyApp"/>
+      </not>
+    </condition>
+    <condition name="notEmpty">
+      <not>
+        <expression name="unsupportedValue" op="empty"/>
+      </not>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <random phrase="appNamePhrase">
+      <text condition="notFirstParty"><opt> from <var name="appName"/></opt></text>
+    </random>
+    <first phrase="phrase_1">
+      <text condition="notEmptyAndIsHomepod">There aren’t any reminder notifications about <transform mode="quote"><var name="unsupportedValue"/></transform> on your <var name="companionName"/></text>
+      <text condition="isHomePod">There aren’t any reminder notifications on your <var name="companionName"/></text>
+      <text condition="notEmpty">You don’t have any reminder notifications about <transform mode="quote"><var name="unsupportedValue"/></transform></text>
+      <text>You donʼt have any reminder notifications</text>
+    </first>
+  </phrases>
+
+
+  <first>
+    <dialog><opt><phrase name="phrase_1"/></opt><opt><phrase name="appNamePhrase"/></opt>.</dialog>
+  </first>
+
+</cat>

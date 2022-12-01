@@ -1,0 +1,88 @@
+{
+    "Name": "gaussianBlurDefinition",
+    "Parameters": {
+        "Constants": {
+            "viewportPercents" : "view.viewportPercents"
+        },
+        "Buffers": {
+            "position": "geometry.vertexPosition",
+            "texcoord": "geometry.vertexUV"
+        },
+        "Textures": {
+            "inputTexture" : "rendergraph.inputTexture"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "FullScreenColorBlurHorizontal",
+            "VertexShader": {
+                "Entry": "fullScreenVert"
+            },
+            "PixelShader": {
+                "Entry": "fsColorBlurHorizontal"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Always"
+            },
+            "FunctionConstants" : {
+            }
+        },
+        {
+            "Name": "FullScreenColorBlurVertical",
+            "VertexShader": {
+                "Entry": "fullScreenVert"
+            },
+            "PixelShader": {
+                "Entry": "fsColorBlurVertical"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Always"
+            },
+            "FunctionConstants" : {
+            }
+        },
+        {
+            "Name": "FullScreenDepthBlurHorizontal",
+            "VertexShader": {
+                "Entry": "fullScreenVert"
+            },
+            "PixelShader": {
+                "Entry": "fsDepthBlurHorizontal"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Always"
+            },
+            "FunctionConstants" : {
+            }
+        },
+        {
+            "Name": "FullScreenDepthBlurVertical",
+            "VertexShader": {
+                "Entry": "fullScreenVert"
+            },
+            "PixelShader": {
+                "Entry": "fsDepthBlurVertical"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Always"
+            },
+            "FunctionConstants" : {
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "ColorBlurHorizontal": "FullScreenColorBlurHorizontal",
+        "ColorBlurVertical": "FullScreenColorBlurVertical",
+        "DepthBlurHorizontal": "FullScreenDepthBlurHorizontal",
+        "DepthBlurVertical": "FullScreenDepthBlurVertical"
+    }
+}
+

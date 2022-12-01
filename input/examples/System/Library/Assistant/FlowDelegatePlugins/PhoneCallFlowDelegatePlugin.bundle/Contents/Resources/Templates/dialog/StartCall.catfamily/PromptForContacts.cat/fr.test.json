@@ -1,0 +1,27 @@
+{
+    "context": {
+        "isFaceTime": "true",
+        "user": {
+            "givenName": "John",
+            "familyName": "Appleseed",
+            "fullName": "John Appleseed",
+            "personHandle": {
+                "type": "PhoneNumber",
+                "value": "4089961010",
+                "label": "Home"
+            }
+        },
+        "request": {
+            "grounding": true,
+            "multiuser": true,
+            "pluginName": "phonePlugin",
+            "voiceGender": "female",
+            "parameters": {},
+            "globalParameters": {},
+            "test": true
+        }
+    },
+    "assertions": [{
+        "contains": "FaceTime"
+    }]
+}

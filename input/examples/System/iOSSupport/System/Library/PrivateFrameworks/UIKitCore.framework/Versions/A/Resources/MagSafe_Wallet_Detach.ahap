@@ -1,0 +1,106 @@
+{
+  "Version" : 1,
+  "Metadata" : {
+    "Project" : "MagSafe Wallet Detach",
+    "Created" : "",
+    "Description" : ""
+  },
+  "Pattern" : [
+    {
+      "Event" : {
+        "EventType" : "HapticTransient",
+        "EventParameters" : [
+          {
+            "ParameterID" : "HapticIntensity",
+            "ParameterValue" : 1
+          },
+          {
+            "ParameterID" : "HapticSharpness",
+            "ParameterValue" : 0.1
+          }
+        ],
+        "Time" : 0.000
+      }
+	 },
+	  {
+      "Event" : {
+        "EventType" : "HapticTransient",
+        "EventParameters" : [
+          {
+            "ParameterID" : "HapticIntensity",
+            "ParameterValue" : 1
+          },
+          {
+            "ParameterID" : "HapticSharpness",
+            "ParameterValue" : 0.3
+          }
+        ],
+        "Time" : 0.070
+      }
+    },
+	{
+    "Event" : {
+      "EventType" : "HapticTransient",
+      "EventParameters" : [
+        {
+          "ParameterID" : "HapticIntensity",
+          "ParameterValue" : 1
+        },
+        {
+          "ParameterID" : "HapticSharpness",
+          "ParameterValue" : 0.5
+        }
+      ],
+      "Time" : 0.140
+    }
+	},
+	{
+    "Event" : {
+      "EventType" : "HapticTransient",
+      "EventParameters" : [
+        {
+          "ParameterID" : "HapticIntensity",
+          "ParameterValue" : 1
+        },
+        {
+          "ParameterID" : "HapticSharpness",
+          "ParameterValue" : 0.8
+        }
+      ],
+      "Time" : 0.210
+    }
+	},
+	{
+    "Event" : {
+      "EventType" : "HapticTransient",
+      "EventParameters" : [
+        {
+          "ParameterID" : "HapticIntensity",
+          "ParameterValue" : 1
+        },
+        {
+          "ParameterID" : "HapticSharpness",
+          "ParameterValue" : 1.0
+        }
+      ],
+      "Time" : 0.280
+    }
+	},
+	{
+    "Event" : {
+      "EventType" : "HapticTransient",
+      "EventParameters" : [
+        {
+          "ParameterID" : "HapticIntensity",
+          "ParameterValue" : 1
+        },
+        {
+          "ParameterID" : "HapticSharpness",
+          "ParameterValue" : 0.1
+        }
+      ],
+      "Time" : 0.350
+    }
+	}
+  ]
+}

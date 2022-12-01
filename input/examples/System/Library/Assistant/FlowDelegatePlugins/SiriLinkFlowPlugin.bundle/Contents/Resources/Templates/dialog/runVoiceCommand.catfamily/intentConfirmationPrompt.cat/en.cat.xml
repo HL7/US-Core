@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#intentConfirmationPrompt">
+    <conditions>
+        <condition name="customFamiliarityCondition" note="Checks if the duc has been seen at least twice and has been seen in last 30 days">
+            <and>
+                <expression name="dialogState.usageCount" op="gt" value="2"/>
+                <expression name="dialogState.hoursSinceLastUse" op="lt" value="720"/>
+            </and>
+        </condition>
+        <condition name="isWorkflowIntentCategory" note="True if intent category is CATEGORY_WORKFLOW">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_WORKFLOW'"/>
+        </condition>
+        <condition name="isInformationIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_INFORMATION'"/>
+        </condition>
+        <condition name="isPlayMediaIntentCategory">
+            <or>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_AUDIO'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_VIDEO'"/>
+            </or>
+        </condition>
+        <condition name="isOrderIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_ORDER'"/>
+        </condition>
+        <condition name="isRequestIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_REQUEST'"/>
+        </condition>
+        <condition name="isStartOrNavigationIntentCategory">
+            <or>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_NAVIGATION'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_START'"/>
+            </or>
+        </condition>
+        <condition name="isShareIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_SHARE'"/>
+        </condition>
+        <condition name="isCreateIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_CREATE'"/>
+        </condition>
+        <condition name="isSendIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_SEND'"/>
+        </condition>
+        <condition name="isPostIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_POST'"/>
+        </condition>
+        <condition name="isSearchIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_SEARCH'"/>
+        </condition>
+        <condition name="isToggleIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_TOGGLE'"/>
+        </condition>
+        <condition name="isSetIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_SET'"/>
+        </condition>
+        <condition name="isDownloadIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_DOWNLOAD'"/>
+        </condition>
+        <condition name="isCheckInIntentCategory">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_CHECK_IN'"/>
+        </condition>
+        <condition name="isCallIntentCategory">
+            <or>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_CALL_AUDIO'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_CALL_VIDEO'"/>
+            </or>
+        </condition>
+        <condition name="noAttributionRequired" note="No attribution required for these categories">
+            <or>
+                <and>
+                    <expression name="customResponsesEnabled" op="eq" value="true"/>
+                    <expression name="customResponse" op="nonempty"/>
+                </and>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_CREATE'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_SEARCH'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_TOGGLE'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_WORKFLOW'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_SOUND'"/>
+            </or>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="customResponsePhrase">
+            <first condition="customResponsesEnabled">
+                <text condition="customFamiliarityCondition"><opt>OK, <var name="user.groundingIfNeeded"/>, </opt><opt><var name="customResponse"/>.</opt></text>
+                <text condition="isWorkflowIntentCategory"><opt>OK, <var name="user.groundingIfNeeded"/>, </opt>Your shortcut says: "<var name="customResponse"/>".</text>
+                <text><opt>OK, <var name="user.groundingIfNeeded"/>, </opt><var name="localizedAppName"/> says: "<var name="customResponse"/>".</text>
+                <text></text>
+            </first>
+        </first>
+        <first phrase="shareAttributionPhrase">
+            <first condition="isShareIntentCategory">
+                <text condition="isShareIntentCategory"> using <var name="localizedAppName"/>?</text>
+                <text condition="isPostIntentCategory"> to <var name="localizedAppName"/>?</text>
+                <text condition="isSendIntentCategory"> with <var name="localizedAppName"/>?</text>
+            </first>
+        </first>
+        <first phrase="attributionPhrase">
+            <text condition="noAttributionRequired">?</text>
+            <text condition="isRequestIntentCategory"> from <var name="localizedAppName"/></text>
+            <text condition="isShareIntentCategory"><phrase name="shareAttributionPhrase"/></text>
+            <text> using <var name="localizedAppName"/>?</text>
+            <text>?</text>
+        </first>
+    </phrases>
+    <all>
+        <first condition="isWorkflowIntentCategory">
+            <dialog><phrase name="customResponsePhrase"/> Ready to run the shortcut<phrase name="attributionPhrase"/></dialog>
+        </first>
+        <first condition="isRequestIntentCategory">
+            <dialog><phrase name="customResponsePhrase"/> Ready to request<phrase name="attributionPhrase"/></dialog>
+        </first>
+        <first condition="isStartOrNavigationIntentCategory">
+            <dialog><phrase name="customResponsePhrase"/> Ready to start<phrase name="attributionPhrase"/></dialog>
+        </first>
+        <first condition="isSetIntentCategory">
+            <dialog><phrase name="customResponsePhrase"/> Ready to set it<phrase name="attributionPhrase"/></dialog>
+        </first>
+        <first condition="isCheckInIntentCategory">
+            <dialog><phrase name="customResponsePhrase"/> Ready to check in<phrase name="attributionPhrase"/></dialog>
+        </first>
+        <first condition="isCallIntentCategory">
+            <dialog><phrase name="customResponsePhrase"/> Ready to call<phrase name="attributionPhrase"/></dialog>
+        </first>
+        <first condition="isDownloadIntentCategory">
+            <switch value="intentVerb.lowercase">
+                <dialog case="'get'"><phrase name="customResponsePhrase"/> Ready to get it<phrase name="attributionPhrase"/></dialog>
+                <dialog case="'download'"><phrase name="customResponsePhrase"/> Ready to download it<phrase name="attributionPhrase"/></dialog>
+            </switch>
+            <dialog><phrase name="customResponsePhrase"/> Ready to download it<phrase name="attributionPhrase"/></dialog>
+        </first>
+        <first condition="isPlayMediaIntentCategory">
+            <dialog><phrase name="customResponsePhrase"/> Ready to play it<phrase name="attributionPhrase"/></dialog>
+        </first>
+        <first condition="isOrderIntentCategory">
+            <switch value="intentVerb.lowercase">
+                <dialog case="'order'"><opt><phrase name="customResponsePhrase"/> </opt>Ready to order<phrase name="attributionPhrase"/></dialog>
+                <dialog case="'buy'"><phrase name="customResponsePhrase"/> Ready to buy<phrase name="attributionPhrase"/></dialog>
+                <dialog case="'pay'"><phrase name="customResponsePhrase"/> Ready to pay<phrase name="attributionPhrase"/></dialog>
+                <dialog case="'book'"><phrase name="customResponsePhrase"/> Ready to book<phrase name="attributionPhrase"/></dialog>
+            </switch>
+           <dialog><phrase name="customResponsePhrase"/> Ready to order<phrase name="attributionPhrase"/></dialog>
+        </first>
+        <first condition="isCreateIntentCategory">
+            <switch value="intentVerb.lowercase">
+                <dialog case="'create'"><phrase name="customResponsePhrase"/> Ready to create it<phrase name="attributionPhrase"/></dialog>
+                <dialog case="'add'"><phrase name="customResponsePhrase"/> Ready to add it<phrase name="attributionPhrase"/></dialog>
+            </switch>
+            <dialog><phrase name="customResponsePhrase"/> Ready to create it<phrase name="attributionPhrase"/></dialog>
+        </first>
+        <first condition="isShareIntentCategory">
+            <switch value="intentVerb.lowercase">
+                <dialog case="'share'"><phrase name="customResponsePhrase"/> Ready to share<phrase name="attributionPhrase"/></dialog>
+                <dialog case="'post'"><phrase name="customResponsePhrase"/> Ready to post<phrase name="attributionPhrase"/></dialog>
+                <dialog case="'send'"><phrase name="customResponsePhrase"/> Ready to send<phrase name="attributionPhrase"/></dialog>
+            </switch>
+            <dialog><phrase name="customResponsePhrase"/> Ready to share<phrase name="attributionPhrase"/></dialog>
+        </first>
+    </all>
+    <fallback>
+        <dialog>Ready to do it?</dialog>
+    </fallback>
+</cat>
+

@@ -1,0 +1,29 @@
+{
+    "Name": "Reality Fusion Debug Mesh Visualization: Generation",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "meshPosition": "[0.0, 0.0, 0.0, 1.0]",
+            "meshOrientation": "[0.0, 0.0, 0.0, 1.0]",
+            "meshWarmth": "0.0"
+        },
+        "Buffers": {
+            "position" : "geometry.vertexPosition"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "RFMeshDebugVisGeneration",
+        "VertexShader": {
+            "Entry": "vsRFMeshDebugVis"
+        },
+        "PixelShader": {
+            "Entry": "fsRFMeshDebugVisWarmth"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        }
+    }]
+}

@@ -1,0 +1,4 @@
+uniform vec2 skew;
+
+// Skew geometry
+_geometry.position.xy += (skew * -_geometry.position.z);

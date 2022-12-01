@@ -1,0 +1,64 @@
+{
+    "Name": "LightmappedPbr",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "lightmapIntensityLV": "0.0"
+        },
+        "Textures": {
+            "textureLightmap" : "fallback.white"
+        },
+        "Buffers": {
+            "lightmapTexcoord" : "geometry.textureCoordinate1"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "Opaque",
+        "VertexShader": {
+            "Entry": "vsRealityPbr"
+        },
+        "PixelShader": {
+            "Entry": "fsRealityPbr"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"    : "true",
+            "EnableNormalMap"       : "true",
+            "EnableEmissiveMap"     : "true",
+            "EnableAreaLight"       : "true",
+            "EnableSeparateRMAS"    : "true",
+            "EnableRoughnessMap"    : "true",
+            "EnableMetallicMap"     : "true",
+            "EnableAOMap"           : "true",
+            "EnableSpecularMap"     : "true",
+            "EnableClearcoat"       : "false",
+            "VertexColorOption"     : "0",
+            "EnableIBL"             : "true",
+            "EnableLightmap"        : "true",
+            "EnableAREnvProbe"      : "false"
+        },
+        "DefaultVariations" : [ "OpaqueCommon" ],
+        "DebugMapping": "PbrDebug"
+    },
+    {
+        "Name": "Shadow",
+        "VertexShader": {
+            "Entry": "vsShadow"
+        },
+        "PixelShader": {
+            "Entry": "fsShadow"
+        },
+        "State" : {
+            "ColorWriteMask" : "None"
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque"   : "Opaque",
+        "Shadow"   : "Shadow"
+    }
+}

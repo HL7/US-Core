@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#intentHandledResponseForOrderIntentCategory">
+    <conditions>
+        <condition name="isBuyIntentVerb">
+            <expression name="intentVerb.lowercase" op="eq" value="'buy'"/>
+        </condition>
+        <condition name="isPayIntentVerb">
+            <expression name="intentVerb.lowercase" op="eq" value="'pay'"/>
+        </condition>
+        <condition name="isOrderIntentVerb">
+            <expression name="intentVerb.lowercase" op="eq" value="'order'"/>
+        </condition>
+        <condition name="isBookIntentVerb">
+            <expression name="intentVerb.lowercase" op="eq" value="'book'"/>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="verbPhrase">
+            <random condition="isPayIntentVerb">
+                <text>Paying</text>
+                <text>Making a payment</text>
+            </random>
+            <random condition="isBuyIntentVerb">
+                <text>Buying</text>
+                <text>Making a purchase</text>
+            </random>
+            <random condition="isOrderIntentVerb">
+                <text>Ordering</text>
+                <text>Placing an order</text>
+            </random>
+            <random condition="isBookIntentVerb">
+                <text>Booking</text>
+                <text>Making a reservation</text>
+            </random>
+            <text>Ordering</text>
+        </first>
+    </phrases>
+    
+    <first>
+        <dialog>OK<opt>, <var name="user.groundingIfNeeded"/></opt>. <phrase name="verbPhrase"/><opt> with <var name="localizedAppName"/></opt>.</dialog>
+    </first>
+</cat>

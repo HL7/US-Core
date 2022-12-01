@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runCustomIntent#intentConfirmationPromptWithTemplate">
+    <conditions>
+        <condition name="shouldShowAppName" note="Checks if we should show app name">
+            <and>
+                <expression name="localizedAppName.length" op="gt" value="0"/>
+                <or>
+                    <expression name="dialogState.usageCount" op="lt" value="2"/>
+                    <expression name="dialogState.hoursSinceLastUse" op="gt" value="720"/>
+                </or>
+            </and>
+        </condition>
+        <condition name="workflow" note="True if intent category is CATEGORY_WORKFLOW">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_WORKFLOW'"/>
+        </condition>
+        <condition name="information" note="True if intent category is CATEGORY_INFORMATION">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_INFORMATION'"/>
+        </condition>
+        <condition name="media" note="True if intent category is for playing media">
+            <or>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_AUDIO'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_PLAY_VIDEO'"/>
+            </or>
+        </condition>
+        <condition name="phonecall" note="True if intent category is for playing media">
+            <or>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_CALL_AUDIO'"/>
+                <expression name="intentCategory" op="eq" value="'CATEGORY_CALL_VIDEO'"/>
+            </or>
+        </condition>
+        <condition name="order" note="True if intent category is CATEGORY_ORDER">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_ORDER'"/>
+        </condition>
+        <condition name="request" note="True if intent category is CATEGORY_REQUEST">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_REQUEST'"/>
+        </condition>
+        <condition name="share" note="True if intent category is CATEGORY_SHARE">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_SHARE'"/>
+        </condition>
+        <condition name="create" note="True if intent category is CATEGORY_CREATE">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_CREATE'"/>
+        </condition>
+        <condition name="search" note="True if intent category is CATEGORY_SEARCH">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_WORKFLOW'"/>
+        </condition>
+        <condition name="toggle" note="True if intent category is CATEGORY_TOGGLE">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_TOGGLE'"/>
+        </condition>
+        <condition name="setcategory" note="True if intent category is CATEGORY_SET">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_SET'"/>
+        </condition>
+        <condition name="download" note="True if intent category is CATEGORY_DOWNLOAD">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_DOWNLOAD'"/>
+        </condition>
+        <condition name="checkin" note="True if intent category is CATEGORY_CHECK_IN">
+            <expression name="intentCategory" op="eq" value="'CATEGORY_CHECK_IN'"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="multiUserIntroduction">
+            <text condition="user.groundingIfNeeded">OK, <var name="user.groundingIfNeeded"/>. </text>
+            <text></text>
+        </first>
+    </phrases>
+    <first>
+        <first condition="shouldShowAppName">
+            <switch value="categoryVerb" condition="information">
+                <dialog case="'view'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to view?</dialog>
+                <dialog case="'open'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to open?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to view?</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="order">
+                <dialog case="'buy'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to buy?</dialog>
+                <dialog case="'pay'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to pay?</dialog>
+                <dialog case="'order'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>". Ready to order?</dialog>
+                <dialog case="'book'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to book?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to order?</dialog>
+            </switch>
+            <first condition="media">
+                <dialog><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to play?</dialog>
+            </first>
+            <first condition="phonecall">
+                <dialog><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to call?</dialog>
+            </first>
+            <first condition="request">
+                <dialog><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to request?</dialog>
+            </first>
+            <switch value="categoryVerb" condition="share">
+                <dialog case="'share'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to share?</dialog>
+                <dialog case="'post'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to post?</dialog>
+                <dialog case="'send'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to send?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to send?</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="create">
+                <dialog case="'create'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to create?</dialog>
+                <dialog case="'add'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to add?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to create?</dialog>
+            </switch>
+            <first condition="setcategory">
+                <dialog><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to set?</dialog>
+            </first>
+            <first condition="search">
+                <dialog><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to search?</dialog>
+            </first>
+            <switch value="categoryVerb" condition="toggle">
+                <dialog case="'turn on'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to turn on?</dialog>
+                <dialog case="'turn off'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to turn off?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to toggle?</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="download">
+                <dialog case="'download'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to download?</dialog>
+                <dialog case="'get'"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to get?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says "<var name="customDialog"/>" Ready to download?</dialog>
+            </switch>
+        </first>
+        <first note="Without app name">
+            <switch value="categoryVerb" condition="information">
+                <dialog case="'view'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to view?</dialog>
+                <dialog case="'open'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to open?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/>Ready to view?</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="order">
+                <dialog case="'buy'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to buy?</dialog>
+                <dialog case="'pay'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to pay?</dialog>
+                <dialog case="'order'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to order?</dialog>
+                <dialog case="'book'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to book?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to order?</dialog>
+            </switch>
+            <first condition="media">
+                <dialog>
+                    <print><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to play?</print>
+                    <speak/>
+                </dialog>
+            </first>
+            <first condition="phonecall">
+                <dialog>
+                    <print><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to call?</print>
+                    <speak/>
+                </dialog>
+            </first>
+            <first condition="request">
+                <dialog><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to request?</dialog>
+            </first>
+            <switch value="categoryVerb" condition="share">
+                <dialog case="'share'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to share?</dialog>
+                <dialog case="'post'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to post?</dialog>
+                <dialog case="'send'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to send?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to send?</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="create">
+                <dialog case="'create'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to create?</dialog>
+                <dialog case="'add'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to add?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to create?</dialog>
+            </switch>
+            <first condition="search">
+                <dialog><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to search?</dialog>
+            </first>
+            <first condition="setcategory">
+                <dialog><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to set?</dialog>
+            </first>
+            <switch value="categoryVerb" condition="toggle">
+                <dialog case="'turn on'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to turn on?</dialog>
+                <dialog case="'turn off'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to turn off?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to turn on?</dialog>
+            </switch>
+            <switch value="categoryVerb" condition="download">
+                <dialog case="'download'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to download?</dialog>
+                <dialog case="'get'"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to get?</dialog>
+                <dialog><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to download?</dialog>
+            </switch>
+            <dialog note="The base case"><phrase name="multiUserIntroduction"/><var name="customDialog"/> Ready to do it?</dialog>
+        </first>
+    </first>
+</cat>

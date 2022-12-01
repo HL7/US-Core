@@ -1,0 +1,62 @@
+#CAT-SCHEMA 1.0
+
+name: messages.MessageComponentDialogContext
+
+inputs:
+    isAppended:
+        access_mode: public
+    isFirstComponentFromSender:
+        access_mode: public
+    isLastComponentFromSender:
+        access_mode: public
+    isPreviousComponentOfSameType:
+        access_mode: public
+    isEmoji:
+        access_mode: public
+    isLastMessageFromSenderWithEffect:
+        access_mode: public
+    isFirstSender:
+        access_mode: public
+    isLastSender:
+        access_mode: public
+    needsAndConnector:
+        access_mode: public
+    needsAlsoConnector:
+        access_mode: public
+    needsRandomConnector:
+        access_mode: public
+
+properties:
+    isAppended:
+        type: dialog.Boolean
+        description: Was this component appended
+    isFirstComponentFromSender:
+        type: dialog.Boolean
+        description: Is this the first component from the sender
+    isLastComponentFromSender:
+        type: dialog.Boolean
+        description: Is this the last component from the sender
+    isPreviousComponentOfSameType:
+        type: dialog.Boolean
+        description: Is the previous component the same type. Note, the sender may be different
+    isEmoji:
+        type: dialog.Boolean
+        description: Is this component an Emoji.
+    isLastMessageFromSenderWithEffect:
+        type: dialog.Boolean
+        description: Is this the last message from the sender with an effect.
+    isFirstSender:
+        type: dialog.Boolean
+        description: Is this the first sender in the conversation.
+    isLastSender:
+        type: dialog.Boolean
+        description: Is this the last sender in the conversation.
+    needsAndConnector:
+        type: dialog.Boolean
+        description: Should this start with "and".
+    needsAlsoConnector:
+        type: dialog.Boolean
+        description: Should this start with "also".
+    needsRandomConnector:
+        type: dialog.Boolean
+        description: Should this start with "and/also".

@@ -1,21 +1,6 @@
 {
   "resourceType": "RelatedPerson",
   "id": "shaw-niece",
-  "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "Patient Niece Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is a patient niece example for the *US Core RelatedPerson Profile Profile*."
-      }
-    ],
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
-    ]
-  },
   "active": true,
   "patient": {
     "reference": "Patient/example",

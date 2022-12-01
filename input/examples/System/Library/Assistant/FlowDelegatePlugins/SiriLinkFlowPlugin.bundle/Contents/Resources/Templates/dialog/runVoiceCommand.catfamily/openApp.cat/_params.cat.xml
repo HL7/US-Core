@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runVoiceCommand#openApp">
+    <meta name="description" value="Open app label"/>
+    <meta name="comment" value="Having to open an app is usually by design. E.g. opening Maps to show direction to a place according to a NSUserActivity"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="localizedAppName" type="dialog.String" description="The app name"/>
+    </parameters>
+</cat>

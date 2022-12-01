@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="runCustomIntent#initiateHandoff">
+    <meta name="description" value="Tells the user to continue on the companion device."/>
+    <meta name="category" value="Incomplete"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+    </parameters>
+</cat>

@@ -1,0 +1,53 @@
+#CAT-SCHEMA 1.0
+
+name: notebook.SearchForNotebookItemsIntentConcept
+
+properties:
+    readingBatchSize:
+        type: dialog.Number
+        description: the number of reminders to be read in one batch
+        sample_value: 5
+
+    itemCount:
+        type: dialog.Number
+        description: Total number of reminders to be read in the read request
+        sample_value: 24
+
+    taskListCount:
+        type: dialog.Number
+        description: Total number of TaskLists to be read to the user
+        sample_value: 2
+
+    searchTerm:
+        type: dialog.String
+        description: A string representing a query the user asked for
+        sample_value: shopping list
+
+    targetTaskList:
+        type: dialog.String
+        description: A list the user asked for specifically
+        sample_value: Grocery List
+
+    isScheduled:
+        type: dialog.Boolean
+        description: flag to tell if the user asked for scheduled reminders
+
+    isFlagged:
+        type: dialog.Boolean
+        description: flag to tell if the user asked for flagged reminders
+
+    isOverdue:
+        type: dialog.Boolean
+        description: flag to tell if the user asked for overdue reminders
+
+    isRecurring:
+        type: dialog.Boolean
+        description: flag to tell if the user asked for recurring reminders
+
+    LocationConcept:
+        type: dialog.Location
+        description: Location that the user requested
+
+    CalendarConcept:
+        type: dialog.Calendar
+        description: Date the user requested

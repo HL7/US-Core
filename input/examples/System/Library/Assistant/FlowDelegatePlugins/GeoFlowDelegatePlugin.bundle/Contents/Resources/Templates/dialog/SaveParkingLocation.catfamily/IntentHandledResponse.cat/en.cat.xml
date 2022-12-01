@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SaveParkingLocation#IntentHandledResponse" locale="en">
+    
+    <conditions>
+        <condition name="hasParkingNote" note="if parking note is non empty">
+            <expression name="parkingNote" op="nonempty" value="true"/>
+        </condition>
+    </conditions>
+    
+    <first>
+        <dialog condition="hasParkingNote">OK, I'll remember that you parked here<opt> '<var name="parkingNote"/>'</opt>.</dialog>
+        <dialog>OK, I'll remember that you parked here.</dialog>
+    </first>
+</cat>

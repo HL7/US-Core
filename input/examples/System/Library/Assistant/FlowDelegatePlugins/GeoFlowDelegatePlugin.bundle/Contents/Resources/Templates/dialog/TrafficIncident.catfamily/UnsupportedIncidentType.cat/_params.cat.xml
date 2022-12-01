@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="TrafficIncident#UnsupportedIncidentType" xmlns="urn:apple:names:siri:cat:1.0">
+	<meta name="description" value="Unsupported incident types RI-6, VI-9"/>
+	<meta name="category" value="Can't Do"/>
+	<meta name="readyForLoc" value="true"/>
+	<parameters>
+		<parameter description="Maps supported incident types" name="incidentTypes" type="dialog.String[]"/>
+		<parameter description="whether intent is to update incident" name="isUpdate" type="dialog.Boolean"/>
+	</parameters>
+</cat>

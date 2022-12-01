@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#intentHandledResponseCustom">
+    <conditions>
+        <condition name="customFamiliarityCondition" note="Checks if the duc has been seen at least twice and has been seen in last 30 days">
+           <and>
+               <expression name="dialogState.usageCount" op="gt" value="2"/>
+               <expression name="dialogState.hoursSinceLastUse" op="lt" value="720"/>
+           </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="multiUserIntroduction">
+            <text condition="user.groundingIfNeeded">OK, <var name="user.groundingIfNeeded"/>. </text>
+            <text></text>
+        </first>
+    </phrases>
+    <first condition="customResponsesEnabled">
+        <dialog condition="customFamiliarityCondition"><phrase name="multiUserIntroduction"/><var name="customResponse"/></dialog>
+        <dialog condition="localizedAppName"><phrase name="multiUserIntroduction"/><var name="localizedAppName"/> says: “<var name="customResponse"/>”</dialog>
+        <dialog><phrase name="multiUserIntroduction"/><var name="customResponse"/></dialog>
+    </first>
+</cat>

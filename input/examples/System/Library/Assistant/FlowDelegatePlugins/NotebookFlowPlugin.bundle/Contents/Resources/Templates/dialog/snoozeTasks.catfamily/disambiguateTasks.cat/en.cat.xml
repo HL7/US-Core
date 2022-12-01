@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="snoozeTasks#disambiguateTasks" locale="en">
+
+   <conditions>
+     <condition name="moreThan50">
+       <expression name="numberOfValuesToDisambiguate" op="gt" value="50"/>
+     </condition>
+     <condition name="moreThan6">
+       <expression name="numberOfValuesToDisambiguate" op="gt" value="6"/>
+     </condition>
+     <condition name="isVoiceOnly">
+       <or>
+         <expression name="device.isVOX"/>
+         <expression name="device.isCarPlay"/>
+       </or>
+     </condition>
+   </conditions>
+  
+   <phrases>
+     <first phrase="phrase">
+       <text condition="moreThan50">You have more than 50 reminders. Which one do you want to snooze?</text>
+       <text condition="moreThan6">You have <var name="numberOfValuesToDisambiguate"/> reminders. Which one do you want to snooze?</text>
+       <text>Which reminder do you want to snooze?</text>
+     </first>
+   </phrases>
+
+
+   <all>
+     <dialog><opt>OK <var name="user.groundingIfNeeded"/>. </opt><opt><phrase name="phrase"/></opt></dialog>
+     <dialog condition="isVoiceOnly">
+         <speak><var name="disambiguationList" list="or"/></speak>
+     </dialog>
+   </all>
+
+</cat>

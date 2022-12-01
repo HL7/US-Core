@@ -1,0 +1,44 @@
+{
+    "Name": "WrappingMaterial",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Textures": {
+            "texture": "fallback.white",
+            "latLongTexture": "fallback.white"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "Wrapping",
+            "VertexShader": {
+                "Entry": "vsWrapping"
+            },
+            "PixelShader": {
+                "Entry": "fsWrappingLinear"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "Greater"
+            }
+        },
+        {
+            "Name": "SphericalWrapping",
+            "VertexShader": {
+                "Entry": "vsWrapping"
+            },
+            "PixelShader": {
+                "Entry": "fsWrappingSpherical"
+            },
+            "State": {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "Greater"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "Opaque": "Wrapping",
+        "Filter": "Wrapping"
+    }
+}

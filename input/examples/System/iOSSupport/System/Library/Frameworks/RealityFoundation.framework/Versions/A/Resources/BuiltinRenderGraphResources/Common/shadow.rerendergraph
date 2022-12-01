@@ -1,0 +1,97 @@
+{
+    "Name" : "ShadowGraph",
+    "Targets" : [
+        {
+            "Name" : "ShadowMapAtlas",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "SampleCount" : 1,
+                "MipLevelCount" : 1
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ShadowMapAtlasData",
+                    "FromMember" : ["atlasWidth"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ShadowMapAtlasData",
+                    "FromMember" : ["atlasHeight"]
+                },
+                {
+                    "ToMember" : ["format"],
+                    "FromType" : "ShadowMapAtlasData",
+                    "FromMember" : ["format"]
+                }
+            ]
+        }
+    ],
+    "Nodes" : [
+        {
+            "MultiViewCameraSetup" : {
+                "Name" : "MultiViewCameraSetup",
+                "UpdateSceneMaterialData" : false,
+                "FrustumCulling" : true,
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ShadowMapAtlas",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "MultiViewMesh" : {
+                "Name" : "ShadowNode",
+                "CullMode" : "CullModeBack",
+                "MaterialPassName" : "Shadow",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "ShadowMapAtlas",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "UpdateMaterialTextureSource" : {
+                "Name" : "PushShadowToScene",
+                "SourceName" : "scene",
+                "TargetsToUpdate" : {
+                    "shadowMap" : "ShadowMapAtlas"
+                }
+            }
+        }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "ShadowMapAtlasLane",
+            "Target" : "ShadowMapAtlas",
+            "GraphScopeOverride" : "ShadowMapAtlasScope"
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "ShadowMapAtlasLane",
+            "Target" : "ShadowMapAtlas",
+            "GraphScopeOverride" : "ShadowMapAtlasScope"
+        }
+    ],
+    "Connections" : [
+        {
+            "Name" : "ShadowNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["materialPassName"],
+                    "FromType" : "ShadowMaterialPassName",
+                    "FromMember" : ["materialPassName"]
+                }
+            ]
+        }
+    ]
+}

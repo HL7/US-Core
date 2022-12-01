@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#intentHandledResponseDone">
+    <phrases>
+        <random phrase="donePhrase">
+            <text>Done</text>
+            <text>OK</text>
+            <text>That's done</text>
+        </random>
+    </phrases>
+    
+    <first>
+        <dialog><phrase name="donePhrase"/><opt>, <var name="user.groundingIfNeeded"/></opt>.</dialog>
+    </first>
+</cat>

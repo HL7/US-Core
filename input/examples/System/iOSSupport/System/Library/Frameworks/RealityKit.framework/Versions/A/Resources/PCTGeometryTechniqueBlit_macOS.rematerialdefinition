@@ -1,0 +1,56 @@
+{
+    "Name": "PCTGeometryTechniqueBlit",
+    "OverrideMaterial": "engine:transparentPbr.rematerialdefinition",
+    "Parameters": {
+        "Textures": {
+            "paintoverTexture"  : "rendergraph.PaintoverTexture",
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "PCTGeometryTechniqueBlit",
+            "VertexShader": {
+                "Entry": "vsPCTGeometryTechniquePositionOnly",
+                "Library": "default.metallib",
+                "Buffers": {
+                    "positions"             : "geometry.positions",
+                    "groupTransparency"     : "geometry.groupTransparency"
+                }
+            },
+            "PixelShader": {
+                "Entry":   "fsPCTGeometryTechniqueBlit",
+                "Library": "default.metallib",
+                "Textures": {
+                    "paintoverTexture"      : "rendergraph.PaintoverTexture"
+                }
+            },
+            "State" : {
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "GreaterEqual",
+                "AlphaBlend"                : true,
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha",
+            },
+            "FunctionConstants" : {
+                "EnableDynamicLighting" : "true",
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "EnableTransparency"    : "true",
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "Transparent": "PCTGeometryTechniqueBlit"
+    }
+}

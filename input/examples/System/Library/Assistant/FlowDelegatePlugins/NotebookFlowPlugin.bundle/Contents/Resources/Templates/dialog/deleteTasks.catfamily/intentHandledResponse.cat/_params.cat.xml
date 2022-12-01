@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="deleteTasks#intentHandledResponse">
+  <meta name="category" value="Handled"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="A summary of the list after it was handled by the app."/>
+  <parameters>
+    <parameter name="taskCount" type="dialog.Number"/>
+    <parameter name="isVox" type="dialog.Boolean"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

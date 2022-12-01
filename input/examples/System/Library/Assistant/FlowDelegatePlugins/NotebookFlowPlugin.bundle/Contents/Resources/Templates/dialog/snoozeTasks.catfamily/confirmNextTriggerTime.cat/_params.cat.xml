@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="snoozeTasks#confirmNextTriggerTime">
+  <meta name="category" value="Confirm"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="Executed when the app requests confirmation of the nextTriggerTime slot."/>
+  <parameters>
+    <parameter name="slotName" type="dialog.String"/>
+    <parameter name="nextTriggerTime" type="dialog.Duration"/>
+    <parameter name="hasValidTime" type="dialog.Boolean"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>
