@@ -104,12 +104,6 @@
                 ],
                 "mustSupport": true,
                 "binding": {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
-                            "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus-max"
-                        }
-                    ],
                     "strength": "preferred",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status"
                 }
