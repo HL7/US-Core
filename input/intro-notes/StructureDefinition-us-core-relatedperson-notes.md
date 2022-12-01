@@ -6,7 +6,7 @@
 
 1. **SHALL** support fetching a RelatedPerson using the **[`_id`](SearchParameter-us-core-relatedperson-id.html)** search parameter:
 
-    `GET [base]/RelatedPerson[id]` or `GET [base]/RelatedPerson?_id=[id]`
+    `GET [base]/RelatedPerson/[id]` or `GET [base]/RelatedPerson?_id=[id]`
 
     Example:
     

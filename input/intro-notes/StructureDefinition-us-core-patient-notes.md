@@ -6,7 +6,7 @@
 
 1. {:.new-content}**SHALL** support fetching a Patient using the **[`_id`](SearchParameter-us-core-patient-id.html)** search parameter:
 
-    `GET [base]/Patient[id]` or `GET [base]/Patient?_id=[id]`
+    `GET [base]/Patient/[id]` or `GET [base]/Patient?_id=[id]`
 
     Example:
     

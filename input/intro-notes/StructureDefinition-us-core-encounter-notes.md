@@ -6,7 +6,7 @@
 
 1. **SHALL** support fetching an encounter using the **[`_id`](SearchParameter-us-core-encounter-id.html)** search parameter:
 
-    `GET [base]/Encounter[id]` or `GET [base]/Encounter?_id=[id]`
+    `GET [base]/Encounter/[id]` or `GET [base]/Encounter?_id=[id]`
 
     Example:
     

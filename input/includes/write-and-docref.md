@@ -7,23 +7,23 @@
 
    {% include examplebutton_default.html example="documentreference-clinical-note-post" b_title = "Click Here To See Example" %}
 
+<div class="bg-success" markdown="1">
+
 #### Mandatory Operation:
 
 1. **SHALL** support fetching documents using the $docref operation.
 
-<div class="bg-success" markdown="1">
-
    This [$docref operation] is used to request a server *generate* a document based on the specified parameters. This operation is invoked on a FHIR Server's DocumentReference endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all DocumentReference instances returning a Bundle of DocumentReference resources. See the [$docref operation] definition for detailed documentation.
 
-- The operation can be invoked using the GET Syntax if the complex type parameter is omitted:
+   - The operation can be invoked using the GET Syntax if the complex type parameter is omitted:
 
-   `GET [base]/DocumentReference/$docref?{parameters}`
+      `GET [base]/DocumentReference/$docref?{parameters}`
 
-- Otherwise the POST transaction with used as follows:
+   - Otherwise the POST transaction with used as follows:
 
-   `POST [base]/DocumentReference/$docref`
+      `POST [base]/DocumentReference/$docref`
 
-    The body of the POST contains the [Parameters] resource with the [$docref operation] input parameters.
+       The body of the POST contains the [Parameters] resource with the [$docref operation] input parameters.
 
    **Example 1: Request the latest CCD**
 

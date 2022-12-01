@@ -88,10 +88,6 @@ differential:
                     code: CodeableConcept
             mustSupport: true
             binding:
-                extension:
-                    - 
-                        url: 'http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet'
-                        valueCanonical: 'http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus-max'
                 strength: preferred
                 # description: 'This value set includes SNOMED CT codes and the HL7 V3 code for the concept "unknown". These codes have historically been used to communicate the pregnancy status of a patient. The maximum required binding is extended to Snomed CT codes.'
                 valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status' # can we get this in VSAC? and need to add pregnancy intent codes to it  e.g. 169449001 | Trying to conceive (finding) | and/or 473384006 | Not trying to conceive (situation) |

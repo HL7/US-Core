@@ -31,7 +31,7 @@ The following search parameter combinations SHOULD be supported:
 
 1. **SHOULD** support searching using the **[`_id`](SearchParameter-us-core-practitioner-id.html)** search parameter:
 
-    `GET [base]/Practitioner[id]` or `GET [base]/Practitioner?_id=[id]`
+    `GET [base]/Practitioner/[id]` or `GET [base]/Practitioner?_id=[id]`
 
     Example:
     

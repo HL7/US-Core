@@ -16,7 +16,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 1. **SHALL** support fetching a ServiceRequest using the **[`_id`](SearchParameter-us-core-servicerequest-id.html)** search parameter:
 
-    `GET [base]/ServiceRequest[id]`
+    `GET [base]/ServiceRequest/[id]`
 
     Example:
 

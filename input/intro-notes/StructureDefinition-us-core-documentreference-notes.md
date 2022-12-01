@@ -6,7 +6,7 @@
 
 1. **SHALL** support fetching a DocumentReference using the **[`_id`](SearchParameter-us-core-documentreference-id.html)** search parameter:
 
-    `GET [base]/DocumentReference[id]` or `GET [base]/DocumentReference?_id=[id]`
+    `GET [base]/DocumentReference/[id]` or `GET [base]/DocumentReference?_id=[id]`
 
     Example:
     

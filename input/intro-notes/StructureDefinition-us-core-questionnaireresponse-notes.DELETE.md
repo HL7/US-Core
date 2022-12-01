@@ -6,7 +6,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 1. **SHALL** support fetching a QuestionnaireResponse using the **[`_id`](SearchParameter-us-core-questionnaireresponse-id.html)** search parameter:
 
-    `GET [base]/QuestionnaireResponse[id]`
+    `GET [base]/QuestionnaireResponse/[id]`
 
     Example:
 
