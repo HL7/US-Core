@@ -86,6 +86,6 @@ The following search parameter combinations SHOULD be supported:
     *Implementation Notes:* Fetches a bundle of all DocumentReference resources for the specified patient and type and period. See the implementation notes above for how to access the actual document. ([how to search by reference] and [how to search by token] and [how to search by date])
 
 
-  {% include write-and-docref.md %}
+{% include write-and-docref.md %}
 
 {% include link-list.md %}
