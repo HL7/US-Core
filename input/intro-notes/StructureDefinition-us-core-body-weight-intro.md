@@ -1,7 +1,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the this profile:
+The following are example usage scenarios for this profile:
 
 - Query for body weight observations
 - [Record or update] body weight observations

@@ -1,7 +1,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the this profile:
+The following are example usage scenarios for this profile:
 
 -   Query for a Patient demographic information using Medical Record
     Number (MRN), which is a type of identifier. The MRN is identifiable

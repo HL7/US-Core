@@ -1,7 +1,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the this profile:
+The following are example usage scenarios for this profile:
 
 -   Query for a specific clinical test result such as electrocardiogram (ECG)
 -   Query for a specific imaging test result

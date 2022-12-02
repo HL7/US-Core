@@ -1,7 +1,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the this profile:
+The following are example usage scenarios for this profile:
 
 - Query for BMI observations belonging to a pediatric patient
 - [Record or update]  BMI observations belonging to a pediatric patient

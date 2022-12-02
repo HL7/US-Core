@@ -723,7 +723,7 @@ definition:
   - reference:
       reference: StructureDefinition/us-core-tribal-affiliation
     description: This Extension profile represents a tribe or band with which a person
-      associates whether or not they are an enrolled member.
+      associates and, optionally, whether they are enrolled.
     exampleBoolean: false
     name: US Core Tribal Affiliation Extension
   - reference:
@@ -955,7 +955,7 @@ definition:
     description: Codes that represent the sex characterization appropriate for the
       associated clinical context.
     exampleBoolean: false
-    name: US Core Sex for Clinical Use
+    name: US Core Sex for Clinical Use Codes
   - reference:
       reference: ValueSet/us-core-sexual-orientation
     description: The US Core Sexual Orientation Value Set includes concepts to describe
@@ -3057,7 +3057,7 @@ definition:
   - code: copyrightyear
     value: 2022+
   - code: releaselabel
-    value: CI Build
+    value: STU6 Ballot
   - code: path-resource
     value: input/resources
   - code: path-resource

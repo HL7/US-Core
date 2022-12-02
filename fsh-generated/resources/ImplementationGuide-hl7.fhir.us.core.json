@@ -534,7 +534,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-tribal-affiliation"
         },
-        "description": "This Extension profile represents a tribe or band with which a person associates whether or not they are an enrolled member.",
+        "description": "This Extension profile represents a tribe or band with which a person associates and, optionally, whether they are enrolled.",
         "exampleBoolean": false,
         "name": "US Core Tribal Affiliation Extension"
       },
@@ -776,7 +776,7 @@
         },
         "description": "Codes that represent the sex characterization appropriate for the associated clinical context.",
         "exampleBoolean": false,
-        "name": "US Core Sex for Clinical Use"
+        "name": "US Core Sex for Clinical Use Codes"
       },
       {
         "reference": {
@@ -3298,7 +3298,7 @@
       },
       {
         "code": "releaselabel",
-        "value": "CI Build"
+        "value": "STU6 Ballot"
       },
       {
         "code": "path-resource",

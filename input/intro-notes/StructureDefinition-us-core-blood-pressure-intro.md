@@ -1,7 +1,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the this profile:
+The following are example usage scenarios for this profile:
 
 - Query for blood pressure observation belonging to a pediatric patient
 - [Record or update] pressure belonging to a pediatric patient

@@ -1,84 +1,67 @@
 {
-    "category": [
+  "category": [
+    {
+      "coding": [
         {
-            "coding": [
-                {
-                    "code": "laboratory",
-                    "display": "Laboratory",
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category"
-                }
-            ],
-            "text": "Laboratory"
+          "code": "laboratory",
+          "display": "Laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
         }
+      ],
+      "text": "Laboratory"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "2028-9",
+        "display": "CO2 SerPl-sCnc",
+        "system": "http://loinc.org"
+      }
     ],
-    "code": {
-        "coding": [
-            {
-                "code": "2028-9",
-                "display": "CO2 SerPl-sCnc",
-                "system": "http://loinc.org"
-            }
-        ],
-        "text": "CO2 SerPl-sCnc"
-    },
-    "effectiveDateTime": "2005-07-05",
-    "id": "serum-co2",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Serum CO2 Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a serum CO2 example for the *US Core Observation Lab Profile*."
-            }
-        ],
-        "lastUpdated": "2016-03-09T15:29:57.477+00:00",
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-        ],
-        "versionId": "962"
-    },
-    "referenceRange": [
-        {
-            "high": {
-                "code": "mmol/L",
-                "system": "http://unitsofmeasure.org",
-                "unit": "mmol/L",
-                "value": 29.0
-            },
-            "low": {
-                "code": "mmol/L",
-                "system": "http://unitsofmeasure.org",
-                "unit": "mmol/L",
-                "value": 22.0
-            },
-            "type": {
-                "coding": [
-                    {
-                        "code": "normal",
-                        "display": "Normal Range",
-                        "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
-                    }
-                ],
-                "text": "Normal Range"
-            }
-        }
-    ],
-    "resourceType": "Observation",
-    "status": "final",
-    "subject": {
-        "display": "Amy Shaw",
-        "reference": "Patient/example"
-    },
-    "valueQuantity": {
+    "text": "CO2 SerPl-sCnc"
+  },
+  "effectiveDateTime": "2005-07-05",
+  "id": "serum-co2",
+  "referenceRange": [
+    {
+      "high": {
+        "code": "mmol/L",
         "system": "http://unitsofmeasure.org",
         "unit": "mmol/L",
-        "value": 24.0
-    },
-    "specimen": {
-        "reference": "Specimen/specimen-example-serum",
-        "display": "Serum specimen"
+        "value": 29
+      },
+      "low": {
+        "code": "mmol/L",
+        "system": "http://unitsofmeasure.org",
+        "unit": "mmol/L",
+        "value": 22
+      },
+      "type": {
+        "coding": [
+          {
+            "code": "normal",
+            "display": "Normal Range",
+            "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+          }
+        ],
+        "text": "Normal Range"
+      }
     }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+    "display": "Amy Shaw",
+    "reference": "Patient/example"
+  },
+  "valueQuantity": {
+    "system": "http://unitsofmeasure.org",
+    "unit": "mmol/L",
+    "value": 24
+  },
+  "specimen": {
+    "reference": "Specimen/specimen-example-serum",
+    "display": "Serum specimen"
+  }
 }

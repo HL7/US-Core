@@ -43,10 +43,9 @@ The valueSet reference http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.
 # ==== The following code system are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked and the identifiers are correct (5) ===========
 
 Code System URI 'https://nahdo.org/sopt' is unknown so the code cannot be validated
-[Unable to determine whether the provided codes are in the value set http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7900 because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated]
+[Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated]
 Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated
-[Unable to determine whether the provided codes are in the value set http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7901 because the value set or a code system it depends on is not known to the validator, Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated]
-Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated
+
 
 # === These warnings are due to using the actual base Type for the _id or _tag SearchParameter expression instead of using "Resource". Reviewed with publishing in Nov 2021 and OK with suppressing these Warnings (source: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Bad.20derived.20searchparameters)  (8) ===
 

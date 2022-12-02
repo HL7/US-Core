@@ -2,7 +2,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the this profile:
+The following are example usage scenarios for this profile:
 
 - Query for a patient's pregnancy status
 - [Record or update] a past or present pregnancy status

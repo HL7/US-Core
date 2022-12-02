@@ -1,56 +1,41 @@
 {
-    "status": "final",
-    "category": [
+  "status": "final",
+  "category": [
+    {
+      "text": "Vital Signs",
+      "coding": [
         {
-            "text": "Vital Signs",
-            "coding": [
-                {
-                    "code": "vital-signs",
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "display": "Vital Signs"
-                }
-            ]
+          "code": "vital-signs",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Vital Signs"
         }
-    ],
-    "code": {
-        "text": "BMI",
-        "coding": [
-            {
-                "code": "39156-5",
-                "system": "http://loinc.org",
-                "display": "Body mass index (BMI) [Ratio]"
-            }
-        ]
-    },
-    "resourceType": "Observation",
-    "valueQuantity": {
-        "code": "kg/m2",
-        "unit": "kg/m2",
-        "value": 16.2,
-        "system": "http://unitsofmeasure.org"
-    },
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "BMI Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a BMI example for the *Vitalsigns Profile*."
-            }
-        ]
-    },
-    "encounter": {
-        "display": "GP Visit"
-    },
-    "effectiveDateTime": "1999-07-02",
-    "id": "bmi",
-    "subject": {
-        "display": "Amy Shaw",
-        "reference": "Patient/example"
+      ]
     }
+  ],
+  "code": {
+    "text": "BMI",
+    "coding": [
+      {
+        "code": "39156-5",
+        "system": "http://loinc.org",
+        "display": "Body mass index (BMI) [Ratio]"
+      }
+    ]
+  },
+  "resourceType": "Observation",
+  "valueQuantity": {
+    "code": "kg/m2",
+    "unit": "kg/m2",
+    "value": 16.2,
+    "system": "http://unitsofmeasure.org"
+  },
+  "encounter": {
+    "display": "GP Visit"
+  },
+  "effectiveDateTime": "1999-07-02",
+  "id": "bmi",
+  "subject": {
+    "display": "Amy Shaw",
+    "reference": "Patient/example"
+  }
 }

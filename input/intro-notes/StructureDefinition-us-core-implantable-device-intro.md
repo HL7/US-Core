@@ -1,7 +1,7 @@
 
 ﻿**Example Usage Scenarios:**
 
-The following are example usage scenarios for the this profile:
+The following are example usage scenarios for this profile:
 
 -   Query for a Patient's Implantable Devices
 -  [Record or update]  a Patient Implantable Device

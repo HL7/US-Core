@@ -7,7 +7,7 @@ This section provides specific guidance on how to access "all medications" and "
 #### Pharmacy FHIR Resources
 {:.no_toc}
 
-The FHIR specification defines 5 FHIR pharmacy resources concerned with the ordering, dispensing, administration, and recording of medications. This guide documents accessing a patient's medications using the following three resources:
+The FHIR specification defines five FHIR pharmacy resources concerned with the ordering, dispensing, administration, and recording of medications. This guide documents accessing a patient's medications using the following three resources:
 
   - [Medication]\:  Represents the medication itself
   - [MedicationRequest]\: An order or request for the supply of the medication and the instructions for administration of the medication to a patient, and patient reported medications.

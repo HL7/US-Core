@@ -1,16 +1,16 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the this profile:
+The following are example usage scenarios for this profile:
 
--   Query for a specific procedure or test request such as an electrocardiogram (ECG) order or a referral to a support program.
--   Query for a specific service offered to a patient such as a referral to a support program.
--   Query for category of service request (e.g. all cardiology requests)
+-   Query for a specific procedure or test request, such as an electrocardiogram (ECG) order or a referral to a support program.
+-   Query for a specific service offered to a patient, such as a referral to a support program.
+-   Query for a category of service request (e.g., all cardiology requests)
 
 
 ### Mandatory and Must Support Data Elements
 
-The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.
+The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.
 
 **Each Service Request must have:**
 
@@ -23,7 +23,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 1.  a category
 1.  when requested service should happen
-1.  when request was made
+1.  when the request was made
 1.  the requester
 
 **Additional USCDI Requirements**
@@ -37,7 +37,7 @@ For ONC's USCDI requirements, each ServiceRequest must support the following add
 **Profile specific implementation guidance:**
 
 - See the [SDOH] guidance page for more information when exchanging Social Determinants of Health (SDOH) Service Requests.
-- The `ServiceRequest.category` binding must support at a minimum the [US Core ServiceRequest Category Codes].  However, this valueset can be treated as [extensible] and other category codes can be used instead.
+- The `ServiceRequest.category` binding must support, at a minimum, the [US Core ServiceRequest Category Codes].  However, this valueset can be treated as [extensible], and other category codes can be used instead.
 - The `ServiceRequest.code` valueset is broad to accommodate a wide variety of use cases and should be constrained to a subset for a particular use case or domain. (for example, LOINC for laboratory orders.)
 <div class="bg-success" markdown="1">
 - \*The ServiceRequest resource can communicate the reason or indication for referral or consultation using either a code in `ServiceRequest.reasonCodeableConcept` or a reference using `ServiceRequest.reasonReference`.

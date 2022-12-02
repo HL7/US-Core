@@ -1,7 +1,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the this profile:
+The following are example usage scenarios for this profile:
 
 - Query for pulse oximety observations for a patient
 - [Record or update]  pulse oximety observations belonging to a patient

@@ -1,7 +1,7 @@
 
 **Example Usage Scenarios:**
 
-The following are example usage scenarios for the this profile:
+The following are example usage scenarios for this profile:
 
 -   Query for a Patient's current or historical problems and health concerns
 -   [Record or update] a Patient's problems and health concerns

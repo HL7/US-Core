@@ -12,7 +12,7 @@ This page documents how US Core Profiles can represent screenings and assessment
 The figure below shows how screenings, assessments, and referrals (requests) relate to providing the services required by a patient.
 
 - **Screening and Assessments**: An accurate [Screening and Assessment](#screening-and-assessments) is necessary before delivering appropriate clinical care. US Core defines two observations to support this process:
-    - [US Core Observation Screening and Assessments Profile] - represents the questions and responses to screening and assessment tools. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. 
+    - [US Core Observation Screening Assessment Profile] - represents the questions and responses to screening and assessment tools. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. 
     - [US Core Simple Observation Profile] - a clinician's decision to document a specific item - "patient has problems with housing". Note this observation is only appropriate when the judgment isn't appropriate on the list of Problems or Health Concerns.
 - **Problems/Health Concerns**: Identifying a Health-related condition (for example, homelessness), Disability concern, or Functional concern is represented by the [US Core Condition Problems and Health Concerns Profile]. 
 - **Interventions**:  The [US Core ServiceRequest Profile] communicates services offered to patients to address problems/health concerns. The [US Core Procedure Profile] can also record a completed service or intervention.
@@ -30,15 +30,15 @@ Screening and Assessments are used to identify various problems or health concer
 
 The following guidance was developed after reviewing several functional status, disability status, mental/cognitive status, and SDOH screening and assessment tools.
 
-#### US Core Observation Screening and Assessments Profile
+#### US Core Observation Screening an Assessments Profile
 
-To meet the requirements for USCDI v3 data class Health Status and Assessments and SDOH Assessments, US Core defines the [US Core Observation Screening and Assessments Profile] to support questions and responses to screening and assessment tools when an assessment is done. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. It also records a total score when a screening or assessment tool includes one. US Core Servers **SHALL** support the [US Core Observation Screening and Assessments Profile] for recording screening and assessments.
+To meet the requirements for USCDI v3 data class Health Status and Assessments and SDOH Assessments, US Core defines the [US Core Observation Screening Assessment Profile] to support questions and responses to screening and assessment tools when an assessment is done. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. It also records a total score when a screening or assessment tool includes one. US Core Servers **SHALL** support the [US Core Observation Screening Assessment Profile] for recording screening and assessments.
 
-The [US Core Observation Screening and Assessments Profile] is defined to record responses from screening or assessments for *any* context. In addition, the profile defines references to other screening and assessment observations. A web of related observations is grouped using these references, and the structure is preserved. The figure below illustrates the relationship between the Observation screening and assessments "panel" and the individual screening and assessment Observations. Each box represents an Observation:
+The [US Core Observation Screening Assessment Profile] is defined to record responses from screening or assessments for *any* context. In addition, the profile defines references to other screening and assessment observations. A web of related observations is grouped using these references, and the structure is preserved. The figure below illustrates the relationship between the Observation screening and assessments "panel" and the individual screening and assessment Observations. Each box represents an Observation:
 
 {% include img-med.html img="uscore-observation-assessment-structure.svg" caption="Relationship Between Screening and Assessment Observations" %}
 
-Note that the panels can be nested to create additional groupings of responses. See the [US Core Observation Screening and Assessments Profile] profile page for detailed documentation on how the observations are linked, examples, and search requirements.
+Note that the panels can be nested to create additional groupings of responses. See the [US Core Observation Screening Assessment Profile] profile page for detailed documentation on how the observations are linked, examples, and search requirements.
 
 Not all questions and answers in an assessment tool may or should be represented as FHIR Observations. For example, the FHIR patient resource best represents patient demographic information.
 {:.bg-info}
@@ -83,7 +83,7 @@ For the SDOH Clinical Care HL7 Implementation Guide, the Gravity project has def
 
 US Core uses broadly defined value sets that contain concepts used across many use cases, including SDOH. The figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Problems and Health Concerns Profile and how the grouped valueset is compatible with the US Core Problem code valueset.   When recording SDOH data US Core Profiles, servers **SHOULD** use the SDOH value sets listed above.
 
-{% include img-med.html img=" sdoh_condition.svg" caption=" Example of SDOH Grouping Value set in US Core Condition Codes Value Set" %}
+{% include img-med.html img="sdoh_condition.svg" caption=" Example of SDOH Grouping Value set in US Core Condition Codes Value Set" %}
 
 ---
 
