@@ -80,9 +80,9 @@ To claim conformance to a US Core Profile, a server:
 
 The following rules summarize the requirements defined by [FHIR Terminology] for coded elements (CodeableConcept, Coding, and code datatypes).
 
-#### Required Bindings Coded Elements
+#### Required Bindings For Coded Elements
 
-[Required binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used. For `CodeableConcept`, only text is *not* valid, but multiple codings (translations) are permitted, as discussed below.
+[Required binding] to a value set definition means that one of the codes from the specified value set **SHALL** be used. For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings, and only text is *not* valid.
 
 For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has a required binding to the AllergyIntoleranceClinicalStatusCodes ValueSet. Therefore, when claiming conformance to this profile:
 
@@ -105,9 +105,9 @@ FHIR profiles use [slicing] when a coded element is a repeating element, and a p
 
   {% include img.html img="Must_Support_Condition_category.png" caption="Figure 5: US Core Condition.category" %}
 
-#### Extensible Binding for CodeableConcept Datatype
+#### Extensible Binding for Coded Elements
 
-[Extensible Binding]  means that one of the codes from the specified value set **SHALL** be used if an applicable concept is present. Multiple codings are permitted for `CodeableConcept`, and this rule applies to *at least* one of the codings. If no suitable code exists in the value set, alternate code(s) may be provided, or if only text is available, then just text may be used.
+[Extensible Binding]  means that one of the codes from the specified value set **SHALL** be used if an applicable concept is present.  If no suitable code exists in the value set, alternate code(s) may be provided.  For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings, and if only text is available, then just text may be used.
 
 The [US Core AllergyIntolerance Profile] illustrates the extensible binding rules for CodeableConcept datatype.  The `AllergyIntolerance.code` element has an extensible binding to the VSAC ValueSet "Common substances for allergy and intolerance documentation including refutations" Allergy. When claiming conformance to this profile:
 
