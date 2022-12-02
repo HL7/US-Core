@@ -1,5 +1,5 @@
 
-The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations], [FHIR RESTful search api] and the standard [Search Param Registry] see the FHIR specification.
+The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations], [FHIR RESTful search api], and the standard [Search Param Registry], see the FHIR specification.
 
 ### Operations
 
@@ -9,7 +9,7 @@ The following operations and search parameters have been defined for the US Core
 
 ### Search Parameters
 
-NOTE: The following search parameters **SHALL NOT** be interpreted on their own as requirements for server.  The CapabilityStatement defines the search capabilities expectations for the US Core Server. This section lists the search parameters definitions that are used within the CapabilityStatement.  This is not a list of search requirements for the client or server.
+NOTE: The following search parameters **SHALL NOT** be interpreted on their own as requirements for the server.  The CapabilityStatement defines the search capabilities expectations for the US Core Server. This section lists the search parameters definitions that are used within the CapabilityStatement.  This is not a list of search requirements for the client or server.
 {:.bg-warning}
 
 #### Search Parameters defined by this Implementation Guide
