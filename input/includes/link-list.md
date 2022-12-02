@@ -364,4 +364,4 @@
 [US Core Common SDOH Assessments ValueSet]: ValueSet-us-core-common-sdoh-assessments.html
 [Gravity Project]: https://hl7.org/gravity
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/
-
+[technical requirements]: general-requirements.html#required-bindings-when-slicing-by-value-sets

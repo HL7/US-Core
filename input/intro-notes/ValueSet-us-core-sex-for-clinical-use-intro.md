@@ -1,3 +1,4 @@
+
 {% include new_page.md %}
 
 The USCDI applicable vocabulary standard for Sex is SMOMED CT.  The table below provides implementers with a concept mapping between the US Core Sex for Clinical Use concepts and the corresponding SNOMED CT concepts. These SNOMED CT are supplied as additional codes in the extension. The [Patient Example] illustrates how to do this.
