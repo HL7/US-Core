@@ -23,7 +23,8 @@ This ballot addresses the following:
 - Several profiles from version 5.0.1 have been *retired* or *renamed* and *rescoped* in this version to accommodate the USCDI Health Status/Assessments Data Classes and as a result of implementer feedback. The [Cross Version Comparisions Table](changes-between-versions.html#cross-version-comparisons) summarized these significant revisions.
 - We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
 - Implementers submitted over 70 trackers since the publication of US Core ver 5.0.0 and 5.0.1. We have addressed them and applied over 50 changes. See the [change log] for detailed list of change and where applied.
-
+  - For tracker [FHIR-32949](https://jira.hl7.org/browse/FHIR-32949), we added a [US Core CarePlan Profile **Ballot Comment**](StructureDefinition-us-core-careplan.html) for community feedback.
+  
 Where possible, new and updated content are highlighted with green text and background
 {:.new-content}
   
