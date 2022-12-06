@@ -1,0 +1,1891 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "d50d20a4-1705-4399-b959-76721af4e8cc-6",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/d50d20a4-1705-4399-b959-76721af4e8cc-6",
+  "name" : "IntersectionLOINCDiagnosticReportCodesAndUSCoreLaboratoryTestCodes",
+  "title" : "Intersection of LOINC Diagnostic Report Codes And US Core Laboratory Test Codes",
+  "status" : "draft",
+  "date" : "2022-12-05T22:39:10-08:00",
+  "expansion" : {
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "1-8",
+      "display" : "Acyclovir [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "10-9",
+      "display" : "Amdinocillin [Susceptibility] by Serum bactericidal titer"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100-8",
+      "display" : "Cefoperazone [Susceptibility] by Minimum inhibitory concentration (MIC)"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1000-9",
+      "display" : "DBG Ab [Presence] in Serum or Plasma from Blood product unit"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100019-9",
+      "display" : "ALK gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100020-7",
+      "display" : "GNA11 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100021-5",
+      "display" : "GNAQ gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100022-3",
+      "display" : "IDH1 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100023-1",
+      "display" : "IDH2 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100024-9",
+      "display" : "SETBP1 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100025-6",
+      "display" : "SRSF2 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100026-4",
+      "display" : "MET gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100027-2",
+      "display" : "SMAD4 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100028-0",
+      "display" : "FBXW7 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100029-8",
+      "display" : "Cancer related multigene analysis in Plasma cell-free DNA by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100041-3",
+      "display" : "Aminoglycoside [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100042-1",
+      "display" : "Atovaquone [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100043-9",
+      "display" : "Azithromycin+Ethambutol [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100044-7",
+      "display" : "Cefcapene [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100045-4",
+      "display" : "Cefozopran [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100046-2",
+      "display" : "Cefquinome [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100047-0",
+      "display" : "Cefteram [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100048-8",
+      "display" : "Clarithromycin+Ethambutol [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100049-6",
+      "display" : "Eravacycline [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100050-4",
+      "display" : "Erythromycin+Ethambutol [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100051-2",
+      "display" : "Ethambutol+rifAMPin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100052-0",
+      "display" : "Flomoxef [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100053-8",
+      "display" : "Fluoroquinolone [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100054-6",
+      "display" : "Gamithromycin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100055-3",
+      "display" : "Optochin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100056-1",
+      "display" : "Panipenem [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100057-9",
+      "display" : "Prothionamide [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100058-7",
+      "display" : "Prulifloxacin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100059-5",
+      "display" : "Rifapentine [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100060-3",
+      "display" : "Tildipirosin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100061-1",
+      "display" : "Tosufloxacin [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100087-6",
+      "display" : "Toxocara canis 24-35kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100088-4",
+      "display" : "Taenia solium larva Ab bands panel - Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100089-2",
+      "display" : "Taenia solium larva 6-8kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100090-0",
+      "display" : "Taenia solium larva 45kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100091-8",
+      "display" : "Trypanosoma cruzi Ab [Units/volume] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100092-6",
+      "display" : "Trypanosoma cruzi Ab bands panel - Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100093-4",
+      "display" : "Trypanosoma cruzi 15-16kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100094-2",
+      "display" : "Trypanosoma cruzi 21-22kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100095-9",
+      "display" : "Trypanosoma cruzi 27-28kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100096-7",
+      "display" : "Trypanosoma cruzi 42kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100097-5",
+      "display" : "Trypanosoma cruzi 45-47kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100098-3",
+      "display" : "Trypanosoma cruzi 120-200kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100099-1",
+      "display" : "Trypanosoma cruzi 160kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1001-7",
+      "display" : "DBG Ab [Presence] in Serum or Plasma from Donor"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100100-7",
+      "display" : "Fasciola sp IgG Ab [Presence] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100101-5",
+      "display" : "Fasciola sp 8-9kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100102-3",
+      "display" : "Fasciola sp 27-28kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100103-1",
+      "display" : "Fasciola sp 60kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100104-9",
+      "display" : "Fasciola sp 42kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100105-6",
+      "display" : "Filaria IgG and IgM panel - Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100106-4",
+      "display" : "Filaria IgG Ab [Presence] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100107-2",
+      "display" : "Leishmania sp IgG Ab [Presence] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100108-0",
+      "display" : "Leishmania sp IgG Ab [Units/volume] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100109-8",
+      "display" : "Leishmania sp Ab bands panel - Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100110-6",
+      "display" : "Leishmania sp 14kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100111-4",
+      "display" : "Leishmania sp 16kD IgG Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100112-2",
+      "display" : "Fasciola sp Ab bands panel - Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100113-0",
+      "display" : "Helicobacter pylori Ab panel - Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100114-8",
+      "display" : "Toxoplasma gondii 30kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100115-5",
+      "display" : "Toxoplasma gondii 31kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100116-3",
+      "display" : "Toxoplasma gondii 33kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100117-1",
+      "display" : "Toxoplasma gondii 40kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100118-9",
+      "display" : "Toxoplasma gondii 41kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100119-7",
+      "display" : "Toxoplasma gondii 45kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100120-5",
+      "display" : "Chlamydia trachomatis Ab panel - Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100121-3",
+      "display" : "Chlamydia trachomatis IgA Ab [Presence] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100122-1",
+      "display" : "Chlamydophila pneumoniae Ab panel - Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100123-9",
+      "display" : "Chlamydophila pneumoniae IgA Ab [Presence] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100124-7",
+      "display" : "Chlamydophila pneumoniae IgA Ab [Units/volume] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100125-4",
+      "display" : "Chlamydophila psittaci Ab panel - Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100126-2",
+      "display" : "Bordetella pertussis Ab.IgG panel - Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100127-0",
+      "display" : "Campylobacter sp Ab panel - Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100128-8",
+      "display" : "Cryptococcus sp Ag panel - Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100129-6",
+      "display" : "Schistosoma sp Ab [Titer] in Serum by Hemagglutination"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100130-4",
+      "display" : "Schistosoma mansoni Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100131-2",
+      "display" : "Schistosoma sp 8kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100132-0",
+      "display" : "Schistosoma sp 9kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100133-8",
+      "display" : "Schistosoma sp 10kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100134-6",
+      "display" : "Schistosoma sp 11kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100135-3",
+      "display" : "Schistosoma sp 12-13kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100136-1",
+      "display" : "Schistosoma sp 14-15kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100137-9",
+      "display" : "Schistosoma sp 15-16kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100138-7",
+      "display" : "Schistosoma sp 18-19kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100139-5",
+      "display" : "Schistosoma sp 22-24kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100140-3",
+      "display" : "Schistosoma sp 30-34kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100141-1",
+      "display" : "Schistosoma sp 65kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100142-9",
+      "display" : "Schistosoma sp 70kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100143-7",
+      "display" : "Schistosoma sp 80kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100144-5",
+      "display" : "Schistosoma sp 95kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100145-2",
+      "display" : "Schistosoma sp 110kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100146-0",
+      "display" : "Schistosoma sp 120kD Ab [Presence] in Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100147-8",
+      "display" : "Toxoplasma gondii Ab bands panel - Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100148-6",
+      "display" : "Schistosoma sp Ab bands panel - Serum by Immunoblot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100149-4",
+      "display" : "6-oxo-piperidine-2-carboxylate and 6(R+S)-oxo-propylpiperidine-2-carboxylate panel - Urine and Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100150-2",
+      "display" : "6(R+S)-oxo-propylpiperidine-2-carboxylate [Moles/volume] in Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100151-0",
+      "display" : "6-oxo-piperidine-2-carboxylate [Moles/volume] in Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100152-8",
+      "display" : "6-oxo-piperidine-2-carboxylate/Creatinine [Molar ratio] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100153-6",
+      "display" : "6(R+S)-oxo-propylpiperidine-2-carboxylate/Creatinine [Molar ratio] in Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100154-4",
+      "display" : "Specimen collection supervision level"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100156-9",
+      "display" : "SARS-CoV-2 (COVID-19) variant [Type] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100157-7",
+      "display" : "SARS-CoV-2 (COVID-19) lineage [Type] in Specimen by Sequencing"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100158-5",
+      "display" : "Microalbumin [Mass/volume] in Urine collected for unspecified duration"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1002-5",
+      "display" : "DBG Ab [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100213-8",
+      "display" : "Prostate cancer multigene analysis in Blood or Tissue by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100281-5",
+      "display" : "D Ab [Units/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1003-3",
+      "display" : "Indirect antiglobulin test.complement specific reagent [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100305-2",
+      "display" : "IDH1 gene exon 4 targeted mutation analysis [Presence] in Blood or Marrow by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100306-0",
+      "display" : "IDH2 gene exon 4 targeted mutation analysis [Presence] in Blood or Marrow by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100341-7",
+      "display" : "Rubella virus IgG Ab index [Units/volume] in Serum and CSF"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100342-5",
+      "display" : "Volatile Organic Compounds associated with SARS-CoV-2 infection [Presence] in Exhaled gas by Gas chromatography-mass spectrometry"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100343-3",
+      "display" : "Influenza virus B RNA [Presence] in Saliva (oral fluid) by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100344-1",
+      "display" : "Influenza virus A RNA [Presence] in Saliva (oral fluid) by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100345-8",
+      "display" : "Influenza virus A and B and SARS-CoV-2 (COVID-19) RNA panel - Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100346-6",
+      "display" : "Clotting time.extrinsic coagulation system activated.platelets inhibited of Blood by Rotational TEG"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100347-4",
+      "display" : "Clot formation.extrinsic coagulation system activated.platelets inhibited [Time] in Blood by Rotational TEG"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100350-8",
+      "display" : "Sesamum indicum 1 IgE Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100351-6",
+      "display" : "Pioglitazone [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100352-4",
+      "display" : "Rosiglitazone [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100356-5",
+      "display" : "Chlamydia trachomatis and Neisseria gonorrhoeae and Trichomonas vaginalis DNA [Identifier] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100357-3",
+      "display" : "Naloxone [Presence] in Cord tissue by Screen method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100358-1",
+      "display" : "Phentermine [Presence] in Cord tissue by Screen method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100359-9",
+      "display" : "Gliadin 33 mer peptide [Mass/volume] in Stool by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100368-0",
+      "display" : "Amino Acids Urea Cycle Panel - Serum or Plasma by LC/MS/MS"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100370-6",
+      "display" : "Orthopoxvirus DNA [Identifier] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100371-4",
+      "display" : "Titin Ab [Units/volume] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100372-2",
+      "display" : "Abiraterone [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100373-0",
+      "display" : "Eucheuma IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100374-8",
+      "display" : "Aloe vera IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100375-5",
+      "display" : "Anise IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100376-3",
+      "display" : "Bambusa vulgaris IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100377-1",
+      "display" : "Goat cheese IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100378-9",
+      "display" : "Sheep cheese IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100379-7",
+      "display" : "Leeks IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100380-5",
+      "display" : "Red cabbage IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100381-3",
+      "display" : "Mentha balsamea Wild IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100383-9",
+      "display" : "Monkeypox virus DNA [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100384-7",
+      "display" : "Rapeseed IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100385-4",
+      "display" : "Corn salad IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100386-2",
+      "display" : "Rosemary IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100387-0",
+      "display" : "Poppy Seed IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100388-8",
+      "display" : "Cocoa IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100389-6",
+      "display" : "Pistachio IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100390-4",
+      "display" : "Sunflower Seed IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100391-2",
+      "display" : "Dates IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100392-0",
+      "display" : "Duck meat IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100393-8",
+      "display" : "Allergen Mushroom mix 2 (Xerocomus, Boletus) IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100394-6",
+      "display" : "Astacoidea IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100395-3",
+      "display" : "Carob IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100396-1",
+      "display" : "Brassica napus IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100397-9",
+      "display" : "Goat Meat IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100398-7",
+      "display" : "Goose meat IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100399-5",
+      "display" : "Ostrich meat IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1004-1",
+      "display" : "Direct antiglobulin test.complement specific reagent [Presence] on Red Blood Cells"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100400-1",
+      "display" : "Quail meat IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100401-9",
+      "display" : "Rabbit meat IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100402-7",
+      "display" : "Venison meat IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100403-5",
+      "display" : "Guineafowl IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100404-3",
+      "display" : "Horse meat IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100405-0",
+      "display" : "Kefir IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100406-8",
+      "display" : "Butter IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100407-6",
+      "display" : "Camembert cheese IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100408-4",
+      "display" : "Emmental cheese IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100409-2",
+      "display" : "Processed cheese IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100410-0",
+      "display" : "Curd cheese IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100411-8",
+      "display" : "Sugar Beet IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100412-6",
+      "display" : "Chinese cabbage IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100413-4",
+      "display" : "Fennel Fresh IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100414-2",
+      "display" : "Gourd IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100415-9",
+      "display" : "Kale IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100416-7",
+      "display" : "Savoy cabbage IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100417-5",
+      "display" : "Vitis sp leaf IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100418-3",
+      "display" : "Liquorice IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100419-1",
+      "display" : "Snow pea IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100420-9",
+      "display" : "Fava bean IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100421-7",
+      "display" : "Chick Pea IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100422-5",
+      "display" : "Chicory IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100423-3",
+      "display" : "Allergy Mushroom Mix 1 (Button + oyster + Shiitaki + chanterelle mushroom) IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100424-1",
+      "display" : "8(9)-Cholestenol [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100425-8",
+      "display" : "DiHydro T-Mas [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100426-6",
+      "display" : "Squalene [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100427-4",
+      "display" : "Stigmasterol [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100428-2",
+      "display" : "Carnitine free and total and acylcarnitine panel - Urine"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100429-0",
+      "display" : "LRBA deficiency panel - Blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100430-8",
+      "display" : "Cells.LRBA+/100 Cells.CD3+CD14-CD45+ in Blood by Flow cytometry (FC)"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100431-6",
+      "display" : "Cells.CD3+CD14-CD45+.LRBA mean fluorescence intensity in Blood by Flow cytometry (FC)"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100432-4",
+      "display" : "Cells.LRBA+/100 Cells.CD3-CD14-CD19+CD45+ in Blood by Flow cytometry (FC)"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100433-2",
+      "display" : "Cells.CD3-CD14-CD19+CD45+.LRBA mean fluorescence intensity in Blood by Flow cytometry (FC)"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100434-0",
+      "display" : "Orthopoxvirus.non-variola DNA [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100435-7",
+      "display" : "Glial fibrillary acidic protein [Mass/volume] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100436-5",
+      "display" : "Ubiquitin carboxyl-terminal hydrolase-L1 [Mass/volume] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100437-3",
+      "display" : "Norsufentanil [Mass/volume] in Urine by Confirmatory method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1005-8",
+      "display" : "Indirect antiglobulin test.IgG specific reagent [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1006-6",
+      "display" : "Direct antiglobulin test.IgG specific reagent [Interpretation] on Red Blood Cells"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100654-3",
+      "display" : "Pyruvate kinase M2 [Presence] in Stool"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100662-6",
+      "display" : "Cortisol free and total panel - Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100663-4",
+      "display" : "TPMT gene c.460G>A and c.719A>G [Presence] in Blood by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100664-2",
+      "display" : "NUDT15 gene c.50_55dup and c.415C>T [Presence] in Blood by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100665-9",
+      "display" : "NUDT15 gene c.415C>T [Presence] in Blood by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100666-7",
+      "display" : "NUDT15 gene c.416G>A [Presence] in Blood by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100667-5",
+      "display" : "NUDT15 gene c.52G>A [Presence] in Blood by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100668-3",
+      "display" : "NUDT15 gene c.50_55dup [Presence] in Blood by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100669-1",
+      "display" : "NUDT15 gene c.50_55del [Presence] in Blood by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100670-9",
+      "display" : "RHD gene allele [Identifier] in Plasma cell-free DNA Nominal--fetus"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100671-7",
+      "display" : "Aspergillus sp DNA [Presence] in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100672-5",
+      "display" : "Aspergillus fumigatus DNA [Presence] in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100673-3",
+      "display" : "Aspergillus terreus DNA [Presence] in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100674-1",
+      "display" : "BK virus DNA [Log #/volume] (viral load) in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100675-8",
+      "display" : "Cytomegalovirus DNA [Units/volume] (viral load) in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100676-6",
+      "display" : "Cytomegalovirus DNA [log units/volume] (viral load) in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100677-4",
+      "display" : "Epstein Barr virus DNA [Log #/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100678-2",
+      "display" : "Epstein Barr virus DNA [Log #/volume] (viral load) in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100679-0",
+      "display" : "Herpes virus 6 DNA [Log #/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100680-8",
+      "display" : "Herpes virus 6 DNA [Log #/volume] (viral load) in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100681-6",
+      "display" : "Herpes virus 7 DNA [Log #/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100682-4",
+      "display" : "Herpes virus 7 DNA [Log #/volume] (viral load) in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100683-2",
+      "display" : "Herpes virus 8 DNA [Log #/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100684-0",
+      "display" : "Herpes virus 8 DNA [Log #/volume] (viral load) in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100685-7",
+      "display" : "JC virus DNA [Log #/volume] (viral load) in Serum or Plasma by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100686-5",
+      "display" : "JC virus DNA [Log #/volume] (viral load) in Cerebral spinal fluid by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100687-3",
+      "display" : "JC virus DNA [Log #/volume] (viral load) in Urine by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100688-1",
+      "display" : "Parvovirus B19 DNA [Log #/volume] (viral load) in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100689-9",
+      "display" : "Toxoplasma gondii DNA [Log #/volume] in Serum or Plasma by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100690-7",
+      "display" : "Toxoplasma gondii DNA [Log #/volume] in Cerebral spinal fluid by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100691-5",
+      "display" : "Varicella zoster virus DNA [Log #/volume] (viral load) in Blood by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100692-3",
+      "display" : "Varicella zoster virus DNA [Log #/volume] (viral load) in Cerebral spinal fluid by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100693-1",
+      "display" : "Pneumocystis jiroveci DNA [Log #/volume] in Respiratory specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100694-9",
+      "display" : "SMN1 gene silent carrier analysis [Presence] in Blood or Tissue by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100695-6",
+      "display" : "Genetic disease analysis overall carrier interpretation in Blood or Tissue by Molecular genetics method Narrative"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100696-4",
+      "display" : "CTNS related multigene analysis [Identifier] in Bodyfluid and Serum or Plasma by Molecular genetics method Nominal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100699-8",
+      "display" : "Rifabutin+Ethambutol [Susceptibility]"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1007-4",
+      "display" : "Direct antiglobulin test.polyspecific reagent [Presence] on Red Blood Cells"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100700-4",
+      "display" : "Trichomonas vaginalis DNA [Presence] in Urethra by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100701-2",
+      "display" : "Trichomonas vaginalis rRNA [Presence] in Urethra by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100702-0",
+      "display" : "Mycoplasma genitalium rRNA [Presence] in Urethra by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100703-8",
+      "display" : "Mycoplasma genitalium rRNA [Presence] in Urine by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100704-6",
+      "display" : "Mycoplasma genitalium rRNA [Presence] in Cervix by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100705-3",
+      "display" : "Mycoplasma genitalium rRNA [Presence] in Anorectal by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100706-1",
+      "display" : "Mycoplasma genitalium rRNA [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100707-9",
+      "display" : "Polymorphonuclear cells [#/volume] in Peritoneal dialysis fluid by Automated count"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100708-7",
+      "display" : "Plasma cells/100 leukocytes in Synovial fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100709-5",
+      "display" : "Hepatocellular carcinoma risk [Score] by GAAD"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100710-3",
+      "display" : "Chlamydia trachomatis and Neisseria gonorrhoeae rRNA panel - Throat by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100711-1",
+      "display" : "Borrelia burgdorferi.VlsE1+pepC10 Ab [Units/volume] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100712-9",
+      "display" : "Brexpiprazole [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100713-7",
+      "display" : "Cariprazine [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100714-5",
+      "display" : "Guanfacine [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100715-2",
+      "display" : "Prothipendyl [Mass/volume] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100716-0",
+      "display" : "Prostate specific Ag [Mass/volume] in DBS"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100717-8",
+      "display" : "FCGR3A gene.p.Phe176Val [Presence] in Blood or Tissue by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100732-7",
+      "display" : "Cholesterol.in lipoprotein (little a) and Cholesterol.in LDL panel - Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100733-5",
+      "display" : "Cholesterol in LDL [Mass/volume] in Serum by calculation --corrected for Cholesterol.in lipoprotein (little a)"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100734-3",
+      "display" : "traMADol and Metabolites Panel - Urine by Confirmatory method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100735-0",
+      "display" : "Mannose-6-phosphate isomerase and phosphomannomutase 1 panel - Leukocytes"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100736-8",
+      "display" : "Acylcarnitine Analysis Post Mortem in Specimen Document"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100737-6",
+      "display" : "Alkaline phosphatase.macromolecular [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100738-4",
+      "display" : "Alanine aminotransferase.macromolecular [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100739-2",
+      "display" : "Aspartate aminotransferase.macromolecular [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100740-0",
+      "display" : "Amylase.macromolecular [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100741-8",
+      "display" : "Gamma glutamyl transferase.macromolecular [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100742-6",
+      "display" : "Lactate dehydrogenase.macromolecular [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100743-4",
+      "display" : "Lipase.macromolecular [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100744-2",
+      "display" : "Alpha-1-acid glycoprotein [Mass/volume] in Serum or Plasma by Electrophoresis"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100745-9",
+      "display" : "Chloride [Moles/volume] in Mixed venous blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100746-7",
+      "display" : "Glucose [Moles/volume] in Mixed venous blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100747-5",
+      "display" : "Legionella serogroup panel - Specimen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100748-3",
+      "display" : "Legionella spp [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100749-1",
+      "display" : "Legionella pneumophila serogroup 1 [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100750-9",
+      "display" : "Legionella pneumophila non-serogroup 1 [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100751-7",
+      "display" : "Galactose-alpha-1,3-galactose (Alpha-Gal) panel - Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100754-1",
+      "display" : "Platelet disorders multigene analysis in Blood or Tissue by Sequencing"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100755-8",
+      "display" : "Oligoclonal bands [#] in Serum or Plasma by Isoelectric focusing"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100756-6",
+      "display" : "Oligoclonal bands [Interpretation] in Cerebral spinal fluid by Isoelectric focusing"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100757-4",
+      "display" : "Protein fractions.oligoclonal bands panel - Serum and CSF by Isoelectric focusing"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100761-6",
+      "display" : "PALB2 gene targeted mutation analysis in Blood or Tissue by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100762-4",
+      "display" : "HBA2 gene.c.377T>C [Presence] in Blood by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100763-2",
+      "display" : "Mycobacterium sp comparative reaction interpretation Narrative"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100764-0",
+      "display" : "Mycobacterium bovis reaction wheal [Diameter] Qualitative --3 days post dose mammalian tuberculin intradermal"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100765-7",
+      "display" : "Homocysteine and methylmalonate and methylcitrate panel - DBS"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100788-9",
+      "display" : "Stemphylium botryosum IgG4 Ab [Mass/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100789-7",
+      "display" : "Rhizopus nigricans IgG4 Ab [Mass/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100790-5",
+      "display" : "Lepidoglyphus destructor IgG Ab [Mass/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100791-3",
+      "display" : "Hamster epithelium IgG Ab [Mass/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100792-1",
+      "display" : "Forsythia IgE Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100793-9",
+      "display" : "Testosterone [Mass/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100794-7",
+      "display" : "Follitropin [Units/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100795-4",
+      "display" : "S100 calcium binding protein B [Mass/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100796-2",
+      "display" : "Thyroglobulin [Mass/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100797-0",
+      "display" : "Testosterone Free [Mass/volume] in Serum --1st specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100798-8",
+      "display" : "Testosterone Free [Mass/volume] in Serum --2nd specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100799-6",
+      "display" : "21-Deoxycortisol [Mass/volume] in Serum --1st specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "1008-2",
+      "display" : "Indirect antiglobulin test.polyspecific reagent [Presence] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100800-2",
+      "display" : "21-Deoxycortisol [Mass/volume] in Serum --2nd specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100801-0",
+      "display" : "21-Deoxycortisol [Mass/volume] in Serum --3rd specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100802-8",
+      "display" : "21-Deoxycortisol [Mass/volume] in Serum --4th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100803-6",
+      "display" : "21-Deoxycortisol [Mass/volume] in Serum --5th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100804-4",
+      "display" : "Vasopressin [Moles/volume] in Plasma --1st specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100805-1",
+      "display" : "Vasopressin [Moles/volume] in Plasma --2nd specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100806-9",
+      "display" : "Vasopressin [Moles/volume] in Plasma --3rd specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100807-7",
+      "display" : "Vasopressin [Moles/volume] in Plasma --4th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100808-5",
+      "display" : "Vasopressin [Moles/volume] in Plasma --5th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100809-3",
+      "display" : "Vasopressin [Moles/volume] in Plasma --6th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100810-1",
+      "display" : "Vasopressin [Moles/volume] in Plasma --7th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100811-9",
+      "display" : "Vasopressin [Moles/volume] in Plasma --8th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100812-7",
+      "display" : "Vasopressin [Moles/volume] in Plasma --9th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100813-5",
+      "display" : "Vasopressin [Moles/volume] in Plasma --10th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100814-3",
+      "display" : "Vasopressin [Moles/volume] in Plasma --11th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100815-0",
+      "display" : "Vasopressin [Moles/volume] in Plasma --12th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100816-8",
+      "display" : "Glucagon [Mass/volume] in Serum or Plasma --6th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100817-6",
+      "display" : "Glucagon [Mass/volume] in Serum or Plasma --7th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100818-4",
+      "display" : "Renin [Mass/volume] in Plasma --1st specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100819-2",
+      "display" : "Renin [Mass/volume] in Plasma --2nd specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100820-0",
+      "display" : "Renin [Mass/volume] in Plasma --3rd specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100829-1",
+      "display" : "Renin [Mass/volume] in Plasma --4th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100830-9",
+      "display" : "Alpha subunit free [Units/volume] in Serum or Plasma --1st specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100831-7",
+      "display" : "Alpha subunit free [Units/volume] in Serum or Plasma --2nd specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100832-5",
+      "display" : "Alpha subunit free [Units/volume] in Serum or Plasma --3rd specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100833-3",
+      "display" : "Alpha subunit free [Units/volume] in Serum or Plasma --4th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100834-1",
+      "display" : "Alpha subunit free [Units/volume] in Serum or Plasma --5th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100835-8",
+      "display" : "Alpha subunit free [Units/volume] in Serum or Plasma --6th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100836-6",
+      "display" : "Alpha subunit free [Units/volume] in Serum or Plasma --7th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100837-4",
+      "display" : "Insulin-like growth factor-I [Mass/volume] in Serum or Plasma --9th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100838-2",
+      "display" : "Testosterone [Mass/volume] in Serum or Plasma --9th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100839-0",
+      "display" : "Vitamin A/Retinol binding protein [Ratio] in Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100840-8",
+      "display" : "IgE [Units/volume] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100841-6",
+      "display" : "Zinc finger protein of the cerebellum 4 Ab [Presence] in Cerebral spinal fluid by Line blot"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100842-4",
+      "display" : "Nonalcoholic steatohepatitis score in Serum or Plasma Calculated by FAST"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100843-2",
+      "display" : "Liver fibrosis score in Serum or Plasma by Calculated.Agile3+"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100844-0",
+      "display" : "Liver fibrosis score in Serum or Plasma by Calculated.Agile4"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100845-7",
+      "display" : "Neurofascin155 IgG4 Ab [Presence] in Serum by Flow cytometry (FC)"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100846-5",
+      "display" : "Dengue virus 1+2+3+4 nsP1 IgG Ab [Presence] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100847-3",
+      "display" : "Gas and ammonia panel - Arterial blood"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100848-1",
+      "display" : "Cell count and Differential panel - Amniotic fluid by Manual count"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100849-9",
+      "display" : "Leukocytes [#/volume] in Amniotic fluid by Manual count"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100850-7",
+      "display" : "Neutrophils [#/volume] in Amniotic fluid by Manual count"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100851-5",
+      "display" : "Other cells [#/volume] in Amniotic fluid by Manual count"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100854-9",
+      "display" : "Lymphocytes/100 cells in Blood mononuclear cells by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100855-6",
+      "display" : "CD3 cells/100 cells in Blood mononuclear cells"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100856-4",
+      "display" : "CD3+CD4+ (T4 helper) cells/100 cells in Blood mononuclear cells"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100857-2",
+      "display" : "CD3+CD8+ (T8 suppressor) cells/100 cells in Blood mononuclear cells"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100858-0",
+      "display" : "Cells.CD4+CD154+/CD4 cells in Blood --after stimulation with SARS-CoV-2 Spike peptide"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100859-8",
+      "display" : "Cells.CD4.Interferon gamma-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Spike peptide"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100860-6",
+      "display" : "Cells.CD4.Tumor necrosis factor alfa-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Spike peptide"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100861-4",
+      "display" : "Cells.CD4+CD154+/CD4 cells in Blood --after stimulation with SARS-CoV-2 Nucleocapsid peptide"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100862-2",
+      "display" : "Cells.CD4.Interferon gamma-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Nucleocapsid peptide"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100863-0",
+      "display" : "Cells.CD4.Tumor necrosis factor alfa-expressing/CD4 cells in Blood --after stimulation with SARS-CoV-2 Nucleocapsid peptide"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100864-8",
+      "display" : "Giardia lamblia bg gene [Genotype] in Specimen by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100865-5",
+      "display" : "Avian schistosomes DNA [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100866-3",
+      "display" : "Febrile antibody profile in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100867-1",
+      "display" : "Campylobacter jejuni+coli+lari+upsaliensis Ag [Presence] in Stool by Rapid immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100868-9",
+      "display" : "Cryptosporidium sp 18S-LC2 rRNA [Genotype] in Specimen by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100869-7",
+      "display" : "Cryptosporidium gp60 gene [Type] in Specimen by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100870-5",
+      "display" : "Cryptosporidium 18S rRNA [Genotype] in Specimen by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100871-3",
+      "display" : "Giardia lamblia gdh gene [Genotype] in Specimen by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100872-1",
+      "display" : "Bacteria producing polysaccharide from sucrose [Presence] in Isolate"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100873-9",
+      "display" : "Giardia lamblia tpi gene [Genotype] in Specimen by Molecular genetics method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100874-7",
+      "display" : "Basidiobolus sp [Presence] in Specimen"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100885-3",
+      "display" : "Parapoxvirus DNA [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100886-1",
+      "display" : "Orf virus DNA [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100887-9",
+      "display" : "Pseudocowpox virus DNA [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100888-7",
+      "display" : "West African monkeypox virus DNA [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100889-5",
+      "display" : "Congo Basin monkeypox virus DNA [Presence] in Specimen by NAA with probe detection"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100890-3",
+      "display" : "Poxvirus DNA panel"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100891-1",
+      "display" : "Orthopoxvirus IgG Ab [Presence] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100892-9",
+      "display" : "Orthopoxvirus IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100893-7",
+      "display" : "Orthopoxvirus IgG and IgM Ab panel - Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100895-2",
+      "display" : "Rickettsia conorii IgG and IgM [Interpretation] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100896-0",
+      "display" : "Vasopressin [Moles/volume] in Plasma --13th specimen post XXX challenge"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100897-8",
+      "display" : "Staphylococcus aureus [Presence] in Specimen by Organism specific culture"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100898-6",
+      "display" : "Lipid panel - Serum or Plasma"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "100899-4",
+      "display" : "Enterobacteriaceae.extended spectrum beta lactamase resistance phenotype [Identifier] in Specimen by Organism specific culture"
+    }]
+  }
+}

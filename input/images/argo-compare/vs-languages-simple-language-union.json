@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "d9b9b31c-d58a-4ecc-b3da-239da5fcef9a-11",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/d9b9b31c-d58a-4ecc-b3da-239da5fcef9a-11",
+  "name" : "UnionAll LanguagesAndLanguageCodesWithLanguageAndOptionallyARegionModifier",
+  "title" : "Union of null And Language codes with language and optionally a region modifier",
+  "status" : "draft",
+  "date" : "2022-12-05T22:46:29-08:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "ext-lang",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "script",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "variant",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "extension",
+        "op" : "exists",
+        "value" : "false"
+      },
+      {
+        "property" : "private-use",
+        "op" : "exists",
+        "value" : "false"
+      }]
+    }]
+  }
+}

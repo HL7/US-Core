@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "e8d47e20-0bfd-4cdb-aa2b-77f4bf4f1627-5",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/e8d47e20-0bfd-4cdb-aa2b-77f4bf4f1627-5",
+  "name" : "UnionArgonaut Condition Category CodesAndConditionCategoryCodes",
+  "title" : "Union of null And Condition Category Codes",
+  "status" : "draft",
+  "date" : "2022-12-05T22:38:06-08:00",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/condition-category"
+    },
+    {
+      "system" : "http://argonaut.hl7.org",
+      "concept" : [{
+        "code" : "problem",
+        "display" : "Problem"
+      },
+      {
+        "code" : "health-concern",
+        "display" : "Health Concern"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category"
+    }]
+  }
+}

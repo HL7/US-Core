@@ -1,0 +1,21 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "57d0ed72-2e2d-4179-b1eb-908c475c498d-6",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/57d0ed72-2e2d-4179-b1eb-908c475c498d-6",
+  "name" : "IntersectionArgonaut Immunization StatusAndImmunizationStatusCodes",
+  "title" : "Intersection of null And Immunization Status Codes",
+  "status" : "draft",
+  "date" : "2022-12-05T22:41:51-08:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "completed",
+        "display" : "Completed"
+      },
+      {
+        "code" : "entered-in-error",
+        "display" : "Entered in Error"
+      }]
+    }]
+  }
+}
