@@ -1,58 +1,73 @@
 {
-  "category": [
-    {
-      "coding": [
+    "category": [
         {
-          "code": "LAB",
-          "display": "Laboratory",
-          "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+            "coding": [
+                {
+                    "code": "LAB",
+                    "display": "Laboratory",
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "code": "58410-2",
-        "display": "CBC panel - Blood by Automated count",
-        "system": "http://loinc.org"
-      }
-    ]
-  },
-  "effectiveDateTime": "2005-07-05",
-  "id": "cbc",
-  "issued": "2005-07-06T11:45:33+11:00",
-  "performer": [
-    {
-      "display": "Acme Laboratory, Inc",
-      "reference": "Organization/acme-lab"
-    }
-  ],
-  "resourceType": "DiagnosticReport",
-  "result": [
-    {
-      "display": "NEUTROPHILS",
-      "reference": "Observation/neutrophils"
+    ],
+    "code": {
+        "coding": [
+            {
+                "code": "58410-2",
+                "display": "CBC panel - Blood by Automated count",
+                "system": "http://loinc.org"
+            }
+        ]
     },
-    {
-      "display": "MCHC",
-      "reference": "Observation/mchc"
+    "effectiveDateTime": "2005-07-05",
+    "id": "cbc",
+    "issued": "2005-07-06T11:45:33+11:00",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "CBC Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a CBC example for the *US Core DiagnosticReport Lab Profile*."
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+        ]
     },
-    {
-      "display": "HEMOGLOBIN",
-      "reference": "Observation/hemoglobin"
+    "performer": [
+        {
+            "display": "Acme Laboratory, Inc",
+            "reference": "Organization/acme-lab"
+        }
+    ],
+    "resourceType": "DiagnosticReport",
+    "result": [
+        {
+            "display": "NEUTROPHILS",
+            "reference": "Observation/neutrophils"
+        },
+        {
+            "display": "MCHC",
+            "reference": "Observation/mchc"
+        },
+        {
+            "display": "HEMOGLOBIN",
+            "reference": "Observation/hemoglobin"
+        },
+        {
+            "display": "ERYTHROCYTES",
+            "reference": "Observation/erythrocytes"
+        }
+    ],
+    "status": "final",
+    "subject": {
+        "display": "Amy Shaw",
+        "reference": "Patient/example"
     },
-    {
-      "display": "ERYTHROCYTES",
-      "reference": "Observation/erythrocytes"
+    "text": {
+        "status": "generated"
     }
-  ],
-  "status": "final",
-  "subject": {
-    "display": "Amy Shaw",
-    "reference": "Patient/example"
-  },
-  "text": {
-    "status": "generated"
-  }
 }

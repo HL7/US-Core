@@ -1,234 +1,249 @@
 {
-  "resourceType": "QuestionnaireResponse",
-  "id": "AHC-HRSN-screening-example",
-  "questionnaire": "http://example.org/Questionnaire/lforms-ahn-hrsn-screening",
-  "status": "completed",
-  "subject": {
-    "reference": "Patient/example",
-    "display": "Amy V. Shaw"
-  },
-  "authored": "2022-03-29T22:38:59.084Z",
-  "item": [
-    {
-      "linkId": "/76513-1",
-      "text": "How hard is it for you to pay for the very basics like food, housing, medical care, and heating?",
-      "answer": [
-        {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA31980-8",
-            "display": "Not hard at all"
-          }
-        }
-      ]
+    "resourceType": "QuestionnaireResponse",
+    "id": "AHC-HRSN-screening-example",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "QuestionnaireResponse AHC HRSN Screening Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is the QuestionnaireResponse example that is referenced by the *US Core Observation Screening Assessment Profile* AHC-HRSN examples"
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
+        ]
     },
-    {
-      "linkId": "/96780-2",
-      "text": "Do you want help finding or keeping work or a job?",
-      "answer": [
-        {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA31983-2",
-            "display": "I do not need or want help"
-          }
-        }
-      ]
+    "questionnaire": "http://example.org/Questionnaire/lforms-ahn-hrsn-screening",
+    "status": "completed",
+    "subject": {
+        "reference": "Patient/example",
+        "display": "Amy V. Shaw"
     },
-    {
-      "linkId": "/96781-0",
-      "text": "If for any reason you need help with day-to-day activities such as bathing, preparing meals, shopping, managing finances, etc., do you get the help you need?",
-      "answer": [
+    "authored": "2022-03-29T22:38:59.084Z",
+    "item": [
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA31976-6",
-            "display": "I don't need any help"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/93159-2",
-      "text": "How often do you feel lonely or isolated from those around you?",
-      "answer": [
+            "linkId": "/76513-1",
+            "text": "How hard is it for you to pay for the very basics like food, housing, medical care, and heating?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA31980-8",
+                        "display": "Not hard at all"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA6270-8",
-            "display": "Never"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/97027-7",
-      "text": "Do you speak a language other than English at home?",
-      "answer": [
+            "linkId": "/96780-2",
+            "text": "Do you want help finding or keeping work or a job?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA31983-2",
+                        "display": "I do not need or want help"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA32-8",
-            "display": "No"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/96782-8",
-      "text": "Do you want help with school or training? For example, starting or completing job training or getting a high school diploma, GED or equivalent.",
-      "answer": [
+            "linkId": "/96781-0",
+            "text": "If for any reason you need help with day-to-day activities such as bathing, preparing meals, shopping, managing finances, etc., do you get the help you need?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA31976-6",
+                        "display": "I don't need any help"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA32-8",
-            "display": "No"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/89555-7",
-      "text": "In the last 30 days, other than the activities you did for work, on average, how many days per week did you engage in moderate exercise (like walking fast, running, jogging, dancing, swimming, biking, or other similar activities)?",
-      "answer": [
+            "linkId": "/93159-2",
+            "text": "How often do you feel lonely or isolated from those around you?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA6270-8",
+                        "display": "Never"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA10137-0",
-            "display": "5"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/68516-4",
-      "text": "On average, how many minutes did you usually spend exercising at this level on one of those days?",
-      "answer": [
+            "linkId": "/97027-7",
+            "text": "Do you speak a language other than English at home?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA32-8",
+                        "display": "No"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA28853-2",
-            "display": "60"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/68517-2",
-      "text": "How many times in the past 12 months have you had 5 or more drinks in a day (males) or 4 or more drinks in a day (females)?",
-      "answer": [
+            "linkId": "/96782-8",
+            "text": "Do you want help with school or training? For example, starting or completing job training or getting a high school diploma, GED or equivalent.",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA32-8",
+                        "display": "No"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA6270-8",
-            "display": "Never"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/96842-0",
-      "text": "How often have you used any tobacco product in past 12 months?",
-      "answer": [
+            "linkId": "/89555-7",
+            "text": "In the last 30 days, other than the activities you did for work, on average, how many days per week did you engage in moderate exercise (like walking fast, running, jogging, dancing, swimming, biking, or other similar activities)?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA10137-0",
+                        "display": "5"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA6270-8",
-            "display": "Never"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/95530-2",
-      "text": "How many times in the past year have you used prescription drugs for non-medical reasons?",
-      "answer": [
+            "linkId": "/68516-4",
+            "text": "On average, how many minutes did you usually spend exercising at this level on one of those days?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA28853-2",
+                        "display": "60"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA6270-8",
-            "display": "Never"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/68524-8",
-      "text": "How many times in the past year have you used illegal drugs?",
-      "answer": [
+            "linkId": "/68517-2",
+            "text": "How many times in the past 12 months have you had 5 or more drinks in a day (males) or 4 or more drinks in a day (females)?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA6270-8",
+                        "display": "Never"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA6270-8",
-            "display": "Never"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/44250-9",
-      "text": "Little interest or pleasure in doing things?",
-      "answer": [
+            "linkId": "/96842-0",
+            "text": "How often have you used any tobacco product in past 12 months?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA6270-8",
+                        "display": "Never"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA6568-5",
-            "display": "Not at all"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/44255-8",
-      "text": "Feeling down, depressed, or hopeless?",
-      "answer": [
+            "linkId": "/95530-2",
+            "text": "How many times in the past year have you used prescription drugs for non-medical reasons?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA6270-8",
+                        "display": "Never"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA6568-5",
-            "display": "Not at all"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/93038-8",
-      "text": "Stress means a situation in which a person feels tense, restless, nervous, or anxious, or is unable to sleep at night because his or her mind is troubled all the time.  Do you feel this kind of stress these days?",
-      "answer": [
+            "linkId": "/68524-8",
+            "text": "How many times in the past year have you used illegal drugs?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA6270-8",
+                        "display": "Never"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA13863-8",
-            "display": "A little bit"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/69858-9",
-      "text": "Because of a physical, mental, or emotional condition, do you have serious difficulty concentrating, remembering, or making decisions?",
-      "answer": [
+            "linkId": "/44250-9",
+            "text": "Little interest or pleasure in doing things?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA6568-5",
+                        "display": "Not at all"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA32-8",
-            "display": "No"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "/69861-3",
-      "text": "Because of a physical, mental, or emotional condition, do you have difficulty doing errands alone such as visiting a physician's office or shopping?",
-      "answer": [
+            "linkId": "/44255-8",
+            "text": "Feeling down, depressed, or hopeless?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA6568-5",
+                        "display": "Not at all"
+                    }
+                }
+            ]
+        },
         {
-          "valueCoding": {
-            "system": "http://loinc.org",
-            "code": "LA32-8",
-            "display": "No"
-          }
+            "linkId": "/93038-8",
+            "text": "Stress means a situation in which a person feels tense, restless, nervous, or anxious, or is unable to sleep at night because his or her mind is troubled all the time.  Do you feel this kind of stress these days?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA13863-8",
+                        "display": "A little bit"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "/69858-9",
+            "text": "Because of a physical, mental, or emotional condition, do you have serious difficulty concentrating, remembering, or making decisions?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA32-8",
+                        "display": "No"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "/69861-3",
+            "text": "Because of a physical, mental, or emotional condition, do you have difficulty doing errands alone such as visiting a physician's office or shopping?",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://loinc.org",
+                        "code": "LA32-8",
+                        "display": "No"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

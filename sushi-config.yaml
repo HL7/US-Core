@@ -103,6 +103,37 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
      - 5.0.1
      - 4.0.0
      - 3.1.1
+  html-exempt:
+    - comparison-argo/vs-observation-status-us-core-observation-smoking-status-status.html
+    - comparison-argo/vs-c80-doc-typecodes-us-core-documentreference-type.html
+    - comparison-argo/vs-medication-codes-2.16.840.1.113762.1.4.1010.4.html
+    - comparison-argo/vs-condition-category-condition-category.html
+    - comparison-argo/index.html
+    - comparison-argo/sd-argo-patient-us-core-patient.html
+    - comparison-argo/vs-observation-ccdavitalsignresult-us-core-vital-signs.html
+    - comparison-argo/vs-device-kind-device-kind.html
+    - comparison-argo/sd-argo-medication-us-core-medication.html
+    - comparison-argo/sd-argo-vitalsigns-us-core-vital-signs.html
+    - comparison-argo/sd-argo-allergyintolerance-us-core-allergyintolerance.html
+    - comparison-argo/sd-argo-condition-us-core-condition-encounter-diagnosis.html
+    - comparison-argo/sd-argo-observationresults-us-core-observation-clinical-result.html
+    - comparison-argo/sd-argo-documentreference-us-core-documentreference.html
+    - comparison-argo/sd-argo-birthsex-us-core-birthsex.html
+    - comparison-argo/sd-argo-smokingstatus-us-core-smokingstatus.html
+    - comparison-argo/sd-argo-immunization-us-core-immunization.html
+    - comparison-argo/vs-observation-codes-us-core-smoking-status-observation-codes.html
+    - comparison-argo/vs-report-codes-us-core-diagnosticreport-report-and-note-codes.html
+    - comparison-argo/sd-argo-condition-us-core-condition-problems-health-concerns.html
+    - comparison-argo/sd-argo-device-us-core-implantable-device.html
+    - comparison-argo/sd-argo-race-us-core-race.html
+    - comparison-argo/vs-observation-codes-us-core-laboratory-test-codes.html
+    - comparison-argo/vs-procedure-type-us-core-procedure-code.html
+    - comparison-argo/vs-languages-simple-language.html
+    - comparison-argo/vs-report-codes-us-core-laboratory-test-codes.html
+    - comparison-argo/vs-vacc-status-immunization-status.html
+    - comparison-argo/sd-argo-observationresults-us-core-observation-lab.html
+    - comparison-argo/sd-argo-ethnicity-us-core-ethnicity.html
+    - comparison-argo/vs-narrative-status-us-core-narrative-status.html
 copyrightyear: '2022+'
 releaselabel: STU6 Ballot
 

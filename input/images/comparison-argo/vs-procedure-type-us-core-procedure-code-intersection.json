@@ -1,0 +1,21 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "38413ae8-8279-4516-8ad7-70470f4d1db7-12",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/38413ae8-8279-4516-8ad7-70470f4d1db7-12",
+  "name" : "Intersection Argonaut ProcedureTypeAndUSCoreProcedureCodes",
+  "title" : "Intersection of null And US Core Procedure Codes",
+  "status" : "draft",
+  "date" : "2022-12-07T16:44:17-08:00",
+  "compose" : {
+    "include" : [{
+      
+    },
+    {
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "71388002"
+      }]
+    }]
+  }
+}
