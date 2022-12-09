@@ -1,0 +1,191 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "429b73e2-c46a-41db-8dba-78071bd447e2-3",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/429b73e2-c46a-41db-8dba-78071bd447e2-3",
+  "name" : "IntersectionArgonaut ethnicity ExtensionAndUSCoreEthnicityExtension",
+  "title" : "Intersection of Argonaut ethnicity Extension And US Core Ethnicity Extension",
+  "status" : "draft",
+  "date" : "2022-12-07T16:40:23-08:00",
+  "snapshot" : {
+    "element" : [{
+      "path" : "Extension",
+      "short" : "left: Argonaut ethnicity Extension; right: US Core ethnicity Extension",
+      "definition" : "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0] which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false
+    },
+    {
+      "path" : "Extension.id",
+      "representation" : ["xmlAttr"],
+      "short" : "left: xml:id (or equivalent in JSON); right: Unique id for inter-element referencing",
+      "definition" : "left: unique id for the element within a resource (for internal references).; right: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "id"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Extension.extension",
+      "short" : "left: Extension; right: Additional content defined by implementations",
+      "definition" : "left: An Extension; right: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "path" : "Extension.url",
+      "representation" : ["xmlAttr"],
+      "short" : "identifies the meaning of the extension",
+      "definition" : "Source of the definition for the extension code - a logical name or a URL.",
+      "comment" : "left: The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #.; right: The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "uri"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "path" : "Extension.value[x]",
+      "short" : "Value of extension",
+      "definition" : "left: Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).; right: Value of extension - must be one of a constrained set of the data types (see [Extensibility] for a list).",
+      "min" : 0,
+      "max" : "0",
+      "type" : [{
+        "code" : "boolean"
+      },
+      {
+        "code" : "integer"
+      },
+      {
+        "code" : "decimal"
+      },
+      {
+        "code" : "base64Binary"
+      },
+      {
+        "code" : "instant"
+      },
+      {
+        "code" : "string"
+      },
+      {
+        "code" : "uri"
+      },
+      {
+        "code" : "date"
+      },
+      {
+        "code" : "dateTime"
+      },
+      {
+        "code" : "time"
+      },
+      {
+        "code" : "code"
+      },
+      {
+        "code" : "oid"
+      },
+      {
+        "code" : "id"
+      },
+      {
+        "code" : "unsignedInt"
+      },
+      {
+        "code" : "positiveInt"
+      },
+      {
+        "code" : "markdown"
+      },
+      {
+        "code" : "Annotation"
+      },
+      {
+        "code" : "Attachment"
+      },
+      {
+        "code" : "Identifier"
+      },
+      {
+        "code" : "CodeableConcept"
+      },
+      {
+        "code" : "Coding"
+      },
+      {
+        "code" : "Quantity"
+      },
+      {
+        "code" : "Range"
+      },
+      {
+        "code" : "Period"
+      },
+      {
+        "code" : "Ratio"
+      },
+      {
+        "code" : "SampledData"
+      },
+      {
+        "code" : "Signature"
+      },
+      {
+        "code" : "HumanName"
+      },
+      {
+        "code" : "Address"
+      },
+      {
+        "code" : "ContactPoint"
+      },
+      {
+        "code" : "Timing"
+      },
+      {
+        "code" : "Reference"
+      },
+      {
+        "code" : "Meta"
+      }],
+      "mustSupport" : false,
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    }]
+  }
+}

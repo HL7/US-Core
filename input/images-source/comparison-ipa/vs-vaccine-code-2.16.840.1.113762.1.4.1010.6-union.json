@@ -1,0 +1,2437 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "ecf941dd-7eaa-4b81-bde2-30867c248406-5",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/ecf941dd-7eaa-4b81-bde2-30867c248406-5",
+  "name" : "UnionVaccineAdministeredValueSetAndCVX Vaccines Administered Vaccine Set",
+  "title" : "Union of Vaccine Administered Value Set And null",
+  "status" : "active",
+  "date" : "2022-12-09T02:16:14-08:00",
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "01",
+        "display" : "diphtheria, tetanus toxoids and pertussis vaccine"
+      },
+      {
+        "code" : "02",
+        "display" : "trivalent poliovirus vaccine, live, oral"
+      },
+      {
+        "code" : "03",
+        "display" : "measles, mumps and rubella virus vaccine"
+      },
+      {
+        "code" : "04",
+        "display" : "measles and rubella virus vaccine"
+      },
+      {
+        "code" : "05",
+        "display" : "measles virus vaccine"
+      },
+      {
+        "code" : "06",
+        "display" : "rubella virus vaccine"
+      },
+      {
+        "code" : "07",
+        "display" : "mumps virus vaccine"
+      },
+      {
+        "code" : "08",
+        "display" : "hepatitis B vaccine, pediatric or pediatric/adolescent dosage"
+      },
+      {
+        "code" : "09",
+        "display" : "tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use (2 Lf of tetanus toxoid and 2 Lf of diphtheria toxoid)"
+      },
+      {
+        "code" : "10",
+        "display" : "poliovirus vaccine, inactivated"
+      },
+      {
+        "code" : "100",
+        "display" : "pneumococcal conjugate vaccine, 7 valent"
+      },
+      {
+        "code" : "101",
+        "display" : "typhoid Vi capsular polysaccharide vaccine"
+      },
+      {
+        "code" : "102",
+        "display" : "DTP- Haemophilus influenzae type b conjugate and hepatitis b vaccine"
+      },
+      {
+        "code" : "103",
+        "display" : "meningococcal C conjugate vaccine"
+      },
+      {
+        "code" : "104",
+        "display" : "hepatitis A and hepatitis B vaccine"
+      },
+      {
+        "code" : "105",
+        "display" : "vaccinia (smallpox) vaccine, diluted"
+      },
+      {
+        "code" : "106",
+        "display" : "diphtheria, tetanus toxoids and acellular pertussis vaccine, 5 pertussis antigens"
+      },
+      {
+        "code" : "107",
+        "display" : "diphtheria, tetanus toxoids and acellular pertussis vaccine, unspecified formulation"
+      },
+      {
+        "code" : "108",
+        "display" : "meningococcal ACWY vaccine, unspecified formulation"
+      },
+      {
+        "code" : "109",
+        "display" : "pneumococcal vaccine, unspecified formulation"
+      },
+      {
+        "code" : "11",
+        "display" : "pertussis vaccine"
+      },
+      {
+        "code" : "110",
+        "display" : "DTaP-hepatitis B and poliovirus vaccine"
+      },
+      {
+        "code" : "111",
+        "display" : "influenza virus vaccine, live, attenuated, for intranasal use"
+      },
+      {
+        "code" : "112",
+        "display" : "tetanus toxoid, unspecified formulation"
+      },
+      {
+        "code" : "113",
+        "display" : "tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use (5 Lf of tetanus toxoid and 2 Lf of diphtheria toxoid)"
+      },
+      {
+        "code" : "114",
+        "display" : "meningococcal polysaccharide (groups A, C, Y and W-135) diphtheria toxoid conjugate vaccine (MCV4P)"
+      },
+      {
+        "code" : "115",
+        "display" : "tetanus toxoid, reduced diphtheria toxoid, and acellular pertussis vaccine, adsorbed"
+      },
+      {
+        "code" : "116",
+        "display" : "rotavirus, live, pentavalent vaccine"
+      },
+      {
+        "code" : "117",
+        "display" : "varicella zoster immune globulin (Investigational New Drug)"
+      },
+      {
+        "code" : "118",
+        "display" : "human papilloma virus vaccine, bivalent"
+      },
+      {
+        "code" : "119",
+        "display" : "rotavirus, live, monovalent vaccine"
+      },
+      {
+        "code" : "12",
+        "display" : "diphtheria antitoxin"
+      },
+      {
+        "code" : "120",
+        "display" : "diphtheria, tetanus toxoids and acellular pertussis vaccine, Haemophilus influenzae type b conjugate, and poliovirus vaccine, inactivated (DTaP-Hib-IPV)"
+      },
+      {
+        "code" : "121",
+        "display" : "zoster vaccine, live"
+      },
+      {
+        "code" : "122",
+        "display" : "rotavirus vaccine, unspecified formulation"
+      },
+      {
+        "code" : "123",
+        "display" : "influenza virus vaccine, H5N1, A/Vietnam/1203/2004 (national stockpile)"
+      },
+      {
+        "code" : "125",
+        "display" : "Novel Influenza-H1N1-09, live virus for nasal administration"
+      },
+      {
+        "code" : "126",
+        "display" : "Novel influenza-H1N1-09, preservative-free, injectable"
+      },
+      {
+        "code" : "127",
+        "display" : "Novel influenza-H1N1-09, injectable"
+      },
+      {
+        "code" : "128",
+        "display" : "Novel influenza-H1N1-09, all formulations"
+      },
+      {
+        "code" : "129",
+        "display" : "Japanese Encephalitis vaccine, unspecified formulation"
+      },
+      {
+        "code" : "13",
+        "display" : "tetanus immune globulin"
+      },
+      {
+        "code" : "130",
+        "display" : "Diphtheria, tetanus toxoids and acellular pertussis vaccine, and poliovirus vaccine, inactivated"
+      },
+      {
+        "code" : "131",
+        "display" : "Historical record of a typhus vaccination"
+      },
+      {
+        "code" : "132",
+        "display" : "Historical diphtheria and tetanus toxoids and acellular pertussis, poliovirus, Haemophilus b conjugate and hepatitis B (recombinant) vaccine."
+      },
+      {
+        "code" : "133",
+        "display" : "pneumococcal conjugate vaccine, 13 valent"
+      },
+      {
+        "code" : "134",
+        "display" : "Japanese Encephalitis vaccine for intramuscular administration"
+      },
+      {
+        "code" : "135",
+        "display" : "influenza, high dose seasonal, preservative-free"
+      },
+      {
+        "code" : "136",
+        "display" : "meningococcal oligosaccharide (groups A, C, Y and W-135) diphtheria toxoid conjugate vaccine (MCV4O)"
+      },
+      {
+        "code" : "137",
+        "display" : "HPV, unspecified formulation"
+      },
+      {
+        "code" : "138",
+        "display" : "tetanus and diphtheria toxoids, not adsorbed, for adult use"
+      },
+      {
+        "code" : "139",
+        "display" : "Td(adult) unspecified formulation"
+      },
+      {
+        "code" : "14",
+        "display" : "immune globulin, unspecified formulation"
+      },
+      {
+        "code" : "140",
+        "display" : "Influenza, seasonal, injectable, preservative free"
+      },
+      {
+        "code" : "141",
+        "display" : "Influenza, seasonal, injectable"
+      },
+      {
+        "code" : "142",
+        "display" : "tetanus toxoid, not adsorbed"
+      },
+      {
+        "code" : "143",
+        "display" : "Adenovirus, type 4 and type 7, live, oral"
+      },
+      {
+        "code" : "144",
+        "display" : "seasonal influenza, intradermal, preservative free"
+      },
+      {
+        "code" : "146",
+        "display" : "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
+      },
+      {
+        "code" : "147",
+        "display" : "Meningococcal, MCV4, unspecified conjugate formulation(groups A, C, Y and W-135)"
+      },
+      {
+        "code" : "148",
+        "display" : "Meningococcal Groups C and Y and Haemophilus b Tetanus Toxoid Conjugate Vaccine"
+      },
+      {
+        "code" : "149",
+        "display" : "influenza, live, intranasal, quadrivalent"
+      },
+      {
+        "code" : "15",
+        "display" : "influenza virus vaccine, split virus (incl. purified surface antigen)-retired CODE"
+      },
+      {
+        "code" : "150",
+        "display" : "Influenza, injectable, quadrivalent, preservative free"
+      },
+      {
+        "code" : "151",
+        "display" : "influenza nasal, unspecified formulation"
+      },
+      {
+        "code" : "152",
+        "display" : "Pneumococcal Conjugate, unspecified formulation"
+      },
+      {
+        "code" : "153",
+        "display" : "Influenza, injectable, Madin Darby Canine Kidney, preservative free"
+      },
+      {
+        "code" : "155",
+        "display" : "Seasonal, trivalent, recombinant, injectable influenza vaccine, preservative free"
+      },
+      {
+        "code" : "156",
+        "display" : "Rho(D) Immune globulin- IV or IM"
+      },
+      {
+        "code" : "157",
+        "display" : "Rho(D) Immune globulin - IM"
+      },
+      {
+        "code" : "158",
+        "display" : "influenza, injectable, quadrivalent, contains preservative"
+      },
+      {
+        "code" : "159",
+        "display" : "Rho(D) Unspecified formulation"
+      },
+      {
+        "code" : "16",
+        "display" : "influenza virus vaccine, whole virus"
+      },
+      {
+        "code" : "160",
+        "display" : "Influenza A monovalent (H5N1), adjuvanted, National stockpile 2013"
+      },
+      {
+        "code" : "161",
+        "display" : "Influenza, injectable,quadrivalent, preservative free, pediatric"
+      },
+      {
+        "code" : "162",
+        "display" : "meningococcal B vaccine, fully recombinant"
+      },
+      {
+        "code" : "163",
+        "display" : "meningococcal B vaccine, recombinant, OMV, adjuvanted"
+      },
+      {
+        "code" : "164",
+        "display" : "meningococcal B, unspecified formulation"
+      },
+      {
+        "code" : "165",
+        "display" : "Human Papillomavirus 9-valent vaccine"
+      },
+      {
+        "code" : "166",
+        "display" : "influenza, intradermal, quadrivalent, preservative free, injectable"
+      },
+      {
+        "code" : "167",
+        "display" : "meningococcal vaccine of unknown formulation and unknown serogroups"
+      },
+      {
+        "code" : "168",
+        "display" : "Seasonal trivalent influenza vaccine, adjuvanted, preservative free"
+      },
+      {
+        "code" : "169",
+        "display" : "Hep A, live attenuated-IM"
+      },
+      {
+        "code" : "17",
+        "display" : "Haemophilus influenzae type b vaccine, conjugate unspecified formulation"
+      },
+      {
+        "code" : "170",
+        "display" : "non-US diphtheria, tetanus toxoids and acellular pertussis vaccine, Haemophilus influenzae type b conjugate, and poliovirus vaccine, inactivated (DTaP-Hib-IPV)"
+      },
+      {
+        "code" : "171",
+        "display" : "Influenza, injectable, Madin Darby Canine Kidney, preservative free, quadrivalent"
+      },
+      {
+        "code" : "172",
+        "display" : "cholera, WC-rBS"
+      },
+      {
+        "code" : "173",
+        "display" : "cholera, BivWC"
+      },
+      {
+        "code" : "174",
+        "display" : "cholera, live attenuated"
+      },
+      {
+        "code" : "175",
+        "display" : "Human Rabies vaccine from human diploid cell culture"
+      },
+      {
+        "code" : "176",
+        "display" : "Human rabies vaccine from Chicken fibroblast culture"
+      },
+      {
+        "code" : "177",
+        "display" : "pneumococcal conjugate vaccine, 10 valent"
+      },
+      {
+        "code" : "178",
+        "display" : "Non-US bivalent oral polio vaccine (types 1 and 3)"
+      },
+      {
+        "code" : "179",
+        "display" : "Non-US monovalent oral polio vaccine, unspecified formulation"
+      },
+      {
+        "code" : "18",
+        "display" : "rabies vaccine, for intramuscular injection RETIRED CODE"
+      },
+      {
+        "code" : "180",
+        "display" : "tetanus immune globulin"
+      },
+      {
+        "code" : "181",
+        "display" : "anthrax immune globulin"
+      },
+      {
+        "code" : "182",
+        "display" : "Oral Polio Vaccine, Unspecified formulation"
+      },
+      {
+        "code" : "183",
+        "display" : "Yellow fever vaccine alternative formulation"
+      },
+      {
+        "code" : "184",
+        "display" : "Yellow fever vaccine, unspecified formulation"
+      },
+      {
+        "code" : "185",
+        "display" : "Seasonal, quadrivalent, recombinant, injectable influenza vaccine, preservative free"
+      },
+      {
+        "code" : "186",
+        "display" : "Influenza, injectable, Madin Darby Canine Kidney,  quadrivalent with preservative"
+      },
+      {
+        "code" : "187",
+        "display" : "zoster vaccine recombinant"
+      },
+      {
+        "code" : "188",
+        "display" : "zoster vaccine, unspecified formulation"
+      },
+      {
+        "code" : "189",
+        "display" : "Hepatitis B vaccine (recombinant), CpG adjuvanted"
+      },
+      {
+        "code" : "19",
+        "display" : "Bacillus Calmette-Guerin vaccine"
+      },
+      {
+        "code" : "190",
+        "display" : "Typhoid conjugate vaccine (non-US)"
+      },
+      {
+        "code" : "191",
+        "display" : "meningococcal A polysaccharide vaccine (non-US)"
+      },
+      {
+        "code" : "192",
+        "display" : "meningococcal AC polysaccharide vaccine (non-US)"
+      },
+      {
+        "code" : "193",
+        "display" : "hepatitis A and hepatitis B vaccine, pediatric/adolescent (non-US)"
+      },
+      {
+        "code" : "194",
+        "display" : "influenza, Southern Hemisphere, unspecified formulation"
+      },
+      {
+        "code" : "195",
+        "display" : "Diphtheria, Tetanus, Poliomyelitis adsorbed"
+      },
+      {
+        "code" : "196",
+        "display" : "tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use, Lf unspecified"
+      },
+      {
+        "code" : "197",
+        "display" : "influenza, high-dose seasonal, quadrivalent, .7mL dose, preservative free"
+      },
+      {
+        "code" : "198",
+        "display" : "Diphtheria, pertussis, tetanus, hepatitis B, Haemophilus Influenza Type b, (Pentavalent)"
+      },
+      {
+        "code" : "20",
+        "display" : "diphtheria, tetanus toxoids and acellular pertussis vaccine"
+      },
+      {
+        "code" : "200",
+        "display" : "influenza, seasonal, Southern Hemisphere, quadrivalent, pediatric 0.25mL dose, preservative free"
+      },
+      {
+        "code" : "201",
+        "display" : "influenza, seasonal, Southern Hemisphere, quadrivalent, 0.5mL dose, no preservative"
+      },
+      {
+        "code" : "202",
+        "display" : "influenza, seasonal, Southern Hemisphere, quadrivalent, 0.5mL dose, with preservative"
+      },
+      {
+        "code" : "203",
+        "display" : "meningococcal polysaccharide (groups A, C, Y, W-135) tetanus toxoid conjugate vaccine .5mL dose, preservative free"
+      },
+      {
+        "code" : "204",
+        "display" : "Ebola Zaire vaccine, live, recombinant, 1mL dose"
+      },
+      {
+        "code" : "205",
+        "display" : "influenza, seasonal vaccine, quadrivalent, adjuvanted, .5mL dose, preservative free"
+      },
+      {
+        "code" : "206",
+        "display" : "smallpox monkeypox vaccine, live attenuated, preservative free (National Stockpile)"
+      },
+      {
+        "code" : "207",
+        "display" : "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 100 mcg/0.5mL dose"
+      },
+      {
+        "code" : "208",
+        "display" : "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3mL dose"
+      },
+      {
+        "code" : "21",
+        "display" : "varicella virus vaccine"
+      },
+      {
+        "code" : "210",
+        "display" : "SARS-COV-2 (COVID-19) vaccine, vector non-replicating, recombinant spike protein-ChAdOx1, preservative free, 0.5 mL"
+      },
+      {
+        "code" : "211",
+        "display" : "SARS-COV-2 (COVID-19) vaccine, Subunit, recombinant spike protein-nanoparticle+Matrix-M1 Adjuvant, preservative free, 0.5mL per dose"
+      },
+      {
+        "code" : "212",
+        "display" : "SARS-COV-2 (COVID-19) vaccine, vector non-replicating, recombinant spike protein-Ad26, preservative free, 0.5 mL"
+      },
+      {
+        "code" : "213",
+        "display" : "SARS-COV-2 (COVID-19) vaccine, UNSPECIFIED"
+      },
+      {
+        "code" : "214",
+        "display" : "Ebola, unspecified"
+      },
+      {
+        "code" : "22",
+        "display" : "DTP-Haemophilus influenzae type b conjugate vaccine"
+      },
+      {
+        "code" : "23",
+        "display" : "plague vaccine"
+      },
+      {
+        "code" : "24",
+        "display" : "anthrax vaccine"
+      },
+      {
+        "code" : "25",
+        "display" : "typhoid vaccine, live, oral"
+      },
+      {
+        "code" : "26",
+        "display" : "cholera vaccine, unspecified formulation"
+      },
+      {
+        "code" : "27",
+        "display" : "botulinum antitoxin"
+      },
+      {
+        "code" : "28",
+        "display" : "diphtheria and tetanus toxoids, adsorbed for pediatric use"
+      },
+      {
+        "code" : "29",
+        "display" : "cytomegalovirus immune globulin, intravenous"
+      },
+      {
+        "code" : "30",
+        "display" : "hepatitis B immune globulin"
+      },
+      {
+        "code" : "31",
+        "display" : "hepatitis A vaccine, pediatric dosage, unspecified formulation"
+      },
+      {
+        "code" : "32",
+        "display" : "meningococcal polysaccharide vaccine (MPSV4)"
+      },
+      {
+        "code" : "33",
+        "display" : "pneumococcal polysaccharide vaccine, 23 valent"
+      },
+      {
+        "code" : "34",
+        "display" : "rabies immune globulin"
+      },
+      {
+        "code" : "35",
+        "display" : "tetanus toxoid, adsorbed"
+      },
+      {
+        "code" : "36",
+        "display" : "varicella zoster immune globulin"
+      },
+      {
+        "code" : "37",
+        "display" : "yellow fever vaccine"
+      },
+      {
+        "code" : "38",
+        "display" : "rubella and mumps virus vaccine"
+      },
+      {
+        "code" : "39",
+        "display" : "Japanese Encephalitis Vaccine SC"
+      },
+      {
+        "code" : "40",
+        "display" : "rabies vaccine, for intradermal injection"
+      },
+      {
+        "code" : "41",
+        "display" : "typhoid vaccine, parenteral, other than acetone-killed, dried"
+      },
+      {
+        "code" : "42",
+        "display" : "hepatitis B vaccine, adolescent/high risk infant dosage"
+      },
+      {
+        "code" : "43",
+        "display" : "hepatitis B vaccine, adult dosage"
+      },
+      {
+        "code" : "44",
+        "display" : "hepatitis B vaccine, dialysis patient dosage"
+      },
+      {
+        "code" : "45",
+        "display" : "hepatitis B vaccine, unspecified formulation"
+      },
+      {
+        "code" : "46",
+        "display" : "Haemophilus influenzae type b vaccine, PRP-D conjugate"
+      },
+      {
+        "code" : "47",
+        "display" : "Haemophilus influenzae type b vaccine, HbOC conjugate"
+      },
+      {
+        "code" : "48",
+        "display" : "Haemophilus influenzae type b vaccine, PRP-T conjugate"
+      },
+      {
+        "code" : "49",
+        "display" : "Haemophilus influenzae type b vaccine, PRP-OMP conjugate"
+      },
+      {
+        "code" : "50",
+        "display" : "DTaP-Haemophilus influenzae type b conjugate vaccine"
+      },
+      {
+        "code" : "51",
+        "display" : "Haemophilus influenzae type b conjugate and Hepatitis B vaccine"
+      },
+      {
+        "code" : "52",
+        "display" : "hepatitis A vaccine, adult dosage"
+      },
+      {
+        "code" : "53",
+        "display" : "typhoid vaccine, parenteral, acetone-killed, dried (U.S. military)"
+      },
+      {
+        "code" : "54",
+        "display" : "adenovirus vaccine, type 4, live, oral"
+      },
+      {
+        "code" : "55",
+        "display" : "adenovirus vaccine, type 7, live, oral"
+      },
+      {
+        "code" : "56",
+        "display" : "dengue fever vaccine"
+      },
+      {
+        "code" : "62",
+        "display" : "human papilloma virus vaccine, quadrivalent"
+      },
+      {
+        "code" : "66",
+        "display" : "Lyme disease vaccine"
+      },
+      {
+        "code" : "69",
+        "display" : "parainfluenza-3 virus vaccine"
+      },
+      {
+        "code" : "71",
+        "display" : "respiratory syncytial virus immune globulin, intravenous"
+      },
+      {
+        "code" : "74",
+        "display" : "rotavirus, live, tetravalent vaccine"
+      },
+      {
+        "code" : "75",
+        "display" : "vaccinia (smallpox) vaccine"
+      },
+      {
+        "code" : "76",
+        "display" : "Staphylococcus bacteriophage lysate"
+      },
+      {
+        "code" : "77",
+        "display" : "tick-borne encephalitis vaccine"
+      },
+      {
+        "code" : "78",
+        "display" : "tularemia vaccine"
+      },
+      {
+        "code" : "79",
+        "display" : "vaccinia immune globulin"
+      },
+      {
+        "code" : "80",
+        "display" : "Venezuelan equine encephalitis, live, attenuated"
+      },
+      {
+        "code" : "801",
+        "display" : "AS03 Adjuvant"
+      },
+      {
+        "code" : "81",
+        "display" : "Venezuelan equine encephalitis, inactivated"
+      },
+      {
+        "code" : "82",
+        "display" : "adenovirus vaccine, unspecified formulation"
+      },
+      {
+        "code" : "83",
+        "display" : "hepatitis A vaccine, pediatric/adolescent dosage, 2 dose schedule"
+      },
+      {
+        "code" : "84",
+        "display" : "hepatitis A vaccine, pediatric/adolescent dosage, 3 dose schedule"
+      },
+      {
+        "code" : "85",
+        "display" : "hepatitis A vaccine, unspecified formulation"
+      },
+      {
+        "code" : "86",
+        "display" : "immune globulin, intramuscular"
+      },
+      {
+        "code" : "87",
+        "display" : "immune globulin, intravenous"
+      },
+      {
+        "code" : "88",
+        "display" : "influenza virus vaccine, unspecified formulation"
+      },
+      {
+        "code" : "89",
+        "display" : "poliovirus vaccine, unspecified formulation"
+      },
+      {
+        "code" : "90",
+        "display" : "rabies vaccine, unspecified formulation"
+      },
+      {
+        "code" : "91",
+        "display" : "typhoid vaccine, unspecified formulation"
+      },
+      {
+        "code" : "92",
+        "display" : "Venezuelan equine encephalitis vaccine, unspecified formulation"
+      },
+      {
+        "code" : "93",
+        "display" : "respiratory syncytial virus monoclonal antibody (palivizumab), intramuscular"
+      },
+      {
+        "code" : "94",
+        "display" : "measles, mumps, rubella, and varicella virus vaccine"
+      },
+      {
+        "code" : "95",
+        "display" : "tuberculin skin test; old tuberculin, multipuncture device"
+      },
+      {
+        "code" : "96",
+        "display" : "tuberculin skin test; purified protein derivative solution, intradermal"
+      },
+      {
+        "code" : "97",
+        "display" : "tuberculin skin test; purified protein derivative, multipuncture device"
+      },
+      {
+        "code" : "98",
+        "display" : "tuberculin skin test; unspecified formulation"
+      },
+      {
+        "code" : "998",
+        "display" : "no vaccine administered"
+      }]
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17"
+    }]
+  },
+  "expansion" : {
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "54",
+      "display" : "adenovirus vaccine, type 4, live, oral"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "55",
+      "display" : "adenovirus vaccine, type 7, live, oral"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "82",
+      "display" : "adenovirus vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "24",
+      "display" : "anthrax vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "19",
+      "display" : "Bacillus Calmette-Guerin vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "27",
+      "display" : "botulinum antitoxin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "26",
+      "display" : "cholera vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "29",
+      "display" : "cytomegalovirus immune globulin, intravenous"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "56",
+      "display" : "dengue fever vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "12",
+      "display" : "diphtheria antitoxin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "28",
+      "display" : "diphtheria and tetanus toxoids, adsorbed for pediatric use"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "20",
+      "display" : "diphtheria, tetanus toxoids and acellular pertussis vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "106",
+      "display" : "diphtheria, tetanus toxoids and acellular pertussis vaccine, 5 pertussis antigens"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "107",
+      "display" : "diphtheria, tetanus toxoids and acellular pertussis vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "110",
+      "display" : "DTaP-hepatitis B and poliovirus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "50",
+      "display" : "DTaP-Haemophilus influenzae type b conjugate vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "120",
+      "display" : "diphtheria, tetanus toxoids and acellular pertussis vaccine, Haemophilus influenzae type b conjugate, and poliovirus vaccine, inactivated (DTaP-Hib-IPV)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "130",
+      "display" : "Diphtheria, tetanus toxoids and acellular pertussis vaccine, and poliovirus vaccine, inactivated"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "01",
+      "display" : "diphtheria, tetanus toxoids and pertussis vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "22",
+      "display" : "DTP-Haemophilus influenzae type b conjugate vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "102",
+      "display" : "DTP- Haemophilus influenzae type b conjugate and hepatitis b vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "57",
+      "display" : "hantavirus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "52",
+      "display" : "hepatitis A vaccine, adult dosage"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "83",
+      "display" : "hepatitis A vaccine, pediatric/adolescent dosage, 2 dose schedule"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "84",
+      "display" : "hepatitis A vaccine, pediatric/adolescent dosage, 3 dose schedule"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "31",
+      "display" : "hepatitis A vaccine, pediatric dosage, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "85",
+      "display" : "hepatitis A vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "104",
+      "display" : "hepatitis A and hepatitis B vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "30",
+      "display" : "hepatitis B immune globulin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "08",
+      "display" : "hepatitis B vaccine, pediatric or pediatric/adolescent dosage"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "42",
+      "display" : "hepatitis B vaccine, adolescent/high risk infant dosage"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "43",
+      "display" : "hepatitis B vaccine, adult dosage"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "44",
+      "display" : "hepatitis B vaccine, dialysis patient dosage"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "45",
+      "display" : "hepatitis B vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "58",
+      "display" : "hepatitis C vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "59",
+      "display" : "hepatitis E vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "60",
+      "display" : "herpes simplex virus, type 2 vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "46",
+      "display" : "Haemophilus influenzae type b vaccine, PRP-D conjugate"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "47",
+      "display" : "Haemophilus influenzae type b vaccine, HbOC conjugate"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "48",
+      "display" : "Haemophilus influenzae type b vaccine, PRP-T conjugate"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "49",
+      "display" : "Haemophilus influenzae type b vaccine, PRP-OMP conjugate"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "17",
+      "display" : "Haemophilus influenzae type b vaccine, conjugate unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "51",
+      "display" : "Haemophilus influenzae type b conjugate and Hepatitis B vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "61",
+      "display" : "human immunodeficiency virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "118",
+      "display" : "human papilloma virus vaccine, bivalent"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "62",
+      "display" : "human papilloma virus vaccine, quadrivalent"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "86",
+      "display" : "immune globulin, intramuscular"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "87",
+      "display" : "immune globulin, intravenous"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "14",
+      "display" : "immune globulin, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "111",
+      "display" : "influenza virus vaccine, live, attenuated, for intranasal use"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "15",
+      "display" : "influenza virus vaccine, split virus (incl. purified surface antigen)-retired CODE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "16",
+      "display" : "influenza virus vaccine, whole virus"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "88",
+      "display" : "influenza virus vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "123",
+      "display" : "influenza virus vaccine, H5N1, A/Vietnam/1203/2004 (national stockpile)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "10",
+      "display" : "poliovirus vaccine, inactivated"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "02",
+      "display" : "trivalent poliovirus vaccine, live, oral"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "89",
+      "display" : "poliovirus vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "39",
+      "display" : "Japanese Encephalitis Vaccine SC"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "63",
+      "display" : "Junin virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "64",
+      "display" : "leishmaniasis vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "65",
+      "display" : "leprosy vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "66",
+      "display" : "Lyme disease vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "03",
+      "display" : "measles, mumps and rubella virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "04",
+      "display" : "measles and rubella virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "94",
+      "display" : "measles, mumps, rubella, and varicella virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "67",
+      "display" : "malaria vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "05",
+      "display" : "measles virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "68",
+      "display" : "melanoma vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "32",
+      "display" : "meningococcal polysaccharide vaccine (MPSV4)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "103",
+      "display" : "meningococcal C conjugate vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "114",
+      "display" : "meningococcal polysaccharide (groups A, C, Y and W-135) diphtheria toxoid conjugate vaccine (MCV4P)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "108",
+      "display" : "meningococcal ACWY vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "07",
+      "display" : "mumps virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "69",
+      "display" : "parainfluenza-3 virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "11",
+      "display" : "pertussis vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "23",
+      "display" : "plague vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "33",
+      "display" : "pneumococcal polysaccharide vaccine, 23 valent"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "100",
+      "display" : "pneumococcal conjugate vaccine, 7 valent"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "109",
+      "display" : "pneumococcal vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "70",
+      "display" : "Q fever vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "18",
+      "display" : "rabies vaccine, for intramuscular injection RETIRED CODE"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "40",
+      "display" : "rabies vaccine, for intradermal injection"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "90",
+      "display" : "rabies vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "72",
+      "display" : "rheumatic fever vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "73",
+      "display" : "Rift Valley fever vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "34",
+      "display" : "rabies immune globulin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "119",
+      "display" : "rotavirus, live, monovalent vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "122",
+      "display" : "rotavirus vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "116",
+      "display" : "rotavirus, live, pentavalent vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "74",
+      "display" : "rotavirus, live, tetravalent vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "71",
+      "display" : "respiratory syncytial virus immune globulin, intravenous"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "93",
+      "display" : "respiratory syncytial virus monoclonal antibody (palivizumab), intramuscular"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "06",
+      "display" : "rubella virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "38",
+      "display" : "rubella and mumps virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "76",
+      "display" : "Staphylococcus bacteriophage lysate"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "113",
+      "display" : "tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use (5 Lf of tetanus toxoid and 2 Lf of diphtheria toxoid)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "09",
+      "display" : "tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use (2 Lf of tetanus toxoid and 2 Lf of diphtheria toxoid)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "115",
+      "display" : "tetanus toxoid, reduced diphtheria toxoid, and acellular pertussis vaccine, adsorbed"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "35",
+      "display" : "tetanus toxoid, adsorbed"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "112",
+      "display" : "tetanus toxoid, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "77",
+      "display" : "tick-borne encephalitis vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "13",
+      "display" : "tetanus immune globulin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "95",
+      "display" : "tuberculin skin test; old tuberculin, multipuncture device"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "96",
+      "display" : "tuberculin skin test; purified protein derivative solution, intradermal"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "97",
+      "display" : "tuberculin skin test; purified protein derivative, multipuncture device"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "98",
+      "display" : "tuberculin skin test; unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "78",
+      "display" : "tularemia vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "91",
+      "display" : "typhoid vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "25",
+      "display" : "typhoid vaccine, live, oral"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "41",
+      "display" : "typhoid vaccine, parenteral, other than acetone-killed, dried"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "53",
+      "display" : "typhoid vaccine, parenteral, acetone-killed, dried (U.S. military)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "101",
+      "display" : "typhoid Vi capsular polysaccharide vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "75",
+      "display" : "vaccinia (smallpox) vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "105",
+      "display" : "vaccinia (smallpox) vaccine, diluted"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "79",
+      "display" : "vaccinia immune globulin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "21",
+      "display" : "varicella virus vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "81",
+      "display" : "Venezuelan equine encephalitis, inactivated"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "80",
+      "display" : "Venezuelan equine encephalitis, live, attenuated"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "92",
+      "display" : "Venezuelan equine encephalitis vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "36",
+      "display" : "varicella zoster immune globulin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "117",
+      "display" : "varicella zoster immune globulin (Investigational New Drug)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "37",
+      "display" : "yellow fever vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "121",
+      "display" : "zoster vaccine, live"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "998",
+      "display" : "no vaccine administered"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "999",
+      "display" : "unknown vaccine or immune globulin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "99",
+      "display" : "RESERVED - do not use"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "133",
+      "display" : "pneumococcal conjugate vaccine, 13 valent"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "134",
+      "display" : "Japanese Encephalitis vaccine for intramuscular administration"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "137",
+      "display" : "HPV, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "136",
+      "display" : "meningococcal oligosaccharide (groups A, C, Y and W-135) diphtheria toxoid conjugate vaccine (MCV4O)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "135",
+      "display" : "influenza, high dose seasonal, preservative-free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "131",
+      "display" : "Historical record of a typhus vaccination"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "132",
+      "display" : "Historical diphtheria and tetanus toxoids and acellular pertussis, poliovirus, Haemophilus b conjugate and hepatitis B (recombinant) vaccine."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "128",
+      "display" : "Novel influenza-H1N1-09, all formulations"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "125",
+      "display" : "Novel Influenza-H1N1-09, live virus for nasal administration"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "126",
+      "display" : "Novel influenza-H1N1-09, preservative-free, injectable"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "127",
+      "display" : "Novel influenza-H1N1-09, injectable"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "138",
+      "display" : "tetanus and diphtheria toxoids, not adsorbed, for adult use"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "139",
+      "display" : "Td(adult) unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "140",
+      "display" : "Influenza, seasonal, injectable, preservative free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "129",
+      "display" : "Japanese Encephalitis vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "141",
+      "display" : "Influenza, seasonal, injectable"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "142",
+      "display" : "tetanus toxoid, not adsorbed"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "143",
+      "display" : "Adenovirus, type 4 and type 7, live, oral"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "144",
+      "display" : "seasonal influenza, intradermal, preservative free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "145",
+      "display" : "respiratory syncytial virus monoclonal antibody (motavizumab), intramuscular"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "146",
+      "display" : "Diphtheria and Tetanus Toxoids and Acellular Pertussis Adsorbed, Inactivated Poliovirus, Haemophilus b Conjugate (Meningococcal Protein Conjugate), and Hepatitis B (Recombinant) Vaccine."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "147",
+      "display" : "Meningococcal, MCV4, unspecified conjugate formulation(groups A, C, Y and W-135)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "148",
+      "display" : "Meningococcal Groups C and Y and Haemophilus b Tetanus Toxoid Conjugate Vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "149",
+      "display" : "influenza, live, intranasal, quadrivalent"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "150",
+      "display" : "Influenza, injectable, quadrivalent, preservative free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "151",
+      "display" : "influenza nasal, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "152",
+      "display" : "Pneumococcal Conjugate, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "153",
+      "display" : "Influenza, injectable, Madin Darby Canine Kidney, preservative free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "code" : "154",
+      "display" : "Hepatitis A immune globulin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "155",
+      "display" : "Seasonal, trivalent, recombinant, injectable influenza vaccine, preservative free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "156",
+      "display" : "Rho(D) Immune globulin- IV or IM"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "157",
+      "display" : "Rho(D) Immune globulin - IM"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "158",
+      "display" : "influenza, injectable, quadrivalent, contains preservative"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "159",
+      "display" : "Rho(D) Unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "160",
+      "display" : "Influenza A monovalent (H5N1), adjuvanted, National stockpile 2013"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "801",
+      "display" : "AS03 Adjuvant"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "161",
+      "display" : "Influenza, injectable,quadrivalent, preservative free, pediatric"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "162",
+      "display" : "meningococcal B vaccine, fully recombinant"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "163",
+      "display" : "meningococcal B vaccine, recombinant, OMV, adjuvanted"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "164",
+      "display" : "meningococcal B, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "165",
+      "display" : "Human Papillomavirus 9-valent vaccine"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "166",
+      "display" : "influenza, intradermal, quadrivalent, preservative free, injectable"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "167",
+      "display" : "meningococcal vaccine of unknown formulation and unknown serogroups"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "168",
+      "display" : "Seasonal trivalent influenza vaccine, adjuvanted, preservative free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "169",
+      "display" : "Hep A, live attenuated-IM"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "170",
+      "display" : "non-US diphtheria, tetanus toxoids and acellular pertussis vaccine, Haemophilus influenzae type b conjugate, and poliovirus vaccine, inactivated (DTaP-Hib-IPV)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "171",
+      "display" : "Influenza, injectable, Madin Darby Canine Kidney, preservative free, quadrivalent"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "172",
+      "display" : "cholera, WC-rBS"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "173",
+      "display" : "cholera, BivWC"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "174",
+      "display" : "cholera, live attenuated"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "175",
+      "display" : "Human Rabies vaccine from human diploid cell culture"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "176",
+      "display" : "Human rabies vaccine from Chicken fibroblast culture"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "177",
+      "display" : "pneumococcal conjugate vaccine, 10 valent"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "178",
+      "display" : "Non-US bivalent oral polio vaccine (types 1 and 3)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "179",
+      "display" : "Non-US monovalent oral polio vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "180",
+      "display" : "tetanus immune globulin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "181",
+      "display" : "anthrax immune globulin"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "182",
+      "display" : "Oral Polio Vaccine, Unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "183",
+      "display" : "Yellow fever vaccine alternative formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "184",
+      "display" : "Yellow fever vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "185",
+      "display" : "Seasonal, quadrivalent, recombinant, injectable influenza vaccine, preservative free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "186",
+      "display" : "Influenza, injectable, Madin Darby Canine Kidney,  quadrivalent with preservative"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "187",
+      "display" : "zoster vaccine recombinant"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "188",
+      "display" : "zoster vaccine, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "189",
+      "display" : "Hepatitis B vaccine (recombinant), CpG adjuvanted"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "190",
+      "display" : "Typhoid conjugate vaccine (non-US)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "191",
+      "display" : "meningococcal A polysaccharide vaccine (non-US)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "192",
+      "display" : "meningococcal AC polysaccharide vaccine (non-US)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "193",
+      "display" : "hepatitis A and hepatitis B vaccine, pediatric/adolescent (non-US)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "194",
+      "display" : "influenza, Southern Hemisphere, unspecified formulation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "195",
+      "display" : "Diphtheria, Tetanus, Poliomyelitis adsorbed"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "196",
+      "display" : "tetanus and diphtheria toxoids, adsorbed, preservative free, for adult use, Lf unspecified"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "197",
+      "display" : "influenza, high-dose seasonal, quadrivalent, .7mL dose, preservative free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "200",
+      "display" : "influenza, seasonal, Southern Hemisphere, quadrivalent, pediatric 0.25mL dose, preservative free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "201",
+      "display" : "influenza, seasonal, Southern Hemisphere, quadrivalent, 0.5mL dose, no preservative"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "202",
+      "display" : "influenza, seasonal, Southern Hemisphere, quadrivalent, 0.5mL dose, with preservative"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "198",
+      "display" : "Diphtheria, pertussis, tetanus, hepatitis B, Haemophilus Influenza Type b, (Pentavalent)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "203",
+      "display" : "meningococcal polysaccharide (groups A, C, Y, W-135) tetanus toxoid conjugate vaccine .5mL dose, preservative free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "205",
+      "display" : "influenza, seasonal vaccine, quadrivalent, adjuvanted, .5mL dose, preservative free"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "206",
+      "display" : "smallpox monkeypox vaccine, live attenuated, preservative free (National Stockpile)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "207",
+      "display" : "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 100 mcg/0.5mL dose"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "208",
+      "display" : "SARS-COV-2 (COVID-19) vaccine, mRNA, spike protein, LNP, preservative free, 30 mcg/0.3mL dose"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "213",
+      "display" : "SARS-COV-2 (COVID-19) vaccine, UNSPECIFIED"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "210",
+      "display" : "SARS-COV-2 (COVID-19) vaccine, vector non-replicating, recombinant spike protein-ChAdOx1, preservative free, 0.5 mL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "212",
+      "display" : "SARS-COV-2 (COVID-19) vaccine, vector non-replicating, recombinant spike protein-Ad26, preservative free, 0.5 ml"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "204",
+      "display" : "Ebola Zaire vaccine, live, recombinant, 1mL dose"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "214",
+      "display" : "Ebola, unspecified"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/cvx",
+      "version" : "20220412",
+      "code" : "211",
+      "display" : "SARS-COV-2 (COVID-19) vaccine, Subunit, recombinant spike protein-nanoparticle+Matrix-M1 Adjuvant, preservative free, 0.5mL per dose"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "AGRPAL",
+      "display" : "Agrippal"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "AVAXM",
+      "display" : "Avaxim"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "BCG",
+      "display" : "BCG"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "CDT",
+      "display" : "CDT"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "CMX",
+      "display" : "COMVAX"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "DTP",
+      "display" : "Triple Antigen"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "DTPA",
+      "display" : "DTPa"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "ENGP",
+      "display" : "Engerix B"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "FLRIX",
+      "display" : "Fluarix"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "FLUVAX",
+      "display" : "Fluvax"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "FLVRN",
+      "display" : "Fluvirin"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "FVXJNR",
+      "display" : "Fluvax Junior"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNDIP",
+      "display" : "Diphtheria"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNFLU",
+      "display" : "Influenza"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNHEP",
+      "display" : "Hepatitis B"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNHIB",
+      "display" : "HIB"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNHPA",
+      "display" : "Hepatitis A"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNJEN",
+      "display" : "Japanese Encephalitis"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNMEA",
+      "display" : "Measles"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNMEN",
+      "display" : "Meningococcal C"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNMUM",
+      "display" : "Mumps"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNPNE",
+      "display" : "Pneumococcal"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNPOL",
+      "display" : "Polio"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNROX",
+      "display" : "Rotavirus"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNRUB",
+      "display" : "Rubella"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNTET",
+      "display" : "Tetanus"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "GNVAR",
+      "display" : "Varicella"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "HATWNJ",
+      "display" : "Twinrix Junior"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "HAVAQ",
+      "display" : "Vaqta Paed/Adol"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "HAVJ",
+      "display" : "Havrix Junior"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "HBOC",
+      "display" : "HibTITER"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "HBV",
+      "display" : "HBV"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "HBVP",
+      "display" : "HBVAX II"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "HBX",
+      "display" : "Hiberix"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "IFHX",
+      "display" : "Infanrix Hexa"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "IFIP",
+      "display" : "Infanrix-IPV"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "IFPA",
+      "display" : "Infanrix Penta"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "IFX",
+      "display" : "Infanrix"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "IFXB",
+      "display" : "InfanrixHepB"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "INFLUV",
+      "display" : "Influvac"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "IPV",
+      "display" : "IPOL"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "JEVAX",
+      "display" : "JE-VAX"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "MENJUG",
+      "display" : "Menjugate"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "MENTEC",
+      "display" : "Meningitec"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "MENUME",
+      "display" : "Menomune"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "MENVAX",
+      "display" : "Mencevax ACWY"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "MMR",
+      "display" : "MMR"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "MMRCSL",
+      "display" : "MMR II"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "MMRSKB",
+      "display" : "Priorix"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "MNTRX",
+      "display" : "Menitorix"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "NEISVC",
+      "display" : "NeisVac-C"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "OPV",
+      "display" : "Polio"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "P",
+      "display" : "Pertussis"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "PANVAX",
+      "display" : "Panvax"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "PDCL",
+      "display" : "Pediacel"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "PLCL",
+      "display" : "Poliacel"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "PNEUMO",
+      "display" : "Pneumovax"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "PRPD",
+      "display" : "ProHIBit"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "PROQAD",
+      "display" : "ProQuad"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "PRPOMP",
+      "display" : "PedvaxHIB"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "PRPT",
+      "display" : "ActHIB"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "PRVNR",
+      "display" : "Prevenar 7"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "PRVTH",
+      "display" : "Prevenar 13"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "PRXTEX",
+      "display" : "Priorix-Tetra"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "QDCL",
+      "display" : "Quadracel"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "ROTRIX",
+      "display" : "Rotarix"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "ROTTEQ",
+      "display" : "Rotateq"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "SYNFLX",
+      "display" : "Synflorix"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "TCL",
+      "display" : "Tripacel"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "VAXGRP",
+      "display" : "Vaxigrip"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "VGRJNR",
+      "display" : "Vaxigrip Junior"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "VLRIX",
+      "display" : "Varilrix"
+    },
+    {
+      "system" : "urn:oid:1.2.36.1.2001.1005.17",
+      "code" : "VRVAX",
+      "display" : "Varivax"
+    }]
+  }
+}
