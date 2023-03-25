@@ -32,10 +32,10 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. the encounters
 1. a date for when written
 1. the prescription *Sig*
-1. <span class="bg-success" markdown="1">the amount dispensed and number of refills</span><!-- new-content -->
-1. <span class="bg-success" markdown="1">the dose and rate</span><!-- new-content -->
+1. the amount dispensed and number of refills
+1. the dose and rate
 
-<div class="bg-success" markdown="1">
+
 **Additional USCDI Requirements**
 
 For ONC's USCDI requirements, each MedicationRequest must support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
@@ -43,20 +43,20 @@ For ONC's USCDI requirements, each MedicationRequest must support the following 
 1. the reason or indication for the prescription*
 
 \*see guidance below
-</div><!-- new-content -->
+
 
 **Profile specific implementation guidance:**
 
 * See the [Medication List] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
-<div class="bg-success" markdown="1">
+
 {% include representing-meds.md %}
-</div><!-- new-content -->
+
 * The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or a reference using `MedicationRequest.reportedReference`.
    *  Although both are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements.
    *  The client application **SHALL** support both elements.
-<div class="bg-success" markdown="1">
+
 - \*The MedicationRequest resource can communicate the reason or indication for referral or consultation using either a code in `MedicationRequest.reasonCodeableConcept` or a reference using `MedicationRequest.reasonReference`.
-</div><!-- new-content -->
+
 * Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
 * Servers **SHALL** follow the guidance in the [Medication List] page  and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.
 

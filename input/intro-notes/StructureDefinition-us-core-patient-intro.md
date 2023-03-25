@@ -33,11 +33,11 @@ For ONC's USCDI requirements, each Patient must support the following additional
 1. a communication language
 1. a race
 1. an ethnicity
-2. <span class="bg-success" markdown="1">a tribal affiliation</span><!-- new-content -->
+2. a tribal affiliation
 3. a birth sex*
-4. <span class="bg-success" markdown="1">sex for clinical use*</span><!-- new-content -->
+4. sex for clinical use*
 5. gender identity*
-6. <span class="bg-success" markdown="1">date of death</span><!-- new-content -->
+6. date of death
 7. previous address
 8. previous name
 9. suffix
@@ -45,14 +45,14 @@ For ONC's USCDI requirements, each Patient must support the following additional
 *see guidance below
 
 **Profile specific implementation guidance:**
-- Note that <span class="bg-success" markdown="1">*Date of Death*</span><!-- new-content -->  *Previous Name*, *Suffix*,and *Previous address* are listed in the U.S. Core Data for Interoperability.
-  - <span class="bg-success" markdown="1">Date of Death is communicated using the `Patient.deceasedDateTime` element.</span><!-- new-content -->
+- Note that *Date of Death*  *Previous Name*, *Suffix*,and *Previous address* are listed in the U.S. Core Data for Interoperability.
+  - Date of Death is communicated using the `Patient.deceasedDateTime` element.
   - Suffix is represented using the `Patient.name.suffix` element.
   - Previous name is represented by setting `Patient.name.use` to "old" and providing an end date in Patient.name.period element if known
   - Previous address is represented by setting `Patient.address.use` to "old" and providing an end date in Patient.address.period element if known.
   - The [Patient example] demonstrates how these elements are represented.
 - \*US Core has reviewed and updated value sets based on input from the [HL7 Gender Harmony Project] which is modeling gender and sex information which includes data elements, value sets, code systems.  When their work is complete, US Core will align with their recommendations. In the interim, the [FHIR specification]({{site.data.fhir.path}}patient.html#gender) provides guidance and background for representing Administrative Gender, Sex assigned at Birth, and Gender Identity.
-- <span class="bg-success" markdown="1">\*US Core has interpreted the USCDI data element "sex" and its applicable vocabulary standard of SNOMED CT as "sex for clinical use" and uses a set of codes defined by HL7 Gender Harmony Project. A mapping between the US Core Sex for Clinical Use concepts and the corresponding SNOMED CT concepts is provided on the [US Core Sex for Clinical Use Value Set] page and the [Patient example] illustrate how the SNOMED CT codes are communicated as *additional* codings.</span><!-- new-content -->
+- \*US Core has interpreted the USCDI data element "sex" and its applicable vocabulary standard of SNOMED CT as "sex for clinical use" and uses a set of codes defined by HL7 Gender Harmony Project. A mapping between the US Core Sex for Clinical Use concepts and the corresponding SNOMED CT concepts is provided on the [US Core Sex for Clinical Use Value Set] page and the [Patient example] illustrate how the SNOMED CT codes are communicated as *additional* codings.
 - The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`. There is increasing concern over the use of Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have actively purged them from their systems and filter them out of incoming data.
 
 {% include link-list.md %}

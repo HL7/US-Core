@@ -34,8 +34,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 - See [Clinical Notes]
 - The `DocumentReference.type` binding must support, at a minimum, the [5 Common Clinical Notes] and may extend to the whole [US Core DocumentReference Type Value Set]
-- <span class="bg-success" markdown="1">In addition to the [US Core DocumentReference Category] value set, other category schemes such as the LOINC-based [Document Class Value Set] and [IHE XDSclassCode] may be used to facilitate the sharing of health documents.
-</span><!-- new-content -->
+- In addition to the [US Core DocumentReference Category] value set, other category schemes such as the LOINC-based [Document Class Value Set] and [IHE XDSclassCode] may be used to facilitate the sharing of health documents.
+
 - For a C-CDA Clinical Summary of Care (CCD):
    -  The document type code is the LOINC code [34133-9] *Summary of episode note*.
    -  The format code is `urn:hl7-org:sdwg:ccda-structuredBody:2.1`
@@ -44,7 +44,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
     -  The client application **SHALL** support both elements.
     -  The `content.url` may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]), FHIR Document Bundle (i.e. [base]/Bundle/[id], or another endpoint.
         - If the endpoint is outside the FHIR base URL, it **SHOULD NOT** require additional authorization to access.
-- <span class="bg-success" markdown="1">Every DocumentReference must have a responsible Organization.</span><!-- new-content --> The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
+- Every DocumentReference must have a responsible Organization. The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
    - Some systems may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.
 
 {% include link-list.md %}

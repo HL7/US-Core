@@ -17,7 +17,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
-* <span class="bg-success" markdown="1">RXNorm concepts are used and are defined as an [extensible] binding. USCDI V3+ recommends the [National Drug Codes (NDC)] as an *optional* terminology. They can be supplied as an additional coding element.</span><!-- new-content -->
+* RXNorm concepts are used and are defined as an [extensible] binding. USCDI V3+ recommends the [National Drug Codes (NDC)] as an *optional* terminology. They can be supplied as an additional coding element.
 * Since the binding is [extensible], when a code is unavailable just text is allowed.
 * When the medication is compounded and is a list of ingredients, the code is still present and may contain only the text.
 

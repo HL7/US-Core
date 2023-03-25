@@ -21,8 +21,8 @@ All the examples in this Implementation Guide are available for download:
 
 All the profile information for the {{site.data.fhir.ig.title}} in a single CSV or Excel file, which may be helpful to testers and analysts to review element properties across profiles in a single table:
 
-- [CSV](all_profiles.csv)
-- [Excel](all_profiles.xlsx)
+- [CSV(compressed folder)](csvs.zip)
+- [Excel(compressed folder)](excels.zip)
 
 A table comparing all the observation profiles in US Core is also available for download:
 

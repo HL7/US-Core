@@ -19,15 +19,15 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  a patient
 1.  when the procedure was performed
 
-<div class="bg-success" markdown="1">
+
 **Additional USCDI Requirements**
 
 For ONC's USCDI requirements, each Procedure must support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
 
-1.  <span class="bg-success" markdown="1">A reference to the request for the procedure*</span>
+1.  A reference to the request for the procedure*</span>
 
 \*see guidance below
-</div><!-- new-content -->
+
 
 **Profile specific implementation guidance:**
 
@@ -35,6 +35,6 @@ For ONC's USCDI requirements, each Procedure must support the following addition
     - Only LOINC concepts that reflect actual procedures **SHOULD** be used
 - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` with a reference to the [US Core Implantable Device Profile].
 - See the [SDOH] guidance page for more information when exchanging Social Determinants of Health (SDOH) Procedures
-- <span class="bg-success" markdown="1">*The Reason or justification for a referral or consultation is communicated through the [US Core ServiceRequest Profile] which can be linked to the Procedure through the `Procedure.basedOn' element.</span><!-- new-content -->
+- *The Reason or justification for a referral or consultation is communicated through the [US Core ServiceRequest Profile] which can be linked to the Procedure through the `Procedure.basedOn' element.
 
 {% include link-list.md %}

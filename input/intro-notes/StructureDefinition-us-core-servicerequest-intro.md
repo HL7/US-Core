@@ -30,7 +30,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 For ONC's USCDI requirements, each ServiceRequest must support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
 
-1. <span class="bg-success" markdown="1">a reason or indication for referral or consultation*</span><!-- new-content -->
+1. a reason or indication for referral or consultation*
 
 \*see guidance below
 
@@ -39,8 +39,8 @@ For ONC's USCDI requirements, each ServiceRequest must support the following add
 - See the [SDOH] guidance page for more information when exchanging Social Determinants of Health (SDOH) Service Requests.
 - The `ServiceRequest.category` binding must support, at a minimum, the [US Core ServiceRequest Category Codes].  However, this valueset can be treated as [extensible], and other category codes can be used instead.
 - The `ServiceRequest.code` valueset is broad to accommodate a wide variety of use cases and should be constrained to a subset for a particular use case or domain. (for example, LOINC for laboratory orders.)
-<div class="bg-success" markdown="1">
+
 - \*The ServiceRequest resource can communicate the reason or indication for referral or consultation using either a code in `ServiceRequest.reasonCodeableConcept` or a reference using `ServiceRequest.reasonReference`.
-</div><!-- new-content -->
+
 
 {% include link-list.md %}

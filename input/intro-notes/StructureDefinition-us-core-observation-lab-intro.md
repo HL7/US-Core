@@ -13,21 +13,21 @@ The following are example usage scenarios for this profile:
 **Each Observation must have:**
 
 1.   a category code of 'laboratory'
-2.   a <span class="bg-success" markdown="1">laboratory</span><!-- new-content --> [LOINC] code, if available, which tells you what is being measured
+2.   a laboratory [LOINC] code, if available, which tells you what is being measured
 
 **Each Observation must support:**
 
 1. a result value*
-   - <span class="bg-success" markdown="1">if the result value is a numeric quantity, a standard [UCUM] unit</span><!-- new-content -->
-   - <span class="bg-success" markdown="1">if the result value is a coded quantity, a standard [SNOMED CT]*</span><!-- new-content -->
-2. <span class="bg-success" markdown="1">a specimen type (e.g., blood, serum, urine)</span><!-- new-content -->
+   - if the result value is a numeric quantity, a standard [UCUM] unit
+   - if the result value is a coded quantity, a standard [SNOMED CT]*
+2. a specimen type (e.g., blood, serum, urine)
 
 \* see guidance below
 
 **Profile specific implementation guidance:**
 
-- <span class="bg-success" markdown="1">For USCDI V3+, systems are required to use SNOMED CT for coded results if the SCT code exists.</span><!-- new-content --> 
-- <span class="bg-success" markdown="1">The specimen type may be implicit `Observation.code` (e.g., Blood Glucose) or communicated using `Observation.specimen`. In addition, the Specimen resource can share other information such as collection details.</span><!-- new-content -->
+- For USCDI V3+, systems are required to use SNOMED CT for coded results if the SCT code exists. 
+- The specimen type may be implicit `Observation.code` (e.g., Blood Glucose) or communicated using `Observation.specimen`. In addition, the Specimen resource can share other information such as collection details.
 {% include observation_guidance_1.md category="laboratory" example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" %}
 
 {% include link-list.md %}

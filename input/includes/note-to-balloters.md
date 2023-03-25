@@ -28,4 +28,4 @@ This ballot addresses the following:
 Where possible, new and updated content are highlighted with green text and background
 {:.new-content}
   
-</div><!-- new-content -->
+</div><!-- note-to-balloters -->

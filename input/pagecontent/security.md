@@ -22,7 +22,7 @@ For US Core, security conformance requirements are as follows:
 -   Systems **SHALL** use TLS version 1.2 or higher for all transmissions not taking place over a secure network connection.
      (Using TLS even within a secured network environment is still encouraged to provide defense in depth.) US Federal systems **SHOULD** conform with FIPS PUB 140-2.
 -   Systems **SHALL** conform to [FHIR Communications Security] requirements.
--   For Authentication and Authorization, Systems **SHALL** support <span class="bg-success" markdown="1">*any* [SMART App Launch version]</span><!-- new-content --> for client <-> server interactions. NOTE: The <span class="bg-success" markdown="1">SMART App Launch</span><!-- new-content --> specifications include the required OAuth 2.0 scopes for enabling security decisions.
+-   For Authentication and Authorization, Systems **SHALL** support *any* [SMART App Launch version] for client <-> server interactions. NOTE: The SMART App Launch specifications include the required OAuth 2.0 scopes for enabling security decisions.
 -   Systems **SHALL** implement consent requirements per their state, local, and institutional policies. The Business Associate Agreements **SHOULD** document systems' mutual consent requirements.
 -   Systems **SHOULD** provide Provenance statements using the [US Core Provenance Profile] resource and associated requirements.
 -   Systems **MAY** implement the [FHIR Digital Signatures] and provide feedback on its appropriateness for US Core transactions.

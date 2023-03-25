@@ -7,7 +7,7 @@
 
    {% include examplebutton_default.html example="documentreference-clinical-note-post" b_title = "Click Here To See Example" %}
 
-<div class="bg-success" markdown="1">
+
 
 #### Mandatory Operation:
 
@@ -33,6 +33,6 @@
 
    {% include examplebutton_default.html example="docref-example2" b_title = "Click Here To See Example" %}
 
-</div><!-- new-content -->
+
 
 {% include link-list.md %}

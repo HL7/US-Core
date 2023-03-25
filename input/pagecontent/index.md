@@ -1,5 +1,8 @@
 
-{% include note-to-balloters.md %}
+<!-- {% raw %} {% include note-to-balloters.md %} {% endraw %} -->
+
+Where possible, new and updated pre-publishing content are highlighted with green text and background - **This highlighting will be removed prior to publication**
+{:.new-content}
 
 Key updates and detailed changes between this and prior versions are available on the US Core [Change Log] and [Changes Between Versions] pages.
 {:.stu-note}
@@ -37,7 +40,7 @@ This Guide is divided into several pages, which are listed at the top of each pa
   - [Future of US Core]\: This page outlines the approach to adding new content to US Core.
 - [FHIR Artifacts]\: These pages provide detailed descriptions and formal definitions for all the FHIR objects defined in this guide.
   - [Profiles and Extensions]\: This page lists the US Core Profiles and Extensions defined in this guide to exchange quality data.
-    - <span class= "bg-success" markdown= "1">Each US Core Profile page includes a narrative description that lists all the [Mandatory] and [Must Support] data elements, profile-specific implementation guidance, and formal definition. A "Quick Start" guide summarizes the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it also may cover un-profiled elements to aid with implementation and certification.</span><!-- new-content -->
+    - Each US Core Profile page includes a narrative description that lists all the [Mandatory] and [Must Support] data elements, profile-specific implementation guidance, and formal definition. A "Quick Start" guide summarizes the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it also may cover un-profiled elements to aid with implementation and certification.
   - [Search Parameters and Operations]\: This page lists the defined US Core Operations and Search Parameters used in US Core transactions.
   - [Terminology]\: This page lists the US Core Value Sets, and Code Systems defined for the profiles.
   - [Capability Statements]\: These pages define the expected FHIR capabilities of the US Core Servers and Clients.

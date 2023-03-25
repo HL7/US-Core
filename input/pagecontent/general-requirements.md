@@ -218,7 +218,7 @@ There are situations when information on a particular data element is missing, a
         - use the appropriate "unknown" concept code from the value set if available
         - if the value set does not have the appropriate "unknown" concept code, use `unknown` from the [DataAbsentReason Code System].
 
-      <div class="bg-success" markdown="1">
+      
 
         Example: CareTeam resource where the mandatory `CareTeam.participant.role` value is unknown.
         ~~~
@@ -243,7 +243,7 @@ There are situations when information on a particular data element is missing, a
             },
         ...
         ~~~
-</div><!-- new-content -->
+
 
    - *required* binding strength (CodeableConcept or code datatypes):
       - use the appropriate "unknown" concept code from the value set if available

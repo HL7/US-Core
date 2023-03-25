@@ -26,11 +26,11 @@ healt
 
 - - Note that this profile also conforms to the base FHIR [Vital Signs Profile].
 {% include vitals-guidance.md %}
-<div class="bg-success" markdown="1">
+
 - Because the blood pressure values are communicated in the *mandatory* systolic and diastolic components:
   - the `Observation.value[x]` element should be omitted
   - an Observation without a systolic or diastolic result value, **SHALL** include a reason why the data is absent in `Observation.component.dataAbsentReason`
   - *all server systems* - including those that never provide a component observation without a value - **SHALL** support `Observation.component.dataAbsentReason` for the components.
-</div><!-- new-content -->
+
 
 {% include link-list.md %}

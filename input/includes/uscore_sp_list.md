@@ -23,12 +23,12 @@
 - [encounter](SearchParameter-us-core-condition-encounter.html)
 
 ##### Coverage
-- {:.new-content}[patient](SearchParameter-us-core-coverage-patient.html)
+- [patient](SearchParameter-us-core-coverage-patient.html)
 
 ##### Device
 - [patient](SearchParameter-us-core-device-patient.html)
 - [type](SearchParameter-us-core-device-type.html)
-- {:.new-content}[status](SearchParameter-us-core-device-status.html)
+- [status](SearchParameter-us-core-device-status.html)
 
 ##### DiagnosticReport
 - [status](SearchParameter-us-core-diagnosticreport-status.html)
@@ -74,9 +74,9 @@
 - [address-postalcode](SearchParameter-us-core-location-address-postalcode.html)
 
 ##### MedicationDispense
-- {:.new-content}[status](SearchParameter-us-core-medicationdispense-status.html)
-- {:.new-content}[type](SearchParameter-us-core-medicationdispense-type.html)
-- {:.new-content}[patient](SearchParameter-us-core-medicationdispense-patient.html)
+- [status](SearchParameter-us-core-medicationdispense-status.html)
+- [type](SearchParameter-us-core-medicationdispense-type.html)
+- [patient](SearchParameter-us-core-medicationdispense-patient.html)
 
 ##### MedicationRequest
 - [status](SearchParameter-us-core-medicationrequest-status.html)
@@ -97,9 +97,9 @@
 - [address](SearchParameter-us-core-organization-address.html)
 
 ##### Patient
-- {:.new-content}[_id](SearchParameter-us-core-patient-id.html)
+- [_id](SearchParameter-us-core-patient-id.html)
 - [birthdate](SearchParameter-us-core-patient-birthdate.html)
-- {:.new-content}[death-date](SearchParameter-us-core-patient-death-date.html)
+- [death-date](SearchParameter-us-core-patient-death-date.html)
 - [family](SearchParameter-us-core-patient-family.html)
 - [gender](SearchParameter-us-core-patient-gender.html)
 - [given](SearchParameter-us-core-patient-given.html)
@@ -124,7 +124,7 @@
 ##### RelatedPerson
 - [_id](SearchParameter-us-core-relatedperson-id.html)
 - [patient](SearchParameter-us-core-relatedperson-patient.html)
-- {:.new-content}[name](SearchParameter-us-core-relatedperson-name.html)
+- [name](SearchParameter-us-core-relatedperson-name.html)
 
 ##### ServiceRequest
 - [status](SearchParameter-us-core-servicerequest-status.html)
