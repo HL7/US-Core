@@ -38,8 +38,8 @@ The following guidance was developed after reviewing several functional status, 
 Systems record clinical judgments <span class="bg-success" markdown="1">(for example, "patient X has this problem")</span><!-- new-content --> as:
 - a problem or health concerns
 - as observation
-<span class="bg-success" markdown="1">Systems that support clinical judgments as as a problem or health concerns **SHALL** support the [US Core Condition Problems and Health Concerns Profile].  Systems that support clinical judgments as observations **SHALL** support the [US Core Simple Observation Profile] to represent these findings. </span><!-- new-content --> These observation can contribute to the identification of future problems or health concerns and support service requests and procedures. When a Simple Observation or Problem or Health Concern is recorded based on an Assessment or Screening tool, systems **SHOULD** associate it with the US Core Observation Screening and Assessments observation or <span class="bg-success" markdown="1">US Core QuestionnaireResponse Profile.</span><!-- new-content -->
 
+<span class="bg-success" markdown="1">Every server that supports the USDCI Data Class "Health Status/Assessments" **SHALL** support representing clinical judgments.  Systems that support clinical judgments as as a problem or health concerns **SHALL** support the [US Core Condition Problems and Health Concerns Profile].  Systems that support clinical judgments as observations **SHALL** support the [US Core Simple Observation Profile] to represent these findings. </span><!-- new-content --> These observation can contribute to the identification of future problems or health concerns and support service requests and procedures. When a Simple Observation or Problem or Health Concern is recorded based on an Assessment or Screening tool, systems **SHOULD** associate it with the US Core Observation Screening and Assessments observation or <span class="bg-success" markdown="1">US Core QuestionnaireResponse Profile.</span><!-- new-content -->
 
 <div class="bg-success" markdown="1">
 #### Structured Screening an Assessments
@@ -57,6 +57,8 @@ The US Core Observation Screening Assessment Profile|SHALL(US Core Observation S
 SDC Base Questionnaire|MAY|SHOULD
 US Core QuestionnaireResponse Profile|undefined|SHOULD
 {:.grid}
+
+The sections below provide additional guidance on when Observations and Questionnaire/QuestionnaireResponse can be used to represent the structured screenings and assessments.
 
 </div><!-- new-content -->
 
