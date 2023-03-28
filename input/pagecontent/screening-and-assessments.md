@@ -27,35 +27,40 @@ The figure below shows how <span class="bg-success" markdown="1">screening and a
 Screening and Assessments are used to identify various problems or health concerns. Their complexity ranges from simple observations to complex structured evaluations: 
 
 - Clinician makes a 'clinical judgment' - I found patient has this problem
-- Clinician completes and shares detailed assessments. <span class="bg-success" markdown="1">(see, for example, [PRAPARE]) </span><!-- new-content -->
+- Clinician completes and shares detailed assessments. <span class="bg-success" markdown="1">(see, for example, the [PRAPARE Survey]) </span><!-- new-content -->
 - Clinician makes a 'clinical judgment' based on detailed assessment.
 
 The following guidance was developed after reviewing several functional status, disability status, mental/cognitive status, and SDOH screening and assessment tools.
 
 
-#### <span class="bg-success" markdown="1">Clinical Judgments</span><!-- new-content -->
+<div class="bg-success" markdown="1">
+#### Clinical Judgments
 
-Systems record clinical judgments <span class="bg-success" markdown="1">(for example, "patient X has this problem")</span><!-- new-content --> as:
+Clinicians may record clinical judgments (for example, "patient X has this problem") as:
 - a problem or health concerns
 - as observation
 
-<span class="bg-success" markdown="1">Every server that supports the USDCI Data Class "Health Status/Assessments" **SHALL** support representing clinical judgments.  Systems that support clinical judgments as as a problem or health concerns **SHALL** support the [US Core Condition Problems and Health Concerns Profile].  Systems that support clinical judgments as observations **SHALL** support the [US Core Simple Observation Profile] to represent these findings. </span><!-- new-content --> These observation can contribute to the identification of future problems or health concerns and support service requests and procedures. When a Simple Observation or Problem or Health Concern is recorded based on an Assessment or Screening tool, systems **SHOULD** associate it with the US Core Observation Screening and Assessments observation or <span class="bg-success" markdown="1">US Core QuestionnaireResponse Profile.</span><!-- new-content -->
+Local policies guide what is appropriate for the problem list versus an observation. For example, some clinics may consider social needs as sensitive information and not appropriate for the problem list.  Observation can contribute to the identification of future problems or health concerns and support service requests and procedures.  Every server that supports the USDCI Data Class "Health Status/Assessments":
+-  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].  
+-  When a *Simple Observation* or *Problem or Health Concern* is recorded based on a structured screening an assessment (see below), the *US Core Simple Observation Profile* **SHOULD** reference it using the `derivedFrom` element and the *US Core Condition Problems and Health Concerns Profile* using the `evidence.detail` element,
+</div><!-- new-content -->
 
 <div class="bg-success" markdown="1">
+
 #### Structured Screening an Assessments
 
-Screening and Assessments can be structured survey instruments consisting of questions with a variety of response including true/false, coded, textual, and  multiple choice.  Examples include [PRAPARE], [APGAR] and [PHQ-9]. To meet the USCDI Assessments data class requirements, US Core defines two ways to represent the questions and responses to these screening and assessment instruments:
+Screening and Assessments can be structured survey instruments consisting of questions with a variety of response including true/false, coded, textual, and  multiple choice.  Examples include PRAPARE, [APGAR] and [PHQ-9]. US Core defines two ways to represent the questions and responses to these screening and assessment instruments:
 
-- Observation: [The US Core Observation Screening Assessment Profile]
+- Observation: [US Core Observation Screening Assessment Profile]
 - Questionnaire/QuestionnaireResponse: [SDC Base Questionnaire]/[US Core QuestionnaireResponse Profile]
 
 Systems *SHOULD* support all three profiles for USDCI Data Class Health Status/Assessments.  The table below summarizes the differences in conformance requirements for these profiles between version 5.0.1 and 6.0.0 of US Core
 
 US Core Profile|5.0.1|6.0.0
 ---|---|---
-The US Core Observation Screening Assessment Profile|SHALL(US Core Observation SDOH Assessment Profile)|SHOULD
-SDC Base Questionnaire|MAY|SHOULD
-US Core QuestionnaireResponse Profile|undefined|SHOULD
+The US Core Observation Screening Assessment Profile|SHALL(US Core Observation SDOH Assessment Profile)|SHALL/SHOULD?
+SDC Base Questionnaire|undefined|SHOULD
+US Core QuestionnaireResponse Profile|MAY|SHOULD
 {:.grid}
 
 The sections below provide additional guidance on when Observations and Questionnaire/QuestionnaireResponse can be used to represent the structured screenings and assessments.
@@ -73,18 +78,41 @@ Note that the panels can be nested to create additional groupings of responses. 
 
 ###### Searching for Screening and Assessment Data
 
-Below is a simple example of a FHIR RESTful search transaction on Observation to access a patient's SDOH assessment data
+Unlike QuestionnaireResponse, When Observations are used to record set of screening an assessments responses, clients can query individual responses can be queried using the standard FHIR RESTful API search parameters  Below is a simple example of a FHIR RESTful search transaction on Observation to access a patient's SDOH assessment data
 
 {% include examplebutton.html example="SDOH_search_transaction" b_title = "Click on Here To See Search Example" %}
 
 ##### <span class="bg-success" markdown="1">SDC Base Questionnaire/US Core QuestionnaireResponse Profile</span><!-- new-content -->
 
 <div class="bg-success" markdown="1">
-Screening and assessment instruments may be represented as questionnaires including FHIR Questionnaires. The [US Core QuestionnaireResponse Profile] (based on the [Structured Data Capture (SDC) Questionnaire Response Profile]) is used to capture, exchange and persist the response data. It represents the answers to the screening and assessment questions represented in the [SDC Base Questionnaire] and is ordered and grouped corresponding to the Questionnaire. 
- Although QuestionnaireResponse can be searched using the standard FHIR RESTful API search parameters, individual responses are not directly searchable in QuestionnaireResponse. In order to search directly for and individual responses, they must be “parsed” into a searchable form - i.e. to a local FHIR or non-FHIR data store such as a database or FHIR Observations.
- US Core Observation Screening Assessment can be extracted from US Core QuestionnaireResponse. The basic workflow for the creation, discovery and retrieval and data-extraction of FHIR Questionnaire and QuestionnaireResponse is thoroughly documented in the Structured Data Capture (SDC) specification. In addition, the SDOH Clinical Care guides define how SDOH data captured in a QuestionnaireResponse can be extracted and used to create or update Observations or other FHIR resources.
+Screening and assessment instruments may be represented as questionnaires including FHIR Questionnaires.  The [Structured Data Capture (SDC)] specification documents he basic workflow for the creation, discovery and retrieval and data-extraction of FHIR Questionnaire and QuestionnaireResponse. The [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile]), and is used to capture, exchange and persist the response data. It represents the answers to the screening and assessment questions represented in the [SDC Base Questionnaire] and is ordered and grouped corresponding to the Questionnaire. See the [US Core QuestionnaireResponse Profile] profile page for detailed documentation, examples and search requirements.
 
-See the US Core QuestionnaireResponse Profile profile page for detailed documentation, examples and search requirements.
+###### Extracting US Core Observation Screening Assessment from US Core QuestionnaireResponse
+
+US Core Observation Screening Assessment can be extracted from US Core QuestionnaireResponse.  Although QuestionnaireResponse can be searched using the standard FHIR RESTful API search parameters, individual responses are not directly searchable in QuestionnaireResponse. In order to search directly for individual responses, the QuestionnaireResponse must be “parsed” into a searchable form - i.e. to a local FHIR or non-FHIR data store such as a database or FHIR Observations. Both SDC and the [SDOH Clinical Care] implementation guide define how data captured in a QuestionnaireResponse can be extracted and used to create or update Observations or other FHIR resources.
+
+</div><!-- new-content -->
+
+<div class="bg-success" markdown="1">
+
+#### Choosing Between QuestionnaireResponse and Observation
+
+For API developers using US Core, it's important to understand when to use the QuestionnaireResponse versus Observation to represent structured assessments and surveys. Here are some guidelines to help choose the appropriate profile:
+
+Choose the QuestionnaireResponse:
+
+- When the screening or assessment tool is a FHIR Questionnaire: QuestionnaireResponse is tightly coupled to the Questionnaire resource. For example, QuestionnaireResponse links to the Questionnaire, each response points the corresponding question, and the structures are mirrored.
+- When the entire instrument is needed for sharing and analysis.
+
+Choose the Observation for Screening Assessment:
+
+- When the screening or assessment tool is a non-FHIR Questionnaire: The results can be directly transformed into Observations, especially if the questions correspond to standard codes such as LOINC (e.g., PRAPARE).
+- When the individual responses are needed for sharing and analysis.
+
+Choose both the QuestionnaireResponse and the Observation:
+
+- When both the individual responses and the entire instrument are needed for sharing and analysis.
+- Note that non-FHIR Questionnaires can be converted to FHIR Questionnaires to create a QuestionnaireResponse from which the Observations can be extracted.
 </div><!-- new-content -->
 
 ### Terminology
