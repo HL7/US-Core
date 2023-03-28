@@ -58,7 +58,7 @@ Systems *SHOULD* support all three profiles for USDCI Data Class Health Status/A
 
 US Core Profile|5.0.1|6.0.0
 ---|---|---
-The US Core Observation Screening Assessment Profile|SHALL(US Core Observation SDOH Assessment Profile)|SHALL/SHOULD?
+The US Core Observation Screening Assessment Profile|SHALL(US Core Observation SDOH Assessment Profile)|SHALL
 SDC Base Questionnaire|undefined|SHOULD
 US Core QuestionnaireResponse Profile|MAY|SHOULD
 {:.grid}
@@ -85,7 +85,7 @@ Unlike QuestionnaireResponse, When Observations are used to record set of screen
 ##### <span class="bg-success" markdown="1">SDC Base Questionnaire/US Core QuestionnaireResponse Profile</span><!-- new-content -->
 
 <div class="bg-success" markdown="1">
-Screening and assessment instruments may be represented as questionnaires including FHIR Questionnaires.  The [Structured Data Capture (SDC)] specification documents he basic workflow for the creation, discovery and retrieval and data-extraction of FHIR Questionnaire and QuestionnaireResponse. The [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile]), and is used to capture, exchange and persist the response data. QuestionnaireResponse can be thought of as a snapshot of the filled-out answer forms to the screening and assessment questions represented in the [SDC Base Questionnaire]. It is ordered and grouped corresponding to the Questionnaire and can be consulted when a complete and accurate record of the responses is required. the [US Core QuestionnaireResponse Profile] profile page for detailed documentation, examples and search requirements.
+Screening and assessment instruments may be represented as questionnaires including FHIR Questionnaires.  The [Structured Data Capture (SDC)] specification documents the workflow for the creation, discovery and retrieval and data-extraction of FHIR Questionnaire and QuestionnaireResponse. The [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile]), and is used to capture, exchange and persist the response data. QuestionnaireResponse can be thought of as a snapshot of the filled-out answer forms to the screening and assessment questions represented in the [SDC Base Questionnaire]. It is ordered and grouped corresponding to the Questionnaire and can be consulted when a complete and accurate record of the responses is required. the [US Core QuestionnaireResponse Profile] profile page for detailed documentation, examples and search requirements.
 
 ###### Extracting US Core Observation Screening Assessment from US Core QuestionnaireResponse
 
@@ -101,12 +101,10 @@ For API developers using US Core, it's important to understand when to use the Q
 
 Choose the QuestionnaireResponse:
 
-- When the screening or assessment tool is a FHIR Questionnaire: QuestionnaireResponse is tightly coupled to the Questionnaire resource. For example, QuestionnaireResponse links to the Questionnaire, each response points the corresponding question, and the structures are mirrored.
 - When the entire instrument is needed for sharing and analysis.
 
 Choose the Observation for Screening Assessment:
 
-- When the screening or assessment tool is a non-FHIR Questionnaire: The results can be directly transformed into Observations, especially if the questions correspond to standard codes such as LOINC (e.g., PRAPARE).
 - When the individual responses are needed for sharing and analysis.
 
 Choose both the QuestionnaireResponse and the Observation:
