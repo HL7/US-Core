@@ -128,7 +128,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 1. **Triaged:** Consider changing Observation.derivedFrom and hasMember QuestionnaireResponse reference to SDC QuestionnaireResponse [FHIR-39965](https://jira.hl7.org/browse/FHIR-39965) [See Changes Here](#.html)
 1. **Resolved - change required:** Correct link issue in “Profile specific implementation guidance section” of the ServiceRequest Profile [FHIR-39966](https://jira.hl7.org/browse/FHIR-39966) [See Changes Here](#.html)
 1. **Resolved - change required:** Coverage.type binding needs different value set or clarification on allowed codes [FHIR-39982](https://jira.hl7.org/browse/FHIR-39982) [See Changes Here](#.html)
-1. **Triaged:** Rename US Core Observation Category [FHIR-40034](https://jira.hl7.org/browse/FHIR-40034) [See Changes Here](#.html)
+1. **Pre-Applied:** Rename http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category [FHIR-40034](https://jira.hl7.org/browse/FHIR-40034) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html)
 1. **Resolved - change required:** Extra ) in Screening and Assessments [FHIR-40041](https://jira.hl7.org/browse/FHIR-40041) [See Changes Here](#.html)
 1. **Resolved - change required:** Clarify screening and assessments [US Core Assessment Category Value Set] [FHIR-40043](https://jira.hl7.org/browse/FHIR-40043) [See Changes Here](#.html)
 1. **Resolved - change required:** Pregnancy status codes missing Possible pregnancy [FHIR-40045](https://jira.hl7.org/browse/FHIR-40045) [See Changes Here](#.html)

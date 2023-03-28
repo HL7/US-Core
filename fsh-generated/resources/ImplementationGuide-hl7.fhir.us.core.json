@@ -6,7 +6,7 @@
   "name": "USCore",
   "title": "US Core Implementation Guide",
   "status": "active",
-  "date": "2022-12-07",
+  "date": "2023-03-24",
   "publisher": "HL7 International - Cross-Group Projects",
   "contact": [
     {
@@ -684,11 +684,11 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/us-core-category"
+          "reference": "ValueSet/us-core-screening-assessment-observation-category"
         },
-        "description": "Codes used in US Core Observation profiles such as the US Core Screening and Assessments Profile. The are typically used when there is a need for categorization for searching and finding resources or workflow hints beyond the Base set of Observation categories.",
+        "description": "Category codes used in the US Core Observation Screening Assessment Profile to help identify the type of USCDI Health Status/Assessment data class being reported.",
         "exampleBoolean": false,
-        "name": "US Core Observation Category"
+        "name": "US Core Screening Assessment Observation Category"
       },
       {
         "reference": {
@@ -3294,7 +3294,7 @@
     "parameter": [
       {
         "code": "copyrightyear",
-        "value": "2022+"
+        "value": "2023+"
       },
       {
         "code": "releaselabel",

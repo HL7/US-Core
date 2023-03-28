@@ -76,14 +76,14 @@
                 "mustSupport": true
             },
             {
-                "id": "Observation.category:uscore",
+                "id": "Observation.category:screening-assessment",
                 "path": "Observation.category",
                 "definition": "Used to classify the context of a screening or assessment observation.",
-                "sliceName": "uscore",
-                "requirements": "Used for filtering the type of assessment or screening observation.",
+                "sliceName": "screening-assessment",
+                "requirements": "Used for filtering the type of screening or assessment observation.",
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-category"
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category"
                 },
                 "mustSupport": true
             },

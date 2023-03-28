@@ -1,12 +1,12 @@
 resourceType: ValueSet
-id: us-core-category
-url: http://hl7.org/fhir/us/core/ValueSet/us-core-category
-name: USCoreObservationCategory
-title: US Core Observation Category
+id: us-core-screening-assessment-observation-category
+url: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-observation-category
+name: USCoreScreeningAssessmentObservationCategory
+title: US Core Screening Assessment Observation Category
 status: active
 experimental: false
-date: 2022-09-29
-description: Codes used in US Core Observation profiles such as the US Core Screening and Assessments Profile. The are typically used when there is a need for categorization for searching and finding resources or workflow hints beyond the Base set of Observation categories.
+date: 2023-03-28
+description: Category codes used in the US Core Observation Screening Assessment Profile to help identify the type of USCDI Health Status/Assessment data class being reported.
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons
   License
 compose:

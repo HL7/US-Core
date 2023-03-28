@@ -27,7 +27,7 @@ The figure below shows how <span class="bg-success" markdown="1">screening and a
 Screening and Assessments are used to identify various problems or health concerns. Their complexity ranges from simple observations to complex structured evaluations: 
 
 - Clinician makes a 'clinical judgment' - I found patient has this problem
-- Clinician completes and shares detailed assessments. <span class="bg-success" markdown="1">(see, for example, the [PRAPARE Survey]) </span><!-- new-content -->
+- Clinician completes and shares detailed assessments. <span class="bg-success" markdown="1">(see, for example, the [Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey]) </span><!-- new-content -->
 - Clinician makes a 'clinical judgment' based on detailed assessment.
 
 The following guidance was developed after reviewing several functional status, disability status, mental/cognitive status, and SDOH screening and assessment tools.
