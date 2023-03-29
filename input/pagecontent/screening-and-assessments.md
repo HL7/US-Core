@@ -1,5 +1,12 @@
+<div class="bg-success" markdown="1">
 
-This page documents how US Core Profiles can represent screenings and assessments. The  [Gravity Project]) published the [SDOH Clinical Care] HL7 Implementation Guide, which documents the orchestration of SDOH data capture and related interventions and how to represent it using FHIR. These efforts led to many additions to US Core 5.0.1 updates to meet the [USCDI v2] Social Determinant of Health (SDOH) data elements: SDOH Assessments, SDOH Goals, SDOH Interventions, and SDOH Problems/Health Concerns. Since screenings and assessments are not unique to social needs,  US Core  6.0.0+  Profiles and the FHIR RESTful interactions documented below span across use cases and thus are less constrained and form the backbone for the Clinical Care Profiles. They provide a general framework for all domains which use screenings are assessments, including the [USCDI v2]  and [USCDI v3] data classes:
+### Introduction
+
+In the context of US Core, *Screening and Assessments* refer to recording responses and capturing assertions/determinations resulting from the screening/assessment process. This page documents how Screening and Assessments are used to identify various problems or health concerns and how US Core Profiles record Screenings and Assessments ranging from simple observations to complex structured evaluations.
+
+The [Gravity Project] and its [SDOH Clinical Care] HL7 Implementation Guide address the screening process and related interventions to address Social Determinant of Health (SDOH). Those efforts helped guide US Core 5.0.1 updates to meet the [USCDI v2] SDOH data elements: SDOH Assessments, SDOH Goals, SDOH Interventions, and SDOH Problems/Health Concerns. As a result of USCDI v3 Health Status/Assessments data class, US Core 6.0.0 expanded from SDOH to a general framework of Screenings and Assessments for all domains, including:
+
+</div><!-- new-content -->
 - SDOH
 - Functional Status
 - Disability Status
