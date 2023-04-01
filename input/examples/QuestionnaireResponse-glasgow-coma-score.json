@@ -1,0 +1,66 @@
+{
+    "resourceType": "QuestionnaireResponse",
+    "id": "glascow-coma-score",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "QuestionnaireResponse Glascow Coma Score Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This example of a US Core QuestionnaireResponse references a non-FHIR survey instrument (in this case a pdf) instead of a FHIR Questionnaire."
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+        ]
+    },
+    "_questionnaire": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri",
+                "valueUri": "https://www.cdc.gov/masstrauma/resources/gcs.pdf"
+            }
+        ]
+    },
+    "status": "completed",
+    "subject": {
+        "reference": "Patient/example",
+        "display": "Amy V. Shaw"
+    },
+    "authored": "2014-12-11T04:44:16Z",
+    "author": {
+        "reference": "Practitioner/practitioner-1",
+        "display": "Ronald Bone"
+    },
+    "item": [
+        {
+            "linkId": "1",
+            "text": "Eye Opening Response",
+            "answer": [
+                {
+                    "valueDecimal": 4
+                }
+            ]
+        },
+        {
+            "linkId": "2",
+            "text": "Verbal Response",
+            "answer": [
+                {
+                    "valueDecimal": 4
+                }
+            ]
+        },
+        {
+            "linkId": "3",
+            "text": "Motor Response",
+            "answer": [
+                {
+                    "valueDecimal": 4
+                }
+            ]
+        }
+    ]
+}

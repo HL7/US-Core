@@ -2,9 +2,9 @@
 
 ### Introduction
 
-In the context of US Core, *Screening and Assessments* refer to recording responses and capturing assertions/determinations resulting from the screening/assessment process. This page documents how Screening and Assessments are used to identify various problems or health concerns and how US Core Profiles record Screenings and Assessments ranging from simple observations to complex structured evaluations.
+Clinicians use various terms such as *assessments*, *scales*, *surveys*, and *screenings* to describe the tools and processes to collect health-related information for assessing a patient's health-related matter. On this page, the term *Screening and Assessments* refer to recording responses and capturing assertions/determinations resulting from this process and these tools. This page documents how Screening and Assessments are used to identify various problems or health concerns and how US Core Profiles record Screenings and Assessments ranging from simple observations to complex structured evaluations.
 
-The [Gravity Project] and its [SDOH Clinical Care] HL7 Implementation Guide address the screening process and related interventions to address Social Determinant of Health (SDOH). Those efforts helped guide US Core 5.0.1 updates to meet the [USCDI v2] SDOH data elements: SDOH Assessments, SDOH Goals, SDOH Interventions, and SDOH Problems/Health Concerns. As a result of USCDI v3 Health Status/Assessments data class, US Core 6.0.0 expanded from SDOH to a general framework of Screenings and Assessments for all domains, including:
+The [Gravity Project] and its [SDOH Clinical Care] HL7 Implementation Guide address the screening process and related interventions to address Social Determinant of Health (SDOH). Those efforts helped guide US Core 5.0.1 updates to meet the [USCDI v2] SDOH data elements for Assessments, Goals, Interventions, and Problems/Health Concerns. With the addition of the USCDI v3 Health Status/Assessments data class, US Core 6.0.0 expanded the guidance on this page from SDOH to a general framework of Screenings and Assessments for all domains, including:
 
 </div><!-- new-content -->
 - SDOH
@@ -106,18 +106,11 @@ US Core Observation Screening Assessment can be extracted from US Core Questionn
 
 For API developers using US Core, it's important to understand when to use the QuestionnaireResponse versus Observation to represent structured assessments and surveys. Here are some guidelines to help choose the appropriate profile:
 
-Choose the QuestionnaireResponse:
+- Observations represent specific point-in-time facts that need to be searched, trended, be the subject of statistical analysis and/or directly referenced in support of other actions.  Not all answers in a form will necessarily be appropriate to surface as an Observation.  However, anything that meets one of the preceding criteria will need to be surfaced as an Observation.
+- QuestionnaireResponses represent the source-of-truth of a completed form.  They show how the question was phrased, what answer text they saw/typed, the order in which they filled out the form, etc. For FHIR implementers, it is important to note that QuestionnaireResponse references specific versions of a form filled out whether the form was represented as a FHIR Questionnaire or not. (however, it may be challenging to determine canonical URLs and linkIds that are consistent across systems without using a FHIR Questionnaire.) This reference provides the context of exactly what options were available to choose from, what logic was used to calculate answers or to determine what questions were act can also be determined. It is important to note that QuestionnaireResponse cannot be used for searching based on individual responses but can be used to capture higher-level information such as what form was filled out, by whom, and when.
 
-- When the entire instrument is needed for sharing and analysis.
+In many cases, data might be represented using both mechanisms - the initial raw assessment retained for audit or detailed review stored as a QuestionnaireResponse, and the detailed key answers surfaced as Observations for easy search and analysis.
 
-Choose the Observation for Screening Assessment:
-
-- When the individual responses are needed for sharing and analysis.
-
-Choose both the QuestionnaireResponse and the Observation:
-
-- When both the individual responses and the entire instrument are needed for sharing and analysis.
-- Note that non-FHIR Questionnaires can be converted to FHIR Questionnaires to create a QuestionnaireResponse from which the Observations can be extracted.
 </div><!-- new-content -->
 
 ### Terminology
@@ -141,6 +134,5 @@ US Core uses broadly defined value sets that contain concepts used across many u
 
 {% include img-med.html img="sdoh_condition.svg" caption=" Example of SDOH Grouping Value set in US Core Condition Codes Value Set" %}
 
----
 
 {% include link-list.md %}

@@ -1,20 +1,20 @@
 resourceType: QuestionnaireResponse
-id: AHC-HRSN-screening-example
+id: ahc-hrsn-screening-example
 meta:
   extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
       valueString: QuestionnaireResponse AHC HRSN Screening Example
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
       valueMarkdown: >-
-            This is the QuestionnaireResponse example that is referenced by the *US Core Observation Screening Assessment Profile* AHC-HRSN examples
+            This is a US Core QuestionnaireResponse example that represents questions and selected answers from the *US Core Observation Screening Assessment Profile* AHC-HRSN defined in LOINC (code 96777-8)). This example is generated using the LHC-Forms SDC Questionnaire App. This example reference a FHIR questionnaire that contains no actual questions, but is used to provide metadata about the assessment tool.
   profile:
     - >-
-      http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse
-  # tag:
-  #   - system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-tags'
-  #     code: sdoh
+      http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
+  tag:
+    - system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'
+      code: sdoh
 
-questionnaire: 'http://example.org/Questionnaire/lforms-ahn-hrsn-screening'
+questionnaire: 'http://hl7.org/fhir/us/core/Questionnaire/ahc-hrsn-screening-example'
 # _questionnaire:
 #   extension:
 #     - url: >-

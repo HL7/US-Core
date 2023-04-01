@@ -3,22 +3,22 @@ id: hunger-vital-sign-example
 meta:
   extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
-      valueString: 'QuestionnaireResponse Hunger Vital Sign [HVS] Example'
+      valueString: QuestionnaireResponse Hunger Vital Sign [HVS] Example
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
       valueMarkdown: >-
-        This is the QuestionnaireResponse example that is referenced by the *US Core Observation Screening Assessment Profile* HVS examples
+        An example of a US Core QuestionnaireResponse that represents questions and selected answers from the Hunger Vital Sign Example questionnaire defined in LOINC (code 88122-7). This example is generated using the LHC-Forms SDC Questionnaire App.
   profile:
     - >-
-      http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse
-
-
+      http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
+  tag:
+    - system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'
+      code: sdoh
 questionnaire: >-
-  http://example.org/fhir/Questionnaire/HungerVitalSign
-# _questionnaire:
-#   extension:
-#     - url: >-
-#         http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri
-#       valueUri: 'https://example.org/forms/hsv'
+  http://hl7.org/fhir/us/core/Questionnaire/hunger-vital-sign-example
+_questionnaire:
+  extension:
+    - url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri'
+      valueUri: https://example.org/forms/hsv
 status: completed
 subject:
   reference: Patient/example

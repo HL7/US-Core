@@ -1,22 +1,28 @@
 {
     "resourceType": "QuestionnaireResponse",
-    "id": "5774968",
+    "id": "phq-9-example",
     "meta": {
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "QuestionnaireResponse Example 44250-9"
+                "valueString": "QuestionnaireResponse PHQ-9 Example"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is the QuestionnaireResponse example that is referenced by the *US Core Observation Screening Assessment Profile* PHQ9 examples"
+                "valueMarkdown": "An example of a US Core QuestionnaireResponse that represents questions and selected answers from the The Patient Health Questionnaire (PHQ-9) questionnaire defined in LOINC (code 44249-1). The example is generated using the LHC-Forms SDC Questionnaire App."
             }
         ],
         "profile": [
-            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+        ],
+        "tag": [
+            {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+                "code": "cognitive-status"
+            }
         ]
     },
-    "questionnaire": "http://example.org/fhir/Questionnaire/44249-1-x",
+    "questionnaire": "http://hl7.org/fhir/us/core/Questionnaire/phq-9-example",
     "status": "completed",
     "subject": {
         "reference": "Patient/example"
@@ -28,7 +34,7 @@
     "item": [
         {
             "linkId": "/44250-9",
-            "text": "Little interest or pleasure in doing things in last 2 weeks",
+            "text": "Little interest or pleasure in doing things?",
             "answer": [
                 {
                     "valueCoding": {
@@ -41,7 +47,7 @@
         },
         {
             "linkId": "/44255-8",
-            "text": "Feeling down, depressed, or hopeless in last 2 weeks",
+            "text": "Feeling down, depressed, or hopeless?",
             "answer": [
                 {
                     "valueCoding": {
@@ -145,7 +151,7 @@
         },
         {
             "linkId": "/44261-6",
-            "text": "Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]",
+            "text": "Patient health questionnaire 9 item total score",
             "answer": [
                 {
                     "valueDecimal": 12

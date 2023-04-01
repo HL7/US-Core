@@ -1,0 +1,40 @@
+resourceType: StructureDefinition
+id: us-core-extension-questionnaire-uri
+url: >-
+  http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri
+name: USCoreExtensionQuestionnaireUri
+title: US Core Extension Questionnaire URI
+status: active
+experimental: false
+date: '2022-03-28'
+description: >-
+  The location where a non-FHIR questionnaire/survey form can be found. This extension is used when the survey,form, or questionnaire which is being anwered is not a FHIR [Questionnaire](https://www.hl7.org/fhir/questionnaire.html), otherwise the [canonical url](https://www.hl7.org/fhir/references.html#canonical) for the FHIR Questionnaire is used.
+fhirVersion: 4.0.1
+kind: complex-type
+abstract: false
+context:
+  - type: element
+    expression: QuestionnaireResponse.questionnaire
+type: Extension
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
+derivation: constraint
+differential:
+  element:
+    - id: Extension
+      path: Extension
+      short: >-
+        The location where a non-FHIR questionnaire/survey form can be found.
+      definition: >-
+        This extension is used when the survey,form, or questionnaire which is being anwered is not a FHIR [Questionnaire](https://www.hl7.org/fhir/questionnaire.html), otherwise the [canonical url](https://www.hl7.org/fhir/questionnaire.html#canonical) for the FHIR Questionnaire is used.
+      min: 0
+      max: '1'
+    - id: Extension.url
+      path: Extension.url
+      type:
+        - code: uri
+      fixedUri: >-
+          http://hl7.org/fhir/us/core/StructureDefinition/us-core-extension-questionnaire-uri
+    - id: 'Extension.value[x]'
+      path: 'Extension.value[x]'
+      type:
+        - code: uri
