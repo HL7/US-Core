@@ -365,4 +365,6 @@
 [Gravity Project]: https://hl7.org/gravity
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/
 [technical requirements]: general-requirements.html#required-bindings-when-slicing-by-value-sets
-[SDC Base Questionnaire]: {{site.data.fhir.hl7_fhir_uv_sdc}}/StructureDefinition-sdc-questionnaireresponse.html
+[SDC Base Questionnaire]: {{site.data.fhir.hl7_fhir_uv_sdc}}/StructureDefinition-sdc-questionnaire.html
+[`Questionnaire.useContext`]: {{site.data.fhir.path}}questionnaire-definitions.html#Questionnaire.useContext
+[US Core Category]: CodeSystem-us-core-category.html

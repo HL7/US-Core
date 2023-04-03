@@ -10,9 +10,9 @@ meta:
   profile:
     - >-
       http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
-  tag:
-    - system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'
-      code: 'sdoh'
+  # tag:
+  #   - system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'
+  #     code: 'sdoh'
 questionnaire: >-
   http://hl7.org/fhir/us/core/Questionnaire/prapare-example
 status: completed

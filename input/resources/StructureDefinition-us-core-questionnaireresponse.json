@@ -23,44 +23,6 @@
                 "comment": "\\-"
             },
             {
-                "id": "QuestionnaireResponse.meta",
-                "path": "QuestionnaireResponse.meta",
-                "mustSupport": true
-            },
-            {
-                "id": "QuestionnaireResponse.meta.tag",
-                "path": "QuestionnaireResponse.meta.tag",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "pattern",
-                            "path": "$this"
-                        }
-                    ],
-                    "ordered": false,
-                    "rules": "open"
-                },
-                "mustSupport": true
-            },
-            {
-                "id": "QuestionnaireResponse.meta.tag.code",
-                "path": "QuestionnaireResponse.meta.tag.code",
-                "min": 1
-            },
-            {
-                "id": "QuestionnaireResponse.meta.tag:uscore",
-                "path": "QuestionnaireResponse.meta.tag",
-                "sliceName": "uscore",
-                "short": "USCore Health Status/Assessments Tag",
-                "definition": "Tags that a provider may use in their workflow to indicate/categorize that the context of this Questionnaire Response related to a USCDI Health Status/Assessments Data Class.",
-                "max": "1",
-                "binding": {
-                    "strength": "required",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-questionnaireresponse-tags"
-                },
-                "mustSupport": true
-            },
-            {
                 "id": "QuestionnaireResponse.questionnaire",
                 "path": "QuestionnaireResponse.questionnaire",
                 "mustSupport": true

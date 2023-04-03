@@ -196,7 +196,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 140. **Resolved - change required:** Flag additional USCDI requirements in a computable way [FHIR-40553](https://jira.hl7.org/browse/FHIR-40553) [See Changes Here](#.html)
 141. **Resolved - change required:** Condition asserted-date search parameter has incorrect expression [FHIR-40573](https://jira.hl7.org/browse/FHIR-40573) [See Changes Here](#.html)
 142. **Resolved - change required:** remove profile from reasonReference profile and use types instead. [FHIR-40656](https://jira.hl7.org/browse/FHIR-40656) [See Changes Here](#.html)
-143. **Pre-Applied:** Update US Core QuestionnaireResponse Tags ValueSet [FHIR-40742](https://jira.hl7.org/browse/FHIR-40742) [See Changes Here](ValueSet-us-core-questionnaireresponse-tags.html)
+143. **Pre-Applied:** Remove US Core QuestionnaireResponse Tag Element [FHIR-40742](https://jira.hl7.org/browse/FHIR-40742) [See Changes Here](StructureDefinition-us-core-questionnaireresponse.html) and [Here](Questionnaire-prapare-example.html)
 
 
 

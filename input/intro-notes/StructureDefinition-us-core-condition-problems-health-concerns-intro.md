@@ -34,7 +34,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 * For Encounter Diagnosis use the [US Core Condition Encounter Diagnosis Profile].
 * For USCDI v2+, the applicable vocabulary standards for Problems/Health Concerns are SNOMED CT and ICD-10-CM.  For general guidance on extensible binding to coded data, review [this section](general-requirements.html#extensible-binding-for-coded-elements) in the General Requirements page.
   - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and should be used as the primary code for current encounter diagnoses.
-* See the [SDOH] guidance page for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.
+* See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.
 * If category is a problems list item, the clinicalStatus **SHOULD** not be unknown.
 * \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDate`, or `Condition.recordedDate`.
     * Although all three are marked as must support, the server is not required to support all.

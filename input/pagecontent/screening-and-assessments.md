@@ -26,7 +26,7 @@ The figure below shows how <span class="bg-success" markdown="1">screening and a
 - **Goals**: Identifying and defining a future desired condition or change in condition (for example, Has adequate quality meals and snacks) is represented by [US Core Goal Profile].
 
 <div class="bg-success" markdown="1">
-{% include img.html img="argo_proposed_screening_and_assessments.png" caption="Screening and Assessment Activities" %}
+{% include img.html img="screening_and_assessments.svg" caption="Screening and Assessment Activities" %}
 </div><!-- new-content -->
 
 ### Screening and Assessments

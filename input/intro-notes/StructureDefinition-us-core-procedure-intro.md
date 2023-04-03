@@ -34,7 +34,7 @@ For ONC's USCDI requirements, each Procedure must support the following addition
 - Procedure codes can be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT. LOINC.
     - Only LOINC concepts that reflect actual procedures **SHOULD** be used
 - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` with a reference to the [US Core Implantable Device Profile].
-- See the [SDOH] guidance page for more information when exchanging Social Determinants of Health (SDOH) Procedures
+- See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Procedures
 - *The Reason or justification for a referral or consultation is communicated through the [US Core ServiceRequest Profile] which can be linked to the Procedure through the `Procedure.basedOn' element.
 
 {% include link-list.md %}

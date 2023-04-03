@@ -11,9 +11,9 @@ meta:
   profile:
     - >-
       http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
-  tag:
-    - system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'
-      code: 'cognitive-status'
+  # tag:
+  #   - system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'
+  #     code: 'cognitive-status'
 questionnaire: http://hl7.org/fhir/us/core/Questionnaire/phq-9-example
 status: completed
 subject:
