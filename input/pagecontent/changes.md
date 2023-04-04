@@ -160,7 +160,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 104. **Resolved - change required:** Clarify applicability of DiagnosticReport in USCDI Mapping [FHIR-40138](https://jira.hl7.org/browse/FHIR-40138) [See Changes Here](#.html)
 105. **Resolved - change required:** Remove the word ""status"" from introductory text [FHIR-40149](https://jira.hl7.org/browse/FHIR-40149) [See Changes Here](#.html)
 106. **Resolved - change required:** Incorrect link for ""record or update"" and additional examples [FHIR-40151](https://jira.hl7.org/browse/FHIR-40151) [See Changes Here](#.html)
-107. **Resolved - change required:** Incorrect Resource noted in the introductory paragraph [FHIR-40155](https://jira.hl7.org/browse/FHIR-40155) [See Changes Here](#.html)
+107. **Applied:** Incorrect Resource noted in the introductory paragraph [FHIR-40155](https://jira.hl7.org/browse/FHIR-40155) [See Changes Here](StructureDefinition-us-core-coverage.html)
 108. **Resolved - change required:** Clarify what a Job is [FHIR-40158](https://jira.hl7.org/browse/FHIR-40158) [See Changes Here](#.html)
 109. **Applied:** Member or subscriber id is must have but the element cardinality is 0..* [FHIR-40160](https://jira.hl7.org/browse/FHIR-40160) [See Changes Here](StructureDefinition-us-core-coverage.html)
 110. **Resolved - change required:** Modify comment regarding Screening and Assessments [FHIR-40161](https://jira.hl7.org/browse/FHIR-40161) [See Changes Here](#.html)
