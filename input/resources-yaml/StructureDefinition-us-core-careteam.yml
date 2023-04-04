@@ -1,115 +1,127 @@
 resourceType: StructureDefinition
 id: us-core-careteam
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam'
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
 name: USCoreCareTeam
 title: US Core CareTeam Profile
 status: active
 experimental: false
-date: '2022-04-20'
-description: >-
-  This profile sets minimum expectations for the CareTeam resource for identifying the Care Team members associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.
+date: 2022-04-20
+description: This profile sets minimum expectations for the CareTeam resource for
+  identifying the Care Team members associated with a patient to promote interoperability
+  and adoption through common implementation.  It identifies which core elements,
+  extensions, vocabularies, and value sets **SHALL** be present in the resource when
+  using this profile.  It provides the floor for standards development for specific
+  use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
 type: CareTeam
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/CareTeam'
+baseDefinition: http://hl7.org/fhir/StructureDefinition/CareTeam
 derivation: constraint
 differential:
   element:
-    - id: CareTeam
-      path: CareTeam
-      definition: '\-'
-      comment: '\-'
-      mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CareTeam
-    - id: CareTeam.status
-      path: CareTeam.status
-      mustSupport: true
-      binding:
-        strength: required
-        description: >-
-          Indicates whether the team is current , represents future intentions
-          or is now a historical record.
-        valueSet: 'http://hl7.org/fhir/ValueSet/care-team-status'
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CarePlan.status
-    - id: CareTeam.subject
-      path: CareTeam.subject
-      min: 1
-      type:
-        - code: Reference
-          targetProfile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CarePlan.subject
-    - id: CareTeam.participant
-      path: CareTeam.participant
-      min: 1
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CarePlan.participant
-    - id: CareTeam.participant.role
-      path: CareTeam.participant.role
-      min: 1
-      max: '1'
-      mustSupport: true
-      binding:
-        strength: extensible
-        description: >-
-          Indicates specific responsibility of an individual within the care
-          team, such as Primary physician, Team coordinator, Caregiver, etc.
-        valueSet: 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.30'
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CarePlan.participant.role
-    - id: CareTeam.participant.member
-      path: CareTeam.participant.member
-      min: 1
-      type:
-        - code: Reference
-          targetProfile:
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam'
-            - >-
-              http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
-          _targetProfile:
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: true
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: true
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: true
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: false
-            - extension:
-                - url: >-
-                    http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-                  valueBoolean: true
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: CarePlan.participant.member
+  - id: CareTeam
+    path: CareTeam
+    definition: \-
+    comment: \-
+    mustSupport: false
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: CareTeam
+  - id: CareTeam.status
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: CareTeam.status
+    short: (USCDI Requirement) proposed | active | suspended | inactive | entered-in-error
+    mustSupport: true
+    binding:
+      strength: required
+      description: Indicates whether the team is current , represents future intentions
+        or is now a historical record.
+      valueSet: http://hl7.org/fhir/ValueSet/care-team-status
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: CarePlan.status
+  - id: CareTeam.subject
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: CareTeam.subject
+    short: (USCDI Requirement) Who care team is for
+    min: 1
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: CarePlan.subject
+  - id: CareTeam.participant
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: CareTeam.participant
+    short: (USCDI Requirement) Members of the team
+    min: 1
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: CarePlan.participant
+  - id: CareTeam.participant.role
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: CareTeam.participant.role
+    short: (USCDI Requirement) Type of involvement
+    min: 1
+    max: '1'
+    mustSupport: true
+    binding:
+      strength: extensible
+      description: Indicates specific responsibility of an individual within the care
+        team, such as Primary physician, Team coordinator, Caregiver, etc.
+      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.30
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: CarePlan.participant.role
+  - id: CareTeam.participant.member
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: CareTeam.participant.member
+    short: (USCDI Requirement) Who is involved
+    min: 1
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+      _targetProfile:
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: CarePlan.participant.member

@@ -23,16 +23,36 @@
             },
             {
                 "id": "ServiceRequest.status",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "ServiceRequest.status",
+                "short": "(USCDI Requirement) draft | active | on-hold | revoked | completed | entered-in-error | unknown",
                 "mustSupport": true
             },
             {
                 "id": "ServiceRequest.intent",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "ServiceRequest.intent",
+                "short": "(USCDI Requirement) proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
                 "mustSupport": true
             },
             {
                 "id": "ServiceRequest.category",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "ServiceRequest.category",
                 "slicing": {
                     "discriminator": [
@@ -43,12 +63,20 @@
                     ],
                     "rules": "open"
                 },
+                "short": "(USCDI Requirement) Classification of service",
                 "mustSupport": true
             },
             {
                 "id": "ServiceRequest.category:us-core",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "ServiceRequest.category",
                 "sliceName": "us-core",
+                "short": "(USCDI Requirement) Classification of service",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -58,7 +86,14 @@
             },
             {
                 "id": "ServiceRequest.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "ServiceRequest.code",
+                "short": "(USCDI Requirement) What is being requested/ordered",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -68,7 +103,14 @@
             },
             {
                 "id": "ServiceRequest.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "ServiceRequest.subject",
+                "short": "(USCDI Requirement) Individual or Entity the service is ordered for",
                 "type": [
                     {
                         "code": "Reference",
@@ -81,7 +123,14 @@
             },
             {
                 "id": "ServiceRequest.occurrence[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "ServiceRequest.occurrence[x]",
+                "short": "(USCDI Requirement) When service should occur",
                 "type": [
                     {
                         "extension": [
@@ -103,12 +152,26 @@
             },
             {
                 "id": "ServiceRequest.authoredOn",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "ServiceRequest.authoredOn",
+                "short": "(USCDI Requirement) Date request signed",
                 "mustSupport": true
             },
             {
                 "id": "ServiceRequest.requester",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "ServiceRequest.requester",
+                "short": "(USCDI Requirement) Who/what is requesting service",
                 "type": [
                     {
                         "code": "Reference",
@@ -176,7 +239,14 @@
             },
             {
                 "id": "ServiceRequest.reasonCode",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "ServiceRequest.reasonCode",
+                "short": "(USCDI Requirement) Explanation/Justification for procedure or service",
                 "binding": {
                     "strength": "extensible",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
@@ -184,7 +254,14 @@
             },
             {
                 "id": "ServiceRequest.reasonReference",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "ServiceRequest.reasonReference",
+                "short": "(USCDI Requirement) Explanation/Justification for service or service",
                 "type": [
                     {
                         "code": "Reference",

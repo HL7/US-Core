@@ -1,97 +1,106 @@
 resourceType: StructureDefinition
 id: us-core-observation-pregnancyintent
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent'
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent
 name: USCoreObservationPregnancyIntentProfile
 title: US Core Observation Pregnancy Intent Profile
 status: active
 experimental: false
-date: '2022-08-24'
-description: The US Core Pregnancy Intent Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch the "patient's intent to become pregnant" associated with a patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
+date: 2022-08-24
+description: The US Core Pregnancy Intent Observation Profile is based upon the core
+  FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI)
+  v3 Pregnancy status requirements. To promote interoperability and adoption through
+  common implementation, this profile sets minimum expectations for the Observation
+  resource to record, search, and fetch the "patient's intent to become pregnant"
+  associated with a patient. It identifies which core elements, extensions, vocabularies,
+  and value sets **SHALL** be present in the resource when using this profile. It
+  provides the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
 type: Observation
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Observation'
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Observation
 derivation: constraint
 differential:
-    element:
-        - 
-            id: Observation
-            path: Observation
-            definition: "\\-"
-            comment: "\\-"
-            mustSupport: false
-        - 
-            id: Observation.status
-            path: Observation.status
-            mustSupport: true
-
-        - 
-            id: Observation.category
-            path: Observation.category
-            slicing:
-                discriminator:
-                    - 
-                        type: pattern
-                        path: $this
-                rules: open
-            # min: 1
-            mustSupport: true
-        - 
-            id: 'Observation.category:SocialHistory'
-            path: Observation.category
-            sliceName: SocialHistory
-            min: 0
-            max: '1'
-            patternCodeableConcept:
-                coding:
-                    - 
-                        system: 'http://terminology.hl7.org/CodeSystem/observation-category'
-                        code: social-history
-            mustSupport: true
-        - 
-            id: Observation.code
-            path: Observation.code
-            short: Pregnancy Status
-
-            patternCodeableConcept:
-                coding:
-                    -
-                        system: 'http://loinc.org'
-                        code: 86645-9
-
-            mustSupport: true
-
-            # binding:
-            #     strength: extensible
-            #     valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status-observation-codes'
-            #     description: 'LOINC 86645-9 (Pregnancy intention in the next year - Reported)'
-
-        - 
-            id: Observation.subject
-            path: Observation.subject
-            min: 1
-            type:
-                - 
-                    code: Reference
-                    targetProfile:
-                        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
-            mustSupport: true
-        - 
-            id: Observation.effectiveDateTime
-            path: Observation.effectiveDateTime
-            min: 1
-            mustSupport: true
-        - 
-            id: Observation.valueCodeableConcept
-            path: Observation.valueCodeableConcept
-            short: Coded Responses from Pregnancy Intent Value Set
-            min: 1
-            type:
-                - 
-                    code: CodeableConcept
-            mustSupport: true
-            binding:
-                strength: extensible
-                # description: 'This value set includes SNOMED CT codes and the HL7 V3 code for the concept "unknown". These codes have historically been used to communicate the pregnancy status of a patient. The maximum required binding is extended to Snomed CT codes.'
-                valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-intent'
+  element:
+  - id: Observation
+    path: Observation
+    definition: \-
+    comment: \-
+    mustSupport: false
+  - id: Observation.status
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.status
+    short: (USCDI Requirement) registered | preliminary | final | amended +
+    mustSupport: true
+  - id: Observation.category
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.category
+    slicing:
+      discriminator:
+      - type: pattern
+        path: $this
+      rules: open
+    short: (USCDI Requirement) Classification of  type of observation
+    mustSupport: true
+  - id: Observation.category:SocialHistory
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.category
+    sliceName: SocialHistory
+    short: (USCDI Requirement) Classification of  type of observation
+    min: 0
+    max: '1'
+    patternCodeableConcept:
+      coding:
+      - system: http://terminology.hl7.org/CodeSystem/observation-category
+        code: social-history
+    mustSupport: true
+  - id: Observation.code
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.code
+    short: (USCDI Requirement) Pregnancy Status
+    patternCodeableConcept:
+      coding:
+      - system: http://loinc.org
+        code: 86645-9
+    mustSupport: true
+  - id: Observation.subject
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.subject
+    short: (USCDI Requirement) Who and/or what the observation is about
+    min: 1
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+    mustSupport: true
+  - id: Observation.effectiveDateTime
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.effectiveDateTime
+    short: (USCDI Requirement) Clinically relevant time/time-period for observation
+    min: 1
+    mustSupport: true
+  - id: Observation.valueCodeableConcept
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.valueCodeableConcept
+    short: (USCDI Requirement) Coded Responses from Pregnancy Intent Value Set
+    min: 1
+    type:
+    - code: CodeableConcept
+    mustSupport: true
+    binding:
+      strength: extensible
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-intent

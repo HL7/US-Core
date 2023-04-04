@@ -1,66 +1,59 @@
 resourceType: StructureDefinition
 id: us-core-birthsex
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex'
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
 version: 3.1.1
 name: USCoreBirthSexExtension
 title: US Core Birth Sex Extension
 status: active
-date: '2019-05-21'
+date: 2019-05-21
 publisher: HL7 US Realm Steering Committee
 contact:
-    - 
-        telecom:
-            - 
-                system: url
-                value: 'http://www.healthit.gov'
-description: "A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc). This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9)."
+- telecom:
+  - system: url
+    value: http://www.healthit.gov
+description: A code classifying the person's sex assigned at birth  as specified by
+  the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc).
+  This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9).
 jurisdiction:
-    - 
-        coding:
-            - 
-                system: 'urn:iso:std:iso:3166'
-                code: US
-                display: United States of America
+- coding:
+  - system: urn:iso:std:iso:3166
+    code: US
+    display: United States of America
 fhirVersion: 4.0.1
 kind: complex-type
 abstract: false
 context:
-    - 
-        type: element
-        expression: Patient
+- type: element
+  expression: Patient
 type: Extension
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
 derivation: constraint
 differential:
-    element:
-        - 
-            id: Extension
-            path: Extension
-            definition: "A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc)."
-            comment: "The codes required are intended to present birth sex (i.e., the sex recorded on the patient's birth certificate) and not gender identity or reassigned sex."
-            min: 0
-            max: '1'
-            isModifier: false
-            mapping:
-                - 
-                    identity: rim
-                    map: 'player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender'
-                - 
-                    identity: iso11179
-                    map: .patient.administrativeGenderCode
-        - 
-            id: Extension.url
-            path: Extension.url
-            fixedUri: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex'
-        - 
-            id: 'Extension.value[x]'
-            path: 'Extension.value[x]'
-            min: 1
-            max: '1'
-            type:
-                - 
-                    code: code
-            binding:
-                strength: required
-                description: Code for sex assigned at birth
-                valueSet: 'http://hl7.org/fhir/us/core/ValueSet/birthsex'
+  element:
+  - id: Extension
+    path: Extension
+    definition: A code classifying the person's sex assigned at birth  as specified
+      by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc).
+    comment: The codes required are intended to present birth sex (i.e., the sex recorded
+      on the patient's birth certificate) and not gender identity or reassigned sex.
+    min: 0
+    max: '1'
+    isModifier: false
+    mapping:
+    - identity: rim
+      map: player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender
+    - identity: iso11179
+      map: .patient.administrativeGenderCode
+  - id: Extension.url
+    path: Extension.url
+    fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
+  - id: Extension.value[x]
+    path: Extension.value[x]
+    min: 1
+    max: '1'
+    type:
+    - code: code
+    binding:
+      strength: required
+      description: Code for sex assigned at birth
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/birthsex

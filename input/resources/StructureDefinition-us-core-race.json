@@ -71,9 +71,15 @@
             },
             {
                 "id": "Extension.extension:ombCategory",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Extension.extension",
                 "sliceName": "ombCategory",
-                "short": "American Indian or Alaska Native|Asian|Black or African American|Native Hawaiian or Other Pacific Islander|White",
+                "short": "(USCDI Requirement) American Indian or Alaska Native|Asian|Black or African American|Native Hawaiian or Other Pacific Islander|White",
                 "definition": "The 5 race category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
                 "min": 0,
                 "max": "5",
@@ -167,9 +173,15 @@
             },
             {
                 "id": "Extension.extension:text",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Extension.extension",
                 "sliceName": "text",
-                "short": "Race Text",
+                "short": "(USCDI Requirement) Race Text",
                 "definition": "Plain text representation of the race concept(s).",
                 "min": 1,
                 "max": "1",

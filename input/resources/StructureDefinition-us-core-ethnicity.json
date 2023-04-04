@@ -71,9 +71,15 @@
             },
             {
                 "id": "Extension.extension:ombCategory",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Extension.extension",
                 "sliceName": "ombCategory",
-                "short": "Hispanic or Latino|Not Hispanic or Latino",
+                "short": "(USCDI Requirement) Hispanic or Latino|Not Hispanic or Latino",
                 "definition": "The 2 ethnicity category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
                 "min": 0,
                 "max": "1",
@@ -166,9 +172,15 @@
             },
             {
                 "id": "Extension.extension:text",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Extension.extension",
                 "sliceName": "text",
-                "short": "ethnicity Text",
+                "short": "(USCDI Requirement) ethnicity Text",
                 "definition": "Plain text representation of the ethnicity concept(s).",
                 "min": 1,
                 "max": "1",

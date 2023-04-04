@@ -27,13 +27,25 @@
             },
             {
                 "id": "Observation.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.code",
-                "short": "Oxygen Saturation by Pulse Oximetry",
+                "short": "(USCDI Requirement) Oxygen Saturation by Pulse Oximetry",
                 "comment": "The code (59408-5 Oxygen saturation in Arterial blood by Pulse oximetry) is included as an additional observation code to FHIR Core vital Oxygen Saturation code (2708-6 Oxygen saturation in Arterial blood).",
                 "mustSupport": true
             },
             {
                 "id": "Observation.code.coding",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.code.coding",
                 "slicing": {
                     "discriminator": [
@@ -44,12 +56,20 @@
                     ],
                     "rules": "open"
                 },
+                "short": "(USCDI Requirement) Code defined by a terminology system",
                 "mustSupport": true
             },
             {
                 "id": "Observation.code.coding:PulseOx",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.code.coding",
                 "sliceName": "PulseOx",
+                "short": "(USCDI Requirement) Code defined by a terminology system",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -65,8 +85,15 @@
             },
             {
                 "id": "Observation.code.coding:O2Sat",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.code.coding",
                 "sliceName": "O2Sat",
+                "short": "(USCDI Requirement) Code defined by a terminology system",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -82,28 +109,55 @@
             },
             {
                 "id": "Observation.valueQuantity",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueQuantity",
-                "short": "Oxygen Saturation by Pulse Oximetry Value",
+                "short": "(USCDI Requirement) Oxygen Saturation by Pulse Oximetry Value",
                 "definition": "The oxygen saturation by pulse oximetry value is expressed as a percentage (0-100) of the total hemoglobin content of the blood.",
                 "mustSupport": true
             },
             {
                 "id": "Observation.valueQuantity.value",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueQuantity.value",
+                "short": "(USCDI Requirement) Numerical value (with implicit precision)",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.valueQuantity.unit",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueQuantity.unit",
+                "short": "(USCDI Requirement) Unit representation",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.valueQuantity.system",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueQuantity.system",
+                "short": "(USCDI Requirement) System that defines coded unit form",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -116,7 +170,14 @@
             },
             {
                 "id": "Observation.valueQuantity.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueQuantity.code",
+                "short": "(USCDI Requirement) Coded form of the unit",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -129,9 +190,13 @@
             },
             {
                 "id": "Observation.component",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component",
-                "short": "Used when reporting flow rates or oxygen concentration.",
-                "definition": "Used when reporting flow rates or oxygen concentration.",
                 "slicing": {
                     "discriminator": [
                         {
@@ -141,20 +206,35 @@
                     ],
                     "rules": "open"
                 },
+                "short": "(USCDI Requirement) Used when reporting flow rates or oxygen concentration.",
+                "definition": "Used when reporting flow rates or oxygen concentration.",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:FlowRate",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component",
                 "sliceName": "FlowRate",
-                "short": "Inhaled oxygen flow rate",
+                "short": "(USCDI Requirement) Inhaled oxygen flow rate",
                 "min": 0,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:FlowRate.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.code",
+                "short": "(USCDI Requirement) Type of component observation (code / type)",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -172,26 +252,54 @@
             },
             {
                 "id": "Observation.component:FlowRate.valueQuantity",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.valueQuantity",
+                "short": "(USCDI Requirement) Vital Sign Component Value",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:FlowRate.valueQuantity.value",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.valueQuantity.value",
+                "short": "(USCDI Requirement) Numerical value (with implicit precision)",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:FlowRate.valueQuantity.unit",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.valueQuantity.unit",
+                "short": "(USCDI Requirement) Unit representation",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:FlowRate.valueQuantity.system",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.valueQuantity.system",
+                "short": "(USCDI Requirement) System that defines coded unit form",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -204,7 +312,14 @@
             },
             {
                 "id": "Observation.component:FlowRate.valueQuantity.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.valueQuantity.code",
+                "short": "(USCDI Requirement) Coded form of the unit",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -217,16 +332,29 @@
             },
             {
                 "id": "Observation.component:Concentration",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component",
                 "sliceName": "Concentration",
-                "short": "Inhaled oxygen concentration",
+                "short": "(USCDI Requirement) Inhaled oxygen concentration",
                 "min": 0,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:Concentration.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.code",
+                "short": "(USCDI Requirement) Type of component observation (code / type)",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -244,26 +372,54 @@
             },
             {
                 "id": "Observation.component:Concentration.valueQuantity",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.valueQuantity",
+                "short": "(USCDI Requirement) Vital Sign Component Value",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:Concentration.valueQuantity.value",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.valueQuantity.value",
+                "short": "(USCDI Requirement) Numerical value (with implicit precision)",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:Concentration.valueQuantity.unit",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.valueQuantity.unit",
+                "short": "(USCDI Requirement) Unit representation",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:Concentration.valueQuantity.system",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.valueQuantity.system",
+                "short": "(USCDI Requirement) System that defines coded unit form",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -276,7 +432,14 @@
             },
             {
                 "id": "Observation.component:Concentration.valueQuantity.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.valueQuantity.code",
+                "short": "(USCDI Requirement) Coded form of the unit",
                 "min": 1,
                 "max": "1",
                 "type": [

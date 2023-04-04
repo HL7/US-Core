@@ -102,6 +102,30 @@ definition:
     exampleBoolean: false
     name: US Core Sex for Clinical Use
   - reference:
+      reference: StructureDefinition/pediatric-bmi-for-age
+    description: To promote interoperability and adoption through common implementation,
+      this profile sets minimum expectations for the Observation resource to record,
+      search, and fetch pediatric body mass index (BMI) percentile per age and sex
+      for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units
+      of measure. It is based on the US Core Vital Signs Profile and identifies the
+      *additional* mandatory core elements, extensions, vocabularies and value sets
+      which **SHALL** be present in the Observation resource when using this profile.
+      It provides the floor for standards development for specific use cases.
+    exampleBoolean: false
+    name: US Core Pediatric BMI for Age Observation Profile
+  - reference:
+      reference: StructureDefinition/pediatric-weight-for-height
+    description: To promote interoperability and adoption through common implementation,
+      this profile sets minimum expectations for the Observation resource to record,
+      search, and fetch  pediatric weight-for-length per age and gender observations
+      in FHIR with a standard LOINC code and UCUM units of measure. It is based on
+      the US Core Vital Signs Profile and identifies the *additional* mandatory core
+      elements, extensions, vocabularies and value sets which **SHALL** be present
+      in the Observation resource when using this profile. It provides the floor for
+      standards development for specific use cases.
+    exampleBoolean: false
+    name: US Core Pediatric Weight for Height Observation Profile
+  - reference:
       reference: StructureDefinition/us-core-allergyintolerance
     description: To promote interoperability and adoption through common implementation,
       this profile sets minimum expectations for the AllergyIntolerance resource to
@@ -236,7 +260,7 @@ definition:
       Resource and implements the US Core Data for Interoperability (USCDI) v3 Health
       Insurance Information requirements. To promote interoperability and adoption
       through common implementation, this profile sets minimum expectations for the
-      Observation resource to record, search, and fetch the "data related to an individual's
+      Coverage resource to record, search, and fetch the "data related to an individual's
       insurance coverage for health care". It identifies which core elements, extensions,
       vocabularies, and value sets **SHALL** be present in the resource when using
       this profile. It provides the floor for standards development for specific use
@@ -481,9 +505,9 @@ definition:
     name: US Core Laboratory Result Observation Profile
   - reference:
       reference: StructureDefinition/us-core-observation-occupation
-    description: The US Core Occupation Status Observation Profile is based upon the
-      core FHIR Observation Resource and implements the US Core Data for Interoperability
-      (USCDI) v3 Occupation status requirements. To promote interoperability and adoption
+    description: The US Core Occupation Observation Profile is based upon the core
+      FHIR Observation Resource and implements the US Core Data for Interoperability
+      (USCDI) v3 Occupation requirements. To promote interoperability and adoption
       through common implementation, this profile sets minimum expectations for the
       Observation resource to record, search, and fetch the "Type of work of a person"
       and "Type of business that compensates for work or assigns work to an unpaid
@@ -557,30 +581,6 @@ definition:
       standards development for specific use cases.
     exampleBoolean: false
     name: US Core Organization Profile
-  - reference:
-      reference: StructureDefinition/pediatric-bmi-for-age
-    description: To promote interoperability and adoption through common implementation,
-      this profile sets minimum expectations for the Observation resource to record,
-      search, and fetch pediatric body mass index (BMI) percentile per age and sex
-      for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units
-      of measure. It is based on the US Core Vital Signs Profile and identifies the
-      *additional* mandatory core elements, extensions, vocabularies and value sets
-      which **SHALL** be present in the Observation resource when using this profile.
-      It provides the floor for standards development for specific use cases.
-    exampleBoolean: false
-    name: US Core Pediatric BMI for Age Observation Profile
-  - reference:
-      reference: StructureDefinition/pediatric-weight-for-height
-    description: To promote interoperability and adoption through common implementation,
-      this profile sets minimum expectations for the Observation resource to record,
-      search, and fetch  pediatric weight-for-length per age and gender observations
-      in FHIR with a standard LOINC code and UCUM units of measure. It is based on
-      the US Core Vital Signs Profile and identifies the *additional* mandatory core
-      elements, extensions, vocabularies and value sets which **SHALL** be present
-      in the Observation resource when using this profile. It provides the floor for
-      standards development for specific use cases.
-    exampleBoolean: false
-    name: US Core Pediatric Weight for Height Observation Profile
   - reference:
       reference: StructureDefinition/us-core-practitioner
     description: This profile sets minimum expectations for the Practitioner resource
@@ -748,6 +748,14 @@ definition:
       associates and, optionally, whether they are enrolled.
     exampleBoolean: false
     name: US Core Tribal Affiliation Extension
+  - reference:
+      reference: StructureDefinition/uscdi-requirement
+    description: '**This extension is only used on US Core Profile StructureDefinition
+      elements.** It flags elements that are ONC USCDI Requirements for certified
+      systems. See the [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html)
+      for more information.'
+    exampleBoolean: false
+    name: US Core USCDI Requirement Extension
   - reference:
       reference: StructureDefinition/us-core-vital-signs
     description: To promote interoperability and adoption through common implementation,
@@ -2489,6 +2497,13 @@ definition:
     name: QuestionnaireResponse AHC HRSN Screening Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
   - reference:
+      reference: QuestionnaireResponse/prapare-example
+    description: This is the QuestionnaireResponse example that is referenced by the
+      *US Core Observation Screening Assessment Profile* PRAPARE examples. This example
+      is generated using the LHC-Forms SDC Questionnaire App.
+    name: QuestionnaireResponse PRAPARE Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
+  - reference:
       reference: QuestionnaireResponse/glascow-coma-score
     description: This example of a US Core QuestionnaireResponse references a non-FHIR
       survey instrument (in this case a pdf) instead of a FHIR Questionnaire.
@@ -2509,13 +2524,6 @@ definition:
       defined in LOINC (code 44249-1). The example is generated using the LHC-Forms
       SDC Questionnaire App.
     name: QuestionnaireResponse PHQ-9 Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
-  - reference:
-      reference: QuestionnaireResponse/prapare-example
-    description: This is the QuestionnaireResponse example that is referenced by the
-      *US Core Observation Screening Assessment Profile* PRAPARE examples. This example
-      is generated using the LHC-Forms SDC Questionnaire App.
-    name: QuestionnaireResponse PRAPARE Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
   - reference:
       reference: AllergyIntolerance/example

@@ -1,137 +1,184 @@
 resourceType: StructureDefinition
 id: us-core-condition-encounter-diagnosis
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis'
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis
 name: USCoreConditionEncounterDiagnosisProfile
 title: US Core Condition Encounter Diagnosis Profile
 status: active
 experimental: false
-date: '2022-04-20'
-description: >-
-  The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 *Encounter Diagnosis* requirements.   In version 5.0.0, The US Core Condition Profile has been split into the US Core Condition Encounter Diagnosis Profile and US Core Condition Problems and Health Concerns Profile. To promote interoperability and adoption through common implementation, this profile defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.
+date: 2022-04-20
+description: The US Core Condition Encounter Diagnosis Profile is based upon the core
+  FHIR Condition Resource and meets the U.S. Core Data for Interoperability (USCDI)
+  v2 *Encounter Diagnosis* requirements.   In version 5.0.0, The US Core Condition
+  Profile has been split into the US Core Condition Encounter Diagnosis Profile and
+  US Core Condition Problems and Health Concerns Profile. To promote interoperability
+  and adoption through common implementation, this profile defines constraints and
+  extensions on the Condition resource for the minimal set of data to record, search,
+  and fetch information about an encounter diagnosis.  It identifies which core elements,
+  extensions, vocabularies, and value sets **SHALL** be present in the resource when
+  using this profile.  It provides the floor for standards development for specific
+  use cases.
 kind: resource
 abstract: false
 type: Condition
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Condition'
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Condition
 derivation: constraint
 differential:
   element:
-    - id: Condition
-      path: Condition
-      definition: '\-'
-      comment: '\-'
-      mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Condition
-    - id: 'Condition.extension:assertedDate'
-      path: Condition.extension
-      sliceName: assertedDate
-      max: '1'
-      type:
-        - code: Extension
-          profile:
-            - 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate'
-      mustSupport: true
-    - id: Condition.clinicalStatus
-      path: Condition.clinicalStatus
-      mustSupport: true
-      binding:
-        strength: required
-        valueSet: 'http://hl7.org/fhir/ValueSet/condition-clinical'
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Condition.clinicalStatus
-    - id: Condition.verificationStatus
-      path: Condition.verificationStatus
-      mustSupport: true
-      binding:
-        strength: required
-        valueSet: 'http://hl7.org/fhir/ValueSet/condition-ver-status'
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Condition.verificationStatus
-    - id: Condition.category
-      path: Condition.category
-      short: category codes
-      slicing:
-        discriminator:
-          - type: pattern
-            path: $this
-        rules: open
-      min: 1
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Condition.category
-    - id: 'Condition.category:us-core'
-      path: Condition.category
-      short: encounter-diagnosis
-      sliceName: us-core
-      min: 1
-
-      max: "1"
-      patternCodeableConcept:
-        coding:
-          - system: 'http://terminology.hl7.org/CodeSystem/condition-category'
-            code: encounter-diagnosis  #A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter.
-      mustSupport: true
-
-    - id: Condition.code
-      path: Condition.code
-      min: 1
-      mustSupport: true
-      binding:
-        strength: extensible
-        description: Valueset to describe the actual problem experienced by the patient
-        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code'
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Condition.code
-    - id: Condition.subject
-      path: Condition.subject
-      type:
-        - code: Reference
-          targetProfile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Condition.patient
-
-    - id: Condition.encounter
-      path: Condition.encounter
-      type:
-        - code: Reference
-          targetProfile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter'
-      mustSupport: true
-
-    - id: 'Condition.onset[x]'
-      path: 'Condition.onset[x]'
-      type:
-        - extension:
-            - url: >-
-                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-              valueBoolean: true
-          code: dateTime
-        - code: Age
-        - code: Period
-        - code: Range
-        - code: string
-      mustSupport: true
-    - id: 'Condition.abatement[x]'
-      path: 'Condition.abatement[x]'
-      type:
-        - extension:
-            - url: >-
-                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-              valueBoolean: true
-          code: dateTime
-        - code: Age
-        - code: Period
-        - code: Range
-        - code: string
-      mustSupport: true
-    - id: Condition.recordedDate
-      path: Condition.recordedDate
-      mustSupport: true
+  - id: Condition
+    path: Condition
+    definition: \-
+    comment: \-
+    mustSupport: false
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Condition
+  - id: Condition.extension:assertedDate
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Condition.extension
+    sliceName: assertedDate
+    short: (USCDI Requirement) Date the condition was first asserted
+    max: '1'
+    type:
+    - code: Extension
+      profile:
+      - http://hl7.org/fhir/StructureDefinition/condition-assertedDate
+    mustSupport: true
+  - id: Condition.clinicalStatus
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Condition.clinicalStatus
+    short: (USCDI Requirement) active | recurrence | relapse | inactive | remission
+      | resolved
+    mustSupport: true
+    binding:
+      strength: required
+      valueSet: http://hl7.org/fhir/ValueSet/condition-clinical
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Condition.clinicalStatus
+  - id: Condition.verificationStatus
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Condition.verificationStatus
+    short: (USCDI Requirement) unconfirmed | provisional | differential | confirmed
+      | refuted | entered-in-error
+    mustSupport: true
+    binding:
+      strength: required
+      valueSet: http://hl7.org/fhir/ValueSet/condition-ver-status
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Condition.verificationStatus
+  - id: Condition.category
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Condition.category
+    slicing:
+      discriminator:
+      - type: pattern
+        path: $this
+      rules: open
+    short: (USCDI Requirement) category codes
+    min: 1
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Condition.category
+  - id: Condition.category:us-core
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Condition.category
+    sliceName: us-core
+    short: (USCDI Requirement) encounter-diagnosis
+    min: 1
+    max: '1'
+    patternCodeableConcept:
+      coding:
+      - system: http://terminology.hl7.org/CodeSystem/condition-category
+        code: encounter-diagnosis
+    mustSupport: true
+  - id: Condition.code
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Condition.code
+    short: (USCDI Requirement) Identification of the condition, problem or diagnosis
+    min: 1
+    mustSupport: true
+    binding:
+      strength: extensible
+      description: Valueset to describe the actual problem experienced by the patient
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Condition.code
+  - id: Condition.subject
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Condition.subject
+    short: (USCDI Requirement) Who has the condition?
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Condition.patient
+  - id: Condition.encounter
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Condition.encounter
+    short: (USCDI Requirement) Encounter created as part of
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+    mustSupport: true
+  - id: Condition.onset[x]
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Condition.onset[x]
+    short: (USCDI Requirement) Estimated or actual date,  date-time, or age
+    type:
+    - extension:
+      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+        valueBoolean: true
+      code: dateTime
+    - code: Age
+    - code: Period
+    - code: Range
+    - code: string
+    mustSupport: true
+  - id: Condition.abatement[x]
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Condition.abatement[x]
+    short: (USCDI Requirement) When in resolution/remission
+    type:
+    - extension:
+      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+        valueBoolean: true
+      code: dateTime
+    - code: Age
+    - code: Period
+    - code: Range
+    - code: string
+    mustSupport: true
+  - id: Condition.recordedDate
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Condition.recordedDate
+    short: (USCDI Requirement) Date record was first recorded
+    mustSupport: true

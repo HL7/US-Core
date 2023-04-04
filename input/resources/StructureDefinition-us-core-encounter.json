@@ -25,12 +25,26 @@
             },
             {
                 "id": "Encounter.identifier",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.identifier",
+                "short": "(USCDI Requirement) Identifier(s) by which this encounter is known",
                 "mustSupport": true
             },
             {
                 "id": "Encounter.identifier.system",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.identifier.system",
+                "short": "(USCDI Requirement) The namespace for the identifier value",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -42,7 +56,14 @@
             },
             {
                 "id": "Encounter.identifier.value",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.identifier.value",
+                "short": "(USCDI Requirement) The value that is unique",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -54,17 +75,38 @@
             },
             {
                 "id": "Encounter.status",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.status",
+                "short": "(USCDI Requirement) planned | arrived | triaged | in-progress | onleave | finished | cancelled +",
                 "mustSupport": true
             },
             {
                 "id": "Encounter.class",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.class",
+                "short": "(USCDI Requirement) Classification of patient encounter",
                 "mustSupport": true
             },
             {
                 "id": "Encounter.type",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.type",
+                "short": "(USCDI Requirement) Specific type of encounter",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -75,7 +117,14 @@
             },
             {
                 "id": "Encounter.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.subject",
+                "short": "(USCDI Requirement) The patient or group present at the encounter",
                 "min": 1,
                 "type": [
                     {
@@ -89,22 +138,50 @@
             },
             {
                 "id": "Encounter.participant",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.participant",
+                "short": "(USCDI Requirement) List of participants involved in the encounter",
                 "mustSupport": true
             },
             {
                 "id": "Encounter.participant.type",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.participant.type",
+                "short": "(USCDI Requirement) Role of participant in encounter",
                 "mustSupport": true
             },
             {
                 "id": "Encounter.participant.period",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.participant.period",
+                "short": "(USCDI Requirement) Period of time during the encounter that the participant participated",
                 "mustSupport": true
             },
             {
                 "id": "Encounter.participant.individual",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.participant.individual",
+                "short": "(USCDI Requirement) Persons involved in the encounter other than the patient",
                 "type": [
                     {
                         "code": "Reference",
@@ -145,17 +222,38 @@
             },
             {
                 "id": "Encounter.period",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.period",
+                "short": "(USCDI Requirement) The start and end time of the encounter",
                 "mustSupport": true
             },
             {
                 "id": "Encounter.reasonCode",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.reasonCode",
+                "short": "(USCDI Requirement) Coded reason the encounter takes place",
                 "mustSupport": true
             },
             {
                 "id": "Encounter.reasonReference",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.reasonReference",
+                "short": "(USCDI Requirement) Reason the encounter takes place (reference)",
                 "max": "*",
                 "type": [
                     {
@@ -215,32 +313,67 @@
             },
             {
                 "id": "Encounter.hospitalization",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.hospitalization",
+                "short": "(USCDI Requirement) Details about the admission to a healthcare service",
                 "mustSupport": true
             },
             {
                 "id": "Encounter.hospitalization.dischargeDisposition",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.hospitalization.dischargeDisposition",
+                "short": "(USCDI Requirement) Category or kind of location after discharge",
+                "mustSupport": true,
                 "binding": {
                     "strength": "preferred",
                     "description": "[National Uniform Billing Committee](http://www.nubc.org/), manual UB-04, UB form locator 17",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition"
-                },
-                "mustSupport": true
+                }
             },
             {
                 "id": "Encounter.location",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.location",
+                "short": "(USCDI Requirement) List of locations where the patient has been",
                 "mustSupport": true
             },
             {
                 "id": "Encounter.location.location",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.location.location",
+                "short": "(USCDI Requirement) Location the encounter takes place",
                 "mustSupport": true
             },
             {
                 "id": "Encounter.serviceProvider",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Encounter.serviceProvider",
+                "short": "(USCDI Requirement) The organization (facility) responsible for this encounter",
                 "type": [
                     {
                         "code": "Reference",

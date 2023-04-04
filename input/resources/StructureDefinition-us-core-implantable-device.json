@@ -33,7 +33,14 @@
             },
             {
                 "id": "Device.udiCarrier",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.udiCarrier",
+                "short": "(USCDI Requirement) Unique Device Identifier (UDI) Barcode string",
                 "comment": "Some devices may not have UDI information (for example. historical data or patient reported data).",
                 "max": "1",
                 "mustSupport": true,
@@ -46,7 +53,14 @@
             },
             {
                 "id": "Device.udiCarrier.deviceIdentifier",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.udiCarrier.deviceIdentifier",
+                "short": "(USCDI Requirement) Mandatory fixed portion of UDI",
                 "min": 1,
                 "mustSupport": true,
                 "mapping": [
@@ -58,7 +72,14 @@
             },
             {
                 "id": "Device.udiCarrier.carrierHRF",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.udiCarrier.carrierHRF",
+                "short": "(USCDI Requirement) UDI Human Readable Barcode String",
                 "alias": [
                     "UDI",
                     "Barcode String"
@@ -73,7 +94,14 @@
             },
             {
                 "id": "Device.distinctIdentifier",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.distinctIdentifier",
+                "short": "(USCDI Requirement) The distinct identification string",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -84,7 +112,14 @@
             },
             {
                 "id": "Device.manufactureDate",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.manufactureDate",
+                "short": "(USCDI Requirement) Date when the device was made",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -95,7 +130,14 @@
             },
             {
                 "id": "Device.expirationDate",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.expirationDate",
+                "short": "(USCDI Requirement) Date and time of expiry of this device (if applicable)",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -106,7 +148,14 @@
             },
             {
                 "id": "Device.lotNumber",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.lotNumber",
+                "short": "(USCDI Requirement) Lot number of manufacture",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -117,7 +166,14 @@
             },
             {
                 "id": "Device.serialNumber",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.serialNumber",
+                "short": "(USCDI Requirement) Serial number assigned by the manufacturer",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -128,7 +184,14 @@
             },
             {
                 "id": "Device.type",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.type",
+                "short": "(USCDI Requirement) The kind or type of device",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -145,7 +208,14 @@
             },
             {
                 "id": "Device.patient",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Device.patient",
+                "short": "(USCDI Requirement) Patient to whom Device is affixed",
                 "min": 1,
                 "type": [
                     {

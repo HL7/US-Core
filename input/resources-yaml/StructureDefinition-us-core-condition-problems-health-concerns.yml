@@ -37,8 +37,12 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Condition
   - id: Condition.extension:assertedDate
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.extension
     sliceName: assertedDate
+    short: (USCDI Requirement) Date the condition was first asserted
     max: '1'
     type:
     - code: Extension
@@ -46,7 +50,12 @@ differential:
       - http://hl7.org/fhir/StructureDefinition/condition-assertedDate
     mustSupport: true
   - id: Condition.clinicalStatus
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.clinicalStatus
+    short: (USCDI Requirement) active | recurrence | relapse | inactive | remission
+      | resolved
     mustSupport: true
     binding:
       strength: required
@@ -55,7 +64,12 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Condition.clinicalStatus
   - id: Condition.verificationStatus
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.verificationStatus
+    short: (USCDI Requirement) unconfirmed | provisional | differential | confirmed
+      | refuted | entered-in-error
     mustSupport: true
     binding:
       strength: required
@@ -64,22 +78,28 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Condition.verificationStatus
   - id: Condition.category
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.category
     slicing:
       discriminator:
       - type: pattern
         path: $this
       rules: open
-    short: category codes
+    short: (USCDI Requirement) category codes
     min: 1
     mustSupport: true
     mapping:
     - identity: argonaut-dq-dstu2
       map: Condition.category
   - id: Condition.category:us-core
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.category
     sliceName: us-core
-    short: problem-list-item | health-concern
+    short: (USCDI Requirement) problem-list-item | health-concern
     min: 1
     mustSupport: true
     binding:
@@ -88,8 +108,12 @@ differential:
         Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-problem-or-health-concern
   - id: Condition.category:sdoh
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.category
     sliceName: sdoh
+    short: (USCDI Requirement) problem-list-item | encounter-diagnosis
     min: 0
     max: '1'
     patternCodeableConcept:
@@ -98,7 +122,11 @@ differential:
         code: sdoh
     mustSupport: true
   - id: Condition.code
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.code
+    short: (USCDI Requirement) Identification of the condition, problem or diagnosis
     min: 1
     mustSupport: true
     binding:
@@ -109,7 +137,11 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Condition.code
   - id: Condition.subject
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.subject
+    short: (USCDI Requirement) Who has the condition?
     type:
     - code: Reference
       targetProfile:
@@ -119,7 +151,11 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Condition.patient
   - id: Condition.onset[x]
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.onset[x]
+    short: (USCDI Requirement) Estimated or actual date,  date-time, or age
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -131,7 +167,11 @@ differential:
     - code: string
     mustSupport: true
   - id: Condition.abatement[x]
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.abatement[x]
+    short: (USCDI Requirement) When in resolution/remission
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -143,5 +183,9 @@ differential:
     - code: string
     mustSupport: true
   - id: Condition.recordedDate
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Condition.recordedDate
+    short: (USCDI Requirement) Date record was first recorded
     mustSupport: true

@@ -24,11 +24,24 @@
             },
             {
                 "id": "Observation.status",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.status",
+                "short": "(USCDI Requirement) registered | preliminary | final | amended +",
                 "mustSupport": true
             },
             {
                 "id": "Observation.category",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.category",
                 "slicing": {
                     "discriminator": [
@@ -39,13 +52,21 @@
                     ],
                     "rules": "open"
                 },
+                "short": "(USCDI Requirement) Classification of  type of observation",
                 "min": 1,
                 "mustSupport": true
             },
             {
                 "id": "Observation.category:us-core",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.category",
                 "sliceName": "us-core",
+                "short": "(USCDI Requirement) Classification of  type of observation",
                 "min": 0,
                 "mustSupport": true,
                 "binding": {
@@ -56,7 +77,14 @@
             },
             {
                 "id": "Observation.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.code",
+                "short": "(USCDI Requirement) Type of observation (code / type)",
                 "mustSupport": true,
                 "binding": {
                     "strength": "preferred"
@@ -64,7 +92,14 @@
             },
             {
                 "id": "Observation.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.subject",
+                "short": "(USCDI Requirement) Who and/or what the observation is about",
                 "min": 1,
                 "type": [
                     {
@@ -78,7 +113,14 @@
             },
             {
                 "id": "Observation.effective[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.effective[x]",
+                "short": "(USCDI Requirement) Clinically relevant time/time-period for observation",
                 "definition": "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\".",
                 "comment": "At least a date should be present unless this observation is a historical report.",
                 "type": [
@@ -105,7 +147,14 @@
             },
             {
                 "id": "Observation.performer",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.performer",
+                "short": "(USCDI Requirement) Who is responsible for the observation",
                 "type": [
                     {
                         "code": "Reference",
@@ -173,7 +222,14 @@
             },
             {
                 "id": "Observation.value[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.value[x]",
+                "short": "(USCDI Requirement) Actual result",
                 "type": [
                     {
                         "extension": [
@@ -237,8 +293,14 @@
             },
             {
                 "id": "Observation.derivedFrom",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.derivedFrom",
-                "short": "Related Observation(s) or other resource the observation is made from",
+                "short": "(USCDI Requirement) Related Observation(s) or other resource the observation is made from",
                 "definition": "Observations or or other resource such as a QuestionnaireResponse from which this observation value is derived.",
                 "type": [
                     {

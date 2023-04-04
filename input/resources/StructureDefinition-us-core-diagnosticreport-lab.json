@@ -43,7 +43,14 @@
             },
             {
                 "id": "DiagnosticReport.status",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DiagnosticReport.status",
+                "short": "(USCDI Requirement) registered | partial | preliminary | final +",
                 "condition": [
                     "us-core-8",
                     "us-core-9"
@@ -56,6 +63,12 @@
             },
             {
                 "id": "DiagnosticReport.category",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DiagnosticReport.category",
                 "slicing": {
                     "discriminator": [
@@ -66,13 +79,21 @@
                     ],
                     "rules": "open"
                 },
+                "short": "(USCDI Requirement) Service category",
                 "min": 1,
                 "mustSupport": true
             },
             {
                 "id": "DiagnosticReport.category:LaboratorySlice",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DiagnosticReport.category",
                 "sliceName": "LaboratorySlice",
+                "short": "(USCDI Requirement) Service category",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -87,8 +108,14 @@
             },
             {
                 "id": "DiagnosticReport.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DiagnosticReport.code",
-                "short": "US Core Laboratory Report Order Code",
+                "short": "(USCDI Requirement) US Core Laboratory Report Order Code",
                 "definition": "The test, panel or battery that was ordered.",
                 "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
                 "mustSupport": true,
@@ -100,7 +127,14 @@
             },
             {
                 "id": "DiagnosticReport.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DiagnosticReport.subject",
+                "short": "(USCDI Requirement) The subject of the report - usually, but not always, the patient",
                 "min": 1,
                 "type": [
                     {
@@ -114,8 +148,14 @@
             },
             {
                 "id": "DiagnosticReport.effective[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DiagnosticReport.effective[x]",
-                "short": "Diagnostically relevant time (typically the time of specimen collection)",
+                "short": "(USCDI Requirement) Diagnostically relevant time (typically the time of specimen collection)",
                 "type": [
                     {
                         "extension": [
@@ -137,8 +177,14 @@
             },
             {
                 "id": "DiagnosticReport.issued",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DiagnosticReport.issued",
-                "short": "When the report was released",
+                "short": "(USCDI Requirement) When the report was released",
                 "condition": [
                     "us-core-9"
                 ],
@@ -146,7 +192,14 @@
             },
             {
                 "id": "DiagnosticReport.performer",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DiagnosticReport.performer",
+                "short": "(USCDI Requirement) Responsible Diagnostic Service",
                 "type": [
                     {
                         "code": "Reference",
@@ -196,7 +249,14 @@
             },
             {
                 "id": "DiagnosticReport.result",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DiagnosticReport.result",
+                "short": "(USCDI Requirement) Observations",
                 "type": [
                     {
                         "code": "Reference",

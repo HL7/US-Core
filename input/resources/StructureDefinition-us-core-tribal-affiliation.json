@@ -47,9 +47,15 @@
             },
             {
                 "id": "Extension.extension:tribalAffiliation",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Extension.extension",
                 "sliceName": "tribalAffiliation",
-                "short": "Affiliated tribe or band name",
+                "short": "(USCDI Requirement) Affiliated tribe or band name",
                 "definition": "Affiliated tribe or band name",
                 "min": 1,
                 "max": "1",

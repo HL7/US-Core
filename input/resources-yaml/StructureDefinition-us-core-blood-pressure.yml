@@ -1,154 +1,215 @@
 resourceType: StructureDefinition
 id: us-core-blood-pressure
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure'
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure
 version: 3.2.0
 name: USCoreBloodPressureProfile
 title: US Core Blood Pressure Profile
 status: active
 experimental: false
-date: '2022-04-20'
-
-description: >-
-  To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.
-
-copyright: >-
-  Used by permission of HL7 International, all rights reserved Creative Commons
+date: 2022-04-20
+description: To promote interoperability and adoption through common implementation,
+  this profile sets minimum expectations for the Observation resource to record, search,
+  and fetch diastolic and systolic blood pressure observations with standard LOINC
+  codes and UCUM units of measure. It is based on the US Core Vital Signs Profile
+  and identifies the *additional* mandatory core elements, extensions, vocabularies
+  and value sets which **SHALL** be present in the Observation resource when using
+  this profile. It provides the floor for standards development for specific use cases.
+copyright: Used by permission of HL7 International, all rights reserved Creative Commons
   License
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
 type: Observation
-baseDefinition: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs'
+baseDefinition: http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs
 derivation: constraint
 differential:
   element:
-    - id: Observation
-      path: Observation
-      short: US Core Blood Pressure Profile
-      definition: '\-'
-      comment: '\-'
-    - id: Observation.code
-      path: Observation.code
-      short: Blood Pressure
-      type:
-        - code: CodeableConcept
-      patternCodeableConcept:
-        coding:
-          - system: 'http://loinc.org'
-            code: 85354-9
-      mustSupport: true
-    - id: Observation.component
-      path: Observation.component
-      slicing:
-        discriminator:
-          - type: pattern
-            path: code
-        ordered: false
-        rules: open
-      min: 2
-      max: '*'
-      mustSupport: true
-    - id: 'Observation.component:systolic'
-      path: Observation.component
-      sliceName: systolic
-      short: Systolic Blood Pressure
-      min: 1
-      max: '1'
-      mustSupport: true
-    - id: 'Observation.component:systolic.code'
-      path: Observation.component.code
-      short: Systolic Blood Pressure Code
-      min: 1
-      max: '1'
-      patternCodeableConcept:
-        coding:
-          - system: 'http://loinc.org'
-            code: 8480-6
-      mustSupport: true
-    - id: 'Observation.component:systolic.valueQuantity'
-      path: Observation.component.valueQuantity
-      type:
-        - code: Quantity
-      mustSupport: true
-    - id: 'Observation.component:systolic.valueQuantity.value'
-      path: Observation.component.valueQuantity.value
-      min: 1
-      max: '1'
-      type:
-        - code: decimal
-      mustSupport: true
-    - id: 'Observation.component:systolic.valueQuantity.unit'
-      path: Observation.component.valueQuantity.unit
-      min: 1
-      max: '1'
-      type:
-        - code: string
-      mustSupport: true
-    - id: 'Observation.component:systolic.valueQuantity.system'
-      path: Observation.component.valueQuantity.system
-      min: 1
-      max: '1'
-      type:
-        - code: uri
-      fixedUri: 'http://unitsofmeasure.org'
-      mustSupport: true
-    - id: 'Observation.component:systolic.valueQuantity.code'
-      path: Observation.component.valueQuantity.code
-      min: 1
-      max: '1'
-      type:
-        - code: code
-      fixedCode: 'mm[Hg]'
-      mustSupport: true
-    - id: 'Observation.component:diastolic'
-      path: Observation.component
-      sliceName: diastolic
-      short: Diastolic Blood Pressure
-      min: 1
-      max: '1'
-      mustSupport: true
-    - id: 'Observation.component:diastolic.code'
-      path: Observation.component.code
-      short: Diastolic Blood Pressure Code
-      min: 1
-      max: '1'
-      patternCodeableConcept:
-        coding:
-          - system: 'http://loinc.org'
-            code: 8462-4
-      mustSupport: true
-    - id: 'Observation.component:diastolic.valueQuantity'
-      path: Observation.component.valueQuantity
-      type:
-        - code: Quantity
-      mustSupport: true
-    - id: 'Observation.component:diastolic.valueQuantity.value'
-      path: Observation.component.valueQuantity.value
-      min: 1
-      max: '1'
-      type:
-        - code: decimal
-      mustSupport: true
-    - id: 'Observation.component:diastolic.valueQuantity.unit'
-      path: Observation.component.valueQuantity.unit
-      min: 1
-      max: '1'
-      type:
-        - code: string
-      mustSupport: true
-    - id: 'Observation.component:diastolic.valueQuantity.system'
-      path: Observation.component.valueQuantity.system
-      min: 1
-      max: '1'
-      type:
-        - code: uri
-      fixedUri: 'http://unitsofmeasure.org'
-      mustSupport: true
-    - id: 'Observation.component:diastolic.valueQuantity.code'
-      path: Observation.component.valueQuantity.code
-      min: 1
-      max: '1'
-      type:
-        - code: code
-      fixedCode: 'mm[Hg]'
-      mustSupport: true
+  - id: Observation
+    path: Observation
+    short: US Core Blood Pressure Profile
+    definition: \-
+    comment: \-
+  - id: Observation.code
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.code
+    short: (USCDI Requirement) Blood Pressure
+    type:
+    - code: CodeableConcept
+    patternCodeableConcept:
+      coding:
+      - system: http://loinc.org
+        code: 85354-9
+    mustSupport: true
+  - id: Observation.component
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component
+    slicing:
+      discriminator:
+      - type: pattern
+        path: code
+      ordered: false
+      rules: open
+    short: (USCDI Requirement) Component observations
+    min: 2
+    max: '*'
+    mustSupport: true
+  - id: Observation.component:systolic
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component
+    sliceName: systolic
+    short: (USCDI Requirement) Systolic Blood Pressure
+    min: 1
+    max: '1'
+    mustSupport: true
+  - id: Observation.component:systolic.code
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.code
+    short: (USCDI Requirement) Systolic Blood Pressure Code
+    min: 1
+    max: '1'
+    patternCodeableConcept:
+      coding:
+      - system: http://loinc.org
+        code: 8480-6
+    mustSupport: true
+  - id: Observation.component:systolic.valueQuantity
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.valueQuantity
+    short: (USCDI Requirement) Vital Sign Component Value
+    type:
+    - code: Quantity
+    mustSupport: true
+  - id: Observation.component:systolic.valueQuantity.value
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.valueQuantity.value
+    short: (USCDI Requirement) Numerical value (with implicit precision)
+    min: 1
+    max: '1'
+    type:
+    - code: decimal
+    mustSupport: true
+  - id: Observation.component:systolic.valueQuantity.unit
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.valueQuantity.unit
+    short: (USCDI Requirement) Unit representation
+    min: 1
+    max: '1'
+    type:
+    - code: string
+    mustSupport: true
+  - id: Observation.component:systolic.valueQuantity.system
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.valueQuantity.system
+    short: (USCDI Requirement) System that defines coded unit form
+    min: 1
+    max: '1'
+    type:
+    - code: uri
+    fixedUri: http://unitsofmeasure.org
+    mustSupport: true
+  - id: Observation.component:systolic.valueQuantity.code
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.valueQuantity.code
+    short: (USCDI Requirement) Coded form of the unit
+    min: 1
+    max: '1'
+    type:
+    - code: code
+    fixedCode: mm[Hg]
+    mustSupport: true
+  - id: Observation.component:diastolic
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component
+    sliceName: diastolic
+    short: (USCDI Requirement) Diastolic Blood Pressure
+    min: 1
+    max: '1'
+    mustSupport: true
+  - id: Observation.component:diastolic.code
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.code
+    short: (USCDI Requirement) Diastolic Blood Pressure Code
+    min: 1
+    max: '1'
+    patternCodeableConcept:
+      coding:
+      - system: http://loinc.org
+        code: 8462-4
+    mustSupport: true
+  - id: Observation.component:diastolic.valueQuantity
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.valueQuantity
+    short: (USCDI Requirement) Vital Sign Component Value
+    type:
+    - code: Quantity
+    mustSupport: true
+  - id: Observation.component:diastolic.valueQuantity.value
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.valueQuantity.value
+    short: (USCDI Requirement) Numerical value (with implicit precision)
+    min: 1
+    max: '1'
+    type:
+    - code: decimal
+    mustSupport: true
+  - id: Observation.component:diastolic.valueQuantity.unit
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.valueQuantity.unit
+    short: (USCDI Requirement) Unit representation
+    min: 1
+    max: '1'
+    type:
+    - code: string
+    mustSupport: true
+  - id: Observation.component:diastolic.valueQuantity.system
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.valueQuantity.system
+    short: (USCDI Requirement) System that defines coded unit form
+    min: 1
+    max: '1'
+    type:
+    - code: uri
+    fixedUri: http://unitsofmeasure.org
+    mustSupport: true
+  - id: Observation.component:diastolic.valueQuantity.code
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.component.valueQuantity.code
+    short: (USCDI Requirement) Coded form of the unit
+    min: 1
+    max: '1'
+    type:
+    - code: code
+    fixedCode: mm[Hg]
+    mustSupport: true

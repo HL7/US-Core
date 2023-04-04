@@ -33,11 +33,24 @@
             },
             {
                 "id": "Observation.status",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.status",
+                "short": "(USCDI Requirement) registered | preliminary | final | amended +",
                 "mustSupport": true
             },
             {
                 "id": "Observation.category",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.category",
                 "slicing": {
                     "discriminator": [
@@ -48,13 +61,21 @@
                     ],
                     "rules": "open"
                 },
+                "short": "(USCDI Requirement) Classification of  type of observation",
                 "min": 1,
                 "mustSupport": true
             },
             {
                 "id": "Observation.category:us-core",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.category",
                 "sliceName": "us-core",
+                "short": "(USCDI Requirement) Classification of  type of observation",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -63,8 +84,14 @@
             },
             {
                 "id": "Observation.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.code",
-                "short": "Clinical Test or Procedure Name",
+                "short": "(USCDI Requirement) Clinical Test or Procedure Name",
                 "definition": "The name of the clinical test or procedure performed on a patient.  A LOINC **SHALL** be used if the concept is present in LOINC.",
                 "comment": "The typical patterns for codes are:  1)  a LOINC code either as a translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.  When using LOINC , Use either the SHORTNAME or LONG_COMMON_NAME field for the display.",
                 "mustSupport": true,
@@ -74,7 +101,14 @@
             },
             {
                 "id": "Observation.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.subject",
+                "short": "(USCDI Requirement) Who and/or what the observation is about",
                 "min": 1,
                 "type": [
                     {
@@ -88,7 +122,14 @@
             },
             {
                 "id": "Observation.effective[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.effective[x]",
+                "short": "(USCDI Requirement) Clinically relevant time/time-period for observation",
                 "type": [
                     {
                         "extension": [
@@ -125,8 +166,14 @@
             },
             {
                 "id": "Observation.value[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.value[x]",
-                "short": "Result Value",
+                "short": "(USCDI Requirement) Result Value",
                 "definition": "The clinical test or procedure result value. If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification.",
                 "type": [
                     {
@@ -198,7 +245,14 @@
             },
             {
                 "id": "Observation.dataAbsentReason",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.dataAbsentReason",
+                "short": "(USCDI Requirement) Why the result is missing",
                 "condition": [
                     "us-core-2"
                 ],

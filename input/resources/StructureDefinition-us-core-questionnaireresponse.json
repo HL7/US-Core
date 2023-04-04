@@ -24,13 +24,27 @@
             },
             {
                 "id": "QuestionnaireResponse.questionnaire",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "QuestionnaireResponse.questionnaire",
+                "short": "(USCDI Requirement) Form being answered",
                 "mustSupport": true
             },
             {
                 "id": "QuestionnaireResponse.questionnaire.extension:url",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "QuestionnaireResponse.questionnaire.extension",
                 "sliceName": "url",
+                "short": "(USCDI Requirement) The location where a non-FHIR questionnaire/survey form can be found.",
                 "min": 0,
                 "max": "1",
                 "type": [
@@ -45,12 +59,26 @@
             },
             {
                 "id": "QuestionnaireResponse.status",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "QuestionnaireResponse.status",
+                "short": "(USCDI Requirement) in-progress | completed | amended | entered-in-error | stopped",
                 "mustSupport": true
             },
             {
                 "id": "QuestionnaireResponse.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "QuestionnaireResponse.subject",
+                "short": "(USCDI Requirement) The subject of the questions",
                 "comment": "-",
                 "min": 1,
                 "type": [
@@ -65,12 +93,26 @@
             },
             {
                 "id": "QuestionnaireResponse.authored",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "QuestionnaireResponse.authored",
+                "short": "(USCDI Requirement) Date the answers were gathered",
                 "mustSupport": true
             },
             {
                 "id": "QuestionnaireResponse.author",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "QuestionnaireResponse.author",
+                "short": "(USCDI Requirement) Person who received and recorded the answers",
                 "type": [
                     {
                         "code": "Reference",
@@ -138,17 +180,38 @@
             },
             {
                 "id": "QuestionnaireResponse.item",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "QuestionnaireResponse.item",
+                "short": "(USCDI Requirement) Groups and questions",
                 "mustSupport": true
             },
             {
                 "id": "QuestionnaireResponse.item.linkId",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "QuestionnaireResponse.item.linkId",
+                "short": "(USCDI Requirement) Pointer to specific item from Questionnaire",
                 "mustSupport": true
             },
             {
                 "id": "QuestionnaireResponse.item.answer.value[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "QuestionnaireResponse.item.answer.value[x]",
+                "short": "(USCDI Requirement) Single-valued answer to the question",
                 "min": 0,
                 "max": "1",
                 "type": [
@@ -165,34 +228,34 @@
                         "code": "time"
                     },
                     {
-                        "code": "decimal",
                         "extension": [
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                 "valueBoolean": true
                             }
-                        ]
+                        ],
+                        "code": "decimal"
                     },
                     {
                         "code": "integer"
                     },
                     {
-                        "code": "string",
                         "extension": [
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                 "valueBoolean": true
                             }
-                        ]
+                        ],
+                        "code": "string"
                     },
                     {
-                        "code": "Coding",
                         "extension": [
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                 "valueBoolean": true
                             }
-                        ]
+                        ],
+                        "code": "Coding"
                     },
                     {
                         "code": "uri"

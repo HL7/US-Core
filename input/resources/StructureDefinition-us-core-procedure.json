@@ -39,8 +39,15 @@
                 ]
             },
             {
-                "id": "Procedure.baseOn",
+                "id": "Procedure.basedOn",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Procedure.basedOn",
+                "short": "(USCDI Requirement) A request for this procedure",
                 "type": [
                     {
                         "code": "Reference",
@@ -54,7 +61,14 @@
             },
             {
                 "id": "Procedure.status",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Procedure.status",
+                "short": "(USCDI Requirement) preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
                 "condition": [
                     "us-core-7"
                 ],
@@ -72,7 +86,14 @@
             },
             {
                 "id": "Procedure.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Procedure.code",
+                "short": "(USCDI Requirement) Identification of the procedure",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -89,7 +110,14 @@
             },
             {
                 "id": "Procedure.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Procedure.subject",
+                "short": "(USCDI Requirement) Who the procedure was performed on",
                 "type": [
                     {
                         "code": "Reference",
@@ -108,7 +136,14 @@
             },
             {
                 "id": "Procedure.performed[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Procedure.performed[x]",
+                "short": "(USCDI Requirement) When the procedure was performed",
                 "type": [
                     {
                         "extension": [

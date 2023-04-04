@@ -31,8 +31,15 @@
             },
             {
                 "id": "Condition.extension:assertedDate",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.extension",
                 "sliceName": "assertedDate",
+                "short": "(USCDI Requirement) Date the condition was first asserted",
                 "max": "1",
                 "type": [
                     {
@@ -46,7 +53,14 @@
             },
             {
                 "id": "Condition.clinicalStatus",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.clinicalStatus",
+                "short": "(USCDI Requirement) active | recurrence | relapse | inactive | remission | resolved",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -61,7 +75,14 @@
             },
             {
                 "id": "Condition.verificationStatus",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.verificationStatus",
+                "short": "(USCDI Requirement) unconfirmed | provisional | differential | confirmed | refuted | entered-in-error",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -76,6 +97,12 @@
             },
             {
                 "id": "Condition.category",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.category",
                 "slicing": {
                     "discriminator": [
@@ -86,7 +113,7 @@
                     ],
                     "rules": "open"
                 },
-                "short": "category codes",
+                "short": "(USCDI Requirement) category codes",
                 "min": 1,
                 "mustSupport": true,
                 "mapping": [
@@ -98,9 +125,15 @@
             },
             {
                 "id": "Condition.category:us-core",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.category",
                 "sliceName": "us-core",
-                "short": "problem-list-item | health-concern",
+                "short": "(USCDI Requirement) problem-list-item | health-concern",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -111,8 +144,15 @@
             },
             {
                 "id": "Condition.category:sdoh",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.category",
                 "sliceName": "sdoh",
+                "short": "(USCDI Requirement) problem-list-item | encounter-diagnosis",
                 "min": 0,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -127,7 +167,14 @@
             },
             {
                 "id": "Condition.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.code",
+                "short": "(USCDI Requirement) Identification of the condition, problem or diagnosis",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -144,7 +191,14 @@
             },
             {
                 "id": "Condition.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.subject",
+                "short": "(USCDI Requirement) Who has the condition?",
                 "type": [
                     {
                         "code": "Reference",
@@ -163,7 +217,14 @@
             },
             {
                 "id": "Condition.onset[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.onset[x]",
+                "short": "(USCDI Requirement) Estimated or actual date,  date-time, or age",
                 "type": [
                     {
                         "extension": [
@@ -191,7 +252,14 @@
             },
             {
                 "id": "Condition.abatement[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.abatement[x]",
+                "short": "(USCDI Requirement) When in resolution/remission",
                 "type": [
                     {
                         "extension": [
@@ -219,7 +287,14 @@
             },
             {
                 "id": "Condition.recordedDate",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Condition.recordedDate",
+                "short": "(USCDI Requirement) Date record was first recorded",
                 "mustSupport": true
             }
         ]

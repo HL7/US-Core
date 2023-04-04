@@ -54,7 +54,14 @@
             },
             {
                 "id": "Medication.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Medication.code",
+                "short": "(USCDI Requirement) Codes that identify this medication",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {

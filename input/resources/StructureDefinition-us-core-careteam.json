@@ -31,7 +31,14 @@
             },
             {
                 "id": "CareTeam.status",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "CareTeam.status",
+                "short": "(USCDI Requirement) proposed | active | suspended | inactive | entered-in-error",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -47,7 +54,14 @@
             },
             {
                 "id": "CareTeam.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "CareTeam.subject",
+                "short": "(USCDI Requirement) Who care team is for",
                 "min": 1,
                 "type": [
                     {
@@ -67,7 +81,14 @@
             },
             {
                 "id": "CareTeam.participant",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "CareTeam.participant",
+                "short": "(USCDI Requirement) Members of the team",
                 "min": 1,
                 "mustSupport": true,
                 "mapping": [
@@ -79,7 +100,14 @@
             },
             {
                 "id": "CareTeam.participant.role",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "CareTeam.participant.role",
+                "short": "(USCDI Requirement) Type of involvement",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true,
@@ -97,7 +125,14 @@
             },
             {
                 "id": "CareTeam.participant.member",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "CareTeam.participant.member",
+                "short": "(USCDI Requirement) Who is involved",
                 "min": 1,
                 "type": [
                     {

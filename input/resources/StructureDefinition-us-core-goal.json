@@ -31,7 +31,14 @@
             },
             {
                 "id": "Goal.lifecycleStatus",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Goal.lifecycleStatus",
+                "short": "(USCDI Requirement) proposed | planned | accepted | active | on-hold | completed | cancelled | entered-in-error | rejected",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -46,7 +53,14 @@
             },
             {
                 "id": "Goal.description",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Goal.description",
+                "short": "(USCDI Requirement) Code or text describing goal",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -62,7 +76,14 @@
             },
             {
                 "id": "Goal.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Goal.subject",
+                "short": "(USCDI Requirement) Who this goal is intended for",
                 "type": [
                     {
                         "code": "Reference",
@@ -81,12 +102,26 @@
             },
             {
                 "id": "Goal.target",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Goal.target",
+                "short": "(USCDI Requirement) Target outcome for the goal",
                 "mustSupport": true
             },
             {
                 "id": "Goal.target.due[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Goal.target.due[x]",
+                "short": "(USCDI Requirement) Reach goal on or before",
                 "type": [
                     {
                         "extension": [

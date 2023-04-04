@@ -26,12 +26,26 @@
             },
             {
                 "id": "DocumentReference.identifier",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.identifier",
+                "short": "(USCDI Requirement) Other identifiers for the document",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.status",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.status",
+                "short": "(USCDI Requirement) current | superseded | entered-in-error",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -40,7 +54,14 @@
             },
             {
                 "id": "DocumentReference.type",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.type",
+                "short": "(USCDI Requirement) Kind of document (LOINC if possible)",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -57,6 +78,12 @@
             },
             {
                 "id": "DocumentReference.category",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.category",
                 "slicing": {
                     "discriminator": [
@@ -67,13 +94,21 @@
                     ],
                     "rules": "open"
                 },
+                "short": "(USCDI Requirement) Categorization of document",
                 "min": 1,
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.category:uscore",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.category",
                 "sliceName": "uscore",
+                "short": "(USCDI Requirement) Categorization of document",
                 "binding": {
                     "strength": "required",
                     "description": "The US Core DocumentReferences Type Value Set is a \"starter set\" of categories supported for fetching and storing clinical notes. Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)",
@@ -82,7 +117,14 @@
             },
             {
                 "id": "DocumentReference.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.subject",
+                "short": "(USCDI Requirement) Who/what is the subject of the document",
                 "min": 1,
                 "type": [
                     {
@@ -96,12 +138,26 @@
             },
             {
                 "id": "DocumentReference.date",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.date",
+                "short": "(USCDI Requirement) When this document reference was created",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.author",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.author",
+                "short": "(USCDI Requirement) Who and/or what authored the document",
                 "type": [
                     {
                         "code": "Reference",
@@ -169,12 +225,26 @@
             },
             {
                 "id": "DocumentReference.content",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.content",
+                "short": "(USCDI Requirement) Document referenced",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.content.attachment",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.content.attachment",
+                "short": "(USCDI Requirement) Where to access the document",
                 "constraint": [
                     {
                         "key": "us-core-6",
@@ -188,12 +258,26 @@
             },
             {
                 "id": "DocumentReference.content.attachment.contentType",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.content.attachment.contentType",
+                "short": "(USCDI Requirement) Mime type of the content, with charset etc.",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.content.attachment.data",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.content.attachment.data",
+                "short": "(USCDI Requirement) Data inline, base64ed",
                 "min": 0,
                 "condition": [
                     "us-core-6"
@@ -202,7 +286,14 @@
             },
             {
                 "id": "DocumentReference.content.attachment.url",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.content.attachment.url",
+                "short": "(USCDI Requirement) Uri where the data can be found",
                 "min": 0,
                 "condition": [
                     "us-core-6"
@@ -211,7 +302,14 @@
             },
             {
                 "id": "DocumentReference.content.format",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.content.format",
+                "short": "(USCDI Requirement) Format/content rules for the document",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -220,12 +318,26 @@
             },
             {
                 "id": "DocumentReference.context",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.context",
+                "short": "(USCDI Requirement) Clinical context of document",
                 "mustSupport": true
             },
             {
                 "id": "DocumentReference.context.encounter",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.context.encounter",
+                "short": "(USCDI Requirement) Context of the document  content",
                 "max": "1",
                 "type": [
                     {
@@ -239,7 +351,14 @@
             },
             {
                 "id": "DocumentReference.context.period",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "DocumentReference.context.period",
+                "short": "(USCDI Requirement) Time of service that is being documented",
                 "mustSupport": true
             }
         ]

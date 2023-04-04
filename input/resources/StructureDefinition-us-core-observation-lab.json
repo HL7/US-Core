@@ -18,8 +18,15 @@
         "element": [
             {
                 "id": "Observation.category:us-core",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.category",
                 "sliceName": "us-core",
+                "short": "(USCDI Requirement) Classification of  type of observation",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -40,8 +47,14 @@
             },
             {
                 "id": "Observation.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.code",
-                "short": "Laboratory Test Name",
+                "short": "(USCDI Requirement) Laboratory Test Name",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -57,36 +70,42 @@
             },
             {
                 "id": "Observation.value[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.value[x]",
-                "short": "Result Value",
+                "short": "(USCDI Requirement) Result Value",
                 "definition": "The Laboratory result value.  If a coded value,  the valueCodeableConcept.code **SHOULD** be selected from [SNOMED CT](http://hl7.org/fhir/ValueSet/uslab-obs-codedresults) if the concept exists. If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification.",
                 "type": [
                     {
-                        "code": "Quantity",
                         "extension": [
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                 "valueBoolean": true
                             }
-                        ]
+                        ],
+                        "code": "Quantity"
                     },
                     {
-                        "code": "CodeableConcept",
                         "extension": [
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                 "valueBoolean": true
                             }
-                        ]
+                        ],
+                        "code": "CodeableConcept"
                     },
                     {
-                        "code": "string",
                         "extension": [
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                 "valueBoolean": true
                             }
-                        ]
+                        ],
+                        "code": "string"
                     },
                     {
                         "code": "boolean"
@@ -141,7 +160,14 @@
             },
             {
                 "id": "Observation.specimen",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.specimen",
+                "short": "(USCDI Requirement) Specimen used for this observation",
                 "type": [
                     {
                         "code": "Reference",

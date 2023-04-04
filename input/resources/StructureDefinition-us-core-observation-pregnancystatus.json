@@ -29,15 +29,23 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
                     }
                 ],
                 "path": "Observation.status",
-                "short": "(USCDI Requirement) registered | preliminary | final | amended +",
+                "short": "(USCDI Requirement) (USCDI Requirement) registered | preliminary | final | amended +",
                 "mustSupport": true
             },
             {
                 "id": "Observation.category",
                 "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    },
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
@@ -53,7 +61,7 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI Requirement) Classification of  type of observation",
+                "short": "(USCDI Requirement) (USCDI Requirement) Classification of  type of observation",
                 "mustSupport": true
             },
             {
@@ -62,11 +70,15 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
                     }
                 ],
                 "path": "Observation.category",
                 "sliceName": "SocialHistory",
-                "short": "(USCDI Requirement) Classification of  type of observation",
+                "short": "(USCDI Requirement) (USCDI Requirement) Classification of  type of observation",
                 "min": 0,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -85,10 +97,14 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
                     }
                 ],
                 "path": "Observation.code",
-                "short": "(USCDI Requirement) Pregnancy Status",
+                "short": "(USCDI Requirement) (USCDI Requirement) Pregnancy Status",
                 "patternCodeableConcept": {
                     "coding": [
                         {
@@ -105,10 +121,14 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
                     }
                 ],
                 "path": "Observation.subject",
-                "short": "(USCDI Requirement) Who and/or what the observation is about",
+                "short": "(USCDI Requirement) (USCDI Requirement) Who and/or what the observation is about",
                 "min": 1,
                 "type": [
                     {
@@ -126,10 +146,14 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
                     }
                 ],
                 "path": "Observation.effectiveDateTime",
-                "short": "(USCDI Requirement) Clinically relevant time/time-period for observation",
+                "short": "(USCDI Requirement) (USCDI Requirement) Clinically relevant time/time-period for observation",
                 "min": 1,
                 "mustSupport": true
             },
@@ -139,10 +163,14 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
                     }
                 ],
                 "path": "Observation.valueCodeableConcept",
-                "short": "(USCDI Requirement) Coded Responses from Pregnancy Status Value Set",
+                "short": "(USCDI Requirement) (USCDI Requirement) Coded Responses from Pregnancy Status Value Set",
                 "min": 1,
                 "type": [
                     {

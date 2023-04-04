@@ -28,8 +28,14 @@
             },
             {
                 "id": "Observation.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.code",
-                "short": "Weight-for-length per age and gender",
+                "short": "(USCDI Requirement) Weight-for-length per age and gender",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -49,14 +55,28 @@
             },
             {
                 "id": "Observation.valueQuantity",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueQuantity",
+                "short": "(USCDI Requirement) Vital Signs Value",
                 "min": 0,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.valueQuantity.value",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueQuantity.value",
+                "short": "(USCDI Requirement) Numerical value (with implicit precision)",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -68,7 +88,14 @@
             },
             {
                 "id": "Observation.valueQuantity.unit",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueQuantity.unit",
+                "short": "(USCDI Requirement) Unit representation",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -80,7 +107,14 @@
             },
             {
                 "id": "Observation.valueQuantity.system",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueQuantity.system",
+                "short": "(USCDI Requirement) System that defines coded unit form",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -93,8 +127,14 @@
             },
             {
                 "id": "Observation.valueQuantity.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueQuantity.code",
-                "short": "Coded responses from the common UCUM units for vital signs value set.",
+                "short": "(USCDI Requirement) Coded responses from the common UCUM units for vital signs value set.",
                 "min": 1,
                 "max": "1",
                 "type": [

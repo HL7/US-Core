@@ -1,108 +1,152 @@
 resourceType: StructureDefinition
 id: us-core-implantable-device
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device'
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device
 version: 3.2.0
 name: USCoreImplantableDeviceProfile
 title: US Core Implantable Device Profile
 status: active
 experimental: false
-date: '2022-04-20'
-description: >-
-  The US Core Implantable Device Profile is based upon the core FHIR Device Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 *Unique Device Identifier(s) for a Patient's Implantable Device(s)* requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Device resource to record, search, and fetch UDI information associated with a patient's implantable device(s). It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
-copyright: >-
-  Used by permission of HL7 International, all rights reserved Creative Commons
+date: 2022-04-20
+description: The US Core Implantable Device Profile is based upon the core FHIR Device
+  Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 *Unique Device
+  Identifier(s) for a Patient's Implantable Device(s)* requirements. To promote interoperability
+  and adoption through common implementation, this profile sets minimum expectations
+  for the Device resource to record, search, and fetch UDI information associated
+  with a patient's implantable device(s). It identifies which core elements, extensions,
+  vocabularies, and value sets **SHALL** be present in the resource when using this
+  profile. It provides the floor for standards development for specific use cases.
+copyright: Used by permission of HL7 International, all rights reserved Creative Commons
   License
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
 type: Device
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Device'
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Device
 derivation: constraint
 differential:
   element:
-    - id: Device
-      path: Device
-      definition: '\-'
-      comment: '\-'
-      mustSupport: false
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Device
-    - id: Device.udiCarrier
-      path: Device.udiCarrier
-      comment: >-
-        Some devices may not have UDI information (for example. historical data
-        or patient reported data).
-      max: '1'
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Device.udi
-    - id: Device.udiCarrier.deviceIdentifier
-      path: Device.udiCarrier.deviceIdentifier
-      min: 1
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
-    - id: Device.udiCarrier.carrierHRF
-      path: Device.udiCarrier.carrierHRF
-      alias:
-        - UDI
-        - Barcode String
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Device.udi
-    - id: Device.distinctIdentifier
-      path: Device.distinctIdentifier
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
-    - id: Device.manufactureDate
-      path: Device.manufactureDate
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
-    - id: Device.expirationDate
-      path: Device.expirationDate
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
-    - id: Device.lotNumber
-      path: Device.lotNumber
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
-    - id: Device.serialNumber
-      path: Device.serialNumber
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: NA (not Supported)
-    - id: Device.type
-      path: Device.type
-      min: 1
-      mustSupport: true
-      binding:
-        strength: extensible
-        description: Codes to identify medical devices
-        valueSet: 'http://hl7.org/fhir/ValueSet/device-kind'
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Device.type
-    - id: Device.patient
-      path: Device.patient
-      min: 1
-      type:
-        - code: Reference
-          targetProfile:
-            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
-      mustSupport: true
-      mapping:
-        - identity: argonaut-dq-dstu2
-          map: Device.patient
+  - id: Device
+    path: Device
+    definition: \-
+    comment: \-
+    mustSupport: false
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Device
+  - id: Device.udiCarrier
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Device.udiCarrier
+    short: (USCDI Requirement) Unique Device Identifier (UDI) Barcode string
+    comment: Some devices may not have UDI information (for example. historical data
+      or patient reported data).
+    max: '1'
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Device.udi
+  - id: Device.udiCarrier.deviceIdentifier
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Device.udiCarrier.deviceIdentifier
+    short: (USCDI Requirement) Mandatory fixed portion of UDI
+    min: 1
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: NA (not Supported)
+  - id: Device.udiCarrier.carrierHRF
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Device.udiCarrier.carrierHRF
+    short: (USCDI Requirement) UDI Human Readable Barcode String
+    alias:
+    - UDI
+    - Barcode String
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Device.udi
+  - id: Device.distinctIdentifier
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Device.distinctIdentifier
+    short: (USCDI Requirement) The distinct identification string
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: NA (not Supported)
+  - id: Device.manufactureDate
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Device.manufactureDate
+    short: (USCDI Requirement) Date when the device was made
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: NA (not Supported)
+  - id: Device.expirationDate
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Device.expirationDate
+    short: (USCDI Requirement) Date and time of expiry of this device (if applicable)
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: NA (not Supported)
+  - id: Device.lotNumber
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Device.lotNumber
+    short: (USCDI Requirement) Lot number of manufacture
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: NA (not Supported)
+  - id: Device.serialNumber
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Device.serialNumber
+    short: (USCDI Requirement) Serial number assigned by the manufacturer
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: NA (not Supported)
+  - id: Device.type
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Device.type
+    short: (USCDI Requirement) The kind or type of device
+    min: 1
+    mustSupport: true
+    binding:
+      strength: extensible
+      description: Codes to identify medical devices
+      valueSet: http://hl7.org/fhir/ValueSet/device-kind
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Device.type
+  - id: Device.patient
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Device.patient
+    short: (USCDI Requirement) Patient to whom Device is affixed
+    min: 1
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+    mustSupport: true
+    mapping:
+    - identity: argonaut-dq-dstu2
+      map: Device.patient
