@@ -55,7 +55,7 @@ For ONC's USCDI requirements, each MedicationRequest must support the following 
    *  Although both are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements.
    *  The client application **SHALL** support both elements.
 
-- \*The MedicationRequest resource can communicate the reason or indication for referral or consultation using either a code in `MedicationRequest.reasonCodeableConcept` or a reference using `MedicationRequest.reasonReference`.
+- \*The MedicationRequest resource can communicate the reason or indication for referral or consultation using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`.
 
 * Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
 * Servers **SHALL** follow the guidance in the [Medication List] page  and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.

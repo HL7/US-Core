@@ -182,7 +182,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 126. **Resolved - change required:** Tribal Affiliation Extension - enrollment and alignment with eCR [FHIR-40203](https://jira.hl7.org/browse/FHIR-40203) [See Changes Here](#.html)
 127. **Resolved - change required:** Observation Occupation binding strength for industry is required  [FHIR-40204](https://jira.hl7.org/browse/FHIR-40204) [See Changes Here](#.html)
 128. **Resolved - change required:** whenHandedOver cardinality 1..1 is not conducive for some of the statuses [FHIR-40205](https://jira.hl7.org/browse/FHIR-40205) [See Changes Here](#.html)
-129. **Resolved - change required:** MedicationRequest.reasonCodeableConcept does not exist [FHIR-40235](https://jira.hl7.org/browse/FHIR-40235) [See Changes Here](#.html)
+129. **Applied:** MedicationRequest.reasonCodeableConcept does not exist [FHIR-40235](https://jira.hl7.org/browse/FHIR-40235) [See Changes Here](StructureDefinition-us-core-medicationrequest.html)
 130. **Resolved - change required:** Utilize ""use"" field for patient previous name and previous address (round 2) [FHIR-40299](https://jira.hl7.org/browse/FHIR-40299) [See Changes Here](#.html)
 131. **Triaged:** Patch Request: Patient.us-core-ethnicity does not allow for nullFlavors in value set [FHIR-40309](https://jira.hl7.org/browse/FHIR-40309) [See Changes Here](#.html)
 132. **Resolved - change required:** remove or explain one of two NUCC bindings [FHIR-40372](https://jira.hl7.org/browse/FHIR-40372) [See Changes Here](#.html)
