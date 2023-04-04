@@ -193,8 +193,8 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 137. **Triaged:** US core should have specific profiles for imaging and lab results [FHIR-40514](https://jira.hl7.org/browse/FHIR-40514) [See Changes Here](#.html)
 138. **Resolved - change required:** The CBC is incomplete and has a few results and not a Complete Blood Count.  Please Fix. [FHIR-40521](https://jira.hl7.org/browse/FHIR-40521) [See Changes Here](#.html)
 139. **Resolved - change required:** Encounter type value set too limited [FHIR-40546](https://jira.hl7.org/browse/FHIR-40546) [See Changes Here](#.html)
-140. **Resolved - change required:** Flag additional USCDI requirements in a computable way [FHIR-40553](https://jira.hl7.org/browse/FHIR-40553) [See Changes Here](#.html)
-141. **Resolved - change required:** Condition asserted-date search parameter has incorrect expression [FHIR-40573](https://jira.hl7.org/browse/FHIR-40573) [See Changes Here](#.html)
+140. **Applied:** Flag additional USCDI requirements in a computable way [FHIR-40553](https://jira.hl7.org/browse/FHIR-40553) [See Changes Here](#.html)
+141. **Resolved - change required:** Condition asserted-date search parameter has incorrect expression [FHIR-40573](https://jira.hl7.org/browse/FHIR-40573) [See Changes Here](StructureDefinition-us-core-patient.html#profile)
 142. **Resolved - change required:** remove profile from reasonReference profile and use types instead. [FHIR-40656](https://jira.hl7.org/browse/FHIR-40656) [See Changes Here](#.html)
 143. **Pre-Applied:** Remove US Core QuestionnaireResponse Tag Element [FHIR-40742](https://jira.hl7.org/browse/FHIR-40742) [See Changes Here](StructureDefinition-us-core-questionnaireresponse.html) and [Here](Questionnaire-prapare-example.html)
 
