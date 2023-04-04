@@ -101,6 +101,32 @@
                 ]
             },
             {
+                "id": "Goal.start[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
+                "path": "Goal.start[x]",
+                "short": "(USCDI Requirement) When goal pursuit begins",
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "date"
+                    },
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
                 "id": "Goal.target",
                 "extension": [
                     {

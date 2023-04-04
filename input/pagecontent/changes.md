@@ -152,7 +152,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 96. **Resolved - change required:** Change AHC HRSN screening tool examples from the supplemental questions to the core questions [FHIR-40091](https://jira.hl7.org/browse/FHIR-40091) [See Changes Here](#.html)
 97. **Resolved - change required:** Handle “personal characteristics” as Observations versus elements on Patient [FHIR-40092](https://jira.hl7.org/browse/FHIR-40092) [See Changes Here](#.html)
 98. **Applied:** Remove MustSupport from DocumentReference.category requiring clinical-note [FHIR-40102](https://jira.hl7.org/browse/FHIR-40102) [See Changes Here](StructureDefinition-us-core-documentreference.html)
-99.  **Triaged:** Remove Must Support from Goal.target and Goal.target.due[x] [FHIR-40103](https://jira.hl7.org/browse/FHIR-40103) [See Changes Here](#.html)
+99.  **Applied:** Add Goal.startDate as 0..1 MS with choice of supporting this or Goal.target.dueDate [FHIR-40103](https://jira.hl7.org/browse/FHIR-40103) [See Changes Here](StructureDefinition-us-core-goal.html)
 100. **Resolved - change required:** Add patient-preference to Simple Observation Categories [FHIR-40104](https://jira.hl7.org/browse/FHIR-40104) [See Changes Here](#.html)
 101. **Resolved - change required:** Add to the code systems chart  [FHIR-40124](https://jira.hl7.org/browse/FHIR-40124) [See Changes Here](#.html)
 102. **Resolved - change required:** Make Specimen.subject must support [FHIR-40136](https://jira.hl7.org/browse/FHIR-40136) [See Changes Here](#.html)
