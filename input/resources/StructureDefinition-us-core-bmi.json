@@ -34,7 +34,7 @@
                     }
                 ],
                 "path": "Observation.code",
-                "short": "(USCDI Requirement) Coded Responses from C-CDA Vital Sign Results",
+                "short": "(USCDI) Coded Responses from C-CDA Vital Sign Results",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -59,7 +59,7 @@
                     }
                 ],
                 "path": "Observation.valueQuantity",
-                "short": "(USCDI Requirement) Vital Signs Value",
+                "short": "(USCDI) Vital Signs Value",
                 "min": 0,
                 "max": "1",
                 "mustSupport": true
@@ -73,7 +73,7 @@
                     }
                 ],
                 "path": "Observation.valueQuantity.value",
-                "short": "(USCDI Requirement) Numerical value (with implicit precision)",
+                "short": "(USCDI) Numerical value (with implicit precision)",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -92,7 +92,7 @@
                     }
                 ],
                 "path": "Observation.valueQuantity.unit",
-                "short": "(USCDI Requirement) Unit representation",
+                "short": "(USCDI) Unit representation",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -111,7 +111,7 @@
                     }
                 ],
                 "path": "Observation.valueQuantity.system",
-                "short": "(USCDI Requirement) System that defines coded unit form",
+                "short": "(USCDI) System that defines coded unit form",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -131,7 +131,7 @@
                     }
                 ],
                 "path": "Observation.valueQuantity.code",
-                "short": "(USCDI Requirement) Coded responses from the common UCUM units for vital signs value set.",
+                "short": "(USCDI) Coded responses from the common UCUM units for vital signs value set.",
                 "min": 1,
                 "max": "1",
                 "type": [

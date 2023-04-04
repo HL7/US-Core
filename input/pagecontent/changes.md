@@ -197,6 +197,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 141. **Resolved - change required:** Condition asserted-date search parameter has incorrect expression [FHIR-40573](https://jira.hl7.org/browse/FHIR-40573) [See Changes Here](StructureDefinition-us-core-patient.html#profile)
 142. **Resolved - change required:** remove profile from reasonReference profile and use types instead. [FHIR-40656](https://jira.hl7.org/browse/FHIR-40656) [See Changes Here](#.html)
 143. **Pre-Applied:** Remove US Core QuestionnaireResponse Tag Element [FHIR-40742](https://jira.hl7.org/browse/FHIR-40742) [See Changes Here](StructureDefinition-us-core-questionnaireresponse.html) and [Here](Questionnaire-prapare-example.html)
+144. **Pre-Applied:** Clarify Direct address options [FHIR-40583](https://jira.hl7.org/browse/FHIR-40583) [See Changes Here](StructureDefinition-us-core-practitionerrole.html#mandatory-and-must-support-data-elements)
 
 
 

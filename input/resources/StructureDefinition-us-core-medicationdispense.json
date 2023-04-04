@@ -27,7 +27,7 @@
                     }
                 ],
                 "path": "MedicationDispense.status",
-                "short": "(USCDI Requirement) preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | declined | unknown",
+                "short": "(USCDI) preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | declined | unknown",
                 "mustSupport": true
             },
             {
@@ -39,7 +39,7 @@
                     }
                 ],
                 "path": "MedicationDispense.medication[x]",
-                "short": "(USCDI Requirement) What medication was supplied",
+                "short": "(USCDI) What medication was supplied",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -66,7 +66,7 @@
                     }
                 ],
                 "path": "MedicationDispense.subject",
-                "short": "(USCDI Requirement) Who the dispense is for",
+                "short": "(USCDI) Who the dispense is for",
                 "min": 1,
                 "type": [
                     {
@@ -87,7 +87,7 @@
                     }
                 ],
                 "path": "MedicationDispense.performer",
-                "short": "(USCDI Requirement) Who performed event",
+                "short": "(USCDI) Who performed event",
                 "mustSupport": true
             },
             {
@@ -99,7 +99,7 @@
                     }
                 ],
                 "path": "MedicationDispense.performer.actor",
-                "short": "(USCDI Requirement) Individual who was performing",
+                "short": "(USCDI) Individual who was performing",
                 "type": [
                     {
                         "code": "Reference",
@@ -174,7 +174,7 @@
                     }
                 ],
                 "path": "MedicationDispense.authorizingPrescription",
-                "short": "(USCDI Requirement) Medication order that authorizes the dispense",
+                "short": "(USCDI) Medication order that authorizes the dispense",
                 "type": [
                     {
                         "code": "Reference",
@@ -194,7 +194,7 @@
                     }
                 ],
                 "path": "MedicationDispense.type",
-                "short": "(USCDI Requirement) Trial fill, partial fill, emergency fill, etc.",
+                "short": "(USCDI) Trial fill, partial fill, emergency fill, etc.",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -210,7 +210,7 @@
                     }
                 ],
                 "path": "MedicationDispense.quantity",
-                "short": "(USCDI Requirement) Amount dispensed",
+                "short": "(USCDI) Amount dispensed",
                 "type": [
                     {
                         "code": "Quantity"
@@ -237,7 +237,7 @@
                     }
                 ],
                 "path": "MedicationDispense.whenHandedOver",
-                "short": "(USCDI Requirement) When product was given out",
+                "short": "(USCDI) When product was given out",
                 "min": 1,
                 "mustSupport": true
             },
@@ -250,7 +250,7 @@
                     }
                 ],
                 "path": "MedicationDispense.dosageInstruction",
-                "short": "(USCDI Requirement) How the medication is to be used by the patient or administered by the caregiver",
+                "short": "(USCDI) How the medication is to be used by the patient or administered by the caregiver",
                 "mustSupport": true
             },
             {
@@ -262,7 +262,7 @@
                     }
                 ],
                 "path": "MedicationDispense.dosageInstruction.text",
-                "short": "(USCDI Requirement) Free text dosage instructions e.g. SIG",
+                "short": "(USCDI) Free text dosage instructions e.g. SIG",
                 "mustSupport": true
             },
             {
@@ -274,7 +274,7 @@
                     }
                 ],
                 "path": "MedicationDispense.dosageInstruction.timing",
-                "short": "(USCDI Requirement) When medication should be administered",
+                "short": "(USCDI) When medication should be administered",
                 "mustSupport": true
             },
             {
@@ -286,7 +286,7 @@
                     }
                 ],
                 "path": "MedicationDispense.dosageInstruction.doseAndRate",
-                "short": "(USCDI Requirement) Amount of medication administered",
+                "short": "(USCDI) Amount of medication administered",
                 "mustSupport": true
             },
             {
@@ -298,7 +298,7 @@
                     }
                 ],
                 "path": "MedicationDispense.dosageInstruction.doseAndRate.dose[x]",
-                "short": "(USCDI Requirement) Amount of medication per dose",
+                "short": "(USCDI) Amount of medication per dose",
                 "type": [
                     {
                         "extension": [

@@ -33,7 +33,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: CareTeam.status
-    short: (USCDI Requirement) proposed | active | suspended | inactive | entered-in-error
+    short: (USCDI) proposed | active | suspended | inactive | entered-in-error
     mustSupport: true
     binding:
       strength: required
@@ -48,7 +48,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: CareTeam.subject
-    short: (USCDI Requirement) Who care team is for
+    short: (USCDI) Who care team is for
     min: 1
     type:
     - code: Reference
@@ -63,7 +63,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: CareTeam.participant
-    short: (USCDI Requirement) Members of the team
+    short: (USCDI) Members of the team
     min: 1
     mustSupport: true
     mapping:
@@ -74,7 +74,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: CareTeam.participant.role
-    short: (USCDI Requirement) Type of involvement
+    short: (USCDI) Type of involvement
     min: 1
     max: '1'
     mustSupport: true
@@ -91,7 +91,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: CareTeam.participant.member
-    short: (USCDI Requirement) Who is involved
+    short: (USCDI) Who is involved
     min: 1
     type:
     - code: Reference

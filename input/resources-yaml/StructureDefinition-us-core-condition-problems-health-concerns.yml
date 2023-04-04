@@ -42,7 +42,7 @@ differential:
       valueBoolean: true
     path: Condition.extension
     sliceName: assertedDate
-    short: (USCDI Requirement) Date the condition was first asserted
+    short: (USCDI) Date the condition was first asserted
     max: '1'
     type:
     - code: Extension
@@ -54,7 +54,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Condition.clinicalStatus
-    short: (USCDI Requirement) active | recurrence | relapse | inactive | remission
+    short: (USCDI) active | recurrence | relapse | inactive | remission
       | resolved
     mustSupport: true
     binding:
@@ -68,7 +68,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Condition.verificationStatus
-    short: (USCDI Requirement) unconfirmed | provisional | differential | confirmed
+    short: (USCDI) unconfirmed | provisional | differential | confirmed
       | refuted | entered-in-error
     mustSupport: true
     binding:
@@ -87,7 +87,7 @@ differential:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI Requirement) category codes
+    short: (USCDI) category codes
     min: 1
     mustSupport: true
     mapping:
@@ -99,7 +99,7 @@ differential:
       valueBoolean: true
     path: Condition.category
     sliceName: us-core
-    short: (USCDI Requirement) problem-list-item | health-concern
+    short: (USCDI) problem-list-item | health-concern
     min: 1
     mustSupport: true
     binding:
@@ -113,7 +113,7 @@ differential:
       valueBoolean: true
     path: Condition.category
     sliceName: sdoh
-    short: (USCDI Requirement) problem-list-item | encounter-diagnosis
+    short: (USCDI) problem-list-item | encounter-diagnosis
     min: 0
     max: '1'
     patternCodeableConcept:
@@ -126,7 +126,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Condition.code
-    short: (USCDI Requirement) Identification of the condition, problem or diagnosis
+    short: (USCDI) Identification of the condition, problem or diagnosis
     min: 1
     mustSupport: true
     binding:
@@ -141,7 +141,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Condition.subject
-    short: (USCDI Requirement) Who has the condition?
+    short: (USCDI) Who has the condition?
     type:
     - code: Reference
       targetProfile:
@@ -155,7 +155,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Condition.onset[x]
-    short: (USCDI Requirement) Estimated or actual date,  date-time, or age
+    short: (USCDI) Estimated or actual date,  date-time, or age
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -171,7 +171,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Condition.abatement[x]
-    short: (USCDI Requirement) When in resolution/remission
+    short: (USCDI) When in resolution/remission
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -187,5 +187,5 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Condition.recordedDate
-    short: (USCDI Requirement) Date record was first recorded
+    short: (USCDI) Date record was first recorded
     mustSupport: true

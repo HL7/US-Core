@@ -41,7 +41,7 @@
                     }
                 ],
                 "path": "Observation.status",
-                "short": "(USCDI Requirement) registered | preliminary | final | amended +",
+                "short": "(USCDI) registered | preliminary | final | amended +",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -72,7 +72,7 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI Requirement) Classification of  type of observation",
+                "short": "(USCDI) Classification of  type of observation",
                 "min": 1,
                 "mustSupport": true
             },
@@ -86,7 +86,7 @@
                 ],
                 "path": "Observation.category",
                 "sliceName": "SocialHistory",
-                "short": "(USCDI Requirement) Classification of  type of observation",
+                "short": "(USCDI) Classification of  type of observation",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -108,7 +108,7 @@
                     }
                 ],
                 "path": "Observation.code",
-                "short": "(USCDI Requirement) Smoking Status",
+                "short": "(USCDI) Smoking Status",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -130,7 +130,7 @@
                     }
                 ],
                 "path": "Observation.subject",
-                "short": "(USCDI Requirement) Who and/or what the observation is about",
+                "short": "(USCDI) Who and/or what the observation is about",
                 "min": 1,
                 "type": [
                     {
@@ -157,7 +157,7 @@
                     }
                 ],
                 "path": "Observation.effectiveDateTime",
-                "short": "(USCDI Requirement) Clinically relevant time/time-period for observation",
+                "short": "(USCDI) Clinically relevant time/time-period for observation",
                 "min": 1,
                 "mustSupport": true,
                 "mapping": [
@@ -176,7 +176,7 @@
                     }
                 ],
                 "path": "Observation.value[x]",
-                "short": "(USCDI Requirement) Typically Coded Responses from Smoking Status Value Set",
+                "short": "(USCDI) Typically Coded Responses from Smoking Status Value Set",
                 "min": 1,
                 "type": [
                     {

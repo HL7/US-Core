@@ -33,7 +33,7 @@
                     }
                 ],
                 "path": "DocumentReference.identifier",
-                "short": "(USCDI Requirement) Other identifiers for the document",
+                "short": "(USCDI) Other identifiers for the document",
                 "mustSupport": true
             },
             {
@@ -45,7 +45,7 @@
                     }
                 ],
                 "path": "DocumentReference.status",
-                "short": "(USCDI Requirement) current | superseded | entered-in-error",
+                "short": "(USCDI) current | superseded | entered-in-error",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -61,7 +61,7 @@
                     }
                 ],
                 "path": "DocumentReference.type",
-                "short": "(USCDI Requirement) Kind of document (LOINC if possible)",
+                "short": "(USCDI) Kind of document (LOINC if possible)",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -94,7 +94,7 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI Requirement) Categorization of document",
+                "short": "(USCDI) Categorization of document",
                 "min": 1,
                 "mustSupport": true
             },
@@ -108,7 +108,7 @@
                 ],
                 "path": "DocumentReference.category",
                 "sliceName": "uscore",
-                "short": "(USCDI Requirement) Categorization of document",
+                "short": "(USCDI) Categorization of document",
                 "binding": {
                     "strength": "required",
                     "description": "The US Core DocumentReferences Type Value Set is a \"starter set\" of categories supported for fetching and storing clinical notes. Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)",
@@ -124,7 +124,7 @@
                     }
                 ],
                 "path": "DocumentReference.subject",
-                "short": "(USCDI Requirement) Who/what is the subject of the document",
+                "short": "(USCDI) Who/what is the subject of the document",
                 "min": 1,
                 "type": [
                     {
@@ -145,7 +145,7 @@
                     }
                 ],
                 "path": "DocumentReference.date",
-                "short": "(USCDI Requirement) When this document reference was created",
+                "short": "(USCDI) When this document reference was created",
                 "mustSupport": true
             },
             {
@@ -157,7 +157,7 @@
                     }
                 ],
                 "path": "DocumentReference.author",
-                "short": "(USCDI Requirement) Who and/or what authored the document",
+                "short": "(USCDI) Who and/or what authored the document",
                 "type": [
                     {
                         "code": "Reference",
@@ -232,7 +232,7 @@
                     }
                 ],
                 "path": "DocumentReference.content",
-                "short": "(USCDI Requirement) Document referenced",
+                "short": "(USCDI) Document referenced",
                 "mustSupport": true
             },
             {
@@ -244,7 +244,7 @@
                     }
                 ],
                 "path": "DocumentReference.content.attachment",
-                "short": "(USCDI Requirement) Where to access the document",
+                "short": "(USCDI) Where to access the document",
                 "constraint": [
                     {
                         "key": "us-core-6",
@@ -265,7 +265,7 @@
                     }
                 ],
                 "path": "DocumentReference.content.attachment.contentType",
-                "short": "(USCDI Requirement) Mime type of the content, with charset etc.",
+                "short": "(USCDI) Mime type of the content, with charset etc.",
                 "mustSupport": true
             },
             {
@@ -277,7 +277,7 @@
                     }
                 ],
                 "path": "DocumentReference.content.attachment.data",
-                "short": "(USCDI Requirement) Data inline, base64ed",
+                "short": "(USCDI) Data inline, base64ed",
                 "min": 0,
                 "condition": [
                     "us-core-6"
@@ -293,7 +293,7 @@
                     }
                 ],
                 "path": "DocumentReference.content.attachment.url",
-                "short": "(USCDI Requirement) Uri where the data can be found",
+                "short": "(USCDI) Uri where the data can be found",
                 "min": 0,
                 "condition": [
                     "us-core-6"
@@ -309,7 +309,7 @@
                     }
                 ],
                 "path": "DocumentReference.content.format",
-                "short": "(USCDI Requirement) Format/content rules for the document",
+                "short": "(USCDI) Format/content rules for the document",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -325,7 +325,7 @@
                     }
                 ],
                 "path": "DocumentReference.context",
-                "short": "(USCDI Requirement) Clinical context of document",
+                "short": "(USCDI) Clinical context of document",
                 "mustSupport": true
             },
             {
@@ -337,7 +337,7 @@
                     }
                 ],
                 "path": "DocumentReference.context.encounter",
-                "short": "(USCDI Requirement) Context of the document  content",
+                "short": "(USCDI) Context of the document  content",
                 "max": "1",
                 "type": [
                     {
@@ -358,7 +358,7 @@
                     }
                 ],
                 "path": "DocumentReference.context.period",
-                "short": "(USCDI Requirement) Time of service that is being documented",
+                "short": "(USCDI) Time of service that is being documented",
                 "mustSupport": true
             }
         ]

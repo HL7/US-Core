@@ -38,7 +38,7 @@
                     }
                 ],
                 "path": "Coverage.identifier",
-                "short": "(USCDI Requirement) Member ID and other identifiers",
+                "short": "(USCDI) Member ID and other identifiers",
                 "condition": [
                     "us-core-15"
                 ],
@@ -53,7 +53,7 @@
                     }
                 ],
                 "path": "Coverage.status",
-                "short": "(USCDI Requirement) active | cancelled | draft | entered-in-error",
+                "short": "(USCDI) active | cancelled | draft | entered-in-error",
                 "comment": "The `Coverage.status` alone does not indicate whether an individual's coverage is terminated or that the individual is not covered. The `Coverage.period` needs to be considered as well.",
                 "mustSupport": true
             },
@@ -66,7 +66,7 @@
                     }
                 ],
                 "path": "Coverage.type",
-                "short": "(USCDI Requirement) Coverage category such as medical or accident",
+                "short": "(USCDI) Coverage category such as medical or accident",
                 "comment": "Identifies if the coverage is PPO, HMO, POS, etc.",
                 "mustSupport": true,
                 "binding": {
@@ -84,7 +84,7 @@
                     }
                 ],
                 "path": "Coverage.subscriberId",
-                "short": "(USCDI Requirement) ID assigned to the subscriber",
+                "short": "(USCDI) ID assigned to the subscriber",
                 "comment": "The identifier assigned by the Payer on the subscriber's ID card",
                 "condition": [
                     "us-core-15"
@@ -100,7 +100,7 @@
                     }
                 ],
                 "path": "Coverage.beneficiary",
-                "short": "(USCDI Requirement) Plan beneficiary",
+                "short": "(USCDI) Plan beneficiary",
                 "comment": "Identifier for a member assigned by the Payer.",
                 "type": [
                     {
@@ -121,7 +121,7 @@
                     }
                 ],
                 "path": "Coverage.relationship",
-                "short": "(USCDI Requirement) Beneficiary relationship to the subscriber",
+                "short": "(USCDI) Beneficiary relationship to the subscriber",
                 "comment": "Relationship of the member to the person insured (subscriber)",
                 "min": 1,
                 "mustSupport": true,
@@ -139,7 +139,7 @@
                     }
                 ],
                 "path": "Coverage.period",
-                "short": "(USCDI Requirement) Coverage start and end dates",
+                "short": "(USCDI) Coverage start and end dates",
                 "comment": "Date that the contract became effective and Date that the contract was terminated or coverage changed.",
                 "mustSupport": true
             },
@@ -152,7 +152,7 @@
                     }
                 ],
                 "path": "Coverage.payor",
-                "short": "(USCDI Requirement) Issuer of the policy",
+                "short": "(USCDI) Issuer of the policy",
                 "comment": "Issuer of the Policy",
                 "max": "1",
                 "type": [
@@ -213,7 +213,7 @@
                     "ordered": false,
                     "rules": "open"
                 },
-                "short": "(USCDI Requirement) Additional coverage classifications",
+                "short": "(USCDI) Additional coverage classifications",
                 "mustSupport": true
             },
             {
@@ -226,7 +226,7 @@
                 ],
                 "path": "Coverage.class",
                 "sliceName": "group",
-                "short": "(USCDI Requirement) Group",
+                "short": "(USCDI) Group",
                 "min": 0,
                 "max": "1",
                 "mustSupport": true
@@ -252,7 +252,7 @@
                     }
                 ],
                 "path": "Coverage.class.value",
-                "short": "(USCDI Requirement) Group Number",
+                "short": "(USCDI) Group Number",
                 "comment": "Employer account identifier",
                 "mustSupport": true
             },
@@ -265,7 +265,7 @@
                     }
                 ],
                 "path": "Coverage.class.name",
-                "short": "(USCDI Requirement) Group Name",
+                "short": "(USCDI) Group Name",
                 "comment": "Name of the Employer Account (135)",
                 "mustSupport": true
             },
@@ -279,7 +279,7 @@
                 ],
                 "path": "Coverage.class",
                 "sliceName": "plan",
-                "short": "(USCDI Requirement) Plan",
+                "short": "(USCDI) Plan",
                 "min": 0,
                 "max": "1",
                 "mustSupport": true
@@ -305,7 +305,7 @@
                     }
                 ],
                 "path": "Coverage.class.value",
-                "short": "(USCDI Requirement) Plan Number",
+                "short": "(USCDI) Plan Number",
                 "comment": "Business concept used by a health plan to describe its benefit offerings",
                 "mustSupport": true
             },
@@ -318,7 +318,7 @@
                     }
                 ],
                 "path": "Coverage.class.name",
-                "short": "(USCDI Requirement) Plan Name",
+                "short": "(USCDI) Plan Name",
                 "comment": "Name of the health plan benefit offering assigned to the Plan Identifier",
                 "mustSupport": true
             }

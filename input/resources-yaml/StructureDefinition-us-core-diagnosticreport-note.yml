@@ -43,7 +43,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.status
-    short: (USCDI Requirement) registered | partial | preliminary | final +
+    short: (USCDI) registered | partial | preliminary | final +
     condition:
     - us-core-10
     mustSupport: true
@@ -60,7 +60,7 @@ differential:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI Requirement) Service category
+    short: (USCDI) Service category
     min: 1
     mustSupport: true
   - id: DiagnosticReport.category:us-core
@@ -69,7 +69,7 @@ differential:
       valueBoolean: true
     path: DiagnosticReport.category
     sliceName: us-core
-    short: (USCDI Requirement) Service category
+    short: (USCDI) Service category
     mustSupport: true
     binding:
       strength: required
@@ -81,7 +81,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.code
-    short: (USCDI Requirement) US Core Report Code
+    short: (USCDI) US Core Report Code
     definition: The test, panel, report, or note that was ordered.
     comment: 'The typical patterns for codes are:  1)  a LOINC code either as a translation
       from a "local" code or as a primary code, or 2)  a local code only if no suitable
@@ -97,7 +97,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.subject
-    short: (USCDI Requirement) The subject of the report - usually, but not always,
+    short: (USCDI) The subject of the report - usually, but not always,
       the patient
     min: 1
     type:
@@ -110,7 +110,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.encounter
-    short: (USCDI Requirement) Health care event when test ordered
+    short: (USCDI) Health care event when test ordered
     type:
     - code: Reference
       targetProfile:
@@ -121,7 +121,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.effective[x]
-    short: (USCDI Requirement) Diagnostically relevant time (typically the time of
+    short: (USCDI) Diagnostically relevant time (typically the time of
       the procedure)
     type:
     - extension:
@@ -137,14 +137,14 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.issued
-    short: (USCDI Requirement) DateTime this version was made
+    short: (USCDI) DateTime this version was made
     mustSupport: true
   - id: DiagnosticReport.performer
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.performer
-    short: (USCDI Requirement) Responsible Diagnostic Service
+    short: (USCDI) Responsible Diagnostic Service
     type:
     - code: Reference
       targetProfile:
@@ -171,7 +171,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.result
-    short: (USCDI Requirement) Observations
+    short: (USCDI) Observations
     type:
     - code: Reference
       targetProfile:
@@ -194,19 +194,19 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.media
-    short: (USCDI Requirement) Key images associated with this report
+    short: (USCDI) Key images associated with this report
     mustSupport: true
   - id: DiagnosticReport.media.link
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.media.link
-    short: (USCDI Requirement) Reference to the image source
+    short: (USCDI) Reference to the image source
     mustSupport: true
   - id: DiagnosticReport.presentedForm
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.presentedForm
-    short: (USCDI Requirement) Entire report as issued
+    short: (USCDI) Entire report as issued
     mustSupport: true

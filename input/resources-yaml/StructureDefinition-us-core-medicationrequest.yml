@@ -47,7 +47,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.status
-    short: (USCDI Requirement) active | on-hold | cancelled | completed | entered-in-error
+    short: (USCDI) active | on-hold | cancelled | completed | entered-in-error
       | stopped | draft | unknown
     mustSupport: true
     binding:
@@ -63,7 +63,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.intent
-    short: (USCDI Requirement) proposal | plan | order | original-order | reflex-order
+    short: (USCDI) proposal | plan | order | original-order | reflex-order
       | filler-order | instance-order | option
     mustSupport: true
     binding:
@@ -83,7 +83,7 @@ differential:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI Requirement) Type of medication usage
+    short: (USCDI) Type of medication usage
     mustSupport: true
   - id: MedicationRequest.category:us-core
     extension:
@@ -91,7 +91,7 @@ differential:
       valueBoolean: true
     path: MedicationRequest.category
     sliceName: us-core
-    short: (USCDI Requirement) Type of medication usage
+    short: (USCDI) Type of medication usage
     mustSupport: true
     binding:
       strength: required
@@ -103,7 +103,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.reported[x]
-    short: (USCDI Requirement) Reported rather than primary record
+    short: (USCDI) Reported rather than primary record
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -144,7 +144,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.medication[x]
-    short: (USCDI Requirement) Medication to be taken
+    short: (USCDI) Medication to be taken
     type:
     - code: CodeableConcept
     - code: Reference
@@ -162,7 +162,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.subject
-    short: (USCDI Requirement) Who or group medication request is for
+    short: (USCDI) Who or group medication request is for
     type:
     - code: Reference
       targetProfile:
@@ -176,7 +176,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.encounter
-    short: (USCDI Requirement) Encounter created as part of encounter/admission/stay
+    short: (USCDI) Encounter created as part of encounter/admission/stay
     type:
     - code: Reference
       targetProfile:
@@ -190,7 +190,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.authoredOn
-    short: (USCDI Requirement) When request was initially authored
+    short: (USCDI) When request was initially authored
     mustSupport: true
     mapping:
     - identity: argonaut-dq-dstu2
@@ -200,7 +200,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.requester
-    short: (USCDI Requirement) Who/What requested the Request
+    short: (USCDI) Who/What requested the Request
     min: 1
     type:
     - code: Reference
@@ -239,7 +239,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.reasonCode
-    short: (USCDI Requirement) Reason or indication for ordering or not ordering the
+    short: (USCDI) Reason or indication for ordering or not ordering the
       medication
     binding:
       strength: extensible
@@ -249,7 +249,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.reasonReference
-    short: (USCDI Requirement) Condition or observation that supports why the prescription
+    short: (USCDI) Condition or observation that supports why the prescription
       is being written
     type:
     - code: Reference
@@ -272,35 +272,35 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.dosageInstruction
-    short: (USCDI Requirement) How the medication should be taken
+    short: (USCDI) How the medication should be taken
     mustSupport: true
   - id: MedicationRequest.dosageInstruction.text
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.dosageInstruction.text
-    short: (USCDI Requirement) Free text dosage instructions e.g. SIG
+    short: (USCDI) Free text dosage instructions e.g. SIG
     mustSupport: true
   - id: MedicationRequest.dosageInstruction.timing
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.dosageInstruction.timing
-    short: (USCDI Requirement) When medication should be administered
+    short: (USCDI) When medication should be administered
     mustSupport: true
   - id: MedicationRequest.dosageInstruction.doseAndRate
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.dosageInstruction.doseAndRate
-    short: (USCDI Requirement) Amount of medication administered
+    short: (USCDI) Amount of medication administered
     mustSupport: true
   - id: MedicationRequest.dosageInstruction.doseAndRate.dose[x]
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.dosageInstruction.doseAndRate.dose[x]
-    short: (USCDI Requirement) Amount of medication per dose
+    short: (USCDI) Amount of medication per dose
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -319,19 +319,19 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.dispenseRequest
-    short: (USCDI Requirement) Medication supply authorization
+    short: (USCDI) Medication supply authorization
     mustSupport: true
   - id: MedicationRequest.dispenseRequest.numberOfRepeatsAllowed
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.dispenseRequest.numberOfRepeatsAllowed
-    short: (USCDI Requirement) Number of refills authorized
+    short: (USCDI) Number of refills authorized
     mustSupport: true
   - id: MedicationRequest.dispenseRequest.quantity
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.dispenseRequest.quantity
-    short: (USCDI Requirement) Amount of medication to supply per dispense
+    short: (USCDI) Amount of medication to supply per dispense
     mustSupport: true

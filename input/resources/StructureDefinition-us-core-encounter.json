@@ -32,7 +32,7 @@
                     }
                 ],
                 "path": "Encounter.identifier",
-                "short": "(USCDI Requirement) Identifier(s) by which this encounter is known",
+                "short": "(USCDI) Identifier(s) by which this encounter is known",
                 "mustSupport": true
             },
             {
@@ -44,7 +44,7 @@
                     }
                 ],
                 "path": "Encounter.identifier.system",
-                "short": "(USCDI Requirement) The namespace for the identifier value",
+                "short": "(USCDI) The namespace for the identifier value",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -63,7 +63,7 @@
                     }
                 ],
                 "path": "Encounter.identifier.value",
-                "short": "(USCDI Requirement) The value that is unique",
+                "short": "(USCDI) The value that is unique",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -82,7 +82,7 @@
                     }
                 ],
                 "path": "Encounter.status",
-                "short": "(USCDI Requirement) planned | arrived | triaged | in-progress | onleave | finished | cancelled +",
+                "short": "(USCDI) planned | arrived | triaged | in-progress | onleave | finished | cancelled +",
                 "mustSupport": true
             },
             {
@@ -94,7 +94,7 @@
                     }
                 ],
                 "path": "Encounter.class",
-                "short": "(USCDI Requirement) Classification of patient encounter",
+                "short": "(USCDI) Classification of patient encounter",
                 "mustSupport": true
             },
             {
@@ -106,7 +106,7 @@
                     }
                 ],
                 "path": "Encounter.type",
-                "short": "(USCDI Requirement) Specific type of encounter",
+                "short": "(USCDI) Specific type of encounter",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -124,7 +124,7 @@
                     }
                 ],
                 "path": "Encounter.subject",
-                "short": "(USCDI Requirement) The patient or group present at the encounter",
+                "short": "(USCDI) The patient or group present at the encounter",
                 "min": 1,
                 "type": [
                     {
@@ -145,7 +145,7 @@
                     }
                 ],
                 "path": "Encounter.participant",
-                "short": "(USCDI Requirement) List of participants involved in the encounter",
+                "short": "(USCDI) List of participants involved in the encounter",
                 "mustSupport": true
             },
             {
@@ -157,7 +157,7 @@
                     }
                 ],
                 "path": "Encounter.participant.type",
-                "short": "(USCDI Requirement) Role of participant in encounter",
+                "short": "(USCDI) Role of participant in encounter",
                 "mustSupport": true
             },
             {
@@ -169,7 +169,7 @@
                     }
                 ],
                 "path": "Encounter.participant.period",
-                "short": "(USCDI Requirement) Period of time during the encounter that the participant participated",
+                "short": "(USCDI) Period of time during the encounter that the participant participated",
                 "mustSupport": true
             },
             {
@@ -181,7 +181,7 @@
                     }
                 ],
                 "path": "Encounter.participant.individual",
-                "short": "(USCDI Requirement) Persons involved in the encounter other than the patient",
+                "short": "(USCDI) Persons involved in the encounter other than the patient",
                 "type": [
                     {
                         "code": "Reference",
@@ -229,7 +229,7 @@
                     }
                 ],
                 "path": "Encounter.period",
-                "short": "(USCDI Requirement) The start and end time of the encounter",
+                "short": "(USCDI) The start and end time of the encounter",
                 "mustSupport": true
             },
             {
@@ -241,7 +241,7 @@
                     }
                 ],
                 "path": "Encounter.reasonCode",
-                "short": "(USCDI Requirement) Coded reason the encounter takes place",
+                "short": "(USCDI) Coded reason the encounter takes place",
                 "mustSupport": true
             },
             {
@@ -253,7 +253,7 @@
                     }
                 ],
                 "path": "Encounter.reasonReference",
-                "short": "(USCDI Requirement) Reason the encounter takes place (reference)",
+                "short": "(USCDI) Reason the encounter takes place (reference)",
                 "max": "*",
                 "type": [
                     {
@@ -320,7 +320,7 @@
                     }
                 ],
                 "path": "Encounter.hospitalization",
-                "short": "(USCDI Requirement) Details about the admission to a healthcare service",
+                "short": "(USCDI) Details about the admission to a healthcare service",
                 "mustSupport": true
             },
             {
@@ -332,7 +332,7 @@
                     }
                 ],
                 "path": "Encounter.hospitalization.dischargeDisposition",
-                "short": "(USCDI Requirement) Category or kind of location after discharge",
+                "short": "(USCDI) Category or kind of location after discharge",
                 "mustSupport": true,
                 "binding": {
                     "strength": "preferred",
@@ -349,7 +349,7 @@
                     }
                 ],
                 "path": "Encounter.location",
-                "short": "(USCDI Requirement) List of locations where the patient has been",
+                "short": "(USCDI) List of locations where the patient has been",
                 "mustSupport": true
             },
             {
@@ -361,7 +361,7 @@
                     }
                 ],
                 "path": "Encounter.location.location",
-                "short": "(USCDI Requirement) Location the encounter takes place",
+                "short": "(USCDI) Location the encounter takes place",
                 "mustSupport": true
             },
             {
@@ -373,7 +373,7 @@
                     }
                 ],
                 "path": "Encounter.serviceProvider",
-                "short": "(USCDI Requirement) The organization (facility) responsible for this encounter",
+                "short": "(USCDI) The organization (facility) responsible for this encounter",
                 "type": [
                     {
                         "code": "Reference",

@@ -35,7 +35,7 @@
                     }
                 ],
                 "path": "Provenance.target",
-                "short": "(USCDI Requirement) The Resource this Provenance record supports",
+                "short": "(USCDI) The Resource this Provenance record supports",
                 "mustSupport": true
             },
             {
@@ -47,7 +47,7 @@
                     }
                 ],
                 "path": "Provenance.target.reference",
-                "short": "(USCDI Requirement) Literal reference, Relative, internal or absolute URL",
+                "short": "(USCDI) Literal reference, Relative, internal or absolute URL",
                 "mustSupport": true
             },
             {
@@ -59,7 +59,7 @@
                     }
                 ],
                 "path": "Provenance.recorded",
-                "short": "(USCDI Requirement) Timestamp when the activity was recorded / updated",
+                "short": "(USCDI) Timestamp when the activity was recorded / updated",
                 "mustSupport": true
             },
             {
@@ -80,7 +80,7 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI Requirement) Actor involved",
+                "short": "(USCDI) Actor involved",
                 "constraint": [
                     {
                         "key": "provenance-1",
@@ -100,7 +100,7 @@
                     }
                 ],
                 "path": "Provenance.agent.type",
-                "short": "(USCDI Requirement) How the agent participated",
+                "short": "(USCDI) How the agent participated",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -116,7 +116,7 @@
                     }
                 ],
                 "path": "Provenance.agent.who",
-                "short": "(USCDI Requirement) Who participated",
+                "short": "(USCDI) Who participated",
                 "type": [
                     {
                         "code": "Reference",
@@ -191,7 +191,7 @@
                     }
                 ],
                 "path": "Provenance.agent.onBehalfOf",
-                "short": "(USCDI Requirement) Who the agent is representing",
+                "short": "(USCDI) Who the agent is representing",
                 "type": [
                     {
                         "code": "Reference",
@@ -212,7 +212,7 @@
                 ],
                 "path": "Provenance.agent",
                 "sliceName": "ProvenanceAuthor",
-                "short": "(USCDI Requirement) Actor involved",
+                "short": "(USCDI) Actor involved",
                 "max": "*",
                 "mustSupport": true
             },
@@ -225,7 +225,7 @@
                     }
                 ],
                 "path": "Provenance.agent.type",
-                "short": "(USCDI Requirement) How the agent participated",
+                "short": "(USCDI) How the agent participated",
                 "min": 1,
                 "type": [
                     {
@@ -252,7 +252,7 @@
                 ],
                 "path": "Provenance.agent",
                 "sliceName": "ProvenanceTransmitter",
-                "short": "(USCDI Requirement) Actor involved",
+                "short": "(USCDI) Actor involved",
                 "definition": "The entity that provided the copy to your system.",
                 "mustSupport": true
             },
@@ -265,7 +265,7 @@
                     }
                 ],
                 "path": "Provenance.agent.type",
-                "short": "(USCDI Requirement) How the agent participated",
+                "short": "(USCDI) How the agent participated",
                 "min": 1,
                 "type": [
                     {

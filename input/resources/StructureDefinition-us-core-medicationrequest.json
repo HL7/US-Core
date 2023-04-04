@@ -61,7 +61,7 @@
                     }
                 ],
                 "path": "MedicationRequest.status",
-                "short": "(USCDI Requirement) active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown",
+                "short": "(USCDI) active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -84,7 +84,7 @@
                     }
                 ],
                 "path": "MedicationRequest.intent",
-                "short": "(USCDI Requirement) proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option",
+                "short": "(USCDI) proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -116,7 +116,7 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI Requirement) Type of medication usage",
+                "short": "(USCDI) Type of medication usage",
                 "mustSupport": true
             },
             {
@@ -129,7 +129,7 @@
                 ],
                 "path": "MedicationRequest.category",
                 "sliceName": "us-core",
-                "short": "(USCDI Requirement) Type of medication usage",
+                "short": "(USCDI) Type of medication usage",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -146,7 +146,7 @@
                     }
                 ],
                 "path": "MedicationRequest.reported[x]",
-                "short": "(USCDI Requirement) Reported rather than primary record",
+                "short": "(USCDI) Reported rather than primary record",
                 "type": [
                     {
                         "extension": [
@@ -233,7 +233,7 @@
                     }
                 ],
                 "path": "MedicationRequest.medication[x]",
-                "short": "(USCDI Requirement) Medication to be taken",
+                "short": "(USCDI) Medication to be taken",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -266,7 +266,7 @@
                     }
                 ],
                 "path": "MedicationRequest.subject",
-                "short": "(USCDI Requirement) Who or group medication request is for",
+                "short": "(USCDI) Who or group medication request is for",
                 "type": [
                     {
                         "code": "Reference",
@@ -292,7 +292,7 @@
                     }
                 ],
                 "path": "MedicationRequest.encounter",
-                "short": "(USCDI Requirement) Encounter created as part of encounter/admission/stay",
+                "short": "(USCDI) Encounter created as part of encounter/admission/stay",
                 "type": [
                     {
                         "code": "Reference",
@@ -318,7 +318,7 @@
                     }
                 ],
                 "path": "MedicationRequest.authoredOn",
-                "short": "(USCDI Requirement) When request was initially authored",
+                "short": "(USCDI) When request was initially authored",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -336,7 +336,7 @@
                     }
                 ],
                 "path": "MedicationRequest.requester",
-                "short": "(USCDI Requirement) Who/What requested the Request",
+                "short": "(USCDI) Who/What requested the Request",
                 "min": 1,
                 "type": [
                     {
@@ -418,7 +418,7 @@
                     }
                 ],
                 "path": "MedicationRequest.reasonCode",
-                "short": "(USCDI Requirement) Reason or indication for ordering or not ordering the medication",
+                "short": "(USCDI) Reason or indication for ordering or not ordering the medication",
                 "binding": {
                     "strength": "extensible",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
@@ -433,7 +433,7 @@
                     }
                 ],
                 "path": "MedicationRequest.reasonReference",
-                "short": "(USCDI Requirement) Condition or observation that supports why the prescription is being written",
+                "short": "(USCDI) Condition or observation that supports why the prescription is being written",
                 "type": [
                     {
                         "code": "Reference",
@@ -464,7 +464,7 @@
                     }
                 ],
                 "path": "MedicationRequest.dosageInstruction",
-                "short": "(USCDI Requirement) How the medication should be taken",
+                "short": "(USCDI) How the medication should be taken",
                 "mustSupport": true
             },
             {
@@ -476,7 +476,7 @@
                     }
                 ],
                 "path": "MedicationRequest.dosageInstruction.text",
-                "short": "(USCDI Requirement) Free text dosage instructions e.g. SIG",
+                "short": "(USCDI) Free text dosage instructions e.g. SIG",
                 "mustSupport": true
             },
             {
@@ -488,7 +488,7 @@
                     }
                 ],
                 "path": "MedicationRequest.dosageInstruction.timing",
-                "short": "(USCDI Requirement) When medication should be administered",
+                "short": "(USCDI) When medication should be administered",
                 "mustSupport": true
             },
             {
@@ -500,7 +500,7 @@
                     }
                 ],
                 "path": "MedicationRequest.dosageInstruction.doseAndRate",
-                "short": "(USCDI Requirement) Amount of medication administered",
+                "short": "(USCDI) Amount of medication administered",
                 "mustSupport": true
             },
             {
@@ -512,7 +512,7 @@
                     }
                 ],
                 "path": "MedicationRequest.dosageInstruction.doseAndRate.dose[x]",
-                "short": "(USCDI Requirement) Amount of medication per dose",
+                "short": "(USCDI) Amount of medication per dose",
                 "type": [
                     {
                         "extension": [
@@ -548,7 +548,7 @@
                     }
                 ],
                 "path": "MedicationRequest.dispenseRequest",
-                "short": "(USCDI Requirement) Medication supply authorization",
+                "short": "(USCDI) Medication supply authorization",
                 "mustSupport": true
             },
             {
@@ -560,7 +560,7 @@
                     }
                 ],
                 "path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
-                "short": "(USCDI Requirement) Number of refills authorized",
+                "short": "(USCDI) Number of refills authorized",
                 "mustSupport": true
             },
             {
@@ -572,7 +572,7 @@
                     }
                 ],
                 "path": "MedicationRequest.dispenseRequest.quantity",
-                "short": "(USCDI Requirement) Amount of medication to supply per dispense",
+                "short": "(USCDI) Amount of medication to supply per dispense",
                 "mustSupport": true
             }
         ]

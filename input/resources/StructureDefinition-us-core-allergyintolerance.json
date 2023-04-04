@@ -38,7 +38,7 @@
                     }
                 ],
                 "path": "AllergyIntolerance.clinicalStatus",
-                "short": "(USCDI Requirement) active | inactive | resolved",
+                "short": "(USCDI) active | inactive | resolved",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -60,7 +60,7 @@
                     }
                 ],
                 "path": "AllergyIntolerance.verificationStatus",
-                "short": "(USCDI Requirement) unconfirmed | confirmed | refuted | entered-in-error",
+                "short": "(USCDI) unconfirmed | confirmed | refuted | entered-in-error",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -82,7 +82,7 @@
                     }
                 ],
                 "path": "AllergyIntolerance.code",
-                "short": "(USCDI Requirement) Code that identifies the allergy or intolerance",
+                "short": "(USCDI) Code that identifies the allergy or intolerance",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -105,7 +105,7 @@
                     }
                 ],
                 "path": "AllergyIntolerance.patient",
-                "short": "(USCDI Requirement) Who the sensitivity is for",
+                "short": "(USCDI) Who the sensitivity is for",
                 "type": [
                     {
                         "code": "Reference",
@@ -131,7 +131,7 @@
                     }
                 ],
                 "path": "AllergyIntolerance.reaction",
-                "short": "(USCDI Requirement) Adverse Reaction Events linked to exposure to substance",
+                "short": "(USCDI) Adverse Reaction Events linked to exposure to substance",
                 "mustSupport": true
             },
             {
@@ -143,7 +143,7 @@
                     }
                 ],
                 "path": "AllergyIntolerance.reaction.manifestation",
-                "short": "(USCDI Requirement) Clinical symptoms/signs associated with the Event",
+                "short": "(USCDI) Clinical symptoms/signs associated with the Event",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",

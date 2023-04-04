@@ -26,7 +26,7 @@
                 ],
                 "path": "Observation.category",
                 "sliceName": "us-core",
-                "short": "(USCDI Requirement) Classification of  type of observation",
+                "short": "(USCDI) Classification of  type of observation",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -54,7 +54,7 @@
                     }
                 ],
                 "path": "Observation.code",
-                "short": "(USCDI Requirement) Laboratory Test Name",
+                "short": "(USCDI) Laboratory Test Name",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -77,7 +77,7 @@
                     }
                 ],
                 "path": "Observation.value[x]",
-                "short": "(USCDI Requirement) Result Value",
+                "short": "(USCDI) Result Value",
                 "definition": "The Laboratory result value.  If a coded value,  the valueCodeableConcept.code **SHOULD** be selected from [SNOMED CT](http://hl7.org/fhir/ValueSet/uslab-obs-codedresults) if the concept exists. If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification.",
                 "type": [
                     {
@@ -167,7 +167,7 @@
                     }
                 ],
                 "path": "Observation.specimen",
-                "short": "(USCDI Requirement) Specimen used for this observation",
+                "short": "(USCDI) Specimen used for this observation",
                 "type": [
                     {
                         "code": "Reference",

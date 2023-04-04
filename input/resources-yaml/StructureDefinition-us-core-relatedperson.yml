@@ -33,7 +33,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: RelatedPerson.active
-    short: (USCDI Requirement) Whether this related person's record is in active use
+    short: (USCDI) Whether this related person's record is in active use
     min: 1
     mustSupport: true
   - id: RelatedPerson.patient
@@ -41,7 +41,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: RelatedPerson.patient
-    short: (USCDI Requirement) The patient this person is related to
+    short: (USCDI) The patient this person is related to
     type:
     - code: Reference
       targetProfile:
@@ -52,7 +52,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: RelatedPerson.relationship
-    short: (USCDI Requirement) The nature of the relationship
+    short: (USCDI) The nature of the relationship
     condition:
     - us-core-14
     mustSupport: true
@@ -61,7 +61,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: RelatedPerson.name
-    short: (USCDI Requirement) A name associated with the person
+    short: (USCDI) A name associated with the person
     condition:
     - us-core-14
     mustSupport: true
@@ -70,13 +70,13 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: RelatedPerson.telecom
-    short: (USCDI Requirement) A contact detail for the person
+    short: (USCDI) A contact detail for the person
     mustSupport: true
   - id: RelatedPerson.address
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: RelatedPerson.address
-    short: (USCDI Requirement) Address where the related person can be contacted or
+    short: (USCDI) Address where the related person can be contacted or
       visited
     mustSupport: true

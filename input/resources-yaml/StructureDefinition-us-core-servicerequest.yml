@@ -28,7 +28,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: ServiceRequest.status
-    short: (USCDI Requirement) draft | active | on-hold | revoked | completed | entered-in-error
+    short: (USCDI) draft | active | on-hold | revoked | completed | entered-in-error
       | unknown
     mustSupport: true
   - id: ServiceRequest.intent
@@ -36,7 +36,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: ServiceRequest.intent
-    short: (USCDI Requirement) proposal | plan | directive | order | original-order
+    short: (USCDI) proposal | plan | directive | order | original-order
       | reflex-order | filler-order | instance-order | option
     mustSupport: true
   - id: ServiceRequest.category
@@ -49,7 +49,7 @@ differential:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI Requirement) Classification of service
+    short: (USCDI) Classification of service
     mustSupport: true
   - id: ServiceRequest.category:us-core
     extension:
@@ -57,7 +57,7 @@ differential:
       valueBoolean: true
     path: ServiceRequest.category
     sliceName: us-core
-    short: (USCDI Requirement) Classification of service
+    short: (USCDI) Classification of service
     mustSupport: true
     binding:
       strength: required
@@ -69,7 +69,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: ServiceRequest.code
-    short: (USCDI Requirement) What is being requested/ordered
+    short: (USCDI) What is being requested/ordered
     min: 1
     mustSupport: true
     binding:
@@ -80,7 +80,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: ServiceRequest.subject
-    short: (USCDI Requirement) Individual or Entity the service is ordered for
+    short: (USCDI) Individual or Entity the service is ordered for
     type:
     - code: Reference
       targetProfile:
@@ -91,7 +91,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: ServiceRequest.occurrence[x]
-    short: (USCDI Requirement) When service should occur
+    short: (USCDI) When service should occur
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -105,14 +105,14 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: ServiceRequest.authoredOn
-    short: (USCDI Requirement) Date request signed
+    short: (USCDI) Date request signed
     mustSupport: true
   - id: ServiceRequest.requester
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: ServiceRequest.requester
-    short: (USCDI Requirement) Who/what is requesting service
+    short: (USCDI) Who/what is requesting service
     type:
     - code: Reference
       targetProfile:
@@ -147,7 +147,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: ServiceRequest.reasonCode
-    short: (USCDI Requirement) Explanation/Justification for procedure or service
+    short: (USCDI) Explanation/Justification for procedure or service
     binding:
       strength: extensible
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
@@ -156,7 +156,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: ServiceRequest.reasonReference
-    short: (USCDI Requirement) Explanation/Justification for service or service
+    short: (USCDI) Explanation/Justification for service or service
     type:
     - code: Reference
       targetProfile:

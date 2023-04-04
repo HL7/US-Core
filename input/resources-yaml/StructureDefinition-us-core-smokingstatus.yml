@@ -37,7 +37,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.status
-    short: (USCDI Requirement) registered | preliminary | final | amended +
+    short: (USCDI) registered | preliminary | final | amended +
     mustSupport: true
     binding:
       strength: required
@@ -55,7 +55,7 @@ differential:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI Requirement) Classification of  type of observation
+    short: (USCDI) Classification of  type of observation
     min: 1
     mustSupport: true
   - id: Observation.category:SocialHistory
@@ -64,7 +64,7 @@ differential:
       valueBoolean: true
     path: Observation.category
     sliceName: SocialHistory
-    short: (USCDI Requirement) Classification of  type of observation
+    short: (USCDI) Classification of  type of observation
     min: 1
     max: '1'
     patternCodeableConcept:
@@ -77,7 +77,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.code
-    short: (USCDI Requirement) Smoking Status
+    short: (USCDI) Smoking Status
     mustSupport: true
     binding:
       strength: extensible
@@ -90,7 +90,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.subject
-    short: (USCDI Requirement) Who and/or what the observation is about
+    short: (USCDI) Who and/or what the observation is about
     min: 1
     type:
     - code: Reference
@@ -105,7 +105,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.effectiveDateTime
-    short: (USCDI Requirement) Clinically relevant time/time-period for observation
+    short: (USCDI) Clinically relevant time/time-period for observation
     min: 1
     mustSupport: true
     mapping:
@@ -116,7 +116,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.value[x]
-    short: (USCDI Requirement) Typically Coded Responses from Smoking Status Value
+    short: (USCDI) Typically Coded Responses from Smoking Status Value
       Set
     min: 1
     type:

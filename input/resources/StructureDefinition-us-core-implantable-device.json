@@ -40,7 +40,7 @@
                     }
                 ],
                 "path": "Device.udiCarrier",
-                "short": "(USCDI Requirement) Unique Device Identifier (UDI) Barcode string",
+                "short": "(USCDI) Unique Device Identifier (UDI) Barcode string",
                 "comment": "Some devices may not have UDI information (for example. historical data or patient reported data).",
                 "max": "1",
                 "mustSupport": true,
@@ -60,7 +60,7 @@
                     }
                 ],
                 "path": "Device.udiCarrier.deviceIdentifier",
-                "short": "(USCDI Requirement) Mandatory fixed portion of UDI",
+                "short": "(USCDI) Mandatory fixed portion of UDI",
                 "min": 1,
                 "mustSupport": true,
                 "mapping": [
@@ -79,7 +79,7 @@
                     }
                 ],
                 "path": "Device.udiCarrier.carrierHRF",
-                "short": "(USCDI Requirement) UDI Human Readable Barcode String",
+                "short": "(USCDI) UDI Human Readable Barcode String",
                 "alias": [
                     "UDI",
                     "Barcode String"
@@ -101,7 +101,7 @@
                     }
                 ],
                 "path": "Device.distinctIdentifier",
-                "short": "(USCDI Requirement) The distinct identification string",
+                "short": "(USCDI) The distinct identification string",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -119,7 +119,7 @@
                     }
                 ],
                 "path": "Device.manufactureDate",
-                "short": "(USCDI Requirement) Date when the device was made",
+                "short": "(USCDI) Date when the device was made",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -137,7 +137,7 @@
                     }
                 ],
                 "path": "Device.expirationDate",
-                "short": "(USCDI Requirement) Date and time of expiry of this device (if applicable)",
+                "short": "(USCDI) Date and time of expiry of this device (if applicable)",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -155,7 +155,7 @@
                     }
                 ],
                 "path": "Device.lotNumber",
-                "short": "(USCDI Requirement) Lot number of manufacture",
+                "short": "(USCDI) Lot number of manufacture",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -173,7 +173,7 @@
                     }
                 ],
                 "path": "Device.serialNumber",
-                "short": "(USCDI Requirement) Serial number assigned by the manufacturer",
+                "short": "(USCDI) Serial number assigned by the manufacturer",
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -191,7 +191,7 @@
                     }
                 ],
                 "path": "Device.type",
-                "short": "(USCDI Requirement) The kind or type of device",
+                "short": "(USCDI) The kind or type of device",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -215,7 +215,7 @@
                     }
                 ],
                 "path": "Device.patient",
-                "short": "(USCDI Requirement) Patient to whom Device is affixed",
+                "short": "(USCDI) Patient to whom Device is affixed",
                 "min": 1,
                 "type": [
                     {

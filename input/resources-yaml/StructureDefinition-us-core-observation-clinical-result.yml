@@ -49,7 +49,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.status
-    short: (USCDI Requirement) registered | preliminary | final | amended +
+    short: (USCDI) registered | preliminary | final | amended +
     mustSupport: true
   - id: Observation.category
     extension:
@@ -61,7 +61,7 @@ differential:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI Requirement) Classification of  type of observation
+    short: (USCDI) Classification of  type of observation
     min: 1
     mustSupport: true
   - id: Observation.category:us-core
@@ -70,7 +70,7 @@ differential:
       valueBoolean: true
     path: Observation.category
     sliceName: us-core
-    short: (USCDI Requirement) Classification of  type of observation
+    short: (USCDI) Classification of  type of observation
     mustSupport: true
     binding:
       strength: required
@@ -81,7 +81,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.code
-    short: (USCDI Requirement) Clinical Test or Procedure Name
+    short: (USCDI) Clinical Test or Procedure Name
     definition: The name of the clinical test or procedure performed on a patient.  A
       LOINC **SHALL** be used if the concept is present in LOINC.
     comment: 'The typical patterns for codes are:  1)  a LOINC code either as a translation
@@ -97,7 +97,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.subject
-    short: (USCDI Requirement) Who and/or what the observation is about
+    short: (USCDI) Who and/or what the observation is about
     min: 1
     type:
     - code: Reference
@@ -109,7 +109,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.effective[x]
-    short: (USCDI Requirement) Clinically relevant time/time-period for observation
+    short: (USCDI) Clinically relevant time/time-period for observation
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -132,7 +132,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.value[x]
-    short: (USCDI Requirement) Result Value
+    short: (USCDI) Result Value
     definition: The clinical test or procedure result value. If a numeric value, valueQuantity.code
       **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM
       Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines
@@ -173,7 +173,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.dataAbsentReason
-    short: (USCDI Requirement) Why the result is missing
+    short: (USCDI) Why the result is missing
     condition:
     - us-core-2
     mustSupport: true

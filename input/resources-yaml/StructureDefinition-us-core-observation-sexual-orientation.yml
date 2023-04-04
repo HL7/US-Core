@@ -57,7 +57,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.status
-    short: (USCDI Requirement) (USCDI Requirement) registered | preliminary | final
+    short: (USCDI) registered | preliminary | final
       | amended +
     mustSupport: true
     binding:
@@ -73,7 +73,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.code
-    short: (USCDI Requirement) (USCDI Requirement) Sexual Orientation
+    short: (USCDI) Sexual Orientation
     patternCodeableConcept:
       coding:
       - system: http://loinc.org
@@ -86,7 +86,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.subject
-    short: (USCDI Requirement) (USCDI Requirement) Who and/or what the observation
+    short: (USCDI) Who and/or what the observation
       is about
     min: 1
     type:
@@ -104,7 +104,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.effective[x]
-    short: (USCDI Requirement) (USCDI Requirement) Clinically relevant time/time-period
+    short: (USCDI) Clinically relevant time/time-period
       for observation
     definition: This records the time during which the patient had identified their
       emotional, romantic, sexual, or affectional attraction to another person.
@@ -127,7 +127,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueCodeableConcept
-    short: (USCDI Requirement) (USCDI Requirement) Sexual Orientation
+    short: (USCDI) Sexual Orientation
     definition: The Sexual Orientation value.
     mustSupport: true
     binding:

@@ -47,7 +47,7 @@
                     }
                 ],
                 "path": "Procedure.basedOn",
-                "short": "(USCDI Requirement) A request for this procedure",
+                "short": "(USCDI) A request for this procedure",
                 "type": [
                     {
                         "code": "Reference",
@@ -68,7 +68,7 @@
                     }
                 ],
                 "path": "Procedure.status",
-                "short": "(USCDI Requirement) preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
+                "short": "(USCDI) preparation | in-progress | not-done | on-hold | stopped | completed | entered-in-error | unknown",
                 "condition": [
                     "us-core-7"
                 ],
@@ -93,7 +93,7 @@
                     }
                 ],
                 "path": "Procedure.code",
-                "short": "(USCDI Requirement) Identification of the procedure",
+                "short": "(USCDI) Identification of the procedure",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -117,7 +117,7 @@
                     }
                 ],
                 "path": "Procedure.subject",
-                "short": "(USCDI Requirement) Who the procedure was performed on",
+                "short": "(USCDI) Who the procedure was performed on",
                 "type": [
                     {
                         "code": "Reference",
@@ -143,7 +143,7 @@
                     }
                 ],
                 "path": "Procedure.performed[x]",
-                "short": "(USCDI Requirement) When the procedure was performed",
+                "short": "(USCDI) When the procedure was performed",
                 "type": [
                     {
                         "extension": [

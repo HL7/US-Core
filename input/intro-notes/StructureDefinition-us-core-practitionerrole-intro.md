@@ -20,7 +20,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
     - `PractitionerRole.organization`
     - `PractitionerRole.healthcareService`
     - `PractitionerRole.location`
-* The PractitionerRole.endpoint is where a [Direct address] may be represented.
+* <span class="bg-success" markdown="1"> A [Direct address] can be represented in the `telecom` element using the [US Core Direct email Extension] or in a referenced [Endpoint] as a "direct-project" endpoint connection type.</span><!-- new-content -->
 * Clients can request servers return the Practitioner resource and Endpoint resources by using `_include`. See [Quick Start].
 * As a result of implementation feedback, the US Core Location  and PractitionerRole Profiles are not explicitly referenced in any US Core Profile. However they **SHOULD** be used as the default profile if referenced by another US Core profile. See this guidance on [Referencing US Core Profiles].
 

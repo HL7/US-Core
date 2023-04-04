@@ -34,7 +34,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.status
-    short: (USCDI Requirement) registered | preliminary | final | amended +
+    short: (USCDI) registered | preliminary | final | amended +
     mustSupport: true
   - id: Observation.category
     extension:
@@ -46,7 +46,7 @@ differential:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI Requirement) Classification of  type of observation
+    short: (USCDI) Classification of  type of observation
     min: 1
     mustSupport: true
   - id: Observation.category:us-core
@@ -55,7 +55,7 @@ differential:
       valueBoolean: true
     path: Observation.category
     sliceName: us-core
-    short: (USCDI Requirement) Classification of  type of observation
+    short: (USCDI) Classification of  type of observation
     min: 0
     mustSupport: true
     binding:
@@ -68,7 +68,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.code
-    short: (USCDI Requirement) Type of observation (code / type)
+    short: (USCDI) Type of observation (code / type)
     mustSupport: true
     binding:
       strength: preferred
@@ -77,7 +77,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.subject
-    short: (USCDI Requirement) Who and/or what the observation is about
+    short: (USCDI) Who and/or what the observation is about
     min: 1
     type:
     - code: Reference
@@ -89,7 +89,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.effective[x]
-    short: (USCDI Requirement) Clinically relevant time/time-period for observation
+    short: (USCDI) Clinically relevant time/time-period for observation
     definition: The time or time-period the observed value is asserted as being true.
       For biological subjects - e.g. human patients - this is usually called the "physiologically
       relevant time".
@@ -109,7 +109,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.performer
-    short: (USCDI Requirement) Who is responsible for the observation
+    short: (USCDI) Who is responsible for the observation
     type:
     - code: Reference
       targetProfile:
@@ -144,7 +144,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.value[x]
-    short: (USCDI Requirement) Actual result
+    short: (USCDI) Actual result
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -175,7 +175,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.derivedFrom
-    short: (USCDI Requirement) Related Observation(s) or other resource the observation
+    short: (USCDI) Related Observation(s) or other resource the observation
       is made from
     definition: Observations or or other resource such as a QuestionnaireResponse
       from which this observation value is derived.

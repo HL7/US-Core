@@ -38,7 +38,7 @@
                     }
                 ],
                 "path": "Goal.lifecycleStatus",
-                "short": "(USCDI Requirement) proposed | planned | accepted | active | on-hold | completed | cancelled | entered-in-error | rejected",
+                "short": "(USCDI) proposed | planned | accepted | active | on-hold | completed | cancelled | entered-in-error | rejected",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -60,7 +60,7 @@
                     }
                 ],
                 "path": "Goal.description",
-                "short": "(USCDI Requirement) Code or text describing goal",
+                "short": "(USCDI) Code or text describing goal",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -83,7 +83,7 @@
                     }
                 ],
                 "path": "Goal.subject",
-                "short": "(USCDI Requirement) Who this goal is intended for",
+                "short": "(USCDI) Who this goal is intended for",
                 "type": [
                     {
                         "code": "Reference",
@@ -109,7 +109,7 @@
                     }
                 ],
                 "path": "Goal.start[x]",
-                "short": "(USCDI Requirement) When goal pursuit begins",
+                "short": "(USCDI) When goal pursuit begins",
                 "type": [
                     {
                         "extension": [
@@ -135,7 +135,7 @@
                     }
                 ],
                 "path": "Goal.target",
-                "short": "(USCDI Requirement) Target outcome for the goal",
+                "short": "(USCDI) Target outcome for the goal",
                 "mustSupport": true
             },
             {
@@ -147,7 +147,7 @@
                     }
                 ],
                 "path": "Goal.target.due[x]",
-                "short": "(USCDI Requirement) Reach goal on or before",
+                "short": "(USCDI) Reach goal on or before",
                 "type": [
                     {
                         "extension": [

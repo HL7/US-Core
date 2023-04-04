@@ -32,7 +32,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: QuestionnaireResponse.questionnaire
-    short: (USCDI Requirement) Form being answered
+    short: (USCDI) Form being answered
     mustSupport: true
   - id: QuestionnaireResponse.questionnaire.extension:url
     extension:
@@ -40,7 +40,7 @@ differential:
       valueBoolean: true
     path: QuestionnaireResponse.questionnaire.extension
     sliceName: url
-    short: (USCDI Requirement) The location where a non-FHIR questionnaire/survey
+    short: (USCDI) The location where a non-FHIR questionnaire/survey
       form can be found.
     min: 0
     max: '1'
@@ -54,7 +54,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: QuestionnaireResponse.status
-    short: (USCDI Requirement) in-progress | completed | amended | entered-in-error
+    short: (USCDI) in-progress | completed | amended | entered-in-error
       | stopped
     mustSupport: true
   - id: QuestionnaireResponse.subject
@@ -62,7 +62,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: QuestionnaireResponse.subject
-    short: (USCDI Requirement) The subject of the questions
+    short: (USCDI) The subject of the questions
     comment: '-'
     min: 1
     type:
@@ -75,14 +75,14 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: QuestionnaireResponse.authored
-    short: (USCDI Requirement) Date the answers were gathered
+    short: (USCDI) Date the answers were gathered
     mustSupport: true
   - id: QuestionnaireResponse.author
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: QuestionnaireResponse.author
-    short: (USCDI Requirement) Person who received and recorded the answers
+    short: (USCDI) Person who received and recorded the answers
     type:
     - code: Reference
       targetProfile:
@@ -117,21 +117,21 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: QuestionnaireResponse.item
-    short: (USCDI Requirement) Groups and questions
+    short: (USCDI) Groups and questions
     mustSupport: true
   - id: QuestionnaireResponse.item.linkId
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: QuestionnaireResponse.item.linkId
-    short: (USCDI Requirement) Pointer to specific item from Questionnaire
+    short: (USCDI) Pointer to specific item from Questionnaire
     mustSupport: true
   - id: QuestionnaireResponse.item.answer.value[x]
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: QuestionnaireResponse.item.answer.value[x]
-    short: (USCDI Requirement) Single-valued answer to the question
+    short: (USCDI) Single-valued answer to the question
     min: 0
     max: '1'
     type:

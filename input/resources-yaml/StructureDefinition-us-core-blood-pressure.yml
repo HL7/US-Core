@@ -34,7 +34,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.code
-    short: (USCDI Requirement) Blood Pressure
+    short: (USCDI) Blood Pressure
     type:
     - code: CodeableConcept
     patternCodeableConcept:
@@ -53,7 +53,7 @@ differential:
         path: code
       ordered: false
       rules: open
-    short: (USCDI Requirement) Component observations
+    short: (USCDI) Component observations
     min: 2
     max: '*'
     mustSupport: true
@@ -63,7 +63,7 @@ differential:
       valueBoolean: true
     path: Observation.component
     sliceName: systolic
-    short: (USCDI Requirement) Systolic Blood Pressure
+    short: (USCDI) Systolic Blood Pressure
     min: 1
     max: '1'
     mustSupport: true
@@ -72,7 +72,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.code
-    short: (USCDI Requirement) Systolic Blood Pressure Code
+    short: (USCDI) Systolic Blood Pressure Code
     min: 1
     max: '1'
     patternCodeableConcept:
@@ -85,7 +85,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity
-    short: (USCDI Requirement) Vital Sign Component Value
+    short: (USCDI) Vital Sign Component Value
     type:
     - code: Quantity
     mustSupport: true
@@ -94,7 +94,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.value
-    short: (USCDI Requirement) Numerical value (with implicit precision)
+    short: (USCDI) Numerical value (with implicit precision)
     min: 1
     max: '1'
     type:
@@ -105,7 +105,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.unit
-    short: (USCDI Requirement) Unit representation
+    short: (USCDI) Unit representation
     min: 1
     max: '1'
     type:
@@ -116,7 +116,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.system
-    short: (USCDI Requirement) System that defines coded unit form
+    short: (USCDI) System that defines coded unit form
     min: 1
     max: '1'
     type:
@@ -128,7 +128,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.code
-    short: (USCDI Requirement) Coded form of the unit
+    short: (USCDI) Coded form of the unit
     min: 1
     max: '1'
     type:
@@ -141,7 +141,7 @@ differential:
       valueBoolean: true
     path: Observation.component
     sliceName: diastolic
-    short: (USCDI Requirement) Diastolic Blood Pressure
+    short: (USCDI) Diastolic Blood Pressure
     min: 1
     max: '1'
     mustSupport: true
@@ -150,7 +150,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.code
-    short: (USCDI Requirement) Diastolic Blood Pressure Code
+    short: (USCDI) Diastolic Blood Pressure Code
     min: 1
     max: '1'
     patternCodeableConcept:
@@ -163,7 +163,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity
-    short: (USCDI Requirement) Vital Sign Component Value
+    short: (USCDI) Vital Sign Component Value
     type:
     - code: Quantity
     mustSupport: true
@@ -172,7 +172,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.value
-    short: (USCDI Requirement) Numerical value (with implicit precision)
+    short: (USCDI) Numerical value (with implicit precision)
     min: 1
     max: '1'
     type:
@@ -183,7 +183,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.unit
-    short: (USCDI Requirement) Unit representation
+    short: (USCDI) Unit representation
     min: 1
     max: '1'
     type:
@@ -194,7 +194,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.system
-    short: (USCDI Requirement) System that defines coded unit form
+    short: (USCDI) System that defines coded unit form
     min: 1
     max: '1'
     type:
@@ -206,7 +206,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.code
-    short: (USCDI Requirement) Coded form of the unit
+    short: (USCDI) Coded form of the unit
     min: 1
     max: '1'
     type:

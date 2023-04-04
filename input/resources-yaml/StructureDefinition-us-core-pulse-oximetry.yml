@@ -34,7 +34,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.code
-    short: (USCDI Requirement) Oxygen Saturation by Pulse Oximetry
+    short: (USCDI) Oxygen Saturation by Pulse Oximetry
     comment: The code (59408-5 Oxygen saturation in Arterial blood by Pulse oximetry)
       is included as an additional observation code to FHIR Core vital Oxygen Saturation
       code (2708-6 Oxygen saturation in Arterial blood).
@@ -49,7 +49,7 @@ differential:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI Requirement) Code defined by a terminology system
+    short: (USCDI) Code defined by a terminology system
     mustSupport: true
   - id: Observation.code.coding:PulseOx
     extension:
@@ -57,7 +57,7 @@ differential:
       valueBoolean: true
     path: Observation.code.coding
     sliceName: PulseOx
-    short: (USCDI Requirement) Code defined by a terminology system
+    short: (USCDI) Code defined by a terminology system
     min: 1
     max: '1'
     type:
@@ -72,7 +72,7 @@ differential:
       valueBoolean: true
     path: Observation.code.coding
     sliceName: O2Sat
-    short: (USCDI Requirement) Code defined by a terminology system
+    short: (USCDI) Code defined by a terminology system
     min: 1
     max: '1'
     type:
@@ -86,7 +86,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueQuantity
-    short: (USCDI Requirement) Oxygen Saturation by Pulse Oximetry Value
+    short: (USCDI) Oxygen Saturation by Pulse Oximetry Value
     definition: The oxygen saturation by pulse oximetry value is expressed as a percentage
       (0-100) of the total hemoglobin content of the blood.
     mustSupport: true
@@ -95,7 +95,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueQuantity.value
-    short: (USCDI Requirement) Numerical value (with implicit precision)
+    short: (USCDI) Numerical value (with implicit precision)
     min: 1
     max: '1'
     mustSupport: true
@@ -104,7 +104,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueQuantity.unit
-    short: (USCDI Requirement) Unit representation
+    short: (USCDI) Unit representation
     min: 1
     max: '1'
     mustSupport: true
@@ -113,7 +113,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueQuantity.system
-    short: (USCDI Requirement) System that defines coded unit form
+    short: (USCDI) System that defines coded unit form
     min: 1
     max: '1'
     type:
@@ -125,7 +125,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueQuantity.code
-    short: (USCDI Requirement) Coded form of the unit
+    short: (USCDI) Coded form of the unit
     min: 1
     max: '1'
     type:
@@ -142,7 +142,7 @@ differential:
       - type: pattern
         path: code
       rules: open
-    short: (USCDI Requirement) Used when reporting flow rates or oxygen concentration.
+    short: (USCDI) Used when reporting flow rates or oxygen concentration.
     definition: Used when reporting flow rates or oxygen concentration.
     mustSupport: true
   - id: Observation.component:FlowRate
@@ -151,7 +151,7 @@ differential:
       valueBoolean: true
     path: Observation.component
     sliceName: FlowRate
-    short: (USCDI Requirement) Inhaled oxygen flow rate
+    short: (USCDI) Inhaled oxygen flow rate
     min: 0
     max: '1'
     mustSupport: true
@@ -160,7 +160,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.code
-    short: (USCDI Requirement) Type of component observation (code / type)
+    short: (USCDI) Type of component observation (code / type)
     type:
     - code: CodeableConcept
     patternCodeableConcept:
@@ -173,14 +173,14 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity
-    short: (USCDI Requirement) Vital Sign Component Value
+    short: (USCDI) Vital Sign Component Value
     mustSupport: true
   - id: Observation.component:FlowRate.valueQuantity.value
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.value
-    short: (USCDI Requirement) Numerical value (with implicit precision)
+    short: (USCDI) Numerical value (with implicit precision)
     min: 1
     max: '1'
     mustSupport: true
@@ -189,7 +189,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.unit
-    short: (USCDI Requirement) Unit representation
+    short: (USCDI) Unit representation
     min: 1
     max: '1'
     mustSupport: true
@@ -198,7 +198,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.system
-    short: (USCDI Requirement) System that defines coded unit form
+    short: (USCDI) System that defines coded unit form
     min: 1
     max: '1'
     type:
@@ -210,7 +210,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.code
-    short: (USCDI Requirement) Coded form of the unit
+    short: (USCDI) Coded form of the unit
     min: 1
     max: '1'
     type:
@@ -223,7 +223,7 @@ differential:
       valueBoolean: true
     path: Observation.component
     sliceName: Concentration
-    short: (USCDI Requirement) Inhaled oxygen concentration
+    short: (USCDI) Inhaled oxygen concentration
     min: 0
     max: '1'
     mustSupport: true
@@ -232,7 +232,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.code
-    short: (USCDI Requirement) Type of component observation (code / type)
+    short: (USCDI) Type of component observation (code / type)
     type:
     - code: CodeableConcept
     patternCodeableConcept:
@@ -245,14 +245,14 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity
-    short: (USCDI Requirement) Vital Sign Component Value
+    short: (USCDI) Vital Sign Component Value
     mustSupport: true
   - id: Observation.component:Concentration.valueQuantity.value
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.value
-    short: (USCDI Requirement) Numerical value (with implicit precision)
+    short: (USCDI) Numerical value (with implicit precision)
     min: 1
     max: '1'
     mustSupport: true
@@ -261,7 +261,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.unit
-    short: (USCDI Requirement) Unit representation
+    short: (USCDI) Unit representation
     min: 1
     max: '1'
     mustSupport: true
@@ -270,7 +270,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.system
-    short: (USCDI Requirement) System that defines coded unit form
+    short: (USCDI) System that defines coded unit form
     min: 1
     max: '1'
     type:
@@ -282,7 +282,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueQuantity.code
-    short: (USCDI Requirement) Coded form of the unit
+    short: (USCDI) Coded form of the unit
     min: 1
     max: '1'
     type:

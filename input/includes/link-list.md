@@ -370,3 +370,5 @@
 [US Core Category]: CodeSystem-us-core-category.html
 [Required Bindings When Slicing by Value Sets]: general-requirements.html#required-bindings-when-slicing-by-value-sets
 [The US Core DocumentReferences Type Value Set]: ValueSet-us-core-documentreference-category.html
+[Endpoint]: {{site.data.fhir.path}}endpoint.html
+[US Core Direct email Extension]: StructureDefinition-us-core-direct.html

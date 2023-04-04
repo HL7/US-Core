@@ -50,7 +50,7 @@
                     }
                 ],
                 "path": "DiagnosticReport.status",
-                "short": "(USCDI Requirement) registered | partial | preliminary | final +",
+                "short": "(USCDI) registered | partial | preliminary | final +",
                 "condition": [
                     "us-core-8",
                     "us-core-9"
@@ -79,7 +79,7 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI Requirement) Service category",
+                "short": "(USCDI) Service category",
                 "min": 1,
                 "mustSupport": true
             },
@@ -93,7 +93,7 @@
                 ],
                 "path": "DiagnosticReport.category",
                 "sliceName": "LaboratorySlice",
-                "short": "(USCDI Requirement) Service category",
+                "short": "(USCDI) Service category",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -115,7 +115,7 @@
                     }
                 ],
                 "path": "DiagnosticReport.code",
-                "short": "(USCDI Requirement) US Core Laboratory Report Order Code",
+                "short": "(USCDI) US Core Laboratory Report Order Code",
                 "definition": "The test, panel or battery that was ordered.",
                 "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
                 "mustSupport": true,
@@ -134,7 +134,7 @@
                     }
                 ],
                 "path": "DiagnosticReport.subject",
-                "short": "(USCDI Requirement) The subject of the report - usually, but not always, the patient",
+                "short": "(USCDI) The subject of the report - usually, but not always, the patient",
                 "min": 1,
                 "type": [
                     {
@@ -155,7 +155,7 @@
                     }
                 ],
                 "path": "DiagnosticReport.effective[x]",
-                "short": "(USCDI Requirement) Diagnostically relevant time (typically the time of specimen collection)",
+                "short": "(USCDI) Diagnostically relevant time (typically the time of specimen collection)",
                 "type": [
                     {
                         "extension": [
@@ -184,7 +184,7 @@
                     }
                 ],
                 "path": "DiagnosticReport.issued",
-                "short": "(USCDI Requirement) When the report was released",
+                "short": "(USCDI) When the report was released",
                 "condition": [
                     "us-core-9"
                 ],
@@ -199,7 +199,7 @@
                     }
                 ],
                 "path": "DiagnosticReport.performer",
-                "short": "(USCDI Requirement) Responsible Diagnostic Service",
+                "short": "(USCDI) Responsible Diagnostic Service",
                 "type": [
                     {
                         "code": "Reference",
@@ -256,7 +256,7 @@
                     }
                 ],
                 "path": "DiagnosticReport.result",
-                "short": "(USCDI Requirement) Observations",
+                "short": "(USCDI) Observations",
                 "type": [
                     {
                         "code": "Reference",

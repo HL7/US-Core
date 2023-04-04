@@ -34,7 +34,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.code
-    short: (USCDI Requirement) Body Weight
+    short: (USCDI) Body Weight
     type:
     - code: CodeableConcept
     patternCodeableConcept:
@@ -47,7 +47,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueQuantity
-    short: (USCDI Requirement) Vital Signs Value
+    short: (USCDI) Vital Signs Value
     min: 0
     max: '1'
     mustSupport: true
@@ -56,7 +56,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueQuantity.value
-    short: (USCDI Requirement) Numerical value (with implicit precision)
+    short: (USCDI) Numerical value (with implicit precision)
     min: 1
     max: '1'
     type:
@@ -67,7 +67,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueQuantity.unit
-    short: (USCDI Requirement) Unit representation
+    short: (USCDI) Unit representation
     min: 1
     max: '1'
     type:
@@ -78,7 +78,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueQuantity.system
-    short: (USCDI Requirement) System that defines coded unit form
+    short: (USCDI) System that defines coded unit form
     min: 1
     max: '1'
     type:
@@ -90,7 +90,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueQuantity.code
-    short: (USCDI Requirement) Coded responses from the common UCUM units for vital
+    short: (USCDI) Coded responses from the common UCUM units for vital
       signs value set.
     min: 1
     max: '1'

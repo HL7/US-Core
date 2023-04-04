@@ -30,7 +30,7 @@
                     }
                 ],
                 "path": "ServiceRequest.status",
-                "short": "(USCDI Requirement) draft | active | on-hold | revoked | completed | entered-in-error | unknown",
+                "short": "(USCDI) draft | active | on-hold | revoked | completed | entered-in-error | unknown",
                 "mustSupport": true
             },
             {
@@ -42,7 +42,7 @@
                     }
                 ],
                 "path": "ServiceRequest.intent",
-                "short": "(USCDI Requirement) proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
+                "short": "(USCDI) proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option",
                 "mustSupport": true
             },
             {
@@ -63,7 +63,7 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI Requirement) Classification of service",
+                "short": "(USCDI) Classification of service",
                 "mustSupport": true
             },
             {
@@ -76,7 +76,7 @@
                 ],
                 "path": "ServiceRequest.category",
                 "sliceName": "us-core",
-                "short": "(USCDI Requirement) Classification of service",
+                "short": "(USCDI) Classification of service",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -93,7 +93,7 @@
                     }
                 ],
                 "path": "ServiceRequest.code",
-                "short": "(USCDI Requirement) What is being requested/ordered",
+                "short": "(USCDI) What is being requested/ordered",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -110,7 +110,7 @@
                     }
                 ],
                 "path": "ServiceRequest.subject",
-                "short": "(USCDI Requirement) Individual or Entity the service is ordered for",
+                "short": "(USCDI) Individual or Entity the service is ordered for",
                 "type": [
                     {
                         "code": "Reference",
@@ -130,7 +130,7 @@
                     }
                 ],
                 "path": "ServiceRequest.occurrence[x]",
-                "short": "(USCDI Requirement) When service should occur",
+                "short": "(USCDI) When service should occur",
                 "type": [
                     {
                         "extension": [
@@ -159,7 +159,7 @@
                     }
                 ],
                 "path": "ServiceRequest.authoredOn",
-                "short": "(USCDI Requirement) Date request signed",
+                "short": "(USCDI) Date request signed",
                 "mustSupport": true
             },
             {
@@ -171,7 +171,7 @@
                     }
                 ],
                 "path": "ServiceRequest.requester",
-                "short": "(USCDI Requirement) Who/what is requesting service",
+                "short": "(USCDI) Who/what is requesting service",
                 "type": [
                     {
                         "code": "Reference",
@@ -246,7 +246,7 @@
                     }
                 ],
                 "path": "ServiceRequest.reasonCode",
-                "short": "(USCDI Requirement) Explanation/Justification for procedure or service",
+                "short": "(USCDI) Explanation/Justification for procedure or service",
                 "binding": {
                     "strength": "extensible",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
@@ -261,7 +261,7 @@
                     }
                 ],
                 "path": "ServiceRequest.reasonReference",
-                "short": "(USCDI Requirement) Explanation/Justification for service or service",
+                "short": "(USCDI) Explanation/Justification for service or service",
                 "type": [
                     {
                         "code": "Reference",

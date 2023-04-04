@@ -31,7 +31,7 @@
                     }
                 ],
                 "path": "Observation.status",
-                "short": "(USCDI Requirement) registered | preliminary | final | amended +",
+                "short": "(USCDI) registered | preliminary | final | amended +",
                 "mustSupport": true
             },
             {
@@ -52,7 +52,7 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI Requirement) Classification of  type of observation",
+                "short": "(USCDI) Classification of  type of observation",
                 "min": 1,
                 "mustSupport": true
             },
@@ -66,7 +66,7 @@
                 ],
                 "path": "Observation.category",
                 "sliceName": "us-core",
-                "short": "(USCDI Requirement) Classification of  type of observation",
+                "short": "(USCDI) Classification of  type of observation",
                 "min": 0,
                 "mustSupport": true,
                 "binding": {
@@ -84,7 +84,7 @@
                     }
                 ],
                 "path": "Observation.code",
-                "short": "(USCDI Requirement) Type of observation (code / type)",
+                "short": "(USCDI) Type of observation (code / type)",
                 "mustSupport": true,
                 "binding": {
                     "strength": "preferred"
@@ -99,7 +99,7 @@
                     }
                 ],
                 "path": "Observation.subject",
-                "short": "(USCDI Requirement) Who and/or what the observation is about",
+                "short": "(USCDI) Who and/or what the observation is about",
                 "min": 1,
                 "type": [
                     {
@@ -120,7 +120,7 @@
                     }
                 ],
                 "path": "Observation.effective[x]",
-                "short": "(USCDI Requirement) Clinically relevant time/time-period for observation",
+                "short": "(USCDI) Clinically relevant time/time-period for observation",
                 "definition": "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\".",
                 "comment": "At least a date should be present unless this observation is a historical report.",
                 "type": [
@@ -154,7 +154,7 @@
                     }
                 ],
                 "path": "Observation.performer",
-                "short": "(USCDI Requirement) Who is responsible for the observation",
+                "short": "(USCDI) Who is responsible for the observation",
                 "type": [
                     {
                         "code": "Reference",
@@ -229,7 +229,7 @@
                     }
                 ],
                 "path": "Observation.value[x]",
-                "short": "(USCDI Requirement) Actual result",
+                "short": "(USCDI) Actual result",
                 "type": [
                     {
                         "extension": [
@@ -300,7 +300,7 @@
                     }
                 ],
                 "path": "Observation.derivedFrom",
-                "short": "(USCDI Requirement) Related Observation(s) or other resource the observation is made from",
+                "short": "(USCDI) Related Observation(s) or other resource the observation is made from",
                 "definition": "Observations or or other resource such as a QuestionnaireResponse from which this observation value is derived.",
                 "type": [
                     {

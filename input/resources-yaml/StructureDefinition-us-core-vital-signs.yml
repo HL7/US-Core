@@ -34,7 +34,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.status
-    short: (USCDI Requirement) registered | preliminary | final | amended +
+    short: (USCDI) registered | preliminary | final | amended +
     mustSupport: true
   - id: Observation.category
     extension:
@@ -49,7 +49,7 @@ differential:
         path: coding.system
       ordered: false
       rules: open
-    short: (USCDI Requirement) Classification of  type of observation
+    short: (USCDI) Classification of  type of observation
     min: 1
     max: '*'
     type:
@@ -61,7 +61,7 @@ differential:
       valueBoolean: true
     path: Observation.category
     sliceName: VSCat
-    short: (USCDI Requirement) Classification of  type of observation
+    short: (USCDI) Classification of  type of observation
     min: 1
     max: '1'
     type:
@@ -72,7 +72,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.category.coding
-    short: (USCDI Requirement) Code defined by a terminology system
+    short: (USCDI) Code defined by a terminology system
     min: 1
     max: '*'
     type:
@@ -83,7 +83,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.category.coding.system
-    short: (USCDI Requirement) Identity of the terminology system
+    short: (USCDI) Identity of the terminology system
     min: 1
     max: '1'
     type:
@@ -95,7 +95,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.category.coding.code
-    short: (USCDI Requirement) Symbol in syntax defined by the system
+    short: (USCDI) Symbol in syntax defined by the system
     min: 1
     max: '1'
     type:
@@ -107,7 +107,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.code
-    short: (USCDI Requirement) Coded Responses from C-CDA Vital Sign Results
+    short: (USCDI) Coded Responses from C-CDA Vital Sign Results
     mustSupport: true
     binding:
       strength: extensible
@@ -118,7 +118,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.subject
-    short: (USCDI Requirement) Who and/or what the observation is about
+    short: (USCDI) Who and/or what the observation is about
     type:
     - code: Reference
       targetProfile:
@@ -129,7 +129,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.effective[x]
-    short: (USCDI Requirement) Often just a dateTime for Vital Signs
+    short: (USCDI) Often just a dateTime for Vital Signs
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -142,7 +142,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.value[x]
-    short: (USCDI Requirement) Vital Signs Value
+    short: (USCDI) Vital Signs Value
     definition: Vital Signs value are typically recorded using the Quantity data type.
     type:
     - extension:
@@ -169,14 +169,14 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.dataAbsentReason
-    short: (USCDI Requirement) Why the result is missing
+    short: (USCDI) Why the result is missing
     mustSupport: true
   - id: Observation.component
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component
-    short: (USCDI Requirement) Component observations
+    short: (USCDI) Component observations
     definition: Used when reporting component observation such as systolic and diastolic
       blood pressure.
     mustSupport: true
@@ -185,7 +185,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.code
-    short: (USCDI Requirement) Type of component observation (code / type)
+    short: (USCDI) Type of component observation (code / type)
     mustSupport: true
     binding:
       strength: extensible
@@ -196,7 +196,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.value[x]
-    short: (USCDI Requirement) Vital Sign Component Value
+    short: (USCDI) Vital Sign Component Value
     definition: Vital Signs value are typically recorded using the Quantity data type.
       For supporting observations such as cuff size could use other datatypes such
       as CodeableConcept.
@@ -225,5 +225,5 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.dataAbsentReason
-    short: (USCDI Requirement) Why the component result is missing
+    short: (USCDI) Why the component result is missing
     mustSupport: true

@@ -37,7 +37,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.status
-    short: (USCDI Requirement) (USCDI Requirement) registered | preliminary | final
+    short: (USCDI) registered | preliminary | final
       | amended +
     mustSupport: true
   - id: Observation.category
@@ -52,7 +52,7 @@ differential:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI Requirement) (USCDI Requirement) Classification of  type of observation
+    short: (USCDI) Classification of  type of observation
     mustSupport: true
   - id: Observation.category:socialhistory
     extension:
@@ -62,7 +62,7 @@ differential:
       valueBoolean: true
     path: Observation.category
     sliceName: socialhistory
-    short: (USCDI Requirement) (USCDI Requirement) Classification of  type of observation
+    short: (USCDI) Classification of  type of observation
     min: 0
     max: '1'
     patternCodeableConcept:
@@ -77,7 +77,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.code
-    short: (USCDI Requirement) (USCDI Requirement) Occupation history
+    short: (USCDI) Occupation history
     patternCodeableConcept:
       coding:
       - system: http://loinc.org
@@ -90,7 +90,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.subject
-    short: (USCDI Requirement) (USCDI Requirement) Who and/or what the observation
+    short: (USCDI) Who and/or what the observation
       is about
     min: 1
     type:
@@ -105,7 +105,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.effectivePeriod
-    short: (USCDI Requirement) (USCDI Requirement) Clinically relevant time/time-period
+    short: (USCDI) Clinically relevant time/time-period
       for observation
     mustSupport: true
   - id: Observation.valueCodeableConcept
@@ -115,7 +115,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueCodeableConcept
-    short: (USCDI Requirement) (USCDI Requirement) Coded occupation or text
+    short: (USCDI) Coded occupation or text
     comment: Express the occupation type using a coded value. If no coded value is
       available, use text. If the occupation is not available, the reason should be
       communicated in `Observation.dataAbsentReason`.
@@ -139,7 +139,7 @@ differential:
       - type: pattern
         path: code.coding
       rules: open
-    short: (USCDI Requirement) (USCDI Requirement) Component results
+    short: (USCDI) Component results
     mustSupport: true
   - id: Observation.component:industry
     extension:
@@ -149,7 +149,7 @@ differential:
       valueBoolean: true
     path: Observation.component
     sliceName: industry
-    short: (USCDI Requirement) (USCDI Requirement) Occupation industry
+    short: (USCDI) Occupation industry
     min: 0
     max: '1'
     mustSupport: true
@@ -160,7 +160,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.code
-    short: (USCDI Requirement) (USCDI Requirement) Occupation industry history
+    short: (USCDI) Occupation industry history
     mustSupport: true
   - id: Observation.component:industry.code.coding
     extension:
@@ -174,7 +174,7 @@ differential:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI Requirement) (USCDI Requirement) Code defined by a terminology system
+    short: (USCDI) Code defined by a terminology system
     mustSupport: true
   - id: Observation.component:industry.code.coding:86188-0
     extension:
@@ -184,7 +184,7 @@ differential:
       valueBoolean: true
     path: Observation.component.code.coding
     sliceName: 86188-0
-    short: (USCDI Requirement) (USCDI Requirement) Code defined by a terminology system
+    short: (USCDI) Code defined by a terminology system
     min: 1
     max: '1'
     patternCoding:
@@ -198,7 +198,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueCodeableConcept
-    short: (USCDI Requirement) (USCDI Requirement) Occupation industry or text
+    short: (USCDI) Occupation industry or text
     comment: Express the occupation industry type using a coded value. If no coded
       value is available, use text. If the occupation industry is not available, the
       reason should be communicated `Observation.component.dataAbsentReason`

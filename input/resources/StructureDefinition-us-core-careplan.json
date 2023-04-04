@@ -38,7 +38,7 @@
                     }
                 ],
                 "path": "CarePlan.text",
-                "short": "(USCDI Requirement) Text summary of the resource, for human interpretation",
+                "short": "(USCDI) Text summary of the resource, for human interpretation",
                 "min": 1,
                 "mustSupport": true,
                 "mapping": [
@@ -57,7 +57,7 @@
                     }
                 ],
                 "path": "CarePlan.text.status",
-                "short": "(USCDI Requirement) generated | extensions | additional | empty",
+                "short": "(USCDI) generated | extensions | additional | empty",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -80,7 +80,7 @@
                     }
                 ],
                 "path": "CarePlan.text.div",
-                "short": "(USCDI Requirement) Limited xhtml content",
+                "short": "(USCDI) Limited xhtml content",
                 "mustSupport": true
             },
             {
@@ -92,7 +92,7 @@
                     }
                 ],
                 "path": "CarePlan.status",
-                "short": "(USCDI Requirement) draft | active | on-hold | revoked | completed | entered-in-error | unknown",
+                "short": "(USCDI) draft | active | on-hold | revoked | completed | entered-in-error | unknown",
                 "requirements": "Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.",
                 "mustSupport": true,
                 "binding": {
@@ -116,7 +116,7 @@
                     }
                 ],
                 "path": "CarePlan.intent",
-                "short": "(USCDI Requirement) proposal | plan | order | option",
+                "short": "(USCDI) proposal | plan | order | option",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -148,7 +148,7 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI Requirement) Type of plan",
+                "short": "(USCDI) Type of plan",
                 "definition": "Type of plan.",
                 "requirements": "Identifies what \"kind\" of plan this is to support differentiation between multiple co-existing plans; e.g. \"Home health\", \"psychiatric\", \"asthma\", \"disease management\", \"wellness plan\", etc.",
                 "min": 1,
@@ -170,7 +170,7 @@
                 ],
                 "path": "CarePlan.category",
                 "sliceName": "AssessPlan",
-                "short": "(USCDI Requirement) Type of plan",
+                "short": "(USCDI) Type of plan",
                 "definition": "Type of plan.",
                 "requirements": "Identifies what \"kind\" of plan this is to support differentiation between multiple co-existing plans; e.g. \"Home health\", \"psychiatric\", \"asthma\", \"disease management\", \"wellness plan\", etc.",
                 "min": 1,
@@ -200,7 +200,7 @@
                     }
                 ],
                 "path": "CarePlan.subject",
-                "short": "(USCDI Requirement) Who the care plan is for",
+                "short": "(USCDI) Who the care plan is for",
                 "definition": "Who care plan is for.",
                 "requirements": "Identifies the patient or group whose intended care is described by the plan.",
                 "type": [

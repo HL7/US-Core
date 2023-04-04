@@ -36,21 +36,21 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Provenance.target
-    short: (USCDI Requirement) The Resource this Provenance record supports
+    short: (USCDI) The Resource this Provenance record supports
     mustSupport: true
   - id: Provenance.target.reference
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Provenance.target.reference
-    short: (USCDI Requirement) Literal reference, Relative, internal or absolute URL
+    short: (USCDI) Literal reference, Relative, internal or absolute URL
     mustSupport: true
   - id: Provenance.recorded
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Provenance.recorded
-    short: (USCDI Requirement) Timestamp when the activity was recorded / updated
+    short: (USCDI) Timestamp when the activity was recorded / updated
     mustSupport: true
   - id: Provenance.agent
     extension:
@@ -62,7 +62,7 @@ differential:
       - type: pattern
         path: type
       rules: open
-    short: (USCDI Requirement) Actor involved
+    short: (USCDI) Actor involved
     constraint:
     - key: provenance-1
       severity: error
@@ -76,7 +76,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Provenance.agent.type
-    short: (USCDI Requirement) How the agent participated
+    short: (USCDI) How the agent participated
     mustSupport: true
     binding:
       strength: extensible
@@ -86,7 +86,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Provenance.agent.who
-    short: (USCDI Requirement) Who participated
+    short: (USCDI) Who participated
     type:
     - code: Reference
       targetProfile:
@@ -121,7 +121,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Provenance.agent.onBehalfOf
-    short: (USCDI Requirement) Who the agent is representing
+    short: (USCDI) Who the agent is representing
     type:
     - code: Reference
       targetProfile:
@@ -133,7 +133,7 @@ differential:
       valueBoolean: true
     path: Provenance.agent
     sliceName: ProvenanceAuthor
-    short: (USCDI Requirement) Actor involved
+    short: (USCDI) Actor involved
     max: '*'
     mustSupport: true
   - id: Provenance.agent:ProvenanceAuthor.type
@@ -141,7 +141,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Provenance.agent.type
-    short: (USCDI Requirement) How the agent participated
+    short: (USCDI) How the agent participated
     min: 1
     type:
     - code: CodeableConcept
@@ -156,7 +156,7 @@ differential:
       valueBoolean: true
     path: Provenance.agent
     sliceName: ProvenanceTransmitter
-    short: (USCDI Requirement) Actor involved
+    short: (USCDI) Actor involved
     definition: The entity that provided the copy to your system.
     mustSupport: true
   - id: Provenance.agent:ProvenanceTransmitter.type
@@ -164,7 +164,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Provenance.agent.type
-    short: (USCDI Requirement) How the agent participated
+    short: (USCDI) How the agent participated
     min: 1
     type:
     - code: CodeableConcept

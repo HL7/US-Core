@@ -51,7 +51,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.status
-    short: (USCDI Requirement) registered | partial | preliminary | final +
+    short: (USCDI) registered | partial | preliminary | final +
     condition:
     - us-core-8
     - us-core-9
@@ -69,7 +69,7 @@ differential:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI Requirement) Service category
+    short: (USCDI) Service category
     min: 1
     mustSupport: true
   - id: DiagnosticReport.category:LaboratorySlice
@@ -78,7 +78,7 @@ differential:
       valueBoolean: true
     path: DiagnosticReport.category
     sliceName: LaboratorySlice
-    short: (USCDI Requirement) Service category
+    short: (USCDI) Service category
     min: 1
     max: '1'
     patternCodeableConcept:
@@ -91,7 +91,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.code
-    short: (USCDI Requirement) US Core Laboratory Report Order Code
+    short: (USCDI) US Core Laboratory Report Order Code
     definition: The test, panel or battery that was ordered.
     comment: 'UsageNote= The typical patterns for codes are:  1)  a LOINC code either
       as a  translation from a "local" code or as a primary code, or 2)  a local code
@@ -107,7 +107,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.subject
-    short: (USCDI Requirement) The subject of the report - usually, but not always,
+    short: (USCDI) The subject of the report - usually, but not always,
       the patient
     min: 1
     type:
@@ -120,7 +120,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.effective[x]
-    short: (USCDI Requirement) Diagnostically relevant time (typically the time of
+    short: (USCDI) Diagnostically relevant time (typically the time of
       specimen collection)
     type:
     - extension:
@@ -136,7 +136,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.issued
-    short: (USCDI Requirement) When the report was released
+    short: (USCDI) When the report was released
     condition:
     - us-core-9
     mustSupport: true
@@ -145,7 +145,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.performer
-    short: (USCDI Requirement) Responsible Diagnostic Service
+    short: (USCDI) Responsible Diagnostic Service
     type:
     - code: Reference
       targetProfile:
@@ -172,7 +172,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: DiagnosticReport.result
-    short: (USCDI Requirement) Observations
+    short: (USCDI) Observations
     type:
     - code: Reference
       targetProfile:
