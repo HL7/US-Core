@@ -24,7 +24,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 For ONC's USCDI requirements, each Procedure must support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
 
-1.  A reference to the request for the procedure*</span>
+1.  A reference to the request for the procedure*
 
 \*see guidance below
 
