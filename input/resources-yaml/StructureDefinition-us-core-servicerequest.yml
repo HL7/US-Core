@@ -1,75 +1,90 @@
-abstract: false
-baseDefinition: http://hl7.org/fhir/StructureDefinition/ServiceRequest
-date: '2022-10-07'
-derivation: constraint
+resourceType: StructureDefinition
+id: us-core-servicerequest
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
+name: USCoreServiceRequestProfile
+title: US Core ServiceRequest Profile
+status: active
+date: 2022-10-07
 description: 'This profile sets minimum expectations for recording, searching, and
   fetching the ServiceRequest resource to promote interoperability and adoption through
   common implementation.  It identifies which core elements, extensions, vocabularies,
   and value sets **SHALL** be present in the resource when using this profile.  It
   provides the floor for standards development for specific use cases.fhirVersion:
   4.0.1'
+kind: resource
+abstract: false
+type: ServiceRequest
+baseDefinition: http://hl7.org/fhir/StructureDefinition/ServiceRequest
+derivation: constraint
 differential:
   element:
-  - comment: \-
-    definition: \-
-    id: ServiceRequest
-    mustSupport: false
+  - id: ServiceRequest
     path: ServiceRequest
+    definition: \-
+    comment: \-
+    mustSupport: false
   - id: ServiceRequest.status
-    mustSupport: true
     path: ServiceRequest.status
+    mustSupport: true
   - id: ServiceRequest.intent
-    mustSupport: true
     path: ServiceRequest.intent
-  - id: ServiceRequest.category
     mustSupport: true
+  - id: ServiceRequest.category
     path: ServiceRequest.category
     slicing:
       discriminator:
-      - path: $this
-        type: pattern
+      - type: pattern
+        path: $this
       rules: open
-  - binding:
-      description: Note that other codes are permitted, see [Required Bindings When
-        Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)
-      strength: required
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category
-    id: ServiceRequest.category:us-core
     mustSupport: true
+  - id: ServiceRequest.category:us-core
     path: ServiceRequest.category
     sliceName: us-core
-  - binding:
-      strength: extensible
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code
-    id: ServiceRequest.code
+    mustSupport: true
+    binding:
+      strength: required
+      description: Note that other codes are permitted, see [Required Bindings When
+        Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category
+  - id: ServiceRequest.code
+    path: ServiceRequest.code
     min: 1
     mustSupport: true
-    path: ServiceRequest.code
+    binding:
+      strength: extensible
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code
   - id: ServiceRequest.subject
-    mustSupport: true
     path: ServiceRequest.subject
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-  - id: ServiceRequest.occurrence[x]
     mustSupport: true
+  - id: ServiceRequest.occurrence[x]
     path: ServiceRequest.occurrence[x]
     type:
-    - code: Period
-      extension:
+    - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
         valueBoolean: true
+      code: Period
     - code: dateTime
     - code: Timing
+    mustSupport: true
   - id: ServiceRequest.authoredOn
-    mustSupport: true
     path: ServiceRequest.authoredOn
-  - id: ServiceRequest.requester
     mustSupport: true
+  - id: ServiceRequest.requester
     path: ServiceRequest.requester
     type:
-    - _targetProfile:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+      - http://hl7.org/fhir/StructureDefinition/PractitionerRole
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+      - http://hl7.org/fhir/StructureDefinition/Device
+      _targetProfile:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: true
@@ -88,19 +103,12 @@ differential:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
-      code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-      - http://hl7.org/fhir/StructureDefinition/PractitionerRole
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
-      - http://hl7.org/fhir/StructureDefinition/Device
-  - binding:
+    mustSupport: true
+  - id: ServiceRequest.reasonCode
+    path: ServiceRequest.reasonCode
+    binding:
       strength: extensible
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
-    id: ServiceRequest.reasonCode
-    path: ServiceRequest.reasonCode
   - id: ServiceRequest.reasonReference
     path: ServiceRequest.reasonReference
     type:
@@ -122,11 +130,3 @@ differential:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs
-id: us-core-servicerequest
-kind: resource
-name: USCoreServiceRequestProfile
-resourceType: StructureDefinition
-status: active
-title: US Core ServiceRequest Profile
-type: ServiceRequest
-url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest

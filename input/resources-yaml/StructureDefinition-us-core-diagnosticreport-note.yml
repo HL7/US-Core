@@ -1,7 +1,10 @@
-abstract: false
-baseDefinition: http://hl7.org/fhir/StructureDefinition/DiagnosticReport
-date: '2022-04-20'
-derivation: constraint
+resourceType: StructureDefinition
+id: us-core-diagnosticreport-note
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
+name: USCoreDiagnosticReportProfileNoteExchange
+title: US Core DiagnosticReport Profile for Report and Note Exchange
+status: active
+date: 2022-04-20
 description: To promote interoperability and adoption through common implementation,
   this profile sets minimum expectations for searching and fetching Diagnostic Reports
   and Notes using the DiagnosticReport resource. This profile identifies the mandatory
@@ -11,150 +14,147 @@ description: To promote interoperability and adoption through common implementat
   are encouraged to read the Clinical Notes Guidance to understand the overlap of
   US Core DiagnosticReport Profile for Report and Note exchange and US Core DocumentReference
   Profile.
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: DiagnosticReport
+baseDefinition: http://hl7.org/fhir/StructureDefinition/DiagnosticReport
+derivation: constraint
 differential:
   element:
-  - alias:
+  - id: DiagnosticReport
+    path: DiagnosticReport
+    definition: \-
+    comment: \-
+    alias:
     - Imaging Report
     - Radiology Report
     - Clinical Test Report
-    comment: \-
     constraint:
-    - expression: (status='partial' or status='preliminary' or status='final' or status='amended'
-        or status='corrected' or status='appended' ) implies effective.exists()
+    - key: us-core-10
+      severity: error
       human: effective[x] SHALL be present if the status is 'partial', 'preliminary',
         'final', 'amended', 'corrected' or 'appended'
-      key: us-core-10
-      severity: error
-    definition: \-
-    id: DiagnosticReport
+      expression: (status='partial' or status='preliminary' or status='final' or status='amended'
+        or status='corrected' or status='appended' ) implies effective.exists()
     mustSupport: false
-    path: DiagnosticReport
-  - binding:
-      strength: required
-      valueSet: http://hl7.org/fhir/ValueSet/diagnostic-report-status
+  - id: DiagnosticReport.status
+    path: DiagnosticReport.status
     condition:
     - us-core-10
-    id: DiagnosticReport.status
     mustSupport: true
-    path: DiagnosticReport.status
+    binding:
+      strength: required
+      valueSet: http://hl7.org/fhir/ValueSet/diagnostic-report-status
   - id: DiagnosticReport.category
-    min: 1
-    mustSupport: true
     path: DiagnosticReport.category
     slicing:
       discriminator:
-      - path: $this
-        type: pattern
+      - type: pattern
+        path: $this
       rules: open
-  - binding:
-      description: Note that other codes are permitted, see [Required Bindings When
-        Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)
-      strength: required
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category
-    id: DiagnosticReport.category:us-core
+    min: 1
     mustSupport: true
+  - id: DiagnosticReport.category:us-core
     path: DiagnosticReport.category
     sliceName: us-core
-  - binding:
-      description: LOINC codes
-      strength: extensible
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes
+    mustSupport: true
+    binding:
+      strength: required
+      description: Note that other codes are permitted, see [Required Bindings When
+        Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category
+  - id: DiagnosticReport.code
+    path: DiagnosticReport.code
+    short: US Core Report Code
+    definition: The test, panel, report, or note that was ordered.
     comment: 'The typical patterns for codes are:  1)  a LOINC code either as a translation
       from a "local" code or as a primary code, or 2)  a local code only if no suitable
       LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL
       be capable of sending the local code if one exists.'
-    definition: The test, panel, report, or note that was ordered.
-    id: DiagnosticReport.code
     mustSupport: true
-    path: DiagnosticReport.code
-    short: US Core Report Code
+    binding:
+      strength: extensible
+      description: LOINC codes
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-report-and-note-codes
   - id: DiagnosticReport.subject
-    min: 1
-    mustSupport: true
     path: DiagnosticReport.subject
+    min: 1
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-  - id: DiagnosticReport.encounter
     mustSupport: true
+  - id: DiagnosticReport.encounter
     path: DiagnosticReport.encounter
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
-  - condition:
-    - us-core-10
-    id: DiagnosticReport.effective[x]
     mustSupport: true
+  - id: DiagnosticReport.effective[x]
     path: DiagnosticReport.effective[x]
     short: Diagnostically relevant time (typically the time of the procedure)
     type:
-    - code: dateTime
-      extension:
+    - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
         valueBoolean: true
+      code: dateTime
     - code: Period
+    condition:
+    - us-core-10
+    mustSupport: true
   - id: DiagnosticReport.issued
-    mustSupport: true
     path: DiagnosticReport.issued
-  - id: DiagnosticReport.performer
     mustSupport: true
+  - id: DiagnosticReport.performer
     path: DiagnosticReport.performer
     type:
-    - _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      code: Reference
+    - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
-  - id: DiagnosticReport.result
+      _targetProfile:
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
     mustSupport: true
+  - id: DiagnosticReport.result
     path: DiagnosticReport.result
     type:
-    - _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      code: Reference
+    - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+      _targetProfile:
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+    mustSupport: true
   - id: DiagnosticReport.media
-    mustSupport: true
     path: DiagnosticReport.media
+    mustSupport: true
   - id: DiagnosticReport.media.link
-    mustSupport: true
     path: DiagnosticReport.media.link
-  - id: DiagnosticReport.presentedForm
     mustSupport: true
+  - id: DiagnosticReport.presentedForm
     path: DiagnosticReport.presentedForm
-fhirVersion: 4.0.1
-id: us-core-diagnosticreport-note
-kind: resource
-name: USCoreDiagnosticReportProfileNoteExchange
-resourceType: StructureDefinition
-status: active
-title: US Core DiagnosticReport Profile for Report and Note Exchange
-type: DiagnosticReport
-url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note
+    mustSupport: true

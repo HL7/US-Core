@@ -31,6 +31,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. clinically relevant date
 
 <div class="bg-success" markdown="1">
+
 **Additional USCDI Requirements**
 
 For ONC's USCDI requirements, each DocumentReference must support the following additional elements. These elements are included in the formal definition of the profile. The examples include all of these elements.

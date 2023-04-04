@@ -1,7 +1,10 @@
-abstract: false
-baseDefinition: http://hl7.org/fhir/StructureDefinition/Observation
-date: '2022-04-20'
-derivation: constraint
+resourceType: StructureDefinition
+id: us-core-simple-observation
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+name: USCoreSimpleObservationProfile
+title: US Core Simple Observation Profile
+status: active
+date: 2022-04-20
 description: The US Core Simple Observation Profile meets the requirements of the
   US Core Data for Interoperability (USCDI) Assessments. This profile promotes interoperability
   and adoption through common implementation by setting minimum expectations for the
@@ -13,88 +16,74 @@ description: The US Core Simple Observation Profile meets the requirements of th
   status. This profile identifies which core elements, extensions, vocabularies, and
   value sets **SHALL** be present in the resource when using this profile. It provides
   the floor for standards development for specific use cases.
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Observation
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Observation
+derivation: constraint
 differential:
   element:
-  - comment: \-
-    definition: \-
-    id: Observation
+  - id: Observation
     path: Observation
     short: assessment observation
+    definition: \-
+    comment: \-
   - id: Observation.status
-    mustSupport: true
     path: Observation.status
-  - id: Observation.category
-    min: 1
     mustSupport: true
+  - id: Observation.category
     path: Observation.category
     slicing:
       discriminator:
-      - path: $this
-        type: pattern
+      - type: pattern
+        path: $this
       rules: open
-  - binding:
-      description: Note that other codes are permitted, see [Required Bindings When
-        Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)
-      strength: required
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
-    id: Observation.category:us-core
-    min: 0
-    mustSupport: true
-    path: Observation.category
-    sliceName: us-core
-  - binding:
-      strength: preferred
-    id: Observation.code
-    mustSupport: true
-    path: Observation.code
-  - id: Observation.subject
     min: 1
     mustSupport: true
+  - id: Observation.category:us-core
+    path: Observation.category
+    sliceName: us-core
+    min: 0
+    mustSupport: true
+    binding:
+      strength: required
+      description: Note that other codes are permitted, see [Required Bindings When
+        Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
+  - id: Observation.code
+    path: Observation.code
+    mustSupport: true
+    binding:
+      strength: preferred
+  - id: Observation.subject
     path: Observation.subject
+    min: 1
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-  - comment: At least a date should be present unless this observation is a historical
-      report.
+    mustSupport: true
+  - id: Observation.effective[x]
+    path: Observation.effective[x]
     definition: The time or time-period the observed value is asserted as being true.
       For biological subjects - e.g. human patients - this is usually called the "physiologically
       relevant time".
-    id: Observation.effective[x]
-    mustSupport: true
-    path: Observation.effective[x]
+    comment: At least a date should be present unless this observation is a historical
+      report.
     type:
-    - code: dateTime
-      extension:
+    - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
         valueBoolean: true
+      code: dateTime
     - code: Period
     - code: Timing
     - code: instant
-  - id: Observation.performer
     mustSupport: true
+  - id: Observation.performer
     path: Observation.performer
     type:
-    - _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      code: Reference
+    - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
@@ -102,26 +91,45 @@ differential:
       - http://hl7.org/fhir/StructureDefinition/PractitionerRole
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
-  - id: Observation.value[x]
+      _targetProfile:
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
     mustSupport: true
+  - id: Observation.value[x]
     path: Observation.value[x]
     type:
-    - code: Quantity
-      extension:
+    - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
         valueBoolean: true
-    - code: CodeableConcept
-      extension:
+      code: Quantity
+    - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
         valueBoolean: true
-    - code: string
-      extension:
+      code: CodeableConcept
+    - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
         valueBoolean: true
-    - code: boolean
-      extension:
+      code: string
+    - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
         valueBoolean: true
+      code: boolean
     - code: integer
     - code: Range
     - code: Ratio
@@ -129,18 +137,14 @@ differential:
     - code: time
     - code: dateTime
     - code: Period
-  - definition: Observations or or other resource such as a QuestionnaireResponse
-      from which this observation value is derived.
-    id: Observation.derivedFrom
     mustSupport: true
+  - id: Observation.derivedFrom
     path: Observation.derivedFrom
     short: Related Observation(s) or other resource the observation is made from
+    definition: Observations or or other resource such as a QuestionnaireResponse
+      from which this observation value is derived.
     type:
-    - _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      code: Reference
+    - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
@@ -148,12 +152,8 @@ differential:
       - http://hl7.org/fhir/StructureDefinition/ImagingStudy
       - http://hl7.org/fhir/StructureDefinition/Media
       - http://hl7.org/fhir/StructureDefinition/MolecularSequence
-fhirVersion: 4.0.1
-id: us-core-simple-observation
-kind: resource
-name: USCoreSimpleObservationProfile
-resourceType: StructureDefinition
-status: active
-title: US Core Simple Observation Profile
-type: Observation
-url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+      _targetProfile:
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
+    mustSupport: true
