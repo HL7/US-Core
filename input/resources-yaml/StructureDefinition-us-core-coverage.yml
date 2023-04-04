@@ -6,7 +6,7 @@ title: US Core Coverage Profile
 status: active
 experimental: false
 date: '2022-09-24'
-description: The US Core CoverageProfile is based upon the core FHIR Coverage Resource and implements the US Core Data for Interoperability (USCDI) v3 Health Insurance Information requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch the "data related to an individual's insurance coverage for health care". It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
+description: "The US Core CoverageProfile is based upon the core FHIR Coverage Resource and implements the US Core Data for Interoperability (USCDI) v3 Health Insurance Information requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Coverage resource to record, search, and fetch the \"data related to an individual's insurance coverage for health care\". It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases."
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -35,7 +35,7 @@ differential:
         - 
             id: Coverage.status
             path: Coverage.status
-            comment: The `Coverage.status` alone does not indicate whether an individual's coverage is terminated or that the individual is not covered. The `Coverage.period` needs to be considered as well.
+            comment: "The `Coverage.status` alone does not indicate whether an individual's coverage is terminated or that the individual is not covered. The `Coverage.period` needs to be considered as well."
             mustSupport: true
         - 
             id: Coverage.type
@@ -49,7 +49,7 @@ differential:
         - 
             id: Coverage.subscriberId
             path: Coverage.subscriberId
-            comment: The identifier assigned by the Payer on the subscriber's ID card
+            comment: "The identifier assigned by the Payer on the subscriber's ID card"
             condition:
                 - us-core-15
             mustSupport: true

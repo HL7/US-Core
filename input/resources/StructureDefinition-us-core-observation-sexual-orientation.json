@@ -63,7 +63,14 @@
             },
             {
                 "id": "Observation.status",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.status",
+                "short": "(USCDI Requirement) registered | preliminary | final | amended +",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -78,8 +85,14 @@
             },
             {
                 "id": "Observation.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.code",
-                "short": "Sexual Orientation",
+                "short": "(USCDI Requirement) Sexual Orientation",
                 "patternCodeableConcept": {
                     "coding": [
                         {
@@ -92,7 +105,14 @@
             },
             {
                 "id": "Observation.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.subject",
+                "short": "(USCDI Requirement) Who and/or what the observation is about",
                 "min": 1,
                 "type": [
                     {
@@ -112,7 +132,14 @@
             },
             {
                 "id": "Observation.effective[x]",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.effective[x]",
+                "short": "(USCDI Requirement) Clinically relevant time/time-period for observation",
                 "definition": "This records the time during which the patient had identified their emotional, romantic, sexual, or affectional attraction to another person.",
                 "type": [
                     {
@@ -144,8 +171,14 @@
             },
             {
                 "id": "Observation.valueCodeableConcept",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueCodeableConcept",
-                "short": "Sexual Orientation",
+                "short": "(USCDI Requirement) Sexual Orientation",
                 "definition": "The Sexual Orientation value.",
                 "mustSupport": true,
                 "binding": {

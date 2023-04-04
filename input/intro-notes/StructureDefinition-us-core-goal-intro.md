@@ -18,11 +18,18 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  text description of the goal
 1.  a patient
 
+<div class="bg-success" markdown="1">
+
 **Each Goal must support:**
 
-1. target date(s):
+1. start date*
+2. target date(s)*
+
+\*see guidance below
+</div><!-- new-content -->
 
 **Profile specific implementation guidance:**
+-  <span class="bg-success" markdown="1">\*Although both `Goal.startDate` and `Goal.target.dueDate` are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements. The client application **SHALL** support both elements.</span><!-- new-content -->
 - Free text goals can be used in Goal.description.text when a concept isn't available or a legacy goal is not mapped to a LOINC or SNOMED concept.
 -  See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Goals
 

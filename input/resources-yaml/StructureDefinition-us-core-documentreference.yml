@@ -59,10 +59,10 @@ differential:
       rules: open
     min: 1
     mustSupport: true
-  - id: DocumentReference.category:us-core
+  - id: DocumentReference.category:uscore
     path: DocumentReference.category
-    sliceName: us-core
-    mustSupport: true
+    sliceName: uscore
+    # mustSupport: true
     binding:
       strength: required
       description: The US Core DocumentReferences Type Value Set is a "starter set"
