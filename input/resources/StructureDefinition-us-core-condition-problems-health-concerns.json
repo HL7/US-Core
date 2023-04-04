@@ -1,39 +1,30 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "us-core-condition-problems-health-concerns",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns",
-    "name": "USCoreConditionProblemsHealthConcernsProfile",
-    "title": "US Core Condition Problems and Health Concerns Profile",
-    "status": "active",
-    "experimental": false,
-    "date": "2022-04-20",
-    "description": "The US Core Condition Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  In version 5.0.0, The US Core Condition Profile has been split into the US Core Condition Encounter Diagnosis Profile and US Core Condition Problems and Health Concerns Profile.  To promote interoperability and adoption through common implementation, this profile defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
-    "fhirVersion": "4.0.1",
-    "kind": "resource",
     "abstract": false,
-    "type": "Condition",
     "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+    "date": "2022-04-20",
     "derivation": "constraint",
+    "description": "The US Core Condition Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  In version 5.0.0, The US Core Condition Profile has been split into the US Core Condition Encounter Diagnosis Profile and US Core Condition Problems and Health Concerns Profile.  To promote interoperability and adoption through common implementation, this profile defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
     "differential": {
         "element": [
             {
-                "id": "Condition",
-                "path": "Condition",
-                "definition": "\\-",
                 "comment": "\\-",
-                "mustSupport": false,
+                "definition": "\\-",
+                "id": "Condition",
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",
                         "map": "Condition"
                     }
-                ]
+                ],
+                "mustSupport": false,
+                "path": "Condition"
             },
             {
                 "id": "Condition.extension:assertedDate",
+                "max": "1",
+                "mustSupport": true,
                 "path": "Condition.extension",
                 "sliceName": "assertedDate",
-                "max": "1",
                 "type": [
                     {
                         "code": "Extension",
@@ -41,108 +32,115 @@
                             "http://hl7.org/fhir/StructureDefinition/condition-assertedDate"
                         ]
                     }
-                ],
-                "mustSupport": true
+                ]
             },
             {
-                "id": "Condition.clinicalStatus",
-                "path": "Condition.clinicalStatus",
-                "mustSupport": true,
                 "binding": {
                     "strength": "required",
                     "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical"
                 },
+                "id": "Condition.clinicalStatus",
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",
                         "map": "Condition.clinicalStatus"
                     }
-                ]
+                ],
+                "mustSupport": true,
+                "path": "Condition.clinicalStatus"
             },
             {
-                "id": "Condition.verificationStatus",
-                "path": "Condition.verificationStatus",
-                "mustSupport": true,
                 "binding": {
                     "strength": "required",
                     "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
                 },
+                "id": "Condition.verificationStatus",
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",
                         "map": "Condition.verificationStatus"
                     }
-                ]
+                ],
+                "mustSupport": true,
+                "path": "Condition.verificationStatus"
             },
             {
                 "id": "Condition.category",
-                "path": "Condition.category",
-                "short": "category codes",
-                "slicing": {
-                    "discriminator": [
-                        {
-                            "type": "pattern",
-                            "path": "$this"
-                        }
-                    ],
-                    "rules": "open"
-                },
-                "min": 1,
-                "mustSupport": true,
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",
                         "map": "Condition.category"
                     }
-                ]
+                ],
+                "min": 1,
+                "mustSupport": true,
+                "path": "Condition.category",
+                "short": "category codes",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "path": "$this",
+                            "type": "pattern"
+                        }
+                    ],
+                    "rules": "open"
+                }
             },
             {
-                "id": "Condition.category:us-core",
-                "path": "Condition.category",
-                "short": "problem-list-item | health-concern",
-                "sliceName": "us-core",
-                "min": 1,
                 "binding": {
+                    "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)",
                     "strength": "required",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-problem-or-health-concern"
                 },
-                "mustSupport": true
+                "id": "Condition.category:us-core",
+                "min": 1,
+                "mustSupport": true,
+                "path": "Condition.category",
+                "short": "problem-list-item | health-concern",
+                "sliceName": "us-core"
             },
             {
                 "id": "Condition.category:sdoh",
-                "path": "Condition.category",
-                "sliceName": "sdoh",
-                "min": 0,
                 "max": "1",
+                "min": 0,
+                "mustSupport": true,
+                "path": "Condition.category",
                 "patternCodeableConcept": {
                     "coding": [
                         {
-                            "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                            "code": "sdoh"
+                            "code": "sdoh",
+                            "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"
                         }
                     ]
                 },
-                "mustSupport": true
+                "sliceName": "sdoh"
             },
             {
-                "id": "Condition.code",
-                "path": "Condition.code",
-                "min": 1,
-                "mustSupport": true,
                 "binding": {
-                    "strength": "extensible",
                     "description": "Valueset to describe the actual problem experienced by the patient",
+                    "strength": "extensible",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
                 },
+                "id": "Condition.code",
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",
                         "map": "Condition.code"
                     }
-                ]
+                ],
+                "min": 1,
+                "mustSupport": true,
+                "path": "Condition.code"
             },
             {
                 "id": "Condition.subject",
+                "mapping": [
+                    {
+                        "identity": "argonaut-dq-dstu2",
+                        "map": "Condition.patient"
+                    }
+                ],
+                "mustSupport": true,
                 "path": "Condition.subject",
                 "type": [
                     {
@@ -151,27 +149,21 @@
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
                         ]
                     }
-                ],
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Condition.patient"
-                    }
                 ]
             },
             {
                 "id": "Condition.onset[x]",
+                "mustSupport": true,
                 "path": "Condition.onset[x]",
                 "type": [
                     {
+                        "code": "dateTime",
                         "extension": [
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                 "valueBoolean": true
                             }
-                        ],
-                        "code": "dateTime"
+                        ]
                     },
                     {
                         "code": "Age"
@@ -185,21 +177,21 @@
                     {
                         "code": "string"
                     }
-                ],
-                "mustSupport": true
+                ]
             },
             {
                 "id": "Condition.abatement[x]",
+                "mustSupport": true,
                 "path": "Condition.abatement[x]",
                 "type": [
                     {
+                        "code": "dateTime",
                         "extension": [
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                 "valueBoolean": true
                             }
-                        ],
-                        "code": "dateTime"
+                        ]
                     },
                     {
                         "code": "Age"
@@ -213,14 +205,23 @@
                     {
                         "code": "string"
                     }
-                ],
-                "mustSupport": true
+                ]
             },
             {
                 "id": "Condition.recordedDate",
-                "path": "Condition.recordedDate",
-                "mustSupport": true
+                "mustSupport": true,
+                "path": "Condition.recordedDate"
             }
         ]
-    }
+    },
+    "experimental": false,
+    "fhirVersion": "4.0.1",
+    "id": "us-core-condition-problems-health-concerns",
+    "kind": "resource",
+    "name": "USCoreConditionProblemsHealthConcernsProfile",
+    "resourceType": "StructureDefinition",
+    "status": "active",
+    "title": "US Core Condition Problems and Health Concerns Profile",
+    "type": "Condition",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
 }

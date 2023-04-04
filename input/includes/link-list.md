@@ -359,7 +359,7 @@
 [Parameters]: {{site.data.fhir.path}}parameters.html
 [Patient Example]: Patient-example.html 
 [US Core Sex for Clinical Use Value Set]: ValueSet-us-core-sex-for-clinical-use.html
-<!-- [SNOMED CT]: http://snomed.info/sct -->
+[SNOMED CT]: http://snomed.info/sct
 [Observation Category Codes]: {{site.data.fhir.path}}valueset-observation-category.html
 [US Core Common SDOH Assessments ValueSet]: ValueSet-us-core-common-sdoh-assessments.html
 [Gravity Project]: https://hl7.org/gravity
@@ -368,3 +368,5 @@
 [SDC Base Questionnaire]: {{site.data.fhir.hl7_fhir_uv_sdc}}/StructureDefinition-sdc-questionnaire.html
 [`Questionnaire.useContext`]: {{site.data.fhir.path}}questionnaire-definitions.html#Questionnaire.useContext
 [US Core Category]: CodeSystem-us-core-category.html
+[Required Bindings When Slicing by Value Sets]: general-requirements.html#required-bindings-when-slicing-by-value-sets
+[The US Core DocumentReferences Type Value Set]: ValueSet-us-core-documentreference-category.html
