@@ -147,7 +147,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 91. **Resolved - change required:** Update the “bindings when slicing by value sets” figure  [FHIR-40086](https://jira.hl7.org/browse/FHIR-40086) [See Changes Here](#.html)
 92. **Resolved - change required:** Consider managing resource “domain” category slices with a common pattern [FHIR-40087](https://jira.hl7.org/browse/FHIR-40087) [See Changes Here](#.html)
 93. **Resolved - change required:** Add guidance to the Procedure profile to express sdoh category [FHIR-40088](https://jira.hl7.org/browse/FHIR-40088) [See Changes Here](#.html)
-94. **Resolved - change required:** Improve language as to the expectations of clinicalStatus when category is problem list [FHIR-40089](https://jira.hl7.org/browse/FHIR-40089) [See Changes Here](#.html)
+94. **Applied:** Improve language as to the expectations of clinicalStatus when category is problem list [FHIR-40089](https://jira.hl7.org/browse/FHIR-40089) [See Changes Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 95. **Resolved - change required:** Alignment with FHIR DS4P IG needed - Use of Masked from the HL7 V3-ActCode is supported for data hidden due to security or privacy reason [FHIR-40090](https://jira.hl7.org/browse/FHIR-40090) [See Changes Here](#.html)
 96. **Resolved - change required:** Change AHC HRSN screening tool examples from the supplemental questions to the core questions [FHIR-40091](https://jira.hl7.org/browse/FHIR-40091) [See Changes Here](#.html)
 97. **Resolved - change required:** Handle “personal characteristics” as Observations versus elements on Patient [FHIR-40092](https://jira.hl7.org/browse/FHIR-40092) [See Changes Here](#.html)
