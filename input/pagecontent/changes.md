@@ -178,7 +178,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 122. **Resolved - change required:** US Core SFCU Extension not aligned with R5 SFCU Extension  [FHIR-40197](https://jira.hl7.org/browse/FHIR-40197) [See Changes Here](#.html)
 123. **Resolved - change required:** Please correct need for the indication element on MedicationRequest [FHIR-40199](https://jira.hl7.org/browse/FHIR-40199) [See Changes Here](#.html)
 124. **Resolved - change required:** ServiceRequest.reasonCode and reasonReference should be MS explicitly or text should be added explaining [FHIR-40200](https://jira.hl7.org/browse/FHIR-40200) [See Changes Here](#.html)
-125. **Resolved - change required:** ServiceRequest Profile Implementation Specific Guidance - incorrect reference to ServiceRequest.reasonCode [FHIR-40202](https://jira.hl7.org/browse/FHIR-40202) [See Changes Here](#.html)
+125. **Applied:** ServiceRequest Profile Implementation Specific Guidance - incorrect reference to ServiceRequest.reasonCode [FHIR-40202](https://jira.hl7.org/browse/FHIR-40202) [See Changes Here](StructureDefinition-us-core-servicerequest.html)
 126. **Resolved - change required:** Tribal Affiliation Extension - enrollment and alignment with eCR [FHIR-40203](https://jira.hl7.org/browse/FHIR-40203) [See Changes Here](#.html)
 127. **Resolved - change required:** Observation Occupation binding strength for industry is required  [FHIR-40204](https://jira.hl7.org/browse/FHIR-40204) [See Changes Here](#.html)
 128. **Resolved - change required:** whenHandedOver cardinality 1..1 is not conducive for some of the statuses [FHIR-40205](https://jira.hl7.org/browse/FHIR-40205) [See Changes Here](#.html)

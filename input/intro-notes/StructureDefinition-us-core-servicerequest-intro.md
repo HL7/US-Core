@@ -40,7 +40,7 @@ For ONC's USCDI requirements, each ServiceRequest must support the following add
 - The `ServiceRequest.category` binding must support, at a minimum, the [US Core ServiceRequest Category Codes].  However, this valueset can be treated as [extensible], and other category codes can be used instead.
 - The `ServiceRequest.code` valueset is broad to accommodate a wide variety of use cases and should be constrained to a subset for a particular use case or domain. (for example, LOINC for laboratory orders.)
 
-- \*The ServiceRequest resource can communicate the reason or indication for referral or consultation using either a code in `ServiceRequest.reasonCodeableConcept` or a reference using `ServiceRequest.reasonReference`.
+- \*The ServiceRequest resource can communicate the reason or indication for referral or consultation using either a code in `ServiceRequest.reasonCode` or a reference using `ServiceRequest.reasonReference`.
 
 
 {% include link-list.md %}
