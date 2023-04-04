@@ -44,7 +44,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 1. **Resolved - change required:** Obervation Survey derivedFrom must support [FHIR-37794](https://jira.hl7.org/browse/FHIR-37794) [See Changes Here](#.html)
 1. **Resolved - change required:** Change Condition patient + category search to SHALL support [FHIR-37918](https://jira.hl7.org/browse/FHIR-37918) [See Changes Here](#.html)
 1. **Resolved - change required:** Diagnostic Report Laboratory Codes LOINC CLASSTYPE value should be ""1"" [FHIR-37933](https://jira.hl7.org/browse/FHIR-37933) [See Changes Here](#.html)
-1. **Resolved - change required:** Add support for imaging identifiers [FHIR-38808](https://jira.hl7.org/browse/FHIR-38808) [See Changes Here](#.html)
+1. **Resolved - change required:** Additional guidance for accessing imaging studies [FHIR-38808](https://jira.hl7.org/browse/FHIR-38808) [See Changes Here](StructureDefinition-us-core-diagnosticreport-note.html#mandatory-and-must-support-data-elements)
 1. **Resolved - change required:** Allow multiple NPIs for Organizations and Practitioners [FHIR-39382](https://jira.hl7.org/browse/FHIR-39382) [See Changes Here](#.html)
 1. **Applied:** Keep QuestionnaireResponse and Update Screening and Assessments page [FHIR-39495](https://jira.hl7.org/browse/FHIR-39495) See Changes: 
    - [Here](screening-and-assessments.html)
@@ -190,7 +190,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 134. **Resolved - change required:** Incorrect/nonsensical lab result/observation in CMP panel  [FHIR-40427](https://jira.hl7.org/browse/FHIR-40427) [See Changes Here](#.html)
 135. **Resolved - change required:** Update to Glucose and CMP example to match CMS panel/specimen info [FHIR-40428](https://jira.hl7.org/browse/FHIR-40428) [See Changes Here](#.html)
 136. **Resolved - change required:** Add Specimen upon which BUN result obtained [FHIR-40429](https://jira.hl7.org/browse/FHIR-40429) [See Changes Here](#.html)
-137. **Triaged:** US core should have specific profiles for imaging and lab results [FHIR-40514](https://jira.hl7.org/browse/FHIR-40514) [See Changes Here](#.html)
+137. **Applied:** Additional guidance for accessing imaging studies [FHIR-40514](https://jira.hl7.org/browse/FHIR-40514) [See Changes Here](StructureDefinition-us-core-diagnosticreport-note.html#mandatory-and-must-support-data-elementsl)
 138. **Resolved - change required:** The CBC is incomplete and has a few results and not a Complete Blood Count.  Please Fix. [FHIR-40521](https://jira.hl7.org/browse/FHIR-40521) [See Changes Here](#.html)
 139. **Resolved - change required:** Encounter type value set too limited [FHIR-40546](https://jira.hl7.org/browse/FHIR-40546) [See Changes Here](#.html)
 140. **Applied:** Flag additional USCDI requirements in a computable way [FHIR-40553](https://jira.hl7.org/browse/FHIR-40553) [See Changes Here](#.html)
