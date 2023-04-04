@@ -13,7 +13,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Coverage must have:**
 
-1. health insurance member or subscriber id
+1. health insurance member identifier or subscriber id
 2. a status
 3. the health insurance beneficiary (patient)
 4. beneficiary's relationship to the subscriber
