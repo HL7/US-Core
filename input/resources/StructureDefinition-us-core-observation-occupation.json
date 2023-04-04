@@ -26,11 +26,24 @@
             },
             {
                 "id": "Observation.status",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.status",
+                "short": "(USCDI Requirement) registered | preliminary | final | amended +",
                 "mustSupport": true
             },
             {
                 "id": "Observation.category",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.category",
                 "slicing": {
                     "discriminator": [
@@ -41,12 +54,20 @@
                     ],
                     "rules": "open"
                 },
+                "short": "(USCDI Requirement) Classification of  type of observation",
                 "mustSupport": true
             },
             {
                 "id": "Observation.category:socialhistory",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.category",
                 "sliceName": "socialhistory",
+                "short": "(USCDI Requirement) Classification of  type of observation",
                 "min": 0,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -61,8 +82,14 @@
             },
             {
                 "id": "Observation.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.code",
-                "short": "Occupation history",
+                "short": "(USCDI Requirement) Occupation history",
                 "patternCodeableConcept": {
                     "coding": [
                         {
@@ -75,7 +102,14 @@
             },
             {
                 "id": "Observation.subject",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.subject",
+                "short": "(USCDI Requirement) Who and/or what the observation is about",
                 "min": 1,
                 "type": [
                     {
@@ -89,13 +123,26 @@
             },
             {
                 "id": "Observation.effectivePeriod",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.effectivePeriod",
+                "short": "(USCDI Requirement) Clinically relevant time/time-period for observation",
                 "mustSupport": true
             },
             {
                 "id": "Observation.valueCodeableConcept",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.valueCodeableConcept",
-                "short": "Coded occupation or text",
+                "short": "(USCDI Requirement) Coded occupation or text",
                 "comment": "Express the occupation type using a coded value. If no coded value is available, use text. If the occupation is not available, the reason should be communicated in `Observation.dataAbsentReason`.",
                 "min": 1,
                 "type": [
@@ -112,6 +159,12 @@
             },
             {
                 "id": "Observation.component",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component",
                 "slicing": {
                     "discriminator": [
@@ -122,25 +175,44 @@
                     ],
                     "rules": "open"
                 },
+                "short": "(USCDI Requirement) Component results",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:industry",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component",
                 "sliceName": "industry",
-                "short": "Occupation industry",
+                "short": "(USCDI Requirement) Occupation industry",
                 "min": 0,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:industry.code",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.code",
-                "short": "Occupation industry history",
+                "short": "(USCDI Requirement) Occupation industry history",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:industry.code.coding",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.code.coding",
                 "slicing": {
                     "discriminator": [
@@ -151,12 +223,20 @@
                     ],
                     "rules": "open"
                 },
+                "short": "(USCDI Requirement) Code defined by a terminology system",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:industry.code.coding:86188-0",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.code.coding",
                 "sliceName": "86188-0",
+                "short": "(USCDI Requirement) Code defined by a terminology system",
                 "min": 1,
                 "max": "1",
                 "patternCoding": {
@@ -167,8 +247,14 @@
             },
             {
                 "id": "Observation.component:industry.valueCodeableConcept",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Observation.component.valueCodeableConcept",
-                "short": "Occupation industry or text",
+                "short": "(USCDI Requirement) Occupation industry or text",
                 "comment": "Express the occupation industry type using a coded value. If no coded value is available, use text. If the occupation industry is not available, the reason should be communicated `Observation.component.dataAbsentReason`",
                 "min": 1,
                 "type": [

@@ -25,19 +25,20 @@
             },
             {
                 "id": "Specimen.type",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Specimen.type",
+                "short": "(USCDI Requirement) Kind of material that forms the specimen",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
                     "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.54"
-                },
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-namespace",
-                        "valueString": "us-core"
-                    }
-                ]
+                }
             }
         ]
     }
