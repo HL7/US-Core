@@ -124,6 +124,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/head-occipital-frontal-circumference-percentile"
+        },
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patients from birth to 37 Months of age using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false,
+        "name": "US Core Pediatric Head Occipital Frontal Circumference Percentile Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/pediatric-bmi-for-age"
         },
         "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric body mass index (BMI) percentile per age and sex for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
@@ -777,14 +785,6 @@
         "description": "The type of participation a provenance agent played for a given target.",
         "exampleBoolean": false,
         "name": "US Core Provenance Participant Type Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-provider-role"
-        },
-        "description": "Provider roles codes which are composed of the NUCC Health Care Provider Taxonomy Code Set classification codes for providers. Only concepts with a classification and no specialization are included.",
-        "exampleBoolean": false,
-        "name": "US Core Provider Role (NUCC)"
       },
       {
         "reference": {
@@ -1721,14 +1721,6 @@
         "description": "**draft | active | on-hold | revoked | completed | entered-in-error | unknown**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
         "name": "USCoreServicerequestStatus"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/head-occipital-frontal-circumference-percentile"
-        },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patients from birth to 37 Months of age using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
-        "exampleBoolean": false,
-        "name": "US Core Pediatric Head Occipital Frontal Circumference Percentile Profile"
       },
       {
         "reference": {

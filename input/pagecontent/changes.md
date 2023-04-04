@@ -185,7 +185,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 129. **Applied:** MedicationRequest.reasonCodeableConcept does not exist [FHIR-40235](https://jira.hl7.org/browse/FHIR-40235) [See Changes Here](StructureDefinition-us-core-medicationrequest.html)
 130. **Resolved - change required:** Utilize ""use"" field for patient previous name and previous address (round 2) [FHIR-40299](https://jira.hl7.org/browse/FHIR-40299) [See Changes Here](#.html)
 131. **Triaged:** Patch Request: Patient.us-core-ethnicity does not allow for nullFlavors in value set [FHIR-40309](https://jira.hl7.org/browse/FHIR-40309) [See Changes Here](#.html)
-132. **Resolved - change required:** remove or explain one of two NUCC bindings [FHIR-40372](https://jira.hl7.org/browse/FHIR-40372) [See Changes Here](#.html)
+132. **Applied:** Update PractitionerRole.role binding [FHIR-40372](https://jira.hl7.org/browse/FHIR-40372) [See Changes Here](StructureDefinition-us-core-practitionerrole.html)
 133. **Resolved - change required:** Must Support of Patient as Care Team Member [FHIR-40415](https://jira.hl7.org/browse/FHIR-40415) [See Changes Here](#.html)
 134. **Resolved - change required:** Incorrect/nonsensical lab result/observation in CMP panel  [FHIR-40427](https://jira.hl7.org/browse/FHIR-40427) [See Changes Here](#.html)
 135. **Resolved - change required:** Update to Glucose and CMP example to match CMS panel/specimen info [FHIR-40428](https://jira.hl7.org/browse/FHIR-40428) [See Changes Here](#.html)
