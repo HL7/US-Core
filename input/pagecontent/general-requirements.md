@@ -97,13 +97,13 @@ Because of the  FHIR conformance rule:
 
 > If an extensible binding is applied to an element with maximum cardinality > 1, the binding applies to all the elements. ([Terminology Binding Extensible])
 
-FHIR profiles use [slicing] when a coded element is a repeating element, and a particular value set is desired for at least one of the repeats. This is a special case where a *required* value set binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the value set (equivalent to  Extensible Binding below). *Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*  The example in figure 5 below illustrates this structure for the repeating Condition.category element:
+FHIR profiles use [slicing] when a coded element is a repeating element, and a particular value set is desired for at least one of the repeats. This is a special case where a *required* value set binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the value set (equivalent to  Extensible Binding below). *Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*  The example in figure 5 below illustrates this structure for the repeating DocumentReference.category element:
 
 - This structure allows 0..\* concept(s) from the *required* value set.
 - This structure, by being 0..\*, allows servers to send concepts, not in the required value set.
 
 
-  {% include img.html img="Must_Support_Condition_category.png" caption="Figure 5: US Core Condition.category" %}
+  {% include img.html img="Must_Support_DocumentReference_category.png" caption="Figure 5: US Core DocumentReference.category" %}
 
 #### Extensible Binding for Coded Elements
 
