@@ -143,7 +143,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 87. **Resolved - change required:** 2 typos in history page [FHIR-40069](https://jira.hl7.org/browse/FHIR-40069) [See Changes Here](#.html)
 88. **Resolved - change required:** Reword a Quick Start example [FHIR-40072](https://jira.hl7.org/browse/FHIR-40072) [See Changes Here](#.html)
 89. **Resolved - change required:** consider alternative answer choices for pregnancy intect codes [FHIR-40084](https://jira.hl7.org/browse/FHIR-40084) [See Changes Here](#.html)
-90. **Resolved - change required:** Improve Screening Assessment Observation.hasMember short description [FHIR-40085](https://jira.hl7.org/browse/FHIR-40085) [See Changes Here](#.html)
+90. **Applied:** Improve Screening Assessment Observation.hasMember short description [FHIR-40085](https://jira.hl7.org/browse/FHIR-40085) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html)
 91. **HALF APPLIED - FIX OTHER IMAGES PRIOR TO PUBLICATIN:** Update the “bindings when slicing by value sets” figure  [FHIR-40086](https://jira.hl7.org/browse/FHIR-40086) [See Changes Here](general-requirements.html#required-bindings-when-slicing-by-value-sets)
 92. **Resolved - change required:** Consider managing resource “domain” category slices with a common pattern [FHIR-40087](https://jira.hl7.org/browse/FHIR-40087) [See Changes Here](#.html)
 93. **Resolved - change required:** Add guidance to the Procedure profile to express sdoh category [FHIR-40088](https://jira.hl7.org/browse/FHIR-40088) [See Changes Here](#.html)
