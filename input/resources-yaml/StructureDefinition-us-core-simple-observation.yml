@@ -122,7 +122,7 @@ differential:
       _targetProfile:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
+          valueBoolean: false
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
@@ -175,21 +175,35 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.derivedFrom
-    short: (USCDI) Related Observation(s) or other resource the observation
+    short: (USCDI) US Core Profiles or other resource the observation
       is made from
-    definition: Observations or or other resource such as a QuestionnaireResponse
-      from which this observation value is derived.
+    definition: US Core Observations, DocumentReference, QuestionnaireResponse or other resource from which this observation value is derived.
     type:
     - code: Reference
       targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+      - http://hl7.org/fhir/StructureDefinition/Observation
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
-      - http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
       - http://hl7.org/fhir/StructureDefinition/ImagingStudy
       - http://hl7.org/fhir/StructureDefinition/Media
       - http://hl7.org/fhir/StructureDefinition/MolecularSequence
       _targetProfile:
       - extension:
         - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-    mustSupport: true
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+    mustSupport: false
