@@ -96,12 +96,6 @@ definition:
     exampleBoolean: false
     name: US Core Provenance Participant Type Extension Codes
   - reference:
-      reference: CodeSystem/us-core-sex-for-clinical-use
-    description: Codes that represent the sex characterization appropriate for the
-      associated clinical context.
-    exampleBoolean: false
-    name: US Core Sex for Clinical Use
-  - reference:
       reference: StructureDefinition/head-occipital-frontal-circumference-percentile
     description: To promote interoperability and adoption through common implementation,
       this profile sets minimum expectations for the Observation resource to record,
@@ -703,20 +697,6 @@ definition:
     exampleBoolean: false
     name: US Core Respiratory Rate Profile
   - reference:
-      reference: StructureDefinition/us-core-sex-for-clinical-use
-    description: This extension aligns with FHIR R5 [sexForClinicalUse extension](http://hl7.org/fhir/2022Sep/extension-patient-sexforclinicaluse.html)
-      from which the following description is excerpted, "Sex for Clinical Use is
-      a categorization of sex derived from observable information such as an organ
-      inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric
-      history, etc. This property is intended for use in clinical decision making
-      and indicates that treatment or diagnostic tests should consider best practices
-      associated with the relevant reference population  It describes the biological
-      sex of an organism, which is most commonly determined based on anatomy and physiology
-      or genetic (chromosome) analysis.  It also optionally communicates the date
-      when the sex was determined." See the referenced extension for more information.
-    exampleBoolean: false
-    name: US Core Sex For Clinical Use
-  - reference:
       reference: StructureDefinition/us-core-simple-observation
     description: The US Core Simple Observation Profile meets the requirements of
       the US Core Data for Interoperability (USCDI) Assessments. This profile promotes
@@ -985,12 +965,6 @@ definition:
     description: A set of SNOMED CT and LOINC concepts to classify a requested service
     exampleBoolean: false
     name: US Core ServiceRequest Category Codes
-  - reference:
-      reference: ValueSet/us-core-sex-for-clinical-use
-    description: Codes that represent the sex characterization appropriate for the
-      associated clinical context.
-    exampleBoolean: false
-    name: US Core Sex for Clinical Use Codes
   - reference:
       reference: ValueSet/us-core-sexual-orientation
     description: The US Core Sexual Orientation Value Set includes concepts to describe

@@ -140,22 +140,6 @@
                 ]
             },
             {
-                "id": "Patient.extension:sex-for-clinical-use",
-                "path": "Patient.extension",
-                "sliceName": "sex-for-clinical-use",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex-for-clinical-use"
-                        ]
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
                 "id": "Patient.extension:genderIdentity",
                 "extension": [
                     {

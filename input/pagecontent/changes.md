@@ -15,7 +15,7 @@ The changes in this annual update to US Core have been reviewed and commented up
   - Updated Patient Demographics/Information:
       - Date of Death [See Change Here](StructureDefinition-us-core-patient.html)
       - Tribal Affiliation [See Change Here](StructureDefinition-us-core-patient.html) 
-      - Sex (for clinical use)[See Change Here](StructureDefinition-us-core-sex-for-clinical-use.html) 
+      - Sex (....todo....)
         - Note that the [US Core BirthSex Extension](StructureDefinition-us-core-birthsex.html) will not be deprecated.
       - Related Person's Name and Related Person's Relationship [See](StructureDefinition-us-core-relatedperson.html)
       - Occupation and Occupation Industry [See Change Here](StructureDefinition-us-core-observation-occupation.html)
@@ -52,7 +52,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
    - [Here](Questionnaire-phq-9-example.html)
    - [Here](Questionnaire-prapare-example.html)
    - [Here](Questionnaire-hunger-vital-sign-example.html)
-   - [Here](QuestionnaireResponse-phq8-example.html)
+   - [Here](QuestionnaireResponse-phq-9-example.html)
    - [Here](CapabilityStatement-us-core-server.html#questionnaire)
    - [Here](CapabilityStatement-us-core-server.html#questionnaireresponse)
 2. **Resolved - change required:** Slicing in Observation.component:industry is too complicated [FHIR-39608](https://jira.hl7.org/browse/FHIR-39608) [See Changes Here](#.html)
@@ -175,7 +175,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 119. **Resolved - change required:** Need to be able to search based on combination of occupation, Industry, plus other info [FHIR-40183](https://jira.hl7.org/browse/FHIR-40183) [See Changes Here](#.html)
 120. **Resolved - change required:** Change main observation to Past or Present Job  [FHIR-40187](https://jira.hl7.org/browse/FHIR-40187) [See Changes Here](#.html)
 121. **Resolved - change required:** Please give guidance on US Core  on which SMART v2 scopes  [FHIR-40192](https://jira.hl7.org/browse/FHIR-40192) [See Changes Here](#.html)
-122. **Resolved - change required:** US Core SFCU Extension not aligned with R5 SFCU Extension  [FHIR-40197](https://jira.hl7.org/browse/FHIR-40197) [See Changes Here](#.html)
+122. **Applied:** Remove the SFCU extension, and retain the birth-sex extension to meet USCDI Patient Sex. [FHIR-40197](https://jira.hl7.org/browse/FHIR-40197) [See Changes Here](uscdi.html)
 123. **Resolved - change required:** Please correct need for the indication element on MedicationRequest [FHIR-40199](https://jira.hl7.org/browse/FHIR-40199) [See Changes Here](#.html)
 124. **Resolved - change required:** ServiceRequest.reasonCode and reasonReference should be MS explicitly or text should be added explaining [FHIR-40200](https://jira.hl7.org/browse/FHIR-40200) [See Changes Here](#.html)
 125. **Applied:** ServiceRequest Profile Implementation Specific Guidance - incorrect reference to ServiceRequest.reasonCode [FHIR-40202](https://jira.hl7.org/browse/FHIR-40202) [See Changes Here](StructureDefinition-us-core-servicerequest.html)
