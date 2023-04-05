@@ -57,12 +57,23 @@ To support a US Core Profile, a server:
 
 #### Profile Support + Interaction Support
 
-Systems may deploy and support one or more US Core Profiles to represent clinical information *and* the US Core interactions to access data. Systems that implement *both* can claim conformance to US Core Profile content structure *and* the RESTful interactions defined for it. This claim is declared by implementing all or parts of the US Core CapabilityStatement into their capabilities.
+<div class="bg-success" markdown="1">
+Servers may deploy and support one or more US Core Profiles to represent clinical information *and* one or more of the following US Core interactions: 
 
+- "Quick Start" defined for each Profile
+- [Clinical Notes]
+- [Medication Lists]
+- [Basic Provenance]
+- [Screening and Assessments]
+
+Servers implementing both can claim conformance to the US Core Profile content structure and the RESTful interactions defined by implementing all or parts of the US Core CapabilityStatement into their capabilities as described below.
 A server that certifies to the [21st Century Cures Act for accessing patient data] must implement all components in the USCDI and the US Core CapabilityStatement.
 
+##### Claiming conformance to a US Core Profile
 
-To claim conformance to a US Core Profile, a server:
+ A conformant server:
+
+</div><!-- new-content -->
 
 - **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.
 - **SHALL** declare conformance with the [US Core Server Capability Statement] by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`
