@@ -1772,13 +1772,6 @@ definition:
     exampleBoolean: false
     name: USCoreQuestionnaireresponseStatus
   - reference:
-      reference: SearchParameter/us-core-questionnaireresponse-tag
-    description: "**Tags applied to this resource**  \n**NOTE**: This US Core SearchParameter\
-      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
-      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
-    exampleBoolean: false
-    name: USCoreQuestionnaireresponseTag
-  - reference:
       reference: SearchParameter/us-core-race
     description: Returns patients with a race extension matching the specified code.
     exampleBoolean: false

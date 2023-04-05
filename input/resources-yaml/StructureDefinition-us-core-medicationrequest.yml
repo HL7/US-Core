@@ -250,11 +250,6 @@ differential:
       valueBoolean: true
     path: MedicationRequest.reasonReference
     short: (USCDI) US Core Condition or Observation that supports the prescription
-    type:
-    - code: Reference
-      targetProfile:
-      - http://hl7.org/fhir/StructureDefinition/Condition
-      - http://hl7.org/fhir/StructureDefinition/Observation
   - id: MedicationRequest.dosageInstruction
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
