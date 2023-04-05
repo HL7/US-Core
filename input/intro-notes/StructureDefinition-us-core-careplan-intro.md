@@ -1,15 +1,3 @@
-
-<div class="note-to-balloters" markdown="1">
-USCDI's Assessment and Plan of Treatment is defined as a "Health professional's conclusions and working assumptions that will guide treatment of the patient." Because the Assessment & Plan is typically contained within a clinical note, there is an open question whether the US Core CarePlan Profile and specifically the required `CarePlan.text` can communicate it effectively. The decision to use `CarePlan.text` predates US Core's current clinical note guidance, which supports the use of DocumentReference to communicate clinical notes. In addition, The `.text` element is not used by the US HIT Vendors in many exchange contexts. Therefore its contents may be a pro forma summary of the CarePlan elements instead of the intended Assessment and Plan of Treatment. On the other hand, the US Core CarePlan has been widely implemented. It has strong support in specific sectors of the community.
-
-We have discussed several options for consideration and are seeking balloter's to comment on them:
-
-1. Keep the current state (implementers choose what they send in CarePlan.text)
-2. Update the guidance to require sending Assessment and Plan in CarePlan.text (requiring the content to include the Assessment and Plan content)
-3. Retire the US Core CarePlan Profile, and following the US Core Clinical Notes guidance, use DocumentReference to communicate the Assessment and Plan content.
-4. Keep the US Core CarePlan Profile, but remove the requirement for CarePlan.text and define a way to communicate the Assessment and Plan content within it (specific reference is TBD e.g., in  CarePlan,supportingInfo, CarePlan.CarePlan.note, or CarePlan.activity.detail.reasonReference).
-</div><!-- note-to-balloters -->
-
 **Example Usage Scenarios:**
 
 The following are example usage scenarios for this profile:
