@@ -111,7 +111,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 55. **Resolved - change required:** MedicationRequest - The requester element is required but this information is not known for all medication types. For example, patient reported medications. [FHIR-39869](https://jira.hl7.org/browse/FHIR-39869) [See Changes Here](#.html)
 56. **Resolved - change required:** Profile Formal Views naming inconsistencies [FHIR-39873](https://jira.hl7.org/browse/FHIR-39873) [See Changes Here](#.html)
 57. **Resolved - change required:** MedicationDispense - whenHandedOver Should have Guidance for Prescriptions Sent by Mail [FHIR-39878](https://jira.hl7.org/browse/FHIR-39878) [See Changes Here](#.html)
-58. **Resolved - change required:** Care Plan Note to Balloters feedback [FHIR-39902](https://jira.hl7.org/browse/FHIR-39902) [See Changes Here](#.html)
+58. **Applied:** Change CarePlan.text from Mandatory min = 1 to Must Support min = 0 [FHIR-39902](https://jira.hl7.org/browse/FHIR-39902) [See Changes Here](StructureDefinition-us-core-careplan.html)
 59. **Resolved - change required:** Using SNOMED CT United States Edition Typo [FHIR-39903](https://jira.hl7.org/browse/FHIR-39903) [See Changes Here](#.html)
 60. **Resolved - change required:** Adding some clarification/explanation [FHIR-39923](https://jira.hl7.org/browse/FHIR-39923) [See Changes Here](#.html)
 61. **Applied:** Define the term Screening and Assessment [FHIR-39938](https://jira.hl7.org/browse/FHIR-39938) See Changes Here](screening-and-assessments.html#introduction)
