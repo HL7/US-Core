@@ -85,21 +85,21 @@ Transformation of data from one format to another **MAY** change the authorship 
 ### Element Level Provenance
 
 <div class="stu-note" markdown="1">
-This section is informative and is not required to be supported by systems conforming to the US Core Provenance Profile.
+This section is informative and not a requirement for systems conforming to the US Core Provenance Profile.
 </div><!-- stu-note -->
 
  Using the FHIR Extension [Target Element], Provenance can target a particular element or set of elements. For example, to document how and who supplied patient demographic data such as Race and Ethnicity (R/E), gender identity, and sexual orientation.
 
 Example:
 
-In this example, this [US Core Patient]  the patient demographic data such as Race and Ethnicity (R/E), gender identity, etc., have *individual element ids* within a resource for internal and external referencing:
+In this [US Core Patient Profile] example, the patient demographic data such as Race and Ethnicity (R/E), gender identity, etc., have *individual element ids* within a resource for internal and external referencing:
 
 ~~~
 {% include_relative Patient-example-targeted-provenance.json %} 
 ~~~
 
 
-The [US Core Provenance] resource communicates who, how, and when elements such as Race and Ethnicity (R/E), gender identity, etc., were collected. Note that the [Target Element] Extension references the element ids within the Patient resource:
+This [US Core Provenance] resource communicates who, how, and when elements such as Race and Ethnicity (R/E), gender identity, etc., were collected. Note that the [Target Element] Extension references the element ids within the Patient resource:
 
 ~~~
 {% include_relative Provenance-example-targeted-provenance.json %}
