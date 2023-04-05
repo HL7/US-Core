@@ -147,9 +147,16 @@ The note and report types for a particular server are discovered by invoking the
 
 `GET [base]/ValueSet/$expand?context=[context]&contextDirection=[contextDirection]`
 
+<div class="bg-success" markdown="1">
+
 Where:
 - [contextDirection] = `incoming` for write operations and `outgoing` for read operations.
- - [context] = `DiagnosticReport.category` for DiagnosticReport report category discovery, `DiagnosticReport.code` for DiagnosticReport report type discovery, `DocumentReference.category` for DocumentReference note category discovery, `DocumentReference.type` for DocumentReference note type discovery.
+- [context] = 
+   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.category` for DiagnosticReport report category discovery
+   -  `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code` for DiagnosticReport report type discovery
+   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category` for DocumentReference note category discovery
+   -  `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.type` for DocumentReference note type discovery
+</div><!-- new-content -->
 
 **Examples**
 
@@ -169,7 +176,10 @@ The read and write formats for a particular server are discovered by invoking th
 
 Where:
 - [contextDirection] = `incoming` for write operations and `outgoing` for read operations.
- - [context] = `DocumentReference.content.attachment.contentType` for DocumentReference note content type discovery and `DiagnosticReport.presentedForm.contentType` for DiagnosticReport report content type discovery.
+ - [context] =
+   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.presentedForm.contentType` for DiagnosticReport report content type discovery.
+   - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType` for DocumentReference note content type discovery
+
 
  **Examples**
 

@@ -4,7 +4,7 @@ System A accepts contentType `text/plain` in a create transaction and returns `t
 **Request for Write contentType**
 
 ~~~
-GET [base]/ValueSet/$expand?context=DocumentReference.content.attachment.contentType&contextDirection=incoming
+GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=incoming
 ~~~
 
 **Response**
@@ -52,7 +52,7 @@ HTTP/1.1 200 OK
 **Request for Read contentType**
 
 ~~~
-GET [base]/ValueSet/$expand?context=DocumentReference.content.attachment.contentType&contextDirection=outgoing
+GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&contextDirection=outgoing
 ~~~
 
 **Response**

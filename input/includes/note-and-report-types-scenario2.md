@@ -4,7 +4,7 @@ A client determines the types of note or reports they can access through Documen
 **Request for DocumentReference note or report type**
 
 ~~~
-GET [base]/ValueSet/$expand?context=DocumentReference.type&contextDirection=outgoing
+GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.type&contextDirection=outgoing
 ~~~
 
 **Response**

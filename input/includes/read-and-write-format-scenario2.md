@@ -5,7 +5,7 @@ System A accepts contentType `text/xhtml` in a create transaction and returns `a
 **Request for Write contentType**
 
 ~~~
-GET [base]/ValueSet/$expand?context=DocumentReference.content.attachment.contentType&amp;contextDirection=incoming
+GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&amp;contextDirection=incoming
 ~~~
 
 **Response**
@@ -53,7 +53,7 @@ HTTP/1.1 200 OK
 **Request for Read contentType**
 
 ~~~
-GET [base]/ValueSet/$expand?context=DocumentReference.content.attachment.contentType&amp;contextDirection=outgoing
+GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.content.attachment.contentType&amp;contextDirection=outgoing
 ~~~
 
 **Response**

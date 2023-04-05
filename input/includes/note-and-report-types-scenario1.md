@@ -4,7 +4,7 @@ A client determines the types of reports they can access through DiagnosticRepor
 **Request for DiagnosticReport report type**
 
 ~~~
-GET [base]/ValueSet/$expand?context=DiagnosticReport.codes&contextDirection=outgoing
+GET [base]/ValueSet/$expand?context=http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code&contextDirection=outgoing
 ~~~
 
 **Response**

@@ -62,8 +62,8 @@ Servers may deploy and support one or more US Core Profiles to represent clinica
 
 - "Quick Start" defined for each Profile
 - [Clinical Notes]
-- [Medication Lists]
-- [Basic Provenance]
+- [Medication List]
+- [Basic Provenance]git pul
 - [Screening and Assessments]
 
 Servers implementing both can claim conformance to the US Core Profile content structure and the RESTful interactions defined by implementing all or parts of the US Core CapabilityStatement into their capabilities as described below.
