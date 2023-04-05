@@ -14,45 +14,43 @@
     "code": {
         "coding": [
             {
-                "code": "718-7",
-                "display": "Hgb Bld-mCnc",
+                "code": "777-3",
+                "display": "Platelets [#/volume] in Blood by Automated count",
                 "system": "http://loinc.org"
             }
         ],
-        "text": "Hgb Bld-mCnc"
+        "text": "Platelets"
     },
     "effectiveDateTime": "2005-07-05",
-    "id": "hemoglobin",
+    "id": "cbc-platelets",
     "meta": {
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Hemoglobin Example"
+                "valueString": "Platelets Example"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a hemoglobin example for the *US Core Observation Lab Profile*."
+                "valueMarkdown": "This is a Platelets example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*."
             }
         ],
-        "lastUpdated": "2016-03-09T15:29:57.818+00:00",
         "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-        ],
-        "versionId": "1046"
+        ]
     },
     "referenceRange": [
         {
             "high": {
-                "code": "g/dL",
+                "code": "10*3/uL",
                 "system": "http://unitsofmeasure.org",
-                "unit": "g/dL",
-                "value": 21.5
+                "unit": "10*3/uL",
+                "value": 450
             },
             "low": {
-                "code": "g/dL",
+                "code": "10*3/uL",
                 "system": "http://unitsofmeasure.org",
-                "unit": "g/dL",
-                "value": 16.5
+                "unit": "10*3/uL",
+                "value": 150
             },
             "type": {
                 "coding": [
@@ -74,7 +72,7 @@
     },
     "valueQuantity": {
         "system": "http://unitsofmeasure.org",
-        "unit": "g/dL",
-        "value": 17.0
+        "unit": "10*3/uL",
+        "value": 200
     }
 }

@@ -14,45 +14,43 @@
     "code": {
         "coding": [
             {
-                "code": "786-4",
-                "display": "MCHC RBC Auto-mCnc",
+                "code": "789-8",
+                "display": "Erythrocytes [#/volume] in Blood by Automated count",
                 "system": "http://loinc.org"
             }
         ],
-        "text": "MCHC RBC Auto-mCnc"
+        "text": "Erythrocytes"
     },
     "effectiveDateTime": "2005-07-05",
-    "id": "mchc",
+    "id": "cbc-erythrocytes",
     "meta": {
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "MCHC Example"
+                "valueString": "Erythrocytes Example"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a MCHC example for the *US Core Observation Lab Profile*."
+                "valueMarkdown": "This is a erythrocytes example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*."
             }
         ],
-        "lastUpdated": "2016-03-09T15:29:57.124+00:00",
         "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-        ],
-        "versionId": "879"
+        ]
     },
     "referenceRange": [
         {
             "high": {
-                "code": "g/dL",
+                "code": "10*6/uL",
                 "system": "http://unitsofmeasure.org",
-                "unit": "g/dL",
-                "value": 34.0
+                "unit": "10*6/uL",
+                "value": 6.1
             },
             "low": {
-                "code": "g/dL",
+                "code": "10*6/uL",
                 "system": "http://unitsofmeasure.org",
-                "unit": "g/dL",
-                "value": 30.0
+                "unit": "10*6/uL",
+                "value": 4.1
             },
             "type": {
                 "coding": [
@@ -74,7 +72,7 @@
     },
     "valueQuantity": {
         "system": "http://unitsofmeasure.org",
-        "unit": "g/dL",
-        "value": 34.7
+        "unit": "10*6/uL",
+        "value": 4.58
     }
 }

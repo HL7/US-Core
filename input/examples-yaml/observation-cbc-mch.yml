@@ -6,33 +6,31 @@ category:
   text: Laboratory
 code:
   coding:
-  - code: 786-4
-    display: MCHC RBC Auto-mCnc
+  - code: 785-6
+    display: MCH [Entitic mass] by Automated count
     system: http://loinc.org
-  text: MCHC RBC Auto-mCnc
+  text: MCH
 effectiveDateTime: '2005-07-05'
-id: mchc
+id: cbc-mch
 meta:
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: MCHC Example
+    valueString: MCH Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a MCHC example for the *US Core Observation Lab Profile*.
-  lastUpdated: '2016-03-09T15:29:57.124+00:00'
+    valueMarkdown: This is a MCH example for the *US Core Observation Lab Profile*. It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*.
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-  versionId: '879'
 referenceRange:
 - high:
-    code: g/dL
+    code: pg
     system: http://unitsofmeasure.org
-    unit: g/dL
-    value: 34.0
+    unit: pg
+    value: 27.5
   low:
-    code: g/dL
+    code: pg
     system: http://unitsofmeasure.org
-    unit: g/dL
-    value: 30.0
+    unit: pg
+    value: 33.2
   type:
     coding:
     - code: normal
@@ -46,5 +44,5 @@ subject:
   reference: Patient/example
 valueQuantity:
   system: http://unitsofmeasure.org
-  unit: g/dL
-  value: 34.7
+  unit: pg
+  value: 30.0

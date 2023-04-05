@@ -2769,24 +2769,52 @@ definition:
     name: Missing Coded Data Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
   - reference:
-      reference: Observation/erythrocytes
-    description: This is a erythrocytes example for the *US Core Observation Lab Profile*.
+      reference: Observation/cbc-erythrocytes
+    description: This is a erythrocytes example for the *US Core Observation Lab Profile*
+      and CBC example for the *US Core DiagnosticReport Lab Profile*.
     name: Erythrocytes Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
-      reference: Observation/hemoglobin
-    description: This is a hemoglobin example for the *US Core Observation Lab Profile*.
+      reference: Observation/cbc-hematocrit
+    description: This is a hematocrit example for the *US Core Observation Lab Profile*
+      and CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: Hematocrit Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/cbc-hemoglobin
+    description: This is a hemoglobin example for the *US Core Observation Lab Profile*
+      and CBC example for the *US Core DiagnosticReport Lab Profile*.
     name: Hemoglobin Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
-      reference: Observation/mchc
+      reference: Observation/cbc-leukocytes
+    description: This is a Leukocytes example for the *US Core Observation Lab Profile*
+      and CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: Leukocytes Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/cbc-mch
+    description: This is a MCH example for the *US Core Observation Lab Profile*.
+      It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: MCH Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/cbc-mchc
     description: This is a MCHC example for the *US Core Observation Lab Profile*.
+      It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*.
     name: MCHC Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
-      reference: Observation/neutrophils
-    description: This is a neutrophils example for the *US Core Observation Lab Profile*.
-    name: Neutrophils Example
+      reference: Observation/cbc-mcv
+    description: This is a MCV example for the *US Core Observation Lab Profile*.
+      It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: MCV Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/cbc-platelets
+    description: This is a Platelets example for the *US Core Observation Lab Profile*
+      and CBC example for the *US Core DiagnosticReport Lab Profile*.
+    name: Platelets Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
       reference: Observation/observation-occupation
@@ -2816,7 +2844,7 @@ definition:
   - reference:
       reference: Observation/serum-bun
     description: This is a BUN example for the *US Core Observation Lab Profile*.
-    name: BUN Example
+    name: Serum BUN Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
       reference: Observation/serum-calcium

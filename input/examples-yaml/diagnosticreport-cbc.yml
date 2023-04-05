@@ -24,14 +24,22 @@ performer:
   reference: Organization/acme-lab
 resourceType: DiagnosticReport
 result:
-- display: NEUTROPHILS
-  reference: Observation/neutrophils
-- display: MCHC
-  reference: Observation/mchc
-- display: HEMOGLOBIN
-  reference: Observation/hemoglobin
+- display: LEUKOCYTES
+  reference: Observation/cbc-leukocytes # ok
 - display: ERYTHROCYTES
-  reference: Observation/erythrocytes
+  reference: Observation/cbc-erythrocytes # ok
+- display: HEMOGLOBIN
+  reference: Observation/cbc-hemoglobin  # ok
+- display: HEMATOCRIT
+  reference: Observation/cbc-hematocrit # ok
+- display: MCV
+  reference: Observation/cbc-mcv # ok
+- display: MCH
+  reference: Observation/cbc-mch # ok
+- display: MCHC
+  reference: Observation/cbc-mchc # ok
+- display: PLATELETS
+  reference: Observation/cbc-platelets # ok
 status: final
 subject:
   display: Amy Shaw

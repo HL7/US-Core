@@ -6,34 +6,34 @@ category:
   text: Laboratory
 code:
   coding:
-  - code: 770-8
-    display: Neutrophils/100 leukocytes in Blood by Automated count
+  - code: 2345-7
+    display: Glucose SerPl-mCnc
     system: http://loinc.org
-  text: Neutrophils %
+  text: Glucose SerPl-mCnc
 effectiveDateTime: '2005-07-05'
-id: neutrophils
+id: serum-glucose
 meta:
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: Neutrophils Example
+    valueString: Serum Glucose Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a neutrophils example for the *US Core Observation Lab
+    valueMarkdown: This is a serum glucose example for the *US Core Observation Lab
       Profile*.
-  lastUpdated: '2016-03-09T15:29:58.052+00:00'
+  lastUpdated: '2016-03-09T15:29:58.328+00:00'
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-  versionId: '1106'
+  versionId: '1165'
 referenceRange:
 - high:
-    code: '%'
+    code: mg/dL
     system: http://unitsofmeasure.org
-    unit: '%'
-    value: 67.0
+    unit: mg/dL
+    value: 109.0
   low:
-    code: '%'
+    code: mg/dL
     system: http://unitsofmeasure.org
-    unit: '%'
-    value: 37.0
+    unit: mg/dL
+    value: 40.0
   type:
     coding:
     - code: normal
@@ -47,5 +47,8 @@ subject:
   reference: Patient/example
 valueQuantity:
   system: http://unitsofmeasure.org
-  unit: '%'
-  value: 40.0
+  unit: mg/dL
+  value: 76.0
+specimen:
+  reference: Specimen/specimen-example-serum
+  display: Serum specimen

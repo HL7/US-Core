@@ -14,45 +14,43 @@
     "code": {
         "coding": [
             {
-                "code": "770-8",
-                "display": "Neutrophils/100 leukocytes in Blood by Automated count",
+                "code": "786-4",
+                "display": "MCHC [Mass/volume] by Automated count",
                 "system": "http://loinc.org"
             }
         ],
-        "text": "Neutrophils %"
+        "text": "MCHC"
     },
     "effectiveDateTime": "2005-07-05",
-    "id": "neutrophils",
+    "id": "cbc-mchc",
     "meta": {
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Neutrophils Example"
+                "valueString": "MCHC Example"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a neutrophils example for the *US Core Observation Lab Profile*."
+                "valueMarkdown": "This is a MCHC example for the *US Core Observation Lab Profile*. It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*."
             }
         ],
-        "lastUpdated": "2016-03-09T15:29:58.052+00:00",
         "profile": [
             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-        ],
-        "versionId": "1106"
+        ]
     },
     "referenceRange": [
         {
             "high": {
-                "code": "%",
+                "code": "g/dL",
                 "system": "http://unitsofmeasure.org",
-                "unit": "%",
-                "value": 67.0
+                "unit": "g/dL",
+                "value": 34.0
             },
             "low": {
-                "code": "%",
+                "code": "g/dL",
                 "system": "http://unitsofmeasure.org",
-                "unit": "%",
-                "value": 37.0
+                "unit": "g/dL",
+                "value": 30.0
             },
             "type": {
                 "coding": [
@@ -74,7 +72,7 @@
     },
     "valueQuantity": {
         "system": "http://unitsofmeasure.org",
-        "unit": "%",
-        "value": 40.0
+        "unit": "g/dL",
+        "value": 34.7
     }
 }

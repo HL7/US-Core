@@ -7,21 +7,19 @@ category:
 code:
   coding:
   - code: 718-7
-    display: Hgb Bld-mCnc
+    display: Hemoglobin [Mass/volume] in Blood
     system: http://loinc.org
-  text: Hgb Bld-mCnc
+  text: Hemoglobin
 effectiveDateTime: '2005-07-05'
-id: hemoglobin
+id: cbc-hemoglobin
 meta:
   extension:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Hemoglobin Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a hemoglobin example for the *US Core Observation Lab Profile*.
-  lastUpdated: '2016-03-09T15:29:57.818+00:00'
+    valueMarkdown: This is a hemoglobin example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-  versionId: '1046'
 referenceRange:
 - high:
     code: g/dL

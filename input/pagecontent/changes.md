@@ -191,7 +191,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 135. **Applied:** Update laboratory results example [FHIR-40428](https://jira.hl7.org/browse/FHIR-40428) [See Changes Here](Observation-serum-glucose.html)
 136. **Applied:** Add Specimen to BUN example [FHIR-40429](https://jira.hl7.org/browse/FHIR-40429) [See Changes Here](Observation-serum-bun.html)
 137. **Applied:** Additional guidance for accessing imaging studies [FHIR-40514](https://jira.hl7.org/browse/FHIR-40514) [See Changes Here](StructureDefinition-us-core-diagnosticreport-note.html#mandatory-and-must-support-data-elements)
-138. **Resolved - change required:** The CBC is incomplete and has a few results and not a Complete Blood Count.  Please Fix. [FHIR-40521](https://jira.hl7.org/browse/FHIR-40521) [See Changes Here](#.html)
+138. **Applied:** The CBC is incomplete and has a few results and not a Complete Blood Count.  Please Fix. [FHIR-40521](https://jira.hl7.org/browse/FHIR-40521) [See Changes Here](DiagnosticReport-cbc.html)
 139. **Resolved - change required:** Encounter type value set too limited [FHIR-40546](https://jira.hl7.org/browse/FHIR-40546) [See Changes Here](#.html)
 140. **Applied:** Flag additional USCDI requirements in a computable way [FHIR-40553](https://jira.hl7.org/browse/FHIR-40553) [See Changes Here](#.html)
 141. **Resolved - change required:** Condition asserted-date search parameter has incorrect expression [FHIR-40573](https://jira.hl7.org/browse/FHIR-40573) [See Changes Here](StructureDefinition-us-core-patient.html#profile)
