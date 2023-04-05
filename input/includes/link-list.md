@@ -372,3 +372,5 @@
 [The US Core DocumentReferences Type Value Set]: ValueSet-us-core-documentreference-category.html
 [Endpoint]: {{site.data.fhir.path}}endpoint.html
 [US Core Direct email Extension]: StructureDefinition-us-core-direct.html
+[Target Element]: http://hl7.org/fhir/StructureDefinition/targetElement
+[Element Level Provenance]: basic-provenance.html#element-level-provenance

@@ -1,0 +1,50 @@
+resourceType: Provenance
+id: example-targeted-provenance
+meta:
+  extension:
+    - url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
+      valueString: Targeted Provenance Example 
+    - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
+      valueMarkdown: This is a provenance example for the *US Core Provenance Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity.
+  profile:
+    - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance'
+
+target:
+  - reference: Patient/example-targeted-provenance
+    extension:
+    - url: "http://hl7.org/fhir/StructureDefinition/targetElement"
+      valueUri: race
+    # - url: "http://hl7.org/fhir/StructureDefinition/targetElement"
+    #   valueUri: ethnicity
+    # - url: "http://hl7.org/fhir/StructureDefinition/targetElement"
+    #   valueUri: genderIdentity
+    # - url: "http://hl7.org/fhir/StructureDefinition/targetElement"
+    #   valueUri: birthsex
+    # - url: "http://hl7.org/fhir/StructureDefinition/targetElement"
+    #   valueUri: sex
+recorded: '2023-02-28T15:26:23.217+00:00'
+agent:  #<<<<<< the form filled by the patient
+  - role:
+      -  coding:
+            - system: 'http://dicom.nema.org/resources/ontology/DCM'
+              code: '110150'
+              display: Application
+    who:
+      display: My_Form #<<<<<< could be a ref or an identifier
+
+  - type:  # <<<< the source (i.e., performer)
+      coding:
+        - system: >-
+            http://terminology.hl7.org/CodeSystem/provenance-participant-type
+          code: informant
+          display: Informant  #<<<<<  the source this is implied by the context
+    who:
+      reference: Patient/example-targeted-provenance
+ # - id: a1  # <<<<application
+    # type:
+    #   coding:
+    #     - system: 'http://terminology.hl7.org/CodeSystem/v3-ParticipationType'
+    #       code: DEV
+    # who:
+    #   reference: Device/software
+  

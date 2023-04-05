@@ -90,13 +90,14 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   excludemap: 'true'
   # excludeexample: 'true'
   suppressed-ids: '$examples'
+
   tabbed-snapshots: 'false'
   # generate: #what does this do - todo: remove and see4
   #   - xml
   #   - json
-  # no-narrative:
-  #   - '*/*'  # does not seems to work
-  #   - 'StructureDefinition/*'
+  no-narrative:
+    - 'Patient/example-targeted-provenance'
+    - 'Provenance/example-targeted-provenance'
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
