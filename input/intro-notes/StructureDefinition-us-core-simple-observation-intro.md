@@ -21,15 +21,20 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Observation must support:**
 
-
 2. a time indicating when the observation was made
 3. who answered the questions
 4. a value
-5. references to an associated survey, assessment, or screening tool
+
+**Additional USCDI Requirements**
+
+For ONC's USCDI requirements, each ServiceRequest must support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
+
+1. references to an associated survey, assessment, or screening tool*
+
+\*see guidance below
 
 **Profile specific implementation guidance:**
-- See the [Screening and Assessments] guidance page for how this profile can represent SDOH assessments.
-- Observations that are formally part of an assessment tool or survey should use the [US Core Observation Screening and Assessment Profile]. However, a simple assertion may be derived from screening and assessment tools and can reference them using `Observation.derivedFrom`.
+
 - The codes can be from LOINC or SNOMED CT.
 - The value for these types of observations may be:
   -  a string
@@ -38,5 +43,8 @@ The following data elements must always be present ([Mandatory] definition) or m
       **code**: Transport too expensive (SNOMED CT: 160695008)  
       **value**: true
 {% include obs_cat_guidance.md category="sdoh, functional-status, or social history" %}
+- See the [Screening and Assessments] guidance page for how this profile can represent SDOH assessments.
+  - \*Observations that are formally part of an assessment tool or survey should use the [US Core Observation Screening and Assessment Profile]. However, a simple assertion may be derived from screening and assessment tools and **SHOULD** reference them using `Observation.derivedFrom`.
+- As documented [here](general-guidance.html#referencing-us-core-profiles), when using `ServiceRequest.reasonReference` to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
 
 {% include link-list.md %}
