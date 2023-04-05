@@ -249,24 +249,12 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationRequest.reasonReference
-    short: (USCDI) Condition or observation that supports why the prescription
-      is being written
+    short: (USCDI) US Core Condition or Observation that supports the prescription
     type:
     - code: Reference
       targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs
+      - http://hl7.org/fhir/StructureDefinition/Condition
+      - http://hl7.org/fhir/StructureDefinition/Observation
   - id: MedicationRequest.dosageInstruction
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
