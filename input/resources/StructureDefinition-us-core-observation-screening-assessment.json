@@ -371,7 +371,7 @@
                     }
                 ],
                 "path": "Observation.hasMember",
-                "short": "(USCDI) Reference to panel members or multi-select responses",
+                "short": "(USCDI) Reference to panel or multi-select responses",
                 "definition": "Aggregate set of Observations that represent question answer pairs for both multi-question surveys, screenings, and assessments and multi-select questions.",
                 "comment": "This grouping element is used to represent surveys, screenings, and assessments that group several questions together or individual questions with  \u201ccheck all that apply\u201d responses. For example in the simplest case a flat multi-question survey where the \"panel\" observation is the survey instrument itself and instead of an `Observation.value` the `hasMember` element references other Observation that represent the individual questions answer pairs. When there is a heirarchical grouping of questions, the observation \"panels\" can be nested. Because surveys, screenings, and assessments can be arbitrarily complex structurally, not all structures can be represented using this Observation grouping pattern.",
                 "type": [

@@ -2769,17 +2769,6 @@ definition:
     name: Missing Coded Data Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam
   - reference:
-      reference: Observation/blood-glucose
-    description: This is a blood glucose example for the *US Core Observation Lab
-      Profile*.
-    name: Blood Glucose Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-  - reference:
-      reference: Observation/bun
-    description: This is a BUN example for the *US Core Observation Lab Profile*.
-    name: BUN Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
-  - reference:
       reference: Observation/erythrocytes
     description: This is a erythrocytes example for the *US Core Observation Lab Profile*.
     name: Erythrocytes Example
@@ -2825,6 +2814,11 @@ definition:
     name: Observation SatO2 FiO2 Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry
   - reference:
+      reference: Observation/serum-bun
+    description: This is a BUN example for the *US Core Observation Lab Profile*.
+    name: BUN Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
       reference: Observation/serum-calcium
     description: This is a serum calcium example for the *US Core Observation Lab
       Profile*.
@@ -2846,6 +2840,12 @@ definition:
     description: This is a serum creatinine example for the *US Core Observation Lab
       Profile*.
     name: Serum Creatinine Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Observation/serum-glucose
+    description: This is a serum glucose example for the *US Core Observation Lab
+      Profile*.
+    name: Serum Glucose Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
       reference: Observation/serum-potassium
