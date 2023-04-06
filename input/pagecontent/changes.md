@@ -58,7 +58,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 2. **Resolved - change required:** Slicing in Observation.component:industry is too complicated [FHIR-39608](https://jira.hl7.org/browse/FHIR-39608) [See Changes Here](#.html)
 3. **Resolved - change required:** Add support for Condition search that include patient + category + status [FHIR-39610](https://jira.hl7.org/browse/FHIR-39610) [See Changes Here](#.html)
 4. **Resolved - change required:** Incorrect sentence [FHIR-39611](https://jira.hl7.org/browse/FHIR-39611) [See Changes Here](#.html)
-5. **Resolved - change required:** genderIdentify extension is not backward compatible [FHIR-39615](https://jira.hl7.org/browse/FHIR-39615) [See Changes Here](#.html)
+5. **Applied:** Revert to simplegenderIdentify extension [FHIR-39615](https://jira.hl7.org/browse/FHIR-39615) [See Changes Here](#.html)
 6. **Resolved - change required:** Duplicated words [FHIR-39637](https://jira.hl7.org/browse/FHIR-39637) [See Changes Here](#.html)
 7. **Resolved - change required:** Missing comma [FHIR-39638](https://jira.hl7.org/browse/FHIR-39638) [See Changes Here](#.html)
 8. **Appplied:** Clarify that Observation.specimen is a MustSupport [FHIR-39639](https://jira.hl7.org/browse/FHIR-39639) [See Changes Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
