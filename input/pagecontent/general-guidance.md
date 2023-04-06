@@ -19,7 +19,7 @@ In situations where the specific piece of data is hidden due to a security or pr
 
 ### SNOMED CT United States Edition
 
-US Core uses the US Edition of [SNOMED CT], which is the official source of SNOMED CT for use in US healthcare systems. The US Edition is a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. The proper URI should be used for terminology servers to validate US Edition only codes. `http://snomed.info/sct` should means an unspecified edition/version.  the US Edition URI is `http://snomed.info/sct/731000124108`. To reference a particular version of the US Edition, the URI version format should be `http://snomed.info/sct/731000124108/version/[YYYYMMDD]`. For more details, see [Using SNOMED CT with FHIR].
+US Core uses the US Edition of [SNOMED CT], which is the official source of SNOMED CT for use in US healthcare systems. The US Edition is a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. The proper URI should be used for terminology servers to validate US Edition only codes. `http://snomed.info/sct` means an unspecified edition/version.  the US Edition URI is `http://snomed.info/sct/731000124108`. To reference a particular version of the US Edition, the URI version format should be `http://snomed.info/sct/731000124108/version/[YYYYMMDD]`. For more details, see [Using SNOMED CT with FHIR].
 
 
 ###  Using UCUM codes in the [Quantity] datatype
