@@ -9,7 +9,7 @@ The [Gravity Project] and its [SDOH Clinical Care] HL7 Implementation Guide addr
 
 - SDOH
 - Functional Status
-- Disability Status
+- Disability Statusgit stat
 - Mental/Cognitive Status.
 
 However, implementers **SHOULD** consider more constrained, domain-specific profiles derived from the US Core Profiles to meet the needs of their respective use cases.

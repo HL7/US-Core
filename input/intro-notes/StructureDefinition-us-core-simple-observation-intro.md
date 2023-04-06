@@ -43,8 +43,10 @@ For ONC's USCDI requirements, each ServiceRequest must support the following add
       **code**: Transport too expensive (SNOMED CT: 160695008)  
       **value**: true
 {% include obs_cat_guidance.md category="sdoh, functional-status, or social history" %}
-- See the [Screening and Assessments] guidance page for how this profile can represent SDOH assessments.
-  - \*Observations that are formally part of an assessment tool or survey should use the [US Core Observation Screening and Assessment Profile]. However, a simple assertion may be derived from screening and assessment tools and **SHOULD** reference them using `Observation.derivedFrom`.
+<div class="bg-success" markdown="1">
+- See the [Screening and Assessments] guidance page for how this profile can represent "clinical judgments".
+  - \*Observations that are formally part of an assessment tool or survey should use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools and **SHOULD** reference them using `Observation.derivedFrom`.
 - As documented [here](general-guidance.html#referencing-us-core-profiles), when using `ServiceRequest.reasonReference` to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
+</div><!-- new-content -->
 
 {% include link-list.md %}
