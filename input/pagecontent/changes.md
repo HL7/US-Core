@@ -17,7 +17,7 @@ The changes in this annual update to US Core have been reviewed and commented up
       - Tribal Affiliation [See Change Here](StructureDefinition-us-core-patient.html) 
       - Sex (....todo....)
         - Note that the [US Core BirthSex Extension](StructureDefinition-us-core-birthsex.html) will not be deprecated.
-      - Related Person's Name and Related Person's Relationship [See](StructureDefinition-us-core-relatedperson.html)
+      - Related Person's Name and Related Person's Relationship [See Change Here](StructureDefinition-us-core-relatedperson.html)
       - Occupation and Occupation Industry [See Change Here](StructureDefinition-us-core-observation-occupation.html)
   - Reason for Referral [See Change Here](StructureDefinition-us-core-servicerequest.html) and [See Change Here](StructureDefinition-us-core-procedure.html)
 
@@ -130,7 +130,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 74. **Applied:** Correct the link and sentence for assessment category codes [FHIR-39954](https://jira.hl7.org/browse/FHIR-39954) [See Changes Here](screening-and-assessments.html#category-codes)
 75. **Resolved - change required:** Describe the purpose and intent of “Grouping” and update the diagram [FHIR-39955](https://jira.hl7.org/browse/FHIR-39955) [See Changes Here](#.html)
 76. **Applied:** Remove US Core Common SDOH Assessments ValueSet [FHIR-39956](https://jira.hl7.org/browse/FHIR-39956)
-77. **Resolved - change required:** Fix link text [FHIR-39958](https://jira.hl7.org/browse/FHIR-39958) [See Changes Here](#.html)
+77. **Applied:** Fix link text [FHIR-39958](https://jira.hl7.org/browse/FHIR-39958) [See Changes Here](changes.html)
 78. **Applied:** Remove MS from Observation Screening Assessment Observation.performer Practitioner Reference [FHIR-39964](https://jira.hl7.org/browse/FHIR-39964) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html#profile)
 79. **Applied:** Revert references the US Core QuestionnaireResponse Profile  [FHIR-39965](https://jira.hl7.org/browse/FHIR-39965) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html)
 80. **Applied:** Correct link issue in “Profile specific implementation guidance section” of the ServiceRequest Profile [FHIR-39966](https://jira.hl7.org/browse/FHIR-39966) [See Changes Here](StructureDefinition-us-core-servicerequest.html)
