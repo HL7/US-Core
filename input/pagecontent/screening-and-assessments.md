@@ -6,22 +6,26 @@ Clinicians use various terms such as *assessments*, *scales*, *surveys*, and *sc
 
 The [Gravity Project] and its [SDOH Clinical Care] HL7 Implementation Guide address the screening process and related interventions to address Social Determinant of Health (SDOH). Those efforts helped guide US Core 5.0.1 updates to meet the [USCDI v2] SDOH data elements for Assessments, Goals, Interventions, and Problems/Health Concerns. With the addition of the USCDI v3 Health Status/Assessments data class, US Core 6.0.0 expanded the guidance on this page from SDOH to a general framework of Screenings and Assessments for all domains, including:
 
-</div><!-- new-content -->
+
 - SDOH
 - Functional Status
 - Disability Status
 - Mental/Cognitive Status.
 
+However, implementers **SHOULD** consider more constrained, domain-specific profiles derived from the US Core Profiles to meet the needs of their respective use cases.
+</div><!-- new-content -->
+
 ### Related Activities in Clinical Care
 
 The figure below shows how <span class="bg-success" markdown="1">screening and assessments lead to providing services for a patient.</span><!-- new-content -->
 
-- **Screening and Assessments**: [Screening and Assessment](#screening-and-assessments) <span class="bg-success" markdown="1">are used to identify problems before delivering appropriate clinical care.</span><!-- new-content -->:
+- **Screening and Assessments**: [Screening and Assessment](#screening-and-assessments) <span class="bg-success" markdown="1">are used to identify problems before delivering appropriate clinical care. The following US Core profile support capturing their responses</span><!-- new-content -->:
     - <span class="bg-success" markdown="1">[US Core Simple Observation Profile]</span><!-- new-content -->
     - <span class="bg-success" markdown="1">The [US Core Observation Screening Assessment Profile]</span><!-- new-content -->
     - <span class="bg-success" markdown="1">The [SDC Base Questionnaire]/[US Core QuestionnaireResponse Profile]</span><!-- new-content -->
-- **Problems/Health Concerns**: Identifying a Health-related condition (for example, homelessness), Disability concern, or Functional concern is represented by:
-  - The [US Core Condition Problems and Health Concerns Profile].
+- **Problems/Health Concerns**: The identified health-related conditions (for example, homelessness or disability) are represented by:
+  - [US Core Simple Observation Profile]
+  - [US Core Condition Problems and Health Concerns Profile].
 - **Interventions**:  The [US Core ServiceRequest Profile] communicates services offered to patients to address problems/health concerns. The [US Core Procedure Profile] can also record a completed service or intervention.
 - **Goals**: Identifying and defining a future desired condition or change in condition (for example, Has adequate quality meals and snacks) is represented by [US Core Goal Profile].
 
@@ -33,18 +37,22 @@ The figure below shows how <span class="bg-success" markdown="1">screening and a
 
 Screening and Assessments are used to identify various problems or health concerns. Their complexity ranges from simple observations to complex structured evaluations: 
 
-- Clinician makes a 'clinical judgment' - I found patient has this problem
-- Clinician completes and shares detailed assessments. <span class="bg-success" markdown="1">(see, for example, the [Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey]) </span><!-- new-content -->
-- Clinician makes a 'clinical judgment' based on detailed assessment.
+<div class="bg-success" markdown="1">
+
+- Clinician makes a simple observation - (for example, the patient states they are homeless)
+- Clinician administers a survey to gather information (for example, the [Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences (PRAPARE) Survey])
+- Clinician makes a "clinical judgment" based on an assessment tool. (for example, based on the PRAPARE survey, the patient has a lack of access to transportation)
+</div><!-- new-content -->
 
 The following guidance was developed after reviewing several functional status, disability status, mental/cognitive status, and SDOH screening and assessment tools.
 
 
 <div class="bg-success" markdown="1">
+
 #### Clinical Judgments
 
-Clinicians may record clinical judgments (for example, "patient X has this problem") as:
-- a problem or health concerns
+Whether based on simple observations or detailed assessments, clinicians may record clinical judgments as:
+- a problem or health concern
 - as observation
 
 Local policies guide what is appropriate for the problem list versus an observation. For example, some clinics may consider social needs as sensitive information and not appropriate for the problem list.  Observation can contribute to the identification of future problems or health concerns and support service requests and procedures.  Every server that supports the USDCI Data Class "Health Status/Assessments":
