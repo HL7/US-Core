@@ -49,12 +49,10 @@ extension:
 
   - id: genderIdentity   #<<<<<<<<<<<<<<<<<<<< ID on gender identity extension
     url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity'
-    extension:
-      - url: value
-        valueCodeableConcept:
-          coding:
-            - system: 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor'
-              code: UNK
+    valueCodeableConcept:
+      coding:
+        - system: 'http://terminology.hl7.org/CodeSystem/v3-NullFlavor'
+          code: UNK
 identifier:
     - 
         system: 'http://hospital.smarthealthit.org'
