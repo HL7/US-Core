@@ -213,7 +213,7 @@
 [Observation Summary Table]: observation-summary.html
 [Observation Value Absent Reason]: http://hl7.org/fhir/ValueSet/data-absent-reason
 [Observation]: {{site.data.fhir.path}}observation.html
-[Occupational Data for Health (ODH) Usual Work Profile]: http://hl7.org/fhir/us/odh/StructureDefinition/odh-UsualWork
+[Occupational Data for Health (ODH)]: http://hl7.org/fhir/us/odh/index.html
 [Office of the National Coordinator for Health Information Technology (ONC)]: http://www.healthit.gov/newsroom/about-onc
 [ONC 2015 Edition Common Clinical Data Set (CCDS)]: https://www.healthit.gov/sites/default/files/ccds_reference_document_v1_1.pdf
 [ONC Provider Directory Workshop]: https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents

@@ -166,7 +166,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 110. **Resolved - change required:** Modify comment regarding Screening and Assessments [FHIR-40161](https://jira.hl7.org/browse/FHIR-40161) [See Changes Here](#.html)
 111. **Resolved - change required:** 5.	Modify Examples/ValueSet for Language Codes [FHIR-40165](https://jira.hl7.org/browse/FHIR-40165) [See Changes Here](#.html)
 112. **Resolved - change required:** Add Observation.focus to accommodate information about a related person [FHIR-40166](https://jira.hl7.org/browse/FHIR-40166) [See Changes Here](#.html)
-113. **Resolved - change required:** Add Observation.performer to Occupation Profile [FHIR-40170](https://jira.hl7.org/browse/FHIR-40170) [See Changes Here](#.html)
+113. **Applied:** Add implementer guidance [FHIR-40170](https://jira.hl7.org/browse/FHIR-40170) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
 114. **Resolved - change required:** Add Boolean indicator of IsCurrentJob [FHIR-40172](https://jira.hl7.org/browse/FHIR-40172) [See Changes Here](#.html)
 115. **Resolved - change required:** Should Past or Present Occupation Observation.code.coding be 1..1 instead of 1..*? [FHIR-40178](https://jira.hl7.org/browse/FHIR-40178) [See Changes Here](#.html)
 116. **Applied:** Add _include guidance for Specimen [FHIR-40180](https://jira.hl7.org/browse/FHIR-40180) [See Changes Here](StructureDefinition-us-core-specimen.html#notes)
