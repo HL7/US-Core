@@ -77,9 +77,9 @@ The sections below provide additional guidance on when Observations and Question
 ##### <span class="bg-success" markdown="1">US Core Observation Screening Assessment Profile</span><!-- new-content -->
 
 <span class="bg-success" markdown="1">
-[US Core Observation Screening Assessment Profile] is defined to record responses from screening or assessments for *any* context.  A web of related observations preserves the structure of a screening or assessment instrument. Note that not all questions and answers in an assessment tool may or should be represented as FHIR Observations. For example, the FHIR patient resource best represents patient demographic information. The figure below illustrates the relationship between the Observation screening and assessments "panel" and the individual screening and assessment "item" Observations. Each box represents an Observation:</span><!-- new-content -->
+[US Core Observation Screening Assessment Profile] is defined to record observations from responses to screening tools and assessments used for any context (e.g., SDOH, functional status, etc). A web of related observations preserves the structure of a screening or assessment instrument. Note that not all questions and answers in an assessment tool may or should be represented as FHIR Observations. For example, the FHIR patient resource best represents patient demographic information. The figure below illustrates the relationship between the Observation screening and assessments "panel" and the individual screening and assessment "item" Observations. Each box represents an Observation:</span><!-- new-content -->
 
-{% include img-med.html img="uscore-observation-assessment-structure.svg" caption="Relationship Between Screening and Assessment Observations" %}
+{% include img-med.html img="uscore-observation-assessment-structure.svg" caption="Relationship Between Screening Assessment Observations" %}
 
 Note that the panels can be nested to create additional groupings of responses. See the [US Core Observation Screening Assessment Profile] profile page for detailed documentation on how the observations are linked, examples, and search requirements.
 
