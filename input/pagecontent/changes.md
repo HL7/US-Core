@@ -129,7 +129,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 73. **Resolved - change required:** Require US Core Server to support the Simple Observation profile for simple assessments [FHIR-39953](https://jira.hl7.org/browse/FHIR-39953) [See Changes Here](#.html)
 74. **Resolved - change required:** Correct the link and sentence for assessment category codes [FHIR-39954](https://jira.hl7.org/browse/FHIR-39954) [See Changes Here](#.html)
 75. **Resolved - change required:** Describe the purpose and intent of “Grouping” and update the diagram [FHIR-39955](https://jira.hl7.org/browse/FHIR-39955) [See Changes Here](#.html)
-76. **Resolved - change required:** Remove US Core Common SDOH Assessments ValueSet [FHIR-39956](https://jira.hl7.org/browse/FHIR-39956) [See Changes Here](#.html)
+76. **Applied:** Remove US Core Common SDOH Assessments ValueSet [FHIR-39956](https://jira.hl7.org/browse/FHIR-39956)
 77. **Resolved - change required:** Fix link text [FHIR-39958](https://jira.hl7.org/browse/FHIR-39958) [See Changes Here](#.html)
 78. **Applied:** Remove MS from Observation Screening Assessment Observation.performer Practitioner Reference [FHIR-39964](https://jira.hl7.org/browse/FHIR-39964) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html#profile)
 79. **Applied:** Revert references the US Core QuestionnaireResponse Profile  [FHIR-39965](https://jira.hl7.org/browse/FHIR-39965) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html)
@@ -145,7 +145,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 89. **Resolved - change required:** consider alternative answer choices for pregnancy intect codes [FHIR-40084](https://jira.hl7.org/browse/FHIR-40084) [See Changes Here](#.html)
 90. **Applied:** Improve Screening Assessment Observation.hasMember short description [FHIR-40085](https://jira.hl7.org/browse/FHIR-40085) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html)
 91. **HALF APPLIED - FIX OTHER IMAGES PRIOR TO PUBLICATIN:** Update the “bindings when slicing by value sets” figure  [FHIR-40086](https://jira.hl7.org/browse/FHIR-40086) [See Changes Here](general-requirements.html#required-bindings-when-slicing-by-value-sets)
-92. **Resolved - change required:** update Condition category slices to align with Observation/ServiceRequest[FHIR-40087](https://jira.hl7.org/browse/FHIR-40087) [See Changes Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
+92. **Applied:** Update Condition category slices to align with Observation/ServiceRequest[FHIR-40087](https://jira.hl7.org/browse/FHIR-40087) [See Changes Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 93. **Applied:** Add guidance to the Procedure profile to express sdoh category [FHIR-40088](https://jira.hl7.org/browse/FHIR-40088) [See Changes Here](screening-and-assessments.html) and 
 94. **Applied:** Improve language as to the expectations of clinicalStatus when category is problem list [FHIR-40089](https://jira.hl7.org/browse/FHIR-40089) [See Changes Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 95. **Resolved - change required:** Alignment with FHIR DS4P IG needed - Use of Masked from the HL7 V3-ActCode is supported for data hidden due to security or privacy reason [FHIR-40090](https://jira.hl7.org/browse/FHIR-40090) [See Changes Here](#.html)

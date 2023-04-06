@@ -36,6 +36,5 @@ The following data elements must always be present ([Mandatory] definition) or m
 - A practitioner's clinical observation or assertion about a patient's health status, which is not a response to a screening or assessment question, should use the [US Core Simple Observation Profile] instead.
 {% include obs_cat_guidance.md category='survey' recommendation="The category type 'survey' is required, and a set of categories that represent the USCDI data elements and further specify the assessment must be supported. Because of [technical requirements], a value set with a [Required Binding] is needed for USCDI categories. However, other categories are permitted."-%}
 {% include DAR-exception.md %}
-- For a *starter set* of example SDOH LOINC codes. see the [US Core Common SDOH Assessments ValueSet], which comprises commonly asked social questions identified by FindHelp.org, a social service assistance tool, and the PRAPARE, Hunger Vital Sign, AHC-HRSN screening tools referenced in USCDI v2. This value set does not replicate the complexities and robustness of the FHIR Questionnaire and QuestionnaireResponse resources developed for SDOH assessment screening tools and other questionnaires. The [Gravity Project] is working on a more comprehensive set of codes to meet these challenges, and this guide may leverage that work in the future.
 
 {% include link-list.md %}
