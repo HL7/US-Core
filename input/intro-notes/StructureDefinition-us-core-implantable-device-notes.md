@@ -17,7 +17,7 @@
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-device-patient.html)** and **[`type`](SearchParameter-us-core-device-type.html)** search parameters:
 

@@ -37,7 +37,7 @@ The following search parameters and search parameter combinations SHALL be suppo
       1. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|{{include.code1 | default: '[code]'}}
       {% if include.code2 %}2. GET [base]/Observation?patient=1134281&amp;code=http://loinc.org\|{{include.code1 | default: '[code]'}},http://loinc.org\|{{include.code2 | default: '[code]'}},http://loinc.org\|{{include.code3 | default: '[code]'}}{% endif %}
 
-    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code(s).  SHOULD support search by multiple report codes. The Observation `code` parameter searches `Observation.code only. ([how to search by reference] and [how to search by token])
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code(s). **SHOULD** support search by multiple report codes. The Observation `code` parameter searches `Observation.code only. ([how to search by reference] and [how to search by token])
 
 2. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`date`](SearchParameter-us-core-observation-date.html)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`
@@ -54,7 +54,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations**SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-observation-patient.html)** and **[`category`](SearchParameter-us-core-observation-category.html)** and **[`status`](SearchParameter-us-core-observation-status.html)** search parameters:
     - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
@@ -78,7 +78,7 @@ The following search parameter combinations SHOULD be supported:
 
       1. GET [base]Observation?patient=555580&amp;code=http://loinc.org\|{{include.code1 | default: '[code]'}}&amp;date=ge2019-01-01T00:00:00Z
 
-    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and date and report code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
+    *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and date and report code(s). **SHOULD** support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
 
 
 

@@ -19,7 +19,7 @@ The US Core implementation Guide will grow following these steps:
 1. Propose candidate for US Core to US Realm Steering Committee - receive formal approval from the US Realm SC to add.
 1. Submit formal STU comments, or propose through a ballot
 
-A new US Regulatory requirement may jump over some of these steps. However, regulators should be encouraged to complete pilot testing. With pilot testing, it is easier to understand how a change will affect real-world implementation.
+A new US Regulatory requirement may jump over some of these steps. However, regulators **SHOULD** be encouraged to complete pilot testing. With pilot testing, it is easier to understand how a change will affect real-world implementation.
 
 
 

@@ -23,6 +23,6 @@ The following are example usage scenarios for this profile:
 
 - - Note that this profile also conforms to the base FHIR [Vital Signs Profile].
 {% include vitals-guidance.md %}
-- Information about the growth chart tables used to determine percentiles should be supplied in `Observation.note.text` (for example, 'CDC Males, 2-20 years Chart').
+- Information about the growth chart tables used to determine percentiles **SHOULD** be supplied in `Observation.note.text` (for example, 'CDC Males, 2-20 years Chart').
 
 {% include link-list.md %}

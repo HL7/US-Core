@@ -344,6 +344,8 @@
 [US Core ServiceRequest Category Codes]: ValueSet-us-core-servicerequest-category.html
 [US Core ServiceRequest Profile]: StructureDefinition-us-core-servicerequest.html
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
+[US Core Observation Pregnancy Status Profile]: StructureDefinition-us-core-observation-pregnancystatus.html
+[US Core Observation Pregnancy Intent Profile]: StructureDefinition-us-core-observation-pregnancyintent.html
 [US Core Vital Signs Profile]: StructureDefinition-us-core-vital-signs.html
 [USCDI v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2
 [USCDI v3]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v3

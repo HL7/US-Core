@@ -29,7 +29,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-procedure-patient.html)** and **[`status`](SearchParameter-us-core-procedure-status.html)** search parameters:
     - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
@@ -53,7 +53,7 @@ The following search parameter combinations SHOULD be supported:
     
       1. GET [base]/Procedure?patient=1137192&amp;date=ge2019-01-14T00:00:00Z&amp;code=http://snomed.info/sct\|35637008
 
-    *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient and date and procedure code(s).  SHOULD support search by multiple codes. ([how to search by reference] and [how to search by token] and [how to search by date])
+    *Implementation Notes:* Fetches a bundle of all Procedure resources for the specified patient and date and procedure code(s). **SHOULD** support search by multiple codes. ([how to search by reference] and [how to search by token] and [how to search by date])
 
 
 

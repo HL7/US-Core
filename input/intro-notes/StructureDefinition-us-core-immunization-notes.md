@@ -17,7 +17,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-immunization-patient.html)** and **[`date`](SearchParameter-us-core-immunization-date.html)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`

@@ -23,7 +23,7 @@ To get Practitioner name and identifier using PractitionerRole:
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-careteam-patient.html)** and **[`role`](SearchParameter-us-core-careteam-role.html)** search parameters:
     - including optional support for these `_include` parameters: `CareTeam:participant:PractitionerRole,CareTeam:participant:Practitioner,CareTeam:participant:Patient,CareTeam:participant:RelatedPerson`

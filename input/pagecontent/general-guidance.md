@@ -1,25 +1,25 @@
 
 ### Referencing US Core Profiles
 
-The search expectations and US Core Profiles have been developed and tested using *logical FHIR ids*.  Therefore a [reference] to a US Core resource should include a logical id (`Reference.reference`), not an identifier (`Reference.identifier`).
+The search expectations and US Core Profiles have been developed and tested using *logical FHIR ids*.  Therefore a [reference] to a US Core resource **SHOULD** include a logical id (`Reference.reference`), not an identifier (`Reference.identifier`).
 
 
-Many of the profiles in this guide [reference] other FHIR resources that are also US Core Profiles.  These references are defined in the formal profile definitions.  For example, [US Core CareTeam Profile] references US Core Patient.  For any other references to base FHIR resources[^2] or not formally defined in a US Core Profiles, the referenced resource should be a US Core Profile if a US Core Profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner should be a valid US Core Patient or US Core Practitioner.  US Core Resources in the [differential view] and marked as "Must Support" follow the [Must Support] rules.  Other resources allowed in the base FHIR specification may be referenced.  For example, RelatedPerson is a permitted target reference in `DocumentReference.author`.
+Many of the profiles in this guide [reference] other FHIR resources that are also US Core Profiles.  These references are defined in the formal profile definitions.  For example, [US Core CareTeam Profile] references US Core Patient.  For any other references to base FHIR resources[^2] or not formally defined in a US Core Profiles, the referenced resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.  US Core Resources in the [differential view] and marked as "Must Support" follow the [Must Support] rules.  Other resources allowed in the base FHIR specification may be referenced.  For example, RelatedPerson is a permitted target reference in `DocumentReference.author`.
 
 ### Contained Resources
 
-When responding to a query, servers should not use inline [contained] resources to represent the returned data. The only time a contained resource can be used is when the source data exists only within the context of the FHIR transaction. For example, the guidance in the [Medication List] page describes how a contained Medication in MedicationRequest is used for representing the medication. In addition, if referencing a contained resource in a US Core Profile, the contained resource should be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.  
+When responding to a query, servers **SHOULD** not use inline [contained] resources to represent the returned data. The only time a contained resource can be used is when the source data exists only within the context of the FHIR transaction. For example, the guidance in the [Medication List] page describes how a contained Medication in MedicationRequest is used for representing the medication. In addition, if referencing a contained resource in a US Core Profile, the contained resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  Further guidance about the general use case for contained can be found in the base FHIR specification.  
 
 
 ###  Suppressed Data
 
-In situations where the specific piece of data is hidden due to a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know and should be avoided. For elements with a minimum cardinality = 0 (including elements labeled *Must Support*), the element should be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code `unknown` following the guidance on [Missing Data] in the Conformance Sections.
+In situations where the specific piece of data is hidden due to a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know and **SHOULD** be avoided. For elements with a minimum cardinality = 0 (including elements labeled *Must Support*), the element **SHOULD** be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code `unknown` following the guidance on [Missing Data] in the Conformance Sections.
 
 
 
 ### SNOMED CT United States Edition
 
-US Core uses the US Edition of [SNOMED CT], which is the official source of SNOMED CT for use in US healthcare systems. The US Edition is a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. The proper URI should be used for terminology servers to validate US Edition only codes. `http://snomed.info/sct` means an unspecified edition/version.  the US Edition URI is `http://snomed.info/sct/731000124108`. To reference a particular version of the US Edition, the URI version format should be `http://snomed.info/sct/731000124108/version/[YYYYMMDD]`. For more details, see [Using SNOMED CT with FHIR].
+US Core uses the US Edition of [SNOMED CT], which is the official source of SNOMED CT for use in US healthcare systems. The US Edition is a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. The proper URI **SHOULD** be used for terminology servers to validate US Edition only codes. `http://snomed.info/sct` means an unspecified edition/version.  the US Edition URI is `http://snomed.info/sct/731000124108`. To reference a particular version of the US Edition, the URI version format **SHOULD** be `http://snomed.info/sct/731000124108/version/[YYYYMMDD]`. For more details, see [Using SNOMED CT with FHIR].
 
 
 ###  Using UCUM codes in the [Quantity] datatype
@@ -60,16 +60,16 @@ Both the [US Core Vital Signs Profile] and [US Core Laboratory Result Observatio
 Clinical information that has been entered in error in the patient's record needs to be represented by the FHIR Server in a way so that Clients can expose the corrected information to their end users.
 
 **Server Recommendations:**
-- A FHIR Server should not delete resources.
-- A FHIR server should update the appropriate resource status to `entered-in-error` or `inactive`.
-- A FHIR Server should allow these resources to be searchable by client applications.
+- A FHIR Server **SHOULD** not delete resources.
+- A FHIR server **SHOULD** update the appropriate resource status to `entered-in-error` or `inactive`.
+- A FHIR Server **SHOULD** allow these resources to be searchable by client applications.
 - If the FHIR server has updated the resource status to `entered-in-error`:
-    -  For *patient facing* applications, A FHIR Server should remove the contents of resource leaving only an id and status.   Note this typically will not be conformant with the US Core or FHIR StructureDefinitions.
+    -  For *patient facing* applications, A FHIR Server **SHOULD** remove the contents of resource leaving only an id and status.   Note this typically will not be conformant with the US Core or FHIR StructureDefinitions.
     - For *provider-facing* applications,  the content may be supplied with content and additional detail (such as the reason for the status change) that the patient viewing system would typically not have access to.
 
 ### Representing Deleted Information
 
-A FHIR Server should not delete records. If a system supports the deletion of records, they should refer to the [Deletion Safety Checks] in the FHIR specification.
+A FHIR Server **SHOULD** not delete records. If a system supports the deletion of records, they **SHOULD** refer to the [Deletion Safety Checks] in the FHIR specification.
 
 ### Narrative
 
@@ -77,7 +77,7 @@ The [US Core CarePlan Profile] requires a narrative summary of the patient asses
 
 ### Language Support
 
-There is a basic need to access records in your language, and the data provider should do their best to translate (safely) to the requested language. Understanding that this will be variably complete depending on the nature of the record. For example, translating the following elements is relatively straightforward:
+There is a basic need to access records in your language, and the data provider **SHOULD** do their best to translate (safely) to the requested language. Understanding that this will be variably complete depending on the nature of the record. For example, translating the following elements is relatively straightforward:
 
 - `Coding.display`
 - Generated narrative
@@ -86,8 +86,8 @@ There is a basic need to access records in your language, and the data provider 
 The following guidelines outline requesting and returning a resource in the requested language.
 
 * Clients MAY request language/locale using the http [`Accept-Language`] header.
-* Servers should make reasonable efforts to translate what can be safely translated.
-* Servers should populate the Resource's `language` element with a code that is based on the underlying language of record, *not* the requested language.
+* Servers **SHOULD** make reasonable efforts to translate what can be safely translated.
+* Servers **SHOULD** populate the Resource's `language` element with a code that is based on the underlying language of record, *not* the requested language.
     * Using the <http://hl7.org/fhir/StructureDefinition/language> extension when the language of a display, etc, is known to be different from the stated (or inferred) language.
 
       Example
@@ -157,7 +157,7 @@ The following guidelines outline requesting and returning a resource in the requ
                 [...snip...]
     ~~~
 
-* Servers should make it known what languages are supported in their CapabilityStatement(s) using this extension[^1]:
+* Servers **SHOULD** make it known what languages are supported in their CapabilityStatement(s) using this extension[^1]:
 
     `http://hl7.org/fhir/5.0/StructureDefinition/extension-CapablilityStatement.acceptLanguage`
 
@@ -173,7 +173,7 @@ For further guidance on language and locale for the generation of the resource n
 
 
   - best practice is to preserve the original time offset so clients are able to display the correct time independent of the current user location
-- The data source timezone should be preserved
+- The data source timezone **SHOULD** be preserved
   - Use a [TZ Extension] on `[Resource]`  (plan to use new meta timezone element in R5)
     - ValueCode:
       - system = https://www.iana.org/time-zones

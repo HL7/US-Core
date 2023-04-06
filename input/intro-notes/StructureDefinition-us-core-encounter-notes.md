@@ -40,7 +40,7 @@
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the **[`identifier`](SearchParameter-us-core-encounter-identifier.html)** search parameter:
 

@@ -30,7 +30,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-questionnaireresponse-patient.html)** and **[`status`](SearchParameter-us-core-questionnaireresponse-status.html)** search parameters:
     - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)

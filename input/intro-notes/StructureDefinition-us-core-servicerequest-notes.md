@@ -44,7 +44,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
       1. GET [base]/ServiceRequest?patient=1032702&amp;code=http://snomed.info/sct\|35637008
 
-    *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and  report code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token])
+    *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and  report code(s). **SHOULD** support search by multiple report codes. ([how to search by reference] and [how to search by token])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`category`](SearchParameter-us-core-servicerequest-category.html)** and **[`authored`](SearchParameter-us-core-servicerequest-authored.html)** search parameters:
     - including support for these `authored` comparators: `gt,lt,ge,le`
@@ -61,7 +61,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-servicerequest-patient.html)** and **[`status`](SearchParameter-us-core-servicerequest-status.html)** search parameters:
     - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
@@ -85,7 +85,7 @@ The following search parameter combinations SHOULD be supported:
 
       1. GET [base]/ServiceRequest?patient=f201&amp;code=http://snomed.info/sct\|35637008&amp;date=ge2019-01-14T00:00:00Z
 
-    *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and date and service code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
+    *Implementation Notes:* Fetches a bundle of all ServiceRequest resources for the specified patient and date and service code(s). **SHOULD** support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
 
 
 

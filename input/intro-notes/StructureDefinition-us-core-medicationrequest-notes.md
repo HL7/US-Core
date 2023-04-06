@@ -32,7 +32,7 @@
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-medicationrequest-patient.html)** and **[`intent`](SearchParameter-us-core-medicationrequest-intent.html)** and **[`encounter`](SearchParameter-us-core-medicationrequest-encounter.html)** search parameters:
     - including optional support for these `_include` parameters: `MedicationRequest:medication`

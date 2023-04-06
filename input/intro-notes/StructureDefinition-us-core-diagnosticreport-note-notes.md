@@ -33,7 +33,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     
       1. GET [base]/DiagnosticReport?patient=1032702&amp;code=http://loinc.org\|24323-8
 
-    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and  report code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token])
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and  report code(s).  **SHOULD** support search by multiple report codes. ([how to search by reference] and [how to search by token])
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`category`](SearchParameter-us-core-diagnosticreport-category.html)** and **[`date`](SearchParameter-us-core-diagnosticreport-date.html)** search parameters:
     - including support for these `date` comparators: `gt,lt,ge,le`
@@ -50,7 +50,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-diagnosticreport-patient.html)** and **[`status`](SearchParameter-us-core-diagnosticreport-status.html)** search parameters:
     - including support for *OR* search on `status` (e.g.`status={system|}[code],{system|}[code],...`)
@@ -74,7 +74,7 @@ The following search parameter combinations SHOULD be supported:
     
       1. GET [base]/DiagnosticReport?patient=f201&amp;code=http://loinc.org\|24323-8&amp;date=ge2019-01-14T00:00:00Z
 
-    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and report code(s).  SHOULD support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
+    *Implementation Notes:* Fetches a bundle of all DiagnosticReport resources for the specified patient and date and report code(s). **SHOULD** support search by multiple report codes. ([how to search by reference] and [how to search by token] and [how to search by date])
 
 
 

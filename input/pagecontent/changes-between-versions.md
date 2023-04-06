@@ -32,24 +32,24 @@ A server may support Version DSTU2 and Argonaut Data Query or FHIR R4 and US Cor
 
 In some FHIR servers, the identifier of the underlying clinical data is not maintained across FHIR versions. Therefore, client applications must plan on deduplication methods that rely on something other than a common identifier across FHIR versions.
 
-* Servers should maintain a stable common identifier for a resource across versions.
+* Servers **SHOULD** maintain a stable common identifier for a resource across versions.
 
 ### Expectation that DSTU2 Data is Preserved in R4
 
-In an upgraded R4 endpoint, any data in DSTU2 should be in R4. However, not all data in R4 may be available in DSTU2 because some profiles and data classes, like Clinical Notes and pediatric observations, are not part of DSTU2.
+In an upgraded R4 endpoint, any data in DSTU2 **SHOULD** be in R4. However, not all data in R4 may be available in DSTU2 because some profiles and data classes, like Clinical Notes and pediatric observations, are not part of DSTU2.
 
-* The FHIR RESTful resource types supported in a DSTU2 implementation should be supported in a R4 implementation
+* The FHIR RESTful resource types supported in a DSTU2 implementation **SHOULD** be supported in a R4 implementation
   - Exceptions
-    - MedicationStatement may be deprecated, and the data should be mapped to MedicationRequest.  
+    - MedicationStatement may be deprecated, and the data **SHOULD** be mapped to MedicationRequest.  
        - See the guidance on the [Medication List] page for how to access a patient's medications
-    - Care teams as represented by CarePlan in DSTU2 should be replaced by and the data mapped to CareTeam in R4
+    - Care teams as represented by CarePlan in DSTU2 **SHOULD** be replaced by and the data mapped to CareTeam in R4
 
-* Servers should make available the same information in DSTU2 and R4 where the more recent standard allows.  (e.g., patient Rhonda Jones is available on both)
+* Servers **SHOULD** make available the same information in DSTU2 and R4 where the more recent standard allows.  (e.g., patient Rhonda Jones is available on both)
   - Exceptions
     - MedicationStatement data mapped to MedicationRequest
-    - care teams, as represented by CarePlan, should be mapped to CareTeam in R4
-* Data should be maintained between versions (i.e., not be degraded).
-* When updating between versions, clients should consider the impact of any changes to data visualization on the usability for the end user and the maintenance of data integrity.
+    - care teams, as represented by CarePlan, **SHOULD** be mapped to CareTeam in R4
+* Data **SHOULD** be maintained between versions (i.e., not be degraded).
+* When updating between versions, clients **SHOULD** consider the impact of any changes to data visualization on the usability for the end user and the maintenance of data integrity.
 
 
 ### Authorization Across Versions

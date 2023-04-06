@@ -18,7 +18,7 @@
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations **SHOULD** be supported:
 
 1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-medicationdispense-patient.html)** and **[`status`](SearchParameter-us-core-medicationdispense-status.html)** search parameters:
     - including optional support for these `_include` parameters: `MedicationDispense:medication`

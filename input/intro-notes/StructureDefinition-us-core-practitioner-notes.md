@@ -27,7 +27,7 @@
 
 #### Optional Search Parameters:
 
-The following search parameter combinations SHOULD be supported:
+The following search parameter combinations **SHOULD** be supported:
 
 1. **SHOULD** support searching using the **[`_id`](SearchParameter-us-core-practitioner-id.html)** search parameter:
 

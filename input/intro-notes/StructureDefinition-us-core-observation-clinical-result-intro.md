@@ -30,7 +30,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
-{% include observation_guidance_1.md category="procedure, exam or laboratory" recommendation="Servers SHOULD use the base FHIR [Observation Category Codes]." %}
+{% include observation_guidance_1.md category="procedure, exam or laboratory" recommendation="Servers**SHOULD** use the base FHIR [Observation Category Codes]." %}
 - For a *starter set* of example clinical test LOINC codes, see [Appendix B in U.S. Core Data for Interoperability (USCDI) Task Force 2021 HITAC Phase 3 Recommendations Report Letter].
 - For representing laboratory test results, see the [US Core Laboratory Result Observation Profile].
 
