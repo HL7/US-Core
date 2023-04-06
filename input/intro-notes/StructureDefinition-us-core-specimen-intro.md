@@ -1,11 +1,9 @@
-{% include new_page.md %}
-
 **Example Usage Scenarios:**
 
-Queries on the Specimen resource are expected to be within the context of an Observation or DiagnosticReport resource query. The following are
-example usage scenarios for the US Core Specimen profile:
+The following are example usage scenarios for the US Core Specimen profile:
 
--   Read Specimen resources referenced in Observation resources.
+-  Query for a patient’s specimen
+-  [Record or update] a specimen for a patient
 
 ### Mandatory and Must Support Data Elements
 
@@ -13,10 +11,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Specimen must have:**
 
-1. A specimen code
+1. <span class="bg-success" markdown="1">a patient</span><!-- new-content -->
+1. a specimen code
 
 **Profile specific implementation guidance:**
 
 *  Since the binding is [extensible] when a code is unavailable, just text is allowed.
+*  <span class="bg-success" markdown="1">in addition to Specimen search criteria, clients may request Specimen resources be included with Observation or DiagnosticReport resource query. An example query is provided in the [Notes](#notes) section below.</span><!-- new-content -->
 
 {% include link-list.md %}
