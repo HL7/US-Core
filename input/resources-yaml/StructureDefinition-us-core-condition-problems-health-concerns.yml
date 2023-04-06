@@ -107,20 +107,42 @@ differential:
       description: Note that other codes are permitted, see [Required Bindings When
         Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-problem-or-health-concern
-  - id: Condition.category:sdoh
+
+
+  # - id: Condition.category:sdoh
+  #   extension:
+  #   - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+  #     valueBoolean: true
+  #   path: Condition.category
+  #   sliceName: sdoh
+  #   short: (USCDI) problem-list-item | encounter-diagnosis
+  #   min: 0
+  #   max: '1'
+  #   patternCodeableConcept:
+  #     coding:
+  #     - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
+  #       code: sdoh
+  #   mustSupport: true
+
+
+  - id: Condition.category:screening-assessment
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Condition.category
-    sliceName: sdoh
-    short: (USCDI) problem-list-item | encounter-diagnosis
-    min: 0
-    max: '1'
-    patternCodeableConcept:
-      coding:
-      - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
-        code: sdoh
+    sliceName: screening-assessment
+    short: (USCDI) USCDI Health Status/Assessments Data Class
+    definition: Categories that a provider may use in their workflow to classify that
+      this Condition is related to a USCDI Health Status/Assessments Data Class.
+    requirements: Used for filtering condition
     mustSupport: true
+    binding:
+      strength: required
+      description: Note that other codes are permitted, see [Required Bindings When
+        Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category
+
+
   - id: Condition.code
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement

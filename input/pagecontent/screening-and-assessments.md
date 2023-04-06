@@ -117,7 +117,17 @@ In many cases, data might be represented using both mechanisms - the initial raw
 
 #### Category Codes
 
-The [US Core Assessment Category Value Set] categorizes contexts for Assessments, Problems, and Service Requests. These concepts enable API consumers to select contexts (for example, SDOH) when accessing patient information. Example searches are shown in each profile's *Quick Start* sections.
+<div class="bg-success" markdown="1">
+
+API consumers may select contextual categories (for example, SDOH) when accessing patient information. For example, the [US Core Category] Code System provides categories for:
+- US Core Simple Observation Profile
+- US Core Observation Screening Assessment Profile
+- US Core Condition Problems and Health Concerns Profile
+- US Core ServiceRequest Profile 
+
+Each profile's *Quick Start* section shows searches by category. Although not defined in US Core Procedure, implementers can categorize procedures using US Core Category or infer the context by inspecting the referenced ServiceRequest. Similarly, they can review the Questionnaire's metadata to determine US Core QuestionnaireResponse's context.
+
+</div><!-- new-content -->
 
  <span class= "bg-warning" markdown= "1">Clients need to understand that data categorization is somewhat subjective. The categorization applied by the source may not align with the client's expectations. Clients may find it more beneficial to use queries based on a specific code or set of codes or to perform additional client-side filtering of query results.</span><!-- bg-warning -->
 

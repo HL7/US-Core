@@ -39,6 +39,7 @@ differential:
     short: (USCDI) Classification of  type of observation
     min: 1
     mustSupport: true
+
   - id: Observation.category:us-core
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -53,6 +54,8 @@ differential:
       description: Note that other codes are permitted, see [Required Bindings When
         Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category
+
+
   - id: Observation.code
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
