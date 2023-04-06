@@ -1692,6 +1692,22 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-specimen-id"
+        },
+        "description": "**Logical id of this artifact**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreSpecimenId"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-specimen-patient"
+        },
+        "description": "**The patient the specimen comes from**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreSpecimenPatient"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-patient"
         },
         "description": "The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v3 'Patient Demographics' requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",

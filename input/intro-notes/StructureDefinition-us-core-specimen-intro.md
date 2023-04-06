@@ -2,8 +2,10 @@
 
 The following are example usage scenarios for the US Core Specimen profile:
 
+<div class="bg-success" markdown="1">
 -  Query for a patient’s specimen
 -  [Record or update] a specimen for a patient
+</div><!-- new-content -->
 
 ### Mandatory and Must Support Data Elements
 

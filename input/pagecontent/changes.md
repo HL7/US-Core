@@ -61,7 +61,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 5. **Resolved - change required:** genderIdentify extension is not backward compatible [FHIR-39615](https://jira.hl7.org/browse/FHIR-39615) [See Changes Here](#.html)
 6. **Resolved - change required:** Duplicated words [FHIR-39637](https://jira.hl7.org/browse/FHIR-39637) [See Changes Here](#.html)
 7. **Resolved - change required:** Missing comma [FHIR-39638](https://jira.hl7.org/browse/FHIR-39638) [See Changes Here](#.html)
-8. **Resolved - change required:** It is not clear if Observation.specimen is a MustSupport [FHIR-39639](https://jira.hl7.org/browse/FHIR-39639) [See Changes Here](#.html)
+8. **Appplied:** Clarify that Observation.specimen is a MustSupport [FHIR-39639](https://jira.hl7.org/browse/FHIR-39639) [See Changes Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
 9.  **Resolved - change required:** Need clarification and example for using SNOMED CT US Edition [FHIR-39640](https://jira.hl7.org/browse/FHIR-39640) [See Changes Here](#.html)
 10. **Resolved - change required:** Add using NDC code to the Medication Guidance [FHIR-39641](https://jira.hl7.org/browse/FHIR-39641) [See Changes Here](#.html)
 11. **Resolved - change required:** Extra trailing parenthesis [FHIR-39643](https://jira.hl7.org/browse/FHIR-39643) [See Changes Here](#.html)

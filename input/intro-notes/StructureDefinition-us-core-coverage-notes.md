@@ -1,6 +1,6 @@
 {% include quickstart-intro.md %}
 
-
+#### Mandatory Search Parameters:
 
 1. {:.new-content}**SHALL** support searching for all coverages for a patient using the **[`patient`](SearchParameter-us-core-coverage-patient.html)** search parameter:
 

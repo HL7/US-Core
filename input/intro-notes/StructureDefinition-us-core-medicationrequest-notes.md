@@ -1,6 +1,6 @@
 {% include quickstart-intro.md %}
 
-
+#### Mandatory Search Parameters:
 
 1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-medicationrequest-patient.html)** and **[`intent`](SearchParameter-us-core-medicationrequest-intent.html)** search parameters:
     - including optional support for these `_include` parameters: `MedicationRequest:medication`

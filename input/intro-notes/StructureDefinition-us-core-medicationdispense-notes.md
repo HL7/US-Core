@@ -1,6 +1,6 @@
 {% include quickstart-intro.md %}
 
-
+#### Mandatory Search Parameters:
 
 1. {:.new-content}**SHALL** support searching using the **[`patient`](SearchParameter-us-core-medicationdispense-patient.html)** search parameter:
 
