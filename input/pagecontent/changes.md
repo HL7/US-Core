@@ -80,7 +80,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 24. **Resolved - change required:** Add reference to FHIR section on language support [FHIR-39710](https://jira.hl7.org/browse/FHIR-39710) [See Changes Here](#.html)
 25. **Resolved - change required:** Refer to FHIR specification as base definition for RESTfull operations [FHIR-39711](https://jira.hl7.org/browse/FHIR-39711) [See Changes Here](#.html)
 26. **Resolved - change required:** POST based searches [FHIR-39712](https://jira.hl7.org/browse/FHIR-39712) [See Changes Here](#.html)
-27. **Resolved - change required:** Compartment based searches [FHIR-39713](https://jira.hl7.org/browse/FHIR-39713) [See Changes Here](#.html)
+27. **Applied:** Clarify compartment based search [FHIR-39713](https://jira.hl7.org/browse/FHIR-39713) [See Changes Here](general-guidance.html#compartment-based-search)
 28. **Resolved - change required:** CapabilityStatement should include unprofiled required resources [FHIR-39714](https://jira.hl7.org/browse/FHIR-39714) [See Changes Here](#.html)
 29. **Applied:** Change "Systems" to "Servers" [FHIR-39716](https://jira.hl7.org/browse/FHIR-39716) [See Changes Here](clinical-notes.html)
 30. **Applied:** Update "Clinical Note Server" to "FHIR Server" [FHIR-39717](https://jira.hl7.org/browse/FHIR-39717) [See Changes Here](clinical-notes.html) and [Here](general-requirements.html)

@@ -274,7 +274,7 @@ However, neither specification defines how a user-facing provider app is able to
 
 ### Compartment Based Search
 
-This IG does not support patient [compartment] based searches.
+<span class="bg-success" markdown="1">US Core servers are not required to support </span><!-- new-content --> patient [compartment] based searches.
 
 ### Across Platform Searches
 
