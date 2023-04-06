@@ -121,7 +121,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 65. **Applied:** Reframe Screening and Assessments Page [FHIR-39944](https://jira.hl7.org/browse/FHIR-39944) [See Changes Here](screening-and-assessments.html#introduction)
 66. **Applied:** Update the Screening and Assessment Activities diagram [FHIR-39945](https://jira.hl7.org/browse/FHIR-39945) [See Changes Here](screening-and-assessments.html#related-activities-in-clinical-care)
 67. **Resolved - change required:** Update the “Screening and Assessment Activities” diagram with proper profile name [FHIR-39946](https://jira.hl7.org/browse/FHIR-39946) [See Changes Here](#.html)
-68. **Applied:** Update “3.6.2 Screening and Assessments” title and content [FHIR-39947](https://jira.hl7.org/browse/FHIR-39947) [See Changes Here](screening-and-assessments.html#screening-and-assessments)
+68. **Applied:** Update Screening and Assessments” title and content [FHIR-39947](https://jira.hl7.org/browse/FHIR-39947) [See Changes Here](screening-and-assessments.html#screening-and-assessments)
 69. **Applied:** Correct title[FHIR-39948](https://jira.hl7.org/browse/FHIR-39948) [See Changes Here]((screening-and-assessments.html#us-core-observation-screening-an-assessments-profile)
 70. **Aoplied:** Update description of Screening Assessments Profile [FHIR-39949](https://jira.hl7.org/browse/FHIR-39949) [See Changes Here](screening-and-assessments.html#us-core-observation-screening-an-assessments-profile)
 71. **Applied:** Change Header [FHIR-39950](https://jira.hl7.org/browse/FHIR-39950) [See Changes Here](screening-and-assessments.html#us-core-observation-screening-assessment-profile)
