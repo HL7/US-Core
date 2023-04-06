@@ -99,7 +99,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 43. **Resolved - change required:** Missing Hyperlinks [FHIR-39738](https://jira.hl7.org/browse/FHIR-39738) [See Changes Here](#.html)
 44. **Resolved - change required:** If a dependent has a unique Identifier, it should be represented in the dependent element not identifier [FHIR-39743](https://jira.hl7.org/browse/FHIR-39743) [See Changes Here](#.html)
 45. **Resolved - change required:** RelatedPerson ""SHOULD support search by name"" should also require patient parameter [FHIR-39791](https://jira.hl7.org/browse/FHIR-39791) [See Changes Here](#.html)
-46. **Resolved - change required:** RelatedPerson uses text from Observation Laboratory profile [FHIR-39792](https://jira.hl7.org/browse/FHIR-39792) [See Changes Here](#.html)
+46. **Applied:** RelatedPerson uses text from Observation Laboratory profile [FHIR-39792](https://jira.hl7.org/browse/FHIR-39792) [See Changes Here](StructureDefinition-us-core-relatedperson.html)
 47. **Resolved - change required:** Reference only reasone for using MedicationDispense [FHIR-39856](https://jira.hl7.org/browse/FHIR-39856) [See Changes Here](#.html)
 48. **Resolved - change required:** Adjust USCDI Mapping references to MedicationRequest Profile [FHIR-39857](https://jira.hl7.org/browse/FHIR-39857) [See Changes Here](#.html)
 49. **Resolved - change required:** Adjust USCDI Mapping references to DiagnosticReport Profile [FHIR-39858](https://jira.hl7.org/browse/FHIR-39858) [See Changes Here](#.html)
