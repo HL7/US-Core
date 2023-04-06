@@ -376,3 +376,4 @@
 [US Core Direct email Extension]: StructureDefinition-us-core-direct.html
 [Target Element]: http://hl7.org/fhir/StructureDefinition/targetElement
 [Element Level Provenance]: basic-provenance.html#element-level-provenance
+[modifier element]: {{site.data.fhir.path}}conformance-rules.html#isModifier

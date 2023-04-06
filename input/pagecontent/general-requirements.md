@@ -191,7 +191,23 @@ Example of translation of CVX vaccine code to NDC code.
       },
 ~~~
 
+### Modifier Elements
 
+A FHIR [modifier element] is an element that modifies the meaning of a resource element. Although servers and clients **SHALL** be able to process  [Mandatory] or [Must Support] elements, not all modifier elements are  Mandatory or Must Support, and there is no requirement for supporting them. Therefore, FHIR clients need to be aware of unexpected modifier elements in the data they receive because they can alter the meaning of the data and can potentially lead to errors or even security risks if not properly handled. In addition, modifiers can be introduced when the data is created, edited, or transmitted, so it is crucial to ensure that all modifiers are understood and handled correctly.
+
+In addition to declaring which US Core profiles they support, Servers **MAY** communicate a system-wide profile in their CapabilityStatement to identify which additional elements, including modifier elements, they support. However, systems are free to include other data elements - and receivers **SHOULD** accept instances that even contain unexpected data elements *except* when those elements are modifier elements. Unless a client determines they can process it safely, rejection is typically the only safe action if unexpected modifier elements are present. For example, an app or system may process modifier elements nested inside an ignored element or in a resource only for human review.
+
+Some examples of modifiers that are not Must Support elements in US Core Profiles include:
+
+- `implicitRules` element common to all profiles
+- `modifierExtension` element common to all profiles
+- `Observation.value[x].comparator`
+- `Practitioner.identifier.use`
+- `Patient.active`
+
+Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages. This view lists all the Must Support and the modifier elements for a profile, as demonstrated in Figure 1 below.
+
+ {% include img.html img="modifier-element-view.png" caption="Figure 1: Modifier Elements Listed in Key Element View" %}
 
 ### Missing Data
 
