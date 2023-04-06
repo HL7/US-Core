@@ -106,7 +106,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 50. **Resolved - change required:** Add USCDI Mapping references for Disability Status and Mental/Cognitive Status [FHIR-39859](https://jira.hl7.org/browse/FHIR-39859) [See Changes Here](#.html)
 51. **Resolved - change required:** Adjust USCDI Mapping references to Patient Profile [FHIR-39860](https://jira.hl7.org/browse/FHIR-39860) [See Changes Here](#.html)
 52. **Resolved - change required:** Value set expansion not showing all codes [FHIR-39861](https://jira.hl7.org/browse/FHIR-39861) [See Changes Here](#.html)
-53. **Resolved - change required:** Extensions - context of use [FHIR-39863](https://jira.hl7.org/browse/FHIR-39863) [See Changes Here](#.html)
+53. **Applied:** Extensions - context of use [FHIR-39863](https://jira.hl7.org/browse/FHIR-39863) [See Changes Here](StructureDefinition-us-core-race.html)
 54. **Resolved - change required:** Add more Lab Result examples [FHIR-39868](https://jira.hl7.org/browse/FHIR-39868) [See Changes Here](#.html)
 55. **Resolved - change required:** MedicationRequest - The requester element is required but this information is not known for all medication types. For example, patient reported medications. [FHIR-39869](https://jira.hl7.org/browse/FHIR-39869) [See Changes Here](#.html)
 56. **Resolved - change required:** Profile Formal Views naming inconsistencies [FHIR-39873](https://jira.hl7.org/browse/FHIR-39873) [See Changes Here](#.html)
