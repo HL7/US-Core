@@ -346,6 +346,8 @@
 [US Core Smoking Status Observation Profile]: StructureDefinition-us-core-smokingstatus.html
 [US Core Observation Pregnancy Status Profile]: StructureDefinition-us-core-observation-pregnancystatus.html
 [US Core Observation Pregnancy Intent Profile]: StructureDefinition-us-core-observation-pregnancyintent.html
+[US Core Pregnancy Status Codes]: ValueSet-us-core-pregnancy-status.html
+[US Core Pregnancy Intent Codes]: ValueSet-us-core-pregnancy-intent.html
 [US Core Vital Signs Profile]: StructureDefinition-us-core-vital-signs.html
 [USCDI v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2
 [USCDI v3]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v3

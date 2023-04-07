@@ -26,7 +26,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
-- For representing the patient's  *intent* to become pregnant use the [US Core Pregnancy Intent Observation Profile].
+- For representing the patient's  *intent* to become pregnant use the [US Core Observation Pregnancy Intent Profile].
 - The [US Core Pregnancy Status Codes] value set includes SNOMED CT codes and the HL7 V3 code for the concept "unknown". These codes have historically been used to communicate the pregnancy status of a patient.
 
 {% include link-list.md %}
