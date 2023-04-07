@@ -72,7 +72,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 16. **Resolved - change required:** Conflict guidance in Observation Blood Pressure  [FHIR-39659](https://jira.hl7.org/browse/FHIR-39659) [See Changes Here](#.html)
 17. **Resolved - change required:** Language on profile use could be improved [FHIR-39703](https://jira.hl7.org/browse/FHIR-39703) [See Changes Here](#.html)
 18. **Resolved - change required:** Where are the US Core Profile FHIR Restful transactions defined? [FHIR-39704](https://jira.hl7.org/browse/FHIR-39704) [See Changes Here](#.html)
-19. **Resolved - change required:** Use ValueSet and not value set when a FHIR ValueSet is intended [FHIR-39705](https://jira.hl7.org/browse/FHIR-39705) [See Changes Here](#.html)
+19. **Applied:** Use ValueSet and not value set when a FHIR ValueSet is intended [FHIR-39705](https://jira.hl7.org/browse/FHIR-39705) [See Changes Here](general-requirements.html)
 20. **Resolved - change required:** Use uppercase Must Support and not lowercase must support [FHIR-39706](https://jira.hl7.org/browse/FHIR-39706) [See Changes Here](#.html)
 21. **Applied:** Document Must Support and Modifier Elements [FHIR-39707](https://jira.hl7.org/browse/FHIR-39707) [See Changes Here](general-requirements.html#modifier-elements)
 22. **Resolved - change required:** Common format for Resources and Resource fields [FHIR-39708](https://jira.hl7.org/browse/FHIR-39708) [See Changes Here](#.html)

@@ -42,7 +42,7 @@ This Guide is divided into several pages, which are listed at the top of each pa
   - [Profiles and Extensions]\: This page lists the US Core Profiles and Extensions defined in this guide to exchange quality data.
     - Each US Core Profile page includes a narrative description that lists all the [Mandatory] and [Must Support] data elements, profile-specific implementation guidance, and formal definition. A "Quick Start" guide summarizes the supported search transactions for each profile. Although the guidance typically focuses on the profiled elements, it also may cover un-profiled elements to aid with implementation and certification.
   - [Search Parameters and Operations]\: This page lists the defined US Core Operations and Search Parameters used in US Core transactions.
-  - [Terminology]\: This page lists the US Core Value Sets, and Code Systems defined for the profiles.
+  - [Terminology]\: This page lists the US Core ValueSets, and CodeSystems defined for the profiles.
   - [Capability Statements]\: These pages define the expected FHIR capabilities of the US Core Servers and Clients.
 - [Security]\: This page documents the general security requirements and recommendations for actors.
 - [Examples]\: This page lists all the examples used in this guide. {% include nonnormative-example-boilerplate.md -%}
@@ -61,7 +61,7 @@ A system that responds to the data access request providing patient data. The US
 
 ### US Core Profiles
 
-The list of US Core Profiles is shown below. Each profile identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. Together they promote interoperability and adoption through common implementation and provide the floor for standards development for specific use cases. See the [USCDI] page, for a mapping to the U.S. Core Data for Interoperability (USCDI).
+The list of US Core Profiles is shown below. Each profile identifies which core elements, extensions, vocabularies, and ValueSets **SHALL** be present in the resource when using this profile. Together they promote interoperability and adoption through common implementation and provide the floor for standards development for specific use cases. See the [USCDI] page, for a mapping to the U.S. Core Data for Interoperability (USCDI).
 
 A simple narrative summary gives each profile's requirements and guidance. A formal hierarchical table presents a [logical view] of the content in both a differential and snapshot view and references to appropriate terminologies and examples are provided.
 

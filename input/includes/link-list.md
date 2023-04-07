@@ -278,6 +278,7 @@
 [U.S. Core Data for Interoperability (USCDI) v3]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v3
 [U.S. Core Data for Interoperability (USCDI)]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi
 [UCUM Codes value set]: {{site.data.fhir.path}}valueset-ucum-units.html
+[UCUM Codes ValueSet]: {{site.data.fhir.path}}valueset-ucum-units.html
 [UCUM]: http://unitsofmeasure.org
 [US Core Allergies Profile]: StructureDefinition-us-core-allergyintolerance.html
 [US Core AllergyIntolerance Profile]: StructureDefinition-us-core-allergyintolerance.html

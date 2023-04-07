@@ -24,7 +24,7 @@ US Core uses the US Edition of [SNOMED CT], which is the official source of SNOM
 
 ###  Using UCUM codes in the [Quantity] datatype
 
-Both the [US Core Vital Signs Profile] and [US Core Laboratory Result Observation Profile] bind the `valueQuantity` datatypes to the [UCUM] code system.  A FHIR [UCUM Codes value set] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing, or the units are missing, which will likely occur in the real world.  
+Both the [US Core Vital Signs Profile] and [US Core Laboratory Result Observation Profile] bind the `valueQuantity` datatypes to the [UCUM] code system.  A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing, or the units are missing, which will likely occur in the real world.  
 
 **UCUM code provided**
 
