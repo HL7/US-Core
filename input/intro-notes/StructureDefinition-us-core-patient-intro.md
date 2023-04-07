@@ -44,7 +44,7 @@ For ONC's USCDI requirements, each Patient must support the following additional
 *see guidance below
 
 **Profile specific implementation guidance:**
-- Note that *Date of Death*  *Previous Name*, *Suffix*,and *Previous address* are listed in the U.S. Core Data for Interoperability.
+- Note that *Date of Death*, *Previous Name*, *Suffix*,and *Previous address* are listed in the U.S. Core Data for Interoperability.
   - Date of Death is communicated using the `Patient.deceasedDateTime` element.
   - Suffix is represented using the `Patient.name.suffix` element.
   - Previous name is represented by setting `Patient.name.use` to "old" and providing an end date in Patient.name.period element if known
