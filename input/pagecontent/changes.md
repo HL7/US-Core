@@ -94,7 +94,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 38. **Resolved - change required:** Wrong resource referenced [FHIR-39733](https://jira.hl7.org/browse/FHIR-39733) [See Changes Here](#.html)
 39. **Resolved - change required:** plural/singular mismatch [FHIR-39734](https://jira.hl7.org/browse/FHIR-39734) [See Changes Here](#.html)
 40. **Resolved - change required:** Screening and Assessment typo [FHIR-39735](https://jira.hl7.org/browse/FHIR-39735) [See Changes Here](#.html)
-41. **Resolved - change required:** Missing Hyperlinks [FHIR-39736](https://jira.hl7.org/browse/FHIR-39736) [See Changes Here](#.html)
+41. **Applied:** Missing Hyperlinks [FHIR-39736](https://jira.hl7.org/browse/FHIR-39736) [See Changes Here](StructureDefinition-us-core-observation-pregnancystatus.html)
 42. **Resolved - change required:** Clarify period of pregnancy intent [FHIR-39737](https://jira.hl7.org/browse/FHIR-39737) [See Changes Here](#.html)
 43. **Applied:** Missing Hyperlinks [FHIR-39738](https://jira.hl7.org/browse/FHIR-39738) [See Changes Here](StructureDefinition-us-core-observation-pregnancyintent.html) and [See Changes Here](StructureDefinition-us-core-observation-pregnancystatus.html)
 44. **Resolved - change required:** If a dependent has a unique Identifier, it should be represented in the dependent element not identifier [FHIR-39743](https://jira.hl7.org/browse/FHIR-39743) [See Changes Here](#.html)
