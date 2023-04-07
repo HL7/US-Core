@@ -92,7 +92,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 36. **Resolved - change required:** External link is missing [FHIR-39725](https://jira.hl7.org/browse/FHIR-39725) [See Changes Here](#.html)
 37. **Resolved - change required:** MedicationDispense Scope of use Conflicts [FHIR-39732](https://jira.hl7.org/browse/FHIR-39732) [See Changes Here](#.html)
 38. **Resolved - change required:** Wrong resource referenced [FHIR-39733](https://jira.hl7.org/browse/FHIR-39733) [See Changes Here](#.html)
-39. **Resolved - change required:** plural/singular mismatch [FHIR-39734](https://jira.hl7.org/browse/FHIR-39734) [See Changes Here](#.html)
+39. **Applied:** plural/singular mismatch [FHIR-39734](https://jira.hl7.org/browse/FHIR-39734) [See Changes Here](StructureDefinition-us-core-coverage.html)
 40. **Applied:** Screening and Assessment typo [FHIR-39735](https://jira.hl7.org/browse/FHIR-39735) [See Changes Here](screening-and-assessments.html)
 41. **Applied:** Missing Hyperlinks [FHIR-39736](https://jira.hl7.org/browse/FHIR-39736) [See Changes Here](StructureDefinition-us-core-observation-pregnancystatus.html)
 42. **Resolved - change required:** Clarify period of pregnancy intent [FHIR-39737](https://jira.hl7.org/browse/FHIR-39737) [See Changes Here](#.html)

@@ -5,7 +5,7 @@
 The following are example usage scenarios for this profile:
 
 - Query for a patient's insurance coverage
-- [Record or update] a past or present insurance coverages
+- [Record or update] a past or present insurance coverage
 
 ### Mandatory and Must Support Data Elements
 
