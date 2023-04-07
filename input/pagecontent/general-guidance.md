@@ -233,7 +233,7 @@ For more information, see the [FHIR RESTful API]
 
 ### Search Syntax
 
-The [FHIR RESTful Search API Requirements] Section documents the servers and clients rules for the RESTful interactions described in this guide.
+The [FHIR RESTful Search API] Section documents the servers and clients rules for the RESTful interactions described in this guide.
 
 All the search interactions in this guide use the `GET` command with the following syntax:
 

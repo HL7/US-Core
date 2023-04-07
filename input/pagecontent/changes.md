@@ -89,7 +89,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 33. **Resolved - change required:** MedicationAdministration and MedicationStatement support unclear. [FHIR-39720](https://jira.hl7.org/browse/FHIR-39720) [See Changes Here](#.html)
 34. **Pre-Applied:** The use of Observations where QuestionnaireReponse is more applicable [FHIR-39722](https://jira.hl7.org/browse/FHIR-39722) [See Changes Here](screening-and-assessments.html)
 35. **Resolved - change required:** DiagnosticReport should support identifier based search [FHIR-39723](https://jira.hl7.org/browse/FHIR-39723) [See Changes Here](#.html)
-36. **Resolved - change required:** External link is missing [FHIR-39725](https://jira.hl7.org/browse/FHIR-39725) [See Changes Here](#.html)
+36. **Applied:** External link is missing [FHIR-39725](https://jira.hl7.org/browse/FHIR-39725) [See Changes Here](general-guidance.html#search-syntax)
 37. **Resolved - change required:** MedicationDispense Scope of use Conflicts [FHIR-39732](https://jira.hl7.org/browse/FHIR-39732) [See Changes Here](#.html)
 38. **Applied:** Wrong resource referenced [FHIR-39733](https://jira.hl7.org/browse/FHIR-39733) [See Changes Here](StructureDefinition-us-core-coverage.html)
 39. **Applied:** plural/singular mismatch [FHIR-39734](https://jira.hl7.org/browse/FHIR-39734) [See Changes Here](StructureDefinition-us-core-coverage.html)
