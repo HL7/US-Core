@@ -59,7 +59,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 3. **Resolved - change required:** Add support for Condition search that include patient + category + status [FHIR-39610](https://jira.hl7.org/browse/FHIR-39610) [See Changes Here](#.html)
 4. **Resolved - change required:** Incorrect sentence [FHIR-39611](https://jira.hl7.org/browse/FHIR-39611) [See Changes Here](#.html)
 5. **Applied:** Revert to simplegenderIdentify extension [FHIR-39615](https://jira.hl7.org/browse/FHIR-39615) [See Changes Here](#.html)
-6. **Resolved - change required:** Duplicated words [FHIR-39637](https://jira.hl7.org/browse/FHIR-39637) [See Changes Here](#.html)
+6. **Applied:** Duplicated words [FHIR-39637](https://jira.hl7.org/browse/FHIR-39637) [See Changes Here](StructureDefinition-us-core-condition-problems-health-concerns.html#optional-search-parameters)
 7. **Applied:** Missing comma [FHIR-39638](https://jira.hl7.org/browse/FHIR-39638) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
 8. **Appplied:** Clarify that Observation.specimen is a MustSupport [FHIR-39639](https://jira.hl7.org/browse/FHIR-39639) [See Changes Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
 9.  **Resolved - change required:** Need clarification and example for using SNOMED CT US Edition [FHIR-39640](https://jira.hl7.org/browse/FHIR-39640) [See Changes Here](#.html)
