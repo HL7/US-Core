@@ -1,25 +1,13 @@
 
-The Profile elements consist of both *Mandatory* and *Must Support* elements.  *Mandatory* elements are elements with a minimum cardinality of 1 (min=1). The base [FHIR Must Support] guidance requires specifications to define the support expected for profile elements labeled *Must Support*. The sections below illustrate how these elements are displayed and explain the rules for interpreting profile elements and sub-elements labeled *Mandatory* and *Must Support* for requesters and responders.
+<div class="bg-success" markdown="1">
+The Profile elements consist of *Mandatory*, *Must Support*, and *USCDI Requirements* elements. The sections below defines the server and client expectations for processing these elements and illustrates how they are displayed and documented.
 
-### Presentation of Must Support and Mandatory Elements in the Formal Profile Views
+</div><!-- new-content -->
 
-Each profile provides several different formal views of all the must support elements in a tree format under tabs labeled "Differential Table",  "Snapshot Table", and "Snapshot Table (Must Support)".
-
-The elements labeled *Must Support* in the "Differential Table" view are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Figure 1 illustrates an example of this:
-
-  {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
-
-In the "Snapshot Table" view in Figure 2, all the must support elements defined for the profile, and any mandatory or must support elements inherited from a base profile (e.g. [US Core Body Height Profile] based on [Vital Signs Profile]), are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. 
-
-  {% include img.html img="Must_Support_Snapshot_View.png" caption="Figure 2: Snapshot Table View" %}
-
- In the "Key Elements Table" view, all the elements presented in the view are either mandatory or must support elements for conformance to the profile. These elements are defined in the US Core Profile, mandatory elements inherited from the base specification, and, for the US Core Vital Signs profiles, any mandatory or must support elements inherited from the FHIR base Vital Signs profile. An example of the "Snapshot Table (Must Support)" is shown in Figure  3.
-
-  {% include img.html img="Must_Support_MS_View.png" caption="Figure 3: Snapshot Table (Must Support) View" %}
 
 ### Mandatory Elements
 
-When an element is mandatory (min=1), the data is expected to always be present. Very rarely, it may not be, and guidance for when data is missing is provided in the [Missing Data] section and the next section. The convention in this guide is to mark all min=1 elements as must support unless they are nested under an optional element. An example of this is [`CarePlan.status`].
+<span class="bg-success" markdown="1">*Mandatory* elements are elements with a minimum cardinality of 1 (min=1).</span><!-- new-content --> When an element is mandatory, the data is expected to always be present. Very rarely, it may not be, and guidance for when data is missing is provided in the [Missing Data] section and the next section. The convention in this guide is to mark all min=1 elements as must support unless they are nested under an optional element. An example of this is [`CarePlan.status`].
 
 ### Must Support Elements
 
@@ -43,7 +31,60 @@ All the profile information for the {{site.data.fhir.ig.title}} is represented i
 
 This [Observation Summary Table] compares *Must Support* Elements across all the US Core Observation Profiles.
 
-##### Defined Pattern Elements
+<div class="bg-success" markdown="1">
+
+### USCDI Requirements
+
+Most US Core Profiles represent requirements for a [U.S. Core Data for Interoperability (USCDI) v3] Data Class. For those US Core Profiles, all *Mandatory* and *Must Support* elements are *USCDI Requirements*. However, the following US Core Profiles do not represent USCDI data classes, and their *Mandatory* and *Must Support* elements are not *USCDI Requirements*:
+
+{% include non-uscdi-profiles.md %}
+
+#### Additional USCDI Requirements 
+
+*Additional USCDI Requirements* elements are needed for [ONC Health IT Certification] but are not *Mandatory* or *Must Support* elements because they may not be required in every use case. Implementers seeking ONC certification **SHALL** interpret them as *Must Support*  elements documented above, otherwise they are considered optional. The following table lists the Additional USCDI Requirements and their corresponding FHIR resources:
+
+{% include additional-uscdi-requirements.md %}
+
+#### Communicating USCDI Requirements
+
+Understanding the Additional USCDI Requirements is essential for API developers and business analysts working with FHIR US Core. The profiles pages list Additional USCDI Requirements under the "Mandatory and Must Support Data Elements" sections to alert users. In addition, "(USCDI)" is prepended to the element's short description, and the computable [USCDI Requirement Extension] is added to each element definition.
+</div><!-- new-content -->
+
+<div class="bg-success" markdown="1">
+
+### Presentation of Must Support, Mandatory, and USCDI Requirement Elements in the Formal Profile Views
+
+<span class="bg-success" markdown="1">On each profile page, several different formal views of the US Core Profile contents are displayed in a tree format under tabs labeled "Differential Table", "Snapshot Table", and "Key Elements Table".</span><!-- new-content -->
+
+#### Differential Table View
+
+Elements with a cardinality starting with "1" (e.g., 1..1) under the "Card" header are *Mandatory* elements. Elements labeled *Must Support* in the "Differential Table" view are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Elements with the label "(USCDI)" under the header "Description and Constraints" are *USCDI requirements*. Figure 1 illustrates an example of this:
+
+  {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
+
+#### Key Elements Table View
+ 
+The "Key Elements Table" view consists of:
+1. all the *Mandatory*, *Must Support*, and *USCDI requirements* elements in the differential view
+2. any *Mandatory*, *Must Support*, and *USCDI requirements* elements inherited from a US Core or other profile from which it is derived. (e.g.,  [US Core Body Height Profile] is based on the [US Core Vital Signs Profile] or [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile])
+3. any *Mandatory* or [modifier elements] not in 1. or 2.
+
+This view includes the same flags and labels described in Differential Table View:.
+
+  {% include img.html img="Must_Support_MS_View.png" caption="Figure 2: Snapshot Table (Must Support) View" %}
+
+#### Snapshot Table View
+
+The "Snapshot Table" view in Figure 3 view consists of:
+1.  all the *Mandatory*, *Must Support*, and *USCDI requirements* elements in the differential view
+2. any inherited *Mandatory*, *Must Support*, and *USCDI requirements* elements from a US Core or other profile upon which it is based. (e.g.,  [US Core Body Height Profile] based on [Vital Signs Profile] or [US Core QuestionnaireResponse Profile] based on [SDC QuestionnaireResponse Profile])
+3. any base FHIR elements not in 1. or 2.
+
+This view includes the same flags and labels as described in Differential Table View:
+
+  {% include img.html img="Must_Support_Snapshot_View.png" caption="Figure 3: Snapshot Table View" %}
+
+#### Defined Pattern Elements
 
 The StructureDefinitions define the US Core Profiles and the [ElementDefinition.pattern], which is used almost exclusively for the CodeableConcept and Coding datatypes. If the element is marked as must support and defined by a pattern, then the pattern defines the elements *and* element values that the server **SHALL** be capable of providing.
 

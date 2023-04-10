@@ -177,7 +177,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 121. **Resolved - change required:** Please give guidance on US Core  on which SMART v2 scopes  [FHIR-40192](https://jira.hl7.org/browse/FHIR-40192) [See Changes Here](#.html)
 122. **Applied:** Remove the SFCU extension, and retain the birth-sex extension to meet USCDI Patient Sex. [FHIR-40197](https://jira.hl7.org/browse/FHIR-40197) [See Changes Here](uscdi.html)
 123. **Resolved - change required:** Please correct need for the indication element on MedicationRequest [FHIR-40199](https://jira.hl7.org/browse/FHIR-40199) [See Changes Here](#.html)
-124. **Resolved - change required:** ServiceRequest.reasonCode and reasonReference should be MS explicitly or text should be added explaining [FHIR-40200](https://jira.hl7.org/browse/FHIR-40200) [See Changes Here](#.html)
+124. **Applied:** Docuement expectations for Additional USCDI Requirements [FHIR-40200](https://jira.hl7.org/browse/FHIR-40200) [See Changes Here](general-requirements.html#us-core-conformance-artifacts) and [Here](must-support.html)
 125. **Applied:** ServiceRequest Profile Implementation Specific Guidance - incorrect reference to ServiceRequest.reasonCode [FHIR-40202](https://jira.hl7.org/browse/FHIR-40202) [See Changes Here](StructureDefinition-us-core-servicerequest.html)
 126. **Applied:** Tribal Affiliation Extension - add guidance to that extension:isEnrolled is an optional extension [FHIR-40203](https://jira.hl7.org/browse/FHIR-40203) [See Changes Here](StructureDefinition-us-core-tribal-affiliation.html)
 127. **Resolved - change required:** Observation Occupation binding strength for industry is required  [FHIR-40204](https://jira.hl7.org/browse/FHIR-40204) [See Changes Here](#.html)
