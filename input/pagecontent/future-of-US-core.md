@@ -39,13 +39,13 @@ Past Balloters, STU commenters, and Accelerator Project teams submitted the foll
 
   Common practice is to preserve the source data time offsets as the original offset or converted to Coordinated Universal Time (UTC) time. Making this a requirement is one consideration.  Another consideration is the addition of server best practices for preserving source timezones using the FHIR standard [timezone extension]. A third consideration is providing a client algorithm for resolving time offsets and time zones.
 
-* **Writing and Updating** - Very little guidance is provided on writing and updating data in the context of US Core profiles. There are multiple issues that will need to be considered when defining expected behavior by the various actors to support updates and writes to the data, including:
+* **Record or Update** - Very little guidance is provided on recording and updating data in the context of US Core profiles. There are multiple issues that will need to be considered when defining expected behavior by the various actors to support updates and writes to the data, including:
 
   - Defining the overall approach
     -  direct updates to a particular resource via FHIR RESTful transactions
     - new Profiles to represent the context and issue and request
   - Write failure scenarios (e.g., insufficient data to create)
-  - Writing and updating data in the context of the Must Support fields
+  - Recording and updating data in the context of the Must Support fields
   - Indicating the source of the update
 
 ------------------------------------------------------------------------
