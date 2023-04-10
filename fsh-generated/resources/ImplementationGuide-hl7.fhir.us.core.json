@@ -230,7 +230,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-coverage"
         },
-        "description": "The US Core CoverageProfile is based upon the core FHIR Coverage Resource and implements the US Core Data for Interoperability (USCDI) v3 Health Insurance Information requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Coverage resource to record, search, and fetch the \"data related to an individual's insurance coverage for health care\". It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Coverage Profile is based upon the core FHIR Coverage Resource and implements the US Core Data for Interoperability (USCDI) v3 Health Insurance Information requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Coverage resource to record, search, and fetch the \"data related to an individual's insurance coverage for health care\". It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Coverage Profile"
       },
@@ -398,7 +398,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-occupation"
         },
-        "description": "The US Core Occupation Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) v3 Occupation requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch the \"Type of work of a person\" and \"Type of business that compensates for work or assigns work to an unpaid worker or volunteer\"  associated with a patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Occupation Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) Occupation requirements. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and fetch a patient's past or present job and \"type of business that compensates for work or assigns work to an unpaid worker or volunteer\". In the context of this profile, a job is defined as a work situation, training position, or volunteer position held for a specified period. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Observation Occupation Profile"
       },
@@ -2897,6 +2897,22 @@
         "description": "This is a Platelets example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.",
         "name": "Platelets Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-occupation-industry-unknown"
+        },
+        "description": "This example of the *US Core Observation Occupation Profile*  represents a situation where the occupation is known, but the industry is not.",
+        "name": "Occupation Observation Example: Industry Unknown",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-occupation-unknown"
+        },
+        "description": "This example of the *US Core Observation Occupation Profile*  represents a situation where the industry is known, but the occupation is not.",
+        "name": "Occupation Observation Example: Unknown Occupation",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"
       },
       {
         "reference": {

@@ -6,7 +6,7 @@ title: US Core Observation Occupation Profile
 status: active
 experimental: false
 date: 2022-08-24
-description: The US Core Occupation Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) Occupation requirements. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and fetch a patient's past or present job ("type of work of a person") and "type of business that compensates for work or assigns work to an unpaid worker or volunteer". It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
+description: The US Core Occupation Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) Occupation requirements. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and fetch a patient's past or present job and "type of business that compensates for work or assigns work to an unpaid worker or volunteer". In the context of this profile, a job is defined as a work situation, training position, or volunteer position held for a specified period. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -26,16 +26,12 @@ differential:
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.status
     short: (USCDI) registered | preliminary | final
       | amended +
     mustSupport: true
   - id: Observation.category
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.category
@@ -48,8 +44,6 @@ differential:
     mustSupport: true
   - id: Observation.category:socialhistory
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.category
@@ -66,8 +60,6 @@ differential:
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.code
     short: (USCDI) Occupation history
     patternCodeableConcept:
@@ -77,8 +69,6 @@ differential:
     mustSupport: true
   - id: Observation.subject
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.subject
@@ -94,16 +84,12 @@ differential:
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.effectivePeriod
     short: (USCDI) Clinically relevant time/time-period
       for observation
     mustSupport: true
   - id: Observation.valueCodeableConcept
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueCodeableConcept
@@ -123,20 +109,16 @@ differential:
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.component
     slicing:
       discriminator:
       - type: pattern
-        path: code.coding
+        path: $this
       rules: open
     short: (USCDI) Component results
     mustSupport: true
   - id: Observation.component:industry
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component
@@ -149,15 +131,11 @@ differential:
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.component.code
     short: (USCDI) Occupation industry history
     mustSupport: true
   - id: Observation.component:industry.code.coding
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.code.coding
@@ -172,8 +150,6 @@ differential:
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.component.code.coding
     sliceName: 86188-0
     short: (USCDI) Code defined by a terminology system
@@ -185,8 +161,6 @@ differential:
     mustSupport: true
   - id: Observation.component:industry.valueCodeableConcept
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.component.valueCodeableConcept

@@ -54,8 +54,6 @@ differential:
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.status
     short: (USCDI) registered | preliminary | final
       | amended +
@@ -70,8 +68,6 @@ differential:
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.code
     short: (USCDI) Sexual Orientation
     patternCodeableConcept:
@@ -81,8 +77,6 @@ differential:
     mustSupport: true
   - id: Observation.subject
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.subject
@@ -99,8 +93,6 @@ differential:
       map: Observation.subject
   - id: Observation.effective[x]
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.effective[x]
@@ -122,8 +114,6 @@ differential:
       map: Observation.effective[x]
   - id: Observation.valueCodeableConcept
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueCodeableConcept

@@ -31,16 +31,12 @@ differential:
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.status
     short: (USCDI) registered | preliminary | final
       | amended +
     mustSupport: true
   - id: Observation.category
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.category
@@ -53,8 +49,6 @@ differential:
     mustSupport: true
   - id: Observation.category:SocialHistory
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.category
@@ -71,8 +65,6 @@ differential:
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.code
     short: (USCDI) Pregnancy Status
     patternCodeableConcept:
@@ -82,8 +74,6 @@ differential:
     mustSupport: true
   - id: Observation.subject
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.subject
@@ -99,8 +89,6 @@ differential:
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.effectiveDateTime
     short: (USCDI) Clinically relevant time/time-period
       for observation
@@ -108,8 +96,6 @@ differential:
     mustSupport: true
   - id: Observation.valueCodeableConcept
     extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.valueCodeableConcept
