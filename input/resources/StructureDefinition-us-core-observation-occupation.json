@@ -30,10 +30,6 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
                     }
                 ],
                 "path": "Observation.status",
@@ -43,10 +39,6 @@
             {
                 "id": "Observation.category",
                 "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    },
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
@@ -68,10 +60,6 @@
             {
                 "id": "Observation.category:socialhistory",
                 "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    },
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
@@ -98,10 +86,6 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
                     }
                 ],
                 "path": "Observation.code",
@@ -119,10 +103,6 @@
             {
                 "id": "Observation.subject",
                 "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    },
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
@@ -147,10 +127,6 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
                     }
                 ],
                 "path": "Observation.effectivePeriod",
@@ -160,10 +136,6 @@
             {
                 "id": "Observation.valueCodeableConcept",
                 "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    },
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
@@ -191,10 +163,6 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
                     }
                 ],
                 "path": "Observation.component",
@@ -202,7 +170,7 @@
                     "discriminator": [
                         {
                             "type": "pattern",
-                            "path": "code.coding"
+                            "path": "code"
                         }
                     ],
                     "rules": "open"
@@ -213,10 +181,6 @@
             {
                 "id": "Observation.component:industry",
                 "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    },
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
@@ -235,71 +199,28 @@
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
                     }
                 ],
                 "path": "Observation.component.code",
                 "short": "(USCDI) Occupation industry history",
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.component:industry.code.coding",
-                "extension": [
+                "type": [
                     {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
+                        "code": "CodeableConcept"
                     }
                 ],
-                "path": "Observation.component.code.coding",
-                "slicing": {
-                    "discriminator": [
+                "patternCodeableConcept": {
+                    "coding": [
                         {
-                            "type": "pattern",
-                            "path": "$this"
+                            "system": "http://loinc.org",
+                            "code": "86188-0"
                         }
-                    ],
-                    "rules": "open"
-                },
-                "short": "(USCDI) Code defined by a terminology system",
-                "mustSupport": true
-            },
-            {
-                "id": "Observation.component:industry.code.coding:86188-0",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "Observation.component.code.coding",
-                "sliceName": "86188-0",
-                "short": "(USCDI) Code defined by a terminology system",
-                "min": 1,
-                "max": "1",
-                "patternCoding": {
-                    "system": "http://loinc.org",
-                    "code": "86188-0"
+                    ]
                 },
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:industry.valueCodeableConcept",
                 "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    },
                     {
                         "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
                         "valueBoolean": true
