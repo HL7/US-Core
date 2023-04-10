@@ -1,5 +1,6 @@
 
 <div class="bg-success" markdown="1">
+
 The Profile elements consist of *Mandatory*, *Must Support*, and *USCDI Requirements* elements. The sections below defines the server and client expectations for processing these elements and illustrates how they are displayed and documented.
 
 </div><!-- new-content -->

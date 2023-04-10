@@ -207,6 +207,6 @@ differential:
     - code: CodeableConcept
     mustSupport: true
     binding:
-      strength: required
+      strength: extensible
       description: Occupational Data for Health
       valueSet: http://phinvads.cdc.gov/fhir/ValueSet/2.16.840.1.114222.4.11.7900
