@@ -27,6 +27,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Profile specific implementation guidance:**
 
-- Implementers may consider referring to [Occupational Data for Health (ODH)] FHIR IG  to convey additional details; data elements, such as Employer; or different topics, such as Usual (Longest-Held) Work. 
+- Implementers may consider referring to [Occupational Data for Health (ODH)] FHIR IG  to convey additional details; data elements, such as Employer; or different topics, such as Usual (Longest-Held) Work.
+- In the [Quick Start](#notes) section below, you can find instructions on searching for Occupations (Jobs) by 'patient','date', and other core search parameters. For more advanced queries using Observation, refer to the FHIR [search] specification.
 
 {% include link-list.md %}

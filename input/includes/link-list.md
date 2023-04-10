@@ -270,7 +270,7 @@
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
 [Suppressed Data]: general-guidance.html#suppressed-data
 [Surgical Operation Note (11504-8)]: https://loinc.org/11504-8.html
-[Terminology Binding Extensible]: http://hl7.org/fhir/R4/terminologies.html#extensible
+[Terminology Binding Extensible]: {{site.data.fhir.path}}R4/terminologies.html#extensible
 [Terminology]: terminology.html "Terminology Page"
 [timezone extension]: {{site.data.fhir.path}}extension-tz-code.html
 [U.S. Core Data for Interoperability (USCDI) v1]: https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf
