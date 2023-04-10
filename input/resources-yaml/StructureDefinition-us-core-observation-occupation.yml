@@ -6,15 +6,7 @@ title: US Core Observation Occupation Profile
 status: active
 experimental: false
 date: 2022-08-24
-description: The US Core Occupation Observation Profile is based upon the core FHIR
-  Observation Resource and implements the US Core Data for Interoperability (USCDI)
-  v3 Occupation requirements. To promote interoperability and adoption through common
-  implementation, this profile sets minimum expectations for the Observation resource
-  to record, search, and fetch the "Type of work of a person" and "Type of business
-  that compensates for work or assigns work to an unpaid worker or volunteer"  associated
-  with a patient. It identifies which core elements, extensions, vocabularies, and
-  value sets **SHALL** be present in the resource when using this profile. It provides
-  the floor for standards development for specific use cases.
+description: The US Core Occupation Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) Occupation requirements. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and fetch a patient's past or present job ("type of work of a person") and "type of business that compensates for work or assigns work to an unpaid worker or volunteer". It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
