@@ -1,1 +1,1 @@
-{% include condition-quickstart1.md %}
+{% include_relative StructureDefinition-us-core-condition-notes.md %}
