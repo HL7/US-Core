@@ -17,7 +17,7 @@ The following are example usage scenarios for this profile:
 
 **Each Observation must support:**
 
-1. a result value*git pug
+1. a result value*
    - if the result value is a numeric quantity, a standard [UCUM] unit
    - if the result value is a coded quantity, a standard [SNOMED CT]*
 2. a specimen type (e.g., blood, serum, urine)

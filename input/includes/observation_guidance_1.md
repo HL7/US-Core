@@ -11,9 +11,7 @@ example usage:
 {% endraw %} -->
 
 {% include obs_cat_guidance.md -%}
-* Additional codes that translate or map to the Observation code or category codes are allowed.  For example:
-   -  providing both a local code and LOINC code
-   -  providing a more specific code {{include.example1}}, a [SNOMED CT] concept, or a system specific code.
+{% include additional-codings.md %}
 * Systems **SHOULD** support `Observation.effectivePeriod` to accurately represent procedure tests that are collected over a period of time {{include.example2}}.
 {% include DAR-exception.md %}
 * See the [General Guidance] page for further guidance on using SNOMED and UCUM.
