@@ -33,10 +33,9 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationDispense.status
-    short: (USCDI) preparation | in-progress | cancelled | on-hold | completed
-      | entered-in-error | stopped | declined | unknown
+    short: (USCDI) preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | declined | unknown
     condition:
-      - key: us-core-20
+      - us-core-20
     mustSupport: true
   - id: MedicationDispense.medication[x]
     extension:
