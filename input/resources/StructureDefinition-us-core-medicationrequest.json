@@ -44,6 +44,14 @@
                 "path": "MedicationRequest",
                 "definition": "\\-",
                 "comment": "\\-",
+                "constraint": [
+                    {
+                        "key": "us-core-21",
+                        "severity": "error",
+                        "human": "requester SHALL be present if intent is \"order\"",
+                        "expression": "intent='order' implies requester.exists()"
+                    }
+                ],
                 "mustSupport": false,
                 "mapping": [
                     {
@@ -85,6 +93,9 @@
                 ],
                 "path": "MedicationRequest.intent",
                 "short": "(USCDI) proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option",
+                "condition": [
+                    "us-core-21"
+                ],
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -337,7 +348,6 @@
                 ],
                 "path": "MedicationRequest.requester",
                 "short": "(USCDI) Who/What requested the Request",
-                "min": 1,
                 "type": [
                     {
                         "code": "Reference",
@@ -400,6 +410,9 @@
                             }
                         ]
                     }
+                ],
+                "condition": [
+                    "us-core-21"
                 ],
                 "mustSupport": true,
                 "mapping": [

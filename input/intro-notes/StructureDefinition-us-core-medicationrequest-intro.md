@@ -21,7 +21,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  an intent code
 1.  a medication*
 1.  a patient
-1.  a prescriber
+
 
 \* see guidance below
 
@@ -30,10 +30,11 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. the category  (e.g. Discharge Medication)
 1. the `reported` flag  or reference signaling that information is from a secondary source such as a patient
 1. the encounters
-1. a date for when written
-1. the prescription *Sig*
-1. the amount dispensed and number of refills
-1. the dose and rate
+1. a prescriber
+2. a date for when written
+3. the prescription *Sig*
+4. the amount dispensed and number of refills
+5. the dose and rate
 
 
 **Additional USCDI Requirements**
@@ -48,6 +49,7 @@ For ONC's USCDI requirements, each MedicationRequest must support the following 
 **Profile specific implementation guidance:**
 
 * See the [Medication List] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
+  * <span class="bg-success" markdown="1">When recording “self-prescribed” medication, `requester` **SHOULD** be used to indicate the Patient or RelatedPerson as the prescriber.</span><!-- new-content -->
 
 {% include representing-meds.md %}
 

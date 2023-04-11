@@ -248,7 +248,8 @@
                     }
                 ],
                 "path": "MedicationDispense.whenHandedOver",
-                "short": "(USCDI) When product was given out",
+                "short": "(USCDI) When product was given out or mailed",
+                "description": "When the product was given out. For mailed prescriptions, when the label was printed",
                 "condition": [
                     "us-core-20"
                 ],
