@@ -147,7 +147,8 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: MedicationDispense.whenHandedOver
-    short: (USCDI) When product was given out
+    short: (USCDI) When product was given out or mailed
+    description: When the product was given out. For mailed prescriptions, when the label was printed
     condition:
       - us-core-20
     mustSupport: true
