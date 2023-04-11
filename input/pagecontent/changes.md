@@ -86,7 +86,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 30. **Applied:** Update "Clinical Note Server" to "FHIR Server" [FHIR-39717](https://jira.hl7.org/browse/FHIR-39717) [See Changes Here](clinical-notes.html) and [Here](general-requirements.html)
 31. **Resolved - change required:** DocumentReference, DiagnosticReport and embedded documents [FHIR-39718](https://jira.hl7.org/browse/FHIR-39718) [See Changes Here](#.html)
 32. **Applied:** Correction and clarify use of $expand [FHIR-39719](https://jira.hl7.org/browse/FHIR-39719) [See Changes Here](clinical-notes.html#using-expand) and [Here](CapabilityStatement-us-core-server.html#valueset)
-33. **Resolved - change required:** Clarify MedicationAdministration and MedicationStatement support. [FHIR-39720](https://jira.hl7.org/browse/FHIR-39720) [See Changes Here](medication-list.html#pharmacy-fhir-resources)
+33. **Applied:** Clarify MedicationAdministration and MedicationStatement support. [FHIR-39720](https://jira.hl7.org/browse/FHIR-39720) [See Changes Here](medication-list.html#pharmacy-fhir-resources)
 34. **Pre-Applied:** The use of Observations where QuestionnaireReponse is more applicable [FHIR-39722](https://jira.hl7.org/browse/FHIR-39722) [See Changes Here](screening-and-assessments.html)
 35. **Resolved - change required:** DiagnosticReport should support identifier based search [FHIR-39723](https://jira.hl7.org/browse/FHIR-39723) [See Changes Here](#.html)
 36. **Applied:** External link is missing [FHIR-39725](https://jira.hl7.org/browse/FHIR-39725) [See Changes Here](general-guidance.html#search-syntax)
