@@ -4,6 +4,8 @@
 
 #### Mandatory Search Parameters:
 
+The following search parameters and search parameter combinations SHALL be supported:
+
 1. **SHALL** support fetching a RelatedPerson using the **[`_id`](SearchParameter-us-core-relatedperson-id.html)** search parameter:
 
     `GET [base]/RelatedPerson/[id]` or `GET [base]/RelatedPerson?_id=[id]`
@@ -30,15 +32,16 @@ The following search parameter combinations **SHOULD** be supported:
 
       *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient ([how to search by reference])
 
-1. {:.new-content}**SHOULD** support searching using the **[`name`](SearchParameter-us-core-relatedperson-name.html)** search parameter:
+1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-relatedperson-patient.html)** and **[`name`](SearchParameter-us-core-relatedperson-name.html)** search parameters:
 
-     `GET [base]/RelatedPerson?name=[string]`
+    `GET [base]/RelatedPerson?patient={Type/}[id]&name=[string]`
 
     Example:
     
-      1. GET [base]/RelatedPerson?name=Mary Shaw
+      1. GET [base]/RelatedPerson?patient=1137192&amp;name=van%20Putten
 
-      *Implementation Notes:* Fetches a bundle of all RelatedPerson resources matching the name ([how to search by string])
+    *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient that may match any of the string fields in the name element (including family, give, prefix, suffix, suffix, and/or text) ([how to search by reference] and [how to search by string])
+
 
 
 

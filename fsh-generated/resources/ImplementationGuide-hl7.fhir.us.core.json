@@ -230,7 +230,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-coverage"
         },
-        "description": "The US Core Coverage Profile is based upon the core FHIR Coverage Resource and implements the US Core Data for Interoperability (USCDI) v3 Health Insurance Information requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Coverage resource to record, search, and fetch the \"data related to an individual's insurance coverage for health care\". It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core CoverageProfile is based upon the core FHIR Coverage Resource and implements the US Core Data for Interoperability (USCDI) v3 Health Insurance Information requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Coverage resource to record, search, and fetch the \"data related to an individual's insurance coverage for health care\". It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Coverage Profile"
       },
@@ -1630,7 +1630,7 @@
         "reference": {
           "reference": "SearchParameter/us-core-relatedperson-name"
         },
-        "description": "**A server defined search that may match any of the string fields in the HumanName, including family,given, prefix, suffix, and/or text**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "description": "**A server defined search that may match any of the string fields in the HumanName, including family, give, prefix, suffix, suffix, and/or text**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
         "name": "USCoreRelatedpersonName"
       },

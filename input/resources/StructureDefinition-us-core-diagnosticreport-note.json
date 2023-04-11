@@ -90,7 +90,7 @@
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
-                    "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)",
+                    "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"
                 }
             },
@@ -268,7 +268,7 @@
                         "targetProfile": [
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
                             "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result",
-                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+                            "http://hl7.org/fhir/StructureDefinition/Observation"
                         ],
                         "_targetProfile": [
                             {
@@ -291,7 +291,7 @@
                                 "extension": [
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
+                                        "valueBoolean": false
                                     }
                                 ]
                             }

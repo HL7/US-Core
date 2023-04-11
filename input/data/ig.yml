@@ -263,7 +263,7 @@ definition:
     name: US Core Condition Problems and Health Concerns Profile
   - reference:
       reference: StructureDefinition/us-core-coverage
-    description: The US Core Coverage Profile is based upon the core FHIR Coverage
+    description: The US Core CoverageProfile is based upon the core FHIR Coverage
       Resource and implements the US Core Data for Interoperability (USCDI) v3 Health
       Insurance Information requirements. To promote interoperability and adoption
       through common implementation, this profile sets minimum expectations for the
@@ -1783,8 +1783,8 @@ definition:
   - reference:
       reference: SearchParameter/us-core-relatedperson-name
     description: "**A server defined search that may match any of the string fields\
-      \ in the HumanName, including family,given, prefix, suffix, and/or text**  \n\
-      **NOTE**: This US Core SearchParameter definition extends the usage context\
+      \ in the HumanName, including family, give, prefix, suffix, suffix, and/or text**\
+      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
       \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
       \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
     exampleBoolean: false
