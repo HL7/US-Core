@@ -261,7 +261,7 @@
 [Servers Requiring Status]: general-requirements.html#search-for-servers-requiring-status
 [ServiceRequest]: {{site.data.fhir.path}}servicerequest.html
 [slicing]: {{site.data.fhir.path}}profiling.html#slicing
-[SMART App Launch Framework]: {{site.data.fhir.hl7_fhir_uv_smart_app_launch}}
+[SMART App Launch]: {{site.data.fhir.hl7_fhir_uv_smart_app_launch}}
 [SMART App Launch version]: http://hl7.org/fhir/smart-app-launch/history.html
 [SNOMED CT]:  http://snomed.info/sct/731000124108 "SNOMED CT US Edition"
 [Social Determinants of Health (SDOH)]: screening-and-assessments.html
@@ -383,3 +383,5 @@
 [ONC Health IT Certification]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
 [modifier elements]: general-requirements.html#modifier-elements
 [PHDSC Payer Type Committee User's Guide]: https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf
+[resource level scopes]: http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#scopes-for-requesting-clinical-data
+[granular scopes]: http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#finer-grained-resource-constraints-using-search-parameters

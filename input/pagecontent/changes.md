@@ -174,7 +174,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 118. **Resolved - change required:** Remove duplicate of Notes: Quick Start intro bullets [FHIR-40182](https://jira.hl7.org/browse/FHIR-40182) [See Changes Here](#.html)
 119. **Applied:** Add search guidance [FHIR-40183](https://jira.hl7.org/browse/FHIR-40183) [See Changes Here](StructureDefinition-us-core-observation-occupation.html#mandatory-and-must-support-data-elements)
 120. **Applied:** Update profile description to state the profile represents a patient's  'Past or Present Job' [FHIR-40187](https://jira.hl7.org/browse/FHIR-40187) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
-121. **Resolved - change required:** Please give guidance on US Core  on which SMART v2 scopes  [FHIR-40192](https://jira.hl7.org/browse/FHIR-40192) [See Changes Here](#.html)
+121. **Applied:** Give guidance on SMART v2 scopes [FHIR-40192](https://jira.hl7.org/browse/FHIR-40192) [See Changes Here](#.html)
 122. **Applied:** Remove the SFCU extension, and retain the birth-sex extension to meet USCDI Patient Sex. [FHIR-40197](https://jira.hl7.org/browse/FHIR-40197) [See Changes Here](uscdi.html)
 123. **Resolved - change required:** Please correct need for the indication element on MedicationRequest [FHIR-40199](https://jira.hl7.org/browse/FHIR-40199) [See Changes Here](#.html)
 124. **Applied:** Document expectations for Additional USCDI Requirements [FHIR-40200](https://jira.hl7.org/browse/FHIR-40200) [See Changes Here](general-requirements.html#us-core-conformance-artifacts) and [Here](must-support.html)
