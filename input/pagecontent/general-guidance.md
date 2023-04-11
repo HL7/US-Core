@@ -13,7 +13,7 @@ When responding to a query, servers **SHOULD** not use inline [contained] resour
 
 ###  Suppressed Data
 
-In situations where the specific piece of data is hidden due to a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know and **SHOULD** be avoided. For elements with a minimum cardinality = 0 (including elements labeled *Must Support*), the element **SHOULD** be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code `unknown` following the guidance on [Missing Data] in the Conformance Sections.
+In situations where the specific piece of data is hidden due to a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know. However, masking data **SHOULD** be handled based on implemented policies. For elements with a minimum cardinality = 0 (including elements labeled *Must Support*), the element **SHOULD** be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code `unknown` following the guidance on [Missing Data] in the Conformance Sections.
 
 
 
