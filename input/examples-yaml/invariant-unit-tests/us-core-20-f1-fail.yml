@@ -1,0 +1,49 @@
+resourceType: MedicationDispense
+status: completed
+medicationCodeableConcept:
+    coding:
+        - 
+            system: 'http://www.nlm.nih.gov/research/umls/rxnorm'
+            code: '476872'
+            display: Nizatidine 15 MG/ML Oral Solution
+    text: Nizatidine 15 MG/ML Oral Solution
+subject:
+    reference: Patient/example
+    display: Amy Shaw
+performer:
+    - 
+        actor:
+            reference: Practitioner/practitioner-pharmacist
+            display: 'Doug Dispenser, PharmD'
+authorizingPrescription:
+    - 
+        reference: MedicationRequest/medicationrequest-coded-oral-axid
+        display: MedicationRequest Coded Oral Axid Example
+type:
+    coding:
+        - 
+            system: 'http://terminology.hl7.org/CodeSystem/v3-ActCode'
+            code: FFC
+            display: First Fill - Complete
+quantity:
+    value: 480
+    unit: mL
+    system: 'http://unitsofmeasure.org'
+    code: mL
+dosageInstruction:
+    - 
+        text: 10 mL bid
+        timing:
+            repeat:
+                boundsPeriod:
+                    start: '2008-04-05'
+                frequency: 2
+                period: 1
+                periodUnit: d
+        doseAndRate:
+            - 
+                doseQuantity:
+                    value: 10
+                    unit: ml
+                    system: 'http://unitsofmeasure.org'
+                    code: mL

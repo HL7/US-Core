@@ -21,6 +21,13 @@ differential:
   element:
   - id: MedicationDispense
     path: MedicationDispense
+
+    constraint:
+    - key: us-core-20
+      severity: error
+      human: whenHandedOver SHALL be present if the status is "completed"
+      expression: status='completed' implies whenHandedOver.exists()
+
   - id: MedicationDispense.status
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -28,6 +35,8 @@ differential:
     path: MedicationDispense.status
     short: (USCDI) preparation | in-progress | cancelled | on-hold | completed
       | entered-in-error | stopped | declined | unknown
+    condition:
+      - key: us-core-20
     mustSupport: true
   - id: MedicationDispense.medication[x]
     extension:
@@ -140,6 +149,8 @@ differential:
       valueBoolean: true
     path: MedicationDispense.whenHandedOver
     short: (USCDI) When product was given out
+    condition:
+      - us-core-20
     mustSupport: true
   - id: MedicationDispense.dosageInstruction
     extension:

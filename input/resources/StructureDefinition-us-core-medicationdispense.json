@@ -16,7 +16,15 @@
         "element": [
             {
                 "id": "MedicationDispense",
-                "path": "MedicationDispense"
+                "path": "MedicationDispense",
+                "constraint": [
+                    {
+                        "key": "us-core-20",
+                        "severity": "error",
+                        "human": "whenHandedOver SHALL be present if the status is \"completed\"",
+                        "expression": "status='completed' implies whenHandedOver.exists()"
+                    }
+                ]
             },
             {
                 "id": "MedicationDispense.status",
@@ -28,6 +36,11 @@
                 ],
                 "path": "MedicationDispense.status",
                 "short": "(USCDI) preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | declined | unknown",
+                "condition": [
+                    {
+                        "key": "us-core-20"
+                    }
+                ],
                 "mustSupport": true
             },
             {
@@ -238,7 +251,9 @@
                 ],
                 "path": "MedicationDispense.whenHandedOver",
                 "short": "(USCDI) When product was given out",
-                "min": 1,
+                "condition": [
+                    "us-core-20"
+                ],
                 "mustSupport": true
             },
             {
