@@ -13,8 +13,7 @@ The FHIR specification defines five FHIR pharmacy resources concerned with the o
   - [MedicationRequest]\: An order or request for the supply of the medication and the instructions for administration of the medication to a patient, and patient reported medications.
   - [MedicationDispense]\: Provision a medication with regards to dispensing in response to a prescription
 
-The following two resources are introduced here to provide background and define the relationships between the pharmacy resources. **This guide does not use them for accessing a patient's medications**:
-
+<span class="bg-success" markdown="1">The following two medication resources are not profiled by US Core, and systems that support US Core are permitted may use them.</span><!-- new-content -->   They are introduced here to provide background and define the relationships between the pharmacy resources. <span class="bg-success" markdown="1">**However, as documented in the section below, the US Core Guidance for accessing a patient's medications does not use them:**</span><!-- new-content --> 
 
   - [MedicationAdministration]
   - [MedicationStatement]

@@ -49,7 +49,7 @@
                         "key": "us-core-21",
                         "severity": "error",
                         "human": "requester SHALL be present if intent is \"order\"",
-                        "expression": "intent='order' implies requester.exists()"
+                        "expression": "(intent='order' or intent='original-order' or intent='reflex-order'or intent='filler-order' or intent='instance-order') implies requester.exists()"
                     }
                 ],
                 "mustSupport": false,

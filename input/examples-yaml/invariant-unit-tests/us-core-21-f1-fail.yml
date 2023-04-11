@@ -1,0 +1,37 @@
+resourceType: MedicationRequest
+meta:
+    profile:
+        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest'
+identifier:
+    - 
+        use: official
+        system: 'http://acme.org/prescriptions'
+        value: '12345689'
+status: active
+intent: order
+reportedBoolean: true
+medicationCodeableConcept:
+    coding:
+        - 
+            system: 'http://www.nlm.nih.gov/research/umls/rxnorm'
+            code: '1187314'
+            display: Tylenol PM Pill
+    text: Tylenol PM Pill
+subject:
+    reference: Patient/example
+    display: Amy V. Shaw
+encounter:
+    reference: Encounter/example-1
+    display: Office Visit
+authoredOn: '2019-06-24'
+reasonCode:
+    - 
+        coding:
+            - 
+                system: 'http://snomed.info/sct'
+                code: '25064002'
+                display: Headache (finding)
+        text: Headache
+dosageInstruction:
+    - 
+        text: Takes 1-2 tablets once daily at bedtime as needed for restless legs
