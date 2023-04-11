@@ -26,7 +26,7 @@
 [Argonaut Provider Directory]: http://www.fhir.org/guides/argonaut/pd//release1/index.html
 [Argonaut]: http://argonautwiki.hl7.org/index.php?title=Main_Page
 [asserted-date]: SearchParameter-us-core-condition-asserted-date.html
-[assertedDate Extension]: http://hl7.org/fhir/R4/extension-condition-asserteddate.html
+[assertedDate Extension]: {{site.data.fhir.path}}extension-condition-asserteddate.html
 [Audit Logging]: {{site.data.fhir.path}}security.html#audit
 [Audit Logging]: {{site.data.fhir.path}}security.html#audit%20logging
 [AuditEvent]: {{site.data.fhir.path}}auditevent.html
@@ -87,7 +87,7 @@
 [Data Access Framework]: https://oncprojectracking.healthit.gov/wiki/display/TechLabSC/DAF+Home
 [DataAbsentReason Code System]: {{site.data.fhir.path}}codesystem-data-absent-reason.html
 [DataAbsentReason Extension]: {{site.data.fhir.path}}extension-data-absent-reason.html
-[Deletion Safety Checks]: http://hl7.org/fhir/R4/safety.html#conformance
+[Deletion Safety Checks]: {{site.data.fhir.path}}safety.html#conformance
 [description]: SearchParameter-us-core-goal-description.html
 [Device search parameters]: {{site.data.fhir.path}}device.html#search
 [Device]: {{site.data.fhir.path}}device.html
@@ -270,7 +270,7 @@
 [StructureDefinitions]: {{site.data.fhir.path}}structuredefinition.html
 [Suppressed Data]: general-guidance.html#suppressed-data
 [Surgical Operation Note (11504-8)]: https://loinc.org/11504-8.html
-[Terminology Binding Extensible]: {{site.data.fhir.path}}R4/terminologies.html#extensible
+[Terminology Binding Extensible]: {{site.data.fhir.path}}terminologies.html#extensible
 [Terminology]: terminology.html "Terminology Page"
 [timezone extension]: {{site.data.fhir.path}}extension-tz-code.html
 [U.S. Core Data for Interoperability (USCDI) v1]: https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf
@@ -369,11 +369,11 @@
 [US Core Common SDOH Assessments ValueSet]: ValueSet-us-core-common-sdoh-assessments.html
 [Gravity Project]: https://hl7.org/gravity
 [SDOH Clinical Care]: http://hl7.org/fhir/us/sdoh-clinicalcare/
-[technical requirements]: general-requirements.html#required-bindings-when-slicing-by-value-sets
+[technical requirements]: general-requirements.html#required-bindings-when-slicing-by-valuesets
 [SDC Base Questionnaire]: {{site.data.fhir.hl7_fhir_uv_sdc}}/StructureDefinition-sdc-questionnaire.html
 [`Questionnaire.useContext`]: {{site.data.fhir.path}}questionnaire-definitions.html#Questionnaire.useContext
 [US Core Category]: CodeSystem-us-core-category.html
-[Required Bindings When Slicing by Value Sets]: general-requirements.html#required-bindings-when-slicing-by-value-sets
+[Required Bindings When Slicing by Value Sets]: general-requirements.html#required-bindings-when-slicing-by-valuesets
 [The US Core DocumentReferences Type Value Set]: ValueSet-us-core-documentreference-category.html
 [Endpoint]: {{site.data.fhir.path}}endpoint.html
 [US Core Direct email Extension]: StructureDefinition-us-core-direct.html
