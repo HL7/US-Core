@@ -19,7 +19,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a status (e.g., dispensed, not dispensed)
 2. a medication*
 3. a patient
-4. a date for when dispensed to the patient
 
 \* see guidance below
 
@@ -29,8 +28,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. the authorizing prescription
 3. type of dispense (e.g., partially dispensed)
 4. the quantity dispensed
-5. free text dosage instructions (the *SIG*)
-6. the dose and rate
+5. <span class="bg-success" markdown="1">a date for when dispensed to the patient</span><!-- new-content -->
+6. free text dosage instructions (the *SIG*)
+7. the dose and rate
 
 
 **Profile specific implementation guidance:**

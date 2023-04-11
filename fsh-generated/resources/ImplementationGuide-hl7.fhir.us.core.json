@@ -406,7 +406,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-pregnancyintent"
         },
-        "description": "The US Core Pregnancy Intent Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch the \"patient's intent to become pregnant\" associated with a patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Pregnancy Intent Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch the \"patient's intent to become pregnant\" over the next year. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Observation Pregnancy Intent Profile"
       },
