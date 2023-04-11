@@ -2509,6 +2509,12 @@ definition:
     name: AllergyIntolerance Provenance Example
     exampleBoolean: true
   - reference:
+      reference: Observation/at-home-in-vitro-test
+    description: This is an At home in vitro test example for the *US Core Observation
+      Lab Profile*, with a coded result value.
+    name: At Home In Vitro Test Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
       reference: Observation/blood-pressure
     description: This is a blood pressure example for the *Vitalsigns Profile*.
     name: Blood Pressure Example
