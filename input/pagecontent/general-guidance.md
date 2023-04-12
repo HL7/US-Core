@@ -235,7 +235,7 @@ Client algorithm for resolving time offsets and timezones.
 
 ### Read (Fetch) Syntax
 
-Fetching resource interactions are defined by the [FHIR RESTful API]. Guidance is included on the profile pages for conformance and informative purposes:
+<span class="bg-success" markdown="1">Fetching resource interactions are defined by the [FHIR RESTful API]. Guidance is included on the profile pages for conformance and informative purposes:</span><!-- new-content -->
 
  **`GET [base]/[Resource-type]/[id] {parameters}`**
 
@@ -251,7 +251,9 @@ For more information, see the [FHIR RESTful API]
 
 ### Search Syntax
 
+<div class="bg-success" markdown="1">
 Searching resources is defined by the [FHIR RESTful API] and included here for informative purposes. The [US Core FHIR RESTful Search API] Section documents the server and client rules for the RESTful interactions described in this guide.
+</div><!-- new-content -->
 
 All the search interactions in this guide use the `GET` command with the following syntax:
 
