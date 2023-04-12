@@ -62,7 +62,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 6. **Applied:** Duplicated words [FHIR-39637](https://jira.hl7.org/browse/FHIR-39637) [See Changes Here](StructureDefinition-us-core-condition-problems-health-concerns.html#optional-search-parameters)
 7. **Applied:** Missing comma [FHIR-39638](https://jira.hl7.org/browse/FHIR-39638) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
 8. **Appplied:** Clarify that Observation.specimen is a MustSupport [FHIR-39639](https://jira.hl7.org/browse/FHIR-39639) [See Changes Here](StructureDefinition-us-core-observation-lab.html#mandatory-and-must-support-data-elements)
-9.  **Resolved - change required:** Need clarification and example for using SNOMED CT US Edition [FHIR-39640](https://jira.hl7.org/browse/FHIR-39640) [See Changes Here](#.html)
+9.  **Partially Applied:** Clarify and  updates examples to use SNOMED CT US Edition [FHIR-39640](https://jira.hl7.org/browse/FHIR-39640) [See Changes Here](general-guidance.html#snomed-ct-united-states-edition) and [Here](AllergyIntolerance-example.html)
 10. **Applied:** Add NDC codes to the Medication Guidance [FHIR-39641](https://jira.hl7.org/browse/FHIR-39641) [See Changes Here](medication-list.html#options-for-representing-medication)
 11. **Applied:** Extra trailing parenthesis [FHIR-39643](https://jira.hl7.org/browse/FHIR-39643) [See Changes Here](screening-and-assessments.html)
 12. **Applied:** Clinical Judgement Profile does not exist [FHIR-39650](https://jira.hl7.org/browse/FHIR-39650) [See Changes Here](screening-and-assessments.html)
