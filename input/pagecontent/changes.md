@@ -68,7 +68,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 12. **Applied:** Clinical Judgement Profile does not exist [FHIR-39650](https://jira.hl7.org/browse/FHIR-39650) [See Changes Here](screening-and-assessments.html)
 13. **Resolved - change required:** Clarify the difference between Simple Observation and Screening Assessment [FHIR-39652](https://jira.hl7.org/browse/FHIR-39652) [See Changes Here](#.html)
 14. **Resolved - change required:** uscore or us-core [FHIR-39653](https://jira.hl7.org/browse/FHIR-39653) [See Changes Here](#.html)
-15. **Applied:** $docref example 1  [FHIR-39658](https://jira.hl7.org/browse/FHIR-39658) [See Changes Here](StructureDefinition-us-core-documentreference.html#mandatory-operation)
+15. **Applied:** Fix $docref examples [FHIR-39658](https://jira.hl7.org/browse/FHIR-39658) [See Changes Here](StructureDefinition-us-core-documentreference.html#mandatory-operation)
 16. **Applied:** Resolve conflicting guidance in Observation Blood Pressure  [FHIR-39659](https://jira.hl7.org/browse/FHIR-39659) [See Changes Here](StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)
 17. **Resolved - change required:** Language on profile use could be improved [FHIR-39703](https://jira.hl7.org/browse/FHIR-39703) [See Changes Here](#.html)
 18. **Resolved - change required:** Where are the US Core Profile FHIR Restful transactions defined? [FHIR-39704](https://jira.hl7.org/browse/FHIR-39704) [See Changes Here](#.html)
