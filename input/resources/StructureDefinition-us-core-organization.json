@@ -65,7 +65,6 @@
                 "path": "Organization.identifier",
                 "sliceName": "NPI",
                 "short": "National Provider Identifier (NPI)",
-                "max": "1",
                 "patternIdentifier": {
                     "system": "http://hl7.org/fhir/sid/us-npi"
                 },
@@ -95,7 +94,6 @@
                 "path": "Organization.identifier",
                 "sliceName": "CLIA",
                 "short": "Clinical Laboratory Improvement Amendments (CLIA) Number for laboratories",
-                "max": "1",
                 "patternIdentifier": {
                     "system": "urn:oid:2.16.840.1.113883.4.7"
                 },
