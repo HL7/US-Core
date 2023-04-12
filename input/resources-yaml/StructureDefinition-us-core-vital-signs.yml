@@ -11,7 +11,7 @@ description: To promote interoperability and adoption through common implementat
   this profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html)
   and defines *additional* constraints on the Observation resource to represent vital
   signs observations. It identifies which core elements, extensions, vocabularies,
-  and value sets **SHALL** be present in the resource when using this profile. It
+  and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It
   provides the floor for standards development for specific use cases.  This US Core
   profiles that are derived from this profile are listed below.
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons

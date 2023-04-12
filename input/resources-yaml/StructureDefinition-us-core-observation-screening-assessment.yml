@@ -14,7 +14,7 @@ description: The US Core Observation Screening Assessment Profile meets the requ
   the patient's cognitive, functional, or disability status. It can represent a single
   response, multiple responses, and multi-select "check all that apply" type questions.
   It identifies which core elements, extensions, vocabularies, and value sets **SHALL**
-  be present in the resource when using this profile. It provides the floor for standards
+  be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards
   development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource

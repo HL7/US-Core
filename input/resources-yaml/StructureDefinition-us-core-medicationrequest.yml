@@ -18,7 +18,7 @@ description: The US Core Medication Request Profile is based upon the core FHIR 
   prescription or order.  This profile sets minimum expectations for the MedicationRequest
   resource to record, search, and fetch a patient's medication to promote interoperability
   and adoption through common implementation.  It identifies which core elements,
-  extensions, vocabularies, and value sets **SHALL** be present in the resource when
+  extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when
   using this profile.  It provides the floor for standards development for specific
   use cases.
 jurisdiction:
