@@ -40,7 +40,7 @@ entry:
             display: Confirmed
       code:
         coding:
-          - system: 'http://snomed.info/sct/731000124108/version/20220301'
+          - system: 'http://snomed.info/sct'
             code: '762952008'
             display: Peanuts
         text: Peanuts
@@ -53,7 +53,7 @@ entry:
       reaction:
         - manifestation:
             - coding:
-                - system: 'http://snomed.info/sct/731000124108/version/20220301'
+                - system: 'http://snomed.info/sct'
                   code: '247472004'
                   display: Hives
           onset: '2017-06-09'
