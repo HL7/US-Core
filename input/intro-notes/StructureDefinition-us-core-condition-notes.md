@@ -16,7 +16,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient ([how to search by reference])
 
-1. {:.new-content}**SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`category`](SearchParameter-us-core-condition-category.html)** search parameters:
+1. **SHALL** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`category`](SearchParameter-us-core-condition-category.html)** search parameters:
 
     `GET [base]/Condition?patient={Type/}[id]&category={system|}[code]`
 
@@ -42,6 +42,16 @@ The following search parameter combinations **SHOULD** be supported:
       1. GET [base/Condition?patient=1032702&amp;clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical\|active,http://terminology.hl7.org/CodeSystem/condition-clinical\|recurrance,http://terminology.hl7.org/CodeSystem/condition-clinical\|remission
 
     *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and all &#34;active&#34; statuses (active,relapse,remission). This will *exclude* diagnoses and health concerns without a clinicalStatus specified. ([how to search by reference] and [how to search by token])
+
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`category`](SearchParameter-us-core-condition-category.html)** and **[`clinical-status`](SearchParameter-us-core-condition-clinical-status.html)** search parameters:
+
+    `GET [base]/Condition?patient={Type/}[id]&category={system|}[code]&clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical|active,http://terminology.hl7.org/CodeSystem/condition-clinical|recurrance,http://terminology.hl7.org/CodeSystem/condition-clinical|remission`
+
+    Example:
+    
+      1. GET [base]/Condition?patient=1032702&amp;category=http://terminology.hl7.org/CodeSystem/condition-category\|problem-list-item&amp;clinical-status=http://terminology.hl7.org/CodeSystem/condition-clinical\|active,http://terminology.hl7.org/CodeSystem/condition-clinical\|recurrance,http://terminology.hl7.org/CodeSystem/condition-clinical\|remission
+
+    *Implementation Notes:* Fetches a bundle of all Condition resources for the specified patient and category for all &#34;active&#34; statuses (active,relapse,remission). This will *exclude* diagnoses and health concerns without a clinicalStatus specified. ([how to search by reference] and [how to search by token])
 
 1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-condition-patient.html)** and **[`category`](SearchParameter-us-core-condition-category.html)** and **[`encounter`](SearchParameter-us-core-condition-encounter.html)** search parameters:
 
