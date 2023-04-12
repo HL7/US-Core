@@ -116,7 +116,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 60. **Resolved - change required:** Adding some clarification/explanation [FHIR-39923](https://jira.hl7.org/browse/FHIR-39923) [See Changes Here](#.html)
 61. **Applied:** Define the term Screening and Assessment [FHIR-39938](https://jira.hl7.org/browse/FHIR-39938) See Changes Here](screening-and-assessments.html#introduction)
 62. **Applied:** Clarify that Simple Observation Profile captures any sort of “simple” observations [FHIR-39940](https://jira.hl7.org/browse/FHIR-39940) [See Changes Here](StructureDefinition-us-core-simple-observation.html)
-63. **Resolved - change required:** Correct the description of the Simple Observation Profile [FHIR-39942](https://jira.hl7.org/browse/FHIR-39942) [See Changes Here](#.html)
+63. **Applied:** Correct the description of the Simple Observation Profile [FHIR-39942](https://jira.hl7.org/browse/FHIR-39942) [See Changes Here](screening-and-assessments.html#clinical-judgments)
 64. **Applied:** Provide further guidance on use of US Core vs other domain specific IGs [FHIR-39943](https://jira.hl7.org/browse/FHIR-39943) [See Changes Here](screening-and-assessments.html#introduction)
 65. **Applied:** Reframe Screening and Assessments Page [FHIR-39944](https://jira.hl7.org/browse/FHIR-39944) [See Changes Here](screening-and-assessments.html#introduction)
 66. **Applied:** Update the Screening and Assessment Activities diagram [FHIR-39945](https://jira.hl7.org/browse/FHIR-39945) [See Changes Here](screening-and-assessments.html#related-activities-in-clinical-care)
