@@ -199,7 +199,7 @@
 [Missing Data]: general-requirements.html#missing-data
 [modifier]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.modifier
 [modifiers]: {{site.data.fhir.path}}search.html#modifiers
-[Multi-language support for Narratives]: {{site.data.fhir.path}}narrative.html#lang
+[Multi-language support for Narratives]: {{site.data.fhir.path}}languages.html
 [multipleAnd]: {{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleAnd
 [multipleOr]:{{site.data.fhir.path}}searchparameter-definitions.html#SearchParameter.multipleOr
 [Must Support]: must-support.html
