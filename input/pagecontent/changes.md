@@ -171,7 +171,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 115. **Applied:** Add guidance to clarify multiple codings can be used [FHIR-40178](https://jira.hl7.org/browse/FHIR-40178) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
 116. **Applied:** Add _include guidance for Specimen [FHIR-40180](https://jira.hl7.org/browse/FHIR-40180) [See Changes Here](StructureDefinition-us-core-specimen.html#notes)
 117. **Applied:** Update Industry NAICS Detail (ODH) to extensible. [FHIR-40181](https://jira.hl7.org/browse/FHIR-40181) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
-118. **Resolved - change required:** Remove duplicate of Notes: Quick Start intro bullets [FHIR-40182](https://jira.hl7.org/browse/FHIR-40182) [See Changes Here](#.html)
+118. **Applied:** Remove duplicate of Notes: Quick Start intro bullets [FHIR-40182](https://jira.hl7.org/browse/FHIR-40182) [See Changes Here](StructureDefinition-us-core-observation-occupation.html#profile)
 119. **Applied:** Add search guidance [FHIR-40183](https://jira.hl7.org/browse/FHIR-40183) [See Changes Here](StructureDefinition-us-core-observation-occupation.html#mandatory-and-must-support-data-elements)
 120. **Applied:** Update profile description to state the profile represents a patient's  'Past or Present Job' [FHIR-40187](https://jira.hl7.org/browse/FHIR-40187) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
 121. **Applied:** Give guidance on SMART v2 scopes [FHIR-40192](https://jira.hl7.org/browse/FHIR-40192) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#notes) and [Here](future-of-US-core.html#us-core-smart-scopes)
