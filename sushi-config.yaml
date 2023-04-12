@@ -88,7 +88,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   excludejson: 'false'
   excludettl: 'true'
   excludemap: 'true'
-  suppressed-ids: '$examples'
+  suppressed-ids: 'DocumentReference/discharge-summary'
   tabbed-snapshots: 'false'
   # generate: #what does this do - todo: remove and see4
   #   - xml
@@ -96,6 +96,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   no-narrative:
     - 'Patient/example-targeted-provenance'
     - 'Provenance/example-targeted-provenance'
+    - 'DocumentReference/discharge-summary'
+    - 'Bundle/docref-example-1'
+    - 'Bundle/docref-example-2'
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
