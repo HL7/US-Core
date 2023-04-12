@@ -22,19 +22,54 @@ In situations where the specific piece of data is hidden due to a security or pr
 <div class="bg-success" markdown="1">
 [SNOMED CT] (Systematized Nomenclature of Medicine -- Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information. US Core uses the US Edition of SNOMED CT, a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. It is used extensively in US CORE for various clinical concepts, including problems, procedures, allergies, and laboratory results. When using SNOMED codes in US Core profiles, implementers **MAY** use the default system URI which refers to an unspecified edition/version as shown in option one below. However, for terminology servers to be able to validate US Edition-only codes, implementers  **SHOULD**  provide the accompanying system URI to describe both the edition and the version of the edition as shown in option three. At a minimum, the URI **SHOULD** contain the edition of the SNOMED CT distribution as shown in option two:
 
-#### SNOMED CT system URI Options
+#### SNOMED CT Edition and Version Options
 
-1. The default URI which refers to an unspecified edition/version: 
-
-   `http://snomed.info/sct` 
-
-2. The unspecified version of US Edition URI:
+1. Using only the system `http://snomed.info/sct` which refers to an unspecified edition/version. For example:
    
-   `http://snomed.info/sct/731000124108`
+    ~~~
+    "code": {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct,
+                    "code": "763875007",
+                    "display": "Product containing sulfonamide (product)"
+                }
+            ],
+            "text": "sulfonamide antibacterial"
+        },
+    ~~~
 
-3. A particular version of the US Edition URI:
+2. Using the system  *plus* the unspecified version US Edition URI `http://snomed.info/sct/731000124108`. For example:
 
-	 `http://snomed.info/sct/731000124108/version/[YYYYMMDD]`
+    ~~~
+    "code": {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "version": "http://snomed.info/sct/731000124108",
+                    "code": "763875007",
+                    "display": "Product containing sulfonamide (product)"
+                }
+            ],
+            "text": "sulfonamide antibacterial"
+        },
+    ~~~
+
+3. Using the system  *plus* a specific version US Edition URI `http://snomed.info/sct/731000124108/version/[YYYYMMDD]`. For example:
+
+      ~~~
+      "code": {
+              "coding": [
+                  {
+                      "system": "http://snomed.info/sct",
+                      "version": "http://snomed.info/sct/731000124108/version/20220301",
+                      "code": "763875007",
+                      "display": "Product containing sulfonamide (product)"
+                  }
+              ],
+              "text": "sulfonamide antibacterial"
+          },
+      ~~~
 
   For more details, see [Using SNOMED CT with FHIR]. 
 </div><!-- new-content -->
