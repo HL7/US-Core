@@ -45,7 +45,7 @@ For ONC's USCDI requirements, each ServiceRequest must support the following add
 {% include obs_cat_guidance.md category="sdoh, functional-status, or social history" %}
 <div class="bg-success" markdown="1">
 - See the [Screening and Assessments] guidance page for how this profile can represent "clinical judgments".
-  - \*Observations that are formally part of an assessment tool or survey**SHOULD**use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools and **SHOULD** reference them using `Observation.derivedFrom`.
+  - \*Observations that are formally part of an assessment tool or survey**SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools and **SHOULD** reference them using `Observation.derivedFrom`.
 - As documented [here](general-guidance.html#referencing-us-core-profiles), when using `ServiceRequest.reasonReference` to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
 </div><!-- new-content -->
 
