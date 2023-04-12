@@ -6,7 +6,8 @@
     "title": "US Core ServiceRequest Profile",
     "status": "active",
     "date": "2022-10-07",
-    "description": "This profile sets minimum expectations for recording, searching, and fetching the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.fhirVersion: 4.0.1",
+    "description": "This profile sets minimum expectations for recording, searching, and fetching the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
+    "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
     "type": "ServiceRequest",
@@ -80,7 +81,7 @@
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
-                    "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)",
+                    "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-value-sets)",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-servicerequest-category"
                 }
             },

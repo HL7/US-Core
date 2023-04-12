@@ -82,8 +82,10 @@ A server that certifies to the [21st Century Cures Act for accessing patient dat
 
 - **SHALL** specify the full capability details from the US Core CapabilityStatement it claims to implement.
     - Declare support for the US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
+      - the US Core Profile's official or "canonical" URL is located on each US Core Profile page
     - Declare support for the US Core Profile's FHIR RESTful transactions
-            - the US Core Profile's official or "canonical" URL is located on each US Core Profile page
+      - <span class="bg-success" markdown="1">The restful transactions for the US Core Profiles are documented in the "Quick Start" section on every profile page.</span><!-- new-content -->
+ 
 
     Example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:
 
