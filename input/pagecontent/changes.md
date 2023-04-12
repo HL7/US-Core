@@ -70,7 +70,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 14. **Resolved - change required:** uscore or us-core [FHIR-39653](https://jira.hl7.org/browse/FHIR-39653) [See Changes Here](#.html)
 15. **Applied:** Fix $docref examples [FHIR-39658](https://jira.hl7.org/browse/FHIR-39658) [See Changes Here](StructureDefinition-us-core-documentreference.html#mandatory-operation)
 16. **Applied:** Resolve conflicting guidance in Observation Blood Pressure  [FHIR-39659](https://jira.hl7.org/browse/FHIR-39659) [See Changes Here](StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)
-17. **Applied:** Language on profile use could be improved [FHIR-39703](https://jira.hl7.org/browse/FHIR-39703) [See Changes Here](#.html)
+17. **Applied:** Clarify how profiles are defined [FHIR-39703](https://jira.hl7.org/browse/FHIR-39703) [See Changes Here](general-requirements.html#us-core-conformance-artifacts) and  [Here](index.html#introduction) and [Here](StructureDefinition-us-core-allergyintolerance.html)
 18. **Resolved - change required:** Where are the US Core Profile FHIR Restful transactions defined? [FHIR-39704](https://jira.hl7.org/browse/FHIR-39704) [See Changes Here](#.html)
 19. **Applied:** Use ValueSet and not value set when a FHIR ValueSet is intended [FHIR-39705](https://jira.hl7.org/browse/FHIR-39705) [See Changes Here](general-requirements.html)
 20. **Resolved - change required:** Use uppercase Must Support and not lowercase must support [FHIR-39706](https://jira.hl7.org/browse/FHIR-39706) [See Changes Here](#.html)

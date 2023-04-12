@@ -9,9 +9,7 @@ experimental: false
 date: 2022-04-20
 description: To promote interoperability and adoption through common implementation,
   this profile sets minimum expectations for searching and fetching patient documents
-  including Clinical Notes using the DocumentReference resource. It identifies the
-  mandatory core elements, extensions, vocabularies and value sets which **SHALL**
-  be present in the DocumentReference resource when using this profile. It provides
+  including Clinical Notes using the DocumentReference resource. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides
   the floor for standards development for specific use cases. Prior to reviewing this
   profile, implementers are encouraged to read the Clinical Notes Guidance to understand
   the overlap of US Core DocumentReference Profile and US Core DiagnosticReport Profile

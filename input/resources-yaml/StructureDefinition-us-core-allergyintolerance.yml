@@ -8,9 +8,7 @@ experimental: false
 date: 2022-04-20
 description: To promote interoperability and adoption through common implementation,
   this profile sets minimum expectations for the AllergyIntolerance resource to record,
-  search, and fetch allergies/adverse reactions associated with a patient pm2.  It
-  identifies the mandatory core elements, extensions, vocabularies and value sets
-  which **SHALL** be present in the AllergyIntolerance resource when using this profile.
+  search, and fetch allergies/adverse reactions associated with a patient.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile.
   It provides the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource

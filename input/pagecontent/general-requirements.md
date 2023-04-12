@@ -6,7 +6,7 @@ This page documents requirements common to all US Core actors used in this guide
 
 ### US Core Conformance Artifacts:
 
-The [Profiles and Extensions] page list the US Core Profiles and have been defined for this implementation guide.  US Core Profile [StructureDefinitions] defines the *minimum* elements, extensions, vocabularies, and ValueSets that **SHALL** be present when using the profile. Each US Core Profile page has a "Quick Start" guide to the supported FHIR RESTfUL transactions for each profile
+The [Profiles and Extensions] page list the US Core Profiles and have been defined for this implementation guide.  US Core Profile [StructureDefinitions] defines the *minimum* elements, extensions, vocabularies, and ValueSets that **SHALL** be present <span class="bg-success" markdown="1">and constrains the way the elements are used when using the profile. </span><!-- new-content -->Each US Core Profile page has a "Quick Start" guide to the supported FHIR RESTfUL transactions for each profile
 
 <div class="bg-success" markdown="1">
 The Profile elements consist of *Mandatory*, *Must Support*, and *USCDI Requirements* elements.  *Mandatory* elements have a minimum cardinality of 1 (min=1). US Core defines the server and client expectations for processing profile elements and sub-elements it labels as  *Must Support*.  All *Must Support* FHIR elements for US Core Profile representing  [U.S. Core Data for Interoperability (USCDI) v3] Data Classes are *USCDI Requirements* elements. Additional elements are designated *USCDI Requirements* only for [ONC Health IT Certification]. The [Must Support] page defines the server and client expectations for processing these elements and illustrates how they are displayed and documented.
