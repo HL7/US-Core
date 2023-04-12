@@ -306,6 +306,7 @@
 [US Core DocumentReferences Category Value Set]: ValueSet-us-core-documentreference-category.html
 [US Core Encounter Profile]: StructureDefinition-us-core-encounter.html
 [US Core Extension Questionnaire URI]: StructureDefinition-us-core-extension-questionnaire-uri.html
+[US Core FHIR RESTful Search API]: general-requirements.html#fhir-restful-search-api-requirements
 [US Core Gender Identity Extension]: StructureDefinition-us-core-genderIdentity.html
 [US Core Goal Profile]: StructureDefinition-us-core-goal.html
 [US Core Head Circumference Profile]: StructureDefinition-us-core-head-circumference.html
