@@ -47,7 +47,7 @@ There is no single best practice for representing a scanned or narrative-only re
 
 {% include img-portrait.html img="DiagnosticReport_DocumentReference_Resource_Overlap.png" caption="Figure 1: DiagnosticReport and DocumentReference Report Overlap" %}
 
-To enable consistent access to scanned clinical reports, the <span class="bg-success" markdown="1">FHIR Server</span><!-- new-content --> **SHALL** expose these overlapping scanned or narrative-only reports through *both* DiagnosticReport and DocumentReference by representing the same attachment URL using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify duplicate data.
+To enable consistent access to scanned DiagnosticReport clinical reports, the <span class="bg-success" markdown="1">FHIR Server</span><!-- new-content --> **SHALL** expose these overlapping scanned or narrative-only reports through *both* DiagnosticReport and DocumentReference by representing the same attachment URL using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify duplicate data.
 
 * DocumentReference.content.attachment.url
 * DiagnosticReport.presentedForm.url
