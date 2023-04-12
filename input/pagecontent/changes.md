@@ -139,7 +139,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 83. **Applied:** Extra ) in Screening and Assessments [FHIR-40041](https://jira.hl7.org/browse/FHIR-40041) [See Changes Here](screening-and-assessments.html)
 84. **Applied:** Fix the link. [FHIR-40043](https://jira.hl7.org/browse/FHIR-40043) [See Changes Here](screening-and-assessments.html#category-codes)
 85. **Resolved - change required:** Pregnancy status codes missing Possible pregnancy [FHIR-40045](https://jira.hl7.org/browse/FHIR-40045) [See Changes Here](#.html)
-86. **Resolved - change required:** RelatedPerson profile text contains Observation content [FHIR-40048](https://jira.hl7.org/browse/FHIR-40048) [See Changes Here](#.html)
+86. **Applied:** RelatedPerson profile text contains Observation content [FHIR-40048](https://jira.hl7.org/browse/FHIR-40048) [See Changes Here](StructureDefinition-us-core-relatedperson.html)
 87. **Resolved - change required:** 2 typos in history page [FHIR-40069](https://jira.hl7.org/browse/FHIR-40069) [See Changes Here](#.html)
 88. **Resolved - change required:** Reword a Quick Start example [FHIR-40072](https://jira.hl7.org/browse/FHIR-40072) [See Changes Here](#.html)
 89. **Applied:** Consider alternative answer choices for pregnancy intect codes [FHIR-40084](https://jira.hl7.org/browse/FHIR-40084) [See Changes Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-us-core-pregnancy-intent.html)
