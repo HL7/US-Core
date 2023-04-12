@@ -152,7 +152,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 111. **Resolved - change required:** Add to the code systems chart  [FHIR-40124](https://jira.hl7.org/browse/FHIR-40124) [See Changes Here](#.html)
 112. **Applied:** Make Specimen.subject must support [FHIR-40136](https://jira.hl7.org/browse/FHIR-40136) [See Changes Here](StructureDefinition-us-core-specimen.html)
 113. **Applied:** Clarify use of unknown for occupation. [FHIR-40137](https://jira.hl7.org/browse/FHIR-40137) [See Changes Here](StructureDefinition-us-core-observation-occupation.html), [Here](Observation-observation-occupation-industry-unknown.html) and [Here](Observation-observation-occupation-unknown.html)
-114. **Resolved - change required:** Clarify applicability of DiagnosticReport in USCDI Mapping [FHIR-40138](https://jira.hl7.org/browse/FHIR-40138) [See Changes Here](#.html)
+114. **Applied:** Clarify applicability of DiagnosticReport in USCDI Mapping [FHIR-40138](https://jira.hl7.org/browse/FHIR-40138) [See Changes Here](clinical-notes.html)
 115. **Applied:** Remove the word ""status"" from introductory text [FHIR-40149](https://jira.hl7.org/browse/FHIR-40149) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
 116. **Applied:** Incorrect link for ""record or update"" and additional examples [FHIR-40151](https://jira.hl7.org/browse/FHIR-40151) [See Changes Here](future-of-US-core.html#future-candidate-requirements-under-consideration)
 117. **Applied:** Incorrect Resource noted in the introductory paragraph [FHIR-40155](https://jira.hl7.org/browse/FHIR-40155) [See Changes Here](StructureDefinition-us-core-coverage.html)
