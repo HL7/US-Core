@@ -77,7 +77,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 21. **Applied:** Document Must Support and Modifier Elements [FHIR-39707](https://jira.hl7.org/browse/FHIR-39707) [See Changes Here](general-requirements.html#modifier-elements)
 22. **Applied:** Common format for Resources and Resource fields [FHIR-39708](https://jira.hl7.org/browse/FHIR-39708) [See Changes Here](screening-and-assessments.html)
 23. **Applied:** Use of mandatory text [FHIR-39709](https://jira.hl7.org/browse/FHIR-39709)
-24. **Applied:** Add reference to FHIR section on language support [FHIR-39710](https://jira.hl7.org/browse/FHIR-39710) [See Changes Here](general-guidance.html)
+24. **Applied:** Add reference to FHIR section on language support [FHIR-39710](https://jira.hl7.org/browse/FHIR-39710) [See Changes Here](general-guidance.html#language-support)
 25. **Resolved - change required:** Refer to FHIR specification as base definition for RESTful operations [FHIR-39711](https://jira.hl7.org/browse/FHIR-39711) [See Changes Here](#.html)
 26. **Resolved - change required:** POST based searches [FHIR-39712](https://jira.hl7.org/browse/FHIR-39712) [See Changes Here](#.html)
 27. **Applied:** Clarify compartment based search [FHIR-39713](https://jira.hl7.org/browse/FHIR-39713) [See Changes Here](general-guidance.html#compartment-based-search)
