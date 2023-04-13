@@ -159,7 +159,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 118. **Applied:** Define Job[FHIR-40158](https://jira.hl7.org/browse/FHIR-40158) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
 119. **Applied:** Member or subscriber id is must have but the element cardinality is 0..* [FHIR-40160](https://jira.hl7.org/browse/FHIR-40160) [See Changes Here](StructureDefinition-us-core-coverage.html)
 120. **Applied:** Modify comment regarding Screening and Assessments [FHIR-40161](https://jira.hl7.org/browse/FHIR-40161) [See Changes Here](#.html)
-121. **Resolved - change required:** 5.	Modify Examples/ValueSet for Language Codes [FHIR-40165](https://jira.hl7.org/browse/FHIR-40165) [See Changes Here](#.html)
+121. **Applied:** Modify Examples/ValueSet for Language Codes [FHIR-40165](https://jira.hl7.org/browse/FHIR-40165) [See Changes Here](ValueSet-simple-language.html)
 122. **Applied:** Add Observation.focus to accommodate information about a related person [FHIR-40166](https://jira.hl7.org/browse/FHIR-40166) [See Changes Here](#.html)
 123. **Applied:** Add implementer guidance [FHIR-40170](https://jira.hl7.org/browse/FHIR-40170) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
 124. **Applied:** Add guidance for current job [FHIR-40172](https://jira.hl7.org/browse/FHIR-40172) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
