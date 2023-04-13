@@ -4,7 +4,9 @@
 
 #### Mandatory Search Parameters:
 
-1. {:.new-content}**SHALL** support fetching a Patient using the **[`_id`](SearchParameter-us-core-patient-id.html)** search parameter:
+The following search parameters and search parameter combinations SHALL be supported:
+
+1. **SHALL** support both read Patient by `id` **AND** Patient search using the **[`_id`](SearchParameter-us-core-patient-id.html)** search parameter:
 
     `GET [base]/Patient/[id]` or `GET [base]/Patient?_id=[id]`
 
@@ -89,6 +91,7 @@ The following search parameter combinations **SHOULD** be supported:
       1. GET [base]/Patient?family=Shaw&amp;gender=female
 
     *Implementation Notes:* Fetches a bundle of all Patient resources matching the specified family and gender ([how to search by string] and [how to search by token])
+
 
 
 

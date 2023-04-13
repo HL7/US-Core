@@ -6,7 +6,7 @@
 
 The following search parameters and search parameter combinations SHALL be supported:
 
-1. {:.new-content}**SHALL** support fetching a Specimen using the **[`_id`](SearchParameter-us-core-specimen-id.html)** search parameter:
+1. {:.new-content}**SHALL** support both read Specimen by `id` **AND** Specimen search using the **[`_id`](SearchParameter-us-core-specimen-id.html)** search parameter:
 
     `GET [base]/Specimen/[id]` or `GET [base]/Specimen?_id=[id]`
 
@@ -21,7 +21,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
 The following search parameter combinations **SHOULD** be supported:
 
-1. {:.new-content}**SHOULD** support searching using the **[`patient`](SearchParameter-us-core-specimen-patient.html)** search parameter:
+1. {:.new-content}**SHOULD** support searching for all specimens for a patient using the **[`patient`](SearchParameter-us-core-specimen-patient.html)** search parameter:
 
      `GET [base]/Specimen?patient={Type/}[id]`
 

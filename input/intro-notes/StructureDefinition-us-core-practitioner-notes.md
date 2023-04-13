@@ -4,6 +4,8 @@
 
 #### Mandatory Search Parameters:
 
+The following search parameters and search parameter combinations SHALL be supported:
+
 1. **SHALL** support searching for a practitioner by a string match of any part of name using the **[`name`](SearchParameter-us-core-practitioner-name.html)** search parameter:
 
     `GET [base]/Practitioner?name=[string]`
@@ -29,7 +31,7 @@
 
 The following search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support searching using the **[`_id`](SearchParameter-us-core-practitioner-id.html)** search parameter:
+1. **SHOULD** support both read Practitioner by `id` **AND** Practitioner search using the **[`_id`](SearchParameter-us-core-practitioner-id.html)** search parameter:
 
     `GET [base]/Practitioner/[id]` or `GET [base]/Practitioner?_id=[id]`
 
@@ -39,6 +41,7 @@ The following search parameter combinations **SHOULD** be supported:
       1. GET [base]/Practitioner?_id=practitioner-1
 
       *Implementation Notes:*  ([how to search by the logical id] of the resource)
+
 
 
 

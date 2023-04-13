@@ -6,7 +6,7 @@
 
 The following search parameters and search parameter combinations SHALL be supported:
 
-1. **SHALL** support fetching a QuestionnaireResponse using the **[`_id`](SearchParameter-us-core-questionnaireresponse-id.html)** search parameter:
+1. **SHALL** support both read QuestionnaireResponse by `id` **AND** QuestionnaireResponse search using the **[`_id`](SearchParameter-us-core-questionnaireresponse-id.html)** search parameter:
 
     `GET [base]/QuestionnaireResponse/[id]` or `GET [base]/QuestionnaireResponse?_id=[id]`
 

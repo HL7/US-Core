@@ -4,7 +4,9 @@
 
 #### Mandatory Search Parameters:
 
-1. **SHALL** support fetching an encounter using the **[`_id`](SearchParameter-us-core-encounter-id.html)** search parameter:
+The following search parameters and search parameter combinations SHALL be supported:
+
+1. **SHALL** support both read Encounter by `id` **AND** Encounter search using the **[`_id`](SearchParameter-us-core-encounter-id.html)** search parameter:
 
     `GET [base]/Encounter/[id]` or `GET [base]/Encounter?_id=[id]`
 
@@ -42,7 +44,7 @@
 
 The following search parameter combinations **SHOULD** be supported:
 
-1. **SHOULD** support searching using the **[`identifier`](SearchParameter-us-core-encounter-identifier.html)** search parameter:
+1. **SHOULD** support searching for an encounter by an identifier using the **[`identifier`](SearchParameter-us-core-encounter-identifier.html)** search parameter:
 
      `GET [base]/Encounter?identifier={system|}[code]`
 
@@ -101,6 +103,7 @@ The following search parameter combinations **SHOULD** be supported:
       1. GET [base]/Encounter?patient=example1&amp;discharge-disposition=01
 
     *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and discharge-disposition ([how to search by reference] and [how to search by token])
+
 
 
 
