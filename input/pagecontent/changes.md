@@ -37,7 +37,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 4. **Resolved - change required:** RelatedPerson relationshiptype should have binding to FHIR value set RelatedPerson-relationshiptype [FHIR-34755](https://jira.hl7.org/browse/FHIR-34755) [See Changes Here](#.html)
 5. **Resolved - change required:** Remove html entities from examples [FHIR-37474](https://jira.hl7.org/browse/FHIR-37474) [See Changes Here](#.html)
 6. **Resolved - change required:** Obervation Survey derivedFrom must support [FHIR-37794](https://jira.hl7.org/browse/FHIR-37794) [See Changes Here](#.html)
-7. **Resolved - change required:** Change Condition patient + category search to SHALL support [FHIR-37918](https://jira.hl7.org/browse/FHIR-37918) [See Changes Here](#.html)
+7. **Applied:** Change Condition patient + category search to SHALL support [FHIR-37918](https://jira.hl7.org/browse/FHIR-37918) [See Changes Here](StructureDefinition-us-core-condition-encounter-diagnosis.html#mandatory-search-parameters)
 8. **Applied:** Diagnostic Report Laboratory Codes LOINC CLASSTYPE value should be ""1"" [FHIR-37933](https://jira.hl7.org/browse/FHIR-37933) [See Changes Here](ValueSet-us-core-laboratory-test-codes.html)
 9.  **Resolved - change required:** Additional guidance for accessing imaging studies [FHIR-38808](https://jira.hl7.org/browse/FHIR-38808) [See Changes Here](StructureDefinition-us-core-diagnosticreport-note.html#mandatory-and-must-support-data-elements)
 10. **Applied:** Allow multiple NPIs for Organizations and Practitioners [FHIR-39382](https://jira.hl7.org/browse/FHIR-39382) [See Changes Here](StructureDefinition-us-core-practitioner.html#profile)

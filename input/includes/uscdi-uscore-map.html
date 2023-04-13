@@ -70,17 +70,17 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Substance (Medication)</td>
-        <td></td>
+        <td> </td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Substance (Drug Class)</td>
-        <td></td>
+        <td> </td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Reaction</td>
-        <td></td>
+        <td> </td>
         <td></td>
       </tr>
  
@@ -97,19 +97,19 @@
     <thead>
       <tr>
         <th class="col-sm-4">Assessment and Plan of Treatment</th>
-        <th class="col-sm-4"></th>
+        <th class="col-sm-4"><a href="StructureDefinition-us-core-careplan.html" target="_blank">US Core CarePlan Profile</a><br /><a href="StructureDefinition-us-core-simple-observation.html" target="_blank">US Core Simple Observation Profile</a><br /><a href="StructureDefinition-us-core-observation-screening-assessment.html" target="_blank">US Core Observation Screening Assessment Profile</a><br /><a href="StructureDefinition-us-core-questionnaireresponse.html" target="_blank">US Core QuestionnaireResponse Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Assessment and Plan of Treatment</td>
-        <td><a href="StructureDefinition-us-core-careplan.html" target="_blank">US Core CarePlan Profile</a></td>
+        <td>US Core CarePlan Profile </td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;SDOH Assessment</td>
-        <td><a href="StructureDefinition-us-core-observation-screening-assessment.html" target="_blank">US Core Observation Screening Assessment Profile</a><br /><a href="StructureDefinition-us-core-simple-observation.html" target="_blank">US Core Simple Observation Profile</a></td>
+        <td>US Core Simple Observation Profile <br /> US Core Observation Screening Assessment Profile <br /> US Core QuestionnaireResponse Profile Observation</td>
         <td><a href="screening-and-assessments.html" target="_blank">See Assessments Guidance</a></td>
       </tr>
  
@@ -133,27 +133,27 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Name</td>
-        <td></td>
+        <td> Practitioner.name, Patient.name, RelatedPerson.name</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Identifier</td>
-        <td></td>
+        <td> Practitioner.identifier, Patient.identifier</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Location</td>
-        <td></td>
+        <td> PractitionerRole.address, Practitioner.address, Patient.address, RelatedPerson.address</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Telecom</td>
-        <td></td>
+        <td> PractitionerRole.telecom, Practitioner.telecom, Patient.telecom, RelatedPerson.telecom</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Role</td>
-        <td></td>
+        <td> CareTeam.participant.role</td>
         <td></td>
       </tr>
  
@@ -177,42 +177,42 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Consultation Note</td>
-        <td></td>
+        <td> DocumentReference</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Discharge Summary Note</td>
-        <td></td>
+        <td> DocumentReference</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;History &amp; Physical</td>
-        <td></td>
+        <td> DocumentReference</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Imaging Narrative</td>
-        <td></td>
+        <td> DocumentReference,DiagnosticReport</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Laboratory Report Narrative</td>
-        <td></td>
+        <td> DocumentReference,DiagnosticReport</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Pathology Report Narrative</td>
-        <td></td>
+        <td> DocumentReference,DiagnosticReport</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Procedure Note</td>
-        <td></td>
+        <td> DocumentReference,DiagnosticReport</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Progress Note</td>
-        <td></td>
+        <td> DocumentReference</td>
         <td><a href="clinical-notes.html" target="_blank">See Clinical Notes Guidance</a></td>
       </tr>
  
@@ -236,12 +236,12 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Clinical Test</td>
-        <td></td>
+        <td> Observation, DiagnosticReport</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Clinical Test Result/Report</td>
-        <td></td>
+        <td> Observation, DiagnosticReport</td>
         <td></td>
       </tr>
  
@@ -265,12 +265,12 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Diagnostic Imaging Test</td>
-        <td></td>
+        <td> Observation, DiagnosticReport</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Diagnostic Imaging Result/Report</td>
-        <td></td>
+        <td> Observation, DiagnosticReport</td>
         <td></td>
       </tr>
  
@@ -294,27 +294,27 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Type</td>
-        <td></td>
+        <td> Encounter.type</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Diagnosis</td>
-        <td><a href="StructureDefinition-us-core-condition-encounter-diagnosis.html" target="_blank">US Core Condition Encounter Diagnosis Profile</a></td>
+        <td>US Core Condition Encounter Diagnosis Profile Condition.code</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Time</td>
-        <td></td>
+        <td> Encounter.period</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Location</td>
-        <td></td>
+        <td> Encounter.location.location</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Disposition</td>
-        <td></td>
+        <td> Encounter.hospitalization.dischargeDisposition</td>
         <td></td>
       </tr>
  
@@ -331,19 +331,19 @@
     <thead>
       <tr>
         <th class="col-sm-4">Goals</th>
-        <th class="col-sm-4"></th>
+        <th class="col-sm-4"><a href="StructureDefinition-us-core-goal.html" target="_blank">US Core Goal Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Patient Goals</td>
-        <td><a href="StructureDefinition-us-core-goal.html" target="_blank">US Core Goal Profile</a></td>
+        <td> Goal</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;SDOH Goals</td>
-        <td></td>
+        <td> Goal</td>
         <td><a href="screening-and-assessments.html" target="_blank">See Assessments Guidance</a></td>
       </tr>
  
@@ -367,37 +367,37 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Coverage Status</td>
-        <td></td>
+        <td> Coverage.status + Coverage.period</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Coverage Type</td>
-        <td></td>
+        <td> Coverage.type</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Relationship to Subscriber</td>
-        <td></td>
+        <td> Coverage,relationship</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Member Identifier</td>
-        <td></td>
+        <td> Coverage.identifier</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Subscriber Identifier</td>
-        <td></td>
+        <td> Coverage.subscriberId</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Group Number</td>
-        <td></td>
+        <td> Coverage.class</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Payer Identifier</td>
-        <td></td>
+        <td> Coverage.payer</td>
         <td></td>
       </tr>
  
@@ -414,39 +414,39 @@
     <thead>
       <tr>
         <th class="col-sm-4">Health Status/Assessments</th>
-        <th class="col-sm-4"></th>
+        <th class="col-sm-4"><a href="StructureDefinition-us-core-simple-observation.html" target="_blank">US Core Simple Observation Profile</a><br /><a href="StructureDefinition-us-core-observation-screening-assessment.html" target="_blank">US Core Observation Screening Assessment Profile</a><br /><a href="StructureDefinition-us-core-questionnaireresponse.html" target="_blank">US Core QuestionnaireResponse Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Health Concerns</td>
-        <td><a href="StructureDefinition-us-core-condition-problems-health-concerns.html" target="_blank">US Core Condition Problems and Health Concerns Profile</a></td>
+        <td>US Core Condition Problems and Health Concerns Profile Condition</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Functional Status</td>
-        <td><a href="StructureDefinition-us-core-observation-screening-assessment.html" target="_blank">US Core Observation Screening Assessment Profile</a><br /><a href="StructureDefinition-us-core-simple-observation.html" target="_blank">US Core Simple Observation Profile</a></td>
+        <td>US Core Simple Observation Profile <br /> US Core Observation Screening Assessment Profile <br /> US Core QuestionnaireResponse Profile Observation</td>
         <td><a href="screening-and-assessments.html" target="_blank">See Assessments Guidance</a></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Disability Status</td>
-        <td></td>
+        <td>US Core Simple Observation Profile <br /> US Core Observation Screening Assessment Profile <br /> US Core QuestionnaireResponse Profile Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Mental/Cognitive Status</td>
-        <td></td>
+        <td>US Core Simple Observation Profile <br /> US Core Observation Screening Assessment Profile <br /> US Core QuestionnaireResponse Profile Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Pregnancy Status</td>
-        <td><a href="StructureDefinition-us-core-observation-pregnancystatus.html" target="_blank">US Core Observation Pregnancy Status Profile</a><br /><a href="StructureDefinition-us-core-observation-pregnancyintent.html" target="_blank">US Core Observation Pregnancy Intent Profile</a></td>
+        <td>US Core Observation Pregnancy Status Profile<br /> US Core Observation Pregnancy Intent Profile Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Smoking Status</td>
-        <td><a href="StructureDefinition-us-core-smokingstatus.html" target="_blank">US Core Smoking Status Observation Profile</a></td>
+        <td>US Core Smoking Status Observation Profile Observation</td>
         <td></td>
       </tr>
  
@@ -470,7 +470,7 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;</td>
-        <td></td>
+        <td> </td>
         <td></td>
       </tr>
  
@@ -494,22 +494,22 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Tests</td>
-        <td></td>
+        <td> Observation, DiagnosticReport</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Values/Results</td>
-        <td></td>
+        <td> Observation, DiagnosticReport</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Specimen Type</td>
-        <td></td>
+        <td> Observation, Specimen</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Result Status</td>
-        <td></td>
+        <td> Observation, DiagnosticReport</td>
         <td></td>
       </tr>
  
@@ -533,27 +533,27 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Medications</td>
-        <td></td>
+        <td> Medication, MedicationRequest</td>
         <td><a href="medication-list.html" target="_blank">See Medication List Guidance</a></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Dose</td>
-        <td></td>
+        <td> MedicationRequest</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Dose Unit of Measure</td>
-        <td></td>
+        <td> MedicationRequest</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Indication</td>
-        <td></td>
+        <td> MedicationRequest</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Fill Status</td>
-        <td><a href="StructureDefinition-us-core-medicationdispense.html" target="_blank">US Core MedicationDispense Profile</a></td>
+        <td>US Core MedicationDispense Profile Medication, MedicationDispense</td>
         <td></td>
       </tr>
  
@@ -577,117 +577,117 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;First Name</td>
-        <td></td>
+        <td> Patient.name.given</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Last Name</td>
-        <td></td>
+        <td> Patient.name.family</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Previous Name</td>
-        <td></td>
+        <td> Patient.name</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Middle Name (including middle initial)</td>
-        <td></td>
+        <td> Patient.name.given</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Suffix</td>
-        <td></td>
+        <td> Patient.name.suffix</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Birth Sex</td>
-        <td></td>
+        <td> US Core Birth Sex Extension</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Sex</td>
-        <td></td>
+        <td> US Core Sex For Clinical Use Extension</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Date of Birth</td>
-        <td></td>
+        <td> Patient.birthDate</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Date of Death</td>
-        <td></td>
+        <td> Patient.deceased[x]</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Race</td>
-        <td><a href="StructureDefinition-us-core-race.html" target="_blank">US Core Race Extension</a></td>
+        <td>US Core Race Extension US Core Race Extension</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Ethnicity</td>
-        <td><a href="StructureDefinition-us-core-ethnicity.html" target="_blank">US Core Ethnicity Extension</a></td>
+        <td>US Core Ethnicity Extension US Core Ethnicity Extension</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Tribal Affiliation</td>
-        <td><a href="StructureDefinition-us-core-tribal-affiliation.html" target="_blank">US Core Tribal Affiliation Extension</a></td>
+        <td>US Core Tribal Affiliation Extension US Core Tibal Affiliation Extension</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Gender Identity</td>
-        <td><a href="StructureDefinition-us-core-genderIdentity.html" target="_blank">US Core Gender Identity Extension</a></td>
+        <td>US Core Gender Identity Extension Gender Identity Extension</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Sexual Orientation</td>
-        <td><a href="StructureDefinition-us-core-observation-sexual-orientation.html" target="_blank">US Core Observation Sexual Orientation Profile</a></td>
+        <td>US Core Observation Sexual Orientation Profile Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Preferred Language</td>
-        <td></td>
+        <td> Patient.communication</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Address</td>
-        <td></td>
+        <td> Patient.address</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Previous Address</td>
-        <td></td>
+        <td> Patient.address</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Email</td>
-        <td></td>
+        <td> Patient.telecom</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Phone Number</td>
-        <td></td>
+        <td> Patient.telecom</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Related Person&#39;s Name</td>
-        <td><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
+        <td>US Core RelatedPerson Profile RelatedPerson.name</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Related Person&#39;s Relationship</td>
-        <td><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
+        <td>US Core RelatedPerson Profile RelatedPerson.relationship</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Occupation</td>
-        <td><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
+        <td>US Core Observation Occupation Profile Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Occupation Industry</td>
-        <td><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
+        <td>US Core Observation Occupation Profile Observation</td>
         <td></td>
       </tr>
  
@@ -711,17 +711,17 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Date of Resolution</td>
-        <td></td>
+        <td> Condition.abatement[x]</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Date of Diagnosis</td>
-        <td></td>
+        <td> Choice of assertedDate Extension, Condition.onset[x], or Condition.onsetDate</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;SDOH Problems/Health Concerns</td>
-        <td></td>
+        <td> Condition</td>
         <td><a href="screening-and-assessments.html" target="_blank">See Assessments Guidance</a></td>
       </tr>
  
@@ -745,17 +745,17 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Procedure</td>
-        <td></td>
+        <td> Procedure</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Reason for Referral</td>
-        <td><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a></td>
+        <td>US Core ServiceRequest Profile ServiceRequest.reasonCode, ServiceRequest.reasonReference</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;SDOH Interventions</td>
-        <td><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a><br /><a href="StructureDefinition-us-core-procedure.html" target="_blank">US Core Procedure Profile</a></td>
+        <td>US Core ServiceRequest Profile<br />US Core Procedure Profile ServiceRequest, Procedure</td>
         <td><a href="screening-and-assessments.html" target="_blank">See Assessments Guidance</a></td>
       </tr>
  
@@ -779,12 +779,12 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Author Time Stamp</td>
-        <td></td>
+        <td> Provenance.recorded</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Author Organization</td>
-        <td></td>
+        <td> Provenance.agent</td>
         <td></td>
       </tr>
  
@@ -808,7 +808,7 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Unique Device Identifier(s) for a Patient&#39;s Implantable Device(s)</td>
-        <td></td>
+        <td> Device</td>
         <td></td>
       </tr>
  
@@ -832,62 +832,62 @@
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Diastolic blood pressure</td>
-        <td><a href="StructureDefinition-us-core-blood-pressure.html" target="_blank">US Core Blood Pressure Profile</a></td>
+        <td>US Core Blood Pressure Profile  Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Systolic blood pressure</td>
-        <td><a href="StructureDefinition-us-core-blood-pressure.html" target="_blank">US Core Blood Pressure Profile</a></td>
+        <td>US Core Blood Pressure Profile  Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Body height</td>
-        <td><a href="StructureDefinition-us-core-body-height.html" target="_blank">US Core Body Height Profile</a></td>
+        <td>US Core Body Height Profile  Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Body weight</td>
-        <td><a href="StructureDefinition-us-core-body-weight.html" target="_blank">US Core Body Weight Profile</a></td>
+        <td>US Core Body Weight Profile  Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Heart rate</td>
-        <td><a href="StructureDefinition-us-core-heart-rate.html" target="_blank">US Core Heart Rate Profile</a></td>
+        <td>US Core Heart Rate Profile  Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Respiratory rate</td>
-        <td><a href="StructureDefinition-us-core-respiratory-rate.html" target="_blank">US Core Respiratory Rate Profile</a></td>
+        <td>US Core Respiratory Rate Profile  Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Body temperature</td>
-        <td><a href="StructureDefinition-us-core-body-temperature.html" target="_blank">US Core Body Temperature Profile</a></td>
+        <td>US Core Body Temperature Profile  Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Pulse oximetry</td>
-        <td><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
+        <td>US Core Pulse Oximetry Profile  Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Inhaled oxygen concentration</td>
-        <td><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
+        <td>US Core Pulse Oximetry Profile  Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;BMI Percentile (2-20 years old)</td>
-        <td><a href="StructureDefinition-pediatric-bmi-for-age.html" target="_blank">US Core Pediatric BMI for Age Observation Profile</a></td>
+        <td>US Core Pediatric BMI for Age Observation Profile  Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Weight-for-length Percentile (Birth - 36 months)</td>
-        <td><a href="StructureDefinition-pediatric-weight-for-height.html" target="_blank">US Core Pediatric Weight for Height Observation Profile</a></td>
+        <td>US Core Pediatric Weight for Height Observation Profile  Observation</td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&bull;Occipital Frontal Head Circumference Percentile (Birth - 36 months)</td>
-        <td><a href="StructureDefinition-head-occipital-frontal-circumference-percentile.html" target="_blank">US Core Pediatric Head Occipital Frontal Circumference Percentile Profile</a></td>
+        <td>US Core Pediatric Head Occipital Frontal Circumference Percentile Profile Observation</td>
         <td></td>
       </tr>
  
