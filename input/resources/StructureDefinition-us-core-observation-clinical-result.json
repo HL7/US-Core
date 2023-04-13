@@ -75,10 +75,11 @@
                 ],
                 "path": "Observation.category",
                 "sliceName": "us-core",
-                "short": "(USCDI) Classification of  type of observation",
+                "short": "(USCDI) Classification of type of observation",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category",
                     "description": "Note that other codes are permitted, see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)"
                 }
             },

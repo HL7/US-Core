@@ -847,6 +847,11 @@ definition:
     exampleBoolean: false
     name: US Core Clinical Note Type
   - reference:
+      reference: ValueSet/us-core-clinical-result-observation-category
+    description: Used to classify the context of clinical result observations.
+    exampleBoolean: false
+    name: US Core Clinical Result Observation Category
+  - reference:
       reference: ValueSet/us-core-condition-code
     description: This describes the problem. Diagnosis/Problem List is broadly defined
       as a series of brief statements that catalog a patient's medical, nursing, dental,
@@ -1675,8 +1680,8 @@ definition:
   - reference:
       reference: SearchParameter/us-core-patient-name
     description: "**A server defined search that may match any of the string fields\
-      \ in the HumanName, including family,given, prefix, suffix, and/or text**  \n\
-      **NOTE**: This US Core SearchParameter definition extends the usage context\
+      \ in the HumanName, including family, give, prefix, suffix, suffix, and/or text**\
+      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
       \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
       \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
     exampleBoolean: false
@@ -1698,8 +1703,8 @@ definition:
   - reference:
       reference: SearchParameter/us-core-practitioner-name
     description: "**A server defined search that may match any of the string fields\
-      \ in the HumanName, including family, given, prefix, suffix, and/or text** \
-      \ \n**NOTE**: This US Core SearchParameter definition extends the usage context\
+      \ in the HumanName, including family, give, prefix, suffix, suffix, and/or text**\
+      \  \n**NOTE**: This US Core SearchParameter definition extends the usage context\
       \ of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
       \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
     exampleBoolean: false

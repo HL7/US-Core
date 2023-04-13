@@ -1,0 +1,49 @@
+{
+    "resourceType": "ValueSet",
+    "id": "us-core-clinical-result-observation-category",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category",
+    "name": "USCoreClinicalResultObservationCategory",
+    "title": "US Core Clinical Result Observation Category",
+    "status": "active",
+    "experimental": false,
+    "date": "2023-04-13",
+    "description": "Used to classify the context of clinical result observations.",
+    "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
+    "compose": {
+        "include": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "concept": [
+                    {
+                        "code": "laboratory",
+                        "display": "Laboratory"
+                    },
+                    {
+                        "code": "exam",
+                        "display": "Exam"
+                    },
+                    {
+                        "code": "therapy",
+                        "display": "Therapy"
+                    },
+                    {
+                        "code": "imaging",
+                        "display": "Imaging"
+                    },
+                    {
+                        "code": "procedure",
+                        "display": "Procedure"
+                    },
+                    {
+                        "code": "vital-signs",
+                        "display": "Vital Signs"
+                    },
+                    {
+                        "code": "activity",
+                        "display": "Activity"
+                    }
+                ]
+            }
+        ]
+    }
+}
