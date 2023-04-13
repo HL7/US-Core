@@ -149,7 +149,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 108. **Applied:** Remove MustSupport from DocumentReference.category requiring clinical-note [FHIR-40102](https://jira.hl7.org/browse/FHIR-40102) [See Changes Here](StructureDefinition-us-core-documentreference.html)
 109. **Applied:** Add Goal.startDate as 0..1 MS with choice of supporting this or Goal.target.dueDate [FHIR-40103](https://jira.hl7.org/browse/FHIR-40103) [See Changes Here](StructureDefinition-us-core-goal.html)
 110. **Applied:** Clarify that other category codes are permitted and Remove MS from Observation.performer Practitioner Reference [FHIR-40104](https://jira.hl7.org/browse/FHIR-40104) [See Changes Here](StructureDefinition-us-core-simple-observation.html)
-111. **Applied:** Add to the code systems chart [FHIR-40124](https://jira.hl7.org/browse/FHIR-40124) [See Changes Here](terminology.html#code-system-uris-usedin-us-core)
+111. **Applied:** Add to the code systems chart [FHIR-40124](https://jira.hl7.org/browse/FHIR-40124) [See Changes Here](terminology.html#code-system-uris-used-in-us-core)
 112. **Applied:** Make Specimen.subject must support [FHIR-40136](https://jira.hl7.org/browse/FHIR-40136) [See Changes Here](StructureDefinition-us-core-specimen.html)
 113. **Applied:** Clarify use of unknown for occupation. [FHIR-40137](https://jira.hl7.org/browse/FHIR-40137) [See Changes Here](StructureDefinition-us-core-observation-occupation.html), [Here](Observation-observation-occupation-industry-unknown.html) and [Here](Observation-observation-occupation-unknown.html)
 114. **Applied:** Clarify applicability of DiagnosticReport in USCDI Mapping [FHIR-40138](https://jira.hl7.org/browse/FHIR-40138) [See Changes Here](clinical-notes.html)
