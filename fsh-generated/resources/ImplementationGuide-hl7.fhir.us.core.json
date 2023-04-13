@@ -118,7 +118,7 @@
         "reference": {
           "reference": "StructureDefinition/head-occipital-frontal-circumference-percentile"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patients from birth to 37 Months of age using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patients from birth to 37 Months of age using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Pediatric Head Occipital Frontal Circumference Percentile Profile"
       },
@@ -126,7 +126,7 @@
         "reference": {
           "reference": "StructureDefinition/pediatric-bmi-for-age"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric body mass index (BMI) percentile per age and sex for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric body mass index (BMI) percentile per age and sex for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Pediatric BMI for Age Observation Profile"
       },
@@ -134,7 +134,7 @@
         "reference": {
           "reference": "StructureDefinition/pediatric-weight-for-height"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch  pediatric weight-for-length per age and gender observations in FHIR with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch  pediatric weight-for-length per age and gender observations in FHIR with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Pediatric Weight for Height Observation Profile"
       },
@@ -142,7 +142,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-allergyintolerance"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient pm2.  It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the AllergyIntolerance resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core AllergyIntolerance Profile"
       },
@@ -158,7 +158,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-blood-pressure"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Blood Pressure Profile"
       },
@@ -166,7 +166,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-bmi"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch Body Mass Index (BMI) observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch Body Mass Index (BMI) observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core BMI Profile"
       },
@@ -174,7 +174,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-body-height"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch body height observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch body height observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Body Height Profile"
       },
@@ -182,7 +182,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-body-temperature"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch body temperature observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch body temperature observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Body Temperature Profile"
       },
@@ -190,7 +190,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-body-weight"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch body weight observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch body weight observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Body Weight Profile"
       },
@@ -198,7 +198,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-careplan"
         },
-        "description": "﻿This profile sets minimum expectations for the CarePlan resource to record, search, and fetch assessment and plan of treatment data associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for the CarePlan resource to record, search, and fetch assessment and plan of treatment data associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core CarePlan Profile"
       },
@@ -206,7 +206,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-careteam"
         },
-        "description": "This profile sets minimum expectations for the CareTeam resource for identifying the Care Team members associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for the CareTeam resource for identifying the Care Team members associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core CareTeam Profile"
       },
@@ -214,7 +214,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-condition-encounter-diagnosis"
         },
-        "description": "The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 *Encounter Diagnosis* requirements.   In version 5.0.0, The US Core Condition Profile has been split into the US Core Condition Encounter Diagnosis Profile and US Core Condition Problems and Health Concerns Profile. To promote interoperability and adoption through common implementation, this profile defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Condition Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 *Encounter Diagnosis* requirements. In version 5.0.0, The US Core Condition Profile has been split into the US Core Condition Encounter Diagnosis Profile and US Core Condition Problems and Health Concerns Profile. To promote interoperability and adoption through common implementation, this profile defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Condition Encounter Diagnosis Profile"
       },
@@ -222,7 +222,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-condition-problems-health-concerns"
         },
-        "description": "The US Core Condition Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  In version 5.0.0, The US Core Condition Profile has been split into the US Core Condition Encounter Diagnosis Profile and US Core Condition Problems and Health Concerns Profile.  To promote interoperability and adoption through common implementation, this profile defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Condition Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  In version 5.0.0, The US Core Condition Profile has been split into the US Core Condition Encounter Diagnosis Profile and US Core Condition Problems and Health Concerns Profile.  To promote interoperability and adoption through common implementation, this profile defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when and constrains the way the elements are used using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Condition Problems and Health Concerns Profile"
       },
@@ -230,7 +230,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-coverage"
         },
-        "description": "The US Core CoverageProfile is based upon the core FHIR Coverage Resource and implements the US Core Data for Interoperability (USCDI) v3 Health Insurance Information requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Coverage resource to record, search, and fetch the \"data related to an individual's insurance coverage for health care\". It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core CoverageProfile is based upon the core FHIR Coverage Resource and implements the US Core Data for Interoperability (USCDI) v3 Health Insurance Information requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Coverage resource to record, search, and fetch the \"data related to an individual's insurance coverage for health care\". It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Coverage Profile"
       },
@@ -238,7 +238,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-diagnosticreport-lab"
         },
-        "description": "Laboratory results are grouped and summarized using the DiagnosticReport resource which typically reference Observation resource(s).  Each Observation resource represents an individual laboratory test and result value or component result values, or a nested panel (such as a microbial susceptibility panel) which references other observations.  They can also be presented in report form or as free text.  This profile sets minimum expectations for the DiagnosticReport resource to record, search, and fetch laboratory results associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "Laboratory results are grouped and summarized using the DiagnosticReport resource which typically reference Observation resource(s).  Each Observation resource represents an individual laboratory test and result value or component result values, or a nested panel (such as a microbial susceptibility panel) which references other observations.  They can also be presented in report form or as free text.  This profile sets minimum expectations for the DiagnosticReport resource to record, search, and fetch laboratory results associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core DiagnosticReport Profile for Laboratory Results Reporting"
       },
@@ -246,7 +246,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-diagnosticreport-note"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for searching and fetching Diagnostic Reports and Notes using the DiagnosticReport resource. This profile identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the DiagnosticReport when using this profile. It provides the floor for standards development for specific use cases. Prior to reviewing this profile, implementers are encouraged to read the Clinical Notes Guidance to understand the overlap of US Core DiagnosticReport Profile for Report and Note exchange and US Core DocumentReference Profile.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for searching and fetching Diagnostic Reports and Notes using the DiagnosticReport resource. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases. Prior to reviewing this profile, implementers are encouraged to read the Clinical Notes Guidance to understand the overlap of US Core DiagnosticReport Profile for Report and Note exchange and US Core DocumentReference Profile.",
         "exampleBoolean": false,
         "name": "US Core DiagnosticReport Profile for Report and Note Exchange"
       },
@@ -262,7 +262,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-documentreference"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for searching and fetching patient documents including Clinical Notes using the DocumentReference resource. It identifies the mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the DocumentReference resource when using this profile. It provides the floor for standards development for specific use cases. Prior to reviewing this profile, implementers are encouraged to read the Clinical Notes Guidance to understand the overlap of US Core DocumentReference Profile and US Core DiagnosticReport Profile for Report and Note exchange.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for searching and fetching patient documents including Clinical Notes using the DocumentReference resource. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases. Prior to reviewing this profile, implementers are encouraged to read the Clinical Notes Guidance to understand the overlap of US Core DocumentReference Profile and US Core DiagnosticReport Profile for Report and Note exchange.",
         "exampleBoolean": false,
         "name": "US Core DocumentReference Profile"
       },
@@ -270,7 +270,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-encounter"
         },
-        "description": "This profile sets minimum expectations for the Encounter resource to record, search, and fetch basic encounter information for an individual patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for the Encounter resource to record, search, and fetch basic encounter information for an individual patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Encounter Profile"
       },
@@ -302,7 +302,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-goal"
         },
-        "description": "This profile sets minimum expectations for the Goal resource to record, search, and fetch Goal information associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases",
+        "description": "This profile sets minimum expectations for the Goal resource to record, search, and fetch Goal information associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases",
         "exampleBoolean": false,
         "name": "US Core Goal Profile"
       },
@@ -310,7 +310,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-head-circumference"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch head circumference observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch head circumference observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Head Circumference Profile"
       },
@@ -318,7 +318,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-heart-rate"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch heart rate observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch heart rate observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Heart Rate Profile"
       },
@@ -326,7 +326,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-immunization"
         },
-        "description": "This profile sets minimum expectations for the Immunization resource to record, search, and fetch immunization history associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for the Immunization resource to record, search, and fetch immunization history associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Immunization Profile"
       },
@@ -334,7 +334,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-implantable-device"
         },
-        "description": "The US Core Implantable Device Profile is based upon the core FHIR Device Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 *Unique Device Identifier(s) for a Patient's Implantable Device(s)* requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Device resource to record, search, and fetch UDI information associated with a patient's implantable device(s). It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Implantable Device Profile is based upon the core FHIR Device Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 *Unique Device Identifier(s) for a Patient's Implantable Device(s)* requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Device resource to record, search, and fetch UDI information associated with a patient's implantable device(s). It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Implantable Device Profile"
       },
@@ -350,7 +350,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-location"
         },
-        "description": "This profile sets minimum expectations for the Location resource for recording, searching for and fetching a Location associated with a patient, provider or organization to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for the Location resource for recording, searching for and fetching a Location associated with a patient, provider or organization to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Location Profile"
       },
@@ -358,7 +358,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-medication"
         },
-        "description": "When referencing a medication, the MedicationRequest resource can either use a code or refer to a Medication resource.  This profile sets minimum expectations for the Medication resource to record, search, and fetch medications associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases",
+        "description": "When referencing a medication, the MedicationRequest resource can either use a code or refer to a Medication resource.  This profile sets minimum expectations for the Medication resource to record, search, and fetch medications associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases",
         "exampleBoolean": false,
         "name": "US Core Medication Profile"
       },
@@ -366,7 +366,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-medicationdispense"
         },
-        "description": "This profile sets minimum expectations for the MedicationDispense resource to record, search, and fetch the \"state of a medication with regards to dispensing or other activity. (e.g., dispensed, partially dispensed, not dispensed)\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for the MedicationDispense resource to record, search, and fetch the \"state of a medication with regards to dispensing or other activity. (e.g., dispensed, partially dispensed, not dispensed)\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core MedicationDispense Profile"
       },
@@ -374,7 +374,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-medicationrequest"
         },
-        "description": "The US Core Medication Request Profile is based upon the core FHIR MedicationRequest Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 *Medications* requirements. The MedicationRequest resource can be used to record a patient's medication prescription or order.  This profile sets minimum expectations for the MedicationRequest resource to record, search, and fetch a patient's medication to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Medication Request Profile is based upon the core FHIR MedicationRequest Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 *Medications* requirements. The MedicationRequest resource can be used to record a patient's medication prescription or order.  This profile sets minimum expectations for the MedicationRequest resource to record, search, and fetch a patient's medication to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core MedicationRequest Profile"
       },
@@ -382,7 +382,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-clinical-result"
         },
-        "description": "The US Core Observation Clinical Result Profile is based upon the core FHIR Observation Resource and, along with the US Core DiagnosticReport Profile, meets the US Core Data for Interoperability (USCDI) requirements for *Diagnostic Imaging* and *Clinical Tests* Data Classes. This profile sets minimum expectations for the Observation resource to record and search non-laboratory clinical test results (e.g., radiology and other clinical observations generated from procedures). An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy. This profile is the basis for the US Core Laboratory Result Observation Profile, which defines additional data elements to record and search laboratory test results.\n\nThe US Core Observation Clinical Result Profile sets minimum expectations to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Observation Clinical Result Profile is based upon the core FHIR Observation Resource and, along with the US Core DiagnosticReport Profile, meets the US Core Data for Interoperability (USCDI) requirements for *Diagnostic Imaging* and *Clinical Tests* Data Classes. This profile sets minimum expectations for the Observation resource to record and search non-laboratory clinical test results (e.g., radiology and other clinical observations generated from procedures). An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy. This profile is the basis for the US Core Laboratory Result Observation Profile, which defines additional data elements to record and search laboratory test results.\n\nThe US Core Observation Clinical Result Profile sets minimum expectations to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Observation Clinical Result Profile"
       },
@@ -390,7 +390,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-lab"
         },
-        "description": "The US Core Laboratory Result Observation Profile is based upon the US Core Observation Clinical Result Profile and, along with the US Core DiagnosticReport Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability (USCDI) Laboratory requirements. Laboratory results are grouped and summarized using the DiagnosticReport resource, which references Observation resources. Each Observation resource represents an individual laboratory test and result value, a “nested” panel (such as a microbial susceptibility panel) that references other observations, or rarely a laboratory test with component result values. The US Core Laboratory Result Observation Profile sets minimum expectations for the Observation resource to record, search, and fetch laboratory test results associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets SHALL be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Laboratory Result Observation Profile is based upon the US Core Observation Clinical Result Profile and, along with the US Core DiagnosticReport Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability (USCDI) Laboratory requirements. Laboratory results are grouped and summarized using the DiagnosticReport resource, which references Observation resources. Each Observation resource represents an individual laboratory test and result value, a “nested” panel (such as a microbial susceptibility panel) that references other observations, or rarely a laboratory test with component result values. The US Core Laboratory Result Observation Profile sets minimum expectations for the Observation resource to record, search, and fetch laboratory test results associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets SHALL be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Laboratory Result Observation Profile"
       },
@@ -398,7 +398,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-occupation"
         },
-        "description": "The US Core Occupation Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) Occupation requirements. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and fetch a patient's past or present job and \"type of business that compensates for work or assigns work to an unpaid worker or volunteer\". In the context of this profile, a job is defined as a work situation, training position, or volunteer position held for a specified period. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Occupation Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) Occupation requirements. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and fetch a patient's past or present job and \"type of business that compensates for work or assigns work to an unpaid worker or volunteer\". In the context of this profile, a job is defined as a work situation, training position, or volunteer position held for a specified period. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Observation Occupation Profile"
       },
@@ -406,7 +406,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-pregnancyintent"
         },
-        "description": "The US Core Pregnancy Intent Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch the \"patient's intent to become pregnant\" over the next year. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Pregnancy Intent Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch the \"patient's intent to become pregnant\" over the next year. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Observation Pregnancy Intent Profile"
       },
@@ -414,7 +414,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-pregnancystatus"
         },
-        "description": "The US Core Pregnancy Status Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch the \"state or condition of being pregnant\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Pregnancy Status Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch the \"state or condition of being pregnant\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Observation Pregnancy Status Profile"
       },
@@ -422,7 +422,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-screening-assessment"
         },
-        "description": "The US Core Observation Screening Assessment Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. To promote interoperability and adoption through common implementation, it sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select \"check all that apply\" type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Observation Screening Assessment Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. To promote interoperability and adoption through common implementation, it sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select \"check all that apply\" type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Observation Screening Assessment Profile"
       },
@@ -430,7 +430,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-sexual-orientation"
         },
-        "description": "The US Core Observation Sexual Orientation Profile meets the U.S. Core Data for Interoperability (USCDI) v2 'Sexual Orientation' requirements. this profile sets minimum expectations for the Observation resource to record, search, and fetch sexual orientation observations associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Observation Sexual Orientation Profile meets the U.S. Core Data for Interoperability (USCDI) v2 'Sexual Orientation' requirements. this profile sets minimum expectations for the Observation resource to record, search, and fetch sexual orientation observations associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Observation Sexual Orientation Profile"
       },
@@ -438,7 +438,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-organization"
         },
-        "description": "This profile sets minimum expectations for the Organization resource to searching for and fetching an Organization associated with a patient or provider to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for the Organization resource to searching for and fetching an Organization associated with a patient or provider to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used and constrains the way the elements are used when using the profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Organization Profile"
       },
@@ -446,7 +446,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-practitioner"
         },
-        "description": "This profile sets minimum expectations for the Practitioner resource to record, search, and fetch basic demographics and other administrative information about an individual practitioner to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for the Practitioner resource to record, search, and fetch basic demographics and other administrative information about an individual practitioner to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used and constrains the way the elements are used when using the profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Practitioner Profile"
       },
@@ -454,7 +454,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-practitionerrole"
         },
-        "description": "This profile sets minimum expectations for the PractitionerRole Resource to record, search, and fetch the practitioner role for a practitioner to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.  The requirements for the US Core Practitioner were drawn from the [Argonaut Provider Directory](http://www.fhir.org/guides/argonaut/pd//release1/index.html), [IHE Healthcare Provider Directory](http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf) and the [ONC Provider Directory Workshop](https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents).",
+        "description": "This profile sets minimum expectations for the PractitionerRole Resource to record, search, and fetch the practitioner role for a practitioner to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used and constrains the way the elements are used when using the profile.  It provides the floor for standards development for specific use cases.  The requirements for the US Core Practitioner were drawn from the [Argonaut Provider Directory](http://www.fhir.org/guides/argonaut/pd//release1/index.html), [IHE Healthcare Provider Directory](http://ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_HPD.pdf) and the [ONC Provider Directory Workshop](https://confluence.oncprojectracking.org/display/PDW/Workshop+Documents).",
         "exampleBoolean": false,
         "name": "US Core PractitionerRole Profile"
       },
@@ -462,7 +462,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-procedure"
         },
-        "description": "The US Core Procedure Profile is based upon the core FHIR Procedure Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 'Procedures' requirements. This profile sets minimum expectations for the Procedure resource to record, search, and fetch procedures associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Procedure Profile is based upon the core FHIR Procedure Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 'Procedures' requirements. This profile sets minimum expectations for the Procedure resource to record, search, and fetch procedures associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Procedure Profile"
       },
@@ -470,7 +470,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-provenance"
         },
-        "description": "This profile sets minimum expectations for the Provenance resource to record, search, and fetch Provenance information associated with a record to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  This FHIR Provenance profile here covers the minimal (basic) information to support lineage of information.  It provides the floor for standards development for specific use cases.  Prior to reviewing this profile, implementers are encouraged to read the Basic Provenance guidance page which documents several key use cases, specifically, what organization was responsible for the most recent action on the resource.",
+        "description": "This profile sets minimum expectations for the Provenance resource to record, search, and fetch Provenance information associated with a record to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  This FHIR Provenance profile here covers the minimal (basic) information to support lineage of information.  It provides the floor for standards development for specific use cases.  Prior to reviewing this profile, implementers are encouraged to read the Basic Provenance guidance page which documents several key use cases, specifically, what organization was responsible for the most recent action on the resource.",
         "exampleBoolean": false,
         "name": "US Core Provenance Profile"
       },
@@ -478,7 +478,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-pulse-oximetry"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pulse oximetry and inspired oxygen observations with a standard LOINC codes and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pulse oximetry and inspired oxygen observations with a standard LOINC codes and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Pulse Oximetry Profile"
       },
@@ -486,7 +486,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-questionnaireresponse"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the QuestionnaireResponse resource to record, search, and fetch retrieve captures the responses to form/survey and assessment tools such as the *Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey*.   This profile is based on the [Structured Data Capture (SDC) Questionnaire Response Profile](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaireresponse.html) and identifies the *additional* core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific uses cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the QuestionnaireResponse resource to record, search, and fetch retrieve captures the responses to form/survey and assessment tools such as the *Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences (PRAPARE) Survey*.   This profile is based on the [Structured Data Capture (SDC) Questionnaire Response Profile](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaireresponse.html) and identifies the *additional* core elements, extensions, vocabularies and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific uses cases.",
         "exampleBoolean": false,
         "name": "US Core QuestionnaireResponse Profile"
       },
@@ -502,7 +502,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-relatedperson"
         },
-        "description": "This profile sets minimum expectations for the RelatedPerson resource to record, search, and fetch basic administrative information about persons with a legal or familial relationship to a patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for the RelatedPerson resource to record, search, and fetch basic administrative information about persons with a legal or familial relationship to a patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core RelatedPerson Profile"
       },
@@ -510,7 +510,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-respiratory-rate"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch respiratory rate observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch respiratory rate observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Respiratory Rate Profile"
       },
@@ -518,7 +518,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-simple-observation"
         },
-        "description": "This US Core FHIR Profile is meant to capture any “simple” observations that are not otherwise covered by other US Core Observation profiles. It represents any type of observation that is not classified as vital signs, laboratory, imaging, or other more specific observation types. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and retrieve observations such as a clinical observation or assertion about a patient's health status or other general observations. This profile identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.",
+        "description": "This US Core FHIR Profile is meant to capture any “simple” observations that are not otherwise covered by other US Core Observation profiles. It represents any type of observation that is not classified as vital signs, laboratory, imaging, or other more specific observation types. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and retrieve observations such as a clinical observation or assertion about a patient's health status or other general observations. This profile identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Simple Observation Profile"
       },
@@ -526,7 +526,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-smokingstatus"
         },
-        "description": "The US Core Smoking Status Observation Profile is based upon the core FHIR Observation Resource and implements the U.S. Core Data for Interoperability (USCDI) v2 Smoking status' requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Smoking Status Observation Profile is based upon the core FHIR Observation Resource and implements the U.S. Core Data for Interoperability (USCDI) v2 Smoking status' requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Smoking Status Observation Profile"
       },
@@ -534,7 +534,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-specimen"
         },
-        "description": "This profile sets minimum expectations for the Specimen resource to record, search, and fetch \"substances being sampled or tested. (e.g., nasopharyngeal swab, whole blood, serum, urine, wound swab)\" associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "This profile sets minimum expectations for the Specimen resource to record, search, and fetch \"substances being sampled or tested. (e.g., nasopharyngeal swab, whole blood, serum, urine, wound swab)\" associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Specimen Profile"
       },
@@ -558,7 +558,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-vital-signs"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html) and defines *additional* constraints on the Observation resource to represent vital signs observations. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile. It provides the floor for standards development for specific use cases.  This US Core profiles that are derived from this profile are listed below.",
+        "description": "To promote interoperability and adoption through common implementation, this profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html) and defines *additional* constraints on the Observation resource to represent vital signs observations. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.  This US Core profiles that are derived from this profile are listed below.",
         "exampleBoolean": false,
         "name": "US Core Vital Signs Profile"
       },
@@ -1710,7 +1710,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-patient"
         },
-        "description": "The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v3 'Patient Demographics' requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "description": "The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v3 'Patient Demographics' requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Patient Profile"
       },
@@ -1718,7 +1718,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-servicerequest"
         },
-        "description": "This profile sets minimum expectations for recording, searching, and fetching the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.fhirVersion: 4.0.1",
+        "description": "This profile sets minimum expectations for recording, searching, and fetching the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core ServiceRequest Profile"
       },

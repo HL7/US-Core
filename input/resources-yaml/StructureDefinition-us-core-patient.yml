@@ -182,8 +182,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Patient.name.use
-    short: (USCDI) usual | official | temp | nickname | anonymous | old
-      | maiden
+    short: (USCDI) usual | official | temp | nickname | anonymous | old | maiden
   - id: Patient.name.family
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -219,7 +218,11 @@ differential:
     - identity: argonaut-dq-dstu2
       map: NA
   - id: Patient.name.period
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
     path: Patient.name.period
+    short: (USCDI) Time period when name was/is in use
     mustSupport: false
     mapping:
     - identity: argonaut-dq-dstu2
@@ -375,7 +378,7 @@ differential:
       valueBoolean: true
     path: Patient.address.period
     short: (USCDI) Time period when address was/is in use
-    mustSupport: true
+    # mustSupport: true
     mapping:
     - identity: argonaut-dq-dstu2
       map: NA

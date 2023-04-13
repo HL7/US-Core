@@ -320,7 +320,14 @@
             },
             {
                 "id": "Patient.name.period",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
                 "path": "Patient.name.period",
+                "short": "(USCDI) Time period when name was/is in use",
                 "mustSupport": false,
                 "mapping": [
                     {
@@ -588,7 +595,6 @@
                 ],
                 "path": "Patient.address.period",
                 "short": "(USCDI) Time period when address was/is in use",
-                "mustSupport": true,
                 "mapping": [
                     {
                         "identity": "argonaut-dq-dstu2",

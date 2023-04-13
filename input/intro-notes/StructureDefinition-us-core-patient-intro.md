@@ -47,8 +47,8 @@ For ONC's USCDI requirements, each Patient must support the following additional
 - Note that *Date of Death*, *Previous Name*, *Suffix*,and *Previous address* are listed in the U.S. Core Data for Interoperability.
   - Date of Death is communicated using the `Patient.deceasedDateTime` element.
   - Suffix is represented using the `Patient.name.suffix` element.
-  - Previous name is represented by setting `Patient.name.use` to "old" and providing an end date in Patient.name.period element if known
-  - Previous address is represented by setting `Patient.address.use` to "old" and providing an end date in Patient.address.period element if known.
+  - Previous name is represented by setting `Patient.name.use` to "old" <span class="bg-success" markdown="1">or</span><!-- new-content --> providing an end date in P`atient.name.period` <span class="bg-success" markdown="1">or doing both.</span><!-- new-content -->
+  - Previous address is represented by setting `Patient.address.use` to "old" <span class="bg-success" markdown="1">or</span><!-- new-content --> providing an end date in `Patient.address.period` <span class="bg-success" markdown="1">or doing both.</span><!-- new-content -->
   - The [Patient example] demonstrates how these elements are represented.
 - \*US Core has reviewed and updated value sets based on input from the [HL7 Gender Harmony Project] which is modeling gender and sex information which includes data elements, value sets, code systems.  When their work is complete, US Core will align with their recommendations.  In the interim,<span class="bg-success" markdown="1"> US Core has interpreted the USCDI data element "sex" as "birth-sex",</span><!-- new-content --> and the [FHIR specification]({{site.data.fhir.path}}patient.html#gender) provides guidance and background for representing Administrative Gender, Sex assigned at Birth, and Gender Identity. 
 - <span class="bg-success" markdown="1">[Provenance] and the FHIR Extension [Target Element] can be use to document how individual patient demographic data was captured. See [Element Level Provenance] on the [Basic Provenance] page for more information.</span><!-- new-content -->
