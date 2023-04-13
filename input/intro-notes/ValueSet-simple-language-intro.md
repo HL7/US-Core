@@ -27,7 +27,7 @@ The publication tooling is unable to expand the language value set because they 
 |chr|Cherokee|
 {:.grid}
 
-For a more complete list of both 2 and 3 letter examples see <https://www.loc.gov/standards/iso639-2/php/code_list.php>
+For a more complete list of both 2 and 3 letter examples see [https://www.loc.gov/standards/iso639-2/php/code_list.php](https://www.loc.gov/standards/iso639-2/php/code_list.php)
 
 </div>
 

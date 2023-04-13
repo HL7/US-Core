@@ -7,13 +7,15 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Goal 2 Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a goal 2 example for the *US Core Goal Profile* and demonstrates use of a code for Goal.description.
+    valueMarkdown: This is a goal 2 example for the *US Core Goal Profile* and demonstrates
+      use of a code for Goal.description.
 lifecycleStatus: active
 description:
   coding:
   - system: http://snomed.info/sct
     code: '406156006'
     display: In paid employment
+    version: http://snomed.info/sct/731000124108
   text: In paid employment
 subject:
   reference: Patient/example

@@ -14,8 +14,7 @@ code:
     system: http://loinc.org
   text: Have you been discharged from the armed forces of the United States?
 derivedFrom:
-- 
-  reference: QuestionnaireResponse/prapare-example
+- reference: QuestionnaireResponse/prapare-example
 effectiveDateTime: '2022-03-28T18:30:40-07:00'
 id: PRAPARE-item-example-93034-7
 meta:
@@ -24,7 +23,8 @@ meta:
     valueString: Prapare Item Example 93034-7
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is a Prapare Item Example 93034-7 (Have you been discharged
-      from the armed forces of the United States?) for the *US Core Observation Screening Assessment Profile*
+      from the armed forces of the United States?) for the *US Core Observation Screening
+      Assessment Profile*
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
 performer:

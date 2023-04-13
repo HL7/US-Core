@@ -2,206 +2,101 @@ resourceType: Questionnaire
 id: hunger-vital-sign-example
 meta:
   extension:
-    - url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
-      valueString: Questionnaire Hunger Vital Sign [HVS] Example
-    - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
-      valueMarkdown: >-
-        An example of an SDC Questionnaire that represents the Hunger Vital Sign Example questionnaire defined in LOINC (code 88121-9). The example is generated using the LHC-Forms SDC Questionnaire App.
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Questionnaire Hunger Vital Sign [HVS] Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: An example of an SDC Questionnaire that represents the Hunger Vital
+      Sign Example questionnaire defined in LOINC (code 88121-9). The example is generated
+      using the LHC-Forms SDC Questionnaire App.
   profile:
-    - 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire'
-
+  - http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire
 code:
-    - 
-        system: 'http://loinc.org'
-        code: 88121-9
-        display: Hunger Vital Sign [HVS]
-# extension:
-#   - url: 'http://hl7.org/fhir/StructureDefinition/variable'
-#     valueExpression:
-#       name: worriedAnsCode
-#       language: text/fhirpath
-#       expression: '%resource.item.where(linkId=''/88122-7'').answer.value.code'
-#   - url: 'http://hl7.org/fhir/StructureDefinition/variable'
-#     valueExpression:
-#       name: ranOutAnsCode
-#       language: text/fhirpath
-#       expression: '%resource.item.where(linkId=''/88123-5'').answer.value.code'
-#   - url: 'http://hl7.org/fhir/StructureDefinition/variable'
-#     valueExpression:
-#       name: riskCodes
-#       language: text/fhirpath
-#       expression: '''LA28397-0''.combine(''LA6729-3'')'
-#   - url: 'http://hl7.org/fhir/StructureDefinition/variable'
-#     valueExpression:
-#       name: riskStatus
-#       language: text/fhirpath
-#       expression: >-
-#         %riskCodes contains %worriedAnsCode or %riskCodes contains
-#         %ranOutAnsCode
-#   - url: 'http://hl7.org/fhir/StructureDefinition/variable'
-#     valueExpression:
-#       name: answeredEitherQ
-#       language: text/fhirpath
-#       expression: '%worriedAnsCode.exists() or %ranOutAnsCode.exists()'
-#   - url: >-
-#       http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap
-#     valueCanonical: >-
-#       http://hl7.org/fhir/us/sdoh-clinicalcare/StructureMap/SDOHCC-StructureMapHungerVitalSign
-
-
-
-url: >-
-  http://hl7.org/fhir/us/core/Questionnaire/hunger-vital-sign-example
+- system: http://loinc.org
+  code: 88121-9
+  display: Hunger Vital Sign [HVS]
+url: http://hl7.org/fhir/us/core/Questionnaire/hunger-vital-sign-example
 status: active
 experimental: true
 name: HungerVitalSignExample
 title: Hunger Vital Sign Example
 subjectType:
-  - Patient
+- Patient
 date: '2023-03-31'
 item:
-  # - extension:
-  #     - url: 'http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl'
-  #       valueCodeableConcept:
-  #         coding:
-  #           - system: 'http://hl7.org/fhir/questionnaire-item-control'
-  #             code: drop-down
-  #             display: Drop down
-  #         text: Drop down
-  - linkId: /88122-7
-    code:
-      - system: 'http://loinc.org'
-        code: 88122-7
-        display: >-
-          (I/We) worried whether (my/our) food would run out before (I/we) got
-          money to buy more.
-    text: >-
-      (I/We) worried whether (my/our) food would run out before (I/we) got money
-      to buy more.
-    type: choice
-    required: false
-    answerOption:
-      - valueCoding:
-          system: 'http://loinc.org'
-          code: LA28397-0
-          display: Often true
-      - valueCoding:
-          system: 'http://loinc.org'
-          code: LA6729-3
-          display: Sometimes true
-      - valueCoding:
-          system: 'http://loinc.org'
-          code: LA28398-8
-          display: Never true
-      - valueCoding:
-          system: 'http://loinc.org'
-          code: LA15775-2
-          display: Don't know/refused
-  # - extension:
-  #     - url: 'http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl'
-  #       valueCodeableConcept:
-  #         coding:
-  #           - system: 'http://hl7.org/fhir/questionnaire-item-control'
-  #             code: drop-down
-  #             display: Drop down
-  #         text: Drop down
-  - linkId: /88123-5
-    code:
-      - system: 'http://loinc.org'
-        code: 88123-5
-        display: >-
-          The food that (I/we) bought just didn't last, and (I/we) didn't have
-          money to get more.
-    text: >-
-      The food that (I/we) bought just didn't last, and (I/we) didn't have money
-      to get more.
-    type: choice
-    required: false
-    answerOption:
-      - valueCoding:
-          system: 'http://loinc.org'
-          code: LA28397-0
-          display: Often true
-      - valueCoding:
-          system: 'http://loinc.org'
-          code: LA6729-3
-          display: Sometimes true
-      - valueCoding:
-          system: 'http://loinc.org'
-          code: LA28398-8
-          display: Never true
-      - valueCoding:
-          system: 'http://loinc.org'
-          code: LA15775-2
-          display: Don't know/refused
-  # - extension:
-  #     - url: 'http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl'
-  #       valueCodeableConcept:
-  #         coding:
-  #           - system: 'http://hl7.org/fhir/questionnaire-item-control'
-  #             code: drop-down
-  #             display: Drop down
-  #         text: Drop down
-  #     - url: 'http://hl7.org/fhir/StructureDefinition/variable'
-  #       valueExpression:
-  #         name: thisItem
-  #         language: text/fhirpath
-  #         expression: '%questionnaire.item.where(linkId = ''/88124-3'')'
-  #     - url: 'http://hl7.org/fhir/StructureDefinition/variable'
-  #       valueExpression:
-  #         name: atRiskCoding
-  #         language: text/fhirpath
-  #         expression: '%thisItem.answerOption.valueCoding.where(code=''LA19952-3'')'
-  #     - url: 'http://hl7.org/fhir/StructureDefinition/variable'
-  #       valueExpression:
-  #         name: noRiskCoding
-  #         language: text/fhirpath
-  #         expression: '%thisItem.answerOption.valueCoding.where(code=''LA19983-8'')'
-  #     - url: >-
-  #         http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression
-  #       valueExpression:
-  #         description: risk determination
-  #         language: text/fhirpath
-  #         expression: >-
-  #           iif(%answeredEitherQ, iif(%riskStatus, %atRiskCoding,
-  #           %noRiskCoding), {})
-  #     - url: >-
-  #         http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression
-  #       valueExpression:
-  #         description: risk determination
-  #         language: text/fhirpath
-  #         expression: >-
-  #           iif(%answeredEitherQ, iif(%riskStatus, %atRiskCoding,
-  #           %noRiskCoding), {})
-  - linkId: /88124-3
-    code:
-      - system: 'http://loinc.org'
-        code: 88124-3
-        display: 'Food insecurity risk [HVS]'
-    text: Food insecurity risk
-    type: choice
-    required: false
-    answerOption:
-      - valueCoding:
-          system: 'http://loinc.org'
-          code: LA19952-3
-          display: At risk
-      - valueCoding:
-          system: 'http://loinc.org'
-          code: LA19983-8
-          display: No risk
-    item:
-      # - extension:
-      #     - url: 'http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl'
-      #       valueCodeableConcept:
-      #         coding:
-      #           - system: 'http://hl7.org/fhir/questionnaire-item-control'
-      #             code: help
-      #             display: Help-Button
-      #         text: Help-Button
-      - linkId: /88124-3-help
-        text: >-
-          An answer of "often true" or "sometimes true" to either or both of the
-          Hunger Vital Sign™ questions identifies a patient as at risk for food
-          insecurity (FI).
-        type: display
+- linkId: /88122-7
+  code:
+  - system: http://loinc.org
+    code: 88122-7
+    display: (I/We) worried whether (my/our) food would run out before (I/we) got
+      money to buy more.
+  text: (I/We) worried whether (my/our) food would run out before (I/we) got money
+    to buy more.
+  type: choice
+  required: false
+  answerOption:
+  - valueCoding:
+      system: http://loinc.org
+      code: LA28397-0
+      display: Often true
+  - valueCoding:
+      system: http://loinc.org
+      code: LA6729-3
+      display: Sometimes true
+  - valueCoding:
+      system: http://loinc.org
+      code: LA28398-8
+      display: Never true
+  - valueCoding:
+      system: http://loinc.org
+      code: LA15775-2
+      display: Don't know/refused
+- linkId: /88123-5
+  code:
+  - system: http://loinc.org
+    code: 88123-5
+    display: The food that (I/we) bought just didn't last, and (I/we) didn't have
+      money to get more.
+  text: The food that (I/we) bought just didn't last, and (I/we) didn't have money
+    to get more.
+  type: choice
+  required: false
+  answerOption:
+  - valueCoding:
+      system: http://loinc.org
+      code: LA28397-0
+      display: Often true
+  - valueCoding:
+      system: http://loinc.org
+      code: LA6729-3
+      display: Sometimes true
+  - valueCoding:
+      system: http://loinc.org
+      code: LA28398-8
+      display: Never true
+  - valueCoding:
+      system: http://loinc.org
+      code: LA15775-2
+      display: Don't know/refused
+- linkId: /88124-3
+  code:
+  - system: http://loinc.org
+    code: 88124-3
+    display: Food insecurity risk [HVS]
+  text: Food insecurity risk
+  type: choice
+  required: false
+  answerOption:
+  - valueCoding:
+      system: http://loinc.org
+      code: LA19952-3
+      display: At risk
+  - valueCoding:
+      system: http://loinc.org
+      code: LA19983-8
+      display: No risk
+  item:
+  - linkId: /88124-3-help
+    text: "An answer of \"often true\" or \"sometimes true\" to either or both of\
+      \ the Hunger Vital Sign\u2122 questions identifies a patient as at risk for\
+      \ food insecurity (FI)."
+    type: display

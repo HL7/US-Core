@@ -6,7 +6,7 @@ category:
   text: Laboratory
 code:
   coding:
-  - code: '777-3'
+  - code: 777-3
     display: Platelets [#/volume] in Blood by Automated count
     system: http://loinc.org
   text: Platelets
@@ -17,20 +17,20 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-name
     valueString: Platelets Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: This is a Platelets example for the *US Core Observation Lab
-      Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.
+    valueMarkdown: This is a Platelets example for the *US Core Observation Lab Profile*
+      and CBC example for the *US Core DiagnosticReport Lab Profile*.
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
 referenceRange:
 - high:
-    code: '10*3/uL'
+    code: 10*3/uL
     system: http://unitsofmeasure.org
-    unit: '10*3/uL'
+    unit: 10*3/uL
     value: 450
   low:
-    code: '10*3/uL'
+    code: 10*3/uL
     system: http://unitsofmeasure.org
-    unit: '10*3/uL'
+    unit: 10*3/uL
     value: 150
   type:
     coding:
@@ -44,6 +44,6 @@ subject:
   display: Amy Shaw
   reference: Patient/example
 valueQuantity:
-  system: 'http://unitsofmeasure.org'
-  unit: '10*3/uL'
+  system: http://unitsofmeasure.org
+  unit: 10*3/uL
   value: 200
