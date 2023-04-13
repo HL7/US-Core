@@ -28,7 +28,7 @@ dependencies:
   hl7.fhir.uv.smart-app-launch: 2.0.0
   us.nlm.vsac:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
-    version: 0.7.0
+    version: 0.9.0
     id: vsac
   hl7.fhir.uv.sdc: 3.0.0
   # hl7.fhir.us.sdoh-clinicalcare: 1.0.0
@@ -77,28 +77,28 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - fsh-generated/includes
     #- input/summaries
   path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
-  active-tables: 'false'
-  apply-contact: 'true'
-  apply-jurisdiction: 'true'
-  apply-publisher: 'true'
-  apply-version: 'true'
-  show-inherited-invariants: 'false'
-  usage-stats-opt-out: 'true'
-  excludexml: 'false'
-  excludejson: 'false'
-  excludettl: 'true'
-  excludemap: 'true'
-  suppressed-ids: 'DocumentReference/discharge-summary'
-  tabbed-snapshots: 'false'
+  active-tables: false
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true
+  apply-version: true
+  show-inherited-invariants: true
+  usage-stats-opt-out: true
+  excludexml: false
+  excludejson: false
+  excludettl: true
+  excludemap: true
+  suppressed-ids: DocumentReference/discharge-summary
+  tabbed-snapshots: false
   # generate: #what does this do - todo: remove and see4
   #   - xml
   #   - json
   no-narrative:
-    - 'Patient/example-targeted-provenance'
-    - 'Provenance/example-targeted-provenance'
-    - 'DocumentReference/discharge-summary'
-    - 'Bundle/docref-example-1'
-    - 'Bundle/docref-example-2'
+    - Patient/example-targeted-provenance
+    - Provenance/example-targeted-provenance
+    - DocumentReference/discharge-summary
+    - Bundle/docref-example-1
+    - Bundle/docref-example-2
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'

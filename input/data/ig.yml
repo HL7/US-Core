@@ -53,7 +53,7 @@ dependsOn:
 - id: vsac
   packageId: us.nlm.vsac
   uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-  version: 0.7.0
+  version: 0.9.0
 - packageId: hl7.fhir.uv.sdc
   version: 3.0.0
   uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
@@ -2065,20 +2065,20 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/AHC-HRSN-item-example-96778-6answer-0
-    description: This is a an example of 96778-6[0] Problems with place where you
-      live for the *US Core Observation Screening Assessment Profile*
+    description: This is a an example of 96778-6 Problems with place where you live
+      for the *US Core Observation Screening Assessment Profile*
     name: AHC-HRSN-item-example-96778-6Answer-0
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/AHC-HRSN-item-example-96778-6answer-5
-    description: This is a an example of 96778-6[5] Problems with place where you
-      live for the *US Core Observation Screening Assessment Profile*
+    description: This is a an example of 96778-6 Problems with place where you live
+      for the *US Core Observation Screening Assessment Profile*
     name: AHC-HRSN-item-example-96778-6Answer-5
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/AHC-HRSN-item-example-96778-6answer-6
-    description: This is a an example of 96778-6[6] Problems with place where you
-      live for the *US Core Observation Screening Assessment Profile*
+    description: This is a an example of 96778-6 Problems with place where you live
+      for the *US Core Observation Screening Assessment Profile*
     name: AHC-HRSN-item-example-96778-6Answer-6
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
@@ -3249,7 +3249,7 @@ definition:
   - code: apply-version
     value: 'true'
   - code: show-inherited-invariants
-    value: 'false'
+    value: 'true'
   - code: usage-stats-opt-out
     value: 'true'
   - code: excludexml
