@@ -96,7 +96,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 55. **Applied:** Change RelatedPerson search to combination of Patient + Name [FHIR-39791](https://jira.hl7.org/browse/FHIR-39791) [See Changes Here](StructureDefinition-us-core-relatedperson.html#optional-search-parameters)
 56. **Applied:** RelatedPerson uses text from Observation Laboratory profile [FHIR-39792](https://jira.hl7.org/browse/FHIR-39792) [See Changes Here](StructureDefinition-us-core-relatedperson.html)
 57. **Applied:** Reference only reason for using MedicationDispense [FHIR-39856](https://jira.hl7.org/browse/FHIR-39856) [See Changes Here](StructureDefinition-us-core-medicationdispense.html)
-58. **Resolved - change required:** Adjust USCDI Mapping references to MedicationRequest Profile [FHIR-39857](https://jira.hl7.org/browse/FHIR-39857) [See Changes Here](#.html)
+58. **Applied:** Adjust USCDI Mapping references to MedicationRequest Profile [FHIR-39857](https://jira.hl7.org/browse/FHIR-39857) [See Changes Here](uscdi.html)
 59. **Applied:** Adjust USCDI Mapping references to DiagnosticReport Profile [FHIR-39858](https://jira.hl7.org/browse/FHIR-39858) [See Changes Here](uscdi.html)
 60. **Applied:** Add USCDI Mapping references for Disability Status and Mental/Cognitive Status [FHIR-39859](https://jira.hl7.org/browse/FHIR-39859) [See Changes Here](uscdi.html)
 61. **Applied:** Adjust USCDI Mapping references to Patient Profile [FHIR-39860](https://jira.hl7.org/browse/FHIR-39860) [See Changes Here](uscdi.html)
