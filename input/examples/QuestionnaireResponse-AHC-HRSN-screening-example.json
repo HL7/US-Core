@@ -1,181 +1,171 @@
 {
-    "resourceType": "QuestionnaireResponse",
-    "id": "ahc-hrsn-screening-example",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "QuestionnaireResponse AHC HRSN Screening Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a US Core QuestionnaireResponse example that represents questions and selected answers from the *US Core Observation Screening Assessment Profile* AHC-HRSN defined in LOINC (code 96777-8)). This example is generated using the LHC-Forms SDC Questionnaire App. This example reference a FHIR questionnaire that contains no actual questions, but is used to provide metadata about the assessment tool."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
-        ]
-    },
-    "questionnaire": "http://hl7.org/fhir/us/core/Questionnaire/ahc-hrsn-screening-example",
-    "status": "completed",
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy V. Shaw"
-    },
-    "authored": "2022-03-29T22:38:59.084000+00:00",
-    "item": [
-        {
-            "linkId": "/71802-3",
-            "text": "What is your living situation today?",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA31993-1",
-                        "display": "I have a steady place to live"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/96778-6",
-            "text": "Think about the place you live. Do you have problems with any of the following?",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA32001-2",
-                        "display": "Water leaks"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA31996-4",
-                        "display": "Pests such as bugs, ants, or mice"
-                    }
-                },
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA32000-4",
-                        "display": "Smoke detectors missing or not working"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/88122-7",
-            "text": "Within the past 12 months, you worried that your food would run out before you got money to buy more.",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA28398-8",
-                        "display": "Never true"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/88123-5",
-            "text": "Within the past 12 months, the food you bought just didn't last and you didn't have money to get more.",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA28398-8",
-                        "display": "Never true"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/93030-5",
-            "text": "In the past 12 months, has lack of reliable transportation kept you from medical appointments, meetings, work or from getting things needed for daily living?",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA32-8",
-                        "display": "No"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/96779-4",
-            "text": "In the past 12 months has the electric, gas, oil, or water company threatened to shut off services in your home?",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA32-8",
-                        "display": "No"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/95618-5",
-            "text": "How often does anyone, including family and friends, physically hurt you?",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA6270-8",
-                        "display": "Never"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/95617-7",
-            "text": "How often does anyone, including family and friends, insult or talk down to you?",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA6270-8",
-                        "display": "Never"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/95616-9",
-            "text": "How often does anyone, including family and friends, threaten you with harm?",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA6270-8",
-                        "display": "Never"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/95615-1",
-            "text": "How often does anyone, including family and friends, scream or curse at you?",
-            "answer": [
-                {
-                    "valueCoding": {
-                        "system": "http://loinc.org",
-                        "code": "LA6270-8",
-                        "display": "Never"
-                    }
-                }
-            ]
-        },
-        {
-            "linkId": "/95614-4",
-            "text": "Safety total score",
-            "answer": [
-                {
-                    "valueDecimal": 4
-                }
-            ]
-        }
+  "resourceType": "QuestionnaireResponse",
+  "id": "ahc-hrsn-screening-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
     ]
+  },
+  "questionnaire": "http://hl7.org/fhir/us/core/Questionnaire/ahc-hrsn-screening-example",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy V. Shaw"
+  },
+  "authored": "2022-03-29T22:38:59.084000+00:00",
+  "item": [
+    {
+      "linkId": "/71802-3",
+      "text": "What is your living situation today?",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA31993-1",
+            "display": "I have a steady place to live"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/96778-6",
+      "text": "Think about the place you live. Do you have problems with any of the following?",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA32001-2",
+            "display": "Water leaks"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA31996-4",
+            "display": "Pests such as bugs, ants, or mice"
+          }
+        },
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA32000-4",
+            "display": "Smoke detectors missing or not working"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/88122-7",
+      "text": "Within the past 12 months, you worried that your food would run out before you got money to buy more.",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA28398-8",
+            "display": "Never true"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/88123-5",
+      "text": "Within the past 12 months, the food you bought just didn't last and you didn't have money to get more.",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA28398-8",
+            "display": "Never true"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/93030-5",
+      "text": "In the past 12 months, has lack of reliable transportation kept you from medical appointments, meetings, work or from getting things needed for daily living?",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA32-8",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/96779-4",
+      "text": "In the past 12 months has the electric, gas, oil, or water company threatened to shut off services in your home?",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA32-8",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/95618-5",
+      "text": "How often does anyone, including family and friends, physically hurt you?",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6270-8",
+            "display": "Never"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/95617-7",
+      "text": "How often does anyone, including family and friends, insult or talk down to you?",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6270-8",
+            "display": "Never"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/95616-9",
+      "text": "How often does anyone, including family and friends, threaten you with harm?",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6270-8",
+            "display": "Never"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/95615-1",
+      "text": "How often does anyone, including family and friends, scream or curse at you?",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6270-8",
+            "display": "Never"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/95614-4",
+      "text": "Safety total score",
+      "answer": [
+        {
+          "valueDecimal": 4
+        }
+      ]
+    }
+  ]
 }

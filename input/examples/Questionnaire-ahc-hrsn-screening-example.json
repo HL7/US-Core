@@ -1,42 +1,32 @@
 {
-    "resourceType": "Questionnaire",
-    "id": "ahc-hrsn-screening-example",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Questionnaire AHC HRSN Screening Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a SDC Questionnaire example that represents the [Accountable health communities (AHC) health-related social needs screening (HRSN) tool](https://innovation.cms.gov/files/worksheets/ahcm-screeningtool.pdf) defined in LOINC (code 96777-8). This example contains no actual questions, but is used to provide metadata about the assessment tool."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
-        ]
-    },
-    "url": "http://hl7.org/fhir/us/core/Questionnaire/ahc-hrsn-screening-example",
-    "status": "active",
-    "experimental": true,
-    "identifier": [
-        {
-            "system": "http://example.org/Questionnaire/identifiers",
-            "value": "ahc-hrsn-screening-example"
-        }
-    ],
-    "name": "AHCHRSNScreening",
-    "title": "AHC HRSN Screening",
-    "description": "This is a SDC Questionnaire example that represents the [Accountable health communities (AHC) health-related social needs screening (HRSN) tool](https://innovation.cms.gov/files/worksheets/ahcm-screeningtool.pdf) defined in LOINC (code 96777-8). This example contains no actual questions, but is used to provide metadata about the assessment tool.",
-    "date": "2023-03-31",
-    "code": [
-        {
-            "system": "http://loinc.org",
-            "code": "96777-8",
-            "display": "Accountable health communities (AHC) health-related social needs screening (HRSN) tool"
-        }
-    ],
-    "subjectType": [
-        "Patient"
+  "resourceType": "Questionnaire",
+  "id": "ahc-hrsn-screening-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
     ]
+  },
+  "url": "http://hl7.org/fhir/us/core/Questionnaire/ahc-hrsn-screening-example",
+  "status": "active",
+  "experimental": true,
+  "identifier": [
+    {
+      "system": "http://example.org/Questionnaire/identifiers",
+      "value": "ahc-hrsn-screening-example"
+    }
+  ],
+  "name": "AHCHRSNScreening",
+  "title": "AHC HRSN Screening",
+  "description": "This is a SDC Questionnaire example that represents the [Accountable health communities (AHC) health-related social needs screening (HRSN) tool](https://innovation.cms.gov/files/worksheets/ahcm-screeningtool.pdf) defined in LOINC (code 96777-8). This example contains no actual questions, but is used to provide metadata about the assessment tool.",
+  "date": "2023-03-31",
+  "code": [
+    {
+      "system": "http://loinc.org",
+      "code": "96777-8",
+      "display": "Accountable health communities (AHC) health-related social needs screening (HRSN) tool"
+    }
+  ],
+  "subjectType": [
+    "Patient"
+  ]
 }

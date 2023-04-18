@@ -22,34 +22,20 @@
   "code": {
     "coding": [
       {
-        "code": "93039-6",
-        "display": "Optional additional questions [PRAPARE]",
+        "code": "68517-2",
+        "display": "How many times in the past year have you have X or more drinks in a day",
         "system": "http://loinc.org"
       }
     ],
-    "text": "Optional additional questions"
+    "text": "How many times in the past 12 months have you had 5 or more drinks in a day (males) or 4 or more drinks in a day (females)?"
   },
   "derivedFrom": [
     {
-      "reference": "QuestionnaireResponse/prapare-example"
+      "reference": "QuestionnaireResponse/ahc-hrsn-screening-example"
     }
   ],
-  "effectiveDateTime": "2022-03-28T18:30:40-07:00",
-  "hasMember": [
-    {
-      "reference": "Observation/PRAPARE-item-example-93028-9"
-    },
-    {
-      "reference": "Observation/PRAPARE-item-example-93027-1"
-    },
-    {
-      "reference": "Observation/PRAPARE-item-example-93026-3"
-    },
-    {
-      "reference": "Observation/PRAPARE-item-example-76501-6"
-    }
-  ],
-  "id": "PRAPARE-panel-example-93039-6",
+  "effectiveDateTime": "2022-03-29T22:38:59.084000+00:00",
+  "id": "AHC-HRSN-item-example-68517-2",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
@@ -64,5 +50,15 @@
   "status": "final",
   "subject": {
     "reference": "Patient/example"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "LA18934-2",
+        "display": "Daily or almost daily",
+        "system": "http://loinc.org"
+      }
+    ],
+    "text": "Daily or almost daily"
   }
 }
