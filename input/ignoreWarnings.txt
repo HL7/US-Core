@@ -54,7 +54,6 @@ WARNING: SearchParameter/us-core-encounter-id: SearchParameter: The expression '
 WARNING: SearchParameter/us-core-patient-id: SearchParameter: The expression 'Patient.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
 WARNING: SearchParameter/us-core-practitioner-id: SearchParameter: The expression 'Practitioner.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
 WARNING: SearchParameter/us-core-questionnaireresponse-id: SearchParameter: The expression 'QuestionnaireResponse.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
-WARNING: SearchParameter/us-core-questionnaireresponse-tag: SearchParameter: The expression 'QuestionnaireResponse.meta.tag' is not compatible with the expression 'Resource.meta.tag' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-tag, and this likely indicates that the derivation relationship is not valid
 WARNING: SearchParameter/us-core-relatedperson-id: SearchParameter: The expression 'RelatedPerson.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
 WARNING: SearchParameter/us-core-servicerequest-id: SearchParameter: The expression 'ServiceRequest.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
 WARNING: SearchParameter/us-core-specimen-id: SearchParameter: The expression 'Specimen.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
@@ -62,8 +61,7 @@ WARNING: SearchParameter/us-core-specimen-id: SearchParameter: The expression 'S
 
 # === US Core Goal Description Binding is extensible which allow for text only and guidance to use free text for Goal.description is given in the US Core Goal Implementation Guidance (1). There are 2 Goal examples, Goal/goal-sdoh-2 uses a code this one does not. ===
 
-WARNING: Goal/goal-1: Goal.description: No code provided, and a code should be provided from the value set 'US Core Goal Codes' (http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description|6.0.0-ballot)
-
+No code provided, and a code should be provided from the value set 'US Core Goal Codes' (http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description|6.0.0)
 
 # === Circular US Core Warnings since this is US Core (4): NONE ===
 
@@ -105,9 +103,10 @@ INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[0].resour
 
 # === Examples demonstrate use of additional Codes or Identifiers not defined in US Core profiles (7)===
 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.0.0-ballot
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.0.0-ballot
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.0.0-ballot
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|6.0.0
 
 
 # === Code System OID is taken from the base FHIR valueset http://hl7.org/fhir/ValueSet/endpoint-payload-type, IHE CodeSystem documented in base spec is not recognized by validator. (3)===
@@ -124,12 +123,7 @@ INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/Struct
 
 # === Using  a SHAM example.org questionnaire for these examples (4)===
 
-
-INFORMATION: QuestionnaireResponse/AHC-HRSN-screening-example: QuestionnaireResponse: The questionnaire 'http://example.org/Questionnaire/lforms-ahn-hrsn-screening' could not be resolved, so no validation can be performed against the base questionnaire
-INFORMATION: QuestionnaireResponse/5774968: QuestionnaireResponse: The questionnaire 'http://example.org/fhir/Questionnaire/44249-1-x' could not be resolved, so no validation can be performed against the base questionnaire
-INFORMATION: QuestionnaireResponse/PRAPARE-example: QuestionnaireResponse: The questionnaire 'http://example.org/fhir/Questionnaire/PRAPARE' could not be resolved, so no validation can be performed against the base questionnaire
-INFORMATION: QuestionnaireResponse/hunger-vital-sign-example: QuestionnaireResponse: The questionnaire 'http://example.org/fhir/Questionnaire/HungerVitalSign' could not be resolved, so no validation can be performed against the base questionnaire
-
+The questionnaire 'http://example.org/Questionnaire/lforms-ahn-hrsn-screening' could not be resolved, so no validation can be performed against the base questionnaire
 
 # === The following comment is understood and acknowledged.  In some cases it inherits binding from core and A change request to correct this has been applied to the base FHIR ver 4.3.0 (“Release 4B”) to clarify the binding applies to the Quantity data type. Will need to slice value[x] in future ===
 
@@ -145,6 +139,21 @@ The string value contains text that looks like embedded HTML tags. If this conte
 # ==== The following comment is understood and acknowledged ====
 
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+
+# ==== The self link for these searchset bundle is to the $docref operation and not a search ====
+
+No types could be determined from the search string, so the types can''t be checked
+
+# ========= The code is listed in DocumentReference Format Code Set this seems to be a terminology server issue =========
+
+The Coding provided (urn:oid:1.3.6.1.4.1.19376.1.2.3#urn:hl7-org:sdwg:ccda-structuredBody:2.1) is not in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = Not in value set http://hl7.org/fhir/ValueSet/formatcodes)
+
+# Using the extension US Core Extension Questionnaire URI  pointing to a pdf form of the Questionnaire for this example ===
+
+No questionnaire is identified, so no validation can be performed against the base questionnaire
+
+
+
 
 
 
