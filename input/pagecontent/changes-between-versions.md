@@ -13,7 +13,7 @@ Work is underway to identify corrections in subsequent versions as "patches" to 
 
 The table below summarizes the different profiles and resource types between Argonaut Data Query and major releases of US Core :
 
-{% include dstu2-r4-table.md %}
+{% include dstu2-r4-table2.md %}
 
 Detailed comparisons between the FHIR artifacts in this current {{site.data.fhir.igVer}} version of US Core and each previous major release are provided in the links below:
 
