@@ -12,14 +12,14 @@ The following are example usage scenarios for this profile:
 
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
 
-**Each Observation must have:**
+**Each Observation Must Have:**
 
 1. a status
 1. a category code
 2. a code
 3. a patient
 
-**Each Observation must support:**
+**Each Observation Must Support:**
 
 2. a time indicating when the observation was made
 3. who answered the questions
@@ -27,13 +27,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Additional USCDI Requirements**
 
-For ONC's USCDI requirements, each ServiceRequest must support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
+For ONC's USCDI requirements, each ServiceRequest Must Support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
 
 1. references to an associated survey, assessment, or screening tool*
 
 \*see guidance below
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 
 - The codes can be from LOINC or SNOMED CT.
 - The value for these types of observations may be:

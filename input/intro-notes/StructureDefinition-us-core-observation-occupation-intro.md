@@ -11,21 +11,21 @@ The following are example usage scenarios for this profile:
 
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
 
-**Each Observation must have:**
+**Each Observation Must Have:**
 
 1. a status
 2. a code for job history
 3. a patient
 5. the job code or text 
 
-**Each Observation must support:**
+**Each Observation Must Support:**
 
 1. a category code of "social-history"
 2. when the job occurred
 3. a code for the job history industry
 4. the industry code or text 
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 
 <div class="bg-success" markdown="1">
 

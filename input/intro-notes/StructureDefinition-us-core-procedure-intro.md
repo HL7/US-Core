@@ -12,7 +12,7 @@ The following are example usage scenarios for this profile:
 
 The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.  
 
-**Each Procedure must have:**
+**Each Procedure Must Have:**
 
 1.  a status
 1.  a code that identifies the type of procedure performed on the patient
@@ -22,14 +22,14 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Additional USCDI Requirements**
 
-For ONC's USCDI requirements, each Procedure must support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
+For ONC's USCDI requirements, each Procedure Must Support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
 
 1.  A reference to the request for the procedure*
 
 \*see guidance below
 
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 
 - Procedure codes can be taken from SNOMED-CT, CPT, HCPCS II, ICD-10-PCS, CDT. LOINC.
     - Only LOINC concepts that reflect actual procedures **SHOULD** be used

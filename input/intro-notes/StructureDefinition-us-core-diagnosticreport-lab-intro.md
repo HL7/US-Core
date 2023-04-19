@@ -10,7 +10,7 @@ The following are example usage scenarios for the US Core DiagnosticReport Profi
 
 The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.  
 
-**Each DiagnosticReport must have:**
+**Each DiagnosticReport Must Have:**
 
 1.  a status
 1.  a category code of 'LAB'
@@ -22,12 +22,12 @@ The following data-elements must always be present ([Mandatory] definition) or m
 \*These elements have the following constraints: **SHALL** be present if status is
 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'.
 
-**Each DiagnosticReport must support:**
+**Each DiagnosticReport Must Support:**
 
 1.   who issues the report
 1.   a result
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 
 * Additional codes that translate or map to the DiagnosticReport codes or category codes are allowed.  For example:
    -  providing both a local system codes and a LOINC code that it map to

@@ -11,7 +11,7 @@ The following are example usage scenarios for the US Core AllergyIntolerance
 
 The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.
 
-**Each AllergyIntolerance must have:**
+**Each AllergyIntolerance Must Have:**
 
 1.  a clinical status of the allergy (e.g., active or resolved)*
 1.  a code which tells you what the patient is allergic to
@@ -19,12 +19,12 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 \*This element has the following constraints: **SHALL** be present if verification status is not "entered-in-error" and **SHALL NOT** be present if verification Status is "entered-in-error".
 
-**Each AllergyIntolerance must support:**
+**Each AllergyIntolerance Must Support:**
 
 1. a verification status
 1. a reaction manifestation
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 
 * *No Known Allergies* may be represented using the US Core-AllergyIntolerance profile with appropriate negation code in `AllergyIntolerence.code` and the appropriate verification status in `AllergyIntolerance.verificationStatus`.
 

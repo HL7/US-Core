@@ -11,19 +11,19 @@ profile:
 
 The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.  
 
-**Each Immunization must have:**
+**Each Immunization Must Have:**
 
 1.  a status
 1.  a vaccine code that identifies the kind of vaccine administered
 1.  a date the vaccine was administered
 1.  a patient
 
-**Each Immunization must support:**
+**Each Immunization Must Support:**
 
 1.  a statusReason if the vaccine wasn't given
 1.  a flag to indicate whether the vaccine was reported by someone other than the person who administered the vaccine.
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 
 - Use the status code: `not-done` to represent that an immunization was *not* given.
 - Based upon the ONC U.S. Core Data for Interoperability (USCDI) v1 requirements, [CVX vaccine codes]<sup>1</sup> are required, and the [NDC vaccine codes] **SHOULD** be supported as a translation.

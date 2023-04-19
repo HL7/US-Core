@@ -17,7 +17,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a [LOINC] code, if available, which tells you the survey question
 1. a patient
 
-**Each Observation must support:**
+**Each Observation Must Support:**
 
 1. additional categories that further specify the assessment or screening
 2. a time indicating when the survey was taken
@@ -29,7 +29,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 \* \*\* see guidance below
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 - \*\*See the [Screening and Assessments] guidance page for how this profile represents surveys, screenings, and assessments.
   - Each response to individual questions and each answer to a multi-select or "check all that apply" question is a separate US Core Screening and Assessments Observation. The question is communicated in `Observation.code`, and the answer is in `Observation.value`.
   - Multi-question screenings and assessments use the US Core Screening and Assessments Observation to represent a "panel" or grouping. The multi-question surveys or assessments  `Observation.code` is an overarching assessment or screening code, and the `Observation.value` element**SHOULD** be empty. `Observation.hasMember` references US Core Screening and Assessments Observations that represent the responses to each question in the screening or assessment. 

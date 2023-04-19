@@ -63,7 +63,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 22. **Applied:** Clarify how profiles are defined [FHIR-39703](https://jira.hl7.org/browse/FHIR-39703) [See Changes Here](general-requirements.html#us-core-conformance-artifacts) and  [Here](index.html#introduction) and [Here](StructureDefinition-us-core-allergyintolerance.html)
 23. **Applied:** Clarify where the US Core Profile FHIR Restful transactions are defined? [FHIR-39704](https://jira.hl7.org/browse/FHIR-39704) [See Changes Here](general-requirements.html#profile-support--interaction-support)
 24. **Applied:** Use ValueSet and not value set when a FHIR ValueSet is intended [FHIR-39705](https://jira.hl7.org/browse/FHIR-39705) [See Changes Here](general-requirements.html)
-25. **Resolved - change required:** Use uppercase Must Support and not lowercase must support [FHIR-39706](https://jira.hl7.org/browse/FHIR-39706)
+25. **Applied:** Use uppercase "Must Support" and not lowercase "must suppor"t [FHIR-39706](https://jira.hl7.org/browse/FHIR-39706)
 26. **Applied:** Document Must Support and Modifier Elements [FHIR-39707](https://jira.hl7.org/browse/FHIR-39707) [See Changes Here](general-requirements.html#modifier-elements)
 27. **Applied:** Common format for Resources and Resource fields [FHIR-39708](https://jira.hl7.org/browse/FHIR-39708) [See Changes Here](screening-and-assessments.html)
 28. **Applied:** Use of mandatory text [FHIR-39709](https://jira.hl7.org/browse/FHIR-39709)

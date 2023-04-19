@@ -4,11 +4,11 @@
 
 The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.  
 
-**Each Location must have:**
+**Each Location Must Have:**
 
 1. A name
 
-**Each Location must support:**
+**Each Location Must Support:**
 
 1.  Location.status
 2.  Location.name

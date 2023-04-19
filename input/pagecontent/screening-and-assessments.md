@@ -152,4 +152,6 @@ US Core uses broadly defined value sets that contain concepts used across many u
 
  The figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Problems and Health Concerns Profile and how the grouped value set is compatible with the US Core Problem code value set.
 
+{% include img-med.html img="sdoh_condition.svg" caption="SDOH Grouped Value Set Reuse in US Core" %}
+
 {% include link-list.md %}

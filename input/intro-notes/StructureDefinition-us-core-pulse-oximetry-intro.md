@@ -8,14 +8,14 @@ The following are example usage scenarios for this profile:
 
 ### Mandatory and Must Support Data Elements
 
-In addition to the mandatory and must support data elements in the [US Core Vital Signs Profile], the following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.
+In addition to the Mandatory and Must Support data elements in the [US Core Vital Signs Profile], the following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.
 
-**Each Observation must have:**
+**Each Observation Must Have:**
 
 1. a fixed code for oxygen saturation in arterial blood as defined in the FHIR oxygen saturation profile
 1. a additional coding for oxygen saturation in arterial blood by pulse oximetry
 
-**Each Observation must support:**
+**Each Observation Must Support:**
 
 1. a value for oxygen saturation
 2. a code for inspired oxygen concentration*
@@ -23,7 +23,7 @@ In addition to the mandatory and must support data elements in the [US Core Vita
 
 \*see guidance below
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 
 - - Note that this profile also conforms to the base FHIR [Vital Signs Profile].
 {% include vitals-guidance.md %}

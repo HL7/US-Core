@@ -10,14 +10,14 @@ The following are example usage scenarios for this profile:
 
 The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.
 
-**Each Implantable Device must have:**
+**Each Implantable Device Must Have:**
 
 1.  a code identifying the type of device
 1.  a patient
 
 In addition, the following data-elements must be supported if the data is present in the sending system ([Must Support] definition):
 
-**Each Implantable Device must support:**
+**Each Implantable Device Must Support:**
 
 1. A Unique Device Identifier (UDI) numeric or alphanumeric code as the Human Readable Form (HRF) string representation of the barcode
 1. The Device Identifier (UDI-DI)
@@ -27,7 +27,7 @@ In addition, the following data-elements must be supported if the data is presen
 1. the serial number
 1. the distinct identifier (i.e., the distinct identification code)
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 - For non-implantable devices (for example, software or crutches) use the base FHIR Device resource or other use case specific Device profiles.
 - This profile supports the requirement to retrieve an 170.315(a)(14) [Implantable device list](https://www.healthit.gov/test-method/implantable-device-list) and follows the [HL7 Cross Paradigm Implementation Guide: UDI Pattern] guidelines for exchanging information about the use of and/or implantation of medical devices in patients.
   - A unique device identifier (UDI) is a unique numeric or alphanumeric code. There is a machine-readable version (AIDC - the Automatic Identification and Data Capture) as well as a human-readable version of the UDI (HRF - Human Readable Form string). This profile specifies that only the HRF must be supported. Considering the complexity of parsing AIDCs there is *no expectation* at this time that one converts an AIDC to HRF upon receipt from a FHIR source that is not conformant to this profile or is using another interchange standard (e.g., C-CDA, HL7 v2, etc). The UDI generally consists of a mandatory Device identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements.  The UDI and its components are mapped to the US Core Implantable Device Profile elements in the table below:

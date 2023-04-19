@@ -8,21 +8,21 @@ The following are example usage scenarios for this profile:
 
 ### Mandatory and Must Support Data Elements
 
-*In addition* to the mandatory and must support data elements in the US Core Vital Signs Profile, the following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and terminology requirements.  {% include diff-display-note.md parent_profile='US Core Vital Signs Profile' %}
+*In addition* to the Mandatory and Must Support data elements in the US Core Vital Signs Profile, the following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and terminology requirements.  {% include diff-display-note.md parent_profile='US Core Vital Signs Profile' %}
 
-**Each Observation must have:**
+**Each Observation Must Have:**
 
 1.  a patient
 1.  a fixed code for systolic and diastolic blood pressure panel
 1.  a fixed *component* code for systolic blood pressure
 1.  a fixed *component* code for diastolic blood pressure
 
-**Each Observation must support:**
+**Each Observation Must Support:**
 healt
 1.  a result value for systolic blood pressure
 1.  a result value for diastolic blood pressure
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 
 - Note that this profile also conforms to the base FHIR [Vital Signs Profile].
 - The observations **MAY** have additional codes that translate or map to the Observation code or category codes. For example:

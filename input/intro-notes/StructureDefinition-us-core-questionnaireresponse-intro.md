@@ -8,23 +8,23 @@ The following are example usage scenarios for this profile:
 
 ### Mandatory and Must Support Data Elements
 
-*In addition to* the mandatory and must support data elements in the SDC QuestionnaireResponse Profile, the following data-elements must always be present ([Mandatory] definition]) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and terminology requirements. Note that the *Must Support* view aggregates all the must support elements between this profile and its parent profiles.
+*In addition to* the Mandatory and Must Support data elements in the SDC QuestionnaireResponse Profile, the following data-elements must always be present ([Mandatory] definition]) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and terminology requirements. Note that the *Key Elements Table* view aggregates all the Must Support elements between this profile and its parent profiles.
 
-**Each QuestionnaireResponse must have:**
+**Each QuestionnaireResponse Must Have:**
 
 1. a reference back to the assessment upon which it is based
 1. a status
 1. a patient
 1. the date the answers were gathered
 
-**Each QuestionnaireResponse must support:**
+**Each QuestionnaireResponse Must Support:**
 
 <!-- 1. a tag to indicate context like SDOH -->
 1. a practitioner who recorded the answers
 3. the questions and decimal, string, and coded type answers
    - each question must have a identifier the pointing to question
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 
 - \*The SDC profile (from which this profile is derived) focuses on the constraints appropriate to capturing the "answer(s)" to a FHIR [Questionnaire] and demands that the Questionnaire's canonical URL be specified. If the QuestionnaireResponse is based on a non-FHIR form:
   1. Construct a FHIR Questionnaire which represents *at least* the relevant metadata (in other words, the actual questions may be omitted).

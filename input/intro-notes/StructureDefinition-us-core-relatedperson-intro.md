@@ -13,12 +13,12 @@ The following are example usage scenarios for this profile:
 
 The following data elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well. The [Formal Views] below provides the formal summary, definitions, and terminology requirements.
 
-**Each RelatedPerson must have:**
+**Each RelatedPerson Must Have:**
 
 1. a status
 2. a patient
 
-**Each RelatedPerson must support:**
+**Each RelatedPerson Must Support:**
 
 1. the relationship to the patient
 2. the name of the related person

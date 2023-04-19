@@ -15,7 +15,7 @@ profile. See the [Medication List] section for guidance on accessing a patient m
 
 The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.  
 
-**Each MedicationRequest must have:**
+**Each MedicationRequest Must Have:**
 
 1.  a status
 1.  an intent code
@@ -25,7 +25,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 \* see guidance below
 
-**Each MedicationRequest must support:**
+**Each MedicationRequest Must Support:**
 
 1. the category  (e.g. Discharge Medication)
 1. the `reported` flag  or reference signaling that information is from a secondary source such as a patient
@@ -39,14 +39,14 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Additional USCDI Requirements**
 
-For ONC's USCDI requirements, each MedicationRequest must support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
+For ONC's USCDI requirements, each MedicationRequest Must Support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
 
 1. the reason or indication for the prescription*
 
 \*see guidance below
 
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 
 * See the [Medication List] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
   * <span class="bg-success" markdown="1">When recording “self-prescribed” medication, `requester` **SHOULD** be used to indicate the Patient or RelatedPerson as the prescriber.</span><!-- new-content -->
@@ -54,7 +54,7 @@ For ONC's USCDI requirements, each MedicationRequest must support the following 
 {% include representing-meds.md %}
 
 * The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or a reference using `MedicationRequest.reportedReference`.
-   *  Although both are marked as must support, the server system is not required to support both, but **SHALL** support at least one of these elements.
+   *  Although both are marked as Must Support, the server system is not required to support both, but **SHALL** support at least one of these elements.
    *  The client application **SHALL** support both elements.
 
 - \*The MedicationRequest resource can communicate the reason or indication for treatment using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`.

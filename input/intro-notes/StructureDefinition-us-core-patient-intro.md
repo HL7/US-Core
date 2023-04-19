@@ -14,20 +14,20 @@ The following are example usage scenarios for this profile:
 
 The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and  terminology requirements.  
 
-**Each Patient must have:**
+**Each Patient Must Have:**
 
 1. a patient identifier (e.g. MRN)
 1. a patient name
 1. a gender*
 
-**Each Patient must support:**
+**Each Patient Must Support:**
 
 1. a birth date
 1. an address
 
 **Additional USCDI Requirements**
 
-For ONC's USCDI requirements, each Patient must support the following additional elements. These elements are included in the formal definition of the profile. The patient examples include all of these elements.
+For ONC's USCDI requirements, each Patient Must Support the following additional elements. These elements are included in the formal definition of the profile. The patient examples include all of these elements.
 
 1. contact detail (e.g. a telephone number or an email address)
 1. a communication language
@@ -43,7 +43,7 @@ For ONC's USCDI requirements, each Patient must support the following additional
 
 *see guidance below
 
-**Profile specific implementation guidance:**
+**Profile Specific Implementation Guidance:**
 - Note that *Date of Death*, *Previous Name*, *Suffix*,and *Previous address* are listed in the U.S. Core Data for Interoperability.
   - Date of Death is communicated using the `Patient.deceasedDateTime` element.
   - Suffix is represented using the `Patient.name.suffix` element.

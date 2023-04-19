@@ -28,7 +28,7 @@ This Guide is divided into several pages, which are listed at the top of each pa
 - [Home]\: The home page provides the introduction and background for US Core.
 - [Conformance]\: These pages describe the set of rules to claim conformance to this guide
   - [General Requirements]\: This page defines requirements common to all actors and profiles used in this guide including how CapabilityStatements are used to claim conformance.
-  - [Must Support]\: This page defines the expectations for mandatory and must support elements in the US Core Profiles.
+  - [Must Support]\: This page defines the expectations for mandatory and Must Support elements in the US Core Profiles.
 - [Guidance]\: The Guidance pages document best practices and how to use the profiles and transactions defined in this guide.
   - [USCDI]\: This page maps the US Core profiles to the (USCDI) data classes and data elements.
   - [General Guidance]\: This page provides guidance and definitions and requirements common to all actors and profiles used in this guide.
