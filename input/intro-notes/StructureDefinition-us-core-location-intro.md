@@ -10,10 +10,10 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each Location Must Support:**
 
-1.  Location.status
-2.  Location.name
-3.  Location.telecom
-4.  Location.address
+1.  `Location.status`
+2.  `Location.name`
+3.  `Location.telecom`
+4.  `Location.address`
 5.  managingOrganization
 
 **Additional Profile specific implementation guidance:**

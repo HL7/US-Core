@@ -65,7 +65,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 24. **Applied:** Use ValueSet and not value set when a FHIR ValueSet is intended [FHIR-39705](https://jira.hl7.org/browse/FHIR-39705) [See Changes Here](general-requirements.html)
 25. **Applied:** Use uppercase "Must Support" and not lowercase "must suppor"t [FHIR-39706](https://jira.hl7.org/browse/FHIR-39706)
 26. **Applied:** Document Must Support and Modifier Elements [FHIR-39707](https://jira.hl7.org/browse/FHIR-39707) [See Changes Here](general-requirements.html#modifier-elements)
-27. **Applied:** Common format for Resources and Resource fields [FHIR-39708](https://jira.hl7.org/browse/FHIR-39708) [See Changes Here](screening-and-assessments.html)
+27. **Applied:** Common format for Resources and Resource fields [FHIR-39708](https://jira.hl7.org/browse/FHIR-39708)
 28. **Applied:** Use of mandatory text [FHIR-39709](https://jira.hl7.org/browse/FHIR-39709)
 29. **Applied:** Add reference to FHIR section on language support [FHIR-39710](https://jira.hl7.org/browse/FHIR-39710) [See Changes Here](general-guidance.html#language-support)
 30. **Applied:** Refer to FHIR specification as base definition for RESTful operations [FHIR-39711](https://jira.hl7.org/browse/FHIR-39711) [See Changes Here](general-guidance.html#read-fetch-syntax)

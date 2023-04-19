@@ -18,7 +18,7 @@ The following search parameters and search parameter combinations SHALL be suppo
     *Implementation Notes:* Fetches a bundle of all CareTeam resources for the specified patient and status =`active` and may include CareTeam Patient, RelatedPerson and Practitioner and PractitionerRole participants.  
 To get Practitioner name and identifier using PractitionerRole:  
 1) Search for the careteam PractitionerRole: GET [base]/CareTeam?patient=[id]&amp;status=active&amp;_include=CareTeam:participant:PractitionerRole
-2) using the FHIR _id from the PractitionerRole.practitioner element resource,  fetch the Practitioner resources using  GET [base]/Practitioner?_id=[id] ([how to search by reference] and [how to search by token])
+2) Use the FHIR _id from the `PractitionerRole.practitioner` element, to fetch the Practitioner resources using  GET [base]/Practitioner?_id=[id] ([how to search by reference] and [how to search by token])
 
 
 #### Optional Search Parameters:

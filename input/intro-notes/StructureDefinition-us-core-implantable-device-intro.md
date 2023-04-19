@@ -34,13 +34,13 @@ In addition, the following data-elements must be supported if the data is presen
 
     |UDI component|US Core Implantable Device Profile element|
     |---|---|
-    |UDI HRF string|Device.udiCarrier.carrierHRF|
-    |DI|Device.udiCarrier.deviceIdentifier|
-    |manufacture date (UDI-PI element)|Device.manufactureDate|
-    |expiration dat (UDI-PI elemente|Device.expirationDate|
-    |lot number (UDI-PI element)|Device.lotNumber|
-    |serial number (UDI-PI element)|Device.serialNumber|
-    |distinct identifier (UDI-PI element)|Device.distinctIdentifier|
+    |UDI HRF string|`Device.udiCarrier.carrierHRF`|
+    |DI|`Device.udiCarrier.deviceIdentifier`|
+    |manufacture date (UDI-PI element)|`Device.manufactureDate`|
+    |expiration dat (UDI-PI elemente|`Device.expirationDate`|
+    |lot number (UDI-PI element)|`Device.lotNumber`|
+    |serial number (UDI-PI element)|`Device.serialNumber`|
+    |distinct identifier (UDI-PI element)|`Device.distinctIdentifier`|
     {:.grid}
 
   -  Implementers are encouraged to use the FDA Global UDI Database (GUDID) and associated APIs to parse and validate the UDI:
@@ -53,11 +53,11 @@ In addition, the following data-elements must be supported if the data is presen
 
    |data element|US Core Implantable Device Profile element|
    |---|---|
-   |manufacturer|Device.manufacturer|
-   |model|Device.model|
+   |manufacturer|`Device.manufacturer`|
+   |model|`Device.model`|
    {:.grid}
 
-- Servers **SHOULD** support query by Device.type to allow clients to request the patient's devices by a specific type. Note: The Device.type is too granular to differentiate implantable vs. non-implantable devices.  
+- Servers **SHOULD** support query by `Device.type` to allow clients to request the patient's devices by a specific type. Note: `Device.type` is too granular to differentiate implantable vs. non-implantable devices.  
 - In the [Quick Start] section below, searching for all devices is described. Records of implanted devices **MAY** be queried against UDI data including:
 
     - UDI HRF string (`udi-carrier`)

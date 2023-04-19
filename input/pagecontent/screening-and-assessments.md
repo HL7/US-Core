@@ -19,7 +19,7 @@ However, implementers **SHOULD** consider more constrained, domain-specific prof
 
 The figure below shows how <span class="bg-success" markdown="1">screening and assessments lead to providing services for a patient.</span><!-- new-content -->
 
-- **Screening and Assessments**: [Screening and Assessment](#screening-and-assessments) <span class="bg-success" markdown="1">are used to identify problems before delivering appropriate clinical care. The following US Core profile support capturing their responses</span><!-- new-content -->:
+- **Screening and Assessments**: [Screening and Assessment](#screening-and-assessments) <span class="bg-success" markdown="1">are used to identify problems before delivering appropriate clinical care. The following US Core Profile support capturing their responses</span><!-- new-content -->:
     - <span class="bg-success" markdown="1">[US Core Simple Observation Profile]</span><!-- new-content -->
     - <span class="bg-success" markdown="1">The [US Core Observation Screening Assessment Profile]</span><!-- new-content -->
     - <span class="bg-success" markdown="1">The [SDC Base Questionnaire]/[US Core QuestionnaireResponse Profile]</span><!-- new-content -->
@@ -89,7 +89,7 @@ The sections below provide additional guidance on when Observations and Question
 
 {% include img-med.html img="uscore-observation-assessment-structure.svg" caption="Relationship Between Screening Assessment Observations" %}
 
-Note that the panels can be nested to create additional groupings of responses. See the [US Core Observation Screening Assessment Profile] profile page for detailed documentation on how the observations are linked, examples, and search requirements.
+Note that the panels can be nested to create additional groupings of responses. See the [US Core Observation Screening Assessment Profile] page for detailed documentation on how the observations are linked, examples, and search requirements.
 
 ###### Searching for Screening and Assessment Data
 
@@ -100,7 +100,7 @@ Unlike QuestionnaireResponse, When Observations are used to record set of screen
 ##### <span class="bg-success" markdown="1">SDC Base Questionnaire/US Core QuestionnaireResponse Profile</span><!-- new-content -->
 
 <div class="bg-success" markdown="1">
-Screening and assessment instruments may be represented as questionnaires including FHIR Questionnaires.  The [Structured Data Capture (SDC)] specification documents the workflow for the creation, discovery and retrieval and data-extraction of FHIR Questionnaire and QuestionnaireResponse. The [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile]), and is used to capture, exchange and persist the response data. QuestionnaireResponse can be thought of as a snapshot of the filled-out answer forms to the screening and assessment questions represented in the [SDC Base Questionnaire]. It is ordered and grouped corresponding to the Questionnaire and can be consulted when a complete and accurate record of the responses is required. the [US Core QuestionnaireResponse Profile] profile page for detailed documentation, examples and search requirements.
+Screening and assessment instruments may be represented as questionnaires including FHIR Questionnaires.  The [Structured Data Capture (SDC)] specification documents the workflow for the creation, discovery and retrieval and data-extraction of FHIR Questionnaire and QuestionnaireResponse. The [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile]), and is used to capture, exchange and persist the response data. QuestionnaireResponse can be thought of as a snapshot of the filled-out answer forms to the screening and assessment questions represented in the [SDC Base Questionnaire]. It is ordered and grouped corresponding to the Questionnaire and can be consulted when a complete and accurate record of the responses is required. the [US Core QuestionnaireResponse Profile] page for detailed documentation, examples and search requirements.
 
 ###### Extracting US Core Observation Screening Assessment from US Core QuestionnaireResponse
 
@@ -142,7 +142,7 @@ Each profile's *Quick Start* section shows searches by category. Although not de
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
 
 <div class="bg-success" markdown="1">
-US Core uses broadly defined value sets that contain concepts used across many use cases, including SDOH. For the SDOH Clinical Care HL7 Implementation Guide, the Gravity Project has defined “Grouped Value Sets” across specific social risk factor domains for problems/health concerns, goals, procedures, and service requests. Value sets for each SDOH domain are bundled together to create the groupings. The links below are to these Gravity Project-managed value sets in [Value Set Authority Center (VSAC)]. In VSAC, clicking “Grouping Members” within the Value Set Details tab will present the many individual value sets in the group representing the various SDOH domains. These grouped value sets are narrower subsets of the value sets allowed in the respective US Core profiles. However, when recording SDOH data US Core Profiles, servers **SHOULD** use them.
+US Core uses broadly defined value sets that contain concepts used across many use cases, including SDOH. For the SDOH Clinical Care HL7 Implementation Guide, the Gravity Project has defined “Grouped Value Sets” across specific social risk factor domains for problems/health concerns, goals, procedures, and service requests. Value sets for each SDOH domain are bundled together to create the groupings. The links below are to these Gravity Project-managed value sets in [Value Set Authority Center (VSAC)]. In VSAC, clicking “Grouping Members” within the Value Set Details tab will present the many individual value sets in the group representing the various SDOH domains. These grouped value sets are narrower subsets of the value sets allowed in the respective US Core Profiles. However, when recording SDOH data US Core Profiles, servers **SHOULD** use them.
 </div><!-- new-content -->
 
 * [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion)

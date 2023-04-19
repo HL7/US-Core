@@ -15,12 +15,12 @@ The guidance for Provenance in US Core focuses on six key elements: Timestamp, t
 
 Element | Required | Must Support |Optional| FHIR Element|
 ---|---|---|---|---
-Target | Resource Provenance <br>record supports | | | Provenance.target
-Timestamp | Date | | Time with timezone offset | Provenance.recorded
-Author | | Name<br>Identifier | NPI recommended, additional identifiers allowed| Provenance.agent.who
-Author Organization | | Name<br>Identifier  | NPI recommended, additional identifiers allowed |Provenance.agent.onBehalfOf
-Transmitter | | Name<br>Identifier | NPI recommended, additional identifiers allowed| Provenance.agent.who
-Transmitter Organization | | Name<br>Identifier  | NPI recommended, additional identifiers allowed |Provenance.agent.onBehalfOf
+Target | Resource Provenance <br>record supports | | | `Provenance.target`
+Timestamp | Date | | Time with timezone offset | `Provenance.recorded`
+Author | | Name<br>Identifier | NPI recommended, additional identifiers allowed| `Provenance.agent.who`
+Author Organization | | Name<br>Identifier  | NPI recommended, additional identifiers allowed |`Provenance.agent.onBehalfOf`
+Transmitter | | Name<br>Identifier | NPI recommended, additional identifiers allowed| `Provenance.agent.who`
+Transmitter Organization | | Name<br>Identifier  | NPI recommended, additional identifiers allowed |`Provenance.agent.onBehalfOf`
 {: .grid}
 
 ### Use Cases
@@ -63,11 +63,11 @@ A Health Information Exchange (HIE) is an organization and a technology to facil
 {% include img.html img="Provenance_HIE_Single_Org_Device.svg" caption="Figure 3: HIE Redistribution - No clinical content transformation" %}
 
 Since no clinical content is changed in the HIE redistribution, the best scenario is a Provenance Record with:
-- Provenance.agent.type = author
-  - Provenance.agent.who set to the practitioner who authored the content (i.e., not the HIE)
-  - Provenance.agent.onBehalfOf set to the organization that the author acted on behalf of before sharing with the HIE
-- Provenance.agent.type = transmitter
-  - Provenance.agent.who set to the HIE organization
+- `Provenance.agent.type` = author
+  - `Provenance.agent.who` set to the practitioner who authored the content (i.e., not the HIE)
+  - `Provenance.agent.onBehalfOf` set to the organization that the author acted on behalf of before sharing with the HIE
+- `Provenance.agent.type` = transmitter
+  - `Provenance.agent.who` set to the HIE organization
 
  The timestamp and pointer (i.e., target) to the appropriate Resource are required in all cases and must be included. This IG would note these as **SHALL** constraints if systems always had the Author and Author Organizations available. Participants in the development of this guide reported Author information provided to HIEs needs to be more consistent and reliable.  
 
@@ -78,7 +78,7 @@ Unlike Use Case 3 - HIE Redistribution, Use Case 4 includes data transformation.
 
 {% include img.html img="Provenance_HIE_Multi_Org_Device.svg" caption="Figure 4: HIE Transformation - Clinical content is transformed" %}
 
-Transformation of data from one format to another **MAY** change the authorship of the information, where the HIE is the author/author organization. The HIE must maintain the original data source. An `agent.type=assembler`, `agent.type=transmitter`, or other agents from [Provenance Agent Type] value set **MAY** also be included. Due to insufficient implementer guidance, the Basic Provenance guidance here does not specify how to assign authorship for this use case. HL7 plans to gather additional input and include it in the HL7 Basic Provenance Informative guide for C-CDA and FHIR.
+Transformation of data from one format to another **MAY** change the authorship of the information, where the HIE is the author/author organization. The HIE must maintain the original data source. An `agent.type`="assembler", `agent.type`="transmitter", or other agents from [Provenance Agent Type] value set **MAY** also be included. Due to insufficient implementer guidance, the Basic Provenance guidance here does not specify how to assign authorship for this use case. HL7 plans to gather additional input and include it in the HL7 Basic Provenance Informative guide for C-CDA and FHIR.
 
 <div class="bg-success" markdown="1">
 

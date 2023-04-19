@@ -49,8 +49,8 @@ There is no single best practice for representing a scanned or narrative-only re
 
 To enable consistent access to scanned DiagnosticReport clinical reports, the <span class="bg-success" markdown="1">FHIR Server</span><!-- new-content --> **SHALL** expose these overlapping scanned or narrative-only reports through *both* DiagnosticReport and DocumentReference by representing the same attachment URL using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify duplicate data.
 
-* DocumentReference.content.attachment.url
-* DiagnosticReport.presentedForm.url
+* `DocumentReference.content.attachment.url`
+* `DiagnosticReport.presentedForm.url`
 
 For example, when `DiagnosticReport.presentedForm.url` references a Scan (PDF), that Attachment **SHALL** also be accessible through `DocumentReference.content.attachment.url`.(See Figure 2) This guide requires servers to implement the duplicate reference to allow a client to find a Pathology report, or other Diagnostic Reports, in either resource. If servers properly categorized scanned reports and used the correct resource per report type (e.g., Pathology scan in DiagnosticReport), this wouldn't be required. However at the time of this IG's development, this duplication requirement is necessary due to a lack of consistency in the proper use of these resources.
 
@@ -110,7 +110,7 @@ The following **SHOULD** be exposed via DiagnosticReport
 * Pathology Report Narrative
 * Procedure Note
 
-Servers that support DiagnosticReport will include the clinical note narrative content in DiagnosticReport.presentedForm.
+Servers that support DiagnosticReport will include the clinical note narrative content in `DiagnosticReport.presentedForm`.
 
 A method for discovering the types of notes and reports that a server supports is described in the [Determining Server Note Type](#using-expand) section below.
 
@@ -118,7 +118,7 @@ Note that this guide focuses on exposing existing information, not how systems a
 
 #### Search
 
-The standard FHIR [search] API is used to retrieve clinical notes and reports. In this guide, the US Core [CapabilityStatement] and the *Quick Start* sections for the US Core Clinical Notes and Diagnostic Report profiles define the required search parameters and describe how they are used.
+The standard FHIR [search] API is used to retrieve clinical notes and reports. In this guide, the US Core [CapabilityStatement] and the *Quick Start* sections for the US Core Clinical Notes and Diagnostic Report and US Core DocumentReference Profiles define the required search parameters and describe how they are used.
 
 Common client search scenarios include:
 
@@ -222,7 +222,7 @@ However, in existing EHRs, the clinical impression is often contained within a b
 
 Footnotes
 
-[^1]: Storing scanned reports as a DiagnosticReport, with appropriate categorization, enables clients to access the scanned reports along with DiagnosticReports containing discrete information. For example, a client can request all DiagnosticReport.category="LAB" and receive reports with discrete information and any scanned reports. However, not all systems store and categorize Lab reports with DiagnosticReport.
+[^1]: Storing scanned reports as a DiagnosticReport, with appropriate categorization, enables clients to access the scanned reports along with DiagnosticReports containing discrete information. For example, a client can request all `DiagnosticReport.category`="LAB" and receive reports with discrete information and any scanned reports. However, not all systems store and categorize Lab reports with DiagnosticReport.
 
 [^2]: The developers of this guide considered requiring Clients to query *both* DocumentReference and DiagnosticReport to get all the information for a patient. However, the requirement to query two places is potentially dangerous if a client doesn't understand or follow this requirement and queries only one resource type, thereby potentially missing vital information from the other type.
 

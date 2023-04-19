@@ -1,5 +1,5 @@
 
-The US Core FHIR profiles are designed to be the base set of requirements for FHIR implementation in the US. All US Realm implementation guides **SHALL** use the US Core profiles or **SHALL** explicitly state why they are unable to use. Throughout the development of US Core, implementers, the government, and the clinical community have brought forward additional requirements for US Core. This section outlines the approach to growth and a place for items that may be added to US Core.
+The US Core FHIR Profiles are designed to be the base set of requirements for FHIR implementation in the US. All US Realm implementation guides **SHALL** use the US Core Profiles or **SHALL** explicitly state why they are unable to use. Throughout the development of US Core, implementers, the government, and the clinical community have brought forward additional requirements for US Core. This section outlines the approach to growth and a place for items that may be added to US Core.
 
 ### US Core Yearly Updates
 
@@ -50,7 +50,7 @@ Clients currently face challenges displaying the source data's times and timezon
   Common practice is to preserve the source data time offsets as the original offset or converted to Coordinated Universal Time (UTC) time. Making this a requirement is one consideration.  Another consideration is the addition of server best practices for preserving source timezones using the FHIR standard [timezone extension]. A third consideration is providing a client algorithm for resolving time offsets and time zones.
 
 #### Record or Update Data
-Very little guidance is provided on writing and updating data in the context of US Core profiles. There are multiple issues that will need to be considered when defining expected behavior by the various actors to support updates and writes to the data, including:
+Very little guidance is provided on writing and updating data in the context of US Core Profiles. There are multiple issues that will need to be considered when defining expected behavior by the various actors to support updates and writes to the data, including:
 
   - Defining the overall approach
     -  direct updates to a particular resource via FHIR RESTful transactions

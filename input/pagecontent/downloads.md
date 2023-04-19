@@ -24,7 +24,7 @@ All the profile information for the {{site.data.fhir.ig.title}} in a single CSV 
 - [CSV(compressed folder)](csvs.zip)
 - [Excel(compressed folder)](excels.zip)
 
-A table comparing all the observation profiles in US Core is also available for download:
+A table comparing all the Observation Profiles in US Core is also available for download:
 
 - [Excel](observations-summary.xlsx)
 

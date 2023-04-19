@@ -95,7 +95,7 @@ Medications may be duplicated in a medication list when multiple sources of data
 
 This specification does not specify de-duplication best practices; however, systems can consider the following approaches:
 
-* Compare the MedicationRequest.identifier. The identifier element is an external business identifier systems include to help indicate that the resources are related.
+* Compare the` MedicationRequest.identifier`. The `identifier` element is an external business identifier systems include to help indicate that the resources are related.
 * Compare the generic or brand name included in the medication resource. The system will require access to terminology capabilities to identify equivalence.
 * Finally, in the de-duplication process, systems must be cautious in only marking things as equivalent if they are certain.
 

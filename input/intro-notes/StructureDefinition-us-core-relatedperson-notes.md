@@ -40,7 +40,7 @@ The following search parameter combinations **SHOULD** be supported:
     
       1. GET [base]/RelatedPerson?patient=1137192&amp;name=van%20Putten
 
-    *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient that may match any of the string fields in the name element (including family, give, prefix, suffix, suffix, and/or text) ([how to search by reference] and [how to search by string])
+    *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient that may match any of the string fields in the `name` element (including family, give, prefix, suffix, suffix, and/or text) ([how to search by reference] and [how to search by string])
 
 
 

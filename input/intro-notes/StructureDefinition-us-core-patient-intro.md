@@ -5,7 +5,7 @@ The following are example usage scenarios for this profile:
 
 -   Query for a Patient demographic information using Medical Record
     Number (MRN), which is a type of identifier. The MRN is identifiable
-    by identifier.system and may be location specific.
+    by `identifier.system` and may be location specific.
 -   Query for a Patient demographic information using first name, last
     name, birthdate, and gender.
 

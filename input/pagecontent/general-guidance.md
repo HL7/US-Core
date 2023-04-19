@@ -13,14 +13,14 @@ When responding to a query, servers **SHOULD** not use inline [contained] resour
 
 ###  Suppressed Data
 
-In situations where the specific piece of data is hidden due to a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know. However, masking data **SHOULD** be handled based on implemented policies. For elements with a minimum cardinality = 0 (including elements labeled *Must Support*), the element **SHOULD** be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code `unknown` following the guidance on [Missing Data] in the Conformance Sections.
+In situations where the specific piece of data is hidden due to a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know. However, masking data **SHOULD** be handled based on implemented policies. For elements with a minimum cardinality = 0 (including elements labeled *Must Support*), the element **SHOULD** be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code "unknown" following the guidance on [Missing Data] in the Conformance Sections.
 
 
 
 ### SNOMED CT United States Edition
 
 <div class="bg-success" markdown="1">
-[SNOMED CT] (Systematized Nomenclature of Medicine -- Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information. US Core uses the US Edition of SNOMED CT, a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. It is used extensively in US CORE for various clinical concepts, including problems, procedures, allergies, and laboratory results. When using SNOMED codes in US Core profiles, implementers **MAY** use the default system URI which refers to an unspecified edition/version as shown in option one below. However, for terminology servers to be able to validate US Edition-only codes, implementers  **SHOULD**  provide the accompanying system URI to describe both the edition and the version of the edition as shown in option three. At a minimum, the URI **SHOULD** contain the edition of the SNOMED CT distribution as shown in option two:
+[SNOMED CT] (Systematized Nomenclature of Medicine -- Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information. US Core uses the US Edition of SNOMED CT, a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. It is used extensively in US CORE for various clinical concepts, including problems, procedures, allergies, and laboratory results. When using SNOMED codes in US Core Profiles, implementers **MAY** use the default system URI which refers to an unspecified edition/version as shown in option one below. However, for terminology servers to be able to validate US Edition-only codes, implementers  **SHOULD**  provide the accompanying system URI to describe both the edition and the version of the edition as shown in option three. At a minimum, the URI **SHOULD** contain the edition of the SNOMED CT distribution as shown in option two:
 
 #### SNOMED CT Edition and Version Options
 
@@ -270,7 +270,7 @@ Client algorithm for resolving time offsets and timezones.
 
 ### Read (Fetch) Syntax
 
-<span class="bg-success" markdown="1">Fetching resource interactions are defined by the [FHIR RESTful API]. Guidance is included on the profile pages for conformance and informative purposes:</span><!-- new-content -->
+<span class="bg-success" markdown="1">Fetching resource interactions are defined by the [FHIR RESTful API]. Guidance is included on the US core Profile pages for conformance and informative purposes:</span><!-- new-content -->
 
  **`GET [base]/[Resource-type]/[id] {parameters}`**
 

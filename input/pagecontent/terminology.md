@@ -93,7 +93,7 @@ This guide links terminology directly to the FHIR® Terminology Service for VSAC
 For more information, refer to the [FHIR Terminology Service for VSAC Resources](https://www.nlm.nih.gov/vsac/support/usingvsac/vsacfhirapi.html)
 
 
-For example, the [US Core Smoking Status Observation Profile] valueCodeableConcept element has a preferred binding to the Smoking Status value set. To access it in VSAC, click on the link to `https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.38/expansion`:
+For example, the [US Core Smoking Status Observation Profile] `valueCodeableConcept` element has a preferred binding to the Smoking Status value set. To access it in VSAC, click on the link to `https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.11.20.9.38/expansion`:
 
  {% include img.html img="vsac-1.png" caption="Figure 1: VSAC link" %}
 

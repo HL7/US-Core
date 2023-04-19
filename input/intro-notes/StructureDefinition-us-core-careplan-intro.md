@@ -28,9 +28,9 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 * \*The original Assessment and Plan design in the CarePlan was to support the "Assessment and Plan" from a narrative Progress Note. Systems have advanced significantly since the introduction of this requirement in 2015. Relaxing this to 0..1 allows more sophisticated systems to discretely encode a CarePlan instead of providing the narrative portion.
 * Additional considerations for systems aligning with [HL7 Consolidated (C-CDA)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492) Care Plan requirements:
-    - US Core Goal **SHOULD** be present in CarePlan.goal
-    - US Core Condition **SHOULD** be present in CarePlan.addresses
-    - Assessment and Plan **MAY** be included as narrative text
+    - US Core Goal **SHOULD** be present in `CarePlan.goal`
+    - US Core Condition **SHOULD** be present in `CarePlan.addresses`
+    - Assessment and Plan **MAY** be included as narrative in `CarePlan.text`
 * As an alternative to the US Core CarePlan, Assessment and Plan of Treatment may be included in various types of [Clinical Notes], such as Progress Notes, History & Physical (H&P), Discharge Summaries, etc.
 </div><!-- new-content -->
 

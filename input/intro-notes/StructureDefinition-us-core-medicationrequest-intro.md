@@ -27,7 +27,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each MedicationRequest Must Support:**
 
-1. the category  (e.g. Discharge Medication)
+1. the category  (e.g., Discharge Medication)
 1. the `reported` flag  or reference signaling that information is from a secondary source such as a patient
 1. the encounters
 1. a prescriber

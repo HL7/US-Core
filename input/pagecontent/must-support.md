@@ -67,7 +67,7 @@ Elements with a cardinality starting with "1" (e.g., 1..1) under the "Card" head
  
 The "Key Elements Table" view consists of:
 1. all the *Mandatory*, *Must Support*, and *USCDI requirements* elements in the differential view
-2. any *Mandatory*, *Must Support*, and *USCDI requirements* elements inherited from a US Core or other profile from which it is derived. (e.g.,  [US Core Body Height Profile] is based on the [US Core Vital Signs Profile] or [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile])
+2. any *Mandatory*, *Must Support*, and *USCDI requirements* elements inherited from a US Core Profile or other profile from which it is derived. (e.g.,  [US Core Body Height Profile] is based on the [US Core Vital Signs Profile] or [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile])
 3. any *Mandatory* or [modifier elements] not in 1. or 2.
 
 This view includes the same flags and labels described in Differential Table View:.
@@ -113,14 +113,14 @@ Complex elements are composed of primitive and/or other complex elements.   Note
 
 For any complex element marked as Must Support, the server **SHALL** be capable of providing at least one of the sub-element values. If any sub-element is marked as Must Support, it must meet the Must Support requirements as well and satisfy the Must Support requirement for the parent element.
 
-For example, the [US Core DiagnosticReport Profile for Report and Note exchange] presentedForm element is labeled Must Support and has no Must Support sub-elements. When claiming conformance to this profile:
+For example, the [US Core DiagnosticReport Profile for Report and Note exchange] `presentedForm` element is labeled Must Support and has no Must Support sub-elements. When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in `DiagnosticReport.presentedForm` sub-element.
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.presentedForm`.
 
   {% include img.html img="Must_Support_DiagnosticReport_presentedForm.png" caption="Figure 9: US Core DiagnosticReport.presentedForm" %}
 
-For example, the [US Core Patient Profile] name element is labeled Must Support and has Must Support sub-elements "family" and "given". When claiming conformance to this profile:
+For example, the [US Core Patient Profile] `name` element is labeled Must Support and has Must Support sub-elements "family" and "given". When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
 - US Core Requestors **SHALL** be capable of processing the value in value in `Patient.name.family` and `Patient.name.given`.
@@ -166,7 +166,7 @@ For example, the [US Core Laboratory Result Observation Profile] effectiveDateTi
 
 Systems **MAY** support populating and processing other choice elements (such as Observation.effectivePeriod), but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_Observation.effective.jpg" caption="Figure 13: US Core Observation.effectiveDateTime" %}
+{% include img.html img="Must_Support_Observation.effective.jpg" caption="Figure 13: US Core `Observation.effectiveDateTime`" %}
 
 For the [US Core Laboratory Result Observation Profile] value element, multiple elements are labeled *Must Support*.
 
@@ -178,7 +178,7 @@ When claiming conformance to the [US Core Laboratory Result Observation Profile]
 Systems can support the other elements, but this is not a requirement of US Core.
 
 
-{% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 14: US Core Observation.value[x]" %}
+{% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 14: US Core `Observation.value[x]`" %}
 
 
 #### Must Support - Choice of Profile Elements

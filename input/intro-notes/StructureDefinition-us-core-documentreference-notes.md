@@ -15,7 +15,7 @@ The following search parameters and search parameter combinations SHALL be suppo
       1. GET [base]/DocumentReference/2169591
       1. GET [base]/DocumentReference?_id=2169591
 
-    *Implementation Notes:* Fetches a single DocumentReference. The document itself is represented as a base64 encoded binary data element or retrieved using the link provided by the resource. If the document is a  relative link to a [Binary] resource like a resource reference, it can be subsequently retrieved using: `GET [base]/Binary/[id]`. ([how to search by the logical id] of the resource)
+    *Implementation Notes:* Fetches a single DocumentReference. The document itself is represented as a base64 encoded binary `data` element or retrieved using the link provided by the resource. If the document is a  relative link to a [Binary] resource like a resource reference, it can be subsequently retrieved using: `GET [base]/Binary/[id]`. ([how to search by the logical id] of the resource)
 
 1. **SHALL** support searching for all documentreferences for a patient using the **[`patient`](SearchParameter-us-core-documentreference-patient.html)** search parameter:
 

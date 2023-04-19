@@ -12,7 +12,7 @@ The [Profiles and Extensions] page list the US Core Profiles and have been defin
 The Profile elements consist of *Mandatory*, *Must Support*, and *USCDI Requirements* elements.  *Mandatory* elements have a minimum cardinality of 1 (min=1). US Core defines the server and client expectations for processing profile elements and sub-elements it labels as  *Must Support*.  All *Must Support* FHIR elements for US Core Profile representing  [U.S. Core Data for Interoperability (USCDI) v3] Data Classes are *USCDI Requirements* elements. Additional elements are designated *USCDI Requirements* only for [ONC Health IT Certification]. The [Must Support] page defines the server and client expectations for processing these elements and illustrates how they are displayed and documented.
 </div><!-- new-content -->
 
-The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications. In addition, the [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need support. The US Core profiles identify the structural constraints, terminology bindings, and invariants.  Similarly, each US Core SearchParameter and Operation resources specify how the server understands them. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles, and the search parameters applicable to each US Core actor.
+The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications. In addition, the [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need support. The US Core Profiles identify the structural constraints, terminology bindings, and invariants.  Similarly, each US Core SearchParameter and Operation resources specify how the server understands them. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles, and the search parameters applicable to each US Core actor.
 
 ### Conforming to US Core
 
@@ -99,7 +99,7 @@ The following rules summarize the requirements defined by [FHIR Terminology] for
 
 [Required binding] to a ValueSet definition means that one of the codes from the specified ValueSet **SHALL** be used. For `CodeableConcept`, which permits multiple codings and a text element, this rule applies to *at least* one of the codings, and only text is *not* valid.
 
-For example, the [US Core AllergyIntolerance Profile] clinicalStatus element has a required binding to the AllergyIntoleranceClinicalStatusCodes ValueSet. Therefore, when claiming conformance to this profile:
+For example, the [US Core AllergyIntolerance Profile] `clinicalStatus` element has a required binding to the AllergyIntoleranceClinicalStatusCodes ValueSet. Therefore, when claiming conformance to this profile:
 
 - US Core Responders **SHALL** provide a code *exclusively* from this ValueSet in  `AllergyIntolerance.clinicalStatus.code`.
 - US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.clinicalStatus.code`.
@@ -112,7 +112,7 @@ Because of the  FHIR conformance rule:
 
 > If an extensible binding is applied to an element with maximum cardinality > 1, the binding applies to all the elements. ([Terminology Binding Extensible])
 
-FHIR profiles use [slicing] when a coded element is a repeating element, and a particular ValueSet is desired for at least one of the repeats. This is a special case where a *required* ValueSet binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the ValueSet (equivalent to  Extensible Binding below). *Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*  The example in figure 5 below illustrates this structure for the repeating DocumentReference.category element:
+FHIR profiles use [slicing] when a coded element is a repeating element, and a particular ValueSet is desired for at least one of the repeats. This is a special case where a *required* ValueSet binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the ValueSet (equivalent to  Extensible Binding below). *Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*  The example in figure 5 below illustrates this structure for the repeating `DocumentReference.category` element:
 
 - This structure allows 0..\* concept(s) from the *required* ValueSet.
 - This structure, by being 0..\*, allows servers to send concepts, not in the required ValueSet.
@@ -243,7 +243,7 @@ There are situations when information on a particular data element is missing, a
 
 1. For *coded* data elements:
    - *example*, *preferred*, or *extensible* binding strengths (CodeableConcept , or Coding datatypes):
-      - if the source systems has text but no coded data, only the text element is used.
+      - if the source systems has text but no coded data, only the `text` element is used.
           - for Coding datatypes, the text-only data is represented as a `display` element.
       - if there is neither text nor coded data:
         - use the appropriate "unknown" concept code from the ValueSet if available
@@ -287,7 +287,7 @@ There are situations when information on a particular data element is missing, a
           - `Immunization.status`
           - `Goal.lifecycleStatus`
 
-        *The clinicalStatus element is conditionally mandatory based on resource-specific constraints.
+        *The c`linicalStatus` element is conditionally mandatory based on resource-specific constraints.
 
         If any of these status code is missing, a `404` HTTP error code and an OperationOutcome **SHALL** be returned in response to a read transaction on the resource. If returning a response to a search, the problematic resource **SHALL** be excluded from the search set, and a *warning* OperationOutcome **SHOULD** be included indicating that other search results were found but could not be compliantly expressed and have been suppressed.
 

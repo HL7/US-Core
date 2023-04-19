@@ -30,7 +30,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Profile Specific Implementation Guidance:**
 -  <span class="bg-success" markdown="1">\*Although both `Goal.startDate` and `Goal.target.dueDate` are marked as Must Support, the server system is not required to support both, but **SHALL** support at least one of these elements. The client application **SHALL** support both elements.</span><!-- new-content -->
-- Free text goals can be used in Goal.description.text when a concept isn't available or a legacy goal is not mapped to a LOINC or SNOMED concept.
+- Free text goals can be used in `Goal.description.text` when a concept isn't available or a legacy goal is not mapped to a LOINC or SNOMED concept.
 -  See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Goals
 
 {% include link-list.md %}
