@@ -4,19 +4,9 @@
 # === 11 ERRORS Discussed on FMG IG review and variance granted ===
 # ==============================================================
 
-# ==== This is known issue with the terminology service and validator as discussed on Zulip here https://chat.fhir.org/#narrow/stream/179202-terminology/topic/SNOMED.20.22.3D.22.20operation - it will be corrected in future updates to the Publisher ===
-
-ERROR: CareTeam/example: CareTeam.participant[0].role[0]: Error from server: The filter "concept = 768734005" from the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.27 was not understood in the context of http://snomed.info/sct
-ERROR: CareTeam/example: CareTeam.participant[1].role[0]: Error from server: The filter "concept = 768734005" from the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.27 was not understood in the context of http://snomed.info/sct
-ERROR: CareTeam/example: CareTeam.participant[2].role[0]: Error from server: The filter "concept = 768734005" from the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.27 was not understood in the context of http://snomed.info/sct
-ERROR: CareTeam/example: CareTeam.participant[3].role[0]: Error from server: The filter "concept = 768734005" from the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.27 was not understood in the context of http://snomed.info/sct
-ERROR: CareTeam/missing-coded-data-example: CareTeam.participant[1].role[0]: Error from server: The filter "concept = 768734005" from the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.27 was not understood in the context of http://snomed.info/sct
-ERROR: CareTeam/missing-coded-data-example: CareTeam.participant[2].role[0]: Error from server: The filter "concept = 768734005" from the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.27 was not understood in the context of http://snomed.info/sct
-ERROR: CareTeam/missing-coded-data-example: CareTeam.participant[3].role[0]: Error from server: The filter "concept = 768734005" from the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.27 was not understood in the context of http://snomed.info/sct
 
 # ==== These are is known issues with the terminology service - there is no timeline for their resolution ===
 
-ERROR: Media/chest-xray: Media.content.contentType: The value provided ('image/jpeg') is not in the value set 'MimeType' (http://hl7.org/fhir/ValueSet/mimetypes|4.0.1), and a code is required from this value set) (error message = Error parsing response message: This does not appear to be a FHIR resource (wrong namespace '') (@ /))
 ERROR: ValueSet.where(id = 'simple-language'): Error from server: Language valuesets cannot be expanded as they are based on a grammar
 
 
@@ -97,8 +87,7 @@ This element does not match any known slice defined in the profile http://hl7.or
 
 # === Code from extensibly bound to NUCC for US Core and not from base FHIR preferred c80-practice-codes valueset (1)===
 
-
-INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[0].resource.ofType(PractitionerRole).specialty[0]: None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
+None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
 
 
 # === Examples demonstrate use of additional Codes or Identifiers not defined in US Core profiles (7)===
@@ -109,21 +98,11 @@ This element does not match any known slice defined in the profile http://hl7.or
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|6.0.0
 
 
-# === Code System OID is taken from the base FHIR valueset http://hl7.org/fhir/ValueSet/endpoint-payload-type, IHE CodeSystem documented in base spec is not recognized by validator. (3)===
-
-Code System URI 'urn:oid:1.3.6.1.4.1.19376.1.2.3' is unknown so the code cannot be validated
-
-
 # === Examples provided in Bundle (e.g. PractitionerRole_Practitioner_Endpoint_Bundle_Example, Allergyintolerance Provenance Example) (2)===
 
 
 INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole'): The Implementation Guide contains no explicitly linked examples for this profile
-INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance'): The Implementation Guide contains no explicitly linked examples for this profile
 
-
-# === Using  a SHAM example.org questionnaire for these examples (4)===
-
-The questionnaire 'http://example.org/Questionnaire/lforms-ahn-hrsn-screening' could not be resolved, so no validation can be performed against the base questionnaire
 
 # === The following comment is understood and acknowledged.  In some cases it inherits binding from core and A change request to correct this has been applied to the base FHIR ver 4.3.0 (“Release 4B”) to clarify the binding applies to the Quantity data type. Will need to slice value[x] in future ===
 
@@ -144,16 +123,15 @@ The repeating element has a pattern. The pattern will apply to all the repeats (
 
 No types could be determined from the search string, so the types can''t be checked
 
-# ========= The code is listed in DocumentReference Format Code Set this seems to be a terminology server issue =========
-
-The Coding provided (urn:oid:1.3.6.1.4.1.19376.1.2.3#urn:hl7-org:sdwg:ccda-structuredBody:2.1) is not in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = Not in value set http://hl7.org/fhir/ValueSet/formatcodes)
 
 # Using the extension US Core Extension Questionnaire URI  pointing to a pdf form of the Questionnaire for this example ===
 
 No questionnaire is identified, so no validation can be performed against the base questionnaire
 
 
+# http://hl7.org/fhir/ValueSet/formatcodes is in error and the guide is referencing the IHE format code package and the value set in there using the same code system.
 
+The Coding provided (http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-structuredBody:2.1) is not in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = Not in value set http://hl7.org/fhir/ValueSet/formatcodes)
 
 
 

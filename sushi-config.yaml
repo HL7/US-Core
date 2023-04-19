@@ -25,7 +25,7 @@ version: '6.0.0'
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.uv.bulkdata: 2.0.0
-  hl7.fhir.uv.smart-app-launch: 2.0.0
+  hl7.fhir.uv.smart-app-launch: 2.1.0
   us.nlm.vsac:
     uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
     version: 0.9.0
@@ -36,6 +36,7 @@ dependencies:
     id: uscdcphinvads
     uri: 'http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads'
     version: 0.12.0
+  ihe.formatcode.fhir: 1.1.0
 pages:
   index.md:
     title: Home
