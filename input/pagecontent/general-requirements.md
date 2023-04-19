@@ -104,7 +104,7 @@ For example, the [US Core AllergyIntolerance Profile] `clinicalStatus` element h
 - US Core Responders **SHALL** provide a code *exclusively* from this ValueSet in  `AllergyIntolerance.clinicalStatus.code`.
 - US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.clinicalStatus.code`.
 
-  {% include img.html img="Must_Support_AllergyIntolerance_clinicalStatus.png" caption="Figure 4: US Core AllergyIntolerance.clinicalStatus" %}
+  {% include img.html img="Must_Support_AllergyIntolerance_clinicalStatus.png" caption="Figure 1: US Core AllergyIntolerance.clinicalStatus" %}
 
 #### Required Bindings When Slicing by ValueSets
 
@@ -112,13 +112,13 @@ Because of the  FHIR conformance rule:
 
 > If an extensible binding is applied to an element with maximum cardinality > 1, the binding applies to all the elements. ([Terminology Binding Extensible])
 
-FHIR profiles use [slicing] when a coded element is a repeating element, and a particular ValueSet is desired for at least one of the repeats. This is a special case where a *required* ValueSet binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the ValueSet (equivalent to  Extensible Binding below). *Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*  The example in figure 5 below illustrates this structure for the repeating `DocumentReference.category` element:
+FHIR profiles use [slicing] when a coded element is a repeating element, and a particular ValueSet is desired for at least one of the repeats. This is a special case where a *required* ValueSet binding is used to differentiate the repeat.  In this guide, the minimum cardinality for these 'slices' is set to 0 so that other codes are allowed when no suitable code exists in the ValueSet (equivalent to  Extensible Binding below). *Note that slicing by valueset does not affect the over the wire structure or validation of instances of these resources.*  The example in Figure 2 below illustrates this structure for the repeating `DocumentReference.category` element:
 
 - This structure allows 0..\* concept(s) from the *required* ValueSet.
 - This structure, by being 0..\*, allows servers to send concepts, not in the required ValueSet.
 
 
-  {% include img.html img="Must_Support_DocumentReference_category.png" caption="Figure 5: US Core DocumentReference.category" %}
+  {% include img.html img="Must_Support_DocumentReference_category.png" caption="Figure 2: US Core DocumentReference.category" %}
 
 #### Extensible Binding for Coded Elements
 
@@ -132,7 +132,7 @@ The [US Core AllergyIntolerance Profile] illustrates the extensible binding rule
   - or text in `AllergyIntolerance.code. text' if only text is available.
 - US Core Requestors **SHALL** be capable of processing the code in `AllergyIntolerance.code.code` or text in `AllergyIntolerance.code.text`
 
-  {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 6: US Core AllergyIntolerance.code" %}
+  {% include img.html img="Must_Support_AllergyIntolerance_code.png" caption="Figure 3: US Core AllergyIntolerance.code" %}
 
 Although the FHIR guidance for extensible bindings indicates that *all conceptual overlaps* including free text, be mapped to the coded values in the bindings, US Core guidance provides more flexibility for situations where implementers cannot fully comply with the FHIR guidance. This flexibility is sometimes necessary and expected for legacy and text-only data. However, for newly recorded, non-legacy data, a system **SHOULD** adhere to the extensible binding rules.
 
@@ -209,9 +209,9 @@ Some examples of modifiers that are not Must Support elements in US Core Profile
 - `Practitioner.identifier.use`
 - `Patient.active`
 
-Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages. This view lists all the Must Support and the modifier elements for a profile, as demonstrated in Figure 7 below.
+Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages. This view lists all the Must Support and the modifier elements for a profile, as demonstrated in Figure 4 below.
 
- {% include img.html img="modifier-element-view.png" caption="Figure 7: Modifier Elements Listed in Key Element View" %}
+ {% include img.html img="modifier-element-view.png" caption="Figure 4: Modifier Elements Listed in Key Element View" %}
 
 ### Missing Data
 

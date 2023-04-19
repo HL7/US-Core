@@ -607,6 +607,20 @@ definition:
     exampleBoolean: false
     name: US Core Organization Profile
   - reference:
+      reference: StructureDefinition/us-core-patient
+    description: The US Core Patient Profile meets the U.S. Core Data for Interoperability
+      (USCDI) v3 'Patient Demographics' requirements. This profile sets minimum expectations
+      for the Patient resource to record, search, and fetch basic demographics and
+      other administrative information about an individual patient. It identifies
+      which core elements, extensions, vocabularies, and value sets **SHALL** be present
+      in the resource when using this profile to promote interoperability and adoption
+      through common implementation.  It identifies which core elements, extensions,
+      vocabularies, and value sets **SHALL** be present in the resource and constrains
+      the way the elements are used when using this profile.  It provides the floor
+      for standards development for specific use cases.
+    exampleBoolean: false
+    name: US Core Patient Profile
+  - reference:
       reference: StructureDefinition/us-core-practitioner
     description: This profile sets minimum expectations for the Practitioner resource
       to record, search, and fetch basic demographics and other administrative information
@@ -718,6 +732,16 @@ definition:
       It provides the floor for standards development for specific use cases.
     exampleBoolean: false
     name: US Core Respiratory Rate Profile
+  - reference:
+      reference: StructureDefinition/us-core-servicerequest
+    description: This profile sets minimum expectations for recording, searching,
+      and fetching the ServiceRequest resource to promote interoperability and adoption
+      through common implementation.  It identifies which core elements, extensions,
+      vocabularies, and value sets **SHALL** be present in the resource and constrains
+      the way the elements are used when using this profile.  It provides the floor
+      for standards development for specific use cases.
+    exampleBoolean: false
+    name: US Core ServiceRequest Profile
   - reference:
       reference: StructureDefinition/us-core-simple-observation
     description: "This US Core FHIR Profile is meant to capture any \u201Csimple\u201D\
@@ -1885,30 +1909,6 @@ definition:
     exampleBoolean: false
     name: USCoreSpecimenPatient
   - reference:
-      reference: StructureDefinition/us-core-patient
-    description: The US Core Patient Profile meets the U.S. Core Data for Interoperability
-      (USCDI) v3 'Patient Demographics' requirements. This profile sets minimum expectations
-      for the Patient resource to record, search, and fetch basic demographics and
-      other administrative information about an individual patient. It identifies
-      which core elements, extensions, vocabularies, and value sets **SHALL** be present
-      in the resource when using this profile to promote interoperability and adoption
-      through common implementation.  It identifies which core elements, extensions,
-      vocabularies, and value sets **SHALL** be present in the resource and constrains
-      the way the elements are used when using this profile.  It provides the floor
-      for standards development for specific use cases.
-    exampleBoolean: false
-    name: US Core Patient Profile
-  - reference:
-      reference: StructureDefinition/us-core-servicerequest
-    description: This profile sets minimum expectations for recording, searching,
-      and fetching the ServiceRequest resource to promote interoperability and adoption
-      through common implementation.  It identifies which core elements, extensions,
-      vocabularies, and value sets **SHALL** be present in the resource and constrains
-      the way the elements are used when using this profile.  It provides the floor
-      for standards development for specific use cases.
-    exampleBoolean: false
-    name: US Core ServiceRequest Profile
-  - reference:
       reference: ValueSet/us-core-laboratory-test-codes
     description: 'Laboratory LOINC codes: From the introduction to August 2022 LOINC
       Users'' guide; "The current scope of the existing laboratory portion of the
@@ -1920,10 +1920,11 @@ definition:
     name: US Core Laboratory Test Codes
   - reference:
       reference: Observation/AHC-HRSN-item-example-68517-2
-    description: This is a Ahc-Hrsn Item Example 68517-2 (How many times in the past
-      12 months have you had 5 or more drinks in a day (males) or 4 or more drinks
-      in a day (females)?) referenced by the the *ServiceRequest for Rehab Example*
-    name: Ahc-Hrsn Item Example 68517-2
+    description: This AHC HRSN Item Example 68517-2 (How many times in the past 12
+      months have you had 5 or more drinks in a day (males) or 4 or more drinks in
+      a day (females)?) is an example of the *US Core Observation Screening and Assessment
+      Profile* and is referenced by the *ServiceRequest for Rehab Example*
+    name: Ahc-Hrsn Item Observation Example 68517-2
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Device/udi-2
@@ -2003,108 +2004,6 @@ definition:
       its use to directly capture individual surveys assessment items as an observations.
       It is not derived from a FHIR QuestionnaireResponse.
     name: 10 Minute Apgar Score Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-71802-3
-    description: This is a an example of 71802-3 Housing status for the *US Core Observation
-      Screening Assessment Profile*
-    name: AHC-HRSN-item-example-71802-3
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-88122-7
-    description: This is a an example of 88122-7 Within the past 12 months we worried
-      whether our food would run out before we got money to buy more [U.S. FSS] for
-      the *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-88122-7
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-88123-5
-    description: This is a an example of 88123-5 Within the past 12 months the food
-      we bought just didn't last and we didn't have money to get more [U.S. FSS] for
-      the *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-88123-5
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-93030-5
-    description: This is a an example of 93030-5 Has lack of transportation kept you
-      from medical appointments, meetings, work, or from getting things needed for
-      daily living for the *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-93030-5
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-95614-4
-    description: This is a an example of 95614-4 Total score [HITS] for the *US Core
-      Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-95614-4
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-95615-1
-    description: This is a an example of 95615-1 Scream or curse at you [HITS] for
-      the *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-95615-1
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-95616-9
-    description: This is a an example of 95616-9 Threaten you with physical harm [HITS]
-      for the *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-95616-9
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-95617-7
-    description: This is a an example of 95617-7 Insult you or talk down to you [HITS]
-      for the *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-95617-7
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-95618-5
-    description: This is a an example of 95618-5 Physically hurt you [HITS] for the
-      *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-95618-5
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-96777-8
-    description: This is a an example of 96777-8 Accountable health communities (AHC)
-      health-related social needs screening (HRSN) tool for the *US Core Observation
-      Screening Assessment Profile*
-    name: AHC-HRSN-item-example-96777-8
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-96778-6
-    description: This is a an example of 96778-6 Problems with place where you live
-      for the *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-96778-6
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-96778-6answer-0
-    description: This is a an example of 96778-6 Problems with place where you live
-      for the *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-96778-6Answer-0
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-96778-6answer-5
-    description: This is a an example of 96778-6 Problems with place where you live
-      for the *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-96778-6Answer-5
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-96778-6answer-6
-    description: This is a an example of 96778-6 Problems with place where you live
-      for the *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-96778-6Answer-6
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-item-example-96779-4
-    description: This is a an example of 96779-4 Has the electric, gas, oil, or water
-      company threatened to shut off services in your home in past 12 months for the
-      *US Core Observation Screening Assessment Profile*
-    name: AHC-HRSN-item-example-96779-4
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
-  - reference:
-      reference: Observation/AHC-HRSN-panel-example-96777-8
-    description: This is a Ahc-Hrsn Panel Example 96777-8 (Accountable health communities
-      (AHC) health-related social needs screening (HRSN) tool) for the *US Core Observation
-      Screening Assessment Profile*
-    name: Ahc-Hrsn Panel Example 96777-8
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/HVS-item-example-88122-7
@@ -2436,14 +2335,6 @@ definition:
     name: Procedure Defibrillator Implant Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure
   - reference:
-      reference: Questionnaire/ahc-hrsn-screening-example
-    description: This is a SDC Questionnaire example that represents the [Accountable
-      health communities (AHC) health-related social needs screening (HRSN) tool](https://innovation.cms.gov/files/worksheets/ahcm-screeningtool.pdf)
-      defined in LOINC (code 96777-8). This example contains no actual questions,
-      but is used to provide metadata about the assessment tool.
-    name: Questionnaire AHC HRSN Screening Example
-    exampleCanonical: http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire
-  - reference:
       reference: Questionnaire/hunger-vital-sign-example
     description: An example of an SDC Questionnaire that represents the Hunger Vital
       Sign Example questionnaire defined in LOINC (code 88121-9). The example is generated
@@ -2465,16 +2356,6 @@ definition:
       the LHC-Forms SDC Questionnaire App.
     name: Questionnaire PRAPARE Example
     exampleCanonical: http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire
-  - reference:
-      reference: QuestionnaireResponse/ahc-hrsn-screening-example
-    description: This is a US Core QuestionnaireResponse example that represents questions
-      and selected answers from the *US Core Observation Screening Assessment Profile*
-      AHC-HRSN defined in LOINC (code 96777-8)). This example is generated using the
-      LHC-Forms SDC Questionnaire App. This example reference a FHIR questionnaire
-      that contains no actual questions, but is used to provide metadata about the
-      assessment tool.
-    name: QuestionnaireResponse AHC HRSN Screening Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
   - reference:
       reference: QuestionnaireResponse/prapare-example
     description: This is the QuestionnaireResponse example that is referenced by the
