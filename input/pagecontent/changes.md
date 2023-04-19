@@ -6,7 +6,7 @@
 The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2023 HL7 balloting process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
 #### What's new in Version 6.0.0 of US Core:
 
-- New and updated resources to meet the [U.S. Core Data for Interoperability (USCDI) v3] new Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2022:
+<!-- - New and updated resources to meet the [U.S. Core Data for Interoperability (USCDI) v3] new Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2022:
  - [Health Insurance Information](StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual's insurance coverage for health care.
   - The SDOH Assessments documentation has been rewritten and renamed to [Screening and Assessments](screening-and-assessments.html), reflecting its expanded coverage of Health Status/Assessments Data Elements. It documents how to use [US Core Observation Screening Assessment Profile] and the [US Core Simple Observation Profile] to represent and access health status and assessments, including: *Functional Status*, *Disability Status*, and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
   - [US Core Observation Pregnancy Status Profile](StructureDefinition-us-core-observation-pregnancystatus.html) and [US Core Observation Pregnancy Intent Profile](StructureDefinition-us-core-observation-pregnancyintent.html) have been added to specifically address pregnancy status.
@@ -22,7 +22,9 @@ The changes in this annual update to US Core have been reviewed and commented up
   - Reason for Referral [See Change Here](StructureDefinition-us-core-servicerequest.html) and [See Change Here](StructureDefinition-us-core-procedure.html)
 
 - Several profiles from version 5.0.1 have been *retired* or *renamed* and *rescoped* in this version to accommodate the USCDI Health Status/Assessments Data Classes and as a result of implementer feedback. The [Cross Version Comparisions Table](changes-between-versions.html#cross-version-comparisons) summarized these significant revisions.
-- We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
+- We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492). -->
+
+{% include img.html img="todo.png" %}
 
 
 #### Changes:
@@ -64,8 +66,8 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 23. **Applied:** Clarify where the US Core Profile FHIR Restful transactions are defined? [FHIR-39704](https://jira.hl7.org/browse/FHIR-39704) [See Changes Here](general-requirements.html#profile-support--interaction-support)
 24. **Applied:** Use ValueSet and not value set when a FHIR ValueSet is intended [FHIR-39705](https://jira.hl7.org/browse/FHIR-39705) [See Changes Here](general-requirements.html)
 25. **Applied:** Use uppercase "Must Support" and not lowercase "must suppor"t [FHIR-39706](https://jira.hl7.org/browse/FHIR-39706)
-26. **Applied:** Document Must Support and Modifier Elements [FHIR-39707](https://jira.hl7.org/browse/FHIR-39707) [See Changes Here](general-requirements.html#modifier-elements)
-27. **Applied:** Common format for Resources and Resource fields [FHIR-39708](https://jira.hl7.org/browse/FHIR-39708)
+26. **Applied:** Document Must Support and Modifier Elements [FHIR-39707](https://jira.hl7.org/browse/FHIR-39707) [See Changes Here](general-requirements.html#modifier-elements)Common format for Resources and Resource fields [FHIR-39708]
+27. **Applied:** (https://jira.hl7.org/browse/FHIR-39708)
 28. **Applied:** Use of mandatory text [FHIR-39709](https://jira.hl7.org/browse/FHIR-39709)
 29. **Applied:** Add reference to FHIR section on language support [FHIR-39710](https://jira.hl7.org/browse/FHIR-39710) [See Changes Here](general-guidance.html#language-support)
 30. **Applied:** Refer to FHIR specification as base definition for RESTful operations [FHIR-39711](https://jira.hl7.org/browse/FHIR-39711) [See Changes Here](general-guidance.html#read-fetch-syntax)
@@ -99,7 +101,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 58. **Applied:** Extensions - context of use [FHIR-39863](https://jira.hl7.org/browse/FHIR-39863) [See Changes Here](StructureDefinition-us-core-race.html)
 59. **Applied:** Add more Lab Result examples [FHIR-39868](https://jira.hl7.org/browse/FHIR-39868) [See Changes Here](Observation-at-home-in-vitro-test.html)
 60. **Applied:** MedicationRequest - Change prescriber to 0..1 this information is not known for patient reported medications. [FHIR-39869](https://jira.hl7.org/browse/FHIR-39869) [See Changes Here](StructureDefinition-us-core-medicationrequest.html)
-61. **Resolved - change required:** Profile Formal Views naming inconsistencies [FHIR-39873](https://jira.hl7.org/browse/FHIR-39873)
+61. **Applied:** Update Profile Formal Views labels [FHIR-39873](https://jira.hl7.org/browse/FHIR-39873)
 62. **Applied:** Provide guidance for Prescriptions Sent by Mail [FHIR-39878](https://jira.hl7.org/browse/FHIR-39878) [See Changes Here](StructureDefinition-us-core-medicationdispense.html)
 63. **Applied:** Change CarePlan.text from Mandatory min = 1 to Must Support min = 0 [FHIR-39902](https://jira.hl7.org/browse/FHIR-39902) [See Changes Here](StructureDefinition-us-core-careplan.html)
 64. **Applied:** Using SNOMED CT United States Edition Typo [FHIR-39903](https://jira.hl7.org/browse/FHIR-39903) [See Changes Here](general-guidance.html#snomed-ct-united-states-edition)
@@ -116,7 +118,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 75. **Aoplied:** Update description of Screening Assessments Profile [FHIR-39949](https://jira.hl7.org/browse/FHIR-39949) [See Changes Here](screening-and-assessments.html)
 76. **Applied:** Change Header [FHIR-39950](https://jira.hl7.org/browse/FHIR-39950) [See Changes Here](screening-and-assessments.html#us-core-observation-screening-assessment-profile)
 77. **Applied:** Correct title of section 3.6.2.2 US Core Observation Simple Observation Profile [FHIR-39951](https://jira.hl7.org/browse/FHIR-39951) [See Changes Here](screening-and-assessments.html)
-78. **Partially Applied:** Require US Core Server to support the Simple Observation profile for simple assessments [FHIR-39953](https://jira.hl7.org/browse/FHIR-39953) [See Changes Here](screening-and-assessments.html#clinical-judgments)
+78. **Applied:** Require US Core Server to support the Simple Observation profile for simple assessments [FHIR-39953](https://jira.hl7.org/browse/FHIR-39953) [See Changes Here](screening-and-assessments.html#clinical-judgments)
 79. **Applied:** Correct the link and sentence for assessment category codes [FHIR-39954](https://jira.hl7.org/browse/FHIR-39954) [See Changes Here](screening-and-assessments.html#category-codes)
 80. **Applied:** Describe the purpose and intent of “Grouping” and update the diagram [FHIR-39955](https://jira.hl7.org/browse/FHIR-39955) [See Changes Here](screening-and-assessments.html#codes-for-problemshealthconcerns-goals-service-requests-and-procedures)
 81. **Applied:** Remove US Core Common SDOH Assessments ValueSet [FHIR-39956](https://jira.hl7.org/browse/FHIR-39956)

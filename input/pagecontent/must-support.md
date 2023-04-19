@@ -8,7 +8,7 @@ The Profile elements consist of *Mandatory*, *Must Support*, and *USCDI Requirem
 
 ### Mandatory Elements
 
-<span class="bg-success" markdown="1">*Mandatory* elements are elements with a minimum cardinality of 1 (min=1).</span><!-- new-content --> When an element is mandatory, the data is expected to always be present. Very rarely, it may not be, and guidance for when data is missing is provided in the [Missing Data] section and the next section. The convention in this guide is to mark all min=1 elements as Must Support unless they are nested under an optional element. An example of this is [`CarePlan.status`].
+<span class="bg-success" markdown="1">*Mandatory* elements are elements with a minimum cardinality of 1 (min=1).</span><!-- new-content --> When an element is Mandatory, the data is expected to always be present. Very rarely, it may not be, and guidance for when data is missing is provided in the [Missing Data] section and the next section. The convention in this guide is to mark all min=1 elements as Must Support unless they are nested under an optional element. An example of this is [`CarePlan.status`].
 
 ### Must Support Elements
 
@@ -25,7 +25,7 @@ The terms *US Core Responder* Actor *US Core Requestor Actor* are used throughou
 
 Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search], and [FHIR Resource] formats before implementing US Core requirements.
 
-All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file. This may be useful to testers and analysts to review the Must Support and mandatory elements across profiles in a single table.
+All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file. This may be useful to testers and analysts to review the Must Support and Mandatory elements across profiles in a single table.
 
 - [CSV](uscore_profiles.csv)
 - [Excel](all_profiles.xlsx)
@@ -72,7 +72,7 @@ The "Key Elements Table" view consists of:
 
 This view includes the same flags and labels described in Differential Table View:.
 
-  {% include img.html img="Must_Support_MS_View.png" caption="Figure 2: Snapshot Table (Must Support) View" %}
+  {% include img.html img="Must_Support_Key_View.png" caption="Figure 2: Snapshot Table (Must Support) View" %}
 
 #### Snapshot Table View
 
@@ -144,7 +144,7 @@ For example, the [US Core DocumentReference Profile] author US Core Practitioner
 
 Systems can support other references, but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_DocumentReference.jpg" caption="Figure 11: US Core DocumentReference.author" %}
+{% include img.html img="Must_Support_DocumentReference.png" caption="Figure 11: US Core DocumentReference.author" %}
 
 In specific profiles, only a single resource reference is present on an element labeled *Must Support*.
 
@@ -153,7 +153,7 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 * US Core Responders **SHALL** be capable of providing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 * US Core Requestors **SHALL** be capable of processing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 
-{% include img.html img="Must_Support_AllergyIntolerance.jpg" caption="Figure 12: US Core AllergyIntolerance.patient" %}
+{% include img.html img="Must_Support_AllergyIntolerance.png" caption="Figure 12: US Core AllergyIntolerance.patient" %}
 
 #### Must Support - Choice of Data Types
 
@@ -166,7 +166,7 @@ For example, the [US Core Laboratory Result Observation Profile] effectiveDateTi
 
 Systems **MAY** support populating and processing other choice elements (such as Observation.effectivePeriod), but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_Observation.effective.jpg" caption="Figure 13: US Core `Observation.effectiveDateTime`" %}
+{% include img.html img="Must_Support_Observation.effective.png" caption="Figure 13: US Core `Observation.effectiveDateTime`" %}
 
 For the [US Core Laboratory Result Observation Profile] value element, multiple elements are labeled *Must Support*.
 
@@ -178,7 +178,7 @@ When claiming conformance to the [US Core Laboratory Result Observation Profile]
 Systems can support the other elements, but this is not a requirement of US Core.
 
 
-{% include img.html img="Must_Support_Observation.value.jpg" caption="Figure 14: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
 
 
 #### Must Support - Choice of Profile Elements
