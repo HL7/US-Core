@@ -115,9 +115,13 @@ INFORMATION: StructureDefinition/us-core-vital-signs: StructureDefinition.differ
 The markdown contains content that appears to be an embedded HTML tag starting at 'Th'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
 
-# ==== The following comment is understood and acknowledged ====
+# ==== The repeating element has a $this pattern which allows users the necessary flexibility ====
 
-# The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/us-core-organization: StructureDefinition.snapshot.element[18].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/us-core-organization: StructureDefinition.snapshot.element[19].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/us-core-organization: StructureDefinition.snapshot.element[20].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/us-core-practitioner: StructureDefinition.snapshot.element[18].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+
 
 # ==== The self link for these searchset bundle is to the $docref operation and not a search ====
 
