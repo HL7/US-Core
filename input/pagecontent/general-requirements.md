@@ -209,9 +209,9 @@ Some examples of modifiers that are not Must Support elements in US Core Profile
 - `Practitioner.identifier.use`
 - `Patient.active`
 
-Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages. This view lists all the Must Support and the modifier elements for a profile, as demonstrated in Figure 1 below.
+Implementers **SHOULD** review the "Key Elements Tab" on the US Core profile pages. This view lists all the Must Support and the modifier elements for a profile, as demonstrated in Figure 7 below.
 
- {% include img.html img="modifier-element-view.png" caption="Figure 1: Modifier Elements Listed in Key Element View" %}
+ {% include img.html img="modifier-element-view.png" caption="Figure 7: Modifier Elements Listed in Key Element View" %}
 
 ### Missing Data
 
