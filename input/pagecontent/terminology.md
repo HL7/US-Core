@@ -72,7 +72,7 @@ The following concept mappings have been defined as part of the this guide.
 
 ### Using Value Set Authority Center (VSAC)
 
-This guide links terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable using a RESTful API service for accessing the VSAC value sets and supported code systems.
+This guide links terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] where applicable using a RESTful API service for accessing the VSAC value sets and supported code systems.
 
   -  VSAC requires login using your own *UMLS API Key* to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html). (See the screenshots below)
   - The value sets in VSAC are specified using a VSAC value set OID.  

@@ -387,3 +387,4 @@
 [resource level scopes]: http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#scopes-for-requesting-clinical-data
 [granular scopes]: http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#finer-grained-resource-constraints-using-search-parameters
 [US Core SMART Scopes]: future-of-US-core.html#us-core-smart-scopes
+[Value Set Authority Center (VSAC)]: (https://vsac.nlm.nih.gov/)

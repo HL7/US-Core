@@ -118,7 +118,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 77. **Applied:** Correct title of section 3.6.2.2 US Core Observation Simple Observation Profile [FHIR-39951](https://jira.hl7.org/browse/FHIR-39951) [See Changes Here](screening-and-assessments.html)
 78. **Partially Applied:** Require US Core Server to support the Simple Observation profile for simple assessments [FHIR-39953](https://jira.hl7.org/browse/FHIR-39953) [See Changes Here](screening-and-assessments.html#clinical-judgments)
 79. **Applied:** Correct the link and sentence for assessment category codes [FHIR-39954](https://jira.hl7.org/browse/FHIR-39954) [See Changes Here](screening-and-assessments.html#category-codes)
-80. **Resolved - change required:** Describe the purpose and intent of “Grouping” and update the diagram [FHIR-39955](https://jira.hl7.org/browse/FHIR-39955) [See Changes Here](screening-and-assessments.html#codes-for-problemshealthconcerns-goals-service-requests-and-procedures)
+80. **Applied:** Describe the purpose and intent of “Grouping” and update the diagram [FHIR-39955](https://jira.hl7.org/browse/FHIR-39955) [See Changes Here](screening-and-assessments.html#codes-for-problemshealthconcerns-goals-service-requests-and-procedures)
 81. **Applied:** Remove US Core Common SDOH Assessments ValueSet [FHIR-39956](https://jira.hl7.org/browse/FHIR-39956)
 82. **Applied:** Fix link text [FHIR-39958](https://jira.hl7.org/browse/FHIR-39958) [See Changes Here](changes.html)
 83. **Applied:** Remove MS from Observation Screening Assessment Observation.performer Practitioner Reference [FHIR-39964](https://jira.hl7.org/browse/FHIR-39964) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html#profile)
