@@ -1,0 +1,7 @@
+{%- for sd_hash in site.data.structuredefinitions -%}
+  {%- assign sd = sd_hash[1] -%}
+    {%- if sd.title == include.title -%}
+        {{sd.path}}
+        {%- break -%}
+    {%- endif -%}
+{%- endfor -%}

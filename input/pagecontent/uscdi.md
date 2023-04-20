@@ -3,10 +3,8 @@ The US Core Profiles were originally designed to meet the 2015 Edition certifica
 
 The table below lists the US Core Profile and FHIR Resources used for the corresponding USCDI Data elements:
 
-<!-- { % include USCDI_v2_table_links.svg % } -->
-
 {% include uscdi-uscore-map.html %}
 
-(This information is also available as a [csv](uscdi_table.csv) or [excel](uscdi_table.xlsx) file)
+(This information is also available as a [csv](uscdi-table.csv) or [excel](uscdi-table.xlsx) file)
 
 {% include link-list.md %}
