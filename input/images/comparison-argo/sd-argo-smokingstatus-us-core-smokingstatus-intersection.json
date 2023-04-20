@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "df3c7c64-6742-406e-87e8-0d0b54846ece-3",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/df3c7c64-6742-406e-87e8-0d0b54846ece-3",
+  "id" : "3468454e-240d-4e3d-ab74-9c7a4620334a-3",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/3468454e-240d-4e3d-ab74-9c7a4620334a-3",
   "name" : "IntersectionArgonaut Smoking Status Observation ProfileAndUSCoreSmokingStatusProfile",
   "title" : "Intersection of null And US Core Smoking Status Observation Profile",
   "status" : "draft",
-  "date" : "2022-12-07T16:45:19-08:00",
+  "date" : "2023-04-20T10:41:48-07:00",
   "snapshot" : {
     "element" : [{
       "path" : "Observation",
@@ -247,7 +247,7 @@
     },
     {
       "path" : "Observation.status",
-      "short" : "registered | preliminary | final | amended +",
+      "short" : "left: registered | preliminary | final | amended +; right: (USCDI) registered | preliminary | final | amended +",
       "definition" : "The status of the result value.",
       "comment" : "This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.",
       "requirements" : "Need to track the status of individual results. Some results are finalized before the whole report is finalized.",
@@ -261,7 +261,7 @@
       "isSummary" : false,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/df3c7c64-6742-406e-87e8-0d0b54846ece-6"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/3468454e-240d-4e3d-ab74-9c7a4620334a-6"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -294,7 +294,7 @@
     },
     {
       "path" : "Observation.category",
-      "short" : "Classification of  type of observation",
+      "short" : "left: Classification of  type of observation; right: (USCDI) Classification of  type of observation",
       "definition" : "left: A code that classifies the general type of observation being made.  This is used  for searching, sorting and display purposes.; right: A code that classifies the general type of observation being made.",
       "comment" : "left: The level of granularity is defined by the category concepts in the value set.   More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in Observation.code.; right: In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.",
       "requirements" : "Used for filtering what observations are retrieved and displayed.",
@@ -326,7 +326,7 @@
     },
     {
       "path" : "Observation.code",
-      "short" : "left: Smoking Status: LOINC 72166-2  = Tobacco smoking status NHIS; right: Smoking Status",
+      "short" : "left: Smoking Status: LOINC 72166-2  = Tobacco smoking status NHIS; right: (USCDI) Smoking Status",
       "definition" : "left: Smoking Status: Limited to fixed LOINC  value 72166-2  = Tobacco smoking status NHIS.; right: Describes what was observed. Sometimes this is called the observation \"name\".",
       "comment" : "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
       "requirements" : "Knowing what kind of observation is being made is essential to understanding the observation.",
@@ -378,7 +378,7 @@
     },
     {
       "path" : "Observation.subject",
-      "short" : "left: Who and/or what this is about; right: Who and/or what the observation is about",
+      "short" : "left: Who and/or what this is about; right: (USCDI) Who and/or what the observation is about",
       "definition" : "left: The patient, or group of patients, location, or device whose characteristics (direct or indirect) are described by the observation and into whose record the observation is placed.  Comments: Indirect characteristics may be those of a specimen, fetus, donor,  other observer (for example a relative or EMT), or any observation made about the subject.; right: The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.",
       "comment" : "left: One would expect this element to be a cardinality  of 1..1.  The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.  If the target of the observation is different than the subject, the general extension [observation-focal-subject].  may be used.  However, the distinction between the patient's own value for an observation versus that of the fetus, or the donor or blood product unit, etc., are often specified in the observation code.; right: One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.",
       "requirements" : "Observations have no value if you don't know who or what they're about.",

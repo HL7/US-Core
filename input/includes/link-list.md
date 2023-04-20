@@ -284,6 +284,7 @@
 [US Core AllergyIntolerance Profile]: StructureDefinition-us-core-allergyintolerance.html
 [US Core Blood Pressure Profile]: StructureDefinition-us-core-blood-pressure.html
 [US Core BMI Profile]: StructureDefinition-us-core-bmi.html
+[US Core Birth Sex Extension]: StructureDefinition-us-core-birthsex.html
 [US Core Body Height Profile]: StructureDefinition-us-core-body-height.html
 [US Core Body Temperature Profile]: StructureDefinition-us-core-body-temperature.html
 [US Core Body Weight Profile]: StructureDefinition-us-core-body-weight.html
@@ -295,6 +296,8 @@
 [US Core Condition Codes]: ValueSet-us-core-condition-code.html
 [US Core Condition Encounter Diagnosis Profile]: StructureDefinition-us-core-condition-encounter-diagnosis.html
 [US Core Condition Problems and Health Concerns Profile]: StructureDefinition-us-core-condition-problems-health-concerns.html
+[US Core Coverage Profile]: StructureDefinition-us-core-coverage.html
+[US Core Diagnostic Imaging Result Observation Profile]: StructureDefinition-us-core-observation-imaging.html
 [US Core Diagnostic Imaging Result Observation Profile]: StructureDefinition-us-core-observation-imaging.html
 [US Core DiagnosticReport Category Codes]: ValueSet-us-core-diagnosticreport-category.html
 [US Core DiagnosticReport Profile for Laboratory Results Reporting]: StructureDefinition-us-core-diagnosticreport-lab.html
@@ -317,13 +320,14 @@
 [US Core Laboratory Result Observation Profile]: StructureDefinition-us-core-observation-lab.html
 [US Core Location Profile]: StructureDefinition-us-core-location.html
 [US Core Medication Profile]: StructureDefinition-us-core-medication.html
-[US Core Medication Request Profile]: StructureDefinition-us-core-medicationrequest.html
+[US Core MedicationDispense Profile]: StructureDefinition-us-core-medicationdispense.html
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
 [US Core MedicationRequest Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Simple Observation Profile]: StructureDefinition-us-core-simple-observation.html
+[US Core Specimen Profile]: StructureDefinition-us-core-specimen.html
 [US Core Observation Clinical Result Profile]: StructureDefinition-us-core-observation-clinical-result.html
 [US Core Observation Screening Assessment Profile]: StructureDefinition-us-core-observation-screening-assessment.html
-[US Core Observation SDOH Assessment Profile]: StructureDefinition-us-core-observation-sdoh-assessment.html
+[US Core Observation Occupation Profile]: StructureDefinition-us-core-observation-occupation.html
 [US Core Observation Sexual Orientation Profile]: StructureDefinition-us-core-observation-sexual-orientation.html
 [US Core Organization Profile]: StructureDefinition-us-core-organization.html
 [US Core Patient Profile]: StructureDefinition-us-core-patient.html
@@ -350,6 +354,7 @@
 [US Core Observation Pregnancy Intent Profile]: StructureDefinition-us-core-observation-pregnancyintent.html
 [US Core Pregnancy Status Codes]: ValueSet-us-core-pregnancy-status.html
 [US Core Pregnancy Intent Codes]: ValueSet-us-core-pregnancy-intent.html
+[US Core Tribal Affiliation Extension]: StructureDefinition-us-core-tribal-affiliation.html
 [US Core Vital Signs Profile]: StructureDefinition-us-core-vital-signs.html
 [USCDI v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2
 [USCDI v3]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v3
@@ -364,7 +369,6 @@
 [writing and updating]: future-of-US-core.html#future-candidate-requirements-under-consideration
 [Parameters]: {{site.data.fhir.path}}parameters.html
 [Patient Example]: Patient-example.html 
-[US Core Sex for Clinical Use Value Set]: ValueSet-us-core-sex-for-clinical-use.html
 [SNOMED CT]: http://snomed.info/sct
 [Observation Category Codes]: {{site.data.fhir.path}}valueset-observation-category.html
 [US Core Common SDOH Assessments ValueSet]: ValueSet-us-core-common-sdoh-assessments.html

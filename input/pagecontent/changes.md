@@ -1,31 +1,40 @@
 ### Version = 6.0.0
 - url: <http://hl7.org/fhir/us/core/STU6/>
 - Based on FHIR version : 4.0.1
-- Expected Publication Date May 2023
 
 The changes in this annual update to US Core have been reviewed and commented upon by the public through the January 2023 HL7 balloting process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
 #### What's new in Version 6.0.0 of US Core:
 
-<!-- - New and updated resources to meet the [U.S. Core Data for Interoperability (USCDI) v3] new Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2022:
- - [Health Insurance Information](StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual's insurance coverage for health care.
-  - The SDOH Assessments documentation has been rewritten and renamed to [Screening and Assessments](screening-and-assessments.html), reflecting its expanded coverage of Health Status/Assessments Data Elements. It documents how to use [US Core Observation Screening Assessment Profile] and the [US Core Simple Observation Profile] to represent and access health status and assessments, including: *Functional Status*, *Disability Status*, and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
-  - [US Core Observation Pregnancy Status Profile](StructureDefinition-us-core-observation-pregnancystatus.html) and [US Core Observation Pregnancy Intent Profile](StructureDefinition-us-core-observation-pregnancyintent.html) have been added to specifically address pregnancy status.
-  - The [US Core Laboratory Observation Profile](StructureDefinition-us-core-observation-lab.html) already supports the result status and terminology requirements for coded and numeric results. The [US Core Specimen Profile](StructureDefinition-us-core-specimen.html) has been added to support Specimen Type.  
-  - Updates to the [US Core MedicationRequest Profile](StructureDefinition-us-core-medicationrequest.html) to support Dose, Dose Unit of Measure, Indication and the [US Core MedicationDispense Profile](StructureDefinition-us-core-medicationdispense.html) has been added to support Fill Status.
+ 
+Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 6.0.0 version of US Core and each previous major release on [Changes Between Versions] page. This section provides an overview of the significant changes in Version 6.0.0 of US Core.
+
+- New and updated resources to meet the [U.S. Core Data for Interoperability (USCDI) v3] new Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2022. [This table](uscdi.html) summarizes the USCDI Data Classes and Data Elements and the corresponding US Core Profile(s).
+  - The *new* [US Core Coverage Profile] represent and access data related to an individual's health insurance coverage for health care.
+  - The profiles from version 5.0.1 have been renamed and rescoped in this version to accommodate the USCDI Health Status/Assessments Data Classes.  
+    -  The [US Core Observation Screening Assessment Profile] replaces the *US Core Observation Survey Profile* and *US Core Observation SDOH Assessment Profile*, and the [US Core Simple Observation Profile] replaces the *US Core Observation Social History Profile*.  See the Cross Version Comparisions Table on the [Changes Between Versions] page for a summary of profile revisions between versions.
+    - The SDOH Assessments documentation has been rewritten and renamed to [Screening and Assessments], reflecting its expanded coverage of Health Status/Assessments Data Elements including: *Functional Status*, *Disability Status*, and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
+  - The *new* [US Core Observation Pregnancy Status Profile] and [US Core Observation Pregnancy Intent Profile] have been added to communicate pregnancy status.
+  - The [US Core Laboratory Result Observation Profile] supports the result status and terminology requirements for coded and numeric results.
+  - The *new* [US Core Specimen Profile] has been added to support Specimen Type.  
+  - The [US Core MedicationRequest Profile] was updated to support Dose, Dose Unit of Measure, Indication,.
+  - The *new* [US Core MedicationDispense Profile] has been added to support Fill Status.
   - Updated Patient Demographics/Information:
-      - Date of Death [See Change Here](StructureDefinition-us-core-patient.html)
-      - Tribal Affiliation [See Change Here](StructureDefinition-us-core-patient.html) 
-      - Sex (....todo....)
-        - Note that the [US Core BirthSex Extension](StructureDefinition-us-core-birthsex.html) will not be deprecated.
-      - Related Person's Name and Related Person's Relationship [See Change Here](StructureDefinition-us-core-relatedperson.html)
-      - Occupation and Occupation Industry [See Change Here](StructureDefinition-us-core-observation-occupation.html)
-  - Reason for Referral [See Change Here](StructureDefinition-us-core-servicerequest.html) and [See Change Here](StructureDefinition-us-core-procedure.html)
+      - To support Date of Death [US Core Patient Profile] was updated
+      - The *new* [US Core Tribal Affiliation Extension] has been added to support Tribal Affiliation
+      - The [US Core Birth Sex Extension] meets the patient sex requirement
+      - To support Related Person's Name and Related Person's Relationship [US Core RelatedPerson Profile] was updated
+      - The *new* [US Core Observation Occupation Profile] supports a patient's Occupation and Occupation Industry
+  - Reason for Referral is supported by an updated [US Core ServiceRequest Profile] and [US Core Procedure Profile]
 
-- Several profiles from version 5.0.1 have been *retired* or *renamed* and *rescoped* in this version to accommodate the USCDI Health Status/Assessments Data Classes and as a result of implementer feedback. The [Cross Version Comparisions Table](changes-between-versions.html#cross-version-comparisons) summarized these significant revisions.
-- We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492). -->
+- The [US Core Observation Clinical Result Profile] supersedes version 5.0.1  *US Core Observation Clinical Test Result Profile* and *US Core Observation Imaging Result Profile*. In addition, it is the base for the [US Core Laboratory Result Observation Profile]. The Cross Version Comparisions Table on the [Changes Between Versions] page summarized these significant revisions.
 
-{% include img.html img="todo.png" %}
+- Document the *USCDI Requirements* conformance category: Besides Mandatory and Must Support elements, the US Core Profile elements consist of USCDI Requirements elements for ONC Health IT Certification. This version [clarifies the meaning](general-requirements.html#us-core-conformance-artifacts) and [documents](must-support.html#uscdi-requirements) how it is communicated in the StructureDefinitions and on the profile pages
 
+- Expanded CapabilityStatement Narrative: Each  US Core Profile contains references to other resources that it depends on or is related to. The CapabilityStatements narrative provides a table summarizing the [Must Support references for US Core Profiles](CapabilityStatement-us-core-server.html#summary-of-must-support-references-between-profiles) to help implementers understand their required capabilities.
+
+- Expanded documentation on the Terminology page: In addition to detailing the Code Systems unique to this guide, links [all the Code Systems](terminology.html#code-systems) used in US Core are listed.
+
+- We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] where applicable and, as a result, align terminology between US Core and [HL7 C-CDA].
 
 #### Changes:
 
@@ -65,8 +74,8 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 23. **Applied:** Clarify where the US Core Profile FHIR Restful transactions are defined? [FHIR-39704](https://jira.hl7.org/browse/FHIR-39704) [See Changes Here](general-requirements.html#profile-support--interaction-support)
 24. **Applied:** Use ValueSet and not value set when a FHIR ValueSet is intended [FHIR-39705](https://jira.hl7.org/browse/FHIR-39705) [See Changes Here](general-requirements.html)
 25. **Applied:** Use uppercase "Must Support" and not lowercase "must suppor"t [FHIR-39706](https://jira.hl7.org/browse/FHIR-39706)
-26. **Applied:** Document Must Support and Modifier Elements [FHIR-39707](https://jira.hl7.org/browse/FHIR-39707) [See Changes Here](general-requirements.html#modifier-elements)Common format for Resources and Resource fields [FHIR-39708]
-27. **Applied:** (https://jira.hl7.org/browse/FHIR-39708)
+26. **Applied:** Document Must Support and Modifier Elements [FHIR-39707](https://jira.hl7.org/browse/FHIR-39707) [See Changes Here](general-requirements.html#modifier-elements)
+27. **Applied:** Common format for Resources and Resource fields [FHIR-39708](https://jira.hl7.org/browse/FHIR-39708)
 28. **Applied:** Use of mandatory text [FHIR-39709](https://jira.hl7.org/browse/FHIR-39709)
 29. **Applied:** Add reference to FHIR section on language support [FHIR-39710](https://jira.hl7.org/browse/FHIR-39710) [See Changes Here](general-guidance.html#language-support)
 30. **Applied:** Refer to FHIR specification as base definition for RESTful operations [FHIR-39711](https://jira.hl7.org/browse/FHIR-39711) [See Changes Here](general-guidance.html#read-fetch-syntax)
@@ -104,7 +113,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 62. **Applied:** Provide guidance for Prescriptions Sent by Mail [FHIR-39878](https://jira.hl7.org/browse/FHIR-39878) [See Changes Here](StructureDefinition-us-core-medicationdispense.html)
 63. **Applied:** Change CarePlan.text from Mandatory min = 1 to Must Support min = 0 [FHIR-39902](https://jira.hl7.org/browse/FHIR-39902) [See Changes Here](StructureDefinition-us-core-careplan.html)
 64. **Applied:** Using SNOMED CT United States Edition Typo [FHIR-39903](https://jira.hl7.org/browse/FHIR-39903) [See Changes Here](general-guidance.html#snomed-ct-united-states-edition)
-65. **Resolved - change required:** Update the Change log [FHIR-39923](https://jira.hl7.org/browse/FHIR-39923) [See Changes Here](changes.html#whats-new-in-version-600-of-us-core)
+65. **Applied:** Update the Change log [FHIR-39923](https://jira.hl7.org/browse/FHIR-39923) [See Changes Here](changes.html#whats-new-in-version-600-of-us-core)
 66. **Applied:** Define the term Screening and Assessment [FHIR-39938](https://jira.hl7.org/browse/FHIR-39938) See Changes Here](screening-and-assessments.html#introduction)
 67. **Applied:** Clarify that Simple Observation Profile captures any sort of “simple” observations [FHIR-39940](https://jira.hl7.org/browse/FHIR-39940) [See Changes Here](StructureDefinition-us-core-simple-observation.html)
 68. **Applied:** Correct the description of the Simple Observation Profile [FHIR-39942](https://jira.hl7.org/browse/FHIR-39942) [See Changes Here](screening-and-assessments.html#clinical-judgments)
@@ -113,7 +122,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 71. **Applied:** Update the Screening and Assessment Activities diagram [FHIR-39945](https://jira.hl7.org/browse/FHIR-39945) [See Changes Here](screening-and-assessments.html#related-activities-in-clinical-care)
 72. **Applied:** Update the “Screening and Assessment Activities” diagram with proper profile name [FHIR-39946](https://jira.hl7.org/browse/FHIR-39946) [See Changes Here](screening-and-assessments.html)
 73. **Applied:** Update Screening and Assessments” title and content [FHIR-39947](https://jira.hl7.org/browse/FHIR-39947) [See Changes Here](screening-and-assessments.html#screening-and-assessments)
-74. **Applied:** Correct title[FHIR-39948](https://jira.hl7.org/browse/FHIR-39948) [See Changes Here]((screening-and-assessments.html)
+74. **Applied:** Correct title[FHIR-39948](https://jira.hl7.org/browse/FHIR-39948) [See Changes Here](screening-and-assessments.html)
 75. **Aoplied:** Update description of Screening Assessments Profile [FHIR-39949](https://jira.hl7.org/browse/FHIR-39949) [See Changes Here](screening-and-assessments.html)
 76. **Applied:** Change Header [FHIR-39950](https://jira.hl7.org/browse/FHIR-39950) [See Changes Here](screening-and-assessments.html#us-core-observation-screening-assessment-profile)
 77. **Applied:** Correct title of section 3.6.2.2 US Core Observation Simple Observation Profile [FHIR-39951](https://jira.hl7.org/browse/FHIR-39951) [See Changes Here](screening-and-assessments.html)
@@ -135,7 +144,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 93. **Applied:** Reword a Quick Start example [FHIR-40072](https://jira.hl7.org/browse/FHIR-40072) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-search-parameters)
 94. **Applied:** Consider alternative answer choices for pregnancy intect codes [FHIR-40084](https://jira.hl7.org/browse/FHIR-40084) [See Changes Here](http://build.fhir.org/ig/HL7/US-Core/ValueSet-us-core-pregnancy-intent.html)
 95.  **Applied:** Improve Screening Assessment Observation.hasMember short description [FHIR-40085](https://jira.hl7.org/browse/FHIR-40085) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html)
-96.  **HALF APPLIED - FIX OTHER IMAGES PRIOR TO PUBLICATION:** Update the “bindings when slicing by value sets” figure  [FHIR-40086](https://jira.hl7.org/browse/FHIR-40086) [See Changes Here](general-requirements.html#required-bindings-when-slicing-by-valuesets)
+96.  **Applied** Update the “bindings when slicing by value sets” figure  [FHIR-40086](https://jira.hl7.org/browse/FHIR-40086) [See Changes Here](general-requirements.html#required-bindings-when-slicing-by-valuesets)
 97.  **Applied:** Update Condition category slices to align with Observation/ServiceRequest[FHIR-40087](https://jira.hl7.org/browse/FHIR-40087) [See Changes Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
 98.  **Applied:** Add guidance to the Procedure profile to express sdoh category [FHIR-40088](https://jira.hl7.org/browse/FHIR-40088) [See Changes Here](screening-and-assessments.html) and 
 99.  **Applied:** Improve language as to the expectations of clinicalStatus when category is problem list [FHIR-40089](https://jira.hl7.org/browse/FHIR-40089) [See Changes Here](StructureDefinition-us-core-condition-problems-health-concerns.html)
@@ -156,7 +165,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 114. **Applied:** Member or subscriber id is must have but the element cardinality is 0..* [FHIR-40160](https://jira.hl7.org/browse/FHIR-40160) [See Changes Here](StructureDefinition-us-core-coverage.html)
 115. **Applied:** Modify comment regarding Screening and Assessments [FHIR-40161](https://jira.hl7.org/browse/FHIR-40161) [See Changes Here](screening-and-assessments.html#us-core-observation-screening-assessment-profile)
 116. **Applied:** Modify Examples/ValueSet for Language Codes [FHIR-40165](https://jira.hl7.org/browse/FHIR-40165) [See Changes Here](ValueSet-simple-language.html)
-117. **Applied:** Add Guidance for more advanced Occupation detail.[FHIR-40166](https://jira.hl7.org/browse/FHIR-40166) [See Changes Here]StructureDefinition-us-core-observation-occupation.html#profile)
+117. **Applied:** Add Guidance for more advanced Occupation detail.[FHIR-40166](https://jira.hl7.org/browse/FHIR-40166) [See Changes Here](StructureDefinition-us-core-observation-occupation.html#profile)
 118. **Applied:** Add implementer guidance [FHIR-40170](https://jira.hl7.org/browse/FHIR-40170) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
 119. **Applied:** Add guidance for current job [FHIR-40172](https://jira.hl7.org/browse/FHIR-40172) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
 120. **Applied:** Add guidance to clarify multiple codings can be used [FHIR-40178](https://jira.hl7.org/browse/FHIR-40178) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)

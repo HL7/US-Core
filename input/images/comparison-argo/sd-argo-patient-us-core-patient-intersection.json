@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "4cc2d972-3edf-4604-bb4e-e0d85635f4ed-9",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/4cc2d972-3edf-4604-bb4e-e0d85635f4ed-9",
+  "id" : "7d50f8e1-df2c-4633-9ea1-41eb58201298-9",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/7d50f8e1-df2c-4633-9ea1-41eb58201298-9",
   "name" : "IntersectionArgonaut Patient ProfileAndUSCorePatientProfile",
   "title" : "Intersection of null And US Core Patient Profile",
   "status" : "draft",
-  "date" : "2022-12-07T16:45:52-08:00",
+  "date" : "2023-04-20T10:42:17-07:00",
   "snapshot" : {
     "element" : [{
       "path" : "Patient",
@@ -178,7 +178,7 @@
     },
     {
       "path" : "Patient.identifier",
-      "short" : "An identifier for this patient",
+      "short" : "left: An identifier for this patient; right: (USCDI) An identifier for this patient",
       "definition" : "An identifier for this patient.",
       "requirements" : "Patients are almost always assigned specific numerical identifiers.",
       "min" : 1,
@@ -310,7 +310,7 @@
     },
     {
       "path" : "Patient.identifier.system",
-      "short" : "left: The namespace for the identifier; right: The namespace for the identifier value",
+      "short" : "left: The namespace for the identifier; right: (USCDI) The namespace for the identifier value",
       "definition" : "left: Establishes the namespace in which set of possible id values is unique.; right: Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
       "comment" : "Identifier.system is always case sensitive.",
       "requirements" : "left: There are many sequences of identifiers.  To perform matching, we need to know what sequence we're dealing with. The system identifies a particular sequence or set of unique identifiers.; right: There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.",
@@ -345,7 +345,7 @@
     },
     {
       "path" : "Patient.identifier.value",
-      "short" : "The value that is unique within the system.",
+      "short" : "left: The value that is unique within the system.; right: (USCDI) The value that is unique within the system.",
       "definition" : "left: The portion of the identifier typically displayed to the user and which is unique within the context of the system.; right: The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
       "comment" : "left: If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.; right: If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension]. Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.",
       "min" : 1,
@@ -463,7 +463,7 @@
     },
     {
       "path" : "Patient.name",
-      "short" : "A name associated with the patient",
+      "short" : "left: A name associated with the patient; right: (USCDI) A name associated with the patient",
       "definition" : "A name associated with the individual.",
       "comment" : "A patient may have multiple names with different uses or applicable periods. For animals, the name is a \"HumanName\" in the sense that is assigned and used by humans and has the same patterns.",
       "requirements" : "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.",
@@ -532,7 +532,7 @@
     },
     {
       "path" : "Patient.name.use",
-      "short" : "usual | official | temp | nickname | anonymous | old | maiden",
+      "short" : "left: usual | official | temp | nickname | anonymous | old | maiden; right: (USCDI) usual | official | temp | nickname | anonymous | old | maiden",
       "definition" : "Identifies the purpose for this name.",
       "comment" : "left: This is labeled as \"Is Modifier\" because applications should not mistake a temporary or old name etc.for a current/permanent one. Applications can assume that a name is current unless it explicitly says that it is temporary or old.; right: Applications can assume that a name is current unless it explicitly says that it is temporary or old.",
       "requirements" : "Allows the appropriate name for a particular context of use to be selected from among a set of names.",
@@ -587,7 +587,7 @@
     },
     {
       "path" : "Patient.name.family",
-      "short" : "Family name (often called 'Surname')",
+      "short" : "left: Family name (often called 'Surname'); right: (USCDI) Family name (often called 'Surname')",
       "definition" : "The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.",
       "comment" : "left: For family name, hyphenated names such as \"Smith-Jones\" are a single name, but names with spaces such as \"Smith Jones\" are broken into multiple parts.; right: Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).",
       "alias" : ["surname"],
@@ -622,7 +622,7 @@
     },
     {
       "path" : "Patient.name.given",
-      "short" : "Given names (not always 'first'). Includes middle names",
+      "short" : "left: Given names (not always 'first'). Includes middle names; right: (USCDI) Given names (not always 'first'). Includes middle names",
       "definition" : "Given name.",
       "comment" : "left: If only initials are recorded, they may be used in place of the full name.  Not called \"first name\" since given names do not always come first.; right: If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called \"first name\" since given names do not always come first.",
       "alias" : ["first name",
@@ -679,7 +679,7 @@
     },
     {
       "path" : "Patient.name.suffix",
-      "short" : "Parts that come after the name",
+      "short" : "left: Parts that come after the name; right: (USCDI) Parts that come after the name",
       "definition" : "Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.",
       "min" : 0,
       "max" : "*",
@@ -704,7 +704,7 @@
     },
     {
       "path" : "Patient.name.period",
-      "short" : "Time period when name was/is in use",
+      "short" : "left: Time period when name was/is in use; right: (USCDI) Time period when name was/is in use",
       "definition" : "Indicates the period of time when this name was valid for the named person.",
       "requirements" : "Allows names to be placed in historical context.",
       "min" : 0,
@@ -734,7 +734,7 @@
     },
     {
       "path" : "Patient.telecom",
-      "short" : "A contact detail for the individual",
+      "short" : "left: A contact detail for the individual; right: (USCDI) A contact detail for the individual",
       "definition" : "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted.",
       "comment" : "left: A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).; right: A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).",
       "requirements" : "People have (primary) ways to contact them in some way such as phone, email.",
@@ -823,7 +823,7 @@
     },
     {
       "path" : "Patient.telecom.system",
-      "short" : "phone | fax | email | pager | url | sms | other",
+      "short" : "left: phone | fax | email | pager | url | sms | other; right: (USCDI) phone | fax | email | pager | url | sms | other",
       "definition" : "Telecommunications form for contact point - what communications system is required to make use of the contact.",
       "min" : 1,
       "max" : "1",
@@ -865,7 +865,7 @@
     },
     {
       "path" : "Patient.telecom.value",
-      "short" : "The actual contact point details",
+      "short" : "left: The actual contact point details; right: (USCDI) The actual contact point details",
       "definition" : "The actual contact point details, in a form that is meaningful to the designated communication system (i.e. phone number or email address).",
       "comment" : "Additional text data such as phone extension numbers, or notes about use of the contact are sometimes included in the value.",
       "requirements" : "Need to support legacy numbers that are not in a tightly controlled format.",
@@ -904,7 +904,7 @@
     },
     {
       "path" : "Patient.telecom.use",
-      "short" : "home | work | temp | old | mobile - purpose of this contact point",
+      "short" : "left: home | work | temp | old | mobile - purpose of this contact point; right: (USCDI) home | work | temp | old | mobile - purpose of this contact point",
       "definition" : "Identifies the purpose for the contact point.",
       "comment" : "Applications can assume that a contact is current unless it explicitly says that it is temporary or old.",
       "requirements" : "Need to track the way a person uses this contact, so a user can choose which is appropriate for their purpose.",
@@ -1011,7 +1011,7 @@
     },
     {
       "path" : "Patient.gender",
-      "short" : "male | female | other | unknown",
+      "short" : "left: male | female | other | unknown; right: (USCDI) male | female | other | unknown",
       "definition" : "Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.",
       "comment" : "left: The gender may not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though the vast majority of systems and contexts only support M and F.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific gender aspect of interest (anatomical, chromosonal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosonal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overrideable error, not a \"hard\" error.; right: The gender might not match the biological sex as determined by genetics or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than male and female, though the vast majority of systems and contexts only support male and female.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific sex or gender aspect of interest (anatomical, chromosomal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosomal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overridable error, not a \"hard\" error.  See the Patient Gender and Sex section for additional information about communicating patient gender and sex.",
       "requirements" : "left: Needed for identification of the individual, in combination with (at least) name and birth date. Gender of individual drives many clinical processes.; right: Needed for identification of the individual, in combination with (at least) name and birth date.",
@@ -1046,7 +1046,7 @@
     },
     {
       "path" : "Patient.birthDate",
-      "short" : "The date of birth for the individual",
+      "short" : "left: The date of birth for the individual; right: (USCDI) The date of birth for the individual",
       "definition" : "The date of birth for the individual.",
       "comment" : "left: At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension \"patient-birthTime\" available that should be used where Time is required (such as in maternaty/infant care systems).; right: At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension \"patient-birthTime\" available that should be used where Time is required (such as in maternity/infant care systems).",
       "requirements" : "Age of the individual drives many clinical processes.",
@@ -1081,7 +1081,7 @@
     },
     {
       "path" : "Patient.deceased[x]",
-      "short" : "Indicates if the individual is deceased or not",
+      "short" : "left: Indicates if the individual is deceased or not; right: (USCDI) Indicates if the individual is deceased or not",
       "definition" : "Indicates if the individual is deceased or not.",
       "comment" : "left: If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.; right: If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.",
       "requirements" : "The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.",
@@ -1111,7 +1111,7 @@
     },
     {
       "path" : "Patient.address",
-      "short" : "left: Addresses for the individual; right: An address for the individual",
+      "short" : "left: Addresses for the individual; right: (USCDI) An address for the individual",
       "definition" : "left: Addresses for the individual.; right: An address for the individual.",
       "comment" : "Patient may have multiple addresses with different uses or applicable periods.",
       "requirements" : "May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.",
@@ -1200,7 +1200,7 @@
     },
     {
       "path" : "Patient.address.use",
-      "short" : "home | work | temp | old | billing - purpose of this address",
+      "short" : "left: home | work | temp | old | billing - purpose of this address; right: (USCDI) home | work | temp | old | billing - purpose of this address",
       "definition" : "The purpose of this address.",
       "comment" : "Applications can assume that an address is current unless it explicitly says that it is temporary or old.",
       "requirements" : "Allows an appropriate address to be chosen from a list of many.",
@@ -1326,7 +1326,7 @@
     },
     {
       "path" : "Patient.address.line",
-      "short" : "Street name, number, direction & P.O. Box etc.",
+      "short" : "left: Street name, number, direction & P.O. Box etc.; right: (USCDI) Street name, number, direction & P.O. Box etc.",
       "definition" : "This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.",
       "min" : 0,
       "max" : "*",
@@ -1371,7 +1371,7 @@
     },
     {
       "path" : "Patient.address.city",
-      "short" : "Name of city, town etc.",
+      "short" : "left: Name of city, town etc.; right: (USCDI) Name of city, town etc.",
       "definition" : "The name of the city, town, suburb, village or other community or delivery center.",
       "alias" : ["Municpality"],
       "min" : 0,
@@ -1452,7 +1452,7 @@
     },
     {
       "path" : "Patient.address.state",
-      "short" : "Sub-unit of country (abbreviations ok)",
+      "short" : "left: Sub-unit of country (abbreviations ok); right: (USCDI) Sub-unit of country (abbreviations ok)",
       "definition" : "Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (e.g. US 2 letter state codes).",
       "alias" : ["Province",
       "Territory"],
@@ -1500,7 +1500,7 @@
     },
     {
       "path" : "Patient.address.postalCode",
-      "short" : "left: Postal code for area; right: US Zip Codes",
+      "short" : "left: Postal code for area; right: (USCDI) US Zip Codes",
       "definition" : "A postal code designating a region defined by the postal service.",
       "alias" : ["Zip",
       "Zip Code"],
@@ -1585,7 +1585,7 @@
     },
     {
       "path" : "Patient.address.period",
-      "short" : "Time period when address was/is in use",
+      "short" : "left: Time period when address was/is in use; right: (USCDI) Time period when address was/is in use",
       "definition" : "Time period when address was/is in use.",
       "requirements" : "Allows addresses to be placed in historical context.",
       "min" : 0,
@@ -1608,7 +1608,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
-      "mustSupport" : true,
+      "mustSupport" : false,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -1995,7 +1995,7 @@
     },
     {
       "path" : "Patient.communication",
-      "short" : "left: A list of Languages which may be used to communicate with the patient about his or her health; right: A language which may be used to communicate with the patient about his or her health",
+      "short" : "left: A list of Languages which may be used to communicate with the patient about his or her health; right: (USCDI) A language which may be used to communicate with the patient about his or her health",
       "definition" : "left: Languages which may be used to communicate with the patient about his or her health.; right: A language which may be used to communicate with the patient about his or her health.",
       "comment" : "left: If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.; right: If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.",
       "requirements" : "left: If a patient does not speak the local language, interpreters may be required, so languages spoken and proficiency is an important things to keep track of both for patient and other persons of interest.; right: If a patient does not speak the local language, interpreters may be required, so languages spoken and proficiency are important things to keep track of both for patient and other persons of interest.",
@@ -2082,7 +2082,7 @@
     },
     {
       "path" : "Patient.communication.language",
-      "short" : "The language which can be used to communicate with the patient about his or her health",
+      "short" : "left: The language which can be used to communicate with the patient about his or her health; right: (USCDI) The language which can be used to communicate with the patient about his or her health",
       "definition" : "The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. \"en\" for English, or \"en-US\" for American English versus \"en-EN\" for England English.",
       "comment" : "The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.",
       "requirements" : "Most systems in multilingual countries will want to convey language. Not all systems actually need the regional dialect.",
@@ -2096,7 +2096,7 @@
       "isSummary" : false,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/4cc2d972-3edf-4604-bb4e-e0d85635f4ed-12"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/7d50f8e1-df2c-4633-9ea1-41eb58201298-12"
       },
       "mapping" : [{
         "identity" : "cda",

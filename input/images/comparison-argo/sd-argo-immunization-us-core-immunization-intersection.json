@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "b339b707-8a34-4f13-848f-6ab4d65b8e59-3",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b339b707-8a34-4f13-848f-6ab4d65b8e59-3",
+  "id" : "b2468634-ccee-43ed-b954-7437b4aee894-3",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b2468634-ccee-43ed-b954-7437b4aee894-3",
   "name" : "IntersectionArgonaut Immunization ProfileAndUSCoreImmunizationProfile",
   "title" : "Intersection of null And US Core Immunization Profile",
   "status" : "draft",
-  "date" : "2022-12-07T16:41:21-08:00",
+  "date" : "2023-04-20T10:37:58-07:00",
   "snapshot" : {
     "element" : [{
       "path" : "Immunization",
@@ -233,7 +233,7 @@
     },
     {
       "path" : "Immunization.status",
-      "short" : "left: in-progress | on-hold | completed | entered-in-error | stopped; right: completed | entered-in-error | not-done",
+      "short" : "left: in-progress | on-hold | completed | entered-in-error | stopped; right: (USCDI) completed | entered-in-error | not-done",
       "definition" : "left: Indicates the current status of the vaccination event.; right: Indicates the current status of the immunization event.",
       "comment" : "left: Will generally be set to show that the immunization has been completed.; right: Will generally be set to show that the immunization has been completed or not done.  This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.",
       "min" : 1,
@@ -247,7 +247,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "Constrained list of immunizaiotn status",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b339b707-8a34-4f13-848f-6ab4d65b8e59-6"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b2468634-ccee-43ed-b954-7437b4aee894-6"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -272,7 +272,7 @@
     },
     {
       "path" : "Immunization.vaccineCode",
-      "short" : "Vaccine Product Type (bind to CVX)",
+      "short" : "left: Vaccine Product Type (bind to CVX); right: (USCDI) Vaccine Product Type (bind to CVX)",
       "definition" : "Vaccine that was administered or was to be administered.",
       "min" : 1,
       "max" : "1",
@@ -328,7 +328,7 @@
     },
     {
       "path" : "Immunization.patient",
-      "short" : "Who was immunized",
+      "short" : "left: Who was immunized; right: (USCDI) Who was immunized",
       "definition" : "The patient who either received or did not receive the immunization.",
       "alias" : ["Patient"],
       "min" : 1,

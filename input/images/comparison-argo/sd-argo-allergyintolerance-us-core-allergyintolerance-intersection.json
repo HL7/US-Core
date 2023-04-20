@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "22d2640d-b286-4895-8f46-da6969c7d7b8-3",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/22d2640d-b286-4895-8f46-da6969c7d7b8-3",
+  "id" : "8282e1af-6b64-4619-80d9-821cc1c8475e-3",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/8282e1af-6b64-4619-80d9-821cc1c8475e-3",
   "name" : "IntersectionArgonaut AllergyIntolerance ProfileAndUSCoreAllergyIntolerance",
   "title" : "Intersection of null And US Core AllergyIntolerance Profile",
   "status" : "draft",
-  "date" : "2022-12-07T16:35:30-08:00",
+  "date" : "2023-04-20T10:32:10-07:00",
   "snapshot" : {
     "element" : [{
       "path" : "AllergyIntolerance",
@@ -283,7 +283,7 @@
     },
     {
       "path" : "AllergyIntolerance.patient",
-      "short" : "Who the sensitivity is for",
+      "short" : "left: Who the sensitivity is for; right: (USCDI) Who the sensitivity is for",
       "definition" : "The patient who has the allergy or intolerance.",
       "alias" : ["Patient"],
       "min" : 1,
@@ -460,7 +460,7 @@
     },
     {
       "path" : "AllergyIntolerance.reaction",
-      "short" : "Adverse Reaction Events linked to exposure to substance",
+      "short" : "left: Adverse Reaction Events linked to exposure to substance; right: (USCDI) Adverse Reaction Events linked to exposure to substance",
       "definition" : "Details about each adverse reaction event linked to exposure to the identified Substance.",
       "min" : 0,
       "max" : "*",
@@ -560,7 +560,7 @@
     },
     {
       "path" : "AllergyIntolerance.reaction.manifestation",
-      "short" : "Clinical symptoms/signs associated with the Event",
+      "short" : "left: Clinical symptoms/signs associated with the Event; right: (USCDI) Clinical symptoms/signs associated with the Event",
       "definition" : "Clinical symptoms and/or signs that are observed or associated with the adverse reaction event.",
       "comment" : "Manifestation can be expressed as a single word, phrase or brief description. For example: nausea, rash or no reaction. It is preferable that manifestation should be coded with a terminology, where possible. The values entered here may be used to display on an application screen as part of a list of adverse reactions, as recommended in the UK NHS CUI guidelines.  Terminologies commonly used include, but are not limited to, SNOMED CT or ICD10.",
       "alias" : ["Symptoms",

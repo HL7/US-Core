@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "fc5d8514-8641-4530-a9a7-57fd5eead0e2-2",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/fc5d8514-8641-4530-a9a7-57fd5eead0e2-2",
+  "id" : "8102bc11-fb44-4615-b2aa-b5092143fbd5-2",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/8102bc11-fb44-4615-b2aa-b5092143fbd5-2",
   "name" : "UnionArgonaut Device ProfileAndUSCoreImplantableDeviceProfile",
   "title" : "Union of null And US Core Implantable Device Profile",
   "status" : "draft",
-  "date" : "2022-12-07T16:38:21-08:00",
+  "date" : "2023-04-20T10:35:03-07:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -220,7 +220,7 @@
     },
     {
       "path" : "Device.type",
-      "short" : "left: What kind of device this is; right: The kind or type of device",
+      "short" : "left: What kind of device this is; right: (USCDI) The kind or type of device",
       "definition" : "left: Code or identifier to identify a kind of device.; right: The kind or type of device.",
       "comment" : "For the FDA mandated Unique Device Identifier (UDI) use  the Device.udi element.",
       "min" : 1,
@@ -234,7 +234,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "Codes to identify medical devices",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/fc5d8514-8641-4530-a9a7-57fd5eead0e2-5"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/8102bc11-fb44-4615-b2aa-b5092143fbd5-5"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -554,7 +554,7 @@
     },
     {
       "path" : "Device.manufactureDate",
-      "short" : "left: Manufacture date; right: Date when the device was made",
+      "short" : "left: Manufacture date; right: (USCDI) Date when the device was made",
       "definition" : "The date and time when the device was manufactured.",
       "min" : 0,
       "max" : "1",
@@ -646,7 +646,7 @@
     },
     {
       "path" : "Device.lotNumber",
-      "short" : "Lot number of manufacture",
+      "short" : "left: Lot number of manufacture; right: (USCDI) Lot number of manufacture",
       "definition" : "Lot number assigned by the manufacturer.",
       "comment" : "Alphanumeric Maximum 20.",
       "min" : 0,
@@ -725,7 +725,7 @@
     },
     {
       "path" : "Device.patient",
-      "short" : "left: If the resource is affixed to a person; right: Patient to whom Device is affixed",
+      "short" : "left: If the resource is affixed to a person; right: (USCDI) Patient to whom Device is affixed",
       "definition" : "left: Patient information, if the resource is affixed to a person.; right: Patient information, If the device is affixed to a person.",
       "requirements" : "If the device is implanted in a patient, then need to associate the device to the patient.",
       "min" : 1,
@@ -836,8 +836,12 @@
     },
     {
       "id" : "Device.udiCarrier",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+        "valueBoolean" : true
+      }],
       "path" : "Device.udiCarrier",
-      "short" : "Unique Device Identifier (UDI) Barcode string",
+      "short" : "(USCDI) Unique Device Identifier (UDI) Barcode string",
       "definition" : "Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.",
       "comment" : "Some devices may not have UDI information (for example. historical data or patient reported data).",
       "min" : 0,
@@ -915,8 +919,12 @@
     },
     {
       "id" : "Device.distinctIdentifier",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+        "valueBoolean" : true
+      }],
       "path" : "Device.distinctIdentifier",
-      "short" : "The distinct identification string",
+      "short" : "(USCDI) The distinct identification string",
       "definition" : "The distinct identification string as required by regulation for a human cell, tissue, or cellular and tissue-based product.",
       "comment" : "For example, this applies to devices in the United States regulated under *Code of Federal Regulation 21CFR§1271.290(c)*.",
       "alias" : ["Distinct Identification Code (DIC)"],
@@ -960,8 +968,12 @@
     },
     {
       "id" : "Device.expirationDate",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+        "valueBoolean" : true
+      }],
       "path" : "Device.expirationDate",
-      "short" : "Date and time of expiry of this device (if applicable)",
+      "short" : "(USCDI) Date and time of expiry of this device (if applicable)",
       "definition" : "The date and time beyond which this device is no longer valid or should not be used (if applicable).",
       "min" : 0,
       "max" : "1",
@@ -1003,8 +1015,12 @@
     },
     {
       "id" : "Device.serialNumber",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+        "valueBoolean" : true
+      }],
       "path" : "Device.serialNumber",
-      "short" : "Serial number assigned by the manufacturer",
+      "short" : "(USCDI) Serial number assigned by the manufacturer",
       "definition" : "The serial number assigned by the organization when the device was manufactured.",
       "comment" : "Alphanumeric Maximum 20.",
       "min" : 0,

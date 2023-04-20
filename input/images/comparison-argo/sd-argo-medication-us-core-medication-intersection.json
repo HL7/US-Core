@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "4f099296-54c8-4b3a-8265-68b378f416d3-3",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/4f099296-54c8-4b3a-8265-68b378f416d3-3",
+  "id" : "f2c5106f-0a46-4a83-a301-c02108928856-3",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/f2c5106f-0a46-4a83-a301-c02108928856-3",
   "name" : "IntersectionArgonaut Medication ProfileAndUSCoreMedicationProfile",
   "title" : "Intersection of null And US Core Medication Profile",
   "status" : "draft",
-  "date" : "2022-12-07T16:41:52-08:00",
+  "date" : "2023-04-20T10:38:30-07:00",
   "snapshot" : {
     "element" : [{
       "path" : "Medication",
@@ -184,7 +184,7 @@
     },
     {
       "path" : "Medication.code",
-      "short" : "Codes that identify this medication",
+      "short" : "left: Codes that identify this medication; right: (USCDI) Codes that identify this medication",
       "definition" : "left: Used for identification and definition of a medication.; right: A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.",
       "comment" : "left: Depending on the context of use, the code that was actually selected by the user (prescriber, dispenser, etc.) should be marked as \"primary\". Other codes can only be literal translations to alternative code systems, or codes at a lower level of granularity (e.g. a generic code for a vendor-specific primary one).; right: Depending on the context of use, the code that was actually selected by the user (prescriber, dispenser, etc.) will have the coding.userSelected set to true.  As described in the coding datatype: \"A coding may be marked as a \"userSelected\" if a user selected the particular coded value in a user interface (e.g. the user selects an item in a pick-list). If a user selected coding exists, it is the preferred choice for performing translations etc. Other codes can only be literal translations to alternative code systems, or codes at a lower level of granularity (e.g. a generic code for a vendor-specific primary one).",
       "min" : 1,
@@ -198,7 +198,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "Prescribable medications",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/4f099296-54c8-4b3a-8265-68b378f416d3-6"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/f2c5106f-0a46-4a83-a301-c02108928856-6"
       },
       "mapping" : [{
         "identity" : "v2",

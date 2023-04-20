@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "b339b707-8a34-4f13-848f-6ab4d65b8e59-2",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b339b707-8a34-4f13-848f-6ab4d65b8e59-2",
+  "id" : "b2468634-ccee-43ed-b954-7437b4aee894-2",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/b2468634-ccee-43ed-b954-7437b4aee894-2",
   "name" : "UnionArgonaut Immunization ProfileAndUSCoreImmunizationProfile",
   "title" : "Union of null And US Core Immunization Profile",
   "status" : "draft",
-  "date" : "2022-12-07T16:41:21-08:00",
+  "date" : "2023-04-20T10:37:58-07:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -239,7 +239,7 @@
     },
     {
       "path" : "Immunization.status",
-      "short" : "left: in-progress | on-hold | completed | entered-in-error | stopped; right: completed | entered-in-error | not-done",
+      "short" : "left: in-progress | on-hold | completed | entered-in-error | stopped; right: (USCDI) completed | entered-in-error | not-done",
       "definition" : "left: Indicates the current status of the vaccination event.; right: Indicates the current status of the immunization event.",
       "comment" : "left: Will generally be set to show that the immunization has been completed.; right: Will generally be set to show that the immunization has been completed or not done.  This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.",
       "min" : 1,
@@ -253,7 +253,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "Constrained list of immunizaiotn status",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b339b707-8a34-4f13-848f-6ab4d65b8e59-5"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/b2468634-ccee-43ed-b954-7437b4aee894-5"
       },
       "mapping" : [{
         "identity" : "rim",
@@ -315,7 +315,7 @@
     },
     {
       "path" : "Immunization.vaccineCode",
-      "short" : "Vaccine Product Type (bind to CVX)",
+      "short" : "left: Vaccine Product Type (bind to CVX); right: (USCDI) Vaccine Product Type (bind to CVX)",
       "definition" : "Vaccine that was administered or was to be administered.",
       "min" : 1,
       "max" : "1",
@@ -371,7 +371,7 @@
     },
     {
       "path" : "Immunization.patient",
-      "short" : "Who was immunized",
+      "short" : "left: Who was immunized; right: (USCDI) Who was immunized",
       "definition" : "The patient who either received or did not receive the immunization.",
       "alias" : ["Patient"],
       "min" : 1,
@@ -1197,8 +1197,12 @@
     },
     {
       "id" : "Immunization.statusReason",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+        "valueBoolean" : true
+      }],
       "path" : "Immunization.statusReason",
-      "short" : "Reason not done",
+      "short" : "(USCDI) Reason not done",
       "definition" : "Indicates the reason the immunization event was not performed.",
       "comment" : "This is generally only used for the status of \"not-done\". The reason for performing the immunization event is captured in reasonCode, not here.",
       "min" : 0,
@@ -1241,8 +1245,12 @@
     },
     {
       "id" : "Immunization.occurrence[x]",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+        "valueBoolean" : true
+      }],
       "path" : "Immunization.occurrence[x]",
-      "short" : "Vaccine administration date",
+      "short" : "(USCDI) Vaccine administration date",
       "definition" : "Date vaccine administered or was to be administered.",
       "comment" : "When immunizations are given a specific date and time should always be known.   When immunizations are patient reported, a specific date might not be known.  Although partial dates are allowed, an adult patient might not be able to recall the year a childhood immunization was given. An exact date is always preferable, but the use of the String data type is acceptable when an exact date is not known. A small number of vaccines (e.g. live oral typhoid vaccine) are given as a series of patient self-administered dose over a span of time. In cases like this, often, only the first dose (typically a provider supervised dose) is recorded with the occurrence indicating the date/time of the first dose.",
       "min" : 1,
@@ -1334,8 +1342,12 @@
     },
     {
       "id" : "Immunization.primarySource",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+        "valueBoolean" : true
+      }],
       "path" : "Immunization.primarySource",
-      "short" : "Indicates context the data was recorded in",
+      "short" : "(USCDI) Indicates context the data was recorded in",
       "definition" : "Indicates whether the data contained in the resource was captured by the individual/organization which was responsible for the administration of the vaccine rather than as 'secondary reported' data  documented by a third party. A value of 'true' means this data originated with the individual/organization which was responsible for the administration of the vaccine.",
       "comment" : "This updated definition is adopted from the FHIR R5 Immunization resource.",
       "min" : 0,

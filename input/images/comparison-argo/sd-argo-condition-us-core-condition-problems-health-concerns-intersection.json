@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "af9d1cdd-aa73-4f6c-a3a2-ecdb23fbfde1-3",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/af9d1cdd-aa73-4f6c-a3a2-ecdb23fbfde1-3",
+  "id" : "1dc4abde-6719-4a05-8e0e-5eaf9925af15-3",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/1dc4abde-6719-4a05-8e0e-5eaf9925af15-3",
   "name" : "IntersectionArgonaut Condition ProfileAndUSCoreConditionProblemsHealthConcernsProfile",
   "title" : "Intersection of null And US Core Condition Problems and Health Concerns Profile",
   "status" : "draft",
-  "date" : "2022-12-07T16:37:22-08:00",
+  "date" : "2023-04-20T10:34:06-07:00",
   "snapshot" : {
     "element" : [{
       "path" : "Condition",
@@ -308,7 +308,7 @@
     },
     {
       "path" : "Condition.code",
-      "short" : "Identification of the condition, problem or diagnosis",
+      "short" : "left: Identification of the condition, problem or diagnosis; right: (USCDI) Identification of the condition, problem or diagnosis",
       "definition" : "Identification of the condition, problem or diagnosis.",
       "requirements" : "0..1 to account for primarily narrative only resources.",
       "alias" : ["type"],
@@ -363,7 +363,7 @@
     },
     {
       "path" : "Condition.category",
-      "short" : "left: complaint | symptom | finding | diagnosis; right: category codes",
+      "short" : "left: complaint | symptom | finding | diagnosis; right: (USCDI) category codes",
       "definition" : "A category assigned to the condition.",
       "comment" : "The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts.",
       "min" : 1,
@@ -414,7 +414,7 @@
     },
     {
       "path" : "Condition.clinicalStatus",
-      "short" : "left: active | relapse | remission | resolved; right: active | recurrence | relapse | inactive | remission | resolved",
+      "short" : "left: active | relapse | remission | resolved; right: (USCDI) active | recurrence | relapse | inactive | remission | resolved",
       "definition" : "The clinical status of the condition.",
       "comment" : "The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
       "min" : 0,
@@ -468,7 +468,7 @@
     },
     {
       "path" : "Condition.verificationStatus",
-      "short" : "left: provisional | differential | confirmed | refuted | entered-in-error | unknown; right: unconfirmed | provisional | differential | confirmed | refuted | entered-in-error",
+      "short" : "left: provisional | differential | confirmed | refuted | entered-in-error | unknown; right: (USCDI) unconfirmed | provisional | differential | confirmed | refuted | entered-in-error",
       "definition" : "The verification status to support the clinical status of the condition.",
       "comment" : "verificationStatus is not required.  For example, when a patient has abdominal pain in the ED, there is not likely going to be a verification status.\nThe data type is CodeableConcept because verificationStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
       "min" : 1,
@@ -569,7 +569,7 @@
     },
     {
       "path" : "Condition.onset[x]",
-      "short" : "Estimated or actual date,  date-time, or age",
+      "short" : "left: Estimated or actual date,  date-time, or age; right: (USCDI) Estimated or actual date,  date-time, or age",
       "definition" : "Estimated or actual date or date-time  the condition began, in the opinion of the clinician.",
       "comment" : "Age is generally used when the patient reports an age at which the Condition began to occur.",
       "min" : 0,
@@ -616,7 +616,7 @@
     },
     {
       "path" : "Condition.abatement[x]",
-      "short" : "left: If/when in resolution/remission; right: When in resolution/remission",
+      "short" : "left: If/when in resolution/remission; right: (USCDI) When in resolution/remission",
       "definition" : "The date or estimated date that the condition resolved or went into remission. This is called \"abatement\" because of the many overloaded connotations associated with \"remission\" or \"resolution\" - Conditions are never really resolved, but they can abate.",
       "comment" : "left: There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.; right: There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.",
       "min" : 0,

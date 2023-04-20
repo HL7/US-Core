@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "fc5d8514-8641-4530-a9a7-57fd5eead0e2-6",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/fc5d8514-8641-4530-a9a7-57fd5eead0e2-6",
+  "id" : "8102bc11-fb44-4615-b2aa-b5092143fbd5-6",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/8102bc11-fb44-4615-b2aa-b5092143fbd5-6",
   "name" : "IntersectionArgonaut Device TypesAndFHIRDeviceTypes",
   "title" : "Intersection of null And FHIR Device Types",
   "status" : "draft",
-  "date" : "2022-12-07T16:38:21-08:00",
+  "date" : "2023-04-20T10:35:03-07:00",
   "compose" : {
     "include" : [{
       "filter" : [{
@@ -1160,11 +1160,6 @@
       "system" : "http://snomed.info/sct",
       "code" : "34164001",
       "display" : "Plaster cast"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "34188004",
-      "display" : "Straightjacket"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -2560,11 +2555,6 @@
       "system" : "http://snomed.info/sct",
       "code" : "79811009",
       "display" : "Electric blanket"
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "code" : "79834000",
-      "display" : "Hickman catheter"
     },
     {
       "system" : "http://snomed.info/sct",
@@ -5015,6 +5005,16 @@
       "system" : "http://snomed.info/sct",
       "code" : "257246004",
       "display" : "Rubber suction catheter"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "257247008",
+      "display" : "Tourniquet cuff"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "code" : "257248003",
+      "display" : "Upper tourniquet cuff"
     }]
   }
 }

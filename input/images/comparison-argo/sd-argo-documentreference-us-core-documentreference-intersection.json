@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "6614c590-e74d-4ee2-a9cb-aed54c1d90fa-3",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/6614c590-e74d-4ee2-a9cb-aed54c1d90fa-3",
+  "id" : "a56d00c4-8762-491f-8c3c-4d0bc59e0f0c-3",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/a56d00c4-8762-491f-8c3c-4d0bc59e0f0c-3",
   "name" : "IntersectionArgonaut DocumentReference ProfileAndUSCoreDocumentReferenceProfile",
   "title" : "Intersection of null And US Core DocumentReference Profile",
   "status" : "draft",
-  "date" : "2022-12-07T16:39:52-08:00",
+  "date" : "2023-04-20T10:36:32-07:00",
   "snapshot" : {
     "element" : [{
       "path" : "DocumentReference",
@@ -235,7 +235,7 @@
     },
     {
       "path" : "DocumentReference.identifier",
-      "short" : "Other identifiers for the document",
+      "short" : "left: Other identifiers for the document; right: (USCDI) Other identifiers for the document",
       "definition" : "Other identifiers associated with the document, including version independent identifiers.",
       "min" : 0,
       "max" : "1",
@@ -272,7 +272,7 @@
     },
     {
       "path" : "DocumentReference.subject",
-      "short" : "Who/what is the subject of the document",
+      "short" : "left: Who/what is the subject of the document; right: (USCDI) Who/what is the subject of the document",
       "definition" : "Who or what the document is about. The document can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure).",
       "min" : 1,
       "max" : "1",
@@ -323,7 +323,7 @@
     },
     {
       "path" : "DocumentReference.type",
-      "short" : "Kind of document (LOINC if possible)",
+      "short" : "left: Kind of document (LOINC if possible); right: (USCDI) Kind of document (LOINC if possible)",
       "definition" : "Specifies the particular kind of document referenced  (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the document referenced.",
       "comment" : "left: Key metadata element describing the document, used in searching/filtering.; right: Key metadata element describing the document that describes he exact type of document. Helps humans to assess whether the document is of interest when viewing a list of documents.",
       "min" : 1,
@@ -337,7 +337,7 @@
       "binding" : {
         "strength" : "required",
         "description" : "All LOINC  values whose SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor concept 'unknown'",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/6614c590-e74d-4ee2-a9cb-aed54c1d90fa-12"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/a56d00c4-8762-491f-8c3c-4d0bc59e0f0c-12"
       },
       "mapping" : [{
         "identity" : "xds",
@@ -374,7 +374,7 @@
     },
     {
       "path" : "DocumentReference.author",
-      "short" : "Who and/or what authored the document",
+      "short" : "left: Who and/or what authored the document; right: (USCDI) Who and/or what authored the document",
       "definition" : "Identifies who is responsible for adding the information to the document.",
       "comment" : "left: Not necessarily who did the actual data entry (i.e. typist) it in or who was the source (informant).; right: Not necessarily who did the actual data entry (i.e. typist) or who was the source (informant).",
       "min" : 0,
@@ -533,7 +533,7 @@
     },
     {
       "path" : "DocumentReference.status",
-      "short" : "current | superseded | entered-in-error",
+      "short" : "left: current | superseded | entered-in-error; right: (USCDI) current | superseded | entered-in-error",
       "definition" : "The status of this document reference.",
       "comment" : "left: This is the status of the DocumentReference object, which might be independent from the docStatus element.; right: This is the status of the DocumentReference object, which might be independent from the docStatus element.\n\nThis element is labeled as a modifier because the status contains the codes that mark the document or reference as not currently valid.",
       "min" : 1,
@@ -832,7 +832,7 @@
     },
     {
       "path" : "DocumentReference.content",
-      "short" : "Document referenced",
+      "short" : "left: Document referenced; right: (USCDI) Document referenced",
       "definition" : "The document and format referenced. There may be multiple content element repetitions, each with a different format.",
       "min" : 1,
       "max" : "1",
@@ -913,7 +913,7 @@
     },
     {
       "path" : "DocumentReference.content.attachment",
-      "short" : "Where to access the document",
+      "short" : "left: Where to access the document; right: (USCDI) Where to access the document",
       "definition" : "The document or url of the document along with critical metadata to prove content has integrity.",
       "min" : 1,
       "max" : "1",
@@ -988,7 +988,7 @@
     },
     {
       "path" : "DocumentReference.content.attachment.contentType",
-      "short" : "Mime type of the content, with charset etc.",
+      "short" : "left: Mime type of the content, with charset etc.; right: (USCDI) Mime type of the content, with charset etc.",
       "definition" : "Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.",
       "requirements" : "Processors of the data need to be able to know how to interpret the data.",
       "min" : 1,
@@ -1046,7 +1046,7 @@
     },
     {
       "path" : "DocumentReference.content.attachment.data",
-      "short" : "Data inline, base64ed",
+      "short" : "left: Data inline, base64ed; right: (USCDI) Data inline, base64ed",
       "definition" : "left: The actual data of the attachment - a sequence of bytes. In XML, represented using base64.; right: The actual data of the attachment - a sequence of bytes, base64 encoded.",
       "comment" : "The base64-encoded data SHALL be expressed in the same character set as the base resource XML or JSON.",
       "requirements" : "The data needs to able to be transmitted inline.",
@@ -1069,7 +1069,7 @@
     },
     {
       "path" : "DocumentReference.content.attachment.url",
-      "short" : "left: https address; right: Uri where the data can be found",
+      "short" : "left: https address; right: (USCDI) Uri where the data can be found",
       "definition" : "left: The https address where the document can be retrieved.  For example, this address may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]) address on the server.; right: A location where the data can be accessed.",
       "comment" : "If both data and url are provided, the url SHALL point to the same content as the data contains. Urls may be relative references or may reference transient locations such as a wrapping envelope using cid: though this has ramifications for using signatures. Relative URLs are interpreted relative to the service url, like a resource reference, rather than relative to the resource itself. If a URL is provided, it SHALL resolve to actual data.",
       "requirements" : "The data needs to be transmitted by reference.",
@@ -1174,7 +1174,7 @@
     },
     {
       "path" : "DocumentReference.content.format",
-      "short" : "Format/content rules for the document",
+      "short" : "left: Format/content rules for the document; right: (USCDI) Format/content rules for the document",
       "definition" : "An identifier of the document encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.",
       "comment" : "Note that while IHE mostly issues URNs for format types, not all documents can be identified by a URI.",
       "min" : 1,
@@ -1208,7 +1208,7 @@
     },
     {
       "path" : "DocumentReference.context",
-      "short" : "Clinical context of document",
+      "short" : "left: Clinical context of document; right: (USCDI) Clinical context of document",
       "definition" : "The clinical context in which the document was prepared.",
       "comment" : "These values are primarily added to help with searching for interesting/relevant documents.",
       "min" : 0,
@@ -1286,7 +1286,7 @@
     },
     {
       "path" : "DocumentReference.context.encounter",
-      "short" : "Context of the document  content",
+      "short" : "left: Context of the document  content; right: (USCDI) Context of the document  content",
       "definition" : "Describes the clinical encounter or type of care that the document content is associated with.",
       "min" : 0,
       "max" : "1",
@@ -1351,7 +1351,7 @@
     },
     {
       "path" : "DocumentReference.context.period",
-      "short" : "Time of service that is being documented",
+      "short" : "left: Time of service that is being documented; right: (USCDI) Time of service that is being documented",
       "definition" : "The time period over which the service that is described by the document was provided.",
       "min" : 0,
       "max" : "1",
