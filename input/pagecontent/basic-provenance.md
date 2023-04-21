@@ -99,7 +99,7 @@ In this [US Core Patient Profile] example, the patient demographic data such as 
 ~~~
 
 
-This [US Core Provenance] resource communicates who, how, and when elements such as Race and Ethnicity (R/E), gender identity, etc., were collected. Note that the [Target Element] Extension references the element ids within the Patient resource:
+This [US Core Provenance Profile] resource communicates who, how, and when elements such as Race and Ethnicity (R/E), gender identity, etc., were collected. Note that the [Target Element] Extension references the element ids within the Patient resource:
 
 ~~~
 {% include_relative Provenance-example-targeted-provenance.json %}

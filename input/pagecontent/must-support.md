@@ -48,7 +48,7 @@ Most US Core Profiles represent requirements for a [U.S. Core Data for Interoper
 
 #### Communicating USCDI Requirements
 
-Understanding the Additional USCDI Requirements is essential for API developers and business analysts working with FHIR US Core. The profiles pages list Additional USCDI Requirements under the "Mandatory and Must Support Data Elements" sections to alert users. In addition, "(USCDI)" is prepended to the element's short description, and the computable [USCDI Requirement Extension] is added to each element definition.
+Understanding the Additional USCDI Requirements is essential for API developers and business analysts working with FHIR US Core. The profiles pages list Additional USCDI Requirements under the "Mandatory and Must Support Data Elements" sections to alert users. In addition, "(USCDI)" is prepended to the element's short description, and the computable [US Core USCDI Requirement Extension] is added to each element definition.
 </div><!-- new-content -->
 
 <div class="bg-success" markdown="1">
@@ -78,7 +78,7 @@ This view includes the same flags and labels described in Differential Table Vie
 
 The "Snapshot Table" view in Figure 3 view consists of:
 1.  all the *Mandatory*, *Must Support*, and *USCDI requirements* elements in the differential view
-2. any inherited *Mandatory*, *Must Support*, and *USCDI requirements* elements from a US Core or other profile upon which it is based. (e.g.,  [US Core Body Height Profile] based on [Vital Signs Profile] or [US Core QuestionnaireResponse Profile] based on [SDC QuestionnaireResponse Profile])
+2. any inherited *Mandatory*, *Must Support*, and *USCDI requirements* elements from a US Core or other profile upon which it is based. (e.g.,  [US Core Body Height Profile] based on [Vital Signs Profile] or [US Core QuestionnaireResponse Profile] based on [Structured Data Capture (SDC) Questionnaire Response Profile])
 3. any base FHIR elements not in 1. or 2.
 
 This view includes the same flags and labels as described in Differential Table View:
@@ -187,6 +187,6 @@ There are several instances in this Guide where there is a choice of supporting 
 
 For example:
 
-[US Core Medication Request Profile] - The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or another resource type. Although both are marked as Must Support, servers are not required to support a boolean and a reference but **SHALL** choose to support at least one of these elements.
+[US Core MedicationRequest Profile] - The MedicationRequest resource can represent that information is from a secondary source using either a boolean flag or reference in `MedicationRequest.reportedBoolean`, or a reference using `MedicationRequest.reportedReference` to Practitioner or another resource type. Although both are marked as Must Support, servers are not required to support a boolean and a reference but **SHALL** choose to support at least one of these elements.
 
 {% include link-list.md %}

@@ -1,5 +1,5 @@
 
-The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations], [FHIR RESTful search api], and the standard [Search Param Registry], see the FHIR specification.
+The following operations and search parameters have been defined for the US Core Implementation Guide.  For more information on the [FHIR RESTful operations], [FHIR RESTful search api], and the standard [Search Parameter Registry], see the FHIR specification.
 
 ### Operations
 

@@ -356,6 +356,7 @@
 [US Core Pregnancy Intent Codes]: ValueSet-us-core-pregnancy-intent.html
 [US Core Tribal Affiliation Extension]: StructureDefinition-us-core-tribal-affiliation.html
 [US Core Vital Signs Profile]: StructureDefinition-us-core-vital-signs.html
+[US Core USCDI Requirement Extension]: StructureDefinition-uscdi-requirement.html
 [USCDI v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2
 [USCDI v3]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v3
 [USCDI]: uscdi.html
@@ -392,3 +393,5 @@
 [granular scopes]: http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#finer-grained-resource-constraints-using-search-parameters
 [US Core SMART Scopes]: future-of-US-core.html#us-core-smart-scopes
 [Value Set Authority Center (VSAC)]: https://vsac.nlm.nih.gov/
+[AGPAR score]: https://en.wikipedia.org/wiki/Apgar_score
+[PHQ-9]: https://en.wikipedia.org/wiki/PHQ-9
