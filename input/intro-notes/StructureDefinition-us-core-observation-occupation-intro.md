@@ -30,9 +30,9 @@ The following data elements must always be present ([Mandatory] definition) or m
 <div class="bg-success" markdown="1">
 
 {% include additional-codings.md %}
-- For the current job, omit 'observation.effectivePeriod.end' to indicate it is ongoing.
-- When the industry is known, but the occupation is not,  use the value "unknown" from the [DataAbsentReason Code System]. However, when the occupation is known but the industry is not, omit the industry `Observation.component'.  The guide provides examples for both scenarios.
-- In the [Quick Start](#notes) section below, you can find instructions on searching for Occupations (Jobs) by 'patient','date', and other core search parameters. For more advanced queries using Observation, refer to the FHIR [search] specification.
+- For the current job, omit `observation.effectivePeriod.end` to indicate it is ongoing.
+- When the industry is known, but the occupation is not,  use the value "unknown" from the [DataAbsentReason Code System]. However, when the occupation is known but the industry is not, omit the industry `Observation.component`.  The guide provides examples for both scenarios.
+- In the [Quick Start](#notes) section below, you can find instructions on searching for Occupations (Jobs) by `patient`, `date`, and other core search parameters. For more advanced queries using Observation, refer to the FHIR [search] specification.
 </div><!-- new-content -->
 
 - Implementers may consider referring to [Occupational Data for Health (ODH)] FHIR IG  to convey additional details; data elements, such as Employer; or different topics, such as Usual (Longest-Held) Work.
