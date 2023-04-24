@@ -54,14 +54,17 @@ Whether based on simple observations or detailed assessments, clinicians may rec
 - a problem or health concern
 - as observation
 
-Local policies guide what is appropriate for the problem list versus an observation. For example, some clinics may consider social needs as sensitive information and not appropriate for the problem list.  Observations can contribute to the identification of future problems or health concerns and support service requests and procedures.  Every server that supports the USDCI Data Class "Health Status/Assessments":
+Local policies guide what is appropriate for the problem list versus an observation. For example, some clinics may consider social needs as sensitive information and not appropriate for the problem list.  Observations can contribute to the identification of future problems or health concerns and support service requests and procedures.
+
+Every server that supports the USDCI Data Class "Health Status/Assessments":
+
 -  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].  
 -  When a *Simple Observation* or *Problem or Health Concern* is recorded based on a structured screening an assessment (see below), the *US Core Simple Observation Profile* **SHOULD** reference it using the `derivedFrom` element and the *US Core Condition Problems and Health Concerns Profile* using the `evidence.detail` element,
 </div><!-- new-content -->
 
 <div class="bg-success" markdown="1">
 
-#### Structured Screening an Assessments
+#### Structured Screening and Assessments
 
 Screening and Assessments can be structured survey instruments consisting of questions with a variety of response including true/false, coded, textual, and  multiple choice.  Examples include PRAPARE, [APGAR score] and [PHQ-9]. US Core defines two ways to represent the questions and responses to these screening and assessment instruments:
 
@@ -84,7 +87,7 @@ The sections below provide additional guidance on when Observations and Question
 ##### <span class="bg-success" markdown="1">US Core Observation Screening Assessment Profile</span><!-- new-content -->
 
 <span class="bg-success" markdown="1">
-[US Core Observation Screening Assessment Profile] is defined to record observations from responses to screening tools and assessments used for any context (e.g., SDOH, functional status, etc.). Although systems can represent most questions and answers in healthcare assessments as FHIR Observations, it is only sometimes necessary and appropriate to represent all of them as Observations. Only relevant responses should be extracted as Observations. For example, depending on the use case and focus of the Assessment or Survey patient demographic, information may be recorded in the Patient resource instead of Observations. The observations can be grouped and nested to preserve the structure of screening or assessment instruments. The figure below illustrates the relationship between the Observation screening and assessments "panel" and the individual screening and assessment "item" Observations. Each box represents an Observation:</span><!-- new-content -->
+[US Core Observation Screening Assessment Profile] is defined to record observations from responses to screening tools and assessments used for any context (e.g., SDOH, functional status, etc.). Although systems can represent most questions and answers in healthcare assessments as FHIR Observations, it is only sometimes necessary and appropriate to represent all of them as Observations. Only relevant responses should be extracted as Observations. For example, depending on the use case and focus of the Assessment or Survey, patient demographic information may be recorded in the Patient resource instead of Observations. The observations can be grouped and nested to preserve the structure of screening or assessment instruments. The figure below illustrates the relationship between the Observation screening and assessments "panel" and the individual screening and assessment "item" Observations. Each box represents an Observation:</span><!-- new-content -->
 
 {% include img-med.html img="uscore-observation-assessment-structure.svg" caption="Relationship Between Screening Assessment Observations" %}
 
@@ -92,7 +95,7 @@ Note that the panels can be nested to create additional groupings of responses. 
 
 ###### Searching for Screening and Assessment Data
 
-Unlike QuestionnaireResponse, When Observations are used to record set of screening an assessments responses, clients can query individual responses can be queried using the standard FHIR RESTful API search parameters  Below is a simple example of a FHIR RESTful search transaction on Observation to access a patient's SDOH assessment data
+Unlike QuestionnaireResponse, When Observations are used to record set of Screening and Assessments responses, clients can query individual responses using the standard FHIR RESTful API search parameters  Below is a simple example of a FHIR RESTful search transaction on Observation to access a patient's SDOH assessment data
 
 {% include examplebutton.html example="SDOH_search_transaction" b_title = "Click on Here To See Search Example" %}
 
@@ -114,7 +117,7 @@ US Core Observation Screening Assessment can be extracted from US Core Questionn
 For API developers using US Core, it's important to understand when to use the QuestionnaireResponse versus Observation to represent structured assessments and surveys. Here are some guidelines to help choose the appropriate profile:
 
 - Observations represent specific point-in-time facts that need to be searched, trended, be the subject of statistical analysis and/or directly referenced in support of other actions.  Not all answers in a form will necessarily be appropriate to surface as an Observation.  However, anything that meets one of the preceding criteria will need to be surfaced as an Observation.
-- QuestionnaireResponses represent the source-of-truth of a completed form.  They show how the question was phrased, what answer text they saw/typed, the order in which they filled out the form, etc. For FHIR implementers, it is important to note that QuestionnaireResponse references specific versions of a form filled out whether the form was represented as a FHIR Questionnaire or not. (however, it may be challenging to determine canonical URLs and linkIds that are consistent across systems without using a FHIR Questionnaire.) This reference provides the context of exactly what options were available to choose from, what logic was used to calculate answers or to determine what questions were act can also be determined. It is important to note that QuestionnaireResponse cannot be used for searching based on individual responses but can be used to capture higher-level information such as what form was filled out, by whom, and when.
+- QuestionnaireResponses represent the source-of-truth of a completed form.  QuestionnaireResponse shows how the question was phrased, what answer text was seen or typed, the order in which the survey or assessment was completed, etc. For FHIR implementers, it is important to note that QuestionnaireResponse references specific versions of a form filled out whether the form was represented as a FHIR Questionnaire or not. (however, it may be challenging to determine canonical URLs and linkIds that are consistent across systems without using a FHIR Questionnaire.) This reference provides the context of exactly what options were available to choose from, what logic was used to calculate answers, or to determine what questions were asked. It is important to note that QuestionnaireResponse cannot be used for searching based on individual responses but can be used to capture higher-level information such as what form was filled out, by whom, and when.
 
 In many cases, data might be represented using both mechanisms - the initial raw assessment retained for audit or detailed review stored as a QuestionnaireResponse, and the detailed key answers surfaced as Observations for easy search and analysis.
 

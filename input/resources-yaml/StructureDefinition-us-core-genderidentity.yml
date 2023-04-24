@@ -5,8 +5,7 @@ name: USCoreGenderIdentityExtension
 title: US Core Gender Identity Extension
 status: active
 date: 2022-11-17
-description: "This extension represents an individual's sense of being a man, woman, boy, girl, nonbinary, or something else, ascertained by asking them what that identity is. Systems requiring multiple gender identities and associated dates **SHOULD** use the FHIR R5 [genderIdentity extension](http://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html), which will supersede this extension in future versions of FHIR R5-based US Core."
-purpose: Complies with USCDI v2+
+description: "This extension represents an individual's sense of being a man, woman, boy, girl, nonbinary, or something else, ascertained by asking them what that identity is. Systems requiring multiple gender identities and associated dates **SHOULD** use the FHIR R5 [genderIdentity extension](http://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html). When future versions of US Core are based on FHIR R5, the FHIR R5 extension will supersede this extension."
 fhirVersion: 4.0.1
 kind: complex-type
 abstract: false
