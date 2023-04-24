@@ -141,7 +141,7 @@ The following guidelines outline requesting and returning a resource in the requ
 * Clients MAY request language/locale using the http [`Accept-Language`] header.
 * Servers **SHOULD** make reasonable efforts to translate what can be safely translated.
 * Servers **SHOULD** populate the Resource's `language` element with a code that is based on the underlying language of record, *not* the requested language.
-    * Using the <http://hl7.org/fhir/StructureDefinition/language> extension when the language of a display, etc, is known to be different from the stated (or inferred) language.
+    * Using the [Human Language] Extension when the language of a display, etc, is known to be different from the stated (or inferred) language.
 
       Example
       ~~~
@@ -173,7 +173,7 @@ The following guidelines outline requesting and returning a resource in the requ
               [...snip...]
       ~~~
 
-* Using the <http://hl7.org/fhir/StructureDefinition/translation> extension when the server is providing additional translations by its own choice or in response to a different `Accept-Language` than what the resource is stored in.
+* Using the [Translation] Extension when the server is providing additional translations by its own choice or in response to a different `Accept-Language` than what the resource is stored in.
 
     Example
     ~~~
@@ -214,7 +214,7 @@ The following guidelines outline requesting and returning a resource in the requ
 
     `http://hl7.org/fhir/5.0/StructureDefinition/extension-CapablilityStatement.acceptLanguage`
 
-For further guidance on language and locale for the generation of the resource narrative, see the [Multi-language support for Narratives] in the core specification.
+For further guidance on language and locale for the generation of the resource narrative, see [Multi-Language support in FHIR (Localization/Internationalization)] in the core specification.
 
 
 <!--
