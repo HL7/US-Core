@@ -52,7 +52,7 @@
 [Change Log]: changes.html
 [Changes Between Versions]: changes-between-versions.html
 [CIMI]:http://www.hl7.org/Special/Committees/cimi/index.cfm
-[CLIA]: http://www.cdc.gov/clia/
+[Clinical Laboratory Improvement Amendments (CLIA)]: http://www.cdc.gov/clia/
 [Clinical Notes]: clinical-notes.html
 [clinical safety]:  {{site.data.fhir.path}}safety.html
 [ClinicalImpression]: {{site.data.fhir.path}}clinicalimpression.html

@@ -34,6 +34,8 @@ Each update to a new version of US Core changes the US Core Profiles and conform
 
 - Expanded documentation on the Terminology page: In addition to detailing the Code Systems unique to this guide, links [all the Code Systems](terminology.html#code-systems) used in US Core are listed.
 
+- Introduce [US Core SMART Scopes] as a candidate requirements under consideration, and provide example for each Profile.
+
 - We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] where applicable and, as a result, align terminology between US Core and [HL7 C-CDA].
 
 #### Changes:

@@ -3,9 +3,9 @@
 {% for scope in site.data.scopes %}
   {% if scope.page_path == page.path %}
     {%capture smart_scope %}
-- Servers providing access to {{ scope.data }} data **SHOULD** use [US Core SMART Scopes] for:
+- Servers providing access to {{ scope.data }} data can use [US Core SMART Scopes] for:
   -  [resource level scopes] (for example, `patient/{{ scope.resource_type }}.rs`){% if scope.category_1 %}
-  -  [granular scopes] (for example, `patient.{{scope.resource_type }}.rs?{{ scope.category_1 }}`{% if scope.category_2 %} and `patient.{{scope.resource_type }}.rs?{{ scope.category_2 }}`{% endif %}{% if scope.category_3 %} and `patient.{{scope.resource_type }}.rs?{{ scope.category_3 }}`{% endif %}){% endif %}.
+  -  [granular scopes] (for example, `patient.{{scope.resource_type }}.rs?category={{ scope.category_1 }}`{% if scope.category_2 %} and `patient.{{scope.resource_type }}.rs?category={{ scope.category_2 }}`{% endif %}{% if scope.category_3 %} and `patient.{{scope.resource_type }}.rs?category={{ scope.category_3 }}`{% endif %}){% endif %}.
      {% endcapture %}
     {% break %}
   {% endif %}

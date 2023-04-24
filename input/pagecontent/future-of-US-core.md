@@ -38,9 +38,11 @@ The US Core design is based on the assumption that access to the Active Medicati
 
 #### Searching for Multiple Patients
 Searching for multiple patients has been called out in the ONC Health IT Certification Program.  Defining capabilities for multiple patient access would focus on querying real-time data for a user-facing provider app across patients. Examples of the type of queries that would be addressed include searching for all of a provider's patients:
-    - with recent lab results  
-    - currently in the Emergency Department
-    - with an Allergy to X
+
+- with recent lab results  
+- currently in the Emergency Department
+- with an Allergy to X
+- being seen by a provider for the day
 
 #### Timezones and Time Offsets
 Clients currently face challenges displaying the source data's times and timezone regardless of the end user's current timezone.  A solution is to define requirements and best practices for servers to preserve and represent time offsets and time zones.  
@@ -76,23 +78,15 @@ We propose to use only a portion of the full expressivity of the FHIR search syn
 1. specific data types defined in US Core and 
 1. those of particular interest to US citizens and health systems. 
 
-The below scopes use a single FHIR search parameter of category and apply to two of the most widely implemented resources, Condition and Observation.
+The example scopes below use a single FHIR search parameter of category applied to Condition and Observation. They use a `system/` prefix, but implementers can also support `patient/` and `user/`.
 
-For the example below, we use a `system/` prefix, but implementers are expected to support `patient/` and `user/` as well.
-
-##### Condition sub-resources
 * `system/Condition.rs?category=http://terminology.hl7.org/CodeSystem/condition-category|encounter-diagnosis`
 * `system/Condition.rs?category=http://terminology.hl7.org/CodeSystem/condition-category|problem-list-item`
 * `system/Condition.rs?category=http://hl7.org/fhir/us/core/CodeSystem/condition-category|health-concern`
-##### Observation sub-resources
-* `system/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|clinical-test` (USCDIv3)
+* `system/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|clinical-test`
 * `system/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`
-* `system/Observation.rs?category=http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html|social-history`
-* `system/Observation.rs?category=https://www.hl7.org/fhir/us/core/CodeSystem-us-core-tags.html|sdoh` (USCDIv3)
-* `system/Observation.rs?category=http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html|survey `(USCDIv3)
-* `system/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs`
 
-
+See the respective “Quick Start” section on each US Core Profile page for more examples.
 
 ------------------------------------------------------------------------
 Footnotes

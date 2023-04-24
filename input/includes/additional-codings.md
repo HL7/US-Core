@@ -1,3 +1,3 @@
 - Additional codes that translate or map to the Observation code or category codes are allowed.  For example:
    -  providing both a local code and LOINC code
-   -  providing a more specific code {{include.example1}}, a [SNOMED CT] concept, or a system specific code.
+   -  providing a more specific code{% if include.example1 %}{{ include.example1 }}{% endif %}, a [SNOMED CT] concept, or a system specific code.

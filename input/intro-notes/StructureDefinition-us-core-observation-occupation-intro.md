@@ -23,7 +23,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a category code of "social-history"
 2. when the job occurred
 3. a code for the job history industry
-4. the industry code or text 
+4. the industry code or text
 
 **Profile Specific Implementation Guidance:**
 
@@ -36,7 +36,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 </div><!-- new-content -->
 
 - Implementers may consider referring to [Occupational Data for Health (ODH)] FHIR IG  to convey additional details; data elements, such as Employer; or different topics, such as Usual (Longest-Held) Work.
-  
 
 
 {% include link-list.md %}
