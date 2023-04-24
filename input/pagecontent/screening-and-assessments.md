@@ -4,12 +4,11 @@
 
 Clinicians use various terms such as *assessments*, *scales*, *surveys*, and *screenings* to describe the tools and processes to collect health-related information for assessing a patient's health-related matter. On this page, the term *Screening and Assessments* refer to recording responses and capturing assertions/determinations resulting from this process and these tools. This page documents how Screening and Assessments are used to identify various problems or health concerns and how US Core Profiles record Screenings and Assessments ranging from simple observations to complex structured evaluations.
 
-The [Gravity Project] and its [SDOH Clinical Care] HL7 Implementation Guide address the screening process and related interventions to address Social Determinant of Health (SDOH). Those efforts helped guide US Core 5.0.1 updates to meet the [USCDI v2] SDOH data elements for Assessments, Goals, Interventions, and Problems/Health Concerns. With the addition of the USCDI v3 Health Status/Assessments data class, US Core 6.0.0 expanded the guidance on this page from SDOH to a general framework of Screenings and Assessments for all domains, including:
-
+The [Gravity Project] and its [SDOH Clinical Care] HL7 Implementation Guide address the screening process and related interventions to address Social Determinant of Health (SDOH). Those efforts helped guide US Core 5.0.1 updates to meet the [USCDI v2] SDOH data elements for Assessments, Goals, Interventions, and Problems/Health Concerns. With the addition of the USCDI v3 Health Status/Assessments data class, US Core 6.0.0 expanded the guidance from an SDOH only focus to a general framework of Screenings and Assessments for all domains, including:
 
 - SDOH
 - Functional Status
-- Disability Statusgit stat
+- Disability Status
 - Mental/Cognitive Status.
 
 However, implementers **SHOULD** consider more constrained, domain-specific profiles derived from the US Core Profiles to meet the needs of their respective use cases.
@@ -19,7 +18,7 @@ However, implementers **SHOULD** consider more constrained, domain-specific prof
 
 The figure below shows how <span class="bg-success" markdown="1">screening and assessments lead to providing services for a patient.</span><!-- new-content -->
 
-- **Screening and Assessments**: [Screening and Assessment](#screening-and-assessments) <span class="bg-success" markdown="1">are used to identify problems before delivering appropriate clinical care. The following US Core Profile support capturing their responses</span><!-- new-content -->:
+- **Screening and Assessments**: [Screening and Assessment](#screening-and-assessments) <span class="bg-success" markdown="1">are used to identify problems before delivering appropriate clinical care. The following US Core Profiles support capturing their responses</span><!-- new-content -->:
     - <span class="bg-success" markdown="1">[US Core Simple Observation Profile]</span><!-- new-content -->
     - <span class="bg-success" markdown="1">The [US Core Observation Screening Assessment Profile]</span><!-- new-content -->
     - <span class="bg-success" markdown="1">The [SDC Base Questionnaire]/[US Core QuestionnaireResponse Profile]</span><!-- new-content -->
@@ -55,7 +54,7 @@ Whether based on simple observations or detailed assessments, clinicians may rec
 - a problem or health concern
 - as observation
 
-Local policies guide what is appropriate for the problem list versus an observation. For example, some clinics may consider social needs as sensitive information and not appropriate for the problem list.  Observation can contribute to the identification of future problems or health concerns and support service requests and procedures.  Every server that supports the USDCI Data Class "Health Status/Assessments":
+Local policies guide what is appropriate for the problem list versus an observation. For example, some clinics may consider social needs as sensitive information and not appropriate for the problem list.  Observations can contribute to the identification of future problems or health concerns and support service requests and procedures.  Every server that supports the USDCI Data Class "Health Status/Assessments":
 -  **SHALL** support representing clinical judgments using [US Core Condition Problems and Health Concerns Profile] or [US Core Simple Observation Profile].  
 -  When a *Simple Observation* or *Problem or Health Concern* is recorded based on a structured screening an assessment (see below), the *US Core Simple Observation Profile* **SHOULD** reference it using the `derivedFrom` element and the *US Core Condition Problems and Health Concerns Profile* using the `evidence.detail` element,
 </div><!-- new-content -->
