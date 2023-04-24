@@ -65,7 +65,6 @@ The following search parameter combinations **SHOULD** be supported:
 
     *Implementation Notes:* Fetches a bundle of all QuestionnaireResponse resources for the specified patient that have been completed against a specified form. ([how to search by reference])
 
-
-
+  {%include questionnaireresponse-context-note.md %}
 
 {% include link-list.md %}

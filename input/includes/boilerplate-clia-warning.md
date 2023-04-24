@@ -1,1 +1,1 @@
-*This example may lack required data for laboratory results transmitted by a laboratory certified to perform testing on human specimens under the Clinical Laboratory Improvement Amendment (CLIA). Specifics on the CLIA Regulation can be found at http://www.cdc.gov/clia*
+*This example may lack required data for laboratory results transmitted by a laboratory certified to perform testing on human specimens under the [Clinical Laboratory Improvement Amendments (CLIA)].

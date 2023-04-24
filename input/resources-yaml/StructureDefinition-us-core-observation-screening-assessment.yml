@@ -250,7 +250,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.hasMember
-    short: (USCDI) Reference to panel or multi-select responses
+    short: (USCDI) Reference to panel members or multi-select responses or multi-select responses
     definition: Aggregate set of Observations that represent question answer pairs
       for both multi-question surveys, screenings, and assessments and multi-select
       questions.

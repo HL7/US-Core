@@ -13,8 +13,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Specimen Must Have:**
 
-1. <span class="bg-success" markdown="1">a patient</span><!-- new-content -->
 1. a specimen code
+
+ <div class="bg-success" markdown="1">
+ **Each Specimen Must Support:**
+
+1. a patient
+ </div><!-- new-content -->
 
 **Profile Specific Implementation Guidance:**
 
