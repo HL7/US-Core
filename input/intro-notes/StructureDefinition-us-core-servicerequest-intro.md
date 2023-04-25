@@ -41,7 +41,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 - The `ServiceRequest.code` valueset is broad to accommodate a wide variety of use cases and**SHOULD**be constrained to a subset for a particular use case or domain. (for example, LOINC for laboratory orders.)
 
 - \*The ServiceRequest resource can communicate the reason or indication for referral or consultation using either a code in `ServiceRequest.reasonCode` or a reference using `ServiceRequest.reasonReference`.
-  - <span class="bg-success" markdown="1">As documented [here](general-guidance.html#referencing-us-core-profiles), when using  `ServiceRequest.reasonReference`, the referenced resources **SHOULD** be a US Core Profile.</span><!-- new-content -->
+  - As documented [here](general-guidance.html#referencing-us-core-profiles), when using  `ServiceRequest.reasonReference`, the referenced resources **SHOULD** be a US Core Profile.
   
 
 

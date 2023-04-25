@@ -144,6 +144,6 @@
 - [status](SearchParameter-us-core-servicerequest-status.html)
 
 ##### Specimen
-- {:.new-content}[_id](SearchParameter-us-core-specimen-id.html)
-- {:.new-content}[patient](SearchParameter-us-core-specimen-patient.html)
+- [_id](SearchParameter-us-core-specimen-id.html)
+- [patient](SearchParameter-us-core-specimen-patient.html)
 

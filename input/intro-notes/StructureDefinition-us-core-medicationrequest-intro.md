@@ -49,7 +49,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 * See the [Medication List] section for guidance on accessing a patient medications including over the counter (OTC) medication and other substances taken for medical and recreational use.
-  * <span class="bg-success" markdown="1">When recording “self-prescribed” medication, `requester` **SHOULD** be used to indicate the Patient or RelatedPerson as the prescriber.</span><!-- new-content -->
+  * When recording “self-prescribed” medication, `requester` **SHOULD** be used to indicate the Patient or RelatedPerson as the prescriber.
 
 {% include representing-meds.md %}
 
@@ -58,7 +58,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
    *  The client application **SHALL** support both elements.
 
 - \*The MedicationRequest resource can communicate the reason or indication for treatment using either a code in `MedicationRequest.reasonCode` or a reference using `MedicationRequest.reasonReference`.
-  - <span class="bg-success" markdown="1">As documented [here](general-guidance.html#referencing-us-core-profiles), when using  `MedicationRequest.reasonReference`, the referenced Condition or Observation **SHOULD** be a US Core Profile.</span><!-- new-content -->
+  - As documented [here](general-guidance.html#referencing-us-core-profiles), when using  `MedicationRequest.reasonReference`, the referenced Condition or Observation **SHOULD** be a US Core Profile.
   
 * Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
 * Servers **SHALL** follow the guidance in the [Medication List] page  and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.

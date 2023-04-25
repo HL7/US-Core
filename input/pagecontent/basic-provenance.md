@@ -80,7 +80,6 @@ Unlike Use Case 3 - HIE Redistribution, Use Case 4 includes data transformation.
 
 Transformation of data from one format to another **MAY** change the authorship of the information, where the HIE is the author/author organization. The HIE must maintain the original data source. An `agent.type`="assembler", `agent.type`="transmitter", or other agents from [Provenance Agent Type] value set **MAY** also be included. Due to insufficient implementer guidance, the Basic Provenance guidance here does not specify how to assign authorship for this use case. HL7 plans to gather additional input and include it in the HL7 Basic Provenance Informative guide for C-CDA and FHIR.
 
-<div class="bg-success" markdown="1">
 
 ### Element Level Provenance
 
@@ -94,27 +93,13 @@ Example:
 
 In this [US Core Patient Profile] example, the patient demographic data such as Race and Ethnicity (R/E), gender identity, etc., have *individual element ids* within a resource for internal and external referencing:
 
-~~~
-{% include_relative Patient-example-targeted-provenance.json %} 
-~~~
-
+{% include examplebutton_default.html example="Patient-example-targeted-provenance.json" b_title = "Click Here to See Individual Element Ids Within a Patient Resource Example" %}
 
 This [US Core Provenance Profile] resource communicates who, how, and when elements such as Race and Ethnicity (R/E), gender identity, etc., were collected. Note that the [Target Element] Extension references the element ids within the Patient resource:
 
-~~~
-{% include_relative Provenance-example-targeted-provenance.json %}
-~~~
-
-</div><!-- new-content -->
-
-
-
-
-
-
+{% include examplebutton_default.html example="Provenance-example-targeted-provenance.json" b_title = "Click Here to See an Element Level Provenance Example" %}
 
 <br />
-
 
 ---
 Footnotes

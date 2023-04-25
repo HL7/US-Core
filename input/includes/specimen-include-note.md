@@ -1,4 +1,3 @@
-<div class="bg-success" markdown="1">
 
 #### Including Specimen when searching for an Observation or DiagnosticReport
 
@@ -9,4 +8,3 @@ Servers **MAY** support the [`_include`] parameter to request that additional re
 Example:
 
 GET [base]/Observation?_id=9163726&_include=Observation:specimen
-</div><!-- new-content -->

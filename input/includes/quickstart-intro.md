@@ -22,9 +22,8 @@ Below is an overview of the required Server RESTful FHIR interactions for this p
 
 - The syntax used to describe the interactions is described [here](general-guidance.html#search-syntax).
 {% if smart_scope -%}
-<div class="bg-success" markdown="1">
 {{smart_scope}}
-</div><!-- new-content -->{% endif %}
+{% endif %}
 - See the [General Requirements] section for additional rules and expectations when a server requires status parameters.
 - See the [General Guidance] section for additional guidance on searching for multiple patients.
 

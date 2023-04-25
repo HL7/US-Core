@@ -22,7 +22,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 1.  a clinical status of the condition (e.g., active or resolved)
 1.  a verification status
-2.  <span class="bg-success" markdown="1">additional health status/assessment categories</span><!-- new-content -->
+2.  additional health status/assessment categories
 3.  a date of diagnosis*
 4.  abatement date (in other words, date of resolution or remission)
 5.  a date when recorded*

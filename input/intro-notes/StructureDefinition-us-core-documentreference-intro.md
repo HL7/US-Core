@@ -30,14 +30,12 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  the patient encounter that is being referenced
 1. clinically relevant date
 
-<div class="bg-success" markdown="1">
 
 **Additional USCDI Requirements**
 
 {% include additional-requirements-intro.md type="DocumentReference" %}
 
 1.  a document category limited to [The US Core DocumentReferences Type Value Set], which currently is composed of a single value, "clinical note"
-</div><!-- new-content -->
 
 **Profile Specific Implementation Guidance:**
 

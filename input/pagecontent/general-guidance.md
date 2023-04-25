@@ -19,7 +19,6 @@ In situations where the specific piece of data is hidden due to a security or pr
 
 ### SNOMED CT United States Edition
 
-<div class="bg-success" markdown="1">
 [SNOMED CT] (Systematized Nomenclature of Medicine -- Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information. US Core uses the US Edition of SNOMED CT, a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. It is used extensively in US CORE for various clinical concepts, including problems, procedures, allergies, and laboratory results. When using SNOMED codes in US Core Profiles, implementers **MAY** use the default system URI which refers to an unspecified edition/version as shown in option one below. However, for terminology servers to be able to validate US Edition-only codes, implementers  **SHOULD**  provide the accompanying system URI to describe both the edition and the version of the edition as shown in option three. At a minimum, the URI **SHOULD** contain the edition of the SNOMED CT distribution as shown in option two:
 
 #### SNOMED CT Edition and Version Options
@@ -72,7 +71,6 @@ In situations where the specific piece of data is hidden due to a security or pr
       ~~~
 
   For more details, see [Using SNOMED CT with FHIR]. 
-</div><!-- new-content -->
 
 
 ###  Using UCUM codes in the [Quantity] datatype
@@ -270,7 +268,7 @@ Client algorithm for resolving time offsets and timezones.
 
 ### Read (Fetch) Syntax
 
-<span class="bg-success" markdown="1">Fetching resource interactions are defined by the [FHIR RESTful API]. Guidance is included on the US core Profile pages for conformance and informative purposes:</span><!-- new-content -->
+Fetching resource interactions are defined by the [FHIR RESTful API]. Guidance is included on the US core Profile pages for conformance and informative purposes:
 
  **`GET [base]/[Resource-type]/[id] {parameters}`**
 
@@ -286,9 +284,7 @@ For more information, see the [FHIR RESTful API]
 
 ### Search Syntax
 
-<div class="bg-success" markdown="1">
 Searching resources is defined by the [FHIR RESTful API] and included here for informative purposes. The [US Core FHIR RESTful Search API] Section documents the server and client rules for the RESTful interactions described in this guide.
-</div><!-- new-content -->
 
 All the search interactions in this guide use the `GET` command with the following syntax:
 
@@ -329,7 +325,7 @@ However, neither specification defines how a user-facing provider app is able to
 
 ### Compartment Based Search
 
-<span class="bg-success" markdown="1">US Core servers are not required to support </span><!-- new-content --> patient [compartment] based searches.
+US Core servers are not required to support  patient [compartment] based searches.
 
 ### Across Platform Searches
 

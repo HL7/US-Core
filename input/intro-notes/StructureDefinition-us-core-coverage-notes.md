@@ -2,7 +2,7 @@
 
 #### Mandatory Search Parameters:
 
-1. {:.new-content}**SHALL** support searching for all coverages for a patient using the **[`patient`](SearchParameter-us-core-coverage-patient.html)** search parameter:
+1. **SHALL** support searching for all coverages for a patient using the **[`patient`](SearchParameter-us-core-coverage-patient.html)** search parameter:
 
     `GET [base]/Coverage?patient={Type/}[id]`
 

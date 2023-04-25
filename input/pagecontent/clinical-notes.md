@@ -47,7 +47,7 @@ There is no single best practice for representing a scanned or narrative-only re
 
 {% include img-portrait.html img="DiagnosticReport_DocumentReference_Resource_Overlap.png" caption="Figure 1: DiagnosticReport and DocumentReference Report Overlap" %}
 
-To enable consistent access to scanned DiagnosticReport clinical reports, the <span class="bg-success" markdown="1">FHIR Server</span><!-- new-content --> **SHALL** expose these overlapping scanned or narrative-only reports through *both* DiagnosticReport and DocumentReference by representing the same attachment URL using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify duplicate data.
+To enable consistent access to scanned DiagnosticReport clinical reports, the FHIR Server **SHALL** expose these overlapping scanned or narrative-only reports through *both* DiagnosticReport and DocumentReference by representing the same attachment URL using the corresponding elements listed below.[^2]  Exposing the content in this manner guarantees the client will receive all the clinical information available for a patient and can easily identify duplicate data.
 
 * `DocumentReference.content.attachment.url`
 * `DiagnosticReport.presentedForm.url`
@@ -147,7 +147,6 @@ The note and report types for a particular server are discovered by invoking the
 
 `GET [base]/ValueSet/$expand?context=[context]&contextDirection=[contextDirection]`
 
-<div class="bg-success" markdown="1">
 
 Where:
 - [contextDirection] = `incoming` for write operations and `outgoing` for read operations.
@@ -156,7 +155,6 @@ Where:
    -  `http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.code` for DiagnosticReport report type discovery
    - `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.category` for DocumentReference note category discovery
    -  `http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference#DocumentReference.type` for DocumentReference note type discovery
-</div><!-- new-content -->
 
 **Examples**
 

@@ -1,14 +1,12 @@
 
-<div class="bg-success" markdown="1">
 
 The Profile elements consist of *Mandatory*, *Must Support*, and *USCDI Requirements* elements. The sections below defines the server and client expectations for processing these elements and illustrates how they are displayed and documented.
 
-</div><!-- new-content -->
 
 
 ### Mandatory Elements
 
-<span class="bg-success" markdown="1">*Mandatory* elements are elements with a minimum cardinality of 1 (min=1).</span><!-- new-content --> When an element is Mandatory, the data is expected to always be present. Very rarely, it may not be, and guidance for when data is missing is provided in the [Missing Data] section and the next section. The convention in this guide is to mark all min=1 elements as Must Support unless they are nested under an optional element. An example of this is [`CarePlan.status`].
+*Mandatory* elements are elements with a minimum cardinality of 1 (min=1). When an element is Mandatory, the data is expected to always be present. Very rarely, it may not be, and guidance for when data is missing is provided in the [Missing Data] section and the next section. The convention in this guide is to mark all min=1 elements as Must Support unless they are nested under an optional element. An example of this is [`CarePlan.status`].
 
 ### Must Support Elements
 
@@ -32,7 +30,6 @@ All the profile information for the {{site.data.fhir.ig.title}} is represented i
 
 This [Observation Summary Table] compares *Must Support* Elements across all the US Core Observation Profiles.
 
-<div class="bg-success" markdown="1">
 
 ### USCDI Requirements
 
@@ -42,24 +39,23 @@ Most US Core Profiles represent requirements for a [U.S. Core Data for Interoper
 
 #### Additional USCDI Requirements 
 
-*Additional USCDI Requirements* elements are needed for [ONC Health IT Certification] but are not *Mandatory* or *Must Support* elements because they may not be required in every use case. Implementers seeking ONC certification **SHALL** interpret them as *Must Support*  elements documented above, otherwise they are considered optional. The following table lists the Additional USCDI Requirements and their corresponding FHIR resources:
+Some US Core Profile elements that are needed to represent USCDI Data Elements for ONC Health IT Certification are not marked *Mandatory* or *Must Support* because they are not required in all valid clinical use cases. US Core designates these elements
+*Additional USCDI Requirements* and implementers seeking ONC certification **SHALL** interpret them as *Must Support* elements documented above, otherwise they are considered optional. The following table lists the Additional USCDI Requirements and their corresponding Profiles and FHIR elements:
 
 {% include additional-uscdi-requirements.md %}
 
 #### Communicating USCDI Requirements
 
 Understanding the Additional USCDI Requirements is essential for API developers and business analysts working with FHIR US Core. The profiles pages list Additional USCDI Requirements under the "Mandatory and Must Support Data Elements" sections to alert users. In addition, "(USCDI)" is prepended to the element's short description, and the computable [US Core USCDI Requirement Extension] is added to each element definition.
-</div><!-- new-content -->
 
-<div class="bg-success" markdown="1">
 
 ### Presentation of Must Support, Mandatory, and USCDI Requirement Elements in the Formal Profile Views
 
-<span class="bg-success" markdown="1">On each profile page, several different formal views of the US Core Profile contents are displayed in a tree format under tabs labeled "Differential Table", "Snapshot Table", and "Key Elements Table".</span><!-- new-content -->
+On each profile page, several different formal views of the US Core Profile contents are displayed in a tree format under tabs labeled "Differential Table", "Snapshot Table", and "Key Elements Table".
 
 #### Differential Table View
 
-Elements with a cardinality starting with "1" (e.g., 1..1) under the "Card" header are *Mandatory* elements. Elements labeled *Must Support* in the "Differential Table" view are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Elements with the label "(USCDI)" under the header "Description and Constraints" are *USCDI requirements*. Figure 1 illustrates an example of this:
+Elements with a cardinality starting with "1"  under the column header, "Card." (e.g., 1..1) are *Mandatory* elements. Elements labeled *Must Support* in the "Differential Table" view are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Elements with the label "(USCDI)" under the header "Description and Constraints" are *USCDI requirements*. Figure 1 illustrates an example of this:
 
   {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
 
@@ -70,7 +66,7 @@ The "Key Elements Table" view consists of:
 2. any *Mandatory*, *Must Support*, and *USCDI requirements* elements inherited from a US Core Profile or other profile from which it is derived. (e.g.,  [US Core Body Height Profile] is based on the [US Core Vital Signs Profile] or [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile])
 3. any *Mandatory* or [modifier elements] not in 1. or 2.
 
-This view includes the same flags and labels described in Differential Table View:.
+This view includes the same flags and labels described in Differential Table View:
 
   {% include img.html img="Must_Support_Key_View.png" caption="Figure 2: Snapshot Table (Must Support) View" %}
 

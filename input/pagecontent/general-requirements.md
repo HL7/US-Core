@@ -6,11 +6,9 @@ This page documents requirements common to all US Core actors used in this guide
 
 ### US Core Conformance Artifacts:
 
-The [Profiles and Extensions] page list the US Core Profiles and have been defined for this implementation guide.  US Core Profile [StructureDefinitions] defines the *minimum* elements, extensions, vocabularies, and ValueSets that **SHALL** be present <span class="bg-success" markdown="1">and constrains the way the elements are used when using the profile. </span><!-- new-content -->Each US Core Profile page has a "Quick Start" guide to the supported FHIR RESTfUL transactions for each profile
+The [Profiles and Extensions] page list the US Core Profiles and have been defined for this implementation guide.  US Core Profile [StructureDefinitions] defines the *minimum* elements, extensions, vocabularies, and ValueSets that **SHALL** be present and constrains the way the elements are used when using the profile. Each US Core Profile page has a "Quick Start" guide to the supported FHIR RESTfUL transactions for each profile
 
-<div class="bg-success" markdown="1">
 The Profile elements consist of *Mandatory*, *Must Support*, and *USCDI Requirements* elements.  *Mandatory* elements have a minimum cardinality of 1 (min=1). US Core defines the server and client expectations for processing profile elements and sub-elements it labels as  *Must Support*.  All *Must Support* FHIR elements for US Core Profile representing  [U.S. Core Data for Interoperability (USCDI) v3] Data Classes are *USCDI Requirements* elements. Additional elements are designated *USCDI Requirements* only for [ONC Health IT Certification]. The [Must Support] page defines the server and client expectations for processing these elements and illustrates how they are displayed and documented.
-</div><!-- new-content -->
 
 The [Capability Statements] page outlines conformance requirements and expectations for the US Core Servers and Client applications. In addition, the [US Core Server CapabilityStatement] and [US Core Client CapabilityStatement] identify the specific profiles and RESTful transactions that need support. The US Core Profiles identify the structural constraints, terminology bindings, and invariants.  Similarly, each US Core SearchParameter and Operation resources specify how the server understands them. However, implementers must refer to the CapabilityStatement for details on the RESTful transactions, specific profiles, and the search parameters applicable to each US Core actor.
 
@@ -59,7 +57,6 @@ To support a US Core Profile, a server:
 
 #### Profile Support + Interaction Support
 
-<div class="bg-success" markdown="1">
 Servers may deploy and support one or more US Core Profiles to represent clinical information *and* one or more of the following US Core interactions: 
 
 - "Quick Start" defined for each Profile
@@ -75,7 +72,6 @@ A server that certifies to the [21st Century Cures Act for accessing patient dat
 
  A conformant server:
 
-</div><!-- new-content -->
 
 - **SHALL** Be able to populate all profile data elements that are mandatory and/or flagged as Must Support as defined by that profile's StructureDefinition.
 - **SHALL** declare conformance with the [US Core Server Capability Statement] by including its official URL in the server's `CapabilityStatement.instantiates` element: `http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server`
@@ -84,7 +80,7 @@ A server that certifies to the [21st Century Cures Act for accessing patient dat
     - Declare support for the US Core Profile by including its official URL in the server's `CapabilityStatement.rest.resource.supportedProfile` element
       - the US Core Profile's official or "canonical" URL is located on each US Core Profile page
     - Declare support for the US Core Profile's FHIR RESTful transactions
-      - <span class="bg-success" markdown="1">The restful transactions for the US Core Profiles are documented in the "Quick Start" section on every profile page.</span><!-- new-content -->
+      - The restful transactions for the US Core Profiles are documented in the "Quick Start" section on every profile page.
  
 
     Example CapabilityStatement snippet for a server conforming to the US Core Patient Profile:

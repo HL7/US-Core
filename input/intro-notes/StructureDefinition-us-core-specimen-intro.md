@@ -2,10 +2,8 @@
 
 The following are example usage scenarios for the US Core Specimen profile:
 
-<div class="bg-success" markdown="1">
 -  Query for a patient’s specimen
 -  [Record or update] a specimen for a patient
-</div><!-- new-content -->
 
 ### Mandatory and Must Support Data Elements
 
@@ -15,15 +13,13 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 1. a specimen code
 
- <div class="bg-success" markdown="1">
- **Each Specimen Must Support:**
+  **Each Specimen Must Support:**
 
 1. a patient
- </div><!-- new-content -->
-
+ 
 **Profile Specific Implementation Guidance:**
 
 *  Since the binding is [extensible] when a code is unavailable, just text is allowed.
-*  <span class="bg-success" markdown="1">in addition to Specimen search criteria, clients may request Specimen resources be included with Observation or DiagnosticReport resource query. An example query is provided in the [Notes](#notes) section below.</span><!-- new-content -->
+*  in addition to Specimen search criteria, clients may request Specimen resources be included with Observation or DiagnosticReport resource query. An example query is provided in the [Notes](#notes) section below.
 
 {% include link-list.md %}

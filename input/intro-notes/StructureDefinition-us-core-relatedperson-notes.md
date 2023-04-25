@@ -32,7 +32,7 @@ The following search parameter combinations **SHOULD** be supported:
 
       *Implementation Notes:* Fetches a bundle of all RelatedPerson resources for the specified patient ([how to search by reference])
 
-1. {:.new-content}**SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-relatedperson-patient.html)** and **[`name`](SearchParameter-us-core-relatedperson-name.html)** search parameters:
+1. **SHOULD** support searching using the combination of the **[`patient`](SearchParameter-us-core-relatedperson-patient.html)** and **[`name`](SearchParameter-us-core-relatedperson-name.html)** search parameters:
 
     `GET [base]/RelatedPerson?patient={Type/}[id]&name=[string]`
 

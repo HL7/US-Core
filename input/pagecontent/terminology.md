@@ -38,7 +38,6 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 |`https://www.usps.com`|[USPS](http://pe.usps.com/text/pub28/28apb.htm)|*United States Postal Service Two–Letter State and Possession Abbreviations*|2.16.840.1.113883.6.92|
 {:.grid}
 
-<div class="bg-success" markdown="1">
 
 #### Code System URIs Used in US Core
 
@@ -51,7 +50,6 @@ The value set used in the US Core Profiles includes codes from following Code Sy
 1. {% if cs[1] %}[{{ cs[0] }}]({{ cs[1] }}){% else %}`{{ cs[0] }}`{% endif %}
 {% endfor %}
 
-</div><!-- new-content -->
 
 <!--
 |[urn:oid:2.16.840.1.113883.6.238](CodeSystem-cdcrec.html)|[CDC](https://www.cdc.gov/phin/resources/vocabulary/index.html)|*Race & Ethnicity - CDC* - See [CDC Race and Ethnicity Code Set Version 1.0](https://www.cdc.gov/phin/resources/vocabulary/documents/cdc-race--ethnicity-background-and-purpose.pdf).|2.16.840.1.113883.6.238

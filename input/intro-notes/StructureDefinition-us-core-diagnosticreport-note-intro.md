@@ -41,16 +41,14 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - A server will return how a customer has categorized their reports at a particular site. Categorization of reports is not consistent across sites. (e.g. a system may categorize an orthopedic note as cardiology.)
 - For Diagnostic Imaging Reports systems **SHOULD** support using the subset of  LOINC codes defined in CONF-DIR-19 in *HL7 Implementation Guide for CDA Release 2: Imaging Integration, Levels 1, 2, and 3, Basic Imaging Reports in CDA and DICOM Diagnostic Imaging Reports (DIR) - Universal Realm, Release 1.0.
 
-<div class="bg-success" markdown="1">
 -  Diagnostic imaging results in visual images requiring interpretation and clinical test results/reports may also reference images as part of the report. There is no single approach for accessing imaging studies alongside clinical data using a single authorization flow to give patients and providers access the images.
-
-"The Argonauts 2023 https://confluence.hl7.org/display/AP/SMART+Imaging+Access project is testing an approach to access imaging studies using a single authorization flow"
-{: .stu-note}
 
    * The `media.link` element is marked as Must Support and the [Media] resource to which it links can support a variety of patient-friendly content such as jpg images of xrays (see the DiagnosticReport Chest Xray Report Example).
    * DICOM studies, series, and SOP instances are encoded as UUID identifiers in the [ImagingStudy] resource which is referenced by the `imagingStudy` element. This optional element can be used by systems with the tools and specific viewers to view these images.
    * Alternatively, systems can use business identifiers such as accession numbers in the `identifer` element to access the source images from external sources.
-</div><!-- new-content -->
+  
+   "The Argonauts 2023 https://confluence.hl7.org/display/AP/SMART+Imaging+Access project is testing an approach to access imaging studies using a single authorization flow"
+   {: .stu-note}
 
 
 {% include link-list.md %}

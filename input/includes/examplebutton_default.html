@@ -11,6 +11,8 @@
   <div class="card card-body" style="border:1px solid;border-color:#cccccc;padding:10px" markdown="1">
     {% if file_type =="xhtml" or file_type =="html" or file_type =="md"%}
       {% include {{include.example}} %}
+    {% elsif file_type =="xml" or file_type =="json" %}
+<pre><code">{% include_relative {{include.example}} %}</code></pre>
     {% else %}
       {% include {{target}}.md %}
     {% endif %}

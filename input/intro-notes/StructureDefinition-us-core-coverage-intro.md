@@ -29,9 +29,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 - `Coverage.status` alone may not indicate whether an individual is covered. The `Coverage.period` needs to be considered as well. For example, the coverage may be expired with a status of "active", or conversely, it may be "canceled" but still have covered claims.
-<div class="bg-success" markdown="1">
 - The hierarchical nature of the `Coverage.type` code system "Payer" (also known as the US Public Health Data Consortium Source of Payment Codes) may be unclear in the expansion, and some of the codes may be inappropriate for the use case.  Implementers should refer to the [PHDSC Payer Type Committee User's Guide] for the Source of Payment Typology when selecting codes.
 - If Insurers issue unique member Ids for dependents, then the *memberId* `Coverage.identifier` should be used instead of `Coverage.dependent` to to uniquely refer to the dependent with respect to their insurance.
-</div><!-- new-content -->
 
 {% include link-list.md %}

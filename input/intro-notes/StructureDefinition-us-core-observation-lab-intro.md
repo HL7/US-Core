@@ -27,7 +27,7 @@ The following are example usage scenarios for this profile:
 **Profile Specific Implementation Guidance:**
 
 - For USCDI V3+, systems are required to use SNOMED CT for coded results if the SCT code exists. 
-- <span class="bg-success" markdown="1">The specimen type can be communicated in the mandatory `Observation.code` (e.g., Blood Glucose), or the Must Support `Observation.specimen` element, or through both elements.</span><!-- new-content -->
+- The specimen type can be communicated in the mandatory `Observation.code` (e.g., Blood Glucose), or the Must Support `Observation.specimen` element, or through both elements.
 {% include observation_guidance_1.md category="laboratory" example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" %}
 
 {% include link-list.md %}
