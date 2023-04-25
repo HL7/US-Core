@@ -27,19 +27,19 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Additional USCDI Requirements**
 
-For ONC's USCDI requirements, each Patient Must Support the following additional elements. These elements are included in the formal definition of the profile. The patient examples include all of these elements.
+{% include additional-requirements-intro.md type="Patient" plural="true" %}
 
 1. contact detail (e.g. a telephone number or an email address)
-1. a communication language
-1. a race
-1. an ethnicity
-2. a tribal affiliation
-3. a birth sex*
-4. gender identity*
-5. date of death
-6. previous address
-7. previous name
-8. suffix
+2. a communication language
+3. a race
+4. an ethnicity
+5. a tribal affiliation
+6. a birth sex*
+7. gender identity*
+8. date of death
+9. previous address
+10. previous name
+11. suffix
 
 *see guidance below
 

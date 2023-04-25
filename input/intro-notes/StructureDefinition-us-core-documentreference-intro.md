@@ -34,7 +34,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Additional USCDI Requirements**
 
-For ONC's USCDI requirements, each DocumentReference Must Support the following additional elements. These elements are included in the formal definition of the profile. The examples include all of these elements.
+{% include additional-requirements-intro.md type="DocumentReference" %}
 
 1.  a document category limited to [The US Core DocumentReferences Type Value Set], which currently is composed of a single value, "clinical note"
 </div><!-- new-content -->

@@ -27,7 +27,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Additional USCDI Requirements**
 
-For ONC's USCDI requirements, each ServiceRequest Must Support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
+{% include additional-requirements-intro.md type="Observation" %}
 
 1. references to an associated survey, assessment, or screening tool*
 

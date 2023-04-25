@@ -22,7 +22,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Additional USCDI Requirements**
 
-For ONC's USCDI requirements, each Procedure Must Support the following additional elements. These elements are included in the formal definition of the profile, and they are represented in the examples.
+{% include additional-requirements-intro.md type="Procedure" %}
 
 1.  A reference to the request for the procedure*
 
