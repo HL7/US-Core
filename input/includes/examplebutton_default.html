@@ -12,7 +12,7 @@
     {% if file_type =="xhtml" or file_type =="html" or file_type =="md"%}
       {% include {{include.example}} %}
     {% elsif file_type =="xml" or file_type =="json" %}
-<pre><code">{% include_relative {{include.example}} %}</code></pre>
+<pre><code>{% include_relative {{include.example}} %}</code></pre>
     {% else %}
       {% include {{target}}.md %}
     {% endif %}
