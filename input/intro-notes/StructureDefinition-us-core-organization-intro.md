@@ -28,6 +28,6 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 - \*Systems **SHALL** support National Provider Identifier (NPI) for organizations
-  and **SHOULD** support [Clinical Laboratory Improvement Amendments (CLIA)] for laboratories and the National Association of Insurance Commissioners NAIC Company code (sometimes called "NAIC Number" or "cocode") for payers.
+  and **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) for laboratories and the National Association of Insurance Commissioners NAIC Company code (sometimes called "NAIC Number" or "cocode") for payers.
 
 {% include link-list.md %}
