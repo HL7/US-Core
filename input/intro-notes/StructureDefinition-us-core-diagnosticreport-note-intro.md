@@ -47,7 +47,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
    * DICOM studies, series, and SOP instances are encoded as UUID identifiers in the [ImagingStudy] resource which is referenced by the `imagingStudy` element. This optional element can be used by systems with the tools and specific viewers to view these images.
    * Alternatively, systems can use business identifiers such as accession numbers in the `identifer` element to access the source images from external sources.
   
-   "The Argonauts 2023 https://confluence.hl7.org/display/AP/SMART+Imaging+Access project is testing an approach to access imaging studies using a single authorization flow"
+   [The Argonauts 2023 SMART Imaging Access](https://confluence.hl7.org/display/AP/SMART+Imaging+Access) project is testing an approach to access imaging studies using a single authorization flow"
    {: .stu-note}
 
 
