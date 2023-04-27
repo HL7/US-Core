@@ -5,7 +5,7 @@ version: 6.0.0
 name: USCore
 title: US Core Implementation Guide
 status: active
-date: '2023-03-24'
+date: '2023-05-01'
 publisher: HL7 International - Cross-Group Projects
 contact:
 - name: HL7 International - Cross-Group Projects
@@ -269,7 +269,7 @@ definition:
     name: US Core Condition Problems and Health Concerns Profile
   - reference:
       reference: StructureDefinition/us-core-coverage
-    description: The US Core CoverageProfile is based upon the core FHIR Coverage
+    description: The US Core Coverage Profile is based upon the core FHIR Coverage
       Resource and implements the US Core Data for Interoperability (USCDI) v3 Health
       Insurance Information requirements. To promote interoperability and adoption
       through common implementation, this profile sets minimum expectations for the
@@ -365,8 +365,9 @@ definition:
     description: This extension represents an individual's sense of being a man, woman,
       boy, girl, nonbinary, or something else, ascertained by asking them what that
       identity is. Systems requiring multiple gender identities and associated dates
-      **SHOULD** use the FHIR R5 [genderIdentity extension](http://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html),
-      which will supersede this extension in future versions of FHIR R5-based US Core.
+      **SHOULD** use the FHIR R5 [genderIdentity extension](http://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html).
+      When future versions of US Core are based on FHIR R5, the FHIR R5 extension
+      will supersede this extension.
     exampleBoolean: false
     name: US Core Gender Identity Extension
   - reference:
@@ -528,16 +529,16 @@ definition:
       reference: StructureDefinition/us-core-observation-occupation
     description: The US Core Occupation Observation Profile is based upon the core
       FHIR Observation Resource and implements the US Core Data for Interoperability
-      (USCDI) Occupation requirements. This profile promotes interoperability and
-      adoption through common implementation by setting minimum expectations for the
-      Observation resource to record, search, and fetch a patient's past or present
-      job and "type of business that compensates for work or assigns work to an unpaid
-      worker or volunteer". In the context of this profile, a job is defined as a
-      work situation, training position, or volunteer position held for a specified
-      period. It identifies which core elements, extensions, vocabularies, and value
-      sets **SHALL** be present and constrains the way the elements are used and constrains
-      the way the elements are used when using the profile. It provides the floor
-      for standards development for specific use cases.
+      (USCDI) Occupation and Occupation Industry requirements. This profile promotes
+      interoperability and adoption through common implementation by setting minimum
+      expectations for the Observation resource to record, search, and fetch a patient's
+      past or present job and "type of business that compensates for work or assigns
+      work to an unpaid worker or volunteer". In the context of this profile, a job
+      is defined as a work situation, training position, or volunteer position held
+      for a specified period. It identifies which core elements, extensions, vocabularies,
+      and value sets **SHALL** be present and constrains the way the elements are
+      used and constrains the way the elements are used when using the profile. It
+      provides the floor for standards development for specific use cases.
     exampleBoolean: false
     name: US Core Observation Occupation Profile
   - reference:
