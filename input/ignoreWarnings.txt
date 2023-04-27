@@ -135,7 +135,7 @@ No questionnaire is identified, so no validation can be performed against the ba
 
 # http://hl7.org/fhir/ValueSet/formatcodes is in error and the guide is referencing the IHE format code package and the value set in there using the same code system.
 
-The Coding provided (http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-structuredBody:2.1) is not in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = Not in value set http://hl7.org/fhir/ValueSet/formatcodes)
+The Coding provided (http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-structuredBody:2.1) is not in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = The provided code is not in the value set 'http://hl7.org/fhir/ValueSet/formatcodes')
 
 
 
