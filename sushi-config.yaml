@@ -85,10 +85,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   apply-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
-  excludexml: false
-  excludejson: false
-  excludettl: true
-  excludemap: true
+  # excludexml: false
+  # excludejson: false
+  # excludettl: true
+  # excludemap: true
   suppressed-ids: DocumentReference/discharge-summary
   tabbed-snapshots: false
   # generate: #what does this do - todo: remove and see4
