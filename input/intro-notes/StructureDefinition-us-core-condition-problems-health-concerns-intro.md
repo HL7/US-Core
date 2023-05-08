@@ -36,10 +36,10 @@ The following data-elements must always be present ([Mandatory] definition) or m
   - The [US Core Condition Codes] supports ICD-9-CM for historical purposes only. ICD-10-CM is available and **SHOULD** be used as the primary code for current encounter diagnoses.
 * See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Problems/Health Concerns.
 * If `Condition.category` contains a Problem List item category (`problem-list-item`), `Condition.clinicalStatus` **SHOULD** be present.
-* \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDate`, or `Condition.recordedDate`.
+* \*There is no single element in Condition that represents the date of diagnosis. It may be the [assertedDate Extension], `Condition.onsetDateTime`, or `Condition.recordedDate`.
     * Although all three are marked as Must Support, the server is not required to support all.
 	* A server **SHALL** support `Condition.recordedDate`.
-    * A server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDate`. A server may support both, which means they support all 3 locations.
+    * A server **SHALL** support at least one of [assertedDate Extension] and `Condition.onsetDateTime`. A server may support both, which means they support all 3 locations.
     * The client application **SHALL** support all three elements.
 
 {% include link-list.md %}
