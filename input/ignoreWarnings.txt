@@ -33,7 +33,6 @@ The valueSet reference http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.
 # ==== The following code system are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked and the identifiers are correct (5) ===========
 
 Code System URI 'https://nahdo.org/sopt' is unknown so the code cannot be validated
-[Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated]
 Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated
 
 
@@ -63,19 +62,16 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureD
 
 # === This is a yet to be resolved ICD10PCS issue with publishing/terminology server. see: https://terminology.hl7.org/CodeSystem-icd10PCS.html the code has been verified as a valid ICD10-PCS code (2) ===
 
-WARNING: Procedure/rehab: Procedure.code: The code system "http://www.cms.gov/Medicare/Coding/ICD10" in the include in "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code" is not known; The code system 'http://www.cms.gov/Medicare/Coding/ICD10' is not known (encountered paired with code = 'HZ30ZZZ') (from http://tx.fhir.org/r4)
+
 INFORMATION: Procedure/rehab: Procedure.code.coding[1]: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
-WARNING: ServiceRequest/rehab: ServiceRequest.code: The code system "http://www.cms.gov/Medicare/Coding/ICD10" in the include in "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code" is not known; The code system 'http://www.cms.gov/Medicare/Coding/ICD10' is not known (encountered paired with code = 'HZ30ZZZ') (from http://tx.fhir.org/r4)
+
 INFORMATION: ServiceRequest/rehab: ServiceRequest.code.coding[1]: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
 
 
 # === Code System not recognized due to IP issues (9) ===
 
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated]
 Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition because the value set or a code system it depends on is not known to the validator, Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated]
 Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
 Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated
 
