@@ -1,0 +1,55 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "us-core-sex",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+    "name": "USCoreSexExtension",
+    "title": "US Core Sex Extension",
+    "status": "active",
+    "date": "2023-05-15",
+    "description": "This extension communicates sex notations in various instances, such as encounters that reflect information derived from driver's licenses or other IDs. The [US Core Birth Sex Extension](http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex) represents the *sex assigned at birth concept* in [U.S. Core Data for Interoperability (USCDI) v1](https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf) and [U.S. Core Data for Interoperability (USCDI) v2](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2); however, this extension MAY also mean sex at the time of birth if it was documented at the time of delivery.",
+    "fhirVersion": "4.0.1",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Patient"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension",
+                "path": "Extension",
+                "definition": "This extension communicates sex notations in various instances, such as encounters that reflect information derived from driver's licenses or other IDs. The [US Core Birth Sex Extension](http://hl7.org/fhir/us/core/StructureDefinition/us-core-birth-sex) represents the *sex assigned at birth concept* in [U.S. Core Data for Interoperability (USCDI) v1](https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf) and [U.S. Core Data for Interoperability (USCDI) v2](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2); however, this extension MAY also mean sex at the time of birth if it was documented at the time of delivery.",
+                "min": 0,
+                "max": "1",
+                "isModifier": false
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "binding": {
+                    "strength": "required",
+                    "description": "Concepts limited to Male, Female and Patient Sex Unknown, for documentation of specific instances of sex information",
+                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.53"
+                }
+            }
+        ]
+    }
+}

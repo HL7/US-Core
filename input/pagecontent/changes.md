@@ -1,3 +1,19 @@
+### Version = 6.1.0
+- url: <http://hl7.org/fhir/us/core/STU6.1/>
+- Based on FHIR version : 4.0.1
+
+The changes in this STU Update to version 6.0.0 of US Core have been reviewed by the public through the HL7 STU update process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
+#### What's new in Version 6.1.0 of US Core:
+
+To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; data element, US Core added the [US Core Sex Extension] as a *USCDI Requirement*. With the introduction of this extension, the [US Core Birth Sex Extension] is no longer a *USCDI requirement*.
+
+#### Correct Update and Errata in Version 5.0.1 of US Core:
+
+**Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
+
+1. **Resolved-Change Required**: FOO  [FHIR-55555](https://jira.hl7.org/browse/FHIR-5555) See Changes:
+   - [Here](#)
+
 ### Version = 6.0.0
 - url: <http://hl7.org/fhir/us/core/STU6/>
 - Based on FHIR version : 4.0.1

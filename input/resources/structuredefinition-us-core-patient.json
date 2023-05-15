@@ -112,15 +112,9 @@
             },
             {
                 "id": "Patient.extension:birthsex",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Patient.extension",
                 "sliceName": "birthsex",
-                "short": "(USCDI) Extension",
+                "short": "Birth Sex Extension",
                 "min": 0,
                 "max": "1",
                 "type": [
@@ -138,6 +132,29 @@
                         "map": "Patient.extension"
                     }
                 ]
+            },
+            {
+                "id": "Patient.extension:sex",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
+                "path": "Patient.extension",
+                "sliceName": "sex",
+                "short": "(USCDI) Sex Extension",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex"
+                        ]
+                    }
+                ],
+                "mustSupport": false
             },
             {
                 "id": "Patient.extension:genderIdentity",

@@ -2,34 +2,11 @@
     "resourceType": "StructureDefinition",
     "id": "us-core-birthsex",
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-    "version": "3.1.1",
     "name": "USCoreBirthSexExtension",
     "title": "US Core Birth Sex Extension",
     "status": "active",
-    "date": "2019-05-21",
-    "publisher": "HL7 US Realm Steering Committee",
-    "contact": [
-        {
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "http://www.healthit.gov"
-                }
-            ]
-        }
-    ],
+    "date": "2023-05-15",
     "description": "A code classifying the person's sex assigned at birth  as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc). This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9).",
-    "jurisdiction": [
-        {
-            "coding": [
-                {
-                    "system": "urn:iso:std:iso:3166",
-                    "code": "US",
-                    "display": "United States of America"
-                }
-            ]
-        }
-    ],
     "fhirVersion": "4.0.1",
     "kind": "complex-type",
     "abstract": false,

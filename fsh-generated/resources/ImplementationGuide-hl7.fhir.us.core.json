@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.core",
   "url": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
-  "version": "6.0.1",
+  "version": "6.1.0",
   "name": "USCore",
   "title": "US Core Implementation Guide",
   "status": "active",
@@ -535,6 +535,14 @@
         "description": "This profile sets minimum expectations for recording, searching, and fetching the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core ServiceRequest Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-sex"
+        },
+        "description": "This extension communicates sex notations in various instances, such as encounters that reflect information derived from driver's licenses or other IDs. The [US Core Birth Sex Extension](http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex) represents the *sex assigned at birth concept* in [U.S. Core Data for Interoperability (USCDI) v1](https://www.healthit.gov/isa/sites/isa/files/2020-07/USCDI-Version-1-July-2020-Errata-Final.pdf) and [U.S. Core Data for Interoperability (USCDI) v2](https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2); however, this extension MAY also mean sex at the time of birth if it was documented at the time of delivery.",
+        "exampleBoolean": false,
+        "name": "US Core Sex Extension"
       },
       {
         "reference": {

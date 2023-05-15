@@ -287,6 +287,7 @@
 [US Core Blood Pressure Profile]: StructureDefinition-us-core-blood-pressure.html
 [US Core BMI Profile]: StructureDefinition-us-core-bmi.html
 [US Core Birth Sex Extension]: StructureDefinition-us-core-birthsex.html
+[US Core Sex Extension]: StructureDefinition-us-core-sex.html
 [US Core Body Height Profile]: StructureDefinition-us-core-body-height.html
 [US Core Body Temperature Profile]: StructureDefinition-us-core-body-temperature.html
 [US Core Body Weight Profile]: StructureDefinition-us-core-body-weight.html

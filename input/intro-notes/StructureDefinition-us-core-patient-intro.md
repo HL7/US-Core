@@ -34,7 +34,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 3. a race
 4. an ethnicity
 5. a tribal affiliation
-6. a birth sex*
+6. <span class="bg-success" markdown="1">sex*</span><!-- new-content -->
 7. gender identity*
 8. date of death
 9. previous address
@@ -50,7 +50,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
   - Previous name is represented by setting `Patient.name.use` to "old" or providing an end date in P`atient.name.period` or doing both.
   - Previous address is represented by setting `Patient.address.use` to "old" or providing an end date in `Patient.address.period` or doing both.
   - The [Patient example] demonstrates how these elements are represented.
-- \*US Core has reviewed and updated value sets based on input from the [HL7 Gender Harmony Project] which is modeling gender and sex information which includes data elements, value sets, code systems.  When their work is complete, US Core will align with their recommendations.  In the interim, US Core has interpreted the USCDI data element "sex" as "birth-sex", and the [FHIR specification]({{site.data.fhir.path}}patient.html#gender) provides guidance and background for representing Administrative Gender, Sex assigned at Birth, and Gender Identity. 
+- \*US Core has reviewed and updated value sets based on input from the [HL7 Gender Harmony Project] which is modeling gender and sex information which includes data elements, value sets, code systems.  When their work is complete, US Core will align with their recommendations.  <span class="bg-success" markdown="1"> The [US Core Birth Sex Extension] is no longer a USCDI requirement with the introduction of the [US Core Sex Extension] to meet the [U.S. Core Data for Interoperability (USCDI) v3] data element "sex". The [FHIR specification]({{site.data.fhir.path}}patient.html#gender) provides additional guidance and background for representing Administrative Gender, Sex assigned at Birth, and Gender Identity.</span><!-- new-content -->
 - [Provenance] and the FHIR Extension [Target Element] can be use to document how individual patient demographic data was captured. See [Element Level Provenance] on the [Basic Provenance] page for more information.
 - The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`. There is increasing concern over the use of Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have actively purged them from their systems and filter them out of incoming data.
 
