@@ -5,7 +5,7 @@
 The changes in this STU Update to version 6.0.0 of US Core have been reviewed by the public through the HL7 STU update process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
 #### What's new in Version 6.1.0 of US Core:
 
-To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; data element, US Core added the [US Core Sex Extension] as a *USCDI Requirement*. With the introduction of this extension, the [US Core Birth Sex Extension] is no longer a *USCDI requirement*.
+To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; data element, US Core added the [US Core Sex Extension] as a [USCDI Requirement]. With the introduction of this extension, the [US Core Birth Sex Extension] is no longer a *USCDI Requirement*.
 
 #### Correct Update and Errata in Version 5.0.1 of US Core:
 
@@ -44,7 +44,7 @@ Each update to a new version of US Core changes the US Core Profiles and conform
 
 - The [US Core Observation Clinical Result Profile] supersedes version 5.0.1  *US Core Observation Clinical Test Result Profile* and *US Core Observation Imaging Result Profile*. In addition, it is the base for the [US Core Laboratory Result Observation Profile]. The Cross Version Comparisions Table on the [Changes Between Versions] page summarized these significant revisions.
 
-- Document the *USCDI Requirements* conformance category: Besides Mandatory and Must Support elements, the US Core Profile elements consist of USCDI Requirements elements for ONC Health IT Certification. This version [clarifies the meaning](general-requirements.html#us-core-conformance-artifacts) and [documents](must-support.html#uscdi-requirements) how it is communicated in the StructureDefinitions and on the profile pages
+- Document the [USCDI Requirement] conformance category: Besides Mandatory and Must Support elements, the US Core Profile elements consist of USCDI Requirements elements for ONC Health IT Certification. This version [clarifies the meaning](general-requirements.html#us-core-conformance-artifacts) and [documents](must-support.html#uscdi-requirements) how it is communicated in the StructureDefinitions and on the profile pages
 
 - Expanded CapabilityStatement Narrative: Each  US Core Profile contains references to other resources that it depends on or is related to. The CapabilityStatements narrative provides a table summarizing the [Must Support references for US Core Profiles](CapabilityStatement-us-core-server.html#summary-of-must-support-references-between-profiles) to help implementers understand their required capabilities.
 
