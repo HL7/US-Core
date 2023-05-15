@@ -360,7 +360,7 @@
 [US Core Tribal Affiliation Extension]: StructureDefinition-us-core-tribal-affiliation.html
 [US Core Vital Signs Profile]: StructureDefinition-us-core-vital-signs.html
 [US Core USCDI Requirement Extension]: StructureDefinition-uscdi-requirement.html
-[USCDI Requirements]: must-support.html#uscdi-requirements
+[USCDI Requirement]: must-support.html#uscdi-requirements
 [USCDI v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2
 [USCDI v3]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v3
 [USCDI]: uscdi.html
