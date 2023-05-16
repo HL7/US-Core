@@ -2,34 +2,11 @@
     "resourceType": "StructureDefinition",
     "id": "us-core-race",
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
-    "version": "3.1.1",
     "name": "USCoreRaceExtension",
     "title": "US Core Race Extension",
     "status": "active",
-    "date": "2019-05-21",
-    "publisher": "HL7 US Realm Steering Committee",
-    "contact": [
-        {
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "http://www.healthit.gov"
-                }
-            ]
-        }
-    ],
-    "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.",
-    "jurisdiction": [
-        {
-            "coding": [
-                {
-                    "system": "urn:iso:std:iso:3166",
-                    "code": "US",
-                    "display": "United States of America"
-                }
-            ]
-        }
-    ],
+    "date": "2023-05-16",
+    "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.",
     "purpose": "Complies with 2015 Edition Common Clinical Data Set for patient race.",
     "fhirVersion": "4.0.1",
     "kind": "complex-type",
