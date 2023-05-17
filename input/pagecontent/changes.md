@@ -2,7 +2,7 @@
 - url: <http://hl7.org/fhir/us/core/STU6.1/>
 - Based on FHIR version : 4.0.1
 
-The changes in this STU Update to version 6.0.0 of US Core have been reviewed by the public through the HL7 STU update process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
+The changes in this STU Update to US Core 6.0.0 have been reviewed by the public through the HL7 STU update process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
 #### What's new in Version 6.1.0 of US Core:
 
 To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; data element, US Core added the [US Core Sex Extension] as a [USCDI Requirement]. With the introduction of this extension, the [US Core Birth Sex Extension] is no longer a *USCDI Requirement*.

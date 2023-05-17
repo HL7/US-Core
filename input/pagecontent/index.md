@@ -1,10 +1,9 @@
 
-<!-- {% raw %} {% include note-to-balloters.md %} 
+{% include note-to-balloters.md %} 
 
 Where possible, new and updated pre-publishing content are highlighted with green text and background - **This highlighting will be removed prior to publication**
 {:.new-content}
 
-{% endraw %} -->
 
 Key updates and detailed changes between this and prior versions are available on the US Core [Change Log] and [Changes Between Versions] pages.
 {:.stu-note}
