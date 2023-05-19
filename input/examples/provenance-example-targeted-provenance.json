@@ -20,22 +20,6 @@
   "recorded": "2023-02-28T15:26:23.217+00:00",
   "agent": [
     {
-      "role": [
-        {
-          "coding": [
-            {
-              "system": "http://dicom.nema.org/resources/ontology/DCM",
-              "code": "110150",
-              "display": "Application"
-            }
-          ]
-        }
-      ],
-      "who": {
-        "display": "My_Form"
-      }
-    },
-    {
       "type": {
         "coding": [
           {
@@ -47,6 +31,14 @@
       },
       "who": {
         "reference": "Patient/example-targeted-provenance"
+      }
+    }
+  ],
+  "entity": [
+    {
+      "role": "source",
+      "what": {
+        "display": "admission form"
       }
     }
   ]
