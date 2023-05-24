@@ -578,6 +578,14 @@
       },
       {
         "reference": {
+          "reference": "SubscriptionTopic/uscdi"
+        },
+        "description": "US/CDI Subscription Fhir-Hose",
+        "exampleBoolean": false,
+        "name": "US Core USCDI Subscription Topic"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-vital-signs"
         },
         "description": "To promote interoperability and adoption through common implementation, this profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html) and defines *additional* constraints on the Observation resource to represent vital signs observations. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.  This US Core profiles that are derived from this profile are listed below.",
@@ -3323,6 +3331,11 @@
         {
           "nameUrl": "downloads.html",
           "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "topics.html",
+          "title": "Topics for subscriptions",
           "generation": "markdown"
         },
         {
