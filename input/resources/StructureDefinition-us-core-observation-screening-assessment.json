@@ -339,7 +339,6 @@
                         "code": "Period"
                     }
                 ],
-                "meaningWhenMissing": "For questions represented in LOINC that allow one answer, If the LOINC Normative Answer List for a LOINC code offers an adequate code for why an Observation.value may not be known, it should be used as the value for Observation.value. However, If the LOINC Normative Answer List for a LOINC code does not offer an adequate code for why an Observation.value may not be known, Observation.dataAbsentReason should be used in lieu of Observation.value.",
                 "condition": [
                     "us-core-2",
                     "us-core-3"

@@ -33,6 +33,15 @@ differential:
       are an enrolled member.
     min: 0
     max: '*'
+  - id: Extension.extension
+    path: Extension.extension
+    slicing:
+        discriminator:
+            - 
+                type: value
+                path: url
+        rules: open
+    min: 1
   - id: Extension.extension:tribalAffiliation
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement

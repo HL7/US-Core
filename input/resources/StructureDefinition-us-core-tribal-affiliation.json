@@ -46,6 +46,20 @@
                 "max": "*"
             },
             {
+                "id": "Extension.extension",
+                "path": "Extension.extension",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "value",
+                            "path": "url"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 1
+            },
+            {
                 "id": "Extension.extension:tribalAffiliation",
                 "extension": [
                     {
