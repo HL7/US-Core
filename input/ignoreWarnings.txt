@@ -1,7 +1,7 @@
 == Suppressed Messages ==
 
 # ==============================================================
-# === 11 ERRORS Discussed on FMG IG review and variance granted ===
+# === 3 ERRORS Discussed on FMG IG review and variance granted ===
 # ==============================================================
 
 
@@ -16,7 +16,7 @@ ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attem
 ERROR: StructureDefinition/us-core-vital-signs: StructureDefinition: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
 
 # ===========================================================================
-# === Warnings and Errors Discussed on FMG IG review and variance granted ===
+# === Warnings and Discussed on FMG IG review and variance granted ===
 # ============================================================================
 
 
@@ -72,8 +72,13 @@ INFORMATION: ServiceRequest/rehab: ServiceRequest.code.coding[1]: Code System UR
 
 Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
+WARNING: Encounter/example-1: Encounter.type[0]: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|6.1.0-preview
+WARNING: Procedure/defib-implant: Procedure.code: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|6.1.0-preview
 Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
 Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated
+WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0-preview
+
+
 
 
 # === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) NONE===
