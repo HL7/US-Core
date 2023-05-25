@@ -5,13 +5,13 @@
 The changes in this STU Update to US Core 6.0.0 have been reviewed by the public through the HL7 STU update process. The resolution of the community comments has been agreed to and voted on by the members of the HL7 International Cross-Group Projects work group.
 #### What's new in Version 6.1.0 of US Core:
 
-To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; data element, US Core added the [US Core Sex Extension] as a [USCDI Requirement]. With the introduction of this extension, the [US Core Birth Sex Extension] is no longer a *USCDI Requirement*.
+To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; data element, US Core added the [US Core Sex Extension] as a [USCDI Requirement]. The [US Core Birth Sex Extension] is no longer a *USCDI Requirement*.
 
 #### Updates and Corrected Errata in Version 6.1.0 of US Core:
 
 **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
-1. **Pre-Applied**: Add Sex extension necessary to satisfy USCDI v3 [FHIR-41301](https://jira.hl7.org/browse/FHIR-41301) See Changes [Here](StructureDefinition-us-core-sex.html), [Here](StructureDefinition-us-core-patient.html), and [Here](uscdi.html)
+1. **Applied**: Add Sex extension necessary to satisfy USCDI v3 [FHIR-41301](https://jira.hl7.org/browse/FHIR-41301) See Changes [Here](StructureDefinition-us-core-sex.html), [Here](StructureDefinition-us-core-patient.html), and [Here](uscdi.html)
 2. **Applied**: Update link to CDC Race and Ethnicity Code Set  [FHIR-41277](https://jira.hl7.org/browse/FHIR-41277) See Changes [Here](StructureDefinition-us-core-race.html)
 3.  **Applied**: Typo change `Condition.onsetDate` to `Condition.onsetDateTime`  [FHIR-41239](https://jira.hl7.org/browse/FHIR-41239) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
 4.  **Applied**: Clarify US Core USCDI Requirement Extension not intended for implementers [FHIR-41238](https://jira.hl7.org/browse/FHIR-41238) See Changes [Here](profiles-and-extensions.html)

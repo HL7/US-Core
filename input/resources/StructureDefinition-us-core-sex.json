@@ -24,7 +24,7 @@
             {
                 "id": "Extension",
                 "path": "Extension",
-                "definition": "The US Core Sex Extension is used to reflect the documentation of a person\u2019s sex. It aligns with the C-CDA Sex Observation (LOINC 46098-0).",
+                "definition": "The US Core Sex Extension is used to reflect the documentation of a person's sex. It aligns with the C-CDA Sex Observation (LOINC 46098-0).",
                 "min": 0,
                 "max": "1",
                 "isModifier": false
@@ -46,7 +46,7 @@
                 ],
                 "binding": {
                     "strength": "required",
-                    "description": "Concepts limited to Male, Female and Patient Sex Unknown, for documentation of specific instances of sex information",
+                    "description": "Concepts limited to Male, Female, Patient Sex Unknown.",
                     "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.53"
                 }
             }
