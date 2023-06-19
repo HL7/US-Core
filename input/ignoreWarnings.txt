@@ -50,7 +50,7 @@ WARNING: SearchParameter/us-core-specimen-id: SearchParameter: The expression 'S
 
 # === US Core Goal Description Binding is extensible which allow for text only and guidance to use free text for Goal.description is given in the US Core Goal Implementation Guidance (1). There are 2 Goal examples, Goal/goal-sdoh-2 uses a code this one does not. ===
 
-No code provided, and a code should be provided from the value set 'US Core Goal Codes' (http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description|6.1.0-snapshot1)
+No code provided, and a code should be provided from the value set 'US Core Goal Codes' (http://hl7.org/fhir/us/core/ValueSet/us-core-goal-description|6.1.0)
 
 # === Circular US Core Warnings since this is US Core (4): NONE ===
 
@@ -72,11 +72,11 @@ INFORMATION: ServiceRequest/rehab: ServiceRequest.code.coding[1]: Code System UR
 
 Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 Code System URI 'http://www.ama-assn.org/go/cpt' is unknown so the code cannot be validated
-WARNING: Encounter/example-1: Encounter.type[0]: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|6.1.0-snapshot1
-WARNING: Procedure/defib-implant: Procedure.code: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|6.1.0-snapshot1
+WARNING: Encounter/example-1: Encounter.type[0]: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|6.1.0
+WARNING: Procedure/defib-implant: Procedure.code: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|6.1.0
 Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
 Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated
-WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0-snapshot1
+WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|6.1.0
 
 
 
@@ -93,10 +93,10 @@ None of the codings provided are in the value set 'Practice Setting Code Value S
 
 # === Examples demonstrate use of additional Codes or Identifiers not defined in US Core profiles (7)===
 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.1.0-snapshot1
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0-snapshot1
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0-snapshot1
-This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|6.1.0-snapshot1
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|6.1.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|6.1.0
 
 
 # === Examples provided in Bundle (e.g. PractitionerRole_Practitioner_Endpoint_Bundle_Example, Allergyintolerance Provenance Example) (2)===

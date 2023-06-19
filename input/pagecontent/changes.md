@@ -11,11 +11,13 @@ To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; dat
 
 **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
-1. **Applied**: Add Sex extension necessary to satisfy USCDI v3 [FHIR-41301](https://jira.hl7.org/browse/FHIR-41301) See Changes [Here](StructureDefinition-us-core-sex.html), [Here](StructureDefinition-us-core-patient.html), and [Here](uscdi.html)
-2. **Applied**: Update link to CDC Race and Ethnicity Code Set  [FHIR-41277](https://jira.hl7.org/browse/FHIR-41277) See Changes [Here](StructureDefinition-us-core-race.html)
+1. **Applied**: Add Sex extension necessary to satisfy USCDI v3 [FHIR-41301](https://jira.hl7.org/browse/FHIR-41301) and [FHIR-41352](https://jira.hl7.org/browse/FHIR-41352) See Changes [Here](StructureDefinition-us-core-sex.html), [Here](StructureDefinition-us-core-patient.html), and [Here](uscdi.html)
+2. **Applied**: Update link to CDC Race and Ethnicity Code Set [FHIR-41277](https://jira.hl7.org/browse/FHIR-41277) See Changes [Here](StructureDefinition-us-core-race.html)
 3.  **Applied**: Typo change `Condition.onsetDate` to `Condition.onsetDateTime`  [FHIR-41239](https://jira.hl7.org/browse/FHIR-41239) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
 4.  **Applied**: Clarify US Core USCDI Requirement Extension not intended for implementers [FHIR-41238](https://jira.hl7.org/browse/FHIR-41238) See Changes [Here](profiles-and-extensions.html)
 5.  **Applied**: Correct Provenance Example [FHIR-41316](https://jira.hl7.org/browse/FHIR-41316) See Changes [Here](Provenance-example-targeted-provenance.json.html)
+6.  **Applied**: Update Changes between versions table [FHIR-41434](https://jira.hl7.org/browse/FHIR-41434) See Changes [Here](changes-between-versions.html#cross-version-comparisons)
+7.  **Applied**: update us-core-3 and us-core-4 [FHIR-41454](https://jira.hl7.org/browse/FHIR-41454) See Changes [Here](StructureDefinition-us-core-observation-clinical-result.html)
 
 ### Version = 6.0.0
 - url: <http://hl7.org/fhir/us/core/STU6/>
@@ -40,7 +42,7 @@ Each update to a new version of US Core changes the US Core Profiles and conform
   - Updated Patient Demographics/Information:
       - To support Date of Death [US Core Patient Profile] was updated
       - The *new* [US Core Tribal Affiliation Extension] has been added to support Tribal Affiliation
-      - The [US Core Birth Sex Extension] meets the patient sex requirement
+      - The [US Core Birth Sex Extension] meets the patient sex requirement (*NOTE: US Core 6.1.0 added the [US Core Sex Extension] as a [USCDI Requirement]. The US Core Birth Sex Extension is no longer a USCDI Requirement*.)
       - To support Related Person's Name and Related Person's Relationship [US Core RelatedPerson Profile] was updated
       - The *new* [US Core Observation Occupation Profile] supports a patient's Occupation and Occupation Industry
   - Reason for Referral is supported by an updated [US Core ServiceRequest Profile] and [US Core Procedure Profile]
