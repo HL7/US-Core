@@ -146,7 +146,7 @@
                         "key": "us-core-4",
                         "severity": "warning",
                         "human": "SHOULD use Snomed CT for coded Results",
-                        "expression": "valueCodeableConcept.coding.system.empty() or valueCodeableConcept.coding.system = 'http://snomed.info/sct'",
+                        "expression": "value.ofType(CodeableConcept).coding.system.empty() or value.ofType(CodeableConcept).coding.system = 'http://snomed.info/sct'",
                         "xpath": "not(exists(f:valueCodeableConcept/f:coding/f:system) ) or f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']"
                     }
                 ],
