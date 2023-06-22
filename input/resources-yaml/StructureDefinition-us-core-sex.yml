@@ -8,7 +8,7 @@ date: 2023-05-15
 description: >-
   The Sex Extension is used to reflect the documentation of a person's sex. Systems choosing to record sources of information should use the [Provenance resource](basic-provenance.html#element-level-provenance).
    
-  USCDI v3 includes a data element for sex, intended to support the exchange of a sex value that is not characterized as sex assigned at birth or birth sex which has been identified as problematic in terms of quality and reliability. This Sex extension supports USCDI v3. Sex assigned at birth or birth sex can be recorded using the more specific [US Core Birth Sex Extension](http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex).
+  USCDI v3 includes a data element for sex, intended to support the exchange of a sex value that is not characterized as sex assigned at birth or birth sex. This Sex extension supports USCDI v3. Sex assigned at birth or birth sex can be recorded using the more specific [US Core Birth Sex Extension](http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex).
 
   Future versions of this extension may be informed by the content of the HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation, which may include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender)).
 fhirVersion: 4.0.1
