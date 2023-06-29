@@ -53,7 +53,7 @@ dependsOn:
 - id: vsac
   packageId: us.nlm.vsac
   uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-  version: 0.9.0
+  version: 0.10.0
 - packageId: hl7.fhir.uv.sdc
   version: 3.0.0
   uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
@@ -750,8 +750,7 @@ definition:
       \ sex. Systems choosing to record sources of information should use the [Provenance\
       \ resource](basic-provenance.html#element-level-provenance).\n \nUSCDI v3 includes\
       \ a data element for sex, intended to support the exchange of a sex value that\
-      \ is not characterized as sex assigned at birth or birth sex which has been\
-      \ identified as problematic in terms of quality and reliability. This Sex extension\
+      \ is not characterized as sex assigned at birth or birth sex. This Sex extension\
       \ supports USCDI v3. Sex assigned at birth or birth sex can be recorded using\
       \ the more specific [US Core Birth Sex Extension](http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex).\n\
       Future versions of this extension may be informed by the content of the HL7\
