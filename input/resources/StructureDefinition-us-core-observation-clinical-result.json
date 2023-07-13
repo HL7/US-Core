@@ -238,7 +238,7 @@
                         "key": "us-core-3",
                         "severity": "error",
                         "human": "SHALL use UCUM for coded quantity units.",
-                        "expression": "value.ofType(Quantity).system.empty() or value.ofType(Quantity).system = 'http://unitsofmeasure.org'",
+                        "expression": "ofType(Quantity).system.empty() or ofType(Quantity).system = 'http://unitsofmeasure.org'",
                         "xpath": "not(exists(f:valueQuantity/f:system) ) or f:valueQuantity/f:system[@value='http://unitsofmeasure.org']"
                     }
                 ],

@@ -1,3 +1,21 @@
+### Version = 7.0.0 - ballot
+- url: <http://hl7.org/fhir/us/core/2024Jan/>
+- Based on FHIR version : 4.0.1
+
+#### The January 2024 Ballot
+
+This ballot addresses the following:
+
+- We have updated US Core to include the [U.S. Core Data for Interoperability (USCDI) v4] Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2023:
+
+{% include img-small.html img="todo.png" %}
+
+- Implementers submitted over \<N> trackers since the publication of US Core ver 6.0.0 and 6.1.0 We have addressed them and applied over \<N'> changes listed below:
+
+ **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
+1. **Applied:** Correct invalid invariants us-core-3 and us-core-4 [FHIR-41523](https://jira.hl7.org/browse/FHIR-41523) [See Changes Here](StructureDefinition-us-core-smokingstatus.html)
+2. **Applied:** Correct invalid invariants pd-1 and us-core-13 [FHIR-41586](https://jira.hl7.org/browse/FHIR-41586) [See Changes Here](StructureDefinition-us-core-practitionerrole.html)
+
 ### Version = 6.1.0
 - url: <http://hl7.org/fhir/us/core/STU6.1/>
 - Based on FHIR version : 4.0.1
@@ -11,13 +29,13 @@ To meet the [U.S. Core Data for Interoperability (USCDI) v3] &quot;sex&quot; dat
 
 **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 
-1. **Applied**: Add Sex extension necessary to satisfy USCDI v3 [FHIR-41301](https://jira.hl7.org/browse/FHIR-41301) and [FHIR-41352](https://jira.hl7.org/browse/FHIR-41352) See Changes [Here](StructureDefinition-us-core-sex.html), [Here](StructureDefinition-us-core-patient.html), and [Here](uscdi.html)
-2. **Applied**: Update link to CDC Race and Ethnicity Code Set [FHIR-41277](https://jira.hl7.org/browse/FHIR-41277) See Changes [Here](StructureDefinition-us-core-race.html)
-3.  **Applied**: Typo change `Condition.onsetDate` to `Condition.onsetDateTime`  [FHIR-41239](https://jira.hl7.org/browse/FHIR-41239) See Changes [Here](StructureDefinition-us-core-condition-encounter-diagnosis.html)
-4.  **Applied**: Clarify US Core USCDI Requirement Extension not intended for implementers [FHIR-41238](https://jira.hl7.org/browse/FHIR-41238) See Changes [Here](profiles-and-extensions.html)
-5.  **Applied**: Correct Provenance Example [FHIR-41316](https://jira.hl7.org/browse/FHIR-41316) See Changes [Here](Provenance-example-targeted-provenance.json.html)
-6.  **Applied**: Update Changes between versions table [FHIR-41434](https://jira.hl7.org/browse/FHIR-41434) See Changes [Here](changes-between-versions.html#cross-version-comparisons)
-7.  **Applied**: update us-core-3 and us-core-4 [FHIR-41454](https://jira.hl7.org/browse/FHIR-41454) See Changes [Here](StructureDefinition-us-core-observation-clinical-result.html)
+1. **Applied**: Add Sex extension necessary to satisfy USCDI v3 [FHIR-41301](https://jira.hl7.org/browse/FHIR-41301) and [FHIR-41352](https://jira.hl7.org/browse/FHIR-41352) See Changes [Here](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-sex.html), [Here](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html), and [Here](http://hl7.org/fhir/us/core/STU6.1/uscdi.html)
+2. **Applied**: Update link to CDC Race and Ethnicity Code Set [FHIR-41277](https://jira.hl7.org/browse/FHIR-41277) See Changes [Here](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-race.html)
+3.  **Applied**: Typo change `Condition.onsetDate` to `Condition.onsetDateTime`  [FHIR-41239](https://jira.hl7.org/browse/FHIR-41239) See Changes [Here](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html)
+4.  **Applied**: Clarify US Core USCDI Requirement Extension not intended for implementers [FHIR-41238](https://jira.hl7.org/browse/FHIR-41238) See Changes [Here](http://hl7.org/fhir/us/core/STU6.1/profiles-and-extensions.html)
+5.  **Applied**: Correct Provenance Example [FHIR-41316](https://jira.hl7.org/browse/FHIR-41316) See Changes [Here](http://hl7.org/fhir/us/core/STU6.1/Provenance-example-targeted-provenance.json.html)
+6.  **Applied**: Update Changes between versions table [FHIR-41434](https://jira.hl7.org/browse/FHIR-41434) See Changes [Here](http://hl7.org/fhir/us/core/STU6.1/changes-between-versions.html#cross-version-comparisons)
+7.  **Applied**: update us-core-3 and us-core-4 [FHIR-41454](https://jira.hl7.org/browse/FHIR-41454) See Changes [Here](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-clinical-result.html)
 
 ### Version = 6.0.0
 - url: <http://hl7.org/fhir/us/core/STU6/>
@@ -229,7 +247,7 @@ These changes are a result of over 150 January 2023 Ballot related trackers whic
 
 This ballot addresses the following:
 
-- We have updated US Core to include the [U.S. Core Data for Interoperability (USCDI) v3] Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2021:
+- We have updated US Core to include the [U.S. Core Data for Interoperability (USCDI) v3] Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2022:
 
   - **Applied**: [Health Insurance Information](http://hl7.org/fhir/us/core/2023Jan/StructureDefinition-us-core-coverage.html) Using US Core to represent and access data related to an individual's insurance coverage for health care.
   - **Applied**: The SDOH Assessments documentation has been rewritten and renamed to [Screening and Assessments](http://hl7.org/fhir/us/core/2023Jan/screening-and-assessments.html), reflecting its expanded coverage of Health Status/Assessments Data Elements. It documents how to use [US Core Observation Screening Assessment Profile] and the [US Core Simple Observation Profile] to represent and access health status and assessments, including: *Functional Status*, *Disability Status*, and *Mental/Cognitive Status* in addition to *SDOH Assessments*.
