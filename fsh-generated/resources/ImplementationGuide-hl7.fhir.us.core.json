@@ -2,11 +2,11 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.core",
   "url": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
-  "version": "6.1.0",
+  "version": "7.0.0-ballot",
   "name": "USCore",
   "title": "US Core Implementation Guide",
   "status": "active",
-  "date": "2023-06-19",
+  "date": "2023-07-13",
   "publisher": "HL7 International - Cross-Group Projects",
   "contact": [
     {
@@ -82,67 +82,1475 @@
     "resource": [
       {
         "reference": {
-          "reference": "CodeSystem/careplan-category"
+          "reference": "Observation/10-minute-apgar-color"
         },
-        "description": "Set of codes that are needed for implementation of the US-Core CarePlan Profile. These codes are used as extensions to the FHIR ValueSet.",
-        "exampleBoolean": false,
-        "name": "US Core CarePlan Category Extension Codes"
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "name": "10 minute Apgar Color Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
-          "reference": "CodeSystem/condition-category"
+          "reference": "Observation/10-minute-apgar-heart-rate"
         },
-        "description": "Set of codes that are needed for implementation of the US-Core Condition Profile. These codes are used as extensions to the FHIR and US Core value sets.",
-        "exampleBoolean": false,
-        "name": "US Core Condition Category Extension Codes"
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "name": "10 minute Apgar Heart Rate Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
-          "reference": "CodeSystem/us-core-category"
+          "reference": "Observation/10-minute-apgar-muscle-tone"
         },
-        "description": "Category codes used across US Core Profiles and resource types. They are typically used when there is a need for categorization for searching and finding resources or workflow hints.",
-        "exampleBoolean": false,
-        "name": "US Core Category"
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "name": "10 minute Apgar Muscle Tone Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
-          "reference": "CodeSystem/us-core-documentreference-category"
+          "reference": "Observation/10-minute-apgar-reflex-irritability"
         },
-        "description": "The US Core DocumentReferences Type Code System is a 'starter set' of categories supported for fetching and storing DocumentReference Resources.",
-        "exampleBoolean": false,
-        "name": "US Core DocumentReferences Category Codes"
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse..",
+        "name": "10 minute Apgar Reflex Irritability Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
-          "reference": "CodeSystem/us-core-provenance-participant-type"
+          "reference": "Observation/10-minute-apgar-respiratory-effort"
         },
-        "description": "Set of codes that are needed for implementation of the US-Core Provenance Profile. These codes are used as extensions to the FHIR value sets.",
-        "exampleBoolean": false,
-        "name": "US Core Provenance Participant Type Extension Codes"
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "name": "10 minute Apgar Respiratory effort Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/head-occipital-frontal-circumference-percentile"
+          "reference": "Observation/10-minute-apgar-score"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patients from birth to 37 Months of age using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
-        "exampleBoolean": false,
-        "name": "US Core Pediatric Head Occipital Frontal Circumference Percentile Profile"
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "name": "10 Minute Apgar Score Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/pediatric-bmi-for-age"
+          "reference": "Observation/10-minute-apgar-score-panel"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric body mass index (BMI) percentile per age and sex for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
-        "exampleBoolean": false,
-        "name": "US Core Pediatric BMI for Age Observation Profile"
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture surveys assessments as a panel of observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "name": "10 Minute Apgar Score Panel Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/pediatric-weight-for-height"
+          "reference": "Observation/AHC-HRSN-item-example-68517-2"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch  pediatric weight-for-length per age and gender observations in FHIR with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
+        "description": "This AHC HRSN Item Example 68517-2 (How many times in the past 12 months have you had 5 or more drinks in a day (males) or 4 or more drinks in a day (females)?) is an example of the *US Core Observation Screening and Assessment Profile* and is referenced by the *ServiceRequest for Rehab Example*",
+        "name": "Ahc-Hrsn Item Observation Example 68517-2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/example"
+        },
+        "description": "This is a allergyintolerance example for the *US Core AllergyIntolerance Profile*.",
+        "name": "AllergyIntolerance Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901"
+        },
+        "description": "This is a allergyintolerance provenance example for the *Bundle Profile*.",
+        "name": "AllergyIntolerance Provenance Example",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/at-home-in-vitro-test"
+        },
+        "description": "This is an At home in vitro test example for the *US Core Observation Lab Profile*, with a coded result value.",
+        "name": "At Home In Vitro Test Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/birthsex"
+        },
+        "description": "Codes for assigning sex at birth as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc)",
         "exampleBoolean": false,
-        "name": "US Core Pediatric Weight for Height Observation Profile"
+        "name": "Birth Sex"
+      },
+      {
+        "reference": {
+          "reference": "Observation/blood-pressure"
+        },
+        "description": "This is a blood pressure example for the *Vitalsigns Profile*.",
+        "name": "Blood Pressure Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
+      },
+      {
+        "reference": {
+          "reference": "Observation/bmi"
+        },
+        "description": "This is a BMI example for the *Vitalsigns Profile*.",
+        "name": "BMI Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi"
+      },
+      {
+        "reference": {
+          "reference": "Observation/bp-data-absent"
+        },
+        "description": "This is a bp data absent example for the *Vitalsigns Profile* showing how to reprsesent blood pressure with a missing diastolic measurement.",
+        "name": "BP Data Absent Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
+      },
+      {
+        "reference": {
+          "reference": "Observation/capillary-refill-time-nail-bed"
+        },
+        "description": "This is a Capillary refill Time Nail Bed Example for the *Clinical Test Result Observation Profile*.",
+        "name": "Capillary refill Time Nail Bed Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "CareTeam/example"
+        },
+        "description": "This is a careteam example for the *US Core CareTeam Profile*.",
+        "name": "CareTeam Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/cbc"
+        },
+        "description": "This is a CBC example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "CBC Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+      },
+      {
+        "reference": {
+          "reference": "Media/chest-xray"
+        },
+        "description": "This is an example Media xray image that is reference by the *US Core DiagnosticReport Note Profile*.",
+        "name": "Chest Xray Example",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/colonoscopy"
+        },
+        "description": "This is a colonoscopy example for the *US Core CarePlan Profile*.",
+        "name": "Colonoscopy Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-duodenal-ulcer"
+        },
+        "description": "This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's active duodenal ulcer with a category of 'problem-list-item'.",
+        "name": "Condition Duodenal Ulcer Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+      },
+      {
+        "reference": {
+          "reference": "Coverage/coverage-example"
+        },
+        "description": "This is a coverage example for the *US Core Coverage Profile*.",
+        "name": "Coverage Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage"
+      },
+      {
+        "reference": {
+          "reference": "Patient/deceased-example"
+        },
+        "description": "This is a deceased patient example for the *US Core Patient Profile*.",
+        "name": "Deceased Patient Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/detailed-ethnicity"
+        },
+        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 41 [CDC ethnicity codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 2 OMB ethnicity category codes.",
+        "exampleBoolean": false,
+        "name": "Detailed ethnicity"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/detailed-race"
+        },
+        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 900+ [CDC Race codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 5 OMB race category codes.",
+        "exampleBoolean": false,
+        "name": "Detailed Race"
+      },
+      {
+        "reference": {
+          "reference": "Device/udi-2"
+        },
+        "description": "This is a Device defib example for the *US Core Implantable Device Profile*.",
+        "name": "Device Defib Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
+      },
+      {
+        "reference": {
+          "reference": "Device/udi-3"
+        },
+        "description": "This is a Device knee example for the *US Core Implantable Device Profile*.",
+        "name": "Device Knee Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/cardiology-report"
+        },
+        "description": "This is a DiagnosticReport cardiology report example for the *US Core DiagnosticReport Note Profile*.",
+        "name": "DiagnosticReport Cardiology Report Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/chest-xray-report"
+        },
+        "description": "This is a DiagnosticReport chest xray report example for the *US Core DiagnosticReport Note Profile*.",
+        "name": "DiagnosticReport Chest Xray Report Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/discharge-summary"
+        },
+        "description": "This is a discharge summary example for the *US Core DocumentReference*. It is used in the [Write Note Example](StructureDefinition-us-core-documentreference.html#mandatory-operation).",
+        "name": "Discharge Summary Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/docref-example-1"
+        },
+        "description": "This bundle is a the response to a $docref operation and contains an example *US Core DocumentReference*.  It is used in [Example 1: Request the latest CCD](StructureDefinition-us-core-documentreference.html#mandatory-operation).",
+        "name": "Docref Example 1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/docref-example-2"
+        },
+        "description": "This bundle is a the response to a $docref operation and contains an examples of *US Core DocumentReference*.  It is used in [Example 2: Request Procedure Notes and Discharge Summaries for 2019](StructureDefinition-us-core-documentreference.html#mandatory-operation).",
+        "name": "Docref Example 2",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/bone-density-report"
+        },
+        "description": "This is a DXA Bone density quantitative measurement panel report example for the *US Core DiagnosticReport Note Profile*.",
+        "name": "DXA Bone density quantitative measurement panel Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-femur-l-armass-bmd"
+        },
+        "description": "This is a DXA Femur-L ArMass BMD Example for the *Imaging Result Observation Profile*.",
+        "name": "DXA Femur-L ArMass BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-femur-l-t-score-bmd"
+        },
+        "description": "This is a DXA Femur-L T-score BMD Example for the *Clinical Test Result Observation Profile*.",
+        "name": "DXA Femur-L T-score BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-femur-l-z-score-bmd"
+        },
+        "description": "This is a DXA Femur-L Z-score BMD Example for the *Imaging Result Observation Profile*.",
+        "name": "DXA Femur-L Z-score BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-hip-l-armass-bmd"
+        },
+        "description": "This is a DXA Hip-L ArMass BMD Example for the *Imaging Result Observation Profile*.",
+        "name": "DXA Hip-L ArMass BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-hip-l-t-score-bmd"
+        },
+        "description": "This is a DXA Hip-L T-score BMD Example for the *Imaging Result Observation Profile*.",
+        "name": "DXA Hip-L T-score BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Observation/dxa-hip-l-z-score-bmd"
+        },
+        "description": "This is a DXA Hip-L Z-score BMD Example for the *Imaging Result Observation Profile*.",
+        "name": "DXA Hip-L Z-score BMD Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ekg-impression"
+        },
+        "description": "This is a EKG impression Example for the *Clinical Test Result Observation Profile*.",
+        "name": "EKG impression Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ekg-lead"
+        },
+        "description": "This is a EKG lead Example for the *Clinical Test Result Observation Profile*.",
+        "name": "EKG lead Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Media/ekg-strip"
+        },
+        "description": "This is an example Media image that is reference by the *US Core DiagnosticReport Note Profile*.",
+        "name": "EKG Strip Image",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/example-1"
+        },
+        "description": "This is a encounter 1 example for the *US Core Encounter Profile*.",
+        "name": "Encounter 1 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/1036"
+        },
+        "description": "This is a encounter 1036 example for the *Encounter Profile*.",
+        "name": "Encounter 1036 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+      },
+      {
+        "reference": {
+          "reference": "Encounter/delivery"
+        },
+        "description": "This is a patient delivery encounter example for the *Encounter Profile*.",
+        "name": "Encounter Delivery Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+      },
+      {
+        "reference": {
+          "reference": "Condition/encounter-diagnosis-example1"
+        },
+        "description": "This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
+        "name": "Encounter Diagnosis Example 1",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "Condition/encounter-diagnosis-example2"
+        },
+        "description": "This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis.",
+        "name": "Encounter Diagnosis Example 2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/episode-summary"
+        },
+        "description": "This is a episode summary example for the *US Core DocumentReference Profile*.",
+        "name": "Episode Summary Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+      },
+      {
+        "reference": {
+          "reference": "Observation/cbc-erythrocytes"
+        },
+        "description": "This is a erythrocytes example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "Erythrocytes Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Goal/goal-1"
+        },
+        "description": "This is a goal 1 example for the *US Core Goal Profile* and demonstrates use free text for Goal.description.",
+        "name": "Goal 1 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
+      },
+      {
+        "reference": {
+          "reference": "Goal/goal-sdoh-2"
+        },
+        "description": "This is a goal 2 example for the *US Core Goal Profile* and demonstrates use of a code for Goal.description.",
+        "name": "Goal 2 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
+      },
+      {
+        "reference": {
+          "reference": "Observation/head-circumference"
+        },
+        "description": "This is a head circumference example for the *US Core Head Circumference Profile*.",
+        "name": "Head Circumference Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference"
+      },
+      {
+        "reference": {
+          "reference": "Condition/health-concern-example"
+        },
+        "description": "This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's health concern.",
+        "name": "Health Concern Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+      },
+      {
+        "reference": {
+          "reference": "Observation/heart-rate"
+        },
+        "description": "This is a heart rate example for the *Vitalsigns Profile*.",
+        "name": "Heart Rate Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
+      },
+      {
+        "reference": {
+          "reference": "Observation/heart-rate-rhythm"
+        },
+        "description": "This is a Heart rate rhythm Example for the *Clinical Test Result Observation Profile*.",
+        "name": "Heart rate rhythm Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Observation/height"
+        },
+        "description": "This is a height example for the *Vitalsigns Profile*.",
+        "name": "Height Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height"
+      },
+      {
+        "reference": {
+          "reference": "Observation/cbc-hematocrit"
+        },
+        "description": "This is a hematocrit example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "Hematocrit Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/cbc-hemoglobin"
+        },
+        "description": "This is a hemoglobin example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "Hemoglobin Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Location/hl7east"
+        },
+        "description": "This is a HL7East example for the *US Core Location Profile*.",
+        "name": "HL7East Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+      },
+      {
+        "reference": {
+          "reference": "Location/hospital"
+        },
+        "description": "This is an example hospital location for the *US Core Location Profile*.",
+        "name": "Hospital Location",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+      },
+      {
+        "reference": {
+          "reference": "Observation/HVS-item-example-88122-7"
+        },
+        "description": "This is a Hvs Item Example 88122-7 ((I/We) worried whether (my/our) food would run out before (I/we) got money to buy more.) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Hvs Item Example 88122-7",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/HVS-item-example-88123-5"
+        },
+        "description": "This is a Hvs Item Example 88123-5 (The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Hvs Item Example 88123-5",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/HVS-item-example-88124-3"
+        },
+        "description": "This is a Hvs Item Example 88124-3 (Food insecurity risk) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Hvs Item Example 88124-3",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/HVS-panel-example-88121-9"
+        },
+        "description": "This is a Hvs Panel Example 88121-9 (Hunger Vital Sign [HVS]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Hvs Panel Example 88121-9",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Immunization/imm-1"
+        },
+        "description": "This is a imm 1 example for the *US Core Immunization Profile*.",
+        "name": "Imm 1 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
+      },
+      {
+        "reference": {
+          "reference": "Observation/jugular-vein-distension"
+        },
+        "description": "This is a Jugular vein distension Example for the *Clinical Test Result Observation Profile*.",
+        "name": "Jugular vein distension Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/simple-language"
+        },
+        "description": "This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47). This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,   and a 3 character code if a 2 character code does not exist. It points back to [RFC 5646](https://tools.ietf.org/html/rfc5646), however only the language codes are required, all other elements are optional.",
+        "exampleBoolean": false,
+        "name": "Language codes with language and optionally a region modifier"
+      },
+      {
+        "reference": {
+          "reference": "Observation/length"
+        },
+        "description": "This is a length example for the *Vitalsigns Profile* which shows how body length (typically used for infants) is represented using 8306-3 -*Body height - lying* as an additional observation code.",
+        "name": "Length Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height"
+      },
+      {
+        "reference": {
+          "reference": "Observation/cbc-leukocytes"
+        },
+        "description": "This is a Leukocytes example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "Leukocytes Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/cbc-mch"
+        },
+        "description": "This is a MCH example for the *US Core Observation Lab Profile*. It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "MCH Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/cbc-mchc"
+        },
+        "description": "This is a MCHC example for the *US Core Observation Lab Profile*. It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "MCHC Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/cbc-mcv"
+        },
+        "description": "This is a MCV example for the *US Core Observation Lab Profile*. It is also used in the CBC example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "MCV Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/medicationdispense-example"
+        },
+        "description": "This is a dispense example for the *US Core MedicationDispense Profile*.",
+        "name": "Medication Dispense Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/medicationrequest-coded-oral-axid"
+        },
+        "description": "This is an prescribed oral solution example for the *US Core MedicationRequest Profile*.  It represents the medication and reason using codes.",
+        "name": "MedicationRequest Coded Oral Axid Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/medicationrequest-contained-oral-axid"
+        },
+        "description": "This is an prescribed oral solution example for the *US Core MedicationRequest Profile*. It represents the medication as a contained Medication resource.",
+        "name": "MedicationRequest Contained Oral Axid Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/medicationrequest-referenced-oral-axid"
+        },
+        "description": "This is an prescribed oral solution example for the *US Core MedicationRequest Profile*. It represents the medication and reason as reference Medication and Condition resources.",
+        "name": "MedicationRequest Referenced Oral Axid Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/self-tylenol"
+        },
+        "description": "This is a “self-prescribed” tylenol example for the *MedicationRequest Profile*.",
+        "name": "MedicationRequest Self Tylenol Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/metabolic-panel"
+        },
+        "description": "This is a metabolic panel example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "Metabolic Panel Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
+      },
+      {
+        "reference": {
+          "reference": "CareTeam/missing-coded-data-example"
+        },
+        "description": "This is an example to demonstrate the using 'unknown' from the *DataAbsentReason Code System* when data is missing for a CareTeam resource where the mandatory `CareTeam.participant.role` value is unknown.",
+        "name": "Missing Coded Data Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+      },
+      {
+        "reference": {
+          "reference": "Observation/satO2-fiO2"
+        },
+        "description": "This is a observation satO2 fiO2 example for the *US Core Pulse Oximetry Profile* representing a spO2 value with a for a patient on 6 l/min of O2 suppplemental oxygen.",
+        "name": "Observation SatO2 FiO2 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-occupation"
+        },
+        "description": "This example of the *US Core Observation Occupation Profile*  documents a nursing assistant's work type.",
+        "name": "Occupation Observation Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-occupation-industry-unknown"
+        },
+        "description": "This example of the *US Core Observation Occupation Profile*  represents a situation where the occupation is known, but the industry is not.",
+        "name": "Occupation Observation Example: Industry Unknown",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/observation-occupation-unknown"
+        },
+        "description": "This example of the *US Core Observation Occupation Profile*  represents a situation where the industry is known, but the occupation is not.",
+        "name": "Occupation Observation Example: Unknown Occupation",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/ofc-percentile"
+        },
+        "description": "This is a OFC percentile example for the *Head Occipital Frontal Circumference Percentile Profile*.",
+        "name": "OFC Percentile Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/omb-ethnicity-category"
+        },
+        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', and the ethnicity categories - 'Hispanic or Latino' and 'Not Hispanic or Latino' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
+        "exampleBoolean": false,
+        "name": "OMB Ethnicity Categories"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/omb-race-category"
+        },
+        "description": "The codes for the concepts 'Unknown', 'Asked but Unknown', 'Other Race'* and\nthe codes for the five race categories - 'American Indian' or 'Alaska Native',\n'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific\nIslander', and 'White' - as defined by the [OMB Standards for Maintaining,\nCollecting, and Presenting Federal Data on Race and Ethnicity, Statistical\nPolicy Directive No. 15, as revised, October 30,\n1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf)\n\n\\* The use of 'Other Race' is discouraged for statistical analysis.",
+        "exampleBoolean": false,
+        "name": "OMB Race Categories"
+      },
+      {
+        "reference": {
+          "reference": "Organization/example-organization-2"
+        },
+        "description": "This is a organization 2 example for the *US Core Organization Profile*.",
+        "name": "Organization 2 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/acme-lab"
+        },
+        "description": "This is an example laboratory example using the *US Core Organization Profile*.",
+        "name": "Organization Acme Lab Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/acme-payer"
+        },
+        "description": "This is an example payer using the *US Core Organization Profile*.",
+        "name": "Organization Acme Payer Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+      },
+      {
+        "reference": {
+          "reference": "Organization/holy-healthcare"
+        },
+        "description": "This is an example managing organization using the *US Core Organization Profile*.",
+        "name": "Organization Holy Healthcare Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+      },
+      {
+        "reference": {
+          "reference": "Observation/oxygen-saturation"
+        },
+        "description": "This is a typical oxygen saturation example for the *US Core Pulse Oximetry Profile* on room air where no oxygen concentration is recorded.",
+        "name": "Oxygen Saturation Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
+      },
+      {
+        "reference": {
+          "reference": "Observation/p-r-interval-ekg-lead"
+        },
+        "description": "This is a P-R interval {EKG lead} Example for the *Clinical Test Result Observation Profile*.",
+        "name": "P-R interval {EKG lead} Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Patient/child-example"
+        },
+        "description": "This is a patient child example for the *US Core Patient Profile*.",
+        "name": "Patient Child Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+      },
+      {
+        "reference": {
+          "reference": "Patient/example"
+        },
+        "description": "This is a patient example for the *US Core Patient Profile*.",
+        "name": "Patient Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+      },
+      {
+        "reference": {
+          "reference": "Patient/infant-example"
+        },
+        "description": "This is a patient infant example for the *US Core Patient Profile*.",
+        "name": "Patient Infant Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+      },
+      {
+        "reference": {
+          "reference": "RelatedPerson/shaw-niece"
+        },
+        "description": "This is a patient niece example for the *US Core RelatedPerson Profile Profile*.",
+        "name": "Patient Niece Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
+      },
+      {
+        "reference": {
+          "reference": "Observation/pediatric-bmi-example"
+        },
+        "description": "This is a pediatric BMI example for the *Pediatric BMI For Age Profile*.",
+        "name": "Pediatric BMI Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age"
+      },
+      {
+        "reference": {
+          "reference": "Observation/pediatric-wt-example"
+        },
+        "description": "This is a pediatric wt example for the *Pediatric Weight For Height Profile*.",
+        "name": "Pediatric Wt Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44250-9"
+        },
+        "description": "This is a PHQ9 Item Example 44250-9 (Little interest or pleasure in doing things in last 2 weeks) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44250-9",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44251-7"
+        },
+        "description": "This is a PHQ9 Item Example 44251-7 (Poor appetite or overeating) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44251-7",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44252-5"
+        },
+        "description": "This is a PHQ9 Item Example 44252-5 (Trouble concentrating on things, such as reading the newspaper or watching television) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44252-5",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44253-3"
+        },
+        "description": "This is a PHQ9 Item Example 44253-3 (Moving or speaking so slowly that other people could have noticed. Or the opposite-being so fidgety or restless that you have been moving around a lot more than usual) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44253-3",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44254-1"
+        },
+        "description": "This is a PHQ9 Item Example 44254-1 (Feeling tired or having little energy) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44254-1",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44255-8"
+        },
+        "description": "This is a PHQ9 Item Example 44255-8 (Feeling down, depressed, or hopeless in last 2 weeks) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44255-8",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44258-2"
+        },
+        "description": "This is a PHQ9 Item Example 44258-2 (Feeling bad about yourself-or that you are a failure or have let yourself or your family down) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44258-2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44259-0"
+        },
+        "description": "This is a PHQ9 Item Example 44259-0 (Trouble falling or staying asleep, or sleeping too much) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44259-0",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44260-8"
+        },
+        "description": "This is a PHQ9 Item Example 44260-8 (Thoughts that you would be better off dead, or of hurting yourself in some way) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44260-8",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-44261-6"
+        },
+        "description": "This is a PHQ9 Item Example 44261-6 (Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 44261-6",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-item-example-69722-7"
+        },
+        "description": "This is a PHQ9 Item Example 69722-7 (How difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Item Example 69722-7",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PHQ9-panel-example-44249-1"
+        },
+        "description": "This is a PHQ9 Panel Example 44249-1 (PHQ-9 quick depression assessment panel [Reported.PHQ]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PHQ9 Panel Example 44249-1",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/cbc-platelets"
+        },
+        "description": "This is a Platelets example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "Platelets Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/practitioner-1"
+        },
+        "description": "This is a practitioner 1 example for the *US Core Practitioner Profile*.",
+        "name": "Practitioner 1 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/practitioner-2"
+        },
+        "description": "This is a practitioner 2 example for the *US Core Practitioner Profile*.",
+        "name": "Practitioner 2 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/practitioner-pharmacist"
+        },
+        "description": "This is a pharmacist example using the *US Core Practitioner Profile*.",
+        "name": "Practitioner Pharmacist Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2"
+        },
+        "description": "This is a PractitionerRole_Practitioner_Endpoint_Bundle_Example example for the *Bundle Profile*.",
+        "name": "PractitionerRole_Practitioner_Endpoint_Bundle_Example Example",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-54899-0"
+        },
+        "description": "This is a Prapare Item Example 54899-0 (Preferred language) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 54899-0",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-56051-6"
+        },
+        "description": "This is a Prapare Item Example 56051-6 (Do you consider yourself Hispanic/Latino?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 56051-6",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-56799-0"
+        },
+        "description": "This is a Prapare Item Example 56799-0 (Address) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 56799-0",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-63512-8"
+        },
+        "description": "This is a Prapare Item Example 63512-8 (How many people are living or staying at this address?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 63512-8",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-63586-2"
+        },
+        "description": "This is a Prapare Item Example 63586-2 (What was your best estimate of the total income of all family members from all sources, before taxes, in last year?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 63586-2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-67875-5"
+        },
+        "description": "This is a Prapare Item Example 67875-5 (Employment status current) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 67875-5",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-71802-3"
+        },
+        "description": "This is a Prapare Item Example 71802-3 (Housing status) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 71802-3",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-76437-3"
+        },
+        "description": "This is a Prapare Item Example 76437-3 (Primary insurance) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 76437-3",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-76501-6"
+        },
+        "description": "This is a Prapare Item Example 76501-6 (Within the last year, have you been afraid of your partner or ex-partner?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 76501-6",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-82589-3"
+        },
+        "description": "This is a Prapare Item Example 82589-3 (Highest level of educ) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 82589-3",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93026-3"
+        },
+        "description": "This is a Prapare Item Example 93026-3 (Do you feel physically and emotionally safe where you currently live?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 93026-3",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93027-1"
+        },
+        "description": "This is a Prapare Item Example 93027-1 (Are you a refugee?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 93027-1",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93028-9"
+        },
+        "description": "This is a Prapare Item Example 93028-9 (In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 93028-9",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93029-7"
+        },
+        "description": "This is a Prapare Item Example 93029-7 (How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 93029-7",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93030-5"
+        },
+        "description": "This is a Prapare Item Example 93030-5 (Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 93030-5",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93033-9"
+        },
+        "description": "This is a Prapare Item Example 93033-9 (Are you worried about losing your housing?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 93033-9",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93034-7"
+        },
+        "description": "This is a Prapare Item Example 93034-7 (Have you been discharged from the armed forces of the United States?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 93034-7",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93035-4"
+        },
+        "description": "This is a Prapare Item Example 93035-4 (At any point in the past 2 years, has season or migrant farm work been your or your family's main source of income?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 93035-4",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93038-8"
+        },
+        "description": "This is a Prapare Item Example 93038-8 (Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Item Example 93038-8",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-multiselect-item-example-32624-9-answer0"
+        },
+        "description": "This is a Prapare Multiselect-Item Example 32624-9-Answer0 (Race) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Multiselect-Item Example 32624-9-Answer0",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-multiselect-item-example-32624-9-answer1"
+        },
+        "description": "This is a Prapare Multiselect-Item Example 32624-9-Answer1 (Race) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Multiselect-Item Example 32624-9-Answer1",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-multiselect-item-example-93031-3-answer0"
+        },
+        "description": "This is a Prapare Multiselect-Item Example 93031-3-Answer0 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Multiselect-Item Example 93031-3-Answer0",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-multiselect-item-example-93031-3-answer1"
+        },
+        "description": "This is a Prapare Multiselect-Item Example 93031-3-Answer1 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Multiselect-Item Example 93031-3-Answer1",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93025-5"
+        },
+        "description": "This is a Prapare Panel Example 93025-5 (Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Panel Example 93025-5",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93039-6"
+        },
+        "description": "This is a Prapare Panel Example 93039-6 (Optional additional questions) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Panel Example 93039-6",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93040-4"
+        },
+        "description": "This is a Prapare Panel Example 93040-4 (Social and emotional health) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Panel Example 93040-4",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93041-2"
+        },
+        "description": "This is a Prapare Panel Example 93041-2 (Money and resources) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Panel Example 93041-2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93042-0"
+        },
+        "description": "This is a Prapare Panel Example 93042-0 (Family and home) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Prapare Panel Example 93042-0",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93043-8"
+        },
+        "description": "This is a Prapare Panel Example 93043-8 (Personal characteristics) for the *US Core Observation Screening Assessment Profile*",
+        "name": "PRAPARE Panel Example 93043-8",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/pregnancy-intent"
+        },
+        "description": "This is a pregnancy intent example for the *US Core Observation Pregnancy Intent Profile*.",
+        "name": "Pregnancy Intent Observation Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent"
+      },
+      {
+        "reference": {
+          "reference": "Observation/pregnancy-status"
+        },
+        "description": "This is a pregnancy status example for the *US Core Observation Pregnancy Status Profile*.",
+        "name": "Pregnancy Status Observation Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/defib-implant"
+        },
+        "description": "This *US Core Procedure Profile* is an example of an Defibrillator implant Procedure.",
+        "name": "Procedure Defibrillator Implant Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+      },
+      {
+        "reference": {
+          "reference": "Observation/pulse-intensity-palpation"
+        },
+        "description": "This is a Pulse intensity Palpation Example for the *Clinical Test Result Observation Profile*.",
+        "name": "Pulse intensity Palpation Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Observation/q-t-interval-ekg-lead"
+        },
+        "description": "This is a Q-T interval {EKG lead} Example for the *Clinical Test Result Observation Profile*.",
+        "name": "Q-T interval {EKG lead} Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Observation/qrs-dur-ekg-lead"
+        },
+        "description": "This is a QRS dur {EKG lead} Example for the *Clinical Test Result Observation Profile*.",
+        "name": "QRS dur {EKG lead} Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/hunger-vital-sign-example"
+        },
+        "description": "An example of an SDC Questionnaire that represents the Hunger Vital Sign Example questionnaire defined in LOINC (code 88121-9). The example is generated using the LHC-Forms SDC Questionnaire App.",
+        "name": "Questionnaire Hunger Vital Sign [HVS] Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/phq-9-example"
+        },
+        "description": "An example of a SDC Questionnaire that represents the Hunger Vital Sign Example questionnaire defined in LOINC (code 44249-1). This example is generated using the LHC-Forms SDC Questionnaire App.",
+        "name": "Questionnaire PHQ-9 Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/prapare-example"
+        },
+        "description": "An example of an SDC Questionnaire that represents the Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE] questionnaire defined in LOINC (code 93025-5). This example is generated using the LHC-Forms SDC Questionnaire App.",
+        "name": "Questionnaire PRAPARE Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+      },
+      {
+        "reference": {
+          "reference": "QuestionnaireResponse/glascow-coma-score"
+        },
+        "description": "This example of a US Core QuestionnaireResponse references a non-FHIR survey instrument (in this case a pdf) instead of a FHIR Questionnaire.",
+        "name": "QuestionnaireResponse Glascow Coma Score Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+      },
+      {
+        "reference": {
+          "reference": "QuestionnaireResponse/hunger-vital-sign-example"
+        },
+        "description": "An example of a US Core QuestionnaireResponse that represents questions and selected answers from the Hunger Vital Sign Example questionnaire defined in LOINC (code 88122-7). This example is generated using the LHC-Forms SDC Questionnaire App.",
+        "name": "QuestionnaireResponse Hunger Vital Sign [HVS] Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+      },
+      {
+        "reference": {
+          "reference": "QuestionnaireResponse/phq-9-example"
+        },
+        "description": "An example of a US Core QuestionnaireResponse that represents questions and selected answers from the The Patient Health Questionnaire (PHQ-9) questionnaire defined in LOINC (code 44249-1). The example is generated using the LHC-Forms SDC Questionnaire App.",
+        "name": "QuestionnaireResponse PHQ-9 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+      },
+      {
+        "reference": {
+          "reference": "QuestionnaireResponse/prapare-example"
+        },
+        "description": "This is the QuestionnaireResponse example that is referenced by the *US Core Observation Screening Assessment Profile* PRAPARE examples. This example is generated using the LHC-Forms SDC Questionnaire App.",
+        "name": "QuestionnaireResponse PRAPARE Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+      },
+      {
+        "reference": {
+          "reference": "Procedure/rehab"
+        },
+        "description": "This is a rehab example for the *US Core Procedure Profile*.",
+        "name": "Rehab Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+      },
+      {
+        "reference": {
+          "reference": "Observation/respiratory-rate"
+        },
+        "description": "This is a respiratory rate example for the *Vitalsigns Profile*.",
+        "name": "Respiratory Rate Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
+      },
+      {
+        "reference": {
+          "reference": "Organization/saint-luke-w-endpoint"
+        },
+        "description": "This is a saint luke w endpoint example for the *US Core Organization Profile*.",
+        "name": "Saint Luke W Endpoint Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+      },
+      {
+        "reference": {
+          "reference": "Condition/condition-SDOH-example"
+        },
+        "description": "This example of a US Core Condition Problems and Health Concerns Profile illustrates its use to capture information about a patient's SDOH Problem/Health Concern.",
+        "name": "SDOH Problem/Health Concern Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
+      },
+      {
+        "reference": {
+          "reference": "Observation/serum-bun"
+        },
+        "description": "This is a BUN example for the *US Core Observation Lab Profile*.",
+        "name": "Serum BUN Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/serum-calcium"
+        },
+        "description": "This is a serum calcium example for the *US Core Observation Lab Profile*.",
+        "name": "Serum Calcium Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/serum-chloride"
+        },
+        "description": "This is a serum chloride example for the *US Core Observation Lab Profile*.",
+        "name": "Serum Chloride Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/serum-co2"
+        },
+        "description": "This is a serum CO2 example for the *US Core Observation Lab Profile*.",
+        "name": "Serum CO2 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/serum-creatinine"
+        },
+        "description": "This is a serum creatinine example for the *US Core Observation Lab Profile*.",
+        "name": "Serum Creatinine Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/serum-glucose"
+        },
+        "description": "This is a serum glucose example for the *US Core Observation Lab Profile*.",
+        "name": "Serum Glucose Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/serum-potassium"
+        },
+        "description": "This is a serum potassium example for the *US Core Observation Lab Profile*.",
+        "name": "Serum Potassium Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/serum-sodium"
+        },
+        "description": "This is a serum sodium example for the *US Core Observation Lab Profile*.",
+        "name": "Serum Sodium Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/specimen-example-serum"
+        },
+        "description": "This is a serum specimen example for the *US Core Specimen Profile*.",
+        "name": "Serum Specimen Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
+      },
+      {
+        "reference": {
+          "reference": "Observation/serum-total-bilirubin"
+        },
+        "description": "This is a serum total bilirubin example for the *US Core Observation Lab Profile*.",
+        "name": "Serum Total Bilirubin Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/defib-implant"
+        },
+        "description": "This *US Core ServiceRequest Profile* is an example for a defibrillator implant referral request.",
+        "name": "ServiceRequest Defibrillator Implant Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/foodpantry-referral"
+        },
+        "description": "This is a service request example for the *US Core ServiceRequest Profile Profile*.",
+        "name": "ServiceRequest Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/rehab"
+        },
+        "description": "This is an example requesting alcohol rehab sessions for a patient using the *US Core ServiceRequest Profile Profile*.",
+        "name": "ServiceRequest for Rehab Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+      },
+      {
+        "reference": {
+          "reference": "Observation/sexual-orientation-example"
+        },
+        "description": "This is an sexual orientation example for the *US Core Observation Sexual Orientation Profile*.",
+        "name": "Sexual Orientation Observation Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/simple-observation-cognitive-status"
+        },
+        "description": "This *US Core Simple Observation Profile* is a cognitive status determination which is not based on any formal assessment tool or survey. (This example is adapted from the [PACIO Cognitive Status Implementation Guide ver 1.0.0](https://build.fhir.org/ig/HL7/PACIO-CognitiveStatus/).)",
+        "name": "Simple Observation Cognitive Status Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/simple-observation-disability-status"
+        },
+        "description": "This *US Core Simple Observation Profile* is a degree of depression severity determination which is based on the results of a PHQ-9 (Patient Health Questionnaire-9) screening.",
+        "name": "Simple Observation Disability Status Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/simple-observation-sdoh"
+        },
+        "description": "This *US Core Simple Observation Profile* is a SDOH determination which is not based on any formal assessment tool or survey.",
+        "name": "Simple Observation SDOH Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/some-day-smoker"
+        },
+        "description": "This is a some day smoker example for the *US Core Smokingstatus Profile*.",
+        "name": "Some Day Smoker Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
+      },
+      {
+        "reference": {
+          "reference": "Provenance/example-targeted-provenance"
+        },
+        "description": "This is a provenance example for the *US Core Provenance Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity.",
+        "name": "Targeted Provenance Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+      },
+      {
+        "reference": {
+          "reference": "Patient/example-targeted-provenance"
+        },
+        "description": "This is a patient example for the *US Core Patient Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity.",
+        "name": "Targeted Provenance Patient Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+      },
+      {
+        "reference": {
+          "reference": "Observation/temperature"
+        },
+        "description": "This is a temperature example for the *Vitalsigns Profile*.",
+        "name": "Temperature Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature"
+      },
+      {
+        "reference": {
+          "reference": "Device/udi-1"
+        },
+        "description": "This is a UDI 1 example for the *US Core Implantable Device Profile*.",
+        "name": "UDI 1 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
+      },
+      {
+        "reference": {
+          "reference": "Observation/urobilinogen"
+        },
+        "description": "This is a urobilinogen example for the *US Core Observation Lab Profile*.",
+        "name": "Urobilinogen Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
         "reference": {
@@ -202,6 +1610,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/careplan-category"
+        },
+        "description": "Set of codes that are needed for implementation of the US-Core CarePlan Profile. These codes are used as extensions to the FHIR ValueSet.",
+        "exampleBoolean": false,
+        "name": "US Core CarePlan Category Extension Codes"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-careplan"
         },
         "description": "This profile sets minimum expectations for the CarePlan resource to record, search, and fetch assessment and plan of treatment data associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
@@ -215,6 +1631,54 @@
         "description": "This profile sets minimum expectations for the CareTeam resource for identifying the Care Team members associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core CareTeam Profile"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/us-core-category"
+        },
+        "description": "Category codes used across US Core Profiles and resource types. They are typically used when there is a need for categorization for searching and finding resources or workflow hints.",
+        "exampleBoolean": false,
+        "name": "US Core Category"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/us-core-client"
+        },
+        "description": "This Section describes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the [Conformance Requirements for Server](CapabilityStatement-us-core-server.html). US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
+        "exampleBoolean": false,
+        "name": "US Core Client CapabilityStatement"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-clinical-note-type"
+        },
+        "description": "The US Core Clinical Note Type Value Set is a 'starter set' of types supported for fetching and storing clinical notes.",
+        "exampleBoolean": false,
+        "name": "US Core Clinical Note Type"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-clinical-result-observation-category"
+        },
+        "description": "Used to classify the context of clinical result observations.",
+        "exampleBoolean": false,
+        "name": "US Core Clinical Result Observation Category"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/condition-category"
+        },
+        "description": "Set of codes that are needed for implementation of the US-Core Condition Profile. These codes are used as extensions to the FHIR and US Core value sets.",
+        "exampleBoolean": false,
+        "name": "US Core Condition Category Extension Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-condition-code"
+        },
+        "description": "This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions). ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical information.",
+        "exampleBoolean": false,
+        "name": "US Core Condition Codes"
       },
       {
         "reference": {
@@ -242,6 +1706,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/us-core-diagnosticreport-category"
+        },
+        "description": "The US Core Diagnostic Report Category Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and notes.",
+        "exampleBoolean": false,
+        "name": "US Core Diagnostic Report Category Codes"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-diagnosticreport-lab"
         },
         "description": "Laboratory results are grouped and summarized using the DiagnosticReport resource which typically reference Observation resource(s).  Each Observation resource represents an individual laboratory test and result value or component result values, or a nested panel (such as a microbial susceptibility panel) which references other observations.  They can also be presented in report form or as free text.  This profile sets minimum expectations for the DiagnosticReport resource to record, search, and fetch laboratory results associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
@@ -266,6 +1738,22 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/us-core-discharge-disposition"
+        },
+        "description": "[National Uniform Billing Committee](http://www.nubc.org/), manual UB-04, UB form locator 17.",
+        "exampleBoolean": false,
+        "name": "US Core Discharge Disposition"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-documentreference-category"
+        },
+        "description": "The US Core DocumentReferences Category Value Set is a 'starter set' of categories supported for fetching and storing clinical notes.",
+        "exampleBoolean": false,
+        "name": "US Core DocumentReference Category"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-documentreference"
         },
         "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for searching and fetching patient documents including Clinical Notes using the DocumentReference resource. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases. Prior to reviewing this profile, implementers are encouraged to read the Clinical Notes Guidance to understand the overlap of US Core DocumentReference Profile and US Core DiagnosticReport Profile for Report and Note exchange.",
@@ -274,11 +1762,35 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/us-core-documentreference-type"
+        },
+        "description": "The US Core DocumentReference Type Value Set includes all LOINC  values whose SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor concept 'unknown'",
+        "exampleBoolean": false,
+        "name": "US Core DocumentReference Type"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/us-core-documentreference-category"
+        },
+        "description": "The US Core DocumentReferences Type Code System is a 'starter set' of categories supported for fetching and storing DocumentReference Resources.",
+        "exampleBoolean": false,
+        "name": "US Core DocumentReferences Category Codes"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-encounter"
         },
         "description": "This profile sets minimum expectations for the Encounter resource to record, search, and fetch basic encounter information for an individual patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Encounter Profile"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-encounter-type"
+        },
+        "description": "The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure)) and codes from the Current Procedure and Terminology (CPT) found in the following CPT sections:\n- 99201-99499 E/M - 99500-99600 home health (mainly nonphysician, such as newborn care in home) - 99605-99607 medication management - 98966-98968 non physician telephone services\n(subscription to AMA Required)",
+        "exampleBoolean": false,
+        "name": "US Core Encounter Type"
       },
       {
         "reference": {
@@ -298,11 +1810,27 @@
       },
       {
         "reference": {
+          "reference": "OperationDefinition/docref"
+        },
+        "description": "This operation is used to return all the references to documents related to a\npatient. It is invoked on a FHIR Server's DocumentReference endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all DocumentReference instances.\n\nThe operation requires a patient id and takes the optional input parameters:\n- start date\n- end date\n- document type\n- on-demand\n- profile\n\nand returns a *searchset* [Bundle](http://hl7.org/fhir/bundle.html) containing [DocumentReference](http://hl7.org/fhir/documentreference.html) resources for the patient. If the server has stored documents or can create documents for the patient and those documents are available for the user, the server returns the DocumentReference resources associated with documents. This operation's intended use is to provide a way for providers or patients to access their available documents. The document itself can be subsequently retrieved using the link provided  in the `DocumentReference.content.attachment.url element`. The link could be a FHIR endpoint to a [Binary](http://hl7.org/fhir/R4/binary.html) Resource or some other document repository.\n\nThis operation is *different* from a FHIR RESTful query on DocumentReference by patient and type and date range because: \n\n1. It is used to request a server to *generate* a document based on the specified parameters.\n\n1. If no parameters are specified, the server SHALL return a DocumentReference to the patient's current C-CDA CCD.\n\n1. If the server cannot *generate* a document based on the specified parameters, the operation will return an empty search bundle.\n\nUnless the client indicates they are only interested in 'on-demand' documents using the *on-demand* parameter, the server SHOULD return DocumentReference instances for *existing* documents that meet the request parameters  In this regard, this operation is *similar* to a FHIR RESTful query.",
+        "exampleBoolean": false,
+        "name": "US Core Fetch DocumentReference"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-genderIdentity"
         },
         "description": "This extension represents an individual's sense of being a man, woman, boy, girl, nonbinary, or something else, ascertained by asking them what that identity is. Systems requiring multiple gender identities and associated dates **SHOULD** use the FHIR R5 [genderIdentity extension](http://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html). When future versions of US Core are based on FHIR R5, the FHIR R5 extension will supersede this extension.",
         "exampleBoolean": false,
         "name": "US Core Gender Identity Extension"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-goal-description"
+        },
+        "description": "Concepts from CPT and LOINC code systems that can be used to indicate the goal.",
+        "exampleBoolean": false,
+        "name": "US Core Goal Codes"
       },
       {
         "reference": {
@@ -354,6 +1882,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-observation-lab"
+        },
+        "description": "The US Core Laboratory Result Observation Profile is based upon the US Core Observation Clinical Result Profile and, along with the US Core DiagnosticReport Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability (USCDI) Laboratory requirements. Laboratory results are grouped and summarized using the DiagnosticReport resource, which references Observation resources. Each Observation resource represents an individual laboratory test and result value, a “nested” panel (such as a microbial susceptibility panel) that references other observations, or rarely a laboratory test with component result values. The US Core Laboratory Result Observation Profile sets minimum expectations for the Observation resource to record, search, and fetch laboratory test results associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets SHALL be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false,
+        "name": "US Core Laboratory Result Observation Profile"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-laboratory-test-codes"
+        },
+        "description": "Laboratory LOINC codes: From the introduction to August 2022 LOINC Users' guide; \"The current scope of the existing laboratory portion of the LOINC  database includes all observations reported by clinical laboratories, including the specialty areas: chemistry, including therapeutic drug monitoring and toxicology; hematology; serology; blood bank; microbiology; cytology; surgical pathology; and fertility.",
+        "exampleBoolean": false,
+        "name": "US Core Laboratory Test Codes"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-location"
         },
         "description": "This profile sets minimum expectations for the Location resource for recording, searching for and fetching a Location associated with a patient, provider or organization to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile.  It provides the floor for standards development for specific use cases.",
@@ -386,19 +1930,27 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/us-core-narrative-status"
+        },
+        "description": "The US Core Narrative Status Value Set limits the text status for the resource narrative.",
+        "exampleBoolean": false,
+        "name": "US Core Narrative Status"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-diagnosticreport-report-and-note-codes"
+        },
+        "description": "This value set includes All LOINC codes defined as type \"clinical,\" therefore excluding laboratory tests, survey instruments, and claims documents. This includes observables such as vital signs, hemodynamics, intake/output, EKG, obstetric ultrasound, and cardiac echo, and includes discrete and narrative diagnostic observations and reports.",
+        "exampleBoolean": false,
+        "name": "US Core Non Laboratory Codes"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-observation-clinical-result"
         },
         "description": "The US Core Observation Clinical Result Profile is based upon the core FHIR Observation Resource and, along with the US Core DiagnosticReport Profile, meets the US Core Data for Interoperability (USCDI) requirements for *Diagnostic Imaging* and *Clinical Tests* Data Classes. This profile sets minimum expectations for the Observation resource to record and search non-laboratory clinical test results (e.g., radiology and other clinical observations generated from procedures). An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy. This profile is the basis for the US Core Laboratory Result Observation Profile, which defines additional data elements to record and search laboratory test results.\n\nThe US Core Observation Clinical Result Profile sets minimum expectations to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Observation Clinical Result Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-observation-lab"
-        },
-        "description": "The US Core Laboratory Result Observation Profile is based upon the US Core Observation Clinical Result Profile and, along with the US Core DiagnosticReport Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability (USCDI) Laboratory requirements. Laboratory results are grouped and summarized using the DiagnosticReport resource, which references Observation resources. Each Observation resource represents an individual laboratory test and result value, a “nested” panel (such as a microbial susceptibility panel) that references other observations, or rarely a laboratory test with component result values. The US Core Laboratory Result Observation Profile sets minimum expectations for the Observation resource to record, search, and fetch laboratory test results associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets SHALL be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
-        "exampleBoolean": false,
-        "name": "US Core Laboratory Result Observation Profile"
       },
       {
         "reference": {
@@ -442,6 +1994,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/us-core-observation-value-codes"
+        },
+        "description": "[Snomed-CT](http://www.ihtsdo.org/) concept codes for coded results",
+        "exampleBoolean": false,
+        "name": "US Core Observation Value Codes (SNOMED-CT)"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-organization"
         },
         "description": "This profile sets minimum expectations for the Organization resource to searching for and fetching an Organization associated with a patient or provider to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used and constrains the way the elements are used when using the profile.  It provides the floor for standards development for specific use cases.",
@@ -455,6 +2015,30 @@
         "description": "The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v3 'Patient Demographics' requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Patient Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pediatric-bmi-for-age"
+        },
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric body mass index (BMI) percentile per age and sex for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false,
+        "name": "US Core Pediatric BMI for Age Observation Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/head-occipital-frontal-circumference-percentile"
+        },
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric head occipital frontal circumference (OFC) percentile observations associated with a patients from birth to 37 Months of age using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false,
+        "name": "US Core Pediatric Head Occipital Frontal Circumference Percentile Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pediatric-weight-for-height"
+        },
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch  pediatric weight-for-length per age and gender observations in FHIR with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false,
+        "name": "US Core Pediatric Weight for Height Observation Profile"
       },
       {
         "reference": {
@@ -474,11 +2058,59 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/us-core-pregnancy-intent"
+        },
+        "description": "This value set includes SNOMED CT codes and the HL7 V3 code for the concept \"unknown\".",
+        "exampleBoolean": false,
+        "name": "US Core Pregnancy Intent Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-pregnancy-status"
+        },
+        "description": "This value set includes SNOMED CT codes and the HL7 V3 code for the concept \"unknown\". These codes have historically been used to communicate the pregnancy status of a patient.",
+        "exampleBoolean": false,
+        "name": "US Core Pregnancy Status Codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-problem-or-health-concern"
+        },
+        "description": "Code set for category codes for *US Core Condition Problems and Health Concerns Profile* consisting of the concepts \"problem\" and \"health-concern\".",
+        "exampleBoolean": false,
+        "name": "US Core Problem or Health Concern"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-procedure-code"
+        },
+        "description": "Concepts from CPT, SNOMED CT, HCPCS Level II Alphanumeric Codes, ICD-10-PCS,CDT and LOINC code systems that can be used to indicate the type of procedure performed.",
+        "exampleBoolean": false,
+        "name": "US Core Procedure Codes"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-procedure"
         },
         "description": "The US Core Procedure Profile is based upon the core FHIR Procedure Resource and meets the U.S. Core Data for Interoperability (USCDI) v2 'Procedures' requirements. This profile sets minimum expectations for the Procedure resource to record, search, and fetch procedures associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Procedure Profile"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-provenance-participant-type"
+        },
+        "description": "The type of participation a provenance agent played for a given target.",
+        "exampleBoolean": false,
+        "name": "US Core Provenance Participant Type Codes"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/us-core-provenance-participant-type"
+        },
+        "description": "Set of codes that are needed for implementation of the US-Core Provenance Profile. These codes are used as extensions to the FHIR value sets.",
+        "exampleBoolean": false,
+        "name": "US Core Provenance Participant Type Extension Codes"
       },
       {
         "reference": {
@@ -530,270 +2162,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-servicerequest"
-        },
-        "description": "This profile sets minimum expectations for recording, searching, and fetching the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
-        "exampleBoolean": false,
-        "name": "US Core ServiceRequest Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-sex"
-        },
-        "description": "The Sex Extension is used to reflect the documentation of a person's sex. Systems choosing to record sources of information should use the [Provenance resource](basic-provenance.html#element-level-provenance).\n \nUSCDI v3 includes a data element for sex, intended to support the exchange of a sex value that is not characterized as sex assigned at birth or birth sex. This Sex extension supports USCDI v3. Sex assigned at birth or birth sex can be recorded using the more specific [US Core Birth Sex Extension](http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex).\nFuture versions of this extension may be informed by the content of the HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation, which may include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender)).",
-        "exampleBoolean": false,
-        "name": "US Core Sex Extension"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-simple-observation"
-        },
-        "description": "This US Core FHIR Profile is meant to capture any “simple” observations that are not otherwise covered by other US Core Observation profiles. It represents any type of observation that is not classified as vital signs, laboratory, imaging, or other more specific observation types. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and retrieve observations such as a clinical observation or assertion about a patient's health status or other general observations. This profile identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
-        "exampleBoolean": false,
-        "name": "US Core Simple Observation Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-smokingstatus"
-        },
-        "description": "The US Core Smoking Status Observation Profile is based upon the core FHIR Observation Resource and implements the U.S. Core Data for Interoperability (USCDI) v2 Smoking status' requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
-        "exampleBoolean": false,
-        "name": "US Core Smoking Status Observation Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-specimen"
-        },
-        "description": "This profile sets minimum expectations for the Specimen resource to record, search, and fetch \"substances being sampled or tested. (e.g., nasopharyngeal swab, whole blood, serum, urine, wound swab)\" associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
-        "exampleBoolean": false,
-        "name": "US Core Specimen Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-tribal-affiliation"
-        },
-        "description": "This Extension profile represents a tribe or band with which a person associates and, optionally, whether they are enrolled.",
-        "exampleBoolean": false,
-        "name": "US Core Tribal Affiliation Extension"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/uscdi-requirement"
-        },
-        "description": "**This extension is only used in the US Core Implementation Guide's Profile StructureDefinition elements.** It flags elements that are ONC USCDI Requirements for certified systems. See the [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for more information.",
-        "exampleBoolean": false,
-        "name": "US Core USCDI Requirement Extension"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-vital-signs"
-        },
-        "description": "To promote interoperability and adoption through common implementation, this profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html) and defines *additional* constraints on the Observation resource to represent vital signs observations. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.  This US Core profiles that are derived from this profile are listed below.",
-        "exampleBoolean": false,
-        "name": "US Core Vital Signs Profile"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/birthsex"
-        },
-        "description": "Codes for assigning sex at birth as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc)",
-        "exampleBoolean": false,
-        "name": "Birth Sex"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/detailed-ethnicity"
-        },
-        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 41 [CDC ethnicity codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 2 OMB ethnicity category codes.",
-        "exampleBoolean": false,
-        "name": "Detailed ethnicity"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/detailed-race"
-        },
-        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', 'other, and the 900+ [CDC Race codes](http://www.cdc.gov/phin/resources/vocabulary/index.html) that are grouped under one of the 5 OMB race category codes.",
-        "exampleBoolean": false,
-        "name": "Detailed Race"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/omb-ethnicity-category"
-        },
-        "description": "The codes for the concepts 'Unknown', 'Asked but no answer', and the ethnicity categories - 'Hispanic or Latino' and 'Not Hispanic or Latino' - as defined by the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
-        "exampleBoolean": false,
-        "name": "OMB Ethnicity Categories"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/omb-race-category"
-        },
-        "description": "The codes for the concepts 'Unknown', 'Asked but Unknown', 'Other Race'* and\nthe codes for the five race categories - 'American Indian' or 'Alaska Native',\n'Asian', 'Black or African American', 'Native Hawaiian or Other Pacific\nIslander', and 'White' - as defined by the [OMB Standards for Maintaining,\nCollecting, and Presenting Federal Data on Race and Ethnicity, Statistical\nPolicy Directive No. 15, as revised, October 30,\n1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf)\n\n\\* The use of 'Other Race' is discouraged for statistical analysis.",
-        "exampleBoolean": false,
-        "name": "OMB Race Categories"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/simple-language"
-        },
-        "description": "This value set includes codes from [BCP-47](http://tools.ietf.org/html/bcp47). This value set matches the ONC 2015 Edition LanguageCommunication data element value set within C-CDA to use a 2 character language code if one exists,   and a 3 character code if a 2 character code does not exist. It points back to [RFC 5646](https://tools.ietf.org/html/rfc5646), however only the language codes are required, all other elements are optional.",
-        "exampleBoolean": false,
-        "name": "Language codes with language and optionally a region modifier"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-clinical-note-type"
-        },
-        "description": "The US Core Clinical Note Type Value Set is a 'starter set' of types supported for fetching and storing clinical notes.",
-        "exampleBoolean": false,
-        "name": "US Core Clinical Note Type"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-clinical-result-observation-category"
-        },
-        "description": "Used to classify the context of clinical result observations.",
-        "exampleBoolean": false,
-        "name": "US Core Clinical Result Observation Category"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-condition-code"
-        },
-        "description": "This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions). ICD-10 is appropriate for Diagnosis information, and ICD-9 for historical information.",
-        "exampleBoolean": false,
-        "name": "US Core Condition Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-diagnosticreport-category"
-        },
-        "description": "The US Core Diagnostic Report Category Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and notes.",
-        "exampleBoolean": false,
-        "name": "US Core Diagnostic Report Category Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-diagnosticreport-report-and-note-codes"
-        },
-        "description": "This value set includes All LOINC codes defined as type \"clinical,\" therefore excluding laboratory tests, survey instruments, and claims documents. This includes observables such as vital signs, hemodynamics, intake/output, EKG, obstetric ultrasound, and cardiac echo, and includes discrete and narrative diagnostic observations and reports.",
-        "exampleBoolean": false,
-        "name": "US Core Non Laboratory Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-discharge-disposition"
-        },
-        "description": "[National Uniform Billing Committee](http://www.nubc.org/), manual UB-04, UB form locator 17.",
-        "exampleBoolean": false,
-        "name": "US Core Discharge Disposition"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-documentreference-category"
-        },
-        "description": "The US Core DocumentReferences Category Value Set is a 'starter set' of categories supported for fetching and storing clinical notes.",
-        "exampleBoolean": false,
-        "name": "US Core DocumentReference Category"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-documentreference-type"
-        },
-        "description": "The US Core DocumentReference Type Value Set includes all LOINC  values whose SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor concept 'unknown'",
-        "exampleBoolean": false,
-        "name": "US Core DocumentReference Type"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-encounter-type"
-        },
-        "description": "The type of encounter: a specific code indicating type of service provided. This value set includes codes from SNOMED CT decending from the concept 308335008 (Patient encounter procedure (procedure)) and codes from the Current Procedure and Terminology (CPT) found in the following CPT sections:\n- 99201-99499 E/M - 99500-99600 home health (mainly nonphysician, such as newborn care in home) - 99605-99607 medication management - 98966-98968 non physician telephone services\n(subscription to AMA Required)",
-        "exampleBoolean": false,
-        "name": "US Core Encounter Type"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-goal-description"
-        },
-        "description": "Concepts from CPT and LOINC code systems that can be used to indicate the goal.",
-        "exampleBoolean": false,
-        "name": "US Core Goal Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-narrative-status"
-        },
-        "description": "The US Core Narrative Status Value Set limits the text status for the resource narrative.",
-        "exampleBoolean": false,
-        "name": "US Core Narrative Status"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-observation-smoking-status-status"
-        },
-        "description": "Codes providing the status of an observation for smoking status. Constrained to `final`and `entered-in-error`.",
-        "exampleBoolean": false,
-        "name": "US Core Status for Smoking Status Observation"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-observation-smokingstatus-max"
-        },
-        "description": "Representing a patient's smoking behavior using concepts from SNOMED CT.",
-        "exampleBoolean": false,
-        "name": "US Core Smoking Status Max-Binding"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-observation-value-codes"
-        },
-        "description": "[Snomed-CT](http://www.ihtsdo.org/) concept codes for coded results",
-        "exampleBoolean": false,
-        "name": "US Core Observation Value Codes (SNOMED-CT)"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-pregnancy-intent"
-        },
-        "description": "This value set includes SNOMED CT codes and the HL7 V3 code for the concept \"unknown\".",
-        "exampleBoolean": false,
-        "name": "US Core Pregnancy Intent Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-pregnancy-status"
-        },
-        "description": "This value set includes SNOMED CT codes and the HL7 V3 code for the concept \"unknown\". These codes have historically been used to communicate the pregnancy status of a patient.",
-        "exampleBoolean": false,
-        "name": "US Core Pregnancy Status Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-problem-or-health-concern"
-        },
-        "description": "Code set for category codes for *US Core Condition Problems and Health Concerns Profile* consisting of the concepts \"problem\" and \"health-concern\".",
-        "exampleBoolean": false,
-        "name": "US Core Problem or Health Concern"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-procedure-code"
-        },
-        "description": "Concepts from CPT, SNOMED CT, HCPCS Level II Alphanumeric Codes, ICD-10-PCS,CDT and LOINC code systems that can be used to indicate the type of procedure performed.",
-        "exampleBoolean": false,
-        "name": "US Core Procedure Codes"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-provenance-participant-type"
-        },
-        "description": "The type of participation a provenance agent played for a given target.",
-        "exampleBoolean": false,
-        "name": "US Core Provenance Participant Type Codes"
-      },
-      {
-        "reference": {
           "reference": "ValueSet/us-core-screening-assessment-condition-category"
         },
         "description": "Category codes used in the US Core Condition Screening Assessment Profile to help identify the type of USCDI Health Status/Assessment data class being reported.",
@@ -810,11 +2178,35 @@
       },
       {
         "reference": {
+          "reference": "CapabilityStatement/us-core-server"
+        },
+        "description": "This Section describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ONC 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ONC [U.S. Core Data for Interoperability (USCDI) Version 3 July 2022](https://www.healthit.gov/isa/sites/isa/files/2022-07/USCDI-Version-3-July-2022-Final.pdf).  US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
+        "exampleBoolean": false,
+        "name": "US Core Server CapabilityStatement"
+      },
+      {
+        "reference": {
           "reference": "ValueSet/us-core-servicerequest-category"
         },
         "description": "A set of SNOMED CT and LOINC concepts to classify a requested service",
         "exampleBoolean": false,
         "name": "US Core ServiceRequest Category Codes"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-servicerequest"
+        },
+        "description": "This profile sets minimum expectations for recording, searching, and fetching the ServiceRequest resource to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false,
+        "name": "US Core ServiceRequest Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-sex"
+        },
+        "description": "The Sex Extension is used to reflect the documentation of a person's sex. Systems choosing to record sources of information should use the [Provenance resource](basic-provenance.html#element-level-provenance).\n \nUSCDI v3 includes a data element for sex, intended to support the exchange of a sex value that is not characterized as sex assigned at birth or birth sex. This Sex extension supports USCDI v3. Sex assigned at birth or birth sex can be recorded using the more specific [US Core Birth Sex Extension](http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex).\nFuture versions of this extension may be informed by the content of the HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation, which may include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender)).",
+        "exampleBoolean": false,
+        "name": "US Core Sex Extension"
       },
       {
         "reference": {
@@ -842,11 +2234,51 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-simple-observation"
+        },
+        "description": "This US Core FHIR Profile is meant to capture any “simple” observations that are not otherwise covered by other US Core Observation profiles. It represents any type of observation that is not classified as vital signs, laboratory, imaging, or other more specific observation types. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and retrieve observations such as a clinical observation or assertion about a patient's health status or other general observations. This profile identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false,
+        "name": "US Core Simple Observation Profile"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-observation-smokingstatus-max"
+        },
+        "description": "Representing a patient's smoking behavior using concepts from SNOMED CT.",
+        "exampleBoolean": false,
+        "name": "US Core Smoking Status Max-Binding"
+      },
+      {
+        "reference": {
           "reference": "ValueSet/us-core-smoking-status-observation-codes"
         },
         "description": "The US Core Smoking Status Observation Codes Value Set is a 'starter set' of concepts to capture smoking status.",
         "exampleBoolean": false,
         "name": "US Core Smoking Status Observation Codes"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-smokingstatus"
+        },
+        "description": "The US Core Smoking Status Observation Profile is based upon the core FHIR Observation Resource and implements the U.S. Core Data for Interoperability (USCDI) v2 Smoking status' requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch smoking status data associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false,
+        "name": "US Core Smoking Status Observation Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-specimen"
+        },
+        "description": "This profile sets minimum expectations for the Specimen resource to record, search, and fetch \"substances being sampled or tested. (e.g., nasopharyngeal swab, whole blood, serum, urine, wound swab)\" associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false,
+        "name": "US Core Specimen Profile"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/us-core-observation-smoking-status-status"
+        },
+        "description": "Codes providing the status of an observation for smoking status. Constrained to `final`and `entered-in-error`.",
+        "exampleBoolean": false,
+        "name": "US Core Status for Smoking Status Observation"
       },
       {
         "reference": {
@@ -858,11 +2290,27 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/us-core-usps-state"
+          "reference": "StructureDefinition/us-core-tribal-affiliation"
         },
-        "description": "This value set defines two letter USPS alphabetic codes.",
+        "description": "This Extension profile represents a tribe or band with which a person associates and, optionally, whether they are enrolled.",
         "exampleBoolean": false,
-        "name": "USPS Two Letter Alphabetic Codes"
+        "name": "US Core Tribal Affiliation Extension"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/uscdi-requirement"
+        },
+        "description": "**This extension is only used in the US Core Implementation Guide's Profile StructureDefinition elements.** It flags elements that are ONC USCDI Requirements for certified systems. See the [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for more information.",
+        "exampleBoolean": false,
+        "name": "US Core USCDI Requirement Extension"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-vital-signs"
+        },
+        "description": "To promote interoperability and adoption through common implementation, this profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html) and defines *additional* constraints on the Observation resource to represent vital signs observations. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.  This US Core profiles that are derived from this profile are listed below.",
+        "exampleBoolean": false,
+        "name": "US Core Vital Signs Profile"
       },
       {
         "reference": {
@@ -874,27 +2322,19 @@
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/us-core-client"
+          "reference": "Medication/uscore-med1"
         },
-        "description": "This Section describes the expected capabilities of the US Core Client which is responsible for creating and initiating the queries for information about an individual patient. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined in the [Conformance Requirements for Server](CapabilityStatement-us-core-server.html). US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
-        "exampleBoolean": false,
-        "name": "US Core Client CapabilityStatement"
+        "description": "This is a uscore med1 example for the *US Core Medication Profile*.",
+        "name": "Uscore Med1 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
       },
       {
         "reference": {
-          "reference": "CapabilityStatement/us-core-server"
+          "reference": "Medication/uscore-med2"
         },
-        "description": "This Section describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ONC 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ONC [U.S. Core Data for Interoperability (USCDI) Version 3 July 2022](https://www.healthit.gov/isa/sites/isa/files/2022-07/USCDI-Version-3-July-2022-Final.pdf).  US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
-        "exampleBoolean": false,
-        "name": "US Core Server CapabilityStatement"
-      },
-      {
-        "reference": {
-          "reference": "OperationDefinition/docref"
-        },
-        "description": "This operation is used to return all the references to documents related to a\npatient. It is invoked on a FHIR Server's DocumentReference endpoint (e.g., `[base]/DocumentReference/$docref`) and operates across all DocumentReference instances.\n\nThe operation requires a patient id and takes the optional input parameters:\n- start date\n- end date\n- document type\n- on-demand\n- profile\n\nand returns a *searchset* [Bundle](http://hl7.org/fhir/bundle.html) containing [DocumentReference](http://hl7.org/fhir/documentreference.html) resources for the patient. If the server has stored documents or can create documents for the patient and those documents are available for the user, the server returns the DocumentReference resources associated with documents. This operation's intended use is to provide a way for providers or patients to access their available documents. The document itself can be subsequently retrieved using the link provided  in the `DocumentReference.content.attachment.url element`. The link could be a FHIR endpoint to a [Binary](http://hl7.org/fhir/R4/binary.html) Resource or some other document repository.\n\nThis operation is *different* from a FHIR RESTful query on DocumentReference by patient and type and date range because: \n\n1. It is used to request a server to *generate* a document based on the specified parameters.\n\n1. If no parameters are specified, the server SHALL return a DocumentReference to the patient's current C-CDA CCD.\n\n1. If the server cannot *generate* a document based on the specified parameters, the operation will return an empty search bundle.\n\nUnless the client indicates they are only interested in 'on-demand' documents using the *on-demand* parameter, the server SHOULD return DocumentReference instances for *existing* documents that meet the request parameters  In this regard, this operation is *similar* to a FHIR RESTful query.",
-        "exampleBoolean": false,
-        "name": "US Core Fetch DocumentReference"
+        "description": "This is a uscore med2 example for the *US Core Medication Profile*.",
+        "name": "Uscore Med2 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
       },
       {
         "reference": {
@@ -1306,6 +2746,14 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/us-core-location-address"
+        },
+        "description": "**A (part of the) address of the location**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
+        "exampleBoolean": false,
+        "name": "USCoreLocationAddress"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/us-core-location-address-city"
         },
         "description": "**A city specified in an address**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
@@ -1327,14 +2775,6 @@
         "description": "**A state specified in an address**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
         "name": "USCoreLocationAddressState"
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/us-core-location-address"
-        },
-        "description": "**A (part of the) address of the location**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
-        "exampleBoolean": false,
-        "name": "USCoreLocationAddress"
       },
       {
         "reference": {
@@ -1490,19 +2930,19 @@
       },
       {
         "reference": {
-          "reference": "SearchParameter/us-core-patient-gender-identity"
-        },
-        "description": "Returns patients with an gender-identity extension matching the specified code.",
-        "exampleBoolean": false,
-        "name": "USCorePatientGenderIdentity"
-      },
-      {
-        "reference": {
           "reference": "SearchParameter/us-core-patient-gender"
         },
         "description": "**Gender of the patient**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain",
         "exampleBoolean": false,
         "name": "USCorePatientGender"
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/us-core-patient-gender-identity"
+        },
+        "description": "Returns patients with an gender-identity extension matching the specified code.",
+        "exampleBoolean": false,
+        "name": "USCorePatientGenderIdentity"
       },
       {
         "reference": {
@@ -1746,1292 +3186,35 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/us-core-laboratory-test-codes"
+          "reference": "ValueSet/us-core-usps-state"
         },
-        "description": "Laboratory LOINC codes: From the introduction to August 2022 LOINC Users' guide; \"The current scope of the existing laboratory portion of the LOINC  database includes all observations reported by clinical laboratories, including the specialty areas: chemistry, including therapeutic drug monitoring and toxicology; hematology; serology; blood bank; microbiology; cytology; surgical pathology; and fertility.",
+        "description": "This value set defines two letter USPS alphabetic codes.",
         "exampleBoolean": false,
-        "name": "US Core Laboratory Test Codes"
+        "name": "USPS Two Letter Alphabetic Codes"
       },
       {
         "reference": {
-          "reference": "Observation/AHC-HRSN-item-example-68517-2"
+          "reference": "Observation/weight"
         },
-        "name": "AHC-HRSN-item-example-68517-2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Device/udi-2"
-        },
-        "name": "udi-2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
-      },
-      {
-        "reference": {
-          "reference": "Device/udi-3"
-        },
-        "name": "udi-3",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
-      },
-      {
-        "reference": {
-          "reference": "DiagnosticReport/bone-density-report"
-        },
-        "name": "bone-density-report",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
-      },
-      {
-        "reference": {
-          "reference": "DiagnosticReport/cardiology-report"
-        },
-        "name": "cardiology-report",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
-      },
-      {
-        "reference": {
-          "reference": "DiagnosticReport/chest-xray-report"
-        },
-        "name": "chest-xray-report",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note"
-      },
-      {
-        "reference": {
-          "reference": "Observation/10-minute-apgar-color"
-        },
-        "name": "10-minute-apgar-color",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/10-minute-apgar-heart-rate"
-        },
-        "name": "10-minute-apgar-heart-rate",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/10-minute-apgar-muscle-tone"
-        },
-        "name": "10-minute-apgar-muscle-tone",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/10-minute-apgar-reflex-irritability"
-        },
-        "name": "10-minute-apgar-reflex-irritability",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/10-minute-apgar-respiratory-effort"
-        },
-        "name": "10-minute-apgar-respiratory-effort",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/10-minute-apgar-score-panel"
-        },
-        "name": "10-minute-apgar-score-panel",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/10-minute-apgar-score"
-        },
-        "name": "10-minute-apgar-score",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/HVS-item-example-88122-7"
-        },
-        "name": "HVS-item-example-88122-7",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/HVS-item-example-88123-5"
-        },
-        "name": "HVS-item-example-88123-5",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/HVS-item-example-88124-3"
-        },
-        "name": "HVS-item-example-88124-3",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/HVS-panel-example-88121-9"
-        },
-        "name": "HVS-panel-example-88121-9",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-item-example-44250-9"
-        },
-        "name": "PHQ9-item-example-44250-9",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-item-example-44251-7"
-        },
-        "name": "PHQ9-item-example-44251-7",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-item-example-44252-5"
-        },
-        "name": "PHQ9-item-example-44252-5",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-item-example-44253-3"
-        },
-        "name": "PHQ9-item-example-44253-3",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-item-example-44254-1"
-        },
-        "name": "PHQ9-item-example-44254-1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-item-example-44255-8"
-        },
-        "name": "PHQ9-item-example-44255-8",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-item-example-44258-2"
-        },
-        "name": "PHQ9-item-example-44258-2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-item-example-44259-0"
-        },
-        "name": "PHQ9-item-example-44259-0",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-item-example-44260-8"
-        },
-        "name": "PHQ9-item-example-44260-8",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-item-example-44261-6"
-        },
-        "name": "PHQ9-item-example-44261-6",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-item-example-69722-7"
-        },
-        "name": "PHQ9-item-example-69722-7",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PHQ9-panel-example-44249-1"
-        },
-        "name": "PHQ9-panel-example-44249-1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-54899-0"
-        },
-        "name": "PRAPARE-item-example-54899-0",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-56051-6"
-        },
-        "name": "PRAPARE-item-example-56051-6",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-56799-0"
-        },
-        "name": "PRAPARE-item-example-56799-0",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-63512-8"
-        },
-        "name": "PRAPARE-item-example-63512-8",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-63586-2"
-        },
-        "name": "PRAPARE-item-example-63586-2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-67875-5"
-        },
-        "name": "PRAPARE-item-example-67875-5",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-71802-3"
-        },
-        "name": "PRAPARE-item-example-71802-3",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-76437-3"
-        },
-        "name": "PRAPARE-item-example-76437-3",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-76501-6"
-        },
-        "name": "PRAPARE-item-example-76501-6",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-82589-3"
-        },
-        "name": "PRAPARE-item-example-82589-3",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-93026-3"
-        },
-        "name": "PRAPARE-item-example-93026-3",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-93027-1"
-        },
-        "name": "PRAPARE-item-example-93027-1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-93028-9"
-        },
-        "name": "PRAPARE-item-example-93028-9",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-93029-7"
-        },
-        "name": "PRAPARE-item-example-93029-7",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-93030-5"
-        },
-        "name": "PRAPARE-item-example-93030-5",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-93033-9"
-        },
-        "name": "PRAPARE-item-example-93033-9",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-93034-7"
-        },
-        "name": "PRAPARE-item-example-93034-7",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-93035-4"
-        },
-        "name": "PRAPARE-item-example-93035-4",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-item-example-93038-8"
-        },
-        "name": "PRAPARE-item-example-93038-8",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-multiselect-item-example-32624-9-answer0"
-        },
-        "name": "PRAPARE-multiselect-item-example-32624-9-answer0",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-multiselect-item-example-32624-9-answer1"
-        },
-        "name": "PRAPARE-multiselect-item-example-32624-9-answer1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-multiselect-item-example-93031-3-answer0"
-        },
-        "name": "PRAPARE-multiselect-item-example-93031-3-answer0",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-multiselect-item-example-93031-3-answer1"
-        },
-        "name": "PRAPARE-multiselect-item-example-93031-3-answer1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-panel-example-93025-5"
-        },
-        "name": "PRAPARE-panel-example-93025-5",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-panel-example-93039-6"
-        },
-        "name": "PRAPARE-panel-example-93039-6",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-panel-example-93040-4"
-        },
-        "name": "PRAPARE-panel-example-93040-4",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-panel-example-93041-2"
-        },
-        "name": "PRAPARE-panel-example-93041-2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-panel-example-93042-0"
-        },
-        "name": "PRAPARE-panel-example-93042-0",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/PRAPARE-panel-example-93043-8"
-        },
-        "name": "PRAPARE-panel-example-93043-8",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-      },
-      {
-        "reference": {
-          "reference": "Observation/simple-observation-cognitive-status"
-        },
-        "name": "simple-observation-cognitive-status",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
-      },
-      {
-        "reference": {
-          "reference": "Observation/simple-observation-disability-status"
-        },
-        "name": "simple-observation-disability-status",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
-      },
-      {
-        "reference": {
-          "reference": "Observation/simple-observation-sdoh"
-        },
-        "name": "simple-observation-sdoh",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
-      },
-      {
-        "reference": {
-          "reference": "Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2"
-        },
-        "name": "66c8856b-ba11-4876-8aa8-467aad8c11a2",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Procedure/defib-implant"
-        },
-        "name": "defib-implant",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
-      },
-      {
-        "reference": {
-          "reference": "Questionnaire/hunger-vital-sign-example"
-        },
-        "name": "hunger-vital-sign-example",
-        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
-      },
-      {
-        "reference": {
-          "reference": "Questionnaire/phq-9-example"
-        },
-        "name": "phq-9-example",
-        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
-      },
-      {
-        "reference": {
-          "reference": "Questionnaire/prapare-example"
-        },
-        "name": "prapare-example",
-        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
-      },
-      {
-        "reference": {
-          "reference": "QuestionnaireResponse/prapare-example"
-        },
-        "name": "prapare-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
-      },
-      {
-        "reference": {
-          "reference": "QuestionnaireResponse/glascow-coma-score"
-        },
-        "name": "glascow-coma-score",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
-      },
-      {
-        "reference": {
-          "reference": "QuestionnaireResponse/hunger-vital-sign-example"
-        },
-        "name": "hunger-vital-sign-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
-      },
-      {
-        "reference": {
-          "reference": "QuestionnaireResponse/phq-9-example"
-        },
-        "name": "phq-9-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
-      },
-      {
-        "reference": {
-          "reference": "AllergyIntolerance/example"
-        },
-        "name": "example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
-      },
-      {
-        "reference": {
-          "reference": "Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901"
-        },
-        "name": "c887e62f-6166-419f-8268-b5ecd6c7b901",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Observation/at-home-in-vitro-test"
-        },
-        "name": "at-home-in-vitro-test",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/blood-pressure"
-        },
-        "name": "blood-pressure",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
-      },
-      {
-        "reference": {
-          "reference": "Observation/bmi"
-        },
-        "name": "bmi",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi"
-      },
-      {
-        "reference": {
-          "reference": "Observation/bp-data-absent"
-        },
-        "name": "bp-data-absent",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure"
-      },
-      {
-        "reference": {
-          "reference": "Bundle/docref-example-1"
-        },
-        "name": "docref-example-1",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Bundle/docref-example-2"
-        },
-        "name": "docref-example-2",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Observation/capillary-refill-time-nail-bed"
-        },
-        "name": "capillary-refill-time-nail-bed",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "CareTeam/example"
-        },
-        "name": "example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
-      },
-      {
-        "reference": {
-          "reference": "CarePlan/colonoscopy"
-        },
-        "name": "colonoscopy",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan"
-      },
-      {
-        "reference": {
-          "reference": "Condition/condition-SDOH-example"
-        },
-        "name": "condition-SDOH-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
-      },
-      {
-        "reference": {
-          "reference": "Condition/condition-duodenal-ulcer"
-        },
-        "name": "condition-duodenal-ulcer",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
-      },
-      {
-        "reference": {
-          "reference": "Condition/encounter-diagnosis-example1"
-        },
-        "name": "encounter-diagnosis-example1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
-      },
-      {
-        "reference": {
-          "reference": "Condition/encounter-diagnosis-example2"
-        },
-        "name": "encounter-diagnosis-example2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
-      },
-      {
-        "reference": {
-          "reference": "Coverage/coverage-example"
-        },
-        "name": "coverage-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage"
-      },
-      {
-        "reference": {
-          "reference": "DiagnosticReport/cbc"
-        },
-        "name": "cbc",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
-      },
-      {
-        "reference": {
-          "reference": "DiagnosticReport/metabolic-panel"
-        },
-        "name": "metabolic-panel",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/discharge-summary"
-        },
-        "name": "discharge-summary",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
-      },
-      {
-        "reference": {
-          "reference": "Observation/dxa-femur-l-armass-bmd"
-        },
-        "name": "dxa-femur-l-armass-bmd",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/dxa-femur-l-t-score-bmd"
-        },
-        "name": "dxa-femur-l-t-score-bmd",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/dxa-femur-l-z-score-bmd"
-        },
-        "name": "dxa-femur-l-z-score-bmd",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/dxa-hip-l-armass-bmd"
-        },
-        "name": "dxa-hip-l-armass-bmd",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/dxa-hip-l-t-score-bmd"
-        },
-        "name": "dxa-hip-l-t-score-bmd",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/dxa-hip-l-z-score-bmd"
-        },
-        "name": "dxa-hip-l-z-score-bmd",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/ekg-impression"
-        },
-        "name": "ekg-impression",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/ekg-lead"
-        },
-        "name": "ekg-lead",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Encounter/1036"
-        },
-        "name": "1036",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-      },
-      {
-        "reference": {
-          "reference": "Encounter/delivery"
-        },
-        "name": "delivery",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-      },
-      {
-        "reference": {
-          "reference": "Encounter/example-1"
-        },
-        "name": "example-1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
-      },
-      {
-        "reference": {
-          "reference": "DocumentReference/episode-summary"
-        },
-        "name": "episode-summary",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
-      },
-      {
-        "reference": {
-          "reference": "Organization/example-organization-2"
-        },
-        "name": "example-organization-2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-      },
-      {
-        "reference": {
-          "reference": "ServiceRequest/foodpantry-referral"
-        },
-        "name": "foodpantry-referral",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
-      },
-      {
-        "reference": {
-          "reference": "Goal/goal-1"
-        },
-        "name": "goal-1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
-      },
-      {
-        "reference": {
-          "reference": "Goal/goal-sdoh-2"
-        },
-        "name": "goal-sdoh-2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal"
-      },
-      {
-        "reference": {
-          "reference": "Observation/head-circumference"
-        },
-        "name": "head-circumference",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-head-circumference"
-      },
-      {
-        "reference": {
-          "reference": "Condition/health-concern-example"
-        },
-        "name": "health-concern-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns"
-      },
-      {
-        "reference": {
-          "reference": "Observation/heart-rate-rhythm"
-        },
-        "name": "heart-rate-rhythm",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/heart-rate"
-        },
-        "name": "heart-rate",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"
-      },
-      {
-        "reference": {
-          "reference": "Observation/height"
-        },
-        "name": "height",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height"
-      },
-      {
-        "reference": {
-          "reference": "Location/hl7east"
-        },
-        "name": "hl7east",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
-      },
-      {
-        "reference": {
-          "reference": "Immunization/imm-1"
-        },
-        "name": "imm-1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
-      },
-      {
-        "reference": {
-          "reference": "Observation/jugular-vein-distension"
-        },
-        "name": "jugular-vein-distension",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/length"
-        },
-        "name": "length",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-height"
-      },
-      {
-        "reference": {
-          "reference": "Location/hospital"
-        },
-        "name": "hospital",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
-      },
-      {
-        "reference": {
-          "reference": "Media/chest-xray"
-        },
-        "name": "chest-xray",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "Media/ekg-strip"
-        },
-        "name": "ekg-strip",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "MedicationDispense/medicationdispense-example"
-        },
-        "name": "medicationdispense-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense"
-      },
-      {
-        "reference": {
-          "reference": "MedicationRequest/medicationrequest-coded-oral-axid"
-        },
-        "name": "medicationrequest-coded-oral-axid",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
-      },
-      {
-        "reference": {
-          "reference": "MedicationRequest/medicationrequest-contained-oral-axid"
-        },
-        "name": "medicationrequest-contained-oral-axid",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
-      },
-      {
-        "reference": {
-          "reference": "MedicationRequest/medicationrequest-referenced-oral-axid"
-        },
-        "name": "medicationrequest-referenced-oral-axid",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
-      },
-      {
-        "reference": {
-          "reference": "MedicationRequest/self-tylenol"
-        },
-        "name": "self-tylenol",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
-      },
-      {
-        "reference": {
-          "reference": "CareTeam/missing-coded-data-example"
-        },
-        "name": "missing-coded-data-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
-      },
-      {
-        "reference": {
-          "reference": "Observation/cbc-erythrocytes"
-        },
-        "name": "cbc-erythrocytes",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/cbc-hematocrit"
-        },
-        "name": "cbc-hematocrit",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/cbc-hemoglobin"
-        },
-        "name": "cbc-hemoglobin",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/cbc-leukocytes"
-        },
-        "name": "cbc-leukocytes",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/cbc-mch"
-        },
-        "name": "cbc-mch",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/cbc-mchc"
-        },
-        "name": "cbc-mchc",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/cbc-mcv"
-        },
-        "name": "cbc-mcv",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/cbc-platelets"
-        },
-        "name": "cbc-platelets",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/observation-occupation-industry-unknown"
-        },
-        "name": "observation-occupation-industry-unknown",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"
-      },
-      {
-        "reference": {
-          "reference": "Observation/observation-occupation-unknown"
-        },
-        "name": "observation-occupation-unknown",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"
-      },
-      {
-        "reference": {
-          "reference": "Observation/observation-occupation"
-        },
-        "name": "observation-occupation",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-occupation"
-      },
-      {
-        "reference": {
-          "reference": "Observation/pregnancy-intent"
-        },
-        "name": "pregnancy-intent",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancyintent"
-      },
-      {
-        "reference": {
-          "reference": "Observation/pregnancy-status"
-        },
-        "name": "pregnancy-status",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus"
-      },
-      {
-        "reference": {
-          "reference": "Observation/satO2-fiO2"
-        },
-        "name": "satO2-fiO2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
-      },
-      {
-        "reference": {
-          "reference": "Observation/serum-bun"
-        },
-        "name": "serum-bun",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/serum-calcium"
-        },
-        "name": "serum-calcium",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/serum-chloride"
-        },
-        "name": "serum-chloride",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/serum-co2"
-        },
-        "name": "serum-co2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/serum-creatinine"
-        },
-        "name": "serum-creatinine",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/serum-glucose"
-        },
-        "name": "serum-glucose",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/serum-potassium"
-        },
-        "name": "serum-potassium",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/serum-sodium"
-        },
-        "name": "serum-sodium",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Observation/serum-total-bilirubin"
-        },
-        "name": "serum-total-bilirubin",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+        "description": "This is a weight example for the *Vitalsigns Profile*.",
+        "name": "Weight Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight"
       },
       {
         "reference": {
           "reference": "Observation/xray-chest-findings"
         },
-        "name": "xray-chest-findings",
+        "description": "This example of a US Core Observation Clinical Result Profile illustrates its use to capture information about a patient's radiology study findings.",
+        "name": "Xray Chest Findings Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
       },
       {
         "reference": {
           "reference": "Observation/xray-chest-impression"
         },
-        "name": "xray-chest-impression",
+        "description": "This example of a US Core Observation Clinical Result Profile illustrates its use to capture information about a patient's radiology study impression.",
+        "name": "Xray Chest Impression Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/ofc-percentile"
-        },
-        "name": "ofc-percentile",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/head-occipital-frontal-circumference-percentile"
-      },
-      {
-        "reference": {
-          "reference": "Organization/acme-lab"
-        },
-        "name": "acme-lab",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-      },
-      {
-        "reference": {
-          "reference": "Organization/acme-payer"
-        },
-        "name": "acme-payer",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-      },
-      {
-        "reference": {
-          "reference": "Organization/holy-healthcare"
-        },
-        "name": "holy-healthcare",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-      },
-      {
-        "reference": {
-          "reference": "Observation/oxygen-saturation"
-        },
-        "name": "oxygen-saturation",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry"
-      },
-      {
-        "reference": {
-          "reference": "Observation/p-r-interval-ekg-lead"
-        },
-        "name": "p-r-interval-ekg-lead",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Patient/child-example"
-        },
-        "name": "child-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-      },
-      {
-        "reference": {
-          "reference": "Patient/deceased-example"
-        },
-        "name": "deceased-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-      },
-      {
-        "reference": {
-          "reference": "Patient/example-targeted-provenance"
-        },
-        "name": "example-targeted-provenance",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-      },
-      {
-        "reference": {
-          "reference": "Patient/example"
-        },
-        "name": "example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-      },
-      {
-        "reference": {
-          "reference": "Patient/infant-example"
-        },
-        "name": "infant-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-      },
-      {
-        "reference": {
-          "reference": "Observation/pediatric-bmi-example"
-        },
-        "name": "pediatric-bmi-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age"
-      },
-      {
-        "reference": {
-          "reference": "Observation/pediatric-wt-example"
-        },
-        "name": "pediatric-wt-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height"
-      },
-      {
-        "reference": {
-          "reference": "Practitioner/practitioner-1"
-        },
-        "name": "practitioner-1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-      },
-      {
-        "reference": {
-          "reference": "Practitioner/practitioner-2"
-        },
-        "name": "practitioner-2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-      },
-      {
-        "reference": {
-          "reference": "Practitioner/practitioner-pharmacist"
-        },
-        "name": "practitioner-pharmacist",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-      },
-      {
-        "reference": {
-          "reference": "Procedure/rehab"
-        },
-        "name": "rehab",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
-      },
-      {
-        "reference": {
-          "reference": "Provenance/example-targeted-provenance"
-        },
-        "name": "example-targeted-provenance",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
-      },
-      {
-        "reference": {
-          "reference": "Observation/pulse-intensity-palpation"
-        },
-        "name": "pulse-intensity-palpation",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/q-t-interval-ekg-lead"
-        },
-        "name": "q-t-interval-ekg-lead",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "Observation/qrs-dur-ekg-lead"
-        },
-        "name": "qrs-dur-ekg-lead",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-      },
-      {
-        "reference": {
-          "reference": "RelatedPerson/shaw-niece"
-        },
-        "name": "shaw-niece",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson"
-      },
-      {
-        "reference": {
-          "reference": "Observation/respiratory-rate"
-        },
-        "name": "respiratory-rate",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
-      },
-      {
-        "reference": {
-          "reference": "Organization/saint-luke-w-endpoint"
-        },
-        "name": "saint-luke-w-endpoint",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-      },
-      {
-        "reference": {
-          "reference": "ServiceRequest/defib-implant"
-        },
-        "name": "defib-implant",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
-      },
-      {
-        "reference": {
-          "reference": "ServiceRequest/rehab"
-        },
-        "name": "rehab",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
-      },
-      {
-        "reference": {
-          "reference": "Observation/sexual-orientation-example"
-        },
-        "name": "sexual-orientation-example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-sexual-orientation"
-      },
-      {
-        "reference": {
-          "reference": "Observation/some-day-smoker"
-        },
-        "name": "some-day-smoker",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus"
-      },
-      {
-        "reference": {
-          "reference": "Specimen/specimen-example-serum"
-        },
-        "name": "specimen-example-serum",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
-      },
-      {
-        "reference": {
-          "reference": "Observation/temperature"
-        },
-        "name": "temperature",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature"
-      },
-      {
-        "reference": {
-          "reference": "Device/udi-1"
-        },
-        "name": "udi-1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-implantable-device"
-      },
-      {
-        "reference": {
-          "reference": "Observation/urobilinogen"
-        },
-        "name": "urobilinogen",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "Medication/uscore-med1"
-        },
-        "name": "uscore-med1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
-      },
-      {
-        "reference": {
-          "reference": "Medication/uscore-med2"
-        },
-        "name": "uscore-med2",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication"
-      },
-      {
-        "reference": {
-          "reference": "Observation/weight"
-        },
-        "name": "weight",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-weight"
       }
     ],
     "page": {

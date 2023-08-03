@@ -26,14 +26,14 @@
                         "key": "pd-1",
                         "severity": "error",
                         "human": "SHALL have contact information or a reference to an Endpoint",
-                        "expression": "telecom or endpoint",
+                        "expression": "telecom.exists() or endpoint.exists()",
                         "xpath": "exists(f:telecom) or exists(f:endpoint)"
                     },
                     {
                         "key": "us-core-13",
                         "severity": "error",
                         "human": "SHALL have a practitioner, an organization, a healthcare service, or a location.",
-                        "expression": "practitioner or organization or healthcareService or location",
+                        "expression": "practitioner.exists() or organization.exists() or healthcareService.exists() or location.exists()",
                         "xpath": "exists(f:practitioner) or exists(f:organization) or exists(f:healthcareService) or exists(f:location)"
                     }
                 ],

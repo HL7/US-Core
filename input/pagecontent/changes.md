@@ -13,8 +13,10 @@ This ballot addresses the following:
 - Implementers submitted over \<N> trackers since the publication of US Core ver 6.0.0 and 6.1.0 We have addressed them and applied over \<N'> changes listed below:
 
  **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
-1. **Applied:** Correct invalid invariants us-core-3 and us-core-4 [FHIR-41523](https://jira.hl7.org/browse/FHIR-41523) [See Changes Here](StructureDefinition-us-core-smokingstatus.html)
+1. **Applied:** Correct invalid invariants us-core-3 and us-core-4 [FHIR-41523](https://jira.hl7.org/browse/FHIR-41523) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html) and [Here](StructureDefinition-us-core-smokingstatus.html)
 2. **Applied:** Correct invalid invariants pd-1 and us-core-13 [FHIR-41586](https://jira.hl7.org/browse/FHIR-41586) [See Changes Here](StructureDefinition-us-core-practitionerrole.html)
+3. **Applied:** Correct invalid invariant us-core-1 [FHIR-41670](https://jira.hl7.org/browse/FHIR-41670) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html)
+4. **Applied:** Correct invalid searchparameter expression for USCoreConditionAssertedDate [FHIR-41673](https://jira.hl7.org/browse/FHIR-41673) [See Changes Here](SearchParameter-us-core-condition-asserted-date.html)
 
 ### Version = 6.1.0
 - url: <http://hl7.org/fhir/us/core/STU6.1/>
