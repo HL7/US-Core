@@ -19,7 +19,6 @@ ERROR: StructureDefinition/us-core-vital-signs: StructureDefinition: illegal att
 # === Warnings and Discussed on FMG IG review and variance granted ===
 # ============================================================================
 
-
 # === VSAC issues - The tooling infrastructure currently is unable to access these codes. They have been checked and the concepts are correct (5) ===
 
 The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' doesnt provide any codes so the code cannot be validated
@@ -66,9 +65,8 @@ INFORMATION: Procedure/rehab: Procedure.code.coding[1]: The definition for the C
 
 INFORMATION: ServiceRequest/rehab: ServiceRequest.code.coding[1]: The definition for the Code System with URI 'http://www.cms.gov/Medicare/Coding/ICD10' doesnt provide any codes so the code cannot be validated
 
-
 # === Code System not recognized due to IP issues (9) ===
-s
+
 Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 The definition for the Code System with URI 'http://www.ama-assn.org/go/cpt' doesnt provide any codes so the code cannot be validated
 WARNING: Encounter/example-1: Encounter.type[0]: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|7.0.0-ballot
@@ -76,9 +74,6 @@ WARNING: Procedure/defib-implant: Procedure.code: Unable to check whether the co
 Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
 Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated
 WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|7.0.0-ballot
-
-
-
 
 # === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) NONE===
 
@@ -171,8 +166,7 @@ WARNING: SearchParameter/us-core-servicerequest-patient: SearchParameter.express
 WARNING: SearchParameter/us-core-specimen-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
 
 
-# === This Search Parameter expression `Goal.target.due as date` is inherited from the FHIR base.  This is a legitimate warning and in 
-in R5 the expression has been udpated to `(Goal.target.due.ofType(date))`.  Since US Core inherits from the FHIR R4 base this warning is acknowledged as an issue with the base specification.
+# === This Search Parameter expression `Goal.target.due as date` is inherited from the FHIR base.  This is a legitimate warning and in R5 the expression has been udpated to `(Goal.target.due.ofType(date))`.  Since US Core inherits from the FHIR R4 base this warning is acknowledged as an issue with the base specification.
 
 WARNING: SearchParameter/us-core-goal-target-date: SearchParameter.expression: The left side is inherently a collection, and so the expression 'Goal.target.due as date' may fail or return false if there is more than one item in the content being evaluated
 
