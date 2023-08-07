@@ -400,3 +400,4 @@
 [Value Set Authority Center (VSAC)]: https://vsac.nlm.nih.gov/
 [PHQ-9]: https://en.wikipedia.org/wiki/PHQ-9
 [APGAR score]: https://en.wikipedia.org/wiki/Apgar_score
+[HL7 Terminology (THO)] : https://terminology.hl7.org/
