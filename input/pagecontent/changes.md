@@ -17,8 +17,8 @@ This ballot addresses the following:
 2. **Applied:** Correct invalid invariants pd-1 and us-core-13 [FHIR-41586](https://jira.hl7.org/browse/FHIR-41586) [See Changes Here](StructureDefinition-us-core-practitionerrole.html)
 3. **Applied:** Correct invalid invariant us-core-1 [FHIR-41670](https://jira.hl7.org/browse/FHIR-41670) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html)
 4. **Applied:** Correct invalid searchparameter expression for USCoreConditionAssertedDate [FHIR-41673](https://jira.hl7.org/browse/FHIR-41673) [See Changes Here](SearchParameter-us-core-condition-asserted-date.html)
-5. 4. **Pre-Applied:** List all valueset URLs and all VSAC Valuesets [FHIR-NNNN](https://jira.hl7.org/browse/FHIR-NNNN) [See Changes Here](terminology.html)
-
+5. **Pre-Applied:** List all valueset URLs and all VSAC Valuesets [FHIR-NNNN](https://jira.hl7.org/browse/FHIR-NNNN) [See Changes Here](terminology.html)
+6. **Applied:** Fix Typo in Tribal Extension [FHIR-41739](https://jira.hl7.org/browse/FHIR-41739) [See Changes Here](StructureDefinition-us-core-tribal-affiliation.profile.json.html)
 ### Version = 6.1.0
 - url: <http://hl7.org/fhir/us/core/STU6.1/>
 - Based on FHIR version : 4.0.1
