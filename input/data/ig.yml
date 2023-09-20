@@ -132,6 +132,13 @@ definition:
     name: AllergyIntolerance Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance
   - reference:
+      reference: AllergyIntolerance/non-pharmacologic-agent-example
+    description: This is a allergyintolerance example for the *US Core AllergyIntolerance
+      Profile* representing a non-pharmacologic substance (latex) that the patient
+      is allergic to.
+    name: AllergyIntolerance Non-pharmacologic agent example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance
+  - reference:
       reference: Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901
     description: This is a allergyintolerance provenance example for the *Bundle Profile*.
     name: AllergyIntolerance Provenance Example
