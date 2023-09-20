@@ -9,8 +9,17 @@ meta:
       Profile*.
   profile:
   - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+identifier:
+  - system: 'http://hl7.org/fhir/sid/us-npi'
+    value: '1234567893'
 status: active
 name: Holy Family Hospital
+type:
+  - coding:
+      - system: 'http://terminology.hl7.org/CodeSystem/v3-RoleCode'
+        code: HOSP
+        display: Hospital
+    text: Hospital
 telecom:
 - system: phone
   value: '9786870156'

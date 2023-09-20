@@ -13,6 +13,12 @@ identifier:
   value: '29'
 status: active
 name: Health Level Seven International - Amherst
+type:
+  - coding:
+      - system: 'http://terminology.hl7.org/CodeSystem/v3-RoleCode'
+        code: _DedicatedNonClinicalLocationRoleType
+        display: DedicatedNonClinicalLocationRoleType
+    text: Administrative Office
 description: HL7 Headquarters - East
 telecom:
 - system: phone
