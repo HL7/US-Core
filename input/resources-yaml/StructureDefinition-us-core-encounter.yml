@@ -216,6 +216,11 @@ differential:
       valueBoolean: true
     path: Encounter.location.location
     short: (USCDI) Location the encounter takes place
+    type:
+        - code: Reference
+          targetProfile:
+            - >-
+              http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
     mustSupport: true
   - id: Encounter.serviceProvider
     extension:

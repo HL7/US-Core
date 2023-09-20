@@ -73,6 +73,11 @@ differential:
         valueSet: 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.1066'
     - id: PractitionerRole.location
       path: PractitionerRole.location
+      type:
+        - code: Reference
+          targetProfile:
+            - >-
+              http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
       condition:
         - us-core-13
       mustSupport: true

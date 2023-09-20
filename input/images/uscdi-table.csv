@@ -64,11 +64,11 @@
 ,Laboratory,US Core Laboratory Result Observation Profile| US Core Specimen Profile,Specimen Type,US Core Laboratory Result Observation Profile| US Core Specimen Profile,"Observation.specimen, Specimen",,
 ,Laboratory,US Core Laboratory Result Observation Profile| US Core DiagnosticReport Profile for Laboratory Results Reporting,Result Status,US Core Laboratory Result Observation Profile| US Core DiagnosticReport Profile for Laboratory Results Reporting,"Observation.status, DiagnosticReport.status",,
 13,Medications,US Core MedicationRequest Profile | US Core MedicationDispense Profile | US Core Medication Profile,,,"MedicationRequest, MedicationDispense, Medication",,
-,Medications,US Core Medication Profile | US Core Medication Request Profile,Medications,US Core Medication Profile|  US Core Medication Request Profile,"Medication.code, MedicationRequest.medication[x]",See Medication List Guidance,medication-list.html
-,Medications,US Core Medication Request Profile,Dose,US Core Medication Request Profile,MedicationRequest.dosageInstruction.doseAndRate,,
-,Medications,US Core Medication Request Profile,Dose Unit of Measure,US Core Medication Request Profile,MedicationRequest.dosageInstruction.doseAndRate,,
-,Medications,US Core Medication Request Profile,Indication,US Core Medication Request Profile,"MedicationRequest.reasonCode, Medication, MedicationreasonReference",,
-,Medications,US Core Medication Dispense Profile,Fill Status,US Core Medication Profile|  US Core Medication Dispense Profile,MedicationDispense,,
+,Medications,US Core Medication Profile | US Core MedicationRequest Profile,Medications,US Core Medication Profile|  US Core MedicationRequest Profile,"Medication.code, MedicationRequest.medication[x]",See Medication List Guidance,medication-list.html
+,Medications,US Core MedicationRequest Profile,Dose,US Core MedicationRequest Profile,MedicationRequest.dosageInstruction.doseAndRate,,
+,Medications,US Core MedicationRequest Profile,Dose Unit of Measure,US Core MedicationRequest Profile,MedicationRequest.dosageInstruction.doseAndRate,,
+,Medications,US Core MedicationRequest Profile,Indication,US Core MedicationRequest Profile,"MedicationRequest.reasonCode, Medication, MedicationreasonReference",,
+,Medications,US Core MedicationDispense Profile,Fill Status,US Core Medication Profile|  US Core MedicationDispense Profile,MedicationDispense,,
 14,Patient Demographics,US Core Patient Profile | US Core Observation Sexual Orientation Profile | US Core Observation Sexual Orientation Profile | US Core Observation Sexual Orientation Profile |US Core Observation Occupation Profile,,,"Patient, Observation",,
 ,Patient Demographics,US Core Patient Profile,First Name,US Core Patient Profile,Patient.name.given,,
 ,Patient Demographics,US Core Patient Profile,Last Name,US Core Patient Profile,Patient.name.family,,
