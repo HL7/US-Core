@@ -20,17 +20,19 @@ The following data elements must always be present ([Mandatory] definition) or m
 2. a medication*
 3. a patient
 
+
 \* see guidance below
 
 **Each MedicationDispense Must Support:**
 
-1. who dispensed the medication
-2. the authorizing prescription
-3. type of dispense (e.g., partially dispensed)
-4. the quantity dispensed
-5. a date for when dispensed to the patient
-6. free text dosage instructions (the *SIG*)
-7. the dose and rate
+1. <span class="bg-success" markdown="1">the encounter associated with the dispense</span><!-- new-content -->
+2. who dispensed the medication
+3. the authorizing prescription
+4. type of dispense (e.g., partially dispensed)
+5. the quantity dispensed
+6. a date for when dispensed to the patient
+7. free text dosage instructions (the *SIG*)
+8. the dose and rate
 
 
 **Profile Specific Implementation Guidance:**

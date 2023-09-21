@@ -94,6 +94,23 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Immunization.patient
+
+  - id: Immunization.encounter
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Immunization.encounter
+    short: (USCDI) Encounter the immunization was part of
+    # definition: The visit or admission or other contact between patient and health
+    #   care provider the immunization was performed as part of.
+    # alias:
+    # - Encounter
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+    mustSupport: true
+
   - id: Immunization.occurrence[x]
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -126,3 +143,21 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Immunization.reported
+
+  - id: Immunization.location
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Immunization.location
+    short: (USCDI) Where the vaccine was administered
+    # definition: The clinic or other location where the vaccine was administered.
+    # alias:
+    # - Location
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+    mustSupport: true
+    # mapping:
+    # - identity: argonaut-dq-dstu2
+    #   map: Immunization.location

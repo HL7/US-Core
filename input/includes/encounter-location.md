@@ -2,7 +2,7 @@
     - [US Core DiagnosticReport Profile for Laboratory Results Reporting]
     - [US Core Immunization Profile]
     - [US Core MedicationDispense Profile]
-    - [US Core Laboratory Result Observation Profile]
+    - [US Core Observation Clinical Result Profile]
     - [US Core Procedure Profile]
     - [US Core ServiceRequest Profile]
 

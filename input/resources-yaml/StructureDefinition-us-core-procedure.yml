@@ -78,6 +78,7 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Procedure.code
+
   - id: Procedure.subject
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -92,6 +93,22 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Procedure.subject
+
+  - id: Procedure.encounter
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Procedure.encounter
+    short: (USCDI) Encounter associated with the procedure
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+    mustSupport: true
+    # mapping:
+    # - identity: argonaut-dq-dstu2
+    #   map: Procedure.encounter
+
   - id: Procedure.performed[x]
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement

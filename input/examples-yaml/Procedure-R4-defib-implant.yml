@@ -23,6 +23,9 @@ code:
     transvenous lead(s), single or dual chamber
 subject:
   reference: Patient/example
+encounter:
+  reference: Encounter/example-1
+  display: Office Visit
 performedPeriod:
   start: '2019-03-26T12:55:26-07:00'
   end: '2019-03-26T13:25:26-07:00'

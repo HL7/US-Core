@@ -21,10 +21,11 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each Observation Must Support:**
 
-1. a time indicating when the measurement was taken
-2. a result value
+1. <span class="bg-success" markdown="1">encounter associated with Observation</span><!-- new-content -->
+2. a time indicating when the measurement was taken
+3. a result value
    - if the result value is a numeric quantity, a standard [UCUM] unit
-3. a reason why the data is absent*
+4. a reason why the data is absent*
 
 \* see guidance below
 

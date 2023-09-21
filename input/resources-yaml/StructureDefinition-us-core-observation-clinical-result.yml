@@ -93,6 +93,7 @@ differential:
     mustSupport: true
     binding:
       strength: extensible
+
   - id: Observation.subject
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -105,6 +106,19 @@ differential:
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     mustSupport: true
+
+  - id: Observation.encounter
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Observation.encounter
+    short: (USCDI) Encounter associated with Observation
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+    mustSupport: true
+
   - id: Observation.effective[x]
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement

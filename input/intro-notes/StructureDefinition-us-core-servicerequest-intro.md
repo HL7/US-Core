@@ -22,9 +22,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 **Each Service Request Must Support:**
 
 1.  a category
-1.  when requested service**SHOULD**happen
-1.  when the request was made
-1.  the requester
+2.  <span class="bg-success" markdown="1">the encounter in which the request was created</span><!-- new-content -->
+3.  when requested service**SHOULD**happen
+4.  when the request was made
+5.  the requester
 
 **Additional USCDI Requirements**
 

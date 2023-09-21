@@ -15,13 +15,15 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 1.  a status
 1.  a vaccine code that identifies the kind of vaccine administered
-1.  a date the vaccine was administered
 1.  a patient
+1.  <span class="bg-success" markdown="1">the encounter the immunization was part of</span><!-- new-content -->
+2.  a date the vaccine was administered
+3.  <span class="bg-success" markdown="1">where the vaccine was administered</span><!-- new-content -->
 
 **Each Immunization Must Support:**
 
 1.  a statusReason if the vaccine wasn't given
-1.  a flag to indicate whether the vaccine was reported by someone other than the person who administered the vaccine.
+2.  a flag to indicate whether the vaccine was reported by someone other than the person who administered the vaccine.
 
 **Profile Specific Implementation Guidance:**
 

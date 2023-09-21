@@ -12,20 +12,21 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each DiagnosticReport Must Have:**
 
-1.  a status
-1.  a category code of 'LAB'
-1.  a code (preferably a LOINC code) which tells you what is being measured
-1.  a patient
-1.  the diagnostically relevant time (known as the "effective time" and typically the time of specimen collection)*
-1.  when the report was released*
+1. a status
+1. a category code of 'LAB'
+1. a code (preferably a LOINC code) which tells you what is being measured
+1. a patient
+1. the diagnostically relevant time (known as the "effective time" and typically the time of specimen collection)*
+1. when the report was released*
 
 \*These elements have the following constraints: **SHALL** be present if status is
 'partial', 'preliminary', 'final', 'amended', 'corrected' or 'appended'.
 
 **Each DiagnosticReport Must Support:**
 
-1.   who issues the report
-1.   a result
+1. <span class="bg-success" markdown="1">encounter associated with DiagnosticReport</span><!-- new-content -->
+2. who issues the report
+3. a result
 
 **Profile Specific Implementation Guidance:**
 

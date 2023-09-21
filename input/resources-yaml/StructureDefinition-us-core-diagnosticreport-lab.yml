@@ -102,6 +102,7 @@ differential:
       strength: extensible
       description: LOINC codes
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-laboratory-test-codes
+      
   - id: DiagnosticReport.subject
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -115,6 +116,19 @@ differential:
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     mustSupport: true
+
+  - id: DiagnosticReport.encounter
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: DiagnosticReport.encounter
+    short: (USCDI) Encounter associated with DiagnosticReport
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+    mustSupport: true
+
   - id: DiagnosticReport.effective[x]
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement

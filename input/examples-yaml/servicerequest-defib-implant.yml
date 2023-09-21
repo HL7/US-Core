@@ -19,6 +19,10 @@ code:
     version: http://snomed.info/sct/731000124108
 subject:
   reference: Patient/example
+  display: Amy Shaw
+encounter:
+  reference: Encounter/example-1
+  display: Office Visit
 authoredOn: '2015-03-30'
 requester:
   reference: Practitioner/practitioner-2

@@ -176,7 +176,8 @@
         "reference": {
           "reference": "Observation/at-home-in-vitro-test"
         },
-        "name": "at-home-in-vitro-test",
+        "description": "This is an At home in vitro test example for the *US Core Observation Lab Profile*, with a coded result value.",
+        "name": "At Home In Vitro Test Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
       },
       {
@@ -240,7 +241,8 @@
         "reference": {
           "reference": "DiagnosticReport/cbc"
         },
-        "name": "cbc",
+        "description": "This is a CBC example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "CBC Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
       },
       {
@@ -357,20 +359,6 @@
       },
       {
         "reference": {
-          "reference": "Procedure/defib-implant"
-        },
-        "name": "defib-implant",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
-      },
-      {
-        "reference": {
-          "reference": "ServiceRequest/defib-implant"
-        },
-        "name": "defib-implant",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
-      },
-      {
-        "reference": {
           "reference": "Encounter/delivery"
         },
         "name": "delivery",
@@ -478,6 +466,14 @@
       },
       {
         "reference": {
+          "reference": "Encounter/example-1"
+        },
+        "description": "This is a encounter 1 example for the *US Core Encounter Profile*.",
+        "name": "Encounter 1 Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+      },
+      {
+        "reference": {
           "reference": "Condition/encounter-diagnosis-example1"
         },
         "name": "encounter-diagnosis-example1",
@@ -517,13 +513,6 @@
         },
         "name": "example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
-      },
-      {
-        "reference": {
-          "reference": "Encounter/example-1"
-        },
-        "name": "example-1",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
       },
       {
         "reference": {
@@ -613,7 +602,8 @@
         "reference": {
           "reference": "Location/hl7east"
         },
-        "name": "hl7east",
+        "description": "This is a HL7East example for the *US Core Location Profile*.",
+        "name": "HL7East Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
       },
       {
@@ -677,7 +667,8 @@
         "reference": {
           "reference": "Immunization/imm-1"
         },
-        "name": "imm-1",
+        "description": "This is a imm 1 example for the *US Core Immunization Profile*.",
+        "name": "Imm 1 Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization"
       },
       {
@@ -713,7 +704,8 @@
         "reference": {
           "reference": "MedicationDispense/medicationdispense-example"
         },
-        "name": "medicationdispense-example",
+        "description": "This is a dispense example for the *US Core MedicationDispense Profile*.",
+        "name": "Medication Dispense Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense"
       },
       {
@@ -741,7 +733,8 @@
         "reference": {
           "reference": "DiagnosticReport/metabolic-panel"
         },
-        "name": "metabolic-panel",
+        "description": "This is a metabolic panel example for the *US Core DiagnosticReport Lab Profile*.",
+        "name": "Metabolic Panel Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
       },
       {
@@ -1175,6 +1168,14 @@
       },
       {
         "reference": {
+          "reference": "Procedure/defib-implant"
+        },
+        "description": "This *US Core Procedure Profile* is an example of an Defibrillator implant Procedure.",
+        "name": "Procedure Defibrillator Implant Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
+      },
+      {
+        "reference": {
           "reference": "Observation/pulse-intensity-palpation"
         },
         "name": "pulse-intensity-palpation",
@@ -1198,15 +1199,9 @@
         "reference": {
           "reference": "Procedure/rehab"
         },
-        "name": "rehab",
+        "description": "This is a rehab example for the *US Core Procedure Profile*.",
+        "name": "Rehab Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
-      },
-      {
-        "reference": {
-          "reference": "ServiceRequest/rehab"
-        },
-        "name": "rehab",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
       },
       {
         "reference": {
@@ -1298,6 +1293,22 @@
         },
         "name": "serum-total-bilirubin",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/defib-implant"
+        },
+        "description": "This *US Core ServiceRequest Profile* is an example for a defibrillator implant referral request.",
+        "name": "ServiceRequest Defibrillator Implant Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/rehab"
+        },
+        "description": "This is an example requesting alcohol rehab sessions for a patient using the *US Core ServiceRequest Profile Profile*.",
+        "name": "ServiceRequest for Rehab Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
       },
       {
         "reference": {
@@ -2011,7 +2022,7 @@
         "reference": {
           "reference": "CapabilityStatement/us-core-server"
         },
-        "description": "This Section describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ONC 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ONC [U.S. Core Data for Interoperability (USCDI) Version 3 July 2022](https://www.healthit.gov/isa/sites/isa/files/2022-07/USCDI-Version-3-July-2022-Final.pdf).  US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
+        "description": "This Section describes the expected capabilities of the US Core Server actor which is responsible for providing responses to the queries submitted by the US Core Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by US Core Servers are defined. Systems implementing this capability statement should meet the ONC 2015 Common Clinical Data Set (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application Access - Data Category Request 170.315(g)(8) and the ONC [U.S. Core Data for Interoperability (USCDI) Version 4 July 2023](https://www.healthit.gov/sites/isa/files/2023-07/Final-USCDI-Version-4-July-2023-Final.pdf).  US Core Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
         "exampleBoolean": false,
         "name": "US Core Server CapabilityStatement"
       },

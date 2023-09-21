@@ -362,6 +362,14 @@
                 ],
                 "path": "Encounter.location.location",
                 "short": "(USCDI) Location the encounter takes place",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                        ]
+                    }
+                ],
                 "mustSupport": true
             },
             {

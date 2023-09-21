@@ -123,6 +123,26 @@
                 "mustSupport": true
             },
             {
+                "id": "ServiceRequest.encounter",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
+                "path": "ServiceRequest.encounter",
+                "short": "(USCDI) Encounter in which the request was created",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
                 "id": "ServiceRequest.occurrence[x]",
                 "extension": [
                     {

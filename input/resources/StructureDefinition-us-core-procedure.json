@@ -135,6 +135,26 @@
                 ]
             },
             {
+                "id": "Procedure.encounter",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
+                "path": "Procedure.encounter",
+                "short": "(USCDI) Encounter associated with the procedure",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
                 "id": "Procedure.performed[x]",
                 "extension": [
                     {

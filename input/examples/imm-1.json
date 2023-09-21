@@ -26,6 +26,14 @@
     "reference": "Patient/example",
     "display": "Amy Shaw"
   },
+  "encounter": {
+    "reference": "Encounter/example-1",
+    "display": "Office Visit"
+  },
   "occurrenceDateTime": "2020-11-19T12:46:57-08:00",
-  "primarySource": false
+  "primarySource": false,
+  "location": {
+    "reference": "Location/hospital",
+    "display": "Holy Family Hospital"
+  }
 }

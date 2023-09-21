@@ -93,6 +93,14 @@
             {
                 "id": "PractitionerRole.location",
                 "path": "PractitionerRole.location",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                        ]
+                    }
+                ],
                 "condition": [
                     "us-core-13"
                 ],

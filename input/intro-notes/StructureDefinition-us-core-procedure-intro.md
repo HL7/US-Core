@@ -17,7 +17,13 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  a status
 1.  a code that identifies the type of procedure performed on the patient
 1.  a patient
-1.  when the procedure was performed
+2.  when the procedure was performed*
+
+\*This elements have the following constraints: **SHALL** be present if status is 'completed' or 'in-progress'.
+
+**Each Procedure Must Support:**
+
+1.  <span class="bg-success" markdown="1">the encounter associated with the procedure</span><!-- new-content -->
 
 
 **Additional USCDI Requirements**
@@ -27,7 +33,6 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  A reference to the request for the procedure*
 
 \*see guidance below
-
 
 **Profile Specific Implementation Guidance:**
 

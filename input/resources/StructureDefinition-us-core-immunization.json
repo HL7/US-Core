@@ -143,6 +143,26 @@
                 ]
             },
             {
+                "id": "Immunization.encounter",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
+                "path": "Immunization.encounter",
+                "short": "(USCDI) Encounter the immunization was part of",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
                 "id": "Immunization.occurrence[x]",
                 "extension": [
                     {
@@ -193,6 +213,26 @@
                         "map": "Immunization.reported"
                     }
                 ]
+            },
+            {
+                "id": "Immunization.location",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
+                "path": "Immunization.location",
+                "short": "(USCDI) Where the vaccine was administered",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+                        ]
+                    }
+                ],
+                "mustSupport": true
             }
         ]
     }
