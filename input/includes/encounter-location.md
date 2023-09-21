@@ -6,4 +6,4 @@
     - [US Core Procedure Profile]
     - [US Core ServiceRequest Profile]
 
-  If the event facility/location differs from the Encounter.location, systems **SHOULD** reference it directly using the resource's `.location` element or standard [FHIR Extension].
+  If the event facility/location differs from (and isn't contained/within) the Encounter.location, systems **SHOULD** reference it directly using the resource's `.location` element if present, or a standard [FHIR Extension].

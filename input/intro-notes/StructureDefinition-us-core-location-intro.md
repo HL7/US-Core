@@ -13,10 +13,9 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  <span class="bg-success" markdown="1">Location or facility identifier`</span><!-- new-content -->
 2.  A status (whether in use)
 3.   <span class="bg-success" markdown="1">The type of location or facility</span><!-- new-content -->
-4.  A Location name
-5.  Contact details of the location
-6.  A Location address
-7.  The managing organization
+4.  Contact details of the location
+5.  A Location address
+6.  The managing organization
 
 **Additional Profile specific implementation guidance:**
 

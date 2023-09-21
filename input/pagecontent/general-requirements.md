@@ -226,7 +226,7 @@ There are situations when information on a particular data element is missing, a
              {
                "extension": [
                  {
-                   "url": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                   "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
                    "valueCode": "unknown"
                  }
                ]
