@@ -7,8 +7,8 @@
 This ballot addresses the following:
 
 - We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v4] Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2023:
-  - For USCDI Allergies and Intolerances Substance (Non-Medication) data element, no change was needed for [US Core AllergyIntolerance] because the existing `code` element binding to [Common substances for allergy and intolerance documentation including refutations](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion) already includes "Non-pharmacologic agent"
-  - For USCDI Facility Information data class and elements, [US Core Location] already supports Facility Name and has been updated to support Facility Identifier and Type.  The [US Core Immunization Profile] has been updated to reference the US Core Location resource directly, and the following US Core Profiles have been updated to *indirectly* reference the location/facility via [US Core Encounter]:
+  - For USCDI Allergies and Intolerances Substance (Non-Medication) data element, no change was needed for [US Core AllergyIntolerance Profile] because the existing `code` element binding to [Common substances for allergy and intolerance documentation including refutations](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion) already includes "Non-pharmacologic agent"
+  - For USCDI Facility Information data class and elements, [US Core Location Profile] already supports Facility Name and has been updated to support Facility Identifier and Type.  The [US Core Immunization Profile] has been updated to reference the US Core Location resource directly, and the following US Core Profiles have been updated to *indirectly* reference the location/facility via [US Core Encounter Profile]:
     - [US Core DiagnosticReport Profile for Laboratory Results Reporting]
     - [US Core Immunization Profile]
     - [US Core MedicationDispense Profile]
