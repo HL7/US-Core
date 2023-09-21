@@ -29,6 +29,7 @@
 ,Diagnostic Imaging,US Core Observation Clinical Result Profile| US Core DiagnosticReport Profile for Report and Note Exchange,Diagnostic Imaging Test,US Core Observation Diagnostic Imaging Result Profile| US Core DiagnosticReport Profile for Report and Note exchange,"Observation, DiagnosticReport",,
 ,Diagnostic Imaging,US Core Observation Clinical Result Profile| US Core DiagnosticReport Profile for Report and Note Exchange,Diagnostic Imaging Result/Report,US Core Observation Diagnostic Imaging Result Profile| US Core DiagnosticReport Profile for Report and Note exchange,"Observation, DiagnosticReport",,
 6,Encounter,US Core Encounter Profile,,US Core Encounter Profile,Encounter,,
+,Encounter,US Core Encounter Profile,Identifier,US Core Encounter Profile,Encounter.identifier,,
 ,Encounter,US Core Encounter Profile,Type,US Core Encounter Profile,Encounter.type,,
 ,Encounter,US Core Condition Encounter Diagnosis Profile,Diagnosis,US Core Condition Encounter Diagnosis Profile,Condition.code,,
 ,Encounter,US Core Encounter Profile,Time,US Core Encounter Profile,Encounter.period,,
@@ -98,6 +99,7 @@
 ,Problems,US Core Condition Problems and Health Concerns Profile,SDOH Problems/Health Concerns,US Core Condition Problems and Health Concerns Profile,Condition,See Screening and Assessments Guidance,screening-and-assessments.html
 16,Procedures,US Core Procedure Profile | US Core ServiceRequest Profile,,,"Procedure, ServiceRequest",,
 ,Procedures,US Core Procedure Profile,Procedure,US Core Procedure Profile,Procedure,,
+,Procedures,US Core Procedure Profile|US Core DiagnosticReport Profile for Report and Note Exchange|US Core Immunization Profile,Time of Procedure,US Core Procedure Profile|US Core DiagnosticReport Profile for Report and Note Exchange|US Core Immunization Profile,"Procedure.pertormed[x],DiagnosticReport.effective[x],Immunization.occurrence[x]",,
 ,Procedures,US Core ServiceRequest Profile,Reason for Referral,US Core ServiceRequest Profile,"ServiceRequest.reasonCode, ServiceRequest.reasonReference",,
 ,Procedures,US Core ServiceRequest Profile | US Core Procedure Profile,SDOH Interventions,US Core ServiceRequest Profile|US Core Procedure Profile,"ServiceRequest, Procedure",See Screening and Assessments Guidance,screening-and-assessments.html
 17,Provenance,US Core Provenance Profile,,US Core Provenance Profile,Provenance,See Basic Provenance Guidance,basic-provenance.html

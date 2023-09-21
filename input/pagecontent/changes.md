@@ -7,7 +7,8 @@
 This ballot addresses the following:
 
 - We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v4] Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2023:
-  - For USCDI Allergies and Intolerances Substance (Non-Medication) data element, no change was needed for [US Core AllergyIntolerance Profile] because the existing `code` element binding to [Common substances for allergy and intolerance documentation including refutations](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion) already includes "Non-pharmacologic agent"
+  - For USCDI Allergies and Intolerances Substance (Non-Medication) data element, no change was needed for the [US Core AllergyIntolerance Profile] because the existing `code` element binding to [Common substances for allergy and intolerance documentation including refutations](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion) already includes "Non-pharmacologic agent"
+  - For USCDI Encounter Identifier data element, no changes were needed because the [US Core Encounter Profile] already supports `Encounter.identifier` as a *Must Support* element.
   - For USCDI Facility Information data class and elements, [US Core Location Profile] already supports Facility Name and has been updated to support Facility Identifier and Type.  The [US Core Immunization Profile] has been updated to reference the US Core Location resource directly, and the following US Core Profiles have been updated to *indirectly* reference the location/facility via [US Core Encounter Profile]:
     - [US Core DiagnosticReport Profile for Laboratory Results Reporting]
     - [US Core Immunization Profile]
@@ -15,6 +16,10 @@ This ballot addresses the following:
     - [US Core Observation Clinical Result Profile]
     - [US Core Procedure Profile]
     - [US Core ServiceRequest Profile]
+  - For USCDI Time of Procedure data element, no changes were needed because:
+    - the [US Core Procedure Profile] already supports `Procedure.performed[x]` as a *Must Support* element.
+    - the [US Core DiagnosticReport Profile for Report and Note Exchange] already supports `DiagnosticReport.performed[x]` as a *Must Support* element.
+    - the [US Core Immunization Profile] already supports `Immunization.occurrence[x]` as a *Must Support* element.
 
 {% include img-small.html img="todo.png" %}
 

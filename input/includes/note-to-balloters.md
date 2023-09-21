@@ -8,6 +8,8 @@ This ballot addresses the following:
 
 {% include img-small.html img="todo.png" %}
 
+See the [US Core Data for Interoperability USCDI Table] which lists the USCDI Data classes and elements and the corresponding US Core Profiles and FHIR Resources used to represent them.
+
 - We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable and, as a result, align terminology between US Core and [HL7 C-CDA](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=492).
 - Implementers submitted over <N> trackers since the publication of US Core ver 5.0.0 and 5.0.1. We have addressed them and applied over <N'> changes. See the [change log] for detailed list of change and where applied.
   

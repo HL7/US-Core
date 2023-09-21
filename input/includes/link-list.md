@@ -402,3 +402,4 @@
 [APGAR score]: https://en.wikipedia.org/wiki/Apgar_score
 [HL7 Terminology (THO)]: https://terminology.hl7.org/
 [FHIR Extension]: https://hl7.org/fhir/extensions/
+[US Core Data for Interoperability USCDI Table]: uscdi.html
