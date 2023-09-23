@@ -286,6 +286,7 @@
 [US Core Allergies Profile]: StructureDefinition-us-core-allergyintolerance.html
 [US Core AllergyIntolerance Profile]: StructureDefinition-us-core-allergyintolerance.html
 [US Core Blood Pressure Profile]: StructureDefinition-us-core-blood-pressure.html
+[US Core Average Blood Pressure Profile]: StructureDefinition-us-core-average-blood-pressure.html
 [US Core BMI Profile]: StructureDefinition-us-core-bmi.html
 [US Core Birth Sex Extension]: StructureDefinition-us-core-birthsex.html
 [US Core Sex Extension]: StructureDefinition-us-core-sex.html
@@ -403,3 +404,4 @@
 [HL7 Terminology (THO)]: https://terminology.hl7.org/
 [FHIR Extension]: https://hl7.org/fhir/extensions/
 [US Core Data for Interoperability USCDI Table]: uscdi.html
+[Vital Signs with Qualifying Elements: Average Blood Pressure Profile]: https://hl7.org/fhir/us/vitals/STU1/StructureDefinition-average-blood-pressure.html

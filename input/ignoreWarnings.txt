@@ -33,7 +33,7 @@ The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' do
 
 The definition for the Code System with URI 'https://nahdo.org/sopt' doesnt provide any codes so the code cannot be validated
 The definition for the Code System with URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' doesnt provide any codes so the code cannot be validated
-
+                                             http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
 # === These warnings are due to using the actual base Type for the _id or _tag SearchParameter expression instead of using "Resource". Reviewed with publishing in Nov 2021 and OK with suppressing these Warnings (source: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Bad.20derived.20searchparameters)  (8) ===
 
 WARNING: SearchParameter/us-core-documentreference-id: SearchParameter: The expression 'DocumentReference.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
@@ -69,11 +69,9 @@ INFORMATION: ServiceRequest/rehab: ServiceRequest.code.coding[1]: The definition
 
 Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
 The definition for the Code System with URI 'http://www.ama-assn.org/go/cpt' doesnt provide any codes so the code cannot be validated
-WARNING: Encounter/example-1: Encounter.type[0]: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-encounter-type|7.0.0-ballot
-WARNING: Procedure/defib-implant: Procedure.code: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code|7.0.0-ballot
 Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
 Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated
-WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|7.0.0-ballot
+WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|7.0.0-ballot
 
 # === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) NONE===
 
@@ -123,7 +121,11 @@ No types could be determined from the search string, so the types can''t be chec
 
 # ====FHIR R4 http://hl7.org/fhir/ValueSet/formatcodes is in error which is has been corrected in the FHIR R5. The guide is referencing the IHE format code package and the value set uses the corrected FHIR R5 codes. ===
 
-INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/.content[0].format: The Coding provided (http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-structuredBody:2.1) is not in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = The provided code http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-structuredBody:2.1: 'For documents following C-CDA 2.1 constraints using a structured body.' is not in the value set 'http://hl7.org/fhir/ValueSet/formatcodes|4.0.1')
+INFORMATION: Bundle/66c8856b-ba11-4876-8aa8-467aad8c11a2: Bundle.entry[2].resource/*Endpoint/71*/.payloadType[0].coding[0]: The code 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' is valid but is deprecated
+INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/.content[0].format: The code 'urn:hl7-org:sdwg:ccda-structuredBody:2.1' is valid but is deprecated
+INFORMATION: DocumentReference/episode-summary: DocumentReference.content[0].format: The code 'urn:hl7-org:sdwg:ccda-structuredBody:2.1' is valid but is deprecated
+INFORMATION: Organization/saint-luke-w-endpoint: Organization.contained[0]/*Endpoint/75*/.payloadType[0].coding[0]: The code 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' is valid but is deprecated
+INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/.content[0].format: The Coding provided (http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-structuredBody:2.1) is not in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = The provided code 'http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-structuredBody:2.1: 'For documents following C-CDA 2.1 constraints using a structured body.'' is not in the value set 'http://hl7.org/fhir/ValueSet/formatcodes|4.0.1')
 
 # === The following Warning is understood and the extension reviewed - its intent is to be used on elements that are jurisdictional requirement which could be potentially any element ===
 
@@ -135,35 +137,11 @@ No questionnaire is identified, so no validation can be performed against the ba
 
 # ===  The following Warning is understood and the invariant reviewed. The type specified in ofType is Quantity *is* a possible candidate for the existing types of value[x]. This invariant has been tested in the FHIRPath tester and is intended as written
 
-WARNING: StructureDefinition/us-core-observation-screening-assessment: StructureDefinition.snapshot.element[0].constraint[8]: us-core-3: The type specified in ofType is Quantity which is not a possible candidate for the existing types (FHIR.Observation) in the expression ofType(Quantity).system.empty() or (ofType(Quantity).system = 'http://unitsofmeasure.org'). Check the paths and types to be sure this is what is intended
-WARNING: StructureDefinition/us-core-observation-screening-assessment: StructureDefinition.snapshot.element[0].constraint[8]: us-core-3: The type specified in ofType is Quantity which is not a possible candidate for the existing types (FHIR.Observation) in the expression ofType(Quantity).system = 'http://unitsofmeasure.org'. Check the paths and types to be sure this is what is intended
-WARNING: StructureDefinition/us-core-observation-clinical-result: StructureDefinition.snapshot.element[22].constraint[1]: us-core-3: The type specified in ofType is Quantity which is not a possible candidate for the existing types (FHIR.Period) in the expression ofType(Quantity).system.empty() or (ofType(Quantity).system = 'http://unitsofmeasure.org'). Check the paths and types to be sure this is what is intended
-WARNING: StructureDefinition/us-core-observation-clinical-result: StructureDefinition.snapshot.element[22].constraint[1]: us-core-3: The type specified in ofType is Quantity which is not a possible candidate for the existing types (FHIR.Period) in the expression ofType(Quantity).system = 'http://unitsofmeasure.org'. Check the paths and types to be sure this is what is intended
-WARNING: StructureDefinition/us-core-smokingstatus: StructureDefinition.snapshot.element[23].constraint[1]: us-core-3: The type specified in ofType is Quantity which is not a possible candidate for the existing types (FHIR.Period) in the expression ofType(Quantity).system.empty() or (ofType(Quantity).system = 'http://unitsofmeasure.org'). Check the paths and types to be sure this is what is intended
-WARNING: StructureDefinition/us-core-smokingstatus: StructureDefinition.snapshot.element[23].constraint[1]: us-core-3: The type specified in ofType is Quantity which is not a possible candidate for the existing types (FHIR.Period) in the expression ofType(Quantity).system = 'http://unitsofmeasure.org'. Check the paths and types to be sure this is what is intended
-
 
 # ===  The following Warning is understood and the invariant reviewed. The type specified in ofType is CodeableConcept *is* a possible candidate for the existing types of value[x]. This invariant has been tested in the FHIRPath tester and is intended as written
 
-WARNING: StructureDefinition/us-core-observation-lab: StructureDefinition.snapshot.element[22].constraint[2]: us-core-4: The type specified in ofType is CodeableConcept which is not a possible candidate for the existing types (FHIR.Period) in the expression ofType(CodeableConcept).coding.system.empty() or (ofType(CodeableConcept).coding.system contains 'http://snomed.info/sct'). Check the paths and types to be sure this is what is intended
-WARNING: StructureDefinition/us-core-observation-lab: StructureDefinition.snapshot.element[22].constraint[2]: us-core-4: The type specified in ofType is CodeableConcept which is not a possible candidate for the existing types (FHIR.Period) in the expression ofType(CodeableConcept).coding.system contains 'http://snomed.info/sct'. Check the paths and types to be sure this is what is intended
 
 # === This Search Parameter expression `[Type].subject.where(resolve() is Patient)` is inherited from the FHIR base.  Nevertheless, the maximum cardinality of `subject` is 1 for all of these cases so there will never be more than han one item in the collection when resolving the reference. Additionally, this invariant has been tested in the FHIRPath tester and is intended as written.
-
-WARNING: SearchParameter/us-core-careplan-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-careteam-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-condition-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-diagnosticreport-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-documentreference-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-encounter-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-goal-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-medicationdispense-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-medicationrequest-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-observation-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-procedure-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-questionnaireresponse-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-servicerequest-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
-WARNING: SearchParameter/us-core-specimen-patient: SearchParameter.expression: The left side is inherently a collection, and so the expression 'resolve() is Patient' may fail or return false if there is more than one item in the content being evaluated
 
 
 # === This Search Parameter expression `Goal.target.due as date` is inherited from the FHIR base.  This is a legitimate warning and in R5 the expression has been udpated to `(Goal.target.due.ofType(date))`.  Since US Core inherits from the FHIR R4 base this warning is acknowledged as an issue with the base specification.
@@ -172,8 +150,6 @@ WARNING: SearchParameter/us-core-goal-target-date: SearchParameter.expression: T
 
 # ===  The following Warning is understood and the invariant reviewed. The resolve() specified in the invariant has a maximum cardinality of 1 so there will never be more than han one item in the collection when resolving the reference. This invariant has been tested in the FHIRPath tester and is intended as written
 
-WARNING: StructureDefinition/us-core-provenance: StructureDefinition.snapshot.element[22].constraint[1]: provenance-1: The left side is inherently a collection, and so the expression 'resolve() is Practitioner' may fail or return false if there is more than one item in the content being evaluated
-WARNING: StructureDefinition/us-core-provenance: StructureDefinition.snapshot.element[22].constraint[1]: provenance-1: The left side is inherently a collection, and so the expression 'resolve() is Device' may fail or return false if there is more than one item in the content being evaluated
 
 # === The US Core Observation Profile are based on US Vendor and Community input and decided that the `Optional.performer` element is optional for Many Observation profiles.
 
@@ -236,3 +212,14 @@ WARNING: Observation/some-day-smoker: Observation: All observations should have 
 WARNING: Observation/temperature: Observation: All observations should have a performer
 WARNING: Observation/urobilinogen: Observation: All observations should have a performer
 WARNING: Observation/weight: Observation: All observations should have a performer
+
+# The 'no-narrative' parameter is used for these resources instances because they are dispayed as inline json examples for transaction and the narrative degrades human readability
+
+WARNING: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Bundle/docref-example-2: Bundle.entry[0].resource/*DocumentReference/procedure-note123*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Bundle/docref-example-2: Bundle.entry[1].resource/*DocumentReference/procedure-note456*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Bundle/docref-example-2: Bundle.entry[2].resource/*DocumentReference/discharge*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: DocumentReference/discharge-summary: DocumentReference: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Patient/example-targeted-provenance: Patient: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+WARNING: Provenance/example-targeted-provenance: Provenance: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+

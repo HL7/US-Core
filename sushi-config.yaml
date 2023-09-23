@@ -7,9 +7,16 @@ canonical: 'http://hl7.org/fhir/us/core'
 name: USCore
 title: US Core Implementation Guide
 status: active
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
+    valueCode: cgp  # <<< The value must be the code for the workgroup
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 3
 publisher:
-  name: HL7 International - Cross-Group Projects
-  url: 'http://www.hl7.org/Special/committees/cgp'
+  name: HL7 International / Cross-Group Projects # <<< The stated publisher must be "HL7 International / {wg-name"} where the wg-name is the display value for the code
+  url: 'http://www.hl7.org/Special/committees/cgp/index.cfm'  # <<< the contacts for the resource must include the link to the group found in the definition
   email: cgp@lists.HL7.org
 jurisdiction: 'urn:iso:std:iso:3166#US'
 copyright: >-
@@ -37,6 +44,7 @@ dependencies:
     uri: 'http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads'
     version: 0.12.0
   ihe.formatcode.fhir: 1.1.0
+  hl7.fhir.uv.extensions: current  # <<<< If your WG is not in the older list, you need to add an explicit dependency to the current version of the extensions pack
 pages:
   index.md:
     title: Home

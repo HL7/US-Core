@@ -3,8 +3,8 @@
 
 The following are example usage scenarios for this profile:
 
-- Query for blood pressure observation belonging to a pediatric patient
-- [Record or update] pressure belonging to a pediatric patient
+- Query for blood pressure observations belonging to a patient
+- [Record or update] blood pressure observations belonging to a patient
 
 ### Mandatory and Must Support Data Elements
 

@@ -31,8 +31,8 @@ differential:
       key: us-core-5
       severity: warning
       human: SHOULD have a translation to the NDC value set
-      expression: vaccineCode.coding.where(system='http://hl7.org/fhir/sid/ndc').empty()
-      xpath: not(exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/ndc']))
+      expression: vaccineCode.coding.where(system='http://hl7.org/fhir/sid/cvx').exists() implies vaccineCode.coding.where(system='http://hl7.org/fhir/sid/ndc').exists()
+      xpath: (exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/ndc']) and exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx'])) or exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx'])not()
     mustSupport: false
     mapping:
     - identity: argonaut-dq-dstu2
