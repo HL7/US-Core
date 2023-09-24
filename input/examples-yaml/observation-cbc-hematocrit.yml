@@ -44,6 +44,15 @@ subject:
   display: Amy Shaw
   reference: Patient/example
 valueQuantity:
+  code: '%'
   system: http://unitsofmeasure.org
   unit: '%'
   value: 43
+interpretation:
+  -
+    coding:
+    - code: N
+      display: Normal
+      system: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+    text: Normal
+

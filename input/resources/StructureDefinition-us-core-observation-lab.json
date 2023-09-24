@@ -159,6 +159,24 @@
                 ]
             },
             {
+                "id": "Observation.interpretation",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
+                "path": "Observation.interpretation",
+                "short": "(USCDI) Result interpretation",
+                "comment": "Categorical assessment of a laboratory value, often in relation to a test's reference range. Examples include but are not limited to high, low, critical, and normal.",
+                "binding": {
+                    "strength": "extensible",
+                    "description": "Observation Interpretation Codes",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+                },
+                "mustSupport": true
+            },
+            {
                 "id": "Observation.specimen",
                 "extension": [
                     {
@@ -176,6 +194,19 @@
                         ]
                     }
                 ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.referenceRange",
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                        "valueBoolean": true
+                    }
+                ],
+                "path": "Observation.referenceRange",
+                "short": "(USCDI) Result reference range",
+                "comment": "Upper and lower limit of test values expected for a designated population of individuals. Reference range values may differ by patient characteristics, laboratory test manufacturer and laboratory test performer.",
                 "mustSupport": true
             }
         ]

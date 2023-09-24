@@ -328,6 +328,7 @@
 [US Core MedicationDispense Profile]: StructureDefinition-us-core-medicationdispense.html
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
 [US Core MedicationRequest Profile]: StructureDefinition-us-core-medicationrequest.html
+[US Core Medication Adherence Extension]: StructureDefinition-us-core-medicationadherance.html
 [US Core Simple Observation Profile]: StructureDefinition-us-core-simple-observation.html
 [US Core Specimen Profile]: StructureDefinition-us-core-specimen.html
 [US Core Observation Clinical Result Profile]: StructureDefinition-us-core-observation-clinical-result.html

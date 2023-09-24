@@ -20,7 +20,9 @@ The following are example usage scenarios for this profile:
 1. a result value*
    - if the result value is a numeric quantity, a standard [UCUM] unit
    - if the result value is a coded quantity, a standard [SNOMED CT]*
-2. a specimen type (e.g., blood, serum, urine)
+1. <span class="bg-success" markdown="1">result interpretation</span><!-- new-content -->
+1. <span class="bg-success" markdown="1">result reference range</span><!-- new-content -->
+1. a specimen type (e.g., blood, serum, urine)
 
 \* see guidance below
 

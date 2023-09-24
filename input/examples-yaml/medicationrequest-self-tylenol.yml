@@ -1,5 +1,36 @@
 resourceType: MedicationRequest
 id: self-tylenol
+
+meta:
+  profile:
+  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: MedicationRequest Self Tylenol Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: "This is a \u201Cself-prescribed\u201D tylenol example for the\
+      \ *MedicationRequest Profile*."
+
+# === proposed extension ===
+extension:
+  - extension:
+    - url: medicationAdherence
+      valueCodeableConcept:
+        coding:
+          - system: http://snomed.info/sct
+            code: '275928001'
+            display: Drugs - partial non-compliance (finding)
+
+    - url: dateAsserted
+      valueDateTime: '2023-08-11T08:15:49.449Z'
+
+    -  url: informationSource
+       valueReference:
+        reference: Patient/example
+        display: Amy Shaw
+    url:  http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
+# === end proposed extension ===
+
 identifier:
 - use: official
   system: http://acme.org/prescriptions
@@ -25,15 +56,7 @@ requester:
   display: '**self-prescribed**'
 dosageInstruction:
 - text: Takes 1-2 tablets once daily at bedtime as needed for restless legs
-meta:
-  profile:
-  - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
-  extension:
-  - url: http://hl7.org/fhir/StructureDefinition/instance-name
-    valueString: MedicationRequest Self Tylenol Example
-  - url: http://hl7.org/fhir/StructureDefinition/instance-description
-    valueMarkdown: "This is a \u201Cself-prescribed\u201D tylenol example for the\
-      \ *MedicationRequest Profile*."
+
 reasonCode:
 - coding:
   - system: http://snomed.info/sct

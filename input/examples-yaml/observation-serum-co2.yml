@@ -45,9 +45,18 @@ subject:
   display: Amy Shaw
   reference: Patient/example
 valueQuantity:
+  code: mmol/L
   system: http://unitsofmeasure.org
   unit: mmol/L
   value: 24.0
 specimen:
   reference: Specimen/specimen-example-serum
   display: Serum specimen
+interpretation:
+  -
+    coding:
+    - code: N
+      display: Normal
+      system: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+    text: Normal
+

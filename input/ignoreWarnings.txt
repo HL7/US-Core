@@ -223,3 +223,6 @@ WARNING: DocumentReference/discharge-summary: DocumentReference: Rule dom-6: 'A 
 WARNING: Patient/example-targeted-provenance: Patient: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 WARNING: Provenance/example-targeted-provenance: Provenance: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 
+# ==== This is  a known issues with the R4-R5 invariant vs-1 - see this Zulip: https://chat.fhir.org/#narrow/stream/179266-fhirpath/topic/missed.20this.20in.20R5.3F.20vitals.20profile.3F) and FHIR Core tracker FHIR-41669 ===
+
+ERROR: Observation/average-blood-pressure: Observation.effective.ofType(Period): Rule vs-1: 'if Observation.effective[x] is dateTime and has a value then that value shall be precise to the day' Failed (defined in http://hl7.org/fhir/StructureDefinition/vitalsigns)s

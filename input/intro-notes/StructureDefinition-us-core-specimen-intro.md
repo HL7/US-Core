@@ -15,7 +15,17 @@ The following data elements must always be present ([Mandatory] definition) or m
 
   **Each Specimen Must Support:**
 
+1. <span class="bg-success" markdown="1">business identifier(s)</span><!-- new-content -->
 1. a patient
+
+<div class="bg-success" markdown="1">
+**Additional USCDI Requirements**
+
+{% include additional-requirements-intro.md type="Specimen" plural="true" %}
+
+1. specimen collection source site
+2. specimen condition acceptability
+</div><!-- new-content -->
  
 **Profile Specific Implementation Guidance:**
 

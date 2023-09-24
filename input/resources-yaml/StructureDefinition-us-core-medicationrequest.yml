@@ -50,6 +50,22 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: MedicationOrder
+
+  - id: MedicationRequest.extension:medicationAdherence
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: MedicationRequest.extension
+    sliceName: medicationAdherence
+    short: (USCDI) US Core Medication Adherence Extension
+    min: 0
+    max: '*'
+    type:
+    - code: Extension
+      profile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
+    mustSupport: false
+ 
   - id: MedicationRequest.status
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -66,6 +82,8 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: MedicationOrder.status
+
+  
   - id: MedicationRequest.intent
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement

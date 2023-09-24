@@ -46,9 +46,18 @@ subject:
   display: Amy Shaw
   reference: Patient/example
 valueQuantity:
+  code: mg/dL
   system: http://unitsofmeasure.org
   unit: mg/dL
   value: 1.0
 specimen:
   reference: Specimen/specimen-example-serum
   display: Serum specimen
+interpretation:
+  -
+    coding:
+    - code: H
+      display: High
+      system: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+    text: High
+

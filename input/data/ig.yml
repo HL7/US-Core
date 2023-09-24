@@ -147,7 +147,7 @@ definition:
     description: This is a allergyintolerance example for the *US Core AllergyIntolerance
       Profile* representing a non-pharmacologic substance (latex) that the patient
       is allergic to.
-    name: AllergyIntolerance Non-pharmacologic agent example
+    name: AllergyIntolerance Non-pharmacologic Agent Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance
   - reference:
       reference: Bundle/c887e62f-6166-419f-8268-b5ecd6c7b901
@@ -443,6 +443,13 @@ definition:
       and CBC example for the *US Core DiagnosticReport Lab Profile*.
     name: Hemoglobin Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
+  - reference:
+      reference: Specimen/example-serum-hemolyzed
+    description: This is a serum specimen example for the *US Core Specimen Profile*.
+      It demonstrates the use of the USCDI requirements for specimen condition and
+      body source site.
+    name: Hemolyzed Serum Specimen Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen
   - reference:
       reference: Location/hl7east
     description: This is a HL7East example for the *US Core Location Profile*.
@@ -1726,6 +1733,19 @@ definition:
       specific use cases to promote interoperability and adoption through common implementation.
     exampleBoolean: false
     name: US Core Location Profile
+  - reference:
+      reference: StructureDefinition/us-core-medication-adherence
+    description: A MedicationRequest extension representing reported adherence to
+      prescribed medication instructions.  In other words, whether a medication was
+      consumed according to instructions.
+    exampleBoolean: false
+    name: US Core Medication Adherence Extension
+  - reference:
+      reference: ValueSet/medication-adherence
+    description: The US Core MedicationStatement Adherence concepts asserting whether
+      a medication has been consumed according to instructions.
+    exampleBoolean: false
+    name: US Core Medication Adherence ValueSet
   - reference:
       reference: StructureDefinition/us-core-medication
     description: When referencing a medication, the MedicationRequest resource can
@@ -3210,6 +3230,8 @@ definition:
     value: Bundle/docref-example-1
   - code: no-narrative
     value: Bundle/docref-example-2
+  - code: version-comparison
+    value: 6.1.0
   - code: version-comparison
     value: 5.0.1
   - code: version-comparison

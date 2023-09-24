@@ -27,20 +27,22 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each MedicationRequest Must Support:**
 
-1. the category  (e.g., Discharge Medication)
-1. the `reported` flag  or reference signaling that information is from a secondary source such as a patient
-1. the encounters
-1. a prescriber
-2. a date for when written
-3. the prescription *Sig*
-4. the amount dispensed and number of refills
-5. the dose and rate
+
+2. the category  (e.g., Discharge Medication)
+3. the `reported` flag  or reference signaling that information is from a secondary source such as a patient
+4. the encounters
+5. a prescriber
+6. a date for when written
+7. the prescription *Sig*
+8. the amount dispensed and number of refills
+9. the dose and rate
 
 
 **Additional USCDI Requirements**
 
 {% include additional-requirements-intro.md type="MedicationRequest" %}
 
+1. <span class="bg-success" markdown="1">reported adherence to prescribed medication instructions</span><!-- new-content -->
 1. the reason or indication for the prescription*
 
 \*see guidance below

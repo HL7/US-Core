@@ -177,7 +177,7 @@
           "reference": "AllergyIntolerance/non-pharmacologic-agent-example"
         },
         "description": "This is a allergyintolerance example for the *US Core AllergyIntolerance Profile* representing a non-pharmacologic substance (latex) that the patient is allergic to.",
-        "name": "AllergyIntolerance Non-pharmacologic agent example",
+        "name": "AllergyIntolerance Non-pharmacologic Agent Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance"
       },
       {
@@ -579,6 +579,14 @@
         "description": "This is a hemoglobin example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.",
         "name": "Hemoglobin Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/example-serum-hemolyzed"
+        },
+        "description": "This is a serum specimen example for the *US Core Specimen Profile*. It demonstrates the use of the USCDI requirements for specimen condition and body source site.",
+        "name": "Hemolyzed Serum Specimen Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen"
       },
       {
         "reference": {
@@ -1947,6 +1955,22 @@
         "description": "This profile sets minimum expectations for the Location resource for recording, searching, and fetching a \"physical place of available services or resources.\"  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used when using the profile.  It provides the floor for standards development for specific use cases to promote interoperability and adoption through common implementation.",
         "exampleBoolean": false,
         "name": "US Core Location Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-medication-adherence"
+        },
+        "description": "A MedicationRequest extension representing reported adherence to prescribed medication instructions.  In other words, whether a medication was consumed according to instructions.",
+        "exampleBoolean": false,
+        "name": "US Core Medication Adherence Extension"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/medication-adherence"
+        },
+        "description": "The US Core MedicationStatement Adherence concepts asserting whether a medication has been consumed according to instructions.",
+        "exampleBoolean": false,
+        "name": "US Core Medication Adherence ValueSet"
       },
       {
         "reference": {
@@ -3477,6 +3501,10 @@
       {
         "code": "no-narrative",
         "value": "Bundle/docref-example-2"
+      },
+      {
+        "code": "version-comparison",
+        "value": "6.1.0"
       },
       {
         "code": "version-comparison",

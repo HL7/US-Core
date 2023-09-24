@@ -27,7 +27,15 @@ differential:
     comment: \-
     mustSupport: false
 
-
+# === New USCDI requirement ===
+  - id: Specimen.identifier
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Specimen.identifier
+    short: (USCDI) Specimen identifier
+    mustSupport: true
+# === New USCDI requirement ===
 
   - id: Specimen.type
     extension:
@@ -53,3 +61,36 @@ differential:
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     mustSupport: true
+
+# === New USCDI requirement ===
+  - id: Specimen.collection
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Specimen.collection
+    short: (USCDI) Collection details
+    # mustSupport: true
+  - id: Specimen.collection.bodySite
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Specimen.collection.bodySite
+    short: (USCDI) Specimen Source Site
+    comment: Body location from where a specimen was obtained. Examples include but are not limited to right internal jugular, left arm, and right eye.
+    binding:
+      strength: extensible
+      valueSet: http://hl7.org/fhir/ValueSet/body-site
+     # mustSupport: true
+
+# === New USCDI requirement ===
+  - id: Specimen.condition
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Specimen.condition
+    short: (USCDI) Specimen condition acceptability
+    comment: Information regarding a specimen, including the container, that does not meet a laboratory's criteria for acceptability. Examples include but are not limited to hemolyzed, clotted, container leaking, and missing patient name. This may include information about the contents of the container, the container, and the label.
+    binding:
+      strength: extensible
+      valueSet: http://terminology.hl7.org/ValueSet/v2-0493
+    # mustSupport: true

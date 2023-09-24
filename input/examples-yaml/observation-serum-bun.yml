@@ -51,3 +51,11 @@ valueQuantity:
 specimen:
   reference: Specimen/specimen-example-serum
   display: Serum specimen
+interpretation:
+  -
+    coding:
+    - code: N
+      display: Normal
+      system: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+    text: Normal
+

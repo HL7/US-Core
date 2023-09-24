@@ -9,7 +9,7 @@ This ballot addresses the following:
 - We have updated US Core to include the new [U.S. Core Data for Interoperability (USCDI) v4] Data Elements and Classes that the Office of the National Coordinator (ONC) published in July of 2023:
   - For USCDI Allergies and Intolerances Substance (Non-Medication) data element, no change was needed for the [US Core AllergyIntolerance Profile] because the existing `code` element binding to [Common substances for allergy and intolerance documentation including refutations](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1186.8/expansion) already includes "Non-pharmacologic agent"
   - For USCDI Encounter Identifier data element, no changes were needed because the [US Core Encounter Profile] already supports `Encounter.identifier` as a *Must Support* element.
-  - For USCDI Facility Information data class and elements, the [US Core Location Profile] already supports Facility Name and has been updated to support Facility Identifier and Type.  The [US Core Immunization Profile] has been updated to reference the US Core Location resource directly, and the following US Core Profiles have been updated to *indirectly* reference the location/facility via [US Core Encounter Profile]:
+  - For USCDI Facility Information data class and elements, the [US Core Location Profile] already supports Facility Name and has been updated to support Facility Identifier and Type.  The [US Core Immunization Profile] has been updated to reference the US Core Location resource directly as a *Must Support* element, and the following US Core Profiles have been updated to *indirectly* reference the location/facility via [US Core Encounter Profile] as a *Must Support* element:
     - [US Core DiagnosticReport Profile for Laboratory Results Reporting]
     - [US Core Immunization Profile]
     - [US Core MedicationDispense Profile]
@@ -21,6 +21,8 @@ This ballot addresses the following:
     - the [US Core DiagnosticReport Profile for Report and Note Exchange] already supports `DiagnosticReport.performed[x]` as a *Must Support* element.
     - the [US Core Immunization Profile] already supports `Immunization.occurrence[x]` as a *Must Support* element.
   - For USCDI Average Blood Pressure data class, the new [US Core Average Blood Pressure Profile] has been added to US Core. It uses the [Vital Signs with Qualifying Elements: Average Blood Pressure Profile] as a blueprint.
+  - For USCDI Medications data class and elements, the [US Core MedicationRequest Profile] already supports Medication Instructions and has been updated to support Medication Adherence as an *Additional USCDI Requirement* using the new [US Core Medication Adherence Extension].
+  - For USCDI Laboratory data class and elements, the [US Core Laboratory Result Observation Profile] already supports Result Unit of Measure data element for using UCUM for coded quantity units and has been updated to support Result Reference Range and Result Interpretation as a *Must Support* elements. The [US Core Specimen Profile] has been updated to support Specimen Identifier as a *Must Support* element, and Specimen Source Site and Specimen Condition Acceptability as *Additional USCDI Requirements*.
 
 {% include img-small.html img="todo.png" %}
 

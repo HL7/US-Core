@@ -44,6 +44,15 @@ subject:
   display: Amy Shaw
   reference: Patient/example
 valueQuantity:
+  code: g/dL
   system: http://unitsofmeasure.org
   unit: g/dL
   value: 34.7
+interpretation:
+  -
+    coding:
+    - code: H
+      display: High
+      system: http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+    text: High
+
