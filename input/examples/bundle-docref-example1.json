@@ -1,90 +1,102 @@
 {
-  "resourceType": "Bundle",
-  "id": "docref-example-1",
-  "type": "searchset",
-  "total": 1,
-  "link": [
-    {
-      "relation": "self",
-      "url": "http://example.org/DocumentReference/$docref?patient=123"
-    }
-  ],
-  "entry": [
-    {
-      "fullUrl": "http://example.org/DocumentReference/ccd123",
-      "resource": {
-        "resourceType": "DocumentReference",
-        "id": "ccd123",
-        "meta": {
-          "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
-          ]
-        },
-        "identifier": [
-          {
-            "system": "urn:ietf:rfc:3986",
-            "value": "urn:oid:2.16.840.1.113883.19.5.99999.1"
-          }
-        ],
-        "status": "current",
-        "type": {
-          "coding": [
+    "resourceType": "Bundle",
+    "id": "docref-example-1",
+    "meta": {
+        "extension": [
             {
-              "system": "http://loinc.org",
-              "code": "34133-9",
-              "display": "Summary of episode note"
-            }
-          ],
-          "text": "CCD Document"
-        },
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
-                "code": "clinical-note",
-                "display": "Clinical Note"
-              }
-            ],
-            "text": "Clinical Note"
-          }
-        ],
-        "subject": {
-          "reference": "Patient/example",
-          "display": "Amy Shaw"
-        },
-        "date": "2016-03-09T15:29:46Z",
-        "author": [
-          {
-            "reference": "Practitioner/practitioner-1",
-            "display": "Ronald Bone, MD"
-          }
-        ],
-        "description": "Pulmonology clinic acute visit",
-        "content": [
-          {
-            "attachment": {
-              "contentType": "text/plain",
-              "url": "Binary/1-note",
-              "title": "Uri where the data can be found: http://example.org/Binary/1-note"
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Docref Example 1"
             },
-            "format": {
-              "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
-              "code": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
-              "display": "For documents following C-CDA 2.1 constraints using a structured body."
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This bundle is a the response to a $docref operation and contains an example *US Core DocumentReference*.  It is used in [Example 1: Request the latest CCD](StructureDefinition-us-core-documentreference.html#mandatory-operation)."
             }
-          }
-        ],
-        "context": {
-          "period": {
-            "start": "2004-12-23T08:00:00+11:00",
-            "end": "2004-12-23T08:01:00+11:00"
-          }
+        ]
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://example.org/DocumentReference/$docref?patient=123"
         }
-      },
-      "search": {
-        "mode": "match"
-      }
-    }
-  ]
+    ],
+    "entry": [
+        {
+            "fullUrl": "http://example.org/DocumentReference/ccd123",
+            "resource": {
+                "resourceType": "DocumentReference",
+                "id": "ccd123",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:oid:2.16.840.1.113883.19.5.99999.1"
+                    }
+                ],
+                "status": "current",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "34133-9",
+                            "display": "Summary of episode note"
+                        }
+                    ],
+                    "text": "CCD Document"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                                "code": "clinical-note",
+                                "display": "Clinical Note"
+                            }
+                        ],
+                        "text": "Clinical Note"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/example",
+                    "display": "Amy Shaw"
+                },
+                "date": "2016-03-09T15:29:46Z",
+                "author": [
+                    {
+                        "reference": "Practitioner/practitioner-1",
+                        "display": "Ronald Bone, MD"
+                    }
+                ],
+                "description": "Pulmonology clinic acute visit",
+                "content": [
+                    {
+                        "attachment": {
+                            "contentType": "text/plain",
+                            "url": "Binary/1-note",
+                            "title": "Uri where the data can be found: http://example.org/Binary/1-note"
+                        },
+                        "format": {
+                            "system": "http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode",
+                            "code": "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+                            "display": "For documents following C-CDA 2.1 constraints using a structured body."
+                        }
+                    }
+                ],
+                "context": {
+                    "period": {
+                        "start": "2004-12-23T08:00:00+11:00",
+                        "end": "2004-12-23T08:01:00+11:00"
+                    }
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        }
+    ]
 }

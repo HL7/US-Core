@@ -1,0 +1,164 @@
+resourceType: StructureDefinition
+id: us-core-medication-adherence
+url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
+# url: http://www.fhir.org/guides/uscdi4-sandbox/StructureDefinition/us-core-medicationrequest-compliance-extension
+name: USCoreMedicationAdherenceExtension
+title: US Core Medication Adherence Extension
+status: active
+date: '2023-09-23'
+description: A MedicationRequest extension representing reported adherence to prescribed medication instructions.  In other words, whether a medication was consumed according to instructions.
+fhirVersion: '4.0.1'
+kind: complex-type
+abstract: false
+context:
+- type: element
+  expression: MedicationRequest
+
+type: Extension
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
+derivation: constraint
+
+differential:
+  element:
+  - id: Extension
+    path: Extension
+    definition: Reported adherence to prescribed medication instructions.
+    min: 0
+    max: '*'
+    mapping:
+    - identity: http://loinc.org
+      map: 71799-1
+
+  - id: Extension.extension
+    path: Extension.extension
+    slicing:
+        discriminator:
+            - 
+                type: value
+                path: url
+        rules: open
+    min: 1
+
+  - id: Extension.extension:medicationAdherence
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Extension.extension
+    sliceName: medicationAdherence
+    short: (USCDI) Medication adherence code
+    definition: Code stating whether the patient is consuming or being administered the medication has according to instructions.  For example, the patient in not taking the medication as prescribed, or the patient is taking the medication as prescribed.
+    min: 1
+    max: '1'
+    type:
+    - code: Extension
+    # mustSupport: true
+
+  - id: Extension.extension:medicationAdherence.url
+    path: Extension.extension.url
+    min: 1
+    max: '1'
+    type:
+    - code: uri
+    fixedUri: medicationAdherence
+
+
+  - id: Extension.extension:medicationAdherence.value[x]
+    path: Extension.extension.value[x]
+    min: 1
+    max: '1'
+    type:
+    - code: CodeableConcept
+    binding:
+      strength: extensible
+      description: Medication Adherence Codes
+      valueSet: http://hl7.org/fhir/us/core//ValueSet/medication-adherence
+
+  - id: Extension.extension:dateAsserted
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Extension.extension
+    sliceName: dateAsserted
+    short: (USCDI) When the medication adherence was asserted
+    definition: When the medication adherence was asserted by the information source
+    min: 0
+    max: '1'
+    type:
+    - code: Extension
+    # mustSupport: true
+
+  - id: Extension.extension:dateAsserted.url
+    path: Extension.extension.url
+    min: 1
+    max: '1'
+    type:
+    - code: uri
+    fixedUri: dateAsserted
+
+
+  - id: Extension.extension:dateAsserted.value[x]
+    path: Extension.extension.value[x]
+    min: 1
+    max: '1'
+    type:
+    - code: dateTime
+
+  - id: Extension.extension:informationSource
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Extension.extension
+    sliceName: informationSource
+    short: (USCDI) Who provided the information about the medication adherence
+    definition: The person or organization that provided the information about the medication adherence
+    min: 0
+    max: '*'
+    type:
+    - code: Extension
+    # mustSupport: true
+
+  - id: Extension.extension:informationSource.url
+    path: Extension.extension.url
+    min: 1
+    max: '1'
+    type:
+    - code: uri
+    fixedUri: informationSource
+
+  - id: Extension.extension:informationSource.value[x]
+    path: Extension.extension.value[x]
+    min: 1
+    max: '1'
+    type:
+    - 
+      code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
+
+      _targetProfile:
+      - extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: true
+      - extension:
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+          valueBoolean: false
+
+
+  - id: Extension.url
+    path: Extension.url
+    # fixedUri: http://www.fhir.org/guides/uscdi4-sandbox/StructureDefinition/us-core-medicationrequest-compliance-extension
+    fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
+
+  - id: Extension.value[x]
+    path: Extension.value[x]
+    min: 0
+    max: '0'

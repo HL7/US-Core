@@ -1,68 +1,78 @@
 {
-  "resourceType": "Condition",
-  "id": "encounter-diagnosis-example2",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
-    ]
-  },
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
-      "valueDateTime": "2016-08-10"
-    }
-  ],
-  "clinicalStatus": {
-    "coding": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-        "code": "resolved",
-        "display": "Resolved"
-      }
-    ],
-    "text": "Resolved"
-  },
-  "verificationStatus": {
-    "coding": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-        "code": "confirmed",
-        "display": "Confirmed"
-      }
-    ],
-    "text": "Confirmed"
-  },
-  "category": [
-    {
-      "coding": [
+    "resourceType": "Condition",
+    "id": "encounter-diagnosis-example2",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Encounter Diagnosis Example 2"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis."
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis"
+        ]
+    },
+    "extension": [
         {
-          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
-          "code": "encounter-diagnosis",
-          "display": "Encounter Diagnosis"
+            "url": "http://hl7.org/fhir/StructureDefinition/condition-assertedDate",
+            "valueDateTime": "2016-08-10"
         }
-      ],
-      "text": "Encounter Diagnosis"
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "442311008",
-        "display": "Liveborn born in hospital",
-        "version": "http://snomed.info/sct/731000124108"
-      }
     ],
-    "text": "Single liveborn, born in hospital"
-  },
-  "subject": {
-    "reference": "Patient/example",
-    "display": "Amy V. Shaw"
-  },
-  "encounter": {
-    "reference": "Encounter/delivery"
-  },
-  "onsetDateTime": "2016-08-10",
-  "abatementDateTime": "2016-08-10",
-  "recordedDate": "2016-08-10T07:15:07-08:00"
+    "clinicalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "resolved",
+                "display": "Resolved"
+            }
+        ],
+        "text": "Resolved"
+    },
+    "verificationStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+                "code": "confirmed",
+                "display": "Confirmed"
+            }
+        ],
+        "text": "Confirmed"
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                    "code": "encounter-diagnosis",
+                    "display": "Encounter Diagnosis"
+                }
+            ],
+            "text": "Encounter Diagnosis"
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "442311008",
+                "display": "Liveborn born in hospital",
+                "version": "http://snomed.info/sct/731000124108"
+            }
+        ],
+        "text": "Single liveborn, born in hospital"
+    },
+    "subject": {
+        "reference": "Patient/example",
+        "display": "Amy V. Shaw"
+    },
+    "encounter": {
+        "reference": "Encounter/delivery"
+    },
+    "onsetDateTime": "2016-08-10",
+    "abatementDateTime": "2016-08-10",
+    "recordedDate": "2016-08-10T07:15:07-08:00"
 }
