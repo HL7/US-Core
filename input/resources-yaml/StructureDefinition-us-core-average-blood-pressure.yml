@@ -43,6 +43,8 @@ differential:
       - system: http://loinc.org
         code: 96607-7
     mustSupport: true
+
+
   - id: Observation.effective[x]
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -50,17 +52,17 @@ differential:
     path: Observation.effective[x]
     short: (USCDI) clinically relevant time-period for the average of blood pressure (BP) readings
     type:
-        # - extension:
-        #     - url: >-
-        #         http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-        #       valueBoolean: true
-        #   code: dateTime
-        - extension:
+
+        - code: dateTime
+        - code: Period
+          extension:
             - url: >-
                 http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
               valueBoolean: true
-          code: Period
+    
     mustSupport: true
+
+
   - id: Observation.component
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement

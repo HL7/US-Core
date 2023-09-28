@@ -1,4 +1,5 @@
 Additional USCDI Requirements,Profile,FHIR Element
+KEEP ME HERE ,KEEP ME HERE ,KEEP ME HERE 
 Contact Detail,[US Core Patient Profile],Patient.telecom
 A Communication Language,[US Core Patient Profile],Patient.communication
 A Race,[US Core Patient Profile],Patient.extension:race
@@ -14,6 +15,9 @@ A Reason Or Indication For Referral Or Consultation,[US Core ServiceRequest Prof
 A Reason Or Indication For Referral Or Consultation,[US Core ServiceRequest Profile],ServiceRequest.reasonReference
 The Reason Or Indication For The Prescription,[US Core MedicationRequest Profile],MedicationRequest.reasonCode
 The Reason Or Indication For The Prescription,[US Core MedicationRequest Profile],MedicationRequest.reasonReference
+Medication Adherence,[US Core MedicationRequest Profile],MedicationRequest.extension:medicationAdherence
 A Reference To The Request For The Procedure,[US Core Procedure Profile],Procedure.basedOn
 US Core Document Category,[US Core DocumentReference Profile],DocumentReference.category:uscore
 "References To An Associated Survey, Assessment, Or Screening Tool",[US Core Simple Observation Profile],Observation.derivedFrom
+Specimen Source Site,[US Core Specimen Profile},Specimen.collection.bodySite
+Specimen Condition Acceptability,[US Core Specimen Profile},Specimen.condition

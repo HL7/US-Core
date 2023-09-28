@@ -60,13 +60,16 @@
                 "short": "(USCDI) clinically relevant time-period for the average of blood pressure (BP) readings",
                 "type": [
                     {
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Period",
                         "extension": [
                             {
                                 "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                 "valueBoolean": true
                             }
-                        ],
-                        "code": "Period"
+                        ]
                     }
                 ],
                 "mustSupport": true

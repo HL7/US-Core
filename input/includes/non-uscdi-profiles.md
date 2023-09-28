@@ -1,4 +1,4 @@
-{%- assign black_list = "Organization,Practitioner,PractitionerRole,Location" | split:"," -%}
+{%- assign black_list = "Organization,Practitioner,PractitionerRole" | split:"," -%}
 {% assign r_list = "" %}
 {%- for sd_hash in site.data.structuredefinitions -%}
   {%- assign sd = sd_hash[1] -%}
