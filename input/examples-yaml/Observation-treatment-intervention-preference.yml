@@ -1,5 +1,5 @@
 resourceType: Observation
-id: treattment-intervention-preference
+id: treatment-intervention-preference
 meta:
   profile:
     -
@@ -24,13 +24,13 @@ status: final
 category:
   - coding:
       - system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'
-        code: treatment-intervention-preference
+        code: intervention-preference
         display: Treatment Intervention preference
     text: Treatment Intervention Preference
 code:
   coding:
     -
-      system: 'http://www.fhir.org/guides/uscdi4-sandbox/CodeSystem/uscore-treatment-intervention-preference'  
+      system: 'http://hl7.org/fhir/us/core/CodeSystem/uscore-treatment-intervention-preference'  
 
       code: intervention-preference
       display: Intervention Preference
@@ -46,8 +46,11 @@ code:
 
 subject:
   display: Amy Shaw
-  reference: http://www.hl7.org/fhir/us/core/Patient/example
+  reference: Patient/example
 effectiveDateTime: '2023-08-30'
+performer:
+  - display: Amy Shaw
+    reference: Patient/example
 valueString: >-
   If I am having significant pain or suffering, I would like my doctors to
   consult a Supportive and Palliative Care Team to help treat my physical,

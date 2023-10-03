@@ -31,9 +31,13 @@ The definition for the Code System with URI 'urn:oid:2.16.840.1.113883.6.238' do
 
 # ==== The following code system are not discoverable because they are code systems in THO, but THO doesn't define the codes. They have been checked and the identifiers are correct (5) ===========
 
-The definition for the Code System with URI 'https://nahdo.org/sopt' doesnt provide any codes so the code cannot be validated
+
 The definition for the Code System with URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' doesnt provide any codes so the code cannot be validated
-                                             http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH
+WARNING: Observation/observation-occupation: Observation.value.ofType(CodeableConcept): Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated
+WARNING: Observation/observation-occupation: Observation.component[0].value.ofType(CodeableConcept): Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated
+WARNING: Observation/observation-occupation-industry-unknown: Observation.value.ofType(CodeableConcept): Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated
+WARNING: Observation/observation-occupation-unknown: Observation.component[0].value.ofType(CodeableConcept): Code System URI 'http://terminology.hl7.org/CodeSystem/PHOccupationalDataForHealthODH' is unknown so the code cannot be validated
+                                            
 # === These warnings are due to using the actual base Type for the _id or _tag SearchParameter expression instead of using "Resource". Reviewed with publishing in Nov 2021 and OK with suppressing these Warnings (source: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Bad.20derived.20searchparameters)  (8) ===
 
 WARNING: SearchParameter/us-core-documentreference-id: SearchParameter: The expression 'DocumentReference.id' is not compatible with the expression 'Resource.id' in the derivedFrom SearchParameter http://hl7.org/fhir/SearchParameter/Resource-id, and this likely indicates that the derivation relationship is not valid
@@ -62,20 +66,23 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureD
 
 
 INFORMATION: Procedure/rehab: Procedure.code.coding[1]: The definition for the Code System with URI 'http://www.cms.gov/Medicare/Coding/ICD10' doesnt provide any codes so the code cannot be validated
-
 INFORMATION: ServiceRequest/rehab: ServiceRequest.code.coding[1]: The definition for the Code System with URI 'http://www.cms.gov/Medicare/Coding/ICD10' doesnt provide any codes so the code cannot be validated
+WARNING: Procedure/rehab: Procedure.code: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
+WARNING: ServiceRequest/rehab: ServiceRequest.code: Code System URI 'http://www.cms.gov/Medicare/Coding/ICD10' is unknown so the code cannot be validated
 
 # === Code System not recognized due to IP issues (9) ===
 
-Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
-The definition for the Code System with URI 'http://www.ama-assn.org/go/cpt' doesnt provide any codes so the code cannot be validated
-Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
+# Error from server: Unable to provide support for code system http://www.ama-assn.org/go/cpt
+# The definition for the Code System with URI 'http://www.ama-assn.org/go/cpt' doesnt provide any codes so the code cannot be validated
+# Error from server: Unable to provide support for code system http://www.nubc.org/patient-discharge
+
+WARNING: ValueSet.where(id = 'us-core-discharge-disposition'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://www.nubc.org/patient-discharge
 Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated
 WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|7.0.0-ballot
 
 # === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) NONE===
 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|4.0.1
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0-cibuild
 
 
 # === Code from extensibly bound to NUCC for US Core and not from base FHIR preferred c80-practice-codes valueset (1)===

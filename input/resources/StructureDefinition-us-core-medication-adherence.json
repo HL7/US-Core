@@ -94,7 +94,7 @@
                 "binding": {
                     "strength": "extensible",
                     "description": "Medication Adherence Codes",
-                    "valueSet": "http://hl7.org/fhir/us/core//ValueSet/medication-adherence"
+                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/medication-adherence"
                 }
             },
             {
@@ -190,7 +190,7 @@
                             {
                                 "extension": [
                                     {
-                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support",
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": true
                                     }
                                 ]
@@ -198,7 +198,7 @@
                             {
                                 "extension": [
                                     {
-                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support",
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": false
                                     }
                                 ]
@@ -206,7 +206,7 @@
                             {
                                 "extension": [
                                     {
-                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support",
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": true
                                     }
                                 ]
@@ -214,14 +214,15 @@
                             {
                                 "extension": [
                                     {
-                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support",
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": false
                                     }
                                 ]
                             }
                         ]
                     }
-                ]
+                ],
+                "mustSupport": true
             },
             {
                 "id": "Extension.url",

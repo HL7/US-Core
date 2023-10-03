@@ -38,11 +38,6 @@ differential:
         or value.exists())
       xpath: exists(f:component) or exists(f:hasMember) or exists(f:*[starts-with(local-name(.),
         'value')]) or exists(f:dataAbsentReason)
-    - key: us-core-3
-      severity: error
-      human: SHALL use UCUM for coded quantity units.
-      expression: ofType(Quantity).system.empty() or ofType(Quantity).system = 'http://unitsofmeasure.org'
-      xpath: not(exists(f:valueQuantity/f:system) ) or f:valueQuantity/f:system[@value='http://unitsofmeasure.org']
   - id: Observation.status
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
@@ -221,6 +216,12 @@ differential:
     condition:
     - us-core-2
     - us-core-3
+    constraint:
+    - key: us-core-3
+      severity: error
+      human: SHALL use UCUM for coded quantity units.
+      expression: ofType(Quantity).system.empty() or ofType(Quantity).system = 'http://unitsofmeasure.org'
+      xpath: not(exists(f:valueQuantity/f:system) ) or f:valueQuantity/f:system[@value='http://unitsofmeasure.org']
     mustSupport: true
   - id: Observation.dataAbsentReason
     extension:
