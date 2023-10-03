@@ -16,7 +16,7 @@ description: >-
 compose: 
   include:
     - valueSet:
-        - 'https://cts.nlm.nih.gov/fhir/res/ValueSet/2.16.840.1.113762.1.4.1115.9' # Intervention Preferences at End of Life Grouping - NEED TO ADD LOINC for Intervention Preference
+        - 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.9' # Intervention Preferences at End of Life Grouping - NEED TO ADD LOINC for Intervention Preference
     - system: 'http://hl7.org/fhir/us/core/CodeSystem/uscore-treatment-intervention-preference' # only "treatment-intervention" from the PACIO ValueSet
       concept:
         - code: intervention-preference
