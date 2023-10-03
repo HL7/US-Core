@@ -26,13 +26,7 @@
                 "path": "Extension",
                 "definition": "Reported adherence to prescribed medication instructions.",
                 "min": 0,
-                "max": "*",
-                "mapping": [
-                    {
-                        "identity": "http://loinc.org",
-                        "map": "71799-1"
-                    }
-                ]
+                "max": "*"
             },
             {
                 "id": "Extension.extension",
@@ -58,6 +52,13 @@
                 ],
                 "path": "Extension.extension",
                 "sliceName": "medicationAdherence",
+                "code": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "71799-1",
+                        "display": "Adherence to prescribed medication instructions [Reported]"
+                    }
+                ],
                 "short": "(USCDI) Medication adherence code",
                 "definition": "Code stating whether the patient is consuming or being administered the medication has according to instructions.  For example, the patient in not taking the medication as prescribed, or the patient is taking the medication as prescribed.",
                 "min": 1,
@@ -189,7 +190,7 @@
                             {
                                 "extension": [
                                     {
-                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": true
                                     }
                                 ]
@@ -197,7 +198,7 @@
                             {
                                 "extension": [
                                     {
-                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": false
                                     }
                                 ]
@@ -205,7 +206,7 @@
                             {
                                 "extension": [
                                     {
-                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": true
                                     }
                                 ]
@@ -213,7 +214,7 @@
                             {
                                 "extension": [
                                     {
-                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
+                                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support",
                                         "valueBoolean": false
                                     }
                                 ]

@@ -362,6 +362,8 @@
 [US Core Pregnancy Intent Codes]: ValueSet-us-core-pregnancy-intent.html
 [US Core Tribal Affiliation Extension]: StructureDefinition-us-core-tribal-affiliation.html
 [US Core Vital Signs Profile]: StructureDefinition-us-core-vital-signs.html
+[US Core Treatment Intervention Preference Profile]: StructureDefinition-us-core-treatment-intervention-preference.html
+[US Core Care Experience Preference Profile]: StructureDefinition-us-core-care-experience-preference.html
 [US Core USCDI Requirement Extension]: StructureDefinition-uscdi-requirement.html
 [USCDI Requirement]: must-support.html#uscdi-requirements
 [USCDI v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2

@@ -60,7 +60,7 @@ dependsOn:
 - id: vsac
   packageId: us.nlm.vsac
   uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-  version: 0.11.0
+  version: 0.12.0
 - packageId: hl7.fhir.uv.sdc
   version: 3.0.0
   uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
@@ -195,6 +195,12 @@ definition:
       Test Result Observation Profile*.
     name: Capillary refill Time Nail Bed Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result
+  - reference:
+      reference: Observation/care-experience-preference
+    description: This is an care experience preference example for the *Care Experience
+      Profile*.  It is based on the *US Core Simple Observation Profile*.
+    name: Care Experience Preference Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference
   - reference:
       reference: CareTeam/example
     description: This is a careteam example for the *US Core CareTeam Profile*.
@@ -1242,6 +1248,12 @@ definition:
     name: Temperature Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature
   - reference:
+      reference: Observation/treattment-intervention-preference
+    description: This is an example for the *Treatment Intervention Profile*.  It
+      is based on the *US Core Simple Observation Profile*.
+    name: Treatment Intervention Preference Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference
+  - reference:
       reference: Device/udi-1
     description: This is a UDI 1 example for the *US Core Implantable Device Profile*.
     name: UDI 1 Example
@@ -1339,6 +1351,17 @@ definition:
       It provides the floor for standards development for specific use cases.
     exampleBoolean: false
     name: US Core Body Weight Profile
+  - reference:
+      reference: StructureDefinition/us-core-care-experience-preference
+    description: To promote interoperability and adoption through common implementation,
+      this profile sets minimum expectations for the Observation resource to record,
+      search, and fetch for a patient's care experience preferences. It is based on
+      the US Core Simple Profile and identifies which *additional* core elements,
+      extensions, vocabularies, and value sets **SHALL** be present and constrains
+      the way the elements are used when using the profile. It provides the floor
+      for standards development for specific use cases.
+    exampleBoolean: false
+    name: US Core Care Experience Preference Profile
   - reference:
       reference: CodeSystem/careplan-category
     description: Set of codes that are needed for implementation of the US-Core CarePlan
@@ -2248,6 +2271,29 @@ definition:
       of LOINC Users' Guide).
     exampleBoolean: false
     name: US Core Survey Codes
+  - reference:
+      reference: CodeSystem/uscore-treatment-intervention-preference
+    description: A code representing an individual's medical intervention (treatment)
+      preferences.
+    exampleBoolean: false
+    name: US Core Treatment Intervention Preference CodeSystem
+  - reference:
+      reference: StructureDefinition/us-core-treatment-intervention-preference
+    description: To promote interoperability and adoption through common implementation,
+      this profile sets minimum expectations for the Observation resource to record,
+      search, and fetch for a patient's treatment intervention preferences. It is
+      based on the US Core Simple Profile and identifies which *additional* core elements,
+      extensions, vocabularies, and value sets **SHALL** be present and constrains
+      the way the elements are used when using the profile. It provides the floor
+      for standards development for specific use cases.
+    exampleBoolean: false
+    name: US Core Treatment Intervention Preference Profile
+  - reference:
+      reference: ValueSet/uscore-treatment-intervention-preference
+    description: A code representing an individual's medical intervention (treatment)
+      preferences.
+    exampleBoolean: false
+    name: US Core Treatment Intervention Preference ValueSet
   - reference:
       reference: StructureDefinition/us-core-tribal-affiliation
     description: This Extension profile represents a tribe or band with which a person

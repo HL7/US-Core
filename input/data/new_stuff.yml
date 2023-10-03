@@ -18,6 +18,7 @@
 # - US Core QuestionnaireResponse Tags ValueSet
 # - USCoreClinicalResultObservationCategory
 - USCoreMedicationAdherenceValueSet
+- USCoreTreatmentInterventionPreferenceValueSet
 
 
 
@@ -25,7 +26,9 @@
 # - USCoreObservationCategoryExtensionCodes
 # - USCoreTagsCodeSystem
 # - USCoreSexForClinicalUse
-# - USCoreCategory
+- USCoreCategory
+- USCoreTreatmentInterventionPreferenceCodeSystem
+
 
 
 # Profiles
@@ -51,6 +54,8 @@
 - USCoreDiagnosticReportProfileLaboratoryReporting
 - USCoreProcedureProfile
 - USCoreServiceRequestProfile
+- USCoreTreatmentInterventionPreferenceProfile
+- USCoreCareExperiencePreferenceProfile
 
 
 
@@ -204,3 +209,5 @@
 - Hemoglobin Example
 - Erythrocytes Example
 - Platelets Example
+- Care Experience Preference Example
+- Treatment Intervention Preference Example

@@ -25,9 +25,9 @@ differential:
     definition: Reported adherence to prescribed medication instructions.
     min: 0
     max: '*'
-    mapping:
-    - identity: http://loinc.org
-      map: 71799-1
+    # mapping:
+    # - identity: http://loinc.org
+    #   map: 71799-1
 
   - id: Extension.extension
     path: Extension.extension
@@ -45,8 +45,14 @@ differential:
       valueBoolean: true
     path: Extension.extension
     sliceName: medicationAdherence
+    code:
+    - system: 'http://loinc.org'
+      code: 71799-1
+      display: Adherence to prescribed medication instructions [Reported]
+
     short: (USCDI) Medication adherence code
-    definition: Code stating whether the patient is consuming or being administered the medication has according to instructions.  For example, the patient in not taking the medication as prescribed, or the patient is taking the medication as prescribed.
+    definition: >-
+      Code stating whether the patient is consuming or being administered the medication has according to instructions.  For example, the patient in not taking the medication as prescribed, or the patient is taking the medication as prescribed.
     min: 1
     max: '1'
     type:
@@ -140,16 +146,16 @@ differential:
 
       _targetProfile:
       - extension:
-        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: true
       - extension:
-        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
       - extension:
-        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: true
       - extension:
-        - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+        - url: http://hl7.org/fhir/us/core/StructureDefinition/elementdefinition-type-must-support
           valueBoolean: false
 
 
