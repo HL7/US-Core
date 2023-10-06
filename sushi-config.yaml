@@ -16,7 +16,7 @@ extension:
     valueInteger: 3
 publisher:
   name: HL7 International / Cross-Group Projects # <<< The stated publisher must be "HL7 International / {wg-name"} where the wg-name is the display value for the code
-  url: 'http://www.hl7.org/Special/committees/cgp/index.cfm'  # <<< the contacts for the resource must include the link to the group found in the definition
+  url: 'http://www.hl7.org/Special/committees/cgp'  # <<< the contacts for the resource must include the link to the group found in the definition
   email: cgp@lists.HL7.org
 jurisdiction: 'urn:iso:std:iso:3166#US'
 copyright: >-
@@ -149,6 +149,12 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - comparison-argo/vs-narrative-status-us-core-narrative-status.html
   # ipa-comparison: 
   #   - '{current}'
+  logging:
+    - tx #tx: Messages describing the use of the terminology server (for debugging)
+    - html #html: Log when validating an html page (troubleshooting only - leave off)
+    - generate #generate: Log when producing an individual resource (troubleshooting only - leave off)
+    - init #init: Messages describing the start up process (for debugging)
+    - progress #progress: Overall progress messages
 copyrightyear: '2023+'
 #releaselabel: CI Build
 releaselabel: STU6

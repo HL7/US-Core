@@ -18,7 +18,7 @@ contact:
 - name: HL7 International / Cross-Group Projects
   telecom:
   - system: url
-    value: http://www.hl7.org/Special/committees/cgp/index.cfm
+    value: http://www.hl7.org/Special/committees/cgp
   - system: email
     value: cgp@lists.HL7.org
 description: 'The US Core Implementation Guide is based on FHIR Version R4 and defines
@@ -3347,5 +3347,15 @@ definition:
     value: comparison-argo/sd-argo-ethnicity-us-core-ethnicity.html
   - code: html-exempt
     value: comparison-argo/vs-narrative-status-us-core-narrative-status.html
+  - code: logging
+    value: tx
+  - code: logging
+    value: html
+  - code: logging
+    value: generate
+  - code: logging
+    value: init
+  - code: logging
+    value: progress
   - code: path-history
     value: http://hl7.org/fhir/us/core/history.html
