@@ -2,22 +2,20 @@ resourceType: StructureDefinition
 id: us-core-treatment-intervention-preference
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference
 # url: http://www.fhir.org/guides/uscdi4-sandbox/StructureDefinition/us-core-treatment-intervention-preference
+version: 3.2.0
 name: USCoreTreatmentInterventionPreferenceProfile
 title: US Core Treatment Intervention Preference Profile
 status: active
 experimental: false
 date: 2023-10-02
 description: >-
-  This US Core FHIR Profile communicates a person’s goals, preferences, and
-  priorities for care and treatment in case that person cannot make medical
-  decisions because of a severe illness or injury. To promote interoperability
-  and adoption through common implementation, this profile sets minimum
-  expectations for the Observation resource to record, search, and fetch a
-  patient's care experience preferences. Based on the US Core Simple Profile, it
-  identifies which *additional* core elements, extensions, vocabularies, and
-  value sets **SHALL** be present and further constrains US Core Simple Profile
-  elements. It provides the floor for standards development for specific use
-  cases.
+  To promote interoperability and adoption through common implementation,
+  this profile sets minimum expectations for the Observation resource to record, search,
+  and fetch for a patient's treatment intervention preferences. It is based on
+  the US Core Simple Profile and identifies which *additional* core elements,
+  extensions, vocabularies, and value sets **SHALL** be present and constrains the
+  way the elements are used when using the profile. It provides the
+  floor for standards development for specific use cases.
 
 copyright: Used by permission of HL7 International, all rights reserved Creative Commons
   License
@@ -36,20 +34,38 @@ differential:
     definition: \-
     comment: \-
 
+
+
+  - id: Observation.category:us-core
+    path: Observation.category
+    sliceName: us-core
+    min: 0
+    max: '1'
+    patternCodeableConcept:
+      coding:
+      - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category  # get a LOINC code for this see stu note
+        code: treatment-intervention-preference
+    mustSupport: true
+
+
   - id: Observation.code
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
+    # extension:
+    # - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+    #   valueBoolean: true
     path: Observation.code
-    short: (USCDI) Treatment intervention preferences code
+    short: Treatment intervention preferences code
     type:
     - code: CodeableConcept
+    patternCodeableConcept:
+      coding:
+      - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category  # get a LOINC code for this see stu note
+        code: treatment-intervention-preference
     mustSupport: true
-    binding:
-      strength: extensible
-      # valueSet: 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.9'
-      valueSet: >-  # add "intervention-preference" from the PACIO to VSAC
-        http://hl7.org/fhir/us/core/ValueSet/uscore-treatment-intervention-preference
+    # binding:
+    #   strength: extensible
+    #   # valueSet: 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1115.11'
+    #   valueSet: >-  # only "intervention-preference" from the PACIO ValueSet
+    #     http://www.fhir.org/guides/uscdi4-sandbox/ValueSet/uscore-treatment-intervention-preference
      
 
   - id: Observation.derivedFrom
@@ -57,7 +73,7 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Observation.derivedFrom
-    short: (USCDI) US Core Profiles or other resource the observation is made from
+    short: (ADD'L USCDI) US Core Profiles or other resource the observation is made from
     definition: US Core Observations, DocumentReference, QuestionnaireResponse or other resource from which this observation value is derived.
     type:
     - code: Reference
@@ -69,23 +85,23 @@ differential:
       - http://hl7.org/fhir/StructureDefinition/ImagingStudy
       - http://hl7.org/fhir/StructureDefinition/Media
       - http://hl7.org/fhir/StructureDefinition/MolecularSequence
-      _targetProfile:
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: true
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-      - extension:
-        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-          valueBoolean: false
-    mustSupport: true
+  #     _targetProfile:
+  #     - extension:
+  #       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+  #         valueBoolean: true
+  #     - extension:
+  #       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+  #         valueBoolean: false
+  #     - extension:
+  #       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+  #         valueBoolean: false
+  #     - extension:
+  #       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+  #         valueBoolean: false
+  #     - extension:
+  #       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+  #         valueBoolean: false
+  #     - extension:
+  #       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+  #         valueBoolean: false
+  #   mustSupport: true

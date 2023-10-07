@@ -1592,7 +1592,7 @@
         "reference": {
           "reference": "Observation/treatment-intervention-preference"
         },
-        "description": "This is an example for the *Treatment Intervention Profile*.  It is based on the *US Core Simple Observation Profile*.",
+        "description": "This is an intervention preference example for the *Treatment Intervention Profile*.  It is based on the *US Core Simple Observation Profile*.",
         "name": "Treatment Intervention Preference Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-treatment-intervention-preference"
       },
@@ -1680,7 +1680,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-care-experience-preference"
         },
-        "description": "This US Core FHIR Profile communicates a person's goals, preferences, and priorities for overall experiences during their care and treatment. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch a patient's care experience preferences. Based on the US Core Simple Profile, it identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and further constrains US Core Simple Profile elements. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch for a patient's care experience preferences. It is based on the US Core Simple Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Care Experience Preference Profile"
       },
@@ -2392,17 +2392,9 @@
         "reference": {
           "reference": "StructureDefinition/us-core-treatment-intervention-preference"
         },
-        "description": "This US Core FHIR Profile communicates a person’s goals, preferences, and priorities for care and treatment in case that person cannot make medical decisions because of a severe illness or injury. To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch a patient's care experience preferences. Based on the US Core Simple Profile, it identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and further constrains US Core Simple Profile elements. It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch for a patient's treatment intervention preferences. It is based on the US Core Simple Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Treatment Intervention Preference Profile"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/uscore-treatment-intervention-preference"
-        },
-        "description": "A code representing an individual's medical intervention (treatment) preferences.",
-        "exampleBoolean": false,
-        "name": "US Core Treatment Intervention Preference ValueSet"
       },
       {
         "reference": {

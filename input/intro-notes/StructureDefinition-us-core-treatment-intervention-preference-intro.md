@@ -13,27 +13,34 @@ The following are example usage scenarios for this profile:
 
 **Each Observation Must Have:**
 
-1. a [LOINC] code, if available, representing an individual’s medical intervention (treatment) preference.
+1. a fixed code for treatment intervention preference*
+
+In this ballot version, we are using the US Core category code "treatment-intervention-preference" for this concept. A request for a new [LOINC] for this concept has been submitted to Regenstrie, and we expect it to be available before the publication of this version of US Core. 
+{:.note-to-balloters}
+
+\*see guidance below
 
 **Each Observation Must Support:**
 
 1. a category code of 'intervention-preference'
-2. a reference to the document(s) the observation is made from*
+
+**Additional USCDI Requirements (inherited from Simple Observation Profile)**
+
+<!-- { % include additional-requirements-intro.md type="Observation" % } -->
+
+1. a reference to an associated form or document the observation is made from*
 
 \*see guidance below
 
-<!-- **Additional USCDI Requirements**
-
-{ % include additional-requirements-intro.md type="Observation" % }
-
-1. references to an associated survey, assessment, or screening tool*
-
-\*see guidance below -->
-
 **Profile Specific Implementation Guidance:**
 
-- Treatment intervention preferences are patient-authored information used to share an individual's medical treatment and intervention goals, preferences, and priorities. They guide caregivers and medical personnel when the patient cannot communicate.
-- The value for these types of observations is typically a string
-- The observation **MAY** be derived from or reference a document (for example an advance directive document.) using `Observation.derivedFrom' to reference a [DocumentReference] resource.
+- Treatment intervention preferences are patient-authored information used to share an individual's medical treatment and intervention goals, preferences, and priorities. They guide caregivers and medical personnel when the patient cannot communicate. The value for these types of observations is typically a string.
+{% include additional-codings.md example1=', for example, the more specific LOINC, “75779-9 (Thoughts on cardiopulmonary resuscitation (CPR) [Reported])”'%}
+  - See the existing [Intervention Preferences at End of Life Grouping] for more specific concepts representing an individual's treatment intervention preferences
+  
+   We expect this value set's "end of life" name and text scope to be removed in an upcoming [Value Set Authority Center (VSAC)] update before the publication of this version of US Core. 
+   {:.note-to-balloters}
+
+- The observation **MAY** be derived from or reference a form or document (for example an advance directive document.) using `Observation.derivedFrom'.
 
 {% include link-list.md %}

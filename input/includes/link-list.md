@@ -328,7 +328,7 @@
 [US Core MedicationDispense Profile]: StructureDefinition-us-core-medicationdispense.html
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
 [US Core MedicationRequest Profile]: StructureDefinition-us-core-medicationrequest.html
-[US Core Medication Adherence Extension]: StructureDefinition-us-core-medicationadherance.html
+[US Core Medication Adherence Extension]: StructureDefinition-us-core-medication-adherence.html
 [US Core Simple Observation Profile]: StructureDefinition-us-core-simple-observation.html
 [US Core Specimen Profile]: StructureDefinition-us-core-specimen.html
 [US Core Observation Clinical Result Profile]: StructureDefinition-us-core-observation-clinical-result.html
@@ -408,3 +408,5 @@
 [FHIR Extension]: https://hl7.org/fhir/extensions/
 [US Core Data for Interoperability USCDI Table]: uscdi.html
 [Vital Signs with Qualifying Elements: Average Blood Pressure Profile]: https://hl7.org/fhir/us/vitals/STU1/StructureDefinition-average-blood-pressure.html
+[Care Experience Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.11/expansion
+[Intervention Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.9/expansion
