@@ -15,7 +15,7 @@ The following are example usage scenarios for this profile:
 
 1. a fixed code for treatment intervention preference*
 
-In this ballot version, we are using the US Core category code "treatment-intervention-preference" for this concept. A request for a new [LOINC] for this concept has been submitted to Regenstrie, and we expect it to be available before the publication of this version of US Core. 
+In this ballot version, we are using the US Core category code "treatment-intervention-preference" for this concept. A request for a new [LOINC] for this concept has been submitted to Regenstrief, and we expect it to be available before the publication of this version of US Core. 
 {:.note-to-balloters}
 
 \*see guidance below
