@@ -27,7 +27,7 @@ This ballot addresses the following:
 
 - Migrate US Core Terminology to VSAC
 - Conformance Updates
-- and more ...
+- Expanded Reason for Referral
 
 {% include img-small.html img="todo.png" %}
 
