@@ -7,4 +7,7 @@ for example
 {% raw %} {% include additional-requirements-intro.md type="Patient" plural="true" %} or {% include additional-requirements-intro.md type="DocumentReference" %} {% endraw %}
 -->
 
-For ONC's USCDI requirements, each {{include.type}} Must Support the following additional {% if include.plural %}elements. These elements are{% else %}element. This element is{% endif %} included in the formal definition of the profile and the {{include.type}} examples.
+<div class="bg-success" markdown="1">
+{% if include.plural %}These elements are{% else %}This element is{% endif %} included in the formal definition of the profile and the {{include.type}} examples as [Additional USCDI Requirements] for certified systems. Elements that are not
+Mandatory or Must Support but are required for ONC's g(10) certification.
+</div><!-- new-content -->

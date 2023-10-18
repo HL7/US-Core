@@ -5,11 +5,13 @@ name: USCoreAllergyIntolerance
 title: US Core AllergyIntolerance Profile
 status: active
 experimental: false
-date: 2022-04-20
+date: 2023-10-17
 description: To promote interoperability and adoption through common implementation,
   this profile sets minimum expectations for the AllergyIntolerance resource to record,
-  search, and fetch allergies/adverse reactions associated with a patient.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile.
-  It provides the floor for standards development for specific use cases.
+  search, and fetch allergies/adverse reactions associated with a patient.  It identifies
+  which core elements, extensions, vocabularies, and value sets **SHALL** be present
+  and constrains the way the elements are used when using the profile. It provides
+  the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -27,11 +29,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: AllergyIntolerance
   - id: AllergyIntolerance.clinicalStatus
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: AllergyIntolerance.clinicalStatus
-    short: (USCDI) active | inactive | resolved
     mustSupport: true
     binding:
       strength: required
@@ -40,11 +38,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: AllergyIntolerance.status
   - id: AllergyIntolerance.verificationStatus
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: AllergyIntolerance.verificationStatus
-    short: (USCDI) unconfirmed | confirmed | refuted | entered-in-error
     mustSupport: true
     binding:
       strength: required
@@ -53,11 +47,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: AllergyIntolerance.status
   - id: AllergyIntolerance.code
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: AllergyIntolerance.code
-    short: (USCDI) Code that identifies the allergy or intolerance
     min: 1
     mustSupport: true
     binding:
@@ -67,11 +57,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: AllergyIntolerance.substance
   - id: AllergyIntolerance.patient
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: AllergyIntolerance.patient
-    short: (USCDI) Who the sensitivity is for
     type:
     - code: Reference
       targetProfile:
@@ -81,18 +67,10 @@ differential:
     - identity: argonaut-dq-dstu2
       map: AllergyIntolerance.patient
   - id: AllergyIntolerance.reaction
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: AllergyIntolerance.reaction
-    short: (USCDI) Adverse Reaction Events linked to exposure to substance
     mustSupport: true
   - id: AllergyIntolerance.reaction.manifestation
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: AllergyIntolerance.reaction.manifestation
-    short: (USCDI) Clinical symptoms/signs associated with the Event
     mustSupport: true
     binding:
       strength: extensible

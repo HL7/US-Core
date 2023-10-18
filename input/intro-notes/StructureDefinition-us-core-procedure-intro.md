@@ -30,7 +30,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="Procedure" %}
 
-1.  A reference to the request for the procedure*
+1.  <span class="bg-success" markdown="1">a reason or indication for referral or consultation*</span><!-- new-content -->
 
 \*see guidance below
 
@@ -40,6 +40,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
     - Only LOINC concepts that reflect actual procedures **SHOULD** be used
 - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` with a reference to the [US Core Implantable Device Profile].
 - See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Procedures
-- *The Reason or justification for a referral or consultation is communicated through the [US Core ServiceRequest Profile] which can be linked to the Procedure through the `Procedure.basedOn' element.
+{% include reason-for-referral.md %}
+
 
 {% include link-list.md %}

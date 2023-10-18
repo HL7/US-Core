@@ -6,7 +6,7 @@
     "title": "US Core Immunization Profile",
     "status": "active",
     "experimental": false,
-    "date": "2022-04-20",
+    "date": "2023-10-17",
     "description": "This profile sets minimum expectations for the Immunization resource to record, search, and fetch immunization history associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -46,14 +46,7 @@
             },
             {
                 "id": "Immunization.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Immunization.status",
-                "short": "(USCDI) completed | entered-in-error | not-done",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -68,14 +61,7 @@
             },
             {
                 "id": "Immunization.statusReason",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Immunization.statusReason",
-                "short": "(USCDI) Reason not done",
                 "mustSupport": true,
                 "binding": {
                     "strength": "example",
@@ -90,14 +76,8 @@
             },
             {
                 "id": "Immunization.vaccineCode",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Immunization.vaccineCode",
-                "short": "(USCDI) Vaccine Product Type (bind to CVX)",
+                "short": "Vaccine Product Type (bind to CVX)",
                 "condition": [
                     "us-core-5"
                 ],
@@ -115,14 +95,7 @@
             },
             {
                 "id": "Immunization.patient",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Immunization.patient",
-                "short": "(USCDI) Who was immunized",
                 "alias": [
                     "Patient"
                 ],
@@ -144,14 +117,8 @@
             },
             {
                 "id": "Immunization.encounter",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Immunization.encounter",
-                "short": "(USCDI) Encounter the immunization was part of",
+                "short": "Encounter the immunization was part of",
                 "type": [
                     {
                         "code": "Reference",
@@ -164,14 +131,7 @@
             },
             {
                 "id": "Immunization.occurrence[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Immunization.occurrence[x]",
-                "short": "(USCDI) Vaccine administration date",
                 "type": [
                     {
                         "extension": [
@@ -196,14 +156,7 @@
             },
             {
                 "id": "Immunization.primarySource",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Immunization.primarySource",
-                "short": "(USCDI) Indicates context the data was recorded in",
                 "definition": "Indicates whether the data contained in the resource was captured by the individual/organization which was responsible for the administration of the vaccine rather than as 'secondary reported' data  documented by a third party. A value of 'true' means this data originated with the individual/organization which was responsible for the administration of the vaccine.",
                 "comment": "This updated definition is adopted from the FHIR R5 Immunization resource.",
                 "mustSupport": true,
@@ -216,14 +169,8 @@
             },
             {
                 "id": "Immunization.location",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Immunization.location",
-                "short": "(USCDI) Where the vaccine was administered",
+                "short": "Where the vaccine was administered",
                 "type": [
                     {
                         "code": "Reference",

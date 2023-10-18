@@ -1304,7 +1304,7 @@
         "reference": {
           "reference": "Procedure/defib-implant"
         },
-        "description": "This *US Core Procedure Profile* is an example of an Defibrillator implant Procedure.",
+        "description": "This *US Core Procedure Profile* is an example of an Defibrillator implant Procedure. In this example, the reason for a referral is communicated through `Procedure.code'.",
         "name": "Procedure Defibrillator Implant Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
       },
@@ -1502,14 +1502,6 @@
       },
       {
         "reference": {
-          "reference": "ServiceRequest/defib-implant"
-        },
-        "description": "This *US Core ServiceRequest Profile* is an example for a defibrillator implant referral request.",
-        "name": "ServiceRequest Defibrillator Implant Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
-      },
-      {
-        "reference": {
           "reference": "ServiceRequest/foodpantry-referral"
         },
         "description": "This is a service request example for the *US Core ServiceRequest Profile Profile*.",
@@ -1611,6 +1603,14 @@
         "description": "This is a urobilinogen example for the *US Core Observation Lab Profile*.",
         "name": "Urobilinogen Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/uscdi-requirement"
+        },
+        "description": "**This extension is only used in the US Core Implementation Guide''s Profile StructureDefinition elements.**  It flags elements that are *Additional* USCDI Requirements for certified systems. In other words, elements that are not marked as Must Support but are required for ONC's g(10) certification. See the [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for more information.",
+        "exampleBoolean": false,
+        "name": "US Core Additional USCDI Requirement Extension"
       },
       {
         "reference": {
@@ -2403,14 +2403,6 @@
         "description": "This Extension profile represents a tribe or band with which a person associates and, optionally, whether they are enrolled.",
         "exampleBoolean": false,
         "name": "US Core Tribal Affiliation Extension"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/uscdi-requirement"
-        },
-        "description": "**This extension is only used in the US Core Implementation Guide's Profile StructureDefinition elements.** It flags elements that are ONC USCDI Requirements for certified systems. See the [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for more information.",
-        "exampleBoolean": false,
-        "name": "US Core USCDI Requirement Extension"
       },
       {
         "reference": {

@@ -5,7 +5,7 @@
     "name": "USCoreProvenance",
     "title": "US Core Provenance Profile",
     "status": "active",
-    "date": "2022-04-20",
+    "date": "2023-10-17",
     "description": "This profile sets minimum expectations for the Provenance resource to record, search, and fetch Provenance information associated with a record to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  This FHIR Provenance profile here covers the minimal (basic) information to support lineage of information.  It provides the floor for standards development for specific use cases.  Prior to reviewing this profile, implementers are encouraged to read the Basic Provenance guidance page which documents several key use cases, specifically, what organization was responsible for the most recent action on the resource.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -28,48 +28,23 @@
             },
             {
                 "id": "Provenance.target",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Provenance.target",
-                "short": "(USCDI) The Resource this Provenance record supports",
+                "short": "The Resource this Provenance record supports",
                 "mustSupport": true
             },
             {
                 "id": "Provenance.target.reference",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Provenance.target.reference",
-                "short": "(USCDI) Literal reference, Relative, internal or absolute URL",
                 "mustSupport": true
             },
             {
                 "id": "Provenance.recorded",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Provenance.recorded",
-                "short": "(USCDI) Timestamp when the activity was recorded / updated",
+                "short": "Timestamp when the activity was recorded / updated",
                 "mustSupport": true
             },
             {
                 "id": "Provenance.agent",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Provenance.agent",
                 "slicing": {
                     "discriminator": [
@@ -80,7 +55,6 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI) Actor involved",
                 "constraint": [
                     {
                         "key": "provenance-1",
@@ -93,14 +67,7 @@
             },
             {
                 "id": "Provenance.agent.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Provenance.agent.type",
-                "short": "(USCDI) How the agent participated",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -109,14 +76,7 @@
             },
             {
                 "id": "Provenance.agent.who",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Provenance.agent.who",
-                "short": "(USCDI) Who participated",
                 "type": [
                     {
                         "code": "Reference",
@@ -184,14 +144,7 @@
             },
             {
                 "id": "Provenance.agent.onBehalfOf",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Provenance.agent.onBehalfOf",
-                "short": "(USCDI) Who the agent is representing",
                 "type": [
                     {
                         "code": "Reference",
@@ -204,28 +157,14 @@
             },
             {
                 "id": "Provenance.agent:ProvenanceAuthor",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Provenance.agent",
                 "sliceName": "ProvenanceAuthor",
-                "short": "(USCDI) Actor involved",
                 "max": "*",
                 "mustSupport": true
             },
             {
                 "id": "Provenance.agent:ProvenanceAuthor.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Provenance.agent.type",
-                "short": "(USCDI) How the agent participated",
                 "min": 1,
                 "type": [
                     {
@@ -244,28 +183,14 @@
             },
             {
                 "id": "Provenance.agent:ProvenanceTransmitter",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Provenance.agent",
                 "sliceName": "ProvenanceTransmitter",
-                "short": "(USCDI) Actor involved",
                 "definition": "The entity that provided the copy to your system.",
                 "mustSupport": true
             },
             {
                 "id": "Provenance.agent:ProvenanceTransmitter.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Provenance.agent.type",
-                "short": "(USCDI) How the agent participated",
                 "min": 1,
                 "type": [
                     {

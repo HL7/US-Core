@@ -5,7 +5,7 @@
     "name": "USCoreRaceExtension",
     "title": "US Core Race Extension",
     "status": "active",
-    "date": "2023-05-16",
+    "date": "2023-10-17",
     "description": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html#3) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.",
     "purpose": "Complies with 2015 Edition Common Clinical Data Set for patient race.",
     "fhirVersion": "4.0.1",
@@ -62,15 +62,9 @@
             },
             {
                 "id": "Extension.extension:ombCategory",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Extension.extension",
                 "sliceName": "ombCategory",
-                "short": "(USCDI) American Indian or Alaska Native|Asian|Black or African American|Native Hawaiian or Other Pacific Islander|White",
+                "short": "American Indian or Alaska Native|Asian|Black or African American|Native Hawaiian or Other Pacific Islander|White",
                 "definition": "The 5 race category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
                 "min": 0,
                 "max": "5",
@@ -164,15 +158,9 @@
             },
             {
                 "id": "Extension.extension:text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Extension.extension",
                 "sliceName": "text",
-                "short": "(USCDI) Race Text",
+                "short": "Race Text",
                 "definition": "Plain text representation of the race concept(s).",
                 "min": 1,
                 "max": "1",

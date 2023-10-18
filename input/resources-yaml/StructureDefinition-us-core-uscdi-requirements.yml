@@ -1,48 +1,51 @@
 resourceType: StructureDefinition
 id: uscdi-requirement
-url: 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement'
-name: USCDIRequirement
-title: US Core USCDI Requirement Extension
+url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+name: AdditionalUSCDIRequirement
+title: US Core Additional USCDI Requirement Extension
 status: active
-date: '2023-04-03'
+date: 2023-04-03
 description: >-
-    **This extension is only used in the US Core Implementation Guide's Profile StructureDefinition elements.** It flags elements that are ONC USCDI Requirements for certified systems. See the [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for more information.
+  **This extension is only used in the US Core Implementation Guide''s Profile
+  StructureDefinition elements.**  It flags elements that are *Additional* USCDI
+  Requirements for certified systems. In other words, elements that are not
+  marked as Must Support but are required for ONC's g(10) certification. See the
+  [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for
+  more information.
 fhirVersion: 4.0.1
 kind: complex-type
 abstract: false
 context:
-    - 
-        type: element
-        expression: ElementDefinition
+- type: element
+  expression: ElementDefinition
 type: Extension
-baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Extension
 derivation: constraint
 differential:
-    element:
-        - 
-            id: Extension
-            path: Extension
-            short: 'USCDI Requirement Flag: ONLY USED FOR US Core Profile StructureDefinitions'
-            definition:  '**This extension is only used on US Core Profile StructureDefinition elements**. It flags elements that are ONC USCDI Requirements for certified systems.'
-            min: 0
-            max: '1'
-            isModifier: false
-            mapping:
-                - 
-                    identity: v2
-                    map: No v2 equivalent
-                - 
-                    identity: rim
-                    map: No RIM equivalent
-        - 
-            id: Extension.url
-            path: Extension.url
-            fixedUri: 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement'
-        - 
-            id: 'Extension.value[x]'
-            path: 'Extension.value[x]'
-            min: 1
-            max: '1'
-            type:
-                - 
-                    code: boolean
+  element:
+  - id: Extension
+    path: Extension
+    short: 'USCDI Requirement Flag: ONLY USED FOR US Core Profile StructureDefinitions'
+    definition: >-
+      This extension flags elements that are *Additional* USCDI   Requirements for certified
+      systems. In other words, elements that are not   marked as Must Support but
+      are required for ONC's g(10) certification. See the   [Conformance
+      page](http://hl7.org/fhir/us/core/general-requirements.html) for more
+      information.
+    min: 0
+    max: '1'
+    isModifier: false
+    mapping:
+    - identity: v2
+      map: No v2 equivalent
+    - identity: rim
+      map: No RIM equivalent
+  - id: Extension.url
+    path: Extension.url
+    fixedUri: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+  - id: Extension.value[x]
+    path: Extension.value[x]
+    min: 1
+    max: '1'
+    type:
+    - code: boolean

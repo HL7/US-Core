@@ -5,7 +5,7 @@
     "name": "USCoreDiagnosticReportProfileNoteExchange",
     "title": "US Core DiagnosticReport Profile for Report and Note Exchange",
     "status": "active",
-    "date": "2022-04-20",
+    "date": "2023-10-17",
     "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for searching and fetching Diagnostic Reports and Notes using the DiagnosticReport resource. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases. Prior to reviewing this profile, implementers are encouraged to read the Clinical Notes Guidance to understand the overlap of US Core DiagnosticReport Profile for Report and Note exchange and US Core DocumentReference Profile.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -37,14 +37,7 @@
             },
             {
                 "id": "DiagnosticReport.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.status",
-                "short": "(USCDI) registered | partial | preliminary | final +",
                 "condition": [
                     "us-core-10"
                 ],
@@ -56,12 +49,6 @@
             },
             {
                 "id": "DiagnosticReport.category",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.category",
                 "slicing": {
                     "discriminator": [
@@ -72,21 +59,13 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI) Service category",
                 "min": 1,
                 "mustSupport": true
             },
             {
                 "id": "DiagnosticReport.category:us-core",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.category",
                 "sliceName": "us-core",
-                "short": "(USCDI) Service category",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -96,14 +75,8 @@
             },
             {
                 "id": "DiagnosticReport.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.code",
-                "short": "(USCDI) US Core Report Code",
+                "short": "US Core Report Code",
                 "definition": "The test, panel, report, or note that was ordered.",
                 "comment": "The typical patterns for codes are:  1)  a LOINC code either as a translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
                 "mustSupport": true,
@@ -115,14 +88,7 @@
             },
             {
                 "id": "DiagnosticReport.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.subject",
-                "short": "(USCDI) The subject of the report - usually, but not always, the patient",
                 "min": 1,
                 "type": [
                     {
@@ -136,14 +102,7 @@
             },
             {
                 "id": "DiagnosticReport.encounter",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.encounter",
-                "short": "(USCDI) Health care event when test ordered",
                 "type": [
                     {
                         "code": "Reference",
@@ -156,14 +115,8 @@
             },
             {
                 "id": "DiagnosticReport.effective[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.effective[x]",
-                "short": "(USCDI) Diagnostically relevant time (typically the time of the procedure)",
+                "short": "Diagnostically relevant time (typically the time of the procedure)",
                 "type": [
                     {
                         "extension": [
@@ -185,26 +138,12 @@
             },
             {
                 "id": "DiagnosticReport.issued",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.issued",
-                "short": "(USCDI) DateTime this version was made",
                 "mustSupport": true
             },
             {
                 "id": "DiagnosticReport.performer",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.performer",
-                "short": "(USCDI) Responsible Diagnostic Service",
                 "type": [
                     {
                         "code": "Reference",
@@ -254,14 +193,7 @@
             },
             {
                 "id": "DiagnosticReport.result",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.result",
-                "short": "(USCDI) Observations",
                 "type": [
                     {
                         "code": "Reference",
@@ -302,38 +234,17 @@
             },
             {
                 "id": "DiagnosticReport.media",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.media",
-                "short": "(USCDI) Key images associated with this report",
                 "mustSupport": true
             },
             {
                 "id": "DiagnosticReport.media.link",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.media.link",
-                "short": "(USCDI) Reference to the image source",
                 "mustSupport": true
             },
             {
                 "id": "DiagnosticReport.presentedForm",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "DiagnosticReport.presentedForm",
-                "short": "(USCDI) Entire report as issued",
                 "mustSupport": true
             }
         ]

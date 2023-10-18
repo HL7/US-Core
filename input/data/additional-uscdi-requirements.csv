@@ -13,6 +13,8 @@ Previous Name,[US Core Patient Profile],Patient.name.use or Patient.name.period
 Suffix,[US Core Patient Profile],Patient.name.suffix
 A Reason Or Indication For Referral Or Consultation,[US Core ServiceRequest Profile],ServiceRequest.reasonCode
 A Reason Or Indication For Referral Or Consultation,[US Core ServiceRequest Profile],ServiceRequest.reasonReference
+A Reason Or Indication For Referral Or Consultation,[US Core Procedure Profile],Procedure.reasonCode
+A Reason Or Indication For Referral Or Consultation,[US Core Procedure Profile],Procedure.reasonReference
 The Reason Or Indication For The Prescription,[US Core MedicationRequest Profile],MedicationRequest.reasonCode
 The Reason Or Indication For The Prescription,[US Core MedicationRequest Profile],MedicationRequest.reasonReference
 Medication Adherence,[US Core MedicationRequest Profile],MedicationRequest.extension:medicationAdherence

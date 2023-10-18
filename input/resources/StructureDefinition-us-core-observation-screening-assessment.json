@@ -5,7 +5,7 @@
     "name": "USCoreObservationScreeningAssessmentProfile",
     "title": "US Core Observation Screening Assessment Profile",
     "status": "active",
-    "date": "2022-04-20",
+    "date": "2023-10-17",
     "description": "The US Core Observation Screening Assessment Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. To promote interoperability and adoption through common implementation, it sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of the patient's cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select \"check all that apply\" type questions. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -33,24 +33,11 @@
             },
             {
                 "id": "Observation.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.status",
-                "short": "(USCDI) registered | preliminary | final | amended +",
                 "mustSupport": true
             },
             {
                 "id": "Observation.category",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category",
                 "slicing": {
                     "discriminator": [
@@ -61,21 +48,13 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI) Classification of  type of observation",
                 "min": 1,
                 "mustSupport": true
             },
             {
                 "id": "Observation.category:survey",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category",
                 "sliceName": "survey",
-                "short": "(USCDI) Classification of  type of observation",
                 "requirements": "Used for filtering if the observation is an assessment or screening.",
                 "min": 1,
                 "max": "1",
@@ -91,15 +70,8 @@
             },
             {
                 "id": "Observation.category:screening-assessment",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category",
                 "sliceName": "screening-assessment",
-                "short": "(USCDI) Classification of  type of observation",
                 "definition": "Categories that a provider may use in their workflow to classify that this Observation is related to a USCDI Health Status/Assessments Data Class.",
                 "requirements": "Used for filtering the type of screening or assessment observation.",
                 "mustSupport": true,
@@ -111,14 +83,7 @@
             },
             {
                 "id": "Observation.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.code",
-                "short": "(USCDI) Type of observation (code / type)",
                 "mustSupport": true,
                 "binding": {
                     "strength": "preferred",
@@ -127,14 +92,7 @@
             },
             {
                 "id": "Observation.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.subject",
-                "short": "(USCDI) Who and/or what the observation is about",
                 "min": 1,
                 "type": [
                     {
@@ -148,14 +106,7 @@
             },
             {
                 "id": "Observation.effective[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.effective[x]",
-                "short": "(USCDI) Clinically relevant time/time-period for observation",
                 "definition": "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\".",
                 "comment": "At least a date should be present unless this observation is a historical report.",
                 "type": [
@@ -194,14 +145,7 @@
             },
             {
                 "id": "Observation.performer",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.performer",
-                "short": "(USCDI) Who is responsible for the observation",
                 "comment": "Some questions on questionnaires are not answered directly (e.g., asserted) by the individual completing the questionnaire, but are derived from answers to one or more other questions. For types of answers, `Observation.performer` should not be specified and `Observation.derivedFrom` should reference the relevant Screening Response Observation(s).",
                 "type": [
                     {
@@ -270,14 +214,7 @@
             },
             {
                 "id": "Observation.value[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.value[x]",
-                "short": "(USCDI) Actual result",
                 "comment": "An observation may have a value if it represents an individual survey, screening, or assessment question and answer pair. An observation should not have a value if it represents a multi-question or multi-select \u201ccheck all that apply\u201d responses. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.",
                 "type": [
                     {
@@ -349,14 +286,7 @@
             },
             {
                 "id": "Observation.dataAbsentReason",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.dataAbsentReason",
-                "short": "(USCDI) Why the result is missing",
                 "comment": "\"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values. For a given LOINC question, if the LOINC answer list includes concepts such as 'unknown' or 'not available', they should be used for Observation.value. Where these concepts are not part of the value set for Observation.value, the Observation.dataAbsentReason can be used if necessary and appropriate.",
                 "condition": [
                     "us-core-2"
@@ -365,14 +295,8 @@
             },
             {
                 "id": "Observation.hasMember",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.hasMember",
-                "short": "(USCDI) Reference to panel members or multi-select responses or multi-select responses",
+                "short": "Reference to panel members or multi-select responses or multi-select responses",
                 "definition": "Aggregate set of Observations that represent question answer pairs for both multi-question surveys, screenings, and assessments and multi-select questions.",
                 "comment": "This grouping element is used to represent surveys, screenings, and assessments that group several questions together or individual questions with  \u201ccheck all that apply\u201d responses. For example in the simplest case a flat multi-question survey where the \"panel\" observation is the survey instrument itself and instead of an `Observation.value` the `hasMember` element references other Observation that represent the individual questions answer pairs. When there is a heirarchical grouping of questions, the observation \"panels\" can be nested. Because surveys, screenings, and assessments can be arbitrarily complex structurally, not all structures can be represented using this Observation grouping pattern.",
                 "type": [
@@ -422,7 +346,7 @@
                     }
                 ],
                 "path": "Observation.derivedFrom",
-                "short": "(USCDI) Related Observation(s) or other resource the observation is made from",
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Related Observation(s) or other resource the observation is made from",
                 "definition": "Observations or or other resource such as a QuestionnaireResponse from which this observation value is derived.",
                 "type": [
                     {

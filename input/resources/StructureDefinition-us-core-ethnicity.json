@@ -6,7 +6,7 @@
     "name": "USCoreEthnicityExtension",
     "title": "US Core Ethnicity Extension",
     "status": "active",
-    "date": "2019-05-21T00:00:00-04:00",
+    "date": "2023-10-17",
     "publisher": "HL7 US Realm Steering Committee",
     "contact": [
         {
@@ -85,15 +85,9 @@
             },
             {
                 "id": "Extension.extension:ombCategory",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Extension.extension",
                 "sliceName": "ombCategory",
-                "short": "(USCDI) Hispanic or Latino|Not Hispanic or Latino",
+                "short": "Hispanic or Latino|Not Hispanic or Latino",
                 "definition": "The 2 ethnicity category codes according to the [OMB Standards for Maintaining, Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).",
                 "min": 0,
                 "max": "1",
@@ -186,15 +180,9 @@
             },
             {
                 "id": "Extension.extension:text",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Extension.extension",
                 "sliceName": "text",
-                "short": "(USCDI) ethnicity Text",
+                "short": "ethnicity Text",
                 "definition": "Plain text representation of the ethnicity concept(s).",
                 "min": 1,
                 "max": "1",

@@ -5,15 +5,16 @@ name: USCoreCoverageProfile
 title: US Core Coverage Profile
 status: active
 experimental: false
-date: 2022-09-24
+date: 2023-10-17
 description: The US Core Coverage Profile is based upon the core FHIR Coverage Resource
   and implements the US Core Data for Interoperability (USCDI) v3 Health Insurance
   Information requirements. To promote interoperability and adoption through common
   implementation, this profile sets minimum expectations for the Coverage resource
   to record, search, and fetch the "data related to an individual's insurance coverage
   for health care". It identifies which core elements, extensions, vocabularies, and
-  value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides
-  the floor for standards development for specific use cases.
+  value sets **SHALL** be present in the resource and constrains the way the elements
+  are used when using this profile. It provides the floor for standards development
+  for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -28,62 +29,44 @@ differential:
     - key: us-core-15
       severity: error
       human: Member Id in Coverage.identifier or Coverage.subscriberId SHALL be present
-      expression: identifier.type.coding.where(system='http://terminology.hl7.org/CodeSystem/v2-0203' and code='MB').exists() or subscriberId.exists()
+      expression: identifier.type.coding.where(system='http://terminology.hl7.org/CodeSystem/v2-0203'
+        and code='MB').exists() or subscriberId.exists()
       xpath: f:identifier or f:subscriberId
   - id: Coverage.identifier
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.identifier
-    short: (USCDI) Member ID and other identifiers
-
     slicing:
-        discriminator:
-          - type: pattern
-            path: type
-        rules: open
+      discriminator:
+      - type: pattern
+        path: type
+      rules: open
+    short: Member ID and other identifiers
     mustSupport: true
-  - id: 'Coverage.identifier:memberid'
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
+  - id: Coverage.identifier:memberid
     path: Coverage.identifier
     sliceName: memberid
-    short: (USCDI) Member ID
+    short: Member ID
     min: 0
     max: '1'
     condition:
     - us-core-15
     mustSupport: true
-
-  - id: 'Coverage.identifier:memberid.type'
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
+  - id: Coverage.identifier:memberid.type
     path: Coverage.identifier.type
-    short: (USCDI) Member Number identifier type
+    short: Member Number identifier type
     min: 1
     patternCodeableConcept:
       coding:
-        - system: 'http://terminology.hl7.org/CodeSystem/v2-0203'
-          code: MB    
+      - system: http://terminology.hl7.org/CodeSystem/v2-0203
+        code: MB
     mustSupport: true
   - id: Coverage.status
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.status
-    short: (USCDI) active | cancelled | draft | entered-in-error
     comment: The `Coverage.status` alone does not indicate whether an individual's
       coverage is terminated or that the individual is not covered. The `Coverage.period`
       needs to be considered as well.
     mustSupport: true
   - id: Coverage.type
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.type
-    short: (USCDI) Coverage category such as medical or accident
     comment: Identifies if the coverage is PPO, HMO, POS, etc.
     mustSupport: true
     binding:
@@ -91,21 +74,13 @@ differential:
       description: US Public Health Data Consortium Source of Payment Codes
       valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591
   - id: Coverage.subscriberId
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.subscriberId
-    short: (USCDI) ID assigned to the subscriber
     comment: The identifier assigned by the Payer on the subscriber's ID card
     condition:
     - us-core-15
     mustSupport: true
   - id: Coverage.beneficiary
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.beneficiary
-    short: (USCDI) Plan beneficiary
     comment: Identifier for a member assigned by the Payer.
     type:
     - code: Reference
@@ -113,11 +88,7 @@ differential:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     mustSupport: true
   - id: Coverage.relationship
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.relationship
-    short: (USCDI) Beneficiary relationship to the subscriber
     comment: Relationship of the member to the person insured (subscriber)
     min: 1
     mustSupport: true
@@ -125,20 +96,12 @@ differential:
       strength: extensible
       valueSet: http://hl7.org/fhir/ValueSet/subscriber-relationship
   - id: Coverage.period
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.period
-    short: (USCDI) Coverage start and end dates
     comment: Date that the contract became effective and Date that the contract was
       terminated or coverage changed.
     mustSupport: true
   - id: Coverage.payor
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.payor
-    short: (USCDI) Issuer of the policy
     comment: Issuer of the Policy
     max: '1'
     type:
@@ -159,9 +122,6 @@ differential:
           valueBoolean: false
     mustSupport: true
   - id: Coverage.class
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.class
     slicing:
       discriminator:
@@ -170,15 +130,11 @@ differential:
       description: Slice based on value pattern
       ordered: false
       rules: open
-    short: (USCDI) Additional coverage classifications
     mustSupport: true
   - id: Coverage.class:group
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.class
     sliceName: group
-    short: (USCDI) Group
+    short: Group
     min: 0
     max: '1'
     mustSupport: true
@@ -189,28 +145,19 @@ differential:
       - system: http://terminology.hl7.org/CodeSystem/coverage-class
         code: group
   - id: Coverage.class:group.value
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.class.value
-    short: (USCDI) Group Number
+    short: Group Number
     comment: Employer account identifier
     mustSupport: true
   - id: Coverage.class:group.name
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.class.name
-    short: (USCDI) Group Name
+    short: Group Name
     comment: Name of the Employer Account (135)
     mustSupport: true
   - id: Coverage.class:plan
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.class
     sliceName: plan
-    short: (USCDI) Plan
+    short: Plan
     min: 0
     max: '1'
     mustSupport: true
@@ -221,18 +168,12 @@ differential:
       - system: http://terminology.hl7.org/CodeSystem/coverage-class
         code: plan
   - id: Coverage.class:plan.value
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.class.value
-    short: (USCDI) Plan Number
+    short: Plan Number
     comment: Business concept used by a health plan to describe its benefit offerings
     mustSupport: true
   - id: Coverage.class:plan.name
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Coverage.class.name
-    short: (USCDI) Plan Name
+    short: Plan Name
     comment: Name of the health plan benefit offering assigned to the Plan Identifier
     mustSupport: true

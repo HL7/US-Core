@@ -6,7 +6,7 @@
     "title": "US Core Location Profile",
     "status": "active",
     "experimental": false,
-    "date": "2022-04-20",
+    "date": "2023-10-17",
     "description": "This profile sets minimum expectations for the Location resource for recording, searching, and fetching a \"physical place of available services or resources.\"  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used when using the profile.  It provides the floor for standards development for specific use cases to promote interoperability and adoption through common implementation.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -31,14 +31,8 @@
             },
             {
                 "id": "Location.identifier",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Location.identifier",
-                "short": "(USCDI Requirement) Unique business identifier for facility or location.",
+                "short": "Unique business identifier for facility or location.",
                 "mustSupport": true
             },
             {
@@ -48,14 +42,8 @@
             },
             {
                 "id": "Location.name",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Location.name",
-                "short": "(USCDI Requirement) Name by which a facility or location is known.",
+                "short": "Name by which a facility or location is known.",
                 "min": 1,
                 "mustSupport": true,
                 "mapping": [
@@ -67,14 +55,8 @@
             },
             {
                 "id": "Location.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Location.type",
-                "short": "(USCDI Requirement) Category of service or resource available in a location.",
+                "short": "Category of service or resource available in a location.",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",

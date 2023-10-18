@@ -8,12 +8,12 @@ meta:
     valueString: Procedure Defibrillator Implant Example
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This *US Core Procedure Profile* is an example of an Defibrillator
-      implant Procedure.
+      implant Procedure. In this example, the reason for a referral is communicated through `Procedure.code'.
 identifier:
 - system: urn:ietf:rfc:3986
   value: urn:uuid:b2a737f2-2fdb-49c1-b097-dac173d07aff
-basedOn:
-- reference: ServiceRequest/defib-implant
+# basedOn:
+# - reference: ServiceRequest/defib-implant
 status: completed
 code:
   coding:
@@ -32,6 +32,16 @@ performedPeriod:
 performer:
 - actor:
     reference: Practitioner/practitioner-1
+
+reasonCode:
+- coding:
+  - system: http://hl7.org/fhir/sid/icd-10-cm
+    code: I49.01
+    display: Ventricular fibrillation
+  text: Ventricular fibrillation
+
+
 focalDevice:
 - manipulated:
     reference: Device/udi-2
+

@@ -6,7 +6,7 @@
     "title": "US Core Specimen Profile",
     "status": "active",
     "experimental": false,
-    "date": "2022-09-27",
+    "date": "2023-10-17",
     "description": "This profile sets minimum expectations for the Specimen resource to record, search, and fetch \"substances being sampled or tested. (e.g., nasopharyngeal swab, whole blood, serum, urine, wound swab)\" associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -25,26 +25,13 @@
             },
             {
                 "id": "Specimen.identifier",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Specimen.identifier",
-                "short": "(USCDI) Specimen identifier",
+                "short": "Specimen identifier",
                 "mustSupport": true
             },
             {
                 "id": "Specimen.type",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Specimen.type",
-                "short": "(USCDI) Kind of material that forms the specimen",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
@@ -54,14 +41,8 @@
             },
             {
                 "id": "Specimen.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Specimen.subject",
-                "short": "(USCDI) The patient where the specimen came from.",
+                "short": "The patient where the specimen came from.",
                 "type": [
                     {
                         "code": "Reference",
@@ -74,14 +55,7 @@
             },
             {
                 "id": "Specimen.collection",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
-                "path": "Specimen.collection",
-                "short": "(USCDI) Collection details"
+                "path": "Specimen.collection"
             },
             {
                 "id": "Specimen.collection.bodySite",
@@ -92,7 +66,7 @@
                     }
                 ],
                 "path": "Specimen.collection.bodySite",
-                "short": "(USCDI) Specimen Source Site",
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Specimen Source Site",
                 "comment": "Body location from where a specimen was obtained. Examples include but are not limited to right internal jugular, left arm, and right eye.",
                 "binding": {
                     "strength": "extensible",
@@ -108,7 +82,7 @@
                     }
                 ],
                 "path": "Specimen.condition",
-                "short": "(USCDI) Specimen condition acceptability",
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: Specimen condition acceptability",
                 "comment": "Information regarding a specimen, including the container, that does not meet a laboratory's criteria for acceptability. Examples include but are not limited to hemolyzed, clotted, container leaking, and missing patient name. This may include information about the contents of the container, the container, and the label.",
                 "binding": {
                     "strength": "extensible",

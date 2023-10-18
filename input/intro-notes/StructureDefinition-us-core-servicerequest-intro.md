@@ -40,10 +40,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 - See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Service Requests.
 - The `ServiceRequest.category` binding Must Support, at a minimum, the [US Core ServiceRequest Category Codes].  However, this valueset can be treated as [extensible], and other category codes can be used instead.
 - The `ServiceRequest.code` valueset is broad to accommodate a wide variety of use cases and**SHOULD**be constrained to a subset for a particular use case or domain. (for example, LOINC for laboratory orders.)
-
-- \*The ServiceRequest resource can communicate the reason or indication for referral or consultation using either a code in `ServiceRequest.reasonCode` or a reference using `ServiceRequest.reasonReference`.
-  - As documented [here](general-guidance.html#referencing-us-core-profiles), when using  `ServiceRequest.reasonReference`, the referenced resources **SHOULD** be a US Core Profile.
+<div class="bg-success" markdown="1">
   
-
+{% include reason-for-referral.md %}
+  
+</div><!-- new-content -->
 
 {% include link-list.md %}

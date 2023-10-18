@@ -5,11 +5,13 @@ name: USCoreCarePlanProfile
 title: US Core CarePlan Profile
 status: active
 experimental: false
-date: 2022-04-20
-description: This profile sets minimum expectations for the CarePlan resource
-  to record, search, and fetch assessment and plan of treatment data associated with
-  a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards
-  development for specific use cases.
+date: 2023-10-17
+description: This profile sets minimum expectations for the CarePlan resource to record,
+  search, and fetch assessment and plan of treatment data associated with a patient
+  to promote interoperability and adoption through common implementation. It identifies
+  which core elements, extensions, vocabularies, and value sets **SHALL** be present
+  and constrains the way the elements are used when using the profile. It provides
+  the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -27,21 +29,15 @@ differential:
     - identity: argonaut-dq-dstu2
       map: CarePlan
   - id: CarePlan.text
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: CarePlan.text
-    short: (USCDI) Text summary of the resource, for human interpretation
+    short: Text summary of the resource, for human interpretation
     mustSupport: true
     mapping:
     - identity: argonaut-dq-dstu2
       map: CarePlan.text
   - id: CarePlan.text.status
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: CarePlan.text.status
-    short: (USCDI) generated | extensions | additional | empty
+    short: generated | extensions | additional | empty
     mustSupport: true
     binding:
       strength: required
@@ -51,19 +47,11 @@ differential:
     - identity: argonaut-dq-dstu2
       map: CarePlan.text.status
   - id: CarePlan.text.div
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: CarePlan.text.div
-    short: (USCDI) Limited xhtml content
+    short: Limited xhtml content
     mustSupport: true
   - id: CarePlan.status
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: CarePlan.status
-    short: (USCDI) draft | active | on-hold | revoked | completed | entered-in-error
-      | unknown
     requirements: Indicates whether the plan is currently being acted upon, represents
       future intentions or is now a historical record.
     mustSupport: true
@@ -76,11 +64,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: CarePlan.status
   - id: CarePlan.intent
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: CarePlan.intent
-    short: (USCDI) proposal | plan | order | option
     mustSupport: true
     binding:
       strength: required
@@ -91,16 +75,12 @@ differential:
     - identity: argonaut-dq-dstu2
       map: NA (new element in STU3)
   - id: CarePlan.category
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: CarePlan.category
     slicing:
       discriminator:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI) Type of plan
     definition: Type of plan.
     requirements: Identifies what "kind" of plan this is to support differentiation
       between multiple co-existing plans; e.g. "Home health", "psychiatric", "asthma",
@@ -111,12 +91,8 @@ differential:
     - identity: argonaut-dq-dstu2
       map: CarePlan.category
   - id: CarePlan.category:AssessPlan
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: CarePlan.category
     sliceName: AssessPlan
-    short: (USCDI) Type of plan
     definition: Type of plan.
     requirements: Identifies what "kind" of plan this is to support differentiation
       between multiple co-existing plans; e.g. "Home health", "psychiatric", "asthma",
@@ -132,11 +108,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: CarePlan.category
   - id: CarePlan.subject
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: CarePlan.subject
-    short: (USCDI) Who the care plan is for
     definition: Who care plan is for.
     requirements: Identifies the patient or group whose intended care is described
       by the plan.

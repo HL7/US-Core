@@ -6,7 +6,7 @@
     "title": "US Core CareTeam Profile",
     "status": "active",
     "experimental": false,
-    "date": "2022-04-20",
+    "date": "2023-10-17",
     "description": "This profile sets minimum expectations for the CareTeam resource for identifying the Care Team members associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -31,14 +31,7 @@
             },
             {
                 "id": "CareTeam.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "CareTeam.status",
-                "short": "(USCDI) proposed | active | suspended | inactive | entered-in-error",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -54,14 +47,7 @@
             },
             {
                 "id": "CareTeam.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "CareTeam.subject",
-                "short": "(USCDI) Who care team is for",
                 "min": 1,
                 "type": [
                     {
@@ -81,14 +67,7 @@
             },
             {
                 "id": "CareTeam.participant",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "CareTeam.participant",
-                "short": "(USCDI) Members of the team",
                 "min": 1,
                 "mustSupport": true,
                 "mapping": [
@@ -100,14 +79,7 @@
             },
             {
                 "id": "CareTeam.participant.role",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "CareTeam.participant.role",
-                "short": "(USCDI) Type of involvement",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true,
@@ -125,14 +97,7 @@
             },
             {
                 "id": "CareTeam.participant.member",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "CareTeam.participant.member",
-                "short": "(USCDI) Who is involved",
                 "min": 1,
                 "type": [
                     {

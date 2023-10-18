@@ -7,7 +7,7 @@
     "title": "US Core Vital Signs Profile",
     "status": "active",
     "experimental": false,
-    "date": "2020-11-17",
+    "date": "2023-10-17",
     "description": "To promote interoperability and adoption through common implementation, this profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html) and defines *additional* constraints on the Observation resource to represent vital signs observations. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.  This US Core profiles that are derived from this profile are listed below.",
     "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1",
@@ -27,24 +27,11 @@
             },
             {
                 "id": "Observation.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.status",
-                "short": "(USCDI) registered | preliminary | final | amended +",
                 "mustSupport": true
             },
             {
                 "id": "Observation.category",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category",
                 "slicing": {
                     "discriminator": [
@@ -60,7 +47,6 @@
                     "ordered": false,
                     "rules": "open"
                 },
-                "short": "(USCDI) Classification of  type of observation",
                 "min": 1,
                 "max": "*",
                 "type": [
@@ -72,15 +58,8 @@
             },
             {
                 "id": "Observation.category:VSCat",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category",
                 "sliceName": "VSCat",
-                "short": "(USCDI) Classification of  type of observation",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -92,14 +71,7 @@
             },
             {
                 "id": "Observation.category:VSCat.coding",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category.coding",
-                "short": "(USCDI) Code defined by a terminology system",
                 "min": 1,
                 "max": "*",
                 "type": [
@@ -111,14 +83,8 @@
             },
             {
                 "id": "Observation.category:VSCat.coding.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category.coding.system",
-                "short": "(USCDI) Identity of the terminology system",
+                "short": "Identity of the terminology system",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -131,14 +97,8 @@
             },
             {
                 "id": "Observation.category:VSCat.coding.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category.coding.code",
-                "short": "(USCDI) Symbol in syntax defined by the system",
+                "short": "Symbol in syntax defined by the system",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -151,14 +111,8 @@
             },
             {
                 "id": "Observation.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.code",
-                "short": "(USCDI) Coded Responses from C-CDA Vital Sign Results",
+                "short": "Coded Responses from C-CDA Vital Sign Results",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -168,14 +122,7 @@
             },
             {
                 "id": "Observation.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.subject",
-                "short": "(USCDI) Who and/or what the observation is about",
                 "type": [
                     {
                         "code": "Reference",
@@ -188,14 +135,8 @@
             },
             {
                 "id": "Observation.effective[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.effective[x]",
-                "short": "(USCDI) Often just a dateTime for Vital Signs",
+                "short": "Often just a dateTime for Vital Signs",
                 "type": [
                     {
                         "extension": [
@@ -214,14 +155,8 @@
             },
             {
                 "id": "Observation.value[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.value[x]",
-                "short": "(USCDI) Vital Signs Value",
+                "short": "Vital Signs Value",
                 "definition": "Vital Signs value are typically recorded using the Quantity data type.",
                 "type": [
                     {
@@ -273,39 +208,19 @@
             },
             {
                 "id": "Observation.dataAbsentReason",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.dataAbsentReason",
-                "short": "(USCDI) Why the result is missing",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component",
-                "short": "(USCDI) Component observations",
+                "short": "Component observations",
                 "definition": "Used when reporting component observation such as systolic and diastolic blood pressure.",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.code",
-                "short": "(USCDI) Type of component observation (code / type)",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -315,14 +230,8 @@
             },
             {
                 "id": "Observation.component.value[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.value[x]",
-                "short": "(USCDI) Vital Sign Component Value",
+                "short": "Vital Sign Component Value",
                 "definition": "Vital Signs value are typically recorded using the Quantity data type. For supporting observations such as cuff size could use other datatypes such as CodeableConcept.",
                 "type": [
                     {
@@ -374,14 +283,7 @@
             },
             {
                 "id": "Observation.component.dataAbsentReason",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.dataAbsentReason",
-                "short": "(USCDI) Why the component result is missing",
                 "mustSupport": true
             }
         ]

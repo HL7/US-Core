@@ -7,7 +7,7 @@
     "title": "US Core Pediatric Weight for Height Observation Profile",
     "status": "active",
     "experimental": false,
-    "date": "2022-04-20",
+    "date": "2023-10-17",
     "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch  pediatric weight-for-length per age and gender observations in FHIR with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
     "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1",
@@ -28,14 +28,8 @@
             },
             {
                 "id": "Observation.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.code",
-                "short": "(USCDI) Weight-for-length per age and gender",
+                "short": "Weight-for-length per age and gender",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -55,28 +49,15 @@
             },
             {
                 "id": "Observation.valueQuantity",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.valueQuantity",
-                "short": "(USCDI) Vital Signs Value",
+                "short": "Vital Signs Value",
                 "min": 0,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.valueQuantity.value",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.valueQuantity.value",
-                "short": "(USCDI) Numerical value (with implicit precision)",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -88,14 +69,7 @@
             },
             {
                 "id": "Observation.valueQuantity.unit",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.valueQuantity.unit",
-                "short": "(USCDI) Unit representation",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -107,14 +81,7 @@
             },
             {
                 "id": "Observation.valueQuantity.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.valueQuantity.system",
-                "short": "(USCDI) System that defines coded unit form",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -127,14 +94,8 @@
             },
             {
                 "id": "Observation.valueQuantity.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.valueQuantity.code",
-                "short": "(USCDI) Coded responses from the common UCUM units for vital signs value set.",
+                "short": "Coded responses from the common UCUM units for vital signs value set.",
                 "min": 1,
                 "max": "1",
                 "type": [

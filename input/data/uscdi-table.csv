@@ -115,7 +115,7 @@
 18,Procedures,US Core Procedure Profile | US Core ServiceRequest Profile,,,,,"Procedure, ServiceRequest",,
 ,Procedures,US Core Procedure Profile,Procedure,Procedure,Procedure,,Procedure,,
 ,Procedures,US Core Procedure Profile|US Core DiagnosticReport Profile for Report and Note Exchange|US Core Immunization Profile,Time of Procedure,Procedure | DiagnosticRepor | Immunization,Procedure | DiagnosticRepor | Immunization,,"Procedure.pertormed[x],DiagnosticReport.effective[x],Immunization.occurrence[x]",,
-,Procedures,US Core ServiceRequest Profile,Reason for Referral,ServiceRequest,ServiceRequest,,"ServiceRequest.reasonCode, ServiceRequest.reasonReference",,
+,Procedures,US Core ServiceRequest Profile | US Core Procedure Profile,Reason for Referral,ServiceRequest | Procedure,ServiceRequest | Procedure,,"ServiceRequest.reasonCode, ServiceRequest.reasonReference, Procedure.reasonCode, Procedure.reasonReference",,
 ,Procedures,US Core ServiceRequest Profile | US Core Procedure Profile,SDOH Interventions,ServiceRequest | Procedure,ServiceRequest | Procedure,,"ServiceRequest, Procedure",See Screening and Assessments Guidance,screening-and-assessments.html
 19,Provenance,US Core Provenance Profile,,,,,Provenance,See Basic Provenance Guidance,basic-provenance.html
 ,Provenance,US Core Provenance Profile,Author Time Stamp,Provenance,Provenance,,Provenance.recorded,,
