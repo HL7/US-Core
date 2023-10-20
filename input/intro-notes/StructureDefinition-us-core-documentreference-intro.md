@@ -31,7 +31,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. clinically relevant date
 
 
-**Additional USCDI Requirements**
+
 
 {% include additional-requirements-intro.md type="DocumentReference" %}
 

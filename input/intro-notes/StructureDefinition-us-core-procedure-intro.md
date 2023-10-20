@@ -26,7 +26,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  <span class="bg-success" markdown="1">the encounter associated with the procedure</span><!-- new-content -->
 
 
-**Additional USCDI Requirements**
+
 
 {% include additional-requirements-intro.md type="Procedure" %}
 

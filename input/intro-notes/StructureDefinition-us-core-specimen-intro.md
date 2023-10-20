@@ -19,7 +19,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. a patient
 
 <div class="bg-success" markdown="1">
-**Additional USCDI Requirements**
 
 {% include additional-requirements-intro.md type="Specimen" plural="true" %}
 

@@ -25,7 +25,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 3. who answered the questions
 4. a value
 
-**Additional USCDI Requirements**
+
 
 {% include additional-requirements-intro.md type="Observation" %}
 

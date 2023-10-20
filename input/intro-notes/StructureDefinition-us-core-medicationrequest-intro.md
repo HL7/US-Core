@@ -37,10 +37,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 8. the amount dispensed and number of refills
 9. the dose and rate
 
-
-**Additional USCDI Requirements**
-
-{% include additional-requirements-intro.md type="MedicationRequest" %}
+{% include additional-requirements-intro.md type="MedicationRequest" plural="true" %}
 
 1. <span class="bg-success" markdown="1">reported adherence to prescribed medication instructions</span><!-- new-content -->
 1. the reason or indication for the prescription*

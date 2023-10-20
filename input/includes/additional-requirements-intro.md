@@ -8,6 +8,7 @@ for example
 -->
 
 <div class="bg-success" markdown="1">
-{% if include.plural %}These elements are{% else %}This element is{% endif %} included in the formal definition of the profile and the {{include.type}} examples as [Additional USCDI Requirements] for certified systems. Elements that are not
-Mandatory or Must Support but are required for ONC's g(10) certification.
+**Additional USCDI Requirements:**
+
+{% if include.plural %}These [Additional USCDI Requirements] elements are{% else %}This [Additional USCDI Requirements] element is{% endif %} not Mandatory or Must Support but {% if include.plural %}are{% else %}is{% endif %} required for ONC Health IT certification testing and {% if include.plural %}are{% else %}is{% endif %} included in the formal definition of the profile and the {{include.type}} examples.
 </div><!-- new-content -->

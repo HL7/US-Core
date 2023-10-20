@@ -1,6 +1,6 @@
 
 
-The Profile elements consist of *Mandatory*, *Must Support*, and *USCDI Requirements* elements. The sections below defines the server and client expectations for processing these elements and illustrates how they are displayed and documented.
+The Profile elements consist of *Mandatory*, *Must Support*, and <span class="bg-success" markdown="1">*Additional USCDI Requirements*</span><!-- new-content --> elements. The sections below defines the server and client expectations for processing these elements and illustrates how they are displayed and documented.
 
 
 
@@ -23,31 +23,32 @@ The terms *US Core Responder* Actor *US Core Requestor Actor* are used throughou
 
 Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search], and [FHIR Resource] formats before implementing US Core requirements.
 
-All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file. This may be useful to testers and analysts to review the Must Support and Mandatory elements across profiles in a single table.
+All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file. This may be useful to testers and analysts to review the *Must Support* and *Mandatory* elements across profiles in a single table.
 
 - [CSV](uscore_profiles.csv)
 - [Excel](all_profiles.xlsx)
 
 This [Observation Summary Table] compares *Must Support* Elements across all the US Core Observation Profiles.
 
+<div class="bg-success" markdown="1">
 
-### USCDI Requirements
+### Additional USCDI Requirements 
 
-Most US Core Profiles represent requirements for a [U.S. Core Data for Interoperability (USCDI) v3] Data Class. For those US Core Profiles, all *Mandatory* and *Must Support* elements are *USCDI Requirements*. However, the following US Core Profiles do not represent USCDI data classes, and their *Mandatory* and *Must Support* elements are not *USCDI Requirements*:
-
-{% include non-uscdi-profiles.md %}
-
-#### Additional USCDI Requirements 
-
-Some US Core Profile elements that are needed to represent USCDI Data Elements for ONC Health IT Certification are not marked *Mandatory* or *Must Support* because they are not required in all valid clinical use cases. US Core designates these elements
-*Additional USCDI Requirements* and implementers seeking ONC certification **SHALL** interpret them as *Must Support* elements documented above, otherwise they are considered optional. The following table lists the Additional USCDI Requirements and their corresponding Profiles and FHIR elements:
+The US Core Profiles include requirements from the [U.S. Core Data for Interoperability (USCDI) v4]. Some US Core Profile elements that are needed to represent USCDI Data Elements for [ONC Health IT Certification] (g(10) certification) are not *Mandatory* or *Must Support* because many non-certifying implementers do not need them for their use cases. US Core designates these elements *Additional USCDI Requirements*. The table below lists them and their corresponding Profiles and FHIR elements. However, implementers seeking ONC certification **SHALL** interpret them as *Must Support* elements as documented above; otherwise, they are considered optional. All *Mandatory*, *Must Support*, or *Additional USCDI Requirements* are in scope for ONC Health IT Certification. See the [USCDI] page for more information about the US Core and USCDI relationship and a mapping between US Core Profiles and the USCDI Data Classes and Elements.
 
 {% include additional-uscdi-requirements.md %}
 
-#### Communicating USCDI Requirements
 
-Understanding the Additional USCDI Requirements is essential for API developers and business analysts working with FHIR US Core. The profiles pages list Additional USCDI Requirements under the "Mandatory and Must Support Data Elements" sections to alert users. In addition, "(USCDI)" is prepended to the element's short description, and the computable [US Core USCDI Requirement Extension] is added to each element definition.
 
+#### Communicating Additional USCDI Requirements
+
+Understanding the* Additional USCDI Requirements* is essential for API developers and business analysts working with FHIR US Core. To alert users when these elements are present:
+
+1. The profiles page includes an "Additional USCDI Requirements" listing the elements under the "Mandatory and Must Support Data Elements" section. 
+2. The computable [US Core USCDI Requirement Extension] is added to each element in the profile's [StructureDefinition].
+3. The formal views of profile content display "**ADDITIONAL USCDI:**" in the element's short description (see below for examples).
+
+</div><!-- new-content -->
 
 ### Presentation of Must Support, Mandatory, and USCDI Requirement Elements in the Formal Profile Views
 
@@ -55,31 +56,35 @@ On each profile page, several different formal views of the US Core Profile cont
 
 #### Differential Table View
 
-Elements with a cardinality starting with "1"  under the column header, "Card." (e.g., 1..1) are *Mandatory* elements. Elements labeled *Must Support* in the "Differential Table" view are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Elements with the label "(USCDI)" under the header "Description and Constraints" are *USCDI requirements*. Figure 1 illustrates an example of this:
+Elements with a cardinality starting with "1"  under the column header, "Card." (e.g., 1..1) are *Mandatory* elements. Elements labeled *Must Support* in the "Differential Table" view are flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span>. Elements with the label "**ADDITIONAL USCDI:**" under the header "Description and Constraints" are <span class="bg-success" markdown="1">*Additional USCDI Requirements*</span><!-- new-content -->. Figure 1 illustrates an example of this:
 
   {% include img.html img="Must_Support_Differential_View.png" caption="Figure 1: Differential Table View" %}
 
 #### Key Elements Table View
  
 The "Key Elements Table" view consists of:
-1. all the *Mandatory*, *Must Support*, and *USCDI requirements* elements in the differential view
-2. any *Mandatory*, *Must Support*, and *USCDI requirements* elements inherited from a US Core Profile or other profile from which it is derived. (e.g.,  [US Core Body Height Profile] is based on the [US Core Vital Signs Profile] or [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile])
+1. all the *Mandatory*, *Must Support*, and <span class="bg-success" markdown="1">*Additional USCDI Requirements*</span><!-- new-content --> elements in the differential view
+2. any *Mandatory*, *Must Support*, and <span class="bg-success" markdown="1">*Additional USCDI Requirements*</span><!-- new-content --> elements inherited from a US Core Profile or other profile from which it is derived. (e.g.,  [US Core Body Height Profile] is based on the [US Core Vital Signs Profile] or [US Core QuestionnaireResponse Profile] is based on the [Structured Data Capture (SDC) Questionnaire Response Profile])
 3. any *Mandatory* or [modifier elements] not in 1. or 2.
 
 This view includes the same flags and labels described in Differential Table View:
 
-  {% include img.html img="Must_Support_Key_View.png" caption="Figure 2: Snapshot Table (Must Support) View" %}
+<div class="bg-success" markdown="1">
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+</div><!-- new-content -->
 
 #### Snapshot Table View
 
 The "Snapshot Table" view in Figure 3 view consists of:
-1.  all the *Mandatory*, *Must Support*, and *USCDI requirements* elements in the differential view
-2. any inherited *Mandatory*, *Must Support*, and *USCDI requirements* elements from a US Core or other profile upon which it is based. (e.g.,  [US Core Body Height Profile] based on [Vital Signs Profile] or [US Core QuestionnaireResponse Profile] based on [Structured Data Capture (SDC) Questionnaire Response Profile])
+1.  all the *Mandatory*, *Must Support*, and <span class="bg-success" markdown="1">*Additional USCDI Requirements*</span><!-- new-content --> elements in the differential view
+2. any inherited *Mandatory*, *Must Support*, and <span class="bg-success" markdown="1">*Additional USCDI Requirements*</span><!-- new-content --> elements from a US Core or other profile upon which it is based. (e.g.,  [US Core Body Height Profile] based on [Vital Signs Profile] or [US Core QuestionnaireResponse Profile] based on [Structured Data Capture (SDC) Questionnaire Response Profile])
 3. any base FHIR elements not in 1. or 2.
 
 This view includes the same flags and labels as described in Differential Table View:
 
-  {% include img.html img="Must_Support_Snapshot_View.png" caption="Figure 3: Snapshot Table View" %}
+<div class="bg-success" markdown="1">
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+</div><!-- new-content -->
 
 #### Defined Pattern Elements
 
@@ -90,7 +95,9 @@ For example, the [US Core DiagnosticReport Profile for Laboratory Results Report
 - US Core Responders **SHALL** provide these values in a `DiagnosticReport.category`
 - US Core Requestors **SHALL** be capable of processing these values in `DiagnosticReport.category`
 
-  {% include img.html img="Must_Support_DiagnosticReport_category.png" caption="Figure 7: US Core DiagnosticReport.category" %}
+<div class="bg-success" markdown="1">
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+</div><!-- new-content -->
 
 #### Must Support - Primitive Element
 
@@ -101,7 +108,9 @@ For example, the [US Core DiagnosticReport Profile for Laboratory Results Report
 - US Core Responders **SHALL** be capable of providing a value in a `DiagnosticReport.issued`
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.issued`
 
-  {% include img.html img="Must_Support_DiagnosticReport_issued.png" caption="Figure 8: US Core DiagnosticReport.issued" %}
+<div class="bg-success" markdown="1">
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+</div><!-- new-content -->
 
 #### Must Support - Complex Elements
 
@@ -114,14 +123,18 @@ For example, the [US Core DiagnosticReport Profile for Report and Note exchange]
 - US Core Responders **SHALL** be capable of providing a value in `DiagnosticReport.presentedForm` sub-element.
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.presentedForm`.
 
-  {% include img.html img="Must_Support_DiagnosticReport_presentedForm.png" caption="Figure 9: US Core DiagnosticReport.presentedForm" %}
+<div class="bg-success" markdown="1">
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+</div><!-- new-content -->
 
 For example, the [US Core Patient Profile] `name` element is labeled Must Support and has Must Support sub-elements "family" and "given". When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
 - US Core Requestors **SHALL** be capable of processing the value in value in `Patient.name.family` and `Patient.name.given`.
 
-  {% include img.html img="Must_Support_Patient_name.png" caption="Figure 10: US Core Patient.name" %}
+<div class="bg-success" markdown="1">
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+</div><!-- new-content -->
 
 On the other hand, if any sub-element is marked as Must Support and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure, you must support the sub-element (s) marked as Must Support. There are no examples of US Core profiles that have this structure defined.
 
@@ -133,48 +146,53 @@ This section documents additional Must Support requirements for the `Reference` 
 
 In certain profiles, only specific resource references are labeled as *Must Support*.
 
-For example, the [US Core DocumentReference Profile] author US Core Practitioner Profile is labeled *Must Support*. When claiming conformance to the [US Core DocumentReference Profile]:
+For example, the [US Core DocumentReference Profile] author US Core Practitioner Profile is labeled *Must Support*. When claiming conformance to this profile:
 
 * US Core Responders **SHALL** be capable of providing a DocumentReference.author with a valid reference to a US Core Practitioner Profile.
 * US Core Requestors **SHALL** be capable of processing a DocumentReference.author with a valid reference to a US Core Practitioner Profile.
 
 Systems can support other references, but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_DocumentReference.png" caption="Figure 11: US Core DocumentReference.author" %}
+<div class="bg-success" markdown="1">
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+</div><!-- new-content -->
 
 In specific profiles, only a single resource reference is present on an element labeled *Must Support*.
 
-For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must Support*. When claiming conformance to the [US Core AllergyIntolerance Profile]:
+For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must Support*. When claiming conformance to this profile:
 
 * US Core Responders **SHALL** be capable of providing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 * US Core Requestors **SHALL** be capable of processing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 
-{% include img.html img="Must_Support_AllergyIntolerance.png" caption="Figure 12: US Core AllergyIntolerance.patient" %}
+<div class="bg-success" markdown="1">
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+</div><!-- new-content -->
 
 #### Must Support - Choice of Data Types
 
-Some elements allow different data types (e.g., Observation.effective[x]) for their content. Only specific data type choice elements are labeled as *Must Support*in these situations.
+Some elements allow different data types (e.g., Observation.effective[x]) for their content. Only specific data type choice elements are labeled as *Must Support* in these situations.
 
-For example, the [US Core Laboratory Result Observation Profile] effectiveDateTime is labeled *Must Support*. When claiming conformance to the [US Core Laboratory Result Observation Profile]:
+For example, the <span class="bg-success" markdown="1">[US Core Observation Clinical Result Profile]</span><!-- new-content --> effectiveDateTime is labeled *Must Support*. When claiming conformance to this profile:
 
 * US Core Responders **SHALL** be capable of populating `Observation.effectiveDateTime`.
 * US Core Requestors **SHALL** be capable of processing `Observation.effectiveDateTime`.
 
 Systems **MAY** support populating and processing other choice elements (such as Observation.effectivePeriod), but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_Observation.effective.png" caption="Figure 13: US Core `Observation.effectiveDateTime`" %}
+<div class="bg-success" markdown="1">
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+</div><!-- new-content -->
 
-For the [US Core Laboratory Result Observation Profile] value element, multiple elements are labeled *Must Support*.
-
-When claiming conformance to the [US Core Laboratory Result Observation Profile]:
+For the <span class="bg-success" markdown="1">[US Core Observation Clinical Result Profile]</span><!-- new-content --> value element, multiple elements are labeled *Must Support*. When claiming conformance to this profile:
 
 * US Core Responders **SHALL** be capable of populating `Observation.valueQuantity`, `Observation.valueCodeableConcept`, and `Observation.valueString`.
 * US Core Requestors **SHALL** be capable of processing `Observation.valueQuantity`, `Observation.valueCodeableConcept`, and `Observation.valueString`.
 
 Systems can support the other elements, but this is not a requirement of US Core.
 
-
+<div class="bg-success" markdown="1">
 {% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+</div><!-- new-content -->
 
 
 #### Must Support - Choice of Profile Elements

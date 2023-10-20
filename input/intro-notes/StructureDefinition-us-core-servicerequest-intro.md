@@ -27,7 +27,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 4.  when the request was made
 5.  the requester
 
-**Additional USCDI Requirements**
+
 
 {% include additional-requirements-intro.md type="ServiceRequest" %}
 

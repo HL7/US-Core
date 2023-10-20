@@ -25,7 +25,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. a birth date
 1. an address
 
-**Additional USCDI Requirements**
+
 
 {% include additional-requirements-intro.md type="Patient" plural="true" %}
 
