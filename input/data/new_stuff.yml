@@ -17,7 +17,6 @@
 # - USCoreObservationCategory
 # - US Core QuestionnaireResponse Tags ValueSet
 # - USCoreClinicalResultObservationCategory
-- USCoreMedicationAdherenceValueSet
 # - USCoreTreatmentInterventionPreferenceValueSet
 
 
@@ -56,6 +55,7 @@
 - USCoreServiceRequestProfile
 - USCoreTreatmentInterventionPreferenceProfile
 - USCoreCareExperiencePreferenceProfile
+- USCoreLaboratoryResultObservationProfile
 
 
 
@@ -66,6 +66,7 @@
 # - USCoreJurisdictionExtension
 # - USCoreSexExtension
 - USCoreMedicationAdherenceExtension
+- USCDIRequirement
 
 # OperationDefinition
 
@@ -191,7 +192,6 @@
 - HL7East Example
 - Rehab Example
 - ServiceRequest for Rehab Example
-- ServiceRequest Defibrillator Implant Example
 - Serum BUN Example
 - Serum Calcium Example
 - Serum Chloride Example

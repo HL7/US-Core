@@ -6,7 +6,7 @@
     "title": "US Core Laboratory Result Observation Profile",
     "status": "active",
     "experimental": false,
-    "date": "2022-11-19",
+    "date": "2023-10-17",
     "description": "The US Core Laboratory Result Observation Profile is based upon the US Core Observation Clinical Result Profile and, along with the US Core DiagnosticReport Profile for Laboratory Results Reporting, meets the U.S. Core Data for Interoperability (USCDI) Laboratory requirements. Laboratory results are grouped and summarized using the DiagnosticReport resource, which references Observation resources. Each Observation resource represents an individual laboratory test and result value, a \u201cnested\u201d panel (such as a microbial susceptibility panel) that references other observations, or rarely a laboratory test with component result values. The US Core Laboratory Result Observation Profile sets minimum expectations for the Observation resource to record, search, and fetch laboratory test results associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies, and value sets SHALL be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -18,15 +18,8 @@
         "element": [
             {
                 "id": "Observation.category:us-core",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category",
                 "sliceName": "us-core",
-                "short": "(USCDI) Classification of  type of observation",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -47,14 +40,8 @@
             },
             {
                 "id": "Observation.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.code",
-                "short": "(USCDI) Laboratory Test Name",
+                "short": "Laboratory Test Name",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -70,14 +57,8 @@
             },
             {
                 "id": "Observation.value[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.value[x]",
-                "short": "(USCDI) Result Value",
+                "short": "Result Value",
                 "definition": "The Laboratory result value.  If a coded value,  the valueCodeableConcept.code **SHOULD** be selected from [SNOMED CT](http://hl7.org/fhir/ValueSet/uslab-obs-codedresults) if the concept exists. If a numeric value, valueQuantity.code **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines all UCUM codes is in the FHIR specification.",
                 "type": [
                     {
@@ -160,32 +141,19 @@
             },
             {
                 "id": "Observation.interpretation",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.interpretation",
-                "short": "(USCDI) Result interpretation",
+                "short": "Result interpretation",
                 "comment": "Categorical assessment of a laboratory value, often in relation to a test's reference range. Examples include but are not limited to high, low, critical, and normal.",
+                "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
                     "description": "Observation Interpretation Codes",
                     "valueSet": "http://hl7.org/fhir/ValueSet/observation-interpretation"
-                },
-                "mustSupport": true
+                }
             },
             {
                 "id": "Observation.specimen",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.specimen",
-                "short": "(USCDI) Specimen used for this observation",
                 "type": [
                     {
                         "code": "Reference",
@@ -198,14 +166,8 @@
             },
             {
                 "id": "Observation.referenceRange",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.referenceRange",
-                "short": "(USCDI) Result reference range",
+                "short": "Result reference range",
                 "comment": "Upper and lower limit of test values expected for a designated population of individuals. Reference range values may differ by patient characteristics, laboratory test manufacturer and laboratory test performer.",
                 "mustSupport": true
             }

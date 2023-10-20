@@ -4,7 +4,7 @@ url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation
 name: USCoreTribalAffiliationExtension
 title: US Core Tribal Affiliation Extension
 status: active
-date: 2022-09-30
+date: 2023-10-17
 description: This Extension profile represents a tribe or band with which a person
   associates and, optionally, whether they are enrolled.
 fhirVersion: 4.0.1
@@ -36,19 +36,15 @@ differential:
   - id: Extension.extension
     path: Extension.extension
     slicing:
-        discriminator:
-            - 
-                type: value
-                path: url
-        rules: open
+      discriminator:
+      - type: value
+        path: url
+      rules: open
     min: 1
   - id: Extension.extension:tribalAffiliation
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Extension.extension
     sliceName: tribalAffiliation
-    short: (USCDI) Affiliated tribe or band name
+    short: Affiliated tribe or band name
     definition: Affiliated tribe or band name
     min: 1
     max: '1'

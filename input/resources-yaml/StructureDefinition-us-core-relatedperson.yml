@@ -4,13 +4,13 @@ url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson
 name: USCoreRelatedPersonProfile
 title: US Core RelatedPerson Profile
 status: active
-date: 2022-04-20
+date: 2023-10-17
 description: This profile sets minimum expectations for the RelatedPerson resource
   to record, search, and fetch basic administrative information about persons with
   a legal or familial relationship to a patient. It identifies which core elements,
-  extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when
-  using this profile.  It provides the floor for standards development for specific
-  use cases.
+  extensions, vocabularies, and value sets **SHALL** be present in the resource and
+  constrains the way the elements are used when using this profile.  It provides the
+  floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -29,54 +29,29 @@ differential:
       human: Either a name or a relationship SHALL be provided (or both)
       expression: name.exists() or relationship.exists()
   - id: RelatedPerson.active
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: RelatedPerson.active
-    short: (USCDI) Whether this related person's record is in active use
     min: 1
     mustSupport: true
   - id: RelatedPerson.patient
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: RelatedPerson.patient
-    short: (USCDI) The patient this person is related to
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     mustSupport: true
   - id: RelatedPerson.relationship
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: RelatedPerson.relationship
-    short: (USCDI) The nature of the relationship
     condition:
     - us-core-14
     mustSupport: true
   - id: RelatedPerson.name
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: RelatedPerson.name
-    short: (USCDI) A name associated with the person
     condition:
     - us-core-14
     mustSupport: true
   - id: RelatedPerson.telecom
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: RelatedPerson.telecom
-    short: (USCDI) A contact detail for the person
     mustSupport: true
   - id: RelatedPerson.address
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: RelatedPerson.address
-    short: (USCDI) Address where the related person can be contacted or
-      visited
     mustSupport: true

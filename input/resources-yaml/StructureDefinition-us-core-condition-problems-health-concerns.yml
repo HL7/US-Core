@@ -5,7 +5,7 @@ name: USCoreConditionProblemsHealthConcernsProfile
 title: US Core Condition Problems and Health Concerns Profile
 status: active
 experimental: false
-date: 2022-04-20
+date: 2023-10-17
 description: The US Core Condition Problems and Health Concerns Profile is based upon
   the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability
   (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health
@@ -18,8 +18,8 @@ description: The US Core Condition Problems and Health Concerns Profile is based
   concept that is documented and categorized as a problem or health concern including
   information about a Social Determinants of Health-related condition. It identifies
   which core elements, extensions, vocabularies, and value sets **SHALL** be present
-  in the resource when and constrains the way the elements are used using this profile. It provides the floor for standards development
-  for specific use cases.
+  in the resource when and constrains the way the elements are used using this profile.
+  It provides the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -37,12 +37,9 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Condition
   - id: Condition.extension:assertedDate
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Condition.extension
     sliceName: assertedDate
-    short: (USCDI) Date the condition was first asserted
+    short: Date the condition was first asserted
     max: '1'
     type:
     - code: Extension
@@ -50,12 +47,7 @@ differential:
       - http://hl7.org/fhir/StructureDefinition/condition-assertedDate
     mustSupport: true
   - id: Condition.clinicalStatus
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Condition.clinicalStatus
-    short: (USCDI) active | recurrence | relapse | inactive | remission
-      | resolved
     mustSupport: true
     binding:
       strength: required
@@ -64,12 +56,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Condition.clinicalStatus
   - id: Condition.verificationStatus
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Condition.verificationStatus
-    short: (USCDI) unconfirmed | provisional | differential | confirmed
-      | refuted | entered-in-error
     mustSupport: true
     binding:
       strength: required
@@ -78,28 +65,22 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Condition.verificationStatus
   - id: Condition.category
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Condition.category
     slicing:
       discriminator:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI) category codes
+    short: category codes
     min: 1
     mustSupport: true
     mapping:
     - identity: argonaut-dq-dstu2
       map: Condition.category
   - id: Condition.category:us-core
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Condition.category
     sliceName: us-core
-    short: (USCDI) problem-list-item | health-concern
+    short: problem-list-item | health-concern
     min: 1
     mustSupport: true
     binding:
@@ -107,31 +88,10 @@ differential:
       description: Note that other codes are permitted, see [Required Bindings When
         Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-problem-or-health-concern
-
-
-  # - id: Condition.category:sdoh
-  #   extension:
-  #   - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-  #     valueBoolean: true
-  #   path: Condition.category
-  #   sliceName: sdoh
-  #   short: (USCDI) problem-list-item | encounter-diagnosis
-  #   min: 0
-  #   max: '1'
-  #   patternCodeableConcept:
-  #     coding:
-  #     - system: http://hl7.org/fhir/us/core/CodeSystem/us-core-category
-  #       code: sdoh
-  #   mustSupport: true
-
-
   - id: Condition.category:screening-assessment
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Condition.category
     sliceName: screening-assessment
-    short: (USCDI) USCDI Health Status/Assessments Data Class
+    short: USCDI Health Status/Assessments Data Class
     definition: Categories that a provider may use in their workflow to classify that
       this Condition is related to a USCDI Health Status/Assessments Data Class.
     requirements: Used for filtering condition
@@ -141,14 +101,8 @@ differential:
       description: Note that other codes are permitted, see [Required Bindings When
         Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-screening-assessment-condition-category
-
-
   - id: Condition.code
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Condition.code
-    short: (USCDI) Identification of the condition, problem or diagnosis
     min: 1
     mustSupport: true
     binding:
@@ -159,11 +113,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Condition.code
   - id: Condition.subject
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Condition.subject
-    short: (USCDI) Who has the condition?
     type:
     - code: Reference
       targetProfile:
@@ -173,11 +123,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Condition.patient
   - id: Condition.onset[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Condition.onset[x]
-    short: (USCDI) Estimated or actual date,  date-time, or age
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -189,11 +135,7 @@ differential:
     - code: string
     mustSupport: true
   - id: Condition.abatement[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Condition.abatement[x]
-    short: (USCDI) When in resolution/remission
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -205,9 +147,5 @@ differential:
     - code: string
     mustSupport: true
   - id: Condition.recordedDate
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Condition.recordedDate
-    short: (USCDI) Date record was first recorded
     mustSupport: true

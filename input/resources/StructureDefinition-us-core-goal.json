@@ -6,7 +6,7 @@
     "title": "US Core Goal Profile",
     "status": "active",
     "experimental": false,
-    "date": "2022-04-20",
+    "date": "2023-10-17",
     "description": "This profile sets minimum expectations for the Goal resource to record, search, and fetch Goal information associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -31,14 +31,7 @@
             },
             {
                 "id": "Goal.lifecycleStatus",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Goal.lifecycleStatus",
-                "short": "(USCDI) proposed | planned | accepted | active | on-hold | completed | cancelled | entered-in-error | rejected",
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
@@ -53,14 +46,7 @@
             },
             {
                 "id": "Goal.description",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Goal.description",
-                "short": "(USCDI) Code or text describing goal",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -76,14 +62,7 @@
             },
             {
                 "id": "Goal.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Goal.subject",
-                "short": "(USCDI) Who this goal is intended for",
                 "type": [
                     {
                         "code": "Reference",
@@ -102,14 +81,7 @@
             },
             {
                 "id": "Goal.start[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Goal.start[x]",
-                "short": "(USCDI) When goal pursuit begins",
                 "type": [
                     {
                         "extension": [
@@ -128,26 +100,12 @@
             },
             {
                 "id": "Goal.target",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Goal.target",
-                "short": "(USCDI) Target outcome for the goal",
                 "mustSupport": true
             },
             {
                 "id": "Goal.target.due[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Goal.target.due[x]",
-                "short": "(USCDI) Reach goal on or before",
                 "type": [
                     {
                         "extension": [

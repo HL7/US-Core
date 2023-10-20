@@ -1304,7 +1304,7 @@
         "reference": {
           "reference": "Procedure/defib-implant"
         },
-        "description": "This *US Core Procedure Profile* is an example of an Defibrillator implant Procedure.",
+        "description": "This *US Core Procedure Profile* is an example of an Defibrillator implant Procedure. In this example, the reason for a referral is communicated through `Procedure.code'.",
         "name": "Procedure Defibrillator Implant Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure"
       },
@@ -1499,14 +1499,6 @@
         "description": "This is a serum total bilirubin example for the *US Core Observation Lab Profile*.",
         "name": "Serum Total Bilirubin Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
-      },
-      {
-        "reference": {
-          "reference": "ServiceRequest/defib-implant"
-        },
-        "description": "This *US Core ServiceRequest Profile* is an example for a defibrillator implant referral request.",
-        "name": "ServiceRequest Defibrillator Implant Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest"
       },
       {
         "reference": {
@@ -1990,14 +1982,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/medication-adherence"
-        },
-        "description": "The US Core MedicationStatement Adherence concepts asserting whether a medication has been consumed according to instructions.",
-        "exampleBoolean": false,
-        "name": "US Core Medication Adherence ValueSet"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/us-core-medication"
         },
         "description": "When referencing a medication, the MedicationRequest resource can either use a code or refer to a Medication resource.  This profile sets minimum expectations for the Medication resource to record, search, and fetch medications associated with a patient to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development for specific use cases",
@@ -2408,7 +2392,7 @@
         "reference": {
           "reference": "StructureDefinition/uscdi-requirement"
         },
-        "description": "**This extension is only used in the US Core Implementation Guide's Profile StructureDefinition elements.** It flags elements that are ONC USCDI Requirements for certified systems. See the [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for more information.",
+        "description": "**This extension is only used in the US Core Implementation Guide''s Profile StructureDefinition elements.**  It flags elements that are *Additional* USCDI Requirements for certified systems. In other words, elements that are not marked as Must Support but are required for [ONC Health IT Certification] (g(10) certification) testing. See the [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for more information.",
         "exampleBoolean": false,
         "name": "US Core USCDI Requirement Extension"
       },

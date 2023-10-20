@@ -6,7 +6,7 @@ name: USCoreObservationSexualOrientationProfile
 title: US Core Observation Sexual Orientation Profile
 status: active
 experimental: false
-date: 2022-04-20
+date: 2023-10-17
 publisher: HL7 US Realm Steering Committee
 contact:
 - telecom:
@@ -17,9 +17,9 @@ description: The US Core Observation Sexual Orientation Profile meets the U.S. C
   sets minimum expectations for the Observation resource to record, search, and fetch
   sexual orientation observations associated with a patient to promote interoperability
   and adoption through common implementation.  It identifies which core elements,
-  extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when
-  using this profile.  It provides the floor for standards development for specific
-  use cases.
+  extensions, vocabularies, and value sets **SHALL** be present in the resource and
+  constrains the way the elements are used when using this profile.  It provides the
+  floor for standards development for specific use cases.
 jurisdiction:
 - coding:
   - system: urn:iso:std:iso:3166
@@ -51,12 +51,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Observation
   - id: Observation.status
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.status
-    short: (USCDI) registered | preliminary | final
-      | amended +
     mustSupport: true
     binding:
       strength: required
@@ -65,23 +60,15 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Observation.status
   - id: Observation.code
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.code
-    short: (USCDI) Sexual Orientation
+    short: Sexual Orientation
     patternCodeableConcept:
       coding:
       - system: http://loinc.org
         code: 76690-7
     mustSupport: true
   - id: Observation.subject
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.subject
-    short: (USCDI) Who and/or what the observation
-      is about
     min: 1
     type:
     - code: Reference
@@ -92,12 +79,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Observation.subject
   - id: Observation.effective[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.effective[x]
-    short: (USCDI) Clinically relevant time/time-period
-      for observation
     definition: This records the time during which the patient had identified their
       emotional, romantic, sexual, or affectional attraction to another person.
     type:
@@ -113,11 +95,8 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Observation.effective[x]
   - id: Observation.valueCodeableConcept
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.valueCodeableConcept
-    short: (USCDI) Sexual Orientation
+    short: Sexual Orientation
     definition: The Sexual Orientation value.
     mustSupport: true
     binding:

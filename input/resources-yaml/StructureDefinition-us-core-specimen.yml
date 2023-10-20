@@ -5,14 +5,14 @@ name: USCoreSpecimenProfile
 title: US Core Specimen Profile
 status: active
 experimental: false
-date: 2022-09-27
+date: 2023-10-17
 description: This profile sets minimum expectations for the Specimen resource to record,
   search, and fetch "substances being sampled or tested. (e.g., nasopharyngeal swab,
   whole blood, serum, urine, wound swab)" associated with a patient to promote interoperability
   and adoption through common implementation.  It identifies which core elements,
-  extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when
-  using this profile.  It provides the floor for standards development for specific
-  use cases.
+  extensions, vocabularies, and value sets **SHALL** be present in the resource and
+  constrains the way the elements are used when using this profile.  It provides the
+  floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -26,71 +26,51 @@ differential:
     definition: \-
     comment: \-
     mustSupport: false
-
-# === New USCDI requirement ===
   - id: Specimen.identifier
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Specimen.identifier
-    short: (USCDI) Specimen identifier
+    short: Specimen identifier
     mustSupport: true
-# === New USCDI requirement ===
-
   - id: Specimen.type
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Specimen.type
-    short: (USCDI) Kind of material that forms the
-      specimen
     min: 1
     mustSupport: true
     binding:
       strength: extensible
       valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.54
-
   - id: Specimen.subject
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Specimen.subject
-    short: (USCDI) The patient where the specimen came from.
+    short: The patient where the specimen came from.
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     mustSupport: true
-
-# === New USCDI requirement ===
   - id: Specimen.collection
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Specimen.collection
-    short: (USCDI) Collection details
-    # mustSupport: true
   - id: Specimen.collection.bodySite
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Specimen.collection.bodySite
-    short: (USCDI) Specimen Source Site
-    comment: Body location from where a specimen was obtained. Examples include but are not limited to right internal jugular, left arm, and right eye.
+    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
+      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: Specimen Source Site"
+    comment: Body location from where a specimen was obtained. Examples include but
+      are not limited to right internal jugular, left arm, and right eye.
     binding:
       strength: extensible
       valueSet: http://hl7.org/fhir/ValueSet/body-site
-     # mustSupport: true
-
-# === New USCDI requirement ===
   - id: Specimen.condition
     extension:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Specimen.condition
-    short: (USCDI) Specimen condition acceptability
-    comment: Information regarding a specimen, including the container, that does not meet a laboratory's criteria for acceptability. Examples include but are not limited to hemolyzed, clotted, container leaking, and missing patient name. This may include information about the contents of the container, the container, and the label.
+    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
+      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: Specimen condition acceptability"
+    comment: Information regarding a specimen, including the container, that does
+      not meet a laboratory's criteria for acceptability. Examples include but are
+      not limited to hemolyzed, clotted, container leaking, and missing patient name.
+      This may include information about the contents of the container, the container,
+      and the label.
     binding:
       strength: extensible
       valueSet: http://terminology.hl7.org/ValueSet/v2-0493
-    # mustSupport: true

@@ -5,7 +5,7 @@
     "name": "USCoreQuestionnaireResponseProfile",
     "title": "US Core QuestionnaireResponse Profile",
     "status": "active",
-    "date": "2022-04-20",
+    "date": "2023-10-17",
     "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the QuestionnaireResponse resource to record, search, and fetch retrieve captures the responses to form/survey and assessment tools such as the *Protocol for Responding to and Assessing Patients\u2019 Assets, Risks, and Experiences (PRAPARE) Survey*.   This profile is based on the [Structured Data Capture (SDC) Questionnaire Response Profile](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaireresponse.html) and identifies the *additional* core elements, extensions, vocabularies and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific uses cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -24,27 +24,14 @@
             },
             {
                 "id": "QuestionnaireResponse.questionnaire",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "QuestionnaireResponse.questionnaire",
-                "short": "(USCDI) Form being answered",
                 "mustSupport": true
             },
             {
                 "id": "QuestionnaireResponse.questionnaire.extension:url",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "QuestionnaireResponse.questionnaire.extension",
                 "sliceName": "url",
-                "short": "(USCDI) The location where a non-FHIR questionnaire/survey form can be found.",
+                "short": "The location where a non-FHIR questionnaire/survey form can be found.",
                 "min": 0,
                 "max": "1",
                 "type": [
@@ -59,26 +46,12 @@
             },
             {
                 "id": "QuestionnaireResponse.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "QuestionnaireResponse.status",
-                "short": "(USCDI) in-progress | completed | amended | entered-in-error | stopped",
                 "mustSupport": true
             },
             {
                 "id": "QuestionnaireResponse.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "QuestionnaireResponse.subject",
-                "short": "(USCDI) The subject of the questions",
                 "comment": "-",
                 "min": 1,
                 "type": [
@@ -93,26 +66,12 @@
             },
             {
                 "id": "QuestionnaireResponse.authored",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "QuestionnaireResponse.authored",
-                "short": "(USCDI) Date the answers were gathered",
                 "mustSupport": true
             },
             {
                 "id": "QuestionnaireResponse.author",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "QuestionnaireResponse.author",
-                "short": "(USCDI) Person who received and recorded the answers",
                 "type": [
                     {
                         "code": "Reference",
@@ -180,38 +139,17 @@
             },
             {
                 "id": "QuestionnaireResponse.item",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "QuestionnaireResponse.item",
-                "short": "(USCDI) Groups and questions",
                 "mustSupport": true
             },
             {
                 "id": "QuestionnaireResponse.item.linkId",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "QuestionnaireResponse.item.linkId",
-                "short": "(USCDI) Pointer to specific item from Questionnaire",
                 "mustSupport": true
             },
             {
                 "id": "QuestionnaireResponse.item.answer.value[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "QuestionnaireResponse.item.answer.value[x]",
-                "short": "(USCDI) Single-valued answer to the question",
                 "min": 0,
                 "max": "1",
                 "type": [

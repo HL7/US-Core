@@ -4,7 +4,7 @@ url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinica
 name: USCoreObservationClinicalResultProfile
 title: US Core Observation Clinical Result Profile
 status: active
-date: 2022-04-20
+date: 2023-10-17
 description: 'The US Core Observation Clinical Result Profile is based upon the core
   FHIR Observation Resource and, along with the US Core DiagnosticReport Profile,
   meets the US Core Data for Interoperability (USCDI) requirements for *Diagnostic
@@ -20,8 +20,8 @@ description: 'The US Core Observation Clinical Result Profile is based upon the 
   The US Core Observation Clinical Result Profile sets minimum expectations to promote
   interoperability and adoption through common implementation. It identifies which
   core elements, extensions, vocabularies, and value sets **SHALL** be present in
-  the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development
-  for specific use cases.'
+  the resource and constrains the way the elements are used when using this profile.
+  It provides the floor for standards development for specific use cases.'
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -45,44 +45,30 @@ differential:
         'value')]) or exists(f:dataAbsentReason)
     mustSupport: false
   - id: Observation.status
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.status
-    short: (USCDI) registered | preliminary | final | amended +
     mustSupport: true
   - id: Observation.category
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.category
     slicing:
       discriminator:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI) Classification of  type of observation
     min: 1
     mustSupport: true
   - id: Observation.category:us-core
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.category
     sliceName: us-core
-    short: (USCDI) Classification of type of observation
+    short: Classification of type of observation
     mustSupport: true
     binding:
       strength: required
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category
       description: Note that other codes are permitted, see [Required Bindings When
         Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-result-observation-category
   - id: Observation.code
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.code
-    short: (USCDI) Clinical Test or Procedure Name
+    short: Clinical Test or Procedure Name
     definition: The name of the clinical test or procedure performed on a patient.  A
       LOINC **SHALL** be used if the concept is present in LOINC.
     comment: 'The typical patterns for codes are:  1)  a LOINC code either as a translation
@@ -93,38 +79,24 @@ differential:
     mustSupport: true
     binding:
       strength: extensible
-
   - id: Observation.subject
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.subject
-    short: (USCDI) Who and/or what the observation is about
     min: 1
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     mustSupport: true
-
   - id: Observation.encounter
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.encounter
-    short: (USCDI) Encounter associated with Observation
+    short: Encounter associated with Observation
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
     mustSupport: true
-
   - id: Observation.effective[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.effective[x]
-    short: (USCDI) Clinically relevant time/time-period for observation
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -143,11 +115,8 @@ differential:
       xpath: f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)
     mustSupport: true
   - id: Observation.value[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.value[x]
-    short: (USCDI) Result Value
+    short: Result Value
     definition: The clinical test or procedure result value. If a numeric value, valueQuantity.code
       **SHALL** be selected from [UCUM](http://unitsofmeasure.org).  A FHIR [UCUM
       Codes value set](http://hl7.org/fhir/STU3/valueset-ucum-units.html) that defines
@@ -184,11 +153,7 @@ differential:
       xpath: not(exists(f:valueQuantity/f:system) ) or f:valueQuantity/f:system[@value='http://unitsofmeasure.org']
     mustSupport: true
   - id: Observation.dataAbsentReason
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.dataAbsentReason
-    short: (USCDI) Why the result is missing
     condition:
     - us-core-2
     mustSupport: true

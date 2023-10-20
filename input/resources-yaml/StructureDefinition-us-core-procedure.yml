@@ -5,15 +5,16 @@ name: USCoreProcedureProfile
 title: US Core Procedure Profile
 status: active
 experimental: false
-date: 2022-04-20
+date: 2023-10-17
 publisher: HL7 US Realm Steering Committee
 description: The US Core Procedure Profile is based upon the core FHIR Procedure Resource
   and meets the U.S. Core Data for Interoperability (USCDI) v2 'Procedures' requirements.
   This profile sets minimum expectations for the Procedure resource to record, search,
   and fetch procedures associated with a patient to promote interoperability and adoption
   through common implementation.  It identifies which core elements, extensions, vocabularies,
-  and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile.  It
-  provides the floor for standards development for specific use cases.
+  and value sets **SHALL** be present in the resource and constrains the way the elements
+  are used when using this profile.  It provides the floor for standards development
+  for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -40,7 +41,8 @@ differential:
     - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
       valueBoolean: true
     path: Procedure.basedOn
-    short: (USCDI) A request for this procedure
+    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
+      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: A request for this procedure"
     type:
     - code: Reference
       targetProfile:
@@ -48,12 +50,7 @@ differential:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest
     mustSupport: false
   - id: Procedure.status
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Procedure.status
-    short: (USCDI) preparation | in-progress | not-done | on-hold | stopped
-      | completed | entered-in-error | unknown
     condition:
     - us-core-7
     mustSupport: true
@@ -64,11 +61,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Procedure.status
   - id: Procedure.code
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Procedure.code
-    short: (USCDI) Identification of the procedure
     min: 1
     mustSupport: true
     binding:
@@ -78,13 +71,8 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Procedure.code
-
   - id: Procedure.subject
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Procedure.subject
-    short: (USCDI) Who the procedure was performed on
     type:
     - code: Reference
       targetProfile:
@@ -93,28 +81,16 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Procedure.subject
-
   - id: Procedure.encounter
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Procedure.encounter
-    short: (USCDI) Encounter associated with the procedure
+    short: Encounter associated with the procedure
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
     mustSupport: true
-    # mapping:
-    # - identity: argonaut-dq-dstu2
-    #   map: Procedure.encounter
-
   - id: Procedure.performed[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Procedure.performed[x]
-    short: (USCDI) When the procedure was performed
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -130,3 +106,25 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Procedure.performed[x]
+
+# =============== FHIR-42136 ===============
+
+  - id: Procedure.reasonCode
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Procedure.reasonCode
+    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
+      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: Coded reason procedure performed"
+    binding:
+      strength: extensible
+      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code
+
+  - id: Procedure.reasonReference
+    extension:
+    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
+      valueBoolean: true
+    path: Procedure.reasonReference
+    short: "\U0001D5D4\U0001D5D7\U0001D5D7\U0001D5DC\U0001D5E7\U0001D5DC\U0001D5E2\U0001D5E1\U0001D5D4\U0001D5DF
+      \U0001D5E8\U0001D5E6\U0001D5D6\U0001D5D7\U0001D5DC: US Core Profile justifying the reason procedure performed"
+# ============================

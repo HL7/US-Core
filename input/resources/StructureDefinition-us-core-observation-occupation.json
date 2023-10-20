@@ -6,7 +6,7 @@
     "title": "US Core Observation Occupation Profile",
     "status": "active",
     "experimental": false,
-    "date": "2022-08-24",
+    "date": "2023-10-17",
     "description": "The US Core Occupation Observation Profile is based upon the core FHIR Observation Resource and implements the US Core Data for Interoperability (USCDI) Occupation and Occupation Industry requirements. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and fetch a patient's past or present job and \"type of business that compensates for work or assigns work to an unpaid worker or volunteer\". In the context of this profile, a job is defined as a work situation, training position, or volunteer position held for a specified period. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -26,24 +26,11 @@
             },
             {
                 "id": "Observation.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.status",
-                "short": "(USCDI) registered | preliminary | final | amended +",
                 "mustSupport": true
             },
             {
                 "id": "Observation.category",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category",
                 "slicing": {
                     "discriminator": [
@@ -54,20 +41,12 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI) Classification of  type of observation",
                 "mustSupport": true
             },
             {
                 "id": "Observation.category:socialhistory",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category",
                 "sliceName": "socialhistory",
-                "short": "(USCDI) Classification of  type of observation",
                 "min": 0,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -82,14 +61,8 @@
             },
             {
                 "id": "Observation.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.code",
-                "short": "(USCDI) Occupation history",
+                "short": "Occupation history",
                 "patternCodeableConcept": {
                     "coding": [
                         {
@@ -102,14 +75,7 @@
             },
             {
                 "id": "Observation.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.subject",
-                "short": "(USCDI) Who and/or what the observation is about",
                 "min": 1,
                 "type": [
                     {
@@ -123,26 +89,13 @@
             },
             {
                 "id": "Observation.effectivePeriod",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.effectivePeriod",
-                "short": "(USCDI) Clinically relevant time/time-period for observation",
                 "mustSupport": true
             },
             {
                 "id": "Observation.valueCodeableConcept",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.valueCodeableConcept",
-                "short": "(USCDI) Coded occupation or text",
+                "short": "Coded occupation or text",
                 "comment": "Express the occupation type using a coded value. If no coded value is available, use text. If the occupation is not available, the reason should be communicated in `Observation.dataAbsentReason`.",
                 "min": 1,
                 "type": [
@@ -159,12 +112,6 @@
             },
             {
                 "id": "Observation.component",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component",
                 "slicing": {
                     "discriminator": [
@@ -175,34 +122,21 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI) Component results",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:industry",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component",
                 "sliceName": "industry",
-                "short": "(USCDI) Occupation industry",
+                "short": "Occupation industry",
                 "min": 0,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:industry.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.code",
-                "short": "(USCDI) Occupation industry history",
+                "short": "Occupation industry history",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -220,14 +154,8 @@
             },
             {
                 "id": "Observation.component:industry.valueCodeableConcept",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.valueCodeableConcept",
-                "short": "(USCDI) Occupation industry or text",
+                "short": "Occupation industry or text",
                 "comment": "Express the occupation industry type using a coded value. If no coded value is available, use text. If the occupation industry is not available, the reason should be communicated `Observation.component.dataAbsentReason`",
                 "min": 1,
                 "type": [

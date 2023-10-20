@@ -5,7 +5,7 @@ name: USCoreDiagnosticReportProfileLaboratoryReporting
 title: US Core DiagnosticReport Profile for Laboratory Results Reporting
 status: active
 experimental: false
-date: 2022-04-20
+date: 2023-10-17
 description: Laboratory results are grouped and summarized using the DiagnosticReport
   resource which typically reference Observation resource(s).  Each Observation resource
   represents an individual laboratory test and result value or component result values,
@@ -14,9 +14,9 @@ description: Laboratory results are grouped and summarized using the DiagnosticR
   profile sets minimum expectations for the DiagnosticReport resource to record, search,
   and fetch laboratory results associated with a patient to promote interoperability
   and adoption through common implementation.  It identifies which core elements,
-  extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when
-  using this profile. It provides the floor for standards development for specific
-  use cases.
+  extensions, vocabularies, and value sets **SHALL** be present in the resource and
+  constrains the way the elements are used when using this profile. It provides the
+  floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -47,11 +47,7 @@ differential:
         or status='corrected' or status='appended' ) implies issued.exists()
     mustSupport: false
   - id: DiagnosticReport.status
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: DiagnosticReport.status
-    short: (USCDI) registered | partial | preliminary | final +
     condition:
     - us-core-8
     - us-core-9
@@ -60,25 +56,17 @@ differential:
       strength: required
       valueSet: http://hl7.org/fhir/ValueSet/diagnostic-report-status
   - id: DiagnosticReport.category
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: DiagnosticReport.category
     slicing:
       discriminator:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI) Service category
     min: 1
     mustSupport: true
   - id: DiagnosticReport.category:LaboratorySlice
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: DiagnosticReport.category
     sliceName: LaboratorySlice
-    short: (USCDI) Service category
     min: 1
     max: '1'
     patternCodeableConcept:
@@ -87,11 +75,8 @@ differential:
         code: LAB
     mustSupport: true
   - id: DiagnosticReport.code
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: DiagnosticReport.code
-    short: (USCDI) US Core Laboratory Report Order Code
+    short: US Core Laboratory Report Order Code
     definition: The test, panel or battery that was ordered.
     comment: 'UsageNote= The typical patterns for codes are:  1)  a LOINC code either
       as a  translation from a "local" code or as a primary code, or 2)  a local code
@@ -102,40 +87,25 @@ differential:
       strength: extensible
       description: LOINC codes
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-laboratory-test-codes
-      
   - id: DiagnosticReport.subject
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: DiagnosticReport.subject
-    short: (USCDI) The subject of the report - usually, but not always,
-      the patient
     min: 1
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     mustSupport: true
-
   - id: DiagnosticReport.encounter
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: DiagnosticReport.encounter
-    short: (USCDI) Encounter associated with DiagnosticReport
+    short: Encounter associated with DiagnosticReport
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
     mustSupport: true
-
   - id: DiagnosticReport.effective[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: DiagnosticReport.effective[x]
-    short: (USCDI) Diagnostically relevant time (typically the time of
-      specimen collection)
+    short: Diagnostically relevant time (typically the time of specimen collection)
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -146,20 +116,13 @@ differential:
     - us-core-8
     mustSupport: true
   - id: DiagnosticReport.issued
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: DiagnosticReport.issued
-    short: (USCDI) When the report was released
+    short: When the report was released
     condition:
     - us-core-9
     mustSupport: true
   - id: DiagnosticReport.performer
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: DiagnosticReport.performer
-    short: (USCDI) Responsible Diagnostic Service
     type:
     - code: Reference
       targetProfile:
@@ -182,11 +145,7 @@ differential:
           valueBoolean: false
     mustSupport: true
   - id: DiagnosticReport.result
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: DiagnosticReport.result
-    short: (USCDI) Observations
     type:
     - code: Reference
       targetProfile:

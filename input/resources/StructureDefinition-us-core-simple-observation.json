@@ -5,7 +5,7 @@
     "name": "USCoreSimpleObservationProfile",
     "title": "US Core Simple Observation Profile",
     "status": "active",
-    "date": "2022-04-20",
+    "date": "2023-10-17",
     "description": "This US Core FHIR Profile is meant to capture any \u201csimple\u201d observations that are not otherwise covered by other US Core Observation profiles. It represents any type of observation that is not classified as vital signs, laboratory, imaging, or other more specific observation types. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and retrieve observations such as a clinical observation or assertion about a patient's health status or other general observations. This profile identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
@@ -24,24 +24,11 @@
             },
             {
                 "id": "Observation.status",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.status",
-                "short": "(USCDI) registered | preliminary | final | amended +",
                 "mustSupport": true
             },
             {
                 "id": "Observation.category",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category",
                 "slicing": {
                     "discriminator": [
@@ -52,21 +39,13 @@
                     ],
                     "rules": "open"
                 },
-                "short": "(USCDI) Classification of  type of observation",
                 "min": 1,
                 "mustSupport": true
             },
             {
                 "id": "Observation.category:us-core",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.category",
                 "sliceName": "us-core",
-                "short": "(USCDI) Classification of  type of observation",
                 "min": 0,
                 "mustSupport": true,
                 "binding": {
@@ -77,14 +56,7 @@
             },
             {
                 "id": "Observation.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.code",
-                "short": "(USCDI) Type of observation (code / type)",
                 "mustSupport": true,
                 "binding": {
                     "strength": "preferred"
@@ -92,14 +64,7 @@
             },
             {
                 "id": "Observation.subject",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.subject",
-                "short": "(USCDI) Who and/or what the observation is about",
                 "min": 1,
                 "type": [
                     {
@@ -113,14 +78,7 @@
             },
             {
                 "id": "Observation.effective[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.effective[x]",
-                "short": "(USCDI) Clinically relevant time/time-period for observation",
                 "definition": "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\".",
                 "comment": "At least a date should be present unless this observation is a historical report.",
                 "type": [
@@ -147,14 +105,7 @@
             },
             {
                 "id": "Observation.performer",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.performer",
-                "short": "(USCDI) Who is responsible for the observation",
                 "type": [
                     {
                         "code": "Reference",
@@ -222,14 +173,7 @@
             },
             {
                 "id": "Observation.value[x]",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.value[x]",
-                "short": "(USCDI) Actual result",
                 "type": [
                     {
                         "extension": [
@@ -300,7 +244,7 @@
                     }
                 ],
                 "path": "Observation.derivedFrom",
-                "short": "(USCDI) US Core Profiles or other resource the observation is made from",
+                "short": "\ud835\uddd4\ud835\uddd7\ud835\uddd7\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\udde8\ud835\udde6\ud835\uddd6\ud835\uddd7\ud835\udddc: US Core Profiles or other resource the observation is made from",
                 "definition": "US Core Observations, DocumentReference, QuestionnaireResponse or other resource from which this observation value is derived.",
                 "type": [
                     {

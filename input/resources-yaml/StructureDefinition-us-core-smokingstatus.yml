@@ -5,15 +5,16 @@ name: USCoreSmokingStatusProfile
 title: US Core Smoking Status Observation Profile
 status: active
 experimental: false
-date: 2022-04-20
+date: 2023-10-17
 description: The US Core Smoking Status Observation Profile is based upon the core
   FHIR Observation Resource and implements the U.S. Core Data for Interoperability
   (USCDI) v2 Smoking status' requirements. This profile sets minimum expectations
   for the Observation resource to record, search, and fetch smoking status data associated
   with a patient to promote interoperability and adoption through common implementation.  It
   identifies which core elements, extensions, vocabularies, and value sets **SHALL**
-  be present in the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards
-  development for specific use cases.
+  be present in the resource and constrains the way the elements are used when using
+  this profile.  It provides the floor for standards development for specific use
+  cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -33,11 +34,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Observation
   - id: Observation.status
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.status
-    short: (USCDI) registered | preliminary | final | amended +
     mustSupport: true
     binding:
       strength: required
@@ -46,25 +43,17 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Observation.status
   - id: Observation.category
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.category
     slicing:
       discriminator:
       - type: pattern
         path: $this
       rules: open
-    short: (USCDI) Classification of  type of observation
     min: 1
     mustSupport: true
   - id: Observation.category:SocialHistory
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.category
     sliceName: SocialHistory
-    short: (USCDI) Classification of  type of observation
     min: 1
     max: '1'
     patternCodeableConcept:
@@ -73,11 +62,8 @@ differential:
         code: social-history
     mustSupport: true
   - id: Observation.code
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.code
-    short: (USCDI) Smoking Status
+    short: Smoking Status
     mustSupport: true
     binding:
       strength: extensible
@@ -86,11 +72,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Observation.code
   - id: Observation.subject
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.subject
-    short: (USCDI) Who and/or what the observation is about
     min: 1
     type:
     - code: Reference
@@ -101,23 +83,15 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Observation.subject
   - id: Observation.effectiveDateTime
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.effectiveDateTime
-    short: (USCDI) Clinically relevant time/time-period for observation
     min: 1
     mustSupport: true
     mapping:
     - identity: argonaut-dq-dstu2
       map: Observation.issued
   - id: Observation.value[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Observation.value[x]
-    short: (USCDI) Typically Coded Responses from Smoking Status Value
-      Set
+    short: Typically Coded Responses from Smoking Status Value Set
     min: 1
     type:
     - extension:

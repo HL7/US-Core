@@ -5,7 +5,7 @@
     "name": "USCoreMedicationAdherenceExtension",
     "title": "US Core Medication Adherence Extension",
     "status": "active",
-    "date": "2023-09-23",
+    "date": "2023-10-17",
     "description": "A MedicationRequest extension representing reported adherence to prescribed medication instructions.  In other words, whether a medication was consumed according to instructions.",
     "fhirVersion": "4.0.1",
     "kind": "complex-type",
@@ -40,16 +40,10 @@
                     ],
                     "rules": "open"
                 },
-                "min": 1
+                "min": 2
             },
             {
                 "id": "Extension.extension:medicationAdherence",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Extension.extension",
                 "sliceName": "medicationAdherence",
                 "code": [
@@ -59,7 +53,7 @@
                         "display": "Adherence to prescribed medication instructions [Reported]"
                     }
                 ],
-                "short": "(USCDI) Medication adherence code",
+                "short": "Medication adherence code",
                 "definition": "Code stating whether the patient is consuming or being administered the medication has according to instructions.  For example, the patient in not taking the medication as prescribed, or the patient is taking the medication as prescribed.",
                 "min": 1,
                 "max": "1",
@@ -67,7 +61,8 @@
                     {
                         "code": "Extension"
                     }
-                ]
+                ],
+                "mustSupport": true
             },
             {
                 "id": "Extension.extension:medicationAdherence.url",
@@ -93,29 +88,24 @@
                 ],
                 "binding": {
                     "strength": "extensible",
-                    "description": "Medication Adherence Codes",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/medication-adherence"
+                    "description": "This set of values contains terms representing whether a medication has been consumed according to instructions.",
+                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.59"
                 }
             },
             {
                 "id": "Extension.extension:dateAsserted",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Extension.extension",
                 "sliceName": "dateAsserted",
-                "short": "(USCDI) When the medication adherence was asserted",
+                "short": "When the medication adherence was asserted",
                 "definition": "When the medication adherence was asserted by the information source",
-                "min": 0,
+                "min": 1,
                 "max": "1",
                 "type": [
                     {
                         "code": "Extension"
                     }
-                ]
+                ],
+                "mustSupport": true
             },
             {
                 "id": "Extension.extension:dateAsserted.url",
@@ -142,15 +132,9 @@
             },
             {
                 "id": "Extension.extension:informationSource",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Extension.extension",
                 "sliceName": "informationSource",
-                "short": "(USCDI) Who provided the information about the medication adherence",
+                "short": "Who provided the information about the medication adherence",
                 "definition": "The person or organization that provided the information about the medication adherence",
                 "min": 0,
                 "max": "*",
@@ -158,7 +142,8 @@
                     {
                         "code": "Extension"
                     }
-                ]
+                ],
+                "mustSupport": true
             },
             {
                 "id": "Extension.extension:informationSource.url",
@@ -191,7 +176,7 @@
                                 "extension": [
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
+                                        "valueBoolean": false
                                     }
                                 ]
                             },
@@ -207,7 +192,7 @@
                                 "extension": [
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
+                                        "valueBoolean": false
                                     }
                                 ]
                             },
@@ -221,8 +206,7 @@
                             }
                         ]
                     }
-                ],
-                "mustSupport": true
+                ]
             },
             {
                 "id": "Extension.url",

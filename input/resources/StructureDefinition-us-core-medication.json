@@ -7,7 +7,7 @@
     "title": "US Core Medication Profile",
     "status": "active",
     "experimental": false,
-    "date": "2019-05-21",
+    "date": "2023-10-17",
     "publisher": "HL7 US Realm Steering Committee",
     "contact": [
         {
@@ -54,14 +54,7 @@
             },
             {
                 "id": "Medication.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Medication.code",
-                "short": "(USCDI) Codes that identify this medication",
                 "min": 1,
                 "mustSupport": true,
                 "binding": {

@@ -5,13 +5,13 @@ name: USCoreImmunizationProfile
 title: US Core Immunization Profile
 status: active
 experimental: false
-date: 2022-04-20
+date: 2023-10-17
 description: This profile sets minimum expectations for the Immunization resource
   to record, search, and fetch immunization history associated with a patient to promote
   interoperability and adoption through common implementation.  It identifies which
   core elements, extensions, vocabularies, and value sets **SHALL** be present in
-  the resource and constrains the way the elements are used when using this profile.  It provides the floor for standards development
-  for specific use cases.
+  the resource and constrains the way the elements are used when using this profile.  It
+  provides the floor for standards development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
@@ -31,18 +31,17 @@ differential:
       key: us-core-5
       severity: warning
       human: SHOULD have a translation to the NDC value set
-      expression: vaccineCode.coding.where(system='http://hl7.org/fhir/sid/cvx').exists() implies vaccineCode.coding.where(system='http://hl7.org/fhir/sid/ndc').exists()
-      xpath: (exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/ndc']) and exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx'])) or exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx'])not()
+      expression: vaccineCode.coding.where(system='http://hl7.org/fhir/sid/cvx').exists()
+        implies vaccineCode.coding.where(system='http://hl7.org/fhir/sid/ndc').exists()
+      xpath: (exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/ndc'])
+        and exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx']))
+        or exists(f:vaccineCode/f:coding/f:system[@value='http://hl7.org/fhir/sid/cvx'])not()
     mustSupport: false
     mapping:
     - identity: argonaut-dq-dstu2
       map: Immunization
   - id: Immunization.status
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Immunization.status
-    short: (USCDI) completed | entered-in-error | not-done
     mustSupport: true
     binding:
       strength: required
@@ -51,11 +50,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Immunization.status
   - id: Immunization.statusReason
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Immunization.statusReason
-    short: (USCDI) Reason not done
     mustSupport: true
     binding:
       strength: example
@@ -64,11 +59,8 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Immunization.wasNotGiven
   - id: Immunization.vaccineCode
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Immunization.vaccineCode
-    short: (USCDI) Vaccine Product Type (bind to CVX)
+    short: Vaccine Product Type (bind to CVX)
     condition:
     - us-core-5
     mustSupport: true
@@ -79,11 +71,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Immunization.vaccineCode
   - id: Immunization.patient
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Immunization.patient
-    short: (USCDI) Who was immunized
     alias:
     - Patient
     type:
@@ -94,29 +82,16 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Immunization.patient
-
   - id: Immunization.encounter
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Immunization.encounter
-    short: (USCDI) Encounter the immunization was part of
-    # definition: The visit or admission or other contact between patient and health
-    #   care provider the immunization was performed as part of.
-    # alias:
-    # - Encounter
+    short: Encounter the immunization was part of
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
     mustSupport: true
-
   - id: Immunization.occurrence[x]
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Immunization.occurrence[x]
-    short: (USCDI) Vaccine administration date
     type:
     - extension:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
@@ -128,11 +103,7 @@ differential:
     - identity: argonaut-dq-dstu2
       map: Immunization.date
   - id: Immunization.primarySource
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Immunization.primarySource
-    short: (USCDI) Indicates context the data was recorded in
     definition: Indicates whether the data contained in the resource was captured
       by the individual/organization which was responsible for the administration
       of the vaccine rather than as 'secondary reported' data  documented by a third
@@ -143,21 +114,11 @@ differential:
     mapping:
     - identity: argonaut-dq-dstu2
       map: Immunization.reported
-
   - id: Immunization.location
-    extension:
-    - url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-      valueBoolean: true
     path: Immunization.location
-    short: (USCDI) Where the vaccine was administered
-    # definition: The clinic or other location where the vaccine was administered.
-    # alias:
-    # - Location
+    short: Where the vaccine was administered
     type:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
     mustSupport: true
-    # mapping:
-    # - identity: argonaut-dq-dstu2
-    #   map: Immunization.location

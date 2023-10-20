@@ -7,7 +7,7 @@
     "title": "US Core Blood Pressure Profile",
     "status": "active",
     "experimental": false,
-    "date": "2022-04-20",
+    "date": "2023-10-17",
     "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.",
     "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
     "fhirVersion": "4.0.1",
@@ -27,14 +27,8 @@
             },
             {
                 "id": "Observation.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.code",
-                "short": "(USCDI) Blood Pressure",
+                "short": "Blood Pressure",
                 "type": [
                     {
                         "code": "CodeableConcept"
@@ -52,12 +46,6 @@
             },
             {
                 "id": "Observation.component",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component",
                 "slicing": {
                     "discriminator": [
@@ -69,36 +57,24 @@
                     "ordered": false,
                     "rules": "open"
                 },
-                "short": "(USCDI) Component observations",
+                "short": "Component observations",
                 "min": 2,
                 "max": "*",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:systolic",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component",
                 "sliceName": "systolic",
-                "short": "(USCDI) Systolic Blood Pressure",
+                "short": "Systolic Blood Pressure",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:systolic.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.code",
-                "short": "(USCDI) Systolic Blood Pressure Code",
+                "short": "Systolic Blood Pressure Code",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -113,14 +89,8 @@
             },
             {
                 "id": "Observation.component:systolic.valueQuantity",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.valueQuantity",
-                "short": "(USCDI) Vital Sign Component Value",
+                "short": "Vital Sign Component Value",
                 "type": [
                     {
                         "code": "Quantity"
@@ -130,14 +100,7 @@
             },
             {
                 "id": "Observation.component:systolic.valueQuantity.value",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.valueQuantity.value",
-                "short": "(USCDI) Numerical value (with implicit precision)",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -149,14 +112,7 @@
             },
             {
                 "id": "Observation.component:systolic.valueQuantity.unit",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.valueQuantity.unit",
-                "short": "(USCDI) Unit representation",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -168,14 +124,7 @@
             },
             {
                 "id": "Observation.component:systolic.valueQuantity.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.valueQuantity.system",
-                "short": "(USCDI) System that defines coded unit form",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -188,14 +137,7 @@
             },
             {
                 "id": "Observation.component:systolic.valueQuantity.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.valueQuantity.code",
-                "short": "(USCDI) Coded form of the unit",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -208,29 +150,17 @@
             },
             {
                 "id": "Observation.component:diastolic",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component",
                 "sliceName": "diastolic",
-                "short": "(USCDI) Diastolic Blood Pressure",
+                "short": "Diastolic Blood Pressure",
                 "min": 1,
                 "max": "1",
                 "mustSupport": true
             },
             {
                 "id": "Observation.component:diastolic.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.code",
-                "short": "(USCDI) Diastolic Blood Pressure Code",
+                "short": "Diastolic Blood Pressure Code",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -245,14 +175,8 @@
             },
             {
                 "id": "Observation.component:diastolic.valueQuantity",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.valueQuantity",
-                "short": "(USCDI) Vital Sign Component Value",
+                "short": "Vital Sign Component Value",
                 "type": [
                     {
                         "code": "Quantity"
@@ -262,14 +186,7 @@
             },
             {
                 "id": "Observation.component:diastolic.valueQuantity.value",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.valueQuantity.value",
-                "short": "(USCDI) Numerical value (with implicit precision)",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -281,14 +198,7 @@
             },
             {
                 "id": "Observation.component:diastolic.valueQuantity.unit",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.valueQuantity.unit",
-                "short": "(USCDI) Unit representation",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -300,14 +210,7 @@
             },
             {
                 "id": "Observation.component:diastolic.valueQuantity.system",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.valueQuantity.system",
-                "short": "(USCDI) System that defines coded unit form",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -320,14 +223,7 @@
             },
             {
                 "id": "Observation.component:diastolic.valueQuantity.code",
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement",
-                        "valueBoolean": true
-                    }
-                ],
                 "path": "Observation.component.valueQuantity.code",
-                "short": "(USCDI) Coded form of the unit",
                 "min": 1,
                 "max": "1",
                 "type": [
