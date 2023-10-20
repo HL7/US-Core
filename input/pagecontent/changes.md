@@ -77,7 +77,11 @@ This ballot addresses the following:
 26. **Triaged:** 'activity' category should allow supervision by clinician [FHIR-41672](https://jira.hl7.org/browse/FHIR-41672) [See Changes Here](#.html)
 27. **Triaged:** APGAR should be Apgar [FHIR-41666](https://jira.hl7.org/browse/FHIR-41666) [See Changes Here](#.html)
 28. **Resolved - change required:** Correct invalid invariants pd-1 and us-core-13 [FHIR-41586](https://jira.hl7.org/browse/FHIR-41586) [See Changes Here](#.html)
-29. **Triaged:** Remove USCDI marker for Patient.gender [FHIR-41572](https://jira.hl7.org/browse/FHIR-41572) [See Changes Here](#.html)
+29. **Triaged:** Update approach to flagging Additional USCDI Requirements [FHIR-41572](https://jira.hl7.org/browse/FHIR-41572) See Changes:
+   - [Here](StructureDefinition-us-core-patient.html#profile)
+   - [Here](general-requirements.html#us-core-conformance-artifacts)
+   - [Here](must-support.html#uscdi-requirements)
+   - [Here](uscdi.html)
 30. **Triaged:** Change ASKU in value set to asked-declined [FHIR-41571](https://jira.hl7.org/browse/FHIR-41571) [See Changes Here](#.html)
 31. **Triaged:** Create a table of VSAC Valueset on the Terminology page [FHIR-41506](https://jira.hl7.org/browse/FHIR-41506) [See Changes Here](#.html)
 32. **Triaged:** Unable to include additional values in Occupation or Industry [FHIR-41364](https://jira.hl7.org/browse/FHIR-41364) [See Changes Here](#.html)

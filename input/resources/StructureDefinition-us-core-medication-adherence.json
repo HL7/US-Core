@@ -40,7 +40,7 @@
                     ],
                     "rules": "open"
                 },
-                "min": 1
+                "min": 2
             },
             {
                 "id": "Extension.extension:medicationAdherence",
@@ -61,7 +61,8 @@
                     {
                         "code": "Extension"
                     }
-                ]
+                ],
+                "mustSupport": true
             },
             {
                 "id": "Extension.extension:medicationAdherence.url",
@@ -87,8 +88,8 @@
                 ],
                 "binding": {
                     "strength": "extensible",
-                    "description": "Medication Adherence Codes",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/medication-adherence"
+                    "description": "This set of values contains terms representing whether a medication has been consumed according to instructions.",
+                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.59"
                 }
             },
             {
@@ -97,13 +98,14 @@
                 "sliceName": "dateAsserted",
                 "short": "When the medication adherence was asserted",
                 "definition": "When the medication adherence was asserted by the information source",
-                "min": 0,
+                "min": 1,
                 "max": "1",
                 "type": [
                     {
                         "code": "Extension"
                     }
-                ]
+                ],
+                "mustSupport": true
             },
             {
                 "id": "Extension.extension:dateAsserted.url",
@@ -140,7 +142,8 @@
                     {
                         "code": "Extension"
                     }
-                ]
+                ],
+                "mustSupport": true
             },
             {
                 "id": "Extension.extension:informationSource.url",
@@ -173,7 +176,7 @@
                                 "extension": [
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
+                                        "valueBoolean": false
                                     }
                                 ]
                             },
@@ -189,7 +192,7 @@
                                 "extension": [
                                     {
                                         "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-                                        "valueBoolean": true
+                                        "valueBoolean": false
                                     }
                                 ]
                             },
@@ -203,8 +206,7 @@
                             }
                         ]
                     }
-                ],
-                "mustSupport": true
+                ]
             },
             {
                 "id": "Extension.url",

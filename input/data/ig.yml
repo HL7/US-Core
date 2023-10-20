@@ -1259,16 +1259,6 @@ definition:
     name: Urobilinogen Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab
   - reference:
-      reference: StructureDefinition/uscdi-requirement
-    description: '**This extension is only used in the US Core Implementation Guide''''s
-      Profile StructureDefinition elements.**  It flags elements that are *Additional*
-      USCDI Requirements for certified systems. In other words, elements that are
-      not marked as Must Support but are required for ONC''s g(10) certification.
-      See the [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html)
-      for more information.'
-    exampleBoolean: false
-    name: US Core Additional USCDI Requirement Extension
-  - reference:
       reference: StructureDefinition/us-core-allergyintolerance
     description: To promote interoperability and adoption through common implementation,
       this profile sets minimum expectations for the AllergyIntolerance resource to
@@ -1768,12 +1758,6 @@ definition:
       consumed according to instructions.
     exampleBoolean: false
     name: US Core Medication Adherence Extension
-  - reference:
-      reference: ValueSet/medication-adherence
-    description: The US Core MedicationStatement Adherence concepts asserting whether
-      a medication has been consumed according to instructions.
-    exampleBoolean: false
-    name: US Core Medication Adherence ValueSet
   - reference:
       reference: StructureDefinition/us-core-medication
     description: When referencing a medication, the MedicationRequest resource can
@@ -2299,6 +2283,16 @@ definition:
       associates and, optionally, whether they are enrolled.
     exampleBoolean: false
     name: US Core Tribal Affiliation Extension
+  - reference:
+      reference: StructureDefinition/uscdi-requirement
+    description: '**This extension is only used in the US Core Implementation Guide''''s
+      Profile StructureDefinition elements.**  It flags elements that are *Additional*
+      USCDI Requirements for certified systems. In other words, elements that are
+      not marked as Must Support but are required for [ONC Health IT Certification]
+      (g(10) certification) testing. See the [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html)
+      for more information.'
+    exampleBoolean: false
+    name: US Core USCDI Requirement Extension
   - reference:
       reference: StructureDefinition/us-core-vital-signs
     description: To promote interoperability and adoption through common implementation,

@@ -1,15 +1,15 @@
 resourceType: StructureDefinition
 id: uscdi-requirement
 url: http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement
-name: AdditionalUSCDIRequirement
-title: US Core Additional USCDI Requirement Extension
+name: USCDIRequirement
+title: US Core USCDI Requirement Extension
 status: active
 date: 2023-04-03
 description: >-
   **This extension is only used in the US Core Implementation Guide''s Profile
   StructureDefinition elements.**  It flags elements that are *Additional* USCDI
   Requirements for certified systems. In other words, elements that are not
-  marked as Must Support but are required for ONC's g(10) certification. See the
+  marked as Must Support but are required for [ONC Health IT Certification] (g(10) certification) testing. See the
   [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for
   more information.
 fhirVersion: 4.0.1
@@ -27,10 +27,10 @@ differential:
     path: Extension
     short: 'USCDI Requirement Flag: ONLY USED FOR US Core Profile StructureDefinitions'
     definition: >-
-      This extension flags elements that are *Additional* USCDI   Requirements for certified
-      systems. In other words, elements that are not   marked as Must Support but
-      are required for ONC's g(10) certification. See the   [Conformance
-      page](http://hl7.org/fhir/us/core/general-requirements.html) for more
+      This extension flags elements that are *Additional* USCDI  Requirements for certified
+      systems. In other words, elements that are not marked as Must Support but
+      are required for for [ONC Health IT Certification] (g(10) certification) testing. See the
+      [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for more
       information.
     min: 0
     max: '1'
