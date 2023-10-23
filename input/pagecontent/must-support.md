@@ -34,15 +34,25 @@ This [Observation Summary Table] compares *Must Support* Elements across all the
 
 ### Additional USCDI Requirements 
 
-The US Core Profiles include requirements from the [U.S. Core Data for Interoperability (USCDI) v4]. Some US Core Profile elements that are needed to represent USCDI Data Elements for [ONC Health IT Certification] (g(10) certification) are not *Mandatory* or *Must Support* because many non-certifying implementers do not need them for their use cases. US Core designates these elements *Additional USCDI Requirements*. The table below lists them and their corresponding Profiles and FHIR elements. However, implementers seeking ONC certification **SHALL** interpret them as *Must Support* elements as documented above; otherwise, they are considered optional. All *Mandatory*, *Must Support*, or *Additional USCDI Requirements* are in scope for ONC Health IT Certification. See the [USCDI] page for more information about the US Core and USCDI relationship and a mapping between US Core Profiles and the USCDI Data Classes and Elements.
+The US Core Profiles include requirements from the [U.S. Core Data for Interoperability (USCDI) v4]. Some US Core Profile elements that are needed to represent USCDI Data Elements for [ONC Health IT Certification] (g(10) certification) are not *Mandatory* or *Must Support* because many non-certifying implementers do not need them for their use cases. US Core designates these elements *Additional USCDI Requirements*.   The following table summarizes the difference between USCDI data classes or elements and *Must Support* and *Additional USCDI Requirements* conformance requirements. 
+ 
+|USCDI Data Class or Element?|*Must Support* Element?|*Additional USCDI Requirements*?| Must Support for Certified Systems?|Must Support for Non-Certified Systems?|
+|---|---|---|---|---|
+|Yes|Yes|No|Yes|Yes|
+|No|Yes|No|Yes|Yes|
+|Yes|No|Yes|Yes|No|
+|No|No|No|No|No|
+{:.grid}
+
+Implementers seeking ONC certification **SHALL** interpret *Additional USCDI Requirements* as *Must Support* elements as documented above; otherwise, they are considered optional. All *Mandatory*, *Must Support*, or *Additional USCDI Requirements* are in scope for ONC Health IT Certification.  See the [USCDI] page for more information about the US Core and USCDI relationship and a mapping between US Core Profiles and the USCDI Data Classes and Elements.
+
+The table below lists the *Additional USCDI Requirements* and their corresponding Profiles and FHIR elements.
 
 {% include additional-uscdi-requirements.md %}
 
-
-
 #### Communicating Additional USCDI Requirements
 
-Understanding the* Additional USCDI Requirements* is essential for API developers and business analysts working with FHIR US Core. To alert users when these elements are present:
+To communicate when *Additional USCDI Requirements* elements are in a US Core profile:
 
 1. The profiles page includes an "Additional USCDI Requirements" listing the elements under the "Mandatory and Must Support Data Elements" section. 
 2. The computable [US Core USCDI Requirement Extension] is added to each element in the profile's [StructureDefinition].

@@ -52,7 +52,10 @@ Clients currently face challenges displaying the source data's times and timezon
   Common practice is to preserve the source data time offsets as the original offset or converted to Coordinated Universal Time (UTC) time. Making this a requirement is one consideration.  Another consideration is the addition of server best practices for preserving source timezones using the FHIR standard [timezone extension]. A third consideration is providing a client algorithm for resolving time offsets and time zones.
 
 #### Record or Update Data
-Very little guidance is provided on writing and updating data in the context of US Core Profiles. There are multiple issues that will need to be considered when defining expected behavior by the various actors to support updates and writes to the data, including:
+
+<div class="bg-success" markdown="1">
+
+Systems may use operations that create and update resources for any of the profiles in this IG.  However, more guidance is needed on writing and updating data in the context of US Core Profiles to support consistency between implementations.  Multiple issues will need to be considered when defining expected behavior by the various actors to support updates and writes to the data, including:
 
   - Defining the overall approach
     -  direct updates to a particular resource via FHIR RESTful transactions
@@ -61,6 +64,10 @@ Very little guidance is provided on writing and updating data in the context of 
   - Recording and updating data in the context of the Must Support fields
   - Indicating the source of the update
 
+
+The Argonaut project has defined [FHIR Write Guidance for Vital Sign Observations](fhir-write.html) for creating and updating vital sign Observations resources from patient-facing and provider-facing applications and expects to develop similar guidance for other Observation categories and resource types. After adequate testing by implementers, we will assess the feasibility of incorporating this guidance into the US Core API.
+
+</div><!-- new-content -->
 
 #### US Core SMART Scopes
 Because of FHIR's resource-based data model, related but distinct data tend to be grouped together in the same FHIR resource type. The original SMART on FHIR scope syntax (and US regulation) tends to limit authorization servers to granting access to all data in the same FHIR resource type, or not giving access to all. For example, a patient can only share an encounter diagnosis if they share their entire problem list, or a health system can only enable backend access to a patient cohort's SDOH data if it enables access to labs. 
