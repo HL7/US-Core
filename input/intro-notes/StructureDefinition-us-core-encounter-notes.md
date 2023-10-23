@@ -70,7 +70,7 @@ The following search parameter combinations **SHOULD** be supported:
 
     Example:
     
-      1. GET [base]/Encounter?patient=1137192&amp;type=http://www.ama-assn.org/go/cpt code\|99201
+      1. GET [base]/Encounter?patient=1137192&amp;type=http://www.ama-assn.org/go/cpt code\|99211
 
     *Implementation Notes:* Fetches a bundle of all Encounter resources matching the specified patient and type ([how to search by reference] and [how to search by token])
 

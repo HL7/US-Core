@@ -79,6 +79,8 @@ WARNING: ServiceRequest/rehab: ServiceRequest.code: Code System URI 'http://www.
 WARNING: ValueSet.where(id = 'us-core-discharge-disposition'): Error from http://tx.fhir.org/r4: Unable to provide support for code system http://www.nubc.org/patient-discharge
 Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated
 WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Code System URI 'http://www.nubc.org/patient-discharge' is unknown so the code cannot be validated; Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|7.0.0-ballot
+WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|7.0.0-ballot
+
 
 # === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) NONE===
 

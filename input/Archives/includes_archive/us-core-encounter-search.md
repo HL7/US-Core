@@ -71,7 +71,7 @@ The following search parameters, search parameter combinations and search parame
 
   `GET [base]/Encounter?type={[system]}|[code]`
 
-  Example: GET [base]/Encounter?http://www.ama-assn.org/go/cpt|99201
+  Example: GET [base]/Encounter?http://www.ama-assn.org/go/cpt|99211
 
   *Implementation Notes:* Fetches a bundle of all Encounter resources for the specified patient (how to search by [token])
 
