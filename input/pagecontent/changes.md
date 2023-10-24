@@ -32,31 +32,30 @@ This ballot addresses the following:
    - [Here](CapabilityStatement-us-core-server.html#summary-of-additional-uscdi-requirement-references-between-profi)
 - Migrate US Core Terminology to VSAC
 - Expanded Reason for Referral
-- Scopes
-- FHIR Write
-
+- Scopes: To meet the ONC’s granular scope requirement in [HTI-1 proposed rule](file:///Users/ehaas/Documents/FHIR/USCDI4-Sandbox/docs/[+https://www.federalregister.gov/d/2023-07229/p-991+]), We added required support for granular scopes as defined in Version 2.0.0 of [SMART App Launch] and moved the SMART scopes guidance from Future of US Core to a [Conformance Page](scopes.html) and updated requirements for each profile.
+- FHIR Write: Add Argonaut Write Guidance for Vital Sign Observations to Record or Update Data section on the Future of US Core Page. [See Changes Here](future.html#record-or-update-datal)
 {% include img-small.html img="todo.png" %}
 
 - Implementers submitted over \<N> trackers since the publication of US Core ver 6.0.0 and 6.1.0 We have addressed them and applied over \<N'> changes listed below:
 
  **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
-1. **Applied:** Correct invalid invariants us-core-3 and us-core-4 [FHIR-41523](https://jira.hl7.org/browse/FHIR-41523) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html) and [Here](StructureDefinition-us-core-smokingstatus.html)
-2. **Applied:** Correct invalid invariants pd-1 and us-core-13 [FHIR-41586](https://jira.hl7.org/browse/FHIR-41586) [See Changes Here](StructureDefinition-us-core-practitionerrole.html)
-3. **Applied:** Correct invalid invariant us-core-1 [FHIR-41670](https://jira.hl7.org/browse/FHIR-41670) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html)
-4. **Applied:** Correct invalid searchparameter expression for USCoreConditionAssertedDate [FHIR-41673](https://jira.hl7.org/browse/FHIR-41673) [See Changes Here](SearchParameter-us-core-condition-asserted-date.html)
+1. **QA:** Correct invalid invariants us-core-3 and us-core-4 [FHIR-41523](https://jira.hl7.org/browse/FHIR-41523) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html) and [Here](StructureDefinition-us-core-smokingstatus.html)
+2. **QA:****Correct invalid invariants pd-1 and us-core-13 [FHIR-41586](https://jira.hl7.org/browse/FHIR-41586) [See Changes Here](StructureDefinition-us-core-practitionerrole.html)
+3. **QA:****Correct invalid invariant us-core-1 [FHIR-41670](https://jira.hl7.org/browse/FHIR-41670) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html)
+4. **QA:****Correct invalid searchparameter expression for USCoreConditionAssertedDate [FHIR-41673](https://jira.hl7.org/browse/FHIR-41673) [See Changes Here](SearchParameter-us-core-condition-asserted-date.html)
 5. **Pre-Applied:** List all valueset URLs and all VSAC Valuesets [FHIR-NNNN](https://jira.hl7.org/browse/FHIR-NNNN) [See Changes Here](terminology.html)
-6. **Applied:** Fix Typo in Tribal Extension [FHIR-41739](https://jira.hl7.org/browse/FHIR-41739) [See Changes Here](StructureDefinition-us-core-tribal-affiliation.profile.json.html)
-7. **Applied:** Fix Missing Data Example [FHIR-42805](https://jira.hl7.org/browse/FHIR-42805) [See Changes Here](general-requirements.html#missing-data)
+6. **QA:****Fix Typo in Tribal Extension [FHIR-41739](https://jira.hl7.org/browse/FHIR-41739) [See Changes Here](StructureDefinition-us-core-tribal-affiliation.profile.json.html)
+7. **QA:****Fix Missing Data Example [FHIR-42805](https://jira.hl7.org/browse/FHIR-42805) [See Changes Here](general-requirements.html#missing-data)
 8. **Triaged:** rewrite introduction to USCDI table since it is not relevent. [FHIR-42801](https://jira.hl7.org/browse/FHIR-42801) [See Changes Here](#.html)
-9. **Applied:** Fix us-core-5 invariant [FHIR-42814](https://jira.hl7.org/browse/FHIR-42814) [See Changes Here](StructureDefinition-us-core-immunization.html#constraints)
+9. **QA:****Fix us-core-5 invariant [FHIR-42814](https://jira.hl7.org/browse/FHIR-42814) [See Changes Here](StructureDefinition-us-core-immunization.html#constraints)
 10. **Triaged:** Update the statement in CapabilityStatement - PractitionerRole section [FHIR-42906](https://jira.hl7.org/browse/FHIR-42906)
 11. **Triaged:** Clarify CarTeam Profile Specific Implementation Guidance [FHIR-42905](https://jira.hl7.org/browse/FHIR-42905)
 12. **Triaged:** Clarify CarTeam Profile Specific Implementation Guidance [FHIR-42905](https://jira.hl7.org/browse/FHIR-42905)
 13. **Triaged:** Medication Adherence & Medication Instructions Scope Clarification [FHIR-42845](https://jira.hl7.org/browse/FHIR-42845)
 14. **Pre-Applied:** Update profile + interaction requirements [FHIR-42789](https://jira.hl7.org/browse/FHIR-42789) and [FHIR-42847](https://jira.hl7.org/browse/FHIR-42847) [See Changes Here](general-requirements.html#conforming-to-us-core)
 15. **Resolved-Change Required:** Correct description of Occupation Profile [FHIR-42867](https://jira.hl7.org/browse/FHIR-42867) [See Changes Here](#.html)
-16. **Resolved-Change Required:** Move the SMART scopes guidance from Future of US Core to a Guidance Page [FHIR-42864](https://jira.hl7.org/browse/FHIR-42864) [See Changes Here](#.html)
-17. **Resolved-Change Required:** Update FHIR Write on Future of US Core Page [FHIR-42863](https://jira.hl7.org/browse/FHIR-42863) [See Changes Here](#.html)
+16. **QA:** Move the SMART scopes guidance from Future of US Core to a Conformance Page [FHIR-42864](https://jira.hl7.org/browse/FHIR-42864) [See Changes Here](scopes.html) and [Here](StructureDefinition-us-core-allergyintolerance.html#mandatory-search-parameters) 
+17. **QA:** Add Argonaut Write Guidance for Vital Sign Observations to Record or Update Data section on the Future of US Core Page [FHIR-42863](https://jira.hl7.org/browse/FHIR-42863) [See Changes Here](future.html#record-or-update-datal)
 18. **Resolved-Change Required:** Migrate US Core Terminology to VSAC [FHIR-42846](https://jira.hl7.org/browse/FHIR-42846) [See Changes Here](#.html)
 19. **Pre-Applied:**  Clarify note in Search Parameters and Operations page [FHIR-42783](https://jira.hl7.org/browse/FHIR-42783) [See Changes Here](search-parameters-and-operations.html)
 20. **Pre-Applied:**  Fix errors in USCDI mapping table [FHIR-42862](https://jira.hl7.org/browse/FHIR-42862) [See Changes Here](uscdi.html)
@@ -65,7 +64,7 @@ This ballot addresses the following:
 23. **Submitted:** ""Datetime must be at least to day"" regex rejects valid dateTimes with the required precision [FHIR-42738](https://jira.hl7.org/browse/FHIR-42738) [See Changes Here](#.html)
 24. **Triaged:** Add USCDI Version 4 Data Elements to US Core [FHIR-42161](https://jira.hl7.org/browse/FHIR-42161) See the Introduction to this version above and Changes [Here](uscdi.html)
 25. **Triaged:** remove option 3 from SNOMED US Edition guidance [FHIR-42160](https://jira.hl7.org/browse/FHIR-42160) [See Changes Here](#.html)
-26. **Applied:** Add Procedure.reasonCode and Procedure.reasonReference as Reason for Referral [FHIR-42136](https://jira.hl7.org/browse/FHIR-42136) and [FHIR-41761](https://jira.hl7.org/browse/FHIR-41761) See Changes:
+26. **QA:** Add Procedure.reasonCode and Procedure.reasonReference as Reason for Referral [FHIR-42136](https://jira.hl7.org/browse/FHIR-42136) and [FHIR-41761](https://jira.hl7.org/browse/FHIR-41761) See Changes:
    -  [Here](StructureDefinition-us-core-procedure.html)
    -  [Here](StructureDefinition-us-core-servicerequest.html)
    -  [Here](Procedure-defib-implant.html)
@@ -83,7 +82,7 @@ This ballot addresses the following:
 37. **Triaged:** 'activity' category should allow supervision by clinician [FHIR-41672](https://jira.hl7.org/browse/FHIR-41672) [See Changes Here](#.html)
 38. **Triaged:** APGAR should be Apgar [FHIR-41666](https://jira.hl7.org/browse/FHIR-41666) [See Changes Here](#.html)
 39. **Resolved - change required:** Correct invalid invariants pd-1 and us-core-13 [FHIR-41586](https://jira.hl7.org/browse/FHIR-41586) [See Changes Here](#.html)
-40. **Applied:** Clarify Additional USCDI Requirements [FHIR-41572](https://jira.hl7.org/browse/FHIR-41572) See Changes:
+40. **QA:** Clarify Additional USCDI Requirements [FHIR-41572](https://jira.hl7.org/browse/FHIR-41572) See Changes:
    - [Here](StructureDefinition-us-core-patient.html#profile)
    - [Here](general-requirements.html#us-core-conformance-artifacts)
    - [Here](must-support.html#uscdi-requirements)

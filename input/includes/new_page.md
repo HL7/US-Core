@@ -13,7 +13,7 @@ site.data.structuredefinitions.{SD}.path maps to page.path
 {%- assign new = false -%}
 {%- for new_stuff in site.data.new_stuff -%}
     {%- if new_stuff == r_name  -%}
-This page is new content for US Core Version 6.0.0
+This page is new content for US Core Version 7.0.0
 {:.new-content}
         {%- break -%}
     {%- endif -%}

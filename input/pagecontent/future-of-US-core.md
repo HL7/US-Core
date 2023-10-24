@@ -69,7 +69,7 @@ The Argonaut project has defined [FHIR Write Guidance for Vital Sign Observation
 
 </div><!-- new-content -->
 
-#### US Core SMART Scopes
+<!-- #### US Core SMART Scopes
 Because of FHIR's resource-based data model, related but distinct data tend to be grouped together in the same FHIR resource type. The original SMART on FHIR scope syntax (and US regulation) tends to limit authorization servers to granting access to all data in the same FHIR resource type, or not giving access to all. For example, a patient can only share an encounter diagnosis if they share their entire problem list, or a health system can only enable backend access to a patient cohort's SDOH data if it enables access to labs. 
 
 Since version 2.0.0 of [SMART App Launch] clients and servers have more specific control over shared data within a specific resource type using [*granular scopes*](https://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#finer-grained-resource-constraints-using-search-parameters). US core encourages user experimentation with granular scope and is seeking general feedback.  In addition, specific feedback is sought on best practices around [scope string length](https://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#scope-size-over-the-wire) and JWT-based tokens.
@@ -93,7 +93,7 @@ The example scopes below use a single FHIR search parameter of category applied 
 * `system/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|clinical-test`
 * `system/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`
 
-See the respective “Quick Start” section on each US Core Profile page for more examples.
+See the respective “Quick Start” section on each US Core Profile page for more examples. -->
 
 ------------------------------------------------------------------------
 Footnotes

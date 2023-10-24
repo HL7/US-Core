@@ -1,4 +1,6 @@
 
+This page is new content for US Core Version 7.0.0
+{:.new-content}
 
 ### SMART Configuration
 EHR systems with support for writing FHIR vital sign Observation resources from patient-facing apps, provider-facing apps or system apps SHALL include a `vitals-write` capability in `.well-known/smart-configuration` [capabilities array](https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#launch-context-for-standalone-launch).
@@ -78,7 +80,7 @@ EHR systems MAY ignore contained Provenance resources in an Observation being su
 
 #### Resource retrieved from an external organization
 
-![](https://hackmd.io/_uploads/S1h87epp2.png)
+{% include img.html img="fhir-write1.png" caption="Figure 1: Resource retrieved from an external organization" %}
 
 When writing an Observation that was retrieved from an external organization (e.g., a health system's EHR or a device manufacturer's cloud data store):
 
@@ -135,7 +137,7 @@ Example:
 
 #### Resources not retrieved from an external organization
 
-![](https://hackmd.io/_uploads/B1PWv1pah.png)
+{% include img.html img="fhir-write2.png" caption="Figure 2: Resources not retrieved from an external organization" %}
 
 When writing an Observation that was not retrieved from an external organization (e.g., transmitted by a home blood pressure cuff, or manually entered by a patient):
 
