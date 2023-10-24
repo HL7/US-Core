@@ -5,9 +5,13 @@ name: USCoreMedicationAdherenceExtension
 title: US Core Medication Adherence Extension
 status: active
 date: 2023-10-17
-description: A MedicationRequest extension representing reported adherence to prescribed
-  medication instructions.  In other words, whether a medication was consumed according
-  to instructions.
+description: >-
+  The Medication Adherence Extension is a statement of whether a medication has
+  been consumed according to instructions for discharge, community-prescribed,
+  and self-prescribed medications. This extension is not intended to track
+  adherence to the Inpatient Medication Administration Record (MAR). In FHIR,
+  [MedicationAdministration](https://hl7.org/fhir/R4/medicationadministration.html) is typically used
+  to monitor compliance with the MAR.
 fhirVersion: 4.0.1
 kind: complex-type
 abstract: false
@@ -40,8 +44,9 @@ differential:
       code: 71799-1
       display: Adherence to prescribed medication instructions [Reported]
     short: Medication adherence code
-    definition: Code stating whether the patient is consuming or being administered
-      the medication has according to instructions.  For example, the patient in not
+    definition: >-
+      Code stating whether the patient is consuming or being administered the
+      medication has according to instructions.  For example, the patient in not
       taking the medication as prescribed, or the patient is taking the medication
       as prescribed.
     min: 1

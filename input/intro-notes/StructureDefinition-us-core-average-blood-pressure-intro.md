@@ -1,3 +1,4 @@
+{% include new_page.md %}
 
 **Example Usage Scenarios:**
 
@@ -31,11 +32,15 @@ The following are example usage scenarios for this profile:
    -  providing more specific codes such as 8306-3 - *Body height - lying* in addition to 8302-2 - *Body height*.  Several additional observation codes are provided in the FHIR core specification [vital signs table].
   a code system value **SHOULD** be supplied for each additional code.
 - The observation **MAY** have [component] observations. For example, to qualify the vital sign observation 8310-5 - *Body temperature*, 8327-9 - *Body temperature measurement site* (oral, forehead, rectal, etc.) may be used as a component observation. Several of these are provided in the FHIR core specification [vital signs table].
+
+<div class="bg-success" markdown="1">
 - The observation **MAY** use [extensions] defined by other profiles such as [Vital Signs with Qualifying Elements: Average Blood Pressure Profile].
 - Information about the protocol or number of measurements used to determine the averages **SHOULD** be supplied in either:
   - `Observation.note.text` (for example, "24-hour ambulatory measurement.")
   - a component observation in `Observation.component`
   - an extension
+</div><!-- new-content --> 
+
 - Implementers may use this profile as a base for other vital signs in addition to those in this guide.
 - Because the blood pressure values are communicated in the *mandatory* systolic and diastolic components:
   - the `Observation.value[x]` element **SHOULD** be omitted

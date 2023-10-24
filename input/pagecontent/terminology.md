@@ -96,7 +96,7 @@ This guide links terminology directly to the FHIR® Terminology Service for VSAC
 
 <div class="bg-success" markdown="1">
 
-####  How to Aceess Value Setas in VSAC
+####  How to Acess Value Sets in VSAC
 
 </div><!-- new-content -->
 

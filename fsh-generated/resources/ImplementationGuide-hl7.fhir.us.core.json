@@ -1976,7 +1976,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-medication-adherence"
         },
-        "description": "A MedicationRequest extension representing reported adherence to prescribed medication instructions.  In other words, whether a medication was consumed according to instructions.",
+        "description": "The Medication Adherence Extension is a statement of whether a medication has been consumed according to instructions for discharge, community-prescribed, and self-prescribed medications. This extension is not intended to track adherence to the Inpatient Medication Administration Record (MAR). In FHIR, [MedicationAdministration](https://hl7.org/fhir/R4/medicationadministration.html) is typically used to monitor compliance with the MAR.",
         "exampleBoolean": false,
         "name": "US Core Medication Adherence Extension"
       },
