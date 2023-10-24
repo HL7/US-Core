@@ -80,7 +80,7 @@ The "Key Elements Table" view consists of:
 This view includes the same flags and labels described in Differential Table View:
 
 <div class="bg-success" markdown="1">
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_Key_View.png" caption="Figure 2: Snapshot Table (Must Support) View" %}
 </div><!-- new-content -->
 
 #### Snapshot Table View
@@ -93,7 +93,7 @@ The "Snapshot Table" view in Figure 3 view consists of:
 This view includes the same flags and labels as described in Differential Table View:
 
 <div class="bg-success" markdown="1">
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_Snapshot_View.png" caption="Figure 3: Snapshot Table View" %}
 </div><!-- new-content -->
 
 #### Defined Pattern Elements
@@ -106,7 +106,7 @@ For example, the [US Core DiagnosticReport Profile for Laboratory Results Report
 - US Core Requestors **SHALL** be capable of processing these values in `DiagnosticReport.category`
 
 <div class="bg-success" markdown="1">
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_DiagnosticReport_category.png" caption="Figure 4: US Core DiagnosticReport.category" %}
 </div><!-- new-content -->
 
 #### Must Support - Primitive Element
@@ -119,7 +119,7 @@ For example, the [US Core DiagnosticReport Profile for Laboratory Results Report
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.issued`
 
 <div class="bg-success" markdown="1">
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_DiagnosticReport_issued.png" caption="Figure 5: US Core DiagnosticReport.issued" %}
 </div><!-- new-content -->
 
 #### Must Support - Complex Elements
@@ -134,7 +134,7 @@ For example, the [US Core DiagnosticReport Profile for Report and Note exchange]
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.presentedForm`.
 
 <div class="bg-success" markdown="1">
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_DiagnosticReport_presentedForm.png" caption="Figure 5: US Core DiagnosticReport.presentedForm" %}
 </div><!-- new-content -->
 
 For example, the [US Core Patient Profile] `name` element is labeled Must Support and has Must Support sub-elements "family" and "given". When claiming conformance to this profile:
@@ -143,7 +143,7 @@ For example, the [US Core Patient Profile] `name` element is labeled Must Suppor
 - US Core Requestors **SHALL** be capable of processing the value in value in `Patient.name.family` and `Patient.name.given`.
 
 <div class="bg-success" markdown="1">
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_Patient_name.png" caption="Figure 6: US Core Patient.name" %}
 </div><!-- new-content -->
 
 On the other hand, if any sub-element is marked as Must Support and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure, you must support the sub-element (s) marked as Must Support. There are no examples of US Core profiles that have this structure defined.
@@ -164,7 +164,7 @@ For example, the [US Core DocumentReference Profile] author US Core Practitioner
 Systems can support other references, but this is not a requirement of US Core.
 
 <div class="bg-success" markdown="1">
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_DocumentReference.png" caption="Figure 7: US Core DocumentReference.author" %}
 </div><!-- new-content -->
 
 In specific profiles, only a single resource reference is present on an element labeled *Must Support*.
@@ -175,7 +175,7 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 * US Core Requestors **SHALL** be capable of processing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 
 <div class="bg-success" markdown="1">
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_AllergyIntolerance.png" caption="Figure 8: US Core AllergyIntolerance.patient" %}
 </div><!-- new-content -->
 
 #### Must Support - Choice of Data Types
@@ -190,7 +190,7 @@ For example, the <span class="bg-success" markdown="1">[US Core Observation Clin
 Systems **MAY** support populating and processing other choice elements (such as Observation.effectivePeriod), but this is not a requirement of US Core.
 
 <div class="bg-success" markdown="1">
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_Observation.effective.png" caption="Figure 9: US Core Observation.effectiveDateTime" %}
 </div><!-- new-content -->
 
 For the <span class="bg-success" markdown="1">[US Core Observation Clinical Result Profile]</span><!-- new-content --> value element, multiple elements are labeled *Must Support*. When claiming conformance to this profile:
@@ -201,7 +201,7 @@ For the <span class="bg-success" markdown="1">[US Core Observation Clinical Resu
 Systems can support the other elements, but this is not a requirement of US Core.
 
 <div class="bg-success" markdown="1">
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 14: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 10: US Core `Observation.value[x]`" %}
 </div><!-- new-content -->
 
 
