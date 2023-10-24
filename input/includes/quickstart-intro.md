@@ -3,7 +3,7 @@
 {% for scope in site.data.scopes %}
   {% if scope.page_path == page.path %}
     {%capture smart_scope %}
-Servers providing access to {{ scope.data }} data **SHALL** use [US Core SMART Scopes] for:
+Servers providing access to {{ scope.data }} data **SHALL** support these [US Core SMART Scopes]:
   -  [resource level scopes]\: `patient/{{ scope.resource_type }}.rs`{% if scope.category_1 %}
   -  [granular scopes]\: `patient.{{ scope.resource_type }}.rs?category={{ scope.category_1 }}`{% if scope.category_2 %} and `patient.{{scope.resource_type }}.rs?category={{ scope.category_2 }}`{% endif %}{% if scope.category_3 %} and `patient.{{scope.resource_type }}.rs?category={{ scope.category_3 }}`{% endif %}{% endif %}.
      {% endcapture %}

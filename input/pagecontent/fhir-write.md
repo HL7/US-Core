@@ -80,7 +80,7 @@ EHR systems MAY ignore contained Provenance resources in an Observation being su
 
 #### Resource retrieved from an external organization
 
-{% include img.html img="fhir-write1.png" caption="Figure 1: Resource retrieved from an external organization" %}
+{% include img.html img="fhir-write1.svg" caption="Figure 1: Resource retrieved from an external organization" %}
 
 When writing an Observation that was retrieved from an external organization (e.g., a health system's EHR or a device manufacturer's cloud data store):
 
@@ -137,7 +137,7 @@ Example:
 
 #### Resources not retrieved from an external organization
 
-{% include img.html img="fhir-write2.png" caption="Figure 2: Resources not retrieved from an external organization" %}
+{% include img.html img="fhir-write2.svg" caption="Figure 2: Resources not retrieved from an external organization" %}
 
 When writing an Observation that was not retrieved from an external organization (e.g., transmitted by a home blood pressure cuff, or manually entered by a patient):
 

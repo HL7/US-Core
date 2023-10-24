@@ -70,7 +70,8 @@ differential:
     binding:
       strength: extensible
       description: This set of values contains terms representing whether a medication has been consumed according to instructions.
-      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.59
+      # valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1099.59
+      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.8
   - id: Extension.extension:dateAsserted
     path: Extension.extension
     sliceName: dateAsserted

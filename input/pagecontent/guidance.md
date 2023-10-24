@@ -7,5 +7,6 @@
 - [Social Determinants of Health (SDOH)]
 - [Changes Between Versions]
 - [Future of US Core]
+   - [[FHIR Write Guidance for Vital Sign Observations]]
 
 {% include link-list.md %}

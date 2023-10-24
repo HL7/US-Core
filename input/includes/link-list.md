@@ -411,3 +411,4 @@
 [Care Experience Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.11/expansion
 [Intervention Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.9/expansion
 [Additional USCDI Requirements]: must-support.html#additional-uscdi-requirements
+[FHIR Write Guidance for Vital Sign Observations]: fhir-write.html
