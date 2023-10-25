@@ -263,7 +263,7 @@
 [Servers Requiring Status]: general-requirements.html#search-for-servers-requiring-status
 [ServiceRequest]: {{site.data.fhir.path}}servicerequest.html
 [slicing]: {{site.data.fhir.path}}profiling.html#slicing
-[SMART App Launch]: {{site.data.fhir.hl7_fhir_uv_smart_app_launch}}
+[SMART App Launch]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}
 [SMART App Launch version]: http://hl7.org/fhir/smart-app-launch/history.html
 [SNOMED CT]:  http://snomed.info/sct/731000124108 "SNOMED CT US Edition"
 [Social Determinants of Health (SDOH)]: screening-and-assessments.html
@@ -398,13 +398,13 @@
 [ONC Health IT Certification]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
 [modifier elements]: general-requirements.html#modifier-elements
 [PHDSC Payer Type Committee User's Guide]: https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf
-[resource level scopes]: http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#scopes-for-requesting-clinical-data
-[granular scopes]: http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#finer-grained-resource-constraints-using-search-parameters
+[resource level scopes]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/scopes-and-launch-context.html#scopes-for-requesting-clinical-data
+[granular scopes]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/scopes-and-launch-context.html#finer-grained-resource-constraints-using-search-parameters
 [US Core SMART Scopes]: scopes.html
 [Value Set Authority Center (VSAC)]: https://vsac.nlm.nih.gov/
 [PHQ-9]: https://en.wikipedia.org/wiki/PHQ-9
 [APGAR score]: https://en.wikipedia.org/wiki/Apgar_score
-[HL7 Terminology (THO)]: https://terminology.hl7.org/
+[HL7 Terminology (THO)]: https://terminology.hl7.org
 [FHIR Extension]: https://hl7.org/fhir/extensions/
 [US Core Data for Interoperability USCDI Table]: uscdi.html
 [Vital Signs with Qualifying Elements: Average Blood Pressure Profile]: https://hl7.org/fhir/us/vitals/STU1/StructureDefinition-average-blood-pressure.html
@@ -412,3 +412,4 @@
 [Intervention Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.9/expansion
 [Additional USCDI Requirements]: must-support.html#additional-uscdi-requirements
 [FHIR Write Guidance for Vital Sign Observations]: fhir-write.html
+[HTI-1 proposed rule]: https://www.federalregister.gov/d/2023-07229/p-991+

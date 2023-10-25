@@ -69,32 +69,6 @@ The Argonaut project has defined [FHIR Write Guidance for Vital Sign Observation
 
 </div><!-- new-content -->
 
-<!-- #### US Core SMART Scopes
-Because of FHIR's resource-based data model, related but distinct data tend to be grouped together in the same FHIR resource type. The original SMART on FHIR scope syntax (and US regulation) tends to limit authorization servers to granting access to all data in the same FHIR resource type, or not giving access to all. For example, a patient can only share an encounter diagnosis if they share their entire problem list, or a health system can only enable backend access to a patient cohort's SDOH data if it enables access to labs. 
-
-Since version 2.0.0 of [SMART App Launch] clients and servers have more specific control over shared data within a specific resource type using [*granular scopes*](https://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#finer-grained-resource-constraints-using-search-parameters). US core encourages user experimentation with granular scope and is seeking general feedback.  In addition, specific feedback is sought on best practices around [scope string length](https://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#scope-size-over-the-wire) and JWT-based tokens.
-
-##### Scope format
-SMART on FHIR STU2 introduced a scope syntax of: `<patient|user|system> / <fhir-resource>. <c | r | u | d |s> [?param=value]`
-
-For example, to limit read and search access to a specific patient's laboratory observations but not other observations, the server grants the following scope:
-
-`patient/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`.
-
-We propose to use only a portion of the full expressivity of the FHIR search syntax by limiting initial scopes to:
-1. specific data types defined in US Core and 
-1. those of particular interest to US citizens and health systems. 
-
-The example scopes below use a single FHIR search parameter of category applied to Condition and Observation. They use a `system/` prefix, but implementers can also support `patient/` and `user/`.
-
-* `system/Condition.rs?category=http://terminology.hl7.org/CodeSystem/condition-category|encounter-diagnosis`
-* `system/Condition.rs?category=http://terminology.hl7.org/CodeSystem/condition-category|problem-list-item`
-* `system/Condition.rs?category=http://hl7.org/fhir/us/core/CodeSystem/condition-category|health-concern`
-* `system/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|clinical-test`
-* `system/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`
-
-See the respective “Quick Start” section on each US Core Profile page for more examples. -->
-
 ------------------------------------------------------------------------
 Footnotes
 
