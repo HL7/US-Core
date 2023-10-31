@@ -413,3 +413,5 @@
 [Additional USCDI Requirements]: must-support.html#additional-uscdi-requirements
 [FHIR Write Guidance for Vital Sign Observations]: fhir-write.html
 [HTI-1 proposed rule]: https://www.federalregister.gov/d/2023-07229/p-991+
+[FHIRpath]: https://hl7.org/fhirpath/N1/
+[USCDI ONDEC process]: https://www.healthit.gov/isa/ONDECå
