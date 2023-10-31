@@ -1,86 +1,88 @@
+<!-- # FHIR Write Guidance for Vital Sign Observations -->
 
-This page is new content for US Core Version 7.0.0
-{:.new-content}
+### Examples
 
-### SMART Configuration
-EHR systems with support for writing FHIR vital sign Observation resources from patient-facing apps, provider-facing apps or system apps SHALL include a `vitals-write` capability in `.well-known/smart-configuration` [capabilities array](https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#launch-context-for-standalone-launch).
+Patient-facing
+- A provider creates an order in an EHR for patient home monitoring. Then, the patient's blood pressure cuff sends data to an app on the patient's phone that writes the data into their record. The EHR automatically associates the blood pressure data with the appropriate order.
+- A patient uses an app to retrieve their vital signs from the EHR where they were recorded during a specialist visit, and write them to the EHR used by their primary care provider. The provider is able to review the vital signs within the EHR and incorporate them into the record.
 
-### Writing from Patient-Facing Apps
+Provider-facing
+- A blood pressure cuff sends readings to an app on a practice tablet that a clinical user then uses to write the data to a patient's record in the EHR.
+- A patient app saves data to a repository controlled by the app developer. Then, the patient uses a "share with provider" function to enable the provider to access this data with an app installed in the provider's EHR. The provider writes some or all of the observations into the patient’s record in the EHR.
 
-EHR systems providing the ability to write FHIR vital sign Observation resources from patient-facing apps SHALL support the registration and authorization of apps with the `patient/Observation.c` SMART scope and MAY require limiting this scope to `category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs`. Note that `read` and `search` capabilities are already implied by [US Core Vital Signs profile](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html).
+### SMART Configuration and Scopes
 
-EHR systems providing the ability to write FHIR vital sign Observation resources from patient-facing apps SHOULD also support the registration and authorization of apps with either `patient/Observation.u` or `patient/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scope. Note, systems are allowed to only support limited [update](#Updating-Previously-Submitted-Observations) capabilities. 
+#### Configuration
+Servers with support for writing FHIR vital sign Observation resources from patient-facing apps, provider-facing apps or system apps SHALL include a `vitals-write` capability in `.well-known/smart-configuration` [capabilities array](https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#launch-context-for-standalone-launch).
 
-When offering a patient write capability, health systems MAY choose to enable or disable this capability in the system based on factors such as the provider, patient, payer, app, and vital type, or MAY choose to enable the capability broadly. If patients and/or apps attempting to write data are not enabled, and this can be discerned during the authorization process, the EHR SHALL omit these unsupported scopes from the resulting access token. If an app uses an access token without the required scopes to submit an `Observation` or the patient is not enabled to write data, the EHR SHALL return an error and SHOULD include an `OperationOutcome` in the response body.
+#### Scopes for patient-facing apps
 
+Servers providing the ability to write FHIR vital sign Observation resources from patient-facing apps SHALL support the registration and authorization of apps with the `patient/Observation.c` SMART scope and MAY require limiting this scope to `category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs`. Note that `read` and `search` capabilities are already implied by [US Core Vital Signs profile](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html).
 
-Examples:
-- Direct write - a provider creates an order in the EHR for patient home monitoring. Then, the patient's blood pressure cuff sends data to an app on the patient's phone that uses SMART to write the data into their record. The EHR automatically associates the blood pressure data with the appropriate order.
-- Mediated write - a patient uses a SMART app to write vitals from an outside source (e.g., specialist visit summary).
+Servers providing the ability to write FHIR vital sign Observation resources from patient-facing apps SHOULD also support the registration and authorization of apps with either `patient/Observation.u` or `patient/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scope. Note, systems are allowed to only support limited [update](#Updating-Previously-Submitted-Observations) capabilities. 
 
-### Writing from Provider-Facing Apps
+When offering a patient write capability, health systems may choose to enable or disable this capability in the system based on factors such as the provider, patient, payer, app, and vital type, or may choose to enable the capability broadly. If patients and/or apps attempting to write data are not enabled, and this can be discerned during the authorization process, the server SHALL omit these unsupported scopes from the resulting access token. If an app uses an access token without the required scopes to submit an `Observation` or the patient is not enabled to write data, the server SHALL return an error and SHOULD include an `OperationOutcome` in the response body.
 
-EHR systems providing the ability to write FHIR vital sign Observation resources from provider-facing apps SHALL support the registration and authorization of apps with the `user/Observation.c` and `system/Observation.c` SMART scopes and MAY require limiting these scopes to `category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs`. Note that `read` and `search` capabilities are already implied by [US Core Vital Signs profile](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html).
+#### Scopes for provider-facing apps
 
-EHR systems providing the ability to write FHIR vital sign Observation resources from patient-facing apps SHOULD also support the registration and authorization of apps with either `user/Observation.u` and `system/Observation.u` SMART scopes, or `user/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` and `system/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scopes. Note, systems are allowed to only support limited [update](#Updating-Previously-Submitted-Observations) capabilities. 
+Servers providing the ability to write FHIR vital sign Observation resources from provider-facing apps SHALL support the registration and authorization of apps with the `user/Observation.c` and `system/Observation.c` SMART scopes and MAY require limiting these scopes to `category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs`. Note that `read` and `search` capabilities are already implied by [US Core Vital Signs profile](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html).
 
-Examples:
-- Direct write - a blood pressure cuff sends readings to a standalone launch SMART app on a practice tablet that a clinical user then uses to write the data to a patient's record in the EHR.
-- Mediated write - a patient app saves data to a repository controlled by the app developer. Then, the patient uses a "share with provider" function to enable the provider to access this data with a SMART app. The provider writes some or all of the observations into the patient’s record in the EHR.
+Servers providing the ability to write FHIR vital sign Observation resources from provider-facing apps SHOULD also support the registration and authorization of apps with either `user/Observation.u` and `system/Observation.u` SMART scopes, or `user/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` and `system/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scopes. Note, systems are allowed to only support limited [update](#Updating-Previously-Submitted-Observations) capabilities. 
+
 
 ### Resource Submission
 
-EHR systems SHALL support the submission of Observation resources that _are not_ the result of a calculation and validate against a [US Core Vital Sign Profile](https://build.fhir.org/ig/HL7/US-Core/profiles-and-extensions.html#observation) that corresponds to a version used by the EHR for vital sign Observation read requests.
+Servers SHALL support the submission of Observation resources that _are not_ the result of a calculation and validate against a [US Core Vital Sign Profile](https://build.fhir.org/ig/HL7/US-Core/profiles-and-extensions.html#observation) that corresponds to a version used by the server for vital sign Observation read requests.
 
-EHR systems MAY support the submission of Observation resources that _are_ the result of a calculation (such as the "US Core Pediatric BMI for Age Observation Profile") and validate against a [US Core Vital Sign Profile](https://build.fhir.org/ig/HL7/US-Core/profiles-and-extensions.html#observation) that corresponds to a version used by the EHR for vital sign Observation read requests.
+Servers MAY support the submission of Observation resources that _are_ the result of a calculation (such as the "US Core Pediatric BMI for Age Observation Profile") and validate against a [US Core Vital Sign Profile](https://build.fhir.org/ig/HL7/US-Core/profiles-and-extensions.html#observation) that corresponds to a version used by the server for vital sign Observation read requests.
 
-EHR systems SHALL respond to supported and valid vital sign Observation creation requests with a status code of `200 OK` and a content location header, or with a status code of `202 Accepted`. If a content location header is provided, the resources SHALL be visible in subsequent read API calls and accessible within the EHR in the same manner as other patient submitted data. If a content location header is not provided, and EHR systems do not subsequently make the resource accessible in read API calls, the EHR system SHALL have a documented and discoverable reason why it was discarded (e.g., a log entry describing rejection during a review workflow or the applicability of a condition in the "Discarding" section below).
+Servers SHALL respond to supported and valid vital sign Observation creation requests with a status code of `200 OK` and a content location header, or with a status code of `202 Accepted`. If a content location header is provided, the resources SHALL be visible in subsequent read API calls and accessible within the system in the same manner as other patient submitted data. If a content location header is not provided, and server does not subsequently make the resource accessible in read API calls, the server SHALL have a documented and discoverable reason why it was discarded (e.g., a log entry describing rejection during a review workflow or the applicability of a condition in the "Discarding" section below).
 
-EHR systems SHALL support the creation of a single vital sign through a FHIR `create` operation and MAY support the creation of multiple vitals signs by submitting a FHIR `Batch` bundle. When batch creation is supported, clients MAY use this approach to indicate that a set of Observation resources should be reviewed as a group and EHR systems MAY use this information when sending notifications or displaying the data.
+Servers SHALL support the creation of a single vital sign through a FHIR `create` operation and MAY support the creation of multiple vitals signs by submitting a FHIR `Batch` bundle. When batch creation is supported, clients MAY use this approach to indicate that a set of Observation resources should be reviewed as a group and systems MAY use this information when sending notifications or displaying the data.
 
-EHRs may choose to segregate data that originated from a patient from other vital sign data for the patient (for example, showing it on a separate patient flow sheet).
+Systems may choose to segregate data that originated from a patient from other vital sign data for the patient (for example, showing it on a separate patient flow sheet).
 
-Workflow for submitted Observations is the responsibility of the receiving system and is out of scope for this version of the IG (e.g., requiring provider review for patient submitted resources before fully integrating them in the chart).
+Workflow for submitted Observations is the responsibility of the receiving system and is out of scope for this version of the guide (e.g., requiring provider review for patient submitted resources before fully integrating them in the chart).
 
 #### Observation Elements
 
 `meta.tag` 
-- Client - When writing patient-mediated data into the EHR, provider-facing apps SHALL include a `Meta.tag` with a system of `http://hl7.org/fhir/us/core/CodeSystem/us-core-tags` and a value of `patient-supplied` to indicate that the data was supplied by a patient or patient designee (such as a parent or spouse) rather than by a healthcare provider.
-- EHRs SHALL associate the `patient-supplied` tag with vital signs supplied by a patient written through this API, and MAY associate the tag with vital signs supplied by a patient regardless of how they arrive in the EHR. Provider-facing apps writing data supplied by a patient SHALL include this tag in the Observation resources being submitted. The EHR MAY subsequently dissociate the tag from the data through an explicit reconciliation process.
+- Client - When writing patient-mediated data into the server, provider-facing apps SHALL include a `Meta.tag` with a system of `http://hl7.org/fhir/us/core/CodeSystem/us-core-tags` and a value of `patient-supplied` to indicate that the data was supplied by a patient or patient designee (such as a parent or spouse) rather than by a healthcare provider.
+- Server - Systems SHALL associate the `patient-supplied` tag with vital signs provided by a patient written through this API, and MAY associate the tag with vital signs supplied by a patient regardless of how they arrive in the system. Provider-facing apps writing data supplied by a patient SHALL include this tag in the Observation resources being submitted. The server MAY subsequently dissociate the tag from the data through an explicit reconciliation process.
 
 `encounter` 
-- Client - If populating this element, apps SHALL use a reference to an Encounter resource in the EHR, and MAY use the value returned by the `launch/encounter` SMART scope. 
-- EHR - Systems SHOULD document whether the `encounter` element is required to create a vital sign. When not required, EHRs MAY determine this value based on context if it is omitted.
+- Client - If populating this element, apps SHALL use a reference to an Encounter resource in the server, and MAY use the value returned by the `launch/encounter` SMART scope. 
+- Server - Systems SHOULD document whether the `encounter` element is required to create a vital sign. When not required, servers MAY determine this value based on context if it is omitted.
 
 `subject` 
-- Client - Apps SHALL populate the `subject` reference with a reference to a Patient resource in the EHR. Patient-facing apps SHOULD populate this element based on the value returned as part of the `launch/patient` SMART scope.
+- Client - Apps SHALL populate the `subject` reference with a reference to a Patient resource in the server. Patient-facing apps SHOULD populate this element based on the value returned as part of the `launch/patient` SMART scope.
  
 `device` 
-- Client - Apps MAY populate the `device` reference with a reference to Device resource in the EHR, or a contained Device resource within the Observation. This is the device used to measure the vital sign (e.g., a BP cuff), not the device used to transmit the data (e.g., a phone). Contained device resources SHALL populate at least one `deviceName` element. 
-- EHR - When provided by an app, systems SHOULD log this data, but do not need to expose it in EHR user interface or in the `device` element when returning the Observation.
+- Client - Apps MAY populate the `device` reference with a reference to Device resource in the server, or a contained Device resource within the Observation. This is the device used to measure the vital sign (e.g., a BP cuff), not the device used to transmit the data (e.g., a phone). Contained device resources SHALL populate at least one `deviceName` element. 
+- Server - When this value is populated with a reference to a Device resource on the server, servers SHALL return this reference in subsequent reads operations of the resource that was created. When this value is populated with a reference to a valid contained Device resource, servers MAY ignore the contained Device, return the contained Device as part of subsquent read operations or create a Device resource in the system and return a reference to it in subsequent read operations. Servers SHALL not return an error due to the presence of a valid contained Device resource. Servers SHOULD document their behavior with regard to contained Device resources.
 
 `performer` 
-- Client - Apps SHOULD populate the `performer` element with a reference to a resource in the EHR when the resource exists or the app has the ability to create it. For patient-facing apps, if the app knows that a patient collected this data, the app SHALL set the `performer` to a reference to the patient based on the the SMART launch context (this should also match the `Observation.subject`). If the relevant resource does not exist and the app is unable to create it, the app SHOULD populate `performer.display`.
-- EHR - Systems SHALL persist this value when it is provided.
- 
+- Client - Apps SHOULD populate the `performer` element with a reference to a resource in the server when the resource exists or the app has the ability to create it. For patient-facing apps, if the app knows that a patient collected this data, the app SHALL set the `performer` to a reference to the patient based on the the SMART launch context (this should also match the `Observation.subject`). If the relevant resource does not exist and the app is unable to create it, the app SHOULD populate `performer.display`.
+- Server - When this value is populated in a successful create operation, systems SHALL return it in subsequent reads operations of the resource that was created. Note that `performer` is not currently required in the US Core vital signs profile.
+
 
 ### Discarding Observations
 
-For a given vital sign type, if many Observations are submitted that have `effectiveDateTime` or `effectivePeriod` values that are close in time, an EHR MAY choose to discard a portion of these Observations or MAY reject submitted Observations with an appropriate OperationOutcome. EHRs SHALL clearly document this behavior or the ways in which this  behavior may be customized by health systems in the APIs documentation.
+For a given vital sign type, if many Observations are submitted that have `effectiveDateTime` or `effectivePeriod` values that are close in time, a server MAY choose to discard a portion of these Observations or MAY reject submitted Observations with an appropriate OperationOutcome. Systems SHALL clearly document this behavior or the ways in which this  behavior may be customized by health systems in the APIs documentation.
 
-If an EHR determines that a vital sign is a duplicate of one it has already stored, the EHR MAY ignore the Observation or MAY reject the submitted Observation with an appropriate OperationOutcome. EHRs SHALL clearly document this behavior or the ways in which this behavior may be customized by health systems in the APIs documentation.
+If a server determines that a vital sign is a duplicate of one it has already stored, the server MAY ignore the Observation or MAY reject the submitted Observation with an appropriate OperationOutcome. Systems SHALL clearly document this behavior or the ways in which this behavior may be customized by health systems in the APIs documentation.
 
 ### Updating Previously Submitted Observations
 
-EHR systems SHOULD support the ability for patients-facing apps to update the `status` element of a vital sign resource the user previously wrote to the system from any app to `entered-in-error` through an `update` interaction. This capability SHOULD only be used by apps to address data mistakes in data submission. 
+Servers SHOULD support the ability for patients-facing apps to update the `status` element of a vital sign resource the user previously wrote to the system from any app to `entered-in-error` through an `update` interaction. This capability SHOULD only be used by apps to address data mistakes in data submission. 
 
 ### Including Provenance Information
 
-EHR systems MAY ignore contained Provenance resources in an Observation being submitted, but SHALL not return an error due to their presence.
+Servers MAY ignore contained Provenance resources in an Observation being submitted, but SHALL not return an error due to their presence.
 
 #### Resource retrieved from an external organization
 
-{% include img.html img="fhir-write1.svg" caption="Figure 1: Resource retrieved from an external organization" %}
+{% include img.html img="fhir-write1.svg" caption="Figure 1: Resources retrieved from an external organization" %}
 
 When writing an Observation that was retrieved from an external organization (e.g., a health system's EHR or a device manufacturer's cloud data store):
 
@@ -89,7 +91,7 @@ When writing an Observation that was retrieved from an external organization (e.
   - `recorded` set to date and time recorded
   - `agent.type = author` that has `agent.who` set to the organization/provider that authored the content, with at least the `who.display` element populated.
     - When available, a `who.identifier.value` should be set to the url where that data was retrieved and `who.identifier.system` should be set to `urn:ietf:rfc:3986`
-- Apps MAY include a Provenance resource with `agent.type = transmitter` with information on the entity that submitted the data. EHR systems MAY store and display this information and/or MAY populate this information based on the SMART context associated with the write.
+- Apps MAY include a Provenance resource with `agent.type = transmitter` with information on the entity that submitted the data. Systems MAY store and display this information and/or MAY populate this information based on the SMART context associated with the write.
 
 Example:
 ```js
@@ -141,7 +143,7 @@ Example:
 
 When writing an Observation that was not retrieved from an external organization (e.g., transmitted by a home blood pressure cuff, or manually entered by a patient):
 
-  - App MAY include a contained Provenance resource with `agent.type = author` with information on the party that wrote the data. EHR systems MAY store and display this information and/or MAY populate this information based on the SMART context associated with the write.
+  - App MAY include a contained Provenance resource with `agent.type = author` with information on the party that wrote the data. Systems MAY store and display this information and/or MAY populate this information based on the SMART context associated with the write.
 
   - App MAY include one or more contained Provenance resources with `agent.type = composer` and/or `agent.type = assembler` with information on the device, app, or apps that captured or passed along the data.
 
