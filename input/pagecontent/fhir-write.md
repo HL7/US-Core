@@ -1,5 +1,8 @@
 <!-- # FHIR Write Guidance for Vital Sign Observations -->
 
+This page is new content for US Core Version 7.0.0
+{:.new-content}
+
 ### Examples
 
 Patient-facing
@@ -10,24 +13,29 @@ Provider-facing
 - A blood pressure cuff sends readings to an app on a practice tablet that a clinical user then uses to write the data to a patient's record in the EHR.
 - A patient app saves data to a repository controlled by the app developer. Then, the patient uses a "share with provider" function to enable the provider to access this data with an app installed in the provider's EHR. The provider writes some or all of the observations into the patient’s record in the EHR.
 
-### SMART Configuration and Scopes
 
-#### Configuration
-Servers with support for writing FHIR vital sign Observation resources from patient-facing apps, provider-facing apps or system apps SHALL include a `vitals-write` capability in `.well-known/smart-configuration` [capabilities array](https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#launch-context-for-standalone-launch).
+### Configuration
+Servers SHALL document support for writing Observation resources in their Capability Statements by including a `CapabilityStatement.rest.resource[type=Observation].interaction` with a `code` of `create`. Servers that support the ability to update Observation resources SHALL also also include an `interaction` with a `code` of `update`.
 
-#### Scopes for patient-facing apps
 
-Servers providing the ability to write FHIR vital sign Observation resources from patient-facing apps SHALL support the registration and authorization of apps with the `patient/Observation.c` SMART scope and MAY require limiting this scope to `category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs`. Note that `read` and `search` capabilities are already implied by [US Core Vital Signs profile](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html).
+### SMART Scopes
 
-Servers providing the ability to write FHIR vital sign Observation resources from patient-facing apps SHOULD also support the registration and authorization of apps with either `patient/Observation.u` or `patient/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scope. Note, systems are allowed to only support limited [update](#Updating-Previously-Submitted-Observations) capabilities. 
+#### Patient-facing apps
+
+Servers providing the ability to write FHIR vital sign Observation resources from patient-facing apps SHALL support the registration and authorization of apps with the `patient/Observation.c?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scope or a broader version of this scope such as `patient/Observation.c`. Note that `read` and `search` capabilities are already implied by [US Core Vital Signs profile](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html).
+
+Servers providing the ability to write FHIR vital sign Observation resources from patient-facing apps SHOULD also support the registration and authorization of apps with the `patient/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scope or a broader version of this scope such as `patient/Observation.u`. Note, systems are allowed to only support limited [update](#Updating-Previously-Submitted-Observations) capabilities. 
 
 When offering a patient write capability, health systems may choose to enable or disable this capability in the system based on factors such as the provider, patient, payer, app, and vital type, or may choose to enable the capability broadly. If patients and/or apps attempting to write data are not enabled, and this can be discerned during the authorization process, the server SHALL omit these unsupported scopes from the resulting access token. If an app uses an access token without the required scopes to submit an `Observation` or the patient is not enabled to write data, the server SHALL return an error and SHOULD include an `OperationOutcome` in the response body.
 
-#### Scopes for provider-facing apps
+#### Provider-facing apps
 
-Servers providing the ability to write FHIR vital sign Observation resources from provider-facing apps SHALL support the registration and authorization of apps with the `user/Observation.c` and `system/Observation.c` SMART scopes and MAY require limiting these scopes to `category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs`. Note that `read` and `search` capabilities are already implied by [US Core Vital Signs profile](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html).
+Servers providing the ability to write FHIR vital sign Observation resources from provider-facing apps SHALL support the registration and authorization of apps with the `user/Observation.c?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` and `system/Observation.c?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scopes or broader versions of these scopes such as `user/Observation.c` and `system/Observation.c`. Note that `read` and `search` capabilities are already implied by [US Core Vital Signs profile](http://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-vital-signs.html).
 
-Servers providing the ability to write FHIR vital sign Observation resources from provider-facing apps SHOULD also support the registration and authorization of apps with either `user/Observation.u` and `system/Observation.u` SMART scopes, or `user/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` and `system/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scopes. Note, systems are allowed to only support limited [update](#Updating-Previously-Submitted-Observations) capabilities. 
+Servers providing the ability to write FHIR vital sign Observation resources from provider-facing apps SHOULD also support the registration and authorization of apps with either `user/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` and `system/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scopes, or broader versions of these scopes such as `user/Observation.u` and `system/Observation.u`. Note, systems are allowed to only support limited [update](#Updating-Previously-Submitted-Observations) capabilities. 
+
+#### Configuration
+Severs SHALL document supported scopes in the `scopes_supported` section of a `.well-known/smart-configuration` [capabilities array](https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#launch-context-for-standalone-launch).
 
 
 ### Resource Submission

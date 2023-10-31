@@ -1,16 +1,21 @@
 
 ### Introduction
 
-Clinicians use various terms such as *assessments*, *scales*, *surveys*, and *screenings* to describe the tools and processes to collect health-related information for assessing a patient's health-related matter. On this page, the term *Screening and Assessments* refer to recording responses and capturing assertions/determinations resulting from this process and these tools. This page documents how Screening and Assessments are used to identify various problems or health concerns and how US Core Profiles record Screenings and Assessments ranging from simple observations to complex structured evaluations.
+Clinicians use various terms such as *assessments*, *scales*, *surveys*, and *screenings* to describe the tools and processes to collect health-related information for assessing a patient's health-related matter. US Cores uses the term *Screening and Assessments* for the process of recording responses and capturing assertions/determinations resulting from this process and these tools. This page documents how Screening and Assessments are used to identify various problems or health concerns and how US Core Profiles record Screenings and Assessments ranging from simple observations to complex structured evaluations.
 
-The [Gravity Project] and its [SDOH Clinical Care] HL7 Implementation Guide address the screening process and related interventions to address Social Determinant of Health (SDOH). Those efforts helped guide US Core 5.0.1 updates to meet the [USCDI v2] SDOH data elements for Assessments, Goals, Interventions, and Problems/Health Concerns. With the addition of the USCDI v3 Health Status/Assessments data class, US Core 6.0.0 expanded the guidance from an SDOH only focus to a general framework of Screenings and Assessments for all domains, including:
+With the addition of the USCDI v3 Health Status Assessments data <span class="bg-success" markdown="1">elements,</span><!-- new-content --> US Core <span class="bg-success" markdown="1"></span><!-- new-content --> expanded the guidance from an Social Determinant of Health (SDOH)-only focus to a general framework of Screenings and Assessments for all domains<span class="bg-success" markdown="1">, including the USCDI Data Elements</span><!-- new-content -->:
 
-- SDOH
+- Social Determinant of Health (SDOH)
 - Functional Status
 - Disability Status
-- Mental/Cognitive Status.
+- Mental/Cognitive Status
+- <span class="bg-success" markdown="1">Physical Activity</span><!-- new-content -->
+- <span class="bg-success" markdown="1">Alcohol Use</span><!-- new-content -->
+- <span class="bg-success" markdown="1">Substance Use</span><!-- new-content -->
 
 However, implementers **SHOULD** consider more constrained, domain-specific profiles derived from the US Core Profiles to meet the needs of their respective use cases.
+
+The [Gravity Project] and its [SDOH Clinical Care] HL7 Implementation Guide address the screening process and related interventions to address Social Determinant of Health (SDOH). Those efforts helped guide US Core 5.0.1 updates to meet the [USCDI v2] SDOH data elements for Assessments, Goals, Interventions, and Problems/Health Concerns.
 
 ### Related Activities in Clinical Care
 
@@ -26,7 +31,7 @@ The figure below shows how screening and assessments lead to providing services 
 - **Interventions**:  The [US Core ServiceRequest Profile] communicates services offered to patients to address problems/health concerns. The [US Core Procedure Profile] can also record a completed service or intervention.
 - **Goals**: Identifying and defining a future desired condition or change in condition (for example, Has adequate quality meals and snacks) is represented by [US Core Goal Profile].
 
-{% include img.html img="screening_and_assessments.svg" caption="Screening and Assessment Activities" %}
+<!-- {% raw %} {% include img.html img="screening_and_assessments.svg" caption="Screening and Assessment Activities" %} {% endraw %} -->
 
 ### Screening and Assessments
 
@@ -38,7 +43,6 @@ Screening and Assessments are used to identify various problems or health concer
 - Clinician makes a "clinical judgment" based on an assessment tool. (for example, based on the PRAPARE survey, the patient has a lack of access to transportation)
 
 The following guidance was developed after reviewing several functional status, disability status, mental/cognitive status, and SDOH screening and assessment tools.
-
 
 
 #### Clinical Judgments
@@ -79,7 +83,7 @@ The sections below provide additional guidance on when Observations and Question
 
 [US Core Observation Screening Assessment Profile] is defined to record observations from responses to screening tools and assessments used for any context (e.g., SDOH, functional status, etc.). Although systems can represent most questions and answers in healthcare assessments as FHIR Observations, it is only sometimes necessary and appropriate to represent all of them as Observations. Only relevant responses should be extracted as Observations. For example, depending on the use case and focus of the Assessment or Survey, patient demographic information may be recorded in the Patient resource instead of Observations. The observations can be grouped and nested to preserve the structure of screening or assessment instruments. The figure below illustrates the relationship between the Observation screening and assessments "panel" and the individual screening and assessment "item" Observations. Each box represents an Observation:
 
-{% include img-med.html img="uscore-observation-assessment-structure.svg" caption="Relationship Between Screening Assessment Observations" %}
+<!-- {% raw %} {% include img-med.html img="uscore-observation-assessment-structure.svg" caption="Relationship Between Screening Assessment Observations" %} {% endraw %} -->
 
 Note that the panels can be nested to create additional groupings of responses. See the [US Core Observation Screening Assessment Profile] page for detailed documentation on how the observations are linked, examples, and search requirements.
 
@@ -87,7 +91,7 @@ Note that the panels can be nested to create additional groupings of responses. 
 
 Unlike QuestionnaireResponse, When Observations are used to record set of Screening and Assessments responses, clients can query individual responses using the standard FHIR RESTful API search parameters  Below is a simple example of a FHIR RESTful search transaction on Observation to access a patient's SDOH assessment data
 
-{% include examplebutton.html example="SDOH_search_transaction" b_title = "Click on Here To See Search Example" %}
+<!-- {% raw %} {% include examplebutton.html example="SDOH_search_transaction" b_title = "Click on Here To See Search Example" %} {% endraw %} -->
 
 ##### SDC Base Questionnaire/US Core QuestionnaireResponse Profile
 
@@ -113,17 +117,47 @@ In many cases, data might be represented using both mechanisms - the initial raw
 
 #### Category Codes
 
+API consumers may <span class="bg-success" markdown="1">query by category</span><!-- new-content --> (for example, `sdoh`) when accessing patient information. <span class="bg-success" markdown="1">Category codes for USCDI Health Assessments Data Elements are listed in the table below. They **SHOULD** be used when generating resources that conform to these profiles</span><!-- new-content -->:
 
-API consumers may select contextual categories (for example, SDOH) when accessing patient information. For example, the [US Core Category] Code System provides categories for:
 - US Core Simple Observation Profile
 - US Core Observation Screening Assessment Profile
 - US Core Condition Problems and Health Concerns Profile
 - US Core ServiceRequest Profile 
 
+<div class="bg-success" markdown="1">
+
+##### USCDI Health Assessments Data Element Category
+
+{% include assessment-category-table-generator.html %}
+
+</div><!-- new-content -->
+
 Each profile's *Quick Start* section shows searches by category. Although not defined in US Core Procedure, implementers can categorize procedures using US Core Category or infer the context by inspecting the referenced ServiceRequest. Similarly, they can review the Questionnaire's metadata to determine US Core QuestionnaireResponse's context.
 
 
  <span class= "bg-warning" markdown= "1">Clients need to understand that data categorization is somewhat subjective. The categorization applied by the source may not align with the client's expectations. Clients may find it more beneficial to use queries based on a specific code or set of codes or to perform additional client-side filtering of query results.</span><!-- bg-warning -->
+
+<div class="bg-success" markdown="1">
+
+#### Screening and Assessment Codes
+
+The US Core Observation Screening Assessment Profile, SDC Base Questionnaire, and US Core Simple Observation Profiles have [preferred] or [example] bindings to broadly defined LOINC value sets. These value sets contain concepts that span many use cases and are not bound to any USCDI Health Assessments Data Element.  
+
+##### USCDI Health Assessments Data Element ValueSets
+
+The table below lists the USCDI Health Assessments Data Elements and the associated value sets for each USCDI Data Element.  This table and guidance intend to promote interoperability by introducing domain-specific value sets as "starter sets" that implementers **SHOULD** use. Implementers **SHALL?/SHOULD?** treat them as having an [extensible] binding to the corresponding US Core Profile. For example, the *Functional Status Clinician Interpretation ValueSet* is **extensibly** bound to the US Core Simple Observation Profile for clinical judgment observations when communicating Functional Status Observations.  However, the value sets in this table are not formally bound to a US Core Profile in the StructureDefinitions, and "automatic" validation (confirmation) that a code is a member of a value set will not occur using the standard validation tools.
+
+{% include assessment-valueset-table-generator.html %}
+
+This information is also available as a [csv](assessments-valuesets.csv) or [excel](assessments-valuesets.xlsx) file:
+
+##### Gravity SDOH ValueSets
+
+The Gravity project created several value sets for the USCDI Health Assessments Data Element, SDOH, and they are listed below. Implementers **SHOULD** use to them to extend the panel item codes when gaps in the *US Core SDOH Panel Item Codes* concepts are encountered.
+
+{% include gravity-valueset-list-generator.html %}
+
+</div><!-- new-content -->
 
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
 
@@ -136,6 +170,6 @@ US Core uses broadly defined value sets that contain concepts used across use ca
 
  The figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Problems and Health Concerns Profile and how the grouped value set is compatible with the broader US Core Problem code value set.
 
-{% include img-med.html img="sdoh_condition.svg" caption="SDOH Grouped Value Set Reuse in US Core" %}
+<!-- {% raw %} {% include img-med.html img="sdoh_condition.svg" caption="SDOH Grouped Value Set Reuse in US Core" %} {% endraw %} -->
 
 {% include link-list.md %}
