@@ -1,0 +1,35 @@
+resourceType: Immunization
+id: imm-1
+meta:
+    extension:
+        - 
+            url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
+            valueString: Imm 1 Example
+        - 
+            url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
+            valueMarkdown: 'This is a imm 1 example for the *US Core Immunization Profile*.'
+    profile:
+        - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization'
+status: completed
+vaccineCode:
+    coding:
+        - 
+            system: 'http://hl7.org/fhir/sid/cvx'
+            code: '197'
+            display: 'influenza, high-dose, quadrivalent'
+        - 
+            # system: 'http://example.org/fhir/CodeSystem'
+            code: 'foo'
+            display: 'foo'
+    text: 'influenza, high-dose, quadrivalent'
+patient:
+    reference: Patient/example
+    display: Amy Shaw
+encounter:
+    reference: Encounter/example-1
+    display: Office Visit
+occurrenceDateTime: '2020-11-19T12:46:57-08:00'
+primarySource: false
+location:
+    reference: Location/hospital
+    display: Holy Family Hospital

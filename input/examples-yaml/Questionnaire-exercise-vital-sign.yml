@@ -1,0 +1,60 @@
+resourceType: Questionnaire
+id: exercise-vital-sign
+meta:
+  profile:
+    - 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire'
+  extension:
+  - url: http://hl7.org/fhir/StructureDefinition/instance-name
+    valueString: Exercise Vital Sign Questionnaire Example
+  - url: http://hl7.org/fhir/StructureDefinition/instance-description
+    valueMarkdown: 'This is the [LHC Form](https://loinc.org/lhc-forms/) Exercise Vital Sign (EVS) Questionnaire Example. It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.'
+url: 'http://hl7.org/fhir/us/core/Questionnaire/exercise-vital-sign'
+name: ExerciseVitalSign
+title: Exercise Vital Sign (EVS)
+status: active
+experimental: true
+subjectType:
+  - Patient
+date: '2023-08-03'
+code:
+    - 
+        system: 'http://loinc.org'
+        code: 89574-8
+        display: Exercise Vital Sign (EVS)
+
+item:
+    - 
+        type: decimal
+        code:
+            - 
+                code: 89555-7
+                system: 'http://loinc.org'
+                display: How many days per week did you engage in moderate to strenuous physical activity in the last 30 days
+        extension:
+            - 
+                url: 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit'
+                valueCoding:
+                    code: d/wk
+                    display: d/wk
+                    system: 'http://unitsofmeasure.org'
+        required: false
+        linkId: /89555-7
+        text: How many D per W did you engage in moderate to strenuous physical activity in the last 30D
+
+    - 
+        type: decimal
+        code:
+            - 
+                code: 68516-4
+                system: 'http://loinc.org'
+                display: 'On those days that you engage in moderate to strenuous exercise, how many minutes, on average, do you exercise?'
+        extension:
+            - 
+                url: 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit'
+                valueCoding:
+                    code: min/d
+                    display: min/d
+                    system: 'http://unitsofmeasure.org'
+        required: false
+        linkId: /68516-4
+        text: 'On those days that you engage in moderate to strenuous exercise, how many minutes, on average, do you exercise?'

@@ -166,6 +166,38 @@
       },
       {
         "reference": {
+          "reference": "Questionnaire/AUDIT-C"
+        },
+        "description": "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] questionnaire example. It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.",
+        "name": "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] Questionnaire Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+      },
+      {
+        "reference": {
+          "reference": "QuestionnaireResponse/AUDIT-C"
+        },
+        "description": "This is the [LHC Form](https://loinc.org/lhc-forms/) Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] QuestionnaireResponse example. It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.",
+        "name": "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] QuestionnaireResponse Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+      },
+      {
+        "reference": {
+          "reference": "Observation/alcohol-use-status"
+        },
+        "description": "This is an alcohol-use-status example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Simple Observations.",
+        "name": "Alcohol Use Status Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/alcoholic-drinks-per-day"
+        },
+        "description": "This is an Alcoholic Drinks Per Day example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Simple Observations.",
+        "name": "Alcoholic Drinks Per Day Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
           "reference": "AllergyIntolerance/example"
         },
         "description": "This is a allergyintolerance example for the *US Core AllergyIntolerance Profile*.",
@@ -195,6 +227,46 @@
         "description": "This is an At home in vitro test example for the *US Core Observation Lab Profile*, with a coded result value.",
         "name": "At Home In Vitro Test Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/AUDIT-C-item-example-68517-2"
+        },
+        "description": "This is a Audit-C Item Example 68517-2 (How many times in the past year have you have X or more drinks in a day?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Audit-C Item Example 68517-2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/AUDIT-C-item-example-68519-8"
+        },
+        "description": "This is a Audit-C Item Example 68519-8 (How many standard drinks containing alcohol do you have on a typical day?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Audit-C Item Example 68519-8",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/AUDIT-C-item-example-68520-6"
+        },
+        "description": "This is a Audit-C Item Example 68520-6 (How often do you have 6 or more drinks on 1 occasion?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Audit-C Item Example 68520-6",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/AUDIT-C-item-example-75626-2"
+        },
+        "description": "This is a Audit-C Item Example 75626-2 (Total score [AUDIT-C]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Audit-C Item Example 75626-2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/AUDIT-C-panel-example-72109-2"
+        },
+        "description": "This is a Audit-C Panel Example 72109-2 (Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Audit-C Panel Example 72109-2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
       },
       {
         "reference": {
@@ -515,6 +587,62 @@
         "description": "This is a erythrocytes example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*.",
         "name": "Erythrocytes Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+      },
+      {
+        "reference": {
+          "reference": "Observation/EVS-item-example-68516-4"
+        },
+        "description": "This is a Evs Item Example 68516-4 (On those days that you engage in moderate to strenuous exercise, how many minutes, on average, do you exercise?) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Evs Item Example 68516-4",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/EVS-item-example-89555-7"
+        },
+        "description": "This is a Evs Item Example 89555-7 (How many D per W did you engage in moderate to strenuous physical activity in the last 30D) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Evs Item Example 89555-7",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/EVS-panel-example-89574-8"
+        },
+        "description": "This is a Evs Panel Example 89574-8 (Exercise Vital Sign (EVS)) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Evs Panel Example 89574-8",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/exercise-per-day"
+        },
+        "description": "This is an minutes exercise per day example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Simple Observations.",
+        "name": "Exercise Per Day Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/exercise-per-week"
+        },
+        "description": "This is a days exercise per week example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Simple Observations.",
+        "name": "Exercise Per Week Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/exercise-vital-sign"
+        },
+        "description": "This is the [LHC Form](https://loinc.org/lhc-forms/) Exercise Vital Sign (EVS) Questionnaire Example. It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.",
+        "name": "Exercise Vital Sign Questionnaire Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+      },
+      {
+        "reference": {
+          "reference": "QuestionnaireResponse/exercise-vital-sign"
+        },
+        "description": "This is the [LHC Form](https://loinc.org/lhc-forms/) Exercise Vital Sign (EVS) QuestionnaireResponse Example. It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.",
+        "name": "Exercise Vital Sign QuestionnaireResponse Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
       },
       {
         "reference": {
@@ -1558,6 +1686,62 @@
       },
       {
         "reference": {
+          "reference": "Observation/substance-use-status"
+        },
+        "description": "This is an Substance-use-status example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Simple Observations.",
+        "name": "Substance Use Status Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
+      },
+      {
+        "reference": {
+          "reference": "Observation/TAPS-item-example-75889-6"
+        },
+        "description": "This is a Taps Item Example 75889-6 (How often have you had four or more drinks in one day during the past year [Reported]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Taps Item Example 75889-6",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/TAPS-item-example-88037-7"
+        },
+        "description": "This is a Taps Item Example 88037-7 (How often have you had five or more drinks in one day during the past year [Reported]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Taps Item Example 88037-7",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/TAPS-item-example-96842-0"
+        },
+        "description": "This is a Taps Item Example 96842-0 (How often have you used any tobacco product in past 12 months) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Taps Item Example 96842-0",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/TAPS-item-example-96843-8"
+        },
+        "description": "This is a Taps Item Example 96843-8 (How often have you used illegal or recreational drugs in past 12 months) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Taps Item Example 96843-8",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/TAPS-item-example-96844-6"
+        },
+        "description": "This is a Taps Item Example 96844-6 (How often have you used any prescription medications just for the feeling, more than prescribed or that were not prescribed for you in past 12 months [TAPS]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Taps Item Example 96844-6",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/TAPS-panel-example-96841-2"
+        },
+        "description": "This is a Taps Panel Example 96841-2 (Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS]) for the *US Core Observation Screening Assessment Profile*",
+        "name": "Taps Panel Example 96841-2",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
+      },
+      {
+        "reference": {
           "reference": "Provenance/example-targeted-provenance"
         },
         "description": "This is a provenance example for the *US Core Provenance Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity.",
@@ -1579,6 +1763,22 @@
         "description": "This is a temperature example for the *Vitalsigns Profile*.",
         "name": "Temperature Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature"
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/TAPS"
+        },
+        "description": "Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS] questionnaire example. It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.",
+        "name": "Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS] Questionnaire Example",
+        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+      },
+      {
+        "reference": {
+          "reference": "QuestionnaireResponse/TAPS"
+        },
+        "description": "This is the [LHC Form](https://loinc.org/lhc-forms/)  Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS] QuestionnaireResponse example. It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Questionnaire/QuestionnaireResponse resources.",
+        "name": "Tobacco, Alcohol, Prescription medications, and other Substance use screen [TAPS] QuestionnaireResponse Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
       },
       {
         "reference": {
