@@ -414,4 +414,6 @@
 [FHIR Write Guidance for Vital Sign Observations]: fhir-write.html
 [HTI-1 proposed rule]: https://www.federalregister.gov/d/2023-07229/p-991+
 [FHIRpath]: https://hl7.org/fhirpath/N1/
-[USCDI ONDEC process]: https://www.healthit.gov/isa/ONDECå
+[USCDI ONDEC process]: https://www.healthit.gov/isa/ONDEC
+[principle of least privilege]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
+[Project US@ Technical Specification for Patient Addresses Final Version 1.0]: https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf

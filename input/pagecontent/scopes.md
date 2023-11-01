@@ -2,7 +2,7 @@
 This page is new content for US Core Version 7.0.0
 {:.new-content}
 
-To meet the ONC's granular scope requirement in [HTI-1 proposed rule], the US Core API requires support for both [resource level scopes] and [granular scopes] as defined in Version 2.0.0 of [SMART App Launch]. US Core requires scopes for:
+To meet the ONC's granular scope requirement in [HTI-1 proposed rule], the US Core API requires servers to support both [resource level scopes] and [granular scopes] as defined in Version 2.0.0 of [SMART App Launch]. US Core clients should follow the [principle of least privilege] and access only the necessary resources. In other words, if a client needs only vital sign observations, it should request access only to Observations with a category of "vital-signs". US Core requires scopes for:
 
 1. specific data types defined in US Core and 
 2. those of particular interest to US citizens and health systems.

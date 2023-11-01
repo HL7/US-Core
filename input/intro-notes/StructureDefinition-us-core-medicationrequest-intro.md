@@ -22,20 +22,16 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  a medication*
 1.  a patient
 
-
-\* see guidance below
-
 **Each MedicationRequest Must Support:**
 
-
-2. the category  (e.g., Discharge Medication)
-3. the `reported` flag  or reference signaling that information is from a secondary source such as a patient
-4. the encounters
-5. a prescriber
-6. a date for when written
-7. the prescription *Sig*
-8. the amount dispensed and number of refills
-9. the dose and rate
+1. the category  (e.g., Discharge Medication)
+2. the `reported` flag  or reference signaling that information is from a secondary source such as a patient
+3. the encounters
+4. a prescriber
+5. a date for when written
+6. the prescription *Sig*
+7. the amount dispensed and number of refills
+8. the dose and rate
 
 {% include additional-requirements-intro.md type="MedicationRequest" plural="true" %}
 

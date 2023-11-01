@@ -51,7 +51,7 @@ This ballot addresses the following:
 8. **QA:**  Update introduction to USCDI table[FHIR-42801](https://jira.hl7.org/browse/FHIR-42801) [See Changes Here](uscdi.html)
 9. **QA:****Fix us-core-5 invariant [FHIR-42814](https://jira.hl7.org/browse/FHIR-42814) [See Changes Here](StructureDefinition-us-core-immunization.html#constraints)
 10. **Resolved-Change Required:**  Update the statement in CapabilityStatement - PractitionerRole section [FHIR-42906](https://jira.hl7.org/browse/FHIR-42906) [See Changes Here](#.html)
-11. **Resolved-Change Required:**  Clarify CareTeam Profile Specific Implementation Guidance [FHIR-42905](https://jira.hl7.org/browse/FHIR-42905) [See Changes Here](#.html)
+11. **Pre-Applied:** Add Project US@ Requirements [FHIR-43025](https://jira.hl7.org/browse/FHIR-43025) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements) and [Here](Patient-example.html)
 12. **Resolved-Change Required:**  Clarify CarTeam Profile Specific Implementation Guidance [FHIR-42905](https://jira.hl7.org/browse/FHIR-42905) [See Changes Here](#.html)
 13. **Pre-Applied:** Medication Adherence Scope Clarification [FHIR-42845](https://jira.hl7.org/browse/FHIR-42845) [See Changes Here](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements) and [Here](StructureDefinition-us-core-medication-adherence.html)
 14. **QA:** Update profile + interaction requirements [FHIR-42789](https://jira.hl7.org/browse/FHIR-42789) and [FHIR-42847](https://jira.hl7.org/browse/FHIR-42847) [See Changes Here](general-requirements.html#conforming-to-us-core)
