@@ -1,0 +1,26 @@
+Additional USCDI Requirements,Profile,FHIR Element
+KEEP ME HERE ,KEEP ME HERE ,KEEP ME HERE 
+Contact Detail,[US Core Patient Profile],Patient.telecom
+A Communication Language,[US Core Patient Profile],Patient.communication
+A Race,[US Core Patient Profile],Patient.extension:race
+An Ethnicity,[US Core Patient Profile],Patient.extension:ethnicity
+A Tribal Affiliation,[US Core Patient Profile],Patient.extension:tribalAffiliation
+A Sex,[US Core Patient Profile],Patient.extension:sex
+Gender Identity,[US Core Patient Profile],Patient.extension:genderIdentity
+Date Of Death,[US Core Patient Profile],Patient.deceased[x]
+Previous Address,[US Core Patient Profile],Patient.address.use or Patient.address.period
+Previous Name,[US Core Patient Profile],Patient.name.use or Patient.name.period
+Suffix,[US Core Patient Profile],Patient.name.suffix
+A Reason Or Indication For Referral Or Consultation,[US Core ServiceRequest Profile],ServiceRequest.reasonCode
+A Reason Or Indication For Referral Or Consultation,[US Core ServiceRequest Profile],ServiceRequest.reasonReference
+A Reason Or Indication For Referral Or Consultation,[US Core Procedure Profile],Procedure.reasonCode
+A Reason Or Indication For Referral Or Consultation,[US Core Procedure Profile],Procedure.reasonReference
+The Reason Or Indication For The Prescription,[US Core MedicationRequest Profile],MedicationRequest.reasonCode
+The Reason Or Indication For The Prescription,[US Core MedicationRequest Profile],MedicationRequest.reasonReference
+Medication Adherence,[US Core MedicationRequest Profile],MedicationRequest.extension:medicationAdherence
+A Reference To The Request For The Procedure,[US Core Procedure Profile],Procedure.basedOn
+US Core Document Category,[US Core DocumentReference Profile],DocumentReference.category:uscore
+"References To An Associated Survey, Assessment, Or Screening Tool",[US Core Simple Observation Profile],Observation.derivedFrom
+Specimen Source Site,[US Core Specimen Profile],Specimen.collection
+Specimen Source Site,[US Core Specimen Profile],Specimen.collection.bodySite
+Specimen Condition Acceptability,[US Core Specimen Profile],Specimen.condition

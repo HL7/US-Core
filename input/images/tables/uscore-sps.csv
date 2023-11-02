@@ -1,0 +1,304 @@
+Index,base,code,base_conf,display,documentation,profile,exists,is_new,update,type,expression,multipleOr,multipleOr_conf,multipleAnd,multipleAnd_conf,shall_modifier,should_modifier,shall_comparator,should_comparator,shall_chain,should_chain,shall_include,should_include,description,example,imp_note,rel_url
+1,!!Questionnaire,_id,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!!questionnaire,Y,,Y,token,!Questionnaire.id,Y,,Y,,,,,,,,,,support both read !!Questionnaire by `id` **AND** !!Questionnaire search,,,SearchParameter-us-core-!!questionnaire-id.html
+2,!!Questionnaire,context-type-value,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!!questionnaire,N,,Y,composite,!!Questionnaire.context-type-value,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-!!questionnaire-context-type-value.html
+3,!!Questionnaire,publisher,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!!questionnaire,Y,,Y,string,!!Questionnaire.publisher,Y,,Y,,contains,,,,,,,,,,,SearchParameter-us-core-!!questionnaire-publisher.html
+4,!!Questionnaire,status,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!!questionnaire,Y,,Y,token,!!Questionnaire.status,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-!!questionnaire-status.html
+5,!!Questionnaire,title,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!!questionnaire,Y,,Y,string,!!Questionnaire.title,Y,,Y,,,"foo,bar2","contains,foo,bar",,"contains,foo,bar","foo,bar2",,,,,,SearchParameter-us-core-!!questionnaire-title.html
+6,!!Questionnaire,url,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!!questionnaire,Y,,Y,uri,!!Questionnaire.url,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-!!questionnaire-url.html
+7,!!Questionnaire,version,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!!questionnaire,Y,,Y,token,!!Questionnaire.version,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-!!questionnaire-version.html
+8,!CarePlan,code,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-!careplan,Y,,Y,token,!CarePlan.code,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-!careplan-code.html
+9,!EXAMPLE CATEGORY SEARCH,category,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!example category search,Y,,Y,token,!EXAMPLE CATEGORY SEARCH.category,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-!example category search-category.html
+10,!EXAMPLE CODE SEARCH,code,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!example code search,Y,,Y,token,!EXAMPLE CODE SEARCH.code,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-!example code search-code.html
+11,!EXAMPLE DATE SEARCH,date,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!example date search,Y,,Y,date,!EXAMPLE DATE SEARCH.date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-!example date search-date.html
+12,!EXAMPLE PATIENT SEARCH,patient,MAY,FALSE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-!example patient search,Y,,Y,reference,!EXAMPLE PATIENT SEARCH.patient,Y,,Y,,,,,,,,,,support searching for all !example patient searchs for a patient,GET [base]/!EXAMPLE PATIENT SEARCH?patient=1137192,Fetches a bundle of all !EXAMPLE PATIENT SEARCH resources for the specified patient,SearchParameter-us-core-!example patient search-patient.html
+13,!EXAMPLE STATUS SEARCH,status,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!example status search,Y,,Y,token,!EXAMPLE STATUS SEARCH.status,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-!example status search-status.html
+14,!MedicationDispense,whenHandedOver,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-!medicationdispense,Y,,Y,date,!MedicationDispense.whenHandedOver,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-!medicationdispense-whenhandedover.html
+15,!MedicationStatement,effective,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-!medicationstatement,Y,,Y,date,!MedicationStatement.effective,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-!medicationstatement-effective.html
+16,!MedicationStatement,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-!medicationstatement,Y,,Y,reference,!MedicationStatement.patient,Y,,Y,,,,,,,,,,support searching for all medication statements for a patient. The server application represents the medication using either an inline code or a contained or external reference to the Medication resource.,GET [base]/MedicationStatement?patient=14676~GET [base]/MedicationStatement?patient=14676&_include=MedicationStatement:medication,Fetches a bundle of all !MedicationStatement resources for the specified patient.W63+X63 Mandatory for client to support the _include parameter. Optional for server to support the _include parameter.,SearchParameter-us-core-!medicationstatement-patient.html
+17,!MedicationStatement,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-!medicationstatement,Y,,Y,token,!MedicationStatement.status,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-!medicationstatement-status.html
+18,!Organization,address-city,SHOULD,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!organization,Y,,Y,string,!Organization.address-city,Y,,Y,,,,,,,,,,support searching organization by city,GET [base]/!Organization?address-city=Ann Arbor,Fetches a bundle of all !Organization resources for the city,SearchParameter-us-core-!organization-address-city.html
+19,!Organization,address-postalcode,SHOULD,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!organization,Y,,Y,string,!Organization.address-postalcode,Y,,Y,,,,,,,,,,support searching organization by ZIP code,GET [base]/!Organization?address-postalcode=48104,Fetches a bundle of all !Organization resources for the ZIP code,SearchParameter-us-core-!organization-address-postalcode.html
+20,!Organization,adress-state,SHOULD,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!organization,Y,,Y,string,!Organization.adress-state,Y,,Y,,,,,,,,,,support searching organization by state,GET [base]/!Organization?address-state=MI,Fetches a bundle of all !Organization resources for the state,SearchParameter-us-core-!organization-adress-state.html
+21,!Patient,address,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!patient,Y,,Y,string,!Patient.address,Y,,Y,,,,,,,,,,support searching a patient based on text address,GET [base]/Organization?address=1183 Mountain View C,,SearchParameter-us-core-!patient-address.html
+22,!Patient,telecom,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!patient,Y,,Y,string,!Patient.telecom,Y,,Y,,,,,,,,,,support searching a patient based on contact information such as phone number or email address,GET [base]/Organization?telecom=(707)555-5555,,SearchParameter-us-core-!patient-telecom.html
+23,!Patient,tribal-affiliation,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-!patient,N,,Y,token,Patient.extension.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation').extension.value.code,Y,,Y,,,,,,,,,,support searching for a patient by tribal affiliation code,GET [base]/Patient?tribal-affiliiation=Shaw,Fetches a bundle of all !Patient resources matching the name,SearchParameter-us-core-!patient-tribal-affiliation.html
+24,!QuestionnaireResponse,_tag,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-!questionnaireresponse,Y,,Y,token,!QuestionnaireResponse.meta._tag,Y,,Y,,,,,,,,,,Allows filtering for !QuestionnaireResponse that have tag of  'sdoh',,,SearchParameter-us-core-!questionnaireresponse-tag.html
+25,AllergyIntolerance,clinical-status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance,Y,,Y,token,AllergyIntolerance.clinical-status,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-allergyintolerance-clinical-status.html
+26,AllergyIntolerance,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance,Y,,Y,reference,AllergyIntolerance.patient,Y,,Y,,,,,,,,,,support searching for all allergies for a patient,GET [base]/AllergyIntolerance?patient=1137192,Fetches a bundle of all AllergyIntolerance resources for the specified patient,SearchParameter-us-core-allergyintolerance-patient.html
+27,CarePlan,category,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan,Y,,Y,token,CarePlan.category,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-careplan-category.html
+28,CarePlan,date,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan,Y,,Y,date,CarePlan.date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-careplan-date.html
+29,CarePlan,patient,MAY,FALSE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan,Y,,Y,reference,CarePlan.patient,Y,,Y,,,,,,,,,,support searching for all careplans for a patient,GET [base]/CarePlan?patient=1137192,Fetches a bundle of all CarePlan resources for the specified patient,SearchParameter-us-core-careplan-patient.html
+30,CarePlan,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-careplan,Y,,Y,token,CarePlan.status,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-careplan-status.html
+31,CareTeam,patient,MAY,FALSE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam,Y,,Y,reference,CareTeam.patient,Y,,Y,,,,,,,,,"CareTeam:participant:PractitionerRole,CareTeam:participant:Practitioner,CareTeam:participant:Patient,CareTeam:participant:RelatedPerson",support searching for all careteams for a patient,GET [base]/CareTeam?name=Shaw,Fetches a bundle of all CareTeam resources for the specified patient,SearchParameter-us-core-careteam-patient.html
+32,CareTeam,role,SHOULD,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam,N,,Y,token,CareTeam.role,Y,SHOULD,Y,,,,,,,,,,support searching a careteam by participant role,GET [base]/CareTeam?role=http://snomed.info/sct\|17561000,,SearchParameter-us-core-careteam-role.html
+33,CareTeam,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam,Y,,Y,token,CareTeam.status,Y,SHOULD,Y,,,,,,,,,,,,,SearchParameter-us-core-careteam-status.html
+34,Condition,abatement-date,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition,Y,,Y,date,Condition.abatement-date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-condition-abatement-date.html
+35,Condition,asserted-date,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition,N,,Y,date,Condition.asserted-date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-condition-asserted-date.html
+36,Condition,category,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition,Y,,Y,token,Condition.category,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-condition-category.html
+37,Condition,clinical-status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition,Y,,Y,token,Condition.clinical-status,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-condition-clinical-status.html
+38,Condition,code,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition,Y,,Y,token,Condition.code,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-condition-code.html
+39,Condition,encounter,MAY,FALSE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition,Y,,Y,reference,Condition.encounter,Y,,Y,,,,,,,,,,support searching for all encounter diagnosis for a patient for an encounter,GET [base]/Condition?patient=1137192,Fetches a bundle of all Condition resources for the specified patient,SearchParameter-us-core-condition-encounter.html
+40,Condition,onset-date,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition,Y,,Y,date,Condition.onset-date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-condition-onset-date.html
+41,Condition,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition,Y,,Y,reference,Condition.patient,Y,,Y,,,,,,,,,,"support searching for all conditions including problems, health concerns, and encounter diagnosis for a patient",GET [base]/Condition?patient=1137192,Fetches a bundle of all Condition resources for the specified patient,SearchParameter-us-core-condition-patient.html
+42,Condition,recorded-date,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition,Y,,Y,date,Condition.recorded-date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-condition-recorded-date.html
+43,Coverage,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage,Y,,Y,reference,Coverage.patient,Y,,Y,,,,,,,,,,support searching for all coverages for a patient,GET [base]/Coverage?patient=1137192,Fetches a bundle of all Coverage resources for the specified patient,SearchParameter-us-core-coverage-patient.html
+44,Device,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-device,Y,,Y,reference,Device.patient,Y,,Y,,,,,,,,,,"support searching for all devices for a patient, including implantable devices",GET [base]/Device?patient=1137192,Fetches a bundle of all Device resources for the specified patient,SearchParameter-us-core-device-patient.html
+45,Device,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-device,Y,,Y,token,Device.status,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-device-status.html
+46,Device,type,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-device,Y,,Y,token,Device.type,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-device-type.html
+47,DiagnosticReport,category,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport,Y,,Y,token,DiagnosticReport.category,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-diagnosticreport-category.html
+48,DiagnosticReport,code,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport,Y,,Y,token,DiagnosticReport.code,Y,SHOULD,Y,,,,,,,,,,,,,SearchParameter-us-core-diagnosticreport-code.html
+49,DiagnosticReport,date,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport,Y,,Y,date,DiagnosticReport.date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-diagnosticreport-date.html
+50,DiagnosticReport,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport,Y,,Y,reference,DiagnosticReport.patient,Y,,Y,,,,,,,,,,support searching for all diagnosticreports for a patient,GET [base]/DiagnosticReport?patient=1137192,Fetches a bundle of all DiagnosticReport resources for the specified patient,SearchParameter-us-core-diagnosticreport-patient.html
+51,DiagnosticReport,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport,Y,,Y,token,DiagnosticReport.status,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-diagnosticreport-status.html
+52,DocumentReference,_id,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference,Y,,Y,token,DocumentReference.id,Y,,Y,,,,,,,,,,support both read DocumentReference by `id` **AND** DocumentReference search,GET [base]/DocumentReference/2169591~GET [base]/DocumentReference?_id=2169591,"Fetches a single DocumentReference. The document itself is represented as a base64 encoded binary data element or retrieved using the link provided by the resource. If the document is a  relative link to a [Binary] resource like a resource reference, it can be subsequently retrieved using: `GET [base]/Binary/[id]`.",SearchParameter-us-core-documentreference-id.html
+53,DocumentReference,category,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference,Y,,Y,token,DocumentReference.category,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-documentreference-category.html
+54,DocumentReference,date,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference,Y,,Y,date,DocumentReference.date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-documentreference-date.html
+55,DocumentReference,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference,Y,,Y,reference,DocumentReference.patient,Y,,Y,,,,,,,,,,support searching for all documentreferences for a patient,GET [base]/DocumentReference?patient=1137192,Fetches a bundle of all DocumentReference resources for the specified patient. See the implementation notes above for how to access the actual document.,SearchParameter-us-core-documentreference-patient.html
+56,DocumentReference,period,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference,Y,,Y,date,DocumentReference.context.period,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-documentreference-period.html
+57,DocumentReference,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference,Y,,Y,token,DocumentReference.status,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-documentreference-status.html
+58,DocumentReference,type,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference,Y,,Y,token,DocumentReference.type,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-documentreference-type.html
+59,Encounter,_id,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter,Y,,Y,token,Encounter._id,Y,,Y,,,,,,,,,,support both read Encounter by `id` **AND** Encounter search,GET [base]/Encounter/12354~GET [base]/Encounter?_id=12354,Fetches a single Encounter,SearchParameter-us-core-encounter-id.html
+60,Encounter,class,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter,Y,,Y,token,Encounter.class,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-encounter-class.html
+61,Encounter,date,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter,Y,,Y,date,Encounter.date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-encounter-date.html
+62,Encounter,discharge-disposition,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter,N,,Y,token,Encounter.discharge-disposition,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-encounter-discharge-disposition.html
+63,Encounter,identifier,SHOULD,TRUE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter,Y,,Y,token,Encounter.identifier,Y,,Y,,,,,,,,,,support searching for an encounter by an identifier,GET [base]/Encounter?identifier=http://hospital.smarthealthit.org\|1032702,Fetches a bundle containing any Encounter resources matching the identifier,SearchParameter-us-core-encounter-identifier.html
+64,Encounter,location,MAY,FALSE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter,Y,,Y,reference,Encounter.location,Y,,Y,,,,,,,,,,support searching for all encounters for a patient,GET [base]/Encounter?patient=1137192,Fetches a bundle of all Encounter resources for the specified patient,SearchParameter-us-core-encounter-location.html
+65,Encounter,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter,Y,,Y,reference,Encounter.patient,Y,,Y,,,,,,,,,,support searching for all encounters for a patient,GET [base]/Encounter?patient=1137192,Fetches a bundle of all Encounter resources for the specified patient,SearchParameter-us-core-encounter-patient.html
+66,Encounter,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter,Y,,Y,token,Encounter.status,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-encounter-status.html
+67,Encounter,type,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter,Y,,Y,token,Encounter.type,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-encounter-type.html
+68,Goal,description,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal,N,,Y,token,Goal.description,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-goal-description.html
+69,Goal,lifecycle-status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal,Y,,Y,token,Goal.lifecycle-status,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-goal-lifecycle-status.html
+70,Goal,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal,Y,,Y,reference,Goal.patient,Y,,Y,,,,,,,,,,support searching for all goals for a patient,GET [base]/Goal?patient=1137192,Fetches a bundle of all Goal resources for the specified patient,SearchParameter-us-core-goal-patient.html
+71,Goal,target-date,MAY,FALSE,"A client **SHALL** provide a value precise to the *day*.
+
+A server **SHALL** support a value a value precise to the *day*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-goal,Y,,Y,date,Goal.target-date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-goal-target-date.html
+72,Immunization,date,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization,Y,,Y,date,Immunization.date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-immunization-date.html
+73,Immunization,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization,Y,,Y,reference,Immunization.patient,Y,,Y,,,,,,,,,,support searching for all immunizations for a patient,GET [base]/Immunization?patient=1137192,Fetches a bundle of all Immunization resources for the specified patient,SearchParameter-us-core-immunization-patient.html
+74,Immunization,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization,Y,,Y,token,Immunization.status,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-immunization-status.html
+75,Location,address,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-location,Y,,Y,string,Location.address,Y,,Y,,,,,,,,,,support searching location based on text address,GET [base]/Location?address=Arbor,Fetches a bundle of all Location resources that match the address string,SearchParameter-us-core-location-address.html
+76,Location,address-city,SHOULD,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-location,Y,,Y,string,Location.address-city,Y,,Y,,,,,,,,,,support searching location by city,GET [base]/Location?address-city=Ann Arbor,Fetches a bundle of all Location resources for the city,SearchParameter-us-core-location-address-city.html
+77,Location,address-postalcode,SHOULD,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-location,Y,,Y,string,Location.address-postalcode,Y,,Y,,,,,,,,,,support searching location by ZIP code,GET [base]/Location?address-postalcode=48104,Fetches a bundle of all Location resources for the ZIP code,SearchParameter-us-core-location-address-postalcode.html
+78,Location,address-state,SHOULD,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-location,Y,,Y,string,Location.address-state,Y,,Y,,,,,,,,,,support searching location by state,GET [base]/Location?address-state=MI,Fetches a bundle of all Location resources for the state,SearchParameter-us-core-location-address-state.html
+79,Location,name,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-location,Y,,Y,string,Location.name,Y,,Y,,,,,,,,,,support searching by location name,GET [base]/Location?name=Health,Fetches a bundle of all Location resources that match the name,SearchParameter-us-core-location-name.html
+80,MedicationDispense,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense,Y,,Y,reference,MedicationDispense.patient,Y,,Y,,,,,,,,,MedicationDispense:medication,,GET [base]/MedicationDispense?patient=14676~GET [base]/MedicationStatement?patient=14676&_include=MedicationDispense:medication,Fetches a bundle of all MedicationDispense resources for the specified patient.,SearchParameter-us-core-medicationdispense-patient.html
+81,MedicationDispense,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense,Y,,Y,token,MedicationDispense.status,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-medicationdispense-status.html
+82,MedicationDispense,type,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationdispense,Y,,Y,token,MedicationDispense.type,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-medicationdispense-type.html
+83,MedicationRequest,authoredon,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest,Y,,Y,date,MedicationRequest.authoredon,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-medicationrequest-authoredon.html
+84,MedicationRequest,encounter,MAY,FALSE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest,Y,,Y,reference,MedicationRequest.encounter,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-medicationrequest-encounter.html
+85,MedicationRequest,intent,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest,Y,,Y,token,MedicationRequest.intent,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-medicationrequest-intent.html
+86,MedicationRequest,patient,MAY,FALSE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest,Y,,Y,reference,MedicationRequest.patient,Y,,Y,,,,,,,,,MedicationRequest:medication,,,,SearchParameter-us-core-medicationrequest-patient.html
+87,MedicationRequest,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest,Y,,Y,token,MedicationRequest.status,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-medicationrequest-status.html
+88,Observation,category,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation,Y,,Y,token,Observation.category,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-observation-category.html
+89,Observation,code,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation,Y,,Y,token,Observation.code,Y,SHOULD,Y,,,,,,,,,,,,,SearchParameter-us-core-observation-code.html
+90,Observation,date,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation,Y,,Y,date,Observation.date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-observation-date.html
+91,Observation,patient,MAY,FALSE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation,Y,,Y,reference,Observation.patient,Y,,Y,,,,,,,,,,support searching for all observations for a patient,GET [base]/Observation?patient=1137192,Fetches a bundle of all Observation resources for the specified patient,SearchParameter-us-core-observation-patient.html
+92,Observation,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation,Y,,Y,token,Observation.status,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-observation-status.html
+93,Organization,address,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization,Y,,Y,string,Organization.address,Y,,Y,,,,,,,,,,support searching organization based on text address,GET [base]/Organization?address=Arbor,Fetches a bundle of all Organization resources that match the address string,SearchParameter-us-core-organization-address.html
+94,Organization,name,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization,Y,,Y,string,Organization.name,Y,,Y,,,,,,,,,,support searching by organization name,GET [base]/Organization?name=Health,Fetches a bundle of all Organization resources that match the name,SearchParameter-us-core-organization-name.html
+95,Patient,_id,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient,Y,,Y,token,Patient._id,Y,,Y,,,,,,,,,,support both read Patient by `id` **AND** Patient search,GET [base]/Patient/1032702~GET [base]/Patient?_id=1032702,,SearchParameter-us-core-patient-id.html
+96,Patient,birthdate,MAY,FALSE,"A client **SHALL** provide a value precise to the *day*.
+
+A server **SHALL** support a value a value precise to the *day*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient,Y,,Y,date,Patient.birthdate,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-patient-birthdate.html
+97,Patient,death-date,MAY,FALSE,"A client **SHALL** provide a value precise to the *day*.
+
+A server **SHALL** support a value a value precise to the *day*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient,Y,,Y,date,Patient.death-date,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-patient-death-date.html
+98,Patient,family,MAY,FALSE,A server **SHALL** support a value precise to the *day*.,http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient,Y,,Y,string,Patient.name.family,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-patient-family.html
+99,Patient,gender,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient,Y,,Y,token,Patient.gender,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-patient-gender.html
+100,Patient,given,MAY,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient,Y,,Y,string,Patient.name.given,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-patient-given.html
+101,Patient,identifier,SHALL,TRUE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient,Y,,Y,token,Patient.identifier,Y,,Y,,,,,,,,,,support searching a patient by an identifier such as a MPI,GET [base]/Patient?identifier=http://hospital.smarthealthit.org\|1032702,Fetches a bundle containing any Patient resources matching the identifier,SearchParameter-us-core-patient-identifier.html
+102,Patient,name,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient,Y,,Y,string,Patient.name,Y,,Y,,,,,,,,,,"support searching for a patient by a server defined search that matches any of the string fields in the HumanName, including family, given, prefix, suffix, and/or text",GET [base]/Patient?name=Shaw,Fetches a bundle of all Patient resources matching the name,SearchParameter-us-core-patient-name.html
+103,Practitioner,_id,SHOULD,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner,Y,,Y,token,Practitioner._id,Y,,Y,,,,,,,,,,support both read Practitioner by `id` **AND** Practitioner search,GET [base]/Practitioner/practitioner-1~GET [base]/Practitioner?_id=practitioner-1,,SearchParameter-us-core-practitioner-id.html
+104,Practitioner,identifier,SHALL,TRUE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner,Y,,Y,token,Practitioner.identifier,Y,,Y,,,,,,,,,,support searching a practitioner by an identifier such as an NPI,GET [base]/Practitioner?dentifier=http://hl7.org/fhir/sid/us-npi\|97860456,Fetches a bundle containing any Practitioner resources matching the identifier,SearchParameter-us-core-practitioner-identifier.html
+105,Practitioner,name,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner,Y,,Y,string,Practitioner.name,Y,,Y,,,,,,,,,,support searching for a practitioner by a string match of any part of name,GET [base]/Practitioner?name=Smith,Fetches a bundle of all Practitioner resources matching the name,SearchParameter-us-core-practitioner-name.html
+106,PractitionerRole,practitioner,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole,Y,,Y,reference,PractitionerRole.practitioner,Y,,Y,,,,,,"identifier,name",,,"PractitionerRole:endpoint,PractitionerRole:practitioner",support searching practitioner role by practitioner name and identifier using chained parameters,GET [base]/PractitionerRole?practitioner.identifier=http://hl7.org/fhir/sid/us-npi\|97860456&_include=PractitionerRole:practitioner&_include=PractitionerRole?endpoint~GET [base]/PractitionerRole?practitioner.name=Henry&_include=PractitionerRole:practitioner&_include=PractitionerRole?endpoint,Fetches a bundle containing  PractitionerRole resources matching the chained parameter practitioner.name or practitioner.identifier. SHOULD support the _include for PractionerRole.practitioner and PractitionerRole.endpoint.,SearchParameter-us-core-practitionerrole-practitioner.html
+107,PractitionerRole,specialty,SHALL,TRUE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole,Y,,Y,token,PractitionerRole.specialty,Y,,Y,,,,,,,,,"PractitionerRole:endpoint,PractitionerRole:practitioner",support searching practitioner role by specialty,GET [base]/PractitionerRole?specialty=http://nucc.org/provider-taxonomy\|208D0000X,Fetches a bundle containing  PractitionerRole resources matching the specialty,SearchParameter-us-core-practitionerrole-specialty.html
+108,Procedure,code,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure,Y,,Y,token,Procedure.code,Y,SHOULD,Y,,,,,,,,,,,,,SearchParameter-us-core-procedure-code.html
+109,Procedure,date,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure,Y,,Y,date,Procedure.date,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-procedure-date.html
+110,Procedure,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure,Y,,Y,reference,Procedure.patient,Y,,Y,,,,,,,,,,support searching for all procedures for a patient,GET [base]/Procedure?patient=1291938,Fetches a bundle of all Procedure resources for the specified patient,SearchParameter-us-core-procedure-patient.html
+111,Procedure,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure,Y,,Y,token,Procedure.status,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-procedure-status.html
+112,QuestionnaireResponse,_id,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse,Y,,Y,token,QuestionnaireResponse._id,Y,,Y,,,,,,,,,,support both read QuestionnaireResponse by `id` **AND** QuestionnaireResponse search,GET [base]/!QuestionnaireResponse/AHC-HRSN-screening-example~GET [base]/!QuestionnaireResponse/?_id=AHC-HRSN-screening-example,,SearchParameter-us-core-questionnaireresponse-id.html
+113,QuestionnaireResponse,authored,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse,Y,,Y,date,QuestionnaireResponse.authored,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,Allows filtering for !QuestionnaireResponses by when they were created/last edited,,,SearchParameter-us-core-questionnaireresponse-authored.html
+114,QuestionnaireResponse,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse,Y,,Y,reference,QuestionnaireResponse.patient,Y,,Y,,,,,,,,,,support searching for all questionnaireresponses for a patient,GET [base]/QuestionnaireResponse?patient=1032702,Fetches a bundle of all QuestionnaireResponse resources for the specified patient,SearchParameter-us-core-questionnaireresponse-patient.html
+115,QuestionnaireResponse,questionnaire,MAY,FALSE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse,Y,,Y,reference,QuestionnaireResponse.questionnaire,Y,,Y,,,,,,,,,,Allows retrieving !QuestionnaireResponses that have been completed against a specified form,,,SearchParameter-us-core-questionnaireresponse-questionnaire.html
+116,QuestionnaireResponse,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse,Y,,Y,token,QuestionnaireResponse.status,Y,SHALL,Y,,,,,,,,,,Allows retrieving !QuestionnaireResponses that are complete (or incomplete),,,SearchParameter-us-core-questionnaireresponse-status.html
+117,RelatedPerson,_id,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson,Y,,Y,token,RelatedPerson._id,Y,,Y,,,,,,,,,,support both read RelatedPerson by `id` **AND** RelatedPerson search,GET [base]/RelatedPerson/shaw-niece~GET [base]/RelatedPerson?_id=shaw-niece,,SearchParameter-us-core-relatedperson-id.html
+118,RelatedPerson,name,SHOULD,FALSE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson,Y,,Y,string,RelatedPerson.name,Y,,Y,,,,,,,,,,"support searching for a patient by a server defined search that matches any of the string fields in the HumanName, including family, given, prefix, suffix, and/or text",GET [base]/RelatedPerson?name=Mary Shaw,Fetches a bundle of all RelatedPerson resources matching the name,SearchParameter-us-core-relatedperson-name.html
+119,RelatedPerson,patient,SHOULD,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson,Y,,Y,reference,RelatedPerson.patient,Y,,Y,,,,,,,,,,support searching for all relatedpersons for a patient,GET [base]/RelatedPerson?patient=1032702,Fetches a bundle of all RelatedPerson resources for the specified patient,SearchParameter-us-core-relatedperson-patient.html
+120,ServiceRequest,_id,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest,Y,,Y,token,ServiceRequest._id,Y,,Y,,,,,,,,,,support both read ServiceRequest by `id` **AND** ServiceRequest search,GET [base]/ServiceRequest/1032702~GET [base]/ServiceRequest?_id=1032702,,SearchParameter-us-core-servicerequest-id.html
+121,ServiceRequest,authored,MAY,FALSE,"A client **SHALL** provide a value precise to the *second + time offset*.
+
+A server **SHALL** support a value precise to the *second + time offset*.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest,Y,,Y,date,ServiceRequest.authored,Y,,Y,SHOULD,,,"gt,lt,ge,le",,,,,,,,,SearchParameter-us-core-servicerequest-authored.html
+122,ServiceRequest,category,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest,Y,,Y,token,ServiceRequest.category,Y,,Y,,,,,,,,,,,,,SearchParameter-us-core-servicerequest-category.html
+123,ServiceRequest,code,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest,Y,,Y,token,ServiceRequest.code,Y,SHOULD,Y,,,,,,,,,,,,,SearchParameter-us-core-servicerequest-code.html
+124,ServiceRequest,patient,SHALL,TRUE,"The client **SHALL** provide at least a id value and **MAY** provide both the Type and id values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest,Y,,Y,reference,ServiceRequest.patient,Y,,Y,,,,,,,,,,support searching for all servicerequests for a patient,GET [base]/ServiceRequest?patient=1137192,Fetches a bundle of all ServiceRequest resources for the specified patient,SearchParameter-us-core-servicerequest-patient.html
+125,ServiceRequest,status,MAY,FALSE,"The client **SHALL** provide at least a code value and **MAY** provide both the system and code values.
+
+The server **SHALL** support both.",http://hl7.org/fhir/us/core/StructureDefinition/us-core-servicerequest,Y,,Y,token,ServiceRequest.status,Y,SHALL,Y,,,,,,,,,,,,,SearchParameter-us-core-servicerequest-status.html
+126,Specimen,_id,SHALL,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen,Y,,Y,token,Specimen._id,Y,,Y,,,,,,,,,,support both read Specimen by `id` **AND** Specimen search,GET [base]/Specimen?_id=123,,SearchParameter-us-core-specimen-id.html
+127,Specimen,patient,SHOULD,TRUE,,http://hl7.org/fhir/us/core/StructureDefinition/us-core-specimen,Y,,Y,reference,Specimen.patient,Y,,Y,,,,,,,,,,support searching for all specimens for a patient,GET [base]/Specimen?patient=1137192,Fetches a bundle of all Specimen resources for the specified patient,SearchParameter-us-core-specimen-patient.html
