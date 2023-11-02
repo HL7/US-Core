@@ -365,7 +365,7 @@
 [US Core Treatment Intervention Preference Profile]: StructureDefinition-us-core-treatment-intervention-preference.html
 [US Core Care Experience Preference Profile]: StructureDefinition-us-core-care-experience-preference.html
 [US Core USCDI Requirement Extension]: StructureDefinition-uscdi-requirement.html
-[USCDI Requirement]: must-support.html#uscdi-requirements
+[Additional USCDI Requirements]: must-support.html#additional-uscdi-requirements
 [USCDI v2]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v2
 [USCDI v3]: https://www.healthit.gov/isa/united-states-core-data-interoperability-uscdi#uscdi-v3
 [USCDI]: uscdi.html
@@ -410,7 +410,6 @@
 [Vital Signs with Qualifying Elements: Average Blood Pressure Profile]: https://hl7.org/fhir/us/vitals/STU1/StructureDefinition-average-blood-pressure.html
 [Care Experience Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.11/expansion
 [Intervention Preferences at End of Life Grouping]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1115.9/expansion
-[Additional USCDI Requirements]: must-support.html#additional-uscdi-requirements
 [FHIR Write Guidance for Vital Sign Observations]: fhir-write.html
 [HTI-1 proposed rule]: https://www.federalregister.gov/d/2023-07229/p-991+
 [FHIRpath]: https://hl7.org/fhirpath/N1/

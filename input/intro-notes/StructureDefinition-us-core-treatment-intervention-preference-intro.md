@@ -34,13 +34,14 @@ In this ballot version, we are using the US Core category code "treatment-interv
 
 **Profile Specific Implementation Guidance:**
 
-- Treatment intervention preferences are patient-authored information used to share an individual's medical treatment and intervention goals, preferences, and priorities. They guide caregivers and medical personnel when the patient cannot communicate. The value for these types of observations is typically a string.
+- \*Treatment intervention preferences are patient-authored information used to share an individual's medical treatment and intervention goals, preferences, and priorities. They guide caregivers and medical personnel when the patient cannot communicate. The value for these types of observations is typically a string.
 {% include additional-codings.md example1=', for example, the more specific LOINC, “75779-9 (Thoughts on cardiopulmonary resuscitation (CPR) [Reported])”'%}
   - See the existing [Intervention Preferences at End of Life Grouping] for more specific concepts representing an individual's treatment intervention preferences
   
    We expect this value set's "end of life" name and text scope to be removed in an upcoming [Value Set Authority Center (VSAC)] update before the publication of this version of US Core. 
    {:.note-to-balloters}
 
-- The observation **MAY** be derived from or reference a form or document (for example an advance directive document.) using `Observation.derivedFrom'.
+- \*Systems can reference a form or document (for example, an advance directive document.) from which the Observation is derived using `Observation.derivedFrom`.
+   - {% include no-ms-refs.md element="Observation.derivedFrom" %}
 
 {% include link-list.md %}

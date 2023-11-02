@@ -25,8 +25,8 @@ Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful
 
 All the profile information for the {{site.data.fhir.ig.title}} is represented in a single CSV or Excel file. This may be useful to testers and analysts to review the *Must Support* and *Mandatory* elements across profiles in a single table.
 
-- [CSV](uscore_profiles.csv)
-- [Excel](all_profiles.xlsx)
+- [CSV](all-profiles.csv)
+- [Excel](all-profiles.xlsx)
 
 This [Observation Summary Table] compares *Must Support* Elements across all the US Core Observation Profiles.
 

@@ -61,9 +61,29 @@ differential:
     type:
     - code: Reference
       targetProfile:
-      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
       - http://hl7.org/fhir/StructureDefinition/Observation
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse
       - http://hl7.org/fhir/StructureDefinition/ImagingStudy
       - http://hl7.org/fhir/StructureDefinition/Media
       - http://hl7.org/fhir/StructureDefinition/MolecularSequence
+      _targetProfile:
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: false
+    mustSupport: false

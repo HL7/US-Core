@@ -26,7 +26,7 @@ Note that:
 
 Updates to US Core depend upon community input and we encourage our audience to submit questions and feedback to US Core specifications by clicking on the *Propose a change* link in the footer of every page.  In addition, we encourage our audience to request any necessary clarifications to USCDI through the [USCDI ONDEC process] that helps inform future updates to FHIR US Core.
 
-The table below defines the relationship between the USCDI Data Classes and Elements and USCore profiles. It lists the US Core Profile used for the corresponding Data Classes and/or Elements. This information and [FHIRPath] expressions to USCDI Data Classes and Elements is available as a [csv](uscdi-table.csv) or [excel](uscdi-table.xlsx) file:
+The table below defines the relationship between the USCDI Data Classes and Elements and USCore profiles. It lists the US Core Profile used for the corresponding Data Classes and/or Elements. This information and [FHIRPath] expressions to USCDI Data Classes and Elements is available as a [csv](tables/uscdi-table.csv) or [excel](tables/uscdi-table.xlsx) file:
 
 </div><!-- new-content -->
 

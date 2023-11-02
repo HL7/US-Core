@@ -31,14 +31,15 @@ The following are example usage scenarios for this profile:
 
 **Profile Specific Implementation Guidance:**
 
-- Care experience preferences are patient-authored information used to share an individual's goals, preferences, and priorities for overall experiences during their care and treatment. They guide caregivers and medical personnel about what is important to them. The value for these types of observations is typically a string.
+- \*Care experience preferences are patient-authored information used to share an individual's goals, preferences, and priorities for overall experiences during their care and treatment. They guide caregivers and medical personnel about what is important to them. The value for these types of observations is typically a string.
 {% include additional-codings.md example1=', for example, the more specific LOINC, “81364-2	(Religious or cultural beliefs [Reported]) from the ”'%}
   - See the existing [Care Experience Preferences at End of Life Grouping] for more specific concepts representing an individual's care experience preferences
 
    We expect this value set's "end of life" name and text scope to be removed in an upcoming [Value Set Authority Center (VSAC)] update before the publication of this version of US Core. 
    {:.note-to-balloters}
 
-- The observation **MAY** be derived from or reference a document (for example an advance directive document.) using `Observation.derivedFrom'.
+- \*Systems can reference a form or document (for example, an advance directive document.) from which the Observation is derived using `Observation.derivedFrom`.
+   - {% include no-ms-refs.md element="Observation.derivedFrom" %}
 
 
 {% include link-list.md %}

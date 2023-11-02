@@ -149,7 +149,7 @@ The table below lists the USCDI Health Assessments Data Elements and the associa
 
 {% include assessment-valueset-table-generator.html %}
 
-This information is also available as a [csv](assessments-valuesets.csv) or [excel](assessments-valuesets.xlsx) file:
+This information is also available as a [csv](tables/assessments-valuesets.csv) or [excel](tables/assessments-valuesets.xlsx) file:
 
 ##### Gravity SDOH ValueSets
 
