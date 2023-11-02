@@ -1,0 +1,169 @@
+groups:
+  AvgBP:
+    name: Average Blood Pressure
+    description: Average Blood Pressure Profile and Examples
+    resources:
+      - StructureDefinition/us-core-average-blood-pressure
+      - Observation/average-blood-pressure
+  SDOH:
+    name:  Social Determinant of Health (SDOH)
+    description: Social Determinant of Health (SDOH) Examples
+    resources:
+  
+      - Questionnaire/prapare-example
+      - Questionnaire/hunger-vital-sign-example
+      - QuestionnaireResponse/prapare-example
+      - QuestionnaireResponse/hunger-vital-sign-example
+      - Observation/PRAPARE-item-example-54899-0
+      - Observation/PRAPARE-item-example-56051-6
+      - Observation/PRAPARE-item-example-56799-0
+      - Observation/PRAPARE-item-example-63512-8
+      - Observation/PRAPARE-item-example-63586-2
+      - Observation/PRAPARE-item-example-67875-5
+      - Observation/PRAPARE-item-example-71802-3
+      - Observation/PRAPARE-item-example-76437-3
+      - Observation/PRAPARE-item-example-76501-6
+      - Observation/PRAPARE-item-example-82589-3
+      - Observation/PRAPARE-item-example-93026-3
+      - Observation/PRAPARE-item-example-93027-1
+      - Observation/PRAPARE-item-example-93028-9
+      - Observation/PRAPARE-item-example-93029-7
+      - Observation/PRAPARE-item-example-93030-5
+      - Observation/PRAPARE-item-example-93033-9
+      - Observation/PRAPARE-item-example-93034-7
+      - Observation/PRAPARE-item-example-93035-4
+      - Observation/PRAPARE-item-example-93038-8
+      - Observation/PRAPARE-multiselect-item-example-32624-9-answer0
+      - Observation/PRAPARE-multiselect-item-example-32624-9-answer1
+      - Observation/PRAPARE-multiselect-item-example-93031-3-answer0
+      - Observation/PRAPARE-multiselect-item-example-93031-3-answer1
+      - Observation/PRAPARE-panel-example-93025-5
+      - Observation/PRAPARE-panel-example-93039-6
+      - Observation/PRAPARE-panel-example-93040-4
+      - Observation/PRAPARE-panel-example-93041-2
+      - Observation/PRAPARE-panel-example-93042-0
+      - Observation/PRAPARE-panel-example-93043-8
+      - Observation/HVS-item-example-88122-7
+      - Observation/HVS-item-example-88123-5
+      - Observation/HVS-item-example-88124-3
+      - Observation/HVS-panel-example-88121-9
+      - Observation/simple-observation-sdoh
+      - Condition/condition-SDOH-example
+      - ServiceRequest/foodpantry-referral
+      - Goal/goal-sdoh-2
+  Functional:
+    name: Functional Status
+    description: Functional Status Examples
+    resources:
+      - Observation/EVS-item-example-68516-4
+      - Observation/EVS-item-example-89555-7
+      - Observation/EVS-panel-example-89574-8
+      - Observation/exercise-per-day
+      - Observation/exercise-per-week
+      - Questionnaire/exercise-vital-sign
+      - QuestionnaireResponse/exercise-vital-sign
+  Disability:
+    name: Disability Status
+    description: Disability Status Examples
+    resources:
+    - Observation/simple-observation-disability-status
+
+  Mental:
+    name: Mental/Cognitive Status
+    description: Mental/Cognitive Status Examples
+    resources:
+      - Questionnaire/phq-9-example
+      - QuestionnaireResponse/phq-9-example
+      - Observation/PHQ9-item-example-44250-9
+      - Observation/PHQ9-item-example-44251-7
+      - Observation/PHQ9-item-example-44252-5
+      - Observation/PHQ9-item-example-44253-3
+      - Observation/PHQ9-item-example-44254-1
+      - Observation/PHQ9-item-example-44255-8
+      - Observation/PHQ9-item-example-44258-2
+      - Observation/PHQ9-item-example-44259-0
+      - Observation/PHQ9-item-example-44260-8
+      - Observation/PHQ9-item-example-44261-6
+      - Observation/PHQ9-item-example-69722-7
+      - Observation/PHQ9-panel-example-44249-1
+      - Observation/simple-observation-cognitive-status
+
+  PE:
+    name: Physical Activity 
+    description: Physical Activity Health Status Assessment Examples
+    resources:
+      - Observation/EVS-item-example-68516-4
+      - Observation/EVS-item-example-89555-7
+      - Observation/EVS-panel-example-89574-8
+      - Observation/exercise-per-day
+      - Observation/exercise-per-week
+      - Questionnaire/exercise-vital-sign
+      - QuestionnaireResponse/exercise-vital-sign
+  Booze:
+    name: Alcohol Use 
+    description: Alcohol Use Health Status Assessment Examples
+    resources:
+      - Observation/alcohol-use-status
+      - Observation/alcoholic-drinks-per-day
+      - Observation/AUDIT-C-item-example-68517-2
+      - Observation/AUDIT-C-item-example-68519-8
+      - Observation/AUDIT-C-item-example-68520-6
+      - Observation/AUDIT-C-item-example-75626-2
+      - Observation/AUDIT-C-panel-example-72109-2
+      - Questionnaire/AUDIT-C
+      - QuestionnaireResponse/AUDIT-C
+  Drugs:
+    name: Substance Use 
+    description: Substance Use Health Status Assessment Examples
+    resources:
+      - Observation/substance-use-status
+      - Observation/TAPS-item-example-75889-6
+      - Observation/TAPS-item-example-88037-7
+      - Observation/TAPS-item-example-96842-0
+      - Observation/TAPS-item-example-96843-8
+      - Observation/TAPS-item-example-96844-6
+      - Observation/TAPS-panel-example-96841-2
+      - Questionnaire/TAPS
+      - QuestionnaireResponse/TAPS
+  Labs:
+    name: Laboratory
+    description: Laboratory and Specimen Profiles and Examples
+    resources:
+      - StructureDefinition/us-core-observation-lab
+      - StructureDefinition/us-core-specimen
+      - Observation/serum-glucose
+      - Specimen/example-serum-hemolyzed
+
+  Facility:
+    name: Facility Information
+    description: Location Profiles and Examples
+    resources:
+      - StructureDefinition/us-core-location
+      - Location/hospital
+
+  Medication:
+    name: Medication
+    description: Medication Adherence Examples
+    resources:
+      - Observation/medication-adherence-oral-axid
+      - Observation/medication-adherence-oral-axid-boolean
+      - Observation/medication-adherence-self-tylenol
+      - StructureDefinition/us-core-medication-adherence
+      - MedicationRequest/coded-oral-axid-with-compliance
+      - MedicationRequest/self-tylenol-with-compliance
+      - StructureDefinition/us-core-medicationstatement
+      - ValueSet/uscore-medicationstatement-status
+      - MedicationStatement/coded-oral-axid-with-compliance
+      - MedicationStatement/self-tylenol-with-compliance
+
+  Preferences:
+    name: Goals and Preferences
+    description: Goals and Preferences Profiles and Examples
+    resources:
+      - StructureDefinition/us-core-care-experience-preference
+      - ValueSet/uscore-care-experience-preference
+      - Observation/care-experience-preference
+      - StructureDefinition/us-core-treatment-intervention-preference
+      - ValueSet/uscore-treatment-intervention-preference
+      - CodeSystem/uscore-treatment-intervention-preference
+      - Observation/intervention-preference
