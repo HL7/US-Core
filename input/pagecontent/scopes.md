@@ -7,6 +7,11 @@ To meet the ONC's granular scope requirement in [HTI-1 proposed rule], the US Co
 1. specific data types defined in US Core and 
 2. those of particular interest to US citizens and health systems.
 
+### SMART Scopes
+
+In addition to the `read` and `search` capabilities defined in the server's CapabilityStatement,
+sevrers SHALL document supported scopes in the `scopes_supported` section of a `.well-known/smart-configuration` [capabilities array](https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#launch-context-for-standalone-launch).
+
 #### Scopes Format
 Version 2.0.0 of [SMART App Launch] introduced a scope syntax of: `<patient|user|system> / <fhir-resource>. <c | r | u | d |s> [?param=value]`
 
@@ -24,7 +29,7 @@ The example scopes below use a single FHIR search parameter of category applied 
 * `patient/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|clinical-test`
 * `patient/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|laboratory`
 
-#### US Core Scopes
+### US Core Scopes
 
 The table below summarizes the US Core scope requirements. The same information can be found in each US Core Profile page's "Quick Start" section.
 
@@ -73,7 +78,7 @@ resource level scope: <code>patient/{{ scope.resource_type }}.rs</code>
 
  
 
-#### US Core Server Obligations
+### US Core Server Obligations
 
 The scopes are formally defined in a server hosts a [smart-configuration file](http://www.hl7.org/fhir/smart-app-launch/conformance.html#using-well-known) at `[url]/.well-known/smart-configuration` that is available to both authenticated and unauthenticated clients. 
 
@@ -81,7 +86,9 @@ The scopes are formally defined in a server hosts a [smart-configuration file](h
 
 - Servers **MAY** limit clients' scopes to those configured at registration time. Servers **SHALL** allow users to select a subset of the requested scopes at the approval time. The app **SHOULD** inspect the returned scopes and accommodate the differences from the scopes it requested and registered.
 
-Example .well-known/smart-configuration file ...with all the US Core scopes...
+### Example `.well-known/smart-configuration` File
+
+This example `.well-known/smart-configuration` file contains all the US Core scopes listed in the capabilities array.  See the [SMART App Launch] Implementation Guide for more example and details.
 
 
 ~~~http
@@ -104,9 +111,14 @@ Content-Type: application/json
     "client_credentials"
   ],
   "registration_endpoint": "https://ehr.example.com/auth/register",
-   /// <<<<<<<<<ADD All US Core Scopes HERE?>>>>>>>>
-  "scopes_supported": ["openid", "profile", "launch", "launch/patient", "patient/*.rs", "user/*.rs", "offline_access"],
-   /// <<<<<<<<<>>>>>>>>
+  "scopes_supported": [
+    "openid",
+    "profile",
+    "launch",
+    "launch/patient",
+    "offline_access",
+{% include comma-sep-scopes.md %}
+  ],
   "response_types_supported": ["code"],
   "management_endpoint": "https://ehr.example.com/user/manage",
   "introspection_endpoint": "https://ehr.example.com/user/introspect",

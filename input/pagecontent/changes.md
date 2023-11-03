@@ -42,14 +42,14 @@ This ballot addresses the following:
 
  **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
 1. **QA:** Correct invalid invariants us-core-3 and us-core-4 [FHIR-41523](https://jira.hl7.org/browse/FHIR-41523) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html) and [Here](StructureDefinition-us-core-smokingstatus.html)
-2. **QA:****Correct invalid invariants pd-1 and us-core-13 [FHIR-41586](https://jira.hl7.org/browse/FHIR-41586) [See Changes Here](StructureDefinition-us-core-practitionerrole.html)
-3. **QA:****Correct invalid invariant us-core-1 [FHIR-41670](https://jira.hl7.org/browse/FHIR-41670) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html)
-4. **QA:****Correct invalid searchparameter expression for USCoreConditionAssertedDate [FHIR-41673](https://jira.hl7.org/browse/FHIR-41673) [See Changes Here](SearchParameter-us-core-condition-asserted-date.html)
+2. **QA:** Correct invalid invariants pd-1 and us-core-13 [FHIR-41586](https://jira.hl7.org/browse/FHIR-41586) [See Changes Here](StructureDefinition-us-core-practitionerrole.html)
+3. **QA:** Correct invalid invariant us-core-1 [FHIR-41670](https://jira.hl7.org/browse/FHIR-41670) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html)
+4. **QA:** Correct invalid searchparameter expression for USCoreConditionAssertedDate [FHIR-41673](https://jira.hl7.org/browse/FHIR-41673) [See Changes Here](SearchParameter-us-core-condition-asserted-date.html)
 5. **Pre-Applied:** List all valueset URLs and all VSAC Valuesets [FHIR-NNNN](https://jira.hl7.org/browse/FHIR-NNNN) [See Changes Here](terminology.html)
-6. **QA:****Fix Typo in Tribal Extension [FHIR-41739](https://jira.hl7.org/browse/FHIR-41739) [See Changes Here](StructureDefinition-us-core-tribal-affiliation.profile.json.html)
-7. **QA:****Fix Missing Data Example [FHIR-42805](https://jira.hl7.org/browse/FHIR-42805) [See Changes Here](general-requirements.html#missing-data)
+6. **QA:** Fix Typo in Tribal Extension [FHIR-41739](https://jira.hl7.org/browse/FHIR-41739) [See Changes Here](StructureDefinition-us-core-tribal-affiliation.profile.json.html)
+7. **QA:** Fix Missing Data Example [FHIR-42805](https://jira.hl7.org/browse/FHIR-42805) [See Changes Here](general-requirements.html#missing-data)
 8. **QA:**  Update introduction to USCDI table[FHIR-42801](https://jira.hl7.org/browse/FHIR-42801) [See Changes Here](uscdi.html)
-9. **QA:****Fix us-core-5 invariant [FHIR-42814](https://jira.hl7.org/browse/FHIR-42814) [See Changes Here](StructureDefinition-us-core-immunization.html#constraints)
+9. **QA:** Fix us-core-5 invariant [FHIR-42814](https://jira.hl7.org/browse/FHIR-42814) [See Changes Here](StructureDefinition-us-core-immunization.html#constraints)
 10. **Resolved-Change Required:**  Update the statement in CapabilityStatement - PractitionerRole section [FHIR-42906](https://jira.hl7.org/browse/FHIR-42906) [See Changes Here](#.html)
 11. **Pre-Applied:** Add Project US@ Requirements [FHIR-43025](https://jira.hl7.org/browse/FHIR-43025) See Changes:
     -  [Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)

@@ -35,7 +35,7 @@ Servers providing the ability to write FHIR vital sign Observation resources fro
 Servers providing the ability to write FHIR vital sign Observation resources from provider-facing apps SHOULD also support the registration and authorization of apps with either `user/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` and `system/Observation.u?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs` SMART scopes, or broader versions of these scopes such as `user/Observation.u` and `system/Observation.u`. Note, systems are allowed to only support limited [update](#updating-previously-submitted-observations) capabilities. 
 
 #### Configuration
-Severs SHALL document supported scopes in the `scopes_supported` section of a `.well-known/smart-configuration` [capabilities array](https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#launch-context-for-standalone-launch).
+Servers SHALL document supported scopes in the `scopes_supported` section of a `.well-known/smart-configuration` [capabilities array](https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#launch-context-for-standalone-launch).
 
 
 ### Resource Submission
