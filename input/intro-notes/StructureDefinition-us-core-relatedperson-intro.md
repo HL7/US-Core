@@ -23,9 +23,12 @@ The following data elements must always be present ([Mandatory] definition) or m
 1. the relationship to the patient
 2. the name of the related person
 3. the telecom of the related person
-4. the address of the related person
-   
+4. the address of the related person*
 
+*see guidance below
 
+**Profile Specific Implementation Guidance:**
+
+- \*<span class="bg-success" markdown="1">{% include should-project-us.md element="RelatedPerson.address" %}</span><!-- new-content -->
 
 {% include link-list.md %}

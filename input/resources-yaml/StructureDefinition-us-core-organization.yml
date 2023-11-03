@@ -128,18 +128,30 @@ differential:
     max: '4'
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: '49 MEADOW ST'
     mustSupport: true
   - id: Organization.address.city
     path: Organization.address.city
     max: '1'
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: 'EVERYTOWN'
     mustSupport: true
   - id: Organization.address.state
     path: Organization.address.state
     max: '1'
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: 'OK'
     mustSupport: true
     binding:
       strength: extensible
@@ -151,6 +163,10 @@ differential:
     max: '1'
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: '74047'
     mustSupport: true
   - id: Organization.address.country
     path: Organization.address.country

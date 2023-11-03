@@ -14,20 +14,18 @@ The following data-elements must always be present ([Mandatory] definition) or m
 2.  A status (whether in use)
 3.   <span class="bg-success" markdown="1">The type of location or facility</span><!-- new-content -->
 4.  Contact details of the location
-5.  A Location address
+5.  A Location address*
 6.  The managing organization
+
+*see guidance below
 
 **Additional Profile specific implementation guidance:**
 
 <div class="bg-success" markdown="1">
-
-~~* As a result of implementation feedback, the US Core Location  and PractitionerRole Profiles are not explicitly referenced in any US Core Profile. However they **SHOULD** be used as the default profile if referenced by another US Core profile. See this guidance on [Referencing US Core Profiles].~~
-
-
-
 * [US Core Encounter] and the [US Core Immunization Profile] link directly to US Core Location via `Encounter.location` and `Immunization.location`.
 {% include encounter-location.md%}
-
+* \*{% include should-project-us.md element="Location.address" %}
 </div><!-- new-content -->
+
 
 {% include link-list.md %}

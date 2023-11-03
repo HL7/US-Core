@@ -396,6 +396,7 @@
 [Element Level Provenance]: basic-provenance.html#element-level-provenance
 [modifier element]: {{site.data.fhir.path}}conformance-rules.html#isModifier
 [ONC Health IT Certification]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
+[Certifying systems]: https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program
 [modifier elements]: general-requirements.html#modifier-elements
 [PHDSC Payer Type Committee User's Guide]: https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf
 [resource level scopes]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/scopes-and-launch-context.html#scopes-for-requesting-clinical-data

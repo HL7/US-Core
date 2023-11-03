@@ -109,18 +109,30 @@ differential:
     max: '4'
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: '49 MEADOW ST'
     mustSupport: true
   - id: Practitioner.address.city
     path: Practitioner.address.city
     max: '1'
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: 'EVERYTOWN'
     mustSupport: true
   - id: Practitioner.address.state
     path: Practitioner.address.state
     max: '1'
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: 'OK'
     mustSupport: true
     binding:
       strength: extensible
@@ -135,6 +147,10 @@ differential:
     max: '1'
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: '74047'
     mustSupport: true
   - id: Practitioner.address.country
     path: Practitioner.address.country

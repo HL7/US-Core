@@ -1,7 +1,7 @@
 resourceType: StructureDefinition
 id: us-core-location
 url: http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
-name: USCoreLocation
+name: USCoreLocationProfile
 title: US Core Location Profile
 status: active
 experimental: false
@@ -64,16 +64,28 @@ differential:
     max: '*'
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: '49 MEADOW ST'
     mustSupport: true
   - id: Location.address.city
     path: Location.address.city
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: 'EVERYTOWN'
     mustSupport: true
   - id: Location.address.state
     path: Location.address.state
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: 'OK'
     mustSupport: true
     binding:
       strength: extensible
@@ -87,6 +99,10 @@ differential:
     short: US Zip Codes
     type:
     - code: string
+    example:
+    - 
+        label: General
+        valueString: '74047'
     mustSupport: true
   - id: Location.managingOrganization
     path: Location.managingOrganization

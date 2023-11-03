@@ -295,18 +295,30 @@ differential:
       | billing - purpose of this address"
   - id: Patient.address.line
     path: Patient.address.line
+    example:
+    - 
+        label: General
+        valueString: '49 MEADOW ST'
     mustSupport: true
     mapping:
     - identity: argonaut-dq-dstu2
       map: NA
   - id: Patient.address.city
     path: Patient.address.city
+    example:
+    - 
+        label: General
+        valueString: 'EVERYTOWN'
     mustSupport: true
     mapping:
     - identity: argonaut-dq-dstu2
       map: NA
   - id: Patient.address.state
     path: Patient.address.state
+    example:
+    - 
+        label: General
+        valueString: 'OK'
     mustSupport: true
     binding:
       strength: extensible
@@ -320,6 +332,10 @@ differential:
     short: US Zip Codes
     alias:
     - Zip Code
+    example:
+    - 
+        label: General
+        valueString: '74047'
     mustSupport: true
     mapping:
     - identity: argonaut-dq-dstu2

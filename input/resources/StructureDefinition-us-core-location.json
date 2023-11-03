@@ -2,7 +2,7 @@
     "resourceType": "StructureDefinition",
     "id": "us-core-location",
     "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location",
-    "name": "USCoreLocation",
+    "name": "USCoreLocationProfile",
     "title": "US Core Location Profile",
     "status": "active",
     "experimental": false,
@@ -88,6 +88,12 @@
                         "code": "string"
                     }
                 ],
+                "example": [
+                    {
+                        "label": "General",
+                        "valueString": "49 MEADOW ST"
+                    }
+                ],
                 "mustSupport": true
             },
             {
@@ -98,6 +104,12 @@
                         "code": "string"
                     }
                 ],
+                "example": [
+                    {
+                        "label": "General",
+                        "valueString": "EVERYTOWN"
+                    }
+                ],
                 "mustSupport": true
             },
             {
@@ -106,6 +118,12 @@
                 "type": [
                     {
                         "code": "string"
+                    }
+                ],
+                "example": [
+                    {
+                        "label": "General",
+                        "valueString": "OK"
                     }
                 ],
                 "mustSupport": true,
@@ -128,6 +146,12 @@
                 "type": [
                     {
                         "code": "string"
+                    }
+                ],
+                "example": [
+                    {
+                        "label": "General",
+                        "valueString": "74047"
                     }
                 ],
                 "mustSupport": true

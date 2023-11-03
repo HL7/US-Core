@@ -21,7 +21,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 1.  An identifier*
 1.  A list of contact information
-1.  An address
+1.  An address*
 
 *see guidance below
 
@@ -29,5 +29,6 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 - \*Systems **SHALL** support National Provider Identifier (NPI) for organizations
   and **SHOULD** support Clinical Laboratory Improvement Amendments (CLIA) for laboratories and the National Association of Insurance Commissioners NAIC Company code (sometimes called "NAIC Number" or "cocode") for payers.
+- \*<span class="bg-success" markdown="1">{% include should-project-us.md element="Organization.address" %}</span><!-- new-content -->
 
 {% include link-list.md %}

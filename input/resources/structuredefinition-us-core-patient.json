@@ -442,6 +442,12 @@
             {
                 "id": "Patient.address.line",
                 "path": "Patient.address.line",
+                "example": [
+                    {
+                        "label": "General",
+                        "valueString": "49 MEADOW ST"
+                    }
+                ],
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -453,6 +459,12 @@
             {
                 "id": "Patient.address.city",
                 "path": "Patient.address.city",
+                "example": [
+                    {
+                        "label": "General",
+                        "valueString": "EVERYTOWN"
+                    }
+                ],
                 "mustSupport": true,
                 "mapping": [
                     {
@@ -464,6 +476,12 @@
             {
                 "id": "Patient.address.state",
                 "path": "Patient.address.state",
+                "example": [
+                    {
+                        "label": "General",
+                        "valueString": "OK"
+                    }
+                ],
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
@@ -483,6 +501,12 @@
                 "short": "US Zip Codes",
                 "alias": [
                     "Zip Code"
+                ],
+                "example": [
+                    {
+                        "label": "General",
+                        "valueString": "74047"
+                    }
                 ],
                 "mustSupport": true,
                 "mapping": [
