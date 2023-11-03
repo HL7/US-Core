@@ -129,6 +129,14 @@ definition:
     name: 10 Minute Apgar Score Panel Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
+      reference: Observation/AHC-HRSN-item-example-68517-2
+    description: This AHC HRSN Item Example 68517-2 (How many times in the past 12
+      months have you had 5 or more drinks in a day (males) or 4 or more drinks in
+      a day (females)?) is an example of the *US Core Observation Screening and Assessment
+      Profile* and is referenced by the *ServiceRequest for Rehab Example*
+    name: Ahc-Hrsn Item Observation Example 68517-2
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
+  - reference:
       reference: Questionnaire/AUDIT-C
     description: Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]
       questionnaire example. It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html)
@@ -1523,12 +1531,14 @@ definition:
     name: US Core Body Weight Profile
   - reference:
       reference: StructureDefinition/us-core-care-experience-preference
-    description: To promote interoperability and adoption through common implementation,
-      this profile sets minimum expectations for the Observation resource to record,
-      search, and fetch for a patient's care experience preferences. It is based on
-      the US Core Simple Profile and identifies which *additional* core elements,
-      extensions, vocabularies, and value sets **SHALL** be present and constrains
-      the way the elements are used when using the profile. It provides the floor
+    description: This profile represents a person's care preferences during their
+      care and treatment. Examples include, but are not limited to religious preferences,
+      dislikes and fears, and thoughts and feelings to be shared. To promote interoperability
+      and adoption through common implementation, this profile sets minimum expectations
+      for the Observation resource to record, search, and fetch for a patient's care
+      experience preferences. This profile identifies which core elements, extensions,
+      vocabularies, and value sets **SHALL** be present in the resource and constrains
+      the way the elements are used when using this profile. It provides the floor
       for standards development for specific use cases.
     exampleBoolean: false
     name: US Core Care Experience Preference Profile
@@ -2374,18 +2384,16 @@ definition:
     name: US Core Simple Observation Codes
   - reference:
       reference: StructureDefinition/us-core-simple-observation
-    description: "This US Core FHIR Profile is meant to capture any \u201Csimple\u201D\
-      \ observations that are not otherwise covered by other US Core Observation profiles.\
-      \ It represents any type of observation that is not classified as vital signs,\
-      \ laboratory, imaging, or other more specific observation types. This profile\
-      \ promotes interoperability and adoption through common implementation by setting\
-      \ minimum expectations for the Observation resource to record, search, and retrieve\
-      \ observations such as a clinical observation or assertion about a patient's\
-      \ health status or other general observations. This profile identifies which\
-      \ core elements, extensions, vocabularies, and value sets **SHALL** be present\
-      \ in the resource and constrains the way the elements are used when using this\
-      \ profile. It provides the floor for standards development for specific use\
-      \ cases."
+    description: "This profile represents a person\u2019s care preferences during\
+      \ their care and treatment. Examples include, but are not limited to religious\
+      \ preferences, dislikes and fears, and thoughts and feelings to be shared. To\
+      \ promote interoperability and adoption through common implementation, this\
+      \ profile sets minimum expectations for the Observation resource to record,\
+      \ search, and fetch for a patient's care experience preferences. This profile\
+      \ identifies which core elements, extensions, vocabularies, and value sets **SHALL**\
+      \ be present in the resource and constrains the way the elements are used when\
+      \ using this profile. It provides the floor for standards development for specific\
+      \ use cases."
     exampleBoolean: false
     name: US Core Simple Observation Profile
   - reference:
@@ -2445,13 +2453,16 @@ definition:
     name: US Core Treatment Intervention Preference CodeSystem
   - reference:
       reference: StructureDefinition/us-core-treatment-intervention-preference
-    description: To promote interoperability and adoption through common implementation,
+    description: This profile represents personal health goals, preferences, and priorities
+      for medical treatments or interventions in the event of a future health scenario
+      where a person is unable to make medical decisions because of a serious illness
+      or injury. To promote interoperability and adoption through common implementation,
       this profile sets minimum expectations for the Observation resource to record,
-      search, and fetch for a patient's treatment intervention preferences. It is
-      based on the US Core Simple Profile and identifies which *additional* core elements,
-      extensions, vocabularies, and value sets **SHALL** be present and constrains
-      the way the elements are used when using the profile. It provides the floor
-      for standards development for specific use cases.
+      search, and fetch for a patient's treatment intervention preferences. This profile
+      identifies which core elements, extensions, vocabularies, and value sets **SHALL**
+      be present in the resource and constrains the way the elements are used when
+      using this profile. It provides the floor for standards development for specific
+      use cases.
     exampleBoolean: false
     name: US Core Treatment Intervention Preference Profile
   - reference:
