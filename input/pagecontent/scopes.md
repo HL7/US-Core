@@ -10,7 +10,7 @@ To meet the ONC's granular scope requirement in [HTI-1 proposed rule], the US Co
 ### SMART Scopes
 
 In addition to the `read` and `search` capabilities defined in the server's CapabilityStatement,
-sevrers SHALL document supported scopes in the `scopes_supported` section of a `.well-known/smart-configuration` [capabilities array](https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#launch-context-for-standalone-launch).
+servers SHALL document supported scopes in the `scopes_supported` section of a `.well-known/smart-configuration` [capabilities array](https://build.fhir.org/ig/HL7/smart-app-launch/conformance.html#launch-context-for-standalone-launch).
 
 #### Scopes Format
 Version 2.0.0 of [SMART App Launch] introduced a scope syntax of: `<patient|user|system> / <fhir-resource>. <c | r | u | d |s> [?param=value]`
