@@ -18,9 +18,9 @@ The following are example usage scenarios for this profile:
 1.  a fixed *component* code for diastolic blood pressure
 
 **Each Observation Must Support:**
-healt
+
 1.  a result value for systolic blood pressure
-1.  a result value for diastolic blood pressure
+2.  a result value for diastolic blood pressure
 
 **Profile Specific Implementation Guidance:**
 

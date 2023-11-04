@@ -61,7 +61,7 @@ Every server that supports the USDCI Data Class "Health Status/Assessments":
 
 #### Structured Screening and Assessments
 
-Screening and Assessments can be structured survey instruments consisting of questions with a variety of response including true/false, coded, textual, and  multiple choice.  Examples include PRAPARE, [APGAR score] and [PHQ-9]. US Core defines two ways to represent the questions and responses to these screening and assessment instruments:
+Screening and Assessments can be structured survey instruments consisting of questions with a variety of response including true/false, coded, textual, and  multiple choice.  Examples include PRAPARE, [Apgar score] and [PHQ-9]. US Core defines two ways to represent the questions and responses to these screening and assessment instruments:
 
 - Observation: [US Core Observation Screening Assessment Profile]
 - Questionnaire/QuestionnaireResponse: [SDC Base Questionnaire]/[US Core QuestionnaireResponse Profile]
