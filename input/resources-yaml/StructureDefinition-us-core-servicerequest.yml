@@ -60,6 +60,13 @@ differential:
     - code: Reference
       targetProfile:
       - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+      - http://hl7.org/fhir/StructureDefinition/Group
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+      - http://hl7.org/fhir/StructureDefinition/Device
+      _targetProfile:
+      - extension:
+        - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          valueBoolean: true
     mustSupport: true
   - id: ServiceRequest.encounter
     path: ServiceRequest.encounter

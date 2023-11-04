@@ -52,9 +52,11 @@ This ballot addresses the following:
    - [Here](Procedure-defib-implant.html)
    - [Here](uscdi.html)
 
-- Scopes: To meet the ONC’s granular scope requirement in [HTI-1 proposed rule](https://www.federalregister.gov/d/2023-07229/p-991+), We added required support for granular scopes as defined in Version 2.0.0 of [SMART App Launch] and moved the SMART scopes guidance from Future of US Core to a [Conformance Page](scopes.html) and updated requirements for each profile.
+- Scopes: To meet the ONC’s granular scope requirement in [HTI-1 proposed rule](https://www.federalregister.gov/d/2023-07229/p-991+), we added required support for granular scopes as defined in Version 2.0.0 of [SMART App Launch] and moved the SMART scopes guidance from Future of US Core to a [Conformance Page](scopes.html) and updated requirements for each profile.
   
 - FHIR Write: Add Argonaut Write Guidance for Vital Sign Observations to Record or Update Data section on the Future of US Core Page. [See Changes Here](future-of-US-core.html#record-or-update-data) and [Here](fhir-write.html)
+  
+- Based on the feedback from the US Core variance request process, we updated several profiles to permit implementers can references to other `subject` entities as defined in the base standard.  This is in addition to the Must Support reference to US Core Patient. For an example of this change [Here](StructureDefinition-us-core-observation-clinical-result.html#profile))
   
 - Implementers submitted over 60 trackers since the publication of US Core ver 6.0.0 and 6.1.0 We have addressed them and applied over 50 changes listed below:
 
@@ -87,10 +89,10 @@ This ballot addresses the following:
 20. **QA:**  Clarify note in Search Parameters and Operations page [FHIR-42783](https://jira.hl7.org/browse/FHIR-42783) [See Changes Here](search-parameters-and-operations.html)
 21. **QA:**  Fix errors in USCDI mapping table [FHIR-42862](https://jira.hl7.org/browse/FHIR-42862) [See Changes Here](uscdi.html)
 22. **QA:** Clarify Coverage status [FHIR-42777](https://jira.hl7.org/browse/FHIR-42777) [See Changes Here](StructureDefinition-us-core-coverage.html#mandatory-and-must-support-data-elements)
-23. **Resolved-Change Required:**  Allow references to other entities for Subject/Patient elements [FHIR-42759](https://jira.hl7.org/browse/FHIR-42759) [See Changes Here](#.html)
+23. **QA:**  Permit Subject element to references to other entities besides Patient [FHIR-42759](https://jira.hl7.org/browse/FHIR-42759) [See Changes Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-clinical-result.html#profile))
 24. **Submitted:** ""Datetime must be at least to day"" regex rejects valid dateTimes with the required precision [FHIR-42738](https://jira.hl7.org/browse/FHIR-42738) [See Changes Here](#.html)
-25. **Resolved-Change Required:**  Add USCDI Version 4 Data Elements to US Core [FHIR-42161](https://jira.hl7.org/browse/FHIR-42161) See the Introduction to this version above and Changes [Here](uscdi.html)
-26. **Resolved-Change Required:**  remove option 3 from SNOMED US Edition guidance [FHIR-42160](https://jira.hl7.org/browse/FHIR-42160) [See Changes Here](#.html)
+25. **QA:**  Add USCDI Version 4 Data Elements to US Core [FHIR-42161](https://jira.hl7.org/browse/FHIR-42161) See the Introduction to this version above and Changes [Here](uscdi.html)
+26. **QA:**  Remove option 3 from SNOMED US Edition guidance [FHIR-42160](https://jira.hl7.org/browse/FHIR-42160) [See Changes Here]([#.html](https://build.fhir.org/ig/HL7/US-Core/general-guidance.html#snomed-ct-united-states-edition))
 27. **QA:** Add Procedure.reasonCode and Procedure.reasonReference as Reason for Referral [FHIR-42136](https://jira.hl7.org/browse/FHIR-42136) and [FHIR-41761](https://jira.hl7.org/browse/FHIR-41761) See Changes:
    -  [Here](StructureDefinition-us-core-procedure.html)
    -  [Here](StructureDefinition-us-core-servicerequest.html)

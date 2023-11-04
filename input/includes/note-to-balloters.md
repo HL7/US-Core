@@ -53,6 +53,8 @@ This ballot addresses the following:
 - Scopes: To meet the ONC’s granular scope requirement in [HTI-1 proposed rule](https://www.federalregister.gov/d/2023-07229/p-991+), We added required support for granular scopes as defined in Version 2.0.0 of [SMART App Launch] and moved the SMART scopes guidance from Future of US Core to a [Conformance Page](scopes.html) and updated requirements for each profile.
   
 - FHIR Write: Add Argonaut Write Guidance for Vital Sign Observations to Record or Update Data section on the Future of US Core Page. [See Changes Here](future-of-US-core.html#record-or-update-data) and [Here](fhir-write.html)
+
+- Based on the feedback from the US Core variance request process, we updated several profiles to permit implementers can references to other `subject` entities as defined in the base standard.  This is in addition to the Must Support reference to US Core Patient. For an example of this change [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-clinical-result.html#profile))
   
 - Implementers submitted over 60 trackers since the publication of US Core ver 6.1.0. We have addressed them and applied over 50 changes. See the [change log] for detailed list of change and where applied.
   
