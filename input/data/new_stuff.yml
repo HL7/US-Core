@@ -31,9 +31,9 @@
 
 
 # Profiles
-# - USCoreConditionEncounterDiagnosisProfile
-# - USCoreConditionProblemsHealthConcernsProfile
-# - USCoreQuestionnaireResponseProfile
+- USCoreConditionEncounterDiagnosisProfile
+- USCoreConditionProblemsHealthConcernsProfile
+- USCoreQuestionnaireResponseProfile
 # - USCoreObservationSurveyProfile
 # - USCoreObservationSDOHAssessment
 # - USCoreObservationOccupationProfile
@@ -42,8 +42,8 @@
 # - USCoreCoverageProfile
 - USCoreSpecimenProfile
 - USCoreMedicationDispenseProfile
-# - USCoreObservationScreeningAssessmentProfile
-# - USCoreSimpleObservationProfile
+- USCoreObservationScreeningAssessmentProfile
+- USCoreSimpleObservationProfile
 - USCoreObservationClinicalResultProfile
 - USCoreAverageBloodPressureProfile
 - USCoreMedicationRequestProfile
@@ -51,11 +51,17 @@
 - USCoreEncounterProfile
 - USCoreImmunizationProfile
 - USCoreDiagnosticReportProfileLaboratoryReporting
+- USCoreDiagnosticReportProfileNoteExchange
+- USCoreDocumentReferenceProfile
 - USCoreProcedureProfile
 - USCoreServiceRequestProfile
 - USCoreTreatmentInterventionPreferenceProfile
 - USCoreCareExperiencePreferenceProfile
 - USCoreLaboratoryResultObservationProfile
+- USCoreCarePlanProfile
+- USCoreCareTeamProfile
+- USCoreGoalProfile
+
 
 
 
@@ -64,7 +70,7 @@
 # - USCoreExtensionQuestionnaireUri
 # - USCoreTribalAffiliationExtension
 # - USCoreSexForClinicalUse
-# - USCoreJurisdictionExtension
+- USCoreJurisdictionExtension
 # - USCoreSexExtension
 - USCoreMedicationAdherenceExtension
 - USCDIRequirement
