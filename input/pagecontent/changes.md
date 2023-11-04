@@ -121,7 +121,7 @@ This ballot addresses the following:
 42. **QA:**  Added interpretation to laboratory result examples [FHIR-40297](https://jira.hl7.org/browse/FHIR-40297) [See Changes Here](Observation-cbc-mchc.html)
 43. **PUBLISHING Resolved - change required:** RelatedPerson relationshiptype should have binding to FHIR value set RelatedPerson-relationshiptype [FHIR-34755](https://jira.hl7.org/browse/FHIR-34755) [See Changes Here](#.html)
 44. **PUBLISHING Resolved - change required:** AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636) [See Changes Here](#.html)
-45. **Resolved - change required:** Several Vital Signs missing from CapabilityStatement US Core Server page [FHIR-34478](https://jira.hl7.org/browse/FHIR-34478) [See Changes Here](#.html)
+45. **PATCH ??? Resolved - change required:** Several Vital Signs missing from CapabilityStatement US Core Server page [FHIR-34478](https://jira.hl7.org/browse/FHIR-34478) [See Changes Here](#.html)
 46. **PUBLISHING Resolved - change required:** Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783) [See Changes Here](#.html)
 47. **PUBLISHING Resolved - change required:** In most of the data elements – “Binding is from base FHIR and US Core Vital Signs”  Need this to be one single combined listing [FHIR-30780](https://jira.hl7.org/browse/FHIR-30780) [See Changes Here](#.html)
 48. **PUBLISHING Resolved - change required:** valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107) [See Changes Here](#.html)
