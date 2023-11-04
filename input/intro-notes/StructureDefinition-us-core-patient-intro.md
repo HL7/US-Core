@@ -42,12 +42,14 @@ The following data-elements must always be present ([Mandatory] definition) or m
 *see guidance below
 
 **Profile Specific Implementation Guidance:**
-- Note that *Date of Death*, *Previous Name*, *Suffix*,and *Previous address* are listed in the U.S. Core Data for Interoperability.
+- <span class="bg-success" markdown="1">Notes for *Date of Death*, *Previous Name*, *Suffix*, *Previous address*, and *Preferred Language* USCDI Data Elements:</span><!-- new-content --> 
   - Date of Death is communicated using the `Patient.deceasedDateTime` element.
   - Suffix is represented using the `Patient.name.suffix` element.
-  - Previous name is represented by setting `Patient.name.use` to "old" or providing an end date in P`atient.name.period` or doing both.
+  - Previous name is represented by setting `Patient.name.use` to "old" or providing an end date in `Patient.name.period` or doing both.
   - Previous address is represented by setting `Patient.address.use` to "old" or providing an end date in `Patient.address.period` or doing both.
+  - <span class="bg-success" markdown="1">`Communication.preferred` **MAY** be used to designate a preferred language when multiple languages are represented.</span><!-- new-content --> 
   - The [Patient example] demonstrates how these elements are represented.
+
 - <span class="bg-success" markdown="1">[Certifying systems] **SHALL** and non-certifying systems **SHOULD** follow the [Project US@ Technical Specification for Patient Addresses Final Version 1.0] as the standard style guide for `Patient.address.line` and  `Patient.address.city` for new and updated records.</span><!-- new-content -->
 
    - <span class="bg-success" markdown="1">For certifying systems, this requirement does not apply to historical records or documents that are exposed through FHIR based APIs.</span><!-- new-content -->
