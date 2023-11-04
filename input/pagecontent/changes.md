@@ -44,7 +44,8 @@ This ballot addresses the following:
 
 
 - We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] where applicable and, as a result, align terminology between US Core and [HL7 C-CDA]. The Following Valuesets have been moved:
-  - todo...
+  
+  {% include img-small.html img="todo.png" %}
 
 - Added Procedure.reasonCode and Procedure.reasonReference as *Additional USCDI Requirements* to meet the USCDI Data Element,Reason for Referral when a ServiceRequest is not used to request a procedure. See these changes: 
    - [Here](StructureDefinition-us-core-procedure.html)
@@ -90,7 +91,7 @@ This ballot addresses the following:
 21. **QA:**  Fix errors in USCDI mapping table [FHIR-42862](https://jira.hl7.org/browse/FHIR-42862) [See Changes Here](uscdi.html)
 22. **QA:** Clarify Coverage status [FHIR-42777](https://jira.hl7.org/browse/FHIR-42777) [See Changes Here](StructureDefinition-us-core-coverage.html#mandatory-and-must-support-data-elements)
 23. **QA:**  Permit Subject element to references to other entities besides Patient [FHIR-42759](https://jira.hl7.org/browse/FHIR-42759) [See Changes Here](StructureDefinition-us-core-observation-clinical-result.html#profile)
-24. **Submitted:** ""Datetime must be at least to day"" regex rejects valid dateTimes with the required precision [FHIR-42738](https://jira.hl7.org/browse/FHIR-42738) [See Changes Here](#.html)
+24. **Resolved-Change Required:** ""Datetime must be at least to day"" regex rejects valid dateTimes with the required precision [FHIR-42738](https://jira.hl7.org/browse/FHIR-42738) [See Changes Here](#.html)
 25. **QA:**  Add USCDI Version 4 Data Elements to US Core [FHIR-42161](https://jira.hl7.org/browse/FHIR-42161) See the Introduction to this version above and Changes [Here](uscdi.html)
 26. **QA:**  Remove guidance to identify version of SNOMED in an instance [FHIR-42160](https://jira.hl7.org/browse/FHIR-42160) [See Changes Here](general-guidance.html#snomed-ct-united-states-edition)
 27. **QA:** Add Procedure.reasonCode and Procedure.reasonReference as Reason for Referral [FHIR-42136](https://jira.hl7.org/browse/FHIR-42136) and [FHIR-41761](https://jira.hl7.org/browse/FHIR-41761) See Changes:
@@ -101,7 +102,7 @@ This ballot addresses the following:
 28. **QA:**  USCDI - FHIR US Core Relationship Clarification [FHIR-42130](https://jira.hl7.org/browse/FHIR-42130) [See Changes Here](uscdi.html)
 29. **QA:**  Typo [FHIR-42069](https://jira.hl7.org/browse/FHIR-42069) [See Changes Here]((StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)
 30. **Resolved-Change Required:**  Clarify the R4 base spec & US Core guidance on DocumentReference [FHIR-41902](https://jira.hl7.org/browse/FHIR-41902) [See Changes Here](#.html)
-31. **QA:**  limit context for jurisdiction extension [FHIR-41867](https://jira.hl7.org/browse/FHIR-41867) [See Changes Here](StructureDefinition-us-core-jurisdiction.html)
+31. **QA:**  Limit context for jurisdiction extension [FHIR-41867](https://jira.hl7.org/browse/FHIR-41867) [See Changes Here](StructureDefinition-us-core-jurisdiction.html)
 32. **Resolved-Change Required:**  Excel downloads missing header row [FHIR-41709](https://jira.hl7.org/browse/FHIR-41709) [See Changes Here](#.html)
 33. **Resolved-Change Required:**  Add VSAC Value Sets to Terminology Page [FHIR-41681](https://jira.hl7.org/browse/FHIR-41681) [See Changes Here](#.html)
 34. **QA:**  APGAR should be Apgar [FHIR-41666](https://jira.hl7.org/browse/FHIR-41666) [See Changes Here](screening-and-assessments.html#structured-screening-and-assessments)
@@ -114,7 +115,7 @@ This ballot addresses the following:
    - [Here](CapabilityStatement-us-core-server.html#summary-of-additional-uscdi-requirement-references)
 37. **Resolved-Change Required:**  Change ASKU in value set to asked-declined [FHIR-41571](https://jira.hl7.org/browse/FHIR-41571) [See Changes Here](#.html)
 38. **Resolved-Change Required:**  update canonical urls in examples and capability statements to include the version [FHIR-41256](https://jira.hl7.org/browse/FHIR-41256) [See Changes Here](#.html)
-39. **Resolved-Change Required:**  Condition profile descriptions are not appearing in IG Detailed Description Snapshot View (other places) [FHIR-40813](https://jira.hl7.org/browse/FHIR-40813) [See Changes Here](#.html)
+39. **Publishing Resolved-Change Required:**  Condition profile descriptions are not appearing in IG Detailed Description Snapshot View (other places) [FHIR-40813](https://jira.hl7.org/browse/FHIR-40813) [See Changes Here](#.html)
 40. **QA:**  Add Preferred Language guidance [FHIR-40773](https://jira.hl7.org/browse/FHIR-40773) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
 41. **QA:**  Update UCUM guidance [FHIR-40604](https://jira.hl7.org/browse/FHIR-40604) [See Changes Here](general-guidance.html#using-ucum-codes-in-the-quantity-datatype)
 42. **QA:**  Added interpretation to laboratory result examples [FHIR-40297](https://jira.hl7.org/browse/FHIR-40297) [See Changes Here](Observation-cbc-mchc.html)
