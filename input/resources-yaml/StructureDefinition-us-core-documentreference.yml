@@ -127,6 +127,8 @@ differential:
     mustSupport: true
   - id: DocumentReference.content.attachment
     path: DocumentReference.content.attachment
+    definition: The document and format referenced. 
+    comment: If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different format or attachment metadata. The content element **SHALL** not contain different versions of the same content. For version handling use multiple DocumentReferences with `DocumentReference.relatesTo`.
     constraint:
     - key: us-core-6
       severity: error

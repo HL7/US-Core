@@ -91,7 +91,7 @@ This ballot addresses the following:
 21. **QA:**  Fix errors in USCDI mapping table [FHIR-42862](https://jira.hl7.org/browse/FHIR-42862) [See Changes Here](uscdi.html)
 22. **QA:** Clarify Coverage status [FHIR-42777](https://jira.hl7.org/browse/FHIR-42777) [See Changes Here](StructureDefinition-us-core-coverage.html#mandatory-and-must-support-data-elements)
 23. **QA:**  Permit Subject element to references to other entities besides Patient [FHIR-42759](https://jira.hl7.org/browse/FHIR-42759) [See Changes Here](StructureDefinition-us-core-observation-clinical-result.html#profile)
-24. **Resolved-Change Required:** ""Datetime must be at least to day"" regex rejects valid dateTimes with the required precision [FHIR-42738](https://jira.hl7.org/browse/FHIR-42738) [See Changes Here](#.html)
+24. **QA:** Correct Regex for us-core-1 XPath invariant [FHIR-42738](https://jira.hl7.org/browse/FHIR-42738) [See Changes Here](StructureDefinition-us-core-observation-clinical-result.html#constraints))
 25. **QA:**  Add USCDI Version 4 Data Elements to US Core [FHIR-42161](https://jira.hl7.org/browse/FHIR-42161) See the Introduction to this version above and Changes [Here](uscdi.html)
 26. **QA:**  Remove guidance to identify version of SNOMED in an instance [FHIR-42160](https://jira.hl7.org/browse/FHIR-42160) [See Changes Here](general-guidance.html#snomed-ct-united-states-edition)
 27. **QA:** Add Procedure.reasonCode and Procedure.reasonReference as Reason for Referral [FHIR-42136](https://jira.hl7.org/browse/FHIR-42136) and [FHIR-41761](https://jira.hl7.org/browse/FHIR-41761) See Changes:
@@ -101,7 +101,7 @@ This ballot addresses the following:
    -  [Here](uscdi.html)
 28. **QA:**  USCDI - FHIR US Core Relationship Clarification [FHIR-42130](https://jira.hl7.org/browse/FHIR-42130) [See Changes Here](uscdi.html)
 29. **QA:**  Typo [FHIR-42069](https://jira.hl7.org/browse/FHIR-42069) [See Changes Here]((StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)
-30. **Resolved-Change Required:**  Clarify the R4 base spec & US Core guidance on DocumentReference [FHIR-41902](https://jira.hl7.org/browse/FHIR-41902) [See Changes Here](#.html)
+30. **QA:**  Clarify when to include multiple attachments as part of a clinical note [FHIR-41902](https://jira.hl7.org/browse/FHIR-41902) [See Changes Here](StructureDefinition-us-core-documentreference.html)
 31. **QA:**  Limit context for jurisdiction extension [FHIR-41867](https://jira.hl7.org/browse/FHIR-41867) [See Changes Here](StructureDefinition-us-core-jurisdiction.html)
 32. **Resolved-Change Required:**  Excel downloads missing header row [FHIR-41709](https://jira.hl7.org/browse/FHIR-41709) [See Changes Here](#.html)
 33. **Resolved-Change Required:**  Add VSAC Value Sets to Terminology Page [FHIR-41681](https://jira.hl7.org/browse/FHIR-41681) [See Changes Here](#.html)
