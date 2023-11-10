@@ -1,61 +1,61 @@
 {
-    "status": "final",
-    "category": [
+  "status": "final",
+  "category": [
+    {
+      "text": "Vital Signs",
+      "coding": [
         {
-            "text": "Vital Signs",
-            "coding": [
-                {
-                    "code": "vital-signs",
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "display": "Vital Signs"
-                }
-            ]
+          "code": "vital-signs",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Vital Signs"
         }
-    ],
-    "code": {
-        "text": "BMI",
-        "coding": [
-            {
-                "code": "77606-2",
-                "system": "http://loinc.org",
-                "display": "Weight-for-length Per age and sex"
-            }
-        ]
-    },
-    "resourceType": "Observation",
-    "valueQuantity": {
-        "code": "%",
-        "unit": "%",
-        "value": 65,
-        "system": "http://unitsofmeasure.org"
-    },
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Pediatric Wt Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a pediatric wt example for the *Pediatric Weight For Height Profile*."
-            }
-        ]
-    },
-    "encounter": {
-        "display": "GP Visit"
-    },
-    "effectiveDateTime": "2020-07-02",
-    "id": "pediatric-wt-example",
-    "subject": {
-        "display": "Infant Example",
-        "reference": "Patient/infant-example"
-    },
-    "note": [
-        {
-            "text": "WHO Males, 0-2 years Chart"
-        }
+      ]
+    }
+  ],
+  "code": {
+    "text": "BMI",
+    "coding": [
+      {
+        "code": "77606-2",
+        "system": "http://loinc.org",
+        "display": "Weight-for-length Per age and sex"
+      }
     ]
+  },
+  "resourceType": "Observation",
+  "valueQuantity": {
+    "code": "%",
+    "unit": "%",
+    "value": 65,
+    "system": "http://unitsofmeasure.org"
+  },
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height|7.0.0-ballot"
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Pediatric Wt Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a pediatric wt example for the *Pediatric Weight For Height Profile*."
+      }
+    ]
+  },
+  "encounter": {
+    "display": "GP Visit"
+  },
+  "effectiveDateTime": "2020-07-02",
+  "id": "pediatric-wt-example",
+  "subject": {
+    "display": "Infant Example",
+    "reference": "Patient/infant-example"
+  },
+  "note": [
+    {
+      "text": "WHO Males, 0-2 years Chart"
+    }
+  ]
 }

@@ -1,123 +1,123 @@
 {
-    "resourceType": "MedicationRequest",
-    "id": "medicationrequest-coded-oral-axid",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "MedicationRequest Coded Oral Axid Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is an prescribed oral solution example for the *US Core MedicationRequest Profile*.  It represents the medication and reason using codes."
-            }
-        ]
-    },
+  "resourceType": "MedicationRequest",
+  "id": "medicationrequest-coded-oral-axid",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|7.0.0-ballot"
+    ],
     "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "MedicationRequest Coded Oral Axid Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is an prescribed oral solution example for the *US Core MedicationRequest Profile*.  It represents the medication and reason using codes."
+      }
+    ]
+  },
+  "extension": [
+    {
+      "extension": [
         {
-            "extension": [
-                {
-                    "url": "medicationAdherence",
-                    "valueCodeableConcept": {
-                        "coding": [
-                            {
-                                "system": "http://snomed.info/sct",
-                                "code": "275928001",
-                                "display": "Drugs - partial non-compliance (finding)"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "url": "dateAsserted",
-                    "valueDateTime": "2023-08-11T08:15:49.449Z"
-                },
-                {
-                    "url": "informationSource",
-                    "valueReference": {
-                        "reference": "Patient/example",
-                        "display": "Amy Shaw"
-                    }
-                }
-            ],
-            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence"
-        }
-    ],
-    "status": "active",
-    "intent": "order",
-    "medicationCodeableConcept": {
-        "coding": [
-            {
-                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                "code": "476872",
-                "display": "Nizatidine 15 MG/ML Oral Solution"
-            }
-        ],
-        "text": "Nizatidine 15 MG/ML Oral Solution"
-    },
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy Shaw"
-    },
-    "authoredOn": "2008-04-05",
-    "requester": {
-        "reference": "Practitioner/practitioner-1",
-        "display": "Ronald Bone, MD"
-    },
-    "dosageInstruction": [
-        {
-            "text": "10 mL bid",
-            "timing": {
-                "repeat": {
-                    "frequency": 2,
-                    "period": 1,
-                    "periodUnit": "d",
-                    "boundsPeriod": {
-                        "start": "2008-04-05"
-                    }
-                }
-            },
-            "doseAndRate": [
-                {
-                    "doseQuantity": {
-                        "value": 10,
-                        "unit": "ml",
-                        "system": "http://unitsofmeasure.org",
-                        "code": "mL"
-                    }
-                }
+          "url": "medicationAdherence",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "275928001",
+                "display": "Drugs - partial non-compliance (finding)"
+              }
             ]
+          }
+        },
+        {
+          "url": "dateAsserted",
+          "valueDateTime": "2023-08-11T08:15:49.449Z"
+        },
+        {
+          "url": "informationSource",
+          "valueReference": {
+            "reference": "Patient/example",
+            "display": "Amy Shaw"
+          }
         }
+      ],
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "476872",
+        "display": "Nizatidine 15 MG/ML Oral Solution"
+      }
     ],
-    "dispenseRequest": {
-        "numberOfRepeatsAllowed": 1,
-        "quantity": {
-            "value": 480,
-            "unit": "mL",
+    "text": "Nizatidine 15 MG/ML Oral Solution"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "authoredOn": "2008-04-05",
+  "requester": {
+    "reference": "Practitioner/practitioner-1",
+    "display": "Ronald Bone, MD"
+  },
+  "dosageInstruction": [
+    {
+      "text": "10 mL bid",
+      "timing": {
+        "repeat": {
+          "frequency": 2,
+          "period": 1,
+          "periodUnit": "d",
+          "boundsPeriod": {
+            "start": "2008-04-05"
+          }
+        }
+      },
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "value": 10,
+            "unit": "ml",
             "system": "http://unitsofmeasure.org",
             "code": "mL"
-        },
-        "expectedSupplyDuration": {
-            "value": 30,
-            "unit": "days",
-            "system": "http://unitsofmeasure.org",
-            "code": "d"
+          }
         }
+      ]
+    }
+  ],
+  "dispenseRequest": {
+    "numberOfRepeatsAllowed": 1,
+    "quantity": {
+      "value": 480,
+      "unit": "mL",
+      "system": "http://unitsofmeasure.org",
+      "code": "mL"
     },
-    "reasonCode": [
+    "expectedSupplyDuration": {
+      "value": 30,
+      "unit": "days",
+      "system": "http://unitsofmeasure.org",
+      "code": "d"
+    }
+  },
+  "reasonCode": [
+    {
+      "coding": [
         {
-            "coding": [
-                {
-                    "system": "http://snomed.info/sct",
-                    "code": "51868009",
-                    "display": "Ulcer of duodenum (disorder)",
-                    "version": "http://snomed.info/sct/731000124108"
-                }
-            ],
-            "text": "Active Duodenal Ulcer"
+          "system": "http://snomed.info/sct",
+          "code": "51868009",
+          "display": "Ulcer of duodenum (disorder)",
+          "version": "http://snomed.info/sct/731000124108"
         }
-    ]
+      ],
+      "text": "Active Duodenal Ulcer"
+    }
+  ]
 }

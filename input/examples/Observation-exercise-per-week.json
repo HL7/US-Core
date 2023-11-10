@@ -1,69 +1,69 @@
 {
-    "resourceType": "Observation",
-    "id": "exercise-per-week",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Exercise Per Week Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a days exercise per week example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Simple Observations."
-            }
-        ]
-    },
-    "status": "final",
-    "category": [
-        {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "code": "social-history",
-                    "display": "Social History"
-                }
-            ],
-            "text": "Social History"
-        },
-        {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "code": "activity",
-                    "display": "Activity"
-                }
-            ],
-            "text": "Physical Activity"
-        }
+  "resourceType": "Observation",
+  "id": "exercise-per-week",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|7.0.0-ballot"
     ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://loinc.org",
-                "code": "89555-7",
-                "display": "How many days per week did you engage in moderate to strenuous physical activity in the last 30 days"
-            }
-        ],
-        "text": "Exercise Days Per Week"
-    },
-    "subject": {
-        "display": "Amy Shaw",
-        "reference": "Patient/example"
-    },
-    "effectiveDateTime": "2023-08-03",
-    "performer": [
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Exercise Per Week Example"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is a days exercise per week example for the *Simple Observation Profile*.  It is based on the on US Core [Screening and Assessments](http://hl7.org/fhir/us/core/screening-and-assessments.html) guidance using Simple Observations."
+      }
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
         {
-            "display": "Amy Shaw",
-            "reference": "Patient/example"
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "social-history",
+          "display": "Social History"
         }
-    ],
-    "valueQuantity": {
-        "value": 3,
-        "unit": "days per week",
-        "system": "http://unitsofmeasure.org",
-        "code": "d/wk"
+      ],
+      "text": "Social History"
+    },
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "activity",
+          "display": "Activity"
+        }
+      ],
+      "text": "Physical Activity"
     }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "89555-7",
+        "display": "How many days per week did you engage in moderate to strenuous physical activity in the last 30 days"
+      }
+    ],
+    "text": "Exercise Days Per Week"
+  },
+  "subject": {
+    "display": "Amy Shaw",
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2023-08-03",
+  "performer": [
+    {
+      "display": "Amy Shaw",
+      "reference": "Patient/example"
+    }
+  ],
+  "valueQuantity": {
+    "value": 3,
+    "unit": "days per week",
+    "system": "http://unitsofmeasure.org",
+    "code": "d/wk"
+  }
 }

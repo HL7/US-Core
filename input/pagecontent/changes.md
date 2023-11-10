@@ -114,7 +114,7 @@ This ballot addresses the following:
    - [Here](uscdi.html)
    - [Here](CapabilityStatement-us-core-server.html#summary-of-additional-uscdi-requirement-references)
 37. **Resolved-Change Required:**  Change ASKU in value set to asked-declined [FHIR-41571](https://jira.hl7.org/browse/FHIR-41571) [See Changes Here](#.html)
-38. **Resolved-Change Required:**  update canonical urls in examples and capability statements to include the version [FHIR-41256](https://jira.hl7.org/browse/FHIR-41256) [See Changes Here](#.html)
+38. **QA:**  update canonical urls in examples and capability statements to include the version [FHIR-41256](https://jira.hl7.org/browse/FHIR-41256) [See Changes Here](AllergyIntolerance-example.html) and [Here](CapabilityStatement-us-core-server.json.html)
 39. **PUBLISHING Resolved-Change Required:**  Condition profile descriptions are not appearing in IG Detailed Description Snapshot View (other places) [FHIR-40813](https://jira.hl7.org/browse/FHIR-40813) [See Changes Here](#.html)
 40. **QA:**  Add Preferred Language guidance [FHIR-40773](https://jira.hl7.org/browse/FHIR-40773) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
 41. **QA:**  Update UCUM guidance [FHIR-40604](https://jira.hl7.org/browse/FHIR-40604) [See Changes Here](general-guidance.html#using-ucum-codes-in-the-quantity-datatype)
