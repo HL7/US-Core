@@ -1,13 +1,9 @@
 == Suppressed Messages ==
 
 # ==============================================================
-# === 3 ERRORS Discussed on FMG IG review and variance granted ===
+# ===  2 ERRORS Discussed on FMG IG review and variance granted ===
 # ==============================================================
 
-
-# ==== These are is known issues with the terminology service - there is no timeline for their resolution ===
-
-ERROR: ValueSet.where(id = 'simple-language'): Error from server: Language valuesets cannot be expanded as they are based on a grammar
 
 
 # === Added this STU NOTE: This profile is technically non-conformant with the base FHIR ver 4.0.1 vitals profile which defines a required binding that excludes the concept for L/min for Observation.component.value(x). This is a known issue in and it means validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile. A change request to correct this has been applied to the base FHIR ver 4.3.0 (“Release 4B”)===
@@ -95,12 +91,30 @@ This element does not match any known slice defined in the profile http://hl7.or
 None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
 
 
-# === Examples demonstrate use of additional Codes or Identifiers not defined in US Core profiles (7)===
+# === These Examples demonstrate use of additional Codes or Identifiers not defined in US Core profiles (7)===
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|7.0.0-ballot
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0-ballot
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0-ballot
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|7.0.0-ballot
+INFORMATION: Observation/length: Observation.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bodyheight|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/satO2-fiO2: Observation.code.coding[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/oxygensat|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+
+
+# === This Examples conform to US Core Average Blood Pressure Profile. It defines additional slices (translations) to the FHIR BP profile for the code and component codes and will not match FHIR BP profile and vice versa ===
+
+INFORMATION: Observation/average-blood-pressure: Observation.code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/average-blood-pressure: Observation.component[0].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/average-blood-pressure: Observation.component[1].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/average-blood-pressure: Observation.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/average-blood-pressure: Observation.component[0].code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Observation/average-blood-pressure: Observation.component[1].code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# === This Examples conform to the US Core Pulse Oximetry Profile. It defines additional slices (translations) to the FHIR Oxygen Saturation profile for the code and component codes and will not match the FHIR Oxygen Saturation profile slices===
+
+INFORMATION: Observation/satO2-fiO2: Observation.code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/oxygensat|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+
 
 
 # === Examples provided in Bundle (e.g. PractitionerRole_Practitioner_Endpoint_Bundle_Example, Allergyintolerance Provenance Example) (2)===
@@ -138,10 +152,6 @@ INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReferenc
 INFORMATION: DocumentReference/episode-summary: DocumentReference.content[0].format: The code 'urn:hl7-org:sdwg:ccda-structuredBody:2.1' is valid but is deprecated
 INFORMATION: Organization/saint-luke-w-endpoint: Organization.contained[0]/*Endpoint/75*/.payloadType[0].coding[0]: The code 'urn:hl7-org:sdwg:ccda-structuredBody:1.1' is valid but is deprecated
 INFORMATION: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/.content[0].format: The Coding provided (http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-structuredBody:2.1) is not in the value set 'DocumentReference Format Code Set' (http://hl7.org/fhir/ValueSet/formatcodes|4.0.1), and a code is recommended to come from this value set.  (error message = The provided code 'http://ihe.net/fhir/ihe.formatcode.fhir/CodeSystem/formatcode#urn:hl7-org:sdwg:ccda-structuredBody:2.1: 'For documents following C-CDA 2.1 constraints using a structured body.'' is not in the value set 'http://hl7.org/fhir/ValueSet/formatcodes|4.0.1')
-
-# === The following Warning is understood and the extension reviewed - its intent is to be used on elements that are jurisdictional requirement which could be potentially any element ===
-
-WARNING: StructureDefinition/us-core-jurisdiction: StructureDefinition.context[0]: Review the extension type: extensions should not have a context of Element unless it's really intended that they can be used anywhere
 
 # === Using the extension US Core Extension Questionnaire URI  pointing to a pdf form of the Questionnaire for this example ===
 
@@ -233,7 +243,3 @@ WARNING: Bundle/docref-example-2: Bundle.entry[2].resource/*DocumentReference/di
 WARNING: DocumentReference/discharge-summary: DocumentReference: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 WARNING: Patient/example-targeted-provenance: Patient: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 WARNING: Provenance/example-targeted-provenance: Provenance: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-
-# ==== This is  a known issues with the R4-R5 invariant vs-1 - see this Zulip: https://chat.fhir.org/#narrow/stream/179266-fhirpath/topic/missed.20this.20in.20R5.3F.20vitals.20profile.3F) and FHIR Core tracker FHIR-41669 ===
-
-ERROR: Observation/average-blood-pressure: Observation.effective.ofType(Period): Rule vs-1: 'if Observation.effective[x] is dateTime and has a value then that value shall be precise to the day' Failed (defined in http://hl7.org/fhir/StructureDefinition/vitalsigns)s

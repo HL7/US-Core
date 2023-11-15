@@ -17,7 +17,7 @@ fhirVersion: 4.0.1
 kind: resource
 abstract: false
 type: Observation
-baseDefinition: http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs
+baseDefinition: http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure
 derivation: constraint
 differential:
   element:
@@ -26,16 +26,41 @@ differential:
     short: US Core Average Blood Pressure Profile
     definition: \-
     comment: \-
+
+
+
   - id: Observation.code
     path: Observation.code
     short: Average Blood Pressure
-    type:
-    - code: CodeableConcept
-    patternCodeableConcept:
-      coding:
-      - system: http://loinc.org
-        code: 96607-7
+    comment: >-
+      The code (96607-7 Blood pressure panel mean systolic and mean diastolic)
+      is added as a translation to the US Core vital Blood Pressure code
+      (85354-9 Blood Blood pressure panel with all children optional).
     mustSupport: true
+
+  - id: Observation.code.coding
+    path: Observation.code.coding
+    slicing:
+      discriminator:
+      - type: pattern
+        path: $this
+      rules: open
+    min: 1
+    mustSupport: true
+
+  - id: Observation.code.coding:uscore-avg-bp
+    path: Observation.code.coding
+    sliceName: uscore-avg-bp
+    min: 1
+    max: '1'
+    type:
+    - code: Coding
+    patternCoding:
+      system: http://loinc.org
+      code: 96607-7
+    mustSupport: true
+
+
   - id: Observation.effective[x]
     path: Observation.effective[x]
     short: clinically relevant time-period for the average of blood pressure (BP)
@@ -49,119 +74,80 @@ differential:
     mustSupport: true
   - id: Observation.component
     path: Observation.component
-    slicing:
-      discriminator:
-      - type: pattern
-        path: code
-      ordered: false
-      rules: open
-    short: Component observations
-    min: 2
-    max: '*'
-    mustSupport: true
+
   - id: Observation.component:systolic
     path: Observation.component
     sliceName: systolic
     short: Average Systolic Blood Pressure
-    min: 1
-    max: '1'
-    mustSupport: true
+
   - id: Observation.component:systolic.code
     path: Observation.component.code
     short: Average Systolic Blood Pressure Code
+    comment: >-
+      The code (96608-5 Systolic blood pressure mean)
+      is added as a translation to the US Core vital Blood Pressure component code
+      (8480-6 Systolic blood pressure).
+
+  - id:  Observation.component:systolic.code.coding
+    path: Observation.component.code.coding
+    slicing:
+      discriminator:
+      - type: pattern
+        path: $this
+      rules: open
     min: 1
-    max: '1'
-    patternCodeableConcept:
-      coding:
-      - system: http://loinc.org
-        code: 96608-5
     mustSupport: true
-  - id: Observation.component:systolic.valueQuantity
-    path: Observation.component.valueQuantity
-    short: Vital Sign Component Value
-    type:
-    - code: Quantity
-    mustSupport: true
-  - id: Observation.component:systolic.valueQuantity.value
-    path: Observation.component.valueQuantity.value
-    min: 1
-    max: '1'
-    type:
-    - code: decimal
-    mustSupport: true
-  - id: Observation.component:systolic.valueQuantity.unit
-    path: Observation.component.valueQuantity.unit
+
+
+  - id:  Observation.component:systolic.code.coding:uscore-avg-systolic-bp
+    path: Observation.component.code.coding
+    sliceName: uscore-avg-systolic-bp
     min: 1
     max: '1'
     type:
-    - code: string
+    - code: Coding
+    patternCoding:
+      system: http://loinc.org
+      code: 96608-5
     mustSupport: true
-  - id: Observation.component:systolic.valueQuantity.system
-    path: Observation.component.valueQuantity.system
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: http://unitsofmeasure.org
-    mustSupport: true
-  - id: Observation.component:systolic.valueQuantity.code
-    path: Observation.component.valueQuantity.code
-    min: 1
-    max: '1'
-    type:
-    - code: code
-    fixedCode: mm[Hg]
-    mustSupport: true
+
+  
+
   - id: Observation.component:diastolic
     path: Observation.component
     sliceName: diastolic
     short: Average Diastolic Blood Pressure
-    min: 1
-    max: '1'
+
     mustSupport: true
   - id: Observation.component:diastolic.code
     path: Observation.component.code
     short: Average Diastolic Blood Pressure Code
+    comment: >-
+      The code (96609-3 Diastolic blood pressure mean)
+      is added as a translation to the US Core vital Blood Pressure component code
+      (8462-4 Diastolic blood pressure).
+
+  - id:  Observation.component:diastolic.code.coding
+    path: Observation.component.code.coding
+    slicing:
+      discriminator:
+      - type: pattern
+        path: $this
+      rules: open
     min: 1
-    max: '1'
-    patternCodeableConcept:
-      coding:
-      - system: http://loinc.org
-        code: 96609-3
     mustSupport: true
-  - id: Observation.component:diastolic.valueQuantity
-    path: Observation.component.valueQuantity
-    short: Vital Sign Component Value
-    type:
-    - code: Quantity
-    mustSupport: true
-  - id: Observation.component:diastolic.valueQuantity.value
-    path: Observation.component.valueQuantity.value
-    min: 1
-    max: '1'
-    type:
-    - code: decimal
-    mustSupport: true
-  - id: Observation.component:diastolic.valueQuantity.unit
-    path: Observation.component.valueQuantity.unit
+
+
+  - id:  Observation.component:diastolic.code.coding:uscore-avg-diastolic-bp
+    path: Observation.component.code.coding
+    sliceName: uscore-avg-diastolic-bp
     min: 1
     max: '1'
     type:
-    - code: string
+    - code: Coding
+    patternCoding:
+      system: http://loinc.org
+      code: 96609-3
     mustSupport: true
-  - id: Observation.component:diastolic.valueQuantity.system
-    path: Observation.component.valueQuantity.system
-    min: 1
-    max: '1'
-    type:
-    - code: uri
-    fixedUri: http://unitsofmeasure.org
-    mustSupport: true
-  - id: Observation.component:diastolic.valueQuantity.code
-    path: Observation.component.valueQuantity.code
-    min: 1
-    max: '1'
-    type:
-    - code: code
-    fixedCode: mm[Hg]
-    mustSupport: true
+
+  

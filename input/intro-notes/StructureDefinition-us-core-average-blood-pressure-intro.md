@@ -9,20 +9,20 @@ The following are example usage scenarios for this profile:
 
 ### Mandatory and Must Support Data Elements
 
-*In addition* to the Mandatory and Must Support data elements in the US Core Vital Signs Profile, the following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and terminology requirements.  {% include diff-display-note.md parent_profile='US Core Vital Signs Profile' %}
+*In addition* to the Mandatory and Must Support data elements in the US Core Blood Pressure Profile, the following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation. Profile specific guidance and examples are provided as well.  The [Formal Views] below provides the  formal summary, definitions, and terminology requirements.  {% include diff-display-note.md parent_profile='US Core Blood Pressure Profile' %}
 
 **Each Observation Must Have:**
 
-1.  a patient
-1.  a fixed code for average systolic and average diastolic blood pressure panel
-2.  a clinically relevant time-period for the average of blood pressure (BP) readings
-3.  a fixed *component* code for average systolic blood pressure
-4.  a fixed *component* code for average diastolic blood pressure
+
+1. a fixed code for average systolic and average diastolic blood pressure panel
+1. a fixed *componen*t code for average systolic blood pressure
+1. a fixed *component* code for average diastolic blood pressure
 
 **Each Observation Must Support:**
 
-1.  a result value for average systolic blood pressure
-2.  a result value for average diastolic blood pressure
+1.  both `dateTime` and `Period` for clinically relevant time-period for the average of blood pressure (BP) readings
+1.  a result value for the average systolic blood pressure
+2.  a result value for the average diastolic blood pressure
 
 **Profile Specific Implementation Guidance:**
 
