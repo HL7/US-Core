@@ -2,16 +2,6 @@
   "resourceType": "Condition",
   "id": "encounter-diagnosis-example2",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "Encounter Diagnosis Example 2"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This example of a US Core Condition Encounter Diagnosis Profile illustrates its use to capture information about a patient's encounter diagnosis."
-      }
-    ],
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis|7.0.0-ballot"
     ]

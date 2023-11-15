@@ -2,16 +2,6 @@
   "resourceType": "QuestionnaireResponse",
   "id": "prapare-example",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "QuestionnaireResponse PRAPARE Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is the QuestionnaireResponse example that is referenced by the *US Core Observation Screening Assessment Profile* PRAPARE examples. This example is generated using the LHC-Forms SDC Questionnaire App."
-      }
-    ],
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|7.0.0-ballot"
     ]

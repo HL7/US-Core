@@ -2,16 +2,6 @@
   "resourceType": "Observation",
   "id": "simple-observation-cognitive-status",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "Simple Observation Cognitive Status Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This *US Core Simple Observation Profile* is a cognitive status determination which is not based on any formal assessment tool or survey. (This example is adapted from the [PACIO Cognitive Status Implementation Guide ver 1.0.0](https://build.fhir.org/ig/HL7/PACIO-CognitiveStatus/).)"
-      }
-    ],
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|7.0.0-ballot"
     ]

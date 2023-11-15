@@ -2,16 +2,6 @@
   "resourceType": "Observation",
   "id": "simple-observation-disability-status",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "Simple Observation Disability Status Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This *US Core Simple Observation Profile* is a degree of depression severity determination which is based on the results of a PHQ-9 (Patient Health Questionnaire-9) screening."
-      }
-    ],
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation|7.0.0-ballot"
     ]

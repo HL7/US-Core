@@ -2,16 +2,6 @@
   "resourceType": "QuestionnaireResponse",
   "id": "hunger-vital-sign-example",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "QuestionnaireResponse Hunger Vital Sign [HVS] Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "An example of a US Core QuestionnaireResponse that represents questions and selected answers from the Hunger Vital Sign Example questionnaire defined in LOINC (code 88122-7). This example is generated using the LHC-Forms SDC Questionnaire App."
-      }
-    ],
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|7.0.0-ballot"
     ]

@@ -2,16 +2,6 @@
   "resourceType": "Observation",
   "id": "q-t-interval-ekg-lead",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-        "valueString": "Q-T interval {EKG lead} Example"
-      },
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-        "valueMarkdown": "This is a Q-T interval {EKG lead} Example for the *Clinical Test Result Observation Profile*."
-      }
-    ],
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|7.0.0-ballot"
     ]
