@@ -111,11 +111,10 @@ INFORMATION: Observation/average-blood-pressure: Observation.code.coding[0]: Thi
 INFORMATION: Observation/average-blood-pressure: Observation.component[0].code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Observation/average-blood-pressure: Observation.component[1].code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# === This Examples conform to the US Core Pulse Oximetry Profile. It defines additional slices (translations) to the FHIR Oxygen Saturation profile for the code and component codes and will not match the FHIR Oxygen Saturation profile slices===
+# === These Examples conform to the US Core Pulse Oximetry Profile. It defines additional slices (translations) to the FHIR Oxygen Saturation profile for the code and component codes and will not match the FHIR Oxygen Saturation profile slices===
 
 INFORMATION: Observation/satO2-fiO2: Observation.code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/oxygensat|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
-
-
+INFORMATION: Observation/oxygen-saturation: Observation.code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/oxygensat|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # === Examples provided in Bundle (e.g. PractitionerRole_Practitioner_Endpoint_Bundle_Example, Allergyintolerance Provenance Example) (2)===
 
