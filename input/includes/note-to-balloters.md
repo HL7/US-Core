@@ -23,7 +23,7 @@ This ballot addresses the following:
     - the [US Core DiagnosticReport Profile for Report and Note Exchange] already supports `DiagnosticReport.performed[x]` as a *Must Support* element.
     - the [US Core Immunization Profile] already supports `Immunization.occurrence[x]` as a *Must Support* element.
   
-  - For the USCDI Average Blood Pressure data class, the new [US Core Average Blood Pressure Profile] has been added to US Core. It uses the [Vital Signs with Qualifying Elements: Average Blood Pressure Profile] as a blueprint.
+  - For the USCDI Average Blood Pressure data class, the new [US Core Average Blood Pressure Profile] has been added to US Core. It is based on the [US Core Blood Pressure Profile] and uses the [Vital Signs with Qualifying Elements: Average Blood Pressure Profile] as a blueprint.
   
   - For the USCDI Medications data class and elements, the [US Core MedicationRequest Profile] already supports Medication Instructions and has been updated to support Medication Adherence as an *Additional USCDI Requirement* using the new [US Core Medication Adherence Extension].
 

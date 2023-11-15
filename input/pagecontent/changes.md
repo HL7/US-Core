@@ -25,7 +25,7 @@ This ballot addresses the following:
     - the [US Core DiagnosticReport Profile for Report and Note Exchange] already supports `DiagnosticReport.performed[x]` as a *Must Support* element.
     - the [US Core Immunization Profile] already supports `Immunization.occurrence[x]` as a *Must Support* element.
   
-  - For the USCDI Average Blood Pressure data class, the new [US Core Average Blood Pressure Profile] has been added to US Core. It uses the [Vital Signs with Qualifying Elements: Average Blood Pressure Profile] as a blueprint.
+  - For the USCDI Average Blood Pressure data class, the new [US Core Average Blood Pressure Profile] has been added to US Core. It is based on the [US Core Blood Pressure Profile] and uses the [Vital Signs with Qualifying Elements: Average Blood Pressure Profile] as a blueprint.
   
   - For the USCDI Medications data class and elements, the [US Core MedicationRequest Profile] already supports Medication Instructions and has been updated to support Medication Adherence as an *Additional USCDI Requirement* using the new [US Core Medication Adherence Extension].
 
@@ -62,6 +62,7 @@ This ballot addresses the following:
 - Implementers submitted over 60 trackers since the publication of US Core ver 6.0.0 and 6.1.0 We have addressed them and applied over 50 changes listed below:
 
  **Tracker Status**: **Summary** **Jira Issue** **Link to Updated Content**
+ 1. **QA:**  Update Smoking Status status element's short description to reflect the status values [FHIR-43118](https://jira.hl7.org/browse/FHIR-43118) [See Changes Here](StructureDefinition-us-core-smokingstatus.html#profile)
 1. **QA:** Correct invalid invariants us-core-3 and us-core-4 [FHIR-41523](https://jira.hl7.org/browse/FHIR-41523) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html) and [Here](StructureDefinition-us-core-smokingstatus.html)
 2. **QA:** Correct invalid invariants pd-1 and us-core-13 [FHIR-41586](https://jira.hl7.org/browse/FHIR-41586) [See Changes Here](StructureDefinition-us-core-practitionerrole.html)
 3. **QA:** Correct invalid invariant us-core-1 [FHIR-41670](https://jira.hl7.org/browse/FHIR-41670) [See Changes Here](StructureDefinition-us-core-observation-screening-assessment.html) and [Here](StructureDefinition-us-core-observation-clinical-result.html)
@@ -81,7 +82,7 @@ This ballot addresses the following:
 11. **QA:**  Fix Typo: Change ServiceRequest.reasonReference to Observation.derivedFrom [FHIR-43045](https://jira.hl7.org/browse/FHIR-43045) [See Changes Here](StructureDefinition-us-core-simple-observation.html#mandatory-and-must-support-data-elements)
 12. **Resolved-Change Required:**  Add link in history page to approved patches [FHIR-42950](https://jira.hl7.org/browse/FHIR-42950) [See Changes Here](https://hl7.org/fhir/us/core/history.html)
 13. **QA:**  Clarify CareTeam Profile Specific Implementation Guidance [FHIR-42905](https://jira.hl7.org/browse/FHIR-42905) [See Changes Here](StructureDefinition-us-core-careteam.html#mandatory-and-must-support-data-elements)
-14. **Pre-Applied:** Medication Adherence Scope Clarification [FHIR-42845](https://jira.hl7.org/browse/FHIR-42845) [See Changes Here](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements) and [Here](StructureDefinition-us-core-medication-adherence.html)
+14. **QA:** Medication Adherence Scope Clarification [FHIR-42845](https://jira.hl7.org/browse/FHIR-42845) [See Changes Here](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements) and [Here](StructureDefinition-us-core-medication-adherence.html)
 15. **QA:** Update profile + interaction requirements [FHIR-42789](https://jira.hl7.org/browse/FHIR-42789) and [FHIR-42847](https://jira.hl7.org/browse/FHIR-42847) [See Changes Here](general-requirements.html#conforming-to-us-core)
 16. **QA:** Correct description of Occupation Profile [FHIR-42867](https://jira.hl7.org/browse/FHIR-42867) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
 17. **QA:** Move the SMART scopes guidance from Future of US Core to a Conformance Page [FHIR-42864](https://jira.hl7.org/browse/FHIR-42864) [See Changes Here](scopes.html) and [Here](StructureDefinition-us-core-allergyintolerance.html#mandatory-search-parameters) 
