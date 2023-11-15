@@ -101,7 +101,7 @@ This ballot addresses the following:
    -  [Here](Procedure-defib-implant.html)
    -  [Here](uscdi.html)
 28. **QA:**  USCDI - FHIR US Core Relationship Clarification [FHIR-42130](https://jira.hl7.org/browse/FHIR-42130) [See Changes Here](uscdi.html)
-29. **QA:**  Typo [FHIR-42069](https://jira.hl7.org/browse/FHIR-42069) [See Changes Here]((StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)
+29. **QA:**  Typo [FHIR-42069](https://jira.hl7.org/browse/FHIR-42069) [See Changes Here](StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)
 30. **QA:**  Clarify when to include multiple attachments as part of a clinical note [FHIR-41902](https://jira.hl7.org/browse/FHIR-41902) [See Changes Here](StructureDefinition-us-core-documentreference.html)
 31. **QA:**  Limit context for jurisdiction extension [FHIR-41867](https://jira.hl7.org/browse/FHIR-41867) [See Changes Here](StructureDefinition-us-core-jurisdiction.html)
 32. **PUBLISHING Resolved-Change Required:**  Excel downloads missing header row [FHIR-41709](https://jira.hl7.org/browse/FHIR-41709) [See Changes Here](#.html)
