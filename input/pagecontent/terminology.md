@@ -19,7 +19,7 @@ Most value sets used in this guide are defined in the base FHIR specification, [
 
 #### Value Sets Used in US Core
 
-The following table lists all the Value sets used in US Core and where they can be found. This information is also available as a [csv](output/tables/valueset-ref-all-list.csv) or [excel](output/tables/valueset-ref-all-list.xlsx) file. 
+The following table lists all the Value sets used in US Core and where they can be found. This information is also available as a [csv](tables/valueset-ref-all-list.csv) or [excel](tables/valueset-ref-all-list.xlsx) file. 
 
 {% include valueset-ref-all-table-generator.html %}
 
@@ -56,7 +56,7 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 
 #### Code System Used in US Core
 
-The following table lists all the CodeSystems used in US Core and where they can be found. This information is also available as a [csv](output/tables/codesystem-ref-all-list.csv) or [excel](output/tables/codesystem-ref-all-list.xlsx) file. 
+The following table lists all the CodeSystems used in US Core and where they can be found. This information is also available as a [csv](tables/codesystem-ref-all-list.csv) or [excel](tables/codesystem-ref-all-list.xlsx) file. 
 
 {% include codesystem-ref-all-table-generator.html %}
 

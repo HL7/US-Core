@@ -36,9 +36,9 @@ entry:
     - reference: Location/hl7east
       display: Health Level Seven International
     endpoint:
-    - reference: http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71
+    - reference: http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/71
       display: Westwood Physicians Organization ADT
-    - reference: http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71
+    - reference: http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/71
       display: Brenda.Jennings.Richard.MD@direct.example.org
   search:
     mode: match
@@ -104,7 +104,7 @@ entry:
         display: Michigan Department of Licensing and Regulatory Affairs
   search:
     mode: include
-- fullUrl: http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/Endpoint-71
+- fullUrl: http://52.90.126.238:8080/fhir/baseDstu3/Endpoint/71
   resource:
     resourceType: Endpoint
     id: '71'
