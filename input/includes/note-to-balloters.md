@@ -54,7 +54,7 @@ This ballot addresses the following:
   
 - FHIR Write: Add Argonaut Write Guidance for Vital Sign Observations to Record or Update Data section on the Future of US Core Page. [See Changes Here](future-of-US-core.html#record-or-update-data) and [Here](fhir-write.html)
 
-- Based on the feedback from the US Core variance request process, we updated several profiles to permit implementers can references to other `subject` entities as defined in the base standard.  This is in addition to the Must Support reference to US Core Patient. For an example of this change [Here](https://build.fhir.org/ig/HL7/US-Core/StructureDefinition-us-core-observation-clinical-result.html#profile))
+- Based on the feedback from the US Core variance request process, we updated several profiles to permit implementers can references to other `subject` entities as defined in the base standard.  This is in addition to the Must Support reference to US Core Patient. We are interested in comments on what the impact on client applications will be. For an example of this change [Here](StructureDefinition-us-core-observation-clinical-result.html#profile))
   
 - Implementers submitted over 60 trackers since the publication of US Core ver 6.1.0. We have addressed them and applied over 50 changes. See the [change log] for detailed list of change and where applied.
   

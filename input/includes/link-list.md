@@ -417,3 +417,7 @@
 [USCDI ONDEC process]: https://www.healthit.gov/isa/ONDEC
 [principle of least privilege]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
 [Project US@ Technical Specification for Patient Addresses Final Version 1.0]: https://asapnet.org/wp-content/uploads/2022/03/Project_US_FINAL_Technical_Specification_Version_1.0.pdf
+[Physical Activity Implementation Guide]: https://hl7.org/fhir/us/physical-activity/
+[American Heart Association]: http://heart.org/
+[Physical Activity Alliance]: http://paamovewithus.org/
+[extension]: {{site.data.fhir.path}}extensibility.html

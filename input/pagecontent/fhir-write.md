@@ -58,6 +58,14 @@ Workflow for submitted Observations is the responsibility of the receiving syste
 - Client - When writing patient-mediated data into the server, provider-facing apps SHALL include a `Meta.tag` with a system of `http://hl7.org/fhir/us/core/CodeSystem/us-core-tags` and a value of `patient-supplied` to indicate that the data was supplied by a patient or patient designee (such as a parent or spouse) rather than by a healthcare provider.
 - Server - Systems SHALL associate the `patient-supplied` tag with vital signs provided by a patient written through this API, and MAY associate the tag with vital signs supplied by a patient regardless of how they arrive in the system. Provider-facing apps writing data supplied by a patient SHALL include this tag in the Observation resources being submitted. The server MAY subsequently dissociate the tag from the data through an explicit reconciliation process.
 
+<div class="note-to-balloters" markdown="1">
+An alternate way to tag any patient generated data would be to use the  code "PATAST" in the `meta.security` element of the resource:
+
+  > PATAST | patient asserted: Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability. was asserted by a patient.)
+  
+We are seeking feedback from the community on whether this more compact approach from the FHIR standard could be adopted and supported.
+</div><!-- note-to-balloters --> 
+
 `encounter` 
 - Client - If populating this element, apps SHALL use a reference to an Encounter resource in the server, and MAY use the value returned by the `launch/encounter` SMART scope. 
 - Server - Systems SHOULD document whether the `encounter` element is required to create a vital sign. When not required, servers MAY determine this value based on context if it is omitted.

@@ -145,7 +145,7 @@ The US Core Observation Screening Assessment Profile, SDC Base Questionnaire, an
 
 ##### USCDI Health Assessments Data Element ValueSets
 
-The table below lists the USCDI Health Assessments Data Elements and the associated value sets for each USCDI Data Element.  This table and guidance intend to promote interoperability by introducing domain-specific value sets as "starter sets" that implementers **SHOULD** use. Implementers **SHALL?/SHOULD?** treat them as having an [extensible] binding to the corresponding US Core Profile. For example, the *Functional Status Clinician Interpretation ValueSet* is **extensibly** bound to the US Core Simple Observation Profile for clinical judgment observations when communicating Functional Status Observations.  However, the value sets in this table are not formally bound to a US Core Profile in the StructureDefinitions, and "automatic" validation (confirmation) that a code is a member of a value set will not occur using the standard validation tools.
+The table below lists the USCDI Health Assessments Data Elements and the associated value sets for each USCDI Data Element.  This table and guidance intend to promote interoperability by introducing domain-specific value sets as "starter sets" that implementers **SHOULD** use. Implementers **SHOULD** treat them as having an [extensible] binding to the corresponding US Core Profile. For example, the *Functional Status Clinician Interpretation ValueSet* is **extensibly** bound to the US Core Simple Observation Profile for clinical judgment observations when communicating Functional Status Observations.  However, the value sets in this table are not formally bound to a US Core Profile in the StructureDefinitions, and "automatic" validation (confirmation) that a code is a member of a value set will not occur using the standard validation tools.
 
 {% include assessment-valueset-table-generator.html %}
 
@@ -157,7 +157,13 @@ The Gravity project created several value sets for the USCDI Health Assessments 
 
 {% include gravity-valueset-list-generator.html %}
 
+##### Physical Activity ValueSet
+
+The physical activity codes are taken from the [Physical Activity Implementation Guide], sponsored by the [American Heart Association] and the [Physical Activity Alliance]. In addition to contributing to the terminology for the USCDI Health Assessments Physical Activity Data Element, the guide documents a standardized way of measuring and sharing a patient's physical activity.
+
 </div><!-- new-content -->
+
+
 
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
 
