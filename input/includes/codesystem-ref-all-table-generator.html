@@ -19,9 +19,11 @@ Code System Sources:
 - [SNOMED](http://snomed.info/sct)
 - [LOINC](http://loinc.org)
 - [UCUM](http://unitsofmeasure.org)
+- [CDC](https://www.cdc.gov/index.htm)
 - Code systems published by other standards organizations
 
 {% assign rows = site.data.codesystem-ref-all-list | sort: "Title" %}
+{% assign bad-THO-list = "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category, http://terminology.hl7.org/CodeSystem/medicationdispense-status, http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason" | split: ", " %}
 {% for item in rows %}
 {% assign cs_link = item.URL %}
 {% assign no_link = false %}
@@ -39,16 +41,27 @@ Code System Sources:
 </thead>
 <tbody>
 {% endif %} 
+
 {% if item.URL contains 'http://hl7.org/fhir/us/core/CodeSystem/' %}
 {% assign source = "US CORE" %}<!-- US Core -->
 {% assign stem_URL = item.URL | split: 'CodeSystem/' | last %}
 {% assign cs_link = "CodeSystem-" | append: stem_URL | append: '.html' %}
+{% elsif bad-THO-list contains item.URL %}
+{% assign source = "THO" %} <!-- THO-->
+{% assign no_link = true %}
 {% elsif item.URL contains 'http://terminology.hl7.org/CodeSystem/' %}
 {% assign source = "THO" %} <!-- THO-->
+{% elsif item.URL contains 'http://hl7.org/fhir/sid/icd-10-cm' %}
+{% assign source = "CDC" %}
+{% assign cs_link = 'https://www.cdc.gov/nchs/icd/icd-10-cm.htm' %}
+{% elsif item.URL contains 'http://hl7.org/fhir/sid/cvx' %}
+{% assign source = "CDC" %}
+{% assign cs_link = 'https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx' %}
 {% elsif item.URL contains 'http://hl7.org/fhir/CodeSystem' %}
 {% assign source = "FHIR" %} <!-- fhir -->
-{% assign stem_URL = item.URL | split: 'CodeSystem/' | last %}
-{% assign cs_link = site.data.fhir.path | append: "codesystem-" | append: stem_URL | append: '.html' %}
+{% assign stem_URL = item.URL | split: 'CodeSystem/' | last  %}
+{% assign cs_link = site.data.fhir.path | append: "codesystem-" | append: stem_URL | append: '.html' | replace: '/R4/codesystem-fhir-types.html', '/codesystem-fhir-types.html' %}
+{% assign cs_link = cs_link | replace: '/R4/codesystem-fhir-types.html', '/codesystem-fhir-types.html' %} <!-- fix bad link -->
 {% elsif item.URL contains 'http://hl7.org/fhir/' %}
 {% assign source = "FHIR" %} <!-- fhir -->
 {% assign stem_URL = item.URL | split: 'fhir/' | last %}
@@ -63,9 +76,9 @@ Code System Sources:
 {% assign source = "UCUM" %}
 {% elsif item.URL contains 'http://loinc.org' %}
 {% assign source = "LOINC" %}
-{% elsif item.URL contains "urn" %}
-{% assign no_link = true %} <!-- no link e.g urn or OID -->
-{% else %} <!-- rest e.g. UCUM , SNOMED, LOiNC-->
+{% elsif item.URL contains 'urn' %} <!-- rest with no link e.g urn or OID -->
+{% assign no_link = true %}
+{% else %} <!--  Other sources - us URL as link -->
 {% endif %}
 <tr>
 <td>{{forloop.index}}</td>
@@ -80,5 +93,7 @@ Code System Sources:
 {% endif %}
 
 {% endfor %}
+
+http://hl7.org/fhir/R4/codesystem-fhir-types.html
 
 

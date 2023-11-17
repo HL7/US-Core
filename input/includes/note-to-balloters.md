@@ -42,7 +42,8 @@ This ballot addresses the following:
 
 
 - We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] where applicable and, as a result, align terminology between US Core and [HL7 C-CDA]. The Following Valuesets have been moved:
-  - todo...
+
+  {% include img-small.html img="todo.png" %}
 
 - Added Procedure.reasonCode and Procedure.reasonReference as *Additional USCDI Requirements* to meet the USCDI Data Element,Reason for Referral when a ServiceRequest is not used to request a procedure. See these changes: 
    - [Here](StructureDefinition-us-core-procedure.html)
