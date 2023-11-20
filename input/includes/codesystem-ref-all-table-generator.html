@@ -60,12 +60,13 @@ Code System Sources:
 {% elsif item.URL contains 'http://hl7.org/fhir/CodeSystem' %}
 {% assign source = "FHIR" %} <!-- fhir -->
 {% assign stem_URL = item.URL | split: 'CodeSystem/' | last  %}
-{% assign cs_link = site.data.fhir.path | append: "codesystem-" | append: stem_URL | append: '.html' | replace: '/R4/codesystem-fhir-types.html', '/codesystem-fhir-types.html' %}
-{% assign cs_link = cs_link | replace: '/R4/codesystem-fhir-types.html', '/codesystem-fhir-types.html' %} <!-- fix bad link -->
+{% assign cs_link = site.data.fhir.path | append: "codesystem-" | append: stem_URL | append: '.html' %}
 {% elsif item.URL contains 'http://hl7.org/fhir/' %}
 {% assign source = "FHIR" %} <!-- fhir -->
 {% assign stem_URL = item.URL | split: 'fhir/' | last %}
 {% assign cs_link = site.data.fhir.path | append: "codesystem-" | append: stem_URL | append: '.html' %}
+{% assign cs_link = cs_link | replace: '/R4/codesystem-fhir-types.html', '/codesystem-fhir-types.html' %}
+<!-- fix bad link -->
 {% elsif item.URL contains 'http://cts.nlm.nih.gov/fhir/' %}
 {% assign source = "VSAC" %}
 {% elsif item.URL contains 'http://phinvads.cdc.gov/fhir/' %}

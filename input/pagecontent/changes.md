@@ -45,7 +45,7 @@ This ballot addresses the following:
 
 - We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] where applicable and, as a result, align terminology between US Core and [HL7 C-CDA]. The Following Valuesets have been moved:
   
-  {% include img-small.html img="todo.png" %}
+  {% include img-small.html img="todo.png" %}s
 
 - Added Procedure.reasonCode and Procedure.reasonReference as *Additional USCDI Requirements* to meet the USCDI Data Element,Reason for Referral when a ServiceRequest is not used to request a procedure. See these changes: 
    - [Here](StructureDefinition-us-core-procedure.html)
@@ -72,7 +72,7 @@ This ballot addresses the following:
 7. **QA:**  Update introduction to USCDI table[FHIR-42801](https://jira.hl7.org/browse/FHIR-42801) [See Changes Here](uscdi.html)
 8. **QA:** Fix us-core-5 invariant [FHIR-42814](https://jira.hl7.org/browse/FHIR-42814) [See Changes Here](StructureDefinition-us-core-immunization.html#constraints)
 9.  **QA:**  Update guidance on referencing PractitionerRole [FHIR-42906](https://jira.hl7.org/browse/FHIR-42906) [See Changes Here](CapabilityStatement-us-core-server.html#practitionerrole) and [Here](StructureDefinition-us-core-practitionerrole.html#mandatory-and-must-support-data-elements)
-10. **Pre-Applied:** Add Project US@ Requirements [FHIR-43025](https://jira.hl7.org/browse/FHIR-43025) See Changes:
+10. **QA:** Add Project US@ Requirements [FHIR-43025](https://jira.hl7.org/browse/FHIR-43025) See Changes:
     -  [Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
     -  [Here](Patient-example.html)
     -  [Here](StructureDefinition-us-core-relatedperson.html#mandatory-and-must-support-data-elements)
@@ -104,7 +104,6 @@ This ballot addresses the following:
 29. **QA:** Typo [FHIR-42069](https://jira.hl7.org/browse/FHIR-42069) [See Changes Here](StructureDefinition-us-core-blood-pressure.html#mandatory-and-must-support-data-elements)
 30. **QA:**  Clarify when to include multiple attachments as part of a clinical note [FHIR-41902](https://jira.hl7.org/browse/FHIR-41902) [See Changes Here](StructureDefinition-us-core-documentreference.html)
 31. **QA:**  Limit context for jurisdiction extension [FHIR-41867](https://jira.hl7.org/browse/FHIR-41867) [See Changes Here](StructureDefinition-us-core-jurisdiction.html)
-32. **PUBLISHING Resolved-Change Required:**  Excel downloads missing header row [FHIR-41709](https://jira.hl7.org/browse/FHIR-41709) [See Changes Here](#.html)
 33. **QA:**  Add VSAC Value Sets to Terminology Page [FHIR-41681](https://jira.hl7.org/browse/FHIR-41681) [See Changes Here](terminology.html)
 34. **QA:**  APGAR should be Apgar [FHIR-41666](https://jira.hl7.org/browse/FHIR-41666) [See Changes Here](screening-and-assessments.html#structured-screening-and-assessments)
 35. **QA:** Correct invalid invariants pd-1 and us-core-13 [FHIR-41586](https://jira.hl7.org/browse/FHIR-41586) [See Changes Here](StructureDefinition-us-core-practitionerrole.html#constraints)
@@ -116,17 +115,20 @@ This ballot addresses the following:
    - [Here](CapabilityStatement-us-core-server.html#summary-of-additional-uscdi-requirement-references)
 37. **Resolved-Change Required:**  Change ASKU in value set to asked-declined [FHIR-41571](https://jira.hl7.org/browse/FHIR-41571) [See Changes Here](#.html)
 38. **QA:**  update canonical urls in examples and capability statements to include the version [FHIR-41256](https://jira.hl7.org/browse/FHIR-41256) [See Changes Here](AllergyIntolerance-example.html) and [Here](CapabilityStatement-us-core-server.json.html)
-39. **PUBLISHING Resolved-Change Required:**  Condition profile descriptions are not appearing in IG Detailed Description Snapshot View (other places) [FHIR-40813](https://jira.hl7.org/browse/FHIR-40813) [See Changes Here](#.html)
 40. **QA:**  Add Preferred Language guidance [FHIR-40773](https://jira.hl7.org/browse/FHIR-40773) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
 41. **QA:**  Update UCUM guidance [FHIR-40604](https://jira.hl7.org/browse/FHIR-40604) [See Changes Here](general-guidance.html#using-ucum-codes-in-the-quantity-datatype)
 42. **QA:**  Added interpretation to laboratory result examples [FHIR-40297](https://jira.hl7.org/browse/FHIR-40297) [See Changes Here](Observation-cbc-mchc.html)
-43. **PUBLISHING Resolved - change required:** RelatedPerson relationshiptype should have binding to FHIR value set RelatedPerson-relationshiptype [FHIR-34755](https://jira.hl7.org/browse/FHIR-34755) [See Changes Here](#.html)
-44. **PUBLISHING Resolved - change required:** AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636) [See Changes Here](#.html)
-45. **PATCH ??? Resolved - change required:** Several Vital Signs missing from CapabilityStatement US Core Server page [FHIR-34478](https://jira.hl7.org/browse/FHIR-34478) [See Changes Here](#.html)
-46. **PUBLISHING Resolved - change required:** Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783) [See Changes Here](#.html)
-47. **PUBLISHING Resolved - change required:** In most of the data elements – “Binding is from base FHIR and US Core Vital Signs”  Need this to be one single combined listing [FHIR-30780](https://jira.hl7.org/browse/FHIR-30780) [See Changes Here](#.html)
-48. **PUBLISHING Resolved - change required:** valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107) [See Changes Here](#.html)
-49. **PUBLISHING Resolved - change required:** Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) [See Changes Here](#.html)
+
+The following trackers have been identified as publishing issues and we will work with HL7 publishing to resolve them.
+
+1. **PUBLISHING**  Excel downloads missing header row [FHIR-41709](https://jira.hl7.org/browse/FHIR-41709) [See Changes Here](#.html)
+2. **PUBLISHING**  Condition profile descriptions are not appearing in IG Detailed Description Snapshot View (other places) [FHIR-40813](https://jira.hl7.org/browse/FHIR-40813) [See Changes Here](#.html)
+3. **PUBLISHING** RelatedPerson relationshiptype should have binding to FHIR value set RelatedPerson-relationshiptype [FHIR-34755](https://jira.hl7.org/browse/FHIR-34755) [See Changes Here](#.html)
+4. **PUBLISHING:** AllergyIntolerance does not show constraint [FHIR-34636](https://jira.hl7.org/browse/FHIR-34636) [See Changes Here](#.html)
+5. **PUBLISHING** Confusing for commercial vendor.  Reads very confusing. [FHIR-30783](https://jira.hl7.org/browse/FHIR-30783) [See Changes Here](#.html)
+6. **PUBLISHING** In most of the data elements – “Binding is from base FHIR and US Core Vital Signs”  Need this to be one single combined listing [FHIR-30780](https://jira.hl7.org/browse/FHIR-30780) [See Changes Here](#.html)
+7. **PUBLISHING** valueset-simple-language.xml QA Error [FHIR-30107](https://jira.hl7.org/browse/FHIR-30107) [See Changes Here](#.html)
+8. **PUBLISHING** Patient Examples QA Errors: CDCREC code system in VSAC [FHIR-30105](https://jira.hl7.org/browse/FHIR-30105) [See Changes Here](#.html)
 
 ### Version = 6.1.0
 - url: <http://hl7.org/fhir/us/core/STU6.1/>
