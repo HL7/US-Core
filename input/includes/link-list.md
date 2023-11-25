@@ -421,3 +421,4 @@
 [American Heart Association]: http://heart.org/
 [Physical Activity Alliance]: http://paamovewithus.org/
 [extension]: {{site.data.fhir.path}}extensibility.html
+[Multiple Chronic Condition (MCC) Care Plan Implementation Guide]: https://hl7.org/fhir/us/mcc/2023Sep/

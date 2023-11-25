@@ -4,12 +4,14 @@
 {% assign rows = site.data.assessments-valuesets %}
 <ul>
 {% for item in rows %}
-{% if item["Gravity"] == "TRUE" %}
+{% unless item["USCDI Data Element"] contains "!" %}
+{% if item["MCC"] == "TRUE" %}
 {% unless forloop.first %}
 <li>
 <a href="{{item["VSAC Link"]}}">{{item["ValueSet Name"]}}</a>
 </li>
 {% endunless %}
 {% endif %}
+{% endunless %}
 {% endfor %}
 </ul>

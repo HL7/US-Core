@@ -145,17 +145,17 @@ The US Core Observation Screening Assessment Profile, SDC Base Questionnaire, an
 
 ##### USCDI Health Assessments Data Element ValueSets
 
-The table below lists the USCDI Health Assessments Data Elements and the associated value sets for each USCDI Data Element.  This table and guidance intend to promote interoperability by introducing domain-specific value sets as "starter sets" that implementers **SHOULD** use. Implementers **SHOULD** treat them as having an [extensible] binding to the corresponding US Core Profile. For example, the *Functional Status Clinician Interpretation ValueSet* is **extensibly** bound to the US Core Simple Observation Profile for clinical judgment observations when communicating Functional Status Observations.  However, the value sets in this table are not formally bound to a US Core Profile in the StructureDefinitions, and "automatic" validation (confirmation) that a code is a member of a value set will not occur using the standard validation tools.
+The table below lists the USCDI Health Assessments Data Elements and the associated value sets in the [Value Set Authority Center (VSAC)] for each USCDI Data Element. This table and guidance intend to promote interoperability by introducing domain-specific value sets as "starter sets" that implementers **SHOULD** treat as having an [extensible] binding to the corresponding US Core Profile. For example, the *Cognitive Function Clinician Interpretation* is **extensibly** bound to the US Core Simple Observation Profile for clinical judgment observations when communicating Cognitive Function Observations.  However, the value sets in this table are not formally bound to a US Core Profile in the StructureDefinitions, and "automatic" validation (confirmation) that a code is a member of a value set will not occur using the standard validation tools.
 
 {% include assessment-valueset-table-generator.html %}
 
 This information is also available as a [csv](tables/assessments-valuesets.csv) or [excel](tables/assessments-valuesets.xlsx) file:
 
-##### Gravity SDOH ValueSets
+##### Additional SDOH value sets
 
-The Gravity project created several value sets for the USCDI Health Assessments Data Element, SDOH, and they are listed below. Implementers **SHOULD** use to them to extend the panel item codes when gaps in the *US Core SDOH Panel Item Codes* concepts are encountered.
+The Gravity project created and maintains the *Social Determinants of Health Screening Assessments And Questions* value set for the SDOH USCDI Health Assessments Data Element listed above. In addition to these concepts, implementers should consider using several SDOH value sets maintained and updated in VSAC by [Multiple Chronic Condition (MCC) Care Plan Implementation Guide] and the HL7 Patent Care work group with support from the National Institute of Health.
 
-{% include gravity-valueset-list-generator.html %}
+{% include mcc-valueset-list-generator.html %}
 
 ##### Physical Activity ValueSet
 
@@ -167,7 +167,7 @@ The physical activity codes are taken from the [Physical Activity Implementation
 
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
 
-US Core uses broadly defined value sets that contain concepts used across use cases, including SDOH. For the SDOH Clinical Care HL7 Implementation Guide, the Gravity Project has defined “Grouped Value Sets” across specific social risk factor domains for problems/health concerns, goals, procedures, and service requests. Value sets for each SDOH domain are bundled together to create the groupings. The links below are to these Gravity Project-managed value sets in [Value Set Authority Center (VSAC)]. In VSAC, clicking “Grouping Members” within the Value Set Details tab will present the many individual value sets in the group representing the various SDOH domains. These grouped value sets are narrower subsets of the value sets allowed in the respective US Core Profiles. However, when recording SDOH data US Core Profiles, servers **SHOULD** use them.
+US Core uses broadly defined value sets that contain concepts used across use cases, including SDOH. For the SDOH Clinical Care HL7 Implementation Guide, the Gravity Project has defined “Grouped Value Sets” across specific social risk factor domains for problems/health concerns, goals, procedures, and service requests. Value sets for each SDOH domain are bundled together to create the groupings. The links below are to these Gravity Project-managed value sets in the [Value Set Authority Center (VSAC)]. In VSAC, clicking “Grouping Members” within the Value Set Details tab will present the many individual value sets in the group representing the various SDOH domains. These grouped value sets are narrower subsets of the value sets allowed in the respective US Core Profiles. However, when recording SDOH data US Core Profiles, servers **SHOULD** use them.
 
 * [Social Determinants of Health Conditions Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.788/expansion)
 * [Social Determinants of Health Procedures Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.789/expansion)

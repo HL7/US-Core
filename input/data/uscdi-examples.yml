@@ -52,10 +52,12 @@ groups:
       - Condition/condition-SDOH-example
       - ServiceRequest/foodpantry-referral
       - Goal/goal-sdoh-2
+
   Functional:
     name: Functional Status
     description: Functional Status Examples
     resources:
+    - Observation/simple-observation-functional-status
 
   Disability:
     name: Disability Status

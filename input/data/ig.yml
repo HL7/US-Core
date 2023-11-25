@@ -1327,6 +1327,12 @@ definition:
     name: Simple Observation Disability Status Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
   - reference:
+      reference: Observation/simple-observation-functional-status
+    description: This *US Core Simple Observation Profile* is a functional status
+      determination which is not based on any formal assessment tool or survey.
+    name: Simple Observation Functional Status Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
+  - reference:
       reference: Observation/simple-observation-sdoh
     description: This *US Core Simple Observation Profile* is a SDOH determination
       which is not based on any formal assessment tool or survey.
