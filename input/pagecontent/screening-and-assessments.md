@@ -153,7 +153,7 @@ This information is also available as a [csv](tables/assessments-valuesets.csv) 
 
 ##### Additional SDOH value sets
 
-The Gravity project created and maintains the *Social Determinants of Health Screening Assessments And Questions* value set for the SDOH USCDI Health Assessments Data Element listed above. In addition to these concepts, implementers should consider using several SDOH value sets maintained and updated in VSAC by [Multiple Chronic Condition (MCC) Care Plan Implementation Guide] and the HL7 Patent Care work group with support from the National Institute of Health.
+The Gravity project created and maintains the *Social Determinants of Health Screening Assessments And Questions* value set listed aboved for the SDOH USCDI Health Assessments Data Element. In addition to these concepts, implementers should consider using several SDOH value sets maintained and updated in VSAC by [Multiple Chronic Condition (MCC) Care Plan Implementation Guide] and the HL7 Patent Care work group with support from the National Institute of Health.
 
 {% include mcc-valueset-list-generator.html %}
 
