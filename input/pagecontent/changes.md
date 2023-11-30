@@ -81,7 +81,7 @@ This ballot addresses the following:
     -  [Here](StructureDefinition-us-core-practitioner.html#mandatory-and-must-support-data-elements)
     -  [Here](StructureDefinition-us-core-location.html#mandatory-and-must-support-data-elements)
 11. **APPLIED:**  Fix Typo: Change ServiceRequest.reasonReference to Observation.derivedFrom [FHIR-43045](https://jira.hl7.org/browse/FHIR-43045) [See Changes Here](StructureDefinition-us-core-simple-observation.html#mandatory-and-must-support-data-elements)
-12. **Resolved-Change Required:**  Add link in history page to approved patches [FHIR-42950](https://jira.hl7.org/browse/FHIR-42950) [See Changes Here](https://hl7.org/fhir/us/core/history.html)
+12. **Applied:**  Add link in history page to approved patches [FHIR-42950](https://jira.hl7.org/browse/FHIR-42950) [See Changes Here](https://hl7.org/fhir/us/core/history.html)
 13. **APPLIED:**  Clarify CareTeam Profile Specific Implementation Guidance [FHIR-42905](https://jira.hl7.org/browse/FHIR-42905) [See Changes Here](StructureDefinition-us-core-careteam.html#mandatory-and-must-support-data-elements)
 14. **APPLIED:** Medication Adherence Scope Clarification [FHIR-42845](https://jira.hl7.org/browse/FHIR-42845) [See Changes Here](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements) and [Here](StructureDefinition-us-core-medication-adherence.html)
 15. **APPLIED:** Update profile + interaction requirements [FHIR-42789](https://jira.hl7.org/browse/FHIR-42789) and [FHIR-42847](https://jira.hl7.org/browse/FHIR-42847) [See Changes Here](general-requirements.html#conforming-to-us-core)
