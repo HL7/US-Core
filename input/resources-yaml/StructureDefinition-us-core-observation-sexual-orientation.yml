@@ -100,6 +100,8 @@ differential:
     definition: The Sexual Orientation value.
     mustSupport: true
     binding:
+      extension:
+      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName
+        valueString: SexualOrientation
       strength: extensible
-      description: Concepts to support who Patient is attracted to
-      valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-sexual-orientation
+      valueSet: http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1240.11

@@ -1,3 +1,8 @@
+##############################################################################
+# mapping of valueset source name to the base_URL and link to a user friendly view.
+# this is used by the `input/includes/valueset-ref-all-table-generator.html`
+# to generate the valueset reference table.
+##############################################################################
 'http://cts.nlm.nih.gov/fhir/':
   - VSAC
   - 'https://vsac.nlm.nih.gov/valueset/{{stem_URL}}/expansion'

@@ -60,7 +60,7 @@ dependsOn:
 - id: vsac
   packageId: us.nlm.vsac
   uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-  version: 0.15.0
+  version: 0.16.0
 - packageId: hl7.fhir.uv.sdc
   version: 3.0.0
   uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
@@ -1463,10 +1463,10 @@ definition:
       this profile sets minimum expectations for the Observation resource to record,
       search, and fetch average diastolic and systolic blood pressure observations
       with standard LOINC codes and UCUM units of measure. It is based on the US Core
-      Average Blood Pressure Profile and identifies which *additional* core elements,
-      extensions, vocabularies, and value sets  **SHALL** be present and constrains
-      the way the elements are used when using the profile.  It provides the floor
-      for standards development for specific use cases.
+      Blood Pressure Profile and identifies which *additional* core elements, extensions,
+      vocabularies, and value sets  **SHALL** be present and constrains the way the
+      elements are used when using the profile.  It provides the floor for standards
+      development for specific use cases.
     exampleBoolean: false
     name: US Core Average Blood Pressure Profile
   - reference:
@@ -2367,12 +2367,6 @@ definition:
       \ include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender))."
     exampleBoolean: false
     name: US Core Sex Extension
-  - reference:
-      reference: ValueSet/us-core-sexual-orientation
-    description: The US Core Sexual Orientation Value Set includes concepts to describe
-      a person's sexual orientation (who they are attracted to).
-    exampleBoolean: false
-    name: US Core Sexual Orientation
   - reference:
       reference: ValueSet/us-core-simple-observation-category
     description: Used to classify the context of a survey, screening or assessment

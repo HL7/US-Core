@@ -71,7 +71,7 @@
       "id": "vsac",
       "packageId": "us.nlm.vsac",
       "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
-      "version": "0.15.0"
+      "version": "0.16.0"
     },
     {
       "packageId": "hl7.fhir.uv.sdc",
@@ -1824,7 +1824,7 @@
         "reference": {
           "reference": "StructureDefinition/us-core-average-blood-pressure"
         },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch average diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It is based on the US Core Average Blood Pressure Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets  **SHALL** be present and constrains the way the elements are used when using the profile.  It provides the floor for standards development for specific use cases.",
+        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch average diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It is based on the US Core Blood Pressure Profile and identifies which *additional* core elements, extensions, vocabularies, and value sets  **SHALL** be present and constrains the way the elements are used when using the profile.  It provides the floor for standards development for specific use cases.",
         "exampleBoolean": false,
         "name": "US Core Average Blood Pressure Profile"
       },
@@ -2491,14 +2491,6 @@
         "description": "The Sex Extension is used to reflect the documentation of a person's sex. Systems choosing to record sources of information should use the [Provenance resource](basic-provenance.html#element-level-provenance).\n \nUSCDI v3 includes a data element for sex, intended to support the exchange of a sex value that is not characterized as sex assigned at birth or birth sex. This Sex extension supports USCDI v3. Sex assigned at birth or birth sex can be recorded using the more specific [US Core Birth Sex Extension](http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex).\nFuture versions of this extension may be informed by the content of the HL7 Cross Paradigm IG: Gender Harmony - Sex and Gender Representation, which may include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender)).",
         "exampleBoolean": false,
         "name": "US Core Sex Extension"
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/us-core-sexual-orientation"
-        },
-        "description": "The US Core Sexual Orientation Value Set includes concepts to describe a person's sexual orientation (who they are attracted to).",
-        "exampleBoolean": false,
-        "name": "US Core Sexual Orientation"
       },
       {
         "reference": {

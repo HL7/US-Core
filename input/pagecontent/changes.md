@@ -43,9 +43,12 @@ This ballot addresses the following:
    - [Here](CapabilityStatement-us-core-server.html#summary-of-additional-uscdi-requirement-references)
 
 
-- We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] where applicable and, as a result, align terminology between US Core and [HL7 C-CDA]. The Following Valuesets have been moved:
+- We continue our efforts to link terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] where applicable and, as a result, align terminology between US Core and [HL7 C-CDA]. The Following Valueset has been moved:
   
-  {% include img-small.html img="todo.png" %}s
+   |Pre 7.0.0-Ballot US Core ValueSet|7.0.0-Ballot VSAC ValueSet|
+   |---|---|
+   [US Core Sexual Orientation](https://hl7.org/fhir/us/core/STU6.1/ValueSet-us-core-sexual-orientation.html)|[Sexual Orientation](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.11/expansion)
+   {:.grid}
 
 - Added Procedure.reasonCode and Procedure.reasonReference as *Additional USCDI Requirements* to meet the USCDI Data Element,Reason for Referral when a ServiceRequest is not used to request a procedure. See these changes: 
    - [Here](StructureDefinition-us-core-procedure.html)
@@ -81,14 +84,14 @@ This ballot addresses the following:
     -  [Here](StructureDefinition-us-core-practitioner.html#mandatory-and-must-support-data-elements)
     -  [Here](StructureDefinition-us-core-location.html#mandatory-and-must-support-data-elements)
 11. **APPLIED:**  Fix Typo: Change ServiceRequest.reasonReference to Observation.derivedFrom [FHIR-43045](https://jira.hl7.org/browse/FHIR-43045) [See Changes Here](StructureDefinition-us-core-simple-observation.html#mandatory-and-must-support-data-elements)
-12. **Applied:**  Add link in history page to approved patches [FHIR-42950](https://jira.hl7.org/browse/FHIR-42950) [See Changes Here](https://hl7.org/fhir/us/core/history.html)
+12. **APPLIED:**  Add link in history page to approved patches [FHIR-42950](https://jira.hl7.org/browse/FHIR-42950) [See Changes Here](https://hl7.org/fhir/us/core/history.html)
 14. **APPLIED:** Medication Adherence Scope Clarification [FHIR-42845](https://jira.hl7.org/browse/FHIR-42845) [See Changes Here](StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements) and [Here](StructureDefinition-us-core-medication-adherence.html)
 15. **APPLIED:** Update profile + interaction requirements [FHIR-42789](https://jira.hl7.org/browse/FHIR-42789) and [FHIR-42847](https://jira.hl7.org/browse/FHIR-42847) [See Changes Here](general-requirements.html#conforming-to-us-core)
 16. **APPLIED:** Provide guidance on NAHDO SOP codes for Medicare Part A,B,C,and D [FHIR-42793](https://jira.hl7.org/browse/FHIR-42793) [See Changes Here](StructureDefinition-us-core-coverage.html#mandatory-and-must-support-data-elements)
 17. **APPLIED:** Correct description of Occupation Profile [FHIR-42867](https://jira.hl7.org/browse/FHIR-42867) [See Changes Here](StructureDefinition-us-core-observation-occupation.html)
 18. **APPLIED:** Move the SMART scopes guidance from Future of US Core to a Conformance Page [FHIR-42864](https://jira.hl7.org/browse/FHIR-42864) [See Changes Here](scopes.html) and [Here](StructureDefinition-us-core-allergyintolerance.html#mandatory-search-parameters) 
 19. **APPLIED:** Add Argonaut Write Guidance for Vital Sign Observations to Record or Update Data section on the Future of US Core Page [FHIR-42863](https://jira.hl7.org/browse/FHIR-42863) [See Changes Here](future-of-US-core.html#record-or-update-data) and [Here](fhir-write.html)
-20. **Resolved-Change Required:** Migrate US Core Terminology to VSAC [FHIR-42846](https://jira.hl7.org/browse/FHIR-42846) [See Changes Here](#.html)
+20. **APPLIED:** Migrate US Core Terminology to VSAC [FHIR-42846](https://jira.hl7.org/browse/FHIR-42846) See this version's introduction
 21. **APPLIED:**  Clarify note in Search Parameters and Operations page [FHIR-42783](https://jira.hl7.org/browse/FHIR-42783) [See Changes Here](search-parameters-and-operations.html)
 22. **APPLIED:**  Fix errors in USCDI mapping table [FHIR-42862](https://jira.hl7.org/browse/FHIR-42862) [See Changes Here](uscdi.html)
 23. **APPLIED:** Clarify Coverage status [FHIR-42777](https://jira.hl7.org/browse/FHIR-42777) [See Changes Here](StructureDefinition-us-core-coverage.html#mandatory-and-must-support-data-elements)
@@ -114,7 +117,7 @@ This ballot addresses the following:
    - [Here](must-support.html#additional-uscdi-requirements)
    - [Here](uscdi.html)
    - [Here](CapabilityStatement-us-core-server.html#summary-of-additional-uscdi-requirement-references)
-37. **Resolved-Change Required:**  Change ASKU in value set to asked-declined [FHIR-41571](https://jira.hl7.org/browse/FHIR-41571) [See Changes Here](#.html)
+37. **APPLIED:**  Change ASKU in value set to asked-declined [FHIR-41571](https://jira.hl7.org/browse/FHIR-41571) [See Changes Here](StructureDefinition-us-core-observation-sexual-orientation.html#terminology-bindings-differential) and [Here](Observation-sexual-orientation-example.html)
 38. **APPLIED:**  update canonical urls in examples and capability statements to include the version [FHIR-41256](https://jira.hl7.org/browse/FHIR-41256) [See Changes Here](AllergyIntolerance-example.html) and [Here](CapabilityStatement-us-core-server.json.html)
 39. **APPLIED:**  Add Preferred Language guidance [FHIR-40773](https://jira.hl7.org/browse/FHIR-40773) [See Changes Here](StructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
 40. **APPLIED:**  Update UCUM guidance [FHIR-40604](https://jira.hl7.org/browse/FHIR-40604) [See Changes Here](general-guidance.html#using-ucum-codes-in-the-quantity-datatype)

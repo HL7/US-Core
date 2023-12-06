@@ -1,6 +1,7 @@
-﻿﻿Data Class Number,USCDI Data Element,Category Code,ValueSet Name,VSAC Link,VSAC OID,Clinical Judgement,Panel,Panel Item,Comment,USCoreStarterCodes,Gravity
-1,SDOH,sdoh,Social Determinants of Health Screening Assessments,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion,2.16.840.1.113762.1.4.1247.126,FALSE,TRUE,FALSE,Set of SDOH Panel Codes,TRUE,
-,SDOH,sdoh,US Core SDOH Panel item Codes,https://healthedata1.github.io/USCDI4-Sandbox/ValueSet-uscore-common-sdoh-assessments.html,-,FALSE,FALSE,TRUE,,TRUE,
+﻿﻿Data Class Number,USCDI Data Element,Category Code,ValueSet Name,VSAC Link,VSAC OID,Clinical Judgement,Panel,Panel Item,Comment,USCoreStarterCodes,MCC
+1,SDOH,sdoh,Social Determinants of Health Screening Assessments and Questions,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.206/expansion,2.16.840.1.113762.1.4.1247.206,FALSE,TRUE,TRUE,Set of SDOH Panel Codes,TRUE,
+,!SDOH,sdoh,Social Determinants of Health Screening Assessments,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1247.126/expansion,2.16.840.1.113762.1.4.1247.126,FALSE,TRUE,FALSE,Set of SDOH Panel Codes,TRUE,
+,!SDOH,sdoh,US Core SDOH Panel item Codes,https://healthedata1.github.io/USCDI4-Sandbox/ValueSet-uscore-common-sdoh-assessments.html,-,FALSE,FALSE,TRUE,,TRUE,
 ,SDOH,sdoh,Caregiver Availability,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1058/expansion,2.16.840.1.113762.1.4.1222.1058,FALSE,FALSE,TRUE,,FALSE,TRUE
 ,SDOH,sdoh,Caregiver Characteristics,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1057/expansion,2.16.840.1.113762.1.4.1222.1057,FALSE,FALSE,TRUE,,FALSE,TRUE
 ,SDOH,sdoh,Criminal Justice Involvement or Incarceration History,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1082/expansion,2.16.840.1.113762.1.4.1222.1082,FALSE,FALSE,TRUE,,FALSE,TRUE
@@ -31,7 +32,7 @@
 ,Functional Status,functional-status,Toileting (ADL or IADL),https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.956/expansion,2.16.840.1.113762.1.4.1222.956,FALSE,FALSE,TRUE,,FALSE,
 ,Functional Status,functional-status,Transferring (ADL or IADL),https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.957/expansion,2.16.840.1.113762.1.4.1222.957,FALSE,FALSE,TRUE,,FALSE,
 ,Functional Status,functional-status,Walking or ambulation/locomotion (ADL/IADL),https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.958/expansion,2.16.840.1.113762.1.4.1222.958,FALSE,FALSE,TRUE,,FALSE,
-,Functional Status,functional-status,Functional Status Clinician Interpretation,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1007/expansion,2.16.840.1.113762.1.4.1222.1007,TRUE,FALSE,FALSE,,TRUE,
+,!Functional Status,functional-status,Functional Status Clinician Interpretation,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1007/expansion,2.16.840.1.113762.1.4.1222.1007,TRUE,FALSE,FALSE,,TRUE,
 ,Functional Status,functional-status,Functional Status Related Questionnaire Panel Codes,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1586/expansion,2.16.840.1.113762.1.4.1222.1586,FALSE,TRUE,FALSE,,TRUE,
 3,Mental/Cognitive Status.,cognitive-status,Cognitive Health Related Questionnaire Panel Codes,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1584/expansion,2.16.840.1.113762.1.4.1222.1584,FALSE,TRUE,FALSE,,TRUE,
 ,Mental/Cognitive Status.,cognitive-status,Cognitive Function Clinical Assessment,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.981/expansion,2.16.840.1.113762.1.4.1222.981,FALSE,FALSE,TRUE,,TRUE,
@@ -40,4 +41,4 @@
 5,Physical Activity,activity,US Core PA Codes,https://healthedata1.github.io/USCDI4-Sandbox/ValueSet-uscore-pa-codes.html,-,FALSE,FALSE,TRUE,,TRUE,
 6,Alcohol Use,social-history,Substance Use,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1015/expansion,2.16.840.1.113762.1.4.1222.1015,FALSE,FALSE,TRUE,,TRUE,
 ,Alcohol Use,social-history,Alcohol Use Related Questionnaire Panel Codes,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1585/expansion,2.16.840.1.113762.1.4.1222.1585,FALSE,TRUE,FALSE,,TRUE,
-7,Substance Use,social-history,Substance Use,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.1015/expansion,2.16.840.1.113762.1.4.1222.1015,FALSE,FALSE,TRUE,,TRUE,
+7,Substance Use,social-history,Drug Misuse,https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1222.707/expansion,2.16.840.1.113762.1.4.1222.707,FALSE,FALSE,TRUE,,TRUE,
