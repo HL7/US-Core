@@ -4,12 +4,14 @@
 # ===  2 ERRORS Discussed on FMG IG review and variance granted ===
 # ==============================================================
 
-
-
-# === Added this STU NOTE: This profile is technically non-conformant with the base FHIR ver 4.0.1 vitals profile which defines a required binding that excludes the concept for L/min for Observation.component.value(x). This is a known issue in and it means validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile. A change request to correct this has been applied to the base FHIR ver 4.3.0 (“Release 4B”)===
+# === Added this STU NOTE: This profile is technically non-conformant with the base FHIR ver 4.0.1 vitals profile which defines a required binding that excludes the concept for L/min for Observation.component.value(x). This is a known issue and it means validation errors may occur when validating against this version of the US Core Pulse Oximetry Profile. A change request to relax the binding in the FHIR Vitals profile to has been made and approved in base FHIR ver 4.3.0 (“Release 4B”) which will correct this error when this guide is based a newer version of FHIR. ===
 
 ERROR: US Core Vital Signs Profile.Observation.component.value[x]: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
 ERROR: StructureDefinition/us-core-vital-signs: StructureDefinition: illegal attempt to change the binding on Observation.component.value[x] from required to extensible
+
+# ==== This is a known issues with the terminology service - there is no timeline for their resolution ===
+
+ERROR: ValueSet.where(id = 'simple-language'): Error from http://tx.fhir.org/r4: Language valuesets cannot be expanded as they are based on a grammar
 
 # ===========================================================================
 # === Warnings and Discussed on FMG IG review and variance granted ===
@@ -97,24 +99,17 @@ This element does not match any known slice defined in the profile http://hl7.or
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0-ballot
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0-ballot
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|7.0.0-ballot
-INFORMATION: Observation/length: Observation.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bodyheight|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Observation/satO2-fiO2: Observation.code.coding[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/oxygensat|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
-
-
 
 # === This Examples conform to US Core Average Blood Pressure Profile. It defines additional slices (translations) to the FHIR BP profile for the code and component codes and will not match FHIR BP profile and vice versa ===
 
 INFORMATION: Observation/average-blood-pressure: Observation.code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Observation/average-blood-pressure: Observation.component[0].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Observation/average-blood-pressure: Observation.component[1].code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Observation/average-blood-pressure: Observation.code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Observation/average-blood-pressure: Observation.component[0].code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Observation/average-blood-pressure: Observation.component[1].code.coding[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # === These Examples conform to the US Core Pulse Oximetry Profile. It defines additional slices (translations) to the FHIR Oxygen Saturation profile for the code and component codes and will not match the FHIR Oxygen Saturation profile slices===
 
-INFORMATION: Observation/satO2-fiO2: Observation.code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/oxygensat|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
-INFORMATION: Observation/oxygen-saturation: Observation.code.coding[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/oxygensat|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # === Examples provided in Bundle (e.g. PractitionerRole_Practitioner_Endpoint_Bundle_Example, Allergyintolerance Provenance Example) (2)===
 
@@ -172,7 +167,7 @@ WARNING: SearchParameter/us-core-goal-target-date: SearchParameter.expression: T
 # ===  The following Warning is understood and the invariant reviewed. The resolve() specified in the invariant has a maximum cardinality of 1 so there will never be more than han one item in the collection when resolving the reference. This invariant has been tested in the FHIRPath tester and is intended as written ===
 
 
-# === The US Core Observation Profile are based on US Vendor and Community input and decided that the `Optional.performer` element is optional for Many Observation profiles. ===
+# === The US Core Observation Profile are based on US Vendor and Community input and decided that the `Observation.performer` element is optional for Many Observation profiles. ===
 
 WARNING: Observation/at-home-in-vitro-test: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/blood-pressure: Observation: Best Practice Recommendation: In general, all observations should have a performer
@@ -233,7 +228,7 @@ WARNING: Observation/temperature: Observation: Best Practice Recommendation: In 
 WARNING: Observation/urobilinogen: Observation: Best Practice Recommendation: In general, all observations should have a performer
 WARNING: Observation/weight: Observation: Best Practice Recommendation: In general, all observations should have a performer
 
-# === The 'no-narrative' parameter is used for these resources instances because they are dispayed as inline json examples for transaction and the narrative degrades human readability ===
+# === The 'no-narrative' parameter is used for these resources instances because they are displayed as inline json examples for transaction and the narrative degrades human readability ===
 
 WARNING: Bundle/docref-example-1: Bundle.entry[0].resource/*DocumentReference/ccd123*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 WARNING: Bundle/docref-example-2: Bundle.entry[0].resource/*DocumentReference/procedure-note123*/: Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
@@ -245,7 +240,6 @@ WARNING: Provenance/example-targeted-provenance: Provenance: Rule dom-6: 'A reso
 
 # === these ValueSets are in FHIR Core/THO and not under the direct control of US Core editors ===
 
-Reference to draft item http://hl7.org/fhir/standards-status|5.1.0-cibuild
 Reference to draft item http://terminology.hl7.org/CodeSystem/observation-category|0.1.0
 Reference to draft item http://terminology.hl7.org/CodeSystem/provenance-participant-type|0.1.0
 Reference to draft item http://hl7.org/fhir/narrative-status|4.0.1
