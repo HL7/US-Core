@@ -80,9 +80,10 @@ WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Code Sy
 WARNING: Encounter/1036: Encounter.hospitalization.dischargeDisposition: Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition|7.0.0-ballot
 
 
-# === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) NONE===
+# === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) ===
 
-This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0-cibuild
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0-ballot1 (this may not be a problem, but you should check that it's not intended to match a slice)
+
 
 # === These questionnaires are created using NLM tooling based on LOINC LFORMs.  They use standard FHIR Questionnaire Extensions that "extend" the base SDC profile ===
 
