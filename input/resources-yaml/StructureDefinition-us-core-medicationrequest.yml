@@ -102,7 +102,7 @@ differential:
     binding:
       strength: required
       description: The type of medication order. Note that other codes are permitted,
-        see [Required Bindings When Slicing by Value Sets](http://hl7.org/fhir/us/core/general-requirements.html#required-bindings-when-slicing-by-valuesets)
+        see [Required Bindings When Slicing by Value Sets](general-requirements.html#required-bindings-when-slicing-by-valuesets)
       valueSet: http://hl7.org/fhir/ValueSet/medicationrequest-category
   - id: MedicationRequest.reported[x]
     path: MedicationRequest.reported[x]

@@ -42,7 +42,7 @@ item:
     code:
     - code: 93043-8
       system: http://loinc.org
-      display: Personal characteristics
+      display: Personal characteristics [PRAPARE]
     text: Personal characteristics
     type: group
     required: false
@@ -179,7 +179,7 @@ item:
     code:
     - code: 93042-0
       system: http://loinc.org
-      display: Family and home
+      display: Family and home [PRAPARE]
     text: Family and home
     type: group
     required: false
@@ -251,7 +251,7 @@ item:
     code:
     - code: 93041-2
       system: http://loinc.org
-      display: Money and resources
+      display: Money and resources [PRAPARE]
     text: Money and resources
     type: group
     required: false
@@ -407,9 +407,9 @@ item:
       - code: 93030-5
         system: http://loinc.org
         display: Has lack of transportation kept you from medical appointments, meetings,
-          work, or from getting things needed for daily living?
+          work, or from getting things needed for daily living
       text: Has lack of transportation kept you from medical appointments, meetings,
-        work, or from getting things needed for daily living?
+        work, or from getting things needed for daily living
       type: choice
       repeats: true
       required: false
@@ -448,7 +448,7 @@ item:
     code:
     - code: 93040-4
       system: http://loinc.org
-      display: Social and emotional health
+      display: Social and emotional health [PRAPARE]
     text: Social and emotional health
     type: group
     required: false
@@ -490,8 +490,7 @@ item:
       code:
       - code: 93038-8
         system: http://loinc.org
-        display: Stress is when someone feels tense, nervous, anxious or can't sleep
-          at night because their mind is troubled. How stressed are you?
+        display: Stress level
       text: Stress is when someone feels tense, nervous, anxious or can't sleep at
         night because their mind is troubled. How stressed are you?
       type: choice
@@ -525,7 +524,7 @@ item:
     code:
     - code: 93039-6
       system: http://loinc.org
-      display: Optional additional questions
+      display: Optional additional questions [PRAPARE]
     text: Optional additional questions
     type: group
     required: false

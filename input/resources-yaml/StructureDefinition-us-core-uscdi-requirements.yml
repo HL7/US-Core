@@ -10,7 +10,7 @@ description: >-
   StructureDefinition elements.**  It flags elements that are *Additional* USCDI
   Requirements for certified systems. In other words, elements that are not
   marked as Must Support but are required for ONC Health IT certification testing. See the
-  [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for
+  [Conformance page](general-requirements.html) for
   more information.
 fhirVersion: 4.0.1
 kind: complex-type
@@ -30,7 +30,7 @@ differential:
       This extension flags elements that are *Additional* USCDI  Requirements for certified
       systems. In other words, elements that are not marked as Must Support but
       are required for for ONC Health IT certification testing. See the
-      [Conformance page](http://hl7.org/fhir/us/core/general-requirements.html) for more
+      [Conformance page](general-requirements.html) for more
       information.
     min: 0
     max: '1'

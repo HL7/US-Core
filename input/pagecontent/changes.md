@@ -510,7 +510,7 @@ These changes are a result of over 100 January 2022 Ballot related trackers whic
 1. **Applied**: Update all occurrences of U.S. Core Data for Interoperability (USCDI) v1 to v2 or removed specific references to version. [FHIR-34613](https://jira.hl7.org/browse/FHIR-34613) [For Example, See Change Here](index.html)
 1. **Applied**: Referencing US Core Profiles [FHIR-34623](https://jira.hl7.org/browse/FHIR-34623) [See Change Here](http://hl7.org/fhir/us/core/STU5/general-guidance.html#referencing-us-core-profiles)
 1. **Applied**: Correct code system in example snippet[FHIR-34624](https://jira.hl7.org/browse/FHIR-34624) [See Change Here](http://hl7.org/fhir/us/core/STU5/general-requirements.html#missing-data)
-1. **Applied**: Add further clarification between slicing a binding (4.1.0) vs using extensible binding (4.0.0) [FHIR-34626](https://jira.hl7.org/browse/FHIR-34626) [See Change Here](http://hl7.org/fhir/us/core/STU5/general-requirements.html#required-bindings-when-slicing-by-value-sets)
+1. **Applied**: Add further clarification between slicing a binding (4.1.0) vs using extensible binding (4.0.0) [FHIR-34626](https://jira.hl7.org/browse/FHIR-34626) [See Change Here](http://hl7.org/fhir/us/core/STU5/general-requirements.html#required-bindings-when-slicing-by-valuesets)
 1. **Applied**: Fix typo [FHIR-34627](https://jira.hl7.org/browse/FHIR-34627)
 1. **Applied**: Clarify reported guidance on how secondary sourced MedicationRequest information can be represented. [FHIR-34628](https://jira.hl7.org/browse/FHIR-34628) [See Change Here](http://hl7.org/fhir/us/core/STU5/StructureDefinition-us-core-medicationrequest.html#mandatory-and-must-support-data-elements)
 1. **Applied**: Fix contextDirection in Example 1[FHIR-34629](https://jira.hl7.org/browse/FHIR-34629) [See Change Here](http://hl7.org/fhir/us/core/STU5/clinical-notes.html#discovering-note-and-report-types)
@@ -891,18 +891,18 @@ Terminology
   - Polymorphic datatypes, which of the possible types must be supported
   - Reference datatype (Reference, canonical) which of the target types must be supported
   - The vital signs profile in the Core Specification which profiles must be supported
-  - New [Conformance Expectations] page
+  - New [Conformance Expectations]](http://hl7.org/fhir/us/core/2021Jan/conformance-expectations.html) page
   (see individual trackers below for details)
 1. Publishing a set US Core Vital Signs independent of the FHIR core profile upon which it is based (see individual trackers below for details)
-  - [US Core Vital Signs Profile]
-    - [US Core Blood Pressure Profile]
-    - [US Core BMI Profile]
-    - [US Core Head Circumference Profile]
-    - [US Core Body Height Profile]
-    - [US Core Body Weight Profile]
-    - [US Core Body Temperature Profile]
-    - [US Core Heart Rate Profile]
-    - [US Core Respiratory Rate Profile]
+  - [US Core Vital Signs Profile](http://hl7.org/fhir/us/core/2021Jan/structuredefinition-us-core-vital-signs.html)
+    - [US Core Blood Pressure Profile](http://hl7.org/fhir/us/core/2021Jan/structuredefinition-us-core-blood-pressure.html)
+    - [US Core BMI Profile](http://hl7.org/fhir/us/core/2021Jan/structuredefinition-us-core-bmi.html)
+    - [US Core Head Circumference Profile](http://hl7.org/fhir/us/core/2021Jan/structuredefinition-us-core-head-circumference.html)
+    - [US Core Body Height Profile](http://hl7.org/fhir/us/core/2021Jan/structuredefinition-us-core-body-height.html)
+    - [US Core Body Weight Profile](http://hl7.org/fhir/us/core/2021Jan/structuredefinition-us-core-body-weight.html)
+    - [US Core Body Temperature Profile](http://hl7.org/fhir/us/core/2021Jan/structuredefinition-us-core-body-temperature.html)
+    - [US Core Heart Rate Profile](http://hl7.org/fhir/us/core/2021Jan/structuredefinition-us-core-heart-rate.html)
+    - [US Core Respiratory Rate Profile](http://hl7.org/fhir/us/core/2021Jan/structuredefinition-us-core-respiratory-rate.html)
 1. Linking terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC) - NIH](https://vsac.nlm.nih.gov/)) where applicable
 
   - We are seeking to resolve several technical and policy glitches when using VSAC directly prior to publishing which include the requirement to log in using your own UMLS API Key requiring a current UMLS account to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html).

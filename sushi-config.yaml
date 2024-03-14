@@ -12,8 +12,46 @@ extension:
     valueCode: cgp  # <<< The value must be the code for the workgroup
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm  #<<<<< this to to inform the publisher of the default FMM level for the artifacts in this IG
     valueInteger: 3
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency  #<<<<< these are to inform the publisher link checker that links to this IG mostly in the change log are valid
+  #   valueCode: hl7.fhir.us.core#7.0.0-ballot
+  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+    valueCode: hl7.fhir.us.core#6.1.0
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#6.0.0
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#6.0.0-ballot
+  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+    valueCode: hl7.fhir.us.core#5.0.1
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#5.0.0
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#4.1.0
+  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+    valueCode: hl7.fhir.us.core#4.0.0
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#3.2.0
+  - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+    valueCode: hl7.fhir.us.core#3.1.1
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#3.1.0
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#3.0.1
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#3.0.0
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#2.1.0
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#2.0.0
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#1.1.0
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#1.0.1
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#1.0.0
+  # - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
+  #   valueCode: hl7.fhir.us.core#0.0.0
 publisher:
   name: HL7 International / Cross-Group Projects # <<< The stated publisher must be "HL7 International / {wg-name"} where the wg-name is the display value for the code
   url: 'http://www.hl7.org/Special/committees/cgp'  # <<< the contacts for the resource must include the link to the group found in the definition
@@ -159,6 +197,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - generate #generate: Log when producing an individual resource (troubleshooting only - leave off)
     - init #init: Messages describing the start up process (for debugging)
     - progress #progress: Overall progress messages
+  auto-oid-root: 2.16.840.1.113883.4.642.40
 copyrightyear: '2023+'
 #releaselabel: CI Build
 # releaselabel: STU6
