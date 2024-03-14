@@ -3,15 +3,15 @@
 
 Clinicians use various terms such as *assessments*, *scales*, *surveys*, and *screenings* to describe the tools and processes to collect health-related information for assessing a patient's health-related matter. US Cores uses the term *Screening and Assessments* for the process of recording responses and capturing assertions/determinations resulting from this process and these tools. This page documents how Screening and Assessments are used to identify various problems or health concerns and how US Core Profiles record Screenings and Assessments ranging from simple observations to complex structured evaluations.
 
-With the addition of the USCDI v3 Health Status Assessments data <span class="bg-success" markdown="1">elements,</span><!-- new-content --> US Core <span class="bg-success" markdown="1"></span><!-- new-content --> expanded the guidance from an Social Determinant of Health (SDOH)-only focus to a general framework of Screenings and Assessments for all domains<span class="bg-success" markdown="1">, including the USCDI Data Elements</span><!-- new-content -->:
+With the addition of the USCDI v3 Health Status Assessments data elements, US Core  expanded the guidance from an Social Determinant of Health (SDOH)-only focus to a general framework of Screenings and Assessments for all domains, including the USCDI Data Elements:
 
 - Social Determinant of Health (SDOH)
 - Functional Status
 - Disability Status
 - Mental/Cognitive Status
-- <span class="bg-success" markdown="1">Physical Activity</span><!-- new-content -->
-- <span class="bg-success" markdown="1">Alcohol Use</span><!-- new-content -->
-- <span class="bg-success" markdown="1">Substance Use</span><!-- new-content -->
+- Physical Activity
+- Alcohol Use
+- Substance Use
 
 However, implementers **SHOULD** consider more constrained, domain-specific profiles derived from the US Core Profiles to meet the needs of their respective use cases.
 
@@ -117,27 +117,24 @@ In many cases, data might be represented using both mechanisms - the initial raw
 
 #### Category Codes
 
-API consumers may <span class="bg-success" markdown="1">query by category</span><!-- new-content --> (for example, `sdoh`) when accessing patient information. <span class="bg-success" markdown="1">Category codes for USCDI Health Assessments Data Elements are listed in the table below. They **SHOULD** be used when generating resources that conform to these profiles</span><!-- new-content -->:
+API consumers may query by category (for example, `sdoh`) when accessing patient information. Category codes for USCDI Health Assessments Data Elements are listed in the table below. They **SHOULD** be used when generating resources that conform to these profiles:
 
 - US Core Simple Observation Profile
 - US Core Observation Screening Assessment Profile
 - US Core Condition Problems and Health Concerns Profile
 - US Core ServiceRequest Profile 
 
-<div class="bg-success" markdown="1">
 
 ##### USCDI Health Assessments Data Element Category
 
 {% include assessment-category-table-generator.html %}
 
-</div><!-- new-content -->
 
 Each profile's *Quick Start* section shows searches by category. Although not defined in US Core Procedure, implementers can categorize procedures using US Core Category or infer the context by inspecting the referenced ServiceRequest. Similarly, they can review the Questionnaire's metadata to determine US Core QuestionnaireResponse's context.
 
 
  <span class= "bg-warning" markdown= "1">Clients need to understand that data categorization is somewhat subjective. The categorization applied by the source may not align with the client's expectations. Clients may find it more beneficial to use queries based on a specific code or set of codes or to perform additional client-side filtering of query results.</span><!-- bg-warning -->
 
-<div class="bg-success" markdown="1">
 
 #### Screening and Assessment Codes
 
@@ -161,7 +158,6 @@ The Gravity project created and maintains the *Social Determinants of Health Scr
 
 The physical activity codes are taken from the [Physical Activity Implementation Guide], sponsored by the [American Heart Association] and the [Physical Activity Alliance]. In addition to contributing to the terminology for the USCDI Health Assessments Physical Activity Data Element, the guide documents a standardized way of measuring and sharing a patient's physical activity.
 
-</div><!-- new-content -->
 
 
 
@@ -178,7 +174,6 @@ US Core uses broadly defined value sets that contain concepts used across use ca
 
 {% include img-med.html img="sdoh_condition.svg" caption="SDOH Grouped Value Set Reuse in US Core" %}
 
-<div class="bg-success" markdown="1">
 
 ### Examples
 
@@ -186,6 +181,5 @@ These are example instances that show what Screening and Assessments data produc
 
 {% include assessment_examples.md %}
 
-</div><!-- new-content -->
 
 {% include link-list.md %}

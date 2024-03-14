@@ -7,7 +7,7 @@ The changes in this annual update to US Core have been reviewed and commented up
  
 Each update to a new version of US Core changes the US Core Profiles and conformance expectations. Implementers can find detailed comparisons between the FHIR artifacts in this 7.0.0 version of US Core and each previous major release on [Changes Between Versions] page. This section provides an overview of the significant changes in Version 7.0.0 of US Core.
 
-{% include img.html img="todo.png" %}
+{% include img-small.html img="todo.png" %}
 
 #### Changes:
 

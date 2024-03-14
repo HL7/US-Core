@@ -15,7 +15,6 @@ Most value sets used in this guide are defined in the base FHIR specification, [
 
 
 
-<div class="bg-success" markdown="1">
 
 #### Value Sets Used in US Core
 
@@ -23,7 +22,6 @@ The following table lists all the Value sets used in US Core and where they can 
 
 {% include valueset-ref-all-table-generator.html %}
 
-</div><!-- new-content -->
 
 ### Code Systems
 
@@ -52,7 +50,6 @@ See the [FHIR terminology section]({{site.data.fhir.path}}terminologies-systems.
 {:.grid}
 
 
-<div class="bg-success" markdown="1">
 
 #### Code System Used in US Core
 
@@ -60,17 +57,14 @@ The following table lists all the CodeSystems used in US Core and where they can
 
 {% include codesystem-ref-all-table-generator.html %}
 
-</div><!-- new-content -->
 
 ### The Value Set Authority Center (VSAC)
 
 This guide links terminology directly to the FHIR® Terminology Service for VSAC Resources ([Value Set Authority Center (VSAC)] where applicable using a RESTful API service for accessing the VSAC value sets and supported code systems. See the table above for a list valuesets used in US core that are defined by VSAC.
 
-<div class="bg-success" markdown="1">
 
 ####  How to Acess Value Sets in VSAC
 
-</div><!-- new-content -->
 
   -  VSAC requires login using your own *UMLS API Key* to view the value sets. [VSAC UMLS Licensing information](https://www.nlm.nih.gov/vsac/support/usingvsac/requestumlslicense.html). (See the screenshots below)
   - The value sets in VSAC are specified using a VSAC value set OID.  

@@ -9,7 +9,7 @@ The following operations and search parameters have been defined for the US Core
 
 ### Search Parameters
 
-NOTE: The following search parameters **SHALL NOT** be interpreted on their own as requirements for the server.  The CapabilityStatement defines the search capabilities expectations for the US Core Server. This section lists the search parameters definitions that are used within the CapabilityStatement.  This is not a list of search requirements for the client or server. <span class="bg-success" markdown="1">Certain search parameters have been defined without explicit categorization as either Mandatory or Optional search parameters. They are provided to assist implementers who may find them relevant to their specific use cases.</span><!-- new-content -->
+NOTE: The following search parameters **SHALL NOT** be interpreted on their own as requirements for the server.  The CapabilityStatement defines the search capabilities expectations for the US Core Server. This section lists the search parameters definitions that are used within the CapabilityStatement.  This is not a list of search requirements for the client or server. Certain search parameters have been defined without explicit categorization as either Mandatory or Optional search parameters. They are provided to assist implementers who may find them relevant to their specific use cases.
 {:.bg-warning}
 
 #### Search Parameters defined by this Implementation Guide

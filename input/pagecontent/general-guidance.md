@@ -19,7 +19,7 @@ In situations where the specific piece of data is hidden due to a security or pr
 
 ### SNOMED CT United States Edition
 
-[SNOMED CT] (Systematized Nomenclature of Medicine -- Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information. US Core uses the US Edition of SNOMED CT, a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. It is used extensively in US CORE for various clinical concepts, including problems, procedures, allergies, and laboratory results. When using SNOMED codes in US Core Profiles, implementers **MAY** use the default system URI which refers to an unspecified edition/version as shown in option one below. <span class="bg-success" markdown="1">However, for terminology servers to be able to validate US Edition-only codes, implementers  **SHOULD**  provide the accompanying system URI to describe the edition as shown in option two.</span><!-- new-content -->
+[SNOMED CT] (Systematized Nomenclature of Medicine -- Clinical Terms) is a comprehensive clinical terminology widely used in healthcare to support the electronic exchange of clinical health information. US Core uses the US Edition of SNOMED CT, a standalone release that combines the content of the US Extension and the International releases of SNOMED CT. It is used extensively in US CORE for various clinical concepts, including problems, procedures, allergies, and laboratory results. When using SNOMED codes in US Core Profiles, implementers **MAY** use the default system URI which refers to an unspecified edition/version as shown in option one below. However, for terminology servers to be able to validate US Edition-only codes, implementers  **SHOULD**  provide the accompanying system URI to describe the edition as shown in option two.
 
 #### SNOMED CT Edition and Version Options
 
@@ -59,7 +59,7 @@ In situations where the specific piece of data is hidden due to a security or pr
 
 ###  Using UCUM codes in the [Quantity] datatype
 
-<span class="bg-success" markdown="1">Some US Core Profiles (for example, the [US Core Vital Signs Profile]) bind the `valueQuantity` datatypes to the [UCUM] code system.</span><!-- new-content --> A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing, or the units are missing, which will likely occur in the real world.  
+Some US Core Profiles (for example, the [US Core Vital Signs Profile]) bind the `valueQuantity` datatypes to the [UCUM] code system. A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing, or the units are missing, which will likely occur in the real world.  
 
 **UCUM code provided**
 
