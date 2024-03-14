@@ -16,11 +16,11 @@ extension:
 - url: http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency
   valueCode: hl7.fhir.us.core#3.1.1
 url: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-version: 7.0.0-ballot
+version: 7.0.0
 name: USCore
 title: US Core Implementation Guide
 status: active
-date: '2023-07-13'
+date: '2024-03-14'
 publisher: HL7 International / Cross-Group Projects
 contact:
 - name: HL7 International / Cross-Group Projects
@@ -78,11 +78,11 @@ dependsOn:
   uri: http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads
   version: 0.12.0
 - packageId: ihe.formatcode.fhir
-  version: 1.1.0
+  version: 1.2.0
   uri: https://profiles.ihe.net/fhir/ihe.formatcode.fhir/ImplementationGuide/ihe.formatcode.fhir
   id: ihe_formatcode_fhir
 - packageId: hl7.fhir.uv.extensions
-  version: 5.1.0-ballot1
+  version: 5.1.0-cibuild
   uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
   id: hl7_fhir_uv_extensions
 definition:
@@ -3418,9 +3418,9 @@ definition:
       generation: markdown
   parameter:
   - code: copyrightyear
-    value: 2023+
+    value: 2024+
   - code: releaselabel
-    value: Ballot
+    value: CI Build
   - code: path-resource
     value: input/resources
   - code: path-resource

@@ -65,8 +65,8 @@ description: >-
   These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the Office of the National Coordinator for Health Information Technology (ONC) sponsored Data Access Framework (DAF) project. For more information on how DAF became US Core see the US Core change notes.
 
 license: CC0-1.0
-date: 2023-07-13
-version: '7.0.0-ballot'
+date: 2024-03-14
+version: '7.0.0'
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.uv.bulkdata: 2.0.0
@@ -81,8 +81,8 @@ dependencies:
     id: uscdcphinvads
     uri: 'http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads'
     version: 0.12.0
-  ihe.formatcode.fhir: 1.1.0
-  hl7.fhir.uv.extensions: 5.1.0-ballot1  # <<<< If your WG is not in the older list, you need to add an explicit dependency to the current version of the extensions pack
+  ihe.formatcode.fhir: 1.2.0
+  hl7.fhir.uv.extensions: 5.1.0-cibuild #5.1.0-ballot1  # <<<< If your WG is not in the older list, you need to add an explicit dependency to the current version of the extensions pack
 pages:
   index.md:
     title: Home
@@ -153,6 +153,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
+  # version-comparison-master: 7.0.0-ballot
   version-comparison:
     - 6.1.0
     - 5.0.1
@@ -198,10 +199,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - init #init: Messages describing the start up process (for debugging)
     - progress #progress: Overall progress messages
   auto-oid-root: 2.16.840.1.113883.4.642.40
-copyrightyear: '2023+'
-#releaselabel: CI Build
-# releaselabel: STU6
-releaselabel: Ballot
+copyrightyear: '2024+'
+releaselabel: CI Build
+# releaselabel: STU7
+# releaselabel: Ballot
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
