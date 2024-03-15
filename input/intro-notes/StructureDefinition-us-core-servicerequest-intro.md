@@ -40,10 +40,10 @@ The following data elements must always be present ([Mandatory] definition) or m
 - See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Service Requests.
 - The `ServiceRequest.category` binding Must Support, at a minimum, the [US Core ServiceRequest Category Codes].  However, this valueset can be treated as [extensible], and other category codes can be used instead.
 - The `ServiceRequest.code` valueset is broad to accommodate a wide variety of use cases and**SHOULD**be constrained to a subset for a particular use case or domain. (for example, LOINC for laboratory orders.)
-<div class="bg-success" markdown="1">
+
   
 {% include reason-for-referral.md %}
   
-</div><!-- new-content -->
+
 
 {% include link-list.md %}

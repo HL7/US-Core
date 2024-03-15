@@ -39,10 +39,6 @@ The following data-elements must always be present ([Mandatory] definition) or m
   * Although both are marked as Must Support, servers are not required to support both `Encounter.location.location` and `Encounter.serviceProvider`, but they **SHALL** support *at least one* of these elements.
   * The client application **SHALL** support both elements.
 
-<div class="bg-success" markdown="1">
-
 {% include encounter-location.md %} 
-
- ~~* If using `Encounter.location.location` it **SHOULD** conform to US Core Location.  However, as a result of implementation feedback, it **MAY**  reference the base FHIR Location resource.  See this guidance on [Referencing US Core Profiles].~~</div><!-- new-content -->
 
 {% include link-list.md %}

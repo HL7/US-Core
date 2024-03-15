@@ -28,17 +28,17 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Profile Specific Implementation Guidance:**
 
-<div class="bg-success" markdown="1">
+
 
 - There is no single way to indicate that the patient has no coverage using the Coverage resource:
   - `Coverage.status` alone may not indicate whether an individual is covered. The `Coverage.period` needs to be considered as well. For example, the coverage may be expired with a status of "active", or conversely, it may be "canceled" but still have covered claims.
   - The absence of a Coverage resource instance may mean that the patient has no coverage or the healthcare provider may not know it.
   - A `coverage.type` of "81" (Self-pay) **MAY** be used to imply that the patient has no coverage or that an individual or organization other than an insurer is taking responsibility for payment for a portion of the health care costs.
-</div><!-- new-content -->
+
 
 - The hierarchical nature of the `Coverage.type` code system "Payer" (also known as the US Public Health Data Consortium Source of Payment Codes) may be unclear in the expansion, and some of the codes may be inappropriate for the use case.  Implementers should refer to the [PHDSC Payer Type Committee User's Guide] for the Source of Payment Typology when selecting codes.
 
-<div class="bg-success" markdown="1">
+
 
   - To differentiate Medicare Parts A, B, C, and D systems can use the following codes:
 
@@ -52,7 +52,7 @@ The following data elements must always be present ([Mandatory] definition) or m
     The US Core team requested a stand-alone code for Medicare Part A from [NAHDO](https://www.nahdo.org/sopt). If this request is not approved,  systems **SHOULD** use the X12 concept for Medicare Part A *as a code translation* to the SOP code "121" (see [Using multiple codes with CodeableConcept Datatype]).
     {: .note-to-balloters}
 
-</div><!-- new-content -->
+
 
 - If Insurers issue unique member Ids for dependents, then the *memberId* `Coverage.identifier` should be used instead of `Coverage.dependent` to to uniquely refer to the dependent with respect to their insurance.
 

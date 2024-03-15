@@ -1,3 +1,7 @@
+{% assign code1 = include.code1 | default: "8867-4" | prepend: "http://loinc.org\|" %} <!-- heart rate LOINC -->
+{% assign code2 = include.code2 | default: "9279-1" | prepend: "http://loinc.org\|" %} <!-- resp rate LOINC -->
+{% assign code3 = include.code3 | default: "85354-9" | prepend: "http://loinc.org\|" %} <!-- bp LOINC -->
+
 {% include quickstart-intro.md %}
 
 #### Mandatory Search Parameters:
@@ -21,7 +25,7 @@ The following search parameters and search parameter combinations SHALL be suppo
 
     Example:
     
-      1. GET [base]/Observation?patient=1186747&amp;code=http://loinc.org\|8867-4,http://loinc.org\|9279-1,http://loinc.org\|85354-9
+      1. <span class="bg-success" markdown="1">GET [base]/Observation?patient=1186747&amp;code={{code1}},{{code2}},{{code3}}</span><!-- new-content -->
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and observation code(s). **SHOULD** support search by multiple codes. The Observation `code` parameter searches `Observation.code only. ([how to search by reference] and [how to search by token])
 
@@ -62,7 +66,7 @@ The following search parameter combinations **SHOULD** be supported:
 
     Example:
     
-      1. GET [base]/Observation?patient=1186747&amp;code=http://loinc.org\|8867-4,http://loinc.org\|9279-1,http://loinc.org\|85354-9&amp;date=ge2020-01-01T00:00:00Z
+      1. <span class="bg-success" markdown="1">GET [base]/Observation?patient=1186747&amp;code={{code1}},{{code2}},{{code3}}&amp;date=ge2020-01-01T00:00:00Z</span><!-- new-content -->
 
     *Implementation Notes:* Fetches a bundle of all Observation resources for the specified patient and date and report code(s). **SHOULD** support search by multiple codes. ([how to search by reference] and [how to search by token] and [how to search by date])
 

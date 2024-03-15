@@ -40,11 +40,11 @@ The following data-elements must always be present ([Mandatory] definition) or m
     - Only LOINC concepts that reflect actual procedures **SHOULD** be used
 - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` with a reference to the [US Core Implantable Device Profile].
 - See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Procedures
-<div class="bg-success" markdown="1">
+
   
 {% include reason-for-referral.md %}
   
-</div><!-- new-content -->
+
 
 
 {% include link-list.md %}

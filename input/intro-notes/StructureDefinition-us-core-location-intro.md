@@ -21,11 +21,11 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Additional Profile specific implementation guidance:**
 
-<div class="bg-success" markdown="1">
+
 * [US Core Encounter] and the [US Core Immunization Profile] link directly to US Core Location via `Encounter.location` and `Immunization.location`.
 {% include encounter-location.md%}
 * \*{% include should-project-us.md element="Location.address" %}
-</div><!-- new-content -->
+
 
 
 {% include link-list.md %}

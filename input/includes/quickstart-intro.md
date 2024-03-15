@@ -26,13 +26,13 @@ Below is an overview of the required Server RESTful FHIR interactions for this p
 
 
 
-<div class="bg-success" markdown="1">
+
 
 {% if smart_scope -%}
 #### US Core Scopes
 {{smart_scope}}
 {% endif %}
 
-</div><!-- new-content -->
+
 
 
