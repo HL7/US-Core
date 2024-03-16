@@ -8,7 +8,9 @@ The following are example usage scenarios for this profile:
 
 ### Mandatory and Must Support Data Elements
 
-*In addition* to the Mandatory and Must Support data elements in the [US Core Observation Clinical Result Profile], The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well. The [Formal Views]  section below provides the formal summary, definitions, and terminology requirements. {% include diff-display-note.md parent_profile='US Core Laboratory Result Observation Profile' %}
+*In addition* to the Mandatory and Must Support data elements in the [US Core Observation Clinical Result Profile], The following data-elements must always be present ([Mandatory] definition) or must be supported if the data is present in the sending system ([Must Support] definition). They are presented below in a simple human-readable explanation.  Profile specific guidance and examples are provided as well. The [Formal Views]  section below provides the formal summary, definitions, and terminology requirements. {% include diff-display-note.md parent_profile='<span class="bg-success" markdown="1">US Core Observation Clinical Result Profile</span><!-- new-content -->' %}
+
+
 
 **Each Observation Must Have:**
 
