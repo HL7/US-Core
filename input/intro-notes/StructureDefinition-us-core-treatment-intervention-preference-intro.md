@@ -22,7 +22,7 @@ The following are example usage scenarios for this profile:
 
 **Each Observation Must Support:**
 
-1. a category code of "intervention-preference"
+1. <span class="bg-success" markdown="1">a category code of "treatment-intervention-preference"</span><!-- new-content -->
 2. a time indicating when the preference was made
 <!-- 3. who reported the preference -->
 4. treatment intervention preference value*

@@ -62,8 +62,8 @@ These changes are a result of over 130 January 2024 Ballot related trackers whic
 45. **Resolved - change required:** (Correction) Update to figure in Section 3.6.4.3 [FHIR-43938](https://jira.hl7.org/browse/FHIR-43938) [See Changes Here](#.html)
 46. **Resolved - change required:** (Correction) Revert US Simple Observation Profile description to ver 6.1.0 text [FHIR-43954](https://jira.hl7.org/browse/FHIR-43954) [See Changes Here](#.html)
 47. **Resolved - change required:** (Correction) update version including examples and capstatements [FHIR-43961](https://jira.hl7.org/browse/FHIR-43961) [See Changes Here](#.html)
-48. **Resolved - change required:** (Correction) Treatment Intervention Preference Profile - typo in list of Must Support Elements [FHIR-44008](https://jira.hl7.org/browse/FHIR-44008) [See Changes Here](#.html)
-49. **Resolved - change required:** (Correction) Add hyperlink [FHIR-44009](https://jira.hl7.org/browse/FHIR-44009) [See Changes Here](StructureDefinition-us-core-location.html#mandatory-and-must-support-data-elementsl)
+48. **Applied:** (Correction) change "treatment-intervention" to "treatment-intervention-profile" [FHIR-44008](https://jira.hl7.org/browse/FHIR-44008) [See Changes Here](StructureDefinition-us-core-treatment-intervention-preference.html#mandatory-and-must-support-data-elements)
+49. **Applied:** (Correction) Add hyperlink [FHIR-44009](https://jira.hl7.org/browse/FHIR-44009) [See Changes Here](StructureDefinition-us-core-location.html#mandatory-and-must-support-data-elementsl)
 50. **Applied:** (Correction) Restore the missing graphic [FHIR-44010](https://jira.hl7.org/browse/FHIR-44010) [See Changes Here](screening-and-assessments.html#us-core-observation-screening-assessment-profile
 51. **Applied:** (Correction) Restore the missing graphic [FHIR-44011](https://jira.hl7.org/browse/FHIR-44011) [See Changes Here](screening-and-assessments.html#us-core-observation-screening-assessment-profile)
 52. **Applied:** (Correction) Restore the missing example [FHIR-44012](https://jira.hl7.org/browse/FHIR-44012) [See Changes Here](screening-and-assessments.html#searching-for-screening-and-assessment-data)
