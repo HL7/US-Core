@@ -22,10 +22,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Additional Profile specific implementation guidance:**
 
 
-* [US Core Encounter] and the [US Core Immunization Profile] link directly to US Core Location via `Encounter.location` and `Immunization.location`.
+* [US Core Encounter Profile] and the [US Core Immunization Profile] link directly to US Core Location via `Encounter.location` and `Immunization.location`.
 {% include encounter-location.md%}
 * \*{% include should-project-us.md element="Location.address" %}
-
-
 
 {% include link-list.md %}
