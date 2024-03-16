@@ -36,7 +36,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 {% include additional-requirements-intro.md type="MedicationRequest" plural="true" %}
 
 1. the reason or indication for the prescription*
-1. <span class="bg-success" markdown="1">reported adherence to prescribed medication instructions*</span><!-- new-content -->
+1. reported adherence to prescribed medication instructions*
  
 \* see guidance below
 
@@ -58,8 +58,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 * Source EHR identifiers **SHOULD** be included to support deduplication across MedicationRequest resources. Exposing the EHR identifiers helps client applications identify duplicates.
 * Servers **SHALL** follow the guidance in the [Medication List] page  and return all `active` Medications as MedicationRequest. It is always best practice to confirm this list with the Patient or Caregiver.
 
-- \*  <span class="bg-success" markdown="1">This profile uses the [US Core Medication Adherence Extension] to report medication adherence. This extension communicates whether a medication has
-been consumed according to instruction.</span><!-- new-content -->
+- \*  This profile uses the [US Core Medication Adherence Extension] to report medication adherence. This extension communicates whether a medication has
+been consumed according to instruction.
 
 
 {% include link-list.md %}

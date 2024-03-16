@@ -16,9 +16,9 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  a status
 1.  a vaccine code that identifies the kind of vaccine administered
 1.  a patient
-1.  <span class="bg-success" markdown="1">the encounter the immunization was part of</span><!-- new-content -->
+1.  the encounter the immunization was part of
 2.  a date the vaccine was administered
-3.  <span class="bg-success" markdown="1">where the vaccine was administered</span><!-- new-content -->
+3.  where the vaccine was administered
 
 **Each Immunization Must Support:**
 

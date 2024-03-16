@@ -42,8 +42,8 @@ The following data elements must always be present ([Mandatory] definition) or m
 {% include obs_cat_guidance.md category="sdoh, functional-status, or social history" %}
 - See the [Screening and Assessments] guidance page for how this profile can represent "clinical judgments".
   - \*Observations that are formally part of an assessment tool or survey**SHOULD** use the [US Core Observation Screening Assessment Profile]. However, an assertion or determination derived from screening and assessment tools and **SHOULD** reference them using `Observation.derivedFrom`.
-- \*As documented [here](general-guidance.html#referencing-us-core-profiles), when using <span class="bg-success" markdown="1">`Observation.derivedFrom'</span><!-- new-content --> to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
+- \*As documented [here](general-guidance.html#referencing-us-core-profiles), when using `Observation.derivedFrom' to reference an Observation, the referenced Observation **SHOULD** be a US Core Observation.
 
-  - <span class="bg-success" markdown="1"> {% include no-ms-refs.md element="Observation.derivedFrom" %} </span><!-- new-content -->
+  -  {% include no-ms-refs.md element="Observation.derivedFrom" %} 
 
 {% include link-list.md %}

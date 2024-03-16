@@ -24,7 +24,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Each MedicationDispense Must Support:**
 
-1. <span class="bg-success" markdown="1">the encounter associated with the dispense</span><!-- new-content -->
+1. the encounter associated with the dispense
 2. who dispensed the medication
 3. the authorizing prescription
 4. type of dispense (e.g., partially dispensed)

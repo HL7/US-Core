@@ -86,8 +86,8 @@ These changes are a result of over 130 January 2024 Ballot related trackers whic
 8. **Resolved - change required:** (Clarification) Use updated content included in FHIR R6 regarding Sex and Gender [FHIR-44123](https://jira.hl7.org/browse/FHIR-44123) [See Changes Here](#.html)
 9. **Resolved - change required:** (Enhancement) Remove ASKU from value sets and use DAR concept instead [FHIR-44127](https://jira.hl7.org/browse/FHIR-44127) [See Changes Here](#.html)
 10. **Resolved - change required:** (Enhancement) Add non-binary to gender identity value set [FHIR-44132](https://jira.hl7.org/browse/FHIR-44132) [See Changes Here](#.html)
-11. **Resolved - change required:** (Correction) Correct reference to USCDI Average Blood Pressure element in change log [FHIR-44405](https://jira.hl7.org/browse/FHIR-44405) [See Changes Here](#.html)
-12. **Resolved - change required:** (Correction) Please bold text [FHIR-44507](https://jira.hl7.org/browse/FHIR-44507) [See Changes Here](#.html)
+11. **Applied:** (Correction) Correct reference to USCDI Average Blood Pressure element from "data class" to "data element" in change log [FHIR-44405](https://jira.hl7.org/browse/FHIR-44405) [See Changes Here](changes.html#the-january-2024-ballot) 
+12. **Applied:** (Correction) bold text "SHALL NOT" [FHbIR-44507](https://jira.hl7.org/browse/FHIR-44507) [See Changes Here](tructureDefinition-us-core-documentreference.html)
 13. **Resolved - change required:** (Enhancement) Continue US Core and C-CDA value set alignment initiatives [FHIR-44522](https://jira.hl7.org/browse/FHIR-44522) [See Changes Here](#.html)
 14. **Resolved - change required:** (Clarification) Update Profile Specific Implementation Guidance” with context specific examples [FHIR-44525](https://jira.hl7.org/browse/FHIR-44525) [See Changes Here](#.html)
 15. **Resolved - change required:** (Clarification) In Treatment Intervention Observation bind to : 75773-2 Goals, preferences, and priorities for medical treatment [FHIR-44539](https://jira.hl7.org/browse/FHIR-44539) [See Changes Here](#.html)
@@ -104,7 +104,7 @@ These changes are a result of over 130 January 2024 Ballot related trackers whic
 26. **Resolved - change required:** (Enhancement) Change binding on Sex Extension's value set from required to extensible? [FHIR-44764](https://jira.hl7.org/browse/FHIR-44764) [See Changes Here](#.html)
 27. **Resolved - change required:** (Enhancement) Remove binding to SCT or relax to ""example"" [FHIR-44785](https://jira.hl7.org/browse/FHIR-44785) [See Changes Here](#.html)
 28. **Resolved - change required:** (Enhancement) Error in CapabilityStatement Table listing Additional USCDI Requirement References [FHIR-44946](https://jira.hl7.org/browse/FHIR-44946) [See Changes Here](#.html)
-29. **Pre-Applied:** (Correction) QA Error: specify version of http://terminology.hl7.org/CodeSystem/provenance-participant-type [FHIR-44967](https://jira.hl7.org/browse/FHIR-44967) [See Changes Here](ValueSet-us-core-provenance-participant-type.html#logical-definition-cld)
+29. **Applied:** (Correction) QA Error: specify version of http://terminology.hl7.org/CodeSystem/provenance-participant-type [FHIR-44967](https://jira.hl7.org/browse/FHIR-44967) [See Changes Here](ValueSet-us-core-provenance-participant-type.html#logical-definition-cld)
 
 ### Version = 7.0.0 - ballot
 - url: <http://hl7.org/fhir/us/core/2024Jan/>
@@ -133,7 +133,7 @@ This ballot addresses the following:
     - the [US Core DiagnosticReport Profile for Report and Note Exchange](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-diagnosticreport-note.html) already supports `DiagnosticReport.performed[x]` as a *Must Support* element.
     - the [US Core Immunization Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-immunization.html) already supports `Immunization.occurrence[x]` as a *Must Support* element.
   
-  - For the USCDI Average Blood Pressure data class, the new [US Core Average Blood Pressure Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-average-blood-pressure.html) has been added to US Core. It is based on the [US Core Blood Pressure Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-blood-pressure.html) and uses the [Vital Signs with Qualifying Elements: Average Blood Pressure Profile] as a blueprint.
+  - For the USCDI Average Blood Pressure data <span class="bg-success" markdown="1">element</span><!-- new-content -->, the new [US Core Average Blood Pressure Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-average-blood-pressure.html) has been added to US Core. It is based on the [US Core Blood Pressure Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-blood-pressure.html) and uses the [Vital Signs with Qualifying Elements: Average Blood Pressure Profile] as a blueprint.
   
   - For the USCDI Medications data class and elements, the [US Core MedicationRequest Profile](https://hl7.org/fhir/us/core/2024Jan/StructureDefinition-us-core-medicationrequest.html) already supports Medication Instructions and has been updated to support Medication Adherence as an *Additional USCDI Requirement* using the new [US Core Medication Adherence Extension].
 

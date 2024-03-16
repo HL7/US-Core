@@ -29,6 +29,6 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Profile Specific Implementation Guidance:**
 
-- \*<span class="bg-success" markdown="1">{% include should-project-us.md element="RelatedPerson.address" %}</span><!-- new-content -->
+- \*{% include should-project-us.md element="RelatedPerson.address" %}
 
 {% include link-list.md %}

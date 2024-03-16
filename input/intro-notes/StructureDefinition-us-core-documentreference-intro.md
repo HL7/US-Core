@@ -47,7 +47,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
     -  The client application **SHALL** support both elements.
     -  The `content.url` may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]), FHIR Document Bundle (i.e. [base]/Bundle/[id], or another endpoint.
         - If the endpoint is outside the FHIR base URL, it **SHOULD NOT** require additional authorization to access.
-    -  <span class="bg-success" markdown="1">If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different format or attachment metadata. The content element **SHALL** not contain different versions of the same content. For version handling use multiple DocumentReferences with `DocumentReference.relatesTo`.</span><!-- new-content --> 
+    -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different format or attachment metadata. The content element <span class="bg-success" markdown="1">**SHALL NOT**</span><!-- new-content --> contain different versions of the same content. For version handling use multiple DocumentReferences with `DocumentReference.relatesTo`. 
 - Every DocumentReference must have a responsible Organization. The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.
    - Some systems may also expose the same organization in referenced Encounter in `Encounter.serviceProvider`.
 

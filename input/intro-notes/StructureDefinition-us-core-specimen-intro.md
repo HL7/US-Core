@@ -15,7 +15,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
   **Each Specimen Must Support:**
 
-1. <span class="bg-success" markdown="1">business identifier(s)</span><!-- new-content -->
+1. business identifier(s)
 1. a patient
 
 

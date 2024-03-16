@@ -24,7 +24,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each DiagnosticReport Must Support:**
 
-1. <span class="bg-success" markdown="1">encounter associated with DiagnosticReport</span><!-- new-content -->
+1. encounter associated with DiagnosticReport
 2. who issues the report
 3. a result
 

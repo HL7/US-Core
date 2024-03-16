@@ -10,9 +10,9 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each Location Must Support:**
 
-1.  <span class="bg-success" markdown="1">Location or facility identifier`</span><!-- new-content -->
+1.  Location or facility identifier`
 2.  A status (whether in use)
-3.   <span class="bg-success" markdown="1">The type of location or facility</span><!-- new-content -->
+3.   The type of location or facility
 4.  Contact details of the location
 5.  A Location address*
 6.  The managing organization
