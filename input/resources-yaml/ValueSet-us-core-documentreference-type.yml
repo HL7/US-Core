@@ -7,7 +7,7 @@ status: active
 experimental: false
 date: 2022-09-29
 description: The US Core DocumentReference Type Value Set includes all LOINC values
-  whose SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor concept
+  whose SCALE is "Doc" in the LOINC database and the HL7 v3 Code System NullFlavor concept
   'unknown'
 copyright: "This material contains content from LOINC (http://loinc.org). LOINC is
   copyright \xA9 1995-2020, Regenstrief Institute, Inc. and the Logical Observation
@@ -24,4 +24,4 @@ compose:
     filter:
     - property: SCALE_TYP
       op: '='
-      value: DOC # LP269822-5 # DOC 
+      value: Doc # LP269822-5 # DOC 

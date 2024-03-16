@@ -47,7 +47,7 @@ differential:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet
         valueCanonical: http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-note-type
       strength: required
-      description: All LOINC  values whose SCALE is DOC in the LOINC database and
+      description: All LOINC  values whose SCALE is "Doc" in the LOINC database and
         the HL7 v3 Code System NullFlavor concept 'unknown'
       valueSet: http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type
   - id: DocumentReference.category
