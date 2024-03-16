@@ -4,7 +4,7 @@
 The following are example usage scenarios for the US Core DocumentReference profile.  See the [Clinical Notes] section for additional detail on using this profile for Clinical Notes:
 
 -   Query for all documents belonging to a Patient
--   Query for a specific Clinical Note type (e.g. Discharge Summary or Continuity of Care Document (CCD))
+-   Query for a specific Clinical Note type (e.g., Discharge Summary or Continuity of Care Document (CCD))
 -   Query for all Clinical Notes belonging to a Patient
 -   Write a new Note to a Patient's Chart
 
@@ -19,7 +19,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1.  a document category
 1.  a patient
 1.  document referenced (content)
-1.  the MIME type (i.e. contentType) of the document
+1.  the MIME type (i.e., contentType) of the document
 
 **Each DocumentReference Must Support:**
 
@@ -45,7 +45,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - The DocumentReference resources can represent the referenced content using either an address where the document can be retrieved using `DocumentReference.attachment.url` or the content as inline base64 encoded data using `DocumentReference.attachment.data`.
     -  Although both are marked as Must Support, the server system is not required to support an address and inline base64 encoded data, but **SHALL** support at least one of these elements.
     -  The client application **SHALL** support both elements.
-    -  The `content.url` may refer to a FHIR Binary Resource (i.e. [base]/Binary/[id]), FHIR Document Bundle (i.e. [base]/Bundle/[id], or another endpoint.
+    -  The `content.url` may refer to a FHIR Binary Resource (i.e., [base]/Binary/[id]), FHIR Document Bundle (i.e., [base]/Bundle/[id], or another endpoint.
         - If the endpoint is outside the FHIR base URL, it **SHOULD NOT** require additional authorization to access.
     -  If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different format or attachment metadata. The content element <span class="bg-success" markdown="1">**SHALL NOT**</span><!-- new-content --> contain different versions of the same content. For version handling use multiple DocumentReferences with `DocumentReference.relatesTo`. 
 - Every DocumentReference must have a responsible Organization. The organization responsible for the DocumentReference **SHALL** be present either in `DocumentReference.custodian` or accessible in the Provenance resource targeting the DocumentReference using `Provenance.agent.who` or `Provenance.agent.onBehalfOf`.

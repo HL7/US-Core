@@ -1,6 +1,6 @@
 <!--format of include file 
 include parameters:
-element (required): resource e.g. (e.g, Patient.address)
+element (required): resource e.g., (e.g, Patient.address)
 for example
 {% raw %} {% include should-project-us.md element="Patient.address" %} {% endraw %}
 -->

@@ -33,7 +33,7 @@ This [Observation Summary Table] compares *Must Support* Elements across all the
 
 ### Additional USCDI Requirements 
 
-The US Core Profiles include requirements from the [U.S. Core Data for Interoperability (USCDI) v4]. Some US Core Profile elements that are needed to represent USCDI Data Elements for [ONC Health IT Certification] (g(10) certification) are not *Mandatory* or *Must Support* because many non-certifying implementers do not need them for their use cases. US Core designates these elements *Additional USCDI Requirements*.
+The US Core Profiles include requirements from the [U.S. Core Data for Interoperability (USCDI)]. Some US Core Profile elements that are needed to represent USCDI Data Elements for [ONC Health IT Certification] (g(10) certification) are not *Mandatory* or *Must Support* because many non-certifying implementers do not need them for their use cases. US Core designates these elements *Additional USCDI Requirements*.
 
 <!-- The following table summarizes the difference between USCDI data classes or elements and *Must Support* and *Additional USCDI Requirements* conformance requirements. 
  

@@ -258,7 +258,7 @@ Fetching resource interactions are defined by the [FHIR RESTful API]. Guidance i
 
 -   GET is the HTTP verb used for fetching a resource
 -   Content surrounded by \[\] is mandatory *for the client* to supply and will be replaced by the string literal identified.
-    -   base: The Service Root URL (e.g. "<https://fhir-open-api-dstu2.smarthealthit.org>”)
+    -   base: The Service Root URL (e.g., "<https://fhir-open-api-dstu2.smarthealthit.org>”)
     -   Resource-type: The name of a resource type (e.g., "Patient")
     -   id: The Logical Id of a resource(e.g., "24342")
 -   Content surrounded by {} is optional *for the client* to supply and will be replaced by the string literal identified.
@@ -277,7 +277,7 @@ All the search interactions in this guide use the `GET` command with the followi
 -   GET is the HTTP verb used for fetching a resource
 -   Variables surrounded by "\[\]" are mandatory *for the client* to supply and will be replaced by the string literal identified.
 -   Variables surrounded by "\{\}" are optional *for the client* to supply and will be replaced by the string literal identified.
-    -   base: The Service Root URL (e.g. "<https://fhir-open-api-dstu2.smarthealthit.org>”)
+    -   base: The Service Root URL (e.g., "<https://fhir-open-api-dstu2.smarthealthit.org>”)
     -  Resource-type: The name of a resource type (e.g., "Patient")
     -  parameter: the search parameters as defined for the particular interaction (e.g."?patient=Patient/123")
     -  value: the search parameter value for a particular search

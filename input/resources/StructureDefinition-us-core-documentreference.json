@@ -51,7 +51,7 @@
                         }
                     ],
                     "strength": "required",
-                    "description": "All LOINC  values whose SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor concept 'unknown'",
+                    "description": "All LOINC  values whose SCALE is \"Doc\" in the LOINC database and the HL7 v3 Code System NullFlavor concept 'unknown'",
                     "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type"
                 }
             },
@@ -220,7 +220,7 @@
                 "id": "DocumentReference.content.attachment",
                 "path": "DocumentReference.content.attachment",
                 "definition": "The document and format referenced.",
-                "comment": "If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different format or attachment metadata. The content element **SHALL** not contain different versions of the same content. For version handling use multiple DocumentReferences with `DocumentReference.relatesTo`.",
+                "comment": "If there are multiple `DocumentReference.content` element repetitions, these **SHALL** all represent the same document in different format or attachment metadata. The content element **SHALL NOT** contain different versions of the same content. For version handling use multiple DocumentReferences with `DocumentReference.relatesTo`.",
                 "constraint": [
                     {
                         "key": "us-core-6",

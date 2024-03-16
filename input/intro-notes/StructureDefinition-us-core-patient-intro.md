@@ -16,7 +16,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 **Each Patient Must Have:**
 
-1. a patient identifier (e.g. MRN)
+1. a patient identifier (e.g., MRN)
 1. a patient name
 1. a gender*
 
@@ -27,7 +27,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 {% include additional-requirements-intro.md type="Patient" plural="true" %}
 
-1. contact detail (e.g. a telephone number or an email address)
+1. contact detail (e.g., a telephone number or an email address)
 2. a communication language
 3. a race
 4. an ethnicity
@@ -54,7 +54,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
    - For certifying systems, this requirement does not apply to historical records or documents that are exposed through FHIR based APIs.
 
-- \*US Core has reviewed and updated value sets based on input from the [HL7 Gender Harmony Project] which is modeling gender and sex information which includes data elements, value sets, code systems.  When their work is complete, US Core will align with their recommendations. The [US Core Sex Extension] meets the [U.S. Core Data for Interoperability (USCDI) v3] data element "sex". The [US Core Birth Sex Extension] is no longer a USCDI Requirement. See the [FHIR specification]({{site.data.fhir.path}}patient.html#gender) for additional guidance and background for representing Administrative Gender, Sex assigned at Birth, and Gender Identity.
+- \*US Core has reviewed and updated value sets based on input from the [HL7 Gender Harmony Project] which is modeling gender and sex information which includes data elements, value sets, code systems.  When their work is complete, US Core will align with their recommendations. The [US Core Sex Extension] meets the [U.S. Core Data for Interoperability (USCDI)] data element "sex". The [US Core Birth Sex Extension] is no longer a USCDI Requirement. See the [FHIR specification]({{site.data.fhir.path}}patient.html#gender) for additional guidance and background for representing Administrative Gender, Sex assigned at Birth, and Gender Identity.
 - [Provenance] and the FHIR Extension [Target Element] can be use to document how individual patient demographic data was captured. See [Element Level Provenance] on the [Basic Provenance] page for more information.
 - The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`. There is increasing concern over the use of Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have actively purged them from their systems and filter them out of incoming data.
 

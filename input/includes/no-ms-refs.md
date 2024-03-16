@@ -1,6 +1,6 @@
 <!--format of include file 
 include parameters:
-element (optional): profile element(e.g. Observation.derivedFrom) 
+element (optional): profile element(e.g., Observation.derivedFrom) 
 for example
 {% raw %} {% include no-ms-refs.md element="Observation.derivedFrom" %} {% endraw %}
 -->
