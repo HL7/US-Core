@@ -11,7 +11,7 @@ Each update to a new version of US Core changes the US Core Profiles and conform
 
 #### Changes:
 
-The ballot-related comments resulted in over 90 changes to this specification, which are listed below:
+The ballot-related comments resulted in over 80 changes to this specification, which are listed below:
 
 **Tracker Status**: **(Change Category)** **Summary** **[Jira Issue](#)** **[Link to Updated Content](#)**
 
@@ -24,7 +24,7 @@ The ballot-related comments resulted in over 90 changes to this specification, w
 7. **Resolved - change required:** (Clarification) what does average mean?  [FHIR-43402](https://jira.hl7.org/browse/FHIR-43402) [See Changes Here](#.html)
 8. **Resolved - change required:** (Clarification) Sub-elements are MS but parent element is not [FHIR-43430](https://jira.hl7.org/browse/FHIR-43430) [See Changes Here](#.html)
 9. **Resolved - change required:** (Clarification) Only deceasedDateTime is ""Additional USCDI Requirement"" [FHIR-43431](https://jira.hl7.org/browse/FHIR-43431) [See Changes Here](#.html)
-10. **Applied:** (Correction) Are row 1 and row 3 duplicated? [FHIR-43432](https://jira.hl7.org/browse/FHIR-43432) [See Changes Here](screening-and-assessments.html#uscdi-health-assessments-data-element-category)
+10. **Applied:** (Correction) Fix table rendering to remove duplicates[FHIR-43432](https://jira.hl7.org/browse/FHIR-43432) [See Changes Here](screening-and-assessments.html#uscdi-health-assessments-data-element-category)
 11. **Resolved - change required:** (Enhancement) Expand options for medication adherence information source [FHIR-43466](https://jira.hl7.org/browse/FHIR-43466) [See Changes Here](#.html)
 12. **Resolved - change required:** (Enhancement) References specific extension for measurement protocol [FHIR-43536](https://jira.hl7.org/browse/FHIR-43536) [See Changes Here](#.html)
 13. **Resolved - change required:** (Clarification) Clarify reference to average BP panel [FHIR-43537](https://jira.hl7.org/browse/FHIR-43537) [See Changes Here](#.html)
