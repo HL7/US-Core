@@ -99,8 +99,8 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 82. **Resolved - change required:** (Enhancement) Sex Extension's value set is too restrictive [FHIR-44710](https://jira.hl7.org/browse/FHIR-44710) [See Changes Here](#.html)
 83. **Triaged:** () It doesn't make sense for Condition.code to be extensible [FHIR-44715](https://jira.hl7.org/browse/FHIR-44715) [See Changes Here](#.html)
 84. **Resolved - change required:** (Clarification) Update guidance about Referencing US Core Profiles [FHIR-44759](https://jira.hl7.org/browse/FHIR-44759) [See Changes Here](#.html)
-85. **Resolved - change required:** (Enhancement) Change binding on Sex Extension's value set from required to extensible? [FHIR-44764](https://jira.hl7.org/browse/FHIR-44764) [See Changes Here](#.html)
-86. **Resolved - change required:** (Enhancement) Remove binding to SCT or relax to ""example"" [FHIR-44785](https://jira.hl7.org/browse/FHIR-44785) [See Changes Here](#.html)
+85. **Reopen???:** (Enhancement) Relax Sex binding to "extensible" [FHIR-44764](https://jira.hl7.org/browse/FHIR-44764) [See Changes Here](StructureDefinition-us-core-sex.html)
+86. **Reopen???:** (Enhancement) Relax Sex binding to "preferred" [FHIR-44785](https://jira.hl7.org/browse/FHIR-44785) [See Changes Here](StructureDefinition-us-core-sex.html)
 87. **Applied:** (Enhancement) Combine the tables of Must Support references andAdditional USCDI references [FHIR-44946](https://jira.hl7.org/browse/FHIR-44946) [See Changes Here](CapabilityStatement-us-core-server.html#ms-ref-table)
 88. **Applied:** (Correction) QA Error: specify version of http://terminology.hl7.org/CodeSystem/provenance-participant-type [FHIR-44967](https://jira.hl7.org/browse/FHIR-44967) [See Changes Here](ValueSet-us-core-provenance-participant-type.html#logical-definition-cld)
 
