@@ -101,7 +101,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 84. **Resolved - change required:** (Clarification) Update guidance about Referencing US Core Profiles [FHIR-44759](https://jira.hl7.org/browse/FHIR-44759) [See Changes Here](#.html)
 85. **Resolved - change required:** (Enhancement) Change binding on Sex Extension's value set from required to extensible? [FHIR-44764](https://jira.hl7.org/browse/FHIR-44764) [See Changes Here](#.html)
 86. **Resolved - change required:** (Enhancement) Remove binding to SCT or relax to ""example"" [FHIR-44785](https://jira.hl7.org/browse/FHIR-44785) [See Changes Here](#.html)
-87. **Resolved - change required:** (Enhancement) Error in CapabilityStatement Table listing Additional USCDI Requirement References [FHIR-44946](https://jira.hl7.org/browse/FHIR-44946) [See Changes Here](#.html)
+87. **Applied:** (Enhancement) Combine the tables of Must Support references andAdditional USCDI references [FHIR-44946](https://jira.hl7.org/browse/FHIR-44946) [See Changes Here](CapabilityStatement-us-core-server.html#ms-ref-table)
 88. **Applied:** (Correction) QA Error: specify version of http://terminology.hl7.org/CodeSystem/provenance-participant-type [FHIR-44967](https://jira.hl7.org/browse/FHIR-44967) [See Changes Here](ValueSet-us-core-provenance-participant-type.html#logical-definition-cld)
 
 ### Version = 7.0.0 - ballot
