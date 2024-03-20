@@ -14,18 +14,15 @@ The following are example usage scenarios for this profile:
 **Each Observation Must Have:**
 
 1. a status
-1. a fixed code for treatment intervention preference*
+1. a fixed code for treatment intervention preference
 2. a patient
-
-\*In this ballot version, we are using the US Core category code "treatment-intervention-preference" for this concept. A request for a new [LOINC] for this concept has been submitted to Regenstrief, and we expect it to be available before the publication of this version of US Core. 
-{:.note-to-balloters}
 
 **Each Observation Must Support:**
 
 1. <span class="bg-success" markdown="1">a category code of "treatment-intervention-preference"</span><!-- new-content -->
 2. a time indicating when the preference was made
 <!-- 3. who reported the preference -->
-4. treatment intervention preference value*
+1. treatment intervention preference value*
   
 \*see guidance below
 

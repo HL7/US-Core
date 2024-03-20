@@ -24,17 +24,17 @@ status: final
 category:
   - coding:
       - system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'
-        code: treatment-intervention-preference
+        code: Goals, preferences, and priorities for medical treatment [Reported]
         display: Treatment Intervention preference
     text: Treatment Intervention Preference
 code:
   coding:
     -
-      system: 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category'  
+      system: 'http://loinc.org'  
 
-      code: treatment-intervention-preference
-      display: Treatment Intervention Preference
-  text: Treatment Intervention Preference
+      code: 75773-2
+      display: Goals, preferences, and priorities for medical treatment
+  text: preferences for medical treatment
     
     # - system: 'http://loinc.org'
     #   code: 75776-5
