@@ -423,3 +423,4 @@
 [Physical Activity Alliance]: http://paamovewithus.org/
 [extension]: {{site.data.fhir.path}}extensibility.html
 [Multiple Chronic Condition (MCC) Care Plan Implementation Guide]: https://hl7.org/fhir/us/mcc/2023Sep/
+[FHIR R5 Patient Resource Gender and Sex Notes]: https://hl7.org/fhir/R5/patient.html#gender
