@@ -71,13 +71,14 @@ subject:
 
 effectivePeriod:
   start: '2023-08-03T01:06:52.480Z'
-  end: '2023-08-03T13:07:01.166Z'
+  end: '2023-08-06T13:07:01.166Z'
 
 # issued: '2019-10-16T12:12:29-10:00'
 
 performer:
   # - reference: https://www.hl7.org/fhir/us/core/Practitioner/practitioner-1
-  - reference: Practitioner/practitioner-1
+  - reference: Patient/example
+    display: Amy Shaw
 
 # bodySite:
 #   coding:
@@ -117,9 +118,9 @@ component:
           code: 8462-4
           display: Diastolic blood pressure
     valueQuantity:
-      value: 44
+      value: 72
       unit: 'mm[Hg]'
       system: 'http://unitsofmeasure.org'
       code: 'mm[Hg]'
 note:
-  - text: 'Average blood pressure is calculated from 12 measurements taken over 12 hours.'
+  - text: 'Average blood pressure is calculated from 12 measurements taken by the patient over 3 days.'

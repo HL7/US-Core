@@ -247,6 +247,7 @@
 [Radiology (LP29684-5)]: https://loinc.org/LP29684-5
 [Record or update]: future-of-US-core.html#future-candidate-requirements-under-consideration
 [reference]: {{site.data.fhir.path}}references.html
+[Reference]: {{site.data.fhir.path}}references.html
 [Referencing US Core Profiles]: general-guidance.html#referencing-us-core-profiles
 [Referral Note (57133-1)]: https://loinc.org/57133-1.html
 [Required Binding]: {{site.data.fhir.path}}terminologies.html#required

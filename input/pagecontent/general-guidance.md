@@ -3,8 +3,9 @@
 
 The search expectations and US Core Profiles have been developed and tested using *logical FHIR ids*.  Therefore a [reference] to a US Core resource **SHOULD** include a logical id (`Reference.reference`), not an identifier (`Reference.identifier`).
 
-
-Many of the profiles in this guide [reference] other FHIR resources that are also US Core Profiles.  These references are defined in the formal profile definitions.  For example, [US Core CareTeam Profile] references US Core Patient.  For any other references to base FHIR resources[^2] or not formally defined in a US Core Profiles, the referenced resource **SHOULD** be a US Core Profile if a US Core Profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner **SHOULD** be a valid US Core Patient or US Core Practitioner.  US Core Resources in the [differential view] and marked as "Must Support" follow the [Must Support] rules.  Other resources allowed in the base FHIR specification may be referenced.  For example, RelatedPerson is a permitted target reference in `DocumentReference.author`.
+<div class="bg-success" markdown="1">
+FHIR resource elements of the [Reference] datatype reference other FHIR resources. For all references, US Core Responders **SHOULD** return resources that conform to a US Core profile if a US Core profile exists for the resource type. In some cases, US Core profiles explicitly constrain these references to point to the relevant US Core profile because the element is typically a *Must Support* or *Additional USCDI Requirements* element. For example, `CareTeam.subject` in [US Core CareTeam Profile] references the [US Core Patient Profile]. In other cases, referencing elements point to the base FHIR resource, because they are not a *Must Support* or *Additional USCDI Requirements* element and, therefore, unconstrained by US Core. (This is an editorial decision to simplify and improve the readability of the Profile rendering in this guide.) For example, although US Core does not constrain `Condition.asserter`, its reference to Patient or Practitioner **SHOULD** be a valid [US Core Patient Profile] or [US Core Practitioner Profile].
+</div><!-- new-content -->
 
 ### Contained Resources
 
@@ -13,7 +14,7 @@ When responding to a query, servers **SHOULD** not use inline [contained] resour
 
 ###  Suppressed Data
 
-In situations where the specific piece of data is hidden due to a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know. However, masking data **SHOULD** be handled based on implemented policies. For elements with a minimum cardinality = 0 (including elements labeled *Must Support*), the element **SHOULD** be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code "unknown" following the guidance on [Missing Data] in the Conformance Sections.
+In situations where the specific piece of data is hidden due to a security or privacy reason, using a code from the [DataAbsentReason Code System] such as `masked` may exceed the data receiver's access rights to know. However, masking data **SHOULD** be handled based on implemented policies. For elements with a minimum cardinality = 0 (including elements labeled **Must Support**), the element **SHOULD** be omitted from the resource. For *Mandatory* elements (in other words, where the minimum cardinality is > 0), use the code "unknown" following the guidance on [Missing Data] in the Conformance Sections.
 
 
 
