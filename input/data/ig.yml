@@ -1944,7 +1944,8 @@ definition:
   - reference:
       reference: StructureDefinition/us-core-medication-adherence
     description: The Medication Adherence Extension is used to report whether a medication
-      has been consumed according to instructions
+      has been consumed according to instructions as reported by a patient or on behalf
+      of the patient.
     exampleBoolean: false
     name: US Core Medication Adherence Extension
   - reference:
@@ -2331,9 +2332,7 @@ definition:
       this capability statement should meet the ONC 2015 Common Clinical Data Set
       (CCDS) access requirement for Patient Selection 170.315(g)(7) and Application
       Access - Data Category Request 170.315(g)(8) and the ONC [U.S. Core Data for
-      Interoperability (USCDI) Version 4 July 2023](https://www.healthit.gov/sites/isa/files/2023-07/Final-USCDI-Version-4-July-2023-Final.pdf).  US
-      Core Clients have the option of choosing from this list to access necessary
-      data based on their local use cases and other contextual requirements.
+      Interoperability (USCDI) Version 4 July 2023](https://www.healthit.gov/sites/isa/files/2023-07/Final-USCDI-Version-4-July-2023-Final.pdf).
     exampleBoolean: false
     name: US Core Server CapabilityStatement
   - reference:

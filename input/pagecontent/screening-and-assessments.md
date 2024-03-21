@@ -123,7 +123,7 @@ In many cases, data might be represented using both mechanisms - the initial raw
 
 #### Category Codes
 
-API consumers may query by category (for example, `sdoh`) when accessing patient information. Category codes for USCDI Health Assessments Data Elements are listed in the table below. They **SHOULD** be used when generating resources that conform to these profiles:
+API consumers <span class="bg-success" markdown="1">can</span><!-- new-content --> query by category (for example, `sdoh`) when accessing patient information. Category codes for USCDI Health Assessments Data Elements are listed in the table below. They **SHOULD** be used when generating resources that conform to these profiles:
 
 - US Core Simple Observation Profile
 - US Core Observation Screening Assessment Profile

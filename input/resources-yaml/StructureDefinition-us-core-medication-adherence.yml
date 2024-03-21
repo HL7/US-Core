@@ -7,7 +7,7 @@ status: active
 date: 2023-10-17
 description: >-
   The Medication Adherence Extension is used to report whether a medication has
-  been consumed according to instructions
+  been consumed according to instructions as reported by a patient or on behalf of the patient.
 fhirVersion: 4.0.1
 kind: complex-type
 abstract: false
@@ -41,10 +41,7 @@ differential:
       display: Adherence to prescribed medication instructions [Reported]
     short: Medication adherence code
     definition: >-
-      Code stating whether the patient is consuming or being administered the
-      medication has according to instructions.  For example, the patient in not
-      taking the medication as prescribed, or the patient is taking the medication
-      as prescribed.
+      Code stating whether the patient is consuming medications according to instructions.
     min: 1
     max: '1'
     type:

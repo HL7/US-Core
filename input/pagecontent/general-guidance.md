@@ -60,7 +60,7 @@ In situations where the specific piece of data is hidden due to a security or pr
 
 ###  Using UCUM codes in the [Quantity] datatype
 
-Some US Core Profiles (for example, the [US Core Vital Signs Profile]) bind the `valueQuantity` datatypes to the [UCUM] code system. A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing, or the units are missing, which will likely occur in the real world.  
+Some US Core Profiles (for example, the [US Core Vital Signs Profile]) bind the `valueQuantity` datatype to the [UCUM] code system. <span class="bg-success" markdown="1">Systems should also use UCUM for the optional `valueRange` and `valueRatio` datatypes (which are complex datatypes with Quantity elements).</span><!-- new-content --> A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing, or the units are missing, which will likely occur in the real world.  
 
 **UCUM code provided**
 
@@ -109,7 +109,7 @@ A FHIR Server **SHOULD** not delete records. If a system supports the deletion o
 
 ### Narrative
 
-The [US Core CarePlan Profile] requires a narrative summary of the patient assessment and plan of treatment. However, *any* US Core Profile may include a human-readable narrative containing a summary of the resource and may be used to represent the resource's content to a human.  For further guidance, refer to the [Narrative documentation] in the FHIR Specification.
+The [US Core CarePlan Profile] requires a narrative summary of the patient assessment and plan of treatment. However, *any* US Core Profile <span class="bg-success" markdown="1">can</span><!-- new-content --> include a human-readable narrative containing a summary of the resource and may be used to represent the resource's content to a human.  For further guidance, refer to the [Narrative documentation] in the FHIR Specification.
 
 ### Language Support
 
@@ -318,7 +318,7 @@ US Core servers are not required to resolve absolute URLs that are external to t
 
 ### Limiting The Number Of Search Results
 
-Servers may choose to return the results in a series of pages to manage the number of search results returned. The search result set contains the URLs used to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
+Servers can choose to return the results in a series of pages to manage the number of search results returned. The search result set contains the URLs used to request additional pages from the search set. For a simple RESTful search, the page links are contained in the returned bundle as links. See the [managing returned resources] in the FHIR specification for more information.
 
 ------------------------------------------------------------------------
 <!--
