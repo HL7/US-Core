@@ -202,9 +202,12 @@ US Core uses broadly defined value sets that contain concepts used across use ca
 * [Social Determinants of Health Service Requests Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1196.790/expansion)
 
  The figure below illustrates how the Gravity value sets are grouped for use in the US Core Condition Problems and Health Concerns Profile and how the grouped value set is compatible with the broader US Core Problem code value set.
+ 
+<div class="bg-success" markdown="1">
 
 {% include img-med.html img="sdoh_condition.svg" caption="SDOH Grouped Value Set Reuse in US Core" %}
 
+</div><!-- new-content -->
 
 ### Examples
 
