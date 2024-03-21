@@ -7,6 +7,17 @@ Yearly US Core updates reflect changes to [U.S. Core Data for Interoperability (
 
 {% include img.html img="yearly-updates.png" caption="Figure 1: US Core Yearly Updates" %}
 
+<div class="bg-success" markdown="1">
+### 
+
+{% include img-small.html img="todo.png" %}
+
+US Core has been based on [FHIR R4] since version 3.0.0.  FHIR R4 was released in Dec 27, 2018 and was first version with Normative content.  decision next version of FHIR that US Core will be based on will be the upcoming R6 at some time in the future. When we update to FHIR R6, here are some of the breaking updates to US Core that we plan to make:
+
+- Addition of MedicationStatement
+- Mandate supporting PractionerRole
+</div><!-- new-content -->
+
 ### Growth Path of US Core
 
 The US Core implementation Guide will grow following these steps:
@@ -20,7 +31,6 @@ The US Core implementation Guide will grow following these steps:
 1. Submit formal STU comments, or propose through a ballot
 
 A new US Regulatory requirement may jump over some of these steps. However, regulators **SHOULD** be encouraged to complete pilot testing. With pilot testing, it is easier to understand how a change will affect real-world implementation.
-
 
 
 ### Future Candidate Requirements Under Consideration
