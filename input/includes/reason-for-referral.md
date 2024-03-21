@@ -6,4 +6,4 @@
      - Although both `Procedure.reasonCode` and `Procedure.reasonReference` are marked as Additional USCDI Requirements. The certifying server system is not required to support both but **SHALL** support at least one of these elements. The certifying client application **SHALL** support both elements.
      - As documented [here](general-guidance.html#referencing-us-core-profiles), when using  `Procedure.reasonReference`, the referenced resources **SHOULD** be a US Core Profile.
 
-    Certifying Servers and Clients **SHALL** support options 1 and 2 as Additional USCDI Requirements.
+    <span class="bg-success" markdown="1">Servers and Clients **SHALL** support options 1 and 2 as Additional USCDI Requirements. Depending on the procedure being documented, a server will select option 1 or 2.</span><!-- new-content -->
