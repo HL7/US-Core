@@ -23,8 +23,11 @@ The following are example usage scenarios for this profile:
    - if the result value is a numeric quantity, a standard [UCUM] unit
    - if the result value is a coded quantity, a standard [SNOMED CT]
 1. result interpretation
-1. result reference range
-1. a specimen type (e.g., blood, serum, urine)
+   - <span class="bg-success" markdown="1">
+   if the result value is a numeric quantity, a standard [UCUM] unit
+   </span><!-- new-content -->
+2. result reference range
+3. a specimen type (e.g., blood, serum, urine)
 
 \* see guidance below
 

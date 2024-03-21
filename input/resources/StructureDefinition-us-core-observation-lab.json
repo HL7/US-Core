@@ -170,6 +170,24 @@
                 "short": "Result reference range",
                 "comment": "Upper and lower limit of test values expected for a designated population of individuals. Reference range values may differ by patient characteristics, laboratory test manufacturer and laboratory test performer.",
                 "mustSupport": true
+            },
+            {
+                "id": "Observation.referenceRange.low",
+                "path": "Observation.referenceRange.low",
+                "binding": {
+                    "strength": "required",
+                    "description": "UCUM",
+                    "valueSet": "http://terminology.hl7.org/ValueSet/ucum-units"
+                }
+            },
+            {
+                "id": "Observation.referenceRange.high",
+                "path": "Observation.referenceRange.high",
+                "binding": {
+                    "strength": "required",
+                    "description": "UCUM",
+                    "valueSet": "http://terminology.hl7.org/ValueSet/ucum-units"
+                }
             }
         ]
     }

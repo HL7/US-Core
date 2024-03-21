@@ -103,6 +103,7 @@ differential:
     mustSupport: true
   - id: DiagnosticReport.encounter
     path: DiagnosticReport.encounter
+    short: Encounter associated with DiagnosticReport
     type:
     - code: Reference
       targetProfile:

@@ -60,7 +60,7 @@ In situations where the specific piece of data is hidden due to a security or pr
 
 ###  Using UCUM codes in the [Quantity] datatype
 
-Some US Core Profiles (for example, the [US Core Vital Signs Profile]) bind the `valueQuantity` datatype to the [UCUM] code system. <span class="bg-success" markdown="1">Systems should also use UCUM for the optional `valueRange` and `valueRatio` datatypes (which are complex datatypes with Quantity elements).</span><!-- new-content --> A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing, or the units are missing, which will likely occur in the real world.  
+Some US Core Profiles bind the <span class="bg-success" markdown="1">`Quantity.code` element in the Quantity datatype to the [UCUM] code system. For example, in the [US Core Laboratory Result Observation Profile], `Observation.valueQuantity`, `Observation.referenceRange.low` and `Observation.referenceRange.high` are bound to UCUM. Systems should also use UCUM for the optional `valueRange` and `valueRatio` datatypes (which are complex datatypes with Quantity elements).</span><!-- new-content --> A FHIR [UCUM Codes ValueSet] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing, or the units are missing, which will likely occur in the real world.  
 
 **UCUM code provided**
 
