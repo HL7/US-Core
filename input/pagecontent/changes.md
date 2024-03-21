@@ -94,18 +94,15 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 74. **Applied:** (Clarification) Update guidance for servers not supporting PractitionerRole [FHIR-44624](https://jira.hl7.org/browse/FHIR-44624) [See Changes Here](StructureDefinition-us-core-practitioner.html)
 75. **Applied:** (Correction) change "resources" to "resources types" [FHIR-44650](https://jira.hl7.org/browse/FHIR-44650) [See Changes Here](StructureDefinition-us-core-provenance.html)
 76. **Applied:** (Correction) Update average blood pressure example to be more realistic [FHIR-44668](https://jira.hl7.org/browse/FHIR-44668) [See Changes Here](Observation-average-blood-pressure.html)
-77. **Resolved - change required:** (Clarification) Clarify address MS requirements for Practitioner [FHIR-44693](https://jira.hl7.org/browse/FHIR-44693) See Changes:
-   - [US Core Practitioner Profile](StructureDefinition-us-core-practitioner.html)
-   - [US Core PractitionerRole Profile](StructureDefinition-us-core-practitionerrole.html)
-   - [Future of US Core](future-of-US-core.html)
-78. **Applied:** (Clarification) Update Goal introduction to match profile [FHIR-44694](https://jira.hl7.org/browse/FHIR-44694) [See Changes Here](StructureDefinition-us-core-goal.html)
-79. **Applied:** (Enhancement) Sex Extension's value set is too restrictive [FHIR-44710](https://jira.hl7.org/browse/FHIR-44710) [See Changes Here](StructureDefinition-us-core-sex.html)
-80. **Triaged:** () It doesn't make sense for Condition.code to be extensible [FHIR-44715](https://jira.hl7.org/browse/FHIR-44715) [See Changes Here](#.html)
-81. **Applied:** (Clarification) Update guidance on Referencing US Core Profiles [FHIR-44759](https://jira.hl7.org/browse/FHIR-44759) [See Changes Here](general-guidance.html#referencing-us-core-profiles)
-82. **Reopen???:** (Enhancement) Relax Sex binding to "extensible" [FHIR-44764](https://jira.hl7.org/browse/FHIR-44764) [See Changes Here](StructureDefinition-us-core-sex.html)
-83. **Reopen???:** (Enhancement) Relax Sex binding to "preferred" [FHIR-44785](https://jira.hl7.org/browse/FHIR-44785) [See Changes Here](StructureDefinition-us-core-sex.html)
-84. **Applied:** (Enhancement) Combine the tables of Must Support references andAdditional USCDI references [FHIR-44946](https://jira.hl7.org/browse/FHIR-44946) [See Changes Here](CapabilityStatement-us-core-server.html#ms-ref-table)
-85. **Applied:** (Correction) QA Error: specify version of http://terminology.hl7.org/CodeSystem/provenance-participant-type [FHIR-44967](https://jira.hl7.org/browse/FHIR-44967) [See Changes Here](ValueSet-us-core-provenance-participant-type.html#logical-definition-cld)
+77. **Resolved - change required:** (Clarification) Clarify Must Support requirements for Practitioner.address [FHIR-44693](https://jira.hl7.org/browse/FHIR-44693) [See Changes Here](StructureDefinition-us-core-practitioner.html) and [Here](future-of-US-core.html)
+1.  **Applied:** (Clarification) Update Goal introduction to match profile [FHIR-44694](https://jira.hl7.org/browse/FHIR-44694) [See Changes Here](StructureDefinition-us-core-goal.html)
+2.  **Applied:** (Enhancement) Sex Extension's value set is too restrictive [FHIR-44710](https://jira.hl7.org/browse/FHIR-44710) [See Changes Here](StructureDefinition-us-core-sex.html)
+3.  **Triaged:** () It doesn't make sense for Condition.code to be extensible [FHIR-44715](https://jira.hl7.org/browse/FHIR-44715) [See Changes Here](#.html)
+4.  **Applied:** (Clarification) Update guidance on Referencing US Core Profiles [FHIR-44759](https://jira.hl7.org/browse/FHIR-44759) [See Changes Here](general-guidance.html#referencing-us-core-profiles)
+5.  **Reopen???:** (Enhancement) Relax Sex binding to "extensible" [FHIR-44764](https://jira.hl7.org/browse/FHIR-44764) [See Changes Here](StructureDefinition-us-core-sex.html)
+6.  **Reopen???:** (Enhancement) Relax Sex binding to "preferred" [FHIR-44785](https://jira.hl7.org/browse/FHIR-44785) [See Changes Here](StructureDefinition-us-core-sex.html)
+7.  **Applied:** (Enhancement) Combine the tables of Must Support references andAdditional USCDI references [FHIR-44946](https://jira.hl7.org/browse/FHIR-44946) [See Changes Here](CapabilityStatement-us-core-server.html#ms-ref-table)
+8.  **Applied:** (Correction) QA Error: specify version of http://terminology.hl7.org/CodeSystem/provenance-participant-type [FHIR-44967](https://jira.hl7.org/browse/FHIR-44967) [See Changes Here](ValueSet-us-core-provenance-participant-type.html#logical-definition-cld)
 
 ### Version = 7.0.0 - ballot
 - url: <http://hl7.org/fhir/us/core/2024Jan/>

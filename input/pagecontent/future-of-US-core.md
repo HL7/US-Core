@@ -8,7 +8,7 @@ Yearly US Core updates reflect changes to [U.S. Core Data for Interoperability (
 {% include img.html img="yearly-updates.png" caption="Figure 1: US Core Yearly Updates" %}
 
 <div class="bg-success" markdown="1">
-### 
+### FHIR Version Support
 
 {% include img-small.html img="todo.png" %}
 
