@@ -4,7 +4,6 @@
 {% assign rows = site.data.assessments-valuesets %}
 
 {% for item in rows %}
-{% unless item["USCDI Data Element"] contains "!" %}
 {% if item["USCoreStarterCodes"] == "TRUE" %}
 {% if forloop.first %}
 
@@ -35,5 +34,4 @@
 </table>
 {% endif %}
 {% endif %}
-{% endunless %}
 {% endfor %}

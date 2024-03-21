@@ -424,3 +424,8 @@
 [extension]: {{site.data.fhir.path}}extensibility.html
 [Multiple Chronic Condition (MCC) Care Plan Implementation Guide]: https://hl7.org/fhir/us/mcc/2023Sep/
 [FHIR R5 Patient Resource Gender and Sex Notes]: https://hl7.org/fhir/R5/patient.html#gender
+[`Meta.lastUpdated`]: {{site.data.fhir.path}}resource.html#Meta
+[`_lastUpdated`]: {{site.data.fhir.path}}search.html#lastUpdated
+[FHIR Topic-Based Subscription]: https://hl7.org/fhir/R5/subscriptions.html
+[FHIR-45012]: https://jira.hl7.org/browse/FHIR-45012
+[Event Location Extension]: http://hl7.org/fhir/StructureDefinition/event-location
