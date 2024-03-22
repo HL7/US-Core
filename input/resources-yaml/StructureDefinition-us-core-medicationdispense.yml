@@ -125,8 +125,6 @@ differential:
       valueSet: http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType
   - id: MedicationDispense.quantity
     path: MedicationDispense.quantity
-    type:
-    - code: Quantity
     mustSupport: true
     binding:
       extension:
@@ -162,6 +160,8 @@ differential:
       - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
         valueBoolean: true
       code: Quantity
+      profile:
+      - 'http://hl7.org/fhir/StructureDefinition/SimpleQuantity'
     - code: Range
     mustSupport: true
     binding:

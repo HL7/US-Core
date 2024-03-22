@@ -47,6 +47,14 @@ differential:
       \  - White."
     min: 0
     max: '1'
+    condition:
+    - us-core-23
+    constraint:
+    -
+      key: us-core-23
+      severity: error
+      human: If "ASKU" or "UNK" are present, then no other OMB race categories can be present.
+      expression: extension.where(url = 'ombCategory').value.where(code in 'ASKU'|'UNK').exists() implies extension.where(url = 'ombCategory').count() = 1
   - id: Extension.extension
     path: Extension.extension
     slicing:
@@ -64,7 +72,7 @@ differential:
       Collecting, and Presenting Federal Data on Race and Ethnicity, Statistical Policy
       Directive No. 15, as revised, October 30, 1997](https://www.govinfo.gov/content/pkg/FR-1997-10-30/pdf/97-28653.pdf).
     min: 0
-    max: '5'
+    max: '6'
     type:
     - code: Extension
     mustSupport: true

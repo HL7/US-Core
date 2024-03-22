@@ -452,7 +452,10 @@
                                 "valueBoolean": true
                             }
                         ],
-                        "code": "Quantity"
+                        "code": "Quantity",
+                        "profile": [
+                            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+                        ]
                     },
                     {
                         "code": "Range"

@@ -218,11 +218,6 @@
             {
                 "id": "MedicationDispense.quantity",
                 "path": "MedicationDispense.quantity",
-                "type": [
-                    {
-                        "code": "Quantity"
-                    }
-                ],
                 "mustSupport": true,
                 "binding": {
                     "extension": [
@@ -277,7 +272,10 @@
                                 "valueBoolean": true
                             }
                         ],
-                        "code": "Quantity"
+                        "code": "Quantity",
+                        "profile": [
+                            "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+                        ]
                     },
                     {
                         "code": "Range"
