@@ -121,16 +121,12 @@ differential:
     comment: Upper and lower limit of test values expected for a designated population
       of individuals. Reference range values may differ by patient characteristics,
       laboratory test manufacturer and laboratory test performer.
+    condition:
+        - us-core-22
+    constraint:
+      - key: us-core-22
+        severity: error
+        human: SHALL use UCUM for coded quantity units.
+        expression: (low.system.empty() or low.system = 'http://unitsofmeasure.org') and (high.system.empty() or high.system = 'http://unitsofmeasure.org')
     mustSupport: true
-  - id: Observation.referenceRange.low
-    path: Observation.referenceRange.low
-    binding:
-      strength: required
-      description: UCUM
-      valueSet: http://terminology.hl7.org/ValueSet/ucum-units
-  - id: Observation.referenceRange.high
-    path: Observation.referenceRange.high
-    binding:
-      strength: required
-      description: UCUM
-      valueSet: http://terminology.hl7.org/ValueSet/ucum-units
+
