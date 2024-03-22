@@ -1,0 +1,46 @@
+category:
+    - 
+        coding:
+            - 
+                code: laboratory
+                display: Laboratory
+                system: 'http://terminology.hl7.org/CodeSystem/observation-category'
+        text: Laboratory
+code:
+    coding:
+        - 
+            code: 1975-2
+            display: Bilirub SerPl-mCnc
+            system: 'http://loinc.org'
+    text: Bilirub SerPl-mCnc
+effectiveDateTime: '2005-07-07'
+id: serum-total-bilirubin
+referenceRange:
+    - 
+        high:
+            code: mg/dL
+            system: 'http://unitsofmeasure.org'
+            unit: mg/dL
+            value: 7
+        low:
+            code: mg/dL
+            system: foo
+            unit: mg/dL
+            value: 2
+        type:
+            coding:
+                - 
+                    code: normal
+                    display: Normal Range
+                    system: 'http://terminology.hl7.org/CodeSystem/referencerange-meaning'
+            text: Normal Range
+resourceType: Observation
+status: final
+subject:
+    display: Amy Shaw
+    reference: Patient/example
+valueQuantity:
+    code: mg/dL
+    system: 'http://unitsofmeasure.org'
+    unit: mg/dL
+    value: 8.6

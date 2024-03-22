@@ -48,7 +48,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 31. **Resolved - change required:** (Clarification) Use of NDC in medicationCodeableConcept [FHIR-43641](https://jira.hl7.org/browse/FHIR-43641) [See Changes Here](#.html)
 32. **Applied:** (Enhancement) Add _lastUpdated search parameter guidance [FHIR-43659](https://jira.hl7.org/browse/FHIR-43659) [See Changes Here]([#.htm](general-guidance.html#searching-using-lastupdated)
 33. **Resolved - change required:** (Enhancement) Value set for medication adherence extension is unclear [FHIR-43757](https://jira.hl7.org/browse/FHIR-43757) [See Changes Here](#.html)
-34. **Pre-Applied** (Enhancement) Update and clarify US Core Scopes requirments [FHIR-43761](https://jira.hl7.org/browse/FHIR-43761) [See Changes Here](scopes.html) and [Here](StructureDefinition-us-core-allergyintolerance.html#us-core-scopes)
+34. **Pre-Applied** (Enhancement) Update and clarify US Core Scopes requirements [FHIR-43761](https://jira.hl7.org/browse/FHIR-43761) [See Changes Here](scopes.html) and [Here](StructureDefinition-us-core-allergyintolerance.html#us-core-scopes)
 35. **Applied:** (Correction) Fix Rendering in granular scope tables[FHIR-43770](https://jira.hl7.org/browse/FHIR-43770) [See Changes Here](scopes.html#us-core-scopes)
 36. **Applied:** (Correction) Fix format error [FHIR-43773](https://jira.hl7.org/browse/FHIR-43773) [See Changes Here](general-requirements.html#missing-data)
 37. **Resolved - change required:** (Clarification) AllergyIntolerance Definition [FHIR-43800](https://jira.hl7.org/browse/FHIR-43800) [See Changes Here](#.html)
