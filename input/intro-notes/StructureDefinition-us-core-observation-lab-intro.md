@@ -33,7 +33,7 @@ The following are example usage scenarios for this profile:
 
 **Profile Specific Implementation Guidance:**
 
-- For USCDI V3+, systems are required to use SNOMED CT for coded results if the SCT code exists. 
+- For USCDI, systems are required to use SNOMED CT for coded results if the SCT code exists. 
 - The specimen type can be communicated in the mandatory `Observation.code` (e.g., Blood Glucose), or the Must Support `Observation.specimen` element, or through both elements.
 {% include observation_guidance_1.md category="laboratory" example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" %}
 - <span class="bg-success" markdown="1">\*This profile inherits the invariant "us-core-3" from the US Core Observation Clinical Result Profile that requires UCUM to be used as a unit type for `Observation.valeQuantity.code'.

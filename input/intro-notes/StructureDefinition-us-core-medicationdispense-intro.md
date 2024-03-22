@@ -36,7 +36,7 @@ The following data elements must always be present ([Mandatory] definition) or m
 
 **Profile Specific Implementation Guidance:**
 
-* The MedicationDispense resource is used to represent the USCDI v3 medication fill status.
+* The MedicationDispense resource is used to represent the USCDI medication fill status.
 {% include representing-meds.md %}
 
 {% include link-list.md %}

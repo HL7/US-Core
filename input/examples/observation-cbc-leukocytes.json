@@ -1,81 +1,91 @@
 {
-  "category": [
-    {
-      "coding": [
+    "category": [
         {
-          "code": "laboratory",
-          "display": "Laboratory",
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+            "coding": [
+                {
+                    "code": "laboratory",
+                    "display": "Laboratory",
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+                }
+            ],
+            "text": "Laboratory"
         }
-      ],
-      "text": "Laboratory"
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "code": "6690-2",
-        "display": "Leukocytes [#/volume] in Blood by Automated count",
-        "system": "http://loinc.org"
-      }
     ],
-    "text": "WBCs"
-  },
-  "effectiveDateTime": "2005-07-05",
-  "id": "cbc-leukocytes",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab|7.0.0"
-    ]
-  },
-  "referenceRange": [
-    {
-      "high": {
-        "code": "10*3/uL",
-        "system": "http://unitsofmeasure.org",
-        "unit": "10*3/uL",
-        "value": 11
-      },
-      "low": {
-        "code": "10*3/uL",
-        "system": "http://unitsofmeasure.org",
-        "unit": "10*3/uL",
-        "value": 4.5
-      },
-      "type": {
+    "code": {
         "coding": [
-          {
-            "code": "normal",
-            "display": "Normal Range",
-            "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
-          }
+            {
+                "code": "6690-2",
+                "display": "Leukocytes [#/volume] in Blood by Automated count",
+                "system": "http://loinc.org"
+            }
         ],
-        "text": "Normal Range"
-      }
-    }
-  ],
-  "resourceType": "Observation",
-  "status": "final",
-  "subject": {
-    "display": "Amy Shaw",
-    "reference": "Patient/example"
-  },
-  "valueQuantity": {
-    "code": "10*3/uL",
-    "system": "http://unitsofmeasure.org",
-    "unit": "10*3/uL",
-    "value": 10
-  },
-  "interpretation": [
-    {
-      "coding": [
+        "text": "WBCs"
+    },
+    "effectiveDateTime": "2005-07-05",
+    "id": "cbc-leukocytes",
+    "meta": {
+        "extension": [
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+                "valueString": "Leukocytes Example"
+            },
+            {
+                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+                "valueMarkdown": "This is a Leukocytes example for the *US Core Observation Lab Profile* and CBC example for the *US Core DiagnosticReport Lab Profile*."
+            }
+        ],
+        "profile": [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+        ]
+    },
+    "referenceRange": [
         {
-          "code": "N",
-          "display": "Normal",
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+            "high": {
+                "code": "10*3/uL",
+                "system": "http://unitsofmeasure.org",
+                "unit": "10*3/uL",
+                "value": 11.0
+            },
+            "low": {
+                "code": "10*3/uL",
+                "system": "http://unitsofmeasure.org",
+                "unit": "10*3/uL",
+                "value": 4.5
+            },
+            "type": {
+                "coding": [
+                    {
+                        "code": "normal",
+                        "display": "Normal Range",
+                        "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+                    }
+                ],
+                "text": "Normal Range"
+            }
         }
-      ],
-      "text": "Normal"
-    }
-  ]
+    ],
+    "resourceType": "Observation",
+    "status": "final",
+    "subject": {
+        "display": "Amy Shaw",
+        "reference": "Patient/example"
+    },
+    "valueQuantity": {
+        "code": "10*3/uL",
+        "system": "http://unitsofmeasure.org",
+        "unit": "10*3/uL",
+        "value": 10.0
+    },
+    "interpretation": [
+        {
+            "coding": [
+                {
+                    "code": "N",
+                    "display": "Normal",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+                }
+            ],
+            "text": "Normal"
+        }
+    ]
 }

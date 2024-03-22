@@ -1,5 +1,5 @@
 * \*This Profile can represent a medication using a code or reference a [Medication] resource.
-    *  When using a code, RXNorm concepts are used. They are defined as an [extensible] binding to `.medicationCodeableConcept`. USCDI V3+ recommends the [National Drug Codes (NDC)] as an *optional* terminology. They can be supplied as an additional coding element.
+    *  When using a code, RXNorm concepts are used. They are defined as an [extensible] binding to `.medicationCodeableConcept`. USCDI recommends the [National Drug Codes (NDC)] as an *optional* terminology. They can be supplied as an additional coding element.
     *  When referencing a Medication resource in `.medicationReference`, the resource may be [contained] or an external resource.
     *  The server systems are not required to support both a code and a reference, but **SHALL** support *at least one* of these methods.
     * If an external reference to a Medication resource is used, the server **SHALL** support the [`_include`] parameter for searching this element.
