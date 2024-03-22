@@ -44,7 +44,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 27. **Resolved - change required:** (Clarification) Remove US Core Jurisdiction Extension [FHIR-43590](https://jira.hl7.org/browse/FHIR-43590) [See Changes Here](#.html)
 28. **Applied:** (Correction) Fixed scopes formats [FHIR-43616](https://jira.hl7.org/browse/FHIR-43616) [See Changes Here](scopes.html)
 29. **Resolved - change required:** (Clarification) Race needs to allow more than one occurrence [FHIR-43624](https://jira.hl7.org/browse/FHIR-43624) [See Changes Here](#.html)
-30. **Resolved - change required:** (Enhancement) In ""base"" US Core Vital sign observation, Please update Observation.code binding  [FHIR-43633](https://jira.hl7.org/browse/FHIR-43633) [See Changes Here](#.html)
+30. **Applied:** (Enhancement) Move US Core Vital Signs ValueSet to VSAC [FHIR-43633](https://jira.hl7.org/browse/FHIR-43633) [See Changes Here](StructureDefinition-us-core-vital-signs.html) and [Here](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion)
 31. **Applied:** (Clarification) Added guidance for using NDC codes[FHIR-43641](https://jira.hl7.org/browse/FHIR-43641) [See Changes Here](StructureDefinition-us-core-medicationdispense.html#mandatory-and-must-support-data-elements)
 32. **Applied:** (Enhancement) Add _lastUpdated search parameter guidance [FHIR-43659](https://jira.hl7.org/browse/FHIR-43659) [See Changes Here]([#.htm](general-guidance.html#searching-using-lastupdated)
 33. **Applied:** (Enhancement) Edit Medication Adherence codes and provide examples [FHIR-43757](https://jira.hl7.org/browse/FHIR-43757) [See Changes Here](StructureDefinition-us-core-medication-adherence.html)

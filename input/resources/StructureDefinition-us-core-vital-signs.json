@@ -110,12 +110,12 @@
             {
                 "id": "Observation.code",
                 "path": "Observation.code",
-                "short": "Coded Responses from C-CDA Vital Sign Results",
+                "short": "Coded vital sign result type",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
-                    "description": "The vital sign codes from the base FHIR and US Core Vital Signs.",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-vital-signs"
+                    "description": "Vital sign result types",
+                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.62"
                 }
             },
             {
@@ -219,11 +219,12 @@
             {
                 "id": "Observation.component.code",
                 "path": "Observation.component.code",
+                "short": "Coded vital sign result type",
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
-                    "description": "The vital sign codes from the base FHIR and US Core Vital Signs.",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-vital-signs"
+                    "description": "Vital sign result types",
+                    "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.88.12.80.62"
                 }
             },
             {

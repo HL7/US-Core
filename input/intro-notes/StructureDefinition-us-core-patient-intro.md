@@ -28,24 +28,28 @@ The following data-elements must always be present ([Mandatory] definition) or m
 {% include additional-requirements-intro.md type="Patient" plural="true" %}
 
 1. contact detail (e.g., a telephone number or an email address)
-2. a communication language
-3. a race
-4. an ethnicity
+2. a communication language*
+3. a race*
+4. an ethnicity*
 5. a tribal affiliation
 6. sex*
 7. gender identity*
-8. date of death
-9. previous address
-10. previous name
-11. suffix
+8. date of death*
+9. previous address*
+10. previous name*
+11. suffix*
 
 *see guidance below
 
 **Profile Specific Implementation Guidance:**
-- Notes for *Date of Death*, *Previous Name*, *Suffix*, *Previous address*, and *Preferred Language* USCDI Data Elements: 
+- Notes for <span class="bg-success" markdown="1">*Race*, *Ethnicity*,</span><!-- new-content --> *Date of Death*, *Previous Name*, *Suffix*, *Previous address*, and *Preferred Language* USCDI Data Elements: 
+  - <span class="bg-success" markdown="1">The Complex Extensions for Race and Ethnicity allow for one or more codes of which:</span><!-- new-content -->
+    - <span class="bg-success" markdown="1">[Must Support] at least one category code from the OMB Race and Ethnicity Categories</span><!-- new-content -->
+    - <span class="bg-success" markdown="1">**MAY** include additional detailed codes from CDC Race and Ethnicity Codes</span><!-- new-content -->
+    - <span class="bg-success" markdown="1">**SHALL** include a text description</span><!-- new-content -->
   - Date of Death is communicated using the `Patient.deceasedDateTime` element.
-  - Suffix is represented using the `Patient.name.suffix` element.
   - Previous name is represented by setting `Patient.name.use` to "old" or providing an end date in `Patient.name.period` or doing both.
+  - Suffix is represented using the `Patient.name.suffix` element.
   - Previous address is represented by setting `Patient.address.use` to "old" or providing an end date in `Patient.address.period` or doing both.
   - `Communication.preferred` **MAY** be used to designate a preferred language when multiple languages are represented. 
   - The [Patient example] demonstrates how these elements are represented.
