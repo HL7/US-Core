@@ -1,56 +1,46 @@
 {
-    "resourceType": "Observation",
-    "id": "dxa-femur-l-armass-bmd",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "DXA Femur-L ArMass BMD Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a DXA Femur-L ArMass BMD Example for the *Imaging Result Observation Profile*."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result"
-        ]
-    },
-    "status": "final",
-    "category": [
+  "resourceType": "Observation",
+  "id": "dxa-femur-l-armass-bmd",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-result|7.0.0"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
         {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "code": "imaging",
-                    "display": "Imaging"
-                }
-            ],
-            "text": "Imaging"
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "imaging",
+          "display": "Imaging"
         }
-    ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://loinc.org",
-                "code": "80954-1",
-                "display": "DXA Femur-L ArMass BMD"
-            }
-        ],
-        "text": "DXA Femur-L ArMass BMD"
-    },
-    "subject": {
-        "reference": "Patient/example",
-        "display": "Amy Shaw"
-    },
-    "encounter": {
-        "display": "Bone Scan"
-    },
-    "effectiveDateTime": "2021-11-10T19:14:41.088720-08:00",
-    "valueQuantity": {
-        "value": 0.631,
-        "unit": "g/cm2",
-        "system": "http://unitsofmeasure.org",
-        "code": "g/cm2"
+      ],
+      "text": "Imaging"
     }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "80954-1",
+        "display": "DXA Femur-L ArMass BMD"
+      }
+    ],
+    "text": "DXA Femur-L ArMass BMD"
+  },
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Amy Shaw"
+  },
+  "encounter": {
+    "display": "Bone Scan"
+  },
+  "effectiveDateTime": "2021-11-10T19:14:41.088720-08:00",
+  "valueQuantity": {
+    "value": 0.631,
+    "unit": "g/cm2",
+    "system": "http://unitsofmeasure.org",
+    "code": "g/cm2"
+  }
 }

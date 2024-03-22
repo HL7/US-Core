@@ -1623,16 +1623,15 @@ definition:
       reference: StructureDefinition/us-core-condition-encounter-diagnosis
     description: The US Core Condition Encounter Diagnosis Profile is based upon the
       core FHIR Condition Resource and meets the U.S. Core Data for Interoperability
-      (USCDI) v2 *Encounter Diagnosis* requirements. In version 5.0.0, The US Core
-      Condition Profile has been split into the US Core Condition Encounter Diagnosis
-      Profile and US Core Condition Problems and Health Concerns Profile. To promote
-      interoperability and adoption through common implementation, this profile defines
-      constraints and extensions on the Condition resource for the minimal set of
-      data to record, search, and fetch information about an encounter diagnosis.  It
-      identifies which core elements, extensions, vocabularies, and value sets **SHALL**
-      be present in the resource and constrains the way the elements are used when
-      using this profile. It provides the floor for standards development for specific
-      use cases.
+      (USCDI) *Encounter Diagnosis* requirements. In version 5.0.0, The US Core Condition
+      Profile has been split into the US Core Condition Encounter Diagnosis Profile
+      and US Core Condition Problems and Health Concerns Profile. To promote interoperability
+      and adoption through common implementation, this profile defines constraints
+      and extensions on the Condition resource for the minimal set of data to record,
+      search, and fetch information about an encounter diagnosis.  It identifies which
+      core elements, extensions, vocabularies, and value sets **SHALL** be present
+      in the resource and constrains the way the elements are used when using this
+      profile. It provides the floor for standards development for specific use cases.
     exampleBoolean: false
     name: US Core Condition Encounter Diagnosis Profile
   - reference:
@@ -2043,7 +2042,7 @@ definition:
       reference: StructureDefinition/us-core-observation-pregnancyintent
     description: The US Core Pregnancy Intent Observation Profile is based upon the
       core FHIR Observation Resource and implements the US Core Data for Interoperability
-      (USCDI) v3 Pregnancy status requirements. To promote interoperability and adoption
+      (USCDI) Pregnancy status requirements. To promote interoperability and adoption
       through common implementation, this profile sets minimum expectations for the
       Observation resource to record, search, and fetch the "patient's intent to become
       pregnant" over the next year. It identifies which core elements, extensions,
@@ -2056,7 +2055,7 @@ definition:
       reference: StructureDefinition/us-core-observation-pregnancystatus
     description: The US Core Pregnancy Status Observation Profile is based upon the
       core FHIR Observation Resource and implements the US Core Data for Interoperability
-      (USCDI) v3 Pregnancy status requirements. This profile sets minimum expectations
+      (USCDI) Pregnancy status requirements. This profile sets minimum expectations
       for the Observation resource to record, search, and fetch the "state or condition
       of being pregnant" associated with a patient to promote interoperability and
       adoption through common implementation. It identifies which core elements, extensions,
@@ -2354,11 +2353,11 @@ definition:
       reference: StructureDefinition/us-core-sex
     description: "The Sex Extension is used to reflect the documentation of a person's\
       \ sex. Systems choosing to record sources of information should use the [Provenance\
-      \ resource](basic-provenance.html#element-level-provenance).\n \nUSCDI v3 includes\
+      \ resource](basic-provenance.html#element-level-provenance).\n \nUSCDI includes\
       \ a data element for sex, intended to support the exchange of a sex value that\
       \ is not characterized as sex assigned at birth or birth sex. This Sex extension\
-      \ supports USCDI v3. Sex assigned at birth or birth sex can be recorded using\
-      \ the more specific [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html).\n\
+      \ supports USCDI. Sex assigned at birth or birth sex can be recorded using the\
+      \ more specific [US Core Birth Sex Extension](StructureDefinition-us-core-birthsex.html).\n\
       Future versions of this extension may be informed by the content of the HL7\
       \ Cross Paradigm IG: Gender Harmony - Sex and Gender Representation, which may\
       \ include additional guidance on its relationship to administrative gender ([Patient.gender](StructureDefinition-us-core-patient-definitions.html#Patient.gender))."

@@ -1,66 +1,56 @@
 {
-    "resourceType": "Observation",
-    "id": "AUDIT-C-item-example-68519-8",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Audit-C Item Example 68519-8"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a Audit-C Item Example 68519-8 (How many standard drinks containing alcohol do you have on a typical day?) for the *US Core Observation Screening Assessment Profile*"
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment"
-        ]
-    },
-    "status": "final",
-    "category": [
-        {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-                    "code": "survey",
-                    "display": "Survey"
-                }
-            ]
-        }
-    ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://loinc.org",
-                "code": "68519-8",
-                "display": "How many standard drinks containing alcohol do you have on a typical day?"
-            }
-        ],
-        "text": "How many standard drinks containing alcohol do you have on a typical day?"
-    },
-    "subject": {
-        "reference": "Patient/example"
-    },
-    "effectiveDateTime": "2023-08-14T20:40:49.675000+00:00",
-    "performer": [
-        {
-            "reference": "Practitioner/practitioner-1"
-        }
-    ],
-    "valueCodeableConcept": {
-        "coding": [
-            {
-                "system": "http://loinc.org",
-                "code": "LA15694-5",
-                "display": "1 or 2"
-            }
-        ],
-        "text": "1 or 2"
-    },
-    "derivedFrom": [
-        {
-            "reference": "QuestionnaireResponse/AUDIT-C",
-            "display": "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] QuestionnaireResponse Example"
-        }
+  "resourceType": "Observation",
+  "id": "AUDIT-C-item-example-68519-8",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment|7.0.0"
     ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "survey",
+          "display": "Survey"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "68519-8",
+        "display": "How many standard drinks containing alcohol do you have on a typical day?"
+      }
+    ],
+    "text": "How many standard drinks containing alcohol do you have on a typical day?"
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2023-08-14T20:40:49.675000+00:00",
+  "performer": [
+    {
+      "reference": "Practitioner/practitioner-1"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "LA15694-5",
+        "display": "1 or 2"
+      }
+    ],
+    "text": "1 or 2"
+  },
+  "derivedFrom": [
+    {
+      "reference": "QuestionnaireResponse/AUDIT-C",
+      "display": "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] QuestionnaireResponse Example"
+    }
+  ]
 }

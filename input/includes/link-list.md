@@ -330,6 +330,7 @@
 [US Core Medication Statement Profile]: StructureDefinition-us-core-medicationstatement.html
 [US Core MedicationRequest Profile]: StructureDefinition-us-core-medicationrequest.html
 [US Core Medication Adherence Extension]: StructureDefinition-us-core-medication-adherence.html
+[Medication Adherence ValueSet]: https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.8/expansionStructureDefinition-us-core-medication-adherence.html
 [US Core Simple Observation Profile]: StructureDefinition-us-core-simple-observation.html
 [US Core Specimen Profile]: StructureDefinition-us-core-specimen.html
 [US Core Observation Clinical Result Profile]: StructureDefinition-us-core-observation-clinical-result.html
@@ -434,4 +435,4 @@
 [Clinician Access for EHR Launch]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/conformance.html#clinician-access-for-standalone
 [Token Introspection]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/token-introspection.html#token-introspection)
 [Well-Known Uniform Resource Identifiers (URIs)]: https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known
-
+[NDC to RxNorm mappings]: https://www.nlm.nih.gov/research/umls/user_education/quick_tours/RxNorm/ndc_rxcui/NDC_RXCUI_DrugName.html
