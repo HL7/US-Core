@@ -58,7 +58,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 41. **Resolved - change required:** (Correction) SimpleQuantity cannot be constrained to Quantity in a profile [FHIR-43932](https://jira.hl7.org/browse/FHIR-43932) [See Changes Here](#.html)
 42. **Resolved - change required:** (Correction) change must support elements for Immunization profile [FHIR-43934](https://jira.hl7.org/browse/FHIR-43934) [See Changes Here](#.html)
 43. **Resolved - change required:** (Clarification) Race extension cardinality / documentation does not match value set [FHIR-43937](https://jira.hl7.org/browse/FHIR-43937) [See Changes Here](#.html)
-44. **Resolved - change required:** (Correction) Update to figure in Section 3.6.4.3 [FHIR-43938](https://jira.hl7.org/browse/FHIR-43938) [See Changes Here](#.html)
+44. **Applied:** (Correction) Update diagram in Section 3.6.4.3 [FHIR-43938](https://jira.hl7.org/browse/FHIR-43938) [See Changes Here](screening-and-assessments.html#codes-for-problemshealthconcerns-goals-service-requests-and-procedures)
 45. **Applied:** (Correction) Undo copy/paste error to US Simple Observation Profile description [FHIR-43954](https://jira.hl7.org/browse/FHIR-43954) [See Changes Here](StructureDefinition-us-core-simple-observation.html)
 46. **Applied:** (Correction) change "treatment-intervention" to "treatment-intervention-profile" [FHIR-44008](https://jira.hl7.org/browse/FHIR-44008) [See Changes Here](StructureDefinition-us-core-treatment-intervention-preference.html#mandatory-and-must-support-data-elements)
 47. **Applied:** (Correction) Add hyperlink [FHIR-44009](https://jira.hl7.org/browse/FHIR-44009) [See Changes Here](StructureDefinition-us-core-location.html#mandatory-and-must-support-data-elements)
