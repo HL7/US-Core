@@ -429,3 +429,9 @@
 [FHIR Topic-Based Subscription]: https://hl7.org/fhir/R5/subscriptions.html
 [FHIR-45012]: https://jira.hl7.org/browse/FHIR-45012
 [Event Location Extension]: http://hl7.org/fhir/StructureDefinition/event-location
+[FHIR OAuth authorization Endpoints and Capabilities]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/conformance.html#smart-on-fhir-oauth-authorization-endpoints-and-capabilities
+[Patient Access for Standalone Apps]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/conformance.html#patient-access-for-standalone-apps
+[Clinician Access for EHR Launch]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/conformance.html#clinician-access-for-standalone
+[Token Introspection]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/token-introspection.html#token-introspection)
+[Well-Known Uniform Resource Identifiers (URIs)]: https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known
+
