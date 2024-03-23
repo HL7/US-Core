@@ -24,13 +24,11 @@ The following data-elements must always be present ([Mandatory] definition) or m
 1. a category code of "care-experience-preference"
 2. a time indicating when the preference was made
 <!-- 3. who reported the preference -->
-4. treatment intervention preference value*
-
-\*see guidance below
+4. <span class="bg-success" markdown="1">care experience preference</span><!-- new-content --> value
 
 **Profile Specific Implementation Guidance:**
 
-- \*Care experience preferences are patient-authored information used to share an individual's goals, preferences, and priorities for overall experiences during their care and treatment. They guide caregivers and medical personnel about what is important to them. The preferences may be documented in narrative (text) form or the result of selecting from a list of options provided by the content creator/implementer.
+- <span class="bg-success" markdown="1">Care experience preferences expressed by a patient may be documented in narrative (text) form or the result of selecting from a list of options provided by the content creator/implementer.</span><!-- new-content -->
 {% include additional-codings.md example1=', for example, the more specific LOINC, “81364-2	(Religious or cultural beliefs [Reported]) from the ”'%}
   - See the existing [Care Experience Preferences at End of Life Grouping] for more specific concepts representing an individual's care experience preferences
 

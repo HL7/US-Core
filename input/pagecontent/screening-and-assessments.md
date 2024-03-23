@@ -189,7 +189,7 @@ to represent conclusions or diagnoses pertaining to drug misuse or abuse. In man
 
 {% include assessment-valueset-table-generator.html %}
 
-This information is also available as a [csv](assessments-valuesets.csv) or [excel](assessments-valuesets.xlsx) file:
+This information is also available as a [csv](tables/assessments-valuesets.csv) or [excel](tables/assessments-valuesets.xlsx) file:
 </div><!-- new-content -->
 
 #### Codes for Problems/HealthConcerns, Goals, Service Requests, and Procedures
