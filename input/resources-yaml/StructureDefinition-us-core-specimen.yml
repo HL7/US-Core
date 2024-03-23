@@ -28,6 +28,9 @@ differential:
     path: Specimen.identifier
     short: Specimen identifier
     mustSupport: true
+  - id: Specimen.accessionIdentifier
+    path: Specimen.accessionIdentifier
+    mustSupport: true
   - id: Specimen.type
     path: Specimen.type
     min: 1

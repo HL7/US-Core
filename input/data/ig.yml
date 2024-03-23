@@ -283,6 +283,12 @@ definition:
     name: Chest Xray Example
     exampleBoolean: true
   - reference:
+      reference: Observation/pack-years-example
+    description: This example for the *US Core Smokingstatus Profile* shows a Quantitative
+      result.
+    name: Cigarette Pack-Years Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus
+  - reference:
       reference: CarePlan/colonoscopy
     description: This is a colonoscopy example for the *US Core CarePlan Profile*.
     name: Colonoscopy Example
@@ -1340,8 +1346,8 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation
   - reference:
       reference: Observation/some-day-smoker
-    description: This is a some day smoker example for the *US Core Smokingstatus
-      Profile*.
+    description: This example for the *US Core Smokingstatus Profile* shows a coded
+      result.
     name: Some Day Smoker Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus
   - reference:
@@ -2392,12 +2398,6 @@ definition:
       \ cases."
     exampleBoolean: false
     name: US Core Simple Observation Profile
-  - reference:
-      reference: ValueSet/us-core-observation-smokingstatus-max
-    description: Representing a patient's smoking behavior using concepts from SNOMED
-      CT.
-    exampleBoolean: false
-    name: US Core Smoking Status Max-Binding
   - reference:
       reference: ValueSet/us-core-smoking-status-observation-codes
     description: The US Core Smoking Status Observation Codes Value Set is a 'starter

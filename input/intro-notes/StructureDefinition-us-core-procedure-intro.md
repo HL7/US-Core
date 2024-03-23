@@ -25,9 +25,6 @@ The following data-elements must always be present ([Mandatory] definition) or m
 
 1.  the encounter associated with the procedure
 
-
-
-
 {% include additional-requirements-intro.md type="Procedure" %}
 
 1.  a reason or indication for referral or consultation*
@@ -41,10 +38,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
 - A procedure including an implantable device **SHOULD** use `Procedure.focalDevice` with a reference to the [US Core Implantable Device Profile].
 - See the [Screening and Assessments] guidance page for more information when exchanging Social Determinants of Health (SDOH) Procedures
 
-  
-{% include reason-for-referral.md %}
-  
 
-
+{% include reason-for-referral.md type="Procedure" %}
 
 {% include link-list.md %}
