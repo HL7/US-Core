@@ -1,93 +1,83 @@
 {
-    "category": [
+  "category": [
+    {
+      "coding": [
         {
-            "coding": [
-                {
-                    "code": "LAB",
-                    "display": "Laboratory",
-                    "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
-                }
-            ]
+          "code": "LAB",
+          "display": "Laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
         }
-    ],
-    "code": {
-        "coding": [
-            {
-                "code": "58410-2",
-                "display": "CBC panel - Blood by Automated count",
-                "system": "http://loinc.org"
-            }
-        ]
-    },
-    "effectiveDateTime": "2005-07-05",
-    "id": "cbc",
-    "issued": "2005-07-06T11:45:33+11:00",
-    "meta": {
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "CBC Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is a CBC example for the *US Core DiagnosticReport Lab Profile*."
-            }
-        ],
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"
-        ]
-    },
-    "performer": [
-        {
-            "display": "Acme Laboratory, Inc",
-            "reference": "Organization/acme-lab"
-        }
-    ],
-    "resourceType": "DiagnosticReport",
-    "result": [
-        {
-            "display": "LEUKOCYTES",
-            "reference": "Observation/cbc-leukocytes"
-        },
-        {
-            "display": "ERYTHROCYTES",
-            "reference": "Observation/cbc-erythrocytes"
-        },
-        {
-            "display": "HEMOGLOBIN",
-            "reference": "Observation/cbc-hemoglobin"
-        },
-        {
-            "display": "HEMATOCRIT",
-            "reference": "Observation/cbc-hematocrit"
-        },
-        {
-            "display": "MCV",
-            "reference": "Observation/cbc-mcv"
-        },
-        {
-            "display": "MCH",
-            "reference": "Observation/cbc-mch"
-        },
-        {
-            "display": "MCHC",
-            "reference": "Observation/cbc-mchc"
-        },
-        {
-            "display": "PLATELETS",
-            "reference": "Observation/cbc-platelets"
-        }
-    ],
-    "status": "final",
-    "subject": {
-        "display": "Amy Shaw",
-        "reference": "Patient/example"
-    },
-    "encounter": {
-        "reference": "Encounter/example-1",
-        "display": "Office Visit"
-    },
-    "text": {
-        "status": "generated"
+      ]
     }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "58410-2",
+        "display": "CBC panel - Blood by Automated count",
+        "system": "http://loinc.org"
+      }
+    ]
+  },
+  "effectiveDateTime": "2005-07-05",
+  "id": "cbc",
+  "issued": "2005-07-06T11:45:33+11:00",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab|7.0.0"
+    ]
+  },
+  "performer": [
+    {
+      "display": "Acme Laboratory, Inc",
+      "reference": "Organization/acme-lab"
+    }
+  ],
+  "resourceType": "DiagnosticReport",
+  "result": [
+    {
+      "display": "LEUKOCYTES",
+      "reference": "Observation/cbc-leukocytes"
+    },
+    {
+      "display": "ERYTHROCYTES",
+      "reference": "Observation/cbc-erythrocytes"
+    },
+    {
+      "display": "HEMOGLOBIN",
+      "reference": "Observation/cbc-hemoglobin"
+    },
+    {
+      "display": "HEMATOCRIT",
+      "reference": "Observation/cbc-hematocrit"
+    },
+    {
+      "display": "MCV",
+      "reference": "Observation/cbc-mcv"
+    },
+    {
+      "display": "MCH",
+      "reference": "Observation/cbc-mch"
+    },
+    {
+      "display": "MCHC",
+      "reference": "Observation/cbc-mchc"
+    },
+    {
+      "display": "PLATELETS",
+      "reference": "Observation/cbc-platelets"
+    }
+  ],
+  "status": "final",
+  "subject": {
+    "display": "Amy Shaw",
+    "reference": "Patient/example"
+  },
+  "encounter": {
+    "reference": "Encounter/example-1",
+    "display": "Office Visit"
+  },
+  "text": {
+    "status": "generated"
+  }
 }

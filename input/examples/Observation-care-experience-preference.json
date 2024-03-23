@@ -1,54 +1,44 @@
 {
-    "resourceType": "Observation",
-    "id": "care-experience-preference",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Care Experience Preference Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is an care experience preference example for the *Care Experience Profile*.  It is based on the *US Core Simple Observation Profile*."
-            }
-        ]
-    },
-    "status": "final",
-    "category": [
+  "resourceType": "Observation",
+  "id": "care-experience-preference",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-care-experience-preference|7.0.0"
+    ]
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
         {
-            "coding": [
-                {
-                    "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
-                    "code": "care-experience-preference",
-                    "display": "Care experience preference"
-                }
-            ],
-            "text": "Care Experience Preference"
+          "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+          "code": "care-experience-preference",
+          "display": "Care experience preference"
         }
+      ],
+      "text": "Care Experience Preference"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "95541-9",
+        "display": "Care experience preference"
+      }
     ],
-    "code": {
-        "coding": [
-            {
-                "system": "http://loinc.org",
-                "code": "95541-9",
-                "display": "Care experience preference"
-            }
-        ],
-        "text": "Care Experience Preference"
-    },
-    "subject": {
-        "display": "Amy Shaw",
-        "reference": "Patient/example"
-    },
-    "effectiveDateTime": "2023-08-30",
-    "performer": [
-        {
-            "display": "Amy Shaw",
-            "reference": "Patient/example"
-        }
-    ],
-    "valueString": "For critical or end-of-life care, here are some examples of the things that I would like to have near me, music that I\u2019d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
+    "text": "Care Experience Preference"
+  },
+  "subject": {
+    "display": "Amy Shaw",
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2023-08-30",
+  "performer": [
+    {
+      "display": "Amy Shaw",
+      "reference": "Patient/example"
+    }
+  ],
+  "valueString": "For critical or end-of-life care, here are some examples of the things that I would like to have near me, music that I’d like to hear, and other details of my care that would help to keep me happy and relaxed: Like Bach, especially the cantatas.  St. Martin in the Fields"
 }

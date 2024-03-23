@@ -1,59 +1,49 @@
 {
-    "resourceType": "Organization",
-    "id": "acme-payer",
-    "meta": {
-        "profile": [
-            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
-        ],
-        "extension": [
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Organization Acme Payer Example"
-            },
-            {
-                "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
-                "valueMarkdown": "This is an example payer using the *US Core Organization Profile*."
-            }
-        ]
-    },
-    "identifier": [
-        {
-            "system": "urn:oid:2.16.840.1.113883.6.300",
-            "value": "55555"
-        }
-    ],
-    "active": true,
-    "type": [
-        {
-            "coding": [
-                {
-                    "system": "http://terminology.hl7.org/CodeSystem/organization-type",
-                    "code": "pay"
-                }
-            ],
-            "text": "Payer"
-        }
-    ],
-    "name": "Acme Health Plan",
-    "telecom": [
-        {
-            "system": "phone",
-            "value": "(+1) 555-555-5555"
-        },
-        {
-            "system": "email",
-            "value": "hq@acme.org"
-        }
-    ],
-    "address": [
-        {
-            "line": [
-                "100 INSURANCE AVE"
-            ],
-            "city": "AMHERST",
-            "state": "MA",
-            "postalCode": "01002",
-            "country": "USA"
-        }
+  "resourceType": "Organization",
+  "id": "acme-payer",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0"
     ]
+  },
+  "identifier": [
+    {
+      "system": "urn:oid:2.16.840.1.113883.6.300",
+      "value": "55555"
+    }
+  ],
+  "active": true,
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "pay"
+        }
+      ],
+      "text": "Payer"
+    }
+  ],
+  "name": "Acme Health Plan",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(+1) 555-555-5555"
+    },
+    {
+      "system": "email",
+      "value": "hq@acme.org"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "100 INSURANCE AVE"
+      ],
+      "city": "AMHERST",
+      "state": "MA",
+      "postalCode": "01002",
+      "country": "USA"
+    }
+  ]
 }

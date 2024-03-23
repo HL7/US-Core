@@ -41,9 +41,9 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 24. **Applied** (Clarification) Clarify location extension to use when not in Encounter [FHIR-43587](https://jira.hl7.org/browse/FHIR-43587) [See Changes Here](StructureDefinition-us-core-encounter.html)
 25. **Resolved - change required:** (Clarification) Reason for Referral Clarification/Correction [FHIR-43588](https://jira.hl7.org/browse/FHIR-43588) [See Changes Here](#.html)
 26. **Resolved - change required:** (Enhancement) Smoking Status Max Binding addition [FHIR-43589](https://jira.hl7.org/browse/FHIR-43589) [See Changes Here](#.html)
-27. **Resolved - change required:** (Clarification) Remove US Core Jurisdiction Extension [FHIR-43590](https://jira.hl7.org/browse/FHIR-43590) [See Changes Here](#.html)
+27. **Applied:** (Clarification) Clarify that not all US Core extensions are used in US Core Profiles [FHIR-43590](https://jira.hl7.org/browse/FHIR-43590) [See Changes Here](profiles-and-extensions.html#extensions)
 28. **Applied:** (Correction) Fixed scopes formats [FHIR-43616](https://jira.hl7.org/browse/FHIR-43616) [See Changes Here](scopes.html)
-29. **Resolved - change required:** (Clarification) Race needs to allow more than one occurrence [FHIR-43624](https://jira.hl7.org/browse/FHIR-43624) [See Changes Here](#.html)
+29. **Resolved - change required:** (Clarification) Document that multiple races and ethnicities are supported in the extension [FHIR-43624](https://jira.hl7.org/browse/FHIR-43624) [See Changes Here](StructureDefinition-us-core-patient.html)
 30. **Applied:** (Enhancement) Move US Core Vital Signs ValueSet to VSAC [FHIR-43633](https://jira.hl7.org/browse/FHIR-43633) [See Changes Here](StructureDefinition-us-core-vital-signs.html) and [Here](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.88.12.80.62/expansion)
 31. **Applied:** (Clarification) Added guidance for using NDC codes[FHIR-43641](https://jira.hl7.org/browse/FHIR-43641) [See Changes Here](StructureDefinition-us-core-medicationdispense.html#mandatory-and-must-support-data-elements)
 32. **Applied:** (Enhancement) Add _lastUpdated search parameter guidance [FHIR-43659](https://jira.hl7.org/browse/FHIR-43659) [See Changes Here]([#.htm](general-guidance.html#searching-using-lastupdated)
@@ -228,6 +228,7 @@ This ballot addresses the following:
 39. **APPLIED:**  Add Preferred Language guidance [FHIR-40773](https://jira.hl7.org/browse/FHIR-40773) [See Changes Here](http://hl7.org/fhir/us/core/2024Jan/tructureDefinition-us-core-patient.html#mandatory-and-must-support-data-elements)
 40. **APPLIED:**  Update UCUM guidance [FHIR-40604](https://jira.hl7.org/browse/FHIR-40604) [See Changes Here](http://hl7.org/fhir/us/core/2024Jan/eneral-guidance.html#using-ucum-codes-in-the-quantity-datatype)
 41. **APPLIED:**  Added interpretation to laboratory result examples [FHIR-40297](https://jira.hl7.org/browse/FHIR-40297) [See Changes Here](http://hl7.org/fhir/us/core/2024Jan/bservation-cbc-mchc.html)
+
 
 The following trackers have been identified as publishing issues and we will work with HL7 publishing to resolve them.
 
