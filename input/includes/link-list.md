@@ -436,3 +436,4 @@
 [Token Introspection]: {{site.data.fhir.ver.hl7_fhir_uv_smart_app_launch}}/token-introspection.html#token-introspection)
 [Well-Known Uniform Resource Identifiers (URIs)]: https://hl7.org/fhir/smart-app-launch/STU2/conformance.html#using-well-known
 [NDC to RxNorm mappings]: https://www.nlm.nih.gov/research/umls/user_education/quick_tours/RxNorm/ndc_rxcui/NDC_RXCUI_DrugName.html
+[Enclosed Precondition Extension]: http://hl7.org/fhir/us/pacio-adi/StructureDefinition/adi-enclosedPrecondition-extension

@@ -29,10 +29,8 @@ The following data-elements must always be present ([Mandatory] definition) or m
 **Profile Specific Implementation Guidance:**
 
 - <span class="bg-success" markdown="1">Care experience preferences expressed by a patient may be documented in narrative (text) form or the result of selecting from a list of options provided by the content creator/implementer.</span><!-- new-content -->
+{% include conditional-goals-guidance.md %}
 {% include additional-codings.md example1=', for example, the more specific LOINC, “81364-2	(Religious or cultural beliefs [Reported]) from the ”'%}
   - See the existing [Care Experience Preferences at End of Life Grouping] for more specific concepts representing an individual's care experience preferences
-
-   We expect this value set's "end of life" name and text scope to be removed in a upcoming [Value Set Authority Center (VSAC)] update before the publication of this version of US Core. 
-   {:.note-to-balloters}
 
 {% include link-list.md %}
