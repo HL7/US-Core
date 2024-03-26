@@ -48,6 +48,7 @@ The following data-elements must always be present ([Mandatory] definition) or m
     - <span class="bg-success" markdown="1">**MAY** include additional detailed codes from CDC Race and Ethnicity Codes</span><!-- new-content -->
     - <span class="bg-success" markdown="1">**SHALL** include a text description</span><!-- new-content -->
   - Date of Death is communicated using the `Patient.deceasedDateTime` element.
+    - <span class="bg-success" markdown="1">Although `Patient.deceased[x]` is marked as 𝗔𝗗𝗗𝗜𝗧𝗜𝗢𝗡𝗔𝗟 𝗨𝗦𝗖𝗗𝗜, certifying systems are not required to support both, but **SHALL** support at least `Patient.deceasedDateTime`</span><!-- new-content -->
   - Previous name is represented by setting `Patient.name.use` to "old" or providing an end date in `Patient.name.period` or doing both.
   - Suffix is represented using the `Patient.name.suffix` element.
   - Previous address is represented by setting `Patient.address.use` to "old" or providing an end date in `Patient.address.period` or doing both.

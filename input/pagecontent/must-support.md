@@ -62,7 +62,7 @@ To communicate when *Additional USCDI Requirements* elements are in a US Core pr
 
 ### Presentation of Must Support, Mandatory, and USCDI Requirement Elements in the Formal Profile Views
 
-On each profile page, several different formal views of the US Core Profile contents are displayed in a tree format under tabs labeled "Differential Table", "Snapshot Table", and "Key Elements Table".
+On each profile page, several different formal views of the US Core Profile contents are displayed in a tree format under tabs labeled "Differential Table", "Snapshot Table", and "Key Elements Table". <span class="bg-success" markdown="1">Several examples below illustrate the presentation of Must Support elements and their rules. For the sake of simplicity, the Additional USCDI Requirements are not considered in these examples.</span><!-- new-content -->
 
 #### Differential Table View
 
@@ -125,17 +125,26 @@ For example, the [US Core DiagnosticReport Profile for Report and Note exchange]
 - US Core Responders **SHALL** be capable of providing a value in `DiagnosticReport.presentedForm` sub-element.
 - US Core Requestors **SHALL** be capable of processing the value in `DiagnosticReport.presentedForm`.
 
-{% include img.html img="Must_Support_DiagnosticReport_presentedForm.png" caption="Figure 5: US Core DiagnosticReport.presentedForm" %}
+{% include img.html img="Must_Support_DiagnosticReport_presentedForm.png" caption="Figure 6: US Core DiagnosticReport.presentedForm" %}
 
 For example, the [US Core Patient Profile] `name` element is labeled Must Support and has Must Support sub-elements "family" and "given". When claiming conformance to this profile:
 
 - US Core Responders **SHALL** be capable of providing a value in `Patient.name.family` and `Patient.name.given`.
 - US Core Requestors **SHALL** be capable of processing the value in value in `Patient.name.family` and `Patient.name.given`.
 
-{% include img.html img="Must_Support_Patient_name.png" caption="Figure 6: US Core Patient.name" %}
+{% include img.html img="Must_Support_Patient_name.png" caption="Figure 7: US Core Patient.name" %}
 
-On the other hand, if any sub-element is marked as Must Support and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure, you must support the sub-element (s) marked as Must Support. There are no examples of US Core profiles that have this structure defined.
+On the other hand, if any sub-element is marked as Must Support and the parent element is not, there is *no expectation* that you must support the parent. However, if the parent element is represented in the structure, you must support the sub-element (s) marked as Must Support.
+<div class="bg-success" markdown="1">
 
+For example, the [US Core Patient Profile] `telecom` element is not labeled Must Support, but `telecom.system`, `telecom.value`, `telecom.use` are. When claiming conformance to this profile:
+
+- *If* US Core Responders support `Patient.telecom`, they **SHALL** be capable of providing values in `Patient.telecom.system` , `Patient.telecom.value`, and `Patient.telecom.use`.
+- US Core Requestors **SHALL** be capable of processing the values in `Patient.telecom`.
+
+{% include img.html img="Must_Support_Patient_telecom.png" caption="Figure 8: US Core Patient.telecom" %}
+
+</div><!-- new-content -->
 Systems can support the other elements, but this is not a requirement of US Core. The [U.S. Core Data for Interoperability (USCDI)] may require additional elements, for example, `suffix`.
 
 #### Must Support - Resource References
@@ -151,7 +160,7 @@ For example, the [US Core DocumentReference Profile] author US Core Practitioner
 
 Systems can support other references, but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_DocumentReference.png" caption="Figure 7: US Core DocumentReference.author" %}
+{% include img.html img="Must_Support_DocumentReference.png" caption="Figure 9: US Core DocumentReference.author" %}
 
 In specific profiles, only a single resource reference is present on an element labeled *Must Support*.
 
@@ -160,7 +169,7 @@ For example, the [US Core AllergyIntolerance Profile] patient is labeled *Must S
 * US Core Responders **SHALL** be capable of providing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 * US Core Requestors **SHALL** be capable of processing an `AllergyIntolerance.patient` with a valid reference to a US Core Patient Profile.
 
-{% include img.html img="Must_Support_AllergyIntolerance.png" caption="Figure 8: US Core AllergyIntolerance.patient" %}
+{% include img.html img="Must_Support_AllergyIntolerance.png" caption="Figure 10: US Core AllergyIntolerance.patient" %}
 
 #### Must Support - Choice of Data Types
 
@@ -173,7 +182,7 @@ For example, the [US Core Observation Clinical Result Profile] effectiveDateTime
 
 Systems **MAY** support populating and processing other choice elements (such as Observation.effectivePeriod), but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_Observation.effective.png" caption="Figure 9: US Core Observation.effectiveDateTime" %}
+{% include img.html img="Must_Support_Observation.effective.png" caption="Figure : US Core Observation.effectiveDateTime" %}
 
 For the [US Core Observation Clinical Result Profile] value element, multiple elements are labeled *Must Support*. When claiming conformance to this profile:
 
@@ -182,7 +191,7 @@ For the [US Core Observation Clinical Result Profile] value element, multiple el
 
 Systems can support the other elements, but this is not a requirement of US Core.
 
-{% include img.html img="Must_Support_Observation.value.png" caption="Figure 10: US Core `Observation.value[x]`" %}
+{% include img.html img="Must_Support_Observation.value.png" caption="Figure 11: US Core `Observation.value[x]`" %}
 
 
 #### Must Support - Choice of Profile Elements
