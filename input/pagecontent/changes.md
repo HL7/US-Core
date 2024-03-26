@@ -15,10 +15,6 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 
 **Tracker Status**: **(Change Category)** **Summary** **[Jira Issue](#)** **[Link to Updated Content](#)**
 
-1. **Applied:** (Correction) Change "ASKU" to "asked-declined" in sex and gender value sets[FHIR-41571](https://jira.hl7.org/browse/FHIR-41571):
-- [US Core Gender Identity Extension](StructureDefinition-us-core-genderIdentity.html)
-- [US Core Sex Extension](StructureDefinition-us-core-sex.html)
-- [US Core Observation Sexual Orientation Profile](StructureDefinition-us-core-observation-sexual-orientation.html)
 1. **Resolved - change required:** (Enhancement) Migrate US Core Terminology to VSAC [FHIR-42846](https://jira.hl7.org/browse/FHIR-42846) [See Changes Here](#.html)
 2. **Resolved - change required:** (Enhancement) Add link in history page to approved pages [FHIR-42950](https://jira.hl7.org/browse/FHIR-42950) [See Changes Here](#.html)
 3. **Applied:** (Enhancement) Updated Gender Identity binding to align with C-CDA [FHIR-43052](https://jira.hl7.org/browse/FHIR-43052) [See Changes Here](StructureDefinition-us-core-genderIdentity.html)
@@ -85,7 +81,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 60. **Resolved - change required:** (Clarification) Clarify the use of UCUM for Quantity datatypes in Lab Observations [FHIR-44117](https://jira.hl7.org/browse/FHIR-44117) [See Changes Here](StructureDefinition-us-core-observation-lab.html) and [Here](general-guidance.html#using-ucum-codes-in-the-quantity-datatype)
 61. **Applied:** (Correction) Remove US Core from CapabilityStatement.instantiates [FHIR-44121](https://jira.hl7.org/browse/FHIR-44121) [See Changes Here](CapabilityStatement-us-core-server.html)
 62. **Applied:** (Clarification) Include FHIR R6 Sex and Gender content in Patient Profile Introduction [FHIR-44123](https://jira.hl7.org/browse/FHIR-44123) [See Changes Here](StructureDefinition-us-core-patient.html)
-63. **Resolved - change required:** (Enhancement) Remove ASKU from value sets and use DAR concept instead [FHIR-44127](https://jira.hl7.org/browse/FHIR-44127) See Changes:
+63. **Resolved - change required:** (Enhancement) Remove ASKU from value sets and use DAR concept instead [FHIR-44127](https://jira.hl7.org/browse/FHIR-44127) and [FHIR-41571](https://jira.hl7.org/browse/FHIR-41571) See Changes:
    - [Gender Identity Value Set](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1021.32/expansion)
    - [Birth Sex](ValueSet-birthsex.html)
    - [Sexual Orientation](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1240.11/expansion)
