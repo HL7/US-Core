@@ -42,6 +42,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
    - [US Core Smoking Status Observation Profile](StructureDefinition-us-core-smokingstatus.html)
    - [Smoking Status Type ValueSet](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.6/expansion)
    - [Smoking Status Comprehensive](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113762.1.4.1267.3/expansion)
+   - [Some Day Smoker Example](Observation-some-day-smoker.html)
    - [Cigarette Pack-Years Example](Observation-pack-years-example.html)
 25. **Applied:** (Clarification) Clarify that not all US Core extensions are used in US Core Profiles [FHIR-43590](https://jira.hl7.org/browse/FHIR-43590) [See Changes Here](profiles-and-extensions.html#extensions)
 26. **Applied:** (Correction) Fixed scopes formats [FHIR-43616](https://jira.hl7.org/browse/FHIR-43616) [See Changes Here](scopes.html)
