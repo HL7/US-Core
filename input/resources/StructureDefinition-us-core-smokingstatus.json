@@ -133,9 +133,17 @@
                 ]
             },
             {
-                "id": "Observation.effectiveDateTime",
-                "path": "Observation.effectiveDateTime",
+                "id": "Observation.effective[x]",
+                "path": "Observation.effective[x]",
                 "min": 1,
+                "type": [
+                    {
+                        "code": "dateTime"
+                    },
+                    {
+                        "code": "Period"
+                    }
+                ],
                 "mustSupport": true,
                 "mapping": [
                     {

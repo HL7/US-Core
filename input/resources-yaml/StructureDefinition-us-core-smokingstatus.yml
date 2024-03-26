@@ -102,9 +102,12 @@ differential:
                     identity: argonaut-dq-dstu2
                     map: Observation.subject
         - 
-            id: Observation.effectiveDateTime
-            path: Observation.effectiveDateTime
+            id: Observation.effective[x]
+            path: Observation.effective[x]
             min: 1
+            type:
+            - code: dateTime
+            - code: Period
             mustSupport: true
             mapping:
                 - 
