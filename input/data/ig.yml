@@ -227,9 +227,8 @@ definition:
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/average-blood-pressure
-    description: This is an average blood pressure example for the *Vitalsigns Profile*.  It
-      is based on the [Vital Signs with Qualifying Elements](http://hl7.org/fhir/us/vitals/STU1/)
-      [Average Blood Pressure Profile](http://hl7.org/fhir/us/vitals/StructureDefinition/average-blood-pressure).
+    description: This is an average blood pressure example for the *US Core Average
+      Blood Pressure Profile*.
     name: Average Blood Pressure Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure
   - reference:
@@ -1477,14 +1476,15 @@ definition:
     name: US Core AllergyIntolerance Profile
   - reference:
       reference: StructureDefinition/us-core-average-blood-pressure
-    description: To promote interoperability and adoption through common implementation,
-      this profile sets minimum expectations for the Observation resource to record,
-      search, and fetch average diastolic and systolic blood pressure observations
-      with standard LOINC codes and UCUM units of measure. It is based on the US Core
-      Blood Pressure Profile and identifies which *additional* core elements, extensions,
-      vocabularies, and value sets  **SHALL** be present and constrains the way the
-      elements are used when using the profile.  It provides the floor for standards
-      development for specific use cases.
+    description: The US Core Average Blood Pressure Profile sets minimum expectations
+      for recording, searching, and fetching average diastolic and systolic blood
+      pressure observations with standard LOINC codes and UCUM units of measure. This
+      profile inherits its scope and usage definition from the FHIR [Observation](http://hl7.org/fhir/R4/StructureDefinition/Observation)
+      resource, and to promote interoperability and adoption through common implementation,
+      it identifies which core elements, extensions, vocabularies, and value sets
+      **SHALL** be present and constrains the way the elements are used when using
+      the profile. It provides the floor for standards development for specific use
+      cases.
     exampleBoolean: false
     name: US Core Average Blood Pressure Profile
   - reference:
@@ -3389,8 +3389,8 @@ definition:
         title: Future of US Core
         generation: markdown
         page:
-        - nameUrl: fhir-write.html
-          title: FHIR Write Guidance for Vital Sign Observations
+        - nameUrl: vitals-write.html
+          title: Writing Vital Signs
           generation: markdown
     - nameUrl: profiles-and-extensions.html
       title: Profiles and Extensions

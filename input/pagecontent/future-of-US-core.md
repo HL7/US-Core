@@ -74,7 +74,7 @@ Systems may use operations that create and update resources for any of the profi
   - Indicating the source of the update
 
 
-The Argonaut project has defined [FHIR Write Guidance for Vital Sign Observations](fhir-write.html) for creating and updating vital sign Observations resources from patient-facing and provider-facing applications and expects to develop similar guidance for other Observation categories and resource types. After adequate testing by implementers, we will assess the feasibility of incorporating this guidance into the US Core API.
+The Argonaut project has defined <span class="bg-success" markdown="1">[Writing Vital Signs](vitals-write.html)</span><!-- new-content --> for creating and updating vital sign Observations resources from patient-facing and provider-facing applications and expects to develop similar guidance for other Observation categories and resource types. After adequate testing by implementers, we will assess the feasibility of incorporating this guidance into the US Core API.
 
 
 ------------------------------------------------------------------------

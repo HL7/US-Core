@@ -5,19 +5,22 @@ name: USCoreAverageBloodPressureProfile
 title: US Core Average Blood Pressure Profile
 status: active
 experimental: false
-date: 2023-10-17
-description: To promote interoperability and adoption through common implementation,
-  this profile sets minimum expectations for the Observation resource to record, search,
-  and fetch average diastolic and systolic blood pressure observations with standard
-  LOINC codes and UCUM units of measure. It is based on the US Core Blood Pressure Profile 
-  and identifies which *additional* core elements, extensions, vocabularies, and value
-  sets  **SHALL** be present and constrains the way the elements are used when using
-  the profile.  It provides the floor for standards development for specific use cases.
+date: 2024-03-25
+description: The US Core Average Blood Pressure Profile sets minimum expectations for
+  recording, searching, and fetching average diastolic and systolic blood
+  pressure observations with standard LOINC codes and UCUM units of measure.
+  This profile inherits its scope and usage definition from the FHIR
+  [Observation](http://hl7.org/fhir/R4/StructureDefinition/Observation)
+  resource, and to promote interoperability and adoption through common
+  implementation, it identifies which core elements, extensions,
+  vocabularies, and value sets **SHALL** be present and constrains the way the
+  elements are used when using the profile. It provides the floor for standards
+  development for specific use cases.
 fhirVersion: 4.0.1
 kind: resource
 abstract: false
 type: Observation
-baseDefinition: http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure
+baseDefinition: http://hl7.org/fhir/StructureDefinition/Observation
 derivation: constraint
 differential:
   element:
@@ -25,44 +28,83 @@ differential:
     path: Observation
     short: US Core Average Blood Pressure Profile
 
+  - id: Observation.status
+    path: Observation.status
+    mustSupport: true
+
+  - id: Observation.category
+    path: Observation.category
+    slicing:
+      discriminator:
+      - type: value
+        path: coding.code
+      - type: value
+        path: coding.system
+      ordered: false
+      rules: open
+    min: 1
+    max: '*'
+    type:
+    - code: CodeableConcept
+    mustSupport: true
+  - id: Observation.category:VSCat
+    path: Observation.category
+    sliceName: VSCat
+    min: 1
+    max: '1'
+    type:
+    - code: CodeableConcept
+    mustSupport: true
+  - id: Observation.category:VSCat.coding
+    path: Observation.category.coding
+    min: 1
+    max: '*'
+    type:
+    - code: Coding
+    mustSupport: true
+  - id: Observation.category:VSCat.coding.system
+    path: Observation.category.coding.system
+    short: Identity of the terminology system
+    min: 1
+    max: '1'
+    type:
+    - code: uri
+    fixedUri: http://terminology.hl7.org/CodeSystem/observation-category
+
+  - id: Observation.category:VSCat.coding.code
+    path: Observation.category.coding.code
+    short: Symbol in syntax defined by the system
+    min: 1
+    max: '1'
+    type:
+    - code: code
+    fixedCode: vital-signs
 
 
   - id: Observation.code
     path: Observation.code
-    short: Average Blood Pressure
-    comment: >-
-      The code (96607-7 Blood pressure panel mean systolic and mean diastolic)
-      is added as a translation to the US Core vital Blood Pressure code
-      (85354-9 Blood Blood pressure panel with all children optional).
-    mustSupport: true
-
-  - id: Observation.code.coding
-    path: Observation.code.coding
-    slicing:
-      discriminator:
-      - type: pattern
-        path: $this
-      rules: open
-    min: 1
-    mustSupport: true
-
-  - id: Observation.code.coding:uscore-avg-bp
-    path: Observation.code.coding
-    sliceName: uscore-avg-bp
-    min: 1
-    max: '1'
+    short: Blood Pressure
     type:
-    - code: Coding
-    patternCoding:
-      system: http://loinc.org
-      code: 96607-7
+    - code: CodeableConcept
+    patternCodeableConcept:
+      coding:
+      - system: http://loinc.org
+        code: 96607-7
     mustSupport: true
 
+  - id: Observation.subject
+    path: Observation.subject
+    type:
+    - code: Reference
+      targetProfile:
+      - http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+    mustSupport: true
 
   - id: Observation.effective[x]
     path: Observation.effective[x]
     short: clinically relevant time-period for the average of blood pressure (BP)
       readings
+    min: 1
     type:
     - code: dateTime
     - extension:
@@ -70,82 +112,180 @@ differential:
         valueBoolean: true
       code: Period
     mustSupport: true
+
+  - id: Observation.value[x]
+    path: Observation.value[x]
+    max: '0'
+
   - id: Observation.component
     path: Observation.component
+    slicing:
+      discriminator:
+      - type: pattern
+        path: code
+      ordered: false
+      rules: open
+    short: Average systolic and diastolic
+      blood pressure and other qualifiers.
+    min: 2
+    max: '*'
+    constraint:
+    - key: us-core-26
+      severity: error
+      human: If there is no value a data absent reason must be present
+      expression: value.exists() or dataAbsentReason.exists()
+    mustSupport: true
+
+  - id: Observation.component.value[x]
+    path: Observation.component.value[x]
+    short: Vital Sign Component Value
+    definition: Vital Signs value are typically recorded using the Quantity data type.
+      For supporting observations such as cuff size could use other datatypes such
+      as CodeableConcept.
+    type:
+    - extension:
+      - url: http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+        valueBoolean: true
+      code: Quantity
+    - code: CodeableConcept
+    - code: string
+    - code: boolean
+    - code: integer
+    - code: Range
+    - code: Ratio
+    - code: SampledData
+    - code: time
+    - code: dateTime
+    - code: Period
+    mustSupport: true
+
+
+  - id: Observation.component.dataAbsentReason
+    path: Observation.component.dataAbsentReason
+    condition: 
+    - us-core-26
+    mustSupport: true
+
 
   - id: Observation.component:systolic
     path: Observation.component
     sliceName: systolic
-    short: Average Systolic Blood Pressure
+    short: Systolic Average Blood Pressure
+    min: 1
+    max: '1'
+    mustSupport: true
 
   - id: Observation.component:systolic.code
     path: Observation.component.code
-    short: Average Systolic Blood Pressure Code
-    comment: >-
-      The code (96608-5 Systolic blood pressure mean)
-      is added as a translation to the US Core vital Blood Pressure component code
-      (8480-6 Systolic blood pressure).
-
-  - id:  Observation.component:systolic.code.coding
-    path: Observation.component.code.coding
-    slicing:
-      discriminator:
-      - type: pattern
-        path: $this
-      rules: open
+    short: Systolic Average Blood Pressure Code
     min: 1
+    max: '1'
+    patternCodeableConcept:
+      coding:
+      - system: http://loinc.org
+        code: 96608-5
     mustSupport: true
 
+  - id: Observation.component:systolic.valueQuantity
+    path: Observation.component.valueQuantity
+    short: Systolic Average Blood Pressure Value
+    type:
+    - code: Quantity
+    condition: 
+    - us-core-26
+    mustSupport: true
 
-  - id:  Observation.component:systolic.code.coding:uscore-avg-systolic-bp
-    path: Observation.component.code.coding
-    sliceName: uscore-avg-systolic-bp
+  - id: Observation.component:systolic.valueQuantity.value
+    path: Observation.component.valueQuantity.value
     min: 1
     max: '1'
     type:
-    - code: Coding
-    patternCoding:
-      system: http://loinc.org
-      code: 96608-5
-    mustSupport: true
+    - code: decimal
+
+
+  - id: Observation.component:systolic.valueQuantity.unit
+    path: Observation.component.valueQuantity.unit
+    min: 1
+    max: '1'
+    type:
+    - code: string
+
+
+  - id: Observation.component:systolic.valueQuantity.system
+    path: Observation.component.valueQuantity.system
+    min: 1
+    max: '1'
+    type:
+    - code: uri
+    fixedUri: http://unitsofmeasure.org
+
+
+  - id: Observation.component:systolic.valueQuantity.code
+    path: Observation.component.valueQuantity.code
+    min: 1
+    max: '1'
+    type:
+    - code: code
+    fixedCode: mm[Hg]
 
   
-
   - id: Observation.component:diastolic
     path: Observation.component
     sliceName: diastolic
-    short: Average Diastolic Blood Pressure
-
+    short: Diastolic Average Blood Pressure
+    min: 1
+    max: '1'
     mustSupport: true
+
   - id: Observation.component:diastolic.code
     path: Observation.component.code
-    short: Average Diastolic Blood Pressure Code
-    comment: >-
-      The code (96609-3 Diastolic blood pressure mean)
-      is added as a translation to the US Core vital Blood Pressure component code
-      (8462-4 Diastolic blood pressure).
-
-  - id:  Observation.component:diastolic.code.coding
-    path: Observation.component.code.coding
-    slicing:
-      discriminator:
-      - type: pattern
-        path: $this
-      rules: open
+    short: Diastolic Average Blood Pressure Code
     min: 1
+    max: '1'
+    patternCodeableConcept:
+      coding:
+      - system: http://loinc.org
+        code: 96609-3
     mustSupport: true
 
+  - id: Observation.component:diastolic.valueQuantity
+    path: Observation.component.valueQuantity
+    short: Diastolic Average Blood Pressure Value
+    type:
+    - code: Quantity
+    condition:
+    - us-core-26
+    mustSupport: true
 
-  - id:  Observation.component:diastolic.code.coding:uscore-avg-diastolic-bp
-    path: Observation.component.code.coding
-    sliceName: uscore-avg-diastolic-bp
+  - id: Observation.component:diastolic.valueQuantity.value
+    path: Observation.component.valueQuantity.value
     min: 1
     max: '1'
     type:
-    - code: Coding
-    patternCoding:
-      system: http://loinc.org
-      code: 96609-3
-    mustSupport: true
+    - code: decimal
 
-  
+
+  - id: Observation.component:diastolic.valueQuantity.unit
+    path: Observation.component.valueQuantity.unit
+    min: 1
+    max: '1'
+    type:
+    - code: string
+
+
+  - id: Observation.component:diastolic.valueQuantity.system
+    path: Observation.component.valueQuantity.system
+    min: 1
+    max: '1'
+    type:
+    - code: uri
+    fixedUri: http://unitsofmeasure.org
+
+
+  - id: Observation.component:diastolic.valueQuantity.code
+    path: Observation.component.valueQuantity.code
+    min: 1
+    max: '1'
+    type:
+    - code: code
+    fixedCode: mm[Hg]

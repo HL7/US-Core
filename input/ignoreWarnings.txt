@@ -76,12 +76,13 @@ This element does not match any known slice defined in the profile http://hl7.or
 None of the codings provided are in the value set 'Practice Setting Code Value Set' (http://hl7.org/fhir/ValueSet/c80-practice-codes|4.0.1), and a coding is recommended to come from this value set) (codes = http://nucc.org/provider-taxonomy#208D00000X)
 
 
-# === These Examples demonstrate use of additional Codes or Identifiers not defined in US Core profiles (7)===
+# === These Examples demonstrate use of additional Codes or Identifiers not defined in US Core profiles  Updated from 7.0.0-ballot===
 
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|7.0.0
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|7.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0
 
 # === This Examples conform to US Core Average Blood Pressure Profile. It defines additional slices (translations) to the FHIR BP profile for the code and component codes and will not match FHIR BP profile and vice versa ===
 
@@ -248,7 +249,15 @@ Most code systems defined in HL7 IGs will need to move to THO later during the p
 
 The value set expansion is too large, and only a subset has been displayed
 
-# === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) (updated text from 7.0.0) ===
+# === Using standard extension capabilitystatement-expectation for CapabilityStatement in additional contexts to fully express intended capabilities: see FHIR-12419 (115) (updated text from 7.0.0-ballot) ===
 
 # This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0-ballot1 (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination|5.1.0-cibuild (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# === These Examples demonstrate use of additional Codes or Identifiers not defined in US Core profiles  Updated from 7.0.0-ballot ===
+
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-pulse-oximetry|7.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|7.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|7.0.0
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-average-blood-pressure|7.0.0
