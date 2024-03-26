@@ -10,7 +10,7 @@ meta:
   - url: http://hl7.org/fhir/StructureDefinition/instance-description
     valueMarkdown: This is a "self-prescribed" tylenol example for the *MedicationRequest Profile*.
 
-# === proposed extension ===
+# === med adherence extension ===
 extension:
   - extension:
     - url: medicationAdherence
@@ -24,11 +24,13 @@ extension:
       valueDateTime: '2023-08-11T08:15:49.449Z'
 
     -  url: informationSource
-       valueReference:
-        reference: Patient/example
-        display: Amy Shaw
+       valueCodeableConcept:
+         coding:
+           - system: http://hl7.org/fhir/us/core/CodeSystem/MedicationAdheranceInformant
+             code: Spouse
+             display: Spouse/Significant Other
     url:  http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
-# === end proposed extension ===
+# === end extension ===
 
 identifier:
 - use: official

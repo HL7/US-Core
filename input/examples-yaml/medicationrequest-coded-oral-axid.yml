@@ -10,7 +10,7 @@ meta:
     valueMarkdown: This is an prescribed oral solution example for the *US Core MedicationRequest
       Profile*.  It represents the medication and reason using codes.
 
-# === proposed extension ===
+# === med adherence extension ===
 extension:
   - extension:
     - url: medicationAdherence
@@ -24,11 +24,19 @@ extension:
       valueDateTime: '2023-08-11T08:15:49.449Z'
 
     -  url: informationSource
-       valueReference:
-        reference: Patient/example
-        display: Amy Shaw
+       valueCodeableConcept:
+         coding:
+           - system: http://hl7.org/fhir/us/core/CodeSystem/MedicationAdheranceInformant
+             code: Patient
+             display: Patient
+    -  url: informationSource
+       valueCodeableConcept:
+         coding:
+           - system: http://hl7.org/fhir/us/core/CodeSystem/MedicationAdheranceInformant
+             code: OutsidePharmacy
+             display: Outside Pharmacy
     url:  http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence
-# === end proposed extension ===
+# === end  extension ===
 
 status: active
 intent: order

@@ -27,9 +27,14 @@
         },
         {
           "url": "informationSource",
-          "valueReference": {
-            "reference": "Patient/example",
-            "display": "Amy Shaw"
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/MedicationAdheranceInformant",
+                "code": "Spouse",
+                "display": "Spouse/Significant Other"
+              }
+            ]
           }
         }
       ],

@@ -30,7 +30,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 13. **Resolved - change required:** (Clarification) Clarify reference to average BP panel [FHIR-43537](https://jira.hl7.org/browse/FHIR-43537) [See Changes Here](#.html)
 14. **Resolved - change required:** (Clarification) Confusing use of Observation.code values [FHIR-43538](https://jira.hl7.org/browse/FHIR-43538) [See Changes Here](#.html)
 15. **Resolved - change required:** (Clarification) Observation.value Omission [FHIR-43539](https://jira.hl7.org/browse/FHIR-43539) [See Changes Here](#.html)
-16. **Resolved - change required:** (Clarification) Broaden Profile Purpose Statement [FHIR-43540](https://jira.hl7.org/browse/FHIR-43540) [See Changes Here](#.html)
+16. **Applied:** (Clarification) Broaden Profile Purpose Statement [FHIR-43540](https://jira.hl7.org/browse/FHIR-43540) [See Changes Here](StructureDefinition-us-core-care-experience-preference.html)
 17. **Resolved - change required:** (Enhancement) Seems like observation-category CodeSystem needs to be extended to include a concept for care-experience-preference [FHIR-43541](https://jira.hl7.org/browse/FHIR-43541) [See Changes Here](#.html)
 18. **Resolved - change required:** (Enhancement) Modify Profile Purpose Statement to match CDA Patient Goal template purpose statement [FHIR-43543](https://jira.hl7.org/browse/FHIR-43543) [See Changes Here](#.html)
 19. **Applied:** (Clarification) Remove note to balloters regarding the terminology [FHIR-43547](https://jira.hl7.org/browse/FHIR-43547) [See Changes Here](StructureDefinition-us-core-care-experience-preference.html) and [Here](StructureDefinition-us-core-treatment-intervention-preference.html)

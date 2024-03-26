@@ -27,9 +27,26 @@
         },
         {
           "url": "informationSource",
-          "valueReference": {
-            "reference": "Patient/example",
-            "display": "Amy Shaw"
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/MedicationAdheranceInformant",
+                "code": "Patient",
+                "display": "Patient"
+              }
+            ]
+          }
+        },
+        {
+          "url": "informationSource",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/core/CodeSystem/MedicationAdheranceInformant",
+                "code": "OutsidePharmacy",
+                "display": "Outside Pharmacy"
+              }
+            ]
           }
         }
       ],
