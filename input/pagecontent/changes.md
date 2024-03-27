@@ -19,7 +19,7 @@ The ballot-related comments resulted in over 80 changes to this specification, w
 2. **Resolved - change required:** (Enhancement) Add link in history page to approved pages [FHIR-42950](https://jira.hl7.org/browse/FHIR-42950) [See Changes Here](#.html)
 3. **Applied:** (Enhancement) Updated Gender Identity binding to align with C-CDA [FHIR-43052](https://jira.hl7.org/browse/FHIR-43052) [See Changes Here](StructureDefinition-us-core-genderIdentity.html)
 4. **Applied:** (Clarification) Rename fhir-write to vitals-write [FHIR-43400](https://jira.hl7.org/browse/FHIR-43400) [See Changes Here](vitals-write.html)
-5. **Applied:** (Clarification) Clarify that the Average Blood Pressure profile is protocol agnostic. [FHIR-43402](https://jira.hl7.org/browse/FHIR-43402) [See Changes Here](StructureDefinition-us-core-medication-adherence.html)
+5. **Applied:** (Clarification) Clarify that the Average Blood Pressure profile is protocol agnostic. [FHIR-43402](https://jira.hl7.org/browse/FHIR-43402) [See Changes Here](StructureDefinition-us-core-average-blood-pressure.html)
 6. **Applied:** (Clarification) Add example to Must Support - Complex Elements section [FHIR-43430](https://jira.hl7.org/browse/FHIR-43430) [See Changes Here](must-support.html#must-support---complex-elements)
 7. **Applied:** (Clarification) Clarify that only `Patient.deceasedDateTime` deceasedDateTime is "Additional USCDI Requirement" [FHIR-43431](https://jira.hl7.org/browse/FHIR-43431) [See Changes Here](StructureDefinition-us-core-patient.html)
 8.  **Applied:** (Correction) Fix table rendering to remove duplicates [FHIR-43432](https://jira.hl7.org/browse/FHIR-43432) [See Changes Here](screening-and-assessments.html#uscdi-health-assessments-data-element-category)
